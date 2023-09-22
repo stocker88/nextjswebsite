@@ -8,7 +8,6 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { openInbox } from 'react'
-import Plx from "react-plx";
 import { isMobile, browserName } from "react-device-detect";
 
 const propTypes = {
@@ -74,31 +73,6 @@ const Hero = ({
       className={outerClasses}
     >
 
-<Plx
-        parallaxData={[
-          {
-            start: 0,
-            end: 700,
-            easing: "ease-in",
-            properties: [
-              {
-                startValue: 1,
-                endValue: 1.4,
-                property: "scale"
-              }
-            ]
-          }
-        ]}
-        style={{
-          position: "fixed",
-          left: 0,
-          top: isMobile?45: 0,
-          width: "100%",
-          zIndex: 0
-        }}
-      >
-
-      </Plx>
 
 <center>
       <div className="container-sm" style={{  zIndex: 10 }}>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Link} from 'react-scroll'
 import Image from '../elements/Image';
 
 class Header extends Component {
