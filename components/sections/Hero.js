@@ -35,7 +35,7 @@ const Hero = ({
   ...props
 }) => {
 
-  const [videoModalActive, setVideomodalactive] = useState(false);
+
   const [pictureActive, setPictureActive] = useState(false);
   const showContactForm = useState(false)
 

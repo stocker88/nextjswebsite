@@ -62,7 +62,6 @@ const MeetingButton = ({
     'has-bottom-divider',
     'has-bg-color',
     'invert-color',
-    className
   );
 
   const innerClasses = classNames(
@@ -75,7 +74,7 @@ const MeetingButton = ({
     'split-wrap',
     'invert-mobile',
     'invert-desktop',
-    'align-top'
+    
   );
 
   const sectionHeader = {

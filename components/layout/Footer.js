@@ -21,9 +21,6 @@ const Footer = ({
 }) => {
 
   const classes = classNames(
-    'site-footer center-content-mobile',
-    'has-top-divider',
-    className
   );
 
   return (
