@@ -23,66 +23,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd673d14-a775-472e-9dbf-1b9b6a908e4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/images/DyTcw6e2T65ivsjTqNi6cTSyRQ6fr5uDzCBuDiEJ38I=/60.1695403819244.ThI1BAqW-R52BKa-4R3iYalJ5ZWqm-SZbQmegkWEio0=.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/images/TPz4g7564B3j4oOKnBJQ11AwkXbhkz3ORcnSfj+fLmY=/60.1695403819027.7VxJrX3PxvdJzb+4qSppY1FJSzfNWDSrOcu7cu1tE2c=.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/next-minimal-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/next-minimal-server.js.nft.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/next-server.js.nft.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/1.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/1.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/2.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/2.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development-fallback/index.pack.gz.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/0.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/12.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/12.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/15.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/15.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/17.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/17.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/2.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/2.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/3.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/3.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/4.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/4.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/5.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/5.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/6.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/6.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/7.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/7.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/8.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/8.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/9.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/9.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-development/index.pack.gz.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/10.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/3.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/8.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/0.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/0.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-development/index.pack.gz.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/4.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/_error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/middleware-build-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/_error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/pages/posts/[slug].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/@swc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/server/vendor-chunks/next.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/vendor-chunks/next.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/_error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/pages/_error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/posts/[slug].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/react-refresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/react-refresh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/chunks/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/chunks/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/development/_buildManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/static/development/_buildManifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/webpack/e3009a3cac8d5c62.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/static/webpack/webpack.e3009a3cac8d5c62.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Hero.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/_normalize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/abstracts/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/abstracts/_include-media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/abstracts/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/base/_base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/base/_fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/base/_helpers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/base/_scroll-reveal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/base/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/elements/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/elements/_containers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/elements/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/elements/_hamburger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/elements/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/layout/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/layout/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/layout/_main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/patterns/_split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/patterns/_tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_cta.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_features-split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_features-tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_hero.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_section.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/core/sections/_testimonial.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/_settings.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_links.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_scroll-reveal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/base/_widths-and-spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/elements/_buttons-and-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/elements/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/layout/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/layout/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/patterns/_split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/patterns/_tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/sections/_cta.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/sections/_features-split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/sections/_features-tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/sections/_hero.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/settings/sections/_testimonial.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/_theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/base/_base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/base/_fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/base/_scroll-reveal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/base/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/elements/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/elements/_containers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/elements/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/elements/_hamburger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/elements/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/illustrations/_illustrations.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/layout/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/layout/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/layout/_main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/patterns/_split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/patterns/_tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_cta.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_features-split.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_features-tiles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_hero.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_section.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/theme/sections/_testimonial.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/css/nucleo-svg.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/css/nucleo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/fonts/nucleo-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/fonts/nucleo-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/fonts/nucleo-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/fonts/nucleo-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/nucleo/fonts/nucleo-icons.woff2" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
