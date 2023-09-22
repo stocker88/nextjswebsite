@@ -1,55 +1,503 @@
-"use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/_error";
-exports.ids = ["pages/_error"];
+exports.id = 820;
+exports.ids = [820];
 exports.modules = {
 
-/***/ "../../../../../opt/homebrew/lib/node_modules/next/dist/pages/_error.js":
-/*!******************************************************************************!*\
-  !*** ../../../../../opt/homebrew/lib/node_modules/next/dist/pages/_error.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 247:
+/***/ ((module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nexports[\"default\"] = void 0;\nvar _interop_require_default = (__webpack_require__(/*! @swc/helpers/lib/_interop_require_default.js */ \"../../../../../opt/homebrew/lib/node_modules/next/node_modules/@swc/helpers/lib/_interop_require_default.js\")[\"default\"]);\nvar _react = _interop_require_default(__webpack_require__(/*! react */ \"react\"));\nvar _head = _interop_require_default(__webpack_require__(/*! ../shared/lib/head */ \"../shared/lib/head\"));\nconst statusCodes = {\n    400: \"Bad Request\",\n    404: \"This page could not be found\",\n    405: \"Method Not Allowed\",\n    500: \"Internal Server Error\"\n};\nfunction _getInitialProps({ res , err  }) {\n    const statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;\n    return {\n        statusCode\n    };\n}\nconst styles = {\n    error: {\n        fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, \"Segoe UI\", \"Fira Sans\", Avenir, \"Helvetica Neue\", \"Lucida Grande\", sans-serif',\n        height: \"100vh\",\n        textAlign: \"center\",\n        display: \"flex\",\n        flexDirection: \"column\",\n        alignItems: \"center\",\n        justifyContent: \"center\"\n    },\n    desc: {\n        display: \"inline-block\",\n        textAlign: \"left\",\n        lineHeight: \"49px\",\n        height: \"49px\",\n        verticalAlign: \"middle\"\n    },\n    h1: {\n        display: \"inline-block\",\n        margin: 0,\n        marginRight: \"20px\",\n        padding: \"0 23px 0 0\",\n        fontSize: \"24px\",\n        fontWeight: 500,\n        verticalAlign: \"top\",\n        lineHeight: \"49px\"\n    },\n    h2: {\n        fontSize: \"14px\",\n        fontWeight: \"normal\",\n        lineHeight: \"49px\",\n        margin: 0,\n        padding: 0\n    }\n};\nvar _Component;\nclass Error extends (_Component = _react.default.Component) {\n    render() {\n        const { statusCode , withDarkMode =true  } = this.props;\n        const title = this.props.title || statusCodes[statusCode] || \"An unexpected error has occurred\";\n        return /*#__PURE__*/ _react.default.createElement(\"div\", {\n            style: styles.error\n        }, /*#__PURE__*/ _react.default.createElement(_head.default, null, /*#__PURE__*/ _react.default.createElement(\"title\", null, statusCode ? `${statusCode}: ${title}` : \"Application error: a client-side exception has occurred\")), /*#__PURE__*/ _react.default.createElement(\"div\", null, /*#__PURE__*/ _react.default.createElement(\"style\", {\n            dangerouslySetInnerHTML: {\n                __html: `\n                body { margin: 0; color: #000; background: #fff; }\n                .next-error-h1 {\n                  border-right: 1px solid rgba(0, 0, 0, .3);\n                }\n\n                ${withDarkMode ? `@media (prefers-color-scheme: dark) {\n                  body { color: #fff; background: #000; }\n                  .next-error-h1 {\n                    border-right: 1px solid rgba(255, 255, 255, .3);\n                  }\n                }` : \"\"}`\n            }\n        }), statusCode ? /*#__PURE__*/ _react.default.createElement(\"h1\", {\n            className: \"next-error-h1\",\n            style: styles.h1\n        }, statusCode) : null, /*#__PURE__*/ _react.default.createElement(\"div\", {\n            style: styles.desc\n        }, /*#__PURE__*/ _react.default.createElement(\"h2\", {\n            style: styles.h2\n        }, this.props.title || statusCode ? title : /*#__PURE__*/ _react.default.createElement(_react.default.Fragment, null, \"Application error: a client-side exception has occurred (see the browser console for more information)\"), \".\"))));\n    }\n}\nError.displayName = \"ErrorPage\";\nError.getInitialProps = _getInitialProps;\nError.origGetInitialProps = _getInitialProps;\nexports[\"default\"] = Error; //# sourceMappingURL=_error.js.map\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vLi4vLi4vLi4vLi4vb3B0L2hvbWVicmV3L2xpYi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L3BhZ2VzL19lcnJvci5qcy5qcyIsIm1hcHBpbmdzIjoiQUFBYTtBQUNiQSw4Q0FBNkM7SUFDekNHLEtBQUssRUFBRSxJQUFJO0NBQ2QsRUFBQyxDQUFDO0FBQ0hELGtCQUFlLEdBQUcsS0FBSyxDQUFDLENBQUM7QUFDekIsSUFBSUcsd0JBQXdCLEdBQUdDLG1NQUErRDtBQUM5RixJQUFJQyxNQUFNLEdBQUdGLHdCQUF3QixDQUFDQyxtQkFBTyxDQUFDLG9CQUFPLENBQUMsQ0FBQztBQUN2RCxJQUFJRSxLQUFLLEdBQUdILHdCQUF3QixDQUFDQyxtQkFBTyxDQUFDLDhDQUFvQixDQUFDLENBQUM7QUFDbkUsTUFBTUcsV0FBVyxHQUFHO0FBQ2hCLE9BQUcsRUFBRSxhQUFhO0FBQ2xCLE9BQUcsRUFBRSw4QkFBOEI7QUFDbkMsT0FBRyxFQUFFLG9CQUFvQjtBQUN6QixPQUFHLEVBQUUsdUJBQXVCO0NBQy9CO0FBQ0QsU0FBU0MsZ0JBQWdCLENBQUMsRUFBRUMsR0FBRyxHQUFHQyxHQUFHLEdBQUcsRUFBRTtJQUN0QyxNQUFNQyxVQUFVLEdBQUdGLEdBQUcsSUFBSUEsR0FBRyxDQUFDRSxVQUFVLEdBQUdGLEdBQUcsQ0FBQ0UsVUFBVSxHQUFHRCxHQUFHLEdBQUdBLEdBQUcsQ0FBQ0MsVUFBVSxHQUFHLEdBQUc7SUFDdEYsT0FBTztRQUNIQSxVQUFVO0tBQ2IsQ0FBQztBQUNOLENBQUM7QUFDRCxNQUFNQyxNQUFNLEdBQUc7SUFDWEMsS0FBSyxFQUFFO1FBQ0hDLFVBQVUsRUFBRSwySEFBMkg7UUFDdklDLE1BQU0sRUFBRSxPQUFPO1FBQ2ZDLFNBQVMsRUFBRSxRQUFRO1FBQ25CQyxPQUFPLEVBQUUsTUFBTTtRQUNmQyxhQUFhLEVBQUUsUUFBUTtRQUN2QkMsVUFBVSxFQUFFLFFBQVE7UUFDcEJDLGNBQWMsRUFBRSxRQUFRO0tBQzNCO0lBQ0RDLElBQUksRUFBRTtRQUNG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d0csQ0FBQyxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQzdPO0NBQ0g7QUFDRFgsS0FBSyxDQUFDWSxXQUFXLEdBQUcsV0FBVyxDQUFDO0FBQ2hDWixLQUFLLENBQUNhLGVBQWUsR0FBR3JDLGdCQUFnQixDQUFDO0FBQ3pDd0IsS0FBSyxDQUFDYyxtQkFBbUIsR0FBR3RDLGdCQUFnQixDQUFDO0FBQzdDUixrQkFBZSxHQUFHZ0MsS0FBSyxDQUFDLENBRXhCLGtDQUFrQyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uLi8uLi8uLi8uLi8uLi9vcHQvaG9tZWJyZXcvbGliL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvcGFnZXMvX2Vycm9yLmpzPzhiNDgiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHtcbiAgICB2YWx1ZTogdHJ1ZVxufSk7XG5leHBvcnRzLmRlZmF1bHQgPSB2b2lkIDA7XG52YXIgX2ludGVyb3BfcmVxdWlyZV9kZWZhdWx0ID0gcmVxdWlyZShcIkBzd2MvaGVscGVycy9saWIvX2ludGVyb3BfcmVxdWlyZV9kZWZhdWx0LmpzXCIpLmRlZmF1bHQ7XG52YXIgX3JlYWN0ID0gX2ludGVyb3BfcmVxdWlyZV9kZWZhdWx0KHJlcXVpcmUoXCJyZWFjdFwiKSk7XG52YXIgX2hlYWQgPSBfaW50ZXJvcF9yZXF1aXJlX2RlZmF1bHQocmVxdWlyZShcIi4uL3NoYXJlZC9saWIvaGVhZFwiKSk7XG5jb25zdCBzdGF0dXNDb2RlcyA9IHtcbiAgICA0MDA6ICdCYWQgUmVxdWVzdCcsXG4gICAgNDA0OiAnVGhpcyBwYWdlIGNvdWxkIG5vdCBiZSBmb3VuZCcsXG4gICAgNDA1OiAnTWV0aG9kIE5vdCBBbGxvd2VkJyxcbiAgICA1MDA6ICdJbnRlcm5hbCBTZXJ2ZXIgRXJyb3InXG59O1xuZnVuY3Rpb24gX2dldEluaXRpYWxQcm9wcyh7IHJlcyAsIGVyciAgfSkge1xuICAgIGNvbnN0IHN0YXR1c0NvZGUgPSByZXMgJiYgcmVzLnN0YXR1c0NvZGUgPyByZXMuc3RhdHVzQ29kZSA6IGVyciA/IGVyci5zdGF0dXNDb2RlIDogNDA0O1xuICAgIHJldHVybiB7XG4gICAgICAgIHN0YXR1c0NvZGVcbiAgICB9O1xufVxuY29uc3Qgc3R5bGVzID0ge1xuICAgIGVycm9yOiB7XG4gICAgICAgIGZvbnRGYW1pbHk6ICctYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsIFJvYm90bywgXCJTZWdvZSBVSVwiLCBcIkZpcmEgU2Fuc1wiLCBBdmVuaXIsIFwiSGVsdmV0aWNhIE5ldWVcIiwgXCJMdWNpZGEgR3JhbmRlXCIsIHNhbnMtc2VyaWYnLFxuICAgICAgICBoZWlnaHQ6ICcxMDB2aCcsXG4gICAgICAgIHRleHRBbGlnbjogJ2NlbnRlcicsXG4gICAgICAgIGRpc3BsYXk6ICdmbGV4JyxcbiAgICAgICAgZmxleERpcmVjdGlvbjogJ2NvbHVtbicsXG4gICAgICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLFxuICAgICAgICBqdXN0aWZ5Q29udGVudDogJ2NlbnRlcidcbiAgICB9LFxuICAgIGRlc2M6IHtcbiAgICAgICAgZGlzcGxheTogJ2lubGluZS1ibG9jaycsXG4gICAgICAgIHRleHRBbGlnbjogJ2xlZnQnLFxuICAgICAgICBsaW5lSGVpZ2h0OiAnNDlweCcsXG4gICAgICAgIGhlaWdodDogJzQ5cHgnLFxuICAgICAgICB2ZXJ0aWNhbEFsaWduOiAnbWlkZGxlJ1xuICAgIH0sXG4gICAgaDE6IHtcbiAgICAgICAgZGlzcGxheTogJ2lubGluZS1ibG9jaycsXG4gICAgICAgIG1hcmdpbjogMCxcbiAgICAgICAgbWFyZ2luUmlnaHQ6ICcyMHB4JyxcbiAgICAgICAgcGFkZGluZzogJzAgMjNweCAwIDAnLFxuICAgICAgICBmb250U2l6ZTogJzI0cHgnLFxuICAgICAgICBmb250V2VpZ2h0OiA1MDAsXG4gICAgICAgIHZlcnRpY2FsQWxpZ246ICd0b3AnLFxuICAgICAgICBsaW5lSGVpZ2h0OiAnNDlweCdcbiAgICB9LFxuICAgIGgyOiB7XG4gICAgICAgIGZvbnRTaXplOiAnMTRweCcsXG4gICAgICAgIGZvbnRXZWlnaHQ6ICdub3JtYWwnLFxuICAgICAgICBsaW5lSGVpZ2h0OiAnNDlweCcsXG4gICAgICAgIG1hcmdpbjogMCxcbiAgICAgICAgcGFkZGluZzogMFxuICAgIH1cbn07XG52YXIgX0NvbXBvbmVudDtcbmNsYXNzIEVycm9yIGV4dGVuZHMgKF9Db21wb25lbnQgPSBfcmVhY3QuZGVmYXVsdC5Db21wb25lbnQpIHtcbiAgICByZW5kZXIoKSB7XG4gICAgICAgIGNvbnN0IHsgc3RhdHVzQ29kZSAsIHdpdGhEYXJrTW9kZSA9dHJ1ZSAgfSA9IHRoaXMucHJvcHM7XG4gICAgICAgIGNvbnN0IHRpdGxlID0gdGhpcy5wcm9wcy50aXRsZSB8fCBzdGF0dXNDb2Rlc1tzdGF0dXNDb2RlXSB8fCAnQW4gdW5leHBlY3RlZCBlcnJvciBoYXMgb2NjdXJyZWQnO1xuICAgICAgICByZXR1cm4gLyojX19QVVJFX18qLyBfcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICAgICAgICAgIHN0eWxlOiBzdHlsZXMuZXJyb3JcbiAgICAgICAgfSwgLyojX19QVVJFX18qLyBfcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KF9oZWFkLmRlZmF1bHQsIG51bGwsIC8qI19fUFVSRV9fKi8gX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcInRpdGxlXCIsIG51bGwsIHN0YXR1c0NvZGUgPyBgJHtzdGF0dXNDb2RlfTogJHt0aXRsZX1gIDogJ0FwcGxpY2F0aW9uIGVycm9yOiBhIGNsaWVudC1zaWRlIGV4Y2VwdGlvbiBoYXMgb2NjdXJyZWQnKSksIC8qI19fUFVSRV9fKi8gX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImRpdlwiLCBudWxsLCAvKiNfX1BVUkVfXyovIF9yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJzdHlsZVwiLCB7XG4gICAgICAgICAgICBkYW5nZXJvdXNseVNldElubmVySFRNTDoge1xuICAgICAgICAgICAgICAgIF9faHRtbDogYFxuICAgICAgICAgICAgICAgIGJvZHkgeyBtYXJnaW46IDA7IGNvbG9yOiAjMDAwOyBiYWNrZ3JvdW5kOiAjZmZmOyB9XG4gICAgICAgICAgICAgICAgLm5leHQtZXJyb3ItaDEge1xuICAgICAgICAgICAgICAgICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAuMyk7XG4gICAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgICAgJHt3aXRoRGFya01vZGUgPyBgQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xuICAgICAgICAgICAgICAgICAgYm9keSB7IGNvbG9yOiAjZmZmOyBiYWNrZ3JvdW5kOiAjMDAwOyB9XG4gICAgICAgICAgICAgICAgICAubmV4dC1lcnJvci1oMSB7XG4gICAgICAgICAgICAgICAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgLjMpO1xuICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1gIDogJyd9YFxuICAgICAgICAgICAgfVxuICAgICAgICB9KSwgc3RhdHVzQ29kZSA/IC8qI19fUFVSRV9fKi8gX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImgxXCIsIHtcbiAgICAgICAgICAgIGNsYXNzTmFtZTogXCJuZXh0LWVycm9yLWgxXCIsXG4gICAgICAgICAgICBzdHlsZTogc3R5bGVzLmgxXG4gICAgICAgIH0sIHN0YXR1c0NvZGUpIDogbnVsbCwgLyojX19QVVJFX18qLyBfcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICAgICAgICAgIHN0eWxlOiBzdHlsZXMuZGVzY1xuICAgICAgICB9LCAvKiNfX1BVUkVfXyovIF9yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJoMlwiLCB7XG4gICAgICAgICAgICBzdHlsZTogc3R5bGVzLmgyXG4gICAgICAgIH0sIHRoaXMucHJvcHMudGl0bGUgfHwgc3RhdHVzQ29kZSA/IHRpdGxlIDogLyojX19QVVJFX18qLyBfcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KF9yZWFjdC5kZWZhdWx0LkZyYWdtZW50LCBudWxsLCBcIkFwcGxpY2F0aW9uIGVycm9yOiBhIGNsaWVudC1zaWRlIGV4Y2VwdGlvbiBoYXMgb2NjdXJyZWQgKHNlZSB0aGUgYnJvd3NlciBjb25zb2xlIGZvciBtb3JlIGluZm9ybWF0aW9uKVwiKSwgXCIuXCIpKSkpO1xuICAgIH1cbn1cbkVycm9yLmRpc3BsYXlOYW1lID0gJ0Vycm9yUGFnZSc7XG5FcnJvci5nZXRJbml0aWFsUHJvcHMgPSBfZ2V0SW5pdGlhbFByb3BzO1xuRXJyb3Iub3JpZ0dldEluaXRpYWxQcm9wcyA9IF9nZXRJbml0aWFsUHJvcHM7XG5leHBvcnRzLmRlZmF1bHQgPSBFcnJvcjtcblxuLy8jIHNvdXJjZU1hcHBpbmdVUkw9X2Vycm9yLmpzLm1hcCJdLCJuYW1lcyI6WyJPYmplY3QiLCJkZWZpbmVQcm9wZXJ0eSIsImV4cG9ydHMiLCJ2YWx1ZSIsImRlZmF1bHQiLCJfaW50ZXJvcF9yZXF1aXJlX2RlZmF1bHQiLCJyZXF1aXJlIiwiX3JlYWN0IiwiX2hlYWQiLCJzdGF0dXNDb2RlcyIsIl9nZXRJbml0aWFsUHJvcHMiLCJyZXMiLCJlcnIiLCJzdGF0dXNDb2RlIiwic3R5bGVzIiwiZXJyb3IiLCJmb250RmFtaWx5IiwiaGVpZ2h0IiwidGV4dEFsaWduIiwiZGlzcGxheSIsImZsZXhEaXJlY3Rpb24iLCJhbGlnbkl0ZW1zIiwianVzdGlmeUNvbnRlbnQiLCJkZXNjIiwibGluZUhlaWdodCIsInZlcnRpY2FsQWxpZ24iLCJoMSIsIm1hcmdpbiIsIm1hcmdpblJpZ2h0IiwicGFkZGluZyIsImZvbnRTaXplIiwiZm9udFdlaWdodCIsImgyIiwiX0NvbXBvbmVudCIsIkVycm9yIiwiQ29tcG9uZW50IiwicmVuZGVyIiwid2l0aERhcmtNb2RlIiwicHJvcHMiLCJ0aXRsZSIsImNyZWF0ZUVsZW1lbnQiLCJzdHlsZSIsImRhbmdlcm91c2x5U2V0SW5uZXJIVE1MIiwiX19odG1sIiwiY2xhc3NOYW1lIiwiRnJhZ21lbnQiLCJkaXNwbGF5TmFtZSIsImdldEluaXRpYWxQcm9wcyIsIm9yaWdHZXRJbml0aWFsUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///../../../../../opt/homebrew/lib/node_modules/next/dist/pages/_error.js\n");
+"use strict";
+
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "default", ({
+  enumerable: true,
+  get: function get() {
+    return Error;
+  }
+}));
+
+var _interop_require_default = __webpack_require__(302);
+
+var _react = /*#__PURE__*/_interop_require_default._(__webpack_require__(689));
+
+var _head = /*#__PURE__*/_interop_require_default._(__webpack_require__(94));
+
+var statusCodes = {
+  400: "Bad Request",
+  404: "This page could not be found",
+  405: "Method Not Allowed",
+  500: "Internal Server Error"
+};
+
+function _getInitialProps(param) {
+  var res = param.res,
+      err = param.err;
+  var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+  return {
+    statusCode: statusCode
+  };
+}
+
+var styles = {
+  error: {
+    // https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css#L38-L52
+    fontFamily: 'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+    height: "100vh",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  desc: {
+    display: "inline-block",
+    textAlign: "left"
+  },
+  h1: {
+    display: "inline-block",
+    margin: "0 20px 0 0",
+    paddingRight: 23,
+    fontSize: 24,
+    fontWeight: 500,
+    verticalAlign: "top",
+    lineHeight: "49px"
+  },
+  h2: {
+    fontSize: 14,
+    fontWeight: 400,
+    lineHeight: "49px",
+    margin: 0
+  }
+};
+
+var Error = /*#__PURE__*/function (_react$default$Compon) {
+  _inherits(Error, _react$default$Compon);
+
+  var _super = _createSuper(Error);
+
+  function Error() {
+    _classCallCheck(this, Error);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Error, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          statusCode = _this$props.statusCode,
+          _this$props$withDarkM = _this$props.withDarkMode,
+          withDarkMode = _this$props$withDarkM === void 0 ? true : _this$props$withDarkM;
+      var title = this.props.title || statusCodes[statusCode] || "An unexpected error has occurred";
+      return /*#__PURE__*/_react["default"].createElement("div", {
+        style: styles.error
+      }, /*#__PURE__*/_react["default"].createElement(_head["default"], null, /*#__PURE__*/_react["default"].createElement("title", null, statusCode ? statusCode + ": " + title : "Application error: a client-side exception has occurred")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("style", {
+        dangerouslySetInnerHTML: {
+          /* CSS minified from
+          body { margin: 0; color: #000; background: #fff; }
+          .next-error-h1 {
+            border-right: 1px solid rgba(0, 0, 0, .3);
+          }
+           ${
+            withDarkMode
+              ? `@media (prefers-color-scheme: dark) {
+            body { color: #fff; background: #000; }
+            .next-error-h1 {
+              border-right: 1px solid rgba(255, 255, 255, .3);
+            }
+          }`
+              : ''
+          }
+          */
+          __html: "body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}" + (withDarkMode ? "@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}" : "")
+        }
+      }), statusCode ? /*#__PURE__*/_react["default"].createElement("h1", {
+        className: "next-error-h1",
+        style: styles.h1
+      }, statusCode) : null, /*#__PURE__*/_react["default"].createElement("div", {
+        style: styles.desc
+      }, /*#__PURE__*/_react["default"].createElement("h2", {
+        style: styles.h2
+      }, this.props.title || statusCode ? title : /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, "Application error: a client-side exception has occurred (see the browser console for more information)"), "."))));
+    }
+  }]);
+
+  return Error;
+}(_react["default"].Component);
+
+(function () {
+  Error.displayName = "ErrorPage";
+})();
+
+(function () {
+  Error.getInitialProps = _getInitialProps;
+})();
+
+(function () {
+  Error.origGetInitialProps = _getInitialProps;
+})();
+
+if ((typeof exports["default"] === 'function' || _typeof(exports["default"]) === 'object' && exports["default"] !== null) && typeof exports["default"].__esModule === 'undefined') {
+  Object.defineProperty(exports["default"], '__esModule', {
+    value: true
+  });
+  Object.assign(exports["default"], exports);
+  module.exports = exports["default"];
+}
 
 /***/ }),
 
-/***/ "../../../../../opt/homebrew/lib/node_modules/next/node_modules/@swc/helpers/lib/_interop_require_default.js":
-/*!*******************************************************************************************************************!*\
-  !*** ../../../../../opt/homebrew/lib/node_modules/next/node_modules/@swc/helpers/lib/_interop_require_default.js ***!
-  \*******************************************************************************************************************/
+/***/ 94:
+/***/ ((module, exports, __webpack_require__) => {
+
+"use client";
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+0 && (0);
+
+function _export(target, all) {
+  for (var name in all) Object.defineProperty(target, name, {
+    enumerable: true,
+    get: all[name]
+  });
+}
+
+_export(exports, {
+  defaultHead: function defaultHead() {
+    return _defaultHead;
+  },
+  "default": function _default() {
+    return _default2;
+  }
+});
+
+var _interop_require_default = __webpack_require__(302);
+
+var _interop_require_wildcard = __webpack_require__(171);
+
+var _react = /*#__PURE__*/_interop_require_wildcard._(__webpack_require__(689));
+
+var _sideeffect = /*#__PURE__*/_interop_require_default._(__webpack_require__(470));
+
+var _ampcontext = __webpack_require__(918);
+
+var _headmanagercontext = __webpack_require__(796);
+
+var _ampmode = __webpack_require__(732);
+
+var _warnonce = __webpack_require__(618);
+
+function _defaultHead(inAmpMode) {
+  if (inAmpMode === void 0) inAmpMode = false;
+  var head = [/*#__PURE__*/_react["default"].createElement("meta", {
+    charSet: "utf-8"
+  })];
+
+  if (!inAmpMode) {
+    head.push( /*#__PURE__*/_react["default"].createElement("meta", {
+      name: "viewport",
+      content: "width=device-width"
+    }));
+  }
+
+  return head;
+}
+
+function onlyReactElement(list, child) {
+  // React children can be "string" or "number" in this case we ignore them for backwards compat
+  if (typeof child === "string" || typeof child === "number") {
+    return list;
+  } // Adds support for React.Fragment
+
+
+  if (child.type === _react["default"].Fragment) {
+    return list.concat( // @ts-expect-error @types/react does not remove fragments but this could also return ReactPortal[]
+    _react["default"].Children.toArray(child.props.children).reduce( // @ts-expect-error @types/react does not remove fragments but this could also return ReactPortal[]
+    function (fragmentList, fragmentChild) {
+      if (typeof fragmentChild === "string" || typeof fragmentChild === "number") {
+        return fragmentList;
+      }
+
+      return fragmentList.concat(fragmentChild);
+    }, []));
+  }
+
+  return list.concat(child);
+}
+
+var METATYPES = ["name", "httpEquiv", "charSet", "itemProp"];
+/*
+ returns a function for filtering head child elements
+ which shouldn't be duplicated, like <title/>
+ Also adds support for deduplicated `key` properties
+*/
+
+function unique() {
+  var keys = new Set();
+  var tags = new Set();
+  var metaTypes = new Set();
+  var metaCategories = {};
+  return function (h) {
+    var isUnique = true;
+    var hasKey = false;
+
+    if (h.key && typeof h.key !== "number" && h.key.indexOf("$") > 0) {
+      hasKey = true;
+      var key = h.key.slice(h.key.indexOf("$") + 1);
+
+      if (keys.has(key)) {
+        isUnique = false;
+      } else {
+        keys.add(key);
+      }
+    } // eslint-disable-next-line default-case
+
+
+    switch (h.type) {
+      case "title":
+      case "base":
+        if (tags.has(h.type)) {
+          isUnique = false;
+        } else {
+          tags.add(h.type);
+        }
+
+        break;
+
+      case "meta":
+        for (var i = 0, len = METATYPES.length; i < len; i++) {
+          var metatype = METATYPES[i];
+          if (!h.props.hasOwnProperty(metatype)) continue;
+
+          if (metatype === "charSet") {
+            if (metaTypes.has(metatype)) {
+              isUnique = false;
+            } else {
+              metaTypes.add(metatype);
+            }
+          } else {
+            var category = h.props[metatype];
+            var categories = metaCategories[metatype] || new Set();
+
+            if ((metatype !== "name" || !hasKey) && categories.has(category)) {
+              isUnique = false;
+            } else {
+              categories.add(category);
+              metaCategories[metatype] = categories;
+            }
+          }
+        }
+
+        break;
+    }
+
+    return isUnique;
+  };
+}
+/**
+ *
+ * @param headChildrenElements List of children of <Head>
+ */
+
+
+function reduceComponents(headChildrenElements, props) {
+  var inAmpMode = props.inAmpMode;
+  return headChildrenElements.reduce(onlyReactElement, []).reverse().concat(_defaultHead(inAmpMode).reverse()).filter(unique()).reverse().map(function (c, i) {
+    var key = c.key || i;
+
+    if ( true && !inAmpMode) {
+      if (c.type === "link" && c.props["href"] && // TODO(prateekbh@): Replace this with const from `constants` when the tree shaking works.
+      ["https://fonts.googleapis.com/css", "https://use.typekit.net/"].some(function (url) {
+        return c.props["href"].startsWith(url);
+      })) {
+        var newProps = _objectSpread({}, c.props || {});
+
+        newProps["data-href"] = newProps["href"];
+        newProps["href"] = undefined; // Add this attribute to make it easy to identify optimized tags
+
+        newProps["data-optimized-fonts"] = true;
+        return /*#__PURE__*/_react["default"].cloneElement(c, newProps);
+      }
+    }
+
+    if (false) { var srcMessage; }
+
+    return /*#__PURE__*/_react["default"].cloneElement(c, {
+      key: key
+    });
+  });
+}
+/**
+ * This component injects elements to `<head>` of your page.
+ * To avoid duplicated `tags` in `<head>` you can use the `key` property, which will make sure every tag is only rendered once.
+ */
+
+
+function Head(param) {
+  var children = param.children;
+  var ampState = (0, _react.useContext)(_ampcontext.AmpStateContext);
+  var headManager = (0, _react.useContext)(_headmanagercontext.HeadManagerContext);
+  return /*#__PURE__*/_react["default"].createElement(_sideeffect["default"], {
+    reduceComponentsToState: reduceComponents,
+    headManager: headManager,
+    inAmpMode: (0, _ampmode.isInAmpMode)(ampState)
+  }, children);
+}
+
+var _default2 = Head;
+
+if ((typeof exports["default"] === 'function' || _typeof(exports["default"]) === 'object' && exports["default"] !== null) && typeof exports["default"].__esModule === 'undefined') {
+  Object.defineProperty(exports["default"], '__esModule', {
+    value: true
+  });
+  Object.assign(exports["default"], exports);
+  module.exports = exports["default"];
+}
+
+/***/ }),
+
+/***/ 918:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-context.js");
+
+/***/ }),
+
+/***/ 732:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-mode.js");
+
+/***/ }),
+
+/***/ 796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
+
+/***/ }),
+
+/***/ 470:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/side-effect.js");
+
+/***/ }),
+
+/***/ 618:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils/warn-once.js");
+
+/***/ }),
+
+/***/ 689:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 302:
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nexports[\"default\"] = _interopRequireDefault;\nfunction _interopRequireDefault(obj) {\n    return obj && obj.__esModule ? obj : {\n        default: obj\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vLi4vLi4vLi4vLi4vb3B0L2hvbWVicmV3L2xpYi9ub2RlX21vZHVsZXMvbmV4dC9ub2RlX21vZHVsZXMvQHN3Yy9oZWxwZXJzL2xpYi9faW50ZXJvcF9yZXF1aXJlX2RlZmF1bHQuanMuanMiLCJtYXBwaW5ncyI6IkFBQWE7QUFDYiw4Q0FBNkM7QUFDN0M7QUFDQSxDQUFDLEVBQUM7QUFDRixrQkFBZTtBQUNmO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi4vLi4vLi4vLi4vLi4vb3B0L2hvbWVicmV3L2xpYi9ub2RlX21vZHVsZXMvbmV4dC9ub2RlX21vZHVsZXMvQHN3Yy9oZWxwZXJzL2xpYi9faW50ZXJvcF9yZXF1aXJlX2RlZmF1bHQuanM/ZTMzYiJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwge1xuICAgIHZhbHVlOiB0cnVlXG59KTtcbmV4cG9ydHMuZGVmYXVsdCA9IF9pbnRlcm9wUmVxdWlyZURlZmF1bHQ7XG5mdW5jdGlvbiBfaW50ZXJvcFJlcXVpcmVEZWZhdWx0KG9iaikge1xuICAgIHJldHVybiBvYmogJiYgb2JqLl9fZXNNb2R1bGUgPyBvYmogOiB7XG4gICAgICAgIGRlZmF1bHQ6IG9ialxuICAgIH07XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///../../../../../opt/homebrew/lib/node_modules/next/node_modules/@swc/helpers/lib/_interop_require_default.js\n");
+"use strict";
+
+
+exports._ = exports._interop_require_default = _interop_require_default;
+function _interop_require_default(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
 
 /***/ }),
 
-/***/ "../shared/lib/head":
-/*!***********************************************!*\
-  !*** external "next/dist/shared/lib/head.js" ***!
-  \***********************************************/
-/***/ ((module) => {
+/***/ 171:
+/***/ ((__unused_webpack_module, exports) => {
 
-module.exports = require("next/dist/shared/lib/head.js");
+"use strict";
 
-/***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/***/ ((module) => {
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
 
-module.exports = require("react");
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+
+    return (_getRequireWildcardCache = function(nodeInterop) {
+        return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+exports._ = exports._interop_require_wildcard = _interop_require_wildcard;
+function _interop_require_wildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return { default: obj };
+
+    var cache = _getRequireWildcardCache(nodeInterop);
+
+    if (cache && cache.has(obj)) return cache.get(obj);
+
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+    for (var key in obj) {
+        if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+            var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+            if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+            else newObj[key] = obj[key];
+        }
+    }
+
+    newObj.default = obj;
+
+    if (cache) cache.set(obj, newObj);
+
+    return newObj;
+}
+
 
 /***/ })
 
@@ -60,7 +508,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("../../../../../opt/homebrew/lib/node_modules/next/dist/pages/_error.js"));
+var __webpack_exports__ = (__webpack_exec__(247));
 module.exports = __webpack_exports__;
 
 })();

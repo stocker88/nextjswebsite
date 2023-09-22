@@ -17,15 +17,12 @@ const defaultProps = {
 }
 
 const Footer = ({
-  className,
-  topOuterDivider,
-  topDivider,
   ...props
 }) => {
 
   const classes = classNames(
     'site-footer center-content-mobile',
-    topOuterDivider && 'has-top-divider',
+    'has-top-divider',
     className
   );
 
@@ -39,7 +36,7 @@ const Footer = ({
         <div className={
           classNames(
             'site-footer-inner',
-            topDivider && 'has-top-divider',
+            'has-top-divider',
           )}>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <nav

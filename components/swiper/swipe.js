@@ -63,7 +63,6 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Image
                     src='/assets/images/chatgpt.png'
-                    alt="Features split 02"
                     width={500}
                     height={500}
                     alt='stockerapp stocker app stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
@@ -95,7 +94,6 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Image
                     src='/assets/images/portfolio.png'
-                    alt="Features split 02"
                     width={500}
                     height={500}
                     alt='stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
@@ -127,7 +125,6 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Image
                     src='/assets/images/tslavsrace.png'
-                    alt="Features split 02"
                     width={500}
                     height={500}
                     alt='stocker ai app money income investing financial online trading stocks crypto'
@@ -160,7 +157,6 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Image
                     src='/assets/images/educational.png'
-                    alt="Features split 02"
                     width={500}
                     height={500}
                     alt='stocker ai app money income investing financial online trading stocks crypto'

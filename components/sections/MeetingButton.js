@@ -29,17 +29,6 @@ const innerClasses = classNames(
 );
 
 const MeetingButton = ({
-  className,
-  topOuterDivider,
-  bottomOuterDivider,
-  topDivider,
-  bottomDivider,
-  hasBgColor,
-  invertColor,
-  invertMobile,
-  invertDesktop,
-  alignTop,
-  imageFill,
   ...props
 }) => {
 
@@ -69,24 +58,24 @@ const MeetingButton = ({
 
   const outerClasses = classNames(
     'features-split section',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color',
+    'has-top-divider',
+    'has-bottom-divider',
+    'has-bg-color',
+    'invert-color',
     className
   );
 
   const innerClasses = classNames(
     'features-split-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
+    'has-top-divider',
+    'has-bottom-divider'
   );
 
   const splitClasses = classNames(
     'split-wrap',
-    invertMobile && 'invert-mobile',
-    invertDesktop && 'invert-desktop',
-    alignTop && 'align-top'
+    'invert-mobile',
+    'invert-desktop',
+    'align-top'
   );
 
   const sectionHeader = {
@@ -96,7 +85,6 @@ const MeetingButton = ({
   return (
     <section
       {...props}
-      id="resume"
       className={outerClasses}
       id="MeetingButton"
     >

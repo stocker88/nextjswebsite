@@ -94,7 +94,6 @@ const Blog = ({
   return (
     <section
       {...props}
-      id="resume"
       className={outerClasses}
       id="blog"
     >
