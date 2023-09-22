@@ -7,8 +7,7 @@ import Button from '../../elements/Button';
 import ButtonGroup from '../../elements/ButtonGroup';
 import { useState } from 'react';
 import Modal from '../../elements/Modal';
-import ContactForm from '../../elements/ContactUs';
-import history from '../../../history';
+
 import MathJax from 'react-mathjax2'
 import InstallButtons from '../../elements/InstallButtons';
 import InstallButtonsWithQR from '../../elements/InstallButtonsWithQR';

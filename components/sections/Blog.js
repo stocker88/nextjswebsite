@@ -7,7 +7,7 @@ import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
 import Modal from '../elements/Modal';
-import ContactForm from '../elements/ContactUs';
+
 
 import SectionHeader from './partials/SectionHeader';
 import Zoom from 'react-medium-image-zoom'
@@ -43,7 +43,6 @@ const Blog = ({
 
   const [videoModalActive, setVideomodalactive] = useState(false);
   const [pictureActive, setPictureActive] = useState(false);
-  const showContactForm = useState(false)
 
   const openModal = (e) => {
     e.preventDefault();

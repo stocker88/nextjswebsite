@@ -7,7 +7,6 @@ import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { Linking } from 'react'
 import * as emailjs from 'emailjs-com'
-import ContactForm from '../elements/ContactUs';
 import {Link} from 'react-router-dom'
 import { openInbox } from 'react'
 

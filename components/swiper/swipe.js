@@ -7,7 +7,6 @@ import Image from '../elements/Image';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination"
-import Example from '../lottie/Animation';
 import { isMobile, browserName } from "react-device-detect";
 
 

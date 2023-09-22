@@ -7,7 +7,6 @@ import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
 import Modal from '../elements/Modal';
-import ContactForm from '../elements/ContactUs';
 import Swipe from '../swiper/swipe';
 import IntroApp from 'components/introApp';
 import Container from 'components/container'
@@ -41,7 +40,6 @@ const FeaturesSplit = ({
 
   const [videoModalActive, setVideomodalactive] = useState(false);
   const [pictureActive, setPictureActive] = useState(false);
-  const showContactForm = useState(false)
 
   const openModal = (e) => {
     e.preventDefault();

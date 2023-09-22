@@ -8,11 +8,8 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { Linking } from 'react'
-import * as emailjs from 'emailjs-com'
-import ContactForm from '../elements/ContactUs';
 import {Link} from 'react-router-dom'
 import { openInbox } from 'react'
-import Example from '../lottie/Animation'
 import Plx from "react-plx";
 import { isMobile, browserName } from "react-device-detect";
 
@@ -37,7 +34,6 @@ const Hero = ({
 
 
   const [pictureActive, setPictureActive] = useState(false);
-  const showContactForm = useState(false)
 
   const openModal = (e) => {
     e.preventDefault();
