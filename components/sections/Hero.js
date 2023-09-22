@@ -7,8 +7,6 @@ import InstallButtons from '../elements/InstallButtons';
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
-import { Linking } from 'react'
-import {Link} from 'react-router-dom'
 import { openInbox } from 'react'
 import Plx from "react-plx";
 import { isMobile, browserName } from "react-device-detect";

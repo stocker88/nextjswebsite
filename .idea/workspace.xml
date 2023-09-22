@@ -23,7 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd673d14-a775-472e-9dbf-1b9b6a908e4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/partials/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/partials/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/BlogHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/BlogHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Hero.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/AppRoute.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
