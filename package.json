@@ -27,7 +27,6 @@
     "node-sass": "npm:sass@^1.49.7",
     "react-bootstrap-carousel": "^4.1.1",
     "react-device-detect": "^2.1.2",
-    "react-fullscreen-image": "^0.0.3",
     "react-ga4": "^2.1.0",
     "react-in-viewport": "^1.0.0-alpha.20",
     "react-katex": "^2.0.2",
