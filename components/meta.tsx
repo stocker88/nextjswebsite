@@ -34,7 +34,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content="Stocker AI App is an Investing Advisory App that helps you design strategies and practise them with virtual trading! Learn how to make money and earn passive income with Stocker Ai App"
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
