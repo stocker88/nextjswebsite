@@ -1,3 +1,5 @@
- module.exports = {
-     basePath: '/nextjswebsite',
- };
+const nextConfig = {
+    images: {
+        unoptimized: true,
+    },
+}
