@@ -35,7 +35,7 @@ const InstallButtons = ({...props}) => {
              {...props}
            >
            <Zoom><Image
-                           src={require('nextjswebsite/public/assets/images/qrcode.png')}
+                           src={require('/assets/images/qrcode.png')}
                           style={{width:120}}
                           alt='stockerapp ai stocker app stocker ai app social trading'
                            /></Zoom>
