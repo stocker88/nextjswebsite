@@ -1,5 +1,5 @@
 ---
-title: 'Profit Drivers: Make the most for your money'
+title: 'Profit Drivers: Make the most of your money'
 excerpt: 'By understanding what positions are driving your gains and losses, you can become the next Warren Buffett and learn how to beat the market.'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2022-09-16T05:35:07.322Z'
