@@ -36,6 +36,7 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>HelloStocker: AI Financial Advisor and Virtual Trading App</title>
           <meta charSet="utf-8" />
+          <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
