@@ -48,12 +48,12 @@ export default function Index({ allPosts }: Props) {
           <meta name="og:description" content="Make Money with your Investing Advisor available 24/7! A financial bot and improved version of ChatGPT! Start building your passive income and make money online! Build your brand in Stocker App with all the money you need! powered by ChatGPT bot advise - Start building your passive income and make money online!  Join a community of live and transparent investors and find the best trades with free financial analytics, Speak with your ChatGPT bot advisor! Find the best stocks and cryptocurrency" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
-          <meta property="og:image" content="https://i.ibb.co/3TmgmYC/hellostocker-stocker-app-ai-financial-advisor-budgeting-investing.png"  />
+          <meta property="og:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
           <meta name="twitter:title" content="Design strategies with your AI financial advisor and practise virtual investing: Make money and take control over your own success"/>
           <meta name="twitter:description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App"/>
-          <meta name="twitter:image" content="https://i.ibb.co/3TmgmYC/hellostocker-stocker-app-ai-financial-advisor-budgeting-investing.png"  />
+          <meta name="twitter:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
-          <link rel="apple-touch-icon" href="https://i.ibb.co/3TmgmYC/hellostocker-stocker-app-ai-financial-advisor-budgeting-investing.png"  />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
             <script src="mathjax-config.js" defer></script>
                 <script type="text/javascript" id="MathJax-script" defer
                   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
