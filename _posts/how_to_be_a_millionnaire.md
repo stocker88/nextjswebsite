@@ -71,7 +71,7 @@ Compounding is like a snowball effect for your money.
 
 **If you save $10 a day, and invest it with 10% return, in 10 years, you will have $62,000, and in 20 years, you will have $600,000.**
 
-**If you save $20 a day, and invest it with 10% return, in 10 years, you will have $300,000, and in 20 years, you will have $3,000,000.**
+**If you save $20 a day, and invest it with 10% return, in 10 years, you will have $160,000, and in 20 years, you will have $2,000,000.**
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
