@@ -37,20 +37,20 @@ export default function Index({ allPosts }: Props) {
           <title>HelloStocker: AI Financial Advisor and Virtual Trading App</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App" />
+          <meta name="description" property="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" property="og:description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App"/>
-          <meta name="description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App"/>
-          <meta property="og:title" content="Design strategies with your AI financial advisor and practise virtual investing: Make money and take control over your own success" />
-          <meta name="og:description" content="Make Money with your Investing Advisor available 24/7! A financial bot and improved version of ChatGPT! Start building your passive income and make money online! Build your brand in Stocker App with all the money you need! powered by ChatGPT bot advise - Start building your passive income and make money online!  Join a community of live and transparent investors and find the best trades with free financial analytics, Speak with your ChatGPT bot advisor! Find the best stocks and cryptocurrency" />
+          <meta name="description" property="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
+          <meta name="description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
+          <meta property="og:title" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
+          <meta name="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
-          <meta name="twitter:title" content="Design strategies with your AI financial advisor and practise virtual investing: Make money and take control over your own success"/>
-          <meta name="twitter:description" content="Design budgeting and investing strategies your AI Financial Advisor and practise them with virtual trading! Learn how to make money and earn passive income with HelloStocker Ai App"/>
+          <meta name="twitter:title" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
+          <meta name="twitter:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
