@@ -42,7 +42,6 @@ export default function Index({ allPosts }: Props) {
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" property="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
           <meta name="description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
           <meta property="og:title" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
           <meta name="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
