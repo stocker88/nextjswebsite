@@ -36,16 +36,16 @@ export default function Post({ post, morePosts, preview }: Props) {
               <Head>
                 <title>{title}</title>
                 <meta name="description" content={post.excerpt}/>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta name="description" property="og:description" content={post.excerpt} />
                 <meta name="description" content={post.excerpt}/>
                 <meta property="og:title" content={post.excerpt} />
                 <meta name="og:description" content={post.excerpt} />
-                <link rel="apple-touch-icon" href={post.ogImage.url} />
+                <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={post.title}/>
                 <meta name="twitter:description" content={post.excerpt}/>
-                <meta name="twitter:image" content={post.ogImage.url}/>
+                <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <script src="mathjax-config.js" defer></script>
                 <script type="text/javascript" id="MathJax-script" defer
                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
