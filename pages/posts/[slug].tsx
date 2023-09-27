@@ -42,7 +42,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta property="og:title" content={post.excerpt} />
                 <meta name="og:description" content={post.excerpt} />
                 <link rel="apple-touch-icon" href={post.ogImage.url} />
-                <meta property="og:url" content="https://www.hellostocker.com/posts/${post.slug}" />
+                <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={post.title}/>
                 <meta name="twitter:description" content={post.excerpt}/>
                 <meta name="twitter:image" content={post.ogImage.url}/>
