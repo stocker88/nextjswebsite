@@ -1,13 +1,13 @@
 ---
 title: 'Mastering Investing: 12 Essential Steps for Beginners to Become Pros'
 excerpt: 'Whether you are saving for retirement, a down payment on a home, or financial security, investing is a valuable tool to help you reach your financial goals. In this beginners guide to investing, we will demystify the process and provide you with essential steps to get started on your investment journey.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/blog/hello-world/investingforbeginners.png'
 date: '2022-09-10T05:35:07.322Z'
 author:
   name: Tim Musk
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/hello-world/investingforbeginners.png'
 ---
 
 
