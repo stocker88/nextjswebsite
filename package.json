@@ -21,7 +21,6 @@
     "react-device-detect": "^2.1.2",
     "react-ga4": "^2.1.0",
     "react-mathjax2": "^0.0.2",
-    "remark-math": "^4.0.0",
     "react-medium-image-zoom": "^4.3.5",
     "swiper": "^7.4.1"
   },
