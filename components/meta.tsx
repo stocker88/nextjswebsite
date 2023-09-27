@@ -36,7 +36,6 @@ const Meta = () => {
         name="description"
         content="Stocker AI App is an Investing Advisory App that helps you design strategies and practise them with virtual trading! Learn how to make money and earn passive income with Stocker Ai App"
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }
