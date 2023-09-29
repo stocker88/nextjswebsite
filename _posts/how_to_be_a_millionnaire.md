@@ -71,7 +71,7 @@ Compounding is like a snowball effect for your money.
 
 a
 
-![](https://www.hellostocker.com/assets/blog/millionnairescience/snowball.png)
+![](/assets/blog/millionnairescience/snowball.png)
 
 **If you save $10 a day:**
 - in 10 years, you will have **$36,000**
