@@ -5,7 +5,7 @@ coverImage: '/assets/blog/preview/cover.jpg'
 date: '2022-03-16T05:35:07.322Z'
 author:
   name: 'Stocker Team'
-  picture: '/assets/blog/authors/stocker.jpeg'
+  picture: '/assets/blog/authors/stocker.png'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
