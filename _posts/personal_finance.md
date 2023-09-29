@@ -2,7 +2,7 @@
 title: 'From Budgeting to Investing: A Comprehensive Guide to Personal Finance'
 excerpt: 'In this comprehensive article, we will dive into the fundamentals of personal finance, including budgeting, saving, investing, and more'
 coverImage: '/assets/blog/personal-finance/personal-finance.png'
-date: '2022-09-20T05:35:07.322Z'
+date: '2022-09-16T05:35:07.322Z'
 author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
