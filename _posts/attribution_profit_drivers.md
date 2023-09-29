@@ -58,6 +58,8 @@ To reach financial freedom, and make as much money as you can, you must understa
 Do you know your strengths? Do you know who to ask for help on things you're not so good at? Don't worry, we are here to help you!
 
 
+![](/assets/blog/attribution/investinganalysis.jpg)
+
 ## **The Math behind**
 
 In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics: stock fundamentals such as value, growth, P/E ratio, and other financial metrics such as Short Ratio, as well as Popularity and Social metrics.
