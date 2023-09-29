@@ -2,7 +2,7 @@
 title: 'Privacy Policy'
 excerpt: ''
 coverImage: '/assets/blog/preview/cover.jpg'
-date: '2022-03-16T05:35:07.322Z'
+date: '2023-03-16T05:35:07.322Z'
 author:
   name: 'Stocker Team'
   picture: '/assets/blog/authors/stocker.png'

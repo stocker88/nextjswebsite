@@ -2,12 +2,12 @@
 title: 'Mastering Your Financial Future: A Comprehensive Guide to Money, Budgeting, and Investing'
 excerpt: 'By understanding what positions are driving your gains and losses, you can become the next Warren Buffett and learn how to beat the market.'
 coverImage: '/assets/blog/money_budgeting_investing/financegroupdiscussion.jpg'
-date: '2022-09-29T05:35:07.322Z'
+date: '2023-09-29T05:35:07.322Z'
 author:
-name: HelloStocker
-picture: '/assets/blog/authors/stocker.png'
+  name: HelloStocker
+  picture: '/assets/blog/authors/stocker.png'
 ogImage:
-url: '/assets/blog/money_budgeting_investing/financegroupdiscussion.jpg'
+  url: '/assets/blog/money_budgeting_investing/financegroupdiscussion.jpg'
 ---
 
 
@@ -33,7 +33,7 @@ Budgeting is the practice of allocating your income to various expenses and savi
 - Saving Money: One of the primary purposes of budgeting is to save money consistently. Prioritize savings in your budget as if it were a non-negotiable expense.
 - Budgeting Apps: Take advantage of budgeting apps like Mint, YNAB (You Need a Budget), or Personal Capital to automate and streamline your budgeting process.
 
-![](/assets/blog/money_budgeting_investing/financialsuccess.jpg)
+![](/assets/blog/money_budgeting_investing/portfolio-allocation.png)
 
 ## **Section 3: Investing Strategies for Wealth Building**
 
