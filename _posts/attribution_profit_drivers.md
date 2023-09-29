@@ -1,5 +1,5 @@
 ---
-title: '[Pro Investor Guide] The Top 1 Investment Strategy Rule: Performance Attribution'
+title: 'How to Invest in Stocks for Personal Finance Success: Find YOUR Profitable Sectors and Strategies'
 excerpt: 'By understanding what positions are driving your gains and losses, you can become the next Warren Buffett and learn how to beat the market.'
 coverImage: '/assets/blog/dynamic-routing/performance_attribution.png'
 date: '2022-09-16T05:35:07.322Z'

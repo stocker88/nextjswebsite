@@ -1,5 +1,5 @@
 ---
-title: 'How to go from 0 to being a Millionnaire'
+title: 'How to go from 0 to being a Millionnaire: Budgeting and Compound Interest'
 excerpt: 'Money has not been a thing and did not exist for over 99% of men’s existence and our genes and way of thinking have not adapted yet. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.png'
 date: '2022-09-25T05:35:07.322Z'

@@ -93,7 +93,10 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                  Earn Passive Income with your AI Investing Advisor
+                  Learn with your 24/7 AI Financial Advisor
+                  <br></br>
+
+
                 </div>
 
               <div className="reveal-from-bottom" data-reveal-delay="200">
@@ -103,8 +106,10 @@ const Hero = ({
 
           <br></br>
           <br></br>
-        <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(26px,max(20px,2vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
 
+
+        <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(26px,max(20px,2vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                Don't risk your money: perfect your skills with Virtual Trading!
 
                         </div>
         <br></br>
