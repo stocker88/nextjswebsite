@@ -17,7 +17,7 @@ Warren Buffett was a kid hustling for pennies during the Depression, and at 11 y
 
 There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, how much money they have.
 
-This is backed up by data, over 10,000 people have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, these 2 main factors that have nothing to do with income.
+This is backed up by data, over 10,000 people have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, the 2 main explanatory factors have nothing to do with income.
 
 Most of people put a barrier in their mind, but not the right ones unfortunately. Just like when you skip the gym, they look for short term gratifications over dedication and long term health.
 
