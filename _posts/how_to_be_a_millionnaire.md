@@ -33,8 +33,6 @@ What comes third? That expensive steak you can’t afford? Or that luxurious car
 
 Money. Money comes third, because there isn’t much else you can’t afford without money.
 
-80% of people don’t even look at prices when they go out, they don’t have a barrier check, and when they do, they don’t compare prices logically, they go for whatever gives them the «easiest» pleasure: by the way that bottle of water just costed you $10, more than our budgeting course.
-
 Warren Buffet had pennies, he is now the most famous investor in the world, one of the most respected when it comes to stock market and money management: he understood at 11 years old what comes third is money, he understood at 11 years old what comes third is money, why do you spend it when you can focus on Love and Health and use money as a tool for freedom?
 
 ## 2. Trade off your animal instincts for rational thinking
@@ -44,6 +42,8 @@ In the history of mankind, money was not such a thing. People used to take logic
 It’s not very logical is it? It was at the time, but not today.
 
 People would take whatever brings them the most pleasures, these same instincts that developed so many wars, disasters and others, are the same ones that ruin your chances of success, by pushing you to think about short term pleasures, just like kids, for good and belongings that will dissipate over time.
+
+80% of people don’t even look at prices when they go out, they don’t have a barrier check, and when they do, they don’t compare prices logically, they go for whatever gives them the «easiest» pleasure: by the way that bottle of water just costed you $10, more than our budgeting course.
 
 **Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
 
@@ -67,7 +67,7 @@ Compounding is like a snowball effect for your money.
 
 - This keeps happening, and your money keeps growing faster and faster.
 
-![](/assets/blog/authors/snowball.png)
+![](https://www.hellostocker.com/assets/blog/authors/snowball.png)
 
 **If you save $10 a day:**
 - in 10 years, you will have **$36,000**
