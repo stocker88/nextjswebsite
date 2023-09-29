@@ -106,7 +106,7 @@ const Blog = ({
 
              <Image
                src='assets/images/attribution.png'
-               alt="stocker ai app money income investing financial online trading stocks crypto"
+               alt="stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn"
                style={{width: 250, borderRadius: 5}}
                resizeMode={"cover"} />
 

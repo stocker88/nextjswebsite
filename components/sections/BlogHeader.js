@@ -51,7 +51,7 @@ const BlogHeader = ({
         <a href="https://hellostocker.com">
             <Image
               src={require('assets/images/stocker.png')}
-              alt="stocker ai app money income investing financial online trading stocks crypto"
+              alt="stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn"
               width={300}
               />
     </a>

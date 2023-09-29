@@ -49,7 +49,7 @@ export default function Swipe() {
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
 
-                    Find the Best Investment Strategies
+                    Find your Best Investing and Budgeting Strategies
                     </h3>
 
                 </div>
@@ -77,10 +77,10 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
-                    Make Money Now, Stocker App is FREE
+                    What stock or crypto will consistently bring you profits?
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
-                    Practise with Virtual Money
+                    Practise with Virtual money: easy
                     </h3>
 
                 </div>
@@ -108,7 +108,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
-                      Tesla vs Ferrari: Profitability Comparison
+                      Tesla vs Ferrari: Profitability Analysis
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
                     Compare your trade ideas with their Competition
@@ -126,7 +126,7 @@ export default function Swipe() {
                     src='/assets/images/tslavsrace.png'
                     width={500}
                     height={500}
-                    alt='stocker ai app money income investing financial online trading stocks crypto'
+                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
                     />
                 </div>
                 </center>
@@ -140,10 +140,10 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                     <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
-                      Make Investing Easier with the Right AI Tools
+                     Market News & Educational Content
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
-                    Market News & Educational Content
+                    Save Time and Build Knowledge
                     </h3>
 
                 </div>
@@ -158,7 +158,7 @@ export default function Swipe() {
                     src='/assets/images/educational.png'
                     width={500}
                     height={500}
-                    alt='stocker ai app money income investing financial online trading stocks crypto'
+                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
                     />
                 </div>
                 </center>
@@ -223,7 +223,7 @@ export default function Swipe() {
                                   alt="Features split 02"
                                   width={500}
                                   height={500}
-                                  alt='stocker ai app money income investing financial online trading stocks crypto'
+                                  alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
                                   />
                               </div>
                               </center>
