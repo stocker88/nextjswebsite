@@ -11,6 +11,9 @@ const PostBody = ({ content }: Props) => {
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   )
 }
