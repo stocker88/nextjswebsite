@@ -36,8 +36,6 @@ Budgeting is the practice of allocating your income to various expenses and savi
 
 - **Budgeting Apps**: Take advantage of budgeting apps like Mint, YNAB (You Need a Budget), or Personal Capital to automate and streamline your budgeting process.
 
-![](/assets/blog/money_budgeting_investing/portfolio-allocation.png)
-
 ## **Section 3: Investing Strategies for Wealth Building**
 
 Investing is a critical component of wealth building. It allows your money to work for you and potentially generate passive income. Here's what you need to know:
@@ -47,6 +45,8 @@ Investing is a critical component of wealth building. It allows your money to wo
 - **Asset Allocation**: Understand the concept of asset allocation, which involves spreading your investments across various asset classes to achieve a balanced portfolio.
 
 - **Wealth Building**: Investing over the long term can significantly contribute to wealth building. Compound interest and regular contributions can lead to substantial growth.
+
+![](/assets/blog/money_budgeting_investing/portfolio-allocation.png)
 
 ## **Section 4: Preparing for Retirement**
 
@@ -68,7 +68,6 @@ Debt management is crucial for financial stability, and improving your credit sc
 
 - **Debt Consolidation**: Explore debt consolidation options, such as balance transfer credit cards or debt consolidation loans, to streamline debt repayment.
 
-![](/assets/blog/money_budgeting_investing/passive_income_stream.png)
 
 ## **Section 6: Passive Income and Investment Portfolio**
 
@@ -79,6 +78,8 @@ Passive income can provide financial security and independence. Additionally, bu
 - **Investment Portfolio**: Build and manage a diversified investment portfolio that aligns with your financial goals and risk tolerance.
 
 - **Dividend Stocks**: Consider including dividend-paying stocks in your portfolio for a potential source of regular income.
+
+![](/assets/blog/money_budgeting_investing/passive_income_stream.png)
 
 ## **Section 7: Financial Literacy and Education**
 
