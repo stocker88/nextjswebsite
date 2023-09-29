@@ -35,6 +35,8 @@ Money. Money comes third, because there isn’t much else you can’t afford wit
 
 Warren Buffet had pennies, he is now the most famous investor in the world, one of the most respected when it comes to stock market and money management: he understood at 11 years old what comes third is money, he understood at 11 years old what comes third is money, why do you spend it when you can focus on Love and Health and use money as a tool for freedom?
 
+![](/assets/blog/millionnairescience/howtobemillionnaire.jpeg)
+
 ## 2. Trade off your animal instincts for rational thinking
 
 In the history of mankind, money was not such a thing. People used to take logical decisions based on their instinct.
@@ -66,10 +68,6 @@ Compounding is like a snowball effect for your money.
 - Now, your total is $105, and your next earnings are calculated based on this larger amount.
 
 - This keeps happening, and your money keeps growing faster and faster.
-
-![](https://www.hellostocker.com/assets/blog/millionnairescience/snowball.png)
-
-a
 
 ![](/assets/blog/millionnairescience/snowball.png)
 
