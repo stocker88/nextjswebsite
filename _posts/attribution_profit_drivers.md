@@ -7,7 +7,7 @@ author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/performance_attribution.png'
+  url: '/assets/blog/attribution/performance_attribution.png'
 ---
 
 
@@ -85,7 +85,7 @@ The Selection Effect for the Technology industry is calculated using the below m
 * \-  The Technology industry return of the SP500
 * \-  The Technology industry return of our Portfolio
 
-$$ {SP500_{Weight}}^{TechnologyIndustry} \times ({{Portfolio_{Return}}^{TechnologyStocks}} - {SP500_{Return}}^{TechnologyIndustry}) $$
+![](/assets/blog/attribution/attributionselectionskills.png)
 
 ### **2) Allocation Skill**
 
@@ -104,7 +104,7 @@ The Allocation Effect for the Technology industry with respect to our investor's
 * \-  The Technology industry return of the SP500
 * \-  The total return of the SP500
 
-$$ ({{Portfolio_{Weight}}^{TechnologyStocks}} - {SP500_{Weight}}^{TechnologyIndustry}) \times  ({SP500_{Return}^{TechnologyIndustry}} - {SP500_{TotalReturn}}) $$  
+![](/assets/blog/attribution/attributionallocationskill.png)  
 
 
 ### **3) Interaction Skill**
@@ -130,7 +130,7 @@ The Interaction Effect for the Technology industry with respect to our investor'
 * \-  The Technology industry weight in the SP500
 * \-  The Technology industry return of the SP500
 
-$$ ({{Portfolio_{Weight}}^{TechnologyStocks}} - {SP500_{Weight}}^{TechnologyIndustry}) \times  ({Portfolio_{Return}^{TechnologyStocks}} - {SP500_{Return}^{TechnologyIndustry}}) $$       
+![](/assets/blog/attribution/attributioninteractionskills.png)
 
 
 ## **Know your strengths: outperform the market**

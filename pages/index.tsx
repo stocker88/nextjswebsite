@@ -43,12 +43,12 @@ export default function Index({ allPosts }: Props) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
           <meta name="description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
-          <meta property="og:title" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
+          <meta property="og:title" content="HelloStocker: AI Financial Advisor and Virtual Trading App" />
           <meta name="og:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
-          <meta name="twitter:title" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
+          <meta name="twitter:title" content="HelloStocker: AI Financial Advisor and Virtual Trading App"/>
           <meta name="twitter:description" content="Learn budgeting and practise investing with $10000 virtual money: passive income and financial freedom with stocks & crypto trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
