@@ -11,7 +11,7 @@ ogImage:
 ---
 
 
-You don’t need to make $300k to be rich, in fact it’s the opposite most of people I know who work and make $300k have almost no savings and no investments.
+You don’t need to make $100k to be rich, in fact it’s the opposite most of people I know who work hard to make $100k have almost no savings and no investments.
 
 Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
@@ -27,15 +27,15 @@ The brain by default is designed to seek pleasures, and in the pursuit of pleasu
 
 Health matters the most, it comes first, being healthy, being safe, even wonder why military and healthcare budgets are so high? Now you know.
 
-Love comes second, our specie is a very social species, the need for social interaction is what made, Instagram TikTok and other social platforms so famous.
+Love comes second, our specie is a very social species, the need for social interaction is what made Instagram, TikTok and other social platforms so famous.
 
 What comes third? That expensive steak you can’t afford? Or that luxurious car that costs more than your flat?
 
 Money. Money comes third, because there isn’t much else you can’t afford without money.
 
-80% of people don’t even look at prices when they go out, they don’t have a barrier check, and when they do, they don’t compare prices logically, they go for whatever gives them the « easy » pleasure: by the way that bottle of water just costed you $10, more than our budgeting course.
+80% of people don’t even look at prices when they go out, they don’t have a barrier check, and when they do, they don’t compare prices logically, they go for whatever gives them the «easiest» pleasure: by the way that bottle of water just costed you $10, more than our budgeting course.
 
-Warren Buffet had pennies, he understood what comes third is money, and this can be done with 2 easy steps.
+Warren Buffet had pennies, he is now the most famous investor in the world, one of the most respected when it comes to stock market and money management: he understood at 11 years old what comes third is money, he understood at 11 years old what comes third is money, why do you spend it when you can focus on Love and Health and use money as a tool for freedom?
 
 ## 2. Trade off your animal instincts for rational thinking
 
@@ -47,7 +47,7 @@ People would take whatever brings them the most pleasures, these same instincts 
 
 **Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
 
-The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent. We did not need any money saving hacks, there was no credit score, no retirement or real estate, all we had to do is **follow our instincts**.
+The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent. We did not need any money saving hacks, there was no credit score, no retirement or real estate, no financial goals, financial independence and financial freedom were not even a concept: all we had to do is **follow our instincts**.
 
 Think about how much expensive restaurants you’ve been to, how much worthless pairs of shoes you have? How much clothes you don’t wear in your wardrobe? How many dates cost you money and didn’t go as expected? How many times you’ve spent money to please others before thinking about yourself first?
 
@@ -67,11 +67,19 @@ Compounding is like a snowball effect for your money.
 
 - This keeps happening, and your money keeps growing faster and faster.
 
-**If you save $10 a day, in 10 years, you will have $36,000, and in 20 years, you will have $90,000.**
+![](/assets/blog/authors/snowball.png)
 
-**If you save $10 a day, and invest it with 10% return, in 10 years, you will have $62,000, and in 20 years, you will have $600,000.**
+**If you save $10 a day:**
+- in 10 years, you will have **$36,000**
+- in 20 years, you will have **$90,000**
 
-**If you save $20 a day, and invest it with 10% return, in 10 years, you will have $160,000, and in 20 years, you will have $2,000,000.**
+**If you save $10 a day, and invest it with 10% return:**
+- in 10 years, you will have **$62,000**
+- in 20 years, you will have **$600,000**
+
+**If you save $20 a day, and invest it with 10% return:**
+- in 10 years, you will have **$160,000**
+- in 20 years, you will have **$2,000,000**
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
