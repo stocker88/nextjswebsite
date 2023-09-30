@@ -34,7 +34,7 @@ export default function Index({ allPosts }: Props) {
        <Layout>
        <Home/>
         <Head>
-          <title>HelloStocker: where ChatGPT Meets Virtual Trading for Financial Success</title>
+          <title>HelloStocker: where ChatGPT meets Virtual Trading for Financial Success</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading" />

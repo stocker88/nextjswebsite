@@ -45,6 +45,36 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
+                    Test your strategies
+                    </div>
+                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
+                    Practise with Virtual money
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Image
+                    src='/assets/images/portfolio.png'
+                    width={500}
+                    height={500}
+                    alt='stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
+                    />
+                </div>
+                </center>
+              </div>
+              </div>
+              </SwiperSlide>
+             <SwiperSlide>
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
                     Your AI financial advisor available 24/7
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
@@ -72,36 +102,6 @@ export default function Swipe() {
               </div>
               </SwiperSlide>
 
-             <SwiperSlide>
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
-                    Test your strategies
-                    </div>
-                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
-                    Practise with Virtual money
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Image
-                    src='/assets/images/portfolio.png'
-                    width={500}
-                    height={500}
-                    alt='stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
-                    />
-                </div>
-                </center>
-              </div>
-              </div>
-              </SwiperSlide>
 
   <SwiperSlide>
                   <div className="container">
