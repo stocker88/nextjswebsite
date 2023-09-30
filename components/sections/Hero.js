@@ -93,7 +93,7 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                  your 24/7 Personal Finance AI Ally
+                  your 24/7 Personal Finance AI Advisor
                   <br></br>
 
 
@@ -109,7 +109,7 @@ const Hero = ({
 
 
         <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(26px,max(20px,2vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                where ChatGPT meets Virtual Trading without risking money for Financial Success
+                Don't risk your money: perfect your skills with Virtual Trading!
 
                         </div>
         <br></br>
