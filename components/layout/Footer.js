@@ -44,9 +44,11 @@ const Footer = ({
                         <Link href="posts/privacypolicy" style={{color:"white", fontFamily: 'arial'}}> Privacy Policy </Link>
 
                         <br></br>
+                        <br></br>
 
-                           <a href={`mailto:support@hellostocker.com`} style={{color:"white", fontFamily: 'arial'}}> Contact Us </a>
+                        <a href={`mailto:support@hellostocker.com`} style={{color:"white", fontFamily: 'arial'}}> Contact Us </a>
 
+                        <br></br>
                         <br></br>
 
                         Made by HelloStocker, for you
