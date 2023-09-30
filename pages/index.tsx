@@ -47,12 +47,12 @@ export default function Index({ allPosts }: Props) {
           <meta name="og:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn  passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
-          <meta property="og:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
+          <meta property="og:image" content="https://i.ibb.co/dchJ1hG/how-to-invest-chatgpt-personal-finance-stocker-ai-trading-stock.png"  />
           <meta name="twitter:title" content="HelloStocker: AI Financial Advisor and Virtual Trading App"/>
           <meta name="twitter:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn  passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading"/>
-          <meta name="twitter:image" content="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
+          <meta name="twitter:image" content="https://i.ibb.co/dchJ1hG/how-to-invest-chatgpt-personal-finance-stocker-ai-trading-stock.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
-          <link rel="apple-touch-icon" href="https://i.ibb.co/MNpTyCf/hellostocker-investing-learn-beginners-pro-strategies-trading-stocks-crypto.png"  />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/dchJ1hG/how-to-invest-chatgpt-personal-finance-stocker-ai-trading-stock.png"  />
             <script src="mathjax-config.js" defer></script>
                 <script type="text/javascript" id="MathJax-script" defer
                   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
