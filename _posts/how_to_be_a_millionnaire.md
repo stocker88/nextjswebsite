@@ -3,7 +3,7 @@ title: 'From 0 to Millionaire: A Roadmap to Wealth with Compound Interest'
 excerpt: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
 seoExcerpt:: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.png'
-date: '2023-09-20T05:35:07.322Z'
+date: '2023-09-29T05:35:07.322Z'
 author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
