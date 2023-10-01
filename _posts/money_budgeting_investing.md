@@ -1,6 +1,7 @@
 ---
 title: 'Mastering Your Financial Future: A Comprehensive Guide to Money, Budgeting, and Investing'
 excerpt: 'In this comprehensive guide, we will explore the essential components of personal finance, from money management and budgeting to investing and retirement planning.'
+seoExcerpt:: 'In this comprehensive guide, we will explore the essential components of personal finance, from money management and budgeting to investing and retirement planning.'
 coverImage: '/assets/blog/money_budgeting_investing/financegroupdiscussion.jpg'
 date: '2023-09-29T05:35:07.322Z'
 author:

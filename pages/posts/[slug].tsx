@@ -35,12 +35,12 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-32">
               <Head>
                 <title>{title}</title>
-                <meta name="description" content={post.excerpt}/>
+                <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta name="description" property="og:description" content={post.excerpt} />
-                <meta name="description" content={post.excerpt}/>
+                <meta name="description" property="og:description" content={post.seoExcerpt} />
+                <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:title" content={post.excerpt} />
-                <meta name="og:description" content={post.excerpt} />
+                <meta name="og:description" content={post.seoExcerpt} />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={post.title}/>
