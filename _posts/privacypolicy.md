@@ -30,7 +30,6 @@ ogImage:
  By [email](mailto:support@hellostocker.com) or in the app directly.
 
 
-
 ### 4. Interpretation and Definitions
 
  The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.

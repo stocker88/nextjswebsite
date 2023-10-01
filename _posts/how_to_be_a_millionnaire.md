@@ -1,9 +1,9 @@
 ---
-title: 'How to go from 0 to being a Millionnaire: Budgeting and Compound Interest'
+title: 'From 0 to Millionaire: A Roadmap to Wealth with Compound Interest'
 excerpt: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
 seoExcerpt:: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.png'
-date: '2023-09-25T05:35:07.322Z'
+date: '2023-09-20T05:35:07.322Z'
 author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
@@ -12,7 +12,7 @@ ogImage:
 ---
 
 
-You don’t need to make $100k to be rich, in fact it’s the opposite most of people I know who work hard to make $100k have almost no savings and no investments.
+You don’t need $100k income to become rich, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
 
 Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
