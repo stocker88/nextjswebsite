@@ -37,19 +37,19 @@ export default function Index({ allPosts }: Props) {
           <title>HelloStocker: where ChatGPT meets Virtual Trading for Financial Success</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading" />
+          <meta name="description" property="og:description" content="Learn how to invest in stocks and crypto with your 24/7 Finance Advisor and practise with Virtual Trading! Personal finance is the art of budgeting and investing without risking money: earn passive income and unlock financial freedom" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn  passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading"/>
+          <meta name="description" content="Learn how to invest in stocks and crypto with your 24/7 Finance Advisor and practise with Virtual Trading! Personal finance is the art of budgeting and investing without risking money: earn passive income and unlock financial freedom"/>
           <meta property="og:title" content="HelloStocker: where ChatGPT Meets Virtual Trading for Financial Success" />
-          <meta name="og:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn  passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading" />
+          <meta name="og:description" content="Learn how to invest in stocks and crypto with your 24/7 Finance Advisor and practise with Virtual Trading! Personal finance is the art of budgeting and investing without risking money: earn passive income and unlock financial freedom" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:title" content="HelloStocker: where ChatGPT Meets Virtual Trading for Financial Success"/>
-          <meta name="twitter:description" content="Smart budgeting and investing without risking money: perfect your skills with Virtual Trading, earn  passive income and unlock financial freedom with your Personal Finance AI Ally, stock investing and crypto trading"/>
+          <meta name="twitter:description" content="Learn how to invest in stocks and crypto with your 24/7 Finance Advisor and practise with Virtual Trading! Personal finance is the art of budgeting and investing without risking money: earn passive income and unlock financial freedom"/>
           <meta name="twitter:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
