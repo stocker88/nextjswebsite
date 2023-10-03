@@ -10,6 +10,7 @@ import Modal from '../elements/Modal';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from 'components/introApp';
+import IntroVideo from 'components/introVideo';
 import Container from 'components/container'
 
 const propTypes = {
@@ -96,6 +97,7 @@ const FeaturesSplit = ({
         <Swipe/>
         <br></br>
         <br></br>
+        <IntroVideo/>
         <SwipeVideo/>
         <br></br>
         <br></br>

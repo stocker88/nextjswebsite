@@ -37,6 +37,8 @@ Budgeting is the practice of allocating your income to various expenses and savi
 
 - **Budgeting Apps**: Take advantage of budgeting apps like Mint, YNAB (You Need a Budget), or Personal Capital to automate and streamline your budgeting process.
 
+![](/assets/blog/personal-finance/personalfinance.jpg)
+
 ## **Section 3: Investing Strategies for Wealth Building**
 
 Investing is a critical component of wealth building. It allows your money to work for you and potentially generate passive income. Here's what you need to know:

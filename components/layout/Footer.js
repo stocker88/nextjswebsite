@@ -46,7 +46,12 @@ const Footer = ({
                         <br></br>
                         <br></br>
 
-                        <a href={`mailto:support@hellostocker.com`} style={{color:"white", fontFamily: 'arial'}}> Contact Us </a>
+                        <a href={`mailto:support@hellostocker.com`} style={{color:"white", fontFamily: 'arial'}}> Contact Support Team </a>
+
+                        <br></br>
+                        <br></br>
+
+                        <a href={'https://www.linkedin.com/in/anesshusseinali/'} style={{color:"white", fontFamily: 'arial'}}> Contact our Founder </a>
 
                         <br></br>
                         <br></br>
