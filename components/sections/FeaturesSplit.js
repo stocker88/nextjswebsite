@@ -100,13 +100,13 @@ const FeaturesSplit = ({
 
         <br></br>
         <br></br>
-        <IntroDownload/>
-        <InstallButtonsWithQR/>
+        <IntroVideo/>
+        <SwipeVideo/>
 
         <br></br>
         <br></br>
-        <IntroVideo/>
-        <SwipeVideo/>
+        <IntroDownload/>
+        <center><InstallButtonsWithQR/></center>
 
         <br></br>
         <br></br>
