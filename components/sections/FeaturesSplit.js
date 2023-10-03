@@ -8,6 +8,7 @@ import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
 import Modal from '../elements/Modal';
 import Swipe from '../swiper/swipe';
+import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from 'components/introApp';
 import Container from 'components/container'
 
@@ -96,9 +97,6 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <SwipeVideo/>
-
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
 </Container>
