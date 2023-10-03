@@ -14,10 +14,10 @@ const InstallButtons = ({...props}) => {
        <section
              {...props}
            >
-           <a href="https://apps.apple.com/us/app/stocker/id1565527320" target="_blank">
+           <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank">
         <Image
          src={require('assets/images/appledownloadlogo.png')}
-         alt="stocker how to invest how to find the best crypto best stocks to invest Ebitda Financial risk  Fundamental analysis  Hedge fund  Economics Price to book Price to earnings Debt to equity  Short interest ratio Mutual fund"
+         alt="stocker app investing for beginners how to invest in stocks how to find the best crypto best stocks to invest cryptocurrency stocker"
         style={{width:130}}
          />
          </a>
@@ -27,7 +27,7 @@ const InstallButtons = ({...props}) => {
         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank">
            <Image
           src={require('assets/images/googledownloadlogo.png')}
-          alt="stocker how to invest how to find the best Balance sheet Earning per share Momentum  Technical analysis  Fundamental analysis Factor model Capital accumulation Capital gains tax Diversification finance "
+          alt="stocker app investing for beginners how to invest in stocks how to find the best crypto best stocks to invest cryptocurrency stocker"
          style={{width:130}}
           />
           </a>

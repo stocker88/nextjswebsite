@@ -43,7 +43,7 @@ const InstallButtons = ({...props}) => {
                            /></Zoom>
                           <br></br>
                           <br></br>
-           <a href="https://apps.apple.com/app/stocker/id1565527320" target="_blank" onClick={sendOutboundApple}>
+           <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
         <Image
          src='/assets/images/appledownloadlogo.png'
          alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
