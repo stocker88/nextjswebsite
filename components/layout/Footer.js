@@ -41,7 +41,7 @@ const Footer = ({
                   className={classes}
                 ></nav>
             <div className="footer-copyright" style={{color:"white", fontFamily: 'arial'}}>
-                        <Link href="posts/privacypolicy" style={{color:"white", fontFamily: 'arial'}}> Privacy Policy </Link>
+                        <Link href="privacypolicy" style={{color:"white", fontFamily: 'arial'}}> Privacy Policy </Link>
 
                         <br></br>
                         <br></br>
