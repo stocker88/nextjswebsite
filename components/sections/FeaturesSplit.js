@@ -11,7 +11,9 @@ import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from 'components/introApp';
 import IntroVideo from 'components/introVideo';
+import IntroDownload from 'components/introDownload';
 import Container from 'components/container'
+import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -95,15 +97,17 @@ const FeaturesSplit = ({
         <br></br>
         <IntroApp/>
         <Swipe/>
+
         <br></br>
         <br></br>
-                        <InstallButtonsWithQR/>
+        <IntroDownload/>
+        <InstallButtonsWithQR/>
 
-                  <br></br>
-                  <br></br>
-
+        <br></br>
+        <br></br>
         <IntroVideo/>
         <SwipeVideo/>
+
         <br></br>
         <br></br>
 </Container>

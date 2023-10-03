@@ -4,7 +4,6 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import InstallButtons from '../elements/InstallButtons';
-import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { openInbox } from 'react'
