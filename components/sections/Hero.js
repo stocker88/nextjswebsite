@@ -75,7 +75,7 @@ const Hero = ({
 
 
 <center>
-      <div className="container-sm" style={{  zIndex: 10 }}>
+      <div className="container-sm has-animations" style={{  zIndex: 10 }}>
 
           <div className="hero-content">
           <br></br>
@@ -93,7 +93,7 @@ const Hero = ({
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   Where ChatGPT Meets Virtual Trading
-
+                <br></br>
 
                 </div>
 
