@@ -15,6 +15,7 @@ import IntroDownload from 'components/introDownload';
 import Container from 'components/container'
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Plx from "react-plx";
+import { isMobile} from "react-device-detect";
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -87,7 +88,38 @@ const FeaturesSplit = ({
     invertDesktop && 'invert-desktop',
     alignTop && 'align-top'
   );
+if(isMobile) {(
+      <section
+        {...props}
+        className={outerClasses}
+      >
+      <Container>
+          <br></br>
+          <br></br>
 
+          <IntroApp/>
+          <Swipe/>
+          <IntroVideo/>
+          <SwipeVideo/>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <IntroDownload/>
+          <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+  </Container>
+
+      </section>
+    );
+    }
   return (
     <section
       {...props}
