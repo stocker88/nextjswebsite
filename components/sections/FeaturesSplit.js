@@ -97,6 +97,11 @@ const FeaturesSplit = ({
         <Swipe/>
         <br></br>
         <br></br>
+                        <InstallButtonsWithQR/>
+
+                  <br></br>
+                  <br></br>
+
         <IntroVideo/>
         <SwipeVideo/>
         <br></br>

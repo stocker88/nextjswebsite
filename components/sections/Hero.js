@@ -101,16 +101,6 @@ const Hero = ({
               <div className="reveal-from-bottom" data-reveal-delay="200">
           <br></br>
           <br></br>
-                <InstallButtonsWithQR/>
-
-          <br></br>
-          <br></br>
-
-
-        <br></br>
-        <br></br>
-          <br></br>
-
 
              </div>
 
