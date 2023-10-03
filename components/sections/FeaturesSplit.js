@@ -101,11 +101,11 @@ const FeaturesSplit = ({
         parallaxData={[
           {
             start: 0,
-            end: 400,
+            end: 600,
             easing: "ease-in",
             properties: [
               {
-                startValue: 0.6,
+                startValue: 0.7,
                 endValue: 1,
                 property: "scale"
               }
@@ -113,11 +113,9 @@ const FeaturesSplit = ({
           }
         ]}
         style={{
-          position: "fixed",
           left: 0,
-          top: isMobile?45: 0,
+
           width: "100%",
-          zIndex: 0
         }}
       >
 
@@ -130,15 +128,60 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <br></br>
+        <Plx
+                parallaxData={[
+                  {
+                    start: 0,
+                    end: 1400,
+                    easing: "ease-in",
+                    properties: [
+                      {
+                        startValue: 0.7,
+                        endValue: 1,
+                        property: "scale"
+                      }
+                    ]
+                  }
+                ]}
+                style={{
+                  left: 0,
+
+                  width: "100%",
+                }}
+              >
         <IntroVideo/>
         <SwipeVideo/>
+        </Plx>
+
 
         <br></br>
         <br></br>
         <br></br>
         <br></br>
+         <Plx
+                                parallaxData={[
+                                  {
+                                    start: 0,
+                                    end: 2400,
+                                    easing: "ease-in",
+                                    properties: [
+                                      {
+                                        startValue: 0.7,
+                                        endValue: 1,
+                                        property: "scale"
+                                      }
+                                    ]
+                                  }
+                                ]}
+                                style={{
+                                  left: 0,
+
+                                  width: "100%",
+                                }}
+                              >
         <IntroDownload/>
         <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+        </Plx>
         <br></br>
         <br></br>
         <br></br>

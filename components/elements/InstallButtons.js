@@ -8,29 +8,46 @@ const innerClasses = classNames(
 'hero-inner section-inner',
 );
 
+const sendOutboundApple = (event) => {
+
+  ReactGA.event({
+   category: 'StoreRedirect',
+   action: 'storeClick',
+   label: 'AAPL'
+ });
+}
+
+const sendOutboundAndroid = (event) => {
+ReactGA.event({
+category: 'StoreRedirect',
+action: 'storeClick',
+label: 'Android'
+});
+}
+
 const InstallButtons = ({...props}) => {
 
        return(
        <section
              {...props}
            >
-           <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank">
-        <Image
-         src={'/assets/images/appledownloadlogo.png'}
-         alt="hellostocker app investing for beginners how to invest in stocks how to find the best crypto best stocks to invest cryptocurrency stocker"
-        style={{width:130}}
-         />
-         </a>
+                <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
+                 <Image
+                  src='/assets/images/appledownloadlogo.png'
+                  alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                 style={{width:150}}
+                  />
+                  </a>
 
-        <br></br>
+         <div style={{paddingTop: 10}}></div>
+                 <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" onClick={sendOutboundAndroid}>
+                    <Image
+                   src='/assets/images/googledownloadlogo.png'
+                   alt="stocker how to invest how to find the best crypto best stocks to invest crypto monnaie "
+                  style={{width:150}}
+                   />
+                   </a>
 
-        <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank">
-           <Image
-          src={'/assets/images/googledownloadlogo.png'}
-          alt="hellostocker app investing for beginners how to invest in stocks how to find the best crypto best stocks to invest cryptocurrency stocker"
-         style={{width:130}}
-          />
-          </a>
           </section>
           )
 }
