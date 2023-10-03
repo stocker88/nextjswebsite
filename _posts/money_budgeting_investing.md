@@ -87,7 +87,7 @@ Passive income can provide financial security and independence. Additionally, bu
 ## **Section 7: Financial Literacy and Education**
 
 Financial literacy is an ongoing journey. Enhancing your financial knowledge is key to making informed decisions. Here's how:
--
+
 - **Financial Literacy**: Emphasize the importance of continuous learning and staying informed about financial topics.
 
 - **Financial Education**: Explore resources like books, online courses, and financial workshops to expand your financial knowledge.
