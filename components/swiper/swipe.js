@@ -79,7 +79,7 @@ export default function Swipe() {
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
 
-                    Find your Best Investing and Budgeting Strategies
+                    Find the best investing and budgeting Strategies
                     </h3>
 
                 </div>
