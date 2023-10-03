@@ -34,6 +34,8 @@ const InstallButtons = ({...props}) => {
        <section
              {...props}
            >
+           <br></br>
+         <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
                           style={{width:120}}
@@ -57,6 +59,8 @@ const InstallButtons = ({...props}) => {
          style={{width:150}}
           />
           </a>
+          <br></br>
+        <br></br>
           </section>
           )
 }
