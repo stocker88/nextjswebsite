@@ -96,7 +96,6 @@ const MeetingButton = ({
                      <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(28px,max(24px,2.3vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
                   Don't risk your money, practise with Virtual trading and AI
                      </div>
-<br></br><br></br>
         <InstallButtonsWithQR/>
 <br></br><br></br>
 

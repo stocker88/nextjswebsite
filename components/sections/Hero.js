@@ -4,6 +4,7 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import InstallButtons from '../elements/InstallButtons';
+import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { openInbox } from 'react'
@@ -92,15 +93,15 @@ const Hero = ({
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   Where ChatGPT Meets Virtual Trading
-                  <br></br>
-                  <br></br>
 
 
                 </div>
 
               <div className="reveal-from-bottom" data-reveal-delay="200">
+                <InstallButtonsWithQR/>
+
           <br></br>
-          <br></br>
+
 
              </div>
 

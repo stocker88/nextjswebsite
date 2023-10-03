@@ -100,13 +100,18 @@ const FeaturesSplit = ({
 
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         <IntroVideo/>
         <SwipeVideo/>
 
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         <IntroDownload/>
         <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
