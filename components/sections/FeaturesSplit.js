@@ -14,6 +14,7 @@ import IntroVideo from 'components/introVideo';
 import IntroDownload from 'components/introDownload';
 import Container from 'components/container'
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
+import Plx from "react-plx";
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -95,8 +96,35 @@ const FeaturesSplit = ({
     <Container>
         <br></br>
         <br></br>
+
+<Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+            easing: "ease-in",
+            properties: [
+              {
+                startValue: 0.6,
+                endValue: 1,
+                property: "scale"
+              }
+            ]
+          }
+        ]}
+        style={{
+          position: "fixed",
+          left: 0,
+          top: isMobile?45: 0,
+          width: "100%",
+          zIndex: 0
+        }}
+      >
+
+
         <IntroApp/>
         <Swipe/>
+</Plx>
 
         <br></br>
         <br></br>
