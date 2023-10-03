@@ -24,6 +24,8 @@ Most of people put a barrier in their mind, but not the right ones unfortunately
 
 The brain by default is designed to seek pleasures, and in the pursuit of pleasures we forget what’s the most important.
 
+<iframe width="642" height="1142" src="https://www.youtube.com/embed/YbEra3h44oo" title="The mathematics of compounding: personal finance can make you a millionnaire" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## 1. Money doesn't matter
 
 Health matters the most, it comes first, being healthy, being safe, even wonder why military and healthcare budgets are so high? Now you know.
