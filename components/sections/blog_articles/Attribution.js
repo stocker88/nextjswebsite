@@ -143,7 +143,7 @@ Performance Attribution
 </h3>
 
 
-<p>Stocker Performance Attribution allows you to understand what are your skills:</p>
+<p>HelloStocker Performance Attribution allows you to understand what are your skills:</p>
 <b> 1) Selection Skill</b>
  <br></br>
  <br></br>
@@ -292,7 +292,7 @@ The sum of all these effects is equal to the difference between your Portfolio P
 When you know where your performance comes from, you can beat the market.
 <br></br>
 <br></br>
-These metrics are calculated for you in <a style={{color:"#1387FF", fontWeight: 'bold'}}href="http://hellostocker.com">Stocker</a> for stocks and cryptos.
+These metrics are calculated for you in <a style={{color:"#1387FF", fontWeight: 'bold'}}href="http://hellostocker.com">HelloStocker</a> for stocks and cryptos.
 <br></br>
 <br></br>
 

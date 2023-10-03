@@ -28,7 +28,7 @@ However by understanding what stocks are driving your gains and losses (who are 
 
 
 
-Stocker Performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
+HelloStocker Performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
 
 This will explain your performance and give you the best stocks and category of stocks for you to maximize your profits. The better you are at making money with a certain company, the more money and passive income you will generate by focusing on this company. 
 
