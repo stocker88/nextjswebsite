@@ -39,7 +39,7 @@ const InstallButtons = ({...props}) => {
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
                           style={{width:120}}
-                          alt='stockerapp ai stocker app investing trading'
+                          alt='hellostocker app'
                            /></Zoom>
                           <br></br>
                           <br></br>
