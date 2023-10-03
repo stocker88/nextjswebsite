@@ -44,14 +44,14 @@ export default function SwipeVideo() {
 
              <SwiperSlide>
                   <div className="container">
-   <iframe width="321" height="571" src="https://www.youtube.com/embed/6aRrWfg7pL4" title="What would $10,000 invested in Elon Musk&#39;s Tesla be worth today?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   <center><iframe width="321" height="571" src="https://www.youtube.com/embed/6aRrWfg7pL4" title="What would $10,000 invested in Elon Musk&#39;s Tesla be worth today?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
               </div>
               </SwiperSlide>
 
 
   <SwiperSlide>
                   <div className="container">
-  <iframe width="321" height="571" src="https://www.youtube.com/embed/GaFa0YPn4fE" title="#Diamond Hands, we&#39;re not afraid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <center><iframe width="321" height="571" src="https://www.youtube.com/embed/GaFa0YPn4fE" title="#Diamond Hands, we&#39;re not afraid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
               </div>
               </SwiperSlide>
 
