@@ -94,3 +94,5 @@ Budgeting and investing apps and robo advisors such as HelloStocker app have bee
 ## 4. Conclusion
 
 If you had saved and invested this money by age 11, just like Warren Buffett did, and knew about compound interest, how much money do you think you would have today? Would you be a millionnaire by now?
+
+[If you liked this article, we suggest you have a look at this one: How to Invest in Stocks and Beat the SP500 Market: Know What You Are Best At](https://www.hellostocker.com/posts/attribution_profit_drivers)
