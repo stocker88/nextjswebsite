@@ -95,7 +95,16 @@ const Hero = ({
                   Where ChatGPT Meets Virtual Trading
 
                 </div>
+<br></br>
+                 <Image
+                  src='/assets/images/usersRating.png'
+                  alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                 style={{width:300}}
+                  />
+<div style={{ color: 'lightgrey', fontSize: "min(16px,max(12px,1.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                  +10,000 contributing users
 
+                </div>
               <div className="reveal-from-bottom" data-reveal-delay="250">
                 <InstallButtonsWithQR/>
 

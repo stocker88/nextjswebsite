@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
-      <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #4B6DFD)" }}/>
+      <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #3700B3)" }}/>
       <FeaturesSplit hasBgColor invertMobile imageFill className="illustration-section-02" />
     </>
   );
