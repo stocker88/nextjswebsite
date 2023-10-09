@@ -90,10 +90,10 @@ const Hero = ({
               />*/}
 
             <div className="container-xs">
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight" style={{ color: 'lightgrey', fontFamily: 'arial',lineHeight: 3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                             HelloStocker
                                           </h1>
-              <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+              <div style={{ color: 'lightgrey', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                    ChatGPT Meets Virtual Trading
 
                 </div>
