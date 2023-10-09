@@ -29,11 +29,8 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <div className="text-color-cyan fw-600  mb-8 center-content-mobile" style={{color:'lightgrey', fontSize:"min(20px,max(15px,1.6vw))", fontFamily: 'arial', fontWeight: 'bold'}}>
-                      The idea strikes
-                    </div>
-                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
-                    Pair Trading: Compare any company with its Competititors
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                      Find the best Investment
                     </h3>
 
                 </div>
@@ -61,11 +58,9 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <div className="text-xxs text-color-cyan fw-600  mb-8 center-content-mobile" style={{color:'lightgrey', fontSize:"min(20px,max(15px,1.6vw))",fontFamily: 'arial', fontWeight: 'bold'}}>
-                    The work begins: keep it safe
-                    </div>
-                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
-                    Practise with Virtual Trading
+
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                    Test Strategies with Virtual Trading
                     </h3>
 
                 </div>
@@ -95,12 +90,8 @@ export default function Swipe() {
                   <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <div className="text-xxs text-color-cyan fw-600 mb-8 center-content-mobile" style={{color:'lightgrey', fontSize:"min(20px,max(15px,1.6vw))",fontFamily: 'arial', fontWeight: 'bold'}}>
+                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                                   Your <a href='https://chat.openai.com/'>AI</a> Financial Advisor motivates you
-                                  </div>
-                                <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
-
-                                  Find the best investing and budgeting Strategies
                                   </h3>
 
                               </div>
@@ -126,14 +117,14 @@ export default function Swipe() {
 <br></br>
               <br></br>
               <br></br>
-
+{/*
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                     <div className="text-xxs text-color-cyan fw-600 mb-8 center-content-mobile" style={{color:'lightgrey',fontSize:"min(20px,max(15px,1.6vw))", fontFamily: 'arial', fontWeight: 'bold'}}>
                      Launch your financial success
                     </div>
-                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                     All the data you need
                     </h3>
 
@@ -157,7 +148,7 @@ export default function Swipe() {
               </div>
 
 
-{/*
+
                 <SwiperSlide>
                   <div className="container">
    <div className="split-item">

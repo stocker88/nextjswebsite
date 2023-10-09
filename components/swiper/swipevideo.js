@@ -22,7 +22,7 @@ export default function SwipeVideo() {
 
   return (
     <>
-    <Swiper effect={'coverflow'} slidesPerView={isMobile?1.2 : 2} spaceBetween={0}
+    <Swiper class="sample-slider" effect={'coverflow'} slidesPerView={isMobile?1.2 : 2} spaceBetween={0}
     centeredSlides={true} loop={true}
      coverflowEffect={{
         "rotate": 0,
@@ -32,9 +32,8 @@ export default function SwipeVideo() {
         "modifier": 0.85,
         "slideShadows": false
         }} pagination={{
-  "clickable": true
+  "clickable": true,
 }} className="mySwiper">
-
 
              <SwiperSlide>
                   <div className="container">

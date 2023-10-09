@@ -79,6 +79,8 @@ const Hero = ({
 
           <div className="hero-content">
           <br></br>
+          <br></br>
+          <br></br>
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
@@ -92,7 +94,7 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                  Where ChatGPT Meets Virtual Trading
+                   ChatGPT Meets Virtual Trading
 
                 </div>
 <br></br>
@@ -108,6 +110,11 @@ const Hero = ({
               <div className="reveal-from-bottom" data-reveal-delay="250">
                 <InstallButtonsWithQR/>
 
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <br></br>
 
 

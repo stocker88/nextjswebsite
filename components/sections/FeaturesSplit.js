@@ -88,38 +88,7 @@ const FeaturesSplit = ({
     invertDesktop && 'invert-desktop',
     alignTop && 'align-top'
   );
-if(isMobile) {(
-      <section
-        {...props}
-        className={outerClasses}
-      >
-      <Container>
-          <br></br>
-          <br></br>
 
-          <IntroApp/>
-          <Swipe/>
-          <IntroVideo/>
-          <SwipeVideo/>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <IntroDownload/>
-          <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-  </Container>
-
-      </section>
-    );
-    }
   return (
     <section
       {...props}
@@ -182,7 +151,7 @@ if(isMobile) {(
                 }}
               >
         <IntroVideo/>
-        <SwipeVideo/>
+        <center><iframe width="321" height="571" src="https://www.youtube.com/embed/YbEra3h44oo" title="The mathematics of compounding: personal finance can make you a millionnaire" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
         </Plx>
 
 

@@ -1247,7 +1247,11 @@ body {
   height: 100%;
 }
 
+.sample-slider .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
 
+}
 
 .swiper {
   width: 100%;
