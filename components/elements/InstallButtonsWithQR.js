@@ -47,7 +47,7 @@ const InstallButtons = ({...props}) => {
         <Image
          src='/assets/images/appledownloadlogo.png'
          alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
-        style={{width:150}}
+        style={{width:151}}
          />
          </a>
 
