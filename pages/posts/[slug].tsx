@@ -48,6 +48,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <script src="mathjax-config.js" defer></script>
+                <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
                 <script type="text/javascript" id="MathJax-script" defer
                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
                 </script>
