@@ -1,7 +1,7 @@
 ---
 title: 'Privacy Policy'
-excerpt: 'HelloStocker AI App: where ChatGPT Meets Virtual Trading for Financial Success'
-seoExcerpt: 'HelloStocker AI App: where ChatGPT Meets Virtual Trading for Financial Success'
+excerpt: 'HelloStocker AI App: Invest Better with AI and Economic Tools'
+seoExcerpt: 'HelloStocker AI App: Invest Better with AI and Economic Tools'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2023-03-16T05:35:07.322Z'
 author:
