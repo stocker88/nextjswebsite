@@ -8,7 +8,6 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 import { openInbox } from 'react'
-import { isMobile, browserName } from "react-device-detect";
 
 const propTypes = {
   ...SectionProps.types

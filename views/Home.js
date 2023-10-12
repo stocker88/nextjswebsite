@@ -12,7 +12,6 @@ import TitleSplit2 from '../components/sections/Title2Split';
 import TitleSplit3 from '../components/sections/Title3Split';
 import TitleSplit4 from '../components/sections/Title4Split';
 import Testimonial from '../components/sections/Testimonial';
-import { isMobile} from "react-device-detect";
 import Header from '../components/layout/Header';
 
 
