@@ -30,7 +30,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Learn with your <a href='https://chat.openai.com/'>AI</a> Financial Advisor
+                                  Get Suggestions from your <a href='https://chat.openai.com/'>AI</a> Financial Advisor
                                   </h3>
 
                               </div>
@@ -90,7 +90,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Test Strategies with Virtual Trading
+                    How much Money will you make? Try Virtual Trading
                     </h3>
 
                 </div>
@@ -174,7 +174,7 @@ export default function Swipe() {
                     alt="Features split 02"
                     width={400}
                     height={400}
-                    alt='stockerapp stocker app crypto news tracker  financial news today  Stocks going viral Crypto going viral find the next big cryptocurrency  financial analysis course  select the best stocks and crypto.   financial literacy course   learn how to invest in stocks how to invest in cryptocurrency   practise investing for beginners   Should I save or invest?  practise investing   free trading simulator Investing for beginners Asset'
+                    alt='stockerapp stocker app crypto news tracker  financial news today  Stocks going viral Crypto going viral find the next big cryptocurrency  financial analysis course  select the best stocks and crypto.   financial literacy course   Make Money how to invest in cryptocurrency   practise investing for beginners   Should I save or invest?  practise investing   free trading simulator Investing for beginners Asset'
                     />
                 </div>
                 </center>

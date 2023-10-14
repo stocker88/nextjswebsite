@@ -89,7 +89,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                  alt="make money online free investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
                  style={{width:200}}
 
                   />
@@ -98,7 +98,7 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                   Invest Better with AI and Economic Tools
+                   Find the Best Trades with AI, Economic & Social Tools
 
                 </div>
 <br></br>

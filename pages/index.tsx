@@ -34,22 +34,22 @@ export default function Index({ allPosts }: Props) {
        <Layout>
        <Home/>
         <Head>
-          <title>HelloStocker: Invest Better with AI and Economic Tools</title>
+          <title>HelloStocker: Make Money with AI Economic & Social Tools</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Learn how to invest in stocks with your AI Investment Advisor, find the best strategies with our Economic Tools and Portfolio Analytics, practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
+          <meta name="description" property="og:description" content="Find the Best Trades with you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors,  learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Learn how to invest in stocks with your AI Investment Advisor, find the best strategies with our Economic Tools and Portfolio Analytics, practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"/>
-          <meta property="og:title" content="HelloStocker: Invest Better with AI and Economic Tools" />
-          <meta name="og:description" content="Learn how to invest in stocks with your AI Investment Advisor, find the best strategies with our Economic Tools and Portfolio Analytics, practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
+          <meta name="description" content="Find the Best Trades with you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors,  learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"/>
+          <meta property="og:title" content="HelloStocker: Make Money with AI Economic & Social Tools" />
+          <meta name="og:description" content="Find the Best Trades with you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors,  learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
-          <meta name="twitter:title" content="HelloStocker: Invest Better with AI and Economic Tools"/>
-          <meta name="twitter:description" content="Learn how to invest in stocks with your AI Investment Advisor, find the best strategies with our Economic Tools and Portfolio Analytics, practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"/>
+          <meta name="twitter:title" content="HelloStocker: Find the Best Trades with AI, Economic & Social Tools"/>
+          <meta name="twitter:description" content="Find the Best Trades with you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors,  learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
