@@ -30,8 +30,8 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  your <a href='https://chat.openai.com/'>AI</a> Financial Advisor
-                                  tells you what Stocks to look for
+                                  your <a href='https://chat.openai.com/'>AI</a> Advisor sends
+                                  Stocks to Watch Live
                                   </h3>
 
                               </div>
@@ -61,7 +61,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Is it a bubble? Competition and historical Analysis
+                      Is it a Bubble? Economic Analysis
                     </h3>
 
                 </div>
@@ -73,7 +73,7 @@ export default function Swipe() {
                   )}
                   data-reveal-container=".split-item">
                   <Image
-                    src='/assets/images/tslavsrace.png'
+                    src='/assets/images/portfolio.png'
                     width={400}
                     height={400}
                     alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
@@ -91,7 +91,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    How much Money will you make? Try Virtual Trading
+                    What about others? Competition Analysis
                     </h3>
 
                 </div>
@@ -103,7 +103,7 @@ export default function Swipe() {
                   )}
                   data-reveal-container=".split-item">
                   <Image
-                    src='/assets/images/portfolio.png'
+                  src='/assets/images/tslavsrace.png'
                     width={400}
                     height={400}
                     alt='stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
