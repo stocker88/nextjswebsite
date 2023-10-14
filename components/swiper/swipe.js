@@ -30,7 +30,8 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Get Recommendations from your <a href='https://chat.openai.com/'>AI</a> Financial Advisor
+                                  your <a href='https://chat.openai.com/'>AI</a> Financial Advisor
+                                  tells you what Stocks to look for
                                   </h3>
 
                               </div>
@@ -60,7 +61,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Find the best Investment
+                      Is it a bubble? Competition and historical Analysis
                     </h3>
 
                 </div>
