@@ -34,7 +34,7 @@ export default function Index({ allPosts }: Props) {
        <Layout>
        <Home/>
         <Head>
-          <title>HelloStocker: Know what Stocks to Buy</title>
+          <title>HelloStocker: Know what Stocks to Buy Now</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Make Money with AI Economic & Social Tools: Get Recommendations from you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors, learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
@@ -48,7 +48,7 @@ export default function Index({ allPosts }: Props) {
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
-          <meta name="twitter:title" content="HelloStocker: Know what Stocks to Buy with AI, Economic & Social Tools"/>
+          <meta name="twitter:title" content="HelloStocker: Know what Stocks to Buy Now with AI, Economic & Social Tools"/>
           <meta name="twitter:description" content="Make Money with AI Economic & Social Tools: Get Recommendations from you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors, learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
