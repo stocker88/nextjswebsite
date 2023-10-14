@@ -34,7 +34,7 @@ const InstallButtons = ({...props}) => {
                 <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
                  <Image
                   src='/assets/images/appledownloadlogo.png'
-                  alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                  alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
                  style={{width:150}}
                   />
                   </a>
@@ -43,7 +43,7 @@ const InstallButtons = ({...props}) => {
                  <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" onClick={sendOutboundAndroid}>
                     <Image
                    src='/assets/images/googledownloadlogo.png'
-                   alt="stocker how to invest how to find the best crypto best stocks to invest crypto monnaie "
+                   alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
                   style={{width:150}}
                    />
                    </a>

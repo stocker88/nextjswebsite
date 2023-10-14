@@ -114,7 +114,7 @@ export default function SwipeVideo() {
                                   alt="Features split 02"
                                   width={500}
                                   height={500}
-                                  alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
                               </center>

@@ -46,7 +46,7 @@ export default function Swipe() {
                                   src='/assets/images/chatgpt.png'
                                   width={400}
                                   height={400}
-                                  alt='stockerapp stocker app stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
                               </center>
@@ -76,7 +76,7 @@ export default function Swipe() {
                     src='/assets/images/portfolio.png'
                     width={400}
                     height={400}
-                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
                 </center>
@@ -140,7 +140,7 @@ export default function Swipe() {
                     src='/assets/images/portfolioVirtual.png'
                     width={400}
                     height={400}
-                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
                 </center>
@@ -172,7 +172,7 @@ export default function Swipe() {
                     src='/assets/images/educational.png'
                     width={400}
                     height={400}
-                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
                 </center>
@@ -237,7 +237,7 @@ export default function Swipe() {
                                   alt="Features split 02"
                                   width={400}
                                   height={400}
-                                  alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
                               </center>

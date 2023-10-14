@@ -82,7 +82,7 @@ const Hero = ({
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
-              alt="stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn"
+              alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
               width={700}
               height={58.33}
               />*/}
@@ -104,7 +104,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="stocker investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                  alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
                  style={{width:250}}
                  priority
                   />
