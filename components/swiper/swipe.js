@@ -119,6 +119,36 @@ export default function Swipe() {
 <br></br>
               <br></br>
               <br></br>
+
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                      Test with Virtual Trading
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Image
+                    src='/assets/images/portfolioVirtual.png'
+                    width={400}
+                    height={400}
+                    alt='stocker ai app money income investing financial invest budgeting trading stocks crypto personalfinance learn'
+                    />
+                </div>
+                </center>
+              </div>
+              </div>
+              <br></br>
+                            <br></br>
+                            <br></br>
 {/*
                   <div className="container">
    <div className="split-item">
