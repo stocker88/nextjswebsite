@@ -11,7 +11,7 @@ import TitleSplit3 from '../components/sections/Title3Split';
 import TitleSplit4 from '../components/sections/Title4Split';
 import Testimonial from '../components/sections/Testimonial';
 import Header from '../components/layout/Header';
-import type Post from '../components/interfaces/post';
+import type Post from '../interfaces/post';
 
 type Props = {
   posts: Post[]
