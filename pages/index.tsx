@@ -32,7 +32,8 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
        <Layout>
-       <Home/>
+       {morePosts.length > 0 && <Home posts={morePosts} />}
+
         <Head>
           <title>HelloStocker: Know what Stocks to Buy with AI & Economic Analytics</title>
           <meta charSet="utf-8" />
