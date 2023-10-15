@@ -89,7 +89,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="your AI Financial Advisor sends daily Stocks to Watch, Economic & Portfolio Analytics Tools to find the best strategies, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="ChatGPT AI Financial Advisor sends daily Stocks to Watch, Economic & Portfolio Analytics Tools to find the best strategies, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:200}}
 
                   />
