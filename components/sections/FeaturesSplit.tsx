@@ -11,7 +11,7 @@ import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
 import IntroVideo from '../../components/introVideo';
-import IntroDownload from '../..components/introDownload';
+import IntroDownload from '../../components/introDownload';
 import Container from '../../components/container'
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Plx from "react-plx";
