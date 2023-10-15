@@ -1,5 +1,5 @@
 ---
-title: 'How to Beat the SP500 Market: Performance Attribution Analytics'
+title: 'How to Beat the SP500 Stock Market: Performance Attribution Analytics'
 excerpt: 'Attribution Analytics tell you what Portfolio Positions you should focus on: you can become the next Warren Buffett and learn how to beat the stock market.'
 seoExcerpt: 'By understanding what positions are driving your profits and practising with Virtual Trading, you can become the next Warren Buffett and learn how to beat the stock market.'
 coverImage: '/assets/blog/attribution/performance_attribution.png'
