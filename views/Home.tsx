@@ -25,7 +25,7 @@ const Home =  ({ posts }: Props) =>  {
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #3700B3)" }}/>
-      <FeaturesSplit hasBgColor invertMobile imageFill className="illustration-section-02" posts={posts}/>
+      {posts.length > 0 && <FeaturesSplit hasBgColor invertMobile imageFill className="illustration-section-02" posts={posts}/>}
     </>
   );
 }
