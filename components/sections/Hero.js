@@ -93,7 +93,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
+                  alt="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:250}}
                  priority
                   />
