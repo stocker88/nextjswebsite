@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: ChatGPT meets investing - Know what Stocks to Buy now</title>
+          <title>HelloStocker: ChatGPT Investing - Know what Stocks to Buy now</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Your AI Financial Advisor sends the Stocks to Watch in HelloStocker App interactive report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!" />
