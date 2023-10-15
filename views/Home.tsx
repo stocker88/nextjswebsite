@@ -1,8 +1,6 @@
 import React from 'react';
 // import sections
 import Hero from '../components/sections/Hero';
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import OldFeaturesTiles from '../components/sections/OldFeaturesTiles';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Blog from '../components/sections/Blog';
 
