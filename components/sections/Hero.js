@@ -19,12 +19,6 @@ const defaultProps = {
 
 const Hero = ({
   className,
-  topOuterDivider,
-  bottomOuterDivider,
-  topDivider,
-  bottomDivider,
-  hasBgColor,
-  invertColor,
   ...props
 }) => {
 
