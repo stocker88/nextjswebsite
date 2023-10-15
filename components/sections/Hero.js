@@ -47,7 +47,7 @@ const Hero = ({
 
   const outerClasses = classNames(
     'hero section center-content',
-    hasBgColor && 'has-bg-color',
+    'has-bg-color',
     className
   );
 
