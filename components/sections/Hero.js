@@ -89,7 +89,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="make money online free investing for beginners how to invest how to find the best crypto best stocks to invest cryptocurrency stocker crypto monnaie"
+                  alt="Make Money with AI, Economic & Social Tools: Get Recommendations from you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors, learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"
                  style={{width:200}}
 
                   />
