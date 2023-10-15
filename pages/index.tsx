@@ -37,7 +37,7 @@ export default function Index({ allPosts }: Props) {
           <title>HelloStocker: Know what Stocks to Buy with AI & Economic Analysis</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Make Money with AI, Economic & Social Tools: Get Recommendations from you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors, learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading" />
+          <meta name="description" property="og:description" content="your AI Financial Advisor sends daily Stocks to Watch, Economic & Portfolio Analytics Tools to find the best strategies, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />

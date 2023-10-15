@@ -89,7 +89,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="Make Money with AI, Economic & Social Tools: Get Recommendations from you AI Financial Advisor, find the best strategies with our Economic and Portfolio Analytics Tools, join a social community of investors, learn how to invest in Stocks and practise with virtual trading for Financial Success! Earn passive income and unlock financial freedom with stock market and crypto trading"
+                  alt="your AI Financial Advisor sends daily Stocks to Watch, Economic & Portfolio Analytics Tools to find the best strategies, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:200}}
 
                   />
