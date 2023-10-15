@@ -177,7 +177,8 @@ const FeaturesSplit = ({
               >
 
         <IntroVideo/>
-        <center><iframe width="321" height="571" src="https://youtube.com/embed/KkJQW4PVb6Q" title="Make Money with Investing" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+        <center><iframe width="321" height="571" src="https://www.youtube.com/embed/KkJQW4PVb6Q" title="Make Money with Investing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+        
         </Plx>
 
 
