@@ -16,6 +16,12 @@ import Container from 'components/container'
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Plx from "react-plx";
 import { isMobile} from "react-device-detect";
+import PostPreview from './../post-preview'
+import type Post from '../../interfaces/post'
+
+type Props = {
+  posts: Post[]
+}
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -30,6 +36,7 @@ const innerClasses = classNames(
 );
 
 const FeaturesSplit = ({
+  posts,
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -125,6 +132,24 @@ const FeaturesSplit = ({
         <Swipe/>
 </Plx>
 
+
+                  <center><div style={{maxWidth: "550px"}}>  <div className="grid grid-cols-1 md:grid-cols- md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+                      {[posts[2]].map((post) => (
+                        <PostPreview
+                          key={post.slug}
+                          title={post.title}
+                          coverImage={post.coverImage}
+                          date={post.date}
+                          author={post.author}
+                          slug={post.slug}
+                          excerpt={post.excerpt}
+                        />
+                      ))}
+                    </div>
+                    </div>
+                    </center>
+
+
         <br></br>
         <br></br>
         <br></br>
@@ -150,6 +175,7 @@ const FeaturesSplit = ({
                   width: "100%",
                 }}
               >
+
         <IntroVideo/>
         <center><iframe width="321" height="571" src="https://youtube.com/embed/KkJQW4PVb6Q" title="Make Money with Investing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
         </Plx>

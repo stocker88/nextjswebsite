@@ -13,15 +13,19 @@ import TitleSplit3 from '../components/sections/Title3Split';
 import TitleSplit4 from '../components/sections/Title4Split';
 import Testimonial from '../components/sections/Testimonial';
 import Header from '../components/layout/Header';
+import type Post from '../components/interfaces/post';
 
+type Props = {
+  posts: Post[]
+}
 
-const Home = () => {
+const Home =  ({ posts }: Props) =>  {
 
   return (
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #3700B3)" }}/>
-      <FeaturesSplit hasBgColor invertMobile imageFill className="illustration-section-02" />
+      <FeaturesSplit hasBgColor invertMobile imageFill className="illustration-section-02" posts={posts}/>
     </>
   );
 }
