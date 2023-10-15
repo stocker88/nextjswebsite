@@ -89,7 +89,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="ChatGPT AI Financial Advisor sends daily Stocks to Watch, Economic & Portfolio Analytics Tools to find the best strategies, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics Tools, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:200}}
 
                   />
@@ -98,7 +98,7 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                   Know what Stocks to Buy
+                   Know what Stocks to Buy in an AI report with Economics & Portfolio Analytics
 
                 </div>
 <br></br>
