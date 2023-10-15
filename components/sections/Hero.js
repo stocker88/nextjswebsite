@@ -78,7 +78,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="Your AI Financial Advisor sends the Stocks to Watch in HelloStocker App interactive report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:200}}
 
                   />
@@ -87,13 +87,13 @@ const Hero = ({
                                             HelloStocker
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(32px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                   Economics & AI Portfolio Analytics
+                   ChatGPT meets Investing
 
                 </div>
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="Your AI Financial Advisor sends the Stocks to Watch in HelloStocker App interactive report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:250}}
                  priority
                   />
