@@ -38,15 +38,8 @@ const innerClasses = classNames(
 const FeaturesSplit = ({
   posts,
   className,
-  topOuterDivider,
-  bottomOuterDivider,
-  topDivider,
-  bottomDivider,
   hasBgColor,
-  invertColor,
   invertMobile,
-  invertDesktop,
-  alignTop,
   imageFill,
   ...props
 }) => {
