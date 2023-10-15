@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Know what Stocks to Buy with AI & Economic Analytics</title>
+          <title>HelloStocker AI & Economic Analytics: Know what Stocks to Buy now</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!" />
@@ -49,7 +49,7 @@ export default function Index({ allPosts }: Props) {
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
-          <meta name="twitter:title" content="HelloStocker: Know what Stocks to Buy Now with AI, Economic & Social Tools"/>
+          <meta name="twitter:title" content="HelloStocker AI & Economic Analytics sends you Stocks to Buy now"/>
           <meta name="twitter:description" content="Your ChatGPT AI Financial Advisor sends the Stocks to Watch in a report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"/>
           <meta name="twitter:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
