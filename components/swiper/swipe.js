@@ -62,7 +62,6 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  your <a href='https://chat.openai.com/'>AI</a> Advisor sends
                                   Find the Best Dividends Stocks, Value Stocks etc.
                                   </h3>
 
