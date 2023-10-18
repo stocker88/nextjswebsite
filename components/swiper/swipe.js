@@ -57,6 +57,37 @@ export default function Swipe() {
               <br></br>
               <br></br>
 
+
+                  <div className="container">
+                 <div className="split-item">
+                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                  your <a href='https://chat.openai.com/'>AI</a> Advisor sends
+                                  Find the Best Dividends Stocks, Value Stocks etc.
+                                  </h3>
+
+                              </div>
+               <center>
+                              <div className={
+                                classNames(
+                                  'split-item-image center-content-mobile reveal-from-bottom',
+                                   'split-item-image-fill'
+                                )}
+                                data-reveal-container=".split-item">
+                                <Image
+                                  src='/assets/images/dividends.png'
+                                  width={400}
+                                  height={400}
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  />
+                              </div>
+                              </center>
+                            </div>
+                            </div>
+
+<br></br>
+              <br></br>
+              <br></br>
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
