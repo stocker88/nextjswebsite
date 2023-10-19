@@ -78,7 +78,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="Your AI Financial Advisor sends the Stocks to Watch in HelloStocker App interactive report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="Make money with the power of Big Data! Your ChatGPT like AI Advisor will send you investment and economic analysis with the Stocks to Buy now: join a social community of investors, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:200}}
 
                   />
@@ -93,7 +93,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="Your AI Financial Advisor sends the Stocks to Watch in HelloStocker App interactive report with Economic & Portfolio Analytics, join the best traders, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
+                  alt="Make money with the power of Big Data! Your ChatGPT like AI Advisor will send you investment and economic analysis with the Stocks to Buy now: join a social community of investors, learn how to invest in Stocks with virtual trading! Passive income & financial freedom with stock market & crypto trading, make money online now!"
                  style={{width:250}}
                  priority
                   />
