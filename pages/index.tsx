@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Stocks to Watch and AI Trading Tools</title>
+          <title>HelloStocker: Stocks to Invest In</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT" />
@@ -44,7 +44,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
           <meta name="description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT"/>
-          <meta property="og:title" content="HelloStocker: Stocks to Watch and AI Trading Tools" />
+          <meta property="og:title" content="HelloStocker: Stocks to Invest In" />
           <meta name="og:description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
