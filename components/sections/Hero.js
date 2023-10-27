@@ -98,7 +98,7 @@ const Hero = ({
                  priority
                   />
 <div style={{ color: 'lightgrey', fontSize: "min(16px,max(12px,1.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                  +10,000 subscribers
+                  +4,000 subscribers
 
                 </div>
               <div className="reveal-from-bottom" data-reveal-delay="250">
