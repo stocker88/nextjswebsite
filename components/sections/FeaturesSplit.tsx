@@ -135,7 +135,36 @@ const FeaturesSplit = ({
                     </div>
                     </center>
 */}
+   <br></br>
+        <br></br>
 
+        <br></br>
+        <br></br>
+
+         <Plx
+                                parallaxData={[
+                                  {
+                                    start: 0,
+                                    end: 2400,
+                                    easing: "ease-in",
+                                    properties: [
+                                      {
+                                        startValue: 0.7,
+                                        endValue: 1,
+                                        property: "scale"
+                                      }
+                                    ]
+                                  }
+                                ]}
+                                style={{
+                                  left: 0,
+
+                                  width: "100%",
+                                }}
+                              >
+        <IntroDownload/>
+        <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+        </Plx>
         <br></br>
         <br></br>
         <br></br>
@@ -168,37 +197,7 @@ const FeaturesSplit = ({
         </Plx>
 
 
-        <br></br>
-        <br></br>
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-         <Plx
-                                parallaxData={[
-                                  {
-                                    start: 0,
-                                    end: 2400,
-                                    easing: "ease-in",
-                                    properties: [
-                                      {
-                                        startValue: 0.7,
-                                        endValue: 1,
-                                        property: "scale"
-                                      }
-                                    ]
-                                  }
-                                ]}
-                                style={{
-                                  left: 0,
-
-                                  width: "100%",
-                                }}
-                              >
-        <IntroDownload/>
-        <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
-        </Plx>
         <br></br>
         <br></br>
         <br></br>

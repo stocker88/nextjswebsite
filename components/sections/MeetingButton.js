@@ -95,7 +95,7 @@ const MeetingButton = ({
 
                      <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(28px,max(24px,2.3vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
 
-                  Transform Your Financial Future: Get Started Today
+                  Transform Your Financial Future: Start Now
                      </div>
         <InstallButtonsWithQR/>
 <br></br><br></br>
