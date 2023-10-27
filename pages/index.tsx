@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Stocks to Buy Before They Skyrocket</title>
+          <title>HelloStocker: Invest with AI</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data" />
@@ -44,7 +44,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
           <meta name="description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"/>
-          <meta property="og:title" content="HelloStocker: Stocks to Buy Before They Skyrocket" />
+          <meta property="og:title" content="HelloStocker: Invest with AI" />
           <meta name="og:description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />

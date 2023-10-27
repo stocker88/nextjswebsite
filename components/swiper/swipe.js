@@ -30,7 +30,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Live Analyst Forecasts
+                                  Your Personal AI Advisor
                                   </h3>
 
                               </div>
@@ -61,7 +61,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Predicted with Economics
+                      Sends You Hot Stocks Before They Blow Up
                     </h3>
 
                 </div>
@@ -91,7 +91,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Get $30 Dividend Per $100 Invested
+                                  Stocks That Pay 30% Dividend Yield
                                   </h3>
 
                               </div>
@@ -122,7 +122,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Warrent Buffet's Trades
+                    With Competition Analysis
                     </h3>
 
                 </div>
@@ -156,7 +156,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Unlimited Virtual Money
+                      And Unlimited Virtual Money
                     </h3>
 
                 </div>
