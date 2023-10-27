@@ -30,7 +30,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Your Personal AI Advisor
+                                 HelloStocker AI Advisor Predicted Netflix +15% Move The Day Before
                                   </h3>
 
                               </div>
@@ -61,7 +61,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Sends You Hot Stocks Before They Blow Up
+                     HelloStocker AI Advisor Predicted Nvidia Spike
                     </h3>
 
                 </div>
@@ -91,7 +91,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Stocks That Pay 30% Dividend Yield
+                                 Find Value Stocks That Pay 30% Dividend Yield
                                   </h3>
 
                               </div>
@@ -122,7 +122,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    With Competition Analysis
+                    Competition Analysis And Pair Trading
                     </h3>
 
                 </div>
@@ -145,8 +145,6 @@ export default function Swipe() {
               </div>
 
 
-
-
 <br></br>
               <br></br>
               <br></br>
@@ -156,7 +154,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      And Unlimited Virtual Money
+                      Unlimited Virtual Money
                     </h3>
 
                 </div>
