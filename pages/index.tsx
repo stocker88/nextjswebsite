@@ -35,22 +35,22 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Stocks to Invest In</title>
+          <title>HelloStocker: Stocks to Buy Before They Skyrocket</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT" />
+          <meta name="description" property="og:description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT"/>
-          <meta property="og:title" content="HelloStocker: Stocks to Invest In" />
-          <meta name="og:description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT" />
+          <meta name="description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"/>
+          <meta property="og:title" content="HelloStocker: Stocks to Buy Before They Skyrocket" />
+          <meta name="og:description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:title" content="HelloStocker: ChatGPT meets investing - Know what Stocks to Buy now"/>
-          <meta name="twitter:description" content="Receive financial analysis with stocks to buy now, make informed decisions with Big Data and AI, get tips from a social community of technical investors, learn how to invest in Stocks with virtual trading & ChatGPT"/>
+          <meta name="twitter:description" content="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"/>
           <meta name="twitter:image" content="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/SJ9Xrx5/howtoinvest-money-investing-budgeting-stock-crypto-hellostocker-app-ai-chatgpt.png"  />
