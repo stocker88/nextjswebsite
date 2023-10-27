@@ -141,8 +141,6 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
 
          <Plx
                                 parallaxData={[
@@ -170,6 +168,9 @@ const FeaturesSplit = ({
         </Plx>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+
         <br></br>
         <br></br>
         <Plx
