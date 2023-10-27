@@ -64,6 +64,7 @@ if(isMobile) {
            >
            <br></br>
          <br></br>
+         <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
                           style={{width:120}}
@@ -71,7 +72,7 @@ if(isMobile) {
                            /></Zoom>
                           <br></br>
                           <br></br>
-
+<br></br><br></br>
           </section>
           )
 }
