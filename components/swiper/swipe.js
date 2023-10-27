@@ -30,7 +30,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                 We Predicted Netflix +15% Overnight Spike The Day Before
+                                 We Predicted Netflix +15% Spike The Day Before
                                   </h3>
 
                               </div>
