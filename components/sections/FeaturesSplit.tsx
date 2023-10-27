@@ -118,7 +118,7 @@ const FeaturesSplit = ({
         <Swipe/>
 </Plx>
 
-
+{/*
                   <center><div style={{maxWidth: "550px"}}>  <div className="grid grid-cols-1 md:grid-cols- md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
                       {[posts[2]].map((post) => (
                         <PostPreview
@@ -134,7 +134,7 @@ const FeaturesSplit = ({
                     </div>
                     </div>
                     </center>
-
+*/}
 
         <br></br>
         <br></br>

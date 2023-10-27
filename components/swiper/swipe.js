@@ -30,8 +30,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  your <a href='https://chat.openai.com/'>AI</a> Advisor sends
-                                  Stocks to Watch Live
+                                  Get Interactive Analysis With Stocks to Buy
                                   </h3>
 
                               </div>
@@ -59,39 +58,10 @@ export default function Swipe() {
 
 
                   <div className="container">
-                 <div className="split-item">
-                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Find the Best Dividends Stocks, Value Stocks etc.
-                                  </h3>
-
-                              </div>
-               <center>
-                              <div className={
-                                classNames(
-                                  'split-item-image center-content-mobile reveal-from-bottom',
-                                   'split-item-image-fill'
-                                )}
-                                data-reveal-container=".split-item">
-                                <Image
-                                  src='/assets/images/dividends.png'
-                                  width={400}
-                                  height={400}
-                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
-                                  />
-                              </div>
-                              </center>
-                            </div>
-                            </div>
-
-<br></br>
-              <br></br>
-              <br></br>
-                  <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Is it a Bubble? Economic Analysis
+                      Stocks That Will Blow Up
                     </h3>
 
                 </div>
@@ -116,12 +86,43 @@ export default function Swipe() {
                             <br></br>
                             <br></br>
 
+
+                  <div className="container">
+                 <div className="split-item">
+                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                  Stocks That Pay 30% Dividend Yield
+                                  </h3>
+
+                              </div>
+               <center>
+                              <div className={
+                                classNames(
+                                  'split-item-image center-content-mobile reveal-from-bottom',
+                                   'split-item-image-fill'
+                                )}
+                                data-reveal-container=".split-item">
+                                <Image
+                                  src='/assets/images/dividends.png'
+                                  width={400}
+                                  height={400}
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  />
+                              </div>
+                              </center>
+                            </div>
+                            </div>
+
+<br></br>
+              <br></br>
+              <br></br>
+
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Is it the Best Trade? Competition Analysis
+                    Warrent Buffet's Trades
                     </h3>
 
                 </div>
@@ -155,7 +156,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Performance Attribution Analytics
+                      Try It In Virtual Trading: No Money Needed
                     </h3>
 
                 </div>
