@@ -30,7 +30,9 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                 We Predicted Netflix +15% Spike The Day Before
+                                 Netflix +15% Spike
+                                    <br></br>
+                                    Predicted The Day Before
                                   </h3>
 
                               </div>
@@ -61,7 +63,9 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                     Is Nvidia a Bubble? Economic Analysis
+                     Is Nvidia a Bubble?
+                        <br></br>
+                        Economic Analysis
                     </h3>
 
                 </div>
@@ -91,7 +95,8 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Value Dividend Stocks That Pay 30% Yield
+                                  Value Stocks That Pay
+                                    <br></br>30% Dividend Yield
                                   </h3>
 
                               </div>
@@ -122,7 +127,8 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Is It The Best Trade? Competition Analysis
+                    Is It The Best Trade?
+                      <br></br>Competition Analysis
                     </h3>
 
                 </div>
