@@ -164,13 +164,6 @@ const FeaturesSplit = ({
                                 }}
                               >
         <IntroDownload/>
-          <center><Image
-                          src='/assets/images/hellostocker.png'
-                          alt="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"
-                         style={{width:120}}
-
-                          />
-                          </center>
         <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
         </Plx>
         <br></br>
