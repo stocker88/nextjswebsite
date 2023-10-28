@@ -35,6 +35,12 @@ if(isMobile) {
                      {...props}
                    >
                    <br></br>
+                           <Image
+                                           src='/assets/images/hellostocker.png'
+                                           alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
+                                          style={{width:151}}
+
+                                           />
                  <br></br>
                        <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
                     <Image
@@ -64,21 +70,18 @@ if(isMobile) {
            >
            <br></br>
          <br></br>
-         <br></br>
         <Image
                         src='/assets/images/hellostocker.png'
                         alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
-                       style={{width:120}}
+                       style={{width:140}}
 
                         />
          <br></br>
-         <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
-                          style={{width:120}}
+                          style={{width:140}}
                           alt='hellostocker ai app'
                            /></Zoom>
-                          <br></br>
                           <br></br>
 <br></br><br></br>
           </section>
