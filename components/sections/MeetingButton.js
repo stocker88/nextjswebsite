@@ -82,29 +82,25 @@ const MeetingButton = ({
   return (
     <section
       {...props}
-      className={outerClasses}
+      className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12"
       id="MeetingButton"
     >
+
 <center>
 
  <div className="container-sm reveal-from-bottom">
-
-
-<br></br><br></br>
 <br></br>
-
-                     <div style={{ color: 'white',  fontFamily: 'arial', fontSize: "min(28px,max(24px,2.3vw))", fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
-
+      <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white'}}>
                   Transform Your Financial Future: Start Now
+     </h2>
                      </div>
         <InstallButtonsWithQR/>
 <br></br><br></br>
-
-
-
-    </div>
+</div>
     </center>
-    </section>
+</section>
+
+
 
   );
 }
