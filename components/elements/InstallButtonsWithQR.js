@@ -67,7 +67,7 @@ if(isMobile) {
          <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
-                          style={{width:120}}
+                          style={{width:140}}
                           alt='hellostocker app'
                            /></Zoom>
                           <br></br>

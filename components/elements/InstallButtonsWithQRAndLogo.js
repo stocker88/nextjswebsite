@@ -73,13 +73,13 @@ if(isMobile) {
         <Image
                         src='/assets/images/hellostocker.png'
                         alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
-                       style={{width:140}}
+                       style={{width:160}}
 
                         />
          <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.png'}
-                          style={{width:140}}
+                          style={{width:160}}
                           alt='hellostocker ai app'
                            /></Zoom>
                           <br></br>
