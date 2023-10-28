@@ -78,7 +78,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"
+                  alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
                  style={{width:200}}
 
                   />
@@ -93,7 +93,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="HelloStocker uses market big data to find the stocks to buy now: unlock the power of AI to quickly analyze Hedge Fund, Government and Company Financial data"
+                  alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
                  style={{width:250}}
                  priority
                   />
