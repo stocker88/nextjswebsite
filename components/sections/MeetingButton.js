@@ -91,7 +91,7 @@ const MeetingButton = ({
  <div className="container-sm reveal-from-bottom">
 <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white'}}>
-                  Transform Your Financial Future: Start Now
+                  Transform Your Financial Future: Install Now
      </h2>
                      </div>
         <InstallButtonsWithQR/>
