@@ -30,9 +30,8 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                 Netflix +15% Spike
-                                    <br></br>
-                                    Predicted The Day Before
+
+                                Your AI Advisor Sends Stocks To Watch
                                   </h3>
 
                               </div>
@@ -63,9 +62,9 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                     Is Nvidia a Bubble?
+
                         <br></br>
-                        Economic Analysis
+                        Economic Predictions
                     </h3>
 
                 </div>
@@ -95,8 +94,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Value Stocks That Pay
-                                    <br></br>30% Dividend Yield
+                                  Get Paid $40 per $100 Invested
                                   </h3>
 
                               </div>
@@ -127,8 +125,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Is It The Best Trade?
-                      <br></br>Competition Analysis
+                    Comparison: Pick The Best
                     </h3>
 
                 </div>
@@ -160,7 +157,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Unlimited Virtual Money
+                      Unlimited Virtual Money: Just Do It
                     </h3>
 
                 </div>
