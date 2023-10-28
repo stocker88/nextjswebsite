@@ -7,7 +7,7 @@ import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
 import Modal from '../elements/Modal';
-
+import Container from '../../components/container'
 import SectionHeader from './partials/SectionHeader';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -82,10 +82,11 @@ const MeetingButton = ({
   return (
     <section
       {...props}
-      className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12"
+      className="flex-col md:flex-row flex items-center md:justify-between "
       id="MeetingButton"
     >
 
+<Container>
 <center>
 
  <div className="container-sm reveal-from-bottom">
@@ -97,9 +98,8 @@ const MeetingButton = ({
         <InstallButtonsWithQR/>
 <br></br><br></br>
     </center>
+</Container>
 </section>
-
-
 
   );
 }
