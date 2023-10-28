@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Your AI Advisor Sends Stocks To Watch
+                                HelloStocker AI Sends Stocks To Watch
                                   </h3>
 
                               </div>
@@ -64,7 +64,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        Economic Predictions
+                        Economic Predictions: Buy Value
                     </h3>
 
                 </div>
@@ -94,7 +94,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Get Paid $40 per $100 Invested
+                                  Cash $40 Dividends Per $100 Invested
                                   </h3>
 
                               </div>

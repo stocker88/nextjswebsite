@@ -13,7 +13,7 @@ import IntroApp from '../../components/introApp';
 import IntroVideo from '../../components/introVideo';
 import IntroDownload from '../../components/introDownload';
 import Container from '../../components/container'
-import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
+import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import Plx from "react-plx";
 import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
@@ -164,7 +164,7 @@ const FeaturesSplit = ({
                                 }}
                               >
         <IntroDownload/>
-        <center><InstallButtonsWithQR style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
         </Plx>
         <br></br>
         <br></br>
