@@ -96,7 +96,6 @@ const MeetingButton = ({
                      </div>
         <InstallButtonsWithQR/>
 <br></br><br></br>
-</div>
     </center>
 </section>
 
