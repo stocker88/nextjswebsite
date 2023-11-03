@@ -37,7 +37,7 @@ if(isMobile) {
                    <br></br>
                            <Image
                                            src='/assets/images/hellostocker.png'
-                                           alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
+                                           alt="We analyze hedge fund trading economic and financial data to find the best stocks and crypto to invest in and deliver an AI powered trading tool on a unified investment social platform driven by ChatGPT 4"
                                           style={{width:151}}
 
                                            />
@@ -72,7 +72,7 @@ if(isMobile) {
          <br></br>
         <Image
                         src='/assets/images/hellostocker.png'
-                        alt="Make informed decisions: unlock the power of AI to find the best stocks to buy now. HelloStocker AI processes Hedge Fund, Government and Company Financial data"
+                        alt="We analyze hedge fund trading economic and financial data to find the best stocks and crypto to invest in and deliver an AI powered trading tool on a unified investment social platform driven by ChatGPT 4"
                        style={{width:160}}
 
                         />
