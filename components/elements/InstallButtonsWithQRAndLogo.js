@@ -37,7 +37,7 @@ if(isMobile) {
                    <br></br>
                            <Image
                                            src='/assets/images/hellostocker.png'
-                                           alt="We analyze hedge fund trading economic and financial data to find the best stocks and crypto to invest in and deliver an AI powered trading tool on a unified investment social platform driven by ChatGPT 4"
+                                           alt="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"
                                           style={{width:151}}
 
                                            />
@@ -72,7 +72,7 @@ if(isMobile) {
          <br></br>
         <Image
                         src='/assets/images/hellostocker.png'
-                        alt="We analyze hedge fund trading economic and financial data to find the best stocks and crypto to invest in and deliver an AI powered trading tool on a unified investment social platform driven by ChatGPT 4"
+                        alt="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"
                        style={{width:160}}
 
                         />
