@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Daily Stocks To Watch
+                                Receive Stocks To Buy - DM Your Advisor
                                   </h3>
 
                               </div>
@@ -53,38 +53,6 @@ export default function Swipe() {
                             </div>
                             </div>
 
-<br></br>
-              <br></br>
-              <br></br>
-
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-
-                        <br></br>
-                        Economic Value Predictions
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Image
-                    src='/assets/images/portfolio.png'
-                    width={400}
-                    height={400}
-                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
-                    />
-                </div>
-                </center>
-              </div>
-              </div>
               <br></br>
                             <br></br>
                             <br></br>
@@ -94,7 +62,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Cash $40 Dividends Per $100
+                                  Dividend Stocks That Pay Your Rent
                                   </h3>
 
                               </div>
@@ -120,12 +88,43 @@ export default function Swipe() {
               <br></br>
               <br></br>
 
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                      Replicate Top Investors With Virtual Trading
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Image
+                    src='/assets/images/portfolioVirtual.png'
+                    width={400}
+                    height={400}
+                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                    />
+                </div>
+                </center>
+              </div>
+              </div>
+
+<br></br>
+              <br></br>
+              <br></br>
+
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Pick The Best Competitor
+                    Too Late For Tesla? Look At Competitors
                     </h3>
 
                 </div>
@@ -157,7 +156,9 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Trade With Unlimited Money
+
+                        <br></br>
+                        Install Now
                     </h3>
 
                 </div>
@@ -169,7 +170,7 @@ export default function Swipe() {
                   )}
                   data-reveal-container=".split-item">
                   <Image
-                    src='/assets/images/portfolioVirtual.png'
+                    src='/assets/images/portfolio.png'
                     width={400}
                     height={400}
                     alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
@@ -178,6 +179,7 @@ export default function Swipe() {
                 </center>
               </div>
               </div>
+
               <br></br>
                             <br></br>
                             <br></br>

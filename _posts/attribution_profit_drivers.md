@@ -2,13 +2,13 @@
 title: 'How to Beat the SP500 Stock Market: Performance Attribution Analytics'
 excerpt: 'Attribution Analytics tell you what Portfolio Positions you should focus on: you can become the next Warren Buffett and learn how to beat the stock market.'
 seoExcerpt: 'By understanding what positions are driving your profits and practising with Virtual Trading, you can become the next Warren Buffett and learn how to beat the stock market.'
-coverImage: '/assets/blog/attribution/performance_attribution.png'
+coverImage: '/assets/blog/attribution/performance_attribution.jpg'
 date: '2023-09-20T05:35:07.322Z'
 author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-  url: '/assets/blog/attribution/performance_attribution.png'
+  url: '/assets/blog/attribution/performance_attribution.jpg'
 ---
 
 
@@ -58,8 +58,6 @@ To reach financial freedom, and make as much money as you can, you must understa
 
 Do you know your strengths? Do you know who to ask for help on things you're not so good at? Don't worry, we are here to help you!
 
-
-![](/assets/blog/attribution/investinganalysis.jpg)
 
 ## **The Math behind**
 

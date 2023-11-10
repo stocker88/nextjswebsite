@@ -2,13 +2,13 @@
 title: 'From Budgeting to Investing: A Comprehensive Guide to Personal Finance'
 excerpt: 'In this comprehensive article, we will dive into the fundamentals of personal finance, including budgeting, saving, investing, and more'
 seoExcerpt: '1) Understanding Budgeting and Its Importance 2) Strategies for Managing Debt and Consolidation 3) Tips for Effective Saving and Investment 4) Your Investment Options: Stocks, Bonds, and Mutual Funds 5) How to select the Right Investment Options 6) Retirement Planning: Why it is important and Where to Start 7) Common Pitfalls to Avoid in Personal Finance Management'
-coverImage: '/assets/blog/personal-finance/personal-finance.png'
+coverImage: '/assets/blog/personal-finance/personalfinance.jpg'
 date: '2023-09-25T05:35:07.322Z'
 author:
   name: Aness Hussein Ali
   picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-  url: '/assets/blog/personal-finance/personal-finance.png'
+  url: '/assets/blog/personal-finance/personalfinance.jpg'
 ---
 
 
