@@ -48,8 +48,6 @@ For those grappling with credit card debt, a balance transfer credit card could 
 
 Remember, the crux of managing debt lies in making consistent payments and resisting the temptation to accumulate new debt. By formulating and sticking to a comprehensive debt repayment plan, you can seize control of your finances and reach your financial objectives.
 
-![](/assets/blog/personal-finance/debtavalanche.png)
-
 ## 3) Tips for Effective Saving and Investment:
 
 Saving and investing are pivotal to achieving your financial goals and securing your future. Here are some valuable tips to help you save and invest wisely:

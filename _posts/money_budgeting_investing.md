@@ -82,7 +82,7 @@ Passive income can provide financial security and independence. Additionally, bu
 
 - **Dividend Stocks**: Consider including dividend-paying stocks in your portfolio for a potential source of regular income.
 
-![](/assets/blog/money_budgeting_investing/passive_income_stream.png)
+![](/assets/blog/money_budgeting_investing/passive_income_stream.jpg)
 
 ## **Section 7: Financial Literacy and Education**
 
