@@ -6,7 +6,6 @@ import Button from '../elements/Button';
 import InstallButtons from '../elements/InstallButtons';
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
-import Modal from '../elements/Modal';
 import { openInbox } from 'react'
 
 const propTypes = {
@@ -24,20 +23,9 @@ const Hero = ({
 
 
   const [pictureActive, setPictureActive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
   const openPicture = (e) => {
     e.preventDefault();
     setPictureActive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
   }
 
   const closePicture = (e) => {

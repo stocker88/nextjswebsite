@@ -6,7 +6,6 @@ import Image from '../elements/Image';
 import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
-import Modal from '../elements/Modal';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
@@ -43,29 +42,6 @@ const FeaturesSplit = ({
   imageFill,
   ...props
 }) => {
-
-  const [videoModalActive, setVideomodalactive] = useState(false);
-  const [pictureActive, setPictureActive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
-  const openPicture = (e) => {
-    e.preventDefault();
-    setPictureActive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }
-
-  const closePicture = (e) => {
-    e.preventDefault();
-    setPictureActive(false);
-  }
 
   const outerClasses = classNames(
     'features-split section',

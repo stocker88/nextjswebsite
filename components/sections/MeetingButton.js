@@ -6,7 +6,6 @@ import Image from '../elements/Image';
 import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
-import Modal from '../elements/Modal';
 import Container from '../../components/container'
 import SectionHeader from './partials/SectionHeader';
 import Zoom from 'react-medium-image-zoom'
@@ -30,29 +29,6 @@ const innerClasses = classNames(
 const MeetingButton = ({
   ...props
 }) => {
-
-  const [videoModalActive, setVideomodalactive] = useState(false);
-  const [pictureActive, setPictureActive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
-  const openPicture = (e) => {
-    e.preventDefault();
-    setPictureActive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }
-
-  const closePicture = (e) => {
-    e.preventDefault();
-    setPictureActive(false);
-  }
 
   const outerClasses = classNames(
     'features-split section',
