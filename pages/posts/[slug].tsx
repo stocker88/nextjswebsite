@@ -42,7 +42,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
                 <meta name="description" property="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
-                <meta name="description" content={description}/>
+                <meta name="description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more"/>
                 <meta property="og:title" content={post.title} />
                 <meta name="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
