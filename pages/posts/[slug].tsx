@@ -67,10 +67,10 @@ export default function Post({ post, morePosts, preview }: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
+              </Container>
             </article>
           </>
         )}
-      </Container>
     </Layout>
   )
 }
