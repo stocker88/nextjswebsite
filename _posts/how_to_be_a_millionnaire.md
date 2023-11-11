@@ -1,7 +1,13 @@
 ---
 title: 'From 0 to Millionaire: A Roadmap to Wealth with Compound Interest'
-excerpt: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
-seoExcerpt:: 'Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
+excerpt: 'You don’t need $100k income to become rich, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
+
+Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
+
+There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, how much money they have.
+
+This is backed up by data, over 10,000 people have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, the 2 main explanatory factors have nothing to do with income. Money did not exist for over 99% of men’s existence. The concepts of Money Management, Saving Money, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent.'
+seoExcerpt:: 'You don’t need $100k income to become rich, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth. Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each. There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, how much money they have. This is backed up by data, over 10,000 people have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, the 2 main explanatory factors have nothing to do with income.'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.png'
 date: '2023-09-29T05:35:07.322Z'
 author:
