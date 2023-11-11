@@ -1,5 +1,5 @@
 ---
-title: 'Privacy Policy'
+title: 'HelloStocker App Privacy Policy'
 excerpt: 'HelloStocker AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
 seoExcerpt: 'HelloStocker AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
 coverImage: '/assets/blog/preview/cover.jpg'
