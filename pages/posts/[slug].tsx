@@ -21,6 +21,7 @@ type Props = {
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter()
   const title = `${post.title}`
+  const description = `${post.seoExcerpt}`
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -42,8 +43,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:description" content={''+post.seoExcerpt} />
                 <meta name="description" property="og:description" content={'Some tips on How to Make Money'} />
-                <meta name="description" content={''+post.seoExcerpt}/>
-                <meta property="og:title" content={''+post.excerpt} />
+                <meta name="description" content={description}/>
+                <meta property="og:title" content={post.title} />
                 <meta name="og:description" content={''+post.seoExcerpt} />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
