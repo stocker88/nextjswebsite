@@ -46,8 +46,8 @@ export default function Swipe() {
                              <div style={{backgroundColor: '#1E2837'}}>
                              <Image
                                   src='/assets/images/chatgpt.png'
-                                  width={400}
-                                  height={400}
+                                  width={450}
+                                  height={450}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
@@ -68,7 +68,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        predicted Nvidia would Skyrocket
+                        Predicted Nvidia would Skyrocket
                     </h3>
 
                 </div>
@@ -82,75 +82,9 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.png'
-                    width={400}
-                    height={400}
+                    width={450}
+                    height={450}
                     alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
-                    />
-                    </Zoom>
-                </div>
-                </center>
-              </div>
-              </div>
-
-              <br></br>
-                            <br></br>
-                            <br></br>
-
-
-                  <div className="container">
-                 <div className="split-item">
-                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Pay Your Rent with Dividend Stocks
-                                  </h3>
-
-                              </div>
-               <center>
-                              <div className={
-                                classNames(
-                                  'split-item-image center-content-mobile reveal-from-bottom',
-                                   'split-item-image-fill'
-                                )}
-                                data-reveal-container=".split-item">
-                                <Zoom>
-                                <Image
-                                  src='/assets/images/dividends.png'
-                                  width={400}
-                                  height={400}
-                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
-                                  />
-                                  </Zoom>
-                              </div>
-                              </center>
-                            </div>
-                            </div>
-
-<br></br>
-              <br></br>
-              <br></br>
-
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Replicate Top Investors in Virtual Trading
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                    src='/assets/images/portfolioVirtual.png'
-                    width={400}
-                    height={400}
-                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
                     </Zoom>
                 </div>
@@ -181,8 +115,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.png'
-                    width={400}
-                    height={400}
+                    width={450}
+                    height={450}
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
                     </Zoom>
@@ -193,6 +127,72 @@ export default function Swipe() {
 
 
 
+<br></br>
+              <br></br>
+              <br></br>
+
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                      Replicate Top Investors in Virtual Trading
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                    src='/assets/images/portfolioVirtual.png'
+                    width={450}
+                    height={450}
+                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                    />
+                    </Zoom>
+                </div>
+                </center>
+              </div>
+              </div>
+
+
+              <br></br>
+                            <br></br>
+                            <br></br>
+
+
+                  <div className="container">
+                 <div className="split-item">
+                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                  Pay Your Rent with Dividend Stocks
+                                  </h3>
+
+                              </div>
+               <center>
+                              <div className={
+                                classNames(
+                                  'split-item-image center-content-mobile reveal-from-bottom',
+                                   'split-item-image-fill'
+                                )}
+                                data-reveal-container=".split-item">
+                                <Zoom>
+                                <Image
+                                  src='/assets/images/dividends.png'
+                                  width={450}
+                                  height={450}
+                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  />
+                                  </Zoom>
+                              </div>
+                              </center>
+                            </div>
+                            </div>
               <br></br>
                             <br></br>
                             <br></br>
@@ -217,8 +217,8 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Image
                     src='/assets/images/educational.png'
-                    width={400}
-                    height={400}
+                    width={450}
+                    height={450}
                     alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
@@ -250,8 +250,8 @@ export default function Swipe() {
                   <Image
                     src='/assets/images/nvdia.png'
                     alt="Features split 02"
-                    width={400}
-                    height={400}
+                    width={450}
+                    height={450}
                     alt='stockerapp stocker app crypto news tracker  financial news today  Stocks going viral Crypto going viral find the next big cryptocurrency  financial analysis course  select the best stocks and crypto.   financial literacy course   Make Money how to invest in cryptocurrency   practise investing for beginners   Should I save or invest?  practise investing   free trading simulator Investing for beginners Asset'
                     />
                 </div>
@@ -282,8 +282,8 @@ export default function Swipe() {
                                 <Image
                                   src='/assets/images/twtrvsmeta.png'
                                   alt="Features split 02"
-                                  width={400}
-                                  height={400}
+                                  width={450}
+                                  height={450}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
