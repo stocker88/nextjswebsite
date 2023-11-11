@@ -43,14 +43,13 @@ export default function Swipe() {
                                 )}
                                 data-reveal-container=".split-item">
                              <Zoom>
-                             <div style={{backgroundColor: '#1E2837'}}>
                              <Image
                                   src='/assets/images/chatgpt.png'
+                                  style={{backgroundColor: '#1E2837'}}
                                   width={450}
                                   height={450}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
-                              </div>
                               </Zoom>
                               </div>
                               </center>
@@ -136,7 +135,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Replicate Top Investors & ETFs
+                      Replicate Top Investors & Hot ETFs
                     </h3>
 
                 </div>
