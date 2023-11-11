@@ -41,10 +41,10 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#00D9FF" />
-                <meta name="description" content={''+post.seoExcerpt}/>
+                <meta name="description" content={'Some tips on How to Make Money'}/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:description" content={''+post.seoExcerpt} />
-                <meta name="description" property="og:description" content={''+post.seoExcerpt} />
+                <meta name="description" property="og:description" content={Some tips on How to Make Money} />
                 <meta name="description" content={''+post.seoExcerpt}/>
                 <meta property="og:title" content={''+post.excerpt} />
                 <meta name="og:description" content={''+post.seoExcerpt} />
