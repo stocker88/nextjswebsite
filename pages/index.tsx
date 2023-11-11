@@ -35,22 +35,22 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Invest with your AI Advisor</title>
+          <title>HelloStocker: Virtual Investing App with Stocks To Buy Signals</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4" />
+          <meta name="description" property="og:description" content="AI powered Virtual Trading App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"/>
+          <meta name="description" content="AI powered Virtual Trading App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"/>
           <meta property="og:title" content="HelloStocker: Invest with your AI Advisor" />
-          <meta name="og:description" content="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4" />
+          <meta name="og:description" content="AI powered Virtual Trading App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:title" content="HelloStocker: Invest with your AI Advisor"/>
-          <meta name="twitter:description" content="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"/>
+          <meta name="twitter:description" content="AI powered Virtual Trading App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />

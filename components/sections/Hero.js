@@ -65,7 +65,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.png'
-                  alt="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"
+                  alt="AI powered Virtual Investing App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
                  style={{width:200}}
 
                   />
@@ -80,7 +80,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.png'
-                  alt="Buy Stocks That Will Go Up! We analyze hedge fund trading economic and financial data to find the hot stocks and crypto to invest in and deliver an AI powered trading tool driven by ChatGPT 4"
+                  alt="AI powered Virtual Investing App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
                  style={{width:250}}
                  priority
                   />
