@@ -51,11 +51,6 @@ const Footer = ({
                         <br></br>
                         <br></br>
 
-                        <a href={'https://www.linkedin.com/in/anesshusseinali/'} style={{color:"white", fontFamily: 'arial'}}> Contact our Founder </a>
-
-                        <br></br>
-                        <br></br>
-
                         Made by HelloStocker, for you
 
             </div>
