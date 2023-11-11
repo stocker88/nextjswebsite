@@ -64,7 +64,7 @@ const Hero = ({
               />*/}
 
   <Image
-                  src='/assets/images/hellostocker.png'
+                  src='/assets/images/hellostocker.webp'
                   alt="AI powered Virtual Investing App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
                  style={{width:200}}
 
@@ -79,7 +79,7 @@ const Hero = ({
                 </div>
 <br></br>
                  <Image
-                  src='/assets/images/usersRating.png'
+                  src='/assets/images/usersRating.webp'
                   alt="AI powered Virtual Investing App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
                  style={{width:250}}
                  priority

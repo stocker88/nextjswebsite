@@ -44,7 +44,7 @@ export default function Swipe() {
                                 data-reveal-container=".split-item">
                              <Zoom>
                              <Image
-                                  src='/assets/images/chatgpt.png'
+                                  src='/assets/images/chatgpt.webp'
                                   style={{backgroundColor: '#1E2837'}}
                                   width={450}
                                   height={450}
@@ -80,7 +80,7 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Zoom>
                   <Image
-                    src='/assets/images/portfolio.png'
+                    src='/assets/images/portfolio.webp'
                     width={450}
                     height={450}
                     alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
@@ -113,7 +113,7 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Zoom>
                   <Image
-                  src='/assets/images/tslavsrace.png'
+                  src='/assets/images/tslavsrace.webp'
                     width={450}
                     height={450}
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
@@ -148,7 +148,7 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Zoom>
                   <Image
-                    src='/assets/images/portfolioVirtual.png'
+                    src='/assets/images/portfolioVirtual.webp'
                     width={450}
                     height={450}
                     alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
@@ -182,7 +182,7 @@ export default function Swipe() {
                                 data-reveal-container=".split-item">
                                 <Zoom>
                                 <Image
-                                  src='/assets/images/dividends.png'
+                                  src='/assets/images/dividends.webp'
                                   width={450}
                                   height={450}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'

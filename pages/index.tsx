@@ -54,10 +54,6 @@ export default function Index({ allPosts }: Props) {
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
-            <script src="mathjax-config.js" defer></script>
-                <script type="text/javascript" id="MathJax-script" defer
-                  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-                </script>
         </Head>
         <Container>
           <Intro />
