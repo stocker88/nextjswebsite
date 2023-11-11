@@ -35,7 +35,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>HelloStocker: Virtual Investing App with Stocks To Buy Signals</title>
+          <title>HelloStocker: Virtual Investing App & Stocks To Buy Signals November 2023</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="AI powered Virtual Trading App that sends you stocks and cryptos to buy now: We analyze hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir" />
