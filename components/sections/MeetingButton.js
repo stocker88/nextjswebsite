@@ -10,7 +10,6 @@ import Container from '../../components/container'
 import SectionHeader from './partials/SectionHeader';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import InstallButtons from '../elements/InstallButtons';
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import { isMobile, browserName } from "react-device-detect";
 import Blog from "../sections/Blog";
