@@ -26,13 +26,10 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
   return (
     <Layout preview={preview}>
-      <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
               <Head>
                 <title>{title}</title>
                 <meta charSet="utf-8" />
@@ -41,7 +38,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#00D9FF" />
-                <meta name="description" content={'Some tips on How to Make Money'}/>
+                <meta name="description" content="Some tips on How to Make Money"/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:description" content={''+post.seoExcerpt} />
                 <meta name="description" property="og:description" content={'Some tips on How to Make Money'} />
@@ -60,6 +57,9 @@ export default function Post({ post, morePosts, preview }: Props) {
                    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
                 </script>
               </Head>
+              <article className="mb-32">
+              <Header />
+              <Container>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
