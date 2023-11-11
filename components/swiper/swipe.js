@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Your 24/7 Personal AI Advisor
+                                Your 24/7 AI Advisor
                                   </h3>
 
                               </div>
@@ -57,6 +57,41 @@ export default function Swipe() {
                             </div>
                             </div>
 
+<br></br>
+              <br></br>
+              <br></br>
+
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+
+                        <br></br>
+                        predicted Nvidia would Skyrocket
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                    src='/assets/images/portfolio.png'
+                    width={400}
+                    height={400}
+                    alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
+                    />
+                    </Zoom>
+                </div>
+                </center>
+              </div>
+              </div>
+
               <br></br>
                             <br></br>
                             <br></br>
@@ -66,7 +101,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Dividend Stocks That Pay Your Rent
+                                  Pay Your Rent with Dividend Stocks
                                   </h3>
 
                               </div>
@@ -132,7 +167,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Too Late For Tesla? Look At Competitors
+                    Buy Tesla Competitors Before They Blow Up
                     </h3>
 
                 </div>
@@ -157,40 +192,6 @@ export default function Swipe() {
               </div>
 
 
-<br></br>
-              <br></br>
-              <br></br>
-
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-
-                        <br></br>
-                        AI predicted Nvidia would Skyrocket
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                    src='/assets/images/portfolio.png'
-                    width={400}
-                    height={400}
-                    alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
-                    />
-                    </Zoom>
-                </div>
-                </center>
-              </div>
-              </div>
 
               <br></br>
                             <br></br>
