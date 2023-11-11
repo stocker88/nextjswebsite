@@ -21,7 +21,6 @@ type Props = {
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter()
   const title = `${post.title}`
-  const description = `${post.seoExcerpt}`
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -42,14 +41,14 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="description" content="Some tips on How to Make Money"/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
-                <meta name="description" property="og:description" content={'Some tips on How to Make Money'} />
+                <meta name="description" property="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
                 <meta name="description" content={description}/>
                 <meta property="og:title" content={post.title} />
-                <meta name="og:description" content={''+post.seoExcerpt} />
+                <meta name="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={''+post.title}/>
-                <meta name="twitter:description" content={''+post.excerpt}/>
+                <meta name="twitter:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more"/>
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <script src="mathjax-config.js" defer></script>
