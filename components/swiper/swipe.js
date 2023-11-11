@@ -8,7 +8,7 @@ import Image from '../elements/Image';
 import "swiper/css";
 import "swiper/css/pagination"
 import { isMobile, browserName } from "react-device-detect";
-
+import Zoom from 'react-medium-image-zoom'
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -42,12 +42,14 @@ export default function Swipe() {
                                    'split-item-image-fill'
                                 )}
                                 data-reveal-container=".split-item">
-                                <Image
+                             <Zoom>
+                             <Image
                                   src='/assets/images/chatgpt.png'
                                   width={400}
                                   height={400}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
+                                  </Zoom>
                               </div>
                               </center>
                             </div>
@@ -73,12 +75,14 @@ export default function Swipe() {
                                    'split-item-image-fill'
                                 )}
                                 data-reveal-container=".split-item">
+                                <Zoom>
                                 <Image
                                   src='/assets/images/dividends.png'
                                   width={400}
                                   height={400}
                                   alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                                   />
+                                  </Zoom>
                               </div>
                               </center>
                             </div>
@@ -104,12 +108,14 @@ export default function Swipe() {
                      'split-item-image-fill'
                   )}
                   data-reveal-container=".split-item">
+                  <Zoom>
                   <Image
                     src='/assets/images/portfolioVirtual.png'
                     width={400}
                     height={400}
                     alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
                     />
+                    </Zoom>
                 </div>
                 </center>
               </div>
@@ -135,12 +141,14 @@ export default function Swipe() {
                      'split-item-image-fill'
                   )}
                   data-reveal-container=".split-item">
+                  <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.png'
                     width={400}
                     height={400}
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
+                    </Zoom>
                 </div>
                 </center>
               </div>
@@ -169,12 +177,14 @@ export default function Swipe() {
                      'split-item-image-fill'
                   )}
                   data-reveal-container=".split-item">
+                  <Zoom>
                   <Image
                     src='/assets/images/portfolio.png'
                     width={400}
                     height={400}
                     alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
                     />
+                    </Zoom>
                 </div>
                 </center>
               </div>
