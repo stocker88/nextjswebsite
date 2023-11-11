@@ -148,41 +148,6 @@ const FeaturesSplit = ({
 
         <br></br>
         <br></br>
-        <Plx
-                parallaxData={[
-                  {
-                    start: 0,
-                    end: 1400,
-                    easing: "ease-in",
-                    properties: [
-                      {
-                        startValue: 0.7,
-                        endValue: 1,
-                        property: "scale"
-                      }
-                    ]
-                  }
-                ]}
-                style={{
-                  left: 0,
-
-                  width: "100%",
-                }}
-              >
-
-        <IntroVideo/>
-        <center><iframe width="321" height="571" src="https://www.youtube.com/embed/KkJQW4PVb6Q" title="Make Money with Investing" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></center>
-
-        </Plx>
-
-
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
 </Container>
 
 

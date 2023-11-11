@@ -1,6 +1,6 @@
 ---
 title: 'How to Beat the SP500 Stock Market'
-excerpt: 'The market is like a big financial playground made up of different industries, like technology and healthcare. Imagine it as a team of 500 players, each player being a stock from various companies. All these players work together, and their performance affects how well the entire team, or market, is doing. Performance Attribution Analytics tell you what Industries and Stocks you should Buy: you can become the next Warren Buffett and learn how to beat the stock market.'
+excerpt: 'The market is like a big financial playground made up of different industries, like technology and healthcare. Imagine it as a team of 500 players, each player being a stock from various companies. All these players work together, and their performance affects how well the entire team, or market, is doing. Performance Attribution Analytics tell you what Industries and Stocks you should Buy. Did you miss on Tesla, Nvidia and Roblox? We will teach you how to become the next Warren Buffett and beat the stock market.'
 seoExcerpt: 'By understanding what positions are driving your profits and practising with Virtual Trading, you can become the next Warren Buffett and learn how to beat the stock market.'
 coverImage: '/assets/blog/attribution/performance_attribution.jpg'
 date: '2023-09-20T05:35:07.322Z'

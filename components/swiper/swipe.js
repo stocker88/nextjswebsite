@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Live Analysis From Your AI Advisor
+                                Your 24/7 AI Advisor DM
                                   </h3>
 
                               </div>
@@ -68,7 +68,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        AI Predicted Nvidia Would Blow Up
+                        Predicted Nvidia Is a Buy
                     </h3>
 
                 </div>
@@ -101,7 +101,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Buy Tesla Competitors Before They Go Up
+                    Buy Tesla Competitors Before They Blow Up
                     </h3>
 
                 </div>
@@ -136,7 +136,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                      Replicate Top Investors in Virtual Trading
+                      Replicate Top Investors & ETFs
                     </h3>
 
                 </div>
