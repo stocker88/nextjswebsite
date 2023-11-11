@@ -139,7 +139,7 @@ export default function Swipe() {
                   src='/assets/images/tslavsrace.png'
                     width={400}
                     height={400}
-                    alt='stockerapp stocker app social trading investment screener free no risk Stocker Stocks etfs fx and crypto bitcoin next'
+                    alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
                 </div>
                 </center>
@@ -173,7 +173,7 @@ export default function Swipe() {
                     src='/assets/images/portfolio.png'
                     width={400}
                     height={400}
-                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                    alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
                     />
                 </div>
                 </center>
