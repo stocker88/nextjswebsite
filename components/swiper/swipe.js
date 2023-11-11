@@ -158,7 +158,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        We predicted Nvidia would Skyrocket
+                        AI predicted Nvidia would Skyrocket
                     </h3>
 
                 </div>
