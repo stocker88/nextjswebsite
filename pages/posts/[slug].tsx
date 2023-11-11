@@ -41,7 +41,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="theme-color" content="#00D9FF" />
                 <meta name="description" content="Some tips on How to Make Money"/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta property="og:description" content={'Some tips on How to Make Money'} />
+                <meta property="og:description" content="Investing Blog: Recommendations, Stocks To Buy, Trendy Cryptos, Trading Analytics and more" />
                 <meta name="description" property="og:description" content={'Some tips on How to Make Money'} />
                 <meta name="description" content={description}/>
                 <meta property="og:title" content={post.title} />
