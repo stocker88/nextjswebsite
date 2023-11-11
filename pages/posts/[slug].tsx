@@ -35,16 +35,23 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-32">
               <Head>
                 <title>{title}</title>
-                <meta name="description" content={post.seoExcerpt}/>
+                <meta charSet="utf-8" />
+                <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
+                <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
+                <link rel="shortcut icon" href="favicon.ico"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#00D9FF" />
+                <meta name="description" content={''+post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta name="description" property="og:description" content={post.seoExcerpt} />
-                <meta name="description" content={post.seoExcerpt}/>
-                <meta property="og:title" content={post.excerpt} />
-                <meta name="og:description" content={post.seoExcerpt} />
+                <meta property="og:description" content={''+post.seoExcerpt} />
+                <meta name="description" property="og:description" content={''+post.seoExcerpt} />
+                <meta name="description" content={''+post.seoExcerpt}/>
+                <meta property="og:title" content={''+post.excerpt} />
+                <meta name="og:description" content={''+post.seoExcerpt} />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
-                <meta name="twitter:title" content={post.title}/>
-                <meta name="twitter:description" content={post.excerpt}/>
+                <meta name="twitter:title" content={''+post.title}/>
+                <meta name="twitter:description" content={''+post.excerpt}/>
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <script src="mathjax-config.js" defer></script>
