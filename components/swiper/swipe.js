@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Your 24/7 AI Advisor
+                                Live Analysis From Your AI Advisor
                                   </h3>
 
                               </div>
@@ -68,7 +68,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        Predicted Nvidia would Skyrocket
+                        AI Predicted Nvidia Would Blow Up
                     </h3>
 
                 </div>
@@ -101,7 +101,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                    Buy Tesla Competitors Before They Blow Up
+                    Buy Tesla Competitors Before They Go Up
                     </h3>
 
                 </div>
@@ -170,7 +170,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-                                  Pay Your Rent with Dividend Stocks
+                                  Pay Your Rent with High Dividend Stocks
                                   </h3>
 
                               </div>
