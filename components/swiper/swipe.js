@@ -31,7 +31,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Your Personal AI Advisor Available 24/7
+                                Your 24/7 Personal AI Advisor
                                   </h3>
 
                               </div>
