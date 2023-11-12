@@ -65,7 +65,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.webp'
-                  alt="AI powered Virtual Investing App that analyses hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
+                  alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:200,height:200}}
 
                   />
@@ -80,7 +80,7 @@ const Hero = ({
 <br></br>
                  <Image
                   src='/assets/images/usersRating.webp'
-                  alt="AI powered Virtual Investing App that analyses hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
+                  alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:250, height:52}}
                  priority
                   />

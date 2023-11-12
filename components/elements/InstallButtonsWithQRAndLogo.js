@@ -37,7 +37,7 @@ if(isMobile) {
                    <br></br>
                            <Image
                                            src='/assets/images/hellostocker.webp'
-                                           alt="AI powered Virtual Investing App that analyses hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
+                                           alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                                           style={{width:151,height:151}}
 
                                            />
@@ -72,7 +72,7 @@ if(isMobile) {
          <br></br>
         <Image
                         src='/assets/images/hellostocker.webp'
-                        alt="AI powered Virtual Investing App that analyses hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox and Palantir"
+                        alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                        style={{width:160}}
 
                         />
