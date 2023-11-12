@@ -16,12 +16,12 @@ ogImage:
 - in 20 years, you will have **$90,000**
 
 **If you save $10 a day, and invest it with 10% return:**
-- in 10 y, compound interest yields **$62,000**
-- in 20 y, compound interest yields **$600,000**
+- in 10y, compound interest yields **$62,000**
+- in 20y, compound interest yields **$600,000**
 
 **If you save $20 a day, and invest it with 10% return:**
-- in 10 y, compound interest yields **$160,000**
-- in 20 y, compound interest yields **$2,000,000**
+- in 10y, compound interest yields **$160,000**
+- in 20y, compound interest yields **$2,000,000**
 
 You don’t need $100k income to be a millionnaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
 
@@ -89,12 +89,12 @@ Compounding is like a snowball effect for your money.
 - in 20 years, you will have **$90,000**
 
 **If you save $10 a day, and invest it with 10% return:**
-- in 10 y, compound interest yields **$62,000**
-- in 20 y, compound interest yields **$600,000**
+- in 10y, compound interest yields **$62,000**
+- in 20y, compound interest yields **$600,000**
 
 **If you save $20 a day, and invest it with 10% return:**
-- in 10 y, compound interest yields **$160,000**
-- in 20 y, compound interest yields **$2,000,000**
+- in 10y, compound interest yields **$160,000**
+- in 20y, compound interest yields **$2,000,000**
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 

@@ -37,17 +37,19 @@ The better you are at making money with certains stocks, the more money and pass
 
 ### **1) Selection Skill**
 
-You could be doing great at picking technology stocks that outperform the S&P Technology Sector, and doing not so well at picking health stocks that outperform the S&P Health Market Sector.
+You could be doing great at buying technology stocks that outperform the S&P Technology Sector, and doing not so well at buying health stocks that outperform the S&P Health Market Sector.
 
-Are you great at selecting the stocks that will outperform its respective sector segment? Are other investors better than you at picking Healthcare stocks? Who is the best suited to advise you?
+Are you great at selecting the stocks that will outperform its respective sector segment? Are other investors better than you at picking Healthcare stocks? What are the best stocks to buy?
 
 ### **2) Allocation Skill**
 
-You could be doing great at forecasting what would happen to Technology Stocks, increasing your positions when you expect the sector to be doing well, and decreasing them when you expect it to underperform.
+You could be doing great at forecasting what would happen to Technology Stocks, increasing your positions (buy tech stocks) when you expect the sector to be doing well, and decreasing them (sell) when you expect it to underperform.
 
-Are you great at allocating your investments across industries? Are you great at timing which Stock Market Sector will go up and when?
+Are you great at allocating your investments across industries? Are you great at timing which Stock Market Sector will go up and when you should buy vs sell?
 
 If not, do you have friends or an investor network where some individuals are better at understanding economic cycles better? Maybe they should be the ones allocating weights for you instead? 
+
+Some people are good at timing which sector to buy and when, some people are good at picking which stocks to buy and when.
 
 ### **3) Interaction Skill**
 
@@ -66,21 +68,27 @@ Do you know your strengths? Do you know how to make money with stocks? Don't wor
 
 ## **The Math behind**
 
-In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics: stock fundamentals such as value, growth, P/E ratio, and other financial metrics such as Short Ratio, as well as Popularity and Social metrics.
+In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics.
 
+Recommendations are made by Stock fundamentals such as value, growth, P/E ratio, and other financial metrics such as Short Ratio
 
-Again, for simplicity, let's assume the segmentation is done by market sector. Our benchmark here is the S&P: the index that replicate the US market.
+You can also sort stocks by Popularity and Social metrics.
 
+Attribution is such a powerful tool: it tells you what stocks to buy and when!
+
+Again, for simplicity, let's assume the segmentation is done by market sector.
 
 We list below the calculation methodologies, a positive figure means you are skilled, the higher the number the more skilled you are.
+
+Understanding the math behind will help you develop a sense of how the SP500 stock market works and further improve your trading skills.
 
 
 ### **1) Selection Skill**
 
 
 
-The selection effect measures the investor's ability to select securities within a given
-industry relative to the S&P500. A positive selection effect occurs for a particular market sector when our portfolio return is greater than the benchmark return.
+The selection effect measures the investor's ability to select / pick the best stocks within a given
+sector relative to the S&P500 overall stock market. A positive selection effect occurs for a particular market sector when our stock portfolio return is greater than the benchmark return.
 
 
 The Selection Effect for the Technology stocks is calculated using the below metrics and formula:
@@ -96,19 +104,16 @@ The Selection Effect for the Technology stocks is calculated using the below met
 ### **2) Allocation Skill**
 
 
-The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to various industries.
-Positive allocation occurs when the portfolio is overweighted in a sector that outperforms the S&P500 and underweighted in
-a market sector that underperforms the S&P500.
+The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to winning sectors.
 
+Positive allocation occurs when the portfolio is overweighted in a sector that outperforms the S&P500 and underweighted in a sector that underperforms the S&P500.
 
-The Allocation Effect for the Technology Stcosk with reS&Pect to our investor's portfolio is calculated using the below metrics and formula:
-
-
+The Allocation Effect for the Technology Stcosk with respect to our investor's portfolio is calculated using the below metrics and formula:
 
 * \-  The Technology Stocks weight in our Portfolio
 * \-  The Technology Stocks weight in the S&P500
 * \-  The Technology Stocks return of the S&P500
-* \-  The total return of the S&P500
+* \-  The total price return of the S&P500
 
 ![](/assets/blog/attribution/attributionallocationskill.png)  
 
@@ -139,7 +144,7 @@ The Interaction Effect for the Technology stocks with respect to our investor's 
 ![](/assets/blog/attribution/attributioninteractionskills.png)
 
 
-## **Know your strengths: outperform the market**
+## **Know your strengths: buy the best stocks and outperform the market**
 
 The sum of all these effects is equal to the difference between your Portfolio Performance and the Market Performance: this is your 'Active Return', often referred as 'Excess Return' over the market.
 
