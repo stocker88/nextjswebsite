@@ -13,7 +13,6 @@ import IntroVideo from '../../components/introVideo';
 import IntroDownload from '../../components/introDownload';
 import Container from '../../components/container'
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
-import Plx from "react-plx";
 import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
@@ -67,29 +66,6 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
 
-<Plx
-        parallaxData={[
-          {
-            start: 0,
-            end: 600,
-            easing: "ease-in",
-            properties: [
-              {
-                startValue: 0.7,
-                endValue: 1,
-                property: "scale"
-              }
-            ]
-          }
-        ]}
-        style={{
-          left: 0,
-
-          width: "100%",
-        }}
-      >
-
-
         <IntroApp/>
         <Swipe/>
 </Plx>
@@ -113,31 +89,8 @@ const FeaturesSplit = ({
 */}
    <br></br>
         <br></br>
-
         <br></br>
 
-
-         <Plx
-                                parallaxData={[
-                                  {
-                                    start: 0,
-                                    end: 2400,
-                                    easing: "ease-in",
-                                    properties: [
-                                      {
-                                        startValue: 0.7,
-                                        endValue: 1,
-                                        property: "scale"
-                                      }
-                                    ]
-                                  }
-                                ]}
-                                style={{
-                                  left: 0,
-
-                                  width: "100%",
-                                }}
-                              >
         <IntroDownload/>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
         </Plx>
