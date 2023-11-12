@@ -70,6 +70,8 @@ const MeetingButton = ({
                   Transform Your Future: Start Now
      </h2>
                      </div>
+                       <br></br>
+                      <br></br>
         <InstallButtonsWithQR/>
 <br></br><br></br>
     </center>
