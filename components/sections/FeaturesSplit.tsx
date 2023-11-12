@@ -68,7 +68,6 @@ const FeaturesSplit = ({
 
         <IntroApp/>
         <Swipe/>
-</Plx>
 
 {/*
                   <center><div style={{maxWidth: "550px"}}>  <div className="grid grid-cols-1 md:grid-cols- md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
@@ -93,7 +92,7 @@ const FeaturesSplit = ({
 
         <IntroDownload/>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
-        </Plx>
+
         <br></br>
         <br></br>
         <br></br>
