@@ -5,10 +5,10 @@ seoExcerpt: 'By understanding what positions are driving your profits and practi
 coverImage: '/assets/blog/attribution/performance_attribution.webp'
 date: '2023-09-26T05:35:07.322Z'
 author:
-name: Aness Hussein Ali
-picture: '/assets/blog/authors/anesshusseinali.jpeg'
+    name: Aness Hussein Ali
+    picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-url: '/assets/blog/attribution/performance_attribution.webp'
+    url: '/assets/blog/attribution/performance_attribution.webp'
 ---
 
 
