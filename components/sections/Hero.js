@@ -86,7 +86,10 @@ const Hero = ({
                   />
 <div style={{ color: 'lightgrey', fontSize: "min(18px,max(14px,1.75vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   over 10,000 investors
+ <div style={{ color: 'white', fontSize: "min(40px,max(30px,3vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                   Install Now
 
+                </div>
                 </div>
               <div className="reveal-from-bottom" data-reveal-delay="250">
                 <InstallButtonsWithQR/>
