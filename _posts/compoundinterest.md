@@ -1,14 +1,14 @@
 ---
-title: 'From 0 to Millionaire: A Roadmap to Wealth with Compound Interest'
+title: 'How To Be A Millionaire: The Science of Compound Interest'
 excerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of investing when he bought his first stock! You don’t need $100k income to be a millionnaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth. Warren Buffett bought his first stock at 11 years old— three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each. There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, nor how much money they have...'
 seoExcerpt: 'If you save 10$ a day in 10 year you will have $90,000. If you invest $10 a day in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of investing when he bought his first stock'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
 date: '2023-09-29T05:35:07.322Z'
 author:
-  name: Aness Hussein Ali
-  picture: '/assets/blog/authors/anesshusseinali.jpeg'
+name: Aness Hussein Ali
+picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-  url: '/assets/blog/millionnairescience/millionnairescience.webp'
+url: '/assets/blog/millionnairescience/millionnairescience.webp'
 ---
 
 **If you save $10 a day:**
@@ -98,9 +98,9 @@ Compounding is like a snowball effect for your money.
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
-The concept of passive income has been trending. You can now make the money work by leveraging multiple investment vehicles, such as savings accounts and the stock market. 
+The concept of passive income has been trending. You can now make the money work by leveraging multiple investment vehicles, such as savings accounts and the stock market.
 
-Budgeting and investing apps and robo advisors such as HelloStocker app have been gaining in popularity and are here to help you with your personal finances. 
+Budgeting and investing apps and robo advisors such as HelloStocker app have been gaining in popularity and are here to help you with your personal finances.
 
 ## 4. Conclusion
 

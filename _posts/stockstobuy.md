@@ -5,18 +5,18 @@ seoExcerpt: 'By understanding what positions are driving your profits and practi
 coverImage: '/assets/blog/attribution/performance_attribution.webp'
 date: '2023-09-26T05:35:07.322Z'
 author:
-  name: Aness Hussein Ali
-  picture: '/assets/blog/authors/anesshusseinali.jpeg'
+name: Aness Hussein Ali
+picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-  url: '/assets/blog/attribution/performance_attribution.webp'
+url: '/assets/blog/attribution/performance_attribution.webp'
 ---
 
 
-The S&P500 stock market is a big financial playground made up of different sectors, like technology and healthcare. 
+The S&P500 stock market is a big financial playground made up of different sectors, like technology and healthcare.
 
-Imagine it as a team of 500 players, each player being a stock from various companies. 
+Imagine it as a team of 500 players, each player being a stock from various companies.
 
-All these players work together, and their price performance affects how well the entire team, or stock market, is doing. 
+All these players work together, and their price performance affects how well the entire team, or stock market, is doing.
 
 So, when we talk about the S&P500 market, we're looking at how all these stocks are doing together.
 
@@ -31,9 +31,9 @@ You can become the next Warren Buffett thanks to the mathematics of investing: P
 
 HelloStocker Price Performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
 
-Attribution explains your performance over the S&P500 or any other market benchmark, and gives you the best stocks and market segmentations for you to maximize your profits. 
+Attribution explains your performance over the S&P500 or any other market benchmark, and gives you the best stocks and market segmentations for you to maximize your profits.
 
-The better you are at making money with certains stocks, the more money and passive income you will generate by focusing on the same type of stocks. 
+The better you are at making money with certains stocks, the more money and passive income you will generate by focusing on the same type of stocks.
 
 ### **1) Selection Skill**
 
@@ -47,17 +47,17 @@ You could be doing great at forecasting what would happen to Technology Stocks, 
 
 Are you great at allocating your investments across industries? Are you great at timing which Stock Market Sector will go up and when you should buy vs sell?
 
-If not, do you have friends or an investor network where some individuals are better at understanding economic cycles better? Maybe they should be the ones allocating weights for you instead? 
+If not, do you have friends or an investor network where some individuals are better at understanding economic cycles better? Maybe they should be the ones allocating weights for you instead?
 
 Some people are good at timing which sector to buy and when, some people are good at picking which stocks to buy and when.
 
 ### **3) Interaction Skill**
 
-For example, if you had superior selection skills (you are great at picking stocks in a specific market sector) and overweighted that particular Sector (you knew it would go up), the interaction effect would be positive! 
+For example, if you had superior selection skills (you are great at picking stocks in a specific market sector) and overweighted that particular Sector (you knew it would go up), the interaction effect would be positive!
 
 If you had superior selection, but underweighted that stock market sector (you thought this it would go down) , the interaction effect would be negative.
 
-In this case, you did not take advantage of the superior selection by allocating more assets to that Sector. 
+In this case, you did not take advantage of the superior selection by allocating more assets to that Sector.
 
 To reach financial freedom, and make money with investing, you must understand performance attribution.
 
@@ -115,7 +115,7 @@ The Allocation Effect for the Technology Stcosk with respect to our investor's p
 * \-  The Technology Stocks return of the S&P500
 * \-  The total price return of the S&P500
 
-![](/assets/blog/attribution/attributionallocationskill.png)  
+![](/assets/blog/attribution/attributionallocationskill.png)
 
 
 ### **3) Interaction Skill**
@@ -123,7 +123,7 @@ The Allocation Effect for the Technology Stcosk with respect to our investor's p
 
 If you are good at selecting stocks for a particular sector, you should overallocate the weight of this market sector in your portfolio.
 
-A positive interaction effect on the technology stocks sector would occur for instance when both of the following conditions are met:  
+A positive interaction effect on the technology stocks sector would occur for instance when both of the following conditions are met:
 
 * \-  the investor's portfolio weight in technology setocks was greater than the S&P500 weight in the same market sector,
 * \-  the investor's portfolio return for technology stocks was greater than the S&P500 return for the same market sector.
