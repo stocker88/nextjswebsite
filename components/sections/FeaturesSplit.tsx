@@ -65,6 +65,10 @@ const FeaturesSplit = ({
     <Container>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      
 
         <IntroApp/>
         <Swipe/>
