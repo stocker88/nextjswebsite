@@ -2,13 +2,13 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/posts/how_to_be_a_millionnaire',
-        destination: '/posts/compoundinterest',
+        source: '/how_to_be_a_millionnaire',
+        destination: '/compoundinterest',
         permanent: true
       },
       {
-        source: '/posts/attribution_profit_drivers',
-        destination: '/posts/stockstobuy',
+        source: '/attribution_profit_drivers',
+        destination: '/stockstobuy',
         permanent: true
       },
     ]
