@@ -28,9 +28,9 @@ export default function Swipe() {
                   <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
-                                Your 24/7 AI Advisor DM
+                                Your 24/7 Live AI Advisor
                                   </h3>
 
                               </div>
@@ -61,10 +61,10 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
 
                         <br></br>
-                        Predicted Nvidia Is a Buy
+                        Predicted Nvidia Is A Buy
                     </h3>
 
                 </div>
@@ -96,7 +96,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                     Buy Tesla Competitors Before They Blow Up
                     </h3>
 
@@ -131,7 +131,7 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                       Replicate Top Investors & Hot ETFs
                     </h3>
 
@@ -165,7 +165,7 @@ export default function Swipe() {
                   <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                                   Pay Your Rent with High Dividend Stocks
                                   </h3>
 
@@ -199,7 +199,7 @@ export default function Swipe() {
                     <div className="text-xxs text-color-cyan fw-600 mb-8 center-content-mobile" style={{color:'lightgrey',fontSize:"min(20px,max(15px,1.6vw))", fontFamily: 'arial', fontWeight: 'bold'}}>
                      Launch your financial success
                     </div>
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
                     All the data you need
                     </h3>
 
