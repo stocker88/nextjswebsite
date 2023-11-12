@@ -93,7 +93,7 @@ const Hero = ({
           <br></br>
           <br></br>
                 <div style={{ color: 'white', fontSize: "min(40px,max(30px,3vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                   Start Now
+                                   Install Now
 
                                 </div>
                 <InstallButtonsWithQR/>
