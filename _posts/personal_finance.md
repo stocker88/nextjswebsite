@@ -76,7 +76,7 @@ Investing can be an intimidating endeavor, especially for newcomers. There exist
 
 Each investment type carries its unique set of risks and rewards. It's crucial to conduct thorough research and gain an understanding of these risks before allocating your money.
 
-![](/assets/blog/money_budgeting_investing/portfolio-allocation.png)
+![](/assets/blog/money_budgeting_investing/portfolio-allocation.webp)
 
 ## 5) How to select the Right Investment Options:
 
@@ -126,4 +126,4 @@ Managing personal finances may pose challenges, particularly for those new to th
 
 Although managing personal finances may appear daunting, it need not be overwhelming. By grasping the fundamentals of personal finance, including budgeting, debt management, saving, and investing, you can exercise control over your financial future and reach your goals. Always remember that personal finance is a lifelong journey, demanding patience, discipline, and consistent effort to achieve success. Armed with the right mindset and strategies, you can reshape your financial future and embark on a path towards lifelong financial security.
 
-![](/assets/blog/money_budgeting_investing/financialsuccess.jpg)
+![](/assets/blog/money_budgeting_investing/financialsuccess.webp)
