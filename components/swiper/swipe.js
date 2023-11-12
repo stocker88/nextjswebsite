@@ -26,13 +26,12 @@ export default function Swipe() {
 
 
                   <div className="container">
-                      <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
-
-                                                  Your 24/7 Live AI Advisor
-                                                    </h3>
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
 
+                                Your 24/7 Live AI Advisor
+                                  </h3>
 
                               </div>
                <center>
@@ -58,15 +57,16 @@ export default function Swipe() {
               <br></br>
               <br></br>
 
-<h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
 
                         <br></br>
                         Predicted Nvidia Is A Buy
                     </h3>
 
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                 </div>
                 <center>
                 <div className={
@@ -96,7 +96,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
-                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
                     Buy Tesla Competitors Before They Blow Up
                     </h3>
 
@@ -131,7 +131,7 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
                       Replicate Top Investors & Hot ETFs
                     </h3>
 
@@ -165,7 +165,7 @@ export default function Swipe() {
                   <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
+                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
                                   Pay Your Rent with High Dividend Stocks
                                   </h3>
 
