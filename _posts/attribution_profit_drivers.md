@@ -12,51 +12,56 @@ ogImage:
 ---
 
 
-The market is like a big financial playground made up of different industries, like technology and healthcare. 
+The S&P500 stock market is a big financial playground made up of different sectors, like technology and healthcare. 
 
 Imagine it as a team of 500 players, each player being a stock from various companies. 
 
-All these players work together, and their performance affects how well the entire team, or market, is doing. 
+All these players work together, and their price performance affects how well the entire team, or stock market, is doing. 
 
-So, when we talk about the market, we're looking at how all these stocks are doing together.
+So, when we talk about the S&P500 market, we're looking at how all these stocks are doing together.
 
-It is well known that over the long run, only very few investors manage to outperform the market.
+It is well known that over the long run, only very few investors manage to outperform the S&P500 (Warren Buffet is one of them).
 
-However by understanding what stocks are driving your gains and losses (who are your good and bad players / friends), you can become the next Warren Buffett, fine tune your investing strategy, and learn how to beat the market!
+We will teach you how to beat the S&P500 stock market: you will know what stocks to buy and focus your trading analysis on.
+
+You can become the next Warren Buffett thanks to the mathematics of investing: Performance Attribution !
 
 ## **Performance Attribution**
 
 
+HelloStocker Price Performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
 
-HelloStocker Performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
+Attribution explains your performance over the S&P500 or any other market benchmark, and gives you the best stocks and market segmentations for you to maximize your profits. 
 
-This will explain your performance and give you the best stocks and category of stocks for you to maximize your profits. The better you are at making money with a certain company, the more money and passive income you will generate by focusing on this company. 
+The better you are at making money with certains stocks, the more money and passive income you will generate by focusing on the same type of stocks. 
 
 ### **1) Selection Skill**
 
-You could be doing great at picking technology stocks that outperform the S&P technology industry, and doing not so well at picking health stocks that outperform the S&P health industry.
+You could be doing great at picking technology stocks that outperform the S&P Technology Sector, and doing not so well at picking health stocks that outperform the S&P Health Market Sector.
 
-Are you great at selecting the stocks that will outperform its respective industry industry segment? Are other investors better than you at picking Healthcare stocks? Who is the best suited to advise you?
+Are you great at selecting the stocks that will outperform its respective sector segment? Are other investors better than you at picking Healthcare stocks? Who is the best suited to advise you?
 
 ### **2) Allocation Skill**
 
-You could be doing great at forecasting what would happen to the technology industry, increasing your positions when you expect the sector to be doing well, and decreasing them when you expect it to underperform.
+You could be doing great at forecasting what would happen to Technology Stocks, increasing your positions when you expect the sector to be doing well, and decreasing them when you expect it to underperform.
 
-Are you great at allocating your investments across industries? Are you great at timing which industry will go up and when?
+Are you great at allocating your investments across industries? Are you great at timing which Stock Market Sector will go up and when?
 
 If not, do you have friends or an investor network where some individuals are better at understanding economic cycles better? Maybe they should be the ones allocating weights for you instead? 
 
 ### **3) Interaction Skill**
 
-For example, if you had superior selection skills (you are great at picking stocks in the industry) and overweighted that particular industry (you knew this industry would go up), the interaction effect would be positive! 
+For example, if you had superior selection skills (you are great at picking stocks in a specific market sector) and overweighted that particular Sector (you knew it would go up), the interaction effect would be positive! 
 
-If you had superior selection, but underweighted that industry (you thought this industry would go down) , the interaction effect would be negative.
+If you had superior selection, but underweighted that stock market sector (you thought this it would go down) , the interaction effect would be negative.
 
-In this case, you did not take advantage of the superior selection by allocating more assets to that industry. 
+In this case, you did not take advantage of the superior selection by allocating more assets to that Sector. 
 
-To reach financial freedom, and make as much money as you can, you must understand how good you are at picking stocks in each industry, and how good you are at forecasting which industry will be going up.
+To reach financial freedom, and make money with investing, you must understand performance attribution.
 
-Do you know your strengths? Do you know who to ask for help on things you're not so good at? Don't worry, we are here to help you!
+Understand how good you are at picking stocks in each market sector, and how good you are at forecasting which stock market sector will be going up.
+
+Do you know your strengths? Do you know how to make money with stocks? Don't worry, we are here to help you!
 
 
 ## **The Math behind**
@@ -64,7 +69,7 @@ Do you know your strengths? Do you know who to ask for help on things you're not
 In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics: stock fundamentals such as value, growth, P/E ratio, and other financial metrics such as Short Ratio, as well as Popularity and Social metrics.
 
 
-Again, for simplicity, let's assume the segmentation is done by industry. Our benchmark here is the S&P: the index that replicate the US market.
+Again, for simplicity, let's assume the segmentation is done by market sector. Our benchmark here is the S&P: the index that replicate the US market.
 
 
 We list below the calculation methodologies, a positive figure means you are skilled, the higher the number the more skilled you are.
@@ -75,16 +80,16 @@ We list below the calculation methodologies, a positive figure means you are ski
 
 
 The selection effect measures the investor's ability to select securities within a given
-industry relative to the SP500. A positive selection effect occurs for a particular industry when our portfolio return is greater than the benchmark return.
+industry relative to the S&P500. A positive selection effect occurs for a particular market sector when our portfolio return is greater than the benchmark return.
 
 
-The Selection Effect for the Technology industry is calculated using the below metrics and formula:
+The Selection Effect for the Technology stocks is calculated using the below metrics and formula:
 
 
 
-* \-  The Technology industry weight in the SP500
-* \-  The Technology industry return of the SP500
-* \-  The Technology industry return of our Portfolio
+* \-  The Technology Stocks weight in the S&P500
+* \-  The Technology Stocks return of the S&P500
+* \-  The Technology Stocks return of our Portfolio
 
 ![](/assets/blog/attribution/attributionselectionskills.png)
 
@@ -92,18 +97,18 @@ The Selection Effect for the Technology industry is calculated using the below m
 
 
 The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to various industries.
-Positive allocation occurs when the portfolio is overweighted in an industry that outperforms the SP500 and underweighted in
-an industry that underperforms the SP500.
+Positive allocation occurs when the portfolio is overweighted in a sector that outperforms the S&P500 and underweighted in
+a market sector that underperforms the S&P500.
 
 
-The Allocation Effect for the Technology industry with respect to our investor's portfolio is calculated using the below metrics and formula:
+The Allocation Effect for the Technology Stcosk with reS&Pect to our investor's portfolio is calculated using the below metrics and formula:
 
 
 
-* \-  The Technology industry weight in our Portfolio
-* \-  The Technology industry weight in the SP500
-* \-  The Technology industry return of the SP500
-* \-  The total return of the SP500
+* \-  The Technology Stocks weight in our Portfolio
+* \-  The Technology Stocks weight in the S&P500
+* \-  The Technology Stocks return of the S&P500
+* \-  The total return of the S&P500
 
 ![](/assets/blog/attribution/attributionallocationskill.png)  
 
@@ -111,25 +116,25 @@ The Allocation Effect for the Technology industry with respect to our investor's
 ### **3) Interaction Skill**
 
 
-If you are good at selecting stocks for a particular industry, you should overallocate the weight of this industry in your portfolio.
+If you are good at selecting stocks for a particular sector, you should overallocate the weight of this market sector in your portfolio.
 
-A positive interaction effect on the technology industry would occur for instance when both of the following conditions are met:  
+A positive interaction effect on the technology stocks sector would occur for instance when both of the following conditions are met:  
 
-* \-  the investor's portfolio weight in the technology industry was greater than the SP500 weight in the same industry,
-* \-  the investor's portfolio return for the technology industry was greater than the SP500 return for the same industry.
+* \-  the investor's portfolio weight in technology setocks was greater than the S&P500 weight in the same market sector,
+* \-  the investor's portfolio return for technology stocks was greater than the S&P500 return for the same market sector.
 
 In this scenario, the investor exercised good selection and overallocated assets to that segment.
 
 The interaction effect would also be positive if the investor underweighted the industries for which he underperformed because of poor selection skills.
 
-The Interaction Effect for the Technology industry with respect to our investor's portfolio is calculated using the below metrics and formula:
+The Interaction Effect for the Technology stocks with respect to our investor's portfolio is calculated using the below metrics and formula:
 
 
 
-* \-  The Technology industry weight in our Portfolio
-* \-  The Technology industry return of our Portfolio
-* \-  The Technology industry weight in the SP500
-* \-  The Technology industry return of the SP500
+* \-  The Technology Stocks weight in our Portfolio
+* \-  The Technology Stocks return of our Portfolio
+* \-  The Technology Stocks weight in the S&P500 Market
+* \-  The Technology Stocks return of the S&P500 Market
 
 ![](/assets/blog/attribution/attributioninteractionskills.png)
 
