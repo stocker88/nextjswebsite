@@ -83,7 +83,6 @@ const Hero = ({
                   src='/assets/images/usersRating.webp'
                   alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:250, height:52}}
-                 priority
                   />
 <div style={{ color: 'white', fontSize: "min(18px,max(14px,1.75vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   over 10,000 investors

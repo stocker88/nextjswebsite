@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.newcompany.stocker",
+      "sha256_cert_fingerprints": [
+        "D2:BA:7C:A0:EB:CC:FF:08:98:AD:B7:88:C7:53:9D:A3:9F:6A:24:A3:53:03:17:BD:CE:35:C0:A6:17:C2:B8:7C"
+      ]
+    }
+  }
+]
