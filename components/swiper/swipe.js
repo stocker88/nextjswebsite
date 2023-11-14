@@ -45,7 +45,7 @@ export default function Swipe() {
                              <Image
                                   src='/assets/images/chatgpt.webp'
                                   sizes="(max-width: 700px) 100vw, (max-width: 700px) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </Zoom>
                               </div>
@@ -148,7 +148,7 @@ export default function Swipe() {
                     src='/assets/images/portfolioVirtual.webp'
 
                     sizes="(max-width: 700px) 100vw, (max-width: 700px) 50vw, 33vw"
-                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
                     </Zoom>
                 </div>
@@ -182,7 +182,7 @@ export default function Swipe() {
                                   src='/assets/images/dividends.webp'
 
                                   sizes="(max-width: 700px) 100vw, (max-width: 700px) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                                   </Zoom>
                               </div>
@@ -215,7 +215,7 @@ export default function Swipe() {
                     src='/assets/images/educational.png'
 
                     sizes="(max-width: 700px) 100vw, (max-width: 700px) 50vw, 33vw"
-                    alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
                 </center>
@@ -280,7 +280,7 @@ export default function Swipe() {
                                   alt="Features split 02"
 
                                   sizes="(max-width: 700px) 100vw, (max-width: 700px) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading'
+                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
                               </center>

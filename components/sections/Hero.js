@@ -58,7 +58,7 @@ const Hero = ({
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
-              alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
+              alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
               width={700}
               height={58.33}
               />*/}

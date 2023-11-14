@@ -80,7 +80,7 @@ const Blog = ({
 
              <Image
                src='assets/images/attribution.png'
-               alt="hellostocker app stocks to buy ai stock to watch market financial advisor economic tools investing virtual trading"
+               alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
                style={{width: 250, borderRadius: 5}}
                resizeMode={"cover"} />
 
