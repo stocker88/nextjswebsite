@@ -40,15 +40,15 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="theme-color" content="#00D9FF" />
                 <meta name="description" content="Some tips on How to Make Money"/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta property="og:description" content="Hot stocks to buy now in HelloStocker: AI and Advisors analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the next Chat GPT" />
-                <meta name="description" property="og:description" content="Hot stocks to buy now in HelloStocker: AI and Advisors analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the next Chat GPT" />
-                <meta name="description" content="Hot stocks to buy now in HelloStocker: AI and Advisors analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the next Chat GPT"/>
+                <meta property="og:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
+                <meta name="description" property="og:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
+                <meta name="description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
                 <meta property="og:title" content={post.title} />
-                <meta name="og:description" content="Hot stocks to buy now in HelloStocker: AI and Advisors analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the next Chat GPT" />
+                <meta name="og:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={''+post.title}/>
-                <meta name="twitter:description" content="Hot stocks to buy now in HelloStocker: AI and Advisors analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the next Chat GPT"/>
+                <meta name="twitter:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
