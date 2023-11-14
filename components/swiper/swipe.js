@@ -132,7 +132,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                      Replicate Top 10 Investors
+                      Replicate Top 10 Investment Portfolio
                     </h3>
 
                 </div>
