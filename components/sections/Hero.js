@@ -65,7 +65,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.webp'
-                  alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
+                  alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:200,height:200}}
 
                   />
@@ -74,14 +74,14 @@ const Hero = ({
                                             HelloStocker App
                                           </h1>
               <div style={{ color: 'white', fontSize: "min(40px,max(30px,3vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                   Virtual Investing & Trading Signals
+                   Virtual Investing & AI Financial Advisor
 
 
                 </div>
 <br></br>
                  <Image
                   src='/assets/images/usersRating.webp'
-                  alt="AI powered Virtual Investing App analyse hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
+                  alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:250, height:52}}
                   />
 <div style={{ color: 'white', fontSize: "min(18px,max(14px,1.75vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
@@ -91,7 +91,7 @@ const Hero = ({
 
           <br></br>
           <br></br>
-                <div style={{ color: 'white', fontSize: "min(40px,max(30px,3vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                <div style={{ color: 'white', fontSize: "min(35px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                    Powered By ChatGPT | Install Now
 
                                 </div>

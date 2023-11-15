@@ -35,22 +35,22 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-          <title>Trading Signals & Virtual Investing App Powered By ChatGPT</title>
+          <title>Virtual Investing AI Financial Advisor App Powered By ChatGPT</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
+          <meta name="description" property="og:description" content="HelloStocker is a GPT powered Virtual Investing Advisor App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
+          <meta name="description" content="HelloStocker is a GPT powered Virtual Investing Advisor App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
           <meta property="og:title" content="HelloStocker: Invest with your AI Advisor" />
-          <meta name="og:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
+          <meta name="og:description" content="HelloStocker is a GPT powered Virtual Investing Advisor App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:title" content="HelloStocker: Invest with your AI Advisor"/>
-          <meta name="twitter:description" content="GPT powered Virtual Investing App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
+          <meta name="twitter:description" content="HelloStocker is a GPT powered Virtual Investing Advisor App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
