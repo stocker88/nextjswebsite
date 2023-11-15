@@ -35,41 +35,40 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-
-            
-            <script type="application/ld+json">
-            {
-              "@context": "http://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "HelloStocker App",
-              "image": "https://www.hellostocker.com/assets/images/hellostocker.webp",
-              "author": {
-                "@type": "Person",
-                "name": "Powered By ChatGPT"
-              },
-              "applicationCategory": "Investing",
-              "screenshot": [
-                "https://www.hellostocker.com/assets/images/chatgpt.webp",
-                "https://www.hellostocker.com/assets/images/portfolio.webp",
-                "https://www.hellostocker.com/assets/images/tslavsrace.webp",
-                "https://www.hellostocker.com/assets/images/portfolioVirtual.webp",
-                "https://www.hellostocker.com/assets/images/dividends.webp"
-              ],
-              "review": {
-                "@type": "Review",
-                "author": {
-                  "@type": "Person",
-                  "name": "itsjayhi"
-                },
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5/5"
-                },
-                "reviewBody": "HelloStocker is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend HelloStocker"
-              }
-            }
-            </script>
-          <title>Virtual Investing AI Financial Advisor App Powered By ChatGPT</title>
+         <script type="application/ld+json">
+            dangerouslySetInnerHTML={{ __html:
+                  JSON.stringify({
+                      "@context": "http://schema.org",
+                      "@type": "SoftwareApplication",
+                      "name": "HelloStocker App",
+                      "image": "https://www.hellostocker.com/assets/images/hellostocker.webp",
+                      "author": {
+                        "@type": "Person",
+                        "name": "Powered By ChatGPT"
+                      },
+                      "applicationCategory": "Investing",
+                      "screenshot": [
+                        "https://www.hellostocker.com/assets/images/chatgpt.webp",
+                        "https://www.hellostocker.com/assets/images/portfolio.webp",
+                        "https://www.hellostocker.com/assets/images/tslavsrace.webp",
+                        "https://www.hellostocker.com/assets/images/portfolioVirtual.webp",
+                        "https://www.hellostocker.com/assets/images/dividends.webp"
+                      ],
+                      "review": {
+                        "@type": "Review",
+                        "author": {
+                          "@type": "Person",
+                          "name": "itsjayhi"
+                        },
+                        "reviewRating": {
+                          "@type": "Rating",
+                          "ratingValue": "5/5"
+                        },
+                        "reviewBody": "HelloStocker is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend HelloStocker"
+                      }
+                    })}}
+                    </script>
+          <title>Virtual Investing & AI Financial Advisor App</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="HelloStocker is a GPT powered Virtual Investing Advisor App: stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
