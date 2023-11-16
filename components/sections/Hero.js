@@ -92,7 +92,7 @@ const Hero = ({
           <br></br>
           <br></br>
                 <div style={{ color: 'white', fontSize: "min(35px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                   Powered By ChatGPT | Install Now
+                                   Install Now
 
                                 </div>
                 <InstallButtonsWithQR/>
