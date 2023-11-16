@@ -40,15 +40,15 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="theme-color" content="#00D9FF" />
                 <meta name="description" content="Some tips on How to Make Money"/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta property="og:description" content="HelloStocker is a ChatGPT powered Virtual Trading Advisor App: receive hot stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
-                <meta name="description" property="og:description" content="HelloStocker is a ChatGPT powered Virtual Trading Advisor App: receive hot stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
-                <meta name="description" content="HelloStocker is a ChatGPT powered Virtual Trading Advisor App: receive hot stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
+                <meta property="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
+                <meta name="description" property="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
+                <meta name="description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
                 <meta property="og:title" content={post.title} />
-                <meta name="og:description" content="HelloStocker is a ChatGPT powered Virtual Trading Advisor App: receive hot stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch" />
+                <meta name="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={''+post.title}/>
-                <meta name="twitter:description" content="HelloStocker is a ChatGPT powered Virtual Trading Advisor App: receive hot stocks to buy now and trends to follow with stock Market Big Data analysis, Hedge Fund Trading, Company Financial analytics. Is Nvidia a buy? Find the next Tesla, Roblox and hot stocks to watch"/>
+                <meta name="twitter:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
