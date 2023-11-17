@@ -58,12 +58,78 @@ export default function Swipe() {
               <br></br>
               <br></br>
 
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                      Unlimited Virtual Money
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                    src='/assets/images/portfolio.webp'
+
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
+                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                    />
+                    </Zoom>
+                </div>
+                </center>
+              </div>
+              </div>
+
+
+              <br></br>
+                            <br></br>
+                            <br></br>
+
+
+                  <div className="container">
+                 <div className="split-item">
+                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                                  Dividend Stocks +20% Yield
+                                  </h3>
+
+                              </div>
+               <center>
+                              <div className={
+                                classNames(
+                                  'split-item-image center-content-mobile reveal-from-bottom',
+                                   'split-item-image-fill'
+                                )}
+                                data-reveal-container=".split-item">
+                                <Zoom>
+                                <Image
+                                  src='/assets/images/dividends.webp'
+
+                                  sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
+                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                                  />
+                                  </Zoom>
+                              </div>
+                              </center>
+                            </div>
+                            </div>
+
+<br></br>
+              <br></br>
+              <br></br>
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                    Buy Tesla Competitors Before They Blow Up
+                    Tesla Competition Analysis
                     </h3>
 
                 </div>
@@ -94,11 +160,15 @@ export default function Swipe() {
               <br></br>
 
 
+
+
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                      Replicate Top 10 Investment Portfolio
+
+                        <br></br>
+                        Is it a Bubble? Look at Nvidia Earnings
                     </h3>
 
                 </div>
@@ -112,75 +182,6 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolioVirtual.webp'
-
-                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
-                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
-                    />
-                    </Zoom>
-                </div>
-                </center>
-              </div>
-              </div>
-
-
-              <br></br>
-                            <br></br>
-                            <br></br>
-
-
-                  <div className="container">
-                 <div className="split-item">
-                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                                  Dividend Stocks That Pay 20% Yield
-                                  </h3>
-
-                              </div>
-               <center>
-                              <div className={
-                                classNames(
-                                  'split-item-image center-content-mobile reveal-from-bottom',
-                                   'split-item-image-fill'
-                                )}
-                                data-reveal-container=".split-item">
-                                <Zoom>
-                                <Image
-                                  src='/assets/images/dividends.webp'
-
-                                  sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
-                                  />
-                                  </Zoom>
-                              </div>
-                              </center>
-                            </div>
-                            </div>
-
-<br></br>
-              <br></br>
-              <br></br>
-
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-
-                        <br></br>
-                        AI Predicted Nvidia Is A Buy
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                    src='/assets/images/portfolio.webp'
 
                     sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='NVIDIA price graph ticker NVDA find hot stocks to watch today with hellostocker market analytics and ai financial advisor practise with virtual trading'
