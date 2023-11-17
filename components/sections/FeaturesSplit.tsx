@@ -111,6 +111,8 @@ const FeaturesSplit = ({
         Having a coffee break? Chat with your own personal financial advisor let's make money!
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         </div>
         <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
         Your AI Advisor processes:
@@ -131,6 +133,8 @@ const FeaturesSplit = ({
         - Quantitative analysis
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         You will receive Stock Market Analysis with:
         <br></br>
         <br></br>
@@ -149,6 +153,8 @@ const FeaturesSplit = ({
         - What competitors to watch for
         </div>
         <div style={{ color: 'lightgrey', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         We predicted these stocks would go up and our users profited over +400% on these names!
