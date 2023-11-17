@@ -53,40 +53,6 @@ export default function Swipe() {
                             </div>
                             </div>
 
-<br></br>
-              <br></br>
-              <br></br>
-
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-
-                        <br></br>
-                        AI Predicted Nvidia Is A Buy
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                    src='/assets/images/portfolio.webp'
-
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
-                    alt='NVIDIA NVDA hot stocks to watch today market analysis financial advisor virtual trading'
-                    />
-                    </Zoom>
-                </div>
-                </center>
-              </div>
-              </div>
 
 <br></br>
               <br></br>
@@ -189,9 +155,45 @@ export default function Swipe() {
                               </center>
                             </div>
                             </div>
+
+<br></br>
+              <br></br>
+              <br></br>
+
+
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                  <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+
+                        <br></br>
+                        AI Predicted Nvidia Is A Buy
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                    src='/assets/images/portfolio.webp'
+
+                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    alt='NVIDIA price graph ticker NVDA find hot stocks to watch today with hellostocker market analytics and ai financial advisor practise with virtual trading'
+                    />
+                    </Zoom>
+                </div>
+                </center>
+              </div>
+              </div>
               <br></br>
                             <br></br>
                             <br></br>
+
 {/*
                   <div className="container">
    <div className="split-item">
