@@ -230,14 +230,14 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8)A Virtual Trading App to practice making money without any risk.</b></div>
+        <div style={{color:'white'}}><b>8) A Virtual Trading App to practice making money without any risk.</b></div>
 <br></br>
 <br></br>
         You will have unlimited Virtual Money to practise and consolidate your knowledge!
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9)Advisory AI is the future of investing.</b></div>
+        <div style={{color:'white'}}><b>9) Advisory AI is the future of investing.</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
@@ -247,7 +247,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10)Want to go wild and search yourself?</b></div>
+        <div style={{color:'white'}}><b>10) Want to go wild and search yourself?</b></div>
 <br></br>
 <br></br>
         Use our AI investment screener to learn investing and improve your trading skills!
