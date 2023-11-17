@@ -112,8 +112,7 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         </div>
-        <b>
-        <div style={{ color: 'white'}} >
+        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
         Your AI Advisor processes:
         <br></br>
         <br></br>
@@ -149,7 +148,6 @@ const FeaturesSplit = ({
         <br></br>
         - What competitors to watch for
         </div>
-</b>
         <div style={{ color: 'lightgrey', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
         <br></br>
         <br></br>
