@@ -143,19 +143,24 @@ const FeaturesSplit = ({
         You get insights you won’t find anywhere else.
         <br></br>
         <br></br>
-        We use advanced AI to track hundreds of signals and data points to help us filter through the noise and find high quality stocks.
+        We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
 <br></br>
 <br></br>
         Unbiased with no hidden agenda.
 <br></br>
 <br></br>
-        Other services are filled with opinions, recommendations, and pump-and-dump stocks. HelloStocker AI reports are 100% unbiased, objective, and data-driven.
+        Other services are filled with opinions, recommendations, and pump-and-dump stocks.
+        <br></br>
+        <br></br>
+        HelloStocker AI reports are 100% unbiased, objective, and data-driven.
 <br></br>
 <br></br>
-        Simple and easy to understand.
+        <b>Simple and easy to understand.</b>
 <br></br>
 <br></br>
-        You don’t need another long financial report to read. Each report is a simple concise message with at most 2 market graphs easy to understand.
+        You don’t need another long financial report to read.
+        <br></br>
+        Each report is a simple concise message with at most 2 market graphs easy to understand.
 <br></br>
 <br></br>
         You save 80+ hours of research per month.
@@ -167,13 +172,17 @@ const FeaturesSplit = ({
         Get access to early opportunities.
 <br></br>
 <br></br>
-        No one wants to buy a stock after it’s gone up 56,978%. We look for stocks that still have huge upside according to the data.
+        No one wants to buy a stock after it’s gone up 56,978%.
+        <br></br>
+        We look for stocks that still have huge upside according to the data.
 <br></br>
 <br></br>
         No complicated tools or dashboards.
 <br></br>
 <br></br>
-        Have you ever tried using a Bloomberg terminal? We have used them for decades. All you’ll need to get up to speed is a comfortable chair, 5 minutes of your time, and maybe a cup of coffee: Install HelloStocker now!
+        Have you ever tried using a Bloomberg terminal? We have used them for decades.
+        <br></br>
+        All you’ll need to get up to speed is a comfortable chair, 5 minutes of your time, and maybe a cup of coffee.
 <br></br>
 <br></br>
         Warren Buffet started his love for stock investing at 11 years old.
