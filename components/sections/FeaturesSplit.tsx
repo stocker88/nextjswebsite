@@ -112,7 +112,7 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         </div>
-        <h2>
+        <b>
         <div style={{ color: 'white'}} >
         Your AI Advisor processes:
         <br></br>
@@ -149,18 +149,19 @@ const FeaturesSplit = ({
         <br></br>
         - What competitors to watch for
         </div>
-        </h2>
-
+</b>
         <div style={{ color: 'lightgrey', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
         <br></br>
         <br></br>
         We predicted these stocks would go up and our users profited over +400% on these names!
         <br></br>
         <br></br>
+        <br></br>
         <div style={{color:'white'}}><b>You get insights you won’t find anywhere else.</b></div>
         <br></br>
         <br></br>
         We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
+<br></br>
 <br></br>
 <br></br>
         <div style={{color:'white'}}><b>Unbiased with no hidden agenda.</b></div>
@@ -172,12 +173,14 @@ const FeaturesSplit = ({
         HelloStocker AI reports are 100% unbiased, objective, and data-driven.
 <br></br>
 <br></br>
-        <b>Simple and easy to understand.</b>
+<br></br>
+        <div style={{color:'white'}}><b>Simple and easy to understand.</b></div>
 <br></br>
 <br></br>
         You don’t need another long financial report to read.
         <br></br>
         Each report is a simple concise message with at most 2 market graphs easy to understand.
+<br></br>
 <br></br>
 <br></br>
         <div style={{color:'white'}}><b>You save 80+ hours of research per month.</b></div>
@@ -186,12 +189,14 @@ const FeaturesSplit = ({
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
 <br></br>
 <br></br>
+<br></br>
         <div style={{color:'white'}}><b>Get access to early opportunities.</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
         <br></br>
         We look for stocks that still have huge upside according to the data.
+<br></br>
 <br></br>
 <br></br>
         <div style={{color:'white'}}><b>No complicated tools or dashboards.</b></div>
