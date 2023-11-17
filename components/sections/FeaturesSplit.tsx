@@ -242,8 +242,9 @@ const FeaturesSplit = ({
         Start early: compound interest grows your wealth exponentially.
 <br></br>
 <br></br>
+</div>
 </Container>
-        </div>
+
         <br></br>
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
