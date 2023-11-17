@@ -30,7 +30,7 @@ export default function Swipe() {
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
 
-                                Predicted Netflix +20% Move 24H Before
+                                We Predicted Netflix +40%
                                   </h3>
 
                               </div>
@@ -44,7 +44,7 @@ export default function Swipe() {
                              <Zoom>
                              <Image
                                   src='/assets/images/chatgpt.webp'
-                                  sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                                  sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </Zoom>
@@ -78,7 +78,7 @@ export default function Swipe() {
                   <Image
                   src='/assets/images/tslavsrace.webp'
 
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
                     </Zoom>
@@ -113,7 +113,7 @@ export default function Swipe() {
                   <Image
                     src='/assets/images/portfolioVirtual.webp'
 
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
                     </Zoom>
@@ -147,7 +147,7 @@ export default function Swipe() {
                                 <Image
                                   src='/assets/images/dividends.webp'
 
-                                  sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                                  sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                                   </Zoom>
@@ -182,7 +182,7 @@ export default function Swipe() {
                   <Image
                     src='/assets/images/portfolio.webp'
 
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='NVIDIA price graph ticker NVDA find hot stocks to watch today with hellostocker market analytics and ai financial advisor practise with virtual trading'
                     />
                     </Zoom>
@@ -216,7 +216,7 @@ export default function Swipe() {
                   <Image
                     src='/assets/images/educational.png'
 
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
@@ -249,7 +249,7 @@ export default function Swipe() {
                     src='/assets/images/nvdia.png'
                     alt="Features split 02"
 
-                    sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                    sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                     alt='stockerapp stocker app crypto news tracker  financial news today  Stocks going viral Crypto going viral find the next big cryptocurrency  financial analysis course  select the best stocks and crypto.   financial literacy course   Make Money how to invest in cryptocurrency   practise investing for beginners   Should I save or invest?  practise investing   free trading simulator Investing for beginners Asset'
                     />
                 </div>
@@ -281,7 +281,7 @@ export default function Swipe() {
                                   src='/assets/images/twtrvsmeta.png'
                                   alt="Features split 02"
 
-                                  sizes="(max-width: 600px) 100vw, (max-width: 600px) 33vw, 33vw"
+                                  sizes="(max-width: 450px) 100vw, (max-width: 450px) 33vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>

@@ -15,6 +15,7 @@ type Props = {
   allPosts: Post[]
 }
 ReactGA.initialize('G-JPXMZYD5DY');
+ReactGA.initialize('G-WXHHGB6FSV');
 
 const trackPage = page => {
   ReactGA.set({ page });
