@@ -113,26 +113,36 @@ const FeaturesSplit = ({
         <br></br>
         Your AI Advisor processes:
         <br></br>
+        <br></br>
         - Hedge fund trading data
+        <br></br>
         <br></br>
         - Wall St analyst ratings
         <br></br>
+        <br></br>
         - Social media sentiment data on Reddit and Twitter
         <br></br>
+        <br></br>
         - Fundamental analysis
+        <br></br>
         <br></br>
         - Quantitative analysis
         <br></br>
         <br></br>
         You will receive Stock Market Analysis with:
         <br></br>
+        <br></br>
         - What the company does
+        <br></br>
         <br></br>
         - Why it's growing in interest
         <br></br>
+        <br></br>
         - How it could be more valuable
         <br></br>
+        <br></br>
         - Risks to watch out for
+        <br></br>
         <br></br>
         - What competitors to watch for
         <br></br>
