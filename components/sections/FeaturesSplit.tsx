@@ -101,10 +101,14 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <Container>
-        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-        Having a coffee break? Chat with your own personal financial advisor let's make money!
+        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
+
+        <br></br>
         <br></br>
         We send you hot stocks to buy now: find the next Nvidia, Netflix and Tesla before they do +999%
+        <br></br>
+        <br></br>
+        Having a coffee break? Chat with your own personal financial advisor let's make money!
         <br></br>
         <br></br>
         Your AI Advisor processes:
