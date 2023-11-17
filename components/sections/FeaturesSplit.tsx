@@ -183,6 +183,7 @@ const FeaturesSplit = ({
 <br></br>
         You don’t need another long financial report to read.
         <br></br>
+        <br></br>
         Each report is a simple concise message with at most 2 market graphs easy to understand.
 <br></br>
 <br></br>
@@ -199,6 +200,7 @@ const FeaturesSplit = ({
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
         <br></br>
+        <br></br>
         We look for stocks that still have huge upside according to the data.
 <br></br>
 <br></br>
@@ -208,46 +210,34 @@ const FeaturesSplit = ({
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
         <br></br>
+        <br></br>
         All you’ll need to get up to speed is a comfortable chair, 5 minutes of your time, and maybe a cup of coffee.
 <br></br>
 <br></br>
-        Warren Buffet started his love for stock investing at 11 years old.
+
 <br></br>
 <br></br>
-        He bought his first stocks during the great depression, and is now a billionaire investors: not millionnaire, billionnaire!
-<br></br>
-<br></br>
-        Start early and Compound Interest to grow your wealth exponentially.
-<br></br>
-<br></br>
-        Want to view what other top traders do?
+        <div style={{color:'white'}}><b>7) Want to view what other top traders do?</b></div>
 <br></br>
 <br></br>
         Join our awesome community of investors, where you can connect with other pro trades!
 <br></br>
 <br></br>
-        Our community discussed the hottest stocks and cryptos to watch!
-<br></br>
-<br></br>
-        We uses AI to study social hot market trends that make money!
-<br></br>
-<br></br>
-        Stay updated with financial news.
-<br></br>
-<br></br>
-        In HelloStocker you can view top investors trading activity: Cathy Wood predicted Tesla.
+        Discuss and view top investors trading activity: Cathy Wood predicted Tesla.
 <br></br>
 <br></br>
         Access their Portfolio Positions and Replicate them with Virtual Trading.
 <br></br>
 <br></br>
-        A Virtual Trading App to practice making money without any risk.
+<br></br>
+        <div style={{color:'white'}}><b>8)A Virtual Trading App to practice making money without any risk.</b></div>
 <br></br>
 <br></br>
-        You will have unlimited Virtual Money to try our AI Analysis.
+        You will have unlimited Virtual Money to practise and consolidate your knowledge!
 <br></br>
 <br></br>
-        Advisory AI is the future of investing.
+<br></br>
+        <div style={{color:'white'}}><b>9)Advisory AI is the future of investing.</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
@@ -256,7 +246,8 @@ const FeaturesSplit = ({
         Our user front AI is Powered By Open AI ChatGPT GPT4 model.
 <br></br>
 <br></br>
-        Have extra time to search and learn yourself?
+<br></br>
+        <div style={{color:'white'}}><b>10)Want to go wild and search yourself?</b></div>
 <br></br>
 <br></br>
         Use our AI investment screener to learn investing and improve your trading skills!
@@ -265,10 +256,12 @@ const FeaturesSplit = ({
         Trading Strategies are built in for you.
 <br></br>
 <br></br>
-        One click and the AI model will show you a menu of stocks to buy based on what you want!
+        One click and the AI model shows you a menu of stocks to buy based on what you want!
 <br></br>
 <br></br>
-        Make money now with your AI Investment Advisor powered by ChatGPT.
+<br></br>
+<br></br>
+        <div style={{color:'white'}}><b>Make money now with your AI Investment Advisor powered by ChatGPT.</b></div>
 <br></br>
 <br></br>
         HelloStocker can help you achieve financial freedom and early retirement with passive income revenues.
