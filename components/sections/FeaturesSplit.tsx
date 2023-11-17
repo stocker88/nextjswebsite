@@ -155,13 +155,13 @@ const FeaturesSplit = ({
         We predicted these stocks would go up and our users profited over +400% on these names!
         <br></br>
         <br></br>
-        You get insights you won’t find anywhere else.
+        <div style={{color:'white'}}><b>You get insights you won’t find anywhere else.</b></div>
         <br></br>
         <br></br>
         We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
 <br></br>
 <br></br>
-        Unbiased with no hidden agenda.
+        <div style={{color:'white'}}><b>Unbiased with no hidden agenda.</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
@@ -178,13 +178,13 @@ const FeaturesSplit = ({
         Each report is a simple concise message with at most 2 market graphs easy to understand.
 <br></br>
 <br></br>
-        You save 80+ hours of research per month.
+        <div style={{color:'white'}}><b>You save 80+ hours of research per month.</b></div>
 <br></br>
 <br></br>
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
 <br></br>
 <br></br>
-        Get access to early opportunities.
+        <div style={{color:'white'}}><b>Get access to early opportunities.</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
@@ -192,7 +192,7 @@ const FeaturesSplit = ({
         We look for stocks that still have huge upside according to the data.
 <br></br>
 <br></br>
-        No complicated tools or dashboards.
+        <div style={{color:'white'}}><b>No complicated tools or dashboards.</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
