@@ -100,7 +100,8 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <br></br>
-        <div style={{ color: 'white', fontSize: "min(30px,max(20px,2vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+        <Container>
+        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
         Having a coffee break? Chat with your own personal financial advisor let's make money!
         <br></br>
         We send you hot stocks to buy now: find the next Nvidia, Netflix and Tesla before they do +999%
@@ -117,6 +118,7 @@ const FeaturesSplit = ({
         - Fundamental analysis
         <br></br>
         - Quantitative analysis
+        <br></br>
         <br></br>
         You will receive Stock Market Analysis with:
         <br></br>
@@ -236,6 +238,7 @@ const FeaturesSplit = ({
         Start early: compound interest grows your wealth exponentially.
 <br></br>
 <br></br>
+</Container>
         </div>
         <br></br>
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
