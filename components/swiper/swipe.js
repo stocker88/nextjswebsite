@@ -132,7 +132,7 @@ export default function Swipe() {
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-4xl md:text-7xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                                  Pay Rent with High Dividend Stocks
+                                  Dividend Stocks That Pay 20% Yield
                                   </h3>
 
                               </div>
