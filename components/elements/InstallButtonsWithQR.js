@@ -88,7 +88,7 @@ if(isMobile) {
                                               <br></br>
 
                           <br></br>
-<br></br><br></br>
+
           </section>
           )
 }
