@@ -100,8 +100,9 @@ const FeaturesSplit = ({
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
         <br></br>
-        <WhyHellostocker/>
         <br></br>
+                <br></br>
+        <WhyHellostocker/>
         <br></br>
         <Container>
         <div style={{ color: 'lightgrey', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
@@ -233,17 +234,29 @@ If you invest $10 a day in the stock market, in 10 years you will have $2,000,00
 
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <AboutUs/>
+        - Our Vision is to put an end to social inequalities by giving everyone equal chances to build wealth.
+        <br></br>
+        <br></br>
+        - Our Mission is to Empower the People with clear and transparent insights.
+        <br></br>
+        <br></br>
+       - Our Founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
+        <br></br>
         - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
-        - Our founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
-        - Our mission is to empower retail with easily accessible smart investing.
-        - Grow your investment portfolio and make money: Install HelloStocker now!
         <br></br>
         <br></br>
         <br></br>
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+                <br></br>
 </Container>
 
 
