@@ -23,9 +23,11 @@ export default function Swipe() {
   return (
     <>
 
-<div>
+<center>
+
+        <br></br>
             <div className="container">
-<br></br>
+
              <div className="split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
@@ -43,7 +45,7 @@ export default function Swipe() {
                         <br></br>
                         <br></br>
 <center>
-                   <i>     We Predicted Netflix +40% </i>
+                        We Predicted Netflix +40%
                   </h3>
 
 
@@ -93,7 +95,7 @@ export default function Swipe() {
 
 
 <center>
-            <i>      Dividend Stocks +20% Yield </i>
+                  Dividend Stocks +20% Yield
                   </h3>
 
 
@@ -126,7 +128,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                <i>    Tesla Competition Analysis </i>
+                    Tesla Competition Analysis
                     </h3>
 
                 </div>
@@ -167,6 +169,7 @@ export default function Swipe() {
         <br></br>
         <br></br>
         - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
+        </div>
         <br></br>
         <br></br>
         </h3>
@@ -180,9 +183,10 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                 <i>     Unlimited Virtual Money </i>
+                      Unlimited Virtual Money
                     </h3>
 
+                </div>
                 <center>
                 <div className={
                   classNames(
@@ -217,7 +221,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
 
                         <br></br>
-                <i?        Is it a Bubble? Look at Nvidia Earnings </i>
+                        Is it a Bubble? Look at Nvidia Earnings
                     </h3>
 
                 </div>
@@ -342,9 +346,11 @@ export default function Swipe() {
 */}
 
 
+</center>
+
 <br></br>
 
-</div>
+
     </>
   )
 }
