@@ -26,49 +26,50 @@ export default function Swipe() {
 <center>
 
         <br></br>
- <div className="container">
-                         <div className="split-item">
-        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                <br></br>
-                <br></br>
-                - What the Company Business does
-                <br></br>
-                <br></br>
-                - Why it's Growing in Interest
-                <br></br>
-                <br></br>
-                - How the Stock could be more Valuable
-                <br></br>
-                <br></br>
-                - Market Risks & Competitors to watch for
-        <br></br>
-        <br></br>
-        <br></br>
+            <div className="container">
 
-                                        We Predicted Netflix +40%
-                                          </h3>
+             <div className="split-item">
+                <center>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                                <br></br>
+                                <br></br>
+                                - What the Company Business does
+                                <br></br>
+                                <br></br>
+                                - Why it's Growing in Interest
+                                <br></br>
+                                <br></br>
+                                - How the Stock could be more Valuable
+                                <br></br>
+                                <br></br>
+                                - Market Risks & Competitors to watch for
+                        <br></br>
+                        <br></br>
+                        <br></br>
 
-                                      </div>
-                       <center>
-                                      <div className={
-                                        classNames(
-                                          'split-item-image center-content-mobile reveal-from-bottom',
-                                           'split-item-image-fill'
-                                        )}
-                                        data-reveal-container=".split-item">
-                                     <Zoom>
-                                     <Image
-                                        width={450}
-                                         height={450}
-                                          src='/assets/images/chatgpt.webp'
-                                          sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                                          alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
-                                          />
-                                      </Zoom>
-                                      </div>
-                                      </center>
-                                    </div>
-                                    </div>
+                        We Predicted Netflix +40%
+                  </h3>
+
+
+                  <div className={
+                    classNames(
+                      'split-item-image center-content-mobile reveal-from-bottom',
+                       'split-item-image-fill'
+                    )}
+                    data-reveal-container=".split-item">
+                 <Zoom>
+                 <Image
+                    width={450}
+                     height={450}
+                      src='/assets/images/chatgpt.webp'
+                      sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                      alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                      />
+                  </Zoom>
+                  </div>
+            </center>
+        </div>
+        </div>
 <br></br>
   <br></br>
         <IntroDataset/>
