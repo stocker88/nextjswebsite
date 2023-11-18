@@ -58,7 +58,7 @@ export default function Swipe() {
 <br></br>
         <br></br>
 
-        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        <div style={{ color: 'white', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
         Your AI Advisor processes:
         <br></br>
         <br></br>
@@ -68,7 +68,7 @@ export default function Swipe() {
         - Wall St analyst ratings
         <br></br>
         <br></br>
-        - Social media sentiment data on Reddit and Twitter
+        - Social media sentiment data
         <br></br>
         <br></br>
         - Fundamental analysis
