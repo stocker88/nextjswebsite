@@ -40,7 +40,7 @@ export default function Swipe() {
                 <br></br>
                 <br></br>
                 - What Risks and Competitiors to watch for
-
+</div>
         <br></br>
 <br></br>
   <br></br>
