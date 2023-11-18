@@ -72,7 +72,7 @@ export default function Swipe() {
   <br></br>
 
         <IntroDataset/>
-        <br></br>
+
 <div className="container">
      <div className="split-item">
         <center>
@@ -154,8 +154,6 @@ export default function Swipe() {
               </div>
 
               <br></br>
-              <br></br>
-
 <br></br>
  <br></br>
         <AboutUs/>
