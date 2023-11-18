@@ -82,16 +82,15 @@ const Hero = ({
                  <Image
                   src='/assets/images/usersRating.webp'
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
-                 style={{width:250, height:52}}
+                 style={{width:275, height:57.2}}
                   />
 <div style={{ color: 'white', fontSize: "min(32px,max(22px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   over 10,000 investors
                 </div>
-              <div className="reveal-from-bottom" data-reveal-delay="250">
 
           <br></br>
           <br></br>
-                <div style={{ color: 'white', fontSize: "min(35px,max(25px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                    Install Now
 
                                 </div>
@@ -103,7 +102,6 @@ const Hero = ({
           <br></br>
 
 
-             </div>
 
           </div>
 
