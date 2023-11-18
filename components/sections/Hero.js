@@ -84,7 +84,7 @@ const Hero = ({
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{width:275, height:57.2}}
                   />
-<div style={{ color: 'white', fontSize: "min(32px,max(22px,2.5vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.3,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+<div style={{ color: 'white', fontSize: "min(25px,max(20px,2vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                   over 10,000 investors
                 </div>
 
