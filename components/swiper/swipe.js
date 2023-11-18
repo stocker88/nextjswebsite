@@ -45,7 +45,6 @@ export default function Swipe() {
 
         </div>
         </div>
-        </div>
 <center>
 <div className="container">
      <div className="split-item">
@@ -97,7 +96,6 @@ export default function Swipe() {
                 <br></br>
 </h3>
 
-        </div>
         </div>
         </div>
 
