@@ -40,7 +40,8 @@ export default function Swipe() {
                 - How the Stock could be more Valuable
                 <br></br>
                 <br></br>
-                - What Market Risks and Competitors to watch for
+                - Market Risks & Competitors to watch for
+        <br></br>
         <br></br>
         <br></br>
 
