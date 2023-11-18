@@ -9,7 +9,6 @@ import { useState } from 'react';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
-import AboutUs from '../../components/aboutUs';
 import WhyHellostocker from '../../components/whyHellostocker';
 import IntroVideo from '../../components/introVideo';
 import IntroDownload from '../../components/introDownload';
@@ -232,25 +231,6 @@ If you invest $10 a day in the stock market, in 10 years you will have $2,000,00
         <br></br>
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <AboutUs/>
-        - Our Vision is to put an end to social inequalities by giving everyone equal chances to build wealth.
-        <br></br>
-        <br></br>
-        - Our Mission is to Empower the People with clear and transparent insights.
-        <br></br>
-        <br></br>
-       - Our Founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
-        <br></br>
-        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
         <br></br>

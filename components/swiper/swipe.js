@@ -13,6 +13,7 @@ import IntroDataset from '../../components/introDataset';
 import SwiperCore, {
   EffectCoverflow,Pagination,Autoplay
 } from 'swiper';
+import AboutUs from '../../components/aboutUs';
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
@@ -62,6 +63,28 @@ export default function Swipe() {
 <br></br>
 <br></br>
 <br></br>
+ <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <AboutUs/>
+
+        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        - Our Vision is to put an end to social inequalities by giving everyone equal chances to build wealth.
+        <br></br>
+        <br></br>
+        - Our Mission is to Empower the People with clear and transparent insights.
+        <br></br>
+        <br></br>
+       - Our Founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
+        <br></br>
+        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 
                   <div className="container">
                  <div className="split-item">
