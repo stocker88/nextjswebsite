@@ -24,6 +24,31 @@ export default function Swipe() {
 
 <center>
 
+        <br></br>
+
+        <div style={{ color: 'white', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        Your AI Advisor processes:
+        <br></br>
+        <br></br>
+        - Financial Reportings Data
+        <br></br>
+        <br></br>
+        - Wall St Analyst Ratings
+        <br></br>
+        <br></br>
+        - Social Sentiment & News
+        <br></br>
+        <br></br>
+        - Technical Trading Analysis
+        <br></br>
+        <br></br>
+        - Hedge fund Trading Activity
+        <br></br>
+        </div>
+
+<br></br>
+<br></br>
+<br></br>
 
                   <div className="container">
                  <div className="split-item">
@@ -54,29 +79,6 @@ export default function Swipe() {
                               </center>
                             </div>
                             </div>
-
-<br></br>
-        <br></br>
-
-        <div style={{ color: 'white', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-        Your AI Advisor processes:
-        <br></br>
-        <br></br>
-        - Hedge fund trading data
-        <br></br>
-        <br></br>
-        - Wall St analyst ratings
-        <br></br>
-        <br></br>
-        - Social media sentiment
-        <br></br>
-        <br></br>
-        - Fundamental analysis
-        <br></br>
-        <br></br>
-        - Quantitative analysis
-        <br></br>
-        </div>
 
 <br></br>
               <br></br>
@@ -202,9 +204,6 @@ export default function Swipe() {
               </div>
               </div>
 
-
-
-<br></br>
               <br></br>
               <br></br>
 
@@ -242,8 +241,6 @@ export default function Swipe() {
               </div>
               </div>
               <br></br>
-                            <br></br>
-                            <br></br>
 
 {/*
                   <div className="container">
