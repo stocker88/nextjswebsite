@@ -27,7 +27,7 @@ export default function Swipe() {
 
         <br></br>
 
-        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        <div style={{ color: 'white', fontSize: "min(25px,max(19px,2vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
                 <br></br>
                 <br></br>
                 - What the company does
@@ -40,13 +40,44 @@ export default function Swipe() {
                 <br></br>
                 <br></br>
                 - What Risks and Competitiors to watch for
-</div>
+        </div>
         <br></br>
+        <br></br>
+
+                          <div className="container">
+                         <div className="split-item">
+                                      <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+                                        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+
+                                        We Predicted Netflix +40%
+                                          </h3>
+
+                                      </div>
+                       <center>
+                                      <div className={
+                                        classNames(
+                                          'split-item-image center-content-mobile reveal-from-bottom',
+                                           'split-item-image-fill'
+                                        )}
+                                        data-reveal-container=".split-item">
+                                     <Zoom>
+                                     <Image
+                                        width={450}
+                                         height={450}
+                                          src='/assets/images/chatgpt.webp'
+                                          sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                                          alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                                          />
+                                      </Zoom>
+                                      </div>
+                                      </center>
+                                    </div>
+                                    </div>
 <br></br>
   <br></br>
         <IntroDataset/>
         <br></br>
-        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        <div style={{ color: 'white', fontSize: "min(25px,max(19px,2vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
         <br></br>
         <br></br>
         - Wall St Analyst Ratings & Financials
@@ -61,37 +92,15 @@ export default function Swipe() {
         - Hedge fund Trading Activity
         </div>
 <br></br>
-<br></br>
-<br></br>
- <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <AboutUs/>
+   <br></br>
+                            <br></br>
 
-        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-        - Our Vision is to put an end to social inequalities by giving everyone equal chances to build wealth.
-        <br></br>
-        <br></br>
-        - Our Mission is to Empower the People with clear and transparent insights.
-        <br></br>
-        <br></br>
-       - Our Founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
-        <br></br>
-        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
 
                   <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-
-                                We Predicted Netflix +40%
+                                  Dividend Stocks +20% Yield
                                   </h3>
 
                               </div>
@@ -102,19 +111,79 @@ export default function Swipe() {
                                    'split-item-image-fill'
                                 )}
                                 data-reveal-container=".split-item">
-                             <Zoom>
-                             <Image
-                                width={450}
-                                 height={450}
-                                  src='/assets/images/chatgpt.webp'
+                                <Zoom>
+                                <Image
+                                  src='/assets/images/dividends.webp'
+                                    width={450}
+                                    height={450}
                                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
-                              </Zoom>
+                                  </Zoom>
                               </div>
                               </center>
                             </div>
                             </div>
+
+<br></br>
+<br></br>
+    <br></br>
+                  <div className="container">
+   <div className="split-item">
+                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
+
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                    Tesla Competition Analysis
+                    </h3>
+
+                </div>
+                <center>
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                  src='/assets/images/tslavsrace.webp'
+                        width={450}
+                    height={450}
+                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                    alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
+                    />
+                    </Zoom>
+                </div>
+                </center>
+              </div>
+              </div>
+
+              <br></br>
+              <br></br>
+
+<br></br>
+ <br></br>
+        <br></br>
+        <br></br>
+        <AboutUs/>
+
+        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        - Our Vision: Put an end to social inequalities by giving everyone equal chances to build wealth.
+        <br></br>
+        <br></br>
+        - Our Mission: Empower the People with clear and transparent insights.
+        <br></br>
+        <br></br>
+       - Our Founders managed billions for Wall Street banks and deployed AI technology for FAANG companies.
+        <br></br>
+        <br></br>
+        - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
 
 <br></br>
               <br></br>
@@ -152,73 +221,7 @@ export default function Swipe() {
 
 
               <br></br>
-                            <br></br>
-                            <br></br>
 
-
-                  <div className="container">
-                 <div className="split-item">
-                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                                  Dividend Stocks +20% Yield
-                                  </h3>
-
-                              </div>
-               <center>
-                              <div className={
-                                classNames(
-                                  'split-item-image center-content-mobile reveal-from-bottom',
-                                   'split-item-image-fill'
-                                )}
-                                data-reveal-container=".split-item">
-                                <Zoom>
-                                <Image
-                                  src='/assets/images/dividends.webp'
-                                    width={450}
-                                    height={450}
-                                  sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
-                                  />
-                                  </Zoom>
-                              </div>
-                              </center>
-                            </div>
-                            </div>
-
-<br></br>
-              <br></br>
-              <br></br>
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                    Tesla Competition Analysis
-                    </h3>
-
-                </div>
-                <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                  src='/assets/images/tslavsrace.webp'
-                        width={450}
-                    height={450}
-                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
-                    />
-                    </Zoom>
-                </div>
-                </center>
-              </div>
-              </div>
-
-              <br></br>
               <br></br>
 
 
