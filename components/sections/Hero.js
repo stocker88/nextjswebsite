@@ -73,7 +73,23 @@ const Hero = ({
             <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                             HelloStocker App
                                           </h1>
-                 <Image
+
+          <br></br>
+           <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                                   Install Now
+
+                                </div>
+                <InstallButtonsWithQR/>
+
+          <br></br>
+          <br></br>
+                          <br></br>
+                        <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                             AI Investing Advisor & Virtual Trading App
+                             </div>
+          <br></br>
+          <br></br>
+ <Image
                   src='/assets/images/usersRating.webp'
                   alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
                  style={{width:275, height:68.75}}
@@ -82,21 +98,8 @@ const Hero = ({
                   over 10,000 investors
                 </div>
                 <br></br>
-                                   <br></br>
-              <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                   AI Investing Advisor & Virtual Trading App
+
                    <br></br>
-          <br></br>
-                                   Install Now
-
-                                </div>
-                <InstallButtonsWithQR/>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-
 
 
           </div>
