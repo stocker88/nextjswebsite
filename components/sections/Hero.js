@@ -74,16 +74,16 @@ const Hero = ({
                                             HelloStocker App
                                           </h1>
 
+                        <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                             AI Investing Advisor & Virtual Trading App
+                             </div>
+                <InstallButtonsWithQR/>
+
+
            <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                    Install Now
 
                                 </div>
-                <InstallButtonsWithQR/>
-
-
-                        <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                             AI Investing Advisor & Virtual Trading App
-                             </div>
           <br></br>
           <br></br>
  <Image
