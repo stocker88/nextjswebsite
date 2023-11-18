@@ -9,6 +9,8 @@ import { useState } from 'react';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
+import AboutUs from '../../components/aboutUs';
+import WhyHellostocker from '../../components/whyHellostocker';
 import IntroVideo from '../../components/introVideo';
 import IntroDownload from '../../components/introDownload';
 import Container from '../../components/container'
@@ -98,6 +100,7 @@ const FeaturesSplit = ({
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
         <br></br>
+        <WhyHellostocker/>
         <br></br>
         <br></br>
         <Container>
@@ -174,7 +177,7 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>7) See what other Traders are doing</b></div>
 <br></br>
 <br></br>
-        Join our awesome community of investors, where you can connect with other pro trades!
+        Join our community of investors, where you can connect with other pro trades!
 <br></br>
 <br></br>
         Discuss and view top investors trading activity: Cathy Wood predicted Tesla.
@@ -213,6 +216,9 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>10) Start early: compound interest grows your wealth exponentially.</b></div>
 <br></br>
 <br></br>
+Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
+<br></br>
+<br></br>
 If you save $10 a day in your bank account, in 10 years you will have $90,000.
 <br></br>
 <br></br>
@@ -227,6 +233,11 @@ If you invest $10 a day in the stock market, in 10 years you will have $2,000,00
 
         <br></br>
         <br></br>
+        <AboutUs/>
+        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
+        - Our founders managed billions for Wall Street banks, and deployed cutting edge AI technology to FAANG companies.
+        - Our mission is to empower retail with easily accessible smart investing.
+        - Grow your investment portfolio and make money: Install HelloStocker now!
         <br></br>
         <br></br>
         <br></br>
