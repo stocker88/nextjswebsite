@@ -167,7 +167,6 @@ export default function Swipe() {
         <br></br>
         <br></br>
         - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
-        </div>
         <br></br>
         <br></br>
         </h3>
@@ -184,7 +183,6 @@ export default function Swipe() {
                       Unlimited Virtual Money
                     </h3>
 
-                </div>
                 <center>
                 <div className={
                   classNames(
