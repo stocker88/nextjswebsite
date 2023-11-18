@@ -194,9 +194,10 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>10) Start early: compound interest grows your wealth exponentially.</b></div>
 <br></br>
 <br></br>
+If you save $10 a day in your bank account, in 10 years you will have $90,000.
 <br></br>
 <br></br>
-
+If you invest $10 a day in the stock market, in 10 years you will have $2,000,000.
 <br></br>
 <br></br>
 </div>

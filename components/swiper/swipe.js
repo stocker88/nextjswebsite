@@ -68,7 +68,7 @@ export default function Swipe() {
         - Wall St analyst ratings
         <br></br>
         <br></br>
-        - Social media sentiment data
+        - Social media sentiment
         <br></br>
         <br></br>
         - Fundamental analysis
@@ -76,25 +76,6 @@ export default function Swipe() {
         <br></br>
         - Quantitative analysis
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        You will receive Stock Market Analysis with:
-        <br></br>
-        <br></br>
-        - What the company does
-        <br></br>
-        <br></br>
-        - Why it's growing in interest
-        <br></br>
-        <br></br>
-        - How it could be more valuable
-        <br></br>
-        <br></br>
-        - Risks to watch out for
-        <br></br>
-        <br></br>
-        - What competitors to watch for
         </div>
 
 <br></br>
@@ -167,6 +148,28 @@ export default function Swipe() {
                             </div>
 
 <br></br>
+<div style={{ color: 'white', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        <br></br>
+        <br></br>
+        Receive Stock Market Analysis with:
+        <br></br>
+        <br></br>
+        - What the company does
+        <br></br>
+        <br></br>
+        - Why it's growing in interest
+        <br></br>
+        <br></br>
+        - How it could be more valuable
+        <br></br>
+        <br></br>
+        - Risks to watch out for
+        <br></br>
+        <br></br>
+        - Competition Analysis
+           <br></br>
+              <br></br>
+        </div>
               <br></br>
               <br></br>
                   <div className="container">
