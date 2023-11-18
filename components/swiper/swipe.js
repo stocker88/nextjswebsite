@@ -43,6 +43,8 @@ export default function Swipe() {
                                 data-reveal-container=".split-item">
                              <Zoom>
                              <Image
+                                width='400px'
+                                 height='400px'
                                   src='/assets/images/chatgpt.webp'
                                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
@@ -77,7 +79,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.webp'
-
+                    width='400px'
+                    height='400px'
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
@@ -111,7 +114,8 @@ export default function Swipe() {
                                 <Zoom>
                                 <Image
                                   src='/assets/images/dividends.webp'
-
+                                width='400px'
+                                height='400px'
                                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                                   alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
@@ -143,7 +147,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-
+                        width='400px'
+                    height='400px'
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
@@ -182,7 +187,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolioVirtual.webp'
-
+                        width='400px'
+                    height='400px'
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='NVIDIA price graph ticker NVDA find hot stocks to watch today with hellostocker market analytics and ai financial advisor practise with virtual trading'
                     />
