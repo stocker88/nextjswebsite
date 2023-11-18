@@ -218,7 +218,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
 
                         <br></br>
-                <i?        Is it a Bubble? Look at Nvidia Earnings </i>
+                <i>        Is it a Bubble? Look at Nvidia Earnings </i>
                     </h3>
 
                 </div>
