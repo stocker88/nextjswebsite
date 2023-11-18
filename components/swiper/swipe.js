@@ -30,9 +30,7 @@ export default function Swipe() {
 
              <div className="split-item">
                 <center>
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                                <br></br>
-                                <br></br>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - What the Company Business does
                                 <br></br>
                                 <br></br>
@@ -160,12 +158,10 @@ export default function Swipe() {
 
 <br></br>
  <br></br>
-        <br></br>
-        <br></br>
         <AboutUs/>
 
         <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-        - Our Vision: Put an end to social inequalities by giving everyone equal chances to build wealth.
+        - Our Vision: End social inequalities by giving everyone equal chances to build wealth.
         <br></br>
         <br></br>
         - Our Mission: Empower the People with clear and transparent insights.
@@ -176,8 +172,6 @@ export default function Swipe() {
         <br></br>
         - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
         </div>
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
 
