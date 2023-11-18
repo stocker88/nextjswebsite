@@ -101,7 +101,7 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <Container>
-        <div style={{ color: 'lightgrey', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
+        <div style={{ color: 'lightgrey', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} >
         <br></br>
 
         <br></br>
@@ -109,6 +109,8 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
+<br></br>
+<br></br>
 <br></br>
 <br></br>
 <br></br>
@@ -122,6 +124,8 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
+<br></br>
+<br></br>
         <div style={{color:'white'}}><b>3) Simple and easy to understand.</b></div>
 <br></br>
 <br></br>
@@ -132,10 +136,14 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
+<br></br>
+<br></br>
         <div style={{color:'white'}}><b>4) You save 80+ hours of research per month.</b></div>
 <br></br>
 <br></br>
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
+<br></br>
+<br></br>
 <br></br>
 <br></br>
 <br></br>
@@ -149,7 +157,9 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use GPT4 analytics.</b></div>
+<br></br>
+<br></br>
+        <div style={{color:'white'}}><b>6) Easy to use ChatGPT analytics.</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -158,10 +168,10 @@ const FeaturesSplit = ({
         All you’ll need to get up to speed is a comfortable chair, 5 minutes of your time, and maybe a cup of coffee.
 <br></br>
 <br></br>
-
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) Want to view what other top traders do?</b></div>
+<br></br>
+        <div style={{color:'white'}}><b>7) See what other Traders are doing</b></div>
 <br></br>
 <br></br>
         Join our awesome community of investors, where you can connect with other pro trades!
@@ -174,20 +184,29 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) A Virtual Trading App to practice making money without any risk.</b></div>
+<br></br>
+<br></br>
+        <div style={{color:'white'}}><b>8) Practice Virtual Trading without any risk.</b></div>
 <br></br>
 <br></br>
         You will have unlimited Virtual Money to practise and consolidate your knowledge!
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9) Advisory AI is the future of investing.</b></div>
+<br></br>
+<br></br>
+        <div style={{color:'white'}}><b>9) Transparent Data.</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
 <br></br>
 <br></br>
-        Our user front AI is Powered By Open AI ChatGPT GPT4 model.
+        Our user Front End AI is Powered By Open AI ChatGPT GPT4 model.
+<br></br>
+<br></br>
+        We give you access to the data our Back End AI Model Processes so you can check it yourself!
+<br></br>
+<br></br>
 <br></br>
 <br></br>
 <br></br>
