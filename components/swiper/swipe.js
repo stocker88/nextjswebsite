@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination"
 import { isMobile, browserName } from "react-device-detect";
 import Zoom from 'react-medium-image-zoom'
-
+import IntroDataset from '../../components/introDataset';
 // import Swiper core and required modules
 import SwiperCore, {
   EffectCoverflow,Pagination,Autoplay
@@ -26,8 +26,7 @@ export default function Swipe() {
 
         <br></br>
 
-        <div style={{ color: 'white', fontSize: "min(20px,max(16px,1.5vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-         Receive Stocks To Buy Analysis with:
+        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
                 <br></br>
                 <br></br>
                 - What the company does
@@ -42,12 +41,11 @@ export default function Swipe() {
                 - What Risks and Competitiors to watch for
 
         <br></br>
-
-
 <br></br>
   <br></br>
+        <IntroDataset/>
         <br></br>
-        Access the AI training Dataset:
+        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
         <br></br>
         <br></br>
         - Wall St Analyst Ratings & Financials
