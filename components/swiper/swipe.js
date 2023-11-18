@@ -23,7 +23,6 @@ export default function Swipe() {
   return (
     <>
 
-        <br></br>
             <div className="container">
 
              <div className="split-item">
@@ -82,8 +81,6 @@ export default function Swipe() {
      <div className="split-item">
 
                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                <br></br>
-                <br></br>
                 - Wall St Analyst Ratings & Financials
                 <br></br>
                 <br></br>
@@ -173,16 +170,19 @@ export default function Swipe() {
     <div className="container">
    <div className="split-item">
         <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-        - Our Vision: End social inequalities by giving everyone equal chances to build wealth.
+        The Vision: End Social Inequalities
         <br></br>
         <br></br>
-        - Our Mission: Empower the People with Clear and Transparent Insights.
+        The Mission: Give Everyone Equal Chances To Build Wealth
         <br></br>
         <br></br>
-       - Our Founders managed billions for Wall Street banks and deployed AI technologies for FAANG companies.
+       Our CEO managed billions for Wall Street banks
+       <br></br>
+       <br></br>
+       Our CTO deployed AI technologies for FAANG companies
         <br></br>
         <br></br>
-        - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
+       We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
         <br></br>
         <br></br>
         </h3>
