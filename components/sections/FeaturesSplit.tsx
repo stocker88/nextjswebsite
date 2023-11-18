@@ -149,7 +149,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use simple AI analytics</b></div>
+        <div style={{color:'white'}}><b>6) Easy to use GPT4 analytics.</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -191,27 +191,12 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10) Want to go wild and search yourself?</b></div>
-<br></br>
-<br></br>
-        Use our AI investment screener to learn investing and improve your trading skills!
-<br></br>
-<br></br>
-        Trading Strategies are built in for you.
-<br></br>
-<br></br>
-        One click and the AI model shows you a menu of stocks to buy based on what you want!
+        <div style={{color:'white'}}><b>10) Start early: compound interest grows your wealth exponentially.</b></div>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>Make money now with your AI Investment Advisor powered by ChatGPT.</b></div>
-<br></br>
-<br></br>
-        HelloStocker can help you achieve financial freedom and early retirement with passive income revenues.
-<br></br>
-<br></br>
-        Start early: compound interest grows your wealth exponentially.
+
 <br></br>
 <br></br>
 </div>
