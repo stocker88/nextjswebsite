@@ -26,28 +26,23 @@ export default function Swipe() {
 <center>
 
         <br></br>
-
-        <div style={{ color: 'white', fontSize: "min(25px,max(19px,2vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-                <br></br>
-                <br></br>
-                - What the company does
-                <br></br>
-                <br></br>
-                - Why it's growing in Interest
-                <br></br>
-                <br></br>
-                - How it could be more Valuable
-                <br></br>
-                <br></br>
-                - What Risks and Competitiors to watch for
-        </div>
-        <br></br>
-        <br></br>
-
-                          <div className="container">
+ <div className="container">
                          <div className="split-item">
-                                      <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                <br></br>
+                <br></br>
+                - What the Company Business does
+                <br></br>
+                <br></br>
+                - Why it's Growing in Interest
+                <br></br>
+                <br></br>
+                - How the Stock could be more Valuable
+                <br></br>
+                <br></br>
+                - What Market Risks and Competitors to watch for
+        <br></br>
+        <br></br>
 
                                         We Predicted Netflix +40%
                                           </h3>
