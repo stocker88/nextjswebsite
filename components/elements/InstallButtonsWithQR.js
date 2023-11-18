@@ -69,6 +69,24 @@ if(isMobile) {
                           alt='hellostocker app'
                            /></Zoom>
                           <br></br>
+
+
+                                              <Image
+                                               src='/assets/images/appledownloadlogo.webp'
+                                               alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
+                                              style={{width:151}}
+                                               />
+
+
+                                      <div style={{paddingTop: 10}}></div>
+
+                                                 <Image
+                                                src='/assets/images/googledownloadlogo.webp'
+                                                alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
+                                               style={{width:150}}
+                                                />
+                                              <br></br>
+
                           <br></br>
 <br></br><br></br>
           </section>
