@@ -23,9 +23,9 @@ export default function Swipe() {
   return (
     <>
 
-        <br></br>
-            <div className="container">
 
+            <div className="container">
+<br></br>
              <div className="split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
@@ -43,7 +43,7 @@ export default function Swipe() {
                         <br></br>
                         <br></br>
 <center>
-                        We Predicted Netflix +40%
+                   <i>     We Predicted Netflix +40% </i>
                   </h3>
 
 
@@ -93,7 +93,7 @@ export default function Swipe() {
 
 
 <center>
-                  Dividend Stocks +20% Yield
+            <i>      Dividend Stocks +20% Yield </i>
                   </h3>
 
 
@@ -126,7 +126,7 @@ export default function Swipe() {
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                    Tesla Competition Analysis
+                <i>    Tesla Competition Analysis </i>
                     </h3>
 
                 </div>
@@ -180,7 +180,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                      Unlimited Virtual Money
+                 <i>     Unlimited Virtual Money </i>
                     </h3>
 
                 <center>
@@ -217,7 +217,7 @@ export default function Swipe() {
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
 
                         <br></br>
-                        Is it a Bubble? Look at Nvidia Earnings
+                <i?        Is it a Bubble? Look at Nvidia Earnings </i>
                     </h3>
 
                 </div>
