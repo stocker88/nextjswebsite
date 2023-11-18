@@ -42,7 +42,14 @@ export default function Swipe() {
                         <br></br>
                         <br></br>
                         <br></br>
+                </h3>
+
+        </div>
+        </div>
 <center>
+<div className="container">
+     <div className="split-item">
+<h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                    <i>     We Predicted Netflix +40% </i>
                   </h3>
 
@@ -63,14 +70,14 @@ export default function Swipe() {
                       />
                   </Zoom>
                   </div>
-            </center>
+
         </div>
         </div>
+        </center>
 <br></br>
   <br></br>
 
         <IntroDataset/>
-
 <div className="container">
      <div className="split-item">
 
@@ -91,7 +98,13 @@ export default function Swipe() {
                 <br></br>
                 <br></br>
 </h3>
+
+        </div>
+        </div>
+
 <center>
+<div className="container">
+     <div className="split-item">
 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
 
             <i>      Dividend Stocks +20% Yield </i>
@@ -115,13 +128,14 @@ export default function Swipe() {
                   />
                   </Zoom>
               </div>
-          </center>
-        </div>
-        </div>
 
+        </div>
+        </div>
+</center>
 <br></br>
 <br></br>
     <br></br>
+    <center>
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
@@ -131,7 +145,7 @@ export default function Swipe() {
                     </h3>
 
                 </div>
-                <center>
+
                 <div className={
                   classNames(
                     'split-item-image center-content-mobile reveal-from-bottom',
@@ -148,15 +162,16 @@ export default function Swipe() {
                     />
                     </Zoom>
                 </div>
-                </center>
-              </div>
-              </div>
 
+              </div>
+              </div>
+</center>
               <br></br>
 <br></br>
  <br></br>
         <AboutUs/>
-
+    <div className="container">
+   <div className="split-item">
         <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
         - Our Vision: End social inequalities by giving everyone equal chances to build wealth.
         <br></br>
@@ -171,6 +186,8 @@ export default function Swipe() {
         <br></br>
         <br></br>
         </h3>
+</div>
+</div>
 
 <br></br>
               <br></br>
