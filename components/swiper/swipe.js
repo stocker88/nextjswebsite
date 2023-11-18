@@ -70,55 +70,55 @@ export default function Swipe() {
         </div>
 <br></br>
   <br></br>
+
         <IntroDataset/>
         <br></br>
-        <div style={{ color: 'white', fontSize: "min(25px,max(19px,2vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
-        <br></br>
-        <br></br>
-        - Wall St Analyst Ratings & Financials
-        <br></br>
-        <br></br>
-        - Social Sentiment & News
-        <br></br>
-        <br></br>
-        - Technical Market Signals
-        <br></br>
-        <br></br>
-        - Hedge fund Trading Activity
+<div className="container">
+     <div className="split-item">
+        <center>
+                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
+                <br></br>
+                <br></br>
+                - Wall St Analyst Ratings & Financials
+                <br></br>
+                <br></br>
+                - Social Sentiment & News
+                <br></br>
+                <br></br>
+                - Technical Market Signals
+                <br></br>
+                <br></br>
+                - Hedge fund Trading Activity
+                <br></br>
+                <br></br>
+                <br></br>
+
+
+
+                  Dividend Stocks +20% Yield
+                  </h3>
+
+
+
+              <div className={
+                classNames(
+                  'split-item-image center-content-mobile reveal-from-bottom',
+                   'split-item-image-fill'
+                )}
+                data-reveal-container=".split-item">
+                <Zoom>
+                <Image
+                  src='/assets/images/dividends.webp'
+                    width={450}
+                    height={450}
+                  sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                  />
+                  </Zoom>
+              </div>
+          </center>
         </div>
-<br></br>
-   <br></br>
-                            <br></br>
-
-
-                  <div className="container">
-                 <div className="split-item">
-                              <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
-                                  Dividend Stocks +20% Yield
-                                  </h3>
-
-                              </div>
-               <center>
-                              <div className={
-                                classNames(
-                                  'split-item-image center-content-mobile reveal-from-bottom',
-                                   'split-item-image-fill'
-                                )}
-                                data-reveal-container=".split-item">
-                                <Zoom>
-                                <Image
-                                  src='/assets/images/dividends.webp'
-                                    width={450}
-                                    height={450}
-                                  sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
-                                  />
-                                  </Zoom>
-                              </div>
-                              </center>
-                            </div>
-                            </div>
+        </div>
 
 <br></br>
 <br></br>
@@ -127,7 +127,7 @@ export default function Swipe() {
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                     Tesla Competition Analysis
                     </h3>
 
@@ -160,21 +160,21 @@ export default function Swipe() {
  <br></br>
         <AboutUs/>
 
-        <div style={{ color: 'white', fontSize: "min(22px,max(18px,1.7vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
         - Our Vision: End social inequalities by giving everyone equal chances to build wealth.
         <br></br>
         <br></br>
-        - Our Mission: Empower the People with clear and transparent insights.
+        - Our Mission: Empower the People with Clear and Transparent Insights.
         <br></br>
         <br></br>
-       - Our Founders managed billions for Wall Street banks and deployed AI technology for FAANG companies.
+       - Our Founders managed billions for Wall Street banks and deployed AI technologies for FAANG companies.
         <br></br>
         <br></br>
         - Our AI predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%.
         </div>
         <br></br>
         <br></br>
-
+        </h3>
 
 <br></br>
               <br></br>
@@ -184,7 +184,7 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                       Unlimited Virtual Money
                     </h3>
 
@@ -217,11 +217,10 @@ export default function Swipe() {
 
 
 
-
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
 
                         <br></br>
                         Is it a Bubble? Look at Nvidia Earnings
