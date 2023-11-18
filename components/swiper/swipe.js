@@ -134,21 +134,16 @@ export default function Swipe() {
 
                 </div>
                 <center>
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
+
+                  
                   <Image
                   src='/assets/images/tslavsrace.webp'
 
                     sizes="(max-width: 350px) 80vw, (max-width: 350px) 33vw, 22vw"
                     alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
                     />
-                    </Zoom>
-                </div>
+
+
                 </center>
               </div>
               </div>
