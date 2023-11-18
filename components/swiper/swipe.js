@@ -55,6 +55,47 @@ export default function Swipe() {
                             </div>
                             </div>
 
+<br></br>
+        <br></br>
+
+        <div style={{ color: 'white', fontSize: "min(25px,max(18px,1.8vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)'}} >
+        Your AI Advisor processes:
+        <br></br>
+        <br></br>
+        - Hedge fund trading data
+        <br></br>
+        <br></br>
+        - Wall St analyst ratings
+        <br></br>
+        <br></br>
+        - Social media sentiment data on Reddit and Twitter
+        <br></br>
+        <br></br>
+        - Fundamental analysis
+        <br></br>
+        <br></br>
+        - Quantitative analysis
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        You will receive Stock Market Analysis with:
+        <br></br>
+        <br></br>
+        - What the company does
+        <br></br>
+        <br></br>
+        - Why it's growing in interest
+        <br></br>
+        <br></br>
+        - How it could be more valuable
+        <br></br>
+        <br></br>
+        - Risks to watch out for
+        <br></br>
+        <br></br>
+        - What competitors to watch for
+        </div>
 
 <br></br>
               <br></br>
