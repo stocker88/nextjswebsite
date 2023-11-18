@@ -23,13 +23,11 @@ export default function Swipe() {
   return (
     <>
 
-<center>
-
         <br></br>
             <div className="container">
 
              <div className="split-item">
-                <center>
+
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - What the Company Business does
                                 <br></br>
@@ -44,7 +42,7 @@ export default function Swipe() {
                         <br></br>
                         <br></br>
                         <br></br>
-
+<center>
                         We Predicted Netflix +40%
                   </h3>
 
@@ -75,7 +73,7 @@ export default function Swipe() {
 
 <div className="container">
      <div className="split-item">
-        <center>
+
                 <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
                 <br></br>
                 <br></br>
@@ -94,7 +92,7 @@ export default function Swipe() {
                 <br></br>
 
 
-
+<center>
                   Dividend Stocks +20% Yield
                   </h3>
 
@@ -345,8 +343,6 @@ export default function Swipe() {
 
 */}
 
-
-</center>
 
 <br></br>
 
