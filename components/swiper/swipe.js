@@ -23,7 +23,7 @@ export default function Swipe() {
   return (
     <>
 
-
+<div>
             <div className="container">
 <br></br>
              <div className="split-item">
@@ -344,7 +344,7 @@ export default function Swipe() {
 
 <br></br>
 
-
+</div>
     </>
   )
 }
