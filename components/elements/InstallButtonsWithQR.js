@@ -68,7 +68,7 @@ if(isMobile) {
                           style={{width:140}}
                           alt='hellostocker ai financial advisor virtual trading app hot qr code install logo stocks to buy now'
                            /></Zoom>
-                          
+
 
                                       <div style={{paddingTop: 10}}></div>
                                               <Image
