@@ -162,26 +162,6 @@ export default function Swipe() {
         </div>
 </center>
 
-              <br></br>
-<br></br>
- <br></br>
-        <AboutUs/>
-    <div className="container">
-   <div className="split-item">
-        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-        Our Mission: Empower Everyone With Financial Growth
-         <br></br>
-                <br></br>
-               We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
-        <br></br>
-        <br></br>
-       Our CEO managed billions for Wall Street banks
-       <br></br>
-       <br></br>
-       Our CTO deployed AI technologies for FAANG companies
-        </h3>
-</div>
-</div>
 
 
         <IntroDownload/>
@@ -222,7 +202,26 @@ export default function Swipe() {
 
               <br></br>
 
-
+<br></br>
+<br></br>
+ <br></br>
+        <AboutUs/>
+    <div className="container">
+   <div className="split-item">
+        <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+        Our Mission: Empower Everyone With Financial Growth
+         <br></br>
+                <br></br>
+               We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
+        <br></br>
+        <br></br>
+       Our CEO managed billions for Wall Street banks
+       <br></br>
+       <br></br>
+       Our CTO deployed AI technologies for FAANG companies
+        </h3>
+</div>
+</div>
 
 {/*
                   <div className="container">
