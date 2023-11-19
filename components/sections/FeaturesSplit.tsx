@@ -180,16 +180,16 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) A Community of Investors</b></div>
+        <div style={{color:'white'}}><b>7) Join a Community of Investors</b></div>
 <br></br>
 <br></br>
-        Join our community of investors, where you can connect with other pro trades!
+        We want to speak with you! You can connect with us with other pro traders!
 <br></br>
 <br></br>
-        Discuss and view top investors trading activity: Cathy Wood predicted Tesla.
+        You will see pro investor trades: Cathy Wood predicted Tesla.
 <br></br>
 <br></br>
-        Access their Portfolio Positions and Replicate them with Virtual Trading.
+        Access Famous Figures Portfolio Positions and Replicate them with Virtual Trading.
 <br></br>
 <br></br>
 <br></br>
