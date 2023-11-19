@@ -89,10 +89,6 @@ const Hero = ({
                                              </div>
                                         <br></br>
                 <InstallButtonsWithQR/>
-
-
-
-          <br></br>
  <Image
                                                src='/assets/images/chatgptgooglecloud.webp'
                                                alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
