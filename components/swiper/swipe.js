@@ -80,13 +80,11 @@ export default function Swipe() {
                                 - We Give You All The Money You Need
                                 <br></br>
                                 <br></br>
+                                - Did you know 95% Of Hedge Funds Build Strategies Virtually First?
+                                <br></br>
+                                <br></br>
                                 - We Don't Want You To Take Risks
-                                <br></br>
-                                <br></br>
-                                - Did you know 95% Of Hedge Funds Build Strategies Virtually First
-                </h3>
 
-        </div>
         </div>
 <center>
 <div className="container">
