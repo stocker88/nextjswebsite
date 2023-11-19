@@ -58,8 +58,8 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={600}
-                     height={1298.55}
+                    width={450}
+                     height={973.91}
                       src='/assets/images/chatgpt.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
@@ -137,8 +137,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-                        width={600}
-                    height={1298.55}
+                        width={450}
+                    height={973.91}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />
@@ -190,8 +190,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.webp'
-                    width={600}
-                    height={1298.55}
+                    width={450}
+                    height={973.91}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
@@ -212,7 +212,7 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                    <div className="text-xxs text-color-cyan fw-600 mb-8 center-content-mobile" style={{color:'lightgrey',fontSize:"min(20px,max(15px,1.6vw))", fontFamily: 'arial', fontWeight: 'bold'}}>
+                    <div className="text-xxs text-color-cyan fw-450 mb-8 center-content-mobile" style={{color:'lightgrey',fontSize:"min(20px,max(15px,1.6vw))", fontFamily: 'arial', fontWeight: 'bold'}}>
                      Launch your financial success
                     </div>
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'lightgrey', fontFamily: 'arial'}}>
@@ -244,10 +244,10 @@ export default function Swipe() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
+                  <div className="text-xxs text-color-cyan fw-450 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
                     Discuss new with the Stocker community
                     </div>
-                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
+                  <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 450, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
                      Share insights in Investing channels
                     </h3>
 
@@ -276,10 +276,10 @@ export default function Swipe() {
                                 <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
+                                <div className="text-xxs text-color-cyan fw-450 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
                                   Competition Analysis
                                   </div>
-                                <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
+                                <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 450, fontSize:"min(15px,max(12px,1.3vw))", fontFamily: 'arial'}}>
                                    Got a trade idea? Compare it with its competitors!
                                   </h3>
 
