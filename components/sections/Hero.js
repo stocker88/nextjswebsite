@@ -92,12 +92,12 @@ const Hero = ({
 
 
           <br></br>
-          <br></br>
  <Image
                                                src='/assets/images/chatgptgooglecloud.webp'
                                                alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                              style={{width:275, height:117.86}}
+                                              style={{width:137.5, height:58.93}}
                                                />
+                <br></br>
                 <br></br>
                 <br></br>
                 <br></br>
