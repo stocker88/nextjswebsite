@@ -123,7 +123,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) Unbiased AI Trading Ideas</b></div>
+        <div style={{color:'white'}}><b>2) Unbiased Trading Ideas</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
@@ -156,7 +156,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>5) Get Access to Early Financial Opportunities</b></div>
+        <div style={{color:'white'}}><b>5) Access Early Financial Opportunities</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
@@ -168,7 +168,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use ChatGPT AI Analytics</b></div>
+        <div style={{color:'white'}}><b>6) Powered by ChatGPT</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -180,7 +180,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) See other Pro Traders Activity</b></div>
+        <div style={{color:'white'}}><b>7) A Community of Investors</b></div>
 <br></br>
 <br></br>
         Join our community of investors, where you can connect with other pro trades!
@@ -195,10 +195,10 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Virtual Trading with No Risk</b></div>
+        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk No Risk</b></div>
 <br></br>
 <br></br>
-        You will have unlimited Virtual Money to practice and consolidate your knowledge!
+        You will have unlimited Virtual Money to practice investment ideas in virtual trading and consolidate your knowledge!
 <br></br>
 <br></br>
 <br></br>
