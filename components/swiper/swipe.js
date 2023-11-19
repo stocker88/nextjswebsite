@@ -109,8 +109,8 @@ export default function Swipe() {
                 <Zoom>
                 <Image
                   src='/assets/images/dividends.webp'
-                    width={500}
-                    height={666.99}
+                    width={600}
+                    height={800.4}
                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                   alt='Dividend Stocks +20% Yield HelloStocker ipad screenshot'
                   />
