@@ -78,7 +78,7 @@ const Hero = ({
                         <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                              AI Investing Advisor & Virtual Trading
                              </h1>
-                             
+
                               <Image
                                                src='/assets/images/usersRating.webp'
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
@@ -87,13 +87,18 @@ const Hero = ({
                              <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                over 10,000 investors
                                              </div>
+                                              <Image
+                                                src='/assets/images/chatgptgooglecloud.webp'
+                                                alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+                                               style={{width:195.9375, height:83.98}}
+                                                />
                                         <br></br>
                 <InstallButtonsWithQR/>
  <Image
-                                               src='/assets/images/chatgptgooglecloud.webp'
-                                               alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                              style={{width:195.9375, height:83.98}}
-                                               />
+   src='/assets/images/chatgptgooglecloud.webp'
+   alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+  style={{width:195.9375, height:83.98}}
+   />
                 <br></br>
                 <br></br>
                 <br></br>
