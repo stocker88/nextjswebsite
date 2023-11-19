@@ -73,7 +73,6 @@ export default function Swipe() {
         Practise your ideas
       </h2>
 <br></br>
-  <br></br>
 
 <center>
 <div className="container">
@@ -114,7 +113,7 @@ export default function Swipe() {
                 - Social Sentiment & News
                 <br></br>
                 <br></br>
-                - Technical Market Signals
+                - Technical Market Signals AI Screening
                 <br></br>
                 <br></br>
                 - Hedge funds & Famous Figures Trading Activity
@@ -194,8 +193,6 @@ export default function Swipe() {
        <br></br>
        <br></br>
        Our CTO deployed AI technologies for FAANG companies
-        <br></br>
-        <br></br>
         </h3>
 </div>
 </div>
@@ -203,7 +200,7 @@ export default function Swipe() {
 
               <br></br>
 
-           
+
 
 {/*
                   <div className="container">
