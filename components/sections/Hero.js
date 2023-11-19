@@ -92,7 +92,6 @@ const Hero = ({
                                         <br></br>
 
                 <InstallButtonsWithQR/>
-                <br></br>
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                                                                      We Give You $10,000 Virtual Money to Practise Trading Ideas
                                                                                      </h1>
