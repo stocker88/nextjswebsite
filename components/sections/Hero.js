@@ -70,6 +70,7 @@ const Hero = ({
 
                   />
             <div className="container-xs">
+            <br></br>
             <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                             What Stocks To Buy Now?
                                           </h1>
