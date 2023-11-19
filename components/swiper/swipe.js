@@ -70,7 +70,7 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        Practise your ideas
+        Practise trading ideas
       </h2>
 <br></br>
 

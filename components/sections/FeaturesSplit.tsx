@@ -123,13 +123,13 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) Unbiased with no hidden agenda</b></div>
+        <div style={{color:'white'}}><b>2) Unbiased trading ideas</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
         <br></br>
         <br></br>
-        HelloStocker AI reports are 100% unbiased, objective, and data-driven.
+        HelloStocker AI reports are 100% unbiased, objective, and data-driven ideas to practise without risk.
 <br></br>
 <br></br>
 <br></br>
@@ -147,7 +147,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>4) You save 80+ hours of research per month</b></div>
+        <div style={{color:'white'}}><b>4) You save 80+ hours of investing research per month</b></div>
 <br></br>
 <br></br>
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
@@ -156,7 +156,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>5) Get access to early opportunities</b></div>
+        <div style={{color:'white'}}><b>5) Get access to early financial opportunities</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
@@ -168,7 +168,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use ChatGPT analytics</b></div>
+        <div style={{color:'white'}}><b>6) Easy to use ChatGPT AI analytics</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -180,7 +180,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) See what other Traders are doing</b></div>
+        <div style={{color:'white'}}><b>7) See what other pro traders are doing</b></div>
 <br></br>
 <br></br>
         Join our community of investors, where you can connect with other pro trades!
