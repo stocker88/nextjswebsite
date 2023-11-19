@@ -114,7 +114,7 @@ const FeaturesSplit = ({
         <br></br>
 
         <br></br>
-        <div style={{color:'white'}}><b>1) You get insights you won’t find anywhere else</b></div>
+        <div style={{color:'white'}}><b>1) You get Insights you won’t find anywhere else</b></div>
         <br></br>
         <br></br>
         We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
@@ -123,7 +123,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) Unbiased trading ideas</b></div>
+        <div style={{color:'white'}}><b>2) Unbiased AI Trading Ideas</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
@@ -135,7 +135,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>3) Simple and easy to understand</b></div>
+        <div style={{color:'white'}}><b>3) Simple and Easy to understand</b></div>
 <br></br>
 <br></br>
         You don’t need another long financial report to read.
@@ -147,7 +147,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>4) You save 80+ hours of investing research per month</b></div>
+        <div style={{color:'white'}}><b>4) You save 80+ hours of investing Research per month</b></div>
 <br></br>
 <br></br>
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
@@ -156,7 +156,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>5) Get access to early financial opportunities</b></div>
+        <div style={{color:'white'}}><b>5) Get Access to Early Financial Opportunities</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
@@ -168,7 +168,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use ChatGPT AI analytics</b></div>
+        <div style={{color:'white'}}><b>6) Easy to use ChatGPT AI Analytics</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -180,7 +180,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) See what other pro traders are doing</b></div>
+        <div style={{color:'white'}}><b>7) See other Pro Traders Activity</b></div>
 <br></br>
 <br></br>
         Join our community of investors, where you can connect with other pro trades!
@@ -195,7 +195,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Virtual Trading without any risk</b></div>
+        <div style={{color:'white'}}><b>8) Practice Virtual Trading with No Risk</b></div>
 <br></br>
 <br></br>
         You will have unlimited Virtual Money to practise and consolidate your knowledge!
@@ -219,7 +219,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10) The mathematics of Investing: Compound Interest</b></div>
+        <div style={{color:'white'}}><b>10) The Math of Investing: Compound Interest</b></div>
 <br></br>
 <br></br>
 Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
@@ -231,7 +231,7 @@ If you save $10 a day in your bank account, in 10 years you will have $90,000.
 If you invest $10 a day in the stock market, in 10 years you will have $2,000,000.
 <br></br>
 <br></br>
-Compound Interest is like a snowball that makes your wealth grow exponentially: start now!
+Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 <br></br>
 <br></br><br></br>
 <br></br>
