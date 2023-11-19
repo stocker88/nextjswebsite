@@ -193,6 +193,9 @@ export default function Swipe() {
        Our CTO deployed AI technologies for FAANG companies
         </h3>
     <center>
+
+<br></br>
+<br></br>
                   <div className="container">
    <div className="split-item">
 
