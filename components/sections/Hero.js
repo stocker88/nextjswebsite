@@ -75,10 +75,10 @@ const Hero = ({
                                           </h1>
 
 
-                        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                              AI Investing Advisor & Virtual Trading
                              </h1>
-                             <br></br>
+                             
                               <Image
                                                src='/assets/images/usersRating.webp'
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
