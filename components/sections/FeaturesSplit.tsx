@@ -189,7 +189,7 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
 <br></br>
 <br></br>
-        You will have unlimited Virtual Money to practice investment ideas in virtual trading and consolidate your knowledge!
+        You get Unlimited Virtual Money to practice AI Trading Ideas and Buy Stocks ETFs & Cryptos in a Secured Virtual Trading app!
 <br></br>
 <br></br>
 <br></br>
