@@ -75,12 +75,12 @@ const Hero = ({
                                             What Stocks To Buy Now?
                                           </h1>
 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                            You Should Ask Your AI Advisor
+                                             Ask Your AI Advisor
                                           </h1>
 
 
                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                             We give you $10,000 Virtual Money to Practise His Trading Ideas
+                             We give you $10,000 Virtual Money to Practise Trading Ideas
                              </h1>
 
                               <Image
