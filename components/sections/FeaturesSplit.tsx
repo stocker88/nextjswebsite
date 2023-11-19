@@ -204,7 +204,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9) Transparent Data.</b></div>
+        <div style={{color:'white'}}><b>9) Transparent AI Training Data.</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
@@ -219,7 +219,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10) Start early: compound interest grows your wealth exponentially.</b></div>
+        <div style={{color:'white'}}><b>10) Compound Interest will make your wealth grow Exponentially.</b></div>
 <br></br>
 <br></br>
 Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
@@ -231,6 +231,7 @@ If you save $10 a day in your bank account, in 10 years you will have $90,000.
 If you invest $10 a day in the stock market, in 10 years you will have $2,000,000.
 <br></br>
 <br></br>
+Compound Interest is like a snowball that makes your wealth grow exponentially: start now!
 <br></br>
 <br></br><br></br>
 <br></br>
