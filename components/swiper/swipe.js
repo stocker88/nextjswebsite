@@ -31,10 +31,7 @@ export default function Swipe() {
                                 - What the Company Business does
                                 <br></br>
                                 <br></br>
-                                - Why it's Growing in Interest
-                                <br></br>
-                                <br></br>
-                                - How the Stock could be more Valuable
+                                - Why the Stock is Growing in Interest
                                 <br></br>
                                 <br></br>
                                 - Market Risks & Competitors to watch for
@@ -87,7 +84,7 @@ export default function Swipe() {
                 - Technical Market Signals
                 <br></br>
                 <br></br>
-                - Hedge fund Trading Activity
+                - Hedge funds & Famous Figures Trading Activity
                 <br></br>
                 <br></br>
                 <br></br>
@@ -155,9 +152,6 @@ export default function Swipe() {
    <div className="split-item">
         <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
         Our Mission: Empower Everyone With Financial Growth
-        <br></br>
-        <br></br>
-        Our Vision: A World Without Social Disparities
          <br></br>
                 <br></br>
                We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
