@@ -114,7 +114,7 @@ const FeaturesSplit = ({
         <br></br>
 
         <br></br>
-        <div style={{color:'white'}}><b>1) You get insights you won’t find anywhere else.</b></div>
+        <div style={{color:'white'}}><b>1) You get insights you won’t find anywhere else</b></div>
         <br></br>
         <br></br>
         We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
@@ -123,7 +123,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) Unbiased with no hidden agenda.</b></div>
+        <div style={{color:'white'}}><b>2) Unbiased with no hidden agenda</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
@@ -135,7 +135,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>3) Simple and easy to understand.</b></div>
+        <div style={{color:'white'}}><b>3) Simple and easy to understand</b></div>
 <br></br>
 <br></br>
         You don’t need another long financial report to read.
@@ -147,7 +147,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>4) You save 80+ hours of research per month.</b></div>
+        <div style={{color:'white'}}><b>4) You save 80+ hours of research per month</b></div>
 <br></br>
 <br></br>
         Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
@@ -156,7 +156,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>5) Get access to early opportunities.</b></div>
+        <div style={{color:'white'}}><b>5) Get access to early opportunities</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
@@ -168,7 +168,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Easy to use ChatGPT analytics.</b></div>
+        <div style={{color:'white'}}><b>6) Easy to use ChatGPT analytics</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -195,7 +195,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Virtual Trading without any risk.</b></div>
+        <div style={{color:'white'}}><b>8) Practice Virtual Trading without any risk</b></div>
 <br></br>
 <br></br>
         You will have unlimited Virtual Money to practise and consolidate your knowledge!
@@ -204,7 +204,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9) Transparent AI Training Data.</b></div>
+        <div style={{color:'white'}}><b>9) Transparent AI Training Data</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
@@ -219,7 +219,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10) Compound Interest will make your wealth grow Exponentially.</b></div>
+        <div style={{color:'white'}}><b>10) The mathematics of Investing: Compound Interest</b></div>
 <br></br>
 <br></br>
 Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
