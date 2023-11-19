@@ -84,7 +84,7 @@ export default function Swipe() {
                                 <br></br>
                                 <br></br>
                                 - We Don't Want You To Take Risks
-
+                </h3>
         </div>
 <center>
 <div className="container">
