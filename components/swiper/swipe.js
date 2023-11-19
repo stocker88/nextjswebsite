@@ -162,7 +162,7 @@ export default function Swipe() {
         </div>
 </center>
 
-
+ <br></br> <br></br> <br></br>
 
         <IntroDownload/>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
