@@ -66,6 +66,7 @@ const MeetingButton = ({
 
  <div className="container-sm reveal-from-bottom">
 <br></br>
+<br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(1, 74, 173, 0.6)'}}>
                   Invest with AI: Start Now
      </h2>
