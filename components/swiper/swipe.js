@@ -159,15 +159,15 @@ export default function Swipe() {
         <br></br>
         <br></br>
         Our Vision: A World Without Social Disparities
+         <br></br>
+                <br></br>
+               We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
         <br></br>
         <br></br>
        Our CEO managed billions for Wall Street banks
        <br></br>
        <br></br>
        Our CTO deployed AI technologies for FAANG companies
-        <br></br>
-        <br></br>
-       We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
         <br></br>
         <br></br>
         </h3>
