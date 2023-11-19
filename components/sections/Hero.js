@@ -77,22 +77,22 @@ const Hero = ({
                         <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
                              AI Investing Advisor & Virtual Trading App
                              </div>
+                              <Image
+                                               src='/assets/images/usersRating.webp'
+                                               alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+                                              style={{width:275, height:68.75}}
+                                               />
+                             <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                                               over 10,000 investors
+                                             </div>
+
                 <InstallButtonsWithQR/>
 
 
-           <div style={{ color: 'white', fontSize: "min(33px,max(24px,2.4vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1.2,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                   Install Now
-                                </div>
+
           <br></br>
           <br></br>
- <Image
-                  src='/assets/images/usersRating.webp'
-                  alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
-                 style={{width:275, height:68.75}}
-                  />
-<div style={{ color: 'white', fontSize: "min(25px,max(20px,2vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                  over 10,000 investors
-                </div>
+
                 <br></br>
                 <br></br>
                 <br></br>

@@ -170,10 +170,10 @@ export default function Swipe() {
     <div className="container">
    <div className="split-item">
         <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-        The Vision: End Social Inequalities
+        Our Mission: Empower Everyone With Financial Growth
         <br></br>
         <br></br>
-        The Mission: Give Everyone Equal Chances To Build Wealth
+        Our Vision: A World Without Social Disparities
         <br></br>
         <br></br>
        Our CEO managed billions for Wall Street banks
