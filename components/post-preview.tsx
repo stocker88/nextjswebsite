@@ -26,7 +26,7 @@ const PostPreview = ({
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug excerpt_snug" style={{'color':'white'}}>
+      <h3 className="text-3xl mb-3 leading-snug excerpt_snug" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
         <Link
           as={`/posts/${slug}`}
           href="/posts/[slug]"
