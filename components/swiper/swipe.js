@@ -14,7 +14,8 @@ import SwiperCore, {
   EffectCoverflow,Pagination,Autoplay
 } from 'swiper';
 import AboutUs from '../../components/aboutUs';
-
+import IntroDownload from '../../components/introDownload';
+import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
 
@@ -183,6 +184,17 @@ export default function Swipe() {
         </h3>
 </div>
 </div>
+
+
+        <IntroDownload/>
+        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+
+        <br></br>
+        <br></br>
+                <br></br>
+        <br></br>
+        <br></br>
+
 
     <center>
                   <div className="container">

@@ -11,7 +11,6 @@ import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
 import WhyHellostocker from '../../components/whyHellostocker';
 import IntroVideo from '../../components/introVideo';
-import IntroDownload from '../../components/introDownload';
 import Container from '../../components/container'
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import { isMobile} from "react-device-detect";
@@ -95,14 +94,6 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
 
-        <IntroDownload/>
-        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
-
-        <br></br>
-        <br></br>
-                <br></br>
-        <br></br>
-        <br></br>
                 <br></br>
         <br></br>
         <br></br>
