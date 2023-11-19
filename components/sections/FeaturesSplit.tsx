@@ -104,6 +104,9 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
                 <br></br>
+        <br></br>
+        <br></br>
+                <br></br>
         <WhyHellostocker/>
         <br></br>
         <Container>
@@ -229,6 +232,8 @@ If you invest $10 a day in the stock market, in 10 years you will have $2,000,00
 <br></br>
 <br></br>
 <br></br>
+<br></br><br></br>
+<br></br>
 <br></br>
 </div>
 </Container>
@@ -236,6 +241,9 @@ If you invest $10 a day in the stock market, in 10 years you will have $2,000,00
         <br></br>
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
