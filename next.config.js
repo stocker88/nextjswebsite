@@ -8,7 +8,7 @@ module.exports = {
       },
       {
         source: '/attribution_profit_drivers',
-        destination: '/stockstobuy',
+        destination: '/attribution_profit_drivers',
         permanent: true
       },
     ]
