@@ -75,8 +75,11 @@ const Hero = ({
                                             What Stocks To Buy Now?
                                           </h1>
 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                             Ask Your AI Trading Advisor
+                                             Ask HelloStocker
                                           </h1>
+                                          <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                                                                                      Your AI Trading Advisor
+                                                                                    </h1>
 
 
 
@@ -93,7 +96,7 @@ const Hero = ({
 
                 <InstallButtonsWithQR/>
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                                                                     Test Trading Ideas with Virtual Money in HelloStocker App
+                                                                                     Install Now and Get $10,000 Virtual Trading Money
                                                                                      </h1>
                                                                           <br></br>
  <Image
