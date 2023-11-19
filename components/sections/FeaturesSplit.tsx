@@ -126,7 +126,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>3) Simple and Easy to understand</b></div>
+        <div style={{color:'white'}}><b>3) It is Simple and Easy to understand</b></div>
 <br></br>
 <br></br>
         You don’t need another long financial report to read.
