@@ -82,7 +82,7 @@ export default function Swipe() {
                                 - We Don't Want You To Take Risks
                                 <br></br>
                                 <br></br>
-                                - 95% Of Successful Hedge Funds Build Their Strategies Virtually First
+                                - Did you know 95% Of Hedge Funds Build Strategies Virtually First
                 </h3>
 
         </div>
