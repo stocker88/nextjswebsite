@@ -129,7 +129,7 @@ const FeaturesSplit = ({
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
         <br></br>
         <br></br>
-        HelloStocker AI reports are 100% unbiased, objective, and data-driven ideas to practise without risk.
+        HelloStocker AI reports are 100% unbiased, objective, and data-driven ideas to practice without risk.
 <br></br>
 <br></br>
 <br></br>
@@ -198,7 +198,7 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>8) Practice Virtual Trading with No Risk</b></div>
 <br></br>
 <br></br>
-        You will have unlimited Virtual Money to practise and consolidate your knowledge!
+        You will have unlimited Virtual Money to practice and consolidate your knowledge!
 <br></br>
 <br></br>
 <br></br>

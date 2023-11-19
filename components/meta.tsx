@@ -34,7 +34,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content="Stocker AI App is an Investing Advisory App to design strategies and practise with virtual trading! Learn how to make money and earn passive income with Stocker Ai App"
+        content="Stocker AI App is an Investing Advisory App to design strategies and practice with virtual trading! Learn how to make money and earn passive income with Stocker Ai App"
       />
     </Head>
   )
