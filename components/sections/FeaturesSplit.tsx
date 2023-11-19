@@ -114,7 +114,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) Unbiased Trading Ideas</b></div>
+        <div style={{color:'white'}}><b>2) You Will Find Unbiased Trading Ideas</b></div>
 <br></br>
 <br></br>
         Other services are filled with opinions, recommendations, and pump-and-dump stocks.
@@ -159,7 +159,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>6) Powered by ChatGPT</b></div>
+        <div style={{color:'white'}}><b>6) We Are Powered by ChatGPT</b></div>
 <br></br>
 <br></br>
         Have you ever tried using a Bloomberg terminal? We have used them for decades.
@@ -171,7 +171,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) Join a Community of Investors</b></div>
+        <div style={{color:'white'}}><b>7) You Can Join a Community of Investors</b></div>
 <br></br>
 <br></br>
         We want to speak with you! You can connect with us with other pro traders!
@@ -186,7 +186,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk No Risk</b></div>
+        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
 <br></br>
 <br></br>
         You will have unlimited Virtual Money to practice investment ideas in virtual trading and consolidate your knowledge!
@@ -195,7 +195,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9) Transparent AI Training Data</b></div>
+        <div style={{color:'white'}}><b>9) We Share Our AI Training Data</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
