@@ -223,8 +223,8 @@ export default function Swipe() {
               </div>
               </div>
 </center>
-<br></br>
-              <br></br>
+
+
 
 </div>
 </div>
