@@ -48,9 +48,6 @@ export default function Swipe() {
 <center>
 <div className="container">
      <div className="split-item">
-<h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                   <i>     We Predicted Netflix +40% </i>
-                  </h3>
 
 
                   <div className={
@@ -61,11 +58,11 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={450}
-                     height={450}
+                    width={300}
+                     height={649.27}
                       src='/assets/images/chatgpt.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                      alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                      alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
                       />
                   </Zoom>
                   </div>
@@ -102,12 +99,6 @@ export default function Swipe() {
 <center>
 <div className="container">
      <div className="split-item">
-<h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-
-            <i>      Dividend Stocks +20% Yield </i>
-                  </h3>
-
-
 
               <div className={
                 classNames(
@@ -118,10 +109,10 @@ export default function Swipe() {
                 <Zoom>
                 <Image
                   src='/assets/images/dividends.webp'
-                    width={450}
-                    height={450}
+                    width={500}
+                    height={666.99}
                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                  alt='Dividend Stocks +20% Yield HelloStocker ipad screenshot'
                   />
                   </Zoom>
               </div>
@@ -135,13 +126,7 @@ export default function Swipe() {
     <center>
                   <div className="container">
    <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
 
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                <i>    Tesla Competition Analysis </i>
-                    </h3>
-
-                </div>
 
                 <div className={
                   classNames(
@@ -152,10 +137,10 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-                        width={450}
-                    height={450}
+                        width={300}
+                    height={649.27}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='TSLA TESLA competition analysis best stock to invest in now tesla stocks'
+                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />
                     </Zoom>
                 </div>
@@ -194,16 +179,8 @@ export default function Swipe() {
               <br></br>
 
 <center>
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-                 <i>     Unlimited Virtual Money </i>
-                    </h3>
-
-                </div>
-
+<div className="container">
+     <div className="split-item">
                 <div className={
                   classNames(
                     'split-item-image center-content-mobile reveal-from-bottom',
@@ -213,10 +190,10 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.webp'
-                    width={450}
-                    height={450}
+                    width={300}
+                    height={649.27}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                    alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
                     </Zoom>
                 </div>
@@ -229,39 +206,6 @@ export default function Swipe() {
 
               <br></br>
 
-<center>
-
-                  <div className="container">
-   <div className="split-item">
-                <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', fontFamily: 'arial',lineHeight: 1.3}}>
-
-                        <br></br>
-                <i>        Is it a Bubble? Look at Nvidia Earnings </i>
-                    </h3>
-
-                </div>
-
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                    src='/assets/images/portfolioVirtual.webp'
-                        width={450}
-                    height={450}
-                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='NVIDIA price graph ticker NVDA find hot stocks to watch today with hellostocker market analytics and ai financial advisor practise with virtual trading'
-                    />
-                    </Zoom>
-                </div>
-
-              </div>
-              </div>
-              </center>
               <br></br>
 
 {/*
