@@ -36,24 +36,23 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-        {/*
+
          <script type="application/ld+json"
             dangerouslySetInnerHTML={{ __html:
                   JSON.stringify({
                       "@context": "http://schema.org",
                       "@type": "SoftwareApplication",
-                      "name": "HelloStocker GPT Financial Advisor App",
+                      "name": "HelloStocker AI Trading Advisor App Powered by ChatGPT",
                       "image": "https://www.hellostocker.com/assets/images/hellostocker.webp",
                       "author": {
                         "@type": "Person",
-                        "name": "Virtual Trading App Powered By ChatGPT"
+                        "name": "Stocks To Buy Now"
                       },
                       "applicationCategory": "Investing",
                       "screenshot": [
                         "https://www.hellostocker.com/assets/images/chatgpt.webp",
                         "https://www.hellostocker.com/assets/images/portfolio.webp",
                         "https://www.hellostocker.com/assets/images/tslavsrace.webp",
-                        "https://www.hellostocker.com/assets/images/portfolioVirtual.webp",
                         "https://www.hellostocker.com/assets/images/dividends.webp"
                       ],
                       "review": {
@@ -69,7 +68,7 @@ export default function Index({ allPosts }: Props) {
                         "reviewBody": "HelloStocker is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend HelloStocker"
                       }
                     })}}
-                />*/}
+                />
           <title>What Stocks To Buy Now?</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
