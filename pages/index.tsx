@@ -36,6 +36,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
+        {/*
          <script type="application/ld+json"
             dangerouslySetInnerHTML={{ __html:
                   JSON.stringify({
@@ -68,23 +69,23 @@ export default function Index({ allPosts }: Props) {
                         "reviewBody": "HelloStocker is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend HelloStocker"
                       }
                     })}}
-                />
-          <title>GPT Financial Advisor & Virtual Investing App</title>
+                />*/}
+          <title>What Stocks To Buy Now?</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Real-time stocks to buy & market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
+          <meta name="description" property="og:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Real-time stocks to buy & market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
+          <meta name="description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App"/>
           <meta property="og:title" content="HelloStocker: Invest with your AI Advisor" />
-          <meta name="og:description" content="Real-time stocks to buy & market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
+          <meta name="og:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:title" content="HelloStocker: Invest with your AI Advisor"/>
-          <meta name="twitter:description" content="Real-time stocks to buy & market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
+          <meta name="twitter:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
