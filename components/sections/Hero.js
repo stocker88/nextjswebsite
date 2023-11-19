@@ -85,7 +85,7 @@ const Hero = ({
                                               style={{width:275, height:68.75}}
                                                />
                              <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(1, 74, 173, 0.6)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               join our community of +10,800 investors
+                                               join our community of +12,800 investors
                                              </div>
                                         <br></br>
                 <InstallButtonsWithQR/>

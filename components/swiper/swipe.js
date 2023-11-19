@@ -73,7 +73,20 @@ export default function Swipe() {
         You Can Practice Trading Ideas
       </h2>
 <br></br>
+  <div className="split-item">
+<div style={{paddingTop: 10}}></div>
+                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                                - We Give You All The Money You Need
+                                <br></br>
+                                <br></br>
+                                - We Don't Want You To Take Risks
+                                <br></br>
+                                <br></br>
+                                - 95% Of Successful Hedge Funds Build Their Strategies Virtually First
+                </h3>
 
+        </div>
+        </div>
 <center>
 <div className="container">
      <div className="split-item">
