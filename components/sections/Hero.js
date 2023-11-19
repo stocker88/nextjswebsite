@@ -79,9 +79,7 @@ const Hero = ({
                                           </h1>
 
 
-                        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                             We give you $10,000 Virtual Money to Practise Trading Ideas
-                             </h1>
+
 
                               <Image
                                                src='/assets/images/usersRating.webp'
@@ -92,6 +90,10 @@ const Hero = ({
                                                join our community of +12,800 investors
                                              </div>
                                         <br></br>
+                                        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                                                                     We give you $10,000 Virtual Money to Practise Trading Ideas
+                                                                     </h1>
+                                                          <br></br>
                 <InstallButtonsWithQR/>
  <Image
    src='/assets/images/chatgptgooglecloud.webp'
