@@ -71,13 +71,13 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Can Practice Trading Ideas
+        You Can Test Trading Ideas
       </h2>
 <br></br>
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - We Give You All The Money You Need
+                                - We Give You Unlimited Virtual Money
                                 <br></br>
                                 <br></br>
                                 - 95% Of Hedge Funds Test Strategies Virtually
