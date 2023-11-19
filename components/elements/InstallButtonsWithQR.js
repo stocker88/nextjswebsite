@@ -62,7 +62,7 @@ if(isMobile) {
        <section
              {...props}
            >
-         <br></br>
+
            <Zoom><Image
                            src={'/assets/images/qrcode.webp'}
                           style={{width:140}}
