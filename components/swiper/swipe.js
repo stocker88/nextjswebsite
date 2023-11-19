@@ -80,7 +80,7 @@ export default function Swipe() {
                                 - We Give You All The Money You Need
                                 <br></br>
                                 <br></br>
-                                - Did you know 95% Of Hedge Funds Build Strategies Virtually First?
+                                - 95% Of Hedge Funds Test Strategies Virtually
                                 <br></br>
                                 <br></br>
                                 - We Don't Want You To Take Risks
