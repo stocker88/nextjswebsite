@@ -180,7 +180,7 @@ export default function Swipe() {
                           <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
         - Our Mission is to Empower You With Financial Growth
         <br></br>
-       - We predicted Netflix +40%, Tesla +3,000% and Nvidia +6,000%
+       - We Predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
        <br></br>
        - Our CEO Traded Billions for Wall Street Hedge Funds
        <br></br>
