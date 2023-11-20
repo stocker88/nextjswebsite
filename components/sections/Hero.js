@@ -78,7 +78,7 @@ const Hero = ({
                                              Ask HelloStocker
                                           </h1>
                                           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                                                                      Your AI Trading Advisor
+                                                                                      Your AI Financial Advisor
                                                                                     </h1>
 
 
@@ -96,7 +96,7 @@ const Hero = ({
 
                 <InstallButtonsWithQR/>
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
-                                                                                     Install Now And Get $10,000 Virtual Trading Money
+                                                                                     Install Now And Get $10,000 Virtual Reality Money
                                                                                      </h1>
                                                                           <br></br>
  <Image
