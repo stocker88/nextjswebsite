@@ -58,12 +58,10 @@ const Hero = ({
           <br></br>
      <div style={{paddingTop: 10}}></div>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                             HelloStocker
+                                                             HelloStocker AI
                                                           </h1>
-                                                          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                                                                      AI Trading Advisor
-                                                                                     </h1>
-
+                                                          
+<br></br>
          {/*    <Image
               src={require('assets/images/stocker.png')}
               alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
@@ -95,11 +93,6 @@ const Hero = ({
                                                Join +12,800 investors
                                              </div>
                                         <br></br>
-        <Image
-                                                            src='/assets/images/chatgptgooglecloud.webp'
-                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                                           style={{width:195.9375, height:83.98}}
-                                                            />
 
 <InstallButtonsWithQR/>
 
