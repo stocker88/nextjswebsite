@@ -89,13 +89,13 @@ const Hero = ({
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
                                               style={{width:240, height:60}}
                                                />
-                             <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '2px 2px 2px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                             <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '3px 3px 3px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                join our community of +12,800 investors
                                              </div>
                                         <br></br>
 
                 <InstallButtonsWithQR/>
-                                                        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(0, 0, 0, 0)' }} >
+                                                        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
                                                                                      Install Now And Get $10,000 Virtual Trading Money
                                                                                      </h1>
                                                                           <br></br>
