@@ -94,7 +94,7 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
 
-
+<center>
         <WhyHellostocker/>
         <br></br>
         <Container>
@@ -247,7 +247,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
         <br></br>
                 <br></br>
 </Container>
-
+</center>
 
     </section>
   );
