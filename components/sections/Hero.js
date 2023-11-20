@@ -74,9 +74,11 @@ const Hero = ({
             <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                             What Stocks To Buy Now?
                                           </h1>
+                                          <div style={{paddingTop: 10}}></div>
 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                              Ask HelloStocker
                                           </h1>
+                                          <div style={{paddingTop: 10}}></div>
                                           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                                                                       Your AI Trading Advisor
                                                                                     </h1>
