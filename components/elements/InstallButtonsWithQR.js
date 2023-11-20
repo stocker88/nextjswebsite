@@ -34,7 +34,7 @@ if(isMobile) {
         <section
                      {...props}
                    >
-                   <br></br>
+
                  <br></br>
                        <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
                     <Image

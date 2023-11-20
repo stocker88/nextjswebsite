@@ -126,6 +126,7 @@ export default function Swipe() {
                 <br></br>
                 - Hedge Funds & Politicians Trading Activity
                 <br></br>
+                <br></br>
 </h4>
 
         </div>
@@ -159,6 +160,7 @@ export default function Swipe() {
  <br></br> <br></br> <br></br>
 
         <IntroDownload/>
+        <br></br>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
 
         <br></br>

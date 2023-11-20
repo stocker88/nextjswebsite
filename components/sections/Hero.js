@@ -81,7 +81,7 @@ const Hero = ({
                                                                                       Your AI Trading Advisor
                                                                                     </h1>
 
-
+<div style={{paddingTop: 10}}></div>
 
 
                               <Image
