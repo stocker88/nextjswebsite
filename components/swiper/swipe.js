@@ -182,9 +182,9 @@ export default function Swipe() {
         <br></br>
        - You Will Join A Well Established Trading Network With Hot AI Capacities
        <br></br>
-       - Our CEO traded billions for Wall Street Hedge Funds
+       - Our CEO Traded Billions for Wall Street Hedge Funds
        <br></br>
-       - Our CTO deployed AI technologies for FAANG companies
+       - Our CTO Built AI Technologies for FAANG Big Tech
        <br></br>
         </h4>
     <center>
