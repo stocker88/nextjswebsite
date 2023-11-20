@@ -57,7 +57,7 @@ const Hero = ({
           <br></br>
           <br></br>
      <div style={{paddingTop: 10}}></div>
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
+                <h1 className="text-5xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker AI
                                                           </h1>
 
