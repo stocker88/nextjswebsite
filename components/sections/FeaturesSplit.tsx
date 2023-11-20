@@ -140,13 +140,13 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>4) You save 80+ hours of investing Research per month</b></div>
 <br></br>
 <br></br>
-        Our AI Advisor processed thousands of financial reports, stock earnings results, investor presentations, and 10-Ks every month so you don’t have to.
+        Our AI Advisor processed thousands of financial reports, stock earnings results, trading data, investor presentations, and 10-Ks every month so you don’t have to.
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>5) Access Early Financial Opportunities</b></div>
+        <div style={{color:'white'}}><b>5) Access Early Trading Opportunities</b></div>
 <br></br>
 <br></br>
         No one wants to buy a stock after it’s gone up 56,978%.
