@@ -28,7 +28,7 @@ export default function Swipe() {
 
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
+                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - What the Company Business Does
                                 <br></br>
                                 - Why the Stock is Growing in Interest
@@ -73,7 +73,7 @@ export default function Swipe() {
 <br></br>
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
+                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - Robinhood & eToro Take Your Money. What If You Lose? Nothing.
                                 <br></br>
                                 - We Give You Unlimited Money in our Virtual Reality Simulator
@@ -117,7 +117,7 @@ export default function Swipe() {
 <div className="container">
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
+                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                 - Wall St Analyst Ratings & Financials
                 <br></br>
                 - Social Sentiment & News
@@ -177,12 +177,12 @@ export default function Swipe() {
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
-                          <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
-        - Our Mission: Empower You With Financial Growth
+                          <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+        - Our Mission is to Empower You With Financial Growth
         <br></br>
        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
         <br></br>
-       - You Will Join A Well Established Trading Network With Hot AI Capacities
+       - You will Join a Well Established Trading Network with Advanced AI Capacities
        <br></br>
        - Our CEO Traded Billions for Wall Street Hedge Funds
        <br></br>
