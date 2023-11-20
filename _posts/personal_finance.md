@@ -131,9 +131,13 @@ Although managing personal finances may appear daunting, it need not be overwhel
 ## **What should you do now?**
 
 Investing can require some patience, but how much money will you have in 10 or 20 years? Is it all really worth it?
+
 If you want to know more about how compound interest and the snowball effect makes your money grow, you should have a look at this article:
-[How To Be A Millionaire: The Science of Compound Interest https://www.hellostocker.com/posts/compoundinterest](https://www.hellostocker.com/posts/compoundinterest)
+
+* \- [How To Be A Millionaire: The Science of Compound Interest https://www.hellostocker.com/posts/compoundinterest](https://www.hellostocker.com/posts/compoundinterest)
 
 The investing universe can be overwhelming: there are so many stocks you could look at.
+
 If you want to know more about which stocks you should focus on you should read this article:
-[How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)
+
+* \- [How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)

@@ -111,9 +111,13 @@ Would you be a Millionaire by now?
 ## What's next?
 
 The investing universe can be overwhelming: there are so many stocks you could look at.
+
 If you want to know more about which stocks you should focus on you should read this article:
-[How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)
+
+* \- [How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)
 
 Investing can increase your revenues, but your overall wealth takes into account budgeting and spendings too.
+
 If you want to learn more about how you can optimize your personal finance, you should read this article:
-[From Budgeting to Investing: A Comprehensive Guide to Personal Finance https://www.hellostocker.com/posts/personal_finance](https://www.hellostocker.com/posts/personal_finance)
+
+* \- [From Budgeting to Investing: A Comprehensive Guide to Personal Finance https://www.hellostocker.com/posts/personal_finance](https://www.hellostocker.com/posts/personal_finance)
