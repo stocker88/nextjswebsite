@@ -76,7 +76,7 @@ export default function Swipe() {
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - Robinhood & eToro Take Your Money
                                 <br></br>
-                                - We Give You Money in a Safe Virtual Trading Simulator
+                                - We Give You Money in a Safe Virtual Reality Simulator
                                 <br></br>
                                 - 95% Of Hedge Funds Test Strategies Virtually
                                 <br></br>
@@ -122,7 +122,7 @@ export default function Swipe() {
                 <br></br>
                 - Social Sentiment & News
                 <br></br>
-                - Technical Market Signals AI Screening
+                - Market Trading Signals & AI Screening
                 <br></br>
                 - Hedge Funds & Politicians Trading Activity
                 <br></br>
