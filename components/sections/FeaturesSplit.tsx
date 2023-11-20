@@ -98,7 +98,7 @@ const FeaturesSplit = ({
         <WhyHellostocker/>
         <br></br>
         <Container>
-        <div style={{ color: 'lightgrey', fontSize: "min(22px,max(17px,1.6vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(0, 0, 0, 0)' }} >
+        <div style={{ color: 'lightgrey', fontSize: "min(22px,max(17px,1.6vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', maxWidth: "1000px" }} >
         <br></br>
 
         <br></br>
