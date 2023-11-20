@@ -181,12 +181,12 @@ export default function Swipe() {
         - Our Mission is to Empower You With Financial Growth
         <br></br>
        - We predicted Netflix +40% return, Tesla +3,000% and Nvidia +6,000%
-        <br></br>
-       - You will Join a Well Established Trading Network with Advanced AI Capacities
        <br></br>
        - Our CEO Traded Billions for Wall Street Hedge Funds
        <br></br>
        - Our CTO Built AI Technologies for FAANG Big Tech
+       <br></br>
+      - Join a Well Established Trading Network with Advanced AI Capacities
        <br></br>
         </h4>
     <center>
