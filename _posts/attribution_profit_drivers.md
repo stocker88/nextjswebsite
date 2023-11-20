@@ -156,11 +156,20 @@ Your active return explain how well you are doing over the market and why:
 
 When you know where your performance comes from, you can build an efficient strategy that will allow you to consistently beat the market.
 
-These metrics are calculated for you in HelloStocker App for stocks and cryptos.
+These metrics are calculated for you in HelloStocker App for stocks.
+
+I am very curious to know what Market Sector do you like to invest in? Is it Tech, Healthcare, Energy or something else? 
 
 
+## **Now What?**
 
+Investing can require some patience, but how much money will you have in 10 or 20 years? Is it all really worth it?
+If you want to know more about how compound interest and the snowball effect makes your money grow, you should have a look at this article:
+[How To Be A Millionaire: The Science of Compound Interest https://www.hellostocker.com/posts/compoundinterest](https://www.hellostocker.com/posts/compoundinterest)
 
+Investing can increase your revenues, but your overall wealth takes into account budgeting and spending too.
+If you want to learn more about how you can optimize your personal finance, you should read this article:
+[From Budgeting to Investing: A Comprehensive Guide to Personal Finance https://www.hellostocker.com/posts/personal_finance](https://www.hellostocker.com/posts/personal_finance)
 
 
 

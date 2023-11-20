@@ -2,7 +2,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/how_to_be_a_millionnaire',
+        source: '/how_to_be_a_millionaire',
         destination: '/compoundinterest',
         permanent: true
       },

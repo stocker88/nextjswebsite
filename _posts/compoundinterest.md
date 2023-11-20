@@ -1,14 +1,14 @@
 ---
 title: 'How To Be A Millionaire: The Science of Compound Interest'
-excerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! You don’t need $100k income to be a millionnaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth. Make smart decisions with HelloStocker AI ChatGPT and market data analysis to make the money work for you! Top investor Warren Buffett bought his first stock at 11 years old — did he buy Nvidia? No: he bought three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each. And he is today considered the best investor of the century. There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, nor how much money they have...'
+excerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! You don’t need $100k income to be a millionaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth. Make smart decisions with HelloStocker AI ChatGPT and market data analysis to make the money work for you! Top investor Warren Buffett bought his first stock at 11 years old — did he buy Nvidia? No: he bought three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each. And he is today considered the best investor of the century. There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, nor how much money they have...'
 seoExcerpt: 'If you save 10$ a day in 10 year you will have $90,000. If you invest $10 a day in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of investing when he bought his first stock'
-coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
+coverImage: '/assets/blog/millionairescience/millionairescience.webp'
 date: '2023-11-29T05:35:07.322Z'
 author:
     name: Aness Hussein Ali
     picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-    url: '/assets/blog/millionnairescience/millionnairescience.webp'
+    url: '/assets/blog/millionairescience/millionairescience.webp'
 ---
 
 **If you save $10 a day:**
@@ -23,13 +23,13 @@ ogImage:
 - in 10y, compound interest yields **$160,000**
 - in 20y, compound interest yields **$2,000,000**
 
-You don’t need $100k income to be a millionnaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
+You don’t need $100k income to be a millionaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
 
 Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
 There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, nor how much money they have.
 
-This is backed up by data, over 10,000 investors have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, the 2 main factors that will make you a millionnaire have nothing to do with income.
+This is backed up by data, over 10,000 investors have filled a survey in our app, that showed the following: wealth is not correlated to earnings, in fact, the 2 main factors that will make you a millionaire have nothing to do with income.
 
 Most of people put a barrier in their mind, but not the right ones unfortunately. Just like when you skip the gym, they look for short term gratifications over dedication and long term health.
 
@@ -46,7 +46,7 @@ What comes third? That expensive steak you can’t afford? Or that luxurious car
 
 Money. Money comes third, because there isn’t much else you can’t afford without money.
 
-Warren Buffet had pennies, he was far from being a millionnaire, he is now the most respected and followed investor in the world, if not the most famous stock marget guru, and he started investing at 11 years old!
+Warren Buffet had pennies, he was far from being a millionaire, he is now the most respected and followed investor in the world, if not the most famous stock marget guru, and he started investing at 11 years old!
 
 ![](/assets/blog/personal-finance/personalfinance.jpg)
 
@@ -82,7 +82,7 @@ Compounding is like a snowball effect for your money.
 
 - This keeps happening, and your money keeps growing faster and faster.
 
-![](/assets/blog/millionnairescience/snowball.png)
+![](/assets/blog/millionairescience/snowball.png)
 
 **If you save $10 a day:**
 - in 10 years, you will have **$36,000**
@@ -104,6 +104,16 @@ Budgeting and investing apps and robo advisors such as HelloStocker app have bee
 
 ## 4. Conclusion
 
-If you had saved and invested this money by age 11, just like Warren Buffett did, and knew about compound interest, how much money do you think you would have today? Would you be a millionnaire by now?
+If you had saved and invested this money by age 11, just like Warren Buffett did, and knew about compound interest, how much money do you think you would have today? 
 
-[If you liked this article, we suggest you have a look at this one: How to Invest in Stocks and Beat the SP500 Market: Know What You Are Best At](https://www.hellostocker.com/posts/attribution_profit_drivers)
+Would you be a Millionaire by now?
+
+## What's next?
+
+The investing universe can be overwhelming: there are so many stocks you could look at.
+If you want to know more about which stocks you should focus on you should read this article:
+[How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)
+
+Investing can increase your revenues, but your overall wealth takes into account budgeting and spendings too.
+If you want to learn more about how you can optimize your personal finance, you should read this article:
+[From Budgeting to Investing: A Comprehensive Guide to Personal Finance https://www.hellostocker.com/posts/personal_finance](https://www.hellostocker.com/posts/personal_finance)
