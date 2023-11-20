@@ -74,14 +74,6 @@ const Hero = ({
             <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                             Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
-                                          <div style={{paddingTop: 10}}></div>
-<h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                             HelloStocker
-                                          </h1>
-                                          <div style={{paddingTop: 10}}></div>
-                                          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                                                                      Your AI Trading Advisor
-                                                                                    </h1>
 
 <div style={{paddingTop: 10}}></div>
 
@@ -97,15 +89,25 @@ const Hero = ({
                                         <br></br>
 
                 <InstallButtonsWithQR/>
+                  <div style={{paddingTop: 10}}></div>
+                <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                                                             HelloStocker AI App
+                                                          </h1>
+                                                          <div style={{paddingTop: 10}}></div>
+                                                          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                                                                                                      Your ChatGPT Trading Advisor
+                                                          <Image
+                                                            src='/assets/images/chatgptgooglecloud.webp'
+                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+                                                           style={{width:195.9375, height:83.98}}
+                                                            />                                           </h1>
+
+
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
                                                                                      Install Now And Get $10,000 Virtual Money
                                                                                      </h1>
                                                                           <br></br>
- <Image
-   src='/assets/images/chatgptgooglecloud.webp'
-   alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-  style={{width:195.9375, height:83.98}}
-   />
+
                 <br></br>
                 <br></br>
                 <br></br>
