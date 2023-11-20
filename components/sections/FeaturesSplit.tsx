@@ -188,7 +188,7 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
 <br></br>
 <br></br>
-        Don't lose your hard earned money testing on Robinhood and eToro: they just want you to trade and don't care whether you make money or not.
+        Don't lose your hard earned money testing on Robinhood and eToro: they just want you to trade and what if you lose? Nothing.
 <br></br>
 <br></br>
         We Give You Unlimited Virtual Money to Practice our AI Trading Ideas and Buy Stocks in a Secured and Safe Virtual Trading Simulator app!

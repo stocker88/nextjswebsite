@@ -74,13 +74,13 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
-                                - Robinhood & eToro want to Take your Hard Earned Money
+                                - Robinhood & eToro Take Your Money. What If You Lose? Nothing.
                                 <br></br>
-                                - We Give You Unlimited Virtual Money
+                                - We Give You Unlimited Money in our Virtual Reality Simulator
                                 <br></br>
                                 - 95% Of Hedge Funds Test Strategies Virtually
                                 <br></br>
-                                - We Don't Want You To Take Risks
+                                - You Come First: We Want You To Be Safe
                                 <br></br>
                                                                 <br></br>
                 </h4>
