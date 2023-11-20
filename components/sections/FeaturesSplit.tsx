@@ -188,7 +188,10 @@ const FeaturesSplit = ({
         <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
 <br></br>
 <br></br>
-        You get Unlimited Virtual Money to practice AI Trading Ideas and Buy Stocks ETFs & Cryptos in a Secured Virtual Trading app!
+        Don't lose your hard earned money testing on Robinhood and eToro: they just want you to trade and don't care whether you make money or not.
+<br></br>
+<br></br>
+        We Give You Unlimited Virtual Money to Practice our AI Trading Ideas and Buy Stocks in a Secured and Safe Virtual Trading Simulator app!
 <br></br>
 <br></br>
 <br></br>
