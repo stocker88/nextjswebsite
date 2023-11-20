@@ -72,11 +72,11 @@ const Hero = ({
             <div className="container-xs">
             <br></br>
             <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                            What Stocks To Buy Now?
+                                            Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
                                           <div style={{paddingTop: 10}}></div>
 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                             Ask HelloStocker
+                                             HelloStocker
                                           </h1>
                                           <div style={{paddingTop: 10}}></div>
                                           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
@@ -92,7 +92,7 @@ const Hero = ({
                                               style={{width:240, height:60}}
                                                />
                              <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '3px 3px 3px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               join a community of +12,800 investors
+                                               Join +12,800 investors
                                              </div>
                                         <br></br>
 
