@@ -56,6 +56,13 @@ const Hero = ({
           <div className="hero-content">
           <br></br>
           <br></br>
+     <div style={{paddingTop: 10}}></div>
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
+                                                             HelloStocker
+                                                          </h1>
+                                                          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
+                                                                                                      AI Trading Advisor
+                                                                                     </h1>
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
@@ -93,25 +100,18 @@ const Hero = ({
                                                             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
                                                            style={{width:195.9375, height:83.98}}
                                                             />
-                                                            
-                  <div style={{paddingTop: 10}}></div>
-                <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                             HelloStocker
-                                                          </h1>
-                                                          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                                                                      AI Trading Advisor
-                                                          <Image
-                                                            src='/assets/images/chatgptgooglecloud.webp'
-                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                                           style={{width:195.9375, height:83.98}}
-                                                            />                                           </h1>
 
+<InstallButtonsWithQR/>
 
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
                                                                                      Install Now And Get $10,000 Virtual Money
                                                                                      </h1>
                                                                           <br></br>
-<InstallButtonsWithQR/>
+        <Image
+                                                            src='/assets/images/chatgptgooglecloud.webp'
+                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+                                                           style={{width:195.9375, height:83.98}}
+                                                            />
                 <br></br>
                 <br></br>
                 <br></br>
