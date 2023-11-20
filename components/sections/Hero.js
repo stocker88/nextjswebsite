@@ -98,7 +98,7 @@ const Hero = ({
 
                 <InstallButtonsWithQR/>
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
-                                                                                     Install Now And Get $10,000 Virtual Reality Money
+                                                                                     Install Now And Get $10,000 Virtual Money
                                                                                      </h1>
                                                                           <br></br>
  <Image
