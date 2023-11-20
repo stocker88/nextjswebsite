@@ -231,7 +231,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 </Container>
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        DM Your AI Advisor Now
+        Start Now And Grow Exponentially
       </h2>
         <br></br>
         <br></br>
