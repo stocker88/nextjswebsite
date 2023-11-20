@@ -168,7 +168,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) You Can Join a Community of Investors</b></div>
+        <div style={{color:'white'}}><b>7) Ask a Pro Community of Investors</b></div>
 <br></br>
 <br></br>
         We want to speak with you! You can connect with us with other pro traders!
@@ -195,7 +195,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>9) We Share Our AI Training Data</b></div>
+        <div style={{color:'white'}}><b>9) Access Transparent AI Data</b></div>
 <br></br>
 <br></br>
         Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
@@ -210,7 +210,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>10) The Math of Investing: Compound Interest</b></div>
+        <div style={{color:'white'}}><b>10) You will grow exponentially</b></div>
 <br></br>
 <br></br>
 Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
@@ -231,7 +231,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 </Container>
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        Start Now And Grow Exponentially
+        Install HelloStocker App
       </h2>
         <br></br>
         <br></br>
