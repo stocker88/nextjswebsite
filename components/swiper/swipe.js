@@ -29,11 +29,11 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
-                                - What the Company Business does
+                                - What the Company Business Does
                                 <br></br>
                                 - Why the Stock is Growing in Interest
                                 <br></br>
-                                - Market Risks & Competitors to watch for
+                                - Market Risks & Competitors to Watch For
                         <br></br>
                         <br></br>
                 </h4>
@@ -124,7 +124,7 @@ export default function Swipe() {
                 <br></br>
                 - Technical Market Signals AI Screening
                 <br></br>
-                - Hedge funds & Famous Figures Trading Activity
+                - Hedge Funds & Politicians Trading Activity
                 <br></br>
 </h4>
 
