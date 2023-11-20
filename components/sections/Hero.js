@@ -88,8 +88,12 @@ const Hero = ({
                                                Join +12,800 investors
                                              </div>
                                         <br></br>
-
-                <InstallButtonsWithQR/>
+        <Image
+                                                            src='/assets/images/chatgptgooglecloud.webp'
+                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+                                                           style={{width:195.9375, height:83.98}}
+                                                            />
+                                                            
                   <div style={{paddingTop: 10}}></div>
                 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker
@@ -107,7 +111,7 @@ const Hero = ({
                                                                                      Install Now And Get $10,000 Virtual Money
                                                                                      </h1>
                                                                           <br></br>
-
+<InstallButtonsWithQR/>
                 <br></br>
                 <br></br>
                 <br></br>
