@@ -74,7 +74,7 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - Robinhood & eToro Take Your Money: That's it
+                                - Robinhood & eToro Take Your Money
                                 <br></br>
                                 - We Give You Money in a Safe Virtual Trading Simulator
                                 <br></br>
