@@ -90,7 +90,7 @@ const Hero = ({
                                               style={{width:240, height:60}}
                                                />
                              <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '3px 3px 3px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               join our community of +12,800 investors
+                                               join a community of +12,800 investors
                                              </div>
                                         <br></br>
 
