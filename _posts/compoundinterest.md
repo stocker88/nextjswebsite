@@ -8,7 +8,7 @@ author:
     name: Aness Hussein Ali
     picture: '/assets/blog/authors/anesshusseinali.jpeg'
 ogImage:
-    url: '/assets/blog/millionairescience/millionairescience.webp'
+    url: '/assets/blog/millionnairescience/millionnairescience.webp'
 ---
 
 **If you save $10 a day:**
