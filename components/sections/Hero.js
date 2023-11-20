@@ -47,7 +47,7 @@ const Hero = ({
       {...props}
       className={outerClasses}
     >
-
+<Container>
 
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
@@ -71,7 +71,7 @@ const Hero = ({
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                             Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
 
@@ -124,6 +124,7 @@ const Hero = ({
 
  </div>
  </center>
+ </Container>
     </section>
   );
 }
