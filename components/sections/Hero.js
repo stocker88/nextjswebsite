@@ -71,7 +71,7 @@ const Hero = ({
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                             Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
 
@@ -83,18 +83,18 @@ const Hero = ({
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
                                               style={{width:240, height:60}}
                                                />
-                             <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '3px 3px 3px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                             <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                Join +12,800 investors
                                              </div>
                                         <br></br>
 
                 <InstallButtonsWithQR/>
                   <div style={{paddingTop: 10}}></div>
-                <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker AI App
                                                           </h1>
                                                           <div style={{paddingTop: 10}}></div>
-                                                          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                                                          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                                                                                       Your ChatGPT Trading Advisor
                                                           <Image
                                                             src='/assets/images/chatgptgooglecloud.webp'
