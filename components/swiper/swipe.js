@@ -28,18 +28,16 @@ export default function Swipe() {
 
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h3 className="text-3xl md:text-6xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.2}}>
                                 - What the Company Business does
                                 <br></br>
-                                <br></br>
                                 - Why the Stock is Growing in Interest
-                                <br></br>
                                 <br></br>
                                 - Market Risks & Competitors to watch for
                         <br></br>
                         <br></br>
                         <br></br>
-                </h3>
+                </h4>
 
         </div>
         </div>

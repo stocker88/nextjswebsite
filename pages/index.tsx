@@ -42,7 +42,7 @@ export default function Index({ allPosts }: Props) {
                   JSON.stringify({
                       "@context": "http://schema.org",
                       "@type": "SoftwareApplication",
-                      "name": "HelloStocker AI Trading Advisor App Powered by ChatGPT",
+                      "name": "HelloStocker AI Trading Advisor App ChatGPT Powered",
                       "image": "https://www.hellostocker.com/assets/images/hellostocker.webp",
                       "author": {
                         "@type": "Person",
@@ -69,22 +69,22 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>What Stocks To Buy Now?</title>
+          <title>HelloStocker We Send You Stocks To Buy</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App" />
+          <meta name="description" property="og:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App"/>
+          <meta name="description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator"/>
           <meta property="og:title" content="HelloStocker: Invest with your AI Advisor" />
-          <meta name="og:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App" />
+          <meta name="og:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:title" content="HelloStocker: Invest with your AI Advisor"/>
-          <meta name="twitter:description" content="Ask Your HelloStocker AI Investing Advisor! We Give You $10,000 Virtual Money to Practise Trading Ideas in our Virtual Trading App"/>
+          <meta name="twitter:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
