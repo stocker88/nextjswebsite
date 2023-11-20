@@ -6,6 +6,7 @@ import Button from '../elements/Button';
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import { openInbox } from 'react'
+import Container from '../container'
 
 const propTypes = {
   ...SectionProps.types
@@ -91,11 +92,10 @@ const Hero = ({
                 <InstallButtonsWithQR/>
                   <div style={{paddingTop: 10}}></div>
                 <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                             HelloStocker AI App
+                                                             HelloStocker
                                                           </h1>
-                                                          <div style={{paddingTop: 10}}></div>
                                                           <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.7,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
-                                                                                                      Your ChatGPT Trading Advisor
+                                                                                                      AI Trading Advisor
                                                           <Image
                                                             src='/assets/images/chatgptgooglecloud.webp'
                                                             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
