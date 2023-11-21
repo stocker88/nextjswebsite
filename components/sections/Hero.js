@@ -7,6 +7,7 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from '../elements/Image';
 import { openInbox } from 'react'
 import Container from '../container'
+import NewsletterSignUp from '../formStocker'
 
 const propTypes = {
   ...SectionProps.types
@@ -52,7 +53,6 @@ const Hero = ({
 
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
-
           <div className="hero-content">
           <br></br>
           <br></br>
@@ -60,7 +60,6 @@ const Hero = ({
                 <h1 className="text-5xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker AI
                                                           </h1>
-
 <br></br>
          {/*    <Image
               src={require('assets/images/stocker.png')}
@@ -94,11 +93,26 @@ const Hero = ({
                                              </div>
                                         <br></br>
 
-<InstallButtonsWithQR/>
+
+          </div>
+
+        </div>
+
+ </div>
+ </center>
+ </Container>
+<NewsletterSignUp/>
+<br></br>
+<Container>
+
+<center>
+      <div className="container-sm has-animations" style={{  zIndex: 10 }}>
+          <div className="hero-content">
 
                                                         <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
                                                                                      Install Now And Try With Free Virtual Money
                                                                                      </h1>
+
                                                                           <br></br>
         <Image
                                                             src='/assets/images/chatgptgooglecloud.webp'
@@ -119,7 +133,7 @@ const Hero = ({
 
         </div>
 
- </div>
+
  </center>
  </Container>
     </section>

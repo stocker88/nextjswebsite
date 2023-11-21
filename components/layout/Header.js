@@ -20,7 +20,7 @@ class Header extends Component {
     return (
 
     <header id="home">
-            <nav class="opaque " id="nav-wrap">
+            <nav className="opaque " id="nav-wrap">
                 <div className="header-nav-inner">
                 <ul id="nav" className="nav">
         {/*          <li>
