@@ -151,7 +151,7 @@ const db = getFirestore();
                 <button type="submit" style={{
                'padding': '20px',
                'color': 'white',
-                'width':'37vw',
+                'width':'35vw',
                'textAlign': 'center',
                'fontSize': 'min(24px,max(17px,2vw))',
                'border': '1px solid rgba (255, 255, 255, 0.2)',
