@@ -101,7 +101,7 @@ const Div = styled.div`
 `;
 */}
     const [input,setInput] = useState("");
-    const [message,setMessage] = useState("");
+    const [message,setMessage] = useState(<></>);
 
     const inputHandler = (e) => {
         setInput(e.target.value);
