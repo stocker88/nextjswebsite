@@ -6,7 +6,7 @@ import { getAnalytics } from "firebase/analytics";
 import {getFirestore} from 'firebase/firestore';
 import { doc, setDoc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
-import styled from "styled-components"
+
 import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -43,7 +43,7 @@ if (firebaseConfig?.projectId) {
 //export db from other script and import it here
 
 function NewsletterSignUp(){
-
+{/*
 const Alert = styled.p`
     position: relative;
     padding: 0.4rem;
@@ -99,6 +99,7 @@ const Div = styled.div`
     background: Linear-gradient(to right, #414345. #232526);
     overflow:hidden;
 `;
+*/}
     const [input,setInput] = useState("");
     const [message,setMessage] = useState("");
 
