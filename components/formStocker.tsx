@@ -103,8 +103,6 @@ const Div = styled.div`
     const [input,setInput] = useState("");
     const [message,setMessage] = useState("");
     let [showDropdown, setShowDropdown] = useState(false);
-    const { category, title } = props.block;
-
 
     const inputHandler = (e) => {
         setInput(e.target.value);
