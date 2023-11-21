@@ -145,7 +145,7 @@ const db = getFirestore();
                 'padding':'17px',
                 'borderRadius': '30px 0 0 30px',
                 'width':'45vw',
-                'fontSize': 'min(23px,max(15px,2vw))',
+                'fontSize': 'min(22px,max(15px,2vw))',
                 'maxWidth':'350px',
                 }}/>
                 <button type="submit" style={{
@@ -153,7 +153,7 @@ const db = getFirestore();
                'color': 'white',
                 'width':'36vw',
                'textAlign': 'center',
-               'fontSize': 'min(23px,max(15px,2vw))',
+               'fontSize': 'min(22px,max(15px,2vw))',
                'border': '1px solid rgba (255, 255, 255, 0.2)',
                'borderRadius': '0 30px 30px 0',
                'background': 'rgba(0, 0, 0, 0.15)',
