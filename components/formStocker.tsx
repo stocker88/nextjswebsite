@@ -133,7 +133,7 @@ const db = getFirestore();
 
     return (
     <center>
-    <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed', 'align-items': 'center'}}>
+    <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
             <form onSubmit={submitHandler} style={{'padding': '2rem'}}>
 
