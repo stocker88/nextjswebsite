@@ -138,21 +138,20 @@ const db = getFirestore();
             <form onSubmit={submitHandler} style={{'padding': '2rem'}}>
 
             <br></br>
-                <input type="email" placeholder="Enter your email here..." onChange={inputHandler} value={input} style={{'padding':'20px', 'border-radius': '30px 0 0 30px', 'width':'40vw', 'maxWidth':'350px'}}/>
+                <input type="email" placeholder="Enter your email here..." onChange={inputHandler} value={input} style={{'padding':'20px', 'borderRZadius': '30px 0 0 30px', 'width':'40vw', 'maxWidth':'350px'}}/>
                 <button type="submit" style={{
                                            'padding': '18px',
                                            'color': 'white',
                                             'width':'40vw',
-                                           'text-align': 'center',
+                                           'textAlign': 'center',
 
-                                           'font-size': '1.2rem',
+                                           'fontSize': '1.2rem',
                                            'border': '1px solid rgba (255, 255, 255, 0.2)',
-                                           'border-radius': '10px',
-                                           'border-radius': '0 30px 30px 0',
+                                           'borderRadius': '0 30px 30px 0',
                                            'background': 'rgba(0, 0, 0, 0.15)',
                                            'maxWidth':'200px',
-                                           'backdrop-filter': 'blur (10px)',
-                                           'z- index': 3}}>Get Early Access </button>
+                                           'backdropFilter': 'blur (10px)',
+                                           'zIndex': 3}}>Get Early Access </button>
             </form>
             {showDropdown && <InstallButtonsWithQR/>}
             {message && <alert> {message} </alert>}
