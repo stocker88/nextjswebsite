@@ -231,7 +231,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 </Container>
 </center>
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        Install HelloStocker App
+        DM HelloStocker AI Advisor Now
       </h2>
         <br></br>
         <br></br>

@@ -74,13 +74,11 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - Robinhood & eToro Want Your Money
-                                <br></br>
-                                - We Give You Money in a Safe Virtual Reality Simulator
+                                - We Will Guarantee Your Success Step By Step
                                 <br></br>
                                 - Hedge Funds Test Strategies Virtually First
                                 <br></br>
-                                - You Come First: We Will Guarantee Your Success Step By Step
+                                - We Give You Money in a Safe Virtual Reality Simulator
                                 <br></br>
                                                                 <br></br>
                 </h4>
