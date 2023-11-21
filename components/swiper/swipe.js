@@ -78,7 +78,7 @@ export default function Swipe() {
                   <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - We Will Guarantee Your Success Step By Step
                                 <br></br>
-                                - Hedge Funds Test Strategies Virtually First
+                                - 100% of Hedge Funds Test Strategies Virtually First
                                 <br></br>
                                 - We Give You Money in a Safe Virtual Reality Simulator
                                 <br></br>
