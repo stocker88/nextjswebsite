@@ -35,7 +35,7 @@ export default function Swipe() {
                         <br></br>
                         - Market Risks & Competitors to Watch For
                         <br></br>
-                        - We Adapt Them To Your Specific Needs With AI
+                        - We Adapt Recommendations To Your Specific Needs Using AI
                         <br></br>
                         <br></br>
                 </h4>
