@@ -71,7 +71,10 @@ const Hero = ({
   <Image
                   src='/assets/images/hellostocker.webp'
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
-                 style={{width:200,height:200}}
+                 style={{
+                 width:'min(max(150px,10vw),200px)',
+                                  height:'min(max(150px,10vw),200px)',
+                                  }}
 
                   />
             <div className="container-xs">
