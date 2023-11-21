@@ -101,7 +101,10 @@ const Div = styled.div`
 `;
 */}
     const [input,setInput] = useState("");
-    const [message,setMessage] = useState(<></>);
+    const [message,setMessage] = useState("");
+    let [showDropdown, setShowDropdown] = useState(false);
+    const { category, title } = props.block;
+
 
     const inputHandler = (e) => {
         setInput(e.target.value);
@@ -116,10 +119,12 @@ const db = getFirestore();
                 email: input,
                 time: serverTimestamp(),
                 });
-
+            setShowDropdown(true)
             setInput("");
-            setMessage(<InstallButtonsWithQR/>);
-           {/* setTimeout(
+
+           {/*
+           setMessage(<InstallButtonsWithQR/>);
+           setTimeout(
                 () => {
                     setMessage("");
                 },
@@ -130,7 +135,7 @@ const db = getFirestore();
 
     return (
     <center>
-    <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed', 'justify-content': 'center', 'align-items': 'center'}}>
+    <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed', 'align-items': 'center'}}>
 
             <form onSubmit={submitHandler} style={{'padding': '2rem'}}>
 
@@ -151,6 +156,7 @@ const db = getFirestore();
                                            'backdrop-filter': 'blur (10px)',
                                            'z- index': 3}}>Get Early Access </button>
             </form>
+            {showDropdown && <InstallButtonsWithQR/>}
             {message && <alert> {message} </alert>}
 
     </div>
