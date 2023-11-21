@@ -142,14 +142,14 @@ const db = getFirestore();
                 onChange={inputHandler}
                 value={input}
                 style={{
-                'padding':'20px',
+                'padding':'18px',
                 'borderRadius': '30px 0 0 30px',
                 'width':'45vw',
                 'fontSize': 'min(24px,max(15px,2vw))',
                 'maxWidth':'350px',
                 }}/>
                 <button type="submit" style={{
-               'padding': '20px',
+               'padding': '18px',
                'color': 'white',
                 'width':'35vw',
                'textAlign': 'center',
