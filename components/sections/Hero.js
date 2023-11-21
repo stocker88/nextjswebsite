@@ -105,7 +105,7 @@ const Hero = ({
                                                Join +12,800 investors
                                              </div>
 <div style={{paddingTop: 20}}></div>
-
+<br></br>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
