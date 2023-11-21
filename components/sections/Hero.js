@@ -82,14 +82,6 @@ const Hero = ({
                                             Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
 
-<div style={{paddingTop: 20}}></div>
-
-
-                              <Image
-                                               src='/assets/images/usersRating.webp'
-                                               alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
-                                              style={{width:240, height:60}}
-                                               />
           </div>
 
         </div>
@@ -100,10 +92,20 @@ const Hero = ({
 <NewsletterSignUp/>
 <br></br>
 <Container>
+
+
+
+<center>
+                              <Image
+                                               src='/assets/images/usersRating.webp'
+                                               alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+                                              style={{width:240, height:60}}
+                                               />
 <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                Join +12,800 investors
                                              </div>
-<center>
+<div style={{paddingTop: 20}}></div>
+
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
