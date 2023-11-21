@@ -138,7 +138,7 @@ const db = getFirestore();
             <form onSubmit={submitHandler} style={{'padding': '2rem'}}>
 
             <br></br>
-                <input type="email" placeholder="Enter your email here..." onChange={inputHandler} value={input} style={{'padding':'20px', 'borderRZadius': '30px 0 0 30px', 'width':'40vw', 'maxWidth':'350px'}}/>
+                <input type="email" placeholder="Enter your email here..." onChange={inputHandler} value={input} style={{'padding':'20px', 'borderRadius': '30px 0 0 30px', 'width':'40vw', 'maxWidth':'350px'}}/>
                 <button type="submit" style={{
                                            'padding': '18px',
                                            'color': 'white',
