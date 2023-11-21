@@ -111,13 +111,16 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) You Will Find Unbiased Trading Ideas</b></div>
+        <div style={{color:'white'}}><b>2) You Receive Stock Recommendations That Fit Your Preferences</b></div>
 <br></br>
 <br></br>
-        Other services are filled with opinions, recommendations, and pump-and-dump stocks.
+        Just like Netflix uses AI to recommend movies - just like spotify uses AI to recommend music...
         <br></br>
         <br></br>
-        HelloStocker AI reports are 100% unbiased, objective, and data-driven ideas to practice without risk.
+        We have a first layer of hot stocks to buy that gets filtered based on your own preference.
+         <br></br>
+         <br></br>
+         You will specific companies that will turn out to be of great interest for you!
 <br></br>
 <br></br>
 <br></br>
@@ -168,28 +171,28 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>7) Ask a Pro Community of Investors</b></div>
+        <div style={{color:'white'}}><b>7) Join a Pro Community of Investors</b></div>
 <br></br>
 <br></br>
-        We want to speak with you! You can connect with us with other pro traders!
+        You will be part of a well estalished investing network with members spamming across over 20 Hedge Funds.
 <br></br>
-<br></br>
-        You will see pro investor trades: Cathy Wood predicted Tesla.
-<br></br>
-<br></br>
-        Access Famous Figures Portfolio Positions and Replicate them with Virtual Trading.
+<br></br
+        Our community is growing exponentially, join now and grow with us!
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
+        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>.
 <br></br>
 <br></br>
-        Don't lose your hard earned money testing on Robinhood and eToro: they just want you to trade and what if you lose? Nothing.
+        Ever wonder why Robinhood lost 90% since IPO? Apps like Robinhood and eToro focus on your money: they want you to trade a lot and fast - it can be risky.
 <br></br>
 <br></br>
-        We Give You Unlimited Virtual Money to Practice our AI Trading Ideas and Buy Stocks in a Secured and Safe Virtual Trading Simulator app!
+        We give you unlimited virtual money to practice and get better at investing in a secured & safe virtual reality trading simulator app!
+<br></br>
+<br></br>
+        You come first: our success is tied to making you successful first!
 <br></br>
 <br></br>
 <br></br>
