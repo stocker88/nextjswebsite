@@ -186,7 +186,7 @@ export default function Swipe() {
        <br></br>
        - Our CTO Built AI Technologies for Big Tech Companies
        <br></br>
-      - Join a Well Established Trading Network with Advanced AI Tools
+      - You Come First - Our Success Depends On Yours
        <br></br>
         </h4>
     <center>
