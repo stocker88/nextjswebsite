@@ -176,8 +176,8 @@ const FeaturesSplit = ({
 <br></br>
         You will be part of a well estalished investing network with members spamming across over 20 Hedge Funds.
 <br></br>
-<br></br
-        Our community is growing exponentially, join now and grow with us!
+<br></br>
+        Our community is growing exponentially, join us now and grow with us!
 <br></br>
 <br></br>
 <br></br>
