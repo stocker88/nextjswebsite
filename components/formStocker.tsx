@@ -135,7 +135,7 @@ const db = getFirestore();
     <center>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
-            <form onSubmit={submitHandler} style={{'padding': '2rem'}}>
+            <form onSubmit={submitHandler} style={{'padding': '1rem'}}>
 
             <br></br>
                 <input type="email" placeholder="Enter your email here..."
