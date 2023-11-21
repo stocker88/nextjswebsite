@@ -162,7 +162,7 @@ const db = getFirestore();
                'zIndex': 3}}>Give me access </button>
             </form>
             {showDropdown && <InstallButtonsWithQR/>}
-           {showDropdown &&     <center> <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
+           {showDropdown &&     <center> <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
                                                                                                  Install Now And Try With Free Virtual Money
                                                                                                  </h1>
 
