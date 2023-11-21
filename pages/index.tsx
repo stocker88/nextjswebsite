@@ -69,7 +69,7 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>HelloStocker We Send You Stocks To Buy</title>
+          <title>HelloStocker AI App - We Send You Stocks To Buy</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator" />
