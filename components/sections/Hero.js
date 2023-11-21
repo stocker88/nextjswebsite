@@ -91,7 +91,7 @@ const Hero = ({
                              <div style={{ color: 'white', fontSize: "min(20px,max(17px,1.7vw))", fontFamily: 'arial', fontWeight: 600,lineHeight: 1,textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                Join +12,800 investors
                                              </div>
-                                        <br></br>
+
 
 
           </div>
@@ -109,11 +109,7 @@ const Hero = ({
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
-                                                        <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)' }} >
-                                                                                     Install Now And Try With Free Virtual Money
-                                                                                     </h1>
 
-                                                                          <br></br>
         <Image
                                                             src='/assets/images/chatgptgooglecloud.webp'
                                                             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
