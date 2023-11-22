@@ -136,7 +136,7 @@ const db = getFirestore();
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
             <form onSubmit={submitHandler}
-style={{'padding': '1rem'}}>
+style={{'padding': '20px'}}>
 
             <br></br>
                 <input type="email" placeholder="Enter your email here..."
@@ -155,20 +155,20 @@ style={{'padding': '1rem'}}>
                'color': 'white',
                 'width':'36vw',
                'textAlign': 'center',
-               'fontSize': 'min(19px,max(15px,2vw))',
+               'fontSize': 'min(19px,max(14px,2vw))',
                'borderRadius': '0 30px 30px 0',
                'background': 'white',
-               'maxWidth':'250px',
+               'maxWidth':'215px',
                'backdropFilter': 'blur (10px)',
                'zIndex': 3}}>  <div style={{
                                                    'padding': '16px',
                                                    'color': 'white',
                                                     'width':'30vw',
                                                    'textAlign': 'center',
-                                                   'fontSize': 'min(19px,max(15px,2vw))',
+                                                   'fontSize': 'min(19px,max(14px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#3700B3',
-                                                   'maxWidth':'215px',
+                                                   'maxWidth':'220px',
                                                    'backdropFilter': 'blur (10px)',
                                                    'zIndex': 3}}>Show me how</div> </button>
             </form>
