@@ -104,9 +104,6 @@ const MeetingButton = ({
             </div>
             <br></br>
 
-          <div className="container-sm has-animations" style={{  zIndex: 10 }}>
-              <div className="hero-content">
-
             <Image
             src='/assets/images/chatgptgooglecloud.webp'
             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
