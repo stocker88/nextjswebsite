@@ -138,7 +138,7 @@ You means the individual accessing or using the Service, or the company, or othe
  The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
 
 
-### 10. End-user license agreement
+### 10. EULA: End User License Agreement
 
 
 
