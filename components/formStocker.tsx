@@ -157,7 +157,7 @@ style={{'padding': '10px'}}>
                'textAlign': 'right',
                'fontSize': 'min(19px,max(15px,2vw))',
                'borderRadius': '0 30px 30px 0',
-               'display': 'flex', 'justifyContent':'flex-end'
+               'display': 'flex', 'justifyContent':'flex-end',
                'background': 'white',
                'maxWidth':'225px'
                }}>  <div style={{
