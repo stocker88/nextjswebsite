@@ -158,9 +158,8 @@ style={{'padding': '10px'}}>
                'fontSize': 'min(19px,max(15px,2vw))',
                'borderRadius': '0 30px 30px 0',
                'background': 'white',
-               'maxWidth':'225px',
-               'backdropFilter': 'blur (10px)',
-               'zIndex': 3}}>  <div style={{
+               'maxWidth':'225px'
+               }}>  <div style={{
                                                    'paddingTop': '16px',
                                                    'paddingBottom': '16px',
                                                    'color': 'white',
@@ -169,9 +168,8 @@ style={{'padding': '10px'}}>
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#3700B3',
-                                                   'maxWidth':'220px',
-                                                   'backdropFilter': 'blur (10px)',
-                                                   'zIndex': 3}}>Show me how</div> </button>
+                                                   'maxWidth':'220px'
+                                                  }}>Show me how</div> </button>
             </form>
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
                     Thank you! <br></br>Test it Now We Give You Virtual Money
