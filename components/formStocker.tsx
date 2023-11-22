@@ -158,10 +158,11 @@ style={{'padding': '20px'}}>
                'fontSize': 'min(19px,max(14px,2vw))',
                'borderRadius': '0 30px 30px 0',
                'background': 'white',
-               'maxWidth':'215px',
+               'maxWidth':'225px',
                'backdropFilter': 'blur (10px)',
                'zIndex': 3}}>  <div style={{
-                                                   'padding': '16px',
+                                                   'paddingTop': '16px',
+                                                   'paddingBottom': '16px',
                                                    'color': 'white',
                                                     'width':'30vw',
                                                    'textAlign': 'center',
