@@ -150,6 +150,7 @@ style={{'padding': '10px'}}>
                 'width':'47vw',
                 'fontSize': 'min(19px,max(15px,2vw))',
                 'maxWidth':'315px',
+                'background': 'white',
                 }}/>
                 <button type="submit" style={{
                'paddingTop': '3px',
