@@ -163,7 +163,7 @@ style={{'padding': '1rem'}}>
                'zIndex': 3}}>Give me access </button>
             </form>
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
-                    Thank you! <br></br>Install Now and Try it with Free Virtual Money
+                    Thank you! <br></br>Test it Now with Virtual Money
                 </h1>    </center>}
             {showDropdown && <InstallButtonsWithQR/>}
 
