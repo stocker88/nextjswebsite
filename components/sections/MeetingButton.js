@@ -61,6 +61,7 @@ const MeetingButton = ({
       className="flex-col md:flex-row flex items-center md:justify-between "
       id="MeetingButton"
     >
+     <div style={{  'width': '100%' }}>
     <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
@@ -116,6 +117,7 @@ const MeetingButton = ({
 </Container>
     </div>
 
+        </div>
         </div>
         </center>
 </section>
