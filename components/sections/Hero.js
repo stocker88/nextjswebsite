@@ -82,7 +82,7 @@ const Hero = ({
                                             Imagine someone told you about Nvidia when it was $50 instead of $500?
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
-          <h2  style={{ color: 'lightGrey',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
+          <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
             HelloStocker helps you find stocks before they blow up. Save time, save money and receive personalized AI recommendations based on your own tastes.
             </h2>
           </div>
