@@ -143,7 +143,7 @@ style={{'padding': '1rem'}}>
                 onChange={inputHandler}
                 value={input}
                 style={{
-                'padding':'17px',
+                'padding':'19px',
                 'textAlign': 'center',
                 'borderRadius': '30px 0 0 30px',
                 'width':'45vw',
@@ -151,7 +151,7 @@ style={{'padding': '1rem'}}>
                 'maxWidth':'315px',
                 }}/>
                 <button type="submit" style={{
-               'padding': '2px',
+               'padding': '3px',
                'color': 'white',
                 'width':'36vw',
                'textAlign': 'center',
@@ -161,7 +161,7 @@ style={{'padding': '1rem'}}>
                'maxWidth':'250px',
                'backdropFilter': 'blur (10px)',
                'zIndex': 3}}>  <div style={{
-                                                   'padding': '15px',
+                                                   'padding': '16px',
                                                    'color': 'white',
                                                     'width':'35vw',
                                                    'textAlign': 'center',
