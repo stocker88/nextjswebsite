@@ -145,7 +145,8 @@ style={{'padding': '10px'}}>
                 style={{
                 'padding':'19px',
                 'textAlign': 'center',
-                'borderRadius': '30px 0 0 30px',
+                'borderRadius': '30px 30px 30px 30px',
+                'border': '0.2px solid rgba (255, 255, 255, 0.2)',
                 'width':'47vw',
                 'fontSize': 'min(19px,max(15px,2vw))',
                 'maxWidth':'315px',
@@ -158,11 +159,10 @@ style={{'padding': '10px'}}>
                 'width':'32vw',
                'textAlign': 'right',
                'fontSize': 'min(19px,max(15px,2vw))',
-               'borderRadius': '30px 30px 30px 30px',
+               'borderRadius': '0 30px 30px 0',
                'background': 'white',
                'maxWidth':'225px',
-                'border': '0.2px solid rgba (255, 255, 255, 0.2)',
-               'backdropFilter': 'blur (10px)',
+
                }}>  <div style={{
                                                    'paddingTop': '16px',
                                                    'paddingBottom': '16px',
