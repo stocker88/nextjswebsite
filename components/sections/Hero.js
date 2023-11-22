@@ -71,8 +71,8 @@ const Hero = ({
                   src='/assets/images/hellostocker.webp'
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{
-                 width:'min(max(150px,10vw),200px)',
-                  height:'min(max(150px,10vw),200px)',
+                 width:'min(max(150px,10vw),170px)',
+                  height:'min(max(150px,10vw),170px)',
                   }}
 
                   />
