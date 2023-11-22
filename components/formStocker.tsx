@@ -135,7 +135,8 @@ const db = getFirestore();
     <center>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
-            <form onSubmit={submitHandler} style={{'padding': '1rem'}}>
+            <form onSubmit={submitHandler}
+style={{'padding': '1rem'}}>
 
             <br></br>
                 <input type="email" placeholder="Enter your email here..."
@@ -161,12 +162,12 @@ const db = getFirestore();
                'backdropFilter': 'blur (10px)',
                'zIndex': 3}}>Give me access </button>
             </form>
+           {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
+                    Thank you! <br></br>Install Now and Try it with Free Virtual Money
+                </h1>    </center>}
             {showDropdown && <InstallButtonsWithQR/>}
-           {showDropdown &&     <center> <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
-                                                                                                 Install Now And Try With Free Virtual Money
-                                                                                                 </h1>
 
-                                                                                      <br></br> </center>}
+
             {/*
             {message && <alert> {message} </alert>}
             )*/}
