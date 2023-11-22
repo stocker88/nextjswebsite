@@ -163,14 +163,14 @@ style={{'padding': '1rem'}}>
                'zIndex': 3}}>  <div style={{
                                                    'padding': '16px',
                                                    'color': 'white',
-                                                    'width':'35vw',
+                                                    'width':'30vw',
                                                    'textAlign': 'center',
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#3700B3',
-                                                   'maxWidth':'245px',
+                                                   'maxWidth':'215px',
                                                    'backdropFilter': 'blur (10px)',
-                                                   'zIndex': 3}}>Give me access</div> </button>
+                                                   'zIndex': 3}}>Show me how</div> </button>
             </form>
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
                     Thank you! <br></br>Test it Now We Give You Virtual Money
