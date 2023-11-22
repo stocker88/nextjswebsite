@@ -111,7 +111,7 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>2) You Receive Stock Recommendations That Fit Your Preferences</b></div>
+        <div style={{color:'white'}}><b>2) You receive stock Recommendations that fit your Preferences</b></div>
 <br></br>
 <br></br>
         Just like Netflix uses AI to recommend movies - just like spotify uses AI to recommend music...
@@ -120,7 +120,7 @@ const FeaturesSplit = ({
         We have a first layer of hot stocks to buy that gets filtered based on your own preference.
          <br></br>
          <br></br>
-         You will specific companies that will turn out to be of great interest for you!
+         You receive specific companies that will turn out to be of great interest for you!
 <br></br>
 <br></br>
 <br></br>

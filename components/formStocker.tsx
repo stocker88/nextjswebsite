@@ -148,7 +148,7 @@ style={{'padding': '1rem'}}>
                 'borderRadius': '30px 0 0 30px',
                 'width':'45vw',
                 'fontSize': 'min(19px,max(15px,2vw))',
-                'maxWidth':'330px',
+                'maxWidth':'315px',
                 }}/>
                 <button type="submit" style={{
                'padding': '2px',
