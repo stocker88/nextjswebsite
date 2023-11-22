@@ -139,7 +139,7 @@ const db = getFirestore();
 style={{'padding': '10px'}}>
 
             <br></br>
-                <input type="email" placeholder="Enter your email here..."
+                <input type="email" required placeholder="Enter your email here..."
                 onChange={inputHandler}
                 value={input}
                 style={{
@@ -164,12 +164,12 @@ style={{'padding': '10px'}}>
                }}>  <div style={{
                                                    'paddingTop': '16px',
                                                    'paddingBottom': '16px',
-                                                   'color': 'white',
+                                                   'color': 'black',
                                                     'width':'31vw',
                                                    'textAlign': 'center',
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
-                                                   'background': '#3700B3',
+                                                   'background': '#00f75f',
                                                    'maxWidth':'220px'
                                                   }}>Show me how</div> </button>
             </form>

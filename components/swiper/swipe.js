@@ -28,7 +28,7 @@ export default function Swipe() {
 
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                         - What the Company Business Does
                         <br></br>
                         - Why the Stock is Growing in Interest
@@ -38,7 +38,7 @@ export default function Swipe() {
                         - We Adapt Recommendations To Your Specific Needs Using AI
                         <br></br>
                         <br></br>
-                </h4>
+                </p>
 
         </div>
         </div>
@@ -75,7 +75,7 @@ export default function Swipe() {
 <br></br>
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - We Will Guarantee Your Success Step By Step
                                 <br></br>
                                 - 100% of Hedge Funds Test Strategies Virtually First
@@ -83,7 +83,7 @@ export default function Swipe() {
                                 - We Give You Money in a Safe Virtual Reality Simulator
                                 <br></br>
                                                                 <br></br>
-                </h4>
+                </p>
         </div>
 <center>
 <div className="container">
@@ -117,7 +117,7 @@ export default function Swipe() {
 <div className="container">
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                 - Wall St Analyst Ratings & Financials
                 <br></br>
                 - Social Sentiment & News
@@ -127,7 +127,7 @@ export default function Swipe() {
                 - Hedge Funds & Politicians Trading Activity
                 <br></br>
                 <br></br>
-</h4>
+</p>
 
         </div>
         </div>
@@ -161,7 +161,7 @@ export default function Swipe() {
 
         <IntroDownload/>
         <br></br>
-        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
 
         <br></br>
         <br></br>
@@ -177,7 +177,7 @@ export default function Swipe() {
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
-                          <h4 className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                          <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
         - Our Mission is to Empower You With Financial Growth
         <br></br>
        - We Predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
@@ -188,7 +188,7 @@ export default function Swipe() {
        <br></br>
       - You Come First - Our Success Depends On Yours
        <br></br>
-        </h4>
+        </p>
     <center>
                   <div className="container">
    <div className="split-item">

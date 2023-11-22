@@ -238,7 +238,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
       </h2>
         <br></br>
         <br></br>
-<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #FF79FA)"}}/></center>
+<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
 
         <br></br>
         <br></br>
