@@ -61,11 +61,12 @@ const MeetingButton = ({
       className="flex-col md:flex-row flex items-center md:justify-between "
       id="MeetingButton"
     >
-
-
-<center>
-  <div className="container-sm has-animations" style={{  zIndex: 10 }}>
+    <center>
+      <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
+<Container>
+<center>
+
  <div className="container-sm reveal-from-bottom">
 <br></br>
 <br></br>
@@ -80,9 +81,7 @@ const MeetingButton = ({
            <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
                     HelloStocker helps you find stocks before they blow up. Save time, save money and receive personalized AI recommendations based on your own tastes.
                     </h2>
-  </div>
 
-        </div>
          </center>
          </Container>
         <NewsletterSignUp/>
@@ -92,9 +91,6 @@ const MeetingButton = ({
 
 
         <center>
-          <div className="container-sm has-animations" style={{  zIndex: 10 }}>
-                  <div className="hero-content">
-
             <Image
                 src='/assets/images/usersRating.webp'
                 alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
@@ -116,12 +112,12 @@ const MeetingButton = ({
             />
         <br></br>
         <br></br>
-          </div>
-
-                </div>
     </center>
+</Container>
+    </div>
 
-
+        </div>
+        </center>
 </section>
 
   );
