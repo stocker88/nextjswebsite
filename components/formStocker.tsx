@@ -164,6 +164,7 @@ style={{'padding': '10px'}}>
                                                    'paddingBottom': '16px',
                                                    'color': 'white',
                                                     'width':'30vw',
+                                                    'display': 'flex', 'justifyContent':'flex-end'
                                                    'textAlign': 'center',
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
