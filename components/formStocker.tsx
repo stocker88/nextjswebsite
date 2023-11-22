@@ -162,8 +162,9 @@ style={{'padding': '10px'}}>
                }}>  <div style={{
                                                    'paddingTop': '16px',
                                                    'paddingBottom': '16px',
+                                                   'paddingRight': '16px',
                                                    'color': 'white',
-                                                    'width':'32vw',
+                                                    'width':'31vw',
                                                    'textAlign': 'center',
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
