@@ -145,12 +145,11 @@ style={{'padding': '10px'}}>
                 style={{
                 'padding':'19px',
                 'textAlign': 'center',
-                'borderRadius': '30px 30px 30px 30px',
+                'borderRadius': '30px 0 0 30px',
                 'border': '0.2px solid rgba (255, 255, 255, 0.2)',
                 'width':'47vw',
                 'fontSize': 'min(19px,max(15px,2vw))',
                 'maxWidth':'315px',
-                'background': 'white',
                 }}/>
                 <button type="submit" style={{
                'paddingTop': '3px',
