@@ -150,20 +150,31 @@ style={{'padding': '1rem'}}>
                 'maxWidth':'350px',
                 }}/>
                 <button type="submit" style={{
-               'padding': '17px',
+               'padding': '2px',
                'color': 'white',
                 'width':'36vw',
                'textAlign': 'center',
                'fontSize': 'min(19px,max(15px,2vw))',
                'border': '1px solid rgba (255, 255, 255, 0.2)',
                'borderRadius': '0 30px 30px 0',
-               'background': 'rgba(0, 0, 0, 0.15)',
+               'background': 'white',
                'maxWidth':'250px',
                'backdropFilter': 'blur (10px)',
-               'zIndex': 3}}>Give me access </button>
+               'zIndex': 3}}>  <div style={{
+                                                   'padding': '15px',
+                                                   'color': 'white',
+                                                    'width':'35vw',
+                                                   'textAlign': 'center',
+                                                   'fontSize': 'min(19px,max(15px,2vw))',
+                                                   'border': '1px solid rgba (255, 255, 255, 0.2)',
+                                                   'borderRadius': '30px 30px 30px 30px',
+                                                   'background': '#3700B3',
+                                                   'maxWidth':'245px',
+                                                   'backdropFilter': 'blur (10px)',
+                                                   'zIndex': 3}}>Give me access</div> </button>
             </form>
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
-                    Thank you! <br></br>Test it Now with Virtual Money
+                    Thank you! <br></br>Test it Now We Give You Virtual Money
                 </h1>    </center>}
             {showDropdown && <InstallButtonsWithQR/>}
 
