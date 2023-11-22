@@ -62,7 +62,7 @@ const MeetingButton = ({
       id="MeetingButton"
     >
 
-<Container>
+
 <center>
   <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
@@ -120,7 +120,7 @@ const MeetingButton = ({
 
                 </div>
     </center>
-</Container>
+
 
 </section>
 
