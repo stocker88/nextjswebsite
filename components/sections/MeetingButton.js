@@ -71,16 +71,14 @@ const MeetingButton = ({
                   Unlock the Power of Big Data: Start Now
      </h2>
                      </div>
+
+
                        <br></br>
                       <br></br>
            <h2  style={{ color: 'lightGrey',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
                     HelloStocker helps you find stocks before they blow up. Save time, save money and receive personalized AI recommendations based on your own tastes.
                     </h2>
-                  </div>
 
-                </div>
-
-         </div>
          </center>
          </Container>
         <NewsletterSignUp/>
