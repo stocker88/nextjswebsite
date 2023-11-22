@@ -158,6 +158,7 @@ style={{'padding': '10px'}}>
                'fontSize': 'min(19px,max(15px,2vw))',
                'borderRadius': '0 30px 30px 0',
                'background': 'white',
+               'display': 'flex', 'justifyContent':'right',
                'maxWidth':'225px'
                }}>  <div style={{
                                                    'paddingTop': '16px',
@@ -165,7 +166,6 @@ style={{'padding': '10px'}}>
                                                    'color': 'white',
                                                     'width':'30vw',
                                                    'textAlign': 'center',
-                                                   'display': 'flex', 'justifyContent':'flex-end',
                                                    'fontSize': 'min(19px,max(15px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#3700B3',
