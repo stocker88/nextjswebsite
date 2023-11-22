@@ -151,7 +151,9 @@ style={{'padding': '10px'}}>
                 'maxWidth':'315px',
                 }}/>
                 <button type="submit" style={{
-               'padding': '3px',
+               'paddingTop': '3px',
+                'paddingBottom': '3px',
+                'paddingRight': '3px',
                'color': 'white',
                 'width':'32vw',
                'textAlign': 'right',
@@ -162,7 +164,6 @@ style={{'padding': '10px'}}>
                }}>  <div style={{
                                                    'paddingTop': '16px',
                                                    'paddingBottom': '16px',
-                                                   'paddingRight': '16px',
                                                    'color': 'white',
                                                     'width':'31vw',
                                                    'textAlign': 'center',
