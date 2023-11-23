@@ -32,11 +32,36 @@ Over 10,000 investors have filled surveys showing wealth is not correlated to ea
 2 main factors determine whether or not you will be a millionaire.
 
 
-## 1. Why Money Matters
+## 1. Trade off your instincts for rational thinking
 
-Health matters the most, being healthy, being safe, even wonder why military and healthcare budgets are so high? Now you know.
+In the history of mankind, money was not such a thing. People used to take logical decisions based on their instinct.
 
-Love is second, our specie is a very social species, the need for social interaction is what made Instagram, TikTok and other social platforms so famous.
+It’s not very logical is it? It was at the time, but not today.
+
+People would take seek pleasures.
+
+80% of people don’t even look at prices when they go out.
+
+They have no barrier check.
+
+They go for whatever gives them the «easiest» pleasure.
+
+
+**Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
+
+The concepts of Money Management, Compound Interest, Personal Finance, Budgeting and Investing were inexistent. 
+
+We did not need money saving hacks, there was no retirement, no stocks or real estate to invest in.
+
+Financial freedom were not even a concept: all we had to do is **follow our instincts**.
+
+![](/assets/blog/personal-finance/personalfinance.jpg)
+
+## 2. Warren Buffett started investing at 11 years old
+
+Health matters most.
+
+Love is second.
 
 What comes third? That expensive dinner? Or the luxurious car you saw on Social Media?
 
@@ -44,23 +69,6 @@ Money. Money comes third, because there isn’t much else you can’t afford wit
 
 Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
-![](/assets/blog/personal-finance/personalfinance.jpg)
-
-## 2. Trade off your instincts for rational thinking
-
-In the history of mankind, money was not such a thing. People used to take logical decisions based on their instinct.
-
-It’s not very logical is it? It was at the time, but not today.
-
-People would take whatever brings them the most pleasures, these same instincts that developed so many wars, disasters and others, are the same ones that ruin your chances of success, by pushing you to think about short term pleasures, just like kids, for good and belongings that will dissipate over time.
-
-80% of people don’t even look at prices when they go out, they don’t have a barrier check, and when they do, they don’t compare prices logically, they go for whatever gives them the «easiest» pleasure: by the way that bottle of water just costed you $10, more than our budgeting course.
-
-**Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
-
-The concepts of Money Management, Compound Interest, Financial Planning, Personal Finance, Budgeting and Investing were all inexistent. We did not need any money saving hacks, there was no credit score, no retirement, no stocks or real estate to invest our money in, no financial goals, financial independence and financial freedom were not even a concept: all we had to do is **follow our instincts**.
-
-Think about how much expensive restaurants you’ve been to, how much worthless pairs of shoes you have? How much clothes you don’t wear in your wardrobe? How many dates cost you money and didn’t go as expected? How many times you’ve spent money to please others before thinking about yourself first?
 
 ## 3. Understand the math behind Compounding
 
