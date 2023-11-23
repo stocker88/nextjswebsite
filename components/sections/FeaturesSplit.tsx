@@ -94,7 +94,26 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
 
+
 <center>
+
+<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
+        Speak With An Advisor
+      </h2>
+        <br></br>
+        <br></br>
+
+    <iframe style={{width: '100%',height: '600px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
+    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+{/*
+<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+*/}
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        
         <WhyHellostocker/>
         <br></br>
         <Container>
@@ -233,25 +252,6 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 </div>
 </Container>
 </center>
-<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        Speak With An Advisor
-      </h2>
-        <br></br>
-        <br></br>
-
-    <iframe style={{width: '100%',height: '100%'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
-    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-{/*
-<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
-*/}
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
                 <br></br>
 </Container>
 
