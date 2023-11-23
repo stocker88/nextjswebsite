@@ -124,5 +124,3 @@ His first trade: he invested $114 and made $6. Today he manages $270,636,932,292
 If you had saved and invested this money by age 11, just like Warren Buffett did, and knew about compound interest, how much money do you think you would have today? 
 
 Would you be a Millionaire by now?
-
-## **More Stories**

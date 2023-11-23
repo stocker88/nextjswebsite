@@ -159,5 +159,3 @@ When you know where your performance comes from, you can build an efficient stra
 These metrics are calculated for you in HelloStocker App for stocks.
 
 I am very curious to know what Market Sector do you like to invest in? Is it Tech, Healthcare, Energy or something else? 
-
-## **More Stories**
