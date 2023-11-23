@@ -50,9 +50,9 @@ People would seek pleasures: PLEASURES.
 
 80% of people don’t even look at prices when they go out.
 
-They have no barrier check.
+Most of us have no barrier check.
 
-They go for whatever gives them the «easiest / quickest» form of pleasure.
+We go for whatever gives us the «easiest / quickest» form of pleasure.
 
 **Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
 
@@ -70,9 +70,17 @@ Health matters most.
 
 Love is second.
 
-What comes third? That expensive dinner? Or the luxurious car you saw on Social Media?
+What comes third? 
 
-Money. Money comes third, because there isn’t much else you can’t afford without money.
+That expensive dinner? 
+
+Or the luxurious car you saw on Social Media?
+
+Money. 
+
+Money comes third.
+
+Apart from Health and Love, there is not much you can’t afford without money.
 
 Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
