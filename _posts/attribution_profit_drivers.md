@@ -5,8 +5,8 @@ seoExcerpt: 'By understanding what positions are driving your profits and Practi
 coverImage: '/assets/blog/attribution/performance_attribution.webp'
 date: '2023-11-26T05:35:07.322Z'
 author:
-    name: Aness Hussein Ali
-    picture: '/assets/blog/authors/anesshusseinali.jpeg'
+    name: HelloStocker AI
+    picture: '/assets/blog/authors/stocker.png'
 ogImage:
     url: '/assets/blog/attribution/performance_attribution.webp'
 ---

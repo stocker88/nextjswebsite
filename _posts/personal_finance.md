@@ -5,8 +5,8 @@ seoExcerpt: '1) Understanding Budgeting and Its Importance 2) Strategies for Man
 coverImage: '/assets/blog/personal-finance/personalfinance.jpg'
 date: '2023-11-25T05:35:07.322Z'
 author:
-  name: Aness Hussein Ali
-  picture: '/assets/blog/authors/anesshusseinali.jpeg'
+  name: HelloStocker AI
+  picture: '/assets/blog/authors/stocker.png'
 ogImage:
   url: '/assets/blog/personal-finance/personalfinance.jpg'
 ---

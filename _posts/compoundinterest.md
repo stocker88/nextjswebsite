@@ -5,8 +5,8 @@ seoExcerpt: 'If you save 10$ a day in 10 year you will have $90,000. If you inve
 coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
 date: '2023-11-29T05:35:07.322Z'
 author:
-    name: Aness Hussein Ali
-    picture: '/assets/blog/authors/anesshusseinali.jpeg'
+    name: HelloStocker AI
+    picture: '/assets/blog/authors/stocker.png'
 ogImage:
     url: '/assets/blog/millionnairescience/millionnairescience.webp'
 ---
