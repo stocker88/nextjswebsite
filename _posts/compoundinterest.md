@@ -23,7 +23,11 @@ ogImage:
 - in 10 years, you will have **$160,000**
 - in 20 years, you will have **$2,000,000!**
 
-You don’t need $100k income to be a millionaire, in fact it’s not correlated at all, many people who make $100k have no money management skills and are not growing their wealth.
+You don’t need $100k income to be a millionaire, in fact it’s not correlated at all.
+
+You would be surprised how many high income earners making +$100k have no money management skills.
+
+They only know how to spend: that's it.
 
 There are 2 main factors that contribute to whether someone will be rich or not, it’s not how smart they are, nor how much money they have.
 
