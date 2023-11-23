@@ -13,6 +13,28 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Post from '../../interfaces/post'
 import MoreStories from '../../components/more-stories'
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  PinterestShareButton,
+  RedditShareButton,
+  TwitterShareButton,
+FacebookIcon,
+InstapaperIcon,
+LinkedinIcon,
+PinterestIcon,
+RedditIcon,
+TwitterIcon,
+WhatsappIcon,
+TelegramIcon,
+  WhatsappShareButton,
+  TelegramShareButton,
+  FacebookShareCount,
+    PinterestShareCount,
+    RedditShareCount,
+
+} from "react-share";
+
 
 type Props = {
   post: PostType
@@ -57,6 +79,37 @@ export default function Post({ post, morePosts, preview }: Props) {
               </Head>
               <article className="mb-32">
               <Header />
+
+
+                <div style={{
+                   'position': 'fixed',
+                   'bottom': '1rem',
+                   'left': '1rem',
+                   'background-color': '#00f75f',
+                   'border': '1px solid #ccc',
+                   'padding': '0.5rem',
+                   'boxShadow': '0px 0px 10px rgba(0, 0, 0, 0.2)',
+                   'zIndex': '1000', /* Adjust the z-index to ensure it appears above other content */
+                   'borderRadius': '30px 30px 30px 30px',
+                 }}>
+
+              <FacebookShareButton children={<FacebookIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <LinkedinShareButton children={<LinkedinIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <TwitterShareButton children={<TwitterIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <PinterestShareButton children={<PinterestIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <RedditShareButton children={<RedditIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <WhatsappShareButton children={<WhatsappIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <div style={{paddingTop:'10px'}}></div>
+              <TelegramShareButton children={<TelegramIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+
+                </div>
+
+
               <Container>
               <PostHeader
                 title={post.title}
@@ -68,6 +121,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
                   Suggested Blog Stories
                 </h2>
+                <br></br>
+                <br></br>
               <MoreStories posts={morePosts} />
               </Container>
             </article>

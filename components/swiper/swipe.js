@@ -161,7 +161,7 @@ export default function Swipe() {
 
         <IntroDownload/>
         <br></br>
-        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
 
         <br></br>
         <br></br>
@@ -186,7 +186,7 @@ export default function Swipe() {
        <br></br>
        - Our CTO Built AI Technologies for Big Tech Companies
        <br></br>
-      - You Come First - Our Success Depends On Yours
+      - You Come First - We want Your Success
        <br></br>
         </p>
     <center>
@@ -203,8 +203,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-                        width={420}
-                    height={908.98}
+                        width={380}
+                    height={822.41}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />

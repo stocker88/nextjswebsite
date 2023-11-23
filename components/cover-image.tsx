@@ -16,6 +16,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
       className={cn('shadow-sm w-full', {
         'hover:shadow-lg transition-shadow duration-200': slug,
       })}
+      style={{'borderRadius': '10px 10px 10px 10px'}}
       width={1300}
       height={630}
       unoptimized={true}

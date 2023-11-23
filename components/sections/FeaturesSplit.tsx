@@ -16,6 +16,7 @@ import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo
 import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
+import Testimonial from './testimonial'
 
 type Props = {
   posts: Post[]
@@ -97,13 +98,13 @@ const FeaturesSplit = ({
 
 <center>
 
-<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
+<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
         Speak With An Advisor
       </h2>
         <br></br>
         <br></br>
 
-    <iframe style={{width: '100%',height: '700px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
+    <iframe style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
     <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 {/*
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
@@ -116,146 +117,10 @@ const FeaturesSplit = ({
 
         <WhyHellostocker/>
         <br></br>
-        <Container>
-        <div style={{ color: 'lightgrey', fontSize: "min(22px,max(17px,1.6vw))", fontFamily: 'arial', fontWeight: 500,lineHeight: 1,textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', maxWidth: "1000px" , textAlign: 'left'}} >
-        <br></br>
 
-        <br></br>
-        <div style={{color:'white'}}><b>1) You get Insights you won’t find anywhere else</b></div>
-        <br></br>
-        <br></br>
-        We use advanced AI to track hundreds of signals and data points to help us filter noise and find high quality stocks.
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>2) You receive stock Recommendations that fit your Preferences</b></div>
-<br></br>
-<br></br>
-        Just like Netflix uses AI to recommend movies - just like spotify uses AI to recommend music...
-        <br></br>
-        <br></br>
-        We have a first layer of hot stocks to buy that gets filtered based on your own preference.
-         <br></br>
-         <br></br>
-         You receive specific companies that will turn out to be of great interest for you!
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>3) It is Simple and Easy to understand</b></div>
-<br></br>
-<br></br>
-        You don’t need another long financial report to read.
-        <br></br>
-        <br></br>
-        Each report is a simple concise message with at most 2 market graphs easy to understand.
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>4) You save 80+ hours of investing Research per month</b></div>
-<br></br>
-<br></br>
-        Our AI Advisor processed thousands of financial reports, stock earnings results, trading data, investor presentations, and 10-Ks every month so you don’t have to.
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>5) Access Early Trading Opportunities</b></div>
-<br></br>
-<br></br>
-        No one wants to buy a stock after it’s gone up 56,978%.
-        <br></br>
-        <br></br>
-        We look for stocks that still have huge upside according to the data.
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>6) We Are Powered by ChatGPT</b></div>
-<br></br>
-<br></br>
-        Have you ever tried using a Bloomberg terminal? We have used them for decades.
-        <br></br>
-        <br></br>
-        All you’ll need to get up to speed is a comfortable chair, 5 minutes of your time, and maybe a cup of coffee.
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>7) Join a Pro Community of Investors</b></div>
-<br></br>
-<br></br>
-        You will be part of a well estalished investing network with members spamming across over 20 Hedge Funds.
-<br></br>
-<br></br>
-        Our community is growing exponentially, join us now and grow with us!
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
-<br></br>
-<br></br>
-        Ever wonder why Robinhood lost 90% since IPO? Apps like Robinhood and eToro want you to trade a lot and fast so they can take commissions.
-<br></br>
-<br></br>
-        We give you unlimited virtual money to practice and get better at investing in a secured & safe virtual reality trading simulator app!
-<br></br>
-<br></br>
-        You come first: our success is tied to making you successful first!
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>9) Access Transparent AI Data</b></div>
-<br></br>
-<br></br>
-        Artificial Intelligence and Big Data generate smart trading decisions by processing millions of data humans can't.
-<br></br>
-<br></br>
-        Our user Front End AI is Powered By Open AI ChatGPT GPT4 model.
-<br></br>
-<br></br>
-        We give you access to the data our Back End AI Model Processes so you can check it yourself!
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-        <div style={{color:'white'}}><b>10) You will grow exponentially</b></div>
-<br></br>
-<br></br>
-Warren Buffett started investing at 11 years old during the great depression with only a couple of dollars.
-<br></br>
-<br></br>
-If you save $10 a day in your bank account, in 10 years you will have $90,000.
-<br></br>
-<br></br>
-If you invest $10 a day in the stock market, in 10 years you will have $2,000,000.
-<br></br>
-<br></br>
-Compound Interest is like a snowball that makes your wealth Grow Exponentially!
-<br></br>
-<br></br><br></br>
-<br></br>
-<br></br>
-</div>
-</Container>
+    <Testimonial/>
 </center>
-                <br></br>
 </Container>
-
-
     </section>
   );
 }
