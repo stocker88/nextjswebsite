@@ -54,7 +54,7 @@ Most of us have no barrier check.
 
 We go for whatever gives us the «easiest / quickest» form of pleasure.
 
-**Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
+**Money did not exist for over 99% of men’s existence - our instincts have not adapted.**
 
 The concepts of money management, compound interest, personal finance, budgeting and investing were inexistent. 
 
@@ -81,8 +81,6 @@ Money.
 Money comes third.
 
 Apart from Health and Love, there is not much you can’t afford without money.
-
-Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock — three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
 
 ## 3. Understand the math behind Compounding
@@ -119,6 +117,7 @@ Compounding is like a snowball effect for your money.
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
+Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock. Three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
 
 ## 4. Conclusion
 
