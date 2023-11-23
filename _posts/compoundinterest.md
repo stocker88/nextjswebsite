@@ -62,7 +62,6 @@ We did not need money saving hacks, there was no retirement, no stocks or real e
 
 Financial freedom were not even a concept: all we had is **our instincts**.
 
-![](/assets/blog/personal-finance/personalfinance.jpg)
 
 ## 2. Warren Buffett started investing at 11 years old
 
@@ -101,7 +100,7 @@ Compounding is like a snowball effect for your money.
 
 - It makes your wealth grow exponentially.
 
-![](/assets/blog/millionairescience/snowball.png)
+![](/assets/blog/millionnairescience/snowball.png)
 
 **If you save $10 a day:**
 - in 10 years, you will have **$36,000**
