@@ -1,7 +1,7 @@
 ---
 title: 'How To Be A Millionaire: The Science of Compound Interest'
-excerpt: 'You would be surprised how many high income earners making +$100k are living pay check to pay check because they have no money management skills. They only know how to spend: that is it. There are 2 main factors that contribute to whether someone will be rich or not. It is not how much money they make. It is not their job. If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! Today he manages $270,450,230,038...'
-seoExcerpt: 'If you save 10$ a day in 10 year you will have $90,000. If you invest $10 a day in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of investing when he bought his first stock'
+excerpt: 'You would be surprised how many high income earners making over $100,000 annual salary are living pay check to pay check because they have no money management skills. They only know how to spend: that is it. There are 2 main factors that contribute to whether someone will be rich or not. It is not how much money they make. It is not their job. If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! Today he manages $270,450,230,038...'
+seoExcerpt: 'You would be surprised how many high income earners making over $100,000 annual salary are living pay check to pay check because they have no money management skills. They only know how to spend: that is it. There are 2 main factors that contribute to whether someone will be rich or not. It is not how much money they make. It is not their job. If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! Today he manages $270,450,230,038...'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
 date: '2023-11-29T05:35:07.322Z'
 author:
@@ -125,16 +125,4 @@ If you had saved and invested this money by age 11, just like Warren Buffett did
 
 Would you be a Millionaire by now?
 
-## What's next?
-
-The investing universe can be overwhelming: there are so many stocks you could look at.
-
-If you want to know more about which stocks you should focus on you should read this article:
-
-* \- [How to Beat the SP500 Market https://www.hellostocker.com/posts/attribution_profit_drivers](https://www.hellostocker.com/posts/attribution_profit_drivers)
-
-Investing can increase your revenues, but your overall wealth takes into account budgeting and spendings too.
-
-If you want to learn more about how you can optimize your personal finance, you should read this article:
-
-* \- [From Budgeting to Investing: A Comprehensive Guide to Personal Finance https://www.hellostocker.com/posts/personal_finance](https://www.hellostocker.com/posts/personal_finance)
+## **More Stories**

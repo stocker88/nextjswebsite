@@ -11,11 +11,12 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
+import Post from '../../interfaces/post'
 import MoreStories from '../../components/more-stories'
 
 type Props = {
   post: PostType
-  morePosts: PostType[]
+  morePosts: Post[]
   preview?: boolean
 }
 
@@ -39,17 +40,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#00D9FF" />
-                <meta name="description" content="Some tips on How to Make Money"/>
+                <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta property="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
-                <meta name="description" property="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
-                <meta name="description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
+                <meta property="og:description" content={post.seoExcerpt} />
+                <meta name="description" property="og:description" content={post.seoExcerpt} />
+                <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:title" content={post.title} />
-                <meta name="og:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity." />
+                <meta name="og:description" content={post.seoExcerpt} />
                 <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
                 <meta name="twitter:title" content={''+post.title}/>
-                <meta name="twitter:description" content="Real-time stocks to buy recommendations & stock market analysis from HelloStocker ChatGPT-powered AI Advisor. Discover hot stocks like Nvidia, find the next Tesla or Roblox, and follow top investors trading activity."/>
+                <meta name="twitter:description" content={post.seoExcerpt}/>
                 <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
@@ -64,8 +65,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
+              <MoreStories posts={morePosts} />
               </Container>
-              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
             </article>
           </>
         )}
@@ -80,6 +81,19 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
+
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'excerpt',
+    'seoExcerpt',
+    'coverImage',
+  ]).filter((e)=>e.slug!=params.slug && e.slug!='privacypolicy')
+
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -87,8 +101,10 @@ export async function getStaticProps({ params }: Params) {
     'author',
     'content',
     'ogImage',
+    'seoExcerpt',
     'coverImage',
   ])
+
   const content = await markdownToHtml(post.content || '')
 
   return {
@@ -97,6 +113,7 @@ export async function getStaticProps({ params }: Params) {
         ...post,
         content,
       },
+      morePosts:allPosts,
     },
   }
 }
