@@ -239,14 +239,7 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
         <br></br>
         <br></br>
 
-<iframe
-title={'hubspot'}
-style={{
-width: '100%',
-height: '500px'
-}}
-src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}
-/>
+    <iframe style={{width: '100%',height: '100%'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
     <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 {/*
 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
