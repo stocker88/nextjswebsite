@@ -64,6 +64,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               />
               <PostBody content={post.content} />
               </Container>
+              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
             </article>
           </>
         )}
