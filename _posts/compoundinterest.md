@@ -116,7 +116,11 @@ Compounding is like a snowball effect for your money.
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
-Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock. Three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
+Warren Buffett was a kid hustling for pennies during the Depression, and at 11 years old in 1942, he launched his lifelong love of investing when he bought his first stock. 
+
+Three shares of an oil company called Cities Service at about $38 each. He sold his shares soon after at $40 each.
+
+His first trade: he invested $114 and made $6. Today he manages $270,636,932,292: $270 Billions.
 
 ## 4. Conclusion
 
