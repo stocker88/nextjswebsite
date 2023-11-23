@@ -38,26 +38,29 @@ It's not their job.
 
 ## 1. Trade off your instincts for rational thinking
 
-In the history of mankind, money was not such a thing. People used to take logical decisions based on their instinct.
+In the history of mankind, money was not such a thing. 
 
-It’s not very logical is it? It was at the time, but not today.
+People used to take logical decisions based on their instinct.
 
-People would take seek pleasures.
+It’s not very logical is it? 
+
+It was at the time, but not today.
+
+People would seek pleasures: PLEASURES.
 
 80% of people don’t even look at prices when they go out.
 
 They have no barrier check.
 
-They go for whatever gives them the «easiest» pleasure.
-
+They go for whatever gives them the «easiest / quickest» form of pleasure.
 
 **Money has not been a thing and did not exist for over 99% of men’s existence, it came only very recently and our genes and way of thinking have not adapted yet.**
 
-The concepts of Money Management, Compound Interest, Personal Finance, Budgeting and Investing were inexistent. 
+The concepts of money management, compound interest, personal finance, budgeting and investing were inexistent. 
 
 We did not need money saving hacks, there was no retirement, no stocks or real estate to invest in.
 
-Financial freedom were not even a concept: all we had to do is **follow our instincts**.
+Financial freedom were not even a concept: all we had is **our instincts**.
 
 ![](/assets/blog/personal-finance/personalfinance.jpg)
 
