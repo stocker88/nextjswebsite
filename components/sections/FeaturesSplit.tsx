@@ -16,7 +16,7 @@ import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo
 import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
-import Testimonial from './testimonial'
+import Testimonial from './Testimonial'
 
 type Props = {
   posts: Post[]
