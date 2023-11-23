@@ -1,6 +1,6 @@
 ---
 title: 'How To Be A Millionaire: The Science of Compound Interest'
-excerpt: 'You would be surprised how many high income earners making +$100k have no money management skills. They only know how to spend: that is it. There are 2 main factors that contribute to whether someone will be rich or not. It is not how much money they make. It is not their job. If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! Today he manages $270,450,230,038...'
+excerpt: 'You would be surprised how many high income earners making +$100k are living paycheck to paycheck because they have no money management skills. They only know how to spend: that is it. There are 2 main factors that contribute to whether someone will be rich or not. It is not how much money they make. It is not their job. If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of markets and investing when he bought his first stock! Today he manages $270,450,230,038...'
 seoExcerpt: 'If you save 10$ a day in 10 year you will have $90,000. If you invest $10 a day in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love of investing when he bought his first stock'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
 date: '2023-11-29T05:35:07.322Z'
@@ -25,7 +25,7 @@ ogImage:
 
 You don’t need $100k income to be a millionaire.
 
-You would be surprised how many high income earners making +$100k have no money management skills.
+You would be surprised to know how many high income earners making +$100k aare living paycheck to paycheck because they have no money management skills.
 
 They only know how to spend: that's it.
 
