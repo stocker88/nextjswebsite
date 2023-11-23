@@ -72,22 +72,23 @@ export default function Index({ allPosts }: Props) {
           <title>HelloStocker AI App - We Send You Stocks To Buy</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator" />
+          <meta name="description" property="og:description" content="HelloStocker AI sends you stocks to buy adapted to your own taste! You save time, save money, receive market advise and investing ideas to try in a virtual trading simulator powered by ChatGPT" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator"/>
-          <meta property="og:title" content="HelloStocker: Invest with your AI Advisor" />
-          <meta name="og:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator" />
+          <meta name="description" content="HelloStocker AI sends you stocks to buy adapted to your own taste! You save time, save money, receive market advise and investing ideas to try in a virtual trading simulator powered by ChatGPT"/>
+          <meta property="og:title" content="HelloStocker AI App - We Send You Stocks To Buy" />
+          <meta name="og:description" content="HelloStocker AI sends you stocks to buy adapted to your own taste! You save time, save money, receive market advise and investing ideas to try in a virtual trading simulator powered by ChatGPT" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
-          <meta name="twitter:title" content="HelloStocker: Invest with your AI Advisor"/>
-          <meta name="twitter:description" content="HelloStocker ChatGPT powered AI Advisor gives you Free Money in a Virtual Trading App To Test Our Stock Trading Analysis in a Market Simulator"/>
+          <meta name="twitter:title" content="HelloStocker AI App - We Send You Stocks To Buy"/>
+          <meta name="twitter:description" content="HelloStocker AI sends you stocks to buy adapted to your own taste! You save time, save money, receive market advise and investing ideas to try in a virtual trading simulator powered by ChatGPT"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>
         </Head>
         <Container>
           <Intro />

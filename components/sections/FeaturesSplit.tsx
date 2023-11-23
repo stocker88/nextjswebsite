@@ -183,10 +183,10 @@ const FeaturesSplit = ({
 <br></br>
 <br></br>
 <br></br>
-        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>.
+        <div style={{color:'white'}}><b>8) Practice Trading Ideas with No Risk</b></div>
 <br></br>
 <br></br>
-        Ever wonder why Robinhood lost 90% since IPO? Apps like Robinhood and eToro focus on your money: they want you to trade a lot and fast - it can be risky.
+        Ever wonder why Robinhood lost 90% since IPO? Apps like Robinhood and eToro want you to trade a lot and fast so they can take commissions.
 <br></br>
 <br></br>
         We give you unlimited virtual money to practice and get better at investing in a secured & safe virtual reality trading simulator app!

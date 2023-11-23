@@ -56,7 +56,7 @@ const Hero = ({
           <div className="hero-content">
           <br></br>
      <div style={{paddingTop: 10}}></div>
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)' }} >
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker AI
                                                           </h1>
 <br></br>
@@ -71,14 +71,14 @@ const Hero = ({
                   src='/assets/images/hellostocker.webp'
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                  style={{
-                 width:'min(max(150px,10vw),170px)',
-                  height:'min(max(150px,10vw),170px)',
+                 width:'min(max(130px,10vw),170px)',
+                  height:'min(max(130px,10vw),170px)',
                   }}
 
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
+            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
                                             Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
