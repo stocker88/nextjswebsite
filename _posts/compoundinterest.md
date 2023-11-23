@@ -72,7 +72,7 @@ Warren Buffett was a kid hustling for pennies during the Depression, and at 11 y
 
 ## 3. Understand the math behind Compounding
 
-There is no easy trick without a mathematical formula, you don’t need to be a genius with a financial education to understand what is compounding, and yet someone uninformed about finance probably never heard the term before.
+There is no easy trick without a mathematical formula, you don’t need to be a genius with a financial education to understand what is compounding.
 
 Compounding is like a snowball effect for your money.
 
@@ -85,6 +85,8 @@ Compounding is like a snowball effect for your money.
 - Now, your total is $105, and your next earnings are calculated based on this larger amount.
 
 - This keeps happening, and your money keeps growing faster and faster.
+
+- It makes your wealth grow exponentially.
 
 ![](/assets/blog/millionairescience/snowball.png)
 
@@ -102,9 +104,6 @@ Compounding is like a snowball effect for your money.
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 
-The concept of passive income has been trending. You can now make the money work by leveraging multiple investment vehicles, such as savings accounts and the stock market.
-
-Budgeting and investing apps and robo advisors such as HelloStocker app have been gaining in popularity and are here to help you with your personal finances.
 
 ## 4. Conclusion
 
