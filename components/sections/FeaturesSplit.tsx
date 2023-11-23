@@ -234,12 +234,16 @@ Compound Interest is like a snowball that makes your wealth Grow Exponentially!
 </Container>
 </center>
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        DM HelloStocker AI Advisor Now
+        Speak With An Advisor
       </h2>
         <br></br>
         <br></br>
-<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
 
+    <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true"></div>
+    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+{/*
+<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+*/}
         <br></br>
         <br></br>
         <br></br>
