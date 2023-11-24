@@ -167,11 +167,11 @@ style={{'padding': '10px'}}>
                                                    'color': 'black',
                                                     'width':'31vw',
                                                    'textAlign': 'center',
-                                                   'fontSize': 'min(19px,max(15px,2vw))',
+                                                   'fontSize': 'min(18px,max(14px,2vw))',
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#00f75f',
                                                    'maxWidth':'220px'
-                                                  }}>Show me how</div> </button>
+                                                  }}>Invest with AI</div> </button>
             </form>
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
                     Thank you! <br></br>Test it Now We Give You Virtual Money
