@@ -99,7 +99,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               <div style={{paddingTop:'10px'}}></div>
               <TwitterShareButton children={<TwitterIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
               <div style={{paddingTop:'10px'}}></div>
-              <PinterestShareButton children={<PinterestIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <PinterestShareButton children={<PinterestIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug} media={'https://www.hellostocker.com'+post.ogImage.url}/>
               <div style={{paddingTop:'10px'}}></div>
               <RedditShareButton children={<RedditIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
               <div style={{paddingTop:'10px'}}></div>
