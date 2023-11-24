@@ -85,7 +85,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                    'position': 'fixed',
                    'bottom': '1rem',
                    'left': '1rem',
-                   'background-color': '#00f75f',
+                   'backgroundColor': '#00f75f',
                    'border': '1px solid #ccc',
                    'padding': '0.5rem',
                    'boxShadow': '0px 0px 10px rgba(0, 0, 0, 0.2)',
