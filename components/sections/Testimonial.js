@@ -1,7 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
 import Image from 'next/image'
 
 const propTypes = {
@@ -28,11 +26,6 @@ const Testimonial = ({
   const tilesClasses = classNames(
     'tiles-wrap',
   );
-
-  const sectionHeader = {
-    title: 'Testimonial',
-    paragraph: ''
-  };
 
   return (
     <section
