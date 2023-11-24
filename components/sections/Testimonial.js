@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from 'next/image'
 
@@ -15,7 +16,7 @@ const Testimonial = ({
 }) => {
 
   const outerClasses = classNames(
-    'features-tiles section'
+    'features-tiles section',
   );
 
   const innerClasses = classNames(
@@ -25,6 +26,7 @@ const Testimonial = ({
   const tilesClasses = classNames(
     'tiles-wrap',
   );
+
 
   return (
     <section
