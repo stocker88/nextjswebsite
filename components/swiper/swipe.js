@@ -16,6 +16,7 @@ import SwiperCore, {
 import AboutUs from '../../components/aboutUs';
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
+import QuoteDisplay from '../../components/inspiration';
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
 
@@ -55,8 +56,8 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={420}
-                     height={908.98}
+                    width={380}
+                     height={822.41}
                       src='/assets/images/chatgpt.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
@@ -76,11 +77,11 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - We Will Guarantee Your Success Step By Step
+                                - We Guarantee Your Success Step By Step
                                 <br></br>
                                 - 100% of Hedge Funds Test Strategies Virtually First
                                 <br></br>
-                                - We Give You Money in a Safe Virtual Reality Simulator
+                                - You Receive Money in a Safe Virtual Reality Simulator
                                 <br></br>
                                                                 <br></br>
                 </p>
@@ -97,8 +98,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.webp'
-                    width={420}
-                    height={908.98}
+                    width={380}
+                    height={822.41}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
@@ -158,7 +159,8 @@ export default function Swipe() {
 </center>
 
  <br></br> <br></br> <br></br>
-
+<QuoteDisplay/>
+<br></br> <br></br>
         <IntroDownload/>
         <br></br>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
@@ -178,15 +180,15 @@ export default function Swipe() {
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
                           <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-        - Our Mission is to Empower You With Financial Growth
+        - The Mission: Empower You With Financial Growth
         <br></br>
-       - We Predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+       - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+       <br></br>
+       - You Come First - We Have the Expertise to Help You
        <br></br>
        - Our CEO Traded Billions for Wall Street Hedge Funds
        <br></br>
        - Our CTO Built AI Technologies for Big Tech Companies
-       <br></br>
-      - You Come First - We want Your Success
        <br></br>
         </p>
     <center>

@@ -282,7 +282,7 @@ const Testimonial = ({
                               <br></br>
                          <i>  Sacha Berenfus
                            <br></br>
-                           Growth Manager @ Hubspot </i>
+                           Sales Growth Manager @ Hubspot </i>
 
 
                             </p>

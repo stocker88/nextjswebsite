@@ -13,6 +13,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Post from '../../interfaces/post'
 import MoreStories from '../../components/more-stories'
+import QuoteDisplay from '../../components/inspiration';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -109,7 +110,8 @@ export default function Post({ post, morePosts, preview }: Props) {
 
                 </div>
 
-
+<QuoteDisplay/>
+<br></br> <br></br>
               <Container>
               <PostHeader
                 title={post.title}

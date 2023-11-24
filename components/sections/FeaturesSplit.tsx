@@ -99,7 +99,7 @@ const FeaturesSplit = ({
 <center>
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
-        Speak With An Advisor
+        Get Help From An Investment Advisor
       </h2>
         <br></br>
         <br></br>
