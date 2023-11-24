@@ -15,8 +15,7 @@ const Testimonial = ({
 }) => {
 
   const outerClasses = classNames(
-    'features-tiles section',
-    className
+    'features-tiles section'
   );
 
   const innerClasses = classNames(
