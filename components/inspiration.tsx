@@ -24,7 +24,7 @@ const QuoteDisplay = () => {
 
   const generateRandomQuote = () => {
     const newIndex = Math.floor(Math.random() * quotes.length);
-    setCurrentQuoteIndex(currentQuoteIndex + 1);
+    setCurrentQuoteIndex((currentQuoteIndex + 1)%quotes.length);
   };
 
 
