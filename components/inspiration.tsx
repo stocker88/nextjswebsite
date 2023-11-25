@@ -49,7 +49,7 @@ const QuoteDisplay = () => {
                  'borderRadius': '30px 30px 30px 30px',
                  'background': '#00f75f',
                  'maxWidth':'280px'
-                }}>Show me another Quote</div></button>
+                }}>Show me another quote</div></button>
       </center>
     </div>
   );

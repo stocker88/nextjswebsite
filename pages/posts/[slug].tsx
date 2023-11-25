@@ -110,8 +110,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
                 </div>
 
-<QuoteDisplay/>
-<br></br> <br></br>
+                <br></br>
               <Container>
               <PostHeader
                 title={post.title}
@@ -126,6 +125,9 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <br></br>
                 <br></br>
               <MoreStories posts={morePosts} />
+              <br></br>
+              <QuoteDisplay/>
+              <br></br>
               </Container>
             </article>
           </>
