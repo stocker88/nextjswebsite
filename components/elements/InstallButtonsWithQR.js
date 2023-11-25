@@ -40,7 +40,7 @@ if(isMobile) {
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
                      alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
-                    style={{width:151}}
+                    style={{width:151, height:44.7966}}
                      />
                      </a>
 
@@ -49,7 +49,7 @@ if(isMobile) {
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
                       alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
-                     style={{width:150}}
+                     style={{width:150, height:44.5}}
                       />
                       </a>
                       <br></br>
