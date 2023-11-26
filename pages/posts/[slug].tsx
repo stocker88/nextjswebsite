@@ -119,15 +119,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
+              <br></br>
+                                            <QuoteDisplay/>
+
+                              <br></br>
                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
                   Suggested Blog Stories
                 </h2>
                 <br></br>
                 <br></br>
               <MoreStories posts={morePosts} />
-              <br></br>
-              <QuoteDisplay/>
-              <br></br>
+
               </Container>
             </article>
           </>
