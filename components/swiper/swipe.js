@@ -36,7 +36,7 @@ export default function Swipe() {
                         <br></br>
                         - You get a 360 analysis with market risks & competitors to watch for
                         <br></br>
-                        - 90% of HelloStocker AI tech predictions beat the sp500 market
+                        - 95% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
                         <br></br>
                 </p>
