@@ -77,13 +77,13 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - We guarantee your success step by step
-                                <br></br>
-                                - 99% of Hedge Funds test strategies virtually first
-                                <br></br>
                                 - You receive free money in a safe virtual reality simulator
                                 <br></br>
                                 - You can test HelloStocker AI without putting your money in
+                                <br></br>
+                                - 99% of Hedge Funds test strategies virtually first
+                                <br></br>
+                                - We guarantee your success
                                 <br></br>
                                 <br></br>
                 </p>
@@ -121,11 +121,11 @@ export default function Swipe() {
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                - Market trading signals & AI screening
+                <br></br>
                 - Wall St analyst ratings & financial data
                 <br></br>
                 - Social sentiment & News
-                <br></br>
-                - Market trading signals & AI screening
                 <br></br>
                 - Hedge Funds & investors trading activity
                 <br></br>
@@ -160,9 +160,9 @@ export default function Swipe() {
         </div>
 </center>
 
- <br></br> <br></br> <br></br><br></br>
+ <br></br> <br></br> <br></br><br></br><br></br><br></br>
 <QuoteDisplay/>
-<br></br> <br></br><br></br><br></br> <br></br>
+<br></br> <br></br><br></br><br></br> <br></br><br></br> <br></br>
         <IntroDownload/>
         <br></br>
         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
@@ -182,16 +182,16 @@ export default function Swipe() {
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
                           <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-        - The mission: Empower you with financial growth
-        <br></br>
+       - You come first: leverage our expertise to help yourself
+       <br></br>
        - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
        <br></br>
-       - You come first: leverage our expertise to help you
+       - HelloStocker CEO traded billions for Wall st hedge funds
        <br></br>
-       - Our CEO traded billions for Wall st hedge funds
+       - HelloStocker CTO built AI technologies for big tech companies
        <br></br>
-       - Our CTO built AI technologies for big tech companies
-       <br></br>
+        - The mission: empower you with financial growth
+        <br></br>
         </p>
     <center>
                   <div className="container">
