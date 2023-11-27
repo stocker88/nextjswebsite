@@ -30,9 +30,9 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - You will Beat the SP500 Stock Market, our blog explains how
+                        - Companies that beat the SP500 Stock Market
                         <br></br>
-                        - You receive what company business does and why it has growing interest
+                        - You receive what the business does and why it has growing interest
                         <br></br>
                         - You get a 360 analysis with market risks & competitors to watch for
                         <br></br>
