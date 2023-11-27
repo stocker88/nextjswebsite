@@ -30,13 +30,13 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - Companies that beat the SP500 Stock Market
+                        - What the business does and why it has growing interest
                         <br></br>
-                        - You receive what the business does and why it has growing interest
+                        - We adapt recommendations to Your specific tastes using AI
                         <br></br>
                         - You get a 360 analysis with market risks & competitors to watch for
                         <br></br>
-                        - We adapt Recommendations to Your specific needs Using AI
+                        - 90% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
                         <br></br>
                 </p>
