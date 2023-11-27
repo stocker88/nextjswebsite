@@ -30,13 +30,13 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - What the Company Business Does
+                        - You will Beat the SP500 Stock Market, our blog explains how
                         <br></br>
-                        - Why the Stock is Growing in Interest
+                        - You receive what company business does and why it has growing interest
                         <br></br>
-                        - Market Risks & Competitors to Watch For
+                        - You get a 360 analysis with market risks & competitors to watch for
                         <br></br>
-                        - We Adapt Recommendations To Your Specific Needs Using AI
+                        - We adapt Recommendations to Your specific needs Using AI
                         <br></br>
                         <br></br>
                 </p>
