@@ -26,7 +26,7 @@ We will teach you how to beat the S&P500 stock market: you will know what stocks
 
 You can become the next Warren Buffett thanks to the mathematics of investing: performance Attribution !
 
-## **Performance Attribution**
+# **Performance Attribution**
 
 
 HelloStocker Price performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
@@ -35,7 +35,7 @@ Attribution explains your performance over the S&P500 or any other market benchm
 
 The better you are at making money with certains stocks, the more money and passive income you will generate by focusing on the same type of stocks.
 
-### **1) Selection Skill**
+## **1) Selection Skill**
 
 
 ![](/assets/blog/attribution/selection.webp)
@@ -48,7 +48,7 @@ Are you great at selecting the stocks that will outperform its respective sector
 
 Are you great at picking biotech stocks that do better than the sp500 biotech stocks allocation?
 
-### **2) Allocation Skill**
+## **2) Allocation Skill**
 
 ![](/assets/blog/attribution/allocation.webp)
 
@@ -66,7 +66,7 @@ You can also use HelloStocker App virtual trading to check what you are best at.
 
 Some people are good at timing which overall sector to buy and when, some people are good at picking which stocks to buy within a particular sector.
 
-### **3) Interaction Skill**
+## **3) Interaction Skill**
 
 ![](/assets/blog/attribution/performance_attribution.webp)
 
@@ -93,7 +93,7 @@ Do you know your strengths? Do you know how to make money with stocks?
 Don't worry, we are here to help you!
 
 
-## **The Math behind**
+# **The Math behind**
 
 In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics.
 
@@ -116,7 +116,7 @@ Understanding the math behind how we do it help you understand why it works.
 It will develop trust and further improve your trading skills.
 
 
-### **1) Selection Skill**
+## **1) Selection Skill**
 
 ![](/assets/blog/attribution/selection.webp)
 
@@ -136,7 +136,7 @@ The Selection Effect for the Technology stocks is calculated using the below met
 * \-  Technology stocks return of our Portfolio
 
 
-### **2) Allocation Skill**
+## **2) Allocation Skill**
 
 ![](/assets/blog/attribution/allocation.webp)
 
@@ -157,7 +157,7 @@ The Allocation Effect for the Technology stock is calculated using the below for
 
 
 
-### **3) Interaction Skill**
+## **3) Interaction Skill**
 
 ![](/assets/blog/attribution/performance_attribution.webp)
 
@@ -188,7 +188,7 @@ The Interaction Effect for the Technology stocks is calculated using the below f
 
 
 
-## **Know your strengths: buy stocks you are best at choosing and make more money than the market**
+# **Know your strengths: buy stocks you are best at choosing and make more money than the market**
 
 The sum of all these effects is equal to the difference between your portfolio performance and the stock market performance.
 
