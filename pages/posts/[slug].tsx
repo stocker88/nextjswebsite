@@ -128,6 +128,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                 </h2>
                 <br></br>
                 <br></br>
+                <br></br>
+                <br></br>
               <MoreStories posts={morePosts} />
 
               </Container>

@@ -37,36 +37,47 @@ The better you are at making money with certains stocks, the more money and pass
 
 ### **1) Selection Skill**
 
-You could be doing great at buying technology stocks that outperform the S&P Technology sector, and doing not so well at buying health stocks that outperform the S&P Health market sector.
 
-Are you great at selecting the stocks that will outperform its respective sector segment? Are other investors better than you at picking Healthcare stocks? What are the best stocks to buy?
+![](/assets/blog/attribution/selection.webp)
+
+If you are great at buying technology stocks that outperform the sp500 technology sector, then you have superior tech selection skills!
+
+If you don't do great at selecting healthcare stocks that outperform the sp500 healthcare sector, then you don't have superior healthcare selection skills. 
+
+Are you great at selecting the stocks that will outperform its respective sector segment? 
+
+Are you great at picking biotech stocks that do better than the sp500 biotech stocks allocation?
 
 ### **2) Allocation Skill**
+
+![](/assets/blog/attribution/allocation.webp)
 
 You could be doing great at forecasting what would happen to Technology stocks:
 - increasing your positions (buying more tech stocks) when you expect the sector to be doing well, 
 - and decreasing them (selling them) when you expect it to perform poorly.
 
-Are you great at allocating your investments across industries? 
+Are you great at allocating your investments across sectors? 
 
 Are you great at timing which stock market sector will go up and when you should buy vs sell?
 
-If not, do you have friends or an investor network where some individuals are better at understanding economic cycles better? 
+If not, use HelloStocker AI to better understand economic cycles and what sector to overallocate and when. 
 
-Maybe they should be the ones allocating weights for you instead?
+You can also use HelloStocker App virtual trading to check what you are best at.
 
-Some people are good at timing which sector to buy and when, some people are good at picking which stocks to buy and when.
+Some people are good at timing which overall sector to buy and when, some people are good at picking which stocks to buy within a particular sector.
 
 ### **3) Interaction Skill**
 
+![](/assets/blog/attribution/performance_attribution.webp)
+
 For example, if:
-1) you had superior selection skills (you are great at picking stocks in a specific market sector) 
-2) and overweighted that particular sector (you knew it would go up)
+1. **1)** you had superior selection skills (you are great at picking stocks in a specific market sector) 
+2. **2)** and overweighted that particular sector (you knew it would go up)
 -> the interaction effect would be positive!
 
 However, if:
-1) you had superior selection, 
-2) but underweighted that stock market sector (you thought this it would go down) 
+1. **1)** you had superior selection, 
+1. **2)** but underweighted that stock market sector (you thought this it would go down) 
 -> the interaction effect would be negative.
 
 In this case, you did not take advantage of the superior selection by allocating more assets to that sector.
@@ -90,19 +101,24 @@ Recommendations are made by stock fundamentals such as value, growth, and other 
 
 You can also sort stocks by Popularity and Social metrics.
 
-Attribution is such a powerful tool: it tells you what stocks to buy and when!
+In other words: we tell you what stocks to buy and when!
 
-Again, for simplicity, let's assume the segmentation is done by market sector.
+You save time, save money, and don't miss on the real investment opportunities.
 
-We list below the calculation methodologies, a positive figure means you are skilled.
+There are 500 stocks, you can't just look at everything.
 
-The higher the number the more skilled you are.
+You will get overwhelmed.
 
-Understanding the math behind will help you develop a sense of how the SP500 stock market works and further improve your trading skills.
+Focus on what you are good at!
+
+Understanding the math behind how we do it help you understand why it works.
+
+It will develop trust and further improve your trading skills.
 
 
 ### **1) Selection Skill**
 
+![](/assets/blog/attribution/selection.webp)
 
 The selection effect measures the investor's ability to select / pick the best stocks within a given sector.
 
@@ -113,15 +129,16 @@ A positive selection effect occurs for a particular market sector when your stoc
 
 The Selection Effect for the Technology stocks is calculated using the below metrics and formula:
 
+![](/assets/blog/attribution/attributionselectionskills.png)
 
 * \-  Technology stocks weight in the S&P500
 * \-  Technology stocks return of the S&P500
 * \-  Technology stocks return of our Portfolio
 
-![](/assets/blog/attribution/attributionselectionskills.png)
 
 ### **2) Allocation Skill**
 
+![](/assets/blog/attribution/allocation.webp)
 
 The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to winning sectors.
 
@@ -131,15 +148,18 @@ It also happens when you underweighted (buy less of) a sector that doesn't perfo
 
 The Allocation Effect for the Technology stock is calculated using the below formula:
 
+![](/assets/blog/attribution/attributionallocationskill.png)
+
 * \-  Technology stocks weight in our Portfolio
 * \-  Technology stocks weight in the S&P500
 * \-  Technology stocks return of the S&P500
 * \-  Total price return of the S&P500
 
-![](/assets/blog/attribution/attributionallocationskill.png)
 
 
 ### **3) Interaction Skill**
+
+![](/assets/blog/attribution/performance_attribution.webp)
 
 
 If you are good at selecting stocks for a particular sector, you should overallocate the weight of this market sector in your portfolio.
@@ -159,13 +179,13 @@ You knew you would not be so good at making money on this sector so you didn't b
 
 The Interaction Effect for the Technology stocks is calculated using the below formula:
 
+![](/assets/blog/attribution/attributioninteractionskills.png)
 
 * \-  Technology stocks weight in our portfolio
 * \-  Technology stocks return of our portfolio
 * \-  Technology stocks weight in the S&P500 market
 * \-  Technology stocks return of the S&P500 market
 
-![](/assets/blog/attribution/attributioninteractionskills.png)
 
 
 ## **Know your strengths: buy stocks you are best at choosing and make more money than the market**
