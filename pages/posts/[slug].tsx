@@ -120,8 +120,13 @@ export default function Post({ post, morePosts, preview }: Props) {
               />
               <PostBody content={post.content} />
               <br></br>
+              <br></br>
+              <br></br>
                                             <QuoteDisplay/>
 
+                              <br></br>
+                              <br></br>
+                              <br></br>
                               <br></br>
                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
                   Suggested Blog Stories

@@ -188,7 +188,7 @@ The Interaction Effect for the Technology stocks is calculated using the below f
 
 
 
-# **Know your strengths: buy stocks you are best at choosing and make more money than the market**
+# **Know your strengths: save time and make more money**
 
 The sum of all these effects is equal to the difference between your portfolio performance and the stock market performance.
 
