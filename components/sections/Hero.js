@@ -70,6 +70,7 @@ const Hero = ({
   <Image
                   src='/assets/images/hellostocker.webp'
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
+                  priority={true}
                  style={{
                  width:'min(max(130px,10vw),170px)',
                   height:'min(max(130px,10vw),170px)',
@@ -102,6 +103,7 @@ const Hero = ({
                               <Image
                                                src='/assets/images/usersRating.webp'
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+                                               priority={true}
                                               style={{width:240, height:60}}
                                                />
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
