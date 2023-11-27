@@ -32,7 +32,7 @@ export default function Swipe() {
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - We adapt recommendations to Your specific tastes using AI
+                        - We adapt recommendations to your specific tastes using AI
                         <br></br>
                         - You get a 360 analysis with market risks & competitors to watch for
                         <br></br>
@@ -71,7 +71,7 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Can Test It For Free
+        You Can Test Trading Ideas
       </h2>
 <br></br>
   <div className="split-item">
@@ -79,7 +79,7 @@ export default function Swipe() {
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - We guarantee your success step by step
                                 <br></br>
-                                - 99% of Hedge Funds test trading strategies virtually first
+                                - 99% of Hedge Funds test strategies virtually first
                                 <br></br>
                                 - You receive free money in a safe virtual reality simulator
                                 <br></br>
@@ -121,13 +121,13 @@ export default function Swipe() {
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                - Wall St analyst ratings & financials
+                - Wall St analyst ratings & financial data
                 <br></br>
                 - Social sentiment & News
                 <br></br>
                 - Market trading signals & AI screening
                 <br></br>
-                - Hedge Funds & politicians trading activity
+                - Hedge Funds & investors trading activity
                 <br></br>
                 <br></br>
 </p>
