@@ -138,7 +138,7 @@ The Selection Effect for the Technology stocks is calculated using the below met
 
 ### **2) Allocation Skill**
 
-![](/assets/blog/attribution/allocation.webp)
+![](/assets/blog/attribution/allocation.webp){: style="border-radius: 5px;"}
 
 The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to winning sectors.
 
@@ -148,7 +148,7 @@ It also happens when you underweighted (buy less of) a sector that doesn't perfo
 
 The Allocation Effect for the Technology stock is calculated using the below formula:
 
-![](/assets/blog/attribution/attributionallocationskill.png)
+![](/assets/blog/attribution/attributionallocationskill.png){: style="borderRadius: 5px;"}
 
 * \-  Technology stocks weight in our Portfolio
 * \-  Technology stocks weight in the S&P500
