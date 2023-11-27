@@ -97,7 +97,7 @@ Compounding is like a snowball effect for your money.
 
 - It makes your wealth grow exponentially.
 
-![](/assets/blog/millionnairescience/snowball.png){: style="borderRadius: 10px"}
+![](/assets/blog/millionnairescience/snowball.png)
 
 **If you save $10 a day:**
 - in 10 years, you will have **$36,000**

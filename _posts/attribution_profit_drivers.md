@@ -38,7 +38,7 @@ The better you are at making money with certains stocks, the more money and pass
 ### **1) Selection Skill**
 
 
-![](/assets/blog/attribution/selection.webp){: style="borderRadius: 10px"}
+![](/assets/blog/attribution/selection.webp)
 
 If you are great at buying technology stocks that outperform the sp500 technology sector, then you have superior tech selection skills!
 
@@ -50,7 +50,7 @@ Are you great at picking biotech stocks that do better than the sp500 biotech st
 
 ### **2) Allocation Skill**
 
-![](/assets/blog/attribution/allocation.webp){: style="borderRadius: 10px"}
+![](/assets/blog/attribution/allocation.webp)
 
 You could be doing great at forecasting what would happen to Technology stocks:
 - increasing your positions (buying more tech stocks) when you expect the sector to be doing well, 
@@ -68,7 +68,7 @@ Some people are good at timing which overall sector to buy and when, some people
 
 ### **3) Interaction Skill**
 
-![](/assets/blog/attribution/performance_attribution.webp){: style="borderRadius: 10px"}
+![](/assets/blog/attribution/performance_attribution.webp)
 
 For example, if:
 1. **1)** you had superior selection skills (you are great at picking stocks in a specific market sector) 
@@ -118,7 +118,7 @@ It will develop trust and further improve your trading skills.
 
 ### **1) Selection Skill**
 
-![](/assets/blog/attribution/selection.webp){: style="borderRadius: 10px;"}
+![](/assets/blog/attribution/selection.webp)
 
 The selection effect measures the investor's ability to select / pick the best stocks within a given sector.
 
@@ -129,7 +129,7 @@ A positive selection effect occurs for a particular market sector when your stoc
 
 The Selection Effect for the Technology stocks is calculated using the below metrics and formula:
 
-![](/assets/blog/attribution/attributionselectionskills.png){: style="border-radius: 10px"}
+![](/assets/blog/attribution/attributionselectionskills.png)
 
 * \-  Technology stocks weight in the S&P500
 * \-  Technology stocks return of the S&P500
@@ -138,7 +138,7 @@ The Selection Effect for the Technology stocks is calculated using the below met
 
 ### **2) Allocation Skill**
 
-![](/assets/blog/attribution/allocation.webp){: style="border-radius: 10px;"}
+![](/assets/blog/attribution/allocation.webp)
 
 The allocation effect measures the investor's ability to effectively allocate their portfolio's assets to winning sectors.
 
@@ -148,7 +148,7 @@ It also happens when you underweighted (buy less of) a sector that doesn't perfo
 
 The Allocation Effect for the Technology stock is calculated using the below formula:
 
-![](/assets/blog/attribution/attributionallocationskill.png){: style="border-radius: 10px"}
+![](/assets/blog/attribution/attributionallocationskill.png)
 
 * \-  Technology stocks weight in our Portfolio
 * \-  Technology stocks weight in the S&P500
@@ -159,7 +159,7 @@ The Allocation Effect for the Technology stock is calculated using the below for
 
 ### **3) Interaction Skill**
 
-![](/assets/blog/attribution/performance_attribution.webp){: style="borderRadius: 10px"}
+![](/assets/blog/attribution/performance_attribution.webp)
 
 
 If you are good at selecting stocks for a particular sector, you should overallocate the weight of this market sector in your portfolio.
@@ -179,7 +179,7 @@ You knew you would not be so good at making money on this sector so you didn't b
 
 The Interaction Effect for the Technology stocks is calculated using the below formula:
 
-![](/assets/blog/attribution/attributioninteractionskills.png){: style="border-radius: 10px"}
+![](/assets/blog/attribution/attributioninteractionskills.png)
 
 * \-  Technology stocks weight in our portfolio
 * \-  Technology stocks return of our portfolio

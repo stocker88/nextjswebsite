@@ -109,7 +109,7 @@ Investing can be an intimidating endeavor, especially for newcomers. There exist
 
 Each investment type carries its unique set of risks and rewards. It's crucial to conduct thorough research and gain an understanding of these risks before allocating your money.
 
-![](/assets/blog/money_budgeting_investing/portfolio-allocation.webp){: style="borderRadius: 10px"}
+![](/assets/blog/money_budgeting_investing/portfolio-allocation.webp)
 
 ## 5) How to select the Right Investment Options:
 
@@ -125,7 +125,7 @@ Choosing the appropriate investments can be a daunting task. Here are some guide
 
 Recall that investing is a long-term pursuit. It is essential to exhibit patience and adhere to your plan, even when confronted with market fluctuations.
 
-![](/assets/blog/personal-finance/asset-class-risk-spectrum.jpg){: style="borderRadius: 10px"}
+![](/assets/blog/personal-finance/asset-class-risk-spectrum.jpg)
 
 ## 6) Retirement Planning: Why it is important and Where to Start:
 
@@ -141,7 +141,7 @@ Retirement planning constitutes an integral facet of personal finance. Initiatin
 
 Keep in mind that initiating retirement savings early grants your money more time to grow, setting the stage for a comfortable retirement.
 
-![](/assets/blog/personal-finance/personalfinance.webp){: style="borderRadius: 10px, alignSelf: 'center'"}
+![](/assets/blog/personal-finance/personalfinance.webp)
 
 ## 7) Common Pitfalls to Avoid in Personal Finance Management:
 
