@@ -83,7 +83,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-            HelloStocker AI sends you stocks to buy today before they blow up. Save time, save money and receive recommendations based on your own preferences.
+            HelloStocker sends you stocks to buy before they blow up. Save time, save money and receive AI recommendations based on your own preferences.
             </h2>
           </div>
 
