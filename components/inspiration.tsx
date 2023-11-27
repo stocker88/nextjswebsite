@@ -6,6 +6,7 @@ const QuoteDisplay = () => {
   "Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett",
     "If you don't find a way to make money while you sleep, you will work until you die. - Warren Buffett",
     "Investing is about using your money to make more money. - Robert Kiyosaki",
+    "Risk comes from not knowing what you're doing. - Warren Buffett",
     "The stock market is a device for transferring money from the impatient to the patient. - Warren Buffett",
     "Price is what you pay. Value is what you get. - Warren Buffett",
     "In the short run, the market is a voting machine, but in the long run, it is a weighing machine. - Benjamin Graham",
