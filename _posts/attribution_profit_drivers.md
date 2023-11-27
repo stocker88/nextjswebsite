@@ -26,7 +26,7 @@ We will teach you how to beat the S&P500 stock market: you will know what stocks
 
 You can become the next Warren Buffett thanks to the mathematics of investing: performance Attribution !
 
-# **Performance Attribution**
+## **Performance Attribution**
 
 
 HelloStocker Price performance Attribution allows you to understand what are your skills: what you are good at and what are the stocks you should invest in.
@@ -93,7 +93,7 @@ Do you know your strengths? Do you know how to make money with stocks?
 Don't worry, we are here to help you!
 
 
-# **The Math behind**
+## **The Math behind**
 
 In HelloStocker App, your AI Financial Advisor can segment your portfolio with respect to many metrics.
 
@@ -188,7 +188,7 @@ The Interaction Effect for the Technology stocks is calculated using the below f
 
 
 
-# **Know your strengths: save time and make more money**
+## **Know your strengths: save time and make more money**
 
 The sum of all these effects is equal to the difference between your portfolio performance and the stock market performance.
 
