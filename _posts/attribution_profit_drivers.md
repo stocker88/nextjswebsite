@@ -164,12 +164,12 @@ The Allocation Effect for the Technology stock is calculated using the below for
 
 If you are good at selecting stocks for a particular sector, you should overallocate the weight of this market sector in your portfolio.
 
-You should buy more of what you are good at.
+## You should buy more of what you are good at.
 
 A positive interaction effect on the technology stocks sector would occur for instance when both of the following conditions are met:
 
-* \-  your investor's portfolio weight in technology stocks was greater than the S&P500 weight in the same market sector,
-* \-  your investor's portfolio return for technology stocks was greater than the S&P500 return for the same market sector.
+* \1)  your investor's portfolio weight in technology stocks was greater than the S&P500 weight in the same market sector,
+* \2)  your investor's portfolio return for technology stocks was greater than the S&P500 return for the same market sector.
 
 In this scenario, you as an investor investor exercised good selection by buying more stocks in this market sector.
 
@@ -196,9 +196,9 @@ All these effects sum to your Excess Return over the market, often referred as '
 
 Your active return explain how well you are doing over the market and why:
 
-* \-  How good you are at selecting stocks in each sectors
-* \-  How good you are at allocating your positions across sectors
-* \-  How good you know your strengths and buy more or less of each sectors based on how well you select stocks within that sector.
+* \1)  How good you are at selecting stocks in each sectors
+* \2)  How good you are at allocating your positions across sectors
+* \3)  How good you know your strengths and buy more or less of each sectors based on how well you select stocks within that sector.
 
 When you know where your performance comes from, you can build an efficient strategy.
 
