@@ -85,7 +85,7 @@ const Hero = ({
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
             Instead of spending hours on boring emails and newsletters, get instant suggestions that fit your preferences, right away. Time is money in trading, you can't afford to wait for email replies.
-            <br></br>HelloStocker AI helps you find stocks before they blow up. Save time, make money and receive instant💸personalized AI recommendations based on your own preferences.
+            <br></br><br></br>HelloStocker AI helps you find stocks before they blow up. Save time, make money and receive instant💸personalized AI recommendations based on your own preferences.
             </h2>
           </div>
 
@@ -117,10 +117,10 @@ const Hero = ({
 
 
         <Image
-                                                            src='/assets/images/chatgptgooglecloud.webp'
-                                                            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                                           style={{width:195.9375, height:83.98}}
-                                                            />
+        src='/assets/images/chatgptgooglecloud.webp'
+        alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+       style={{width:195.9375, height:83.98}}
+        />
                 <br></br>
                 <br></br>
                 <br></br>
