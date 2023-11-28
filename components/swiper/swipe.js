@@ -34,7 +34,7 @@ export default function Swipe() {
                         <br></br>
                         - We adapt recommendations to your specific tastes using AI
                         <br></br>
-                        - Ask anything and receive instant replies: no more boring newsletters
+                        - Time is money, ask anything and receive instant replies, no more boring emails
                         <br></br>
                         - 95% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
