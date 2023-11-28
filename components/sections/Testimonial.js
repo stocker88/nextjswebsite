@@ -53,7 +53,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Insights You Won’t Find Anywhere Else </b>
                              <br></br>
-                             "HelloStocker is a game-changer! They spot trends and relevant information others overlook. I've discovered stock opportunities thanks to their AI Advisor and cashed 3 digits profits on Nvidia Meta and some biotech stocks."
+                             "HelloStocker is a game-changer! They spot trends and relevant information others overlook. I've discovered stock opportunities thanks to their AI Advisor and cashed 3 digits profits on Nvidia Meta and some biotech stocks. Instead of spending hours on boring emails and newsletters, get instant suggestions that fit your preferences, right away. Time is money in trading, you can't afford to wait for email replies."
                               <br></br>
                               <br></br>
                          <i>  Adrien Chenin
@@ -178,7 +178,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
-                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. Their UX is super cool and I can test their ideas straight away with virtual money, much better than boring emails. I received many recommendations and they keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
+                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. I received many recommendations and they keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
                               <br></br>
                               <br></br>
                          <i>  Mehrad Oroudji
