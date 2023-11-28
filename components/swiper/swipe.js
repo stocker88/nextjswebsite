@@ -34,7 +34,7 @@ export default function Swipe() {
                         <br></br>
                         - We adapt recommendations to your specific tastes using AI
                         <br></br>
-                        - You get a 360 analysis with market risks & competitors to watch for
+                        - Ask anything and receive instant replies: no more boring newsletters
                         <br></br>
                         - 95% of HelloStocker AI predictions beat the sp500 market
                         <br></br>

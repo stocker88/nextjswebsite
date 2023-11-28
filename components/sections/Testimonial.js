@@ -53,7 +53,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Insights You Won’t Find Anywhere Else </b>
                              <br></br>
-                             "HelloStocker's insights are a game-changer! They dig deep into data that others overlook. Thanks to their advanced AI, I've uncovered stock opportunities that were hidden in plain sight and cashed on Nvidia."
+                             "HelloStocker is a game-changer! They spot trends and relevant information others overlook. I've discovered stock opportunities thanks to their AI Advisor and cashed 3 digits profits on Nvidia Meta and some biotech stocks."
                               <br></br>
                               <br></br>
                          <i>  Adrien Chenin
@@ -78,7 +78,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                              <br></br>
-                             "It's like having a personal stock genie! HelloStocker tailors recommendations to match my preferences. It's not just about hot stocks; it's about the right stocks for me. My portfolio's never been more aligned with my goals, I made plenty of money buying AI stocks."
+                             "Your personal genie available 24/7! HelloStocker tailors recommendations to match my preferences. It's not just about hot stocks; it's about the right stocks for me. I made plenty of money and it feels good gogogo HelloStocker team!"
                               <br></br>
                               <br></br>
                          <i>  Jerome Hagege
@@ -103,7 +103,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                              <br></br>
-                             "Finally, financial reports that don't require a finance degree! I asked for dividend stocks and received a quick reply with straightforward! HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT model interface. No more complex jargon."
+                             "I wanted dividend stocks for passive income and received a clear reply straight to the point. Finally financial advises that don't require a finance degree... HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT model interface. No more financial jargon."
                               <br></br>
                               <br></br>
                          <i>  Fabien Nieto
@@ -128,7 +128,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
-                             "HelloStocker is my time-saver hero! Instead of spending countless hours sifting through reports, I get suggestions that fit my preferences. I save time and made 3 digit profits on their biotech stocks"
+                             "HelloStocker App my time-saver hero! Instead of spending hours shifting through boring emails and reports. I ask tell them what I like and now get suggestions that fit my preferences, right away, time is money in trading, I can't afford to wait for email replies. I made 3 digit profits on their biotech and real estate stocks"
                               <br></br>
                               <br></br>
                          <i>  Felix Revert
@@ -153,7 +153,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
-                             "Being ahead of the curve matters, time is money, the more you wait the more you miss. HelloStocker spots stocks with huge upside potential before the masses catch on. That early advantage has made a real difference in my gains and perfectly timed Adobe, AMD & Workforce, they keep sending me blue chip stocks I like to follow"
+                             "Being ahead of the curve matters: time is money. The more you wait the more you miss.... HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on. That early advantage has made a real difference in my gains. I perfectly timed Adobe, AMD & Workforce, they keep sending me blue chip stocks I love to follow"
                               <br></br>
                               <br></br>
                          <i>  Alexia Karolewicz
@@ -178,7 +178,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
-                             "Move over, complicated Bloomberg terminals! HelloStocker powered by ChatGPT makes it easy to navigate the large stock universe. Their UX is very cool and I can test their ideas straight away with virtual money, much better than boring emails. I received many recommendations and they keep outperforming the sp500, pretty reassuring since I like to track my performance against the market."
+                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. Their UX is super cool and I can test their ideas straight away with virtual money, much better than boring emails. I received many recommendations and they keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
                               <br></br>
                               <br></br>
                          <i>  Mehrad Oroudji
@@ -203,7 +203,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Join a Pro Community of Investors </b>
                              <br></br>
-                             "HelloStocker's community is a goldmine! Investors and hedge fund members has given me insights and connections clearly and it was well presented! eToro became a naughty mess they should rethink their UX. Above all HelloStocker AI Advisor is a must. He saves me time, money, and I don't miss any opportunity!"
+                             "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help. eToro became a naughty mess they should rethink their UX and how followers interact with each other. Above all HelloStocker AI Advisor is a must: saves me time, money, and I receive hot opportunities!"
                               <br></br>
                               <br></br>
                          <i>  Charles Elie Labroy
@@ -228,7 +228,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                              <br></br>
-                             "HelloStocker trading isn't just about stocks; it's about building wealth, and making it grow the smart way. I don't just 'make money': I track how much money I made over the sp500. Making money is easy when everything goes up, beating the sp500 market with their Stocker AI advisor is the real way to go!"
+                             "It's not just about investing, it's about building wealth, and making it grow the smart way. I don't just 'make money': I track how much money I made over the sp500. Making money is easy when everything goes up, beating the sp500 market with their Stocker AI advisor is the real way to go!"
                               <br></br>
                               <br></br>
                          <i>  Kanishk Budhia
@@ -277,7 +277,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                              <br></br>
-                             "HelloStocker AI doesn't hide a thing! They give access to AI-processed data, allow me to verify and understand the decisions. Transparency like this builds trust. I understand how my ai advisor took the decisions. I can test ideas before executing them on my robinhood account. I've made more money with their signals than with my etfs. Stocker App great job!"
+                             "HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made. Transparency like this builds trust. I understand how my ai advisor takes the decisions and can interact with the AI directly, better than sending emails and waiting for answers, makes me save time and cash on profits faster: trading is time sensitive! Stocker App great job!"
                               <br></br>
                               <br></br>
                          <i>  Sacha Berenfus
