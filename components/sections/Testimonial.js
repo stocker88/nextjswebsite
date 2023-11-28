@@ -128,7 +128,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
-                             "HelloStocker App my time-saver hero! Instead of spending hours shifting through boring emails and reports. I ask tell them what I like and now get suggestions that fit my preferences, right away, time is money in trading, I can't afford to wait for email replies. I made 3 digit profits on their biotech and real estate stocks"
+                             "HelloStocker App my time-saver hero! Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away. Time is money in trading, I can't afford to wait for email replies. I made 3 digit profits on their biotech and real estate stocks"
                               <br></br>
                               <br></br>
                          <i>  Felix Revert
