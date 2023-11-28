@@ -178,7 +178,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
-                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. I received many recommendations and they keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
+                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. I received recommendations that keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
                               <br></br>
                               <br></br>
                          <i>  Mehrad Oroudji
@@ -203,7 +203,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Join a Pro Community of Investors </b>
                              <br></br>
-                             "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help. eToro became a naughty mess they should rethink their UX and how followers interact with each other. Above all HelloStocker AI Advisor is a must: saves me time, money, and I receive hot opportunities!"
+                             "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help. eToro became a naughty mess they should rethink their UX and how followers interact with each other. Above all HelloStocker AI Advisor is a must: saves me time and my profits increased!"
                               <br></br>
                               <br></br>
                          <i>  Charles Elie Labroy
@@ -228,7 +228,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                              <br></br>
-                             "It's not just about investing, it's about building wealth, and making it grow the smart way. I don't just 'make money': I track how much money I made over the sp500. Making money is easy when everything goes up, beating the sp500 market with their Stocker AI advisor is the real way to go!"
+                             "It's not just about investing, it's about building wealth, and making it grow the smart way. I don't just 'realise profits': I track how much I make over the sp500. Making money is easy when everything goes up, beating the sp500 market with their Stocker AI advisor is the real way to go!"
                               <br></br>
                               <br></br>
                          <i>  Kanishk Budhia
@@ -253,7 +253,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
                              <br></br>
-                             "Practise trading ideas without the risk! HelloStocker App nails it. I get as much virtual trading money as I want and can fine-tune my strategies without the fear of losing real cash. It's a safe playground for learning and gaining confidence in their smart technology."
+                             "Practise trading ideas without the risk! HelloStocker App nails it. I get as much virtual trading money as I want and can work on my skills without the fear of losing real cash. It's a safe playground for learning and gaining confidence in their smart technology."
                               <br></br>
                               <br></br>
                          <i>  Maxime Lonné
@@ -277,7 +277,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                              <br></br>
-                             "HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made. Transparency like this builds trust. I understand how my ai advisor takes the decisions and can interact with the AI directly, better than sending emails and waiting for answers, makes me save time and cash on profits faster: trading is time sensitive! Stocker App great job!"
+                             "HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made. Transparency like this builds trust. I understand how my ai advisor takes the decisions and can interact with the AI directly, better than sending emails and waiting for answers, makes me save time and cash on profits faster. Time is money especially in investing! Stocker App great job!"
                               <br></br>
                               <br></br>
                          <i>  Sacha Berenfus
