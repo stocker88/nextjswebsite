@@ -177,29 +177,27 @@ export default function Swipe() {
 
 
  <br></br>
-        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-                <center>About Us</center>
-              </h2>
+       <AboutUs/>
                               <br></br>                <br></br>
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
-        <center>
                           <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-       We traded billions for Wall st hedge funds
+       - We traded billions for Wall st hedge funds
        <br></br>
        <br></br>
-       We built AI technologies for big tech companies
+       - We built AI technologies for big tech companies
        <br></br>
        <br></br>
-       HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+       - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
         <br></br>
         <br></br>
-        Our mission: empower you with financial growth
+        - Our mission: empower you with financial growth
         <br></br>
+        <br></br>
+        - Join an Established Financial Network with Advanced AI Tools
         <br></br>
         </p>
-</center>
 
 
 
