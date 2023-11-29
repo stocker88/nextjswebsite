@@ -5,19 +5,7 @@ const AboutUs = () => {
 
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        We Guarantee Your Success
-         <br></br>
         We trade billions for Wall Street Hedge Funds
- <br></br>
-        We build AI technologies for big tech companies
- <br></br>
-        HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
- <br></br>
-        Our mission: empower you with financial growth
- <br></br>
-        Join an Established Financial Network with Advanced AI Tools
-         <br></br>Ferrari took +40% since we recommended it
-
       </h2>
      {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         You have control over your own success

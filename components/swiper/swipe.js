@@ -71,7 +71,7 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Can Test Trading Ideas
+        We Guarantee Your Success With Virtual Trading
       </h2>
 <br></br>
   <div className="split-item">
@@ -178,13 +178,11 @@ export default function Swipe() {
  <br></br>
  <center>
        <AboutUs/>
-
+</center>
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
                           <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-       - We trade billions for Wall Street Hedge Funds
-       <br></br>
        <br></br>
        - We build AI technologies for big tech companies
        <br></br>
@@ -192,7 +190,7 @@ export default function Swipe() {
        - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
         <br></br>
         <br></br>
-        - Our mission: empower you with financial growth
+        - Our mission: empower retail with financial growth
         <br></br>
         <br></br>
         - Join an Established Financial Network with Advanced AI Tools
@@ -225,7 +223,7 @@ export default function Swipe() {
 
 </div>
 </div>
-</center>
+
  <br></br>
 <br></br><br></br>
 
