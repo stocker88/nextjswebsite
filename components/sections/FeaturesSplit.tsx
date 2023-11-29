@@ -67,6 +67,40 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
         <br></br>
+         <br></br>
+        <br></br><br></br>
+
+        <center>
+
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
+                Get Help From An Investment Advisor
+              </h2>
+                <br></br>
+                <br></br>
+
+                <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
+                            style={{
+
+                                 }}>  <div style={{
+                                 'padding': '0.8rem',
+                                 'color': 'black',
+                                  'width':'31vw',
+                                 'textAlign': 'center',
+                                 'fontSize': 'min(19px,max(15px,2vw))',
+                                 'borderRadius': '30px 30px 30px 30px',
+                                 'background': '#00f75f',
+                                 'maxWidth':'280px'
+                                }}>Check his LinkedIn</div></button></a>
+                <br></br>
+                <br></br>
+
+            <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
+            <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+        {/*
+        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+        */}
+                <br></br>
+                <br></br>
         <br></br>
         <br></br>
 
@@ -93,40 +127,7 @@ const FeaturesSplit = ({
 */}
    <br></br>
         <br></br>
-        <br></br>
-<br></br><br></br>
 
-<center>
-
-<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
-        Get Help From An Investment Advisor
-      </h2>
-        <br></br>
-        <br></br>
-
-        <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
-                    style={{
-
-                         }}>  <div style={{
-                         'padding': '0.8rem',
-                         'color': 'black',
-                          'width':'31vw',
-                         'textAlign': 'center',
-                         'fontSize': 'min(19px,max(15px,2vw))',
-                         'borderRadius': '30px 30px 30px 30px',
-                         'background': '#00f75f',
-                         'maxWidth':'280px'
-                        }}>Check his LinkedIn</div></button></a>
-        <br></br>
-        <br></br>
-
-    <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
-    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-{/*
-<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
-*/}
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
 
