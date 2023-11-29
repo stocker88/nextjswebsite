@@ -200,7 +200,7 @@ export default function Swipe() {
                         }}>Check his LinkedIn</div></button></a>
         <br></br>
         <br></br>
-
+</center>
     <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
     <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 {/*

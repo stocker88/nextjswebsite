@@ -96,7 +96,7 @@ const FeaturesSplit = ({
         <br></br>
         <br></br>
 
-
+<center>
         <WhyHellostocker/>
         <br></br>
 
