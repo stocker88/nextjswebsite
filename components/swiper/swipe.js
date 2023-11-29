@@ -158,56 +158,6 @@ export default function Swipe() {
         </div>
         </div>
 </center>
-
- <br></br> <br></br>
- <br></br><br></br>
- <br></br><br></br>
-<QuoteDisplay/>
-<br></br> <br></br>
-<br></br><br></br>
- <br></br><br></br> <br></br>
-
- <br></br><br></br>
-        <IntroDownload/>
-        <br></br>
-        <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
-
-        <br></br>
-        <br></br>
-                <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-
- <br></br>
- <br></br>
- <center>
-       <AboutUs/>
-</center>
-    <div className="container">
-   <div className="split-item">
-        <div style={{paddingTop: 10}}></div>
-                          <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-       <br></br>
-       - We build AI technologies for big tech companies
-       <br></br>
-       <br></br>
-       - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
-        <br></br>
-        <br></br>
-        - Our mission: empower retail with financial growth
-        <br></br>
-        <br></br>
-        - Join an Established Financial Network with Advanced AI Tools
-        <br></br>
-        </p>
-
-</div>
-</div>
-
- <br></br>
-<br></br><br></br>
 <br></br><br></br>
 <br></br><br></br>
 
@@ -244,6 +194,57 @@ export default function Swipe() {
 */}
         <br></br>
         <br></br>
+ <br></br> <br></br>
+ <br></br><br></br> <br></br>
+
+  <br></br><br></br>
+         <IntroDownload/>
+         <br></br>
+         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
+
+         <br></br>
+         <br></br>
+                 <br></br>
+         <br></br>
+ <br></br><br></br>
+ <br></br><br></br>
+<QuoteDisplay/>
+<br></br> <br></br>
+<br></br><br></br>
+
+        <br></br>
+        <br></br>
+
+
+ <br></br>
+ <br></br>
+ <center>
+       <AboutUs/>
+</center>
+    <div className="container">
+   <div className="split-item">
+        <div style={{paddingTop: 10}}></div>
+                          <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+       <br></br>
+       - We build AI technologies for big tech companies
+       <br></br>
+       <br></br>
+       - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+        <br></br>
+        <br></br>
+        - Our mission: empower retail with financial growth
+        <br></br>
+        <br></br>
+        - Join an Established Financial Network with Advanced AI Tools
+        <br></br>
+        </p>
+
+</div>
+</div>
+
+ <br></br>
+<br></br><br></br>
+
         <center>
   <div className="container">
    <div className="split-item">
