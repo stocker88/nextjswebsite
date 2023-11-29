@@ -103,7 +103,7 @@ const FeaturesSplit = ({
       </h2>
         <br></br>
 
-        <a href='https://www.linkedin.com/feed/'><button
+        <a href='https://www.linkedin.com/feed/' target="_blank" ><button
                     style={{
 
                          }}>  <div style={{

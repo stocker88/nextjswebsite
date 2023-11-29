@@ -181,18 +181,22 @@ export default function Swipe() {
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>
+        <center>
                           <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-
-       - Our CEO traded billions for Wall st hedge funds
+       Our CEO traded billions for Wall st hedge funds
        <br></br>
-       - Our CTO built AI technologies for big tech companies
        <br></br>
-       - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+       Our CTO built AI technologies for big tech companies
+       <br></br>
+       <br></br>
+       HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
         <br></br>
-        - The mission: empower you with financial growth
+        <br></br>
+       The mission: empower you with financial growth
+        <br></br>
         <br></br>
         </p>
-
+</center>
 
 
 
