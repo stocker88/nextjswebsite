@@ -30,7 +30,7 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - We Send You Hot Stocks To Buy Now
+                        - We send you hot stocks to buy now
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
