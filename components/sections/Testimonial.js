@@ -158,7 +158,7 @@ const Testimonial = ({
                               <br></br>
                          <i>  Alexia Karolewicz
                            <br></br>
-                           Procurement Manager IP Acquisition @ Reckitt </i>
+                           Procurement Manager IP Acquisition</i>
 
 
                             </p>
