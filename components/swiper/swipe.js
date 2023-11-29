@@ -30,9 +30,9 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - What the business does and why it has growing interest
+                        - We Send You Hot Stocks To Buy Now
                         <br></br>
-                        - We adapt recommendations to your specific tastes using AI
+                        - What the business does and why it has growing interest
                         <br></br>
                         - Time is money, ask anything and receive instant replies
                         <br></br>
@@ -79,7 +79,7 @@ export default function Swipe() {
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - 99% of Hedge Funds test strategies virtually first
                                 <br></br>
-                                - We guarantee your success step by step
+                                - We don't ask anything from you
                                 <br></br>
                                 - You receive unlimited money to practice in a safe virtual reality simulator
                                 <br></br>
@@ -202,30 +202,6 @@ export default function Swipe() {
         - Join an Established Financial Network with Advanced AI Tools
         <br></br>
         </p>
-
-  <div className="container">
-   <div className="split-item">
-
-
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                  src='/assets/images/tslavsrace.webp'
-                        width={380}
-                    height={822.41}
-                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
-                    />
-                    </Zoom>
-                </div>
-
-              </div>
-              </div>
 
 </div>
 </div>
