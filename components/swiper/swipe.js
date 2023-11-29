@@ -177,7 +177,9 @@ export default function Swipe() {
 
 
  <br></br>
-        <AboutUs/>
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
+                <center>About Us</center>
+              </h2>
     <div className="container">
    <div className="split-item">
         <div style={{paddingTop: 10}}></div>

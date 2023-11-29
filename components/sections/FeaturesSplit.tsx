@@ -102,6 +102,7 @@ const FeaturesSplit = ({
         Get Help From An Investment Advisor
       </h2>
         <br></br>
+        <br></br>
 
         <a href='https://www.linkedin.com/feed/' target="_blank" ><button
                     style={{
@@ -116,6 +117,7 @@ const FeaturesSplit = ({
                          'background': '#00f75f',
                          'maxWidth':'280px'
                         }}>Check his LinkedIn</div></button></a>
+        <br></br>
         <br></br>
 
     <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
