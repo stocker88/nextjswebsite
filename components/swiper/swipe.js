@@ -237,7 +237,7 @@ export default function Swipe() {
         - Our mission: empower retail with financial growth
         <br></br>
         <br></br>
-        - Join an Established Financial Network with Advanced AI Tools
+        - Join an established financial network with advanced AI trading tools
         <br></br>
         </p>
 
