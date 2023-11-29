@@ -57,7 +57,7 @@ const Hero = ({
           <br></br>
      <div style={{paddingTop: 10}}></div>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                                             HelloStocker AI
+                                                             HelloStocker AI App
                                                           </h1>
 <br></br>
          {/*    <Image
@@ -84,7 +84,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-            HelloStocker helps you find stocks before they blow up. Save time, make money and receive personalized AI recommendations based on your own preferences.
+            HelloStocker helps you find stocks before they blow up. Save time, make money and receive personalized AI recommendations based on your own preferences in a virtual trading app.
             </h2>
           </div>
 
