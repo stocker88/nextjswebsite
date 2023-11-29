@@ -102,6 +102,20 @@ const FeaturesSplit = ({
         Get Help From An Investment Advisor
       </h2>
         <br></br>
+
+        <a href='https://www.linkedin.com/feed/'><button
+                    style={{
+
+                         }}>  <div style={{
+                         'padding': '0.8rem',
+                         'color': 'black',
+                          'width':'31vw',
+                         'textAlign': 'center',
+                         'fontSize': 'min(19px,max(15px,2vw))',
+                         'borderRadius': '30px 30px 30px 30px',
+                         'background': '#00f75f',
+                         'maxWidth':'280px'
+                        }}>Check his LinkedIn</div></button></a>
         <br></br>
 
     <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
