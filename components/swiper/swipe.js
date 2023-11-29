@@ -34,7 +34,7 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - Time is money, ask anything and receive instant replies
+                        - No boring emails ask anything and receive instant replies
                         <br></br>
                         - 95% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
