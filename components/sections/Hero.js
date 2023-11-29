@@ -96,22 +96,18 @@ const Hero = ({
 <NewsletterSignUp/>
 <br></br>
 <Container>
-
+<center>
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                We don't take money - You receive $10,000 to practice ideas in a Virtual Trading Simulator
                                              </div>
 
-<center>
+<br></br>
                               <Image
                                                src='/assets/images/usersRating.webp'
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
                                                priority={true}
                                               style={{width:240, height:60}}
                                                />
-<div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               Join +12,800 investors using HelloStocker AI to receive live investment recommendations adapted to their needs.
-                                             </div>
-<div style={{paddingTop: 20}}></div>
 <br></br>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
