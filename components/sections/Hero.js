@@ -119,10 +119,11 @@ const Hero = ({
        style={{width:195.9375, height:83.98}}
         />
                 <br></br>
-                <br></br>
+
                 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                                We give you $10,000 to test ideas in Virtual Reality Trading
                                                              </div>
+                                                                             <br></br>
                 <br></br>
                 <br></br>
                                           <br></br>
