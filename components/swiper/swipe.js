@@ -176,6 +176,7 @@ export default function Swipe() {
 
  <br></br>
  <br></br>
+ <center>
        <AboutUs/>
 
     <div className="container">
@@ -224,7 +225,7 @@ export default function Swipe() {
 
 </div>
 </div>
-
+</center>
  <br></br>
 <br></br><br></br>
 
