@@ -77,14 +77,13 @@ export default function Swipe() {
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                                - You receive free money in a safe virtual reality simulator
-                                <br></br>
-                                - You can test HelloStocker AI without putting your money in
-                                <br></br>
                                 - 99% of Hedge Funds test strategies virtually first
                                 <br></br>
-                                - We guarantee your success
+                                - We guarantee your success step by step
                                 <br></br>
+                                - You receive unlimited money to practice in a safe virtual reality simulator
+                                <br></br>
+
                                 <br></br>
                 </p>
         </div>
