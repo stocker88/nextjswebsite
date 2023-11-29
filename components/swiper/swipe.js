@@ -208,11 +208,14 @@ export default function Swipe() {
 
  <br></br>
 <br></br><br></br>
+<br></br><br></br>
+<br></br><br></br>
 
 <center>
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
-        Speak with our Ex Goldman Sachs Advisor
+        Speak with our Advisor
+         <br></br> Ex Goldman Sachs
         <br></br>Ex Bank of America | Ex Societe Generale Trader
       </h2>
         <br></br>
@@ -241,6 +244,31 @@ export default function Swipe() {
 */}
         <br></br>
         <br></br>
+        <center>
+  <div className="container">
+   <div className="split-item">
+
+
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                  src='/assets/images/tslavsrace.webp'
+                        width={380}
+                    height={822.41}
+                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
+                    />
+                    </Zoom>
+                </div>
+
+              </div>
+              </div>
+</center>
 
 {/*
                   <div className="container">
