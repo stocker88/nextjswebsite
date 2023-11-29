@@ -160,6 +160,8 @@ export default function Swipe() {
 </center>
 <br></br><br></br>
 <br></br><br></br>
+<br></br><br></br>
+<br></br><br></br>
 
 <center>
 
