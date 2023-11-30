@@ -17,6 +17,7 @@ import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
 import Testimonial from './Testimonial'
+import QuoteDisplay from '../../components/inspiration';
 
 type Props = {
   posts: Post[]
