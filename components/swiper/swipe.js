@@ -166,7 +166,7 @@ export default function Swipe() {
 
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        We Notify You When To Sell
+        We Notify You When To Sell: We Keep You Safe
       </h2>
 
 
