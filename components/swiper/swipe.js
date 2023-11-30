@@ -180,9 +180,8 @@ export default function Swipe() {
 
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
         Speak with our CFA Advisor
-         <br></br> ex Goldman Sachs
-         <br></br>Bank of America and
-          <br></br> Societe Generale Trader
+         <br></br> ex Goldman Sachs and
+         <br></br>Bank of America Trader
         <br></br>  with over 15 years in investing
       </h2>
         <br></br>
