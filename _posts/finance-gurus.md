@@ -105,7 +105,10 @@ Because I don't live in Dubai.
 
 I have a LinkedIn profile, my name is public.
 
-[My LinkedIn]('https://www.linkedin.com/in/anesshusseinali/')
+<pre><code>
+<a href=https://www.linkedin.com/in/anesshusseinali/> https://www.linkedin.com/in/anesshusseinali/ </a>
+</code></pre>
+![Click here to see my LinkedIn]('https://www.linkedin.com/in/anesshusseinali/')
 
 
 **If I scam you I can't escape.**
@@ -115,7 +118,7 @@ And I'm happy to meet up if you want to!
 I host meetups in New York, London, and Paris.
 
 
-# How to differentiate the Advisor from the Scammer?
+## **How to differentiate the Advisor from the Scammer?**
 
 That one is easy!
 
