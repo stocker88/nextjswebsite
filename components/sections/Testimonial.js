@@ -50,15 +50,14 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
-                             <br></br>They don't make money by pushing me to trade.
-                              <br></br>They care about advising me and helping me out.
-                               <br></br>It makes a HUUUUGEEEE difference.
-                              <br></br> They have no direct interests in pushing me to trade unless I can profit from it.
-                              <br></br>Compared to most of 'financial gurus' with email newsletters and telegram channels... HelloStocker notifies me when to Sell!
-                              <br></br>They have interests in keeping me happy by making my wealth grow forever.."
+                              <b style={{color:'#00f75f'}}> They Don't push Me To Buy And They Tell Me When To Sell' </b>
+                             <br></br>Most platforms and newsletters push me to trade fast with my real money.
+                             <br></br>They make me buy things because this is how they generate their revenues.
+                              <br></br>If my trading goes down I'm left alone with my losses.
+                              <br></br>HelloStocker cares about advising me and helping me grow my wealth.
+                              <br></br>They won't leave me, they take a $5 monthly subscription, so they want to keep me happy forever.
                               <br></br>
                               <br></br>
                          <b>  Adrien Chenin
@@ -80,7 +79,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                              <br></br>
@@ -109,7 +108,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                              <br></br>
@@ -139,7 +138,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
@@ -168,7 +167,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
@@ -198,7 +197,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
@@ -227,7 +226,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                              <br></br>
@@ -256,7 +255,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                              <br></br>
@@ -284,7 +283,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
                              <br></br>
@@ -314,7 +313,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                              <br></br>
