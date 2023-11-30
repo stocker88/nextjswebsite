@@ -39,7 +39,7 @@ const Testimonial = ({
 {[
 
 <a href='https://www.linkedin.com/in/adrien-chenin-306b6131/' target="_blank" >
-                         <center>
+                         
                          <Image
                            src='/assets/images/testimonies/adrien.webp'
                            alt="Features tile icon 06"
@@ -68,9 +68,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/hagege/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/jerome.webp'
                            alt="Features tile icon 06"
@@ -97,9 +97,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/fabienns/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/fabienns/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/fabien.webp'
                            alt="Features tile icon 06"
@@ -127,9 +127,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/felix-revert-00998852/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/felix-revert-00998852/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/felix.webp'
                            alt="Features tile icon 06"
@@ -156,9 +156,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/alexia-karolewicz-71a9b644/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/alexia-karolewicz-71a9b644/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/alexia.webp'
                            alt="Features tile icon 06"
@@ -175,7 +175,7 @@ const Testimonial = ({
                              <br></br>
                              "Being ahead of the curve matters: time is money.
                              <br></br>HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on.
-                              <br></br>They notify you directly on your phone: you receive the information faster.
+                              <br></br>I get notifications directly on your phone: I receive the information faster.
                                <br></br>That early advantage has made a real difference in my gains.
                                 <br></br>I perfectly timed Adobe, AMD & Workforce."
                               <br></br>
@@ -186,9 +186,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" > <center>
+,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" > 
                          <Image
                            src='/assets/images/testimonies/mehrad.webp'
                            alt="Features tile icon 06"
@@ -215,9 +215,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b480/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b480/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/charles.webp'
                            alt="Features tile icon 06"
@@ -235,8 +235,7 @@ const Testimonial = ({
                              "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
                               <br></br>They have my long term interests in mind and help me train with their tools.
-                              <br></br>eToro became a naughty mess they should rethink their UX and get rid of all these influencers who want to make money by pushing you to buy anything now.
-                              <br></br>Above all HelloStocker AI Advisor is a must: saves me time and my profits increased!"
+                              <br></br>eToro became a naughty mess they should rethink their UX and get rid of all these influencers who want to make money by pushing you to buy anything now."
                               <br></br>
                               <br></br>
                          <b>  Charles Elie Labroy
@@ -245,9 +244,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/kanishk.webp'
                            alt="Features tile icon 06"
@@ -273,9 +272,9 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
-, <a href='https://www.linkedin.com/in/maxime-lonn%C3%A9-b38a6829/' target="_blank" ><center>
+, <a href='https://www.linkedin.com/in/maxime-lonn%C3%A9-b38a6829/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/maxime.webp'
                            alt="Features tile icon 06"
@@ -302,10 +301,10 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>,
 
-                            <a href='https://www.linkedin.com/in/sachaberenfus/' target="_blank" ><center>
+                            <a href='https://www.linkedin.com/in/sachaberenfus/' target="_blank" >
                          <Image
                            src='/assets/images/testimonies/sacha.webp'
                            alt="Features tile icon 06"
@@ -332,7 +331,7 @@ const Testimonial = ({
 
 
                             </p>
-                           </center>
+                         
                            </a>
 
 ]}
