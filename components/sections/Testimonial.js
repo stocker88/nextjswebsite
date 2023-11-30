@@ -52,7 +52,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> They Don't push Me To Buy And They Tell Me When To Sell </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Sell </b>
                               <br></br>
                              <br></br>Most platforms and newsletters push me to trade fast with my real money.
                              <br></br>They make me buy things because this is how they generate their revenues.
@@ -82,7 +82,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                               <br></br>
                              <br></br>
                              Your personal genie available 24/7!
@@ -112,7 +112,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                               <br></br>
                              <br></br>
                              I wanted dividend stocks for passive income and received a clear reply straight to the point.
@@ -143,7 +143,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Saves 120+ Hours of Investing Research per Month </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 120+ Hours of Investing Research per Month </b>
                              <br></br>
                              <br></br>
                              HelloStocker App my time-saver hero!
@@ -175,7 +175,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
                              <br></br>
                              Being ahead of the curve matters: time is money.
@@ -206,7 +206,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                               <br></br>
                              <br></br>
                              No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing.
@@ -236,7 +236,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                               <br></br>
                              <br></br>
                              HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
@@ -266,7 +266,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                               <br></br>
                              <br></br>
                              It's not just about investing, it's about building wealth, and making it grow the smart way.
@@ -295,7 +295,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for learning </b>
                               <br></br>
                              <br></br>
                              Practise trading ideas without the risk! HelloStocker App nails it.
@@ -326,7 +326,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                               <br></br>
                              <br></br>
                              HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made.
