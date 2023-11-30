@@ -83,6 +83,8 @@ export default function Swipe() {
                                 <br></br>
                                 - You receive unlimited money to practice in a safe virtual reality simulator
                                 <br></br>
+                                - We remind you when to sell
+                                <br></br>
 
                                 <br></br>
                 </p>
