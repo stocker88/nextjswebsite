@@ -69,9 +69,7 @@ In this article we will:
 
 \-**10) Wait I forgot - now they want you to bring your friend.**
 
-
 ![](/assets/blog/financial-gurus/how trading gurus make money.webp)
-
 
 They get paid $600 when they convince you to trade!
 
@@ -112,6 +110,7 @@ I have a LinkedIn profile, my name is public.
 <pre><code>
 <a href=https://www.linkedin.com/in/anesshusseinali/> https://www.linkedin.com/in/anesshusseinali/ </a>
 </code></pre>
+
 [Click here to see my LinkedIn]: https://www.linkedin.com/in/anesshusseinali/
 
 **If I scam you I can't escape.**
