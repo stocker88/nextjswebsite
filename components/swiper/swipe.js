@@ -223,11 +223,6 @@ export default function Swipe() {
          <br></br>
                  <br></br>
          <br></br>
- <br></br><br></br>
- <br></br><br></br>
-<QuoteDisplay/>
-<br></br> <br></br>
-<br></br><br></br>
 
         <br></br>
         <br></br>

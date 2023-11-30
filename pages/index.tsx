@@ -102,6 +102,7 @@ export default function Index({ allPosts }: Props) {
             />
           )}*/}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
         </Container>
       </Layout>
     </>

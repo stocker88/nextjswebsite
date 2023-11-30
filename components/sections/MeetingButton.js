@@ -91,6 +91,20 @@ const MeetingButton = ({
          </Container>
         <NewsletterSignUp/>
         <br></br>
+         <br></br><br></br> <br></br>
+
+          <br></br><br></br>
+                 <IntroDownload/>
+                 <br></br>
+                 <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
+
+                 <br></br>
+                 <br></br>
+                         <br></br>
+                 <br></br>
+
+                <br></br>
+
         <Container>
 
 <br></br>
