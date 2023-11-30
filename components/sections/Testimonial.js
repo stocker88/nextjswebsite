@@ -85,7 +85,7 @@ const Testimonial = ({
                              <br></br>
                              "Your personal genie available 24/7!
                              <br></br>HelloStocker tailors recommendations to match my preferences.
-                             <br></br>It's not just about hot stocks; it's about the right stocks for me.
+                             <br></br>It's not just about stocks; it's about the right stocks for me.
                              <br></br>I made plenty of money, sure gains, no rush, and it feels good!
                               <br></br>
                               <br></br>
@@ -144,8 +144,9 @@ const Testimonial = ({
                              <br></br>
                              "HelloStocker App my time-saver hero!
                              <br></br>Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
-                             <br></br>Time is money in trading, I can't afford to wait for email replies.
-                             <br></br>After spending a couple of months practising with their virtual trading, I got a sense of how biotech works and made 3 digit profits!"
+                             <br></br>Time is money, especially in investing and trading.
+                              <br></br>I can't afford to wait a week for email replies.
+                             <br></br>Thanks to the virtual trading money they game me, I got a sense of how biotech works and made 3 digit real profits!"
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
