@@ -115,7 +115,7 @@ That one is easy!
 
 You can follow these 2 steps:
 
-# **1) Ask the influencer you trust so much to trade live in HelloStocker **
+## **1) Ask the influencer you trust so much to trade live in HelloStocker **
 
 \- 'But why HelloStocker? I already have my setup'
 
@@ -150,7 +150,7 @@ Or you trade virtually to show others what you are capable of.
 Well I know, scammer.
 
 
-# **2) Ask them how they make money
+## **2) Ask them how they make money
 
 \- 'I make money with trading'
 
@@ -171,7 +171,7 @@ Go back to 1
 Well I know, scammer.
 
 
-# **But then how does HelloStocker AI App make money?
+## **But then how does HelloStocker AI App make money?
 
 We charge $10 a month.
 
@@ -193,23 +193,36 @@ HelloStocker helps you find the right stocks for you.
 
 Save time, make money and receive personalized AI recommendations based on your own preferences in a virtual trading app.
 
-1) We use AI to Adapt Recommendations To Your Own Tastes
+## **1) We use AI to Adapt Recommendations To Your Own Tastes**
+
 \- We send you hot stocks to buy and tell you when to sell
+
 \- What the business does and why it has growing interest
+
 \- 95% of HelloStocker AI predictions beat the sp500 market
+
 \- No boring emails or newsletter ask anything and receive instant replies
 
-2) Your Success Is Guaranteed With Virtual Trading
+## 2) Your Success Is Guaranteed With Virtual Trading**
+
 \- You will get better at investing, 100% guaranteed
+
 \- 99% of Hedge Funds test strategies virtually first
+
 \- You receive unlimited money to practice in a safe virtual reality simulator
+
 \- We use your virtual positions to tell you when to sell
+
 \- We will never ask you to trade or open an account
 
-3) You Get Access To AI Trading Tools
+## 3) You Get Access To AI Trading Tools**
+
 \- Market trading signals & AI screening
+
 \- Wall St analyst ratings & financial data
+
 \- Social sentiment & News
+
 \- Hedge Funds & investors trading activity
 
 It is a bargain.
