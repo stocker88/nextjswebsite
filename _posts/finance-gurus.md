@@ -218,7 +218,7 @@ By a Finance Guru with no LinkedIn.
 
 &nbsp;
 
-Because I don't live in Dubai.
+Because I don't hide in Dubai.
 
 &nbsp;
 
