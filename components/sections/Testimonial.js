@@ -52,9 +52,10 @@ const Testimonial = ({
                            />
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
 
-                              <b style={{color:'#00f75f'}}> Insights You Won’t Find Anywhere Else </b>
+                              <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
                              <br></br>
-                             "HelloStocker is a game-changer! They spot trends and relevant information others overlook. I've discovered stock opportunities thanks to their AI Advisor and cashed 3 digits profits on Nvidia Meta and some biotech stocks. Instead of spending hours on boring emails and newsletters, get instant suggestions that fit your preferences, right away. Time is money in trading, you can't afford to wait for email replies."
+                             They don't make money by pushing me to trade, they make money by advising you and helping you out. It makes a HUUUUGEEEE difference.
+                              Compared to other apps that push me to trade fast and leave me right after, HelloStocker tells me when to sell, and don't push me to trade with my real money, they have interests in mind and want to keep me forever.."
                               <br></br>
                               <br></br>
                          <b>  Adrien Chenin
@@ -132,7 +133,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
-                             "HelloStocker App my time-saver hero! Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away. Time is money in trading, I can't afford to wait for email replies. I made 3 digit profits on their biotech and real estate stocks"
+                             "HelloStocker App my time-saver hero! Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away. Time is money in trading, I can't afford to wait for email replies. After spending a couple of months practising with their virtual trading, I got a sense of how biotech works and made 3 digit profits!"
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
@@ -158,7 +159,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
-                             "Being ahead of the curve matters: time is money. The more you wait the more you miss.... HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on. That early advantage has made a real difference in my gains. I perfectly timed Adobe, AMD & Workforce, they keep sending me blue chip stocks I love to follow"
+                             "Being ahead of the curve matters: time is money. HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on. They notify you directly on your phone: you receive the information faster. That early advantage has made a real difference in my gains. I perfectly timed Adobe, AMD & Workforce."
                               <br></br>
                               <br></br>
                          <b>  Alexia Karolewicz
@@ -184,7 +185,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
-                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. I received recommendations that keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
+                             "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing. They make it easy to navigate the large stock universe. I received blue chip stocks recommendations that keep outperforming the sp500. It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!"
                               <br></br>
                               <br></br>
                          <b>  Mehrad Oroudji
@@ -210,7 +211,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Join a Pro Community of Investors </b>
                              <br></br>
-                             "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help. eToro became a naughty mess they should rethink their UX and how followers interact with each other. Above all HelloStocker AI Advisor is a must: saves me time and my profits increased!"
+                             "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help. They don't push me to trade, in fact you can't real trade with them at all... They have my long term interests in mind and help me train with their tools. eToro became a naughty mess they should rethink their UX and get rid of all these influencers who want to make money by pushing you to buy anything now. Above all HelloStocker AI Advisor is a must: saves me time and my profits increased!"
                               <br></br>
                               <br></br>
                          <b>  Charles Elie Labroy
@@ -262,7 +263,7 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
                              <br></br>
-                             "Practise trading ideas without the risk! HelloStocker App nails it. I get as much virtual trading money as I want and can work on my skills without the fear of losing real cash. It's a safe playground for learning and gaining confidence in their smart technology."
+                             "Practise trading ideas without the risk! HelloStocker App nails it. They don't take any money from you, it's not about pushing you to trade now: it's about making sure you acquire the skillset and profit from it. I get as much virtual trading money as I want and can practice trading ideas without the fear of losing real cash. It's a safe playground for learning and gaining confidence in their AI technology."
                               <br></br>
                               <br></br>
                          <b>  Maxime Lonné
