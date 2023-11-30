@@ -150,12 +150,12 @@ const Testimonial = ({
                              <br></br>
 
                              <br></br>
-                             I can't wait for boring emails and reports...
+                             I can't wait for boring emails newsletters and reports...
                               <br></br>
-                              I get instant suggestions and replies, when I'm free, right away.
+                              With HelloStocker AI advisor, I get instant suggestions and replies, when I'm free, right away.
                              <br></br>
-                          HelloStocker App is my time saving hero.
-                              <br></br>I don't wait weeks for email replies: HelloStocker has a ChatGPT advisor like instant messaging system.
+                                My time saving hero.
+                              <br></br>I don't wait weeks for email replies: their advisor sends me instant replies.
                               <br></br>Time is money, especially in investing and trading.
 
                               <br></br>
@@ -346,7 +346,7 @@ const Testimonial = ({
                               <br></br>I can access the AI data and verify how investment decisions are made.
                               <br></br>Transparency like this builds trust.
                               <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
-                               <br></br>With HelloStocker you save time and cash on profits.
+                                <br></br>With HelloStocker you save time and increase profits.
                               <br></br>I use the app everyday I recommend!
                               <br></br>
                               <br></br>
