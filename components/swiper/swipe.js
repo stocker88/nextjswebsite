@@ -80,12 +80,11 @@ export default function Swipe() {
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                                 - 99% of Hedge Funds test strategies virtually first
                                 <br></br>
-                                - We don't ask anything from you
-                                <br></br>
                                 - You receive unlimited money to practice in a safe virtual reality simulator
                                 <br></br>
                                 - We use your virtual positions to tell you when to sell
                                 <br></br>
+                                - We will never ask you to trade or open an account
 
                                 <br></br>
                 </p>
