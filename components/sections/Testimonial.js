@@ -55,7 +55,7 @@ const Testimonial = ({
                               <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
                              <br></br>
                              They don't make money by pushing me to trade, they make money by advising me and helping me out. It makes a HUUUUGEEEE difference.
-                              Compared to other apps that push me to trade and buy fast, HelloStocker tells me when to sell.
+                              Compared to other apps, HelloStocker also tells me when to sell.
                               <br></br>
                               They have no direct interests in having me trade with my money.
                               <br></br>They take only $5 a month to advise me.
