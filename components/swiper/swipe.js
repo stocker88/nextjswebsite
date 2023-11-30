@@ -68,10 +68,11 @@ export default function Swipe() {
         </div>
         </div>
         </center>
+
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        We Guarantee Your Success With Virtual Trading
+        Your Success Is Guaranteed With Virtual Trading
       </h2>
 <br></br>
   <div className="split-item">
