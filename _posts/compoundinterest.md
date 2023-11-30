@@ -12,16 +12,16 @@ ogImage:
 ---
 
 **If you save $10 a day:**
-- in 10 years, you will have **$36,000**
-- in 20 years, you will have **$90,000**
+\- in 10 years, you will have **$36,000**
+\- in 20 years, you will have **$90,000**
 
 **If you save $10 a day, and invest it with 10% return:**
-- in 10 years, you will have **$62,000**
-- in 20 years, you will have **$600,000!**
+\- in 10 years, you will have **$62,000**
+\- in 20 years, you will have **$600,000!**
 
 **If you save $20 (not $10) a day, and invest it with 10% return:**
-- in 10 years, you will have **$160,000**
-- in 20 years, you will have **$2,000,000!**
+\- in 10 years, you will have **$160,000**
+\- in 20 years, you will have **$2,000,000!**
 
 
 You would be surprised to know how many high income earners making over $100,000 are living pay check to pay check because they have no money management skills.
@@ -85,31 +85,31 @@ There is no easy trick without a mathematical formula, you don’t need to be a 
 
 Compounding is like a snowball effect for your money.
 
-- You start with some money, say $100.
+\- You start with some money, say $100.
 
-- You invest it, and it earns you more money over time, let's say $5.
+\- You invest it, and it earns you more money over time, let's say $5.
 
-- Instead of taking that $5 out, you leave it with your original $100.
+\- Instead of taking that $5 out, you leave it with your original $100.
 
-- Now, your total is $105, and your next earnings are calculated based on this larger amount.
+\- Now, your total is $105, and your next earnings are calculated based on this larger amount.
 
-- This keeps happening, and your money keeps growing faster and faster.
+\- This keeps happening, and your money keeps growing faster and faster.
 
-- It makes your wealth grow exponentially.
+\- It makes your wealth grow exponentially.
 
 ![](/assets/blog/millionnairescience/snowball.png)
 
 **If you save $10 a day:**
-- in 10 years, you will have **$36,000**
-- in 20 years, you will have **$90,000**
+\- in 10 years, you will have **$36,000**
+\- in 20 years, you will have **$90,000**
 
 **If you save $10 a day, and invest it with 10% return:**
-- in 10 years, you will have **$62,000**
-- in 20 years, you will have **$600,000**
+\- in 10 years, you will have **$62,000**
+\- in 20 years, you will have **$600,000**
 
 **If you save $20 a day, and invest it with 15% return:**
-- in 10 years, you will have **$160,000**
-- in 20 years, you will have **$2,000,000**
+\- in 10 years, you will have **$160,000**
+\- in 20 years, you will have **$2,000,000**
 
 Compound growth is like a money-making snowball that gets bigger as it rolls, thanks to the money it picks up along the way.
 

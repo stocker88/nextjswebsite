@@ -42,8 +42,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/fabien.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -178,7 +178,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 120+ Hours of Investing Research per Month </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 130+ Hours of Investing Research per Month </b>
                              <br></br>
 
                              <br></br>
@@ -264,7 +264,7 @@ const Testimonial = ({
                             </p>
 
                            </a>
-, <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b4120/' target="_blank" >
+, <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b4130/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/charles.webp'
                            alt="Features tile icon 06"
