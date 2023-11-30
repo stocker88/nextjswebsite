@@ -87,10 +87,9 @@ const Testimonial = ({
                            Most platforms and newsletters push me to trade fast with my real money.
                         <br></br>Trading is how they profit from you: they need you to trade.
                          <br></br>If it goes down you're left alone with your losses.
-                         <br></br>HelloStocker cares about helping me grow my wealth.
-                         <br></br> They don't make money when I trade, they don't manage money.
+                         <br></br>HelloStocker App doesn't make money when I trade, they don't manage money.
                          <br></br>It costs $5 monthly subscription, and that's it.
-                         <br></br>They want me to be happy so I can stay with them forever.
+                         <br></br>HelloStocker AI advisor cares about making me grow my wealth so I can stay with them forever.
                               <br></br>
                               <br></br>
                          <b>  Jerome Hagege
@@ -118,7 +117,7 @@ const Testimonial = ({
                               <br></br>
                              <br></br>
                              I wanted dividend stocks for passive income.
-                              HelloStocker sent me recommendations well explained and straight to the point.
+                              HelloStocker AI trading advisor sent me stock recommendations well explained and straight to the point.
                              <br></br>
                              Finally financial advises that don't require a finance degree...
                              <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
@@ -156,7 +155,7 @@ const Testimonial = ({
                               I get instant suggestions and replies, when I'm free, right away.
                              <br></br>
                           HelloStocker App is my time saving hero.
-                              <br></br>I don't wait weeks for email replies: HelloStocker has a ChatGPT like instant messaging system.
+                              <br></br>I don't wait weeks for email replies: HelloStocker has a ChatGPT advisor like instant messaging system.
                               <br></br>Time is money, especially in investing and trading.
 
                               <br></br>
@@ -218,10 +217,10 @@ const Testimonial = ({
                              <br></br>
                              No more complicated Bloomberg terminals!
                               <br></br>
-                              HelloStocker is the way to go: ChatGPT of investing.
+                              HelloStocker App is the way to go: ChatGPT advisor of investing.
                               <br></br>They make it easy to navigate the stock market universe.
                               <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
-                              <br></br>It's easy to make money when the market goes up, but not as easy to beat the sp500 market...
+                              <br></br>It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market...
                                <br></br>HelloStocker AI solved it💸!
                               <br></br>
                               <br></br>
@@ -249,10 +248,10 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                               <br></br>
                              <br></br>
-                             HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
+                             HelloStocker trading community is a goldmine! Top investors and hedge fund members have given me financial insights and great connections.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
                               <br></br>They have my long term interests in mind and help me train with their tools.
-                              <br></br>eToro became a naughty mess they should 1) rethink their UX and 2) get rid of all these influencers who want to make money by pushing you to buy anything fast.
+                              <br></br>eToro became a naughty mess they should 1) rethink their UX and 2) get rid of influencers who make money by pushing you to buy any stock or crypto.
                               <br></br>
                               <br></br>
                          <b>  Charles Elie Labroy
@@ -281,9 +280,9 @@ const Testimonial = ({
                              <br></br>
                              It's not about investing...
                               <br></br>it's about building wealth, and making it constantly grow.
-                              <br></br>I don't just 'realise profits': I track how much I make over the sp500.
-                              <br></br>Making money is easy when everything goes up.
-                              <br></br>Making more money than others and beating the sp500 market is the real way to go, well done team!
+                              <br></br>I don't just 'realise profits': I track how well my stocks do over the sp500.
+                              <br></br>Finding stocks that go up is easy when everything goes up.
+                              <br></br>Finding better trades than others and beating the sp500 market is the real way to go!
                               <br></br>
                               <br></br>
                          <b>  Kanishk Budhia
@@ -313,7 +312,8 @@ const Testimonial = ({
                              Practise trading ideas without the risk! HelloStocker App nails it.
                              <br></br>They don't take money from you, it's not about trading!
                               <br></br>It's about making sure you acquire the skillset and profit from it.
-                              <br></br>I get as much virtual trading money as I want and can practice investing ideas without the fear of losing real cash.
+                              <br></br>I get as much virtual money as I want.
+                              <br></br>They have a virtual reality trading platform so you can practice investing ideas without the fear of losing cash.
                               <br></br>It's a safe playground for learning and gaining confidence in their AI technology.
                               <br></br>
                               <br></br>
@@ -342,8 +342,8 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                               <br></br>
                              <br></br>
-                             HelloStocker AI doesn't hide a thing.
-                              <br></br>I can access the AI data and verify how decisions are made.
+                             HelloStocker AI tips don't hide a thing.
+                              <br></br>I can access the AI data and verify how investment decisions are made.
                               <br></br>Transparency like this builds trust.
                               <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
                                <br></br>With HelloStocker you save time and cash on profits.
