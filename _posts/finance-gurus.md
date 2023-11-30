@@ -107,7 +107,7 @@ Because I don't live in Dubai.
 
 I have a LinkedIn profile, my name is public.
 
-
+* \- [Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/){style={{color:'blue'}}}
 [Click here to see my LinkedIn]: https://www.linkedin.com/in/anesshusseinali/
 
 **If I scam you I can't escape.**
