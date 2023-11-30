@@ -229,7 +229,7 @@ const Testimonial = ({
                           </>></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
 
-                              <b style={{color:'#00f75f'}}> Join a Pro Community of Investors </b>
+                              <b style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                              <br></br>
                              "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
