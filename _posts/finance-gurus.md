@@ -8,7 +8,7 @@ author:
     name: HelloStocker AI
     picture: '/assets/blog/authors/stocker.png'
 ogImage:
-    url: '/assets/blog/attribution/performance_attribution.webp'
+    url: '/assets/blog/financial-gurus/how finance gurus make money.webp.webp'
 ---
 
 
