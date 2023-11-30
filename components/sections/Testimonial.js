@@ -234,7 +234,7 @@ const Testimonial = ({
                              "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
                               <br></br>They have my long term interests in mind and help me train with their tools.
-                              <br></br>eToro became a naughty mess they should rethink their UX and get rid of all these influencers who want to make money by pushing you to buy anything now."
+                              <br></br>eToro became a naughty mess they should 1) rethink their UX and 2) get rid of all these influencers who want to make money by pushing you to buy anything fast."
                               <br></br>
                               <br></br>
                          <b>  Charles Elie Labroy
