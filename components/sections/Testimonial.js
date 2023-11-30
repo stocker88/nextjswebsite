@@ -119,7 +119,7 @@ const Testimonial = ({
                              I wanted dividend stocks for passive income.
                               HelloStocker AI trading advisor sent me stock recommendations well explained and straight to the point.
                              <br></br>
-                             Finally financial advises that don't require a finance degree...
+                             Finally financial advises that don't require a finance degree💪
                              <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
                               <br></br>They have a user friendly ChatGPT like interface.
                              <br></br>No more financial jargon Harvard show off.
