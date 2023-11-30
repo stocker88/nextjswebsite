@@ -54,9 +54,8 @@ const Testimonial = ({
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                               <br></br>
-                             <br></br>
-                               Your personal genie available 24/7!
                               <br></br>HelloStocker tailors recommendations to match my preferences.
+                              <br></br>Your personal genie available 24/7!
                               <br></br>It's not just about stocks; it's about the right stocks for me.
                               <br></br>I made plenty of money, sure gains, no rush, and it feels good!
                               <br></br>
@@ -86,10 +85,12 @@ const Testimonial = ({
                               <br></br>
                              <br></br>
                            Most platforms and newsletters push me to trade fast with my real money.
-                        <br></br>They make me buy things because this is how they generate their revenues.
+                        <br></br>Trading is how other trading apps make money: they need me to trade.
                          <br></br>If my trading goes down I'm left alone with my losses.
-                         <br></br>HelloStocker cares about advising me and helping me grow my wealth.
-                         <br></br>They won't leave me, they take a $5 monthly subscription, so they want to keep me happy forever.
+                         <br></br>HelloStocker cares about helping me grow my wealth.
+                         <br></br> They don't make money when I trade, they want me to be rich.
+                         <br></br>It costs $5 monthly subscription, and that's it.
+                         <br></br>They want me to be happy so I can stay with them forever.
                               <br></br>
                               <br></br>
                          <b>  Jerome Hagege
