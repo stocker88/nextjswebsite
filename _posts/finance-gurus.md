@@ -47,6 +47,8 @@ In this article we will:
 
 ## **How Trading Gurus Get Paid**
 
+![](/assets/blog/financial-gurus/how_trading_gurus_make_money.webp)
+
 10 steps:
 
 \-**1) They give you free trading courses**
@@ -68,8 +70,6 @@ In this article we will:
 \-**9) They just got paid $600 - done.**
 
 \-**10) Wait I forgot - now they want you to bring your friend.**
-
-![](/assets/blog/financial-gurus/how_trading_gurus_make_money.webp)
 
 They get paid $600 when they convince you to trade!
 
