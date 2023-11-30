@@ -20,7 +20,7 @@ Investing for Goldman Sachs Asset Management office in New York City.
 
 Managing my own multi billion dollars book on Kerviel's ex trading desk.
 
-Building automated analytics for Bank of America's trading floor in London.
+Building automated trading for Bank of America in London.
 
 **One thing I learnt from my 15 years in investing?**
 
@@ -36,34 +36,34 @@ Building automated analytics for Bank of America's trading floor in London.
  
 In this article we will:
 
-\1) Cover how finance gurus make money
+**1)** Cover how finance gurus make money
 
-\2) Use their weakness to differentiate genuine advisors from scammers!
+**2)** Use their weakness to differentiate genuine advisors from scammers!
 
 
 ## **How Trading Gurus Get Paid**
 
 In 10 short steps:
 
-\1) They give you free trading courses
+**1)** They give you free trading courses
 
-\2) They show you how rich they are
+**2)** They show you how rich they are
 
-\3) They make you believe you can see them trade live
+**3)** They make you believe you can see them trade live
 
-\4) And even if they do, you won't see ALL their trades 
+**4)** And even if they do, you won't see ALL their trades 
 
-\5) They convince you it works and push you to trade
+**5)** They convince you it works and push you to trade
 
-\6) They offer to give you $200 if you start trading with them
+**6)** They offer to give you $200 if you start trading with them
 
-\7) You open an account with their affiliate broker and deposit $1,000
+**7)** You open an account with their affiliate broker and deposit $1,000
 
-\8) Their affiliate pays them $600
+**8)** Their affiliate pays them $600
 
-\9) They just got paid $600 - done.
+**9)** They just got paid $600 - done.
 
-#10) Wait I forgot - now they want you to bring your friend.
+**10**) Wait I forgot - now they want you to bring your friend.
 
 
 They get paid $600 when they convince you to trade!
