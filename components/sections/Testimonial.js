@@ -85,7 +85,7 @@ const Testimonial = ({
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                               <br></br>
                              <br></br>
-                             "Your personal genie available 24/7!
+                             Your personal genie available 24/7!
                              <br></br>HelloStocker tailors recommendations to match my preferences.
                              <br></br>It's not just about stocks; it's about the right stocks for me.
                              <br></br>I made plenty of money, sure gains, no rush, and it feels good!
@@ -115,11 +115,11 @@ const Testimonial = ({
                               <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                               <br></br>
                              <br></br>
-                             "I wanted dividend stocks for passive income and received a clear reply straight to the point.
+                             I wanted dividend stocks for passive income and received a clear reply straight to the point.
                              <br></br>
                              Finally financial advises that don't require a finance degree...
                              <br></br>HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT model interface.
-                             <br></br>No more financial jargon."
+                             <br></br>No more financial jargon.
                               <br></br>
                               <br></br>
                          <b>  Fabien Nieto
@@ -145,8 +145,8 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
-                             HelloStocker App my time-saver hero!
                              <br></br>
+                             HelloStocker App my time-saver hero!
                              <br></br>
                              Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
                              <br></br>Time is money, especially in investing and trading.
