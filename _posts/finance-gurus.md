@@ -112,7 +112,7 @@ I have a LinkedIn profile, my name is public.
 <pre><code>
 <a href=https://www.linkedin.com/in/anesshusseinali/> https://www.linkedin.com/in/anesshusseinali/ </a>
 </code></pre>
-[https://www.linkedin.com/in/anesshusseinali/]: https://www.linkedin.com/in/anesshusseinali/
+[Click here to see my LinkedIn]: https://www.linkedin.com/in/anesshusseinali/
 
 **If I scam you I can't escape.**
 
