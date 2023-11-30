@@ -1,4 +1,3 @@
-const ReactMarkdown = require('react-markdown/with-html')
 ---
 title: 'How Finance Gurus Make Money'
 excerpt: 'Ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
