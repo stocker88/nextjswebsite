@@ -16,19 +16,23 @@ Ever wondered how financial gurus get paid?
 
 I worked 15 years as a trader.
 
-Investing for Goldman Sachs Asset Management office in New York.
+Investing for Goldman Sachs Asset Management office in New York City.
 
-Managing my own multi billion dollar book on ex-Kerviel's trading desk.
+Managing my own multi billion dollars book on Kerviel's ex trading desk.
 
 Building automated analytics for Bank of America's trading floor in London.
 
 **One thing I learnt from my 15 years in investing?**
 
-There is no money magician.
+**There is no money magician.**
 
-No genie will turn you $1 into $10 in 2 months.
+**You can't dig gold out of air.**
 
-But there is a smart way to make money.
+**Jesus Christ doesn't trade yet.**
+
+**No genie will turn your $1 into $100 in 30 days.**
+
+**But there is a smart way to make money.**
  
 In this article we will:
 
