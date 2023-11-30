@@ -158,7 +158,7 @@ const Testimonial = ({
                           HelloStocker App is my time saving hero.
                               <br></br>I don't wait weeks for email replies: HelloStocker has a ChatGPT like instant messaging system.
                               <br></br>Time is money, especially in investing and trading.
-                             
+
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
@@ -307,7 +307,7 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for learning </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
                               <br></br>
                              <br></br>
                              Practise trading ideas without the risk! HelloStocker App nails it.
