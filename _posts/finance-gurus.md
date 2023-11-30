@@ -164,7 +164,7 @@ Well I know, scammer.
 
 Ok show me on HelloStocker then.
 
-(go back to 1)
+Go back to 1!
 
 \- 'I will show you how on telegram'
 
@@ -172,7 +172,7 @@ There is no virtual trading on telegram
 
 \- 'I show you with my broker'
 
-Go back to 1
+Go back to 1!
 
 \- 'I don't have time for you, I would rather go scam someone who trusts me'
 
