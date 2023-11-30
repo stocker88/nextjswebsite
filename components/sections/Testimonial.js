@@ -341,12 +341,12 @@ const Testimonial = ({
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                               <br></br>
-                             <br></br>
-                             HelloStocker AI tips don't hide a thing.
+                             <br></br>Transparency like this builds trust.
                               <br></br>I can access the AI data and verify how investment decisions are made.
-                              <br></br>Transparency like this builds trust.
+
+                              <br></br>
+                                                           HelloStocker AI tips don't hide a thing.
                               <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
-                                <br></br>With HelloStocker you save time and increase profits.
                               <br></br>I use the app everyday I recommend!
                               <br></br>
                               <br></br>
