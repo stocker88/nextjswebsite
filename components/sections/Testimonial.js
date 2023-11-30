@@ -52,13 +52,13 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Sell </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                               <br></br>
-                             <br></br>Most platforms and newsletters push me to trade fast with my real money.
-                             <br></br>They make me buy things because this is how they generate their revenues.
-                              <br></br>If my trading goes down I'm left alone with my losses.
-                              <br></br>HelloStocker cares about advising me and helping me grow my wealth.
-                              <br></br>They won't leave me, they take a $5 monthly subscription, so they want to keep me happy forever.
+                             <br></br>
+                               Your personal genie available 24/7!
+                              <br></br>HelloStocker tailors recommendations to match my preferences.
+                              <br></br>It's not just about stocks; it's about the right stocks for me.
+                              <br></br>I made plenty of money, sure gains, no rush, and it feels good!
                               <br></br>
                               <br></br>
                          <b>  Adrien Chenin
@@ -82,13 +82,14 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Sell </b>
                               <br></br>
                              <br></br>
-                             Your personal genie available 24/7!
-                             <br></br>HelloStocker tailors recommendations to match my preferences.
-                             <br></br>It's not just about stocks; it's about the right stocks for me.
-                             <br></br>I made plenty of money, sure gains, no rush, and it feels good!
+                           Most platforms and newsletters push me to trade fast with my real money.
+                        <br></br>They make me buy things because this is how they generate their revenues.
+                         <br></br>If my trading goes down I'm left alone with my losses.
+                         <br></br>HelloStocker cares about advising me and helping me grow my wealth.
+                         <br></br>They won't leave me, they take a $5 monthly subscription, so they want to keep me happy forever.
                               <br></br>
                               <br></br>
                          <b>  Jerome Hagege
