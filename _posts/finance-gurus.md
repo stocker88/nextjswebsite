@@ -12,7 +12,7 @@ ogImage:
 ---
 
 
-Ever wondered how financial gurus get paid?
+💸Ever wondered how financial gurus get paid?
 
 &nbsp;
 
@@ -38,27 +38,27 @@ Building automated trading for Bank of America in London.
 
 &nbsp;
 
-**One thing I learnt from my 15 years in investing?**
+**📚One thing I learnt from my 15 years in investing?**
 
 &nbsp;
 
-\- **There is no money magician.**
+\- **🦄There is no money magician.**
 
 &nbsp;
 
-\- **You can't dig gold out of air.**
+\- **🙄You can't dig gold out of air.**
 
 &nbsp;
 
-\- **Jesus Christ doesn't trade yet.**
+\- **💀Jesus Christ doesn't trade yet.**
 
 &nbsp;
 
-\- **No genie will turn your $1 into $100 in 30 days.**
+\- **🧞No genie will turn your $1 into $100 in 30 days.**
 
 &nbsp;
 
-\- **But there is a smart way to make money.**
+\- **🧠But there is a smart way to make money.**
 
 &nbsp;
 
@@ -70,7 +70,7 @@ In this article we will:
 
 &nbsp;
 
-\-**1)** Cover how finance gurus make money
+\-**1)** Explain how finance gurus make money
 
 &nbsp;
 
@@ -99,11 +99,11 @@ In this article we will:
 
 &nbsp;
 
-**2) They show you how rich they are**
+**2) 🚘They show you how rich they are**
 
 &nbsp;
 
-**3) They make you believe you see them trade live**
+**3) 📈They make you believe you see them trade live**
 
 &nbsp;
 
@@ -111,7 +111,7 @@ In this article we will:
 
 &nbsp;
 
-**5) They convince you it works and push you to trade**
+**5) ✅They convince you it works and push you to trade**
 
 &nbsp;
 
@@ -119,19 +119,19 @@ In this article we will:
 
 &nbsp;
 
-**7) You open an account with their affiliate broker and deposit $1,000**
+**7) 🚀You open an account with their affiliate broker and deposit $1,000**
 
 &nbsp;
 
-**8) Their affiliate pays them $600**
+**8) 🧐Their affiliate pays them $600**
 
 &nbsp;
 
-**9) They just got paid $600 - done.**
+**9) 💸They just got paid $600 - done.**
 
 &nbsp;
 
-**10) Wait I forgot - now they want you to bring your friend.**
+**10) 💀Wait I forgot - now they want you to bring your friend.**
 
 &nbsp;
 
@@ -155,9 +155,20 @@ That's $600,000 a month:
 
 &nbsp;
 
+BINGO
+
+&nbsp;
+
+This is how they make money with trading!
+
+&nbsp;
+
+Not with their trading, with yours.
+
 &nbsp;
 
 &nbsp;
+
 
 ### **Pretty good business isn't it?**
 
@@ -169,11 +180,13 @@ They show you their lamborghini.
 
 &nbsp;
 
-And they make you believe they made this money with trading.
+&nbsp;
+
+**Meanwhile you lose your $1,000** 
 
 &nbsp;
 
-**But what happens when you lose your $1,000?** 
+What happens then?
 
 &nbsp;
 
@@ -255,56 +268,56 @@ You can follow these 2 steps:
 
 &nbsp;
 
-\- 'But why HelloStocker? I already have my setup'
+❌\- 'But why HelloStocker? I already have my setup'
 
 &nbsp;
 
-Because HelloStocker is not your broker.
-
-&nbsp;
-
-&nbsp;
-
-
-\- 'But I already trade live'
-
-&nbsp;
-
-How do we know it's actually live?
-
-
-How do we know we see all your trades?
-
-
-How do we track your real profits?
+✅Because HelloStocker is not your broker.
 
 &nbsp;
 
 &nbsp;
 
 
-\- 'I don't want to put money in this app'
+❌\- 'But I already trade live'
 
 &nbsp;
 
-HelloStocker doesn't take money.
+✅How do we know it's actually live?
 
 
-It gives you free virtual money - as much as you want.
+✅How do we know we see all your trades?
+
+
+✅How do we track your real profits?
 
 &nbsp;
 
 &nbsp;
 
-\- 'I don't have time for you'
+
+❌\- 'I don't want to put money in this app'
+
+&nbsp;
+
+✅HelloStocker doesn't take money.
+
+
+✅It gives you free virtual money - as much as you want.
+
+&nbsp;
+
+&nbsp;
+
+❌\- 'I don't have time for you'
 
 &nbsp;  
 
-\- 'I would rather go scam someone who trusts me'
+❌\- 'I would rather go scam someone who trusts me'
 
 &nbsp;
 
-Well I know, scammer -> share the link in his comments.
+✅Well I know, scammer -> share the link in his comments.
 
 &nbsp;
 
@@ -317,37 +330,37 @@ Well I know, scammer -> share the link in his comments.
 
 &nbsp;
 
-\- 'I make money with trading'
+❌\- 'I make money with trading'
 
 &nbsp;
 
-Ok show me on HelloStocker then.
+✅Ok show me on HelloStocker then.
 
 &nbsp;
 
-\- 'I will show you how on telegram'
+❌\- 'I will show you how on telegram'
 
 &nbsp;
 
-There is no virtual trading on telegram
+✅There is no virtual trading on telegram
 
 &nbsp;
 
-\- 'I show you with my broker'
+❌\- 'I show you with my broker'
 
 &nbsp;
 
-Go back to point A)...
+✅Go back to point A)...
 
 &nbsp;
 
-\- 'I don't have time for you' 
+❌\- 'I don't have time for you' 
 
-\- 'I would rather scam someone who trusts me'
+❌\- 'I would rather scam someone who trusts me'
 
 &nbsp;
 
-Well I know, scammer.
+✅Well I know, scammer.
 
 &nbsp;
 
@@ -366,37 +379,37 @@ Well I know, scammer.
 
 &nbsp;
 
-We charge $10 a month for premium features.
+✅We charge $10 a month for premium features.
 
 &nbsp;
 
-You get Apple Store and Google Play 1 week free trial.
+✅You get Apple Store and Google Play 1 week free trial.
 
 &nbsp;
 
-There is also a freemium plan.
+✅There is also a freemium plan.
 
 &nbsp;
 
-And you won't get scammed.
+✅And you won't get scammed.
 
 &nbsp;
 
-If you are unhappy, you call us.
+✅If you are unhappy, you call us.
 
 &nbsp;
 
-Our interests is not to make you trade.
+✅Our interests is not to make you trade.
 
 &nbsp;
 
-We will never ask you to invest with any of our partner.
+✅We will never ask you to invest with any of our partner.
 
 &nbsp;
 
 &nbsp;
 
-Our interests is to make your wealth and money grow.
+✅Our interests is to make your wealth and money grow.
 
 &nbsp;
 
@@ -406,7 +419,7 @@ The more money you have, the more this $10 fee becomes peanuts.
 
 &nbsp;
 
-We want to keep you with us forever.
+✅We want to keep you with us forever.
 
 &nbsp;
 
@@ -505,41 +518,41 @@ That's why so many people subscribed already.
 
 &nbsp;
 
-Buying a stock costs minimum $5 in transaction fee.
+❌Buying a stock costs minimum $5 in transaction fee.
 
 &nbsp;
 
-Selling a stock costs minimum $5 in transaction fee. 
+❌Selling a stock costs minimum $5 in transaction fee. 
 
 &nbsp;
 
-That's already $10, for one trade!
-
-&nbsp;
-
-&nbsp;
-
-Your Starbucks Frappuccino costs $12.
+❌That's already $10, for one trade!
 
 &nbsp;
 
 &nbsp;
 
-HelloStocker costs $10.
+❌Your Starbucks Frappuccino costs $12.
 
 &nbsp;
 
-And we teach you how to make your wealth grow.
+&nbsp;
+
+✅HelloStocker costs $10.
 
 &nbsp;
 
-Without having any interest in having you invest.
+✅And we teach you how to make your wealth grow.
 
 &nbsp;
 
-And without making any hidden revenues on you deciding to trade or not.
+✅Without having any interest in having you invest.
 
 &nbsp;
 
-We don't push you to trade, we push you to learn and get better.
+✅And without making any hidden revenues on you deciding to trade or not.
+
+&nbsp;
+
+✅We don't push you to trade, we push you to learn and get better.
 
