@@ -38,10 +38,9 @@ const Testimonial = ({
 
 {[
 
-<a href='https://www.linkedin.com/in/adrien-chenin-306b6131/' target="_blank" >
-                         
+<a href='https://www.linkedin.com/in/fabienns/' target="_blank" >
                          <center><Image
-                           src='/assets/images/testimonies/adrien.webp'
+                           src='/assets/images/testimonies/fabien.webp'
                            alt="Features tile icon 06"
                            width={120}
                            height={120}
@@ -52,21 +51,25 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                               <br></br>
-                              <br></br>HelloStocker tailors recommendations to match my preferences.
-                              <br></br>Your personal genie available 24/7!
-                              <br></br>It's not just about stocks; it's about the right stocks for me.
-                              <br></br>I made plenty of money, sure gains, no rush, and it feels good!
+                             <br></br>
+                             I wanted dividend stocks for passive income.
+                              HelloStocker AI trading advisor sent me stock recommendations well explained and straight to the point.
+                             <br></br>
+                             Finally financial advises that don't require a finance degree💪
+                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
+                              <br></br>They have a user friendly ChatGPT like interface.
+                             <br></br>No more financial jargon Harvard show off.
                               <br></br>
                               <br></br>
-                         <b>  Adrien Chenin
-                           <br></br>
-                           Quantitative Researcher @ Millenium Hedge Fund   </b> 
+                         <b>  Fabien Nieto
+                                                   <br></br>
+                                                   CEO & Founder @ SEO Marketing Agency   </b>
 
 
                             </p>
-                         
+
                            </a>
 , <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
                          <center><Image
@@ -100,39 +103,36 @@ const Testimonial = ({
                             </p>
                          
                            </a>
-, <a href='https://www.linkedin.com/in/fabienns/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/fabien.webp'
-                           alt="Features tile icon 06"
-                           width={120}
-                           height={120}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+, <a href='https://www.linkedin.com/in/adrien-chenin-306b6131/' target="_blank" >
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
-                              <br></br>
+                           <center><Image
+                             src='/assets/images/testimonies/adrien.webp'
+                             alt="Features tile icon 06"
+                             width={120}
+                             height={120}
+                             style={{
+                             'borderRadius': '45px 45px 45px 45px',
+                             'border': '2px solid rgba(255, 255, 255, 1)'
+                             }}
+                            /></center>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                                <br></br>
+                                <br></br>HelloStocker tailors recommendations to match my preferences.
+                                <br></br>Your personal genie available 24/7!
+                                <br></br>It's not just about stocks; it's about the right stocks for me.
+                                <br></br>3 digit profits, no rush, it feels good!
+                                <br></br>
+                                <br></br>
+                           <b>  Adrien Chenin
                              <br></br>
-                             I wanted dividend stocks for passive income.
-                              HelloStocker AI trading advisor sent me stock recommendations well explained and straight to the point.
-                             <br></br>
-                             Finally financial advises that don't require a finance degree💪
-                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
-                              <br></br>They have a user friendly ChatGPT like interface.
-                             <br></br>No more financial jargon Harvard show off.
-                              <br></br>
-                              <br></br>
-                         <b>  Fabien Nieto
-                                                   <br></br>
-                                                   CEO & Founder @ SEO Marketing Agency   </b> 
+                             Quantitative Researcher @ Millenium Hedge Fund   </b>
 
 
-                            </p>
-                         
-                           </a>
+                              </p>
+
+                             </a>
 , <a href='https://www.linkedin.com/in/felix-revert-00998852/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/felix.webp'
