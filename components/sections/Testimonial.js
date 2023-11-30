@@ -53,11 +53,11 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'400px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
-                             <br></br>
-                             They don't make money by pushing me to trade, they make money by advising me and helping me out. It makes a HUUUUGEEEE difference.
-                              Compared to other apps, HelloStocker also tells me when to sell.
-                              <br></br>
-                              They have no direct interests in having me trade.
+                             <br></br>They don't make money by pushing me to trade.
+                              <br></br>They care about advising me and helping me out.
+                               <br></br>It makes a HUUUUGEEEE difference.
+                              <br></br> They have no direct interests in pushing me to trade unless I can profit from it.
+                              <br></br>Compared to most of 'financial gurus', HelloStocker often notifies me when to Sell!
                               <br></br>They have interests in keeping me happy by making my wealth grow forever.."
                               <br></br>
                               <br></br>
