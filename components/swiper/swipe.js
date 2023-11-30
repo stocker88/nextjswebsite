@@ -83,7 +83,7 @@ export default function Swipe() {
                                 <br></br>
                                 - You receive unlimited money to practice in a safe virtual reality simulator
                                 <br></br>
-                                - We notify you when to sell
+                                - We use your virtual positions to tell you when to sell
                                 <br></br>
 
                                 <br></br>
@@ -163,12 +163,14 @@ export default function Swipe() {
 <br></br><br></br>
 <br></br><br></br>
 
-<center>
+
 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
         We Notify You When To Sell
       </h2>
-</center>
 
+
+<br></br><br></br>
+<br></br><br></br>
 <br></br><br></br>
 <br></br><br></br>
 <br></br><br></br>
