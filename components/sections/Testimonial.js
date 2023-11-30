@@ -71,7 +71,39 @@ const Testimonial = ({
                             </p>
 
                            </a>
-, <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
+, <a href='https://www.linkedin.com/in/maxime-lonn%C3%A9-b38a6829/' target="_blank" >
+                           <center><Image
+                             src='/assets/images/testimonies/maxime.webp'
+                             alt="Features tile icon 06"
+                             width={120}
+                             height={120}
+                             style={{
+                             'borderRadius': '45px 45px 45px 45px',
+                             'border': '2px solid rgba(255, 255, 255, 1)'
+                             }}
+                            /></center>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
+                                <br></br>
+                               <br></br>
+                               Practise trading ideas without the risk! HelloStocker App nails it.
+                               <br></br>They don't take money from you, it's not about trading!
+                                <br></br>It's about making sure you acquire the skillset and profit from it.
+                                <br></br>I get as much virtual money as I want.
+                                <br></br>They have a virtual reality trading platform so you can practice investing ideas without the fear of losing cash.
+                                <br></br>It's a safe playground for learning and gaining confidence in their AI technology.
+                                <br></br>
+                                <br></br>
+                           <b>  Maxime Lonné
+                             <br></br>
+                             Directeur Paid Media @ Eskimoz   </b>
+
+
+                              </p>
+
+                             </a>,
+                             <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/jerome.webp'
                            alt="Features tile icon 06"
@@ -293,38 +325,7 @@ const Testimonial = ({
                             </p>
                          
                            </a>
-, <a href='https://www.linkedin.com/in/maxime-lonn%C3%A9-b38a6829/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/maxime.webp'
-                           alt="Features tile icon 06"
-                           width={120}
-                           height={120}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
-
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
-                              <br></br>
-                             <br></br>
-                             Practise trading ideas without the risk! HelloStocker App nails it.
-                             <br></br>They don't take money from you, it's not about trading!
-                              <br></br>It's about making sure you acquire the skillset and profit from it.
-                              <br></br>I get as much virtual money as I want.
-                              <br></br>They have a virtual reality trading platform so you can practice investing ideas without the fear of losing cash.
-                              <br></br>It's a safe playground for learning and gaining confidence in their AI technology.
-                              <br></br>
-                              <br></br>
-                         <b>  Maxime Lonné
-                           <br></br>
-                           Directeur Paid Media @ Eskimoz   </b> 
-
-
-                            </p>
-                         
-                           </a>,
+,
 
                             <a href='https://www.linkedin.com/in/sachaberenfus/' target="_blank" >
                          <center><Image
