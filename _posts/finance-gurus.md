@@ -106,6 +106,8 @@ I have a LinkedIn profile, my name is public.
 
 **[Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
+<span style="color:blue">**[Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**</span>
+
 And I'm happy to meet up if you want to!
 
 I host meetups in New York, London, and Paris.
