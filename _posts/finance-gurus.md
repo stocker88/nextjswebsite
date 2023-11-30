@@ -81,10 +81,6 @@ That's $600,000 a month:
 
 Pretty good business isn't it?
 
-How do I know that? 
-
-I know a bunch of them.
-
 They show you their lamborghini.
 
 And they make you believe they made this money with trading.
