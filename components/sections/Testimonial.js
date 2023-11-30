@@ -117,10 +117,11 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                               <br></br>
                              <br></br>
-                             I wanted dividend stocks for passive income and received a clear reply straight to the point.
+                             I wanted dividend stocks for passive income.
+                              HelloStocker sent me recommendations well explained and straight to the point.
                              <br></br>
                              Finally financial advises that don't require a finance degree...
-                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT model interface.
+                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT like interface.
                              <br></br>No more financial jargon.
                               <br></br>
                               <br></br>
@@ -147,13 +148,14 @@ const Testimonial = ({
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 120+ Hours of Investing Research per Month </b>
                              <br></br>
-                             <br></br>
-                             HelloStocker App my time-saver hero!
+
                              <br></br>
                              Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
-                             <br></br>Time is money, especially in investing and trading.
-                              <br></br>I can't afford to wait a week for email replies.
-                             <br></br>Thanks to the virtual trading money they game me I got a sense of how biotech works, and made 3 digit real profits!
+                             <br></br>
+                          HelloStocker App my time-saver hero!
+                              <br></br>I can't afford to wait a week for email replies: I love their instant messaging system.
+                              <br></br>Time is money, especially in investing and trading.
+                             <br></br>The app gave me a clear sense of how the biotech sector works: I made a 3 digit profit.
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
@@ -180,9 +182,9 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
                              <br></br>
-                             Being ahead of the curve matters: time is money.
+                             Being ahead of the curve matters.
                              <br></br>HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on.
-                              <br></br>I get notifications directly on your phone: I receive the information faster.
+                              <br></br>I get notifications directly on my phone!
                                <br></br>That early advantage has made a real difference in my gains.
                                 <br></br>I perfectly timed Adobe, AMD & Workforce.
                               <br></br>
