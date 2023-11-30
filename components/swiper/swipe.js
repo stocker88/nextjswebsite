@@ -234,7 +234,7 @@ export default function Swipe() {
        - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
         <br></br>
         <br></br>
-        - Our mission: empower retail with financial growth
+        - Our Mission: empower retail with financial growth
         <br></br>
         <br></br>
         - Join an established financial network with advanced AI trading tools
