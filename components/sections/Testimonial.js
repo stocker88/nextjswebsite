@@ -40,7 +40,7 @@ const Testimonial = ({
 
 <a href='https://www.linkedin.com/in/adrien-chenin-306b6131/' target="_blank" >
                          
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/adrien.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -49,8 +49,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
                              <br></br>
@@ -70,7 +70,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/jerome.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -79,8 +79,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                              <br></br>
@@ -99,7 +99,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/fabienns/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/fabien.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -108,8 +108,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                              <br></br>
@@ -129,7 +129,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/felix-revert-00998852/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/felix.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -138,8 +138,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
@@ -158,7 +158,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/alexia-karolewicz-71a9b644/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/alexia.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -167,8 +167,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
@@ -188,7 +188,7 @@ const Testimonial = ({
                          
                            </a>
 ,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" > 
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/mehrad.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -197,8 +197,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                              <br></br>
@@ -217,7 +217,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b480/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/charles.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -226,8 +226,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Join a Pro Community of Investors </b>
                              <br></br>
@@ -246,7 +246,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/kanishk.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -255,8 +255,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                              <br></br>
@@ -274,7 +274,7 @@ const Testimonial = ({
                          
                            </a>
 , <a href='https://www.linkedin.com/in/maxime-lonn%C3%A9-b38a6829/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/maxime.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -283,8 +283,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
                              <br></br>
@@ -304,7 +304,7 @@ const Testimonial = ({
                            </a>,
 
                             <a href='https://www.linkedin.com/in/sachaberenfus/' target="_blank" >
-                         <Image
+                         <center><Image
                            src='/assets/images/testimonies/sacha.webp'
                            alt="Features tile icon 06"
                            width={74}
@@ -313,8 +313,8 @@ const Testimonial = ({
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
-                           />
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+                          </>></center>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , maxWidth:'400px'}}>
 
                               <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                              <br></br>
