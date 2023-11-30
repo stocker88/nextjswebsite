@@ -75,8 +75,8 @@ const Testimonial = ({
                            <center><Image
                              src='/assets/images/testimonies/maxime.webp'
                              alt="Features tile icon 06"
-                             width={120}
-                             height={120}
+                             width={130}
+                             height={130}
                              style={{
                              'borderRadius': '45px 45px 45px 45px',
                              'border': '2px solid rgba(255, 255, 255, 1)'
@@ -107,8 +107,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/jerome.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -129,19 +129,19 @@ const Testimonial = ({
                               <br></br>
                          <b>  Jerome Hagege
                            <br></br>
-                           Data Science Manager - NLP Research   </b> 
+                           Data Science Manager - NLP Research   </b>
 
 
                             </p>
-                         
+
                            </a>
 , <a href='https://www.linkedin.com/in/adrien-chenin-306b6131/' target="_blank" >
 
                            <center><Image
                              src='/assets/images/testimonies/adrien.webp'
                              alt="Features tile icon 06"
-                             width={120}
-                             height={120}
+                             width={130}
+                             height={130}
                              style={{
                              'borderRadius': '45px 45px 45px 45px',
                              'border': '2px solid rgba(255, 255, 255, 1)'
@@ -169,8 +169,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/felix.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -194,18 +194,18 @@ const Testimonial = ({
                               <br></br>
                          <b>  Felix Revert
                            <br></br>
-                           Product Manager Data Science   </b> 
+                           Product Manager Data Science   </b>
 
 
                             </p>
-                         
+
                            </a>
 , <a href='https://www.linkedin.com/in/alexia-karolewicz-71a9b644/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/alexia.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -225,18 +225,18 @@ const Testimonial = ({
                               <br></br>
                          <b>  Alexia Karolewicz
                            <br></br>
-                           Procurement Manager IP Acquisition   </b> 
+                           Procurement Manager IP Acquisition   </b>
 
 
                             </p>
-                         
+
                            </a>
-,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" > 
+,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/mehrad.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -258,18 +258,18 @@ const Testimonial = ({
                               <br></br>
                          <b>  Mehrad Oroudji
                                                    <br></br>
-                                                   Senior Non Linear Credit Trader   </b> 
+                                                   Senior Non Linear Credit Trader   </b>
 
 
                             </p>
-                         
+
                            </a>
 , <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b4120/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/charles.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -288,18 +288,18 @@ const Testimonial = ({
                               <br></br>
                          <b>  Charles Elie Labroy
                            <br></br>
-                           Machine Learning Software Developer @ Meta   </b> 
+                           Machine Learning Software Developer @ Meta   </b>
 
 
                             </p>
-                         
+
                            </a>
 , <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/kanishk.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -319,11 +319,11 @@ const Testimonial = ({
                               <br></br>
                          <b>  Kanishk Budhia
                            <br></br>
-                           CEO & Founder @ Solino Home   </b> 
+                           CEO & Founder @ Solino Home   </b>
 
 
                             </p>
-                         
+
                            </a>
 ,
 
@@ -331,8 +331,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/sacha.webp'
                            alt="Features tile icon 06"
-                           width={120}
-                           height={120}
+                           width={130}
+                           height={130}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
