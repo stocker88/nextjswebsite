@@ -57,8 +57,7 @@ const Testimonial = ({
                              They don't make money by pushing me to trade, they make money by advising me and helping me out. It makes a HUUUUGEEEE difference.
                               Compared to other apps, HelloStocker also tells me when to sell.
                               <br></br>
-                              They have no direct interests in having me trade with my money.
-                              <br></br>They take only $5 a month to advise me.
+                              They have no direct interests in having me trade.
                               <br></br>They have interests in keeping me happy by making my wealth grow forever.."
                               <br></br>
                               <br></br>
