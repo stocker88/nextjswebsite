@@ -182,7 +182,7 @@ export default function Swipe() {
         Speak with our CFA Advisor
          <br></br> ex Goldman Sachs and
          <br></br>Bank of America Trader
-        <br></br>  with over 15 years in investing
+        <br></br> with over 15 years in investing
       </h2>
         <br></br>
         <br></br>
