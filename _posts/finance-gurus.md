@@ -24,55 +24,55 @@ Building automated trading for Bank of America in London.
 
 **One thing I learnt from my 15 years in investing?**
 
-**There is no money magician.**
+\- **There is no money magician.**
 
-**You can't dig gold out of air.**
+\- **You can't dig gold out of air.**
 
-**Jesus Christ doesn't trade yet.**
+\- **Jesus Christ doesn't trade yet.**
 
-**No genie will turn your $1 into $100 in 30 days.**
+\- **No genie will turn your $1 into $100 in 30 days.**
 
-**But there is a smart way to make money.**
+\- **But there is a smart way to make money.**
  
 In this article we will:
 
-**1)** Cover how finance gurus make money
+\-**1)** Cover how finance gurus make money
 
-**2)** Use their weakness to differentiate genuine advisors from scammers!
+\-**2)** Use their weakness to differentiate genuine advisors from scammers!
 
 
 ## **How Trading Gurus Get Paid**
 
 In 10 short steps:
 
-**1)** They give you free trading courses
+\-**1)** They give you free trading courses
 
-**2)** They show you how rich they are
+\-**2)** They show you how rich they are
 
-**3)** They make you believe you can see them trade live
+\-**3)** They make you believe you can see them trade live
 
-**4)** And even if they do, you won't see ALL their trades 
+\-**4)** And even if they do, you won't see ALL their trades 
 
-**5)** They convince you it works and push you to trade
+\-**5)** They convince you it works and push you to trade
 
-**6)** They offer to give you $200 if you start trading with them
+\-**6)** They offer to give you $200 if you start trading with them
 
-**7)** You open an account with their affiliate broker and deposit $1,000
+\-**7)** You open an account with their affiliate broker and deposit $1,000
 
-**8)** Their affiliate pays them $600
+\-**8)** Their affiliate pays them $600
 
-**9)** They just got paid $600 - done.
+\-**9)** They just got paid $600 - done.
 
-**10**) Wait I forgot - now they want you to bring your friend.
+\-**10**) Wait I forgot - now they want you to bring your friend.
 
 
 They get paid $600 when they convince you to trade!
 
 If they get 1,000 people a month to trade...
 
-That's $600,000 a month.
+That's $600,000 a month:
 
-**$7,200,000 a year.**
+\-**$7,200,000 a year.**
 
 Pretty good business isn't it?
 
