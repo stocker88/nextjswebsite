@@ -66,6 +66,9 @@ In 10 short steps:
 \-**10**) Wait I forgot - now they want you to bring your friend.
 
 
+![](/assets/blog/financial-gurus/how trading gurus make money.webp)
+
+
 They get paid $600 when they convince you to trade!
 
 If they get 1,000 people a month to trade...
@@ -153,7 +156,7 @@ Or you trade virtually to show others what you are capable of.
 Well I know, scammer.
 
 
-### **2) Ask them how they make money
+### **2) Ask them how they make money**
 
 \- 'I make money with trading'
 
