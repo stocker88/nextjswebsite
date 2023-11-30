@@ -14,6 +14,8 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import { isMobile, browserName } from "react-device-detect";
 import NewsletterSignUp from '../formStocker'
 import Blog from "../sections/Blog";
+import IntroDownload from '../../components/introDownload';
+
 const propTypes = {
   ...SectionSplitProps.types
 }
