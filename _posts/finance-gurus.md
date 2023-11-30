@@ -113,12 +113,12 @@ You can follow these 2 steps:
 
 # **1) Ask the influencer you trust so much to trade live in HelloStocker **
 
-#- 'But why HelloStocker? I already have my setup'
+-- 'But why HelloStocker? I already have my setup'
 
 Because HelloStocker is not your broker.
 
 
-#- 'But I already trade live'
+-- 'But I already trade live'
 
 How do we know it's actually live?
 
@@ -127,7 +127,7 @@ How do we know we see all your trades?
 How do we track your real profits?
 
 
-#- 'I don't want to put money in this app'
+-- 'I don't want to put money in this app'
 
 HelloStocker doesn't take money.
 
@@ -141,28 +141,28 @@ You either practice virtually to learn.
 
 Or you trade virtually to show others what you are capable of.
 
-#- 'I don't have time for you, I would rather go scam someone who trusts me'
+-- 'I don't have time for you, I would rather go scam someone who trusts me'
 
 Well I know, scammer.
 
 
 # **2) Ask them how they make money
 
-#- 'I make money with trading'
+-- 'I make money with trading'
 
 Ok show me on HelloStocker then.
 
 (go back to 1)
 
-#- 'I will show you how on telegram'
+-- 'I will show you how on telegram'
 
 There is no virtual trading on telegram
 
-#- 'I show you with my broker'
+-- 'I show you with my broker'
 
 Go back to 1
 
-#- 'I don't have time for you, I would rather go scam someone who trusts me'
+-- 'I don't have time for you, I would rather go scam someone who trusts me'
 
 Well I know, scammer.
 
@@ -190,23 +190,23 @@ HelloStocker helps you find the right stocks for you.
 Save time, make money and receive personalized AI recommendations based on your own preferences in a virtual trading app.
 
 1) We use AI to Adapt Recommendations To Your Own Tastes
-#- We send you hot stocks to buy and tell you when to sell
-#- What the business does and why it has growing interest
-#- 95% of HelloStocker AI predictions beat the sp500 market
-#- No boring emails or newsletter ask anything and receive instant replies
+-- We send you hot stocks to buy and tell you when to sell
+-- What the business does and why it has growing interest
+-- 95% of HelloStocker AI predictions beat the sp500 market
+-- No boring emails or newsletter ask anything and receive instant replies
 
 2) Your Success Is Guaranteed With Virtual Trading
-#- You will get better at investing, 100% guaranteed
-#- 99% of Hedge Funds test strategies virtually first
-#- You receive unlimited money to practice in a safe virtual reality simulator
-#- We use your virtual positions to tell you when to sell
-#- We will never ask you to trade or open an account
+-- You will get better at investing, 100% guaranteed
+-- 99% of Hedge Funds test strategies virtually first
+-- You receive unlimited money to practice in a safe virtual reality simulator
+-- We use your virtual positions to tell you when to sell
+-- We will never ask you to trade or open an account
 
 3) You Get Access To AI Trading Tools
-#- Market trading signals & AI screening
-#- Wall St analyst ratings & financial data
-#- Social sentiment & News
-#- Hedge Funds & investors trading activity
+-- Market trading signals & AI screening
+-- Wall St analyst ratings & financial data
+-- Social sentiment & News
+-- Hedge Funds & investors trading activity
 
 It is a bargain.
 
