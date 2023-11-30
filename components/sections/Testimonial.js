@@ -213,10 +213,13 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                               <br></br>
                              <br></br>
-                             No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing.
-                              <br></br>They make it easy to navigate the large stock universe.
+                             No more complicated Bloomberg terminals!
+                              <br></br>
+                              HelloStocker is the way to go: ChatGPT of investing.
+                              <br></br>They make it easy to navigate the stock market universe.
                               <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
-                              <br></br>It's easy to make money when the market goes up, but it's always hard to beat the sp500 market, well done team!
+                              <br></br>It's easy to make money when the market goes up, but not as easy to beat the sp500 market...
+                               <br></br>HelloStocker AI solved it💸!
                               <br></br>
                               <br></br>
                          <b>  Mehrad Oroudji
@@ -273,9 +276,11 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                               <br></br>
                              <br></br>
-                             It's not just about investing, it's about building wealth, and making it grow the smart way.
+                             It's not about investing...
+                              <br></br>it's about building wealth, and making it constantly grow.
                               <br></br>I don't just 'realise profits': I track how much I make over the sp500.
-                              <br></br>Making money is easy when everything goes up, beating the sp500 market with their Stocker AI advisor is the real way to go!
+                              <br></br>Making money is easy when everything goes up.
+                              <br></br>Making more money than others and beating the sp500 market is the real way to go, well done team!
                               <br></br>
                               <br></br>
                          <b>  Kanishk Budhia
