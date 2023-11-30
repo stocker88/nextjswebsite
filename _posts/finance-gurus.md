@@ -112,8 +112,7 @@ I have a LinkedIn profile, my name is public.
 <pre><code>
 <a href=https://www.linkedin.com/in/anesshusseinali/> https://www.linkedin.com/in/anesshusseinali/ </a>
 </code></pre>
-![Click here to see my LinkedIn]('https://www.linkedin.com/in/anesshusseinali/')
-
+[https://www.linkedin.com/in/anesshusseinali/]: https://www.linkedin.com/in/anesshusseinali/
 
 **If I scam you I can't escape.**
 
@@ -128,7 +127,7 @@ That one is easy!
 
 You can follow these 2 steps:
 
-### **1) Ask the influencer you trust so much to trade live in HelloStocker**
+## **1) Ask the influencer you trust so much to trade live in HelloStocker**
 
 \- 'But why HelloStocker? I already have my setup'
 
@@ -163,7 +162,7 @@ Or you trade virtually to show others what you are capable of.
 Well I know, scammer.
 
 
-### **2) Ask them how they make money**
+## **2) Ask them how they make money**
 
 \- 'I make money with trading'
 
@@ -216,7 +215,7 @@ Save time, make money and receive personalized AI recommendations based on your 
 
 \- No boring emails or newsletter ask anything and receive instant replies
 
-## 2) Your Success Is Guaranteed With Virtual Trading**
+## **2) Your Success Is Guaranteed With Virtual Trading**
 
 \- You will get better at investing, 100% guaranteed
 
@@ -228,7 +227,7 @@ Save time, make money and receive personalized AI recommendations based on your 
 
 \- We will never ask you to trade or open an account
 
-## 3) You Get Access To AI Trading Tools**
+## **3) You Get Access To AI Trading Tools**
 
 \- Market trading signals & AI screening
 
