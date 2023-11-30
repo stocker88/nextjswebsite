@@ -10,17 +10,19 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
+  <center>
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-sm w-full', {
         'hover:shadow-lg transition-shadow duration-200': slug,
       })}
-      style={{'borderRadius': '10px 10px 10px 10px'}}
       width={1300}
       height={630}
+      style={{'maxWidth':'1000px','borderRadius': '10px 10px 10px 10px'}}
       unoptimized={true}
     />
+    </center>
   )
   return (
     <div className="sm:mx-0">

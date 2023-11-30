@@ -14,6 +14,7 @@ import type PostType from '../../interfaces/post'
 import Post from '../../interfaces/post'
 import MoreStories from '../../components/more-stories'
 import QuoteDisplay from '../../components/inspiration';
+
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -128,6 +129,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                               <br></br>
                               <br></br>
                               <br></br>
+                              <br></br>
+                              <br></br>
                 <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
                   Suggested Blog Stories
                 </h2>
@@ -176,7 +179,7 @@ export async function getStaticProps({ params }: Params) {
     'coverImage',
   ])
 
-  const content = await markdownToHtml(post.content || '')
+  const content = post.content
 
   return {
     props: {

@@ -72,14 +72,12 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        Your Success Is Guaranteed With Virtual Trading
+        You Will Get Better At Investing, 100% Guaranteed With Virtual Trading
       </h2>
 <br></br>
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                    - You will get better at investing, 100% guaranteed
-                    <br></br>
                     - 99% of Hedge Funds test strategies virtually first
                     <br></br>
                     - You receive unlimited money to practice in a safe virtual reality simulator
