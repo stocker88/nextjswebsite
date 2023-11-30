@@ -85,10 +85,10 @@ const Testimonial = ({
                               <br></br>
                              <br></br>
                            Most platforms and newsletters push me to trade fast with my real money.
-                        <br></br>Trading is how other trading apps make money: they need me to trade.
-                         <br></br>If my trading goes down I'm left alone with my losses.
+                        <br></br>Trading is how they profit from you: they need you to trade.
+                         <br></br>If it goes down you're left alone with your losses.
                          <br></br>HelloStocker cares about helping me grow my wealth.
-                         <br></br> They don't make money when I trade, they want me to be rich.
+                         <br></br> They don't make money when I trade, they don't manage money.
                          <br></br>It costs $5 monthly subscription, and that's it.
                          <br></br>They want me to be happy so I can stay with them forever.
                               <br></br>
@@ -121,8 +121,9 @@ const Testimonial = ({
                               HelloStocker sent me recommendations well explained and straight to the point.
                              <br></br>
                              Finally financial advises that don't require a finance degree...
-                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs and user friendly ChatGPT like interface.
-                             <br></br>No more financial jargon.
+                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
+                              <br></br>They have a user friendly ChatGPT like interface.
+                             <br></br>No more financial jargon Harvard show off.
                               <br></br>
                               <br></br>
                          <b>  Fabien Nieto
@@ -150,12 +151,14 @@ const Testimonial = ({
                              <br></br>
 
                              <br></br>
-                             Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
+                             I can't wait for boring emails and reports...
+                              <br></br>
+                              I get instant suggestions and replies, when I'm free, right away.
                              <br></br>
-                          HelloStocker App my time-saver hero!
-                              <br></br>I can't afford to wait a week for email replies: I love their instant messaging system.
+                          HelloStocker App is my time saving hero.
+                              <br></br>I don't wait weeks for email replies: HelloStocker has a ChatGPT like instant messaging system.
                               <br></br>Time is money, especially in investing and trading.
-                             <br></br>The app gave me a clear sense of how the biotech sector works: I made a 3 digit profit.
+                             
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
@@ -308,8 +311,9 @@ const Testimonial = ({
                               <br></br>
                              <br></br>
                              Practise trading ideas without the risk! HelloStocker App nails it.
-                             <br></br>They don't take any money from you, it's not about pushing you to trade now: it's about making sure you acquire the skillset and profit from it.
-                              <br></br>I get as much virtual trading money as I want and can practice trading ideas without the fear of losing real cash.
+                             <br></br>They don't take money from you, it's not about trading!
+                              <br></br>It's about making sure you acquire the skillset and profit from it.
+                              <br></br>I get as much virtual trading money as I want and can practice investing ideas without the fear of losing real cash.
                               <br></br>It's a safe playground for learning and gaining confidence in their AI technology.
                               <br></br>
                               <br></br>
@@ -338,10 +342,12 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                               <br></br>
                              <br></br>
-                             HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made.
+                             HelloStocker AI doesn't hide a thing.
+                              <br></br>I can access the AI data and verify how decisions are made.
                               <br></br>Transparency like this builds trust.
-                              <br></br>I understand how my ai advisor takes the decisions and can interact with the AI directly, better than sending emails and waiting for answers, makes me save time and cash on profits faster.
-                              <br></br>Time is money especially in investing! Stocker App great job!
+                              <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
+                               <br></br>With HelloStocker you save time and cash on profits.
+                              <br></br>I use the app everyday I recommend!
                               <br></br>
                               <br></br>
                          <b>  Sacha Berenfus
