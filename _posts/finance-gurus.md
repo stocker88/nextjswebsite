@@ -1,3 +1,4 @@
+const ReactMarkdown = require('react-markdown/with-html')
 ---
 title: 'How Finance Gurus Make Money'
 excerpt: 'Ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
@@ -103,7 +104,7 @@ Because I don't live in Dubai.
 
 I have a LinkedIn profile, my name is public.
 
-Link [Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)
+**[Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
 And I'm happy to meet up if you want to!
 
