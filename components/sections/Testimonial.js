@@ -55,7 +55,11 @@ const Testimonial = ({
                               <b style={{color:'#00f75f'}}> They Don't push Me To Buy - They Tell Me When To Sell' </b>
                              <br></br>
                              They don't make money by pushing me to trade, they make money by advising me and helping me out. It makes a HUUUUGEEEE difference.
-                              Compared to other apps that push me to trade fast and make money on it, HelloStocker tells me when to sell, and don't push me to trade with my real money, they take only $5 a month and have interests in keeping me happy forever.."
+                              Compared to other apps that push me to trade and buy fast, HelloStocker tells me when to sell.
+                              <br></br>
+                              They have no direct interests in having me trade with my money.
+                              <br></br>They take only $5 a month to advise me.
+                              <br></br>They have interests in keeping me happy by making my wealth grow forever.."
                               <br></br>
                               <br></br>
                          <b>  Adrien Chenin
@@ -81,7 +85,10 @@ const Testimonial = ({
 
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                              <br></br>
-                             "Your personal genie available 24/7! HelloStocker tailors recommendations to match my preferences. It's not just about hot stocks; it's about the right stocks for me. I made plenty of money and it feels good gogogo HelloStocker team!"
+                             "Your personal genie available 24/7!
+                             <br></br>HelloStocker tailors recommendations to match my preferences.
+                             <br></br>It's not just about hot stocks; it's about the right stocks for me.
+                             <br></br>I made plenty of money, sure gains, no rush, and it feels good!
                               <br></br>
                               <br></br>
                          <b>  Jerome Hagege
