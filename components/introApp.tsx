@@ -5,7 +5,7 @@ const IntroApp = () => {
 
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        We Adapt Recommendations To Your Own Tastes Using AI
+        We use AI to Adapt Recommendations To Your Own Tastes
       </h2>
      {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         You have control over your own success

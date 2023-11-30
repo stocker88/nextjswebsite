@@ -30,13 +30,13 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - We send you hot stocks to buy now and tell you when to sell
+                        - We send you hot stocks to buy and tell you when to sell
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - No boring emails ask anything and receive instant replies
-                        <br></br>
                         - 95% of HelloStocker AI predictions beat the sp500 market
+                        <br></br>
+                        - No boring emails or newsletter ask anything and receive instant replies
                         <br></br>
                         <br></br>
                 </p>
@@ -83,6 +83,8 @@ export default function Swipe() {
                                 - You receive unlimited money to practice in a safe virtual reality simulator
                                 <br></br>
                                 - We use your virtual positions to tell you when to sell
+                                <br></br>
+                                - You will get better at investing, 100% guaranteed
                                 <br></br>
                                 - We will never ask you to trade or open an account
 
