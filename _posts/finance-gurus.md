@@ -109,13 +109,13 @@ And I'm happy to meet up if you want to!
 I host meetups in New York, London, and Paris.
 
 
-## **How to differentiate the Advisor from the Scammer?**
+# **How to differentiate the Advisor from the Scammer?**
 
 That one is easy!
 
 You can follow these 2 steps:
 
-## **1) Ask the influencer you trust so much to trade live in HelloStocker **
+### **1) Ask the influencer you trust so much to trade live in HelloStocker**
 
 \- 'But why HelloStocker? I already have my setup'
 
@@ -150,7 +150,7 @@ Or you trade virtually to show others what you are capable of.
 Well I know, scammer.
 
 
-## **2) Ask them how they make money
+### **2) Ask them how they make money
 
 \- 'I make money with trading'
 
