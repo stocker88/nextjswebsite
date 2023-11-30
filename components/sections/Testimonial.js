@@ -53,6 +53,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> They Don't push Me To Buy And They Tell Me When To Sell' </b>
+                              <br></br>
                              <br></br>Most platforms and newsletters push me to trade fast with my real money.
                              <br></br>They make me buy things because this is how they generate their revenues.
                               <br></br>If my trading goes down I'm left alone with my losses.
@@ -82,6 +83,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                              <br></br>
                              <br></br>
                              "Your personal genie available 24/7!
                              <br></br>HelloStocker tailors recommendations to match my preferences.
@@ -111,6 +113,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
+                              <br></br>
                              <br></br>
                              "I wanted dividend stocks for passive income and received a clear reply straight to the point.
                              <br></br>
@@ -143,10 +146,12 @@ const Testimonial = ({
                               <b style={{color:'#00f75f'}}> Saves 80+ Hours of Investing Research per Month </b>
                              <br></br>
                              "HelloStocker App my time-saver hero!
-                             <br></br>Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
+                             <br></br>
+                             <br></br>
+                             Instead of spending hours shifting through boring emails and reports, I get instant suggestions and replies that fit my preferences, right away.
                              <br></br>Time is money, especially in investing and trading.
                               <br></br>I can't afford to wait a week for email replies.
-                             <br></br>Thanks to the virtual trading money they game me, I got a sense of how biotech works and made 3 digit real profits!"
+                             <br></br>Thanks to the virtual trading money they game me I got a sense of how biotech works, and made 3 digit real profits!"
                               <br></br>
                               <br></br>
                          <b>  Felix Revert
@@ -171,6 +176,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
+                             <br></br>
                              <br></br>
                              "Being ahead of the curve matters: time is money.
                              <br></br>HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on.
@@ -201,6 +207,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Powered by ChatGPT </b>
+                              <br></br>
                              <br></br>
                              "No more complicated Bloomberg terminals! Old school way! HelloStocker is the new way to go: the ChatGPT of investing.
                               <br></br>They make it easy to navigate the large stock universe.
@@ -230,6 +237,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
+                              <br></br>
                              <br></br>
                              "HelloStocker community is a goldmine! Investors and hedge fund members has given me financial insights and great connections, they are here to help.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
@@ -259,6 +267,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Exponential Growth Potential </b>
+                              <br></br>
                              <br></br>
                              "It's not just about investing, it's about building wealth, and making it grow the smart way.
                               <br></br>I don't just 'realise profits': I track how much I make over the sp500.
@@ -287,6 +296,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> A Safe Playground for learning </b>
+                              <br></br>
                              <br></br>
                              "Practise trading ideas without the risk! HelloStocker App nails it.
                              <br></br>They don't take any money from you, it's not about pushing you to trade now: it's about making sure you acquire the skillset and profit from it.
@@ -317,6 +327,7 @@ const Testimonial = ({
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b style={{color:'#00f75f'}}> Access Transparent AI Data </b>
+                              <br></br>
                              <br></br>
                              "HelloStocker AI doesn't hide a thing, I get access to AI-processed data and can verify and understand how the decisions are made.
                               <br></br>Transparency like this builds trust.
