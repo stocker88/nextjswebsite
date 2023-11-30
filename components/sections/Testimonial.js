@@ -57,7 +57,7 @@ const Testimonial = ({
                               <br></br>They care about advising me and helping me out.
                                <br></br>It makes a HUUUUGEEEE difference.
                               <br></br> They have no direct interests in pushing me to trade unless I can profit from it.
-                              <br></br>Compared to most of 'financial gurus' with email newsletters and telegram channels... HelloStocker often notifies me when to Sell!
+                              <br></br>Compared to most of 'financial gurus' with email newsletters and telegram channels... HelloStocker notifies me when to Sell!
                               <br></br>They have interests in keeping me happy by making my wealth grow forever.."
                               <br></br>
                               <br></br>
