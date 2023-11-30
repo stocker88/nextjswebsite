@@ -22,6 +22,10 @@ Managing my own multi billion dollars book on Kerviel's ex trading desk.
 
 Building automated trading for Bank of America in London.
 
+<pre><code>
+<div style={{paddingTop:'20'}}></div>
+</code></pre>
+
 **One thing I learnt from my 15 years in investing?**
 
 \- **There is no money magician.**
@@ -180,7 +184,7 @@ Go back to 1
 Well I know, scammer.
 
 
-## **But then how does HelloStocker AI App make money?
+## **But then how does HelloStocker AI App make money?**
 
 We charge $10 a month.
 
