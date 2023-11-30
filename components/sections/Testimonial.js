@@ -43,8 +43,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/adrien.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -73,8 +73,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/jerome.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -103,8 +103,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/fabien.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -134,8 +134,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/felix.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -166,8 +166,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/alexia.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -197,8 +197,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/mehrad.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -227,8 +227,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/charles.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -257,8 +257,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/kanishk.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -286,8 +286,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/maxime.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
@@ -317,8 +317,8 @@ const Testimonial = ({
                          <center><Image
                            src='/assets/images/testimonies/sacha.webp'
                            alt="Features tile icon 06"
-                           width={74}
-                           height={74}
+                           width={80}
+                           height={80}
                            style={{
                            'borderRadius': '45px 45px 45px 45px',
                            'border': '2px solid rgba(255, 255, 255, 1)'
