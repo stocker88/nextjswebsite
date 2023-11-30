@@ -10,7 +10,7 @@ import Container from '../../components/container'
 import SectionHeader from './partials/SectionHeader';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
+import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
 import { isMobile, browserName } from "react-device-detect";
 import NewsletterSignUp from '../formStocker'
 import Blog from "../sections/Blog";
@@ -93,16 +93,14 @@ const MeetingButton = ({
          </Container>
         <NewsletterSignUp/>
         <br></br>
-         <br></br><br></br>
+         <br></br>
 
 
-                 <center><InstallButtonsWithQRAndLogo /></center>
+                 <center><InstallButtonsWithQR /></center>
 
 
 
         <Container>
-
-<br></br>
 
         <center>
             <Image
