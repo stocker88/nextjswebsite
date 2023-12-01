@@ -102,11 +102,7 @@ const FeaturesSplit = ({
         <br></br>
 
     <Testimonial/>
-     <br></br><br></br>
 
-    <QuoteDisplay/>
-    <br></br> <br></br>
-    <br></br> <br></br>
     <br></br> <br></br>
     <br></br><br></br>
 </center>
