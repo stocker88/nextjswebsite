@@ -33,11 +33,9 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - Up to 3 recommendations a day
+                        - You receive instant messages and get notified you when to sell
                         <br></br>
-                        - Access the full history: 95% of AI predictions beat the sp500 market
-                        <br></br>
-                        - Ask anything and get instant answers
+                        - 90% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
                         - We use AI to adapt recommendations to your own tastes
                         <br></br>
