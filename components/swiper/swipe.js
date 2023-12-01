@@ -79,7 +79,7 @@ export default function Swipe() {
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
                   <br></br>
-                    - You can test ideas in a safe virtual reality simulator
+                    - You can test trading ideas in a safe virtual reality simulator
                     <br></br>
                     - 99% of Hedge Funds test strategies virtually first
                     <br></br>
