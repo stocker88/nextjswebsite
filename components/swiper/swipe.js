@@ -30,7 +30,6 @@ export default function Swipe() {
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                        - We send you hot stocks to buy and tell you when to sell
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
@@ -38,6 +37,7 @@ export default function Swipe() {
                         <br></br>
                         - No boring emails or newsletter ask anything and receive instant replies
                         <br></br>
+                        - We use AI to adapt recommendations to your own tastes
                         <br></br>
                 </p>
 
@@ -72,7 +72,7 @@ export default function Swipe() {
 <br></br>
   <br></br>
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Will Get Better At Investing, 100% Guaranteed With Virtual Trading
+        You Receive Unlimited Money in Virtual Trading
       </h2>
 <br></br>
   <div className="split-item">
@@ -84,7 +84,7 @@ export default function Swipe() {
                     <br></br>
                     - We use your virtual positions to tell you when to sell
                     <br></br>
-                    - We will never ask you to trade or open an account
+                    - We Guarantee Your Success
 
                                 <br></br>
                 </p>

@@ -12,7 +12,7 @@ ogImage:
 ---
 
 
-💸Have you ever wondered how financial gurus get paid?
+💸 Have you ever wondered how financial gurus get paid?
 
 &nbsp;
 
@@ -42,23 +42,23 @@ Building automated trading for Bank of America in London.
 
 &nbsp;
 
-\- **🦄There is no money magician.**
+**🦄 There is no money magician.**
 
 &nbsp;
 
-\- **🙄You can't dig gold out of air.**
+**🙄 You can't dig gold out of air.**
 
 &nbsp;
 
-\- **💀Jesus Christ doesn't trade yet.**
+**💀 Jesus Christ doesn't trade yet.**
 
 &nbsp;
 
-\- **🧞No genie will turn your $1 into $100 in 30 days.**
+**🧞 No genie will turn your $1 into $100 in 30 days.**
 
 &nbsp;
 
-\- **🧠But there is a smart way to make money.**
+**🧠 But there is a smart way to make money.**
 
 &nbsp;
 
