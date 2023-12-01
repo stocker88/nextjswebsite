@@ -85,8 +85,6 @@ export default function Swipe() {
                     <br></br>
                     - We rely on your virtual positions to tell you when to sell
                     <br></br>
-                    - We guarantee you will get better and successful
-                    <br></br>
                 </p>
         </div>
 <center>
