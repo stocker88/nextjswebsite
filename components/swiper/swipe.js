@@ -33,9 +33,11 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
+                        - Up to 3 recommendations a day
+                        <br></br>
                         - 95% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
-                        - No boring emails or newsletter ask anything and receive instant replies
+                        - No boring emails: Ask anything and get instant answers
                         <br></br>
                         - We use AI to adapt recommendations to your own tastes
                         <br></br>
@@ -56,8 +58,8 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={380}
-                     height={822.41}
+                    width={340}
+                     height={735.85}
                       src='/assets/images/chatgpt.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
@@ -101,8 +103,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio.webp'
-                    width={380}
-                    height={822.41}
+                    width={340}
+                    height={735.85}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
@@ -175,8 +177,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-                        width={380}
-                    height={822.41}
+                        width={340}
+                    height={735.85}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />
