@@ -96,17 +96,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                  }}>
 
               <FacebookShareButton children={<FacebookIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <LinkedinShareButton children={<LinkedinIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <TwitterShareButton children={<TwitterIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <PinterestShareButton children={<PinterestIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug} media={'https://www.hellostocker.com'+post.ogImage.url}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <RedditShareButton children={<RedditIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <WhatsappShareButton children={<WhatsappIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'10px'}}></div>
+              <div style={{paddingTop:'5px'}}></div>
               <TelegramShareButton children={<TelegramIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
 
                 </div>
