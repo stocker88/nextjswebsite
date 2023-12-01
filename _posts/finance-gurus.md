@@ -155,7 +155,7 @@ That's $600,000 a month:
 
 &nbsp;
 
-BINGO
+**BINGO**
 
 &nbsp;
 
@@ -163,7 +163,7 @@ This is how they make money with trading!
 
 &nbsp;
 
-Not with their trading, with yours.
+**Not with their trading, with yours.**
 
 &nbsp;
 
