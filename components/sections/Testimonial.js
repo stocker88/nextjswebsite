@@ -231,39 +231,37 @@ const Testimonial = ({
                             </p>
 
                            </a>
-,<a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/mehrad.webp'
-                           alt="Features tile icon 06"
-                           width={130}
-                           height={130}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+,<a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
+                          <center><Image
+                            src='/assets/images/testimonies/kanishk.webp'
+                            alt="Features tile icon 06"
+                            width={130}
+                            height={130}
+                            style={{
+                            'borderRadius': '45px 45px 45px 45px',
+                            'border': '2px solid rgba(255, 255, 255, 1)'
+                            }}
+                           /></center>
+                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
+                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
+                               <br></br>
                               <br></br>
-                             <br></br>
-                             No more complicated Bloomberg terminals!
-                              <br></br>
-                              HelloStocker App is the way to go: ChatGPT advisor of investing.
-                              <br></br>They make it easy to navigate the stock market universe.
-                              <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
-                              <br></br>It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market...
-                               <br></br>HelloStocker AI solved it💸!
-                              <br></br>
-                              <br></br>
-                         <b>  Mehrad Oroudji
-                                                   <br></br>
-                                                   Senior Non Linear Credit Trader   </b>
+                              It's not about investing...
+                               <br></br>it's about building wealth, and making it constantly grow.
+                               <br></br>I don't just 'realise profits': I track how well my stocks do over the sp500.
+                               <br></br>Finding stocks that go up is easy when everything goes up.
+                               <br></br>Finding better trades than others and beating the sp500 market is the real way to go!
+                               <br></br>
+                               <br></br>
+                          <b>  Kanishk Budhia
+                            <br></br>
+                            CEO & Founder @ Solino Home   </b>
 
 
-                            </p>
+                             </p>
 
-                           </a>
+                            </a>
 , <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b4130/' target="_blank" >
                          <center><Image
                            src='/assets/images/testimonies/charles.webp'
@@ -294,37 +292,39 @@ const Testimonial = ({
                             </p>
 
                            </a>
-, <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/kanishk.webp'
-                           alt="Features tile icon 06"
-                           width={130}
-                           height={130}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+, <a href='https://www.linkedin.com/in/mehrad-oroudji-0b122544/' target="_blank" >
+                           <center><Image
+                             src='/assets/images/testimonies/mehrad.webp'
+                             alt="Features tile icon 06"
+                             width={130}
+                             height={130}
+                             style={{
+                             'borderRadius': '45px 45px 45px 45px',
+                             'border': '2px solid rgba(255, 255, 255, 1)'
+                             }}
+                            /></center>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
-                              <br></br>
-                             <br></br>
-                             It's not about investing...
-                              <br></br>it's about building wealth, and making it constantly grow.
-                              <br></br>I don't just 'realise profits': I track how well my stocks do over the sp500.
-                              <br></br>Finding stocks that go up is easy when everything goes up.
-                              <br></br>Finding better trades than others and beating the sp500 market is the real way to go!
-                              <br></br>
-                              <br></br>
-                         <b>  Kanishk Budhia
-                           <br></br>
-                           CEO & Founder @ Solino Home   </b>
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
+                                <br></br>
+                               <br></br>
+                               No more complicated Bloomberg terminals!
+                                <br></br>
+                                HelloStocker App is the way to go: ChatGPT advisor of investing.
+                                <br></br>They make it easy to navigate the stock market universe.
+                                <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
+                                <br></br>It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market...
+                                 <br></br>HelloStocker AI solved it💸!
+                                <br></br>
+                                <br></br>
+                           <b>  Mehrad Oroudji
+                                                     <br></br>
+                                                     Senior Non Linear Credit Trader   </b>
 
 
-                            </p>
+                              </p>
 
-                           </a>
+                             </a>
 ,
 
                             <a href='https://www.linkedin.com/in/sachaberenfus/' target="_blank" >
