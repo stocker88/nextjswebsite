@@ -387,7 +387,7 @@ You can follow these 2 steps:
 
 &nbsp;
 
-✅You get Apple Store and Google Play 1 week free trial.
+✅You get Apple Store and Google Play 2 weeks free trial.
 
 &nbsp;
 
