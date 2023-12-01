@@ -161,78 +161,9 @@ export default function Swipe() {
         </div>
 </center>
 
-        <center>
-  <div className="container">
-   <div className="split-item">
-
-
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                  src='/assets/images/tslavsrace.webp'
-                        width={340}
-                    height={735.85}
-                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
-                    />
-                    </Zoom>
-                </div>
-
-              </div>
-              </div>
-</center>
-<br></br><br></br>
 <br></br><br></br>
 
 
-<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        We Remind You When To Sell
-      </h2>
-
-
-<br></br><br></br>
-<br></br><br></br>
-<br></br><br></br>
-<br></br><br></br>
-<br></br><br></br>
-
-<center>
-
-<h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
-        Speak with your CFA Advisor
-         <br></br> ex Goldman Sachs and
-         <br></br>Bank of America Trader
-        <br></br> with over 15 years in investing
-      </h2>
-        <br></br>
-        <br></br>
-
-        <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
-                    style={{
-
-                         }}>  <div style={{
-                         'padding': '0.8rem',
-                         'color': 'black',
-                          'width':'31vw',
-                         'textAlign': 'center',
-                         'fontSize': 'min(19px,max(15px,2vw))',
-                         'borderRadius': '30px 30px 30px 30px',
-                         'background': '#00f75f',
-                         'maxWidth':'280px'
-                        }}>Check his LinkedIn</div></button></a>
-        <br></br>
-        <br></br>
-</center>
-    <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
-    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-{/*
-<center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
-*/}
         <br></br>
         <br></br>
  <br></br> <br></br>
@@ -243,14 +174,10 @@ export default function Swipe() {
          <br></br>
          <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
 
-         <br></br>
-         <br></br>
-                 <br></br>
-         <br></br>
 
-        <br></br>
-        <br></br>
-
+         <br></br>
+         <br></br>
+         <br></br><br></br>
 
  <br></br>
  <br></br>
@@ -277,6 +204,75 @@ export default function Swipe() {
 
 </div>
 </div>
+         <br></br><br></br>
+
+        <center>
+  <div className="container">
+   <div className="split-item">
+
+
+                <div className={
+                  classNames(
+                    'split-item-image center-content-mobile reveal-from-bottom',
+                     'split-item-image-fill'
+                  )}
+                  data-reveal-container=".split-item">
+                  <Zoom>
+                  <Image
+                  src='/assets/images/tslavsrace.webp'
+                        width={340}
+                    height={735.85}
+                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
+                    />
+                    </Zoom>
+                </div>
+
+              </div>
+              </div>
+</center>
+<br></br><br></br>
+         <br></br><br></br>
+
+         <center>
+
+         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
+                 Speak with our Financial Advisor
+                  <br></br> ex Goldman Sachs and
+                  <br></br>Bank of America Trader
+                 <br></br> with over 15 years in investing
+               </h2>
+                 <br></br>
+                 <br></br>
+
+                 <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
+                             style={{
+
+                                  }}>  <div style={{
+                                  'padding': '0.8rem',
+                                  'color': 'black',
+                                   'width':'31vw',
+                                  'textAlign': 'center',
+                                  'fontSize': 'min(19px,max(15px,2vw))',
+                                  'borderRadius': '30px 30px 30px 30px',
+                                  'background': '#00f75f',
+                                  'maxWidth':'280px'
+                                 }}>Check his LinkedIn</div></button></a>
+                 <br></br>
+                 <br></br>
+         </center>
+             <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
+             <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+         {/*
+         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+         */}
+                 <br></br>
+         <br></br>
+
+        <br></br>
+        <br></br>
+
+
 
  <br></br>
 
