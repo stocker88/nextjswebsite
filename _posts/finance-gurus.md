@@ -1,7 +1,7 @@
 ---
 title: 'How Finance Gurus Make Money'
-excerpt: 'Ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
-seoExcerpt: 'Ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
+excerpt: 'Have you ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
+seoExcerpt: 'Have you ever wondered how financial gurus get paid? Learn how to differentiate the Advisor from the Scammer!'
 coverImage: '/assets/blog/financial-gurus/how finance gurus make money.webp'
 date: '2023-11-30T05:35:07.322Z'
 author:
@@ -12,7 +12,7 @@ ogImage:
 ---
 
 
-💸Ever wondered how financial gurus get paid?
+💸Have you ever wondered how financial gurus get paid?
 
 &nbsp;
 
