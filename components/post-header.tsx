@@ -23,7 +23,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} style={{'color':'lightgrey'}}/>
+          <DateFormatter dateString={date}/>
         </div>
       </div>
     </>
