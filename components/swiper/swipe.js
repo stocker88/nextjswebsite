@@ -33,11 +33,13 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - You receive instant messages and get notified you when to sell
+                        - We use AI to adapt recommendations to your own tastes
                         <br></br>
                         - 90% of HelloStocker AI predictions beat the sp500 market
                         <br></br>
-                        - We use AI to adapt recommendations to your own tastes
+                        - You can interact instantly by messages - no boring emails
+                        <br></br>
+                        - Most newsletters tell you 'buy buy buy': We also tell you when to sell
                         <br></br>
                 </p>
 
@@ -83,7 +85,7 @@ export default function Swipe() {
                     <br></br>
                     - 99% of Hedge Funds test strategies virtually first
                     <br></br>
-                    - We rely on your virtual positions to tell you when to sell
+                    - It is a safe playground for testing and growing
                     <br></br>
                 </p>
         </div>
