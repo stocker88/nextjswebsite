@@ -3,7 +3,7 @@ title: 'Is Nvidia A Buy?'
 excerpt: 'Is Nvidia stock overvalued or is it a buy? 5 good tips you should know right now'
 seoExcerpt: 'Is Nvidia stock overvalued or is it a buy? 5 good tips you should know right now'
 coverImage: '/assets/blog/financial-gurus/how finance gurus make money.webp'
-date: '2023-12-02T05:35:07.322Z'
+date: '2023-11-30T05:35:07.322Z'
 author:
     name: HelloStocker AI
     picture: '/assets/blog/authors/stocker.png'
