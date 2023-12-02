@@ -27,7 +27,7 @@ And repeating myself until I decide to write it in an article I can share with y
 Today I stand with +1,000% returns on Nvda stocks.
    
 Is Nvidia still a buy? 
-
+  
 Should I sell and realize profits? 
 
 Or is it time to buy more Nvidia shares?
