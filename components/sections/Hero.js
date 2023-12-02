@@ -84,7 +84,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-            HelloStocker helps you find stocks before they blow up. Save time, make money and receive personalized AI recommendations based on your own preferences.
+            HelloStocker helps you find stocks before they blow up. Save time, make money and receive AI recommendations based on your own preferences.
             </h2>
           </div>
 
@@ -106,7 +106,7 @@ const Hero = ({
                                                />
 
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               Join +12,800 investors using HelloStocker AI to receive live investment recommendations adapted to their needs.
+                                               Join +12,800 investors trading safely in HelloStocker AI with unlimited virtual money
                                              </div>
 <br></br>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>

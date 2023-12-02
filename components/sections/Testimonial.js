@@ -116,15 +116,16 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Sell </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Realise My Gains </b>
                               <br></br>
                              <br></br>
-                           Most platforms and newsletters push me to trade fast with my real money.
-                        <br></br>Trading is how they profit from you: they need you to trade.
-                         <br></br>If it goes down you're left alone with your losses.
-                         <br></br>HelloStocker App doesn't make money when I trade, they don't manage money.
+                           What's the point of buying if you don't know when to sell?
+                         <br></br>  They don't gain from making me trade, they profit from advising me and helping me out.
                          <br></br>It costs $5 monthly subscription, and that's it.
-                         <br></br>HelloStocker AI advisor cares about making me grow my wealth so I can stay with them forever.
+                         <br></br>
+                                Compared to others who say 'buy buy buy', HelloStocker AI has my final interests in mind.
+                              <br></br>
+                              They tell me when to buy and send me signals when it's time to realize my gains.
                               <br></br>
                               <br></br>
                          <b>  Jerome Hagege
@@ -218,9 +219,9 @@ const Testimonial = ({
                              <br></br>
                              Being ahead of the curve matters.
                              <br></br>HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on.
-                              <br></br>I get notifications directly on my phone!
+                              <br></br>They send important reminders and insights.
                                <br></br>That early advantage has made a real difference in my gains.
-                                <br></br>I perfectly timed Adobe, AMD & Workforce.
+                                <br></br>I perfectly timed Adobe, AMD, Ferrari & Workforce.
                               <br></br>
                               <br></br>
                          <b>  Alexia Karolewicz
