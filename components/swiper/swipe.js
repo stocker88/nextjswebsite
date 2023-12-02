@@ -33,13 +33,11 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - We use AI to adapt recommendations to your own tastes
+                        - You receive AI recommendations adapted to your own tastes
                         <br></br>
-                        - 90% of HelloStocker AI predictions beat the sp500 market
+                        - Interactive analysis with live chat - no boring emails
                         <br></br>
-                        - You can interact instantly by messages - no boring emails
-                        <br></br>
-                        - Most newsletters tell you 'buy buy buy': We also tell you when to sell
+                        - We also tell you when to realize your gains and maximize your profits
                         <br></br>
                 </p>
 
