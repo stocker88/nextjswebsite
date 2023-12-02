@@ -16,7 +16,7 @@ Wish you bought Nvidia at $50 before it reaches $500?
 
 I bought Nvidia at $50 in summer 2019.
 
-I have been tracking this stock daily for the past 4 years.
+I have been tracking this stock daily for the past 4 years.  
 
 Reading every single news.
 
