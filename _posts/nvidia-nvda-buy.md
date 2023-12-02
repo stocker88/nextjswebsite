@@ -25,7 +25,7 @@ Telling you and everyone about what I believe would happen next.
 And repeating myself until I decide to write it in an article I can share with you.
 
 Today I stand with +1,000% returns on Nvda stocks.
-
+   
 Is Nvidia still a buy? 
 
 Should I sell and realize profits? 
