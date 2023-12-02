@@ -44,38 +44,6 @@ The timing was not great, I had lost -35.6% on Nvidia.
 &nbsp;
 
 
-But this trade paid +1,100% over the longer run.
-
-&nbsp;
-
-I will reiterate on my initial thought process: the logic followed to take Nvidia investment decision.
-
-&nbsp;
-
-But apply this logic on today's market.
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-**[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
-
-&nbsp;
-
-If you want to track Nvidia you can do it safely without putting any money in.
-
-
-&nbsp;
-
-Learn investing and get better with unlimited money in HelloStocker virtual trading simulator.
-
-
-&nbsp;
-
-Ready? Let's start.
-
 &nbsp;
 
 &nbsp;
@@ -107,23 +75,13 @@ There is an explosion of data being generated every day:
 
 \- 500 million tweets are sent
 
-&nbsp;
-
 \- 294 billion emails are sent
-
-&nbsp;
 
 \- 4 petabytes of data are created on Facebook
 
-&nbsp;
-
 \- 4 terabytes of data are created from each connected car
 
-&nbsp;
-
 \- 65 billion messages are sent on WhatsApp
-
-&nbsp;
 
 \- 5 billion searches are made
 
@@ -648,14 +606,46 @@ Buying the stock is now a bargain.
 
 &nbsp;
 
+&nbsp;
 
+&nbsp;
 
 ### 4) Upcoming catalysts or events that could impact the stock price
 
 
 &nbsp;
 
-### 5) If I buy Nvidia, when should I realize my gains and sell?
+&nbsp;
+
+
+### 5) The Verdict
+
+&nbsp;
+
+&nbsp;
+
+Still under construction...
+
+
+#### Are you looking for +10% quick profit? or +10,000% profits?
+
+&nbsp;
+
+&nbsp;
+
+#### How much money are you not going to spend in the next 2 years and are you happy to lock in an investment?
+
+&nbsp;
+
+&nbsp;
+
+Still under construction...
+
+&nbsp;
+
+&nbsp;
+
+### 6) Bonus: If I buy Nvidia, when should I realize my gains? How do I know when I should sell?
 
 &nbsp;
 
@@ -666,16 +656,17 @@ Ask your AI Financial Advisor: he will give you a price target at which you shou
 If you buy Nvidia stock in the virtual trading simulator, you will receive a reminder!
 
 
-&nbsp;
 
 
-
-
-### 5) Are you looking for +10% quick profit? or +10,000% profits?
+**[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
-### 6) How much money are you not going to spend in the next 2 years and are you happy to lock in an investment?
+If you want to track Nvidia you can do it safely without putting any money in.
 
+
+&nbsp;
+
+Learn investing and get better with unlimited money in HelloStocker virtual trading simulator.
 
 

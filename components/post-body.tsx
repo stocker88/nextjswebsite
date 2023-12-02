@@ -1,6 +1,7 @@
 import markdownStyles from './markdown-styles.module.css'
 import Markdown from 'react-markdown'
 import Zoom from 'react-medium-image-zoom'
+import Image from 'next/image'
 
 type Props = {
   content: string
@@ -44,10 +45,12 @@ const CustomLink = ({ href, children }) => (
 
 const CustomImage = ({ alt, src, title }) => (
   <div className="my-4">
-    <Zoom><img
+    <Zoom><Image
       className="max-w-full rounded-lg"
       src={src}
       alt={alt}
+      height={500}
+      width={1000}
       title={title}
     /></Zoom>
     {title && <p className="text-center text-sm mt-2 text-gray-600">{title}</p>}
