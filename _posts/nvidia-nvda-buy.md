@@ -18,7 +18,7 @@ z
 
 &nbsp;  
 
-This is what Nvidia looked like in 2018 when I bought it at $50.
+This is what Nvidia looked like in 2018 when I bought it at $50 📈
 
 &nbsp;  
 
@@ -26,7 +26,7 @@ This is what Nvidia looked like in 2018 when I bought it at $50.
 
 &nbsp;  
 
-And this is what happened to NVDA stock price right after.
+And this is what happened to NVDA stock price right after 📉
 
 
 &nbsp;
@@ -52,7 +52,7 @@ I will reiterate on my initial thought process: the logic followed to take Nvidi
 
 &nbsp;
 
-And apply the same logic on today's market - not 5 years ago - today.
+But apply this logic on today's market.
 
 &nbsp;
 
@@ -60,8 +60,7 @@ And apply the same logic on today's market - not 5 years ago - today.
 
 &nbsp;
 
-
-Please connect on LinkedIn I want to hear your thoughts.
+**[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
@@ -455,11 +454,11 @@ There is no financial reason as of why AMD is more hyped than Nvidia.
 &nbsp;
 &nbsp;
 
-#### So why is AMD price so high compared to its earnings? 
+#### So why is AMD price so high compared to its earnings? 🧐
 
 &nbsp;
 
-My guess is: most people don't understand what they are doing.
+My guess is: most people don't understand what they are doing. 🙄
 
 &nbsp;
 
@@ -471,11 +470,11 @@ They see Nvidia price is high and spiked so they go for AMD.
 
 &nbsp;
 
-And they think they will get a better deal with AMD.
+❌And they think they will get a better deal with AMD. 
 
 &nbsp;
 
-But it is not the case, we just looked at the economics.
+✅But we look at the economics.
 
 &nbsp;
 
