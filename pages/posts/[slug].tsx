@@ -83,34 +83,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               <Header />
 
 
-                <div style={{
-                   'position': 'fixed',
-                   'bottom': '1rem',
-                   'left': 'min(50px, 1vw)',
-                   'backgroundColor': '#00f75f',
-                   'border': '1px solid #ccc',
-                   'padding': 'min(10px, 0.8vw)',
-                   'boxShadow': '0px 0px 10px rgba(0, 0, 0, 0.2)',
-                   'zIndex': '1000', /* Adjust the z-index to ensure it appears above other content */
-                   'borderRadius': '30px 30px 30px 30px',
-                 }}>
-<div style={{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <TwitterShareButton aria-label="Twitter" children={<TwitterIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug} media={'https://www.hellostocker.com'+post.ogImage.url}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-              <div style={{paddingTop:'max(3px,0.6vw)'}}></div>
-              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,30px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
-
-                </div>
-
+             
                 <br></br>
               <Container>
               <PostHeader
