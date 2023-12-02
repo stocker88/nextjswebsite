@@ -437,7 +437,7 @@ HelloStocker helps you find the right stocks for you.
 
 &nbsp;
 
-Save time, make money and receive AI recommendations based on your own preferences in a virtual trading app.
+Save time, make money and receive AI recommendations adapted to your own preferences in a virtual trading app.
 
 &nbsp;
 

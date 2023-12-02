@@ -37,7 +37,7 @@ export default function Swipe() {
                         <br></br>
                         - Interactive analysis with live chat - no boring emails
                         <br></br>
-                        - We tell you when to realize your gains
+                        - We remind you when to realize your gains
                         <br></br>
                 </p>
 
