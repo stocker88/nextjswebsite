@@ -67,25 +67,27 @@ The timing was not great, I had lost -35.6% on Nvidia.
 &nbsp;
 
 
-AI market size worldwide is predicted to increase times 1,000: that's +100,000%.
+AI market size worldwide is predicted to increase times 1,000.
 
 &nbsp;
 
-AI is being adopted across various industries, such as healthcare, finance, retail, transportation, and agriculture.
+That's +100,000%.
+
+&nbsp;
+
+AI drives innovation and allows companies to deliver a better product to their customer.
 
 &nbsp;
 
 Netflix, Spotify, and HelloStocker, all leverage AI for better recommendations.
 
-Netflix for movies.
+\- Netflix for movies.
 
-Spotify for music.
+\- Spotify for music.
 
-HelloStocker AI for stocks.
+\- HelloStocker AI for stocks.
 
 &nbsp;
-
-They all use AI to drive innovation and deliver a times 10 better product to their customer.
 
 The ability to deliver personalized and live experiences drives better customer's satisfaction.
 
@@ -98,8 +100,6 @@ The ability to deliver personalized and live experiences drives better customer'
 
 According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in the US mentioned AI in their 2023 revenues reports.
 
-That's +100% more than in 2022!
-
 &nbsp;
 
 ![](/assets/blog/nvidia/goldmansachs.png)
@@ -110,10 +110,6 @@ That's +100% more than in 2022!
 &nbsp;
 
 Governments, research institutions, and tech companies are investing heavily in AI research and development.
-
-This investment is fostering collaborations, attracting talent, and creating a supportive ecosystem for the growth of the AI industry.
-
-Governments and companies who don't adopt AI will be left at the industrial age.
 
 &nbsp;
 
@@ -158,10 +154,6 @@ AI thrives on data and the ability to analyze large datasets to derive meaningfu
 &nbsp;
 
 This abundance of data provides a fertile ground for AI algorithms.
-
-&nbsp;
-
-They can train more accurately and improve their performance, leading to enhanced decision-making and problem-solving.
 
 
 &nbsp;
@@ -252,7 +244,12 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 \- Also, a portion of the money you invest on IPO goes to banks, when you buy the stock on IPO you don't give 100% to the company.
 
 
-\- That's funny isn't it? That's how banks get paid: they take 10% of the IPO price. ARM is definitely hyped.
+\- That's funny isn't it? That's how banks get paid: they take 10% of the IPO price. 
+
+
+&nbsp;
+
+Conclusion: ARM is overvalued.
 
 &nbsp;
 
@@ -268,25 +265,18 @@ We look at the changes in prices over the last 2 years: AMD price 2 years ago ha
 
 &nbsp;
 
-This way we can visually compare changes: returns and yields.
-
-&nbsp;
-
-Price itself is the ratio of Market Cap (company valuation) to Number of Shares Available to trade.
-
-&nbsp;
-
 \- 1) We see that Nvidia stock price outperformed AMD x 2.
 
 \- 2) Nvidia's Net Income also did x2, so it justified it's stock price change.
 
-\- 3) AMD Net Income decreased: which justifies why it's stock price did not increase.
+\- 3) AMD Net Income decreased a lot: it's share price should have decreased more.
 
-\- 4) Nvidia's earning per share doubled! Making a better deal than 2 years ago.
+\- 4) Earning per share confirms that AMD is overvalued: Share Price is the ratio of Market Cap (Valuation) to Number of Shares Available to trade.
+
 
 &nbsp;
 
-Conclusion: there is no financial reason as of why AMD is more hyped than Nvidia.
+Conclusion: AMD is overvalued compared to Nvidia.
 
 &nbsp;
 
@@ -306,7 +296,7 @@ They see Nvidia price is high and spiked so they go for AMD.
 
 &nbsp;
 
-✅But we look at the economics.
+✅But we just looked at the competition economics historical analysis.
 
 &nbsp;
 
@@ -314,23 +304,19 @@ They see Nvidia price is high and spiked so they go for AMD.
 
 #### B) Competitors sorted by Valuation
 
-
 &nbsp;
 
 Nvidia is first! The biggest whale out there.
-Guess who should we compare it with?
-
-&nbsp;
-
-Hint: (another big whale)
+Guess who you should compare it with?
 
 &nbsp;
 
 ![](/assets/blog/nvidia/nvidia_competition_4.png)
 
+
 &nbsp;
 
-TSM: Taiwan Semiconductor!
+Hint: (the second one)
 
 &nbsp;
 
@@ -340,18 +326,8 @@ TSM: Taiwan Semiconductor!
 &nbsp;
 
 \- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
-
-
-&nbsp;
-
-
 \- 2) Is it justified? Seems like it is, Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2.
-
-
-&nbsp;
-
-
-\- 3) What is the takeaway? I would rather by Taiwan Semiconductor shares than AMD.
+\- 3) What is the takeaway? If you want to diversify, you better buy 50% Nvidia and 50% Taiwan Semiconductor stocks than AMD.
 
 
 &nbsp;
@@ -369,77 +345,33 @@ TSM: Taiwan Semiconductor!
 
 &nbsp;
 
-There are only 2 ways someone knows what will happen in the short term.
+There are only 2 ways for you to know what will happen in the short term.
 
 &nbsp;
 
-### 1) They know someone who works at Nvidia, or someone who can influence macro economic and political events
+#### 1) You know someone who works at Nvidia, or someone who can influence macro economic and political events
 
 &nbsp;
 
-Most likely you don't. It is unfair right? How do we make it fair? 
+Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
 
 &nbsp;
 
-The SEC thought of it, anyone who trades with insider information will be fined and jailed: it is a crime.
-
-&nbsp;
-
-You can predict what will happen within a couple of months or a couple of years.
-
-&nbsp;
-
-But you can't legally trade the stock and predict what will happen tomorrow.
-
-&nbsp;
-
-So can we make sure politicians and famous figures are not abusing their roles on the economy?
-
-&nbsp;
-
-Well: all their trades are disclosed.
-
-&nbsp;
-
-How interesting is it to know what politicians are doing? This could help with the short term.
-
-&nbsp;
-
-In HelloStocker we process public information and politicians trading activity and send you notifications on the stocks you bought in virtual trading!
-
+Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
 &nbsp;
 
-### 2) They have access to news and information more efficiently than you do
+#### 2) You have access to news and information more efficiently than others
 
 &nbsp;
 
-Well this is a helpful one!
+We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm) and notify you in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
-Why? Because there has been a new financial earnings report very recently!
-
-&nbsp;
-
-Let's take it into account to see what happened to the stock.
-
-
-&nbsp;
-
-
-How fast do you get access to information?
-
-&nbsp;
-
-Do you have a financial social platform AI powered app that sends you instant notifications as soon as anomalies in the main news broadcasting channels are detected and spotted as relevant?
-
-&nbsp;
-
-Install HelloStocker AI now.
-
+We have social bots that crawl the web and alert you as soon as relevant news is published.
 
 &nbsp;
 
