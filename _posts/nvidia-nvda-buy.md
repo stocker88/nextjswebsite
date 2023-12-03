@@ -367,11 +367,8 @@ TSM: Taiwan Semiconductor!
 
 &nbsp;
 
-&nbsp;
 
 ### Short Term
-
-&nbsp;
 
 &nbsp;
 
