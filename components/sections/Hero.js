@@ -23,16 +23,6 @@ const Hero = ({
 }) => {
 
 
-  const [pictureActive, setPictureActive] = useState(false);
-  const openPicture = (e) => {
-    e.preventDefault();
-    setPictureActive(true);
-  }
-
-  const closePicture = (e) => {
-    e.preventDefault();
-    setPictureActive(false);
-  }
 
   const outerClasses = classNames(
     'hero section center-content',

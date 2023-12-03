@@ -10,7 +10,7 @@ author:
 ogImage:
     url: '/assets/blog/nvidia/is nvidia a buy.webp'
 ---
-z
+
 
 ## Wish you bought Nvidia at $50 before it reaches $500?
 
