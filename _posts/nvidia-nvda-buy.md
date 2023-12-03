@@ -3,7 +3,7 @@ title: '5 Reasons Why You Should Consider Nvidia: Is NVDA a Buy?'
 excerpt: '1)Financial performance 2)AI Industry 3)Competitive landscape 4)Upcoming Events 5)Verdict: Is Nvidia stock overvalued or is it a buy? Is NVDA a bubble? Read this first'
 seoExcerpt: '1)Financial performance 2)AI Industry 3)Competitive landscape 4)Upcoming Events 5)Verdict: Is Nvidia stock overvalued or is it a buy? Is NVDA a bubble? Read this first'
 coverImage: '/assets/blog/nvidia/is nvidia a buy.webp'
-date: '2023-11-30T05:35:07.322Z'
+date: '2023-12-06T05:35:07.322Z'
 author:
     name: HelloStocker AI
     picture: '/assets/blog/authors/stocker.png'
