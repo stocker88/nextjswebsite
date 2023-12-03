@@ -122,25 +122,7 @@ Governments, research institutions, and tech companies are investing heavily in 
 
 &nbsp;
 
-![](/assets/blog/nvidia/aieverywhere.jpg)
-
-&nbsp;
-
 There is an explosion of data being generated every day:
-
-&nbsp;
-
-\- 500 million tweets are sent
-
-\- 294 billion emails are sent
-
-\- 4 petabytes of data are created on Facebook
-
-\- 4 terabytes of data are created from each connected car
-
-\- 65 billion messages are sent on WhatsApp
-
-\- 5 billion searches are made
 
 &nbsp;
 
@@ -428,6 +410,8 @@ Looking at the change in Earning per Share, it seems like Nvidia has never been 
 
 ### 5) The Verdict
 
+&nbsp;
+
 #### Are you looking for +10% quick profit? or +10,000% profits?
 
 &nbsp;
@@ -438,15 +422,18 @@ If you are looking for +10% quick profit => go buy Altcoins.
 
 If you have some investments you are not planning on touching over the next 5 years, and are aiming for a huge upside, Nvidia is the go to right now.
 
+&nbsp;
+
+&nbsp;
 
 **[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
-If you want to track Nvidia you can do it safely without putting any money in.
+### If you want to track Nvidia you can do it safely without putting any money in.
 
 &nbsp;
 
-Learn investing and practice trading with unlimited money in [HelloStocker virtual trading simulator](https://www.hellostocker.com).
+Learn investing and practice trading with unlimited money in **[HelloStocker virtual trading simulator](https://www.hellostocker.com)**
 
 
