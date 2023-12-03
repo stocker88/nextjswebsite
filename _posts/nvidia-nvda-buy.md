@@ -93,6 +93,8 @@ The ability to deliver personalized and live experiences drives better customer'
 
 &nbsp;
 
+&nbsp;
+
 
 #### B) Exponential increase in companies mentioning AI in their financial reports 
 
@@ -110,6 +112,8 @@ According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in th
 &nbsp;
 
 Governments, research institutions, and tech companies are investing heavily in AI research and development.
+
+&nbsp;
 
 &nbsp;
 
@@ -326,7 +330,9 @@ Hint: (the second one)
 &nbsp;
 
 \- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
+
 \- 2) Is it justified? Seems like it is, Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2.
+
 \- 3) What is the takeaway? If you want to diversify, you better buy 50% Nvidia and 50% Taiwan Semiconductor stocks than AMD.
 
 
@@ -367,7 +373,7 @@ Politicians and insider trades are disclosed on the [SEC's website](https://www.
 
 &nbsp;
 
-We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm) and notify you in [HelloStocker App](https://www.hellostocker.com).
+We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm)) and notify you in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -389,73 +395,48 @@ Now let's see how the Earnings per Share value of Nvidia shares changed over tim
 
 &nbsp;
 
-Price to Earnings how much money does the company generated for $1 invested in the stock.
+&nbsp;
+
+Nvidia is definitely not a bubble, it's change in revenues is supporting the change in share price.
+
+The company has managed to grow at the same pace as the industry it relies on: AI.
 
 &nbsp;
 
-[//]: # (And we saw how Nvidia stock price is actually even cheaper now than it has been before.)
+![](/assets/blog/nvidia/nvidia_financials1.png)
 
 &nbsp;
 
-People see the price increase, so they think 'its expensive' but the actual company value is discounted.
+Nvidia's change in Net Income is higher than the change in share price.
 
 &nbsp;
 
-
-Buying the stock is now a bargain.
-
-&nbsp;
+There has been no substancial amount of new shares related from the company (that could have diluted the share price).
 
 &nbsp;
 
-&nbsp;
-
-### 4) Upcoming catalysts or events that could impact the stock price
-
+This is confirmed by the change in Earnings per Share (Total Earnings divided by Number of Shares available).
 
 &nbsp;
 
-&nbsp;
+Looking at the change in Earning per Share, it seems like Nvidia has never been as discounted as it is now.
 
+![](/assets/blog/nvidia/nvidia_financials2.png)
+
+
+&nbsp;
 
 ### 5) The Verdict
-
-&nbsp;
-
-&nbsp;
-
-Still under construction...
-
 
 #### Are you looking for +10% quick profit? or +10,000% profits?
 
 &nbsp;
 
-&nbsp;
-
-#### How much money are you not going to spend in the next 2 years and are you happy to lock in an investment?
+If you are looking for +10% quick profit => go buy Altcoins.
 
 &nbsp;
 
-&nbsp;
-
-Still under construction...
-
-&nbsp;
-
-&nbsp;
-
-### 6) Bonus: If I buy Nvidia, when should I realize my gains? How do I know when I should sell?
-
-&nbsp;
-
-Ask your AI Financial Advisor: he will give you a price target at which you should sell.
-
-&nbsp;
-
-If you buy Nvidia stock in the virtual trading simulator, you will receive a reminder!
-
-
+If you have some investments you are not planning on touching over the next 5 years, and are aiming for a huge upside, Nvidia is the go to right now.
 
 
 **[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
@@ -464,9 +445,8 @@ If you buy Nvidia stock in the virtual trading simulator, you will receive a rem
 
 If you want to track Nvidia you can do it safely without putting any money in.
 
-
 &nbsp;
 
-Learn investing and get better with unlimited money in HelloStocker virtual trading simulator.
+Learn investing and practice trading with unlimited money in [HelloStocker virtual trading simulator](https://www.hellostocker.com).
 
 
