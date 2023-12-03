@@ -14,9 +14,7 @@ ogImage:
 
 ## Wish you bought Nvidia at $50 before it reaches $500?
 
-&nbsp;  
-
-&nbsp;  
+&nbsp;
 
 This is what Nvidia looked like in 2018 when I bought it at $50 📈
 
@@ -31,18 +29,11 @@ And this is what happened to NVDA stock price right after 📉
 
 &nbsp;
 
-&nbsp;
-
 ![](/assets/blog/nvidia/2.png)
-
-&nbsp; 
 
 &nbsp;
 
 The timing was not great, I had lost -35.6% on Nvidia.
-
-&nbsp;
-
 
 &nbsp;
 
@@ -54,18 +45,84 @@ The timing was not great, I had lost -35.6% on Nvidia.
 
 &nbsp;
 
-&nbsp;
 
+### 1) The AI Market is Growing Exponentially
 
-### 1) Nvidia relies on AI and Tech Industry Trends
-
-&nbsp;
 
 &nbsp;
 
-#### A) Digital technologies are now everywhere 
+#### A) AI Market Size Forecast from 2023 to 2030 Is Blowing Up...
+
 
 &nbsp;
+
+
+![](/assets/blog/nvidia/statistica.png)
+
+
+&nbsp;
+
+Source: Statistica 2023 study https://www.statista.com/statistics/1365145/artificial-intelligence-market-size/
+
+&nbsp;
+
+
+AI market size worldwide is predicted to increase times 1,000: that's +100,000%.
+
+&nbsp;
+
+AI is being adopted across various industries, such as healthcare, finance, retail, transportation, and agriculture.
+
+&nbsp;
+
+Netflix, Spotify, and HelloStocker, all leverage AI for better recommendations.
+
+Netflix for movies.
+
+Spotify for music.
+
+HelloStocker AI for stocks.
+
+&nbsp;
+
+They all use AI to drive innovation and deliver a times 10 better product to their customer.
+
+The ability to deliver personalized and live experiences drives better customer's satisfaction.
+
+&nbsp;
+
+
+#### B) Exponential increase in companies mentioning AI in their financial reports 
+
+&nbsp;
+
+According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in the US mentioned AI in their 2023 revenues reports.
+
+That's +100% more than in 2022!
+
+&nbsp;
+
+![](/assets/blog/nvidia/goldmansachs.png)
+
+
+Source: https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html
+
+&nbsp;
+
+Governments, research institutions, and tech companies are investing heavily in AI research and development.
+
+This investment is fostering collaborations, attracting talent, and creating a supportive ecosystem for the growth of the AI industry.
+
+Governments and companies who don't adopt AI will be left at the industrial age.
+
+&nbsp;
+
+#### C) Digital technologies are now everywhere 
+
+
+&nbsp;
+
+![](/assets/blog/nvidia/aieverywhere.jpg)
 
 &nbsp;
 
@@ -87,18 +144,12 @@ There is an explosion of data being generated every day:
 
 &nbsp;
 
-&nbsp;
 
-![](/assets/blog/nvidia/aieverywhere.jpg)
-
+![](/assets/blog/nvidia/datacreated.webp)
 
 &nbsp;
 
-&nbsp;
-
-By 2025, it’s estimated that 463 exabytes of data will be created each day globally. No one ever heard the word exabytes before the invention of AI.
-
-&nbsp;
+Source Statistica: https://www.statista.com/statistics/871513/worldwide-data-created/
 
 &nbsp;
 
@@ -110,30 +161,29 @@ This abundance of data provides a fertile ground for AI algorithms.
 
 &nbsp;
 
-They can train more accurately and improve their performance.
+They can train more accurately and improve their performance, leading to enhanced decision-making and problem-solving.
 
-&nbsp;
-
-Leading to enhanced decision-making and problem-solving.
 
 &nbsp;
 
 &nbsp;
 
-![](/assets/blog/nvidia/datacreated.webp)
+#### D) Human workforce is shifting into AI and Tech
 
 &nbsp;
 
-Source Statistica: https://www.statista.com/statistics/871513/worldwide-data-created/
+McKinsey study on the total hours worked in Europe and United States: 2023 vs 2030 estimate in billion
 
 &nbsp;
 
+![](/assets/blog/nvidia/mckinsey.png)
+
+
+Source: McKinsey study https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce
 
 &nbsp;
 
-#### B) AI automates human tasks
-
-&nbsp;
+By 2030 there will be a 65% increase in technology workers.
 
 &nbsp;
 
@@ -149,142 +199,8 @@ Automation and artificial intelligence will accelerate the shift in skills that 
 
 &nbsp;
 
-According to a study realised by McKinsey - by 2030 there will be a 50% increase in technology workers.
-
-
 &nbsp;
 
-If not more.
-
-&nbsp;
-
-&nbsp;
-
-Total hours worked in Europe and United States, 2023 vs 2030 estimate in billion:
-
-&nbsp;
-
-![](/assets/blog/nvidia/mckinsey.png)
-
-
-Source: McKinsey study https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-#### C) Artificial intelligence market size will skyrocket 
-
-&nbsp;
-
-&nbsp;
-
-AI enables businesses to better understand their customers.
-
-&nbsp;
-
-By analyzing their preferences, behavior, and historical data, AI allows for more targeted and personalized experiences.
-
-&nbsp;
-
-Better product recommendations, more tailored marketing campaigns. 
-
-
-&nbsp;
-
-AI is being adopted across various industries, such as healthcare, finance, retail, transportation, and agriculture.
-
-&nbsp;
-
-Netflix, Spotify, and HelloStocker, all leverage AI for better recommendations.
-
-&nbsp;
-
-Netflix for movies.
-
-&nbsp;
-
-Spotify for music.
-
-&nbsp;
-
-HelloStocker AI for stocks.
-
-&nbsp;
-
-They all use AI to drive innovation and deliver a times 10 better product to their customer. 
-
-&nbsp;
-
-The ability to deliver personalized and live experiences drives better recommendations.
-
-&nbsp;
-
-AI market size worldwide is predicted to rocket times 1,000.
-
-&nbsp;
-
-That's +100,000% over the next 10 years.
-
-&nbsp;
-
-&nbsp;
-
-Artificial intelligence (AI) market size worldwide in 2021 with a forecast until 2030:
-
-![](/assets/blog/nvidia/statistica.png)
-
-
-Source: Statistica 2023 study https://www.statista.com/statistics/1365145/artificial-intelligence-market-size/
-
-&nbsp;
-
-&nbsp;
-
-
-#### D) Supportive Ecosystem
-
-&nbsp;
-
-Governments, research institutions, and tech companies are investing heavily in AI research and development. 
-
-&nbsp;
-
-This investment is fostering collaborations, attracting talent, and creating a supportive ecosystem for the growth of the AI industry. 
-
-&nbsp;
-
-Governments and companies who don't adopt AI will be left at the industrial age.
-
-&nbsp;
-
-According to a recent study by Goldman Sachs, more and more companies are adopting AI.
-
-&nbsp;
-
-It is taking a bigger market share across all sectors in our economy.
-
-
-&nbsp;
-
-16% of the top / biggest 3,000 companies in the US mentioned AI in their 2023 revenues reports.
-
-&nbsp;
-
-That's +100% more than in 2022!
-
-&nbsp;
-
-![](/assets/blog/nvidia/goldmansachs.png)
-
-
-Source: https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html
-
-&nbsp;
 
 &nbsp;
 
@@ -293,14 +209,9 @@ Source: https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-t
 
 &nbsp;
 
-Before we dive into Nvidia's financial, it is worth mentioning that Nvidia is not alone.
+Will Nvidia take the biggest share of the pot? What are other alternatives?
 
 &nbsp;
-
-First tap the 'Competition button' on Nvidia
-
-
-![](/assets/blog/nvidia/nvidia_competition_1.png)
 
 
 #### A) Competitors sorted by Price to Earning 
@@ -315,53 +226,36 @@ This shows you which stocks are 'hyped' with high growth expectations.
 
 &nbsp;
 
-The lowest the PE, the more discounted is the stock: it is undervalued, but sometimes for a reason. 
+![](/assets/blog/nvidia/nvidia_competition_2.png)
 
 &nbsp;
+
+The lowest the PE, the more discounted is the stock: it is undervalued, but sometimes for a reason. 
 
 However: the highest the PE, the more overvalued is the stock: but again the market could expect something big.
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_competition_2.png)
-
-&nbsp;
-
-We see that some companies are even more 'hyped' than Nvidia! &nbsp;
-
-
-&nbsp;
-
-
-These are ARM and AMD:
-
-&nbsp;
+We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
 \- ARM is overhyped because Softbank marketed it and it was all over the news. Never buy a stock right after Softbank does.
 
-&nbsp;
 
 \- ARM stock trading volume spiked because of its IPO: everyone bought the stock now over a short interval of time.
 
-&nbsp;
 
 \- Their IPO was everywhere in the news, and you could not buy the stock before, so everyone rushed on it and made the stock go up.
 
-&nbsp;
 
 \- It's a marketing strategy, just like when Apple shows their new iPhone model 2 months before the release date.
 
-&nbsp;
 
 \- Also, a portion of the money you invest on IPO goes to banks, when you buy the stock on IPO you don't give 100% to the company.
 
-&nbsp;
 
 \- That's funny isn't it? That's how banks get paid: they take 10% of the IPO price. ARM is definitely hyped.
-
-&nbsp;
 
 &nbsp;
 
@@ -387,29 +281,18 @@ Price itself is the ratio of Market Cap (company valuation) to Number of Shares 
 
 \- 1) We see that Nvidia stock price outperformed AMD x 2.
 
-&nbsp;
-
 \- 2) Nvidia's Net Income also did x2, so it justified it's stock price change.
 
-&nbsp;
-
 \- 3) AMD Net Income decreased: which justifies why it's stock price did not increase.
-
-&nbsp;
 
 \- 4) Nvidia's earning per share doubled! Making a better deal than 2 years ago.
 
 &nbsp;
 
-Conclusion?
+Conclusion: there is no financial reason as of why AMD is more hyped than Nvidia.
 
 &nbsp;
 
-There is no financial reason as of why AMD is more hyped than Nvidia.
-
-&nbsp;
-
-&nbsp;
 &nbsp;
 
 #### So why is AMD price so high compared to its earnings? 🧐
@@ -417,13 +300,7 @@ There is no financial reason as of why AMD is more hyped than Nvidia.
 &nbsp;
 
 My guess is: most people don't understand what they are doing. 🙄
-
-&nbsp;
-
 They put their money on a trading app and cross fingers.
-
-&nbsp;
-
 They see Nvidia price is high and spiked so they go for AMD.
 
 &nbsp;
@@ -444,9 +321,6 @@ They see Nvidia price is high and spiked so they go for AMD.
 &nbsp;
 
 Nvidia is first! The biggest whale out there.
-
-&nbsp;
-
 Guess who should we compare it with?
 
 &nbsp;
