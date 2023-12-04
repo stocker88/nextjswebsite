@@ -46,10 +46,7 @@ const Hero = ({
           <div className="hero-content">
           <br></br>
      <div style={{paddingTop: 10}}></div>
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
-                                                             HelloStocker AI App
-                                                          </h1>
-<br></br>
+      
          {/*    <Image
               src={require('assets/images/stocker.png')}
               alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
