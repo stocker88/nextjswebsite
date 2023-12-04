@@ -46,7 +46,7 @@ const Hero = ({
           <div className="hero-content">
           <br></br>
      <div style={{paddingTop: 10}}></div>
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
+                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)' }} >
                                                              HelloStocker AI App
                                                           </h1>
 <br></br>
@@ -62,8 +62,8 @@ const Hero = ({
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                   priority={true}
                  style={{
-                 width:'min(max(130px,10vw),170px)',
-                  height:'min(max(130px,10vw),170px)',
+                 width:'min(max(160px,11vw),200px)',
+                  height:'min(max(160px,11vw),200px)',
                   }}
 
                   />
