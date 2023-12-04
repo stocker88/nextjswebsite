@@ -44,7 +44,7 @@ const Hero = ({
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
-     <div style={{paddingTop: 10}}></div>
+     <div style={{paddingTop: 'max(10px,3vw)'}}></div>
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
