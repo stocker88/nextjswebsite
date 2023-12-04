@@ -88,7 +88,8 @@ const Hero = ({
                                                src='/assets/images/usersRating.webp'
                                                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
                                                priority={true}
-                                              style={{width:240, height:60}}
+                                              width={240}
+                                              height={60}
                                                />
 
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
@@ -102,7 +103,8 @@ const Hero = ({
         <Image
         src='/assets/images/chatgptgooglecloud.webp'
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-       style={{width:150, height:64.3}}
+       width={150}
+       height={64.3}
         />
                 <br></br>
              <br></br>

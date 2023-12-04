@@ -40,7 +40,8 @@ if(isMobile) {
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
                      alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
-                    style={{width:151, height:44.7966}}
+                    width={151 }
+                    height={44.7966}
                      />
                      </a>
 
@@ -49,7 +50,8 @@ if(isMobile) {
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
                       alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
-                     style={{width:150, height:44.5}}
+                     width={151 }
+                    height={44.7966}
                       />
                       </a>
                       <br></br>
@@ -65,7 +67,7 @@ if(isMobile) {
 
            <Zoom><Image
                            src={'/assets/images/qrcode.webp'}
-                          style={{width:140}}
+                          width={140}
                           alt='hellostocker ai financial advisor virtual trading app hot qr code install logo stocks to buy now'
                            /></Zoom>
 
@@ -74,7 +76,7 @@ if(isMobile) {
                                               <Image
                                                src='/assets/images/appledownloadlogo.webp'
                                                alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
-                                              style={{width:131}}
+                                              width={131}
                                                />
 
 
@@ -83,7 +85,7 @@ if(isMobile) {
                                                  <Image
                                                 src='/assets/images/googledownloadlogo.webp'
                                                 alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
-                                               style={{width:130}}
+                                               width:{130}
                                                 />
                                               <br></br>
 

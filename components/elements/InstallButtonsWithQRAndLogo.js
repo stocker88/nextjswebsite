@@ -37,7 +37,7 @@ if(isMobile) {
                            <Image
                                            src='/assets/images/hellostocker.webp'
                                            alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
-                                          style={{width:151,height:151}}
+                                          width={151}  height={151}
 
                                            />
                  <br></br>
@@ -45,7 +45,7 @@ if(isMobile) {
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
                      alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
-                    style={{width:151, height:44.7966}}
+                    width={151}  height={44.7966}
                      />
                      </a>
 
@@ -54,7 +54,8 @@ if(isMobile) {
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
                       alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
-                     style={{width:150, height:44.5}}
+                     width={151 }
+                    height={44.7966}
                       />
                       </a>
                       <br></br>
@@ -72,13 +73,13 @@ if(isMobile) {
         <Image
                         src='/assets/images/hellostocker.webp'
                         alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
-                       style={{width:160}}
+                       width={160}
 
                         />
          <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.webp'}
-                          style={{width:160}}
+                          width={160}
                           alt='hellostocker ai app'
                            /></Zoom>
 
@@ -86,7 +87,7 @@ if(isMobile) {
                                                                          <Image
                                                                           src='/assets/images/appledownloadlogo.webp'
                                                                           alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
-                                                                         style={{width:131}}
+                                                                         width={131}
                                                                           />
 
 
@@ -95,7 +96,7 @@ if(isMobile) {
                                                                             <Image
                                                                            src='/assets/images/googledownloadlogo.webp'
                                                                            alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
-                                                                          style={{width:130}}
+                                                                          width:{130}
                                                                            />
 
                           <br></br>
