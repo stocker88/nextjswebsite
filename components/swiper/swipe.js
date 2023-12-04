@@ -245,7 +245,7 @@ export default function Swipe() {
 
          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
                  Speak with our Financial Advisor
-                 <h2>
+                 </h2>
                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
                   <br></br> ex Goldman Sachs | Bank of America Investment Manager
                  <br></br> with over 15 years in investing
