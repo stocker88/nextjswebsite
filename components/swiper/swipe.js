@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import classNames from 'classnames';
+import cn from 'classnames'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination"

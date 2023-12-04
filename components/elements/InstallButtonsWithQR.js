@@ -68,7 +68,8 @@ if(isMobile) {
            <Zoom><Image
                            src={'/assets/images/qrcode.webp'}
                           width={140}
-                          alt='hellostocker ai financial advisor virtual trading app hot qr code install logo stocks to buy now'
+                          height={140}
+                          alt='hellostocker ai financial advisor hot stocks to buy now logo'
                            /></Zoom>
 
 
