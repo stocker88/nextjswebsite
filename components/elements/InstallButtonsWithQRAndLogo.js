@@ -90,6 +90,7 @@ if(isMobile) {
                                                                           src='/assets/images/appledownloadlogo.webp'
                                                                           alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                                                                          width={131}
+                                                                         height={38.863}
                                                                           />
 
 
