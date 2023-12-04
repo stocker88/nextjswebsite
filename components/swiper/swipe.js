@@ -58,7 +58,7 @@ export default function Swipe() {
                  <Image
                     width={340}
                      height={735.85}
-                      src='/assets/images/chatgpt.webp'
+                      src='/assets/images/chatgpt2.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
                       />
