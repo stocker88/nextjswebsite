@@ -62,7 +62,7 @@ The timing was not great, I had lost -35.6% on Nvidia.
 
 &nbsp;
 
-[Source: Statistica 2023 study](https://www.statista.com/statistics/1365145/artificial-intelligence-market-size/)
+[Source: Statistica 2023 study ](https://www.statista.com/statistics/1365145/artificial-intelligence-market-size/)
 
 &nbsp;
 
@@ -107,7 +107,7 @@ According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in th
 ![](/assets/blog/nvidia/goldmansachs.png)
 
 
-[Source: Goldman Sachs 2023 study](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html) 
+[Source: Goldman Sachs 2023 study ](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html) 
 
 &nbsp;
 
@@ -131,7 +131,7 @@ There is an explosion of data being generated every day:
 
 &nbsp;
 
-[Source: Statistica 2023 analysis](https://www.statista.com/statistics/871513/worldwide-data-created/)
+[Source: Statistica 2023 analysis ](https://www.statista.com/statistics/871513/worldwide-data-created/)
 
 &nbsp;
 
@@ -157,7 +157,7 @@ McKinsey study on the total hours worked in Europe and United States: 2023 vs 20
 ![](/assets/blog/nvidia/mckinsey.png)
 
 
-[Source: McKinsey 2023 analysis](https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce)
+[Source: McKinsey 2023 analysis ](https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce)
 
 &nbsp;
 
@@ -341,11 +341,11 @@ There are only 2 ways for you to know what will happen in the short term.
 
 &nbsp;
 
-Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with the SEC (Security Exchange Commission).
+Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
 
 &nbsp;
 
-[Politicians and insider trades are disclosed on the SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
+Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -355,7 +355,7 @@ Anyone who trades with insider information will be fined and jailed: it is a cri
 
 &nbsp;
 
-[We track Hedge Fund activity form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm) and notify you in [HelloStocker App](https://www.hellostocker.com).
+We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm)) and notify you in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -434,6 +434,6 @@ If you have some investments you are not planning on touching over the next 5 ye
 
 &nbsp;
 
-**[Learn investing and practice trading with unlimited money in HelloStocker virtual trading simulator](https://www.hellostocker.com)**
+Learn investing and practice trading with unlimited money in **[HelloStocker virtual trading simulator](https://www.hellostocker.com)**
 
 
