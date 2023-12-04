@@ -249,7 +249,7 @@ export default function Swipe() {
                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
                   <br></br> ex Goldman Sachs | Bank of America Investment Manager
                   <br></br>
-                 <br></br> +15 years of investing experience
+                 <br></br> over 15 years of investing experience
                </h3>
                  <br></br>
                  <br></br>
