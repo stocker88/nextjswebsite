@@ -223,9 +223,31 @@ export default function Swipe() {
          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
                  Speak with our Financial Advisor
                  </h2>
-                 <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
+
                  <br></br>
-                 <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
+                                  <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true' target="_blank" ><button
+                                              style={{
+
+                                                   }}>  <div style={{
+                                                   'padding': '0.8rem',
+                                                   'color': 'black',
+                                                    'width':'31vw',
+                                                   'textAlign': 'center',
+                                                   'fontSize': 'min(19px,max(15px,2vw))',
+                                                   'borderRadius': '30px 30px 30px 30px',
+                                                   'background': '#00f75f',
+                                                   'maxWidth':'280px'
+                                                  }}>Book 20min here</div></button></a>
+
+                  <br></br>
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
+                  <br></br> ex Goldman Sachs | Bank of America Investment Manager
+                  <br></br>
+                 <br></br> over 15 years of investing experience
+               </h3>
+                 <br></br>
+                 <br></br>
+ <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
                                               style={{
 
                                                    }}>  <div style={{
@@ -238,27 +260,7 @@ export default function Swipe() {
                                                    'background': '#00f75f',
                                                    'maxWidth':'280px'
                                                   }}>Connect on LinkedIn</div></button></a>
-                  <br></br>
-                  <br></br> ex Goldman Sachs | Bank of America Investment Manager
-                  <br></br>
-                 <br></br> over 15 years of investing experience
-               </h3>
-                 <br></br>
-                 <br></br>
 
-                 <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true' target="_blank" ><button
-                             style={{
-
-                                  }}>  <div style={{
-                                  'padding': '0.8rem',
-                                  'color': 'black',
-                                   'width':'31vw',
-                                  'textAlign': 'center',
-                                  'fontSize': 'min(19px,max(15px,2vw))',
-                                  'borderRadius': '30px 30px 30px 30px',
-                                  'background': '#00f75f',
-                                  'maxWidth':'280px'
-                                 }}>Book 20min here</div></button></a>
                  <br></br>
                  <br></br>
                      </center>
