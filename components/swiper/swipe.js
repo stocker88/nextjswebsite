@@ -235,7 +235,7 @@ export default function Swipe() {
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#00f75f',
                                                    'maxWidth':'280px'
-                                                  }}><b>Book 20min here</b></div></button></a>
+                                                  }}>Book 20min here</div></button></a>
 
                   <br></br>
                   <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
@@ -257,7 +257,7 @@ export default function Swipe() {
                                                    'borderRadius': '30px 30px 30px 30px',
                                                    'background': '#00f75f',
                                                    'maxWidth':'280px'
-                                                  }}><b>Connect on LinkedIn</b></div></button></a>
+                                                  }}>Connect on LinkedIn</div></button></a>
 
                  <br></br>
                  <br></br>
