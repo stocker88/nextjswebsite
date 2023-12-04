@@ -106,6 +106,7 @@ According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in th
 
 ![](/assets/blog/nvidia/goldmansachs.png)
 
+&nbsp;
 
 [Source: Goldman Sachs 2023 study ](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html) 
 

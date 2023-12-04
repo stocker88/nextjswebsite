@@ -66,10 +66,10 @@ const PostBody = ({ content }: Props) => {
           img: CustomImage,
            p: CustomP,
            h2: CustomH2,
-              h3: CustomH3,
-              h4: CustomH4,
-              h5: CustomH5,
-              h6: CustomH6,
+          h3: CustomH3,
+          h4: CustomH4,
+          h5: CustomH5,
+          h6: CustomH6,
         }}
         >{content}</Markdown>
 
