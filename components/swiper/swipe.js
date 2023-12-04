@@ -82,7 +82,7 @@ export default function Swipe() {
                     <br></br>
                     - 99% of Hedge Funds test strategies virtually first
                     <br></br>
-                    - It is a safe playground for testing and growing
+                    - It is a safe playground for learning and growing
                     <br></br>
                 </p>
         </div>
