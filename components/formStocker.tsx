@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import 'firebase/firestore';
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import {getFirestore} from 'firebase/firestore';
 import { doc, setDoc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
@@ -29,10 +28,6 @@ const firebaseApp = initializeApp(firebaseConfig);
 if (firebaseConfig?.projectId) {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-
-  if (app.name && typeof window !== 'undefined') {
-    const analytics = getAnalytics(app);
-  }
 
   // Access Firebase services using shorthand notation
   const db = getFirestore();
