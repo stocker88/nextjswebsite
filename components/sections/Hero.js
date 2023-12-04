@@ -58,8 +58,8 @@ const Hero = ({
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                   priority={true}
                  style={{
-                 width:'min(max(165px,12vw),210px)',
-                  height:'min(max(165px,12vw),210px)',
+                 width:'min(max(165px,12vw),250px)',
+                  height:'min(max(165px,12vw),250px)',
                   }}
 
                   />
