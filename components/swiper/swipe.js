@@ -263,7 +263,7 @@ export default function Swipe() {
                                   'borderRadius': '30px 30px 30px 30px',
                                   'background': '#00f75f',
                                   'maxWidth':'280px'
-                                 }}>Check his LinkedIn</div></button></a>
+                                 }}>Connect on LinkedIn</div></button></a>
                  <br></br>
                  <br></br>
                  <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true' target="_blank" ><button

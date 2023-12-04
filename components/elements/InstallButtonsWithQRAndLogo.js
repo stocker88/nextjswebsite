@@ -74,12 +74,14 @@ if(isMobile) {
                         src='/assets/images/hellostocker.webp'
                         alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                        width={160}
+                       height={160}
 
                         />
          <br></br>
            <Zoom><Image
                            src={'/assets/images/qrcode.webp'}
                           width={160}
+                          height={160}
                           alt='hellostocker ai app'
                            /></Zoom>
 
