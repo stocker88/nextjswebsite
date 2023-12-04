@@ -56,8 +56,8 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={300}
-                     height={649.28}
+                    width={320}
+                     height={693}
                       src='/assets/images/chatgpt2.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
@@ -99,8 +99,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                     src='/assets/images/portfolio2.webp'
-                    width={300}
-                    height={649.28}
+                    width={320}
+                    height={693}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
@@ -266,10 +266,26 @@ export default function Swipe() {
                                  }}>Check his LinkedIn</div></button></a>
                  <br></br>
                  <br></br>
+                 <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true' target="_blank" ><button
+                             style={{
+
+                                  }}>  <div style={{
+                                  'padding': '0.8rem',
+                                  'color': 'black',
+                                   'width':'31vw',
+                                  'textAlign': 'center',
+                                  'fontSize': 'min(19px,max(15px,2vw))',
+                                  'borderRadius': '30px 30px 30px 30px',
+                                  'background': '#00f75f',
+                                  'maxWidth':'280px'
+                                 }}>Book here</div></button></a>
+                 <br></br>
+                 <br></br>
+         {/*
          </center>
              <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-         {/*
+
          <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
          */}
                  <br></br>
