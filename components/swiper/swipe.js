@@ -56,8 +56,8 @@ export default function Swipe() {
                     data-reveal-container=".split-item">
                  <Zoom>
                  <Image
-                    width={340}
-                     height={735.85}
+                    width={300}
+                     height={649.28}
                       src='/assets/images/chatgpt2.webp'
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
@@ -98,9 +98,9 @@ export default function Swipe() {
                   data-reveal-container=".split-item">
                   <Zoom>
                   <Image
-                    src='/assets/images/portfolio.webp'
-                    width={340}
-                    height={735.85}
+                    src='/assets/images/portfolio2.webp'
+                    width={300}
+                    height={649.28}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
@@ -227,8 +227,8 @@ export default function Swipe() {
                   <Zoom>
                   <Image
                   src='/assets/images/tslavsrace.webp'
-                        width={340}
-                    height={735.85}
+                        width={300}
+                    height={649.28}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />
