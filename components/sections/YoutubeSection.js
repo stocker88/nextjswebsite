@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader2 from './partials/SectionHeader2';
-import Image from '../elements/Image';
+import Image from 'next/image';
 import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';

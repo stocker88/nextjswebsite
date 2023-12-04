@@ -1,12 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import Image from '../elements/Image';
+import Image from 'next/image';
 import { useState } from 'react';
 import { isMobile } from "react-device-detect";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import ReactGA from 'react-ga4';
-
 const innerClasses = classNames(
 'hero-inner section-inner',
 );

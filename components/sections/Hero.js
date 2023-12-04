@@ -4,7 +4,7 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
-import Image from '../elements/Image';
+import Image from 'next/image';
 import { openInbox } from 'react'
 import Container from '../container'
 import NewsletterSignUp from '../formStocker'

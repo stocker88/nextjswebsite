@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader2 from './partials/SectionHeader2';
-import Image from '../elements/Image';
+import Image from 'next/image';
 
 const propTypes = {
   ...SectionSplitProps.types

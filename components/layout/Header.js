@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Image from '../elements/Image';
+import Image from 'next/image';
 
 class Header extends Component {
 
