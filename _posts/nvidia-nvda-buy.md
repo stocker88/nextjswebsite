@@ -6,7 +6,7 @@ coverImage: '/assets/blog/nvidia/is nvidia a buy.webp'
 date: '2023-12-06T05:35:07.322Z'
 author:
     name: HelloStocker AI
-    picture: '/assets/blog/authors/stocker.png'
+    picture: '/assets/blog/authors/stocker.webp'
 ogImage:
     url: '/assets/blog/nvidia/is nvidia a buy.webp'
 ---
@@ -20,7 +20,7 @@ This is what Nvidia looked like in 2018 when I bought it at $50 📈
 
 &nbsp;  
 
-![](/assets/blog/nvidia/1.png)
+![](/assets/blog/nvidia/1.webp)
 
 &nbsp;  
 
@@ -29,7 +29,7 @@ And this is what happened to NVDA stock price right after 📉
 
 &nbsp;
 
-![](/assets/blog/nvidia/2.png)
+![](/assets/blog/nvidia/2.webp)
 
 &nbsp;
 
@@ -57,7 +57,7 @@ The timing was not great, I had lost -35.6% on Nvidia.
 &nbsp;
 
 
-![](/assets/blog/nvidia/statistica.png)
+![](/assets/blog/nvidia/statistica.webp)
 
 
 &nbsp;
@@ -104,7 +104,7 @@ According to Goldman Sachs study: 16% of the top / biggest 3,000 companies in th
 
 &nbsp;
 
-![](/assets/blog/nvidia/goldmansachs.png)
+![](/assets/blog/nvidia/goldmansachs.webp)
 
 
 [Source: Goldman Sachs 2023 study ](https://www.goldmansachs.com/intelligence/pages/ai-investment-forecast-to-approach-200-billion-globally-by-2025.html) 
@@ -154,7 +154,7 @@ McKinsey study on the total hours worked in Europe and United States: 2023 vs 20
 
 &nbsp;
 
-![](/assets/blog/nvidia/mckinsey.png)
+![](/assets/blog/nvidia/mckinsey.webp)
 
 
 [Source: McKinsey 2023 analysis ](https://www.mckinsey.com/featured-insights/future-of-work/skill-shift-automation-and-the-future-of-the-workforce)
@@ -201,7 +201,7 @@ This shows you which stocks are 'hyped' with high growth expectations.
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_competition_2.png)
+![](/assets/blog/nvidia/nvidia_competition_2.webp)
 
 &nbsp;
 
@@ -243,7 +243,7 @@ Let's select AMD, it now shows in orange:
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_competition_3.png)
+![](/assets/blog/nvidia/nvidia_competition_3.webp)
 
 &nbsp;
 
@@ -297,7 +297,7 @@ Guess who you should compare it with?
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_competition_4.png)
+![](/assets/blog/nvidia/nvidia_competition_4.webp)
 
 
 &nbsp;
@@ -306,7 +306,7 @@ Hint: (the second one)
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_competition_5.png)
+![](/assets/blog/nvidia/nvidia_competition_5.webp)
 
 
 &nbsp;
@@ -385,7 +385,7 @@ The company has managed to grow at the same pace as the industry it relies on: A
 
 &nbsp;
 
-![](/assets/blog/nvidia/nvidia_financials1.png)
+![](/assets/blog/nvidia/nvidia_financials1.webp)
 
 &nbsp;
 
@@ -403,7 +403,7 @@ This is confirmed by the change in Earnings per Share (Total Earnings divided by
 
 Looking at the change in Earning per Share, it seems like Nvidia has never been as discounted as it is now.
 
-![](/assets/blog/nvidia/nvidia_financials2.png)
+![](/assets/blog/nvidia/nvidia_financials2.webp)
 
 
 &nbsp;
