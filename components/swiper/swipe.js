@@ -130,8 +130,6 @@ export default function Swipe() {
                 <br></br>
                 - Real Estate stocks that pay 15% dividend yield
                 <br></br>
-                - Hedge Funds & investors trading activity
-                <br></br>
                 <br></br>
 </p>
 
