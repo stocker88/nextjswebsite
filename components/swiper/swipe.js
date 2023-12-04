@@ -59,6 +59,7 @@ export default function Swipe() {
                     width={320}
                      height={693}
                       src='/assets/images/chatgpt2.webp'
+                      style={{'borderRadius': '30px 30px 30px 30px'}}
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                       alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
                       />
@@ -101,6 +102,7 @@ export default function Swipe() {
                     src='/assets/images/portfolio2.webp'
                     width={320}
                     height={693}
+                    style={{'borderRadius': '30px 30px 30px 30px'}}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
                     />
