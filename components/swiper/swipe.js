@@ -35,7 +35,7 @@ export default function Swipe() {
                         <br></br>
                         - You receive AI recommendations adapted to your own tastes
                         <br></br>
-                        - Interactive analysis with live chat - no boring emails
+                        - Interactive analysis with 24/7 live chat
                         <br></br>
                         - We remind you when to realize your gains
                         <br></br>
