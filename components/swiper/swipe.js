@@ -3,7 +3,6 @@ import React, { useRef, useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import classNames from 'classnames';
-import cn from 'classnames'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination"
@@ -57,9 +56,7 @@ export default function Swipe() {
                  <Image
                     width={320}
                      height={693}
-                     className={cn('shadow-sm w-full', {
-                             'hover:shadow-lg transition-shadow duration-200': slug,
-                           })}
+                     className="shadow-md"
                       src='/assets/images/chatgpt2.webp'
                       style={{'borderRadius': '30px 30px 30px 30px'}}
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
@@ -104,9 +101,7 @@ export default function Swipe() {
                     src='/assets/images/portfolio2.webp'
                     width={320}
                     height={693}
-                    className={cn('shadow-sm w-full', {
-                            'hover:shadow-lg transition-shadow duration-200': slug,
-                          })}
+                    className="shadow-md"
                     style={{'borderRadius': '30px 30px 30px 30px'}}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
@@ -211,9 +206,7 @@ export default function Swipe() {
                   src='/assets/images/tslavsrace.webp'
                         width={300}
                     height={649.28}
-                    className={cn('shadow-sm w-full', {
-                            'hover:shadow-lg transition-shadow duration-200': slug,
-                          })}
+                    className="shadow-md"
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />
