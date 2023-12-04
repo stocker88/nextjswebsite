@@ -128,6 +128,8 @@ export default function Swipe() {
                 <br></br>
                 - Social sentiment & News
                 <br></br>
+                - Real Estate stocks that pay 15% dividend yield
+                <br></br>
                 - Hedge Funds & investors trading activity
                 <br></br>
                 <br></br>
@@ -135,31 +137,6 @@ export default function Swipe() {
 
         </div>
         </div>
-
-<center>
-<div className="container">
-     <div className="split-item">
-
-              <div className={
-                classNames(
-                  'split-item-image center-content-mobile reveal-from-bottom',
-                   'split-item-image-fill'
-                )}
-                data-reveal-container=".split-item">
-                <Zoom>
-                <Image
-                  src='/assets/images/dividends.webp'
-                    width={600}
-                    height={800.4}
-                  sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                  alt='Dividend Stocks +20% Yield HelloStocker ipad screenshot'
-                  />
-                  </Zoom>
-              </div>
-
-        </div>
-        </div>
-</center>
 
 <br></br><br></br>
 
