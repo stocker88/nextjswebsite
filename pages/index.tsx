@@ -87,7 +87,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>
+          {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
         </Head>
         <Container>
           <Intro />
