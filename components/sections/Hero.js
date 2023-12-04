@@ -55,7 +55,7 @@ const Hero = ({
 
   <Image
                   src='/assets/images/hellostocker.webp'
-                  alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
+                  alt="HelloStocker AI App"
                   priority={true}
                  style={{
                  width:'min(max(165px,12vw),250px)',
@@ -105,6 +105,7 @@ const Hero = ({
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
        width={150}
        height={64}
+       priority={true}
         />
                 <br></br>
              <br></br>
