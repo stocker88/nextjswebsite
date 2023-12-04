@@ -56,6 +56,9 @@ export default function Swipe() {
                  <Image
                     width={320}
                      height={693}
+                     className={cn('shadow-sm w-full', {
+                             'hover:shadow-lg transition-shadow duration-200': slug,
+                           })}
                       src='/assets/images/chatgpt2.webp'
                       style={{'borderRadius': '30px 30px 30px 30px'}}
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
@@ -100,6 +103,9 @@ export default function Swipe() {
                     src='/assets/images/portfolio2.webp'
                     width={320}
                     height={693}
+                    className={cn('shadow-sm w-full', {
+                            'hover:shadow-lg transition-shadow duration-200': slug,
+                          })}
                     style={{'borderRadius': '30px 30px 30px 30px'}}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Unlimited Virtual Money HelloStocker Screenshot'
@@ -204,6 +210,9 @@ export default function Swipe() {
                   src='/assets/images/tslavsrace.webp'
                         width={300}
                     height={649.28}
+                    className={cn('shadow-sm w-full', {
+                            'hover:shadow-lg transition-shadow duration-200': slug,
+                          })}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
                     alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
                     />

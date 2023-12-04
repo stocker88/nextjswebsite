@@ -104,7 +104,7 @@ const Hero = ({
         src='/assets/images/chatgptgooglecloud.webp'
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
        width={150}
-       height={64.3}
+       height={64}
         />
                 <br></br>
              <br></br>
