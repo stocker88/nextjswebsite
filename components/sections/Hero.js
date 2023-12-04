@@ -44,7 +44,6 @@ const Hero = ({
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
-          <br></br>
      <div style={{paddingTop: 10}}></div>
 
          {/*    <Image
@@ -59,8 +58,8 @@ const Hero = ({
                   alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial big data to find the next Nvidia, Tesla, Roblox, the Next Apple"
                   priority={true}
                  style={{
-                 width:'min(max(160px,11vw),200px)',
-                  height:'min(max(160px,11vw),200px)',
+                 width:'min(max(165px,12vw),210px)',
+                  height:'min(max(165px,12vw),210px)',
                   }}
 
                   />
@@ -71,7 +70,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-            HelloStocker helps you find stocks before they blow up: AI trading recommendations adapted to you.
+            HelloStocker helps you find stocks before they blow up: AI trading recommendations for you.
             </h2>
           </div>
 
@@ -103,7 +102,7 @@ const Hero = ({
         <Image
         src='/assets/images/chatgptgooglecloud.webp'
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-       style={{width:195.9375, height:83.98}}
+       style={{width:150, height:64.3}}
         />
                 <br></br>
              <br></br>
