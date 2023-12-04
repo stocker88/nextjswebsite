@@ -341,11 +341,11 @@ There are only 2 ways for you to know what will happen in the short term.
 
 &nbsp;
 
-Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
+Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with the SEC (Security Exchange Commission).
 
 &nbsp;
 
-Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
+[Politicians and insider trades are disclosed on the SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -355,7 +355,7 @@ Politicians and insider trades are disclosed on the [SEC's website](https://www.
 
 &nbsp;
 
-We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm)) and notify you in [HelloStocker App](https://www.hellostocker.com).
+[We track Hedge Fund activity form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm) and notify you in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -434,6 +434,6 @@ If you have some investments you are not planning on touching over the next 5 ye
 
 &nbsp;
 
-Learn investing and practice trading with unlimited money in **[HelloStocker virtual trading simulator](https://www.hellostocker.com)**
+**[Learn investing and practice trading with unlimited money in HelloStocker virtual trading simulator](https://www.hellostocker.com)**
 
 
