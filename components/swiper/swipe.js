@@ -280,7 +280,7 @@ export default function Swipe() {
                                   'borderRadius': '30px 30px 30px 30px',
                                   'background': '#00f75f',
                                   'maxWidth':'280px'
-                                 }}>Book here</div></button></a>
+                                 }}>Book 20min here</div></button></a>
                  <br></br>
                  <br></br>
                      </center>
