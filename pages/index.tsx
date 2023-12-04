@@ -77,12 +77,12 @@ export default function Index({ allPosts }: Props) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
           <meta name="description" content="HelloStocker helps you find stocks before they blow up: test investing strategies with virtual trading, learn how to invest with AI and grow with the stock market today"/>
-          <meta property="og:title" content="HelloStocker AI App - We Send You Stocks To Buy" />
+          <meta property="og:title" content="HelloStocker AI App - Hot Stocks To Buy Now" />
           <meta name="og:description" content="HelloStocker helps you find stocks before they blow up: test investing strategies with virtual trading, learn how to invest with AI and grow with the stock market today" />
           <meta property="og:type" content="video.movie" />
           <meta property="og:url" content="https://www.hellostocker.com/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
-          <meta name="twitter:title" content="HelloStocker AI App - We Send You Stocks To Buy"/>
+          <meta name="twitter:title" content="HelloStocker AI App - Hot Stocks To Buy Now"/>
           <meta name="twitter:description" content="HelloStocker helps you find stocks before they blow up: test investing strategies with virtual trading, learn how to invest with AI and grow with the stock market today"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
