@@ -121,11 +121,7 @@ But since he gets paid on having you trade everyday, he will push you to do it.
 
 And burn your money: meanwhile he gets paid!
 
-&nbsp;
-
 ![](/assets/blog/financial-gurus/how_trading_gurus_make_money.png)
-
-&nbsp;
 
 
 ### **Pretty good business isn't it?**
