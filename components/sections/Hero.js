@@ -57,6 +57,8 @@ const Hero = ({
                   src='/assets/images/hellostocker.webp'
                   alt="HelloStocker AI App"
                   priority={true}
+                  width={256}
+                  height={256}
                  style={{
                  width:'min(max(165px,12vw),250px)',
                   height:'min(max(165px,12vw),250px)',

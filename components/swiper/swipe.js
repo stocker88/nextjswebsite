@@ -29,13 +29,14 @@ export default function Swipe() {
 
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
                         - You receive AI recommendations adapted to your own tastes
                         <br></br>
-                        - Interactive analysis with 24/7 live chat
+                        - Ask anything for instant solutions on a 24/7 chat
+                        <br></br>
                         <br></br>
                 </p>
 
@@ -77,7 +78,7 @@ export default function Swipe() {
 <br></br>
   <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
                   <br></br>
                     - You can test trading ideas in a safe virtual reality simulator
                     <br></br>
@@ -121,16 +122,16 @@ export default function Swipe() {
 <div className="container">
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-                - Market trading signals & AI screening
-                <br></br>
-                - Wall St analyst ratings & financial data
-                <br></br>
-                - Social sentiment & News
-                <br></br>
-                - Real Estate stocks that pay 15% dividend yield
-                <br></br>
-                <br></br>
+      <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
+    - Market trading signals & AI screening
+    <br></br>
+    - Wall St analyst ratings & financial data
+    <br></br>
+    - Social sentiment & News
+    <br></br>
+    - Real Estate stocks that pay 15% dividend yield
+    <br></br>
+    <br></br>
 </p>
 
         </div>

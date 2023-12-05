@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import 'firebase/firestore';
 import { initializeApp } from "firebase/app";
@@ -97,20 +97,73 @@ const Div = styled.div`
 */}
     const [input,setInput] = useState("");
     const [message,setMessage] = useState("");
+    const [deviceInfo, setDeviceInfo] = useState({
+        userAgent: '',
+        platform: '',
+        language: '',
+        screenWidth: '',
+        screenHeight: '',
+        // Add more properties based on available browser APIs
+//         latitude: null,
+//         longitude: null,
+      });
+
     let [showDropdown, setShowDropdown] = useState(false);
+    const fetchDeviceInfo = () => {
+        try {
+          // Get basic device information
+          setDeviceInfo({
+            ...deviceInfo,
+            userAgent: navigator.userAgent,
+            platform: navigator.platform,
+            language: navigator.language,
+            screenWidth: window.screen.width,
+            screenHeight: window.screen.height,
+            // Add or update other properties as needed
+          });
+        } catch (error) {
+          console.error('Error fetching device information:', error);
+          // Set empty string ('') as default values if fetching device information fails
+          setDeviceInfo({
+            ...deviceInfo,
+            userAgent: '',
+            platform: '',
+            language: '',
+            screenWidth: '',
+            screenHeight: '',
+            // Set other properties to empty strings as needed
+          });
+        }
+      };
+
+
+      useEffect(() => {
+        // Fetch device information when the component mounts
+        fetchDeviceInfo();
+      }, []); // Empty dependency array ensures the effect runs only once after initial render
+
 
     const inputHandler = (e) => {
         setInput(e.target.value);
     };
-const db = getFirestore();
+    const db = getFirestore();
     const submitHandler = (e) => {
         e.preventDefault();
         if (input){
             console.log(input);
             //add to firebase
+            const dateTime = Date.now();
+            const unixTime = Math.floor(dateTime / 1000);
+
              setDoc(doc(db, "contactList", input), {
                 email: input,
                 time: serverTimestamp(),
+                unixTime: unixTime,
+              userAgent: deviceInfo.userAgent,
+              platform: deviceInfo.platform,
+              language: deviceInfo.language,
+              screenWidth: deviceInfo.screenWidth,
+              screenHeight: deviceInfo.screenHeight,
                 });
             setShowDropdown(true)
             setInput("");
