@@ -84,7 +84,12 @@ If they get 1,000 people a month to trade... That's $600,000 a month: **→ $7,2
 &nbsp;
 
 
-### **The Guru wants you to trade everyday: he will make even more money!**  
+&nbsp;
+
+
+## **The Guru wants you to trade everyday: he will make even more money!**  
+
+&nbsp;
 
 &nbsp;
 
@@ -100,7 +105,7 @@ Who cares you will make money right?
 
 &nbsp;
 
-### **He doesn't tell you short term trades get taxed 40%**
+### **He doesn't tell you short term trades is taxed 40%**
 
 &nbsp;
 
@@ -111,7 +116,7 @@ You can do the math quick: unless you live in Puerto Rico, your commissions and 
 &nbsp;
 
 
-### **Long term investing gets taxed 20%**
+### **Long term investing is taxed 20%**
 
 &nbsp;
 
@@ -152,7 +157,7 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-## One thing I learnt from my 15 years in investing?**
+## One thing I learnt from my 15 years in investing?
 
 &nbsp;
 
