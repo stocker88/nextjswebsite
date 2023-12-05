@@ -32,6 +32,13 @@ In this article we will:
 ## 1) How Trading Gurus Get Paid
 
 
+&nbsp;
+
+The Guru makes money with trading!
+
+&nbsp;
+
+**Not with his trading, with yours.**
 
 &nbsp;
 
@@ -41,77 +48,97 @@ In this article we will:
 
 
 
-**1) They give you free trading courses**
+**1) The Guru gives you free trading courses**
 
 &nbsp;
 
-**2) 🚘They show you how rich they are**
+**2) 🚘The Guru shows you expensive cars rented in Dubai**
 
 &nbsp;
 
-**3) 📈They make you believe you see them trade live**
+**3) 📈The Guru makes you believe you see him trade live**
 
 &nbsp;
 
-**4) And even if they do, you won't see ALL their trades** 
+**4) And even if he does, you won't see ALL his trades** 
 
 &nbsp;
 
-**5) ✅They convince you it works and push you to trade**
+**5) ✅The Guru convinces you he make money with trading and pushes you to trade**
 
 &nbsp;
 
-**6) They offer to give you $200 if you start trading with them**
+**6) The Guru is generous and offers to give you $200 if you start trading with them**
 
 &nbsp;
 
-**7) 🚀You open an account with their affiliate broker and deposit $1,000**
+**7) 🚀You open an account with his affiliate broker and deposit $1,000 to trade**
 
 &nbsp;
 
-**8) 🧐Their affiliate pays them $600**
+**8) 🧐The affiliate pays your Guru $600: wait and what about you?**
 
 &nbsp;
 
-**9) 💸They just got paid $600 - done.**
+**9) 💸The Guru got paid $600: your influencer just made money on YOUR trading (not his).**
 
 &nbsp;
 
-**10) 💀Wait I forgot - now they want you to bring your friend.**
+**10) 💀Wait I forgot - now he wants you to bring your friends.**
+
+&nbsp;
+
 
 &nbsp;
 
 &nbsp;
 
-&nbsp;
-
-They get paid $600 when they convince you to trade!
+Your Guru influencer gets paid $600 when they convince you to trade!
 
 &nbsp;
 
-If they get 1,000 people a month to trade...
+If they get 1,000 people a month to trade... That's $600,000 a month: **→ $7,200,000 a year.**
+
 
 &nbsp;
 
-That's $600,000 a month:
+
+### **The Guru wants you to trade everyday: he will make even more money!**  
 
 &nbsp;
 
-**→ $7,200,000 a year.**
+And now he wants you to trade everyday! Be a day trader!
 
 &nbsp;
 
-**BINGO**
+He takes 50% of all your trading commissions.
 
 &nbsp;
 
-This is how they make money with trading!
+Who cares you will make money right?
 
 &nbsp;
 
-**Not with their trading, with yours.**
+### **He doesn't tell you short term trades get taxed 40%**
 
 &nbsp;
+
+You can do the math quick: unless you live in Puerto Rico, your commissions and taxes will eat all your gains.
+
+
+
+&nbsp;
+
+
+### **Long term investing gets taxed 20%**
+
+&nbsp;
+
+But since he gets paid on having you trade everyday, he will push you to do it.
+
+&nbsp;
+
+And burn your money: meanwhile he gets paid!
 
 &nbsp;
 
@@ -120,31 +147,23 @@ This is how they make money with trading!
 
 &nbsp;
 
-&nbsp;
-
-They show you their lamborghini.
-
-&nbsp;
-
-&nbsp;
-
-**Meanwhile you lose your $1,000** 
-
-&nbsp;
-
-What happens then?
-
-&nbsp;
-
-**Nothing, you just lost your money.**
-
-&nbsp;
-
-They don't care about you.
-
-&nbsp;
-
 They want you to buy and trade fast.
+
+&nbsp;
+
+Buy Sell Buy Sell burn commissions!
+
+&nbsp;
+
+It's not about trading lots: it's about picking the few good trades that pay big.
+
+&nbsp;
+
+Why? Because short term trade gains are taxed 40%.
+
+&nbsp;
+
+Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
@@ -246,7 +265,7 @@ After your first 2 millions, personal finance and money doesn't buy anymore happ
 
 &nbsp;
 
-## 2) How to differentiate the Advisor from the Influencer?
+## 2) How to differentiate the Advisor from the Guru Influencer?
 
 &nbsp;
 
