@@ -402,45 +402,50 @@ Hint: (the second one)
 
 &nbsp;
 
+The AI Industry is in the early stages of an exponential surge.
+
+&nbsp;
+
+With this in mind, Nvidia could become the next Apple anytime soon.
+
+
+&nbsp;
+
+Competition analysis showed why Nvidia remains the best option and why competition is overhyped.
+
+
+&nbsp;
+
+It's not about prices. It's about Economics.
+
+
+&nbsp;
+
+
+&nbsp;
+
+
 #### Are you looking for +10% quick profit? or +10,000% profits?
 
 &nbsp;
 
-If you are looking for +10% quick profit => go buy Altcoins.
+If you are looking for +10% quick profit => go buy Altcoins. Keep in mind when things moves fast, it goes in all directions: you must be open to take on losses.
 
 &nbsp;
 
-You want things that move fast.
-
-&nbsp;
-
-But when it moves fast, it goes in all directions: you must be open to take on losses.
-
-&nbsp;
-
-However, if you want to make long term gains, have some investments you are not planning on touching over the next 5 years, and are aiming for a huge upside: Nvidia is a buy.
+If you want to make long term gains, and have funds/investments you are not planning on touching over the next couple of years: Nvidia is your buy.
 
 &nbsp;
 
 &nbsp;
 
-### 5) Let's connect and share ideas
+&nbsp;
 
 **[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
 
-&nbsp;
-
-### If you want to track Nvidia you can do it safely without putting any money in.
+Learn investing and practice trading with unlimited money in **[HelloStocker](https://www.hellostocker.com)**
 
 &nbsp;
 
-Learn investing and practice trading with unlimited money in **[HelloStocker virtual trading simulator](https://www.hellostocker.com)**
-
-&nbsp;
-
-You can share posts and discuss with other investors on the platform, you will find me there.
-
-&nbsp;
-
-Can't wait to hear back from you!
+HelloStocker AI will answer your questions and send you the best stocks to buy now.
 
