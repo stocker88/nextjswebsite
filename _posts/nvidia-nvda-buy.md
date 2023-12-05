@@ -143,6 +143,10 @@ Automation and artificial intelligence will accelerate the shift in skills that 
 
 &nbsp;
 
+Prospects and innovations in the AI sector make it a buy. But what about Nvidia stock?
+
+&nbsp;
+
 &nbsp;
 
 
@@ -227,13 +231,13 @@ There are only 3 ways for you to know what will happen in the short term.
 
 &nbsp;
 
-Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
+Anyone who trades and buys stocks based on insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
 
 &nbsp;
 
 #### B) You know someone who can influence macro economic and political events
 
-Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
+Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track what they buy / sell and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
 &nbsp;
 
@@ -346,8 +350,7 @@ Conclusion: AMD is overvalued compared to Nvidia.
 &nbsp;
 
 My guess is: most people don't understand what they are doing. 🙄
-They put their money on a trading app and cross fingers.
-They see Nvidia price is high and spiked so they go for AMD.
+They see Nvidia price spiked so they buy AMD instead since it didn't spike.
 
 &nbsp;
 
@@ -366,6 +369,7 @@ They see Nvidia price is high and spiked so they go for AMD.
 &nbsp;
 
 Nvidia is first! The biggest whale out there.
+
 Guess who you should compare it with?
 
 &nbsp;
@@ -374,6 +378,11 @@ Guess who you should compare it with?
 
 
 &nbsp;
+
+If you had to pick a similar company, which one would be your next buy?
+
+&nbsp;
+
 
 Hint: (the second one)
 
@@ -386,9 +395,9 @@ Hint: (the second one)
 
 \- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
 
-\- 2) Is it justified? Seems like it is, Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2.
+\- 2) Is it justified? Seems like it is, Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2
 
-\- 3) What is the takeaway? If you want to diversify, you better buy 50% Nvidia and 50% Taiwan Semiconductor stocks than AMD.
+\- 3) What is the takeaway? If you want to diversify, you better buy 50% Nvidia and 50% Taiwan Semiconductor stocks than buy AMD
 
 
 &nbsp;
@@ -411,12 +420,12 @@ With this in mind, Nvidia could become the next Apple anytime soon.
 
 &nbsp;
 
-Competition analysis showed why Nvidia remains the best option and why competition is overhyped.
+Competition analysis showed why Nvidia remains the best buy and why competition is overhyped.
 
 
 &nbsp;
 
-It's not about prices. It's about Economics.
+It's not about prices. It's about Economics: it's about Value.
 
 
 &nbsp;
@@ -429,11 +438,15 @@ It's not about prices. It's about Economics.
 
 &nbsp;
 
-If you are looking for +10% quick profit => go buy Altcoins. Keep in mind when things moves fast, it goes in all directions: you must be open to take on losses.
+If you are looking for +10% quick profit => buy Altcoins. 
 
 &nbsp;
 
-If you want to make long term gains, and have funds/investments you are not planning on touching over the next couple of years: Nvidia is your buy.
+Keep in mind when things moves fast, it goes in all directions: you must be open to take on losses.
+
+&nbsp;
+
+If you want to make long term gains, and have funds/investments you are not planning on spending over the next couple of years: Nvidia is your buy.
 
 &nbsp;
 
