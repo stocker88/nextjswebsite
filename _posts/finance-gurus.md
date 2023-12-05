@@ -12,21 +12,6 @@ ogImage:
 ---
 
 
-In this article we will:
-
-&nbsp;
-
-\-**1)** Explain how finance gurus make money
-
-&nbsp;
-
-\-**2)** Use their weakness to differentiate genuine advisors from scammers!
-
-
-&nbsp;
-
-&nbsp;
-
 &nbsp;
 
 ## 1) How Trading Gurus Get Paid
@@ -44,43 +29,43 @@ The Guru makes money with trading!
 
 
 
-**1) The Guru gives you free trading courses**
+\- 1) The Guru gives you free trading courses
 
 &nbsp;
 
-**2) 🚘The Guru shows you expensive cars rented in Dubai**
+\- 2) 🚘The Guru shows you expensive cars rented in Dubai
 
 &nbsp;
 
-**3) 📈The Guru makes you believe you see him trade live**
+\- 3) 📈The Guru makes you believe you see him trade live
 
 &nbsp;
 
-**4) And even if he does, you won't see ALL his trades** 
+\- 4) And even if he does, you won't see ALL his trades 
 
 &nbsp;
 
-**5) ✅The Guru convinces you he make money with trading and pushes you to trade**
+\- 5) ✅The Guru convinces you he make money with trading and pushes you to trade
 
 &nbsp;
 
-**6) The Guru is generous and offers to give you $200 if you start trading with them**
+\- 6) The Guru is generous and offers to give you $200 if you start trading with them
 
 &nbsp;
 
-**7) 🚀You open an account with his affiliate broker and deposit $1,000 to trade**
+\- 7) 🚀You open an account with his affiliate broker and deposit $1,000 to trade
 
 &nbsp;
 
-**8) 🧐The affiliate pays your Guru $600: wait and what about you?**
+\- 8) 🧐The affiliate pays your Guru $600: wait and what about you?
 
 &nbsp;
 
-**9) 💸The Guru got paid $600: your influencer just made money on YOUR trading (not his).**
+\- 9) 💸The Guru makes you trade everyday and take commissions on your trades
 
 &nbsp;
 
-**10) 💀Wait I forgot - now he wants you to bring your friends.**
+\- 10) 💀Wait I forgot - now he wants you to bring your friends.
 
 &nbsp;
 
