@@ -42,10 +42,6 @@ The Guru makes money with trading!
 
 &nbsp;
 
-![](/assets/blog/financial-gurus/how_trading_gurus_make_money.webp)
-
-&nbsp;
-
 
 
 **1) The Guru gives you free trading courses**
@@ -139,6 +135,10 @@ But since he gets paid on having you trade everyday, he will push you to do it.
 &nbsp;
 
 And burn your money: meanwhile he gets paid!
+
+&nbsp;
+
+![](/assets/blog/financial-gurus/how_trading_gurus_make_money.png)
 
 &nbsp;
 
