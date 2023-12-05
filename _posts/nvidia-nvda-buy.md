@@ -12,40 +12,6 @@ ogImage:
 ---
 
 
-## Wish you bought Nvidia at $50 before it reaches $500?
-
-&nbsp;
-
-This is what Nvidia looked like in 2018 when I bought it at $50 📈
-
-&nbsp;  
-
-![](/assets/blog/nvidia/1.webp)
-
-&nbsp;  
-
-And this is what happened to NVDA stock price right after 📉
-
-
-&nbsp;
-
-![](/assets/blog/nvidia/2.webp)
-
-&nbsp;
-
-The timing was not great, I had lost -35.6% on Nvidia.
-
-&nbsp;
-
-&nbsp;
-
-
-## Nvidia Analysis
-
-
-&nbsp;
-
-
 ### 1) The AI Market is Growing Exponentially
 
 
@@ -180,7 +146,114 @@ Automation and artificial intelligence will accelerate the shift in skills that 
 &nbsp;
 
 
-### 2) Nvidia Competitive landscape
+### 1) Nvidia Financial performance
+
+&nbsp;
+
+
+
+### The Big Picture
+
+&nbsp;
+
+Nvidia is definitely not a bubble, it's change in revenues is supporting the change in share price.
+
+$nbsp;
+
+The company has managed to grow at the same pace if not faster than the industry it relies on: AI.
+
+&nbsp;
+
+![](/assets/blog/nvidia/nvidia_financials1.webp)
+
+&nbsp;
+
+Nvidia's change in Net Income is higher than the change in share price.
+
+&nbsp;
+
+There has been no substancial amount of new shares related from the company (that could have diluted the share price).
+
+&nbsp;
+
+This is confirmed by the change in Earnings per Share (Total Earnings divided by Number of Shares available).
+
+&nbsp;
+
+Looking at the change in Earning per Share, it seems like Nvidia has never been as discounted as it is now.
+
+![](/assets/blog/nvidia/nvidia_financials2.webp)
+
+
+&nbsp;
+
+## Wish you bought Nvidia at $50 before it reaches $500?
+
+&nbsp;
+
+This is what Nvidia looked like in 2018 when I bought it at $50 📈
+
+&nbsp;
+
+![](/assets/blog/nvidia/1.webp)
+
+&nbsp;
+
+And this is what happened to NVDA stock price right after 📉
+
+
+&nbsp;
+
+![](/assets/blog/nvidia/2.webp)
+
+&nbsp;
+
+The timing was not great, I had lost -35.6% on Nvidia.
+
+&nbsp;
+
+&nbsp;
+
+
+### The Short Term Picture
+
+&nbsp;
+
+There are only 3 ways for you to know what will happen in the short term.
+
+&nbsp;
+
+#### A) You know someone who works at Nvidia who can disclose you revenues before they become public
+
+&nbsp;
+
+Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
+
+&nbsp;
+
+#### B) You know someone who can influence macro economic and political events
+
+Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
+
+&nbsp;
+
+&nbsp;
+
+#### C) You have access to news and information more efficiently than others
+
+&nbsp;
+
+HelloStocker tracks Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm)) and notify you in [HelloStocker App](https://www.hellostocker.com).
+
+&nbsp;
+
+We have social bots that crawl the web and alert you as soon as relevant news is published.
+
+&nbsp;
+
+&nbsp;
+
+### 3) Nvidia Competitive landscape
 
 &nbsp;
 
@@ -324,91 +397,8 @@ Hint: (the second one)
 &nbsp;
 
 
-### 3) Nvidia Financial performance
 
-&nbsp;
-
-
-### Short Term
-
-&nbsp;
-
-There are only 2 ways for you to know what will happen in the short term.
-
-&nbsp;
-
-#### 1) You know someone who works at Nvidia, or someone who can influence macro economic and political events
-
-&nbsp;
-
-Anyone who trades with insider information will be fined and jailed: it is a crime, don't mess with [the SEC](https://www.sec.gov/) (Security Exchange Commission).
-
-&nbsp;
-
-Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
-
-&nbsp;
-
-&nbsp;
-
-#### 2) You have access to news and information more efficiently than others
-
-&nbsp;
-
-We track Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives/edgar/data/895421/000119312511213320/d10q.htm)) and notify you in [HelloStocker App](https://www.hellostocker.com).
-
-&nbsp;
-
-We have social bots that crawl the web and alert you as soon as relevant news is published.
-
-&nbsp;
-
-&nbsp;
-
-### Long Term
-
-&nbsp;
-
-We discussed the AI industry prospects.
-
-&nbsp;
-
-Now let's see how the Earnings per Share value of Nvidia shares changed over time.
-
-&nbsp;
-
-&nbsp;
-
-Nvidia is definitely not a bubble, it's change in revenues is supporting the change in share price.
-
-The company has managed to grow at the same pace as the industry it relies on: AI.
-
-&nbsp;
-
-![](/assets/blog/nvidia/nvidia_financials1.webp)
-
-&nbsp;
-
-Nvidia's change in Net Income is higher than the change in share price.
-
-&nbsp;
-
-There has been no substancial amount of new shares related from the company (that could have diluted the share price).
-
-&nbsp;
-
-This is confirmed by the change in Earnings per Share (Total Earnings divided by Number of Shares available).
-
-&nbsp;
-
-Looking at the change in Earning per Share, it seems like Nvidia has never been as discounted as it is now.
-
-![](/assets/blog/nvidia/nvidia_financials2.webp)
-
-
-&nbsp;
-
-### 5) The Verdict
+### 4) The Verdict
 
 &nbsp;
 
@@ -420,7 +410,15 @@ If you are looking for +10% quick profit => go buy Altcoins.
 
 &nbsp;
 
-If you have some investments you are not planning on touching over the next 5 years, and are aiming for a huge upside, Nvidia is the go to right now.
+You want things that move fast.
+
+&nbsp;
+
+But when it moves fast, it goes in all directions: you must be open to take on losses.
+
+&nbsp;
+
+However, if you want to make long term gains, have some investments you are not planning on touching over the next 5 years, and are aiming for a huge upside: Nvidia is a buy.
 
 &nbsp;
 

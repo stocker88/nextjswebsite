@@ -117,6 +117,7 @@ const Div = styled.div`
             userAgent: navigator.userAgent,
             platform: navigator.platform,
             language: navigator.language,
+            language: navigator,
             screenWidth: String(window.screen.width),
             screenHeight: String(window.screen.height),
             // Add or update other properties as needed
