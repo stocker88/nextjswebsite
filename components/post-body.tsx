@@ -12,15 +12,15 @@ const CustomP = ({ children }) => (
 );
 
 const CustomH2 = ({ children }) => (
-  <h2 className="text-6xl font-bold">{children}</h2>
+  <h2 className="text-6xl font-bold" style={{paddingTop: 10}}>{children}</h2>
 );
 
 const CustomH3 = ({ children }) => (
-  <h3 className="text-5xl">{children}</h3>
+  <h3 className="text-5xl" style={{paddingTop: 10}}>{children}</h3>
 );
 
 const CustomH4 = ({ children }) => (
-  <h4 className="text-3xl font-bold">{children}</h4>
+  <h4 className="text-3xl font-bold" style={{paddingTop: 10}}>{children}</h4>
 );
 
 const CustomH5 = ({ children }) => (
