@@ -1,7 +1,7 @@
 ---
 title: 'Is Nvidia a buy? 5 Facts You Should Know'
-excerpt: '1. Financial performance 2. AI Industry 3. Competitive landscape 4. Upcoming Events 5. Verdict: Is Nvidia stock overvalued? Is NVDA a bubble?'
-seoExcerpt: '1. Financial performance 2. AI Industry 3. Competitive landscape 4. Upcoming Events 5. Verdict: Is Nvidia stock overvalued? Is NVDA a bubble?'
+excerpt: '1. AI Industry 2. Financial performance 3. Competitive landscape 4. Your goals 5. Verdict: Is Nvidia stock overvalued? Is NVDA a bubble?'
+seoExcerpt: '1. AI Industry 2. Financial performance 3. Competitive landscape 4. Your goals 5. Verdict: Is Nvidia stock overvalued? Is NVDA a bubble?'
 coverImage: '/assets/blog/nvidia/is nvidia a buy.webp'
 date: '2023-12-06T05:35:07.322Z'
 author:
@@ -398,7 +398,7 @@ Hint: (the second one)
 
 
 
-### 4) The Verdict
+### 4) Your Goals
 
 &nbsp;
 
@@ -424,6 +424,8 @@ However, if you want to make long term gains, have some investments you are not 
 
 &nbsp;
 
+### 5) Let's connect and share ideas
+
 **[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
@@ -434,4 +436,11 @@ However, if you want to make long term gains, have some investments you are not 
 
 Learn investing and practice trading with unlimited money in **[HelloStocker virtual trading simulator](https://www.hellostocker.com)**
 
+&nbsp;
+
+You can share posts and discuss with other investors on the platform, you will find me there.
+
+&nbsp;
+
+Can't wait to hear back from you!
 
