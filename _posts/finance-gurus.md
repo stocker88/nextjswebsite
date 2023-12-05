@@ -212,7 +212,7 @@ I don't care if you trade with Robinhood eToro or whatever broker.
 
 &nbsp;
 
-I want you to learn how to invest, find the right opportunities, make big money, and shake my hands when we meet.
+I want you to shake my hands when we meet: learn how to invest, find the right opportunities, make big money.
 
 &nbsp;
 
@@ -223,7 +223,7 @@ I want you to learn how to invest, find the right opportunities, make big money,
 
 &nbsp;
 
-After your first 2 millions, personal finance and money doesn't buy anymore happiness, but purpose and social reward does.
+After your first 2 millions, money won't buy anymore happiness, but purpose and social reward always does.
 
 &nbsp;
 
