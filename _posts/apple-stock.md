@@ -12,7 +12,7 @@ ogImage:
 ---
 
 
-### 1) The AI Market is Growing Exponentially
+## 1) The AI Market is Growing Exponentially
 
 
 &nbsp;
@@ -146,7 +146,7 @@ Automation and artificial intelligence will accelerate the shift in skills that 
 &nbsp;
 
 
-### 1) Nvidia Financial performance
+## 1) Nvidia Financial performance
 
 &nbsp;
 
@@ -253,7 +253,7 @@ We have social bots that crawl the web and alert you as soon as relevant news is
 
 &nbsp;
 
-### 3) Nvidia Competitive landscape
+## 3) Nvidia Competitive landscape
 
 &nbsp;
 
