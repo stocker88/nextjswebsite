@@ -383,5 +383,5 @@ After your first 2 millions, money won't buy anymore happiness, but purpose and 
 
 &nbsp;
 
-✅We want to keep you with us forever.
+✅We want to keep you happy forever.
 
