@@ -159,14 +159,10 @@ A Finance Guru with a million followers, but no LinkedIn.
 &nbsp;
 
 
-💸 Have you ever wondered how financial gurus get paid?
-&nbsp;
 
 &nbsp;
 
-&nbsp;
-
-**📚One thing I learnt from my 15 years in investing?**
+## One thing I learnt from my 15 years in investing?**
 
 &nbsp;
 
@@ -191,7 +187,7 @@ Trust me, I have 10 followers on instagram.
 
 &nbsp;
 
-My marketing s*** because I was busy with building on investing skills.
+I don't work in marketing, I worked in investing.
 
 
 &nbsp;
@@ -212,9 +208,6 @@ Building automated trading for Bank of America in London...
 
 ## **Why I don't do that?**
 
-&nbsp;
-
-I don't hide in Dubai. I have a LinkedIn profile, my name is public.
 
 &nbsp;
 
@@ -226,26 +219,26 @@ And today I own a $100m2 flat in Paris (le Marais) and a flat in London (Covent 
 
 &nbsp;
 
-The goal: empower people with smart investment choices.
+The goal: empower people with smart investment choices. Not get into a get richer quick scheme.
 
 &nbsp;
 
-Not push them to trade fast and open an account with Robinhood eToro or whatever broker.
+I don't care if you trade with Robinhood eToro or whatever broker.
+
+&nbsp;
+
+I want you to learn how to invest, find the right opportunities, make big money, and shake my hands when we meet.
+
+&nbsp;
+
+
+**[Click here to connect on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
 &nbsp;
 
-
-**[Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
-
-&nbsp;
-
-&nbsp;
-
-Facts: after your first 2 millions, money doesn't buy happiness, purpose does.
-
-&nbsp;
+After your first 2 millions, personal finance and money doesn't buy anymore happiness, but purpose and social reward does.
 
 &nbsp;
 
@@ -259,72 +252,62 @@ Facts: after your first 2 millions, money doesn't buy happiness, purpose does.
 
 &nbsp;
 
-That one is easy!
-
-&nbsp;
-
-You can follow these 2 steps:
-
-&nbsp;
-
-&nbsp;
-
 ### **A) Ask your Financial Guru to trade live in HelloStocker**
 
 &nbsp;
 
 &nbsp;
 
-❌\- 'But why HelloStocker? I already have my setup'
+❌\- Influencer : 'But why HelloStocker? I already have my setup'
 
 &nbsp;
 
-✅Because HelloStocker is not your broker.
-
-&nbsp;
-
-&nbsp;
-
-
-❌\- 'But I already trade live'
-
-&nbsp;
-
-✅How do we know it's actually live?
-
-
-✅How do we know we see all your trades?
-
-
-✅How do we track your real profits?
+✅\- You : 'Because HelloStocker is not your broker.'
 
 &nbsp;
 
 &nbsp;
 
 
-❌\- 'I don't want to put money in this app'
+❌\- Influencer : 'But I already trade live'
 
 &nbsp;
 
-✅HelloStocker doesn't take money.
+✅\- You : 'How do we know it's actually live?'
 
 
-✅It gives you free virtual money - as much as you want.
+✅\- You : 'How do we know we see all your trades?'
+
+
+✅\- You : 'How do we track your real profits?'
 
 &nbsp;
 
 &nbsp;
 
-❌\- 'I don't have time for you'
+
+❌\- Influencer : 'I don't want to put money in this app'
+
+&nbsp;
+
+✅\- You : 'HelloStocker doesn't take money.'
+
+
+✅\- You : 'It gives you free virtual money - as much as you want.'
+
+&nbsp;
+
+&nbsp;
+
+❌\- Influencer : 'I don't have time for you'
 
 &nbsp;  
 
-❌\- 'I would rather go scam someone who trusts me'
+❌\- Influencer : 'I would rather go scam someone who trusts me'
 
 &nbsp;
 
-✅Well I know, scammer -> share the link in his comments.
+✅\- You : 'Well I know, scammer' -> leave a comment and share this link on his posts.
 
 &nbsp;
 
@@ -337,37 +320,37 @@ You can follow these 2 steps:
 
 &nbsp;
 
-❌\- 'I make money with trading'
+❌\- Influencer : 'I make money with trading'
 
 &nbsp;
 
-✅Ok show me on HelloStocker then.
+✅\- You : 'Ok show me on HelloStocker then.'
 
 &nbsp;
 
-❌\- 'I will show you how on telegram'
+❌\- Influencer : 'I will show you how on telegram'
 
 &nbsp;
 
-✅There is no virtual trading on telegram
+✅\- You : 'There is no virtual trading on telegram'
 
 &nbsp;
 
-❌\- 'I show you with my broker'
+❌\- Influencer : 'I show you with my broker'
 
 &nbsp;
 
-✅Go back to point A)...
+✅\- You : 'Why not In HelloStocker?' (back to point A)
 
 &nbsp;
 
-❌\- 'I don't have time for you' 
+❌\- Influencer : 'I don't have time for you' 
 
-❌\- 'I would rather scam someone who trusts me'
+❌\- Influencer : 'I would rather scam someone who trusts me'
 
 &nbsp;
 
-✅Well I know, you're an influencer, not an advisor.
+✅\- You : 'Well I know, you're an influencer, not an advisor.'
 
 &nbsp;
 
