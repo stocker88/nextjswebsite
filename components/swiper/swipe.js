@@ -35,7 +35,7 @@ export default function Swipe() {
                         <br></br>
                         - You receive AI recommendations adapted to your own tastes
                         <br></br>
-                        - Ask anything for instant solutions on a 24/7 chat
+                        - Ask anything your AI Financial Advisor is available 24/7
                         <br></br>
                         <br></br>
                 </p>
