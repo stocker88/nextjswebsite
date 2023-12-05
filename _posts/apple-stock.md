@@ -158,7 +158,7 @@ Automation and artificial intelligence will accelerate the shift in skills that 
 
 Nvidia is definitely not a bubble, it's change in revenues is supporting the change in share price.
 
-$nbsp;
+&nbsp;  
 
 The company has managed to grow at the same pace if not faster than the industry it relies on: AI.
 
