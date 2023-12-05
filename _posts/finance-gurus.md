@@ -12,60 +12,6 @@ ogImage:
 ---
 
 
-💸 Have you ever wondered how financial gurus get paid?
-
-&nbsp;
-
-I worked 15 years as a trader.
-
-&nbsp;
-
-Investing for Goldman Sachs Asset Management office in New York City.
-
-&nbsp;
-
-Managing my own multi billion dollars book on Kerviel's ex trading desk.
-
-&nbsp;
-
-Building automated trading for Bank of America in London.
-
-&nbsp;
-
-&nbsp;  
-
-&nbsp;
-
-&nbsp;
-
-**📚One thing I learnt from my 15 years in investing?**
-
-&nbsp;
-
-**🦄 There is no money magician.**
-
-&nbsp;
-
-**🙄 You can't dig gold out of air.**
-
-&nbsp;
-
-**💀 Jesus Christ doesn't trade yet.**
-
-&nbsp;
-
-**🧞 No genie will turn your $1 into $100 in 30 days.**
-
-&nbsp;
-
-**🧠 But there is a smart way to make money.**
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
 In this article we will:
 
 &nbsp;
@@ -198,11 +144,11 @@ They don't care about you.
 
 &nbsp;
 
-You just got scammed.
+They want you to buy and trade fast.
 
 &nbsp;
 
-By a Finance Guru with no LinkedIn.
+A Finance Guru with a million followers, but no LinkedIn.
 
 &nbsp;
 
@@ -212,30 +158,92 @@ By a Finance Guru with no LinkedIn.
 
 &nbsp;
 
+
+💸 Have you ever wondered how financial gurus get paid?
 &nbsp;
-
-### **Why I don't do that?**
-
-&nbsp;
-
-Because I don't hide in Dubai.
 
 &nbsp;
 
-I have a LinkedIn profile, my name is public.
+&nbsp;
+
+**📚One thing I learnt from my 15 years in investing?**
 
 &nbsp;
+
+**🦄 Social influencers are not investors.**
+
+&nbsp;
+
+**🙄 You can't get rich on whatsapp.**
+
+&nbsp;
+
+**🧞 Even the best trader will not turn $1 into $100 in 5 days.**
+
+&nbsp;
+
+**🧠 But there is a smart way to make money.**
+
+&nbsp;
+
+Trust me, I have 10 followers on instagram.
+
+
+&nbsp;
+
+My marketing s*** because I was busy with building on investing skills.
+
+
+&nbsp;
+
+Investing for Goldman Sachs Asset Management office in New York City...
+
+&nbsp;
+
+Managing my own multi billion dollars book on Kerviel's ex trading desk...
+
+&nbsp;
+
+Building automated trading for Bank of America in London...
+
+&nbsp;
+
+&nbsp;
+
+## **Why I don't do that?**
+
+&nbsp;
+
+I don't hide in Dubai. I have a LinkedIn profile, my name is public.
+
+&nbsp;
+
+I come from nothing, I was a political refugee when my parents moved to Paris at the age of 3.
+
+&nbsp;
+
+And today I own a $100m2 flat in Paris (le Marais) and a flat in London (Covent Garden), thanks to my investments and hard work.
+
+&nbsp;
+
+The goal: empower people with smart investment choices.
+
+&nbsp;
+
+Not push them to trade fast and open an account with Robinhood eToro or whatever broker.
+
+&nbsp;
+
+&nbsp;
+
 
 **[Click here to see my LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
-And I'm happy to meet up if you want to!
-
 &nbsp;
 
-I host meetups in New York, London, and Paris.
-
+Facts: after your first 2 millions, money doesn't buy happiness, purpose does.
 
 &nbsp;
 
@@ -243,14 +251,9 @@ I host meetups in New York, London, and Paris.
 
 &nbsp;
 
-
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-## 2) How to differentiate the Advisor from the Scammer?
+## 2) How to differentiate the Advisor from the Influencer?
 
 &nbsp;
 
@@ -364,7 +367,7 @@ You can follow these 2 steps:
 
 &nbsp;
 
-✅Well I know, scammer.
+✅Well I know, you're an influencer, not an advisor.
 
 &nbsp;
 
@@ -395,31 +398,27 @@ You can follow these 2 steps:
 
 &nbsp;
 
-✅And you won't get scammed.
+✅And you know we want to keep you forever, we don't push you to trade, we advise.
 
 &nbsp;
 
-✅If you are unhappy, you call us.
+✅If you are unhappy (or happy) you call us.
 
 &nbsp;
 
-✅Our interests is not to make you trade.
-
-&nbsp;
-
-✅We will never ask you to invest with any of our partner.
+✅We will never ask you to invest with any partner.
 
 &nbsp;
 
 &nbsp;
 
-✅Our interests is to make your wealth and money grow.
+✅Our interests is to make your wealth and money grow: advise you, and make you rich.
 
 &nbsp;
 
 &nbsp;
 
-The more money you have, the more this $10 fee becomes peanuts.
+The more money you have, the more this $10 fee becomes peanuts, everyone will be happy.
 
 &nbsp;
 
@@ -433,130 +432,5 @@ What do you get for $10?
 
 &nbsp;
 
-HelloStocker helps you find the right stocks for you. 
-
-&nbsp;
-
-Save time, make money and receive AI recommendations adapted to your own preferences in a virtual trading app.
-
-&nbsp;
-
-&nbsp;
-
-#### 1) We use AI to Adapt Recommendations To Your Own Tastes
-
-&nbsp;
-
-\- We send you hot stocks to buy and tell you when to sell
-
-&nbsp;
-
-\- What the business does and why it has growing interest
-
-&nbsp;
-
-\- 95% of HelloStocker AI predictions beat the sp500 market
-
-&nbsp;
-
-\- No boring emails or newsletter ask anything and receive instant replies
-
-&nbsp;
-
-&nbsp;
-
-#### 2) You will get better at investing, 100% guaranteed With Virtual Trading
-
-
-&nbsp;
-
-\- 99% of Hedge Funds test strategies virtually first
-
-&nbsp;
-
-\- You receive unlimited money to practice in a safe virtual reality simulator
-
-&nbsp;
-
-\- We use your virtual positions to tell you when to sell
-
-&nbsp;
-
-\- We will never ask you to trade or open an account
-
-&nbsp;
-
-&nbsp;
-
-#### 3) You Get Access To AI Trading Tools
-
-&nbsp;
-
-\- Market trading signals & AI screening
-
-&nbsp;
-
-\- Wall St analyst ratings & financial data
-
-&nbsp;
-
-\- Social sentiment & News
-
-&nbsp;
-
-\- Hedge Funds & investors trading activity
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-It is a bargain.
-
-&nbsp;
-
-That's why so many people subscribed already.
-
-&nbsp;
-
-&nbsp;
-
-❌Buying a stock costs minimum $5 in transaction fee.
-
-&nbsp;
-
-❌Selling a stock costs minimum $5 in transaction fee. 
-
-&nbsp;
-
-❌That's already $10, for one trade!
-
-&nbsp;
-
-&nbsp;
-
-❌Your Starbucks Frappuccino costs $12.
-
-&nbsp;
-
-&nbsp;
-
-✅HelloStocker costs $10.
-
-&nbsp;
-
-✅And we teach you how to make your wealth grow.
-
-&nbsp;
-
-✅Without having any interest in having you invest.
-
-&nbsp;
-
-✅And without making any hidden revenues on you deciding to trade or not.
-
-&nbsp;
-
-✅We don't push you to trade, we push you to learn and get better.
+HelloStocker helps you find the best stocks to buy now, adapted to your AI preferences. 
 
