@@ -20,7 +20,7 @@ const CustomH3 = ({ children }) => (
 );
 
 const CustomH4 = ({ children }) => (
-  <h4 className="text-2xl font-bold">{children}</h4>
+  <h4 className="text-3xl font-bold">{children}</h4>
 );
 
 const CustomH5 = ({ children }) => (
