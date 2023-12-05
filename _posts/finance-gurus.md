@@ -371,7 +371,7 @@ After your first 2 millions, money won't buy anymore happiness, but purpose and 
 
 &nbsp;
 
-✅If you are unhappy (or happy) you call us.
+✅We are available 24/7.
 
 &nbsp;
 
@@ -379,27 +379,9 @@ After your first 2 millions, money won't buy anymore happiness, but purpose and 
 
 &nbsp;
 
-&nbsp;
-
 ✅Our interests is to make your wealth and money grow: advise you, and make you rich.
 
 &nbsp;
 
-&nbsp;
-
-The more money you have, the more this $10 fee becomes peanuts, everyone will be happy.
-
-&nbsp;
-
 ✅We want to keep you with us forever.
-
-&nbsp;
-
-What do you get for $10?
-
-&nbsp;
-
-&nbsp;
-
-HelloStocker helps you find the best stocks to buy now, adapted to your AI preferences. 
 
