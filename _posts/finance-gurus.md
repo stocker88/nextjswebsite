@@ -176,17 +176,8 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-Trust me, I have 10 followers on instagram.
 
-
-&nbsp;
-
-I don't work in marketing, I worked in investing.
-
-
-&nbsp;
-
-Investing for Goldman Sachs Asset Management office in New York City...
+I was part of the investing team for Goldman Sachs Asset Management office in New York City...
 
 &nbsp;
 
@@ -200,7 +191,7 @@ Building automated trading for Bank of America in London...
 
 &nbsp;
 
-## **Why I don't do that?**
+## **I am not a financial Guru, why?**
 
 
 &nbsp;
