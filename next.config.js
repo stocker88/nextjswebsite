@@ -1,16 +1,28 @@
-const { PHASE_PRODUCTION_BUILD } = require('next/constants');
-
-module.exports = (phase) => {
-  const isProduction = phase === PHASE_PRODUCTION_BUILD;
-
-  return {
-    assetPrefix: isProduction ? 'https://www.hellostocker.com/' : '', // Replace with your CDN URL
-    generateBuildId: async () => {
-      // Custom build ID to include a content hash
-      if (isProduction) {
-        return require('crypto').randomBytes(16).toString('hex');
-      }
-    },
-    // Other Next.js configurations...
-  };
+// next.config.js
+module.exports = {
+  async headers() {
+    return [
+      {
+        // Cache-Control for immutable assets (JavaScript, CSS, images, etc.)
+        source: "/_next/static/:slug*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Cache-Control for Server-Side Rendered (SSR) pages
+        source: "/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "s-maxage=1, stale-while-revalidate",
+          },
+        ],
+      },
+      // Add more header configurations if needed
+    ];
+  },
 };
