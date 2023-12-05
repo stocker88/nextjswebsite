@@ -136,7 +136,7 @@ They want you to buy and trade fast.
 
 &nbsp;
 
-Buy Sell Buy Sell burn commissions!
+Buy Sell Buy Sell burn your money on commissions!
 
 &nbsp;
 
@@ -150,18 +150,8 @@ Why? Because short term trade gains are taxed 40%.
 
 Long term trade gains are taxed 20% (hold for over a year).
 
-&nbsp;
-
-A Finance Guru with a million followers, but no LinkedIn.
 
 &nbsp;
-
-**A Financial Guru with no experience in investing.**
-
-&nbsp;
-
-&nbsp;
-
 
 
 &nbsp;
