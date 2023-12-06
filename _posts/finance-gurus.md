@@ -28,44 +28,31 @@ The Guru makes money with trading!
 &nbsp;
 
 
-
-\- 1) The Guru gives you free trading courses
-
-&nbsp;
-
-\- 2) 🚘The Guru shows you expensive cars rented in Dubai
+\- 1) 🚘The Guru shows you expensive cars rented in Dubai
 
 &nbsp;
 
-\- 3) 📈The Guru makes you believe you see him trade live
+\- 2) 📈The Guru makes you believe you see him trade live
 
 &nbsp;
 
-\- 4) And even if he does, you won't see ALL his trades 
+\- 3) ✅The Guru convinces you he makes money with trading and pushes you to trade
 
 &nbsp;
 
-\- 5) ✅The Guru convinces you he make money with trading and pushes you to trade
+\- 4) The Guru is generous and offers to give you $200 if you start trading with them
 
 &nbsp;
 
-\- 6) The Guru is generous and offers to give you $200 if you start trading with them
+\- 5) 🚀You open an account with his affiliate broker and deposit $1,000 to trade
 
 &nbsp;
 
-\- 7) 🚀You open an account with his affiliate broker and deposit $1,000 to trade
+\- 6) 🧐The affiliate pays your Guru $600: wait and what about you?
 
 &nbsp;
 
-\- 8) 🧐The affiliate pays your Guru $600: wait and what about you?
-
-&nbsp;
-
-\- 9) 💸The Guru makes you trade everyday and take commissions on your trades
-
-&nbsp;
-
-\- 10) 💀Wait I forgot - now he wants you to bring your friends.
+\- 7) 🤯The Guru pushes you to day trade and take 50% commissions on your trades
 
 &nbsp;
 
@@ -74,38 +61,21 @@ The Guru makes money with trading!
 
 &nbsp;
 
-Your Guru influencer gets paid $600 when they convince you to trade!
+Your Guru influencer gets paid $600 when they convince you to trade, but wait for it...
 
 &nbsp;
 
-If they get 1,000 people a month to trade... That's $600,000 a month: **→ $7,200,000 a year.**
-
-
-&nbsp;
-
-
-&nbsp;
-
-
-## **The Guru wants you to trade everyday: he will make even more money!**  
+## **The Guru wants you to trade everyday so he can take half your commissions!**  
 
 &nbsp;
 
 &nbsp;
 
-And now he wants you to trade everyday! Be a day trader!
+Be a day trader!
 
 &nbsp;
 
-He takes 50% of all your trading commissions.
-
-&nbsp;
-
-Who cares you will make money right?
-
-&nbsp;
-
-### **He doesn't tell you short term trades is taxed 40%**
+### **He doesn't tell you short term trades are taxed 40%**
 
 &nbsp;
 
@@ -120,11 +90,8 @@ You can do the math quick: unless you live in Puerto Rico, your commissions and 
 
 &nbsp;
 
-But since he gets paid on having you trade everyday, he will push you to do it.
+But since he gets paid on having you trade everyday, he will push you to do it: the Guru comes first.
 
-&nbsp;
-
-And burn your money: meanwhile he gets paid!
 
 ![](/assets/blog/financial-gurus/how_trading_gurus_make_money.png)
 
@@ -137,7 +104,7 @@ They want you to buy and trade fast.
 
 &nbsp;
 
-Buy Sell Buy Sell burn your money on commissions!
+Buy Sell Buy Sell... burn your money on commissions! The rest goes to taxes.
 
 &nbsp;
 
@@ -157,23 +124,15 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-## One thing I learnt from my 15 years in investing?
+## 2 things I learnt from my 15 years in investing?
 
 &nbsp;
 
-**🦄 Social influencers are not investors.**
+**🦄 Social influencers and 'Finance Gurus' don't make money with their trading: they make money with your trading.**
 
 &nbsp;
 
-**🙄 You can't get rich on whatsapp.**
-
-&nbsp;
-
-**🧞 Even the best trader will not turn $1 into $100 in 5 days.**
-
-&nbsp;
-
-**🧠 But there is a smart way to make money.**
+**🧠 There is a smart way for you to make money with long term investing.**
 
 &nbsp;
 
