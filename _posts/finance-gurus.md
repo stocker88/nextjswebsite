@@ -132,7 +132,7 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-**🧠 There is a smart way for you to make money with long term investing.**
+**🧠 There are smart way for you to profit from long term investing.**
 
 &nbsp;
 
@@ -151,28 +151,32 @@ Building automated trading for Bank of America in London...
 
 &nbsp;
 
-## **I am not a financial Guru, why?**
+## **How can I help you?**
 
 
 &nbsp;
 
-I come from nothing, I was a political refugee when my parents moved to Paris at the age of 3.
+My parents grew up in wealthy families and moved to France as political refugees when I was 3: I grew up with nothing apart from love and good values.
 
 &nbsp;
 
-And today I own a $100m2 flat in Paris (le Marais) and a flat in London (Covent Garden), thanks to my investments and hard work.
+Thanks to my investments and hard work in prestigious banks, I now have the luxury to own a $100m2 flat in Paris (le Marais) and a flat in London (Covent Garden).
 
 &nbsp;
 
-The goal: empower people with smart investment choices. Not get into a get richer quick scheme.
+The goal: Empower you with smart investment decisions to make your money work.
 
 &nbsp;
 
-I don't care if you trade with Robinhood eToro or whatever broker.
+I don't care if you make $1,000 or $10,000 a month: what matters is for you to grow your wealth 💸
 
 &nbsp;
 
-I want you to shake my hands when we meet: learn how to invest, find the right opportunities, make big money.
+We'll shake hands and exchange ideas when we meet!
+
+&nbsp;
+
+There is no better feeling than helping others. Remember: money is the tool, not the goal. 
 
 &nbsp;
 
@@ -180,10 +184,6 @@ I want you to shake my hands when we meet: learn how to invest, find the right o
 **[Click here to connect on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
-
-&nbsp;
-
-After your first 2 millions, money won't buy anymore happiness, but purpose and social reward always does.
 
 &nbsp;
 
