@@ -454,11 +454,12 @@ If you want to make long term gains, and have funds/investments you are not plan
 
 &nbsp;
 
-**[Please connect on LinkedIn and share your thoughts 🧠](https://www.linkedin.com/in/anesshusseinali/)**
-
-Learn investing and practice trading with unlimited money in **[HelloStocker](https://www.hellostocker.com)**
+**[Connect and share your thoughts on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
 &nbsp;
 
-HelloStocker AI will answer your questions and send you the best stocks to buy now.
+&nbsp;
+&nbsp;
+
+&nbsp;
 
