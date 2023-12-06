@@ -68,7 +68,7 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>HelloStocker App: Best Stocks To Buy Now</title>
+          <title>Best Stocks To Buy Now with AI</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="HelloStocker helps you find stocks before they blow up: test investing strategies with virtual trading, learn how to invest with AI and grow with the stock market today" />
