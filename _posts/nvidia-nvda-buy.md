@@ -162,9 +162,9 @@ Prospects and innovations in the AI sector make it a buy. But what about Nvidia 
 
 Nvidia is definitely not a bubble, it's change in revenues is supporting the change in share price.
 
-$nbsp;
+&nbsp;
 
-The company has managed to grow at the same pace if not faster than the industry it relies on: AI.
+The company grows with **and facilitates the growth of** the industry it relies on: AI.
 
 &nbsp;
 
