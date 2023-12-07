@@ -227,7 +227,7 @@ export default function Swipe() {
                  </h2>
 
                  <br></br>
-                                  <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true' target="_blank" ><button
+                                  <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting' target="_blank" ><button
                                               style={{
 
                                                    }}>  <div style={{
