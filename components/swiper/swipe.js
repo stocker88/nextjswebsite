@@ -16,7 +16,7 @@ import SwiperCore, {
 import AboutUs from '../../components/aboutUs';
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
-import QuoteDisplay from '../../components/inspiration';
+
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
 
@@ -143,12 +143,7 @@ export default function Swipe() {
 
         <br></br>
         <br></br>
- <br></br> <br></br>
-      <br></br><br></br>
 
-     <QuoteDisplay/>
-     <br></br> <br></br>
-     <br></br> <br></br>
  <br></br><br></br> <br></br>
 
   <br></br><br></br>

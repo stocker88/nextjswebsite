@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const QuoteDisplay = () => {
   const [quotes, setQuotes] = useState([
-  "Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett",
+    "Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett",
     "If you don't find a way to make money while you sleep, you will work until you die. - Warren Buffett",
     "Use your money to make more money. - Robert Kiyosaki",
     "Risk comes from not knowing what you're doing, always double check with an advisor. - Warren Buffett",

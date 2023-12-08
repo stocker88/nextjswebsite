@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from 'next/image'
+import QuoteDisplay from '../../components/inspiration';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -232,7 +233,21 @@ const Testimonial = ({
                             </p>
 
                            </a>
-,<a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
+]}
+           </div>
+<br></br> <br></br>
+      <br></br><br></br>
+
+     <QuoteDisplay/>
+     <br></br> <br></br>
+     <br></br> <br></br>
+
+
+    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+
+{[
+
+     <a href='https://www.linkedin.com/in/kanishkbudhia/' target="_blank" >
                           <center><Image
                             src='/assets/images/testimonies/kanishk.webp'
                             alt="Features tile icon 06"
