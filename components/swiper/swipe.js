@@ -72,22 +72,26 @@ export default function Swipe() {
 
 <br></br>
   <br></br>
-      <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Receive Unlimited Money: Test In Virtual Trading
-      </h2>
-<br></br>
-  <div className="split-item">
+
+        <IntroDataset/>
+<div className="container">
+     <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
-                  <br></br>
-                    - You can test trading ideas in a safe virtual reality simulator
-                    <br></br>
-                    - 99% of Hedge Funds test strategies virtually first
-                    <br></br>
-                    - It is a safe playground for learning and growing
-                    <br></br>
-                </p>
+      <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
+    - Market trading signals & AI screening
+    <br></br>
+    - Wall St analyst ratings & financial data
+    <br></br>
+    - Social sentiment & News
+    <br></br>
+    - Real Estate stocks that pay 15% dividend yield
+    <br></br>
+    <br></br>
+</p>
+
         </div>
+        </div>
+
 <center>
 <div className="container">
      <div className="split-item">
@@ -118,25 +122,22 @@ export default function Swipe() {
               <br></br>
               <br></br>
 
-        <IntroDataset/>
-<div className="container">
-     <div className="split-item">
+      <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
+        You Receive Unlimited Money: Test In Virtual Trading
+      </h2>
+<br></br>
+  <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-      <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
-    - Market trading signals & AI screening
-    <br></br>
-    - Wall St analyst ratings & financial data
-    <br></br>
-    - Social sentiment & News
-    <br></br>
-    - Real Estate stocks that pay 15% dividend yield
-    <br></br>
-    <br></br>
-</p>
-
+                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
+                  <br></br>
+                    - You can test trading ideas in a safe virtual reality simulator
+                    <br></br>
+                    - 99% of Hedge Funds test strategies virtually first
+                    <br></br>
+                    - It is a safe playground for learning and growing
+                    <br></br>
+                </p>
         </div>
-        </div>
-
 <br></br><br></br>
 
 
