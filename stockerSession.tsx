@@ -11,7 +11,7 @@ interface SessionContextProps {
   setSessionData: React.Dispatch<React.SetStateAction<SessionData>>;
 }
 
-const SessionContext = createContext<SessionContextProps | undefined>(undefined)
+const SessionContext = createContext<SessionContextProps | null>(null)
 
 export const SessionProvider: React.FC = ({ children }) => {
   const [sessionData, setSessionData] = useState<SessionData>({ sessionData: /* initial value */ });
