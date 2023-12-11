@@ -1,5 +1,12 @@
 import React, { createContext, useState, useContext } from 'react';
 
+interface SessionData {
+  email: string;
+  sessionId: string;
+  // ... other properties
+}
+
+
 const SessionContext = createContext();
 
 export const SessionProvider = ({ children }) => {
@@ -12,7 +19,7 @@ export const SessionProvider = ({ children }) => {
   );
 };
 
-export const useSession = () => {
+export const useSession = : { sessionData: SessionData; setSessionData: React.Dispatch<React.SetStateAction<SessionData>> } =>  {
   const context = useContext(SessionContext);
   if (!context) {
     throw new Error('useSession must be used within a SessionProvider');
