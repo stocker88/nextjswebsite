@@ -18,7 +18,7 @@ ogImage:
 
 &nbsp;
 
-### Newsletter send you 1 recommendation per month, HelloStocker AI sends you 2 recommendations per day
+### Newsletter send you 1 recommendation per month, HelloStocker AI sends you 60 recommendations per month (2 per day)
 
 &nbsp;
 
