@@ -6,11 +6,15 @@ interface SessionData {
   // ... other properties
 }
 
+interface SessionContextProps {
+  sessionData: SessionData;
+  setSessionData: React.Dispatch<React.SetStateAction<SessionData>>;
+}
 
-const SessionContext = createContext<SessionData | undefined>(undefined)
+const SessionContext = createContext<SessionContextProps | undefined>(undefined)
 
-export const SessionProvider = ({ children }) => {
-  const [sessionData, setSessionData] = useState({empty:''}); // Your session data
+export const SessionProvider: React.FC = ({ children }) => {
+  const [sessionData, setSessionData] = useState<SessionData>({ sessionData: /* initial value */ });
 
   return (
     <SessionContext.Provider value={{ sessionData, setSessionData }}>
@@ -18,6 +22,7 @@ export const SessionProvider = ({ children }) => {
     </SessionContext.Provider>
   );
 };
+
 
 export const useSession = : { sessionData: SessionData; setSessionData: React.Dispatch<React.SetStateAction<SessionData>> } =>  {
   const context = useContext(SessionContext);
