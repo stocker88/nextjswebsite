@@ -18,13 +18,9 @@ ogImage:
 
 &nbsp;
 
-### Newsletter send you 1 recommendation per month, HelloStocker AI sends you 60 recommendations per month (2 per day)
+### Newsletters send you 1 recommendation per month, HelloStocker AI sends you 60 recommendations per month (2 per day)
 
 &nbsp;
-
-&nbsp;
-
-By the end of the year, you followed 12 stocks.
 
 &nbsp;
 
@@ -44,7 +40,11 @@ And even more ETFs and Cryptos (let's not get you overwhelmed).
 
 &nbsp;
 
-Someone please explains why you would pay for a newsletter that sends you only one recommendation. How can you not miss out?
+With a Newsletter, by the end of the year, you followed 12 stocks.
+
+&nbsp;
+
+With HelloStocker AI, by the end of the year, you beat the SP500 market.
 
 &nbsp;
 
