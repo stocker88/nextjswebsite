@@ -1,84 +1,24 @@
 ---
-title: 'Unleash Your Financial Potential: Why Your AI Advisor Beats Outdated Newsletters and Overhyped Telegram 'Gurus'
+title: 'Why Your AI Advisor Beats Outdated Newsletters and Overhyped Telegram Gurus'
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
-coverImage: '/assets/blog/financial-gurus/how finance gurus make money.webp'
-date: '2023-12-06T05:35:07.322Z'
+coverImage: '/assets/blog/ai-advisor/ai advisor.webp'
+date: '2023-12-05T05:35:07.322Z'
 author:
-    name: HelloStocker AI
-    picture: '/assets/blog/authors/stocker.png'
+name: HelloStocker AI
+picture: '/assets/blog/authors/stocker.png'
 ogImage:
-    url: '/assets/blog/financial-gurus/how finance gurus make money.webp'
+url: '/assets/blog/ai-advisor/ai advisor.webp'
 ---
 
 
-&nbsp;
-
-## 1) How Trading Gurus Get Paid
-
-
-&nbsp;
-
-The Guru makes money with trading!
-
-&nbsp;
-
-**Not with his trading, with yours.**
-
-&nbsp;
-
-
-\- 1) The Guru shows you expensive cars rented in Dubai
-
-&nbsp;
-
-\- 2) The Guru convinces you he makes money with trading and pushes you to trade
-
-&nbsp;
-
-\- 3) You open an account with his affiliate broker and deposit $1,000 to trade
-
-&nbsp;
-
-\- 4) 🧐The affiliate pays your Guru $600
-
-&nbsp;
-
-\- 5) 🤯The Guru pushes you to day trade and take 50% commissions on your trades
+## 1) Why are Newsletter such a bad option
 
 &nbsp;
 
 &nbsp;
 
-## **The Guru wants you to trade everyday so he can take half your commissions!**  
-
-&nbsp;
-
-You can do the math quick: unless you live in Puerto Rico, your commissions and taxes will eat all your gains.
-
-&nbsp;
-
-Long term investing is taxed 20%**
-
-&nbsp;
-
-
-![](/assets/blog/financial-gurus/how_trading_gurus_make_money.png)
-
-
-&nbsp;
-
-
-&nbsp;
-
-
-## 2) Why are Newsletter such a bad option
-
-&nbsp;
-
-&nbsp;
-
-### 1) Newsletter sends you 1 recommendation per month, HelloStocker AI sends you 2 recommendations per day
+### Newsletter send you 1 recommendation per month, HelloStocker AI sends you 2 recommendations per day
 
 &nbsp;
 
@@ -104,17 +44,13 @@ And even more ETFs and Cryptos (let's not get you overwhelmed).
 
 &nbsp;
 
-Someone please explains why you would pay $60 a month for a newsletter that sends you only one recommendation. How can you not miss out?
-
-&nbsp;
-
-With HelloStocker you get 2 recommendations per day.
+Someone please explains why you would pay for a newsletter that sends you only one recommendation. How can you not miss out?
 
 &nbsp;
 
 &nbsp;
 
-### 2) Newsletter never respond, HelloStocker AI sends you instant replies 24/7
+### Newsletter never respond, HelloStocker AI sends you instant replies 24/7
 
 &nbsp;
 
@@ -144,6 +80,66 @@ A Human Financial Advisor is available for free within 24h to answer any of your
 
 &nbsp;
 
+&nbsp;
+
+## 2) You shouldn't trust Telegram Gurus
+
+&nbsp;
+
+![](/assets/blog/ai-advisor/how-finance-gurus-make-money.webp)
+
+&nbsp;
+
+The Guru makes money with trading?
+
+&nbsp;
+
+**Not with his trading, with yours.**
+
+&nbsp;
+
+
+\- 1) The Guru shows you expensive cars rented in Dubai
+
+&nbsp;
+
+\- 2) The Guru pushes you to trade
+
+&nbsp;
+
+\- 3) You open an account with his affiliate broker
+
+&nbsp;
+
+\- 4) 🧐The affiliate pays the Guru $600
+
+&nbsp;
+
+\- 5) 🤯The Guru pushes you to day trade and takes 50% commissions on your trades
+
+&nbsp;
+
+&nbsp;
+
+### The Guru takes half your commissions!
+
+![](/assets/blog/ai-advisor/how_trading_gurus_make_money.png)
+
+
+Unless you live in Puerto Rico, your commissions and taxes will eat all your gains.
+
+&nbsp;
+
+Long term investing is taxed 20%.
+
+&nbsp;
+
+Dividends are taxed 0%.
+
+&nbsp;
+
+
+&nbsp;
 
 
 ## 3 Things I learnt from my 15 years in investing?
@@ -154,7 +150,7 @@ A Human Financial Advisor is available for free within 24h to answer any of your
 
 &nbsp;
 
-**💾 Email Newsletter are has -een and overrated for the service they offer.**
+**💾 Email Newsletter are outdated and overrated for the service they offer.**
 
 &nbsp;
 
@@ -162,15 +158,7 @@ A Human Financial Advisor is available for free within 24h to answer any of your
 
 &nbsp;
 
-I was part of the investing team for Goldman Sachs Asset Management office in New York City...
-
-&nbsp;
-
-Managing alone a multi billion dollars book on Kerviel's ex trading desk...
-
-&nbsp;
-
-Building automated AI trading analytics for Hedge Funds in London...
+After over 15 years in Goldman Sachs Asset Management Investment team office in New York City, managing alone a multi billion dollars book on Kerviel's ex trading desk, building automated AI trading analytics for Hedge Funds in London...
 
 &nbsp;
 
@@ -178,7 +166,7 @@ After speaking with thousands of customers and investors: I understood each of y
 
 &nbsp;
 
-Feel free to connect and ask any question you may have on LinkedIn.
+I would love to connect with you on LinkedIn and see how I can help.
 
 &nbsp;
 
@@ -194,15 +182,19 @@ Feel free to connect and ask any question you may have on LinkedIn.
 
 &nbsp;
 
-✅ There is freemium data access.
+✅ Everyone gets free AI data access and free virtual trading analytics.
 
 &nbsp;
 
-✅ $19.99 a month  /  $59.99 for 6 months  /  $149.99 for lifetime membership for unlimited AI recommendations
+There is a pro membership with Apple Store and Google Play 2 weeks free trial:
 
 &nbsp;
 
-✅ You get Apple Store and Google Play 2 weeks free trial.
+✅ $19.99 a month  /  $59.99 for 6 months  /  $149.99 for lifetime membership
+
+&nbsp;
+
+✅ You receive the best stocks & cryptos to buy now.
 
 &nbsp;
 
@@ -210,8 +202,13 @@ Feel free to connect and ask any question you may have on LinkedIn.
 
 &nbsp;
 
-✅ Why so cheap? AI made us competitive.
+✅ AI made us competitive.
 
 &nbsp;
 
 ✅ You get a better and cheaper product at the same time.
+
+
+&nbsp;
+
+**[Back to HelloStocker.com](https://www.hellostocker.com/)**
