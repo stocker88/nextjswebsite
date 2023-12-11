@@ -2,7 +2,7 @@ import Alert from './alert'
 import Meta from './meta'
 import MeetingButton from '../components/sections/MeetingButton';
 import Footer from '../components/layout/Footer';
-import { SessionProvider } from 'stockerSession';
+import { SessionProvider } from '../stockerSession';
 
 type Props = {
   preview?: boolean

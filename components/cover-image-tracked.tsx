@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { doc, setDoc } from "firebase/firestore";
 import {getFirestore} from 'firebase/firestore';
 import { serverTimestamp } from "firebase/firestore";
-import { useSession } from 'stockerSession';
+import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
 
 type Props = {

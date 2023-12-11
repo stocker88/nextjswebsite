@@ -12,7 +12,7 @@ import { doc, setDoc } from "firebase/firestore";
 import 'firebase/firestore';
 
 import {getFirestore} from 'firebase/firestore';
-import { useSession } from 'stockerSession';
+import { useSession } from '../stockerSession';
 
 
 
