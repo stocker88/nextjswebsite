@@ -5,10 +5,10 @@ seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know wh
 coverImage: '/assets/blog/ai-advisor/ai advisor.webp'
 date: '2023-12-05T05:35:07.322Z'
 author:
-name: HelloStocker AI
-picture: '/assets/blog/authors/stocker.png'
+    name: HelloStocker AI
+    picture: '/assets/blog/authors/stocker.png'
 ogImage:
-url: '/assets/blog/ai-advisor/ai advisor.webp'
+    url: '/assets/blog/ai-advisor/ai advisor.webp'
 ---
 
 
@@ -142,7 +142,7 @@ Dividends are taxed 0%.
 &nbsp;
 
 
-## 3 Things I learnt from my 15 years in investing?
+## 3 lessons from 15 years in investing?
 
 &nbsp;
 
@@ -178,7 +178,7 @@ I would love to connect with you on LinkedIn and see how I can help.
 
 &nbsp;
 
-## 3) How much does HelloStocker cost?
+### How much does HelloStocker AI cost?
 
 &nbsp;
 
