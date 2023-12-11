@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from 'react';
 const SessionContext = createContext();
 
 export const SessionProvider = ({ children }) => {
-  const [sessionData, setSessionData] = useState({}); // Your session data
+  const [sessionData, setSessionData] = useState({empty:''}); // Your session data
 
   return (
     <SessionContext.Provider value={{ sessionData, setSessionData }}>
