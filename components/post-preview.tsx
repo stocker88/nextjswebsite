@@ -9,6 +9,7 @@ import {getFirestore} from 'firebase/firestore';
 import { serverTimestamp } from "firebase/firestore";
 import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
+import { DateTimeFormatOptions } from 'intl';
 
 
 type Props = {
@@ -82,7 +83,7 @@ const db = getFirestore();
     const email = sessionData.email || '';
     const sessionId = sessionData.sessionId || '';
 const today = new Date();
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const options: DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   const formattedDate = today.toLocaleDateString(undefined, options);
     const docId = email === ''
       ?  sessionId ===''?
