@@ -1,7 +1,7 @@
 ---
-title: 'Pick an Advisor over a Financial Guru'
-excerpt: 'Have you ever wondered how financial gurus get paid? They just want you to buy and trade fast!'
-seoExcerpt: 'Have you ever wondered how financial gurus get paid? They just want you to buy and trade fast!'
+title: 'Chose an AI Advisor over an Overrated Newsletter or Telegram Guru'
+excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
+seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 coverImage: '/assets/blog/financial-gurus/how finance gurus make money.webp'
 date: '2023-11-20T05:35:07.322Z'
 author:
@@ -124,7 +124,76 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-## 2 things I learnt from my 15 years in investing?
+
+## 2) Why are Newsletter a bad option
+
+&nbsp;
+
+&nbsp;
+
+### 1) Newsletter sends you 1 recommendation per month, HelloStocker AI sends you 2 recommendations per day
+
+&nbsp;
+
+&nbsp;
+
+By the end of the year, you followed 12 stocks.
+
+&nbsp;
+
+There are 500 stocks in the SP500
+
+&nbsp;
+
+3000 stocks in the Russell 3000
+
+&nbsp;
+
+And even more ETFs and Cryptos (let's not get you overwhelmed).
+
+&nbsp;
+
+With HelloStocker you get 2 recommendations per day.
+
+&nbsp;
+
+How can you not miss out with a newsletter that sends you one recommendation per month?
+
+&nbsp;
+
+### 2) Newsletter never respond to you, HelloStocker AI sends you instant replies 24/7
+
+&nbsp;
+
+Have you tried emailing a newsletter?
+
+&nbsp;
+
+They respond within 30 days.
+
+&nbsp;
+
+Do you know by how much can a stock price move within a month?
+
+&nbsp;
+
+Enough for you to review the price again and send them another email.
+
+&nbsp;
+
+HelloStocker is available 24/7 and answers instantly.
+
+&nbsp;
+
+A Human Financial Advisor is available for free within 24h to answer any of your questions.
+
+&nbsp;
+
+&nbsp;
+
+
+
+## 3 Things I learnt from my 15 years in investing?
 
 &nbsp;
 
@@ -132,7 +201,11 @@ Long term trade gains are taxed 20% (hold for over a year).
 
 &nbsp;
 
-**🧠 There are smart way for you to profit from long term investing.**
+**💾 Email Newsletter are old and over rated for the service they offer.**
+
+&nbsp;
+
+**🧠 There are smart way for you to profit from investing: use AI.**
 
 &nbsp;
 
@@ -149,37 +222,13 @@ Building automated trading for Bank of America in London...
 
 &nbsp;
 
-&nbsp;
-
-## **How can I help you?**
-
+I've spoken with thousands of investors, but I know each one of you has slightly different needs.
 
 &nbsp;
 
-My parents grew up in wealthy families and moved to France as political refugees when I was 3: I grew up with nothing apart from love and good values.
+Feel free to connect and ask any question you may have, I respond fast.
 
 &nbsp;
-
-Thanks to my investments and hard work in prestigious banks, I now have the luxury to own a $100m2 flat in Paris (le Marais) and a flat in London (Covent Garden).
-
-&nbsp;
-
-The goal: Empower you with smart investment decisions to make your money work.
-
-&nbsp;
-
-I don't care if you make $1,000 or $10,000 a month: what matters is for you to grow your wealth 💸
-
-&nbsp;
-
-We'll shake hands and exchange ideas when we meet!
-
-&nbsp;
-
-There is no better feeling than helping others. Remember: money is the tool, not the goal. 
-
-&nbsp;
-
 
 **[Click here to connect on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
 
@@ -191,156 +240,40 @@ There is no better feeling than helping others. Remember: money is the tool, not
 
 &nbsp;
 
-## 2) How to differentiate the Advisor from the Guru Influencer?
+## 3) How much does HelloStocker cost?
 
 &nbsp;
 
 &nbsp;
 
-### **A) Ask your Financial Guru to trade live in HelloStocker**
+✅ We charge $10 a month for premium features.
 
 &nbsp;
 
-&nbsp;
-
-❌\- Influencer : 'But why HelloStocker? I already have my setup'
+✅ You get Apple Store and Google Play 2 weeks free trial.
 
 &nbsp;
 
-✅\- You : 'Because HelloStocker is not your broker.'
+✅ There is also a freemium plan.
 
 &nbsp;
 
-&nbsp;
-
-
-❌\- Influencer : 'But I already trade live'
+✅ You know we want to keep you forever, we don't push you to trade, we advise.
 
 &nbsp;
 
-✅\- You : 'How do we know it's actually live?'
-
-
-✅\- You : 'How do we know we see all your trades?'
-
-
-✅\- You : 'How do we track your real profits?'
+✅ Your AI Advisor is available 24/7, and you get a Human Advisor call you within 24h.
 
 &nbsp;
 
-&nbsp;
+✅ Other Newsletters and Analysis cost $300 a year... HelloStocker AI has a $150 lifetime membership.
 
-
-❌\- Influencer : 'I don't want to put money in this app'
-
-&nbsp;
-
-✅\- You : 'HelloStocker doesn't take money.'
-
-
-✅\- You : 'It gives you free virtual money - as much as you want.'
 
 &nbsp;
 
-&nbsp;
+✅ Why so cheap? Tech and AI allows HelloStocker to scale.
 
-❌\- Influencer : 'I don't have time for you'
-
-&nbsp;  
-
-❌\- Influencer : 'I would rather go scam someone who trusts me'
 
 &nbsp;
 
-✅\- You : 'Well I know, scammer' -> leave a comment and share this link on his posts.
-
-&nbsp;
-
-&nbsp;
-
-
-### **B) Ask them how they make money**
-
-&nbsp;
-
-&nbsp;
-
-❌\- Influencer : 'I make money with trading'
-
-&nbsp;
-
-✅\- You : 'Ok show me on HelloStocker then.'
-
-&nbsp;
-
-❌\- Influencer : 'I will show you how on telegram'
-
-&nbsp;
-
-✅\- You : 'There is no virtual trading on telegram'
-
-&nbsp;
-
-❌\- Influencer : 'I show you with my broker'
-
-&nbsp;
-
-✅\- You : 'Why not In HelloStocker?' (back to point A)
-
-&nbsp;
-
-❌\- Influencer : 'I don't have time for you' 
-
-❌\- Influencer : 'I would rather scam someone who trusts me'
-
-&nbsp;
-
-✅\- You : 'Well I know, you're an influencer, not an advisor.'
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
-## 3) So how does HelloStocker make money?
-
-&nbsp;
-
-&nbsp;
-
-✅We charge $10 a month for premium features.
-
-&nbsp;
-
-✅You get Apple Store and Google Play 2 weeks free trial.
-
-&nbsp;
-
-✅There is also a freemium plan.
-
-&nbsp;
-
-✅And you know we want to keep you forever, we don't push you to trade, we advise.
-
-&nbsp;
-
-✅We are available 24/7.
-
-&nbsp;
-
-✅We will never ask you to invest with any partner.
-
-&nbsp;
-
-✅Our interests is to make your wealth and money grow: advise you, and make you rich.
-
-&nbsp;
-
-✅We want to keep you happy forever.
-
+✅ AI made us competitive: we can afford a better and cheaper product at the same time.

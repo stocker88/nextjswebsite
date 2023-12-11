@@ -132,9 +132,7 @@ export default function Swipe() {
                   <br></br>
                     - You can test trading ideas in a safe virtual reality simulator
                     <br></br>
-                    - 99% of Hedge Funds test strategies virtually first
-                    <br></br>
-                    - It is a safe playground for learning and growing
+                    - It is also a safe playground for learning and growing
                     <br></br>
                 </p>
         </div>
