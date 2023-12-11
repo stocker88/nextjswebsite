@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { useState, useEffect } from "react";
 import ConfettiExplosion from 'react-confetti-explosion';
 import Layout from '../components/layout'
-import { DateTimeFormatOptions } from 'intl';
+
 
 import { doc, setDoc } from "firebase/firestore";
 import 'firebase/firestore';
@@ -66,7 +66,7 @@ const [deviceInfo, setDeviceInfo] = useState({
     const email = sessionData.email || '';
     const sessionId = sessionData.sessionId || '';
     const today = new Date();
-      const options: DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+      const options: Intl.DateTimeFormat = { year: 'numeric', month: 'long', day: 'numeric' };
       const formattedDate = today.toLocaleDateString(undefined, options);
     const docId = email === ''
       ?  sessionId ===''?
