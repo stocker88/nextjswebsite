@@ -3,7 +3,7 @@ title: 'Unleash Your Financial Potential: Why Your AI Advisor Beats Outdated New
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 coverImage: '/assets/blog/financial-gurus/how finance gurus make money.webp'
-date: '2023-11-20T05:35:07.322Z'
+date: '2023-12-06T05:35:07.322Z'
 author:
     name: HelloStocker AI
     picture: '/assets/blog/authors/stocker.png'
