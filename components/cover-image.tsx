@@ -71,8 +71,8 @@ const db = getFirestore();
     const email = sessionData.email || '';
     const sessionId = sessionData.sessionId || '';
 const today = new Date();
-  const options: Intl.DateTimeFormat = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = today.toLocaleDateString(undefined, options);
+
+  const formattedDate = format(today, 'MMMM d, yyyy');
     const docId = email === ''
       ?  sessionId ===''?
         deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+formattedDate
