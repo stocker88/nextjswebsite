@@ -11,10 +11,10 @@ interface SessionContextProps {
   setSessionData: React.Dispatch<React.SetStateAction<SessionData>>;
 }
 
-const SessionContext = createContext<SessionContextProps | null>(null)
+const SessionContext = createContext<SessionContextProps | null>(null);
 
 export const SessionProvider: React.FC = ({ children }) => {
-  const [sessionData, setSessionData] = useState<SessionData>({ sessionData: { email: '', sessionId: '' } });
+  const [sessionData, setSessionData] = useState<SessionData>({ email: '', sessionId: '' });
 
   return (
     <SessionContext.Provider value={{ sessionData, setSessionData }}>
@@ -22,7 +22,6 @@ export const SessionProvider: React.FC = ({ children }) => {
     </SessionContext.Provider>
   );
 };
-
 
 export const useSession = (): { sessionData: SessionData; setSessionData: React.Dispatch<React.SetStateAction<SessionData>> } =>  {
   const context = useContext(SessionContext);
