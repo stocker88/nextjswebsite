@@ -7,7 +7,7 @@ interface SessionData {
 }
 
 
-const SessionContext = createContext();
+const SessionContext = createContext()<SessionData | undefined>(undefined)
 
 export const SessionProvider = ({ children }) => {
   const [sessionData, setSessionData] = useState({empty:''}); // Your session data
