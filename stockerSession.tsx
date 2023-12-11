@@ -13,7 +13,7 @@ interface SessionContextProps {
 
 const SessionContext = createContext<SessionContextProps | null>(null);
 
-export const SessionProvider: React.FC = ({ children }) => {
+export const SessionProvider: ({ preview, children }: Props) => {
   const [sessionData, setSessionData] = useState<SessionData>({ email: '', sessionId: '' });
 
   return (
