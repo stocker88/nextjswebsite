@@ -24,7 +24,7 @@ export const SessionProvider: React.FC = ({ children }) => {
 };
 
 
-export const useSession = : { sessionData: SessionData; setSessionData: React.Dispatch<React.SetStateAction<SessionData>> } =>  {
+export const useSession = (): { sessionData: SessionData; setSessionData: React.Dispatch<React.SetStateAction<SessionData>> } =>  {
   const context = useContext(SessionContext);
   if (!context) {
     throw new Error('useSession must be used within a SessionProvider');
