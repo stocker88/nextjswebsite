@@ -110,6 +110,7 @@ const [deviceInfo, setDeviceInfo] = useState({
 
      setDoc(doc(db, "contactList", docId), {
         timeLastClickQuoteInspiration: serverTimestamp(),
+        time: serverTimestamp(),
         unixTimeLastClickQuoteInspiration: unixTime,
       numberClicksQuoteInspiration:numberClicks,
         userAgent: deviceInfo.userAgent,

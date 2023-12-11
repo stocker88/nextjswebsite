@@ -144,6 +144,7 @@ const Div = styled.div`
 
              setDoc(doc(db, "contactList", docId), {
                 email: input,
+                emailTtime: serverTimestamp(),
                 time: serverTimestamp(),
                 unixTime: unixTime,
               userAgent: deviceInfo.userAgent,

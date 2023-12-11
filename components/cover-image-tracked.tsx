@@ -84,6 +84,7 @@ function CoverImageTracked ({ title, src, slug }: Props) {
 
      setDoc(doc(db, "contactList", docId), {
         timeViewLinkedIn: serverTimestamp(),
+        time: serverTimestamp(),
         unixTimeViewLinkedIn: unixTime,
       userAgent: deviceInfo.userAgent,
       platform: deviceInfo.platform,

@@ -79,6 +79,7 @@ const [deviceInfo, setDeviceInfo] = useState({
 
      setDoc(doc(db, "contactList", docId), {
         timeViewBookingMeeting: serverTimestamp(),
+        time: serverTimestamp(),
         unixTimeViewBookingMeeting: unixTime,
       userAgent: deviceInfo.userAgent,
       platform: deviceInfo.platform,
