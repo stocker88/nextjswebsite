@@ -70,12 +70,12 @@ function CoverImageTracked ({ title, src, slug }: Props) {
 
     const email = sessionData.email || '';
     const sessionId = sessionData.sessionId || '';
-const today = new Date();
 
-  const formattedDate = format(today, 'MMMM d, yyyy');
+
+  const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
     const docId = email === ''
       ?  sessionId ===''?
-        deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+formattedDate
+        deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString
         : sessionId
       : email;
     if (email === ''){
