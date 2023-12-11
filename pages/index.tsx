@@ -10,6 +10,25 @@ import Post from '../interfaces/post'
 import Home from '../views/Home';
 //import './App.css';
 import ReactGA from 'react-ga4';
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
+  authDomain: "stocker-fcda2.firebaseapp.com",
+  projectId: "stocker-fcda2",
+  storageBucket: "stocker-fcda2.appspot.com",
+  messagingSenderId: "269261832880",
+  appId: "1:269261832880:web:4b6affd899a01f5f0cf175",
+  measurementId: "G-WXHHGB6FSV"
+};
+
+// Initialize Firebase
+//const firebaseApp = initializeApp(firebaseConfig);
+
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
 
 type Props = {
   allPosts: Post[]
@@ -105,6 +124,7 @@ export default function Index({ allPosts }: Props) {
 
         </Container>
       </Layout>
+
     </>
   )
 }

@@ -107,9 +107,7 @@ By establishing and adhering to a budget, you gain control over your finances an
 
 &nbsp;
 
-&nbsp;
 
-![](/assets/blog/personal-finance/personalfinancetips.jpg)
 
 &nbsp;
 

@@ -1,37 +1,19 @@
 import { useState, useEffect } from "react";
-
-import 'firebase/firestore';
-import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore';
-import { doc, setDoc } from "firebase/firestore";
 import { serverTimestamp } from "firebase/firestore";
+import ConfettiExplosion from 'react-confetti-explosion';
 
 import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
-
+import { doc, setDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
-  authDomain: "stocker-fcda2.firebaseapp.com",
-  projectId: "stocker-fcda2",
-  storageBucket: "stocker-fcda2.appspot.com",
-  messagingSenderId: "269261832880",
-  appId: "1:269261832880:web:4b6affd899a01f5f0cf175",
-  measurementId: "G-WXHHGB6FSV"
-};
+import 'firebase/firestore';
 
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-if (firebaseConfig?.projectId) {
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+import {getFirestore} from 'firebase/firestore';
+import { useSession } from 'stockerSession';
 
-  // Access Firebase services using shorthand notation
-  const db = getFirestore();
-}
 
 
 
@@ -95,6 +77,8 @@ const Div = styled.div`
     overflow:hidden;
 `;
 */}
+    const { sessionData, setSessionData } = useSession();
+
     const [input,setInput] = useState("");
     const [message,setMessage] = useState("");
     const [deviceInfo, setDeviceInfo] = useState({
@@ -107,6 +91,8 @@ const Div = styled.div`
 //         latitude: null,
 //         longitude: null,
       });
+    const [isExploding, setIsExploding] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     let [showDropdown, setShowDropdown] = useState(false);
     const fetchDeviceInfo = () => {
@@ -154,8 +140,9 @@ const Div = styled.div`
             //add to firebase
             const dateTime = Date.now();
             const unixTime = Math.floor(dateTime / 1000);
+            const docId = sessionData.sessionId || input;
 
-             setDoc(doc(db, "contactList", input), {
+             setDoc(doc(db, "contactList", docId), {
                 email: input,
                 time: serverTimestamp(),
                 unixTime: unixTime,
@@ -164,9 +151,14 @@ const Div = styled.div`
               language: deviceInfo.language,
               screenWidth: deviceInfo.screenWidth,
               screenHeight: deviceInfo.screenHeight,
-                });
+                }, { merge: true });
+
+            setSessionData({ ...sessionData, email: input });
+
             setShowDropdown(true)
             setInput("");
+            setIsSubmitted(true)
+            setIsExploding(true)
 
            {/*
            setMessage(<InstallButtonsWithQR/>);
@@ -181,11 +173,16 @@ const Div = styled.div`
 
     return (
     <center>
+    <>{isExploding && <ConfettiExplosion
+                width={1600}
+                numberOfPieces={350} // Equivalent to particleCount
+                tweenDuration={4000} // Equivalent to duration
+                 gravity={0.8} // Equivalent to force
+                />}</>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
-            <form onSubmit={submitHandler}
+            {isSubmitted===false && <form onSubmit={submitHandler}
 style={{'padding': '10px'}}>
-
             <br></br>
                 <input type="email" required placeholder="Enter your email here..."
                 onChange={inputHandler}
@@ -220,9 +217,10 @@ style={{'padding': '10px'}}>
                                                    'background': '#00f75f',
                                                    'maxWidth':'220px'
                                                   }}>Show me how→</div> </button>
-            </form>
+            </form>}
            {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
-                    Thank you! <br></br>Test it Now We Give You Virtual Money
+                    <br></br>Install now
+                    to receive the best stocks & crypto to buy
                 </h1>    </center>}
             {showDropdown && <InstallButtonsWithQR/>}
 

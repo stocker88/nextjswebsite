@@ -16,7 +16,8 @@ import SwiperCore, {
 import AboutUs from '../../components/aboutUs';
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
-
+import LinkedInButton from '../../components/connectLinkedin';
+import BookingMeetingButton from '../../components/bookingMeetingButton';
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
 
@@ -196,19 +197,7 @@ export default function Swipe() {
                  </h2>
 
                  <br></br>
-                                  <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting' target="_blank" ><button
-                                              style={{
-
-                                                   }}>  <div style={{
-                                                   'padding': '0.8rem',
-                                                   'color': 'black',
-                                                    'width':'31vw',
-                                                   'textAlign': 'center',
-                                                   'fontSize': 'min(19px,max(15px,2vw))',
-                                                   'borderRadius': '30px 30px 30px 30px',
-                                                   'background': '#00f75f',
-                                                   'maxWidth':'280px'
-                                                  }}>Book 20min here</div></button></a>
+                <BookingMeetingButton/>
 
                   <br></br>
                   <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)'}} >
@@ -218,19 +207,7 @@ export default function Swipe() {
                </h3>
                  <br></br>
                  <br></br>
- <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" ><button
-                                              style={{
-
-                                                   }}>  <div style={{
-                                                   'padding': '0.8rem',
-                                                   'color': 'black',
-                                                    'width':'31vw',
-                                                   'textAlign': 'center',
-                                                   'fontSize': 'min(19px,max(15px,2vw))',
-                                                   'borderRadius': '30px 30px 30px 30px',
-                                                   'background': '#00f75f',
-                                                   'maxWidth':'280px'
-                                                  }}>Connect on LinkedIn</div></button></a>
+ <LinkedInButton/>
 
                  <br></br>
                  <br></br>

@@ -2,6 +2,7 @@ import Alert from './alert'
 import Meta from './meta'
 import MeetingButton from '../components/sections/MeetingButton';
 import Footer from '../components/layout/Footer';
+import { SessionProvider } from 'stockerSession';
 
 type Props = {
   preview?: boolean
@@ -11,6 +12,7 @@ type Props = {
 const Layout = ({ preview, children }: Props) => {
   return (
     <>
+    <SessionProvider>
       <Meta />
       <div className="min-h-screen">
         {/*<Alert preview={preview} />*/}
@@ -18,6 +20,7 @@ const Layout = ({ preview, children }: Props) => {
       </div>
       <MeetingButton style={{  background: "linear-gradient( #1387FF, #3700B3)" }}/>
         <Footer  style={{  background: "linear-gradient(#3700B3, #1387FF)" }}/>
+        </SessionProvider>
     </>
   )
 }

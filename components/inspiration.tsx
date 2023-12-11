@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ConfettiExplosion from 'react-confetti-explosion';
+import Layout from '../components/layout'
 
-const QuoteDisplay = () => {
+import { doc, setDoc } from "firebase/firestore";
+import 'firebase/firestore';
+import {getFirestore} from 'firebase/firestore';
+import { serverTimestamp } from "firebase/firestore";
+import { useSession } from 'stockerSession';
+
+function QuoteDisplay () {
+const db = getFirestore();
+    const { sessionData, setSessionData } = useSession();
+
+
   const [quotes, setQuotes] = useState([
     "Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett",
     "If you don't find a way to make money while you sleep, you will work until you die. - Warren Buffett",
@@ -17,11 +29,91 @@ const QuoteDisplay = () => {
     // Add more quotes here as needed
   ]);
 
+ const fetchDeviceInfo = () => {
+        try {
+          // Get basic device information
+          setDeviceInfo({
+            ...deviceInfo,
+            userAgent: navigator.userAgent,
+            platform: navigator.platform,
+            language: navigator.language,
+            screenWidth: String(window.screen.width),
+            screenHeight: String(window.screen.height),
+            // Add or update other properties as needed
+          });
+        } catch (error) {
+          console.error('Error fetching device information:', error);
+
+          // Set empty string ('') as default values if fetching device information fails
+          setDeviceInfo({
+            ...deviceInfo,
+            userAgent: '',
+            platform: '',
+            language: '',
+            screenWidth: '',
+            screenHeight: '',
+            // Set other properties to empty strings as needed
+          });
+        }
+      };
+const [deviceInfo, setDeviceInfo] = useState({
+        userAgent: '',
+        platform: '',
+        language: '',
+        screenWidth: '',
+        screenHeight: '',
+        // Add more properties based on available browser APIs
+//         latitude: null,
+//         longitude: null,
+      });
+
+    const [isExploding, setIsExploding] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [numberClicks, setNumberClicks] = useState(0);
+
+  useEffect(() => {
+        // Fetch device information when the component mounts
+        fetchDeviceInfo();
+      }, []); // Empty dependency array ensures the effect runs only once after initial render
+
 
   const generateRandomQuote = () => {
     const newIndex = Math.floor(Math.random() * quotes.length);
     setCurrentQuoteIndex((newIndex)%quotes.length);
+    setNumberClicks(numberClicks+1)
+    setIsSubmitted(true)
+    setIsExploding(true)
+    setTimeout(() => {
+      setIsExploding(false);
+    }, 1000);
+
+    const dateTime = Date.now();
+    const unixTime = Math.floor(dateTime / 1000);
+
+
+    const email = sessionData.email || '';
+    const sessionId = sessionData.sessionId || '';
+
+    const docId = email === ''
+      ?  sessionId ===''?
+        deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight
+        : sessionId
+      : email;
+    if (email === ''){
+        setSessionData({ ...sessionData, sessionId: docId });
+    }
+
+     setDoc(doc(db, "contactList", docId), {
+        timeLastClickQuoteInspiration: serverTimestamp(),
+        unixTimeLastClickQuoteInspiration: unixTime,
+      numberClicksQuoteInspiration:numberClicks,
+        userAgent: deviceInfo.userAgent,
+        platform: deviceInfo.platform,
+        language: deviceInfo.language,
+        screenWidth: deviceInfo.screenWidth,
+        screenHeight: deviceInfo.screenHeight,
+        }, { merge: true });
   };
 
 
@@ -29,6 +121,12 @@ const QuoteDisplay = () => {
     <div>
 
     <center>
+    <>{isExploding && <ConfettiExplosion
+                    width={1600}
+                    numberOfPieces={250} // Equivalent to particleCount
+                    tweenDuration={2000} // Equivalent to duration
+                     gravity={0.8} // Equivalent to force
+                    />}</>
       <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{maxWidth:'900px','color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
       {quotes[currentQuoteIndex]}</h2>
            <br></br>
