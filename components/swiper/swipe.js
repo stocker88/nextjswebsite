@@ -187,32 +187,6 @@ export default function Swipe() {
 </div>
          <br></br><br></br>
 
-        <center>
-  <div className="container">
-   <div className="split-item">
-
-
-                <div className={
-                  classNames(
-                    'split-item-image center-content-mobile reveal-from-bottom',
-                     'split-item-image-fill'
-                  )}
-                  data-reveal-container=".split-item">
-                  <Zoom>
-                  <Image
-                  src='/assets/images/tslavsrace.webp'
-                        width={300}
-                    height={649.28}
-                    className="shadow-md"
-                    sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='Pair Trading TSLA TESLA competition analysis HelloStocker Screenshot'
-                    />
-                    </Zoom>
-                </div>
-
-              </div>
-              </div>
-</center>
 <br></br><br></br>
          <br></br><br></br>
 
