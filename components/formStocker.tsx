@@ -175,9 +175,9 @@ const Div = styled.div`
     <center>
     <>{isExploding && <ConfettiExplosion
                 width={1600}
-                numberOfPieces={350} // Equivalent to particleCount
-                tweenDuration={4000} // Equivalent to duration
-                 gravity={0.8} // Equivalent to force
+                particleCount={350} // Equivalent to particleCount
+                duration={4000} // Equivalent to duration
+                 force={0.8} // Equivalent to force
                 />}</>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 

@@ -127,9 +127,9 @@ const today = new Date();
     <center>
     <>{isExploding && <ConfettiExplosion
                     width={1600}
-                    numberOfPieces={250} // Equivalent to particleCount
-                    tweenDuration={2000} // Equivalent to duration
-                     gravity={0.8} // Equivalent to force
+                    particleCount={250} // Equivalent to particleCount
+                    duration={2000} // Equivalent to duration
+                     force={0.8} // Equivalent to force
                     />}</>
       <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{maxWidth:'900px','color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
       {quotes[currentQuoteIndex]}</h2>
