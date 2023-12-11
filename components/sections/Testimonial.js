@@ -122,7 +122,7 @@ const Testimonial = ({
                              <br></br>
                            What's the point of buying if you don't know when to sell?
                          <br></br>  They don't gain from making me trade, they profit from advising me and helping me out.
-                         <br></br>It costs $5 monthly subscription, and that's it.
+                         <br></br>It costs $10 monthly subscription, and that's it🚀
                          <br></br>
                                 Compared to others who say 'buy buy buy', HelloStocker AI has my final interests in mind.
                               <br></br>
