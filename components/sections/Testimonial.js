@@ -186,7 +186,9 @@ const Testimonial = ({
                              <br></br>
                              I can't wait for boring emails newsletters and reports...
                               <br></br>
-                              With HelloStocker AI advisor, I get instant suggestions and replies, when I'm free, right away.
+                              I get instant suggestions and replies.
+                              <br></br>
+                               HelloStocker AI advisor is reactive and sends perfect recaps!
                              <br></br>
                                 My time saving hero.
                               <br></br>I don't wait weeks for email replies: their advisor sends me instant replies.
