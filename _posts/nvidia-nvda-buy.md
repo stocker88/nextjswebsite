@@ -235,7 +235,7 @@ Anyone who trades and buys stocks based on insider information will be fined and
 
 &nbsp;
 
-#### B) You know someone who can influence macro economic and political events
+#### B) You know someone who can influence macro economics and political events
 
 Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track what they buy / sell and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
@@ -252,6 +252,14 @@ HelloStocker tracks Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives
 &nbsp;
 
 We have social bots that crawl the web and alert you as soon as relevant news is published.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -359,6 +367,10 @@ They see Nvidia price spiked so they buy AMD instead since it didn't spike.
 &nbsp;
 
 ✅But we just looked at the competition economics historical analysis.
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

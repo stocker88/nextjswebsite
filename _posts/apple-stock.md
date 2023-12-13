@@ -231,7 +231,7 @@ Anyone who trades with insider information will be fined and jailed: it is a cri
 
 &nbsp;
 
-#### B) You know someone who can influence macro economic and political events
+#### B) You know someone who can influence macro economics and political events
 
 Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track them and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
