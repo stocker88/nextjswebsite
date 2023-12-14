@@ -571,15 +571,15 @@ Keep in mind when things moves fast, it goes in all directions: you must be open
 
 &nbsp;
 
-If you want to make long term +10,000% gains.
+If you want to make long term +10,000% gains...
 
 &nbsp;
 
-If you have funds you are not planning on spending over the next couple of years.
+If you have funds you are not planning on spending over the next couple of years...
 
 &nbsp;
 
-Buy Nvidia, now.
+Buy Nvidia.
 
 &nbsp;
 
