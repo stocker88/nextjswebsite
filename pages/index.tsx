@@ -124,9 +124,6 @@ export default function Index({ allPosts }: Props) {
 
         </Container>
       </Layout>
- </>
-      }
-    </SessionProvider>
     </>
   )
 }
