@@ -47,11 +47,19 @@ AI drives innovation and allows companies to deliver a better product to their c
 
 Netflix, Spotify, and HelloStocker, all leverage AI for better recommendations.
 
+&nbsp;
+
 \- Netflix for movies.
+
+&nbsp;
 
 \- Spotify for music.
 
+&nbsp;
+
 \- HelloStocker AI for stocks.
+
+&nbsp;
 
 &nbsp;
 
