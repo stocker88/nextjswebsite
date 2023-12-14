@@ -344,20 +344,20 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
-\- Apple pre releases their new iPhone model 2 months before the official date.
+\- Apple pre releases new iPhone model before the official date.
 
 &nbsp;
 
-→ It is a marketing strategy / market manipulation tactic to create a rush on IPO.
+→ It is a marketing strategy / market manipulation tactic to create the IPO rush.
 
 &nbsp;
 
 
-\- When you buy the stock on IPO you don't give 100% to the company.
+\- When you buy the stock on IPO, the company doesn't receive 100% of investments.
 
 &nbsp;
 
-→ 15% of your investment money goes to the banks which setup the IPO
+→ 15% of your money goes to the banks which setup the IPO
 
 &nbsp;
 
@@ -400,11 +400,20 @@ AMD price 2 years ago has been scaled to match Nvidia price.
 
 &nbsp;
 
-\- 2) Nvidia's Net Income also did x2 → it validates the stock price change.
+\- 2) Nvidia's Net Income also did x2 
 
 &nbsp;
 
-\- 3) AMD Net Income decreased a lot → its share price should have decreased more.
+→ it validates the stock price change.
+
+&nbsp;
+
+\- 3) AMD Net Income decreased a lot 
+
+
+&nbsp;
+
+→ its share price should have decreased more.
 
 &nbsp;
 
