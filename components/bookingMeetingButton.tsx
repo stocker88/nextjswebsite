@@ -64,7 +64,7 @@ const [deviceInfo, setDeviceInfo] = useState({
     const dateTime = Date.now();
     const unixTime = Math.floor(dateTime / 1000);
 
-    const email = sessionData.email || '';
+
     const sessionId = sessionData.sessionId || '';
 
     const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);

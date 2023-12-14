@@ -140,8 +140,10 @@ const Div = styled.div`
             //add to firebase
             const dateTime = Date.now();
             const unixTime = Math.floor(dateTime / 1000);
-            const docId = sessionData.sessionId || input;
 
+            const sessionId = sessionData.sessionId || '';
+
+            const docId = sessionId || input;
              setDoc(doc(db, "contactList", docId), {
                 email: input,
                 emailTime: serverTimestamp(),

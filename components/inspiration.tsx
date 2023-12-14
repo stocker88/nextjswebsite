@@ -94,7 +94,7 @@ const [deviceInfo, setDeviceInfo] = useState({
     const unixTime = Math.floor(dateTime / 1000);
 
 
-    const email = sessionData.email || '';
+
     const sessionId = sessionData.sessionId || '';
 
 

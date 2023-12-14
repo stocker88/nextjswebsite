@@ -81,7 +81,6 @@ const db = getFirestore();
     const dateTime = Date.now();
     const unixTime = Math.floor(dateTime / 1000);
 
-    const email = sessionData.email || '';
     const sessionId = sessionData.sessionId || '';
 
 
