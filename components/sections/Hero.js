@@ -72,7 +72,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "600px" }} >
-            HelloStocker AI sends you stocks before they blow up: you save time, save money, and receive the best opportunities. One week free trial - $10 a month - cancel anytime.
+            HelloStocker AI sends you stocks before they blow up: you save time, save money, and receive the best opportunities.
             </h2>
           </div>
 
@@ -95,7 +95,8 @@ const Hero = ({
                                                />
 
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               Share ideas with +12,800 investors in the best social virtual trading app
+                                               Join +12,800 investors and receive the best stocks & crypto today
+                                               One week free trial - cancel anytime - $9.99 a month
                                              </div>
 <br></br>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>

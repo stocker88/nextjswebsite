@@ -112,6 +112,7 @@ const MeetingButton = ({
 
             <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                 Join +12,800 investors and receive the best stocks & crypto today
+                One week free trial - cancel anytime - $9.99 a month
             </div>
 
             <div style={{paddingTop: 20}}>
