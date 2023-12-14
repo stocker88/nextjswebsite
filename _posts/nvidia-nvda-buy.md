@@ -308,30 +308,40 @@ Again here: the market could expect something big.
 
 &nbsp;
 
+&nbsp;
+
 We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
 \- ARM is overhyped because Softbank marketed it and it was all over the news.
 
-→ Never buy a stock right after Softbank does.
+&nbsp;
+
+→ Never buy a stock right after Softbank.
 
 &nbsp;
 
 \- ARM stock trading volume spiked because of its IPO.
 
-→ Everyone bought the stock now over a short interval of time.
+&nbsp;
+
+→ Everyone bought the stock over a short interval of time.
 
 &nbsp;
 
 \- Their IPO was everywhere in the news, and you could not buy the stock before.
 
-→ Everyone rushed on it and made the stock over spike for no reason.
+&nbsp;
+
+→ Everyone rushed and made the stock spike for no reason.
 
 &nbsp;
 
 
 \- Apple pre release shows their new iPhone model 2 months before the official release date.
+
+&nbsp;
 
 → It is a marketing strategy / market manipulation tactic to create an inflow on IPO.
 
@@ -340,7 +350,9 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 \- When you buy the stock on IPO you don't give 100% to the company.
 
-→ 15% of your investment money goes to banks who setup the IPO
+&nbsp;
+
+→ 15% of your investment money goes to the banks which setup the IPO
 
 &nbsp;
 
