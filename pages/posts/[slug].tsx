@@ -98,7 +98,9 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
               </Head>
               <article className="mb-32">
-              <Header />
+              <Header
+                slug={post.slug}
+              />
 
 
                 <div style={{

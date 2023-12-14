@@ -8,9 +8,11 @@ import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
 import { format } from 'date-fns';
 
+type Props = {
+  slug: string
+}
 
-
-const Header = () => {
+const Header = ({ slug }: Props) => {
 
 
 
