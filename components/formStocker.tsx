@@ -154,7 +154,9 @@ const Div = styled.div`
               screenHeight: deviceInfo.screenHeight,
                 }, { merge: true });
 
-            setSessionData({ ...sessionData, email: input });
+            if (sessionId === ''){
+                setSessionData({ ...sessionData, sessionId: docId });
+            }
 
             setShowDropdown(true)
             setInput("");

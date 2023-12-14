@@ -71,12 +71,8 @@ const db = getFirestore();
 
 
   const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-    const docId = email === ''
-      ?  sessionId ===''?
-        deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString
-        : sessionId
-      : email;
-    if (email === ''){
+    const docId = sessionId ===''?deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString: sessionId;
+    if (sessionId === ''){
         setSessionData({ ...sessionData, sessionId: docId });
     }
 
