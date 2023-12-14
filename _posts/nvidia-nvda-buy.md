@@ -489,17 +489,31 @@ Hint: (the second one)
 
 &nbsp;
 
-\- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
-
-\- 2) Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2
+\- 1) Taiwan Semiconductor's price didn't move
 
 &nbsp;
 
-They seem aligned in terms of change pricing.
+\- 1) Nvidia stock price did times 2
 
 &nbsp;
 
-So why is Taiwan semiconductor EPS so low? (17 only...)
+\- 3) Taiwan Semiconductor Earnings per Share didn't change
+
+&nbsp;
+
+\- 4) Nvidia EPS did times 2
+
+&nbsp;
+
+Both are aligned in terms of change pricing.
+
+&nbsp;
+
+Why is Taiwan Semiconductor Price to Earning so low?
+
+&nbsp;
+
+17 PE only, way below ARM, AMD and Nvidia...
 
 &nbsp;
 
@@ -524,17 +538,19 @@ The AI Industry is in the early stages of an exponential surge.
 
 &nbsp;
 
-With this in mind, Nvidia could become the next Apple anytime soon.
-
+Nvidia could become the next Apple anytime soon.
 
 &nbsp;
 
 Competition analysis showed why Nvidia remains the best buy and why competition is overhyped.
 
+&nbsp;
+
+It's not about prices.
 
 &nbsp;
 
-It's not about prices. It's about Economics: it's about Value.
+It's about Economics, Prospects and Value.
 
 
 &nbsp;
@@ -543,7 +559,7 @@ It's not about prices. It's about Economics: it's about Value.
 &nbsp;
 
 
-#### Are you looking for +10% quick profit? or +10,000% profits?
+#### What are your goals?
 
 &nbsp;
 
@@ -555,7 +571,15 @@ Keep in mind when things moves fast, it goes in all directions: you must be open
 
 &nbsp;
 
-If you want to make long term gains, and have funds/investments you are not planning on spending over the next couple of years: Nvidia is your buy.
+If you want to make long term +10,000% gains.
+
+&nbsp;
+
+If you have funds you are not planning on spending over the next couple of years.
+
+&nbsp;
+
+Buy Nvidia, now.
 
 &nbsp;
 
