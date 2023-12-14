@@ -176,15 +176,15 @@ Nvidia's change in Net Income is higher than the change in share price.
 
 &nbsp;
 
-There has been no substancial amount of new shares related from the company (that could have diluted the share price).
+The company did not release new shares (that could have diluted the share price).
 
 &nbsp;
 
-This is confirmed by the change in Earnings per Share (Total Earnings divided by Number of Shares available).
+This is confirmed by the change in Earnings per Share (EPS is Total Earnings divided by Number of Shares available).
 
 &nbsp;
 
-Looking at the change in Earning per Share, it seems like Nvidia has never been as discounted as it is now.
+The change in EPS confirms Nvidia has never been as discounted as it is now.
 
 ![](/assets/blog/nvidia/nvidia_financials2.webp)
 
@@ -223,11 +223,11 @@ The timing was not great, I had lost -35.6% on Nvidia.
 
 &nbsp;
 
-There are only 3 ways for you to know what will happen in the short term.
+There are only 3 ways to predict the short term.
 
 &nbsp;
 
-#### A) You know someone who works at Nvidia who can disclose you revenues before they become public
+#### A) You know someone who works at Nvidia and can disclose revenues before they go public
 
 &nbsp;
 
@@ -236,6 +236,8 @@ Anyone who trades and buys stocks based on insider information will be fined and
 &nbsp;
 
 #### B) You know someone who can influence macro economics and political events
+
+&nbsp;
 
 Politicians and insider trades are disclosed on the [SEC's website](https://www.sec.gov/) we track what they buy / sell and notify you for stocks you follow in [HelloStocker App](https://www.hellostocker.com).
 
@@ -251,7 +253,7 @@ HelloStocker tracks Hedge Fund activity ([form 10Q](https://www.sec.gov/Archives
 
 &nbsp;
 
-We have social bots that crawl the web and alert you as soon as relevant news is published.
+We have social bots that monitors the web and alert you as soon as relevant news is detected.
 
 &nbsp;
 
@@ -290,9 +292,19 @@ This shows you which stocks are 'hyped' with high growth expectations.
 
 &nbsp;
 
-The lowest the PE, the more discounted is the stock: it is undervalued, but sometimes for a reason. 
+The lowest the PE, the more discounted is the stock.
 
-However: the highest the PE, the more overvalued is the stock: but again the market could expect something big.
+&nbsp;
+
+It means the stock is undervalued, but often for a reason. 
+
+&nbsp;
+
+However: the highest the PE, the more overvalued is the stock.
+
+&nbsp;
+
+Again here: the market could expect something big.
 
 &nbsp;
 
@@ -300,27 +312,46 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
-\- ARM is overhyped because Softbank marketed it and it was all over the news. Never buy a stock right after Softbank does.
+\- ARM is overhyped because Softbank marketed it and it was all over the news.
+
+→ Never buy a stock right after Softbank does.
+
+&nbsp;
+
+\- ARM stock trading volume spiked because of its IPO.
+
+→ Everyone bought the stock now over a short interval of time.
+
+&nbsp;
+
+\- Their IPO was everywhere in the news, and you could not buy the stock before.
+
+→ Everyone rushed on it and made the stock over spike for no reason.
+
+&nbsp;
 
 
-\- ARM stock trading volume spiked because of its IPO: everyone bought the stock now over a short interval of time.
+\- Apple pre release shows their new iPhone model 2 months before the official release date.
+
+→ It is a marketing strategy / market manipulation tactic to create an inflow on IPO.
+
+&nbsp;
 
 
-\- Their IPO was everywhere in the news, and you could not buy the stock before, so everyone rushed on it and made the stock go up.
+\- When you buy the stock on IPO you don't give 100% to the company.
 
+→ 15% of your investment money goes to banks who setup the IPO
 
-\- It's a marketing strategy, just like when Apple shows their new iPhone model 2 months before the release date.
+&nbsp;
 
+ 
 
-\- Also, a portion of the money you invest on IPO goes to banks, when you buy the stock on IPO you don't give 100% to the company.
-
-
-\- That's funny isn't it? That's how banks get paid: they take 10% of the IPO price. 
+&nbsp;
 
 
 &nbsp;
 
-Conclusion: ARM is overvalued.
+Conclusion: ARM is overvalued, you better buy Nvidia.
 
 &nbsp;
 
