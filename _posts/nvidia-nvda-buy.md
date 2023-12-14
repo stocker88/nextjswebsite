@@ -310,11 +310,17 @@ Again here: the market could expect something big.
 
 &nbsp;
 
+#### Nvidia is a Better Option than ARM
+
+&nbsp;
+
+&nbsp;
+
 We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
-\- ARM is overhyped because Softbank marketed it and it was all over the news.
+\- ARM is overhyped: Softbank marketed it all over the news.
 
 &nbsp;
 
@@ -330,7 +336,7 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
-\- Their IPO was everywhere in the news, and you could not buy the stock before.
+\- Their IPO was pre released, you could not buy the stock before.
 
 &nbsp;
 
@@ -338,12 +344,11 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 
 &nbsp;
 
-
-\- Apple pre release shows their new iPhone model 2 months before the official release date.
+\- Apple pre releases their new iPhone model 2 months before the official date.
 
 &nbsp;
 
-→ It is a marketing strategy / market manipulation tactic to create an inflow on IPO.
+→ It is a marketing strategy / market manipulation tactic to create a rush on IPO.
 
 &nbsp;
 
@@ -364,6 +369,14 @@ We see that ARM and AMD are even more 'hyped' than Nvidia! &nbsp;
 &nbsp;
 
 Conclusion: ARM is overvalued, you better buy Nvidia.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+#### Nvidia is a Better Option than AMD
 
 &nbsp;
 
@@ -463,6 +476,8 @@ Hint: (the second one)
 ![](/assets/blog/nvidia/nvidia_competition_5.webp)
 
 
+#### Nvidia is a Better Option than Taiwan SemiConductor
+
 &nbsp;
 
 \- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
@@ -492,7 +507,7 @@ Conclusion: buy Nvidia it is a better option here again.
 &nbsp;
 
 
-### 4) Your Goals
+### 4) The Verdict
 
 &nbsp;
 
