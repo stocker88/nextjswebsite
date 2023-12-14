@@ -34,7 +34,7 @@ export default function Swipe() {
                         <br></br>
                         - What the business does and why it has growing interest
                         <br></br>
-                        - You receive opportunities adapted to your own preferences
+                        - You receive the best opportunities adapted to your preferences 🚀
                         <br></br>
                         - Ask anything your AI Financial Robot Advisor is available 24/7
                         <br></br>
