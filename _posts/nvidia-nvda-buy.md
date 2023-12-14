@@ -363,22 +363,34 @@ Let's select AMD, it now shows in orange:
 
 &nbsp;
 
-We look at the changes in prices over the last 2 years: AMD price 2 years ago has been scaled to match Nvidia price.
+We look at the changes in prices over the last 2 years.
 
 &nbsp;
 
-\- 1) We see that Nvidia stock price outperformed AMD x 2.
+AMD price 2 years ago has been scaled to match Nvidia price.
 
-\- 2) Nvidia's Net Income also did x2, so it justified it's stock price change.
+&nbsp;
 
-\- 3) AMD Net Income decreased a lot: it's share price should have decreased more.
+\- 1) Nvidia stock price outperformed AMD x 2.
 
-\- 4) Earning per share confirms that AMD is overvalued: Share Price is the ratio of Market Cap (Valuation) to Number of Shares Available to trade.
+&nbsp;
+
+\- 2) Nvidia's Net Income also did x2 → it validates the stock price change.
+
+&nbsp;
+
+\- 3) AMD Net Income decreased a lot → it's share price should have decreased more.
+
+&nbsp;
+
+\- 4) EPS change confirms AMD is overvalued
 
 
 &nbsp;
 
-Conclusion: AMD is overvalued compared to Nvidia.
+&nbsp;
+
+Conclusion: you better buy Nvidia than buy AMD.
 
 &nbsp;
 
@@ -388,16 +400,19 @@ Conclusion: AMD is overvalued compared to Nvidia.
 
 &nbsp;
 
-My guess is: most people don't understand what they are doing. 🙄
-They see Nvidia price spiked so they buy AMD instead since it didn't spike.
+Most people don't understand what they are doing. 🙄
 
 &nbsp;
 
-❌And they think they will get a better deal with AMD. 
+They see Nvidia price spiked so they buy AMD hoping it does the same.
 
 &nbsp;
 
-✅But we just looked at the competition economics historical analysis.
+❌They think they will get a better deal with AMD. 
+
+&nbsp;
+
+✅We just looked at competition financial analysis.
 
 &nbsp;
 
@@ -412,6 +427,8 @@ They see Nvidia price spiked so they buy AMD instead since it didn't spike.
 &nbsp;
 
 Nvidia is first! The biggest whale out there.
+
+&nbsp;
 
 Guess who you should compare it with?
 
@@ -438,13 +455,23 @@ Hint: (the second one)
 
 \- 1) Taiwan Semiconductor's price didn't move, Nvidia did times 2
 
-\- 2) Is it justified? Seems like it is, Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2
-
-\- 3) What is the takeaway? If you want to diversify, you better buy 50% Nvidia and 50% Taiwan Semiconductor stocks than buy AMD
-
+\- 2) Taiwan Semiconductor Earnings per Share didn't change, Nvidia did times 2
 
 &nbsp;
 
+They seem aligned in terms of change pricing.
+
+&nbsp;
+
+So why is Taiwan semiconductor EPS so low? (17 only...)
+
+&nbsp;
+
+Taiwan could suffer from China interventions.
+
+&nbsp;
+
+Conclusion: buy Nvidia it is a better option here again.
 
 &nbsp;
 
