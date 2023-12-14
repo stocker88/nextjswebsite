@@ -81,9 +81,9 @@ const db = getFirestore();
     }
 
      setDoc(doc(db, "contactList", docId), {
-        [ `timeViewClickedPost${slug}` ]: serverTimestamp(),
+        [ `time_clickedBackToHome_${slug}` ]: serverTimestamp(),
         time: serverTimestamp(),
-         [ `unixTimeViewClickedPost${slug}` ]: unixTime,
+         [ `unixTime_clickedBackToHome_${slug}` ]: unixTime,
           userAgent: deviceInfo.userAgent,
           platform: deviceInfo.platform,
           language: deviceInfo.language,
