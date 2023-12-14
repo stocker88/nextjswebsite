@@ -97,6 +97,7 @@ const Hero = ({
 <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                Join +12,800 investors and receive the best stocks & crypto on your phone
                                                <br></br>
+                                               <br></br>
                                                </div>
                            <div style={{ color: 'lightGrey', fontSize: "min(14.5px,max(13.5px,1.35vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                7 days free trial - $9.99/month - cancel anytime
