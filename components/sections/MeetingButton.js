@@ -85,7 +85,7 @@ const MeetingButton = ({
                        <br></br>
                       <br></br>
            <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-                    HelloStocker AI App sends you stocks before they blow up: you save time, save money, and receive the best opportunities.
+                    HelloStocker AI App sends you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
                     </h2>
 <br></br>
 

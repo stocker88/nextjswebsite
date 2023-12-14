@@ -72,7 +72,7 @@ const Hero = ({
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "600px" }} >
-            HelloStocker AI App sends you stocks before they blow up: you save time, save money, and receive the best opportunities.
+            HelloStocker AI App sends you got stocks before they blow up: you save time, save money, and receive the best opportunities.
             </h2>
           </div>
 
@@ -100,6 +100,7 @@ const Hero = ({
                                                <br></br>
                                                </div>
                            <div style={{ color: 'lightGrey', fontSize: "min(14.5px,max(13.5px,1.35vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+
                                                7 days free trial - $9.99/month - cancel anytime
                                              </div>
 <br></br>
