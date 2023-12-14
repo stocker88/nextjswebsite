@@ -116,11 +116,7 @@ const MeetingButton = ({
                 <br></br>
                        </div>
    <div style={{ color: 'lightGrey', fontSize: "min(14.5px,max(13.5px,1.35vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                       7 days free trial
-                       <br></br>
-                       $9.99/month
-                       <br></br>
-                       cancel anytime
+                       7 days free trial - $9.99/month - cancel anytime
                      </div>
 
             <div style={{paddingTop: 20}}>
