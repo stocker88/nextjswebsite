@@ -276,7 +276,7 @@ Will Nvidia take the biggest share of the pot? What are other alternatives?
 &nbsp;
 
 
-#### A) Competitors sorted by Price to Earning 
+### A) Competitors sorted by Price to Earning 
 
 &nbsp;
 
@@ -447,7 +447,7 @@ We just looked at competition financial analysis ✅
 
 &nbsp;
 
-#### B) Competitors sorted by Valuation
+### B) Competitors sorted by Valuation
 
 &nbsp;
 
