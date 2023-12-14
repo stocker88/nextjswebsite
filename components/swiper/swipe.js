@@ -124,7 +124,7 @@ export default function Swipe() {
               <br></br>
 
       <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }} >
-        You Receive Unlimited Money: Test In Virtual Trading
+        Test In Virtual Trading
       </h2>
 <br></br>
   <div className="split-item">
@@ -132,6 +132,8 @@ export default function Swipe() {
                   <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
                   <br></br>
                     - You can test trading ideas in a safe virtual reality simulator
+                    <br></br>
+                    - We give you free unlimited virtual money to test investment opportunities
                     <br></br>
                     - It is also a safe playground for learning and growing
                     <br></br>
