@@ -391,11 +391,11 @@ AMD price 2 years ago has been scaled to match Nvidia price.
 
 &nbsp;
 
-\- 3) AMD Net Income decreased a lot → it's share price should have decreased more.
+\- 3) AMD Net Income decreased a lot → its share price should have decreased more.
 
 &nbsp;
 
-\- 4) EPS change confirms AMD is overvalued
+\- 4) Earnings per Share change confirms AMD is overvalued
 
 
 &nbsp;
@@ -412,7 +412,7 @@ Conclusion: you better buy Nvidia than buy AMD.
 
 &nbsp;
 
-Most people don't understand what they are doing. 🙄
+Most people don't understand what they are doing 🙄
 
 &nbsp;
 
@@ -420,11 +420,11 @@ They see Nvidia price spiked so they buy AMD hoping it does the same.
 
 &nbsp;
 
-❌They think they will get a better deal with AMD. 
+They think they will get a better deal with AMD ❌ 
 
 &nbsp;
 
-✅We just looked at competition financial analysis.
+We just looked at competition financial analysis ✅
 
 &nbsp;
 
@@ -487,6 +487,9 @@ Conclusion: buy Nvidia it is a better option here again.
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
 
 
 ### 4) Your Goals
