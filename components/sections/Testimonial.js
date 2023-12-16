@@ -50,7 +50,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
                               <br></br>
@@ -83,7 +83,7 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
                                 <br></br>
@@ -115,7 +115,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Realise My Gains </b>
                               <br></br>
@@ -149,7 +149,7 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                                 <br></br>
@@ -178,7 +178,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 130+ Hours of Investing Research per Month </b>
                              <br></br>
@@ -215,7 +215,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
                              <br></br>
@@ -260,7 +260,7 @@ const Testimonial = ({
                             'border': '2px solid rgba(255, 255, 255, 1)'
                             }}
                            /></center>
-                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
                                <br></br>
@@ -291,7 +291,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                               <br></br>
@@ -321,7 +321,7 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
                                 <br></br>
@@ -356,7 +356,7 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
                               <br></br>

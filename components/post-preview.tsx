@@ -107,7 +107,7 @@ const db = getFirestore();
          <div className="mb-5">
            <CoverImage slug={slug} title={title} src={coverImage} />
          </div>
-         <h3 className="text-3xl mb-3 leading-snug excerpt_snug" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+         <h3 className="text-3xl mb-3 leading-snug excerpt_snug" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }}>
            <Link
              as={`/posts/${slug}`}
              href="/posts/[slug]"

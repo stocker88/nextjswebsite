@@ -133,9 +133,10 @@ const Div = styled.div`
         setInput(e.target.value);
     };
     const db = getFirestore();
-    const submitHandler = (e) => {
-        e.preventDefault();
-        if (input){
+
+    const submitHandler = ()=> {
+
+
             console.log(input);
             //add to firebase
             const dateTime = Date.now();
@@ -143,9 +144,11 @@ const Div = styled.div`
 
             const sessionId = sessionData.sessionId || '';
 
-            const docId = sessionId || input;
+            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
+            const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
+
              setDoc(doc(db, "contactList", docId), {
-                email: input,
+
                 emailTime: serverTimestamp(),
                 time: serverTimestamp(),
                 unixTime: unixTime,
@@ -173,11 +176,13 @@ const Div = styled.div`
                 },
                 3000,
             )*/}
-        }
+
     }
 
     return (
     <center>
+    <br></br>
+
     <>{isExploding && <ConfettiExplosion
                 width={1600}
                 particleCount={350} // Equivalent to particleCount
@@ -186,44 +191,25 @@ const Div = styled.div`
                 />}</>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
-            {isSubmitted===false && <form onSubmit={submitHandler}
-style={{'padding': '10px'}}>
-            <br></br>
-                <input type="email" required placeholder="Enter your email here..."
-                onChange={inputHandler}
-                value={input}
+            {isSubmitted===false &&
+                <button type="submit"
+                onClick={submitHandler}
                 style={{
-                'padding':'19px',
-                'textAlign': 'center',
-                'borderRadius': '30px 0 0 30px',
-                'width':'47vw',
-                'fontSize': 'min(18px,max(14px,2vw))',
-                'maxWidth':'315px',
-                }}/>
-                <button type="submit" style={{
-               'paddingTop': '3px',
-                'paddingBottom': '3px',
-                'paddingRight': '3px',
-               'color': 'white',
-                'width':'32vw',
-               'textAlign': 'right',
-               'fontSize': 'min(19px,max(15px,2vw))',
-               'borderRadius': '0 30px 30px 0',
-               'background': 'white',
-               'maxWidth':'225px',
-               }}>  <div style={{
-                                                   'paddingTop': '16px',
-                                                   'paddingBottom': '16px',
-                                                   'color': 'black',
-                                                    'width':'31vw',
-                                                   'textAlign': 'center',
-                                                   'fontSize': 'min(18px,max(14px,2vw))',
-                                                   'borderRadius': '30px 30px 30px 30px',
-                                                   'background': '#00f75f',
-                                                   'maxWidth':'220px'
-                                                  }}>Show me how→</div> </button>
-            </form>}
-           {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '4px 4px 4px rgba(0, 0, 0, 0)', 'padding': '2rem' }} >
+                 'paddingTop': '16px',
+              'paddingBottom': '16px',
+              'color': 'black',
+               'width':'31vw',
+              'textAlign': 'center',
+              'fontSize': 'min(20px,max(15px,2vw))',
+              'borderRadius': '30px 30px 30px 30px',
+              'background': '#00f75f',
+              'maxWidth':'280px',
+              'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
+               }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Show me now→</b>
+                </button>
+
+            }
+           {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 0.5)', 'padding': '2rem' }} >
                     <br></br>Install now
                     to receive the best stocks & crypto to buy
                 </h1>    </center>}

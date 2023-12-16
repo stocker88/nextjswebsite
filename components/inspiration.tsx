@@ -128,7 +128,7 @@ const [deviceInfo, setDeviceInfo] = useState({
                     duration={2000} // Equivalent to duration
                      force={0.8} // Equivalent to force
                     />}</>
-      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{maxWidth:'900px','color':'white', 'textShadow': '2px 2px 2px rgba(0, 0, 0, 0)' }}>
+      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }}>
       {quotes[currentQuoteIndex]}</h2>
            <br></br>
 
