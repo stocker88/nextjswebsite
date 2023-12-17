@@ -60,8 +60,8 @@ const Hero = ({
                   width={256}
                   height={256}
                  style={{
-                 width:'min(max(165px,12vw),250px)',
-                  height:'min(max(165px,12vw),250px)',
+                 width:'min(max(165px,14vw),250px)',
+                  height:'min(max(165px,14vw),250px)',
                   }}
 
                   />
