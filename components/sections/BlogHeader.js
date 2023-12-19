@@ -47,7 +47,7 @@ const BlogHeader = ({
       className={outerClasses}
     >
       <div >
-        <a href="https://hellostocker.com">
+        <a href="https://www.hellostocker.com">
             <Image
               src={require('assets/images/stocker.png')}
               alt="hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
