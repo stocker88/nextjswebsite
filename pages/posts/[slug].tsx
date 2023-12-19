@@ -125,7 +125,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <div style={{
                    'position': 'fixed',
                    'bottom': '1rem',
-                   'left': 'min(50px, 1vw)',
+                   'left': isMobile?'5%':'min(50px, 1vw)',
                    'backgroundColor': '#00f75f',
                    'border': '1px solid #ccc',
                    'padding': 'min(10px, 0.8vw)',
