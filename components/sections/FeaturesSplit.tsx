@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
-import WhyStocksToBuyNow from '../../components/whyHelloStocker';
+import WhyStocksToBuyNow from '../../components/whyHellostocker';
 import IntroVideo from '../../components/introVideo';
 import Container from '../../components/container'
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
