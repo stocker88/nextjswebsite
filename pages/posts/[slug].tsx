@@ -135,6 +135,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                     'display': 'flex',
                      'flexDirection': isMobile? 'row' :'column',
                     'whiteSpace': isMobile ? 'nowrap' : 'normal',
+                    'overflowX': isMobile ? 'auto' : 'visible',
                     'justifyContent': isMobile ?'center': 'flex-start',
                  }}>
             <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
