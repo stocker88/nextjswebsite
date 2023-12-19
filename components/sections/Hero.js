@@ -54,7 +54,7 @@ const Hero = ({
               />*/}
 
   <Image
-                  src='/assets/images/StocksToBuyNow.webp'
+                  src='/assets/images/stockstobuynow.webp'
                   alt="StocksToBuyNow AI App"
                   priority={true}
                   width={256}

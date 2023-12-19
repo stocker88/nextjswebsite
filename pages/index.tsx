@@ -61,7 +61,7 @@ export default function Index({ allPosts }: Props) {
                       "@context": "http://schema.org",
                       "@type": "SoftwareApplication",
                       "name": "StocksToBuyNow AI Trading Advisor App ChatGPT Powered",
-                      "image": "https://www.stockstobuynow.ai/assets/images/StocksToBuyNow.webp",
+                      "image": "https://www.stockstobuynow.ai/assets/images/stockstobuynow.webp",
                       "author": {
                         "@type": "Person",
                         "name": "Stocks To Buy Now"
