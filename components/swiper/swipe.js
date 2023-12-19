@@ -62,7 +62,7 @@ export default function Swipe() {
                       src='/assets/images/chatgpt2.webp'
                       style={{'borderRadius': '30px 30px 30px 30px'}}
                       sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                      alt='We Predicted Netflix +40% HelloStocker AI Screenshot'
+                      alt='We Predicted Netflix +40% StocksToBuyNow AI Screenshot'
                       />
                   </Zoom>
                   </div>
@@ -110,7 +110,7 @@ export default function Swipe() {
                     className="shadow-md"
                     style={{'borderRadius': '30px 30px 30px 30px'}}
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='Unlimited Virtual Money HelloStocker Screenshot'
+                    alt='Unlimited Virtual Money StocksToBuyNow Screenshot'
                     />
                     </Zoom>
                 </div>
@@ -177,7 +177,7 @@ export default function Swipe() {
        - We build AI technologies for Big Tech companies
        <br></br>
        <br></br>
-      - HelloStocker AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
+      - StocksToBuyNow AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
        <br></br>
        <br></br>
        - Our Mission: Empower You With Financial Growth
@@ -216,7 +216,7 @@ export default function Swipe() {
                      </center>
          {/*
 
-             <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting?embed=true'}/>
+             <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-StocksToBuyNow-ai/15-and-30min-meeting?embed=true'}/>
              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 
          <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
@@ -255,7 +255,7 @@ export default function Swipe() {
                     src='/assets/images/educational.png'
 
                     sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                    alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                    alt='StocksToBuyNow app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                     />
                 </div>
                 </center>
@@ -320,7 +320,7 @@ export default function Swipe() {
                                   alt="Features split 02"
 
                                   sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                                  alt='hellostocker app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
+                                  alt='StocksToBuyNow app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading'
                                   />
                               </div>
                               </center>

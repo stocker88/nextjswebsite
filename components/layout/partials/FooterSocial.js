@@ -36,7 +36,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/HelloStocker">
+          <a href="https://twitter.com/StocksToBuyNow">
             <svg
               width="18"
               height="18"

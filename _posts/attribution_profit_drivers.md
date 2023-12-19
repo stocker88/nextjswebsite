@@ -5,7 +5,7 @@ seoExcerpt: 'The stock market is like a big financial playground made up of diff
 coverImage: '/assets/blog/attribution/performance_attribution.webp'
 date: '2023-12-01T05:35:07.322Z'
 author:
-    name: HelloStocker AI
+    name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stocker.png'
 ogImage:
     url: '/assets/blog/attribution/performance_attribution.webp'
@@ -80,7 +80,7 @@ You can become the next Warren Buffett thanks to the mathematics of investing: p
 
 &nbsp;
 
-HelloStocker performance attribution allows you to understand what are your skills.
+StocksToBuyNow performance attribution allows you to understand what are your skills.
 
 
 &nbsp;
@@ -213,7 +213,7 @@ Others are good at picking which stocks to buy within a particular sector.
 
 &nbsp;
 
-Use HelloStocker app to receive insights on allocation timing!
+Use StocksToBuyNow app to receive insights on allocation timing!
 
 
 &nbsp;
@@ -290,7 +290,7 @@ Understand how good you are at picking stocks in each market sector.
 
 &nbsp;
 
-And analyze with HelloStocker how good you are at forecasting which stock market sector will be going up.
+And analyze with StocksToBuyNow how good you are at forecasting which stock market sector will be going up.
 
 &nbsp;
 
@@ -313,7 +313,7 @@ Don't worry, we are here to help you!
 
 &nbsp;
 
-In HelloStocker App, your AI Financial Advisor can segment your portfolio per sector.
+In StocksToBuyNow App, your AI Financial Advisor can segment your portfolio per sector.
 
 &nbsp;
 

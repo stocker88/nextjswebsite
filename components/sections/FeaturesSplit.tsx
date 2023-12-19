@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
 import IntroApp from '../../components/introApp';
-import WhyHellostocker from '../../components/whyHellostocker';
+import WhyStocksToBuyNow from '../../components/whyHelloStocker';
 import IntroVideo from '../../components/introVideo';
 import Container from '../../components/container'
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
@@ -98,7 +98,7 @@ const FeaturesSplit = ({
         <br></br>
 
 <center>
-        <WhyHellostocker/>
+        <WhyStocksToBuyNow/>
         <br></br>
 
     <Testimonial/>

@@ -56,10 +56,10 @@ const Testimonial = ({
                               <br></br>
                              <br></br>
                              I wanted dividend stocks for passive income.
-                              HelloStocker AI trading advisor sent me stock recommendations well explained and straight to the point.
+                              StocksToBuyNow AI trading advisor sent me stock recommendations well explained and straight to the point.
                              <br></br>
                              Finally financial advises that don't require a finance degree💪
-                             <br></br>HelloStocker delivers concise messages with easy-to-read graphs.
+                             <br></br>StocksToBuyNow delivers concise messages with easy-to-read graphs.
                               <br></br>They have a user friendly ChatGPT like interface.
                              <br></br>No more financial jargon Harvard show off.
                               <br></br>
@@ -88,7 +88,7 @@ const Testimonial = ({
                                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
                                 <br></br>
                                <br></br>
-                               Practise trading ideas without the risk! HelloStocker App nails it.
+                               Practise trading ideas without the risk! StocksToBuyNow App nails it.
                                <br></br>They don't take money from you, it's not about trading!
                                 <br></br>It's about making sure you acquire the skillset and profit from it.
                                 <br></br>I get as much virtual money as I want.
@@ -124,7 +124,7 @@ const Testimonial = ({
                          <br></br>  They don't gain from making me trade, they profit from advising me and helping me out.
                          <br></br>It costs $10 monthly subscription, and that's it🚀
                          <br></br>
-                                Compared to others who say 'buy buy buy', HelloStocker AI has my final interests in mind.
+                                Compared to others who say 'buy buy buy', StocksToBuyNow AI has my final interests in mind.
                               <br></br>
                               They tell me when to buy and send me signals when it's time to realize my gains.
                               <br></br>
@@ -153,7 +153,7 @@ const Testimonial = ({
 
                                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
                                 <br></br>
-                                <br></br>HelloStocker tailors recommendations to match my preferences.
+                                <br></br>StocksToBuyNow tailors recommendations to match my preferences.
                                 <br></br>Your personal genie available 24/7!
                                 <br></br>It's not just about stocks; it's about the right stocks for me.
                                 <br></br>3 digit profits, no rush, it feels good!
@@ -188,7 +188,7 @@ const Testimonial = ({
                               <br></br>
                               I get instant suggestions and replies.
                               <br></br>
-                               HelloStocker AI advisor is reactive and sends perfect recaps!
+                               StocksToBuyNow AI advisor is reactive and sends perfect recaps!
                              <br></br>
                                 My time saving hero.
                               <br></br>I don't wait weeks for email replies: their advisor sends me instant replies.
@@ -221,7 +221,7 @@ const Testimonial = ({
                              <br></br>
                              <br></br>
                              Being ahead of the curve matters.
-                             <br></br>HelloStocker Financial Advisor spots stocks with huge upside potential before the masses catch on.
+                             <br></br>StocksToBuyNow Financial Advisor spots stocks with huge upside potential before the masses catch on.
                               <br></br>They send important reminders and insights.
                                <br></br>That early advantage has made a real difference in my gains.
                                 <br></br>I perfectly timed Adobe, AMD, Ferrari & Workforce.
@@ -296,7 +296,7 @@ const Testimonial = ({
                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
                               <br></br>
                              <br></br>
-                             HelloStocker trading community is a goldmine! Top investors and hedge fund members have given me financial insights and great connections.
+                             StocksToBuyNow trading community is a goldmine! Top investors and hedge fund members have given me financial insights and great connections.
                              <br></br>They don't push me to trade, in fact you can't real trade with them at all...
                               <br></br>They have my long term interests in mind and help me train with their tools.
                               <br></br>eToro became a naughty mess they should 1) rethink their UX and 2) get rid of influencers who make money by pushing you to buy any stock or crypto.
@@ -328,11 +328,11 @@ const Testimonial = ({
                                <br></br>
                                No more complicated Bloomberg terminals!
                                 <br></br>
-                                HelloStocker App is the way to go: ChatGPT advisor of investing.
+                                StocksToBuyNow App is the way to go: ChatGPT advisor of investing.
                                 <br></br>They make it easy to navigate the stock market universe.
                                 <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
                                 <br></br>It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market...
-                                 <br></br>HelloStocker AI solved it💸!
+                                 <br></br>StocksToBuyNow AI solved it💸!
                                 <br></br>
                                 <br></br>
                            <b>  Mehrad Oroudji
@@ -364,7 +364,7 @@ const Testimonial = ({
                               <br></br>I can access the AI data and verify how investment decisions are made.
 
                               <br></br>
-                                                           HelloStocker AI tips don't hide a thing.
+                                                           StocksToBuyNow AI tips don't hide a thing.
                               <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
                               <br></br>I use the app everyday I recommend!
                               <br></br>

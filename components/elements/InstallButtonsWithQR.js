@@ -39,7 +39,7 @@ if(isMobile) {
                        <a href="https://apps.apple.com/app/stocker/id1565527320?platform=iphone" target="_blank" onClick={sendOutboundApple}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
-                     alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
+                     alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                     width={151 }
                     height={44.7966}
                      />
@@ -49,7 +49,7 @@ if(isMobile) {
                     <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" onClick={sendOutboundAndroid}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
-                      alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                      alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                      width={151 }
                     height={44.7966}
                       />
@@ -69,14 +69,14 @@ if(isMobile) {
                            src={'/assets/images/qrcode.webp'}
                           width={140}
                           height={140}
-                          alt='hellostocker ai financial advisor hot stocks to buy now logo'
+                          alt='StocksToBuyNow ai financial advisor hot stocks to buy now logo'
                            /></Zoom>
 
 
                                       <div style={{paddingTop: 10}}></div>
                                               <Image
                                                src='/assets/images/appledownloadlogo.webp'
-                                               alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now apple store logo"
+                                               alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                                               width={131}
                                               height={38.863}
                                                />
@@ -86,7 +86,7 @@ if(isMobile) {
 
                                                  <Image
                                                 src='/assets/images/googledownloadlogo.webp'
-                                                alt="hellostocker ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                                                alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                                                width={130}
                                                height={38.566}
                                                 />

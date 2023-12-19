@@ -102,19 +102,19 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#00D9FF" />
                 <meta name="description" content={post.seoExcerpt}/>
-                <meta property="og:image" content={'https://www.hellostocker.com'+post.ogImage.url} />
+                <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
                 <meta property="og:description" content={post.seoExcerpt} />
                 <meta name="description" property="og:description" content={post.seoExcerpt} />
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:title" content={post.title} />
                 <meta name="og:description" content={post.seoExcerpt} />
-                <link rel="apple-touch-icon" href={'https://www.hellostocker.com'+post.ogImage.url} />
-                <meta property="og:url" content={"https://www.hellostocker.com/posts/"+post.slug} />
+                <link rel="apple-touch-icon" href={'https://www.stockstobuynow.ai'+post.ogImage.url} />
+                <meta property="og:url" content={"https://www.stockstobuynow.ai/posts/"+post.slug} />
                 <meta name="twitter:title" content={''+post.title}/>
                 <meta name="twitter:description" content={post.seoExcerpt}/>
-                <meta name="twitter:image" content={'https://www.hellostocker.com'+post.ogImage.url}/>
+                <meta name="twitter:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
-                <link rel="canonical" href={"https://www.hellostocker.com/posts/"+post.slug} />
+                <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
               </Head>
               <article className="mb-32">
               <Header
@@ -139,19 +139,19 @@ export default function Post({ post, morePosts, preview }: Props) {
                     'justifyContent': isMobile ?'center': 'flex-start',
                  }}>
             <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <TwitterShareButton aria-label="Twitter" children={<TwitterIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <TwitterShareButton aria-label="Twitter" children={<TwitterIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug} media={'https://www.hellostocker.com'+post.ogImage.url}/>
+              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug} media={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.hellostocker.com/posts/"+post.slug}/>
+              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
 
                 </div>
 

@@ -1,6 +1,6 @@
 {
-  "short_name": "HelloStocker",
-  "name": "HelloStocker",
+  "short_name": "StocksToBuyNow",
+  "name": "StocksToBuyNow",
   "icons": [
     {
       "src": "favicon.ico",

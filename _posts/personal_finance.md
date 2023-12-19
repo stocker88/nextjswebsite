@@ -5,7 +5,7 @@ seoExcerpt: '1) Understanding Budgeting and Its Importance 2) Tips for Effective
 coverImage: '/assets/blog/personal-finance/personalfinance.webp'
 date: '2023-11-25T05:35:07.322Z'
 author:
-  name: HelloStocker AI
+  name: StocksToBuyNow AI
   picture: '/assets/blog/authors/stocker.png'
 ogImage:
   url: '/assets/blog/personal-finance/personalfinance.webp'
@@ -143,7 +143,7 @@ Here are some valuable tips to help you save and invest wisely:
 
 &nbsp;
 
-5. **5) Consider HelloStocker Robo-Advisor**: If you're uncertain about where to begin with investments, explore the option of using HelloStocker robo-advisor. Our online investment platforms leverage algorithms to create and manage a portfolio tailored to your goals and risk tolerance.
+5. **5) Consider StocksToBuyNow Robo-Advisor**: If you're uncertain about where to begin with investments, explore the option of using StocksToBuyNow robo-advisor. Our online investment platforms leverage algorithms to create and manage a portfolio tailored to your goals and risk tolerance.
 
 &nbsp;
 

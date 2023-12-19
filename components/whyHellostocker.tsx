@@ -1,6 +1,6 @@
 import { CMS_NAME } from '../lib/constants'
 
-const WhyHellostocker = () => {
+const WhyStocksToBuyNow = () => {
   return (
 
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
@@ -18,4 +18,4 @@ const WhyHellostocker = () => {
   )
 }
 
-export default WhyHellostocker
+export default WhyStocksToBuyNow

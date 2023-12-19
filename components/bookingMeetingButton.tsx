@@ -91,7 +91,7 @@ const [deviceInfo, setDeviceInfo] = useState({
 
     <center>
         <button onClick={onClickedButton}>
-            <a href='https://meetings-eu1.hubspot.com/meetings/alex-hellostocker-ai/15-and-30min-meeting' target="_blank" >
+            <a href='https://meetings-eu1.hubspot.com/meetings/alex-StocksToBuyNow-ai/15-and-30min-meeting' target="_blank" >
              <div style={{
                   'padding': '0.8rem',
                   'color': 'black',

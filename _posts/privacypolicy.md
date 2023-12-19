@@ -1,7 +1,7 @@
 ---
-title: 'HelloStocker App Privacy Policy and EULA'
-excerpt: 'HelloStocker AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
-seoExcerpt: 'HelloStocker AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
+title: 'StocksToBuyNow App Privacy Policy and EULA'
+excerpt: 'StocksToBuyNow AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
+seoExcerpt: 'StocksToBuyNow AI App: Know what Stocks to Buy Now with AI, Economic & Social Tools'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2023-03-16T05:35:07.322Z'
 author:
@@ -39,7 +39,7 @@ ogImage:
 
 &nbsp;
 
- By [email](mailto:support@hellostocker.com) or in the app directly.
+ By [email](mailto:support@stockstobuynow.ai) or in the app directly.
 
 &nbsp;
 
@@ -235,7 +235,7 @@ We have no tolerance for Objectionable Content or abusive users, and will remove
 
 &nbsp;
 
-The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@hellostocker.com. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
+The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@stockstobuynow.ai. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
 
 Deletion and or modification of your personal data
 
@@ -292,6 +292,6 @@ Protect against legal liability
 
  
 
- If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@hellostocker.com) or in the app directly.
+ If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@stockstobuynow.ai) or in the app directly.
  
  

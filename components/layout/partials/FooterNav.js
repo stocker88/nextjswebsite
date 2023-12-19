@@ -31,7 +31,7 @@ const FooterNav = ({
       <ul className="list-reset">
 
              <li>
-                                              <a href={`mailto:support@hellostocker.com`} >
+                                              <a href={`mailto:support@stockstobuynow.ai`} >
 
                                                 <svg
                                                   width="20"
@@ -47,7 +47,7 @@ const FooterNav = ({
                                               </a>
                                             </li>
             <li>
-              <a href="https://twitter.com/HelloStocker">
+              <a href="https://twitter.com/StocksToBuyNow">
                 <svg
                   width="18"
                   height="18"

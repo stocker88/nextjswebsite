@@ -60,18 +60,18 @@ export default function Index({ allPosts }: Props) {
                   JSON.stringify({
                       "@context": "http://schema.org",
                       "@type": "SoftwareApplication",
-                      "name": "HelloStocker AI Trading Advisor App ChatGPT Powered",
-                      "image": "https://www.hellostocker.com/assets/images/hellostocker.webp",
+                      "name": "StocksToBuyNow AI Trading Advisor App ChatGPT Powered",
+                      "image": "https://www.stockstobuynow.ai/assets/images/StocksToBuyNow.webp",
                       "author": {
                         "@type": "Person",
                         "name": "Stocks To Buy Now"
                       },
                       "applicationCategory": "Investing",
                       "screenshot": [
-                        "https://www.hellostocker.com/assets/images/chatgpt.webp",
-                        "https://www.hellostocker.com/assets/images/portfolio.webp",
-                        "https://www.hellostocker.com/assets/images/tslavsrace.webp",
-                        "https://www.hellostocker.com/assets/images/dividends.webp"
+                        "https://www.stockstobuynow.ai/assets/images/chatgpt.webp",
+                        "https://www.stockstobuynow.ai/assets/images/portfolio.webp",
+                        "https://www.stockstobuynow.ai/assets/images/tslavsrace.webp",
+                        "https://www.stockstobuynow.ai/assets/images/dividends.webp"
                       ],
                       "review": {
                         "@type": "Review",
@@ -83,26 +83,26 @@ export default function Index({ allPosts }: Props) {
                           "@type": "Rating",
                           "ratingValue": "5/5"
                         },
-                        "reviewBody": "HelloStocker is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend HelloStocker"
+                        "reviewBody": "StocksToBuyNow is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend StocksToBuyNow"
                       }
                     })}}
                 />
           <title>Best Stocks To Buy Now AI Tool</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
+          <meta name="description" property="og:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
-          <meta property="og:title" content="HelloStocker AI App - Best Stocks To Buy Now" />
-          <meta name="og:description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
+          <meta name="description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
+          <meta property="og:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now" />
+          <meta name="og:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
           <meta property="og:type" content="video.movie" />
-          <meta property="og:url" content="https://www.hellostocker.com/" />
+          <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
-          <meta name="twitter:title" content="HelloStocker AI App - Best Stocks To Buy Now"/>
-          <meta name="twitter:description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
+          <meta name="twitter:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now"/>
+          <meta name="twitter:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/9bGN5VD/Unlock-Financial-Freedom-2.png"  />

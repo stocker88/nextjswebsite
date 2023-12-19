@@ -100,7 +100,7 @@ const db = getFirestore();
       style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }}
       onClick={handleClick}
       >
-        Back to HelloStocker AI
+        Back to StocksToBuyNow AI
       </Link>
         </center>
 

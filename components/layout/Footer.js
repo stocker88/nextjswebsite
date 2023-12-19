@@ -46,12 +46,12 @@ const Footer = ({
                         <br></br>
                         <br></br>
 
-                        <a href={`mailto:support@hellostocker.com`} style={{color:"white", fontFamily: 'arial'}}> Contact Support Team </a>
+                        <a href={`mailto:support@stockstobuynow.ai`} style={{color:"white", fontFamily: 'arial'}}> Contact Support Team </a>
 
                         <br></br>
                         <br></br>
 
-                        Made by HelloStocker, for you
+                        Made by StocksToBuyNow, for you
 
             </div>
             <br></br>
