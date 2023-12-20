@@ -195,17 +195,20 @@ export default function Swipe() {
          <center>
 
          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)'}} >
-                 Speak with our Financial Advisor
+                 Ex Goldman Sachs Directors
+                  <br></br>
+                  <br></br>
+                  Ex Bank of America Directors
+                   <br></br>
+                   <br></br>
+                   Ex Open AI Directors
                  </h2>
-
-                 <br></br>
-                <BookingMeetingButton/>
 
                   <br></br>
                   <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)'}} >
-                  <br></br> ex Goldman Sachs | Bank of America Investment Manager
-                  <br></br>
-                 <br></br> over 15 years of investing experience
+                 <br></br> Over 15 years of investing experience
+                 <br></br>
+                 <br></br> Trading Billions
                </h3>
                  <br></br>
                  <br></br>
