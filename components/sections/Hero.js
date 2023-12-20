@@ -71,7 +71,7 @@ const Hero = ({
                                             Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
                                           </h1>
                                           <div style={{paddingTop: 20}}></div>
-          <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "600px" }} >
+          <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "650px" }} >
             StocksToBuyNow AI App sends you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
             </h2>
           </div>
@@ -94,7 +94,7 @@ const Hero = ({
           height={60}
            />
 
-<div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+<div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "700px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                                                Join +12,800 investors who receive <br></br>the best stocks & crypto on their phone
                                                <br></br>
                                                <br></br>
