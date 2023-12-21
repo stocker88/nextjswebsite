@@ -181,7 +181,7 @@ const Div = styled.div`
 
     return (
     <center>
-    <br></br>
+
 
     <>{isExploding && <ConfettiExplosion
                 width={1600}
@@ -202,15 +202,15 @@ const Div = styled.div`
               'textAlign': 'center',
               'fontSize': 'min(20px,max(15px,2vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': '#00f75f',
+              'background': 'black',
               'maxWidth':'240px',
-              'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
+              'boxShadow': '0px 0px 10px rgba(250, 250, 250, 0.5)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get the App →</b>
                 </button>
 
             }
-           {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 0.5)', 'padding': '2rem' }} >
-                    💸 Start now receive the best stocks & crypto to buy 🎊
+           {showDropdown &&     <center> <h1 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
+
                 </h1>    </center>}
             {showDropdown && <InstallButtonsWithQR/>}
 

@@ -99,7 +99,7 @@ const [deviceInfo, setDeviceInfo] = useState({
                   'textAlign': 'center',
                   'fontSize': 'min(19px,max(15px,2vw))',
                   'borderRadius': '30px 30px 30px 30px',
-                  'background': '#00f75f',
+                  'background': '#493bc3',
                   'maxWidth':'280px'
                  }}>Book 20min here</div></a>
                     </button>

@@ -75,28 +75,20 @@ const MeetingButton = ({
 <br></br>
 <br></br>
 <br></br>
-      <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '2px 2px 2px rgba(1, 74, 173, 0.6)'}}>
+      <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 8px rgba(1, 74, 1, 0.7)'}}>
                   Unlock the Power of Big Data
      </h2>
                      </div>
-<br></br>
-<br></br>
-
-                       <br></br>
-                      <br></br>
-           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(18px,max(16px,3vw))", lineHeight: 1.3,textShadow: '4px 4px 4px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
-                    StocksToBuyNow AI App sends you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
+<div style={{paddingTop: '2.2vw'}}></div>
+           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+                    We send you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
                     </h2>
 <br></br>
 
          </center>
          </Container>
         <NewsletterSignUp/>
-        <br></br>
-         <br></br>
-
-
-                 <center><InstallButtonsWithQR /></center>
+<div style={{paddingTop: '2.2vw'}}></div>
 
 
 
@@ -110,24 +102,16 @@ const MeetingButton = ({
                 height={60}
             />
 
-            <div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "600px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                Join +12,800 investors who receive <br></br>the best stocks & crypto on their phone
-                <br></br>
 
-                       </div>
+    <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+       Join a community of +12,800 investors who receive high quality stocks adapted to their own preferences
 
-            <div style={{paddingTop: 20}}>
-            </div>
+       </div>
+
+            <div style={{paddingTop: '2.2vw'}}></div>
+
             <br></br>
 
-            <Image
-            src='/assets/images/chatgptgooglecloud.webp'
-            alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-           width={195.9375}
-           height={83.98}
-            />
-        <br></br>
-        <br></br>
     </center>
 </Container>
     </div>

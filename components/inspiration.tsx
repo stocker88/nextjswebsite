@@ -128,7 +128,7 @@ const [deviceInfo, setDeviceInfo] = useState({
                     duration={2000} // Equivalent to duration
                      force={0.8} // Equivalent to force
                     />}</>
-      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }}>
+      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight " style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 10px rgba(0, 0, 0, 1)' }}>
       {quotes[currentQuoteIndex]}</h2>
            <br></br>
 
@@ -138,14 +138,14 @@ const [deviceInfo, setDeviceInfo] = useState({
 
                  }}>  <div style={{
                  'padding': '0.8rem',
-                 'color': 'black',
+                 'color': 'white',
                   'width':'31vw',
                  'textAlign': 'center',
                  'fontSize': 'min(19px,max(15px,2vw))',
                  'borderRadius': '30px 30px 30px 30px',
-                 'background': '#00f75f',
+                 'background': '#493bc3',
                  'maxWidth':'280px'
-                }}>Show me another quote</div></button>
+                }}><b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Show me another quote</b></div></button>
       </center>
     </div>
   );

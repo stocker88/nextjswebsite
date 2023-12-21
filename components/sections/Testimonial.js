@@ -50,18 +50,18 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Simple and Easy to Understand </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
                               <br></br>
                              <br></br>
                              I wanted dividend stocks for passive income.
                               StocksToBuyNow AI trading advisor sent me stock recommendations well explained and straight to the point.
-                             <br></br>
+
                              Finally financial advises that don't require a finance degree💪
-                             <br></br>StocksToBuyNow delivers concise messages with easy-to-read graphs.
-                              <br></br>They have a user friendly ChatGPT like interface.
-                             <br></br>No more financial jargon Harvard show off.
+                             StocksToBuyNow delivers concise messages with easy-to-read graphs.
+                             They have a user friendly ChatGPT like interface.
+                             No more financial jargon Harvard show off.
                               <br></br>
                               <br></br>
                          <b>  Fabien Nieto
@@ -83,17 +83,15 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> A Safe Playground for Learning </b>
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
                                 <br></br>
                                <br></br>
                                Practise trading ideas without the risk! StocksToBuyNow App nails it.
-                               <br></br>They don't take money from you, it's not about trading!
-                                <br></br>It's about making sure you acquire the skillset and profit from it.
-                                <br></br>I get as much virtual money as I want.
-                                <br></br>They have a virtual reality trading platform so you can practice investing ideas without the fear of losing cash.
-                                <br></br>It's a safe playground for learning and gaining confidence in their AI technology.
+                                It's about making sure you acquire the skillset and profit from it.
+                                They have a virtual reality trading platform so you can practice investing ideas without the fear of losing.
+                                It's a safe playground for learning and gaining confidence in their AI technology.
                                 <br></br>
                                 <br></br>
                            <b>  Maxime Lonné
@@ -115,17 +113,17 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> They Tell Me When To Realise My Gains </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> They Tell Me When To Realise My Gains </b>
                               <br></br>
                              <br></br>
                            What's the point of buying if you don't know when to sell?
-                         <br></br>  They don't gain from making me trade, they profit from advising me and helping me out.
-                         <br></br>It costs $10 monthly subscription, and that's it🚀
-                         <br></br>
+
+                         It costs $10 monthly subscription, and that's it🚀
+
                                 Compared to others who say 'buy buy buy', StocksToBuyNow AI has my final interests in mind.
-                              <br></br>
+
                               They tell me when to buy and send me signals when it's time to realize my gains.
                               <br></br>
                               <br></br>
@@ -149,14 +147,14 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Stock Recommendations that Fit Your Preferences </b>
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Fit Your Preferences </b>
                                 <br></br>
-                                <br></br>StocksToBuyNow tailors recommendations to match my preferences.
-                                <br></br>Your personal genie available 24/7!
-                                <br></br>It's not just about stocks; it's about the right stocks for me.
-                                <br></br>3 digit profits, no rush, it feels good!
+                                <br></br>The AI tailors recommendations to match my preferences.
+                                I ask the AI what he thinks before making any trade, it's like a personnal coach.
+                                 Your personal genie available 24/7! It's not just about stocks; it's about the right stocks for me.
+
                                 <br></br>
                                 <br></br>
                            <b>  Adrien Chenin
@@ -178,21 +176,21 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Saves 130+ Hours of Investing Research per Month </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
                              <br></br>
 
                              <br></br>
                              I can't wait for boring emails newsletters and reports...
-                              <br></br>
+
                               I get instant suggestions and replies.
-                              <br></br>
-                               StocksToBuyNow AI advisor is reactive and sends perfect recaps!
-                             <br></br>
+
+                               This AI advisor is reactive and sends perfect recaps!
+
                                 My time saving hero.
-                              <br></br>I don't wait weeks for email replies: their advisor sends me instant replies.
-                              <br></br>Time is money, especially in investing and trading.
+                             I don't wait weeks for email replies: their advisor sends me instant replies.
+                             Time is money, especially in investing and trading.
 
                               <br></br>
                               <br></br>
@@ -215,16 +213,16 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Early Trading Opportunities </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Access Early Trading Opportunities </b>
                              <br></br>
                              <br></br>
                              Being ahead of the curve matters.
-                             <br></br>StocksToBuyNow Financial Advisor spots stocks with huge upside potential before the masses catch on.
-                              <br></br>They send important reminders and insights.
-                               <br></br>That early advantage has made a real difference in my gains.
-                                <br></br>I perfectly timed Adobe, AMD, Ferrari & Workforce.
+                             StocksToBuyNow Financial Advisor spots stocks with huge upside potential before the masses catch on.
+                             They send important reminders and insights.
+                             That early advantage has made a real difference in my gains. I always double check with the AI before buying anything.
+                             I perfectly timed Adobe, AMD, Ferrari & Workforce.
                               <br></br>
                               <br></br>
                          <b>  Alexia Karolewicz
@@ -260,15 +258,14 @@ const Testimonial = ({
                             'border': '2px solid rgba(255, 255, 255, 1)'
                             }}
                            /></center>
-                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Exponential Growth Potential </b>
+                               <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Exponential Growth Potential </b>
                                <br></br>
                               <br></br>
-                              It's not about investing...
-                               <br></br>it's about building wealth, and making it constantly grow.
-                               <br></br>I don't just 'realise profits': I track how well my stocks do over the sp500.
-                               <br></br>Finding stocks that go up is easy when everything goes up.
+                              It's not just about trading... it's about building wealth, and making it constantly grow.
+                               I don't just 'realise profits': I track how well my stocks do over the sp500.
+                               Finding stocks that go up is easy when everything goes up.
                                <br></br>Finding better trades than others and beating the sp500 market is the real way to go!
                                <br></br>
                                <br></br>
@@ -291,15 +288,14 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Join a Community of Investors Who Care About You</b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Join a Community of Investors Who Care About You</b>
                               <br></br>
                              <br></br>
                              StocksToBuyNow trading community is a goldmine! Top investors and hedge fund members have given me financial insights and great connections.
-                             <br></br>They don't push me to trade, in fact you can't real trade with them at all...
                               <br></br>They have my long term interests in mind and help me train with their tools.
-                              <br></br>eToro became a naughty mess they should 1) rethink their UX and 2) get rid of influencers who make money by pushing you to buy any stock or crypto.
+
                               <br></br>
                               <br></br>
                          <b>  Charles Elie Labroy
@@ -321,18 +317,17 @@ const Testimonial = ({
                              'border': '2px solid rgba(255, 255, 255, 1)'
                              }}
                             /></center>
-                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Powered by ChatGPT </b>
+                                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Powered by ChatGPT </b>
                                 <br></br>
                                <br></br>
                                No more complicated Bloomberg terminals!
-                                <br></br>
                                 StocksToBuyNow App is the way to go: ChatGPT advisor of investing.
-                                <br></br>They make it easy to navigate the stock market universe.
-                                <br></br>I received blue chip stocks recommendations that keep outperforming the sp500.
-                                <br></br>It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market...
-                                 <br></br>StocksToBuyNow AI solved it💸!
+                                They make it easy to navigate the stock market universe.
+                                I received blue chip stocks recommendations that keep outperforming the sp500.
+                                It's easy to find good stocks when the market goes up, but not as easy to beat the sp500 overall stock market!💸
+
                                 <br></br>
                                 <br></br>
                            <b>  Mehrad Oroudji
@@ -356,17 +351,15 @@ const Testimonial = ({
                            'border': '2px solid rgba(255, 255, 255, 1)'
                            }}
                           /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
+                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#00f75f'}}> Access Transparent AI Data </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Access Transparent AI Data </b>
                               <br></br>
-                             <br></br>Transparency like this builds trust.
-                              <br></br>I can access the AI data and verify how investment decisions are made.
+                             <br></br>Transparency like this builds trust. I can access the AI data and verify how investment decisions are made.
 
-                              <br></br>
-                                                           StocksToBuyNow AI tips don't hide a thing.
-                              <br></br>I understand how my advisor takes decisions and can interact with the AI at any time.
-                              <br></br>I use the app everyday I recommend!
+
+                            StocksToBuyNow AI tips don't hide a thing. I understand how my advisor takes decisions and can interact with the AI at any time.
+                              I use the app everyday, I get new ideas and double check all ideas I have, I totally recommend!
                               <br></br>
                               <br></br>
                          <b>  Sacha Berenfus

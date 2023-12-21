@@ -30,16 +30,7 @@ export default function Swipe() {
 
              <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
-                        <br></br>
-                        - What the business does and why it has growing interest
-                        <br></br>
-                        - You receive the best opportunities adapted to your preferences 🚀
-                        <br></br>
-                        - Ask anything your AI Financial Robot Advisor is available 24/7
-                        <br></br>
-                        <br></br>
-                </p>
+
 
         </div>
         </div>
@@ -78,17 +69,7 @@ export default function Swipe() {
 <div className="container">
      <div className="split-item">
 <div style={{paddingTop: 10}}></div>
-      <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
-    - Market trading signals & AI screening
-    <br></br>
-    - Wall St analyst ratings & financial data
-    <br></br>
-    - Social sentiment & News
-    <br></br>
-    - Real Estate stocks that pay 15% dividend yield
-    <br></br>
-    <br></br>
-</p>
+
 
         </div>
         </div>
@@ -118,113 +99,66 @@ export default function Swipe() {
               </div>
               </div>
 </center>
-
+<center>
 <br></br>
               <br></br>
               <br></br>
 
-      <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }} >
-        Test In Virtual Trading
-      </h2>
 <br></br>
-  <div className="split-item">
-<div style={{paddingTop: 10}}></div>
-                  <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.15}}>
-                  <br></br>
-                    - You can test trading ideas in a safe virtual reality simulator
-                    <br></br>
-                    - We give you free unlimited virtual money to test investment opportunities
-                    <br></br>
-                    - It is also a safe playground for learning and growing
-                    <br></br>
-                </p>
-        </div>
+</center>
 <br></br><br></br>
 
 
         <br></br>
         <br></br>
 
- <br></br><br></br> <br></br>
-
-  <br></br><br></br>
-         <IntroDownload/>
-         <br></br>
-         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)", 'borderRadius': '10px 10px 10px 10px'}}/></center>
-
-
-         <br></br>
-         <br></br>
-         <br></br><br></br>
 
  <br></br>
- <br></br><br></br><br></br>
 
  <br></br>
  <br></br>
  <center>
        <AboutUs/>
 </center>
-    <div className="container">
-   <div className="split-item">
-        <div style={{paddingTop: 10}}></div>
-                          <p className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'white', textShadow: '2px 2px 2px rgba(0, 0, 0, 0)', fontFamily: 'arial',lineHeight: 1.3}}>
-       <br></br>
 
-       - We traded Billions for Wall Street Hedge Funds
-        <br></br>
-      <br></br>
-       - We build AI technologies for Big Tech companies
-       <br></br>
-       <br></br>
-      - StocksToBuyNow AI predicted Netflix +40%, Nvidia +1,200% and Tesla +3,600%
-       <br></br>
-       <br></br>
-       - Our Mission: Empower You With Financial Growth
-        <br></br>
-        </p>
-
-</div>
-</div>
-         <br></br><br></br>
-
-<br></br><br></br>
-         <br></br><br></br>
-         <br></br><br></br>
 
          <center>
 
-         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)'}} >
-                 Ex Goldman Sachs Directors
-                  <br></br>
-                  <br></br>
-                  Ex Bank of America Directors
-                   <br></br>
-                   <br></br>
-                   Ex Open AI Directors
+         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                 Ex Goldman Sachs, Bank of America and OpenAI Directors
+
                  </h2>
 
-                  <br></br>
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)'}} >
-                 <br></br> Over 15 years of investing experience
+
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                 <br></br> Over 15 Years in Investing and AI
                  <br></br>
-                 <br></br> Trading Billions
-               </h3>
-                 <br></br>
-                 <br></br>
- <LinkedInButton/>
 
                  <br></br>
+
+                    <LinkedInButton/>
+                    <br></br>
+                             <Image
+                                             src='/assets/images/chatgptgooglecloud.webp'
+                                             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
+                                            width={150}
+                                            height={60}
+                                            priority={true}
+                                             />
+               </h3>
+
+
                  <br></br>
+
                      </center>
          {/*
 
              <iframe title='' style={{width: '100%',height: '700px', 'borderRadius': '10px 10px 10px 10px'}} src={'https://meetings-eu1.hubspot.com/meetings/alex-StocksToBuyNow-ai/15-and-30min-meeting?embed=true'}/>
              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 
-         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #00f75f)"}}/></center>
+         <center><InstallButtonsWithQRAndLogo style={{ background: "linear-gradient(#4B6DFD, #617EF6, #493bc3)"}}/></center>
          */}
-                 <br></br>
+
          <br></br>
 
         <br></br>

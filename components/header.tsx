@@ -97,7 +97,7 @@ const db = getFirestore();
       <Link
       href="/"
       className="hover:underline"
-      style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }}
+      style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }}
       onClick={handleClick}
       >
         Back to StocksToBuyNow AI

@@ -44,7 +44,7 @@ const Hero = ({
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
-     <div style={{paddingTop: 'max(10px,3vw)'}}></div>
+     <div style={{paddingTop: '5vw'}}></div>
 
          {/*    <Image
               src={require('assets/images/stocker.png')}
@@ -67,22 +67,22 @@ const Hero = ({
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.2,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "700px" }} >
+            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.2,textShadow: '0px 0px 7px rgba(1, 0, 1, 0.7)', maxWidth: "800px" }} >
                                             Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
                                           </h1>
-                                          <div style={{paddingTop: 20}}></div>
-          <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(19px,max(17px,3.3vw))", lineHeight: 1.3,textShadow: '3px 3px 3px rgba(1, 74, 173, 0.6)', maxWidth: "650px" }} >
-            StocksToBuyNow AI App sends you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
+                                          <div style={{paddingTop: '2.2vw'}}></div>
+          <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+            We send you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
             </h2>
           </div>
 
         </div>
-
+<div style={{paddingTop: '2.2vw'}}></div>
  </div>
  </center>
  </Container>
 <NewsletterSignUp/>
-<br></br>
+<div style={{paddingTop: '2.2vw'}}></div>
 <Container>
 <center>
 
@@ -90,28 +90,27 @@ const Hero = ({
            src='/assets/images/usersRating.webp'
            alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
            priority={true}
-          width={240}
-          height={60}
+          width={200}
+          height={50}
            />
 
-<div style={{ color: 'lightGrey', fontSize: "min(16px,max(15px,1.5vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "700px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                               Join +12,800 investors who receive <br></br>the best stocks & crypto on their phone
-                                               <br></br>
-                                               <br></br>
-                                               </div>
+    <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+       Join a community of +12,800 investors who receive high quality stocks adapted to their own preferences
 
-<br></br>
+       </div>
+
+
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
-
-        <Image
+<div style={{paddingTop: '2.2vw'}}></div>
+        {/*<Image
         src='/assets/images/chatgptgooglecloud.webp'
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-       width={150}
-       height={64}
+       width={130}
+       height={54.46667}
        priority={true}
-        />
+        />*/}
                 <br></br>
              <br></br>
                 <br></br>

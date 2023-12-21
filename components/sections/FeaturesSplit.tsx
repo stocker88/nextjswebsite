@@ -92,14 +92,7 @@ const FeaturesSplit = ({
                     </div>
                     </center>
 */}
-   <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
 <center>
-        <WhyStocksToBuyNow/>
-        <br></br>
 
     <Testimonial/>
 

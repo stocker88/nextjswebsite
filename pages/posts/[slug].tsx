@@ -126,7 +126,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                    'position': 'fixed',
                    'bottom': '1rem',
                    'left': isMobile?'5%':'min(50px, 1vw)',
-                   'backgroundColor': '#00f75f',
+                   'backgroundColor': '#493bc3',
                    'border': '1px solid #ccc',
                    'padding': 'min(10px, 0.8vw)',
                    'boxShadow': '0px 0px 10px rgba(0, 0, 0, 0.2)',
@@ -177,7 +177,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                               <br></br>
                               <br></br>
                               <br></br>
-                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 0.5)' }} >
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
                   Suggested Blog Stories
                 </h2>
                 <br></br>
