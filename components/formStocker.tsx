@@ -197,10 +197,8 @@ const Div = styled.div`
                 style={{
                  'paddingTop': '16px',
               'paddingBottom': '16px',
-                'paddingLeft': '16px',
-              'paddingRight': '16px',
               'color': 'black',
-               'width':'31vw',
+               'width':'40vw',
               'textAlign': 'center',
               'fontSize': 'min(20px,max(15px,2vw))',
               'borderRadius': '30px 30px 30px 30px',
