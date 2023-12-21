@@ -70,19 +70,19 @@ const Hero = ({
             <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.2,textShadow: '0px 0px 7px rgba(1, 0, 1, 0.7)', maxWidth: "800px" }} >
                                             Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
                                           </h1>
-                                          <div style={{paddingTop: '2.2vw'}}></div>
+                                          <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
             We send you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
             </h2>
           </div>
 
         </div>
-<div style={{paddingTop: '2.2vw'}}></div>
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
  </div>
  </center>
  </Container>
 <NewsletterSignUp/>
-<div style={{paddingTop: '2.2vw'}}></div>
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 <Container>
 <center>
 
@@ -103,7 +103,7 @@ const Hero = ({
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
-<div style={{paddingTop: '2.2vw'}}></div>
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
         {/*<Image
         src='/assets/images/chatgptgooglecloud.webp'
         alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"

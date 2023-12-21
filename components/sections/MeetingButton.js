@@ -79,7 +79,7 @@ const MeetingButton = ({
                   Unlock the Power of Big Data
      </h2>
                      </div>
-<div style={{paddingTop: '2.2vw'}}></div>
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
            <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
                     We send you hot stocks before they blow up: you save time, save money, and receive the best opportunities.
                     </h2>
@@ -88,7 +88,7 @@ const MeetingButton = ({
          </center>
          </Container>
         <NewsletterSignUp/>
-<div style={{paddingTop: '2.2vw'}}></div>
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 
 
 
@@ -108,7 +108,7 @@ const MeetingButton = ({
 
        </div>
 
-            <div style={{paddingTop: '2.2vw'}}></div>
+            <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 
             <br></br>
 
