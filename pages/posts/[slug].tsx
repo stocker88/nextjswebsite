@@ -127,9 +127,8 @@ export default function Post({ post, morePosts, preview }: Props) {
                    'bottom': '1rem',
                    'left': isMobile?'5%':'min(50px, 1vw)',
                    'backgroundColor': '#493bc3',
-                   'border': '1px solid #ccc',
                    'padding': 'min(10px, 0.8vw)',
-                   'boxShadow': '0px 0px 10px rgba(0, 0, 0, 0.2)',
+                   'boxShadow': '0px 0px 8px rgba(250, 250, 250, 0.4)',
                    'zIndex': '100', /* Adjust the z-index to ensure it appears above other content */
                    'borderRadius': '30px 30px 30px 30px',
                     'display': 'flex',
