@@ -204,7 +204,7 @@ const Div = styled.div`
               'borderRadius': '30px 30px 30px 30px',
               'background': 'black',
               'maxWidth':'240px',
-              'boxShadow': '0px 0px 10px rgba(250, 250, 250, 0.5)',
+              'boxShadow': '0px 0px 13px rgba(250, 250, 250, 0.5)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get the App →</b>
                 </button>
 
