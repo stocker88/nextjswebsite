@@ -62,7 +62,6 @@ const Hero = ({
                  style={{
                  width:'min(max(165px,14vw),250px)',
                   height:'min(max(165px,14vw),250px)',
-                  boxShadow: '0px 0px 5px 2px rgba(0, 0, 0, 0.5)'
                   }}
 
                   />
