@@ -6,7 +6,7 @@ coverImage: '/assets/blog/apple-stock/apple-stock.webp'
 date: '2023-11-20T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
-    picture: '/assets/blog/authors/stocker.webp'
+    picture: '/assets/blog/authors/stocker.png'
 ogImage:
     url: '/assets/blog/apple-stock/apple-stock.webp'
 ---

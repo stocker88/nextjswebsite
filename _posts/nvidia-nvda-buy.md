@@ -6,7 +6,7 @@ coverImage: '/assets/blog/nvidia/is nvidia a buy.webp'
 date: '2023-12-06T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
-    picture: '/assets/blog/authors/stocker.webp'
+    picture: '/assets/blog/authors/stocker.png'
 ogImage:
     url: '/assets/blog/nvidia/is nvidia a buy.webp'
 ---
