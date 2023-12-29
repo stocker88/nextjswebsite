@@ -49,7 +49,7 @@ const BlogHeader = ({
       <div >
         <a href="https://www.stockstobuynow.ai">
             <Image
-              src={require('assets/images/stocker.png')}
+              src='assets/images/stockstobuynow.png'
               alt="StocksToBuyNow app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
               width={300}
               />
