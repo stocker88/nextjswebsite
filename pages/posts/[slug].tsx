@@ -113,7 +113,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="twitter:title" content={''+post.title}/>
                 <meta name="twitter:description" content={post.seoExcerpt}/>
                 <meta name="twitter:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
-                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:card" content="app"/>
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
               </Head>
               <article className="mb-32">
