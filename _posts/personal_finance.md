@@ -6,7 +6,7 @@ coverImage: '/assets/blog/personal-finance/personalfinance.webp'
 date: '2023-11-25T05:35:07.322Z'
 author:
   name: StocksToBuyNow AI
-  picture: '/assets/blog/authors/stocker.png'
+  picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
   url: '/assets/blog/personal-finance/personalfinance.webp'
 ---

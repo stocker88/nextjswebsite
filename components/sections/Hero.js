@@ -47,7 +47,7 @@ const Hero = ({
      <div style={{paddingTop: 'max(70px,5vw)'}}></div>
 
          {/*    <Image
-              src={require('assets/images/stocker.png')}
+              src={require('assets/images/stockstobuynow.png')}
               alt="StocksToBuyNow app stocks to buy ai stocks to watch market financial advisor economic tools investing virtual trading"
               width={700}
               height={58.33}

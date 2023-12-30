@@ -1,24 +1,24 @@
 ---
-title: 'Why Your AI Advisor Beats Outdated Newsletters and Overhyped Telegram Gurus'
+title: 'Chose your AI Advisor over am Email Newsletter or a Whatsapp Trading Gurus'
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 coverImage: '/assets/blog/ai-advisor/ai advisor.webp'
-date: '2023-12-05T05:35:07.322Z'
+date: '2023-11-05T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
-    picture: '/assets/blog/authors/stocker.png'
+    picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/ai-advisor/ai advisor.webp'
 ---
 
 
-## 1) Why are Newsletter such a bad option
+## 1) Email Newsletters are outdated
 
 &nbsp;
 
 &nbsp;
 
-### Newsletters send you 1 recommendation per month, StocksToBuyNow AI sends you 60 recommendations per month (2 per day)
+### Newsletters send you 1 email per month, your AI sends you 60 recommendations per month (2 per day)
 
 &nbsp;
 
@@ -44,13 +44,30 @@ With a Newsletter, by the end of the year, you followed 12 stocks.
 
 &nbsp;
 
-With StocksToBuyNow AI, by the end of the year, you beat the SP500 market.
+You cannot possibly enjoy benefits from Diversification.
+
+&nbsp;
+
+And most likely you won't be learning much.
+
+&nbsp;
+
+
+With StocksToBuyNow AI, by the end of the year:
+
+&nbsp;
+
+&nbsp; - you diversified your portfolio with stocks that beat the SP500 market,
+
+&nbsp;
+
+&nbsp; - you get better at investing and understand the subtilities of macro economics, technical trading, and financial reportings.
 
 &nbsp;
 
 &nbsp;
 
-### Newsletter never respond, StocksToBuyNow AI sends you instant replies 24/7
+### Newsletter are slow to respond, your AI is available 24/7
 
 &nbsp;
 
@@ -70,11 +87,8 @@ Enough for you to review the price again and send them another email.
 
 &nbsp;
 
-StocksToBuyNow is available 24/7 and answers instantly.
+StocksToBuyNow is available 24/7 and replies instantly.
 
-&nbsp;
-
-A Human Financial Advisor is available for free within 24h to answer any of your questions.
 
 &nbsp;
 
@@ -82,7 +96,7 @@ A Human Financial Advisor is available for free within 24h to answer any of your
 
 &nbsp;
 
-## 2) You shouldn't trust Telegram Gurus
+## 2) You shouldn't trust Whatsapp Gurus
 
 &nbsp;
 
@@ -127,6 +141,10 @@ The Guru makes money with trading?
 
 
 Unless you live in Puerto Rico, your commissions and taxes will eat all your gains.
+
+&nbsp;
+
+Short term trading is taxes 40%.
 
 &nbsp;
 
@@ -176,39 +194,5 @@ I would love to connect with you on LinkedIn and see how I can help.
 
 &nbsp;
 
-&nbsp;
-
-### How much does StocksToBuyNow AI cost?
 
 &nbsp;
-
-✅ Everyone gets free AI data access and free virtual trading analytics.
-
-&nbsp;
-
-There is a pro membership with Apple Store and Google Play 2 weeks free trial:
-
-&nbsp;
-
-✅ $19.99 a month  /  $59.99 for 6 months  /  $149.99 for lifetime membership
-
-&nbsp;
-
-✅ You receive the best stocks & cryptos to buy now.
-
-&nbsp;
-
-✅ Other Newsletters and Analysis cost $300 a year... StocksToBuyNow AI has a $150 lifetime membership.
-
-&nbsp;
-
-✅ AI made us competitive.
-
-&nbsp;
-
-✅ You get a better and cheaper product at the same time.
-
-
-&nbsp;
-
-**[Back to stockstobuynow.ai](https://www.stockstobuynow.ai/)**
