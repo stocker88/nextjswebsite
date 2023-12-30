@@ -104,7 +104,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="twitter:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now"/>
           <meta name="twitter:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
-          <meta name="twitter:card" content="summary_large_image"/>
+          <meta name="twitter:card" content="app"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
         </Head>
