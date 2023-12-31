@@ -102,6 +102,7 @@ export default function Index({ allPosts }: Props) {
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           <meta name="twitter:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now"/>
+          <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
           <meta name="twitter:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
           <meta name="twitter:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           <meta name="twitter:card" content="app"/>

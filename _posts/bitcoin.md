@@ -344,7 +344,11 @@ The volatile nature of Bitcoin can create opportunities for traders to profit fr
 
 &nbsp;
 
-Adding Bitcoin to an investment portfolio can provide diversification benefits, as it has a low correlation with traditional asset classes like stocks and bonds.
+Adding Bitcoin to an investment portfolio can provide diversification benefits.
+
+&nbsp;
+
+Bitcoin and cryptocurrencies overall have a low correlation with traditional asset classes like stocks and bonds.
 
 &nbsp;
 
