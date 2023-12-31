@@ -104,7 +104,7 @@ The Bitcoin halving events have taken place as follows:
 
 &nbsp;
 
-&nbsp; - The next Bitcoin halving is expected to occur approximately four years after the 2020 halving, in 2024. 
+&nbsp; - The next Bitcoin halving is expected to occur approximately four years after the 2020 halving, in 2024.
 
 &nbsp;
 
@@ -118,6 +118,13 @@ Halvings are significant events in the Bitcoin ecosystem as they impact the supp
 
 The reduction in the rate of new Bitcoin creation often leads to discussions about its potential effects on the market dynamics and price.
 
+&nbsp;
+
+Bitcoin price prediction is aiming for a high target at $1,000,000 (yes Million) and mid price at $200,000.  
+
+&nbsp;
+
+This price prediction takes into account the effect of halving, but also social trend analysis explained below, and macro economics and current inflation rates.
 
 &nbsp;
 
@@ -143,7 +150,7 @@ The social score for BTC-USD has been steadily increasing over timeThis indicate
 
 &nbsp;
 
-It suggests that more people are discussing and sharing information about Bitcoin, which could potentially impact its price and market sentiment.
+It suggests that more people are discussing and sharing information about Bitcoin, which could impact its price and market sentiment.
 
 &nbsp;
 
@@ -179,9 +186,39 @@ However, it's important to note that past performance is not indicative of futur
 
 &nbsp;
 
-How can I assist you further with BTC-USD or any other financial analysis?
+Regardless, Bitcoin price prediction is an agglomeration of multiple effects that adds up and increase the likelihood to see a 7 digit price.
 
 &nbsp;
+
+Social Trend is positive, but social hype (chances of the trend being a bubble) is actually low.
+
+
+&nbsp;
+
+Most of current flow is coming from the ETF indexation (that was released last October).
+
+
+&nbsp;
+
+
+Since then, many funds and big investors started buying Bitcoin with long term views.
+
+
+&nbsp;
+
+
+We are not dealing with day traders / speculators anymore. 
+
+
+&nbsp;
+
+
+We see serious investors putting part of their retirement in the cryptocurrency.
+
+
+&nbsp;
+
+
 
 ### C) Social Hype Analysis
 
@@ -216,12 +253,12 @@ This is mostly due to the ETF indexation, this rally is a slow and sure rally.
 
 &nbsp;
 
-We wouldn’t be surprised if Bitcoin reaches $200k in 2024.
+We wouldn’t be surprised if Bitcoin reaches $400,000 in 2024.
 
 
 &nbsp;
 
-This adds up to the halving coming this year.
+This price prediction takes into account the halving coming this year.
 
 &nbsp;
 
