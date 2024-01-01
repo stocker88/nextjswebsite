@@ -14,12 +14,14 @@ import 'firebase/firestore';
 import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
 
-
+type Props = {
+  from: string
+}
 
 
 //export db from other script and import it here
 
-function NewsletterSignUp(){
+function NewsletterSignUp({ from }: Props){
 {/*
 const Alert = styled.p`
     position: relative;
@@ -157,6 +159,7 @@ const Div = styled.div`
               language: deviceInfo.language,
               screenWidth: deviceInfo.screenWidth,
               screenHeight: deviceInfo.screenHeight,
+              from: from,
                 }, { merge: true });
 
             if (sessionId === ''){
@@ -202,9 +205,9 @@ const Div = styled.div`
               'textAlign': 'center',
               'fontSize': 'min(20px,max(15px,2vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': 'black',
+              'background': from==='Hero'? 'black':from==='Footer'? 'black':'#493bc3',
               'maxWidth':'240px',
-              'boxShadow': '0px 0px 13px rgba(250, 250, 250, 0.5)',
+              'boxShadow': from==='Hero'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='Footer'? '0px 0px 13px rgba(250, 250, 250, 0.5)':'0px 0px 13px rgba(0, 0, 0, 0.5)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get the App →</b>
                 </button>
 

@@ -87,7 +87,7 @@ const MeetingButton = ({
 
          </center>
          </Container>
-        <NewsletterSignUp/>
+        <NewsletterSignUp from='Footer'/>
 <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 
 

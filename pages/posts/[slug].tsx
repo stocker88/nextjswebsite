@@ -15,6 +15,8 @@ import Post from '../../interfaces/post'
 import MoreStories from '../../components/more-stories'
 import QuoteDisplay from '../../components/inspiration';
 import { useState, useEffect } from 'react';
+import NewsletterSignUp from '../../components/formStocker'
+import Image from 'next/image';
 
 import {
   FacebookShareButton,
@@ -117,10 +119,37 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="twitter:card" content="app"/>
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
               </Head>
+              <div>
+                         <center>
+                         <Header
+                                         slug={post.slug}
+                                       />
+
+
+               <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+                          We send you hot stocks before they blow up: you save time, improve your trading, and check the best opportunities.
+                          </h2>
+                          <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+                          <NewsletterSignUp from={post.slug}/>
+
+                          <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+<Image
+                                                              src='/assets/images/usersRating.webp'
+                                                              alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+                                                              priority={true}
+                                                             width={200}
+                                                             height={50}
+                                                              />
+
+                                                       <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                                                          Join a community of +12,800 investors
+
+                                                          </div>
+                                        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+                                 </center>
+            </div>
               <article className="mb-32">
-              <Header
-                slug={post.slug}
-              />
+
 
 
                 <div style={{

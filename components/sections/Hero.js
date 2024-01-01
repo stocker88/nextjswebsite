@@ -81,7 +81,7 @@ const Hero = ({
  </div>
  </center>
  </Container>
-<NewsletterSignUp/>
+<NewsletterSignUp from='Hero'/>
 <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 <Container>
 <center>
