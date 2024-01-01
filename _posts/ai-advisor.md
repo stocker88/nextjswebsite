@@ -2,13 +2,13 @@
 title: 'Choose your Stocks To Buy AI over Email Newsletters and Whatsapp Trading Gurus'
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
-coverImage: '/assets/blog/ai-advisor/ai advisor.webp'
+coverImage: '/assets/blog/ai-advisor/ai-advisor.jpg'
 date: '2023-11-05T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/ai-advisor/ai advisor.webp'
+    url: '/assets/blog/ai-advisor/ai-advisor.jpg'
 ---
 
 
@@ -184,11 +184,7 @@ After speaking with thousands of customers and investors: I understood each of y
 
 &nbsp;
 
-I would love to connect with you on LinkedIn and see how I can help.
-
-&nbsp;
-
-**[Click here to connect on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
+![](/assets/blog/ai-advisor/ai advisor.webp)
 
 &nbsp;
 

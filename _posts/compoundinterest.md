@@ -2,13 +2,13 @@
 title: 'How To Be A Millionaire: The Science of Compound Interest'
 excerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love for stock market investing when he bought his first stock! Today he manages $270,450,230,038...'
 seoExcerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love for stock market investing when he bought his first stock! Today he manages $270,450,230,038...'
-coverImage: '/assets/blog/millionnairescience/millionnairescience.webp'
+coverImage: '/assets/blog/millionnairescience/millionnairescience.jpg'
 date: '2023-12-02T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/millionnairescience/millionnairescience.webp'
+    url: '/assets/blog/millionnairescience/millionnairescience.jpg'
 ---
 
 If you save $10 a day:

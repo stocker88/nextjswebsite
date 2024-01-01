@@ -2,13 +2,13 @@
 title: 'From Budgeting to Investing: A Comprehensive Guide to Personal Finance'
 excerpt: '1) Understanding Budgeting and Its Importance 2) Tips for Effective Saving and Investment 3) Your Investment Options: Stocks, Bonds, and Mutual Funds 4) How to select the Right Investment Options 5) Retirement Planning: Why it is important and Where to Start 6) Common Pitfalls to Avoid in Personal Finance Management'
 seoExcerpt: '1) Understanding Budgeting and Its Importance 2) Tips for Effective Saving and Investment 3) Your Investment Options: Stocks, Bonds, and Mutual Funds 4) How to select the Right Investment Options 5) Retirement Planning: Why it is important and Where to Start 6) Common Pitfalls to Avoid in Personal Finance Management'
-coverImage: '/assets/blog/personal-finance/personalfinance.webp'
+coverImage: '/assets/blog/personal-finance/investing-budgeting.webp'
 date: '2023-11-25T05:35:07.322Z'
 author:
   name: StocksToBuyNow AI
   picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-  url: '/assets/blog/personal-finance/personalfinance.webp'
+  url: '/assets/blog/personal-finance/investing-budgeting.webp'
 ---
 
 
