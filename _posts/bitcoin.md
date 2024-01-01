@@ -146,7 +146,12 @@ Based on the available Social data for Bitcoin, here are three key points and in
 
 &nbsp;
 
-The social score for BTC-USD has been steadily increasing over timeThis indicates a growing interest and engagement from the online community in Bitcoin
+The social score for BTC-USD has been steadily increasing over time.
+
+
+&nbsp;
+
+This indicates a growing interest and engagement from the online community in Bitcoin.
 
 &nbsp;
 
@@ -174,11 +179,16 @@ However, it also poses risks for investors due to the potential for sudden price
 
 &nbsp;
 
-Despite its volatility, Bitcoin has shown long-term growthOver the analyzed period, the price of BTC-USD has steadily increased, indicating a positive trend
+Despite its volatility, Bitcoin has shown long-term growth.
+
 
 &nbsp;
 
-This growth can be attributed to factors such as increasing adoption, institutional interest, and limited supply
+Over the analyzed period, the price of BTC-USD has steadily increased, indicating a positive trend.
+
+&nbsp;
+
+This growth can be attributed to factors such as increasing adoption, institutional interest, and limited supply.
 
 &nbsp;
 
@@ -300,9 +310,6 @@ This suggests that Bitcoin has consistently attracted a significant amount of at
 
 It indicates that Bitcoin is a topic of ongoing interest and conversation among users, which can have implications for its market dynamics.
 
-&nbsp;
-
-How can I assist you further with this information?
 
 &nbsp;
 

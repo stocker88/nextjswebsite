@@ -62,17 +62,7 @@ export default function Swipe() {
         </div>
         </center>
 
-<br></br>
-  <br></br>
 
-        <IntroDataset/>
-<div className="container">
-     <div className="split-item">
-<div style={{paddingTop: 10}}></div>
-
-
-        </div>
-        </div>
 
 <center>
 <div className="container">
@@ -137,14 +127,7 @@ export default function Swipe() {
                  <br></br>
 
                     <LinkedInButton/>
-                    <br></br>
-                             <Image
-                                             src='/assets/images/chatgptgooglecloud.webp'
-                                             alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-                                            width={150}
-                                            height={60}
-                                            priority={true}
-                                             />
+
                </h3>
 
 

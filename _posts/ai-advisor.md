@@ -1,5 +1,5 @@
 ---
-title: 'Chose your Stocks To Buy AI over Email Newsletters and Whatsapp Trading Gurus'
+title: 'Choose your Stocks To Buy AI over Email Newsletters and Whatsapp Trading Gurus'
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 coverImage: '/assets/blog/ai-advisor/ai advisor.webp'
@@ -19,7 +19,7 @@ ogImage:
 &nbsp;
 
 ### Newsletters send you 1 email per month, your AI sends you 60 recommendations per month (2 per day)
-
+z
 &nbsp;
 
 &nbsp;

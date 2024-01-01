@@ -109,21 +109,7 @@ export default function Index({ allPosts }: Props) {
           <link rel="apple-touch-icon" href="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
         </Head>
-        <Container>
-          <Intro />
-        {/*  {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}*/}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
 
-        </Container>
       </Layout>
     </>
   )

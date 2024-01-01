@@ -346,15 +346,15 @@ These levels can be used by traders to make decisions about buying or selling AA
 
 &nbsp;
 
-In conclusion, AAPL has shown a strong upward trend followed by a period of consolidation
+In conclusion, AAPL has shown a strong upward trend followed by a period of consolidation.
 
 &nbsp;
 
-Traders should pay attention to the support and resistance levels to gauge potential buying or selling opportunities
+Traders should pay attention to the support and resistance levels to gauge potential buying or selling opportunities.
 
 &nbsp;
 
-The current price is close to the resistance level, which could indicate a potential reversal or continuation of the upward trendHow can I assist you further?
+The current price is close to the resistance level, which could indicate a potential reversal or continuation of the upward trend.
 
 
 
