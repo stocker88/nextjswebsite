@@ -115,12 +115,11 @@ const Testimonial = ({
                           /></center>
                            <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
 
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> They Tell Me When To Realise My Gains </b>
+                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
                               <br></br>
                              <br></br>
                            What's the point of buying if you don't know when to sell?
 
-                         It costs $10 monthly subscription, and that's it🚀
 
                                 Compared to others who say 'buy buy buy', StocksToBuyNow AI has my final interests in mind.
 
@@ -165,74 +164,6 @@ const Testimonial = ({
                               </p>
 
                              </a>
-, <a href='https://www.linkedin.com/in/felix-revert-00998852/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/felix.webp'
-                           alt="Features tile icon 06"
-                           width={130}
-                           height={130}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
-
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
-                             <br></br>
-
-                             <br></br>
-                             I can't wait for boring emails newsletters and reports...
-
-                              I get instant suggestions and replies.
-
-                               This AI advisor is reactive and sends perfect recaps!
-
-                                My time saving hero.
-                             I don't wait weeks for email replies: their advisor sends me instant replies.
-                             Time is money, especially in investing and trading.
-
-                              <br></br>
-                              <br></br>
-                         <b>  Felix Revert
-                           <br></br>
-                           Product Manager Data Science   </b>
-
-
-                            </p>
-
-                           </a>
-, <a href='https://www.linkedin.com/in/alexia-karolewicz-71a9b644/' target="_blank" >
-                         <center><Image
-                           src='/assets/images/testimonies/alexia.webp'
-                           alt="Features tile icon 06"
-                           width={130}
-                           height={130}
-                           style={{
-                           'borderRadius': '45px 45px 45px 45px',
-                           'border': '2px solid rgba(255, 255, 255, 1)'
-                           }}
-                          /></center>
-                           <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'700px', 'textAlign': 'left',}}>
-
-                              <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Access Early Trading Opportunities </b>
-                             <br></br>
-                             <br></br>
-                             Being ahead of the curve matters.
-                             StocksToBuyNow Financial Advisor spots stocks with huge upside potential before the masses catch on.
-                             They send important reminders and insights.
-                             That early advantage has made a real difference in my gains. I always double check with the AI before buying anything.
-                             I perfectly timed Adobe, AMD, Ferrari & Workforce.
-                              <br></br>
-                              <br></br>
-                         <b>  Alexia Karolewicz
-                           <br></br>
-                           Procurement Manager IP Acquisition   </b>
-
-
-                            </p>
-
-                           </a>
 ]}
            </div>
 <br></br> <br></br>
