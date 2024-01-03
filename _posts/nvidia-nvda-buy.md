@@ -1,14 +1,14 @@
 ---
-title: 'Should You Buy Nvidia? 5 Facts You Should Know'
+title: 'Should You Buy Nvidia? 5 Highlights from Price Forecast and Financial Projections'
 excerpt: '1. AI Industry Prospects 2. Financial performance 3. Competitive landscape 4. Your goals 5. Verdict: Should you buy Nvidia? Is NVDA a bubble?'
 seoExcerpt: '1. AI Industry Prospects 2. Financial performance 3. Competitive landscape 4. Your goals 5. Verdict: Should you buy Nvidia? Is NVDA a bubble?'
-coverImage: '/assets/blog/nvidia/is nvidia a buy.webp'
+coverImage: '/assets/blog/nvidia/is nvidia a buy.jpg'
 date: '2023-12-06T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/nvidia/is nvidia a buy.webp'
+    url: '/assets/blog/nvidia/is nvidia a buy.jpg'
 ---
 
 

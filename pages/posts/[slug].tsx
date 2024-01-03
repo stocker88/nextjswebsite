@@ -69,22 +69,21 @@ export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter()
   const title = `${post.title}`
 
-      const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
-      };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
+    };
 
-      handleResize(); // Set initial state based on window width
+    handleResize(); // Set initial state based on window width
 
-      window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -120,33 +119,32 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
               </Head>
               <div>
-                         <center>
-                         <Header
-                                         slug={post.slug}
-                                       />
+             <center>
+                     <Header
+                     slug={post.slug}
+                   />
 
 
-               <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-                          We send you hot stocks before they blow up: you save time, improve your trading, and check the best opportunities.
-                          </h2>
-                          <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-                          <NewsletterSignUp from={post.slug}/>
+                   <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+                  We send you hot stocks to buy before they blow up: you save time, improve your trading, and check the best opportunities.
+                  </h2>
+                  <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+                  <NewsletterSignUp from={post.slug}/>
 
-                          <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-<Image
-                                                              src='/assets/images/usersRating.webp'
-                                                              alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
-                                                              priority={true}
-                                                             width={200}
-                                                             height={50}
-                                                              />
+                  <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+                <Image
+                  src='/assets/images/usersRating.webp'
+                  alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+                  priority={true}
+                 width={200}
+                 height={50}
+                  />
 
-                                                       <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                                                          Join a community of +12,800 investors
-
-                                                          </div>
-                                        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-                                 </center>
+                <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                    Join a community of +12,800 investors
+                </div>
+                <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+             </center>
             </div>
               <article className="mb-32">
 

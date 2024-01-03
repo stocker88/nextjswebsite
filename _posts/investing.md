@@ -2,13 +2,13 @@
 title: 'Top 10 Investment Styles: Best Strategies for Your Portfolio'
 excerpt: 'AI, Dividends, Value, Momentum, Quality, Crypto, ETF, Hedge Funds, Technology, Biotech, Growth, from Asset Classes to Style Factors: pick the best investment strategies for your portfolio.'
 seoExcerpt: 'AI, Dividends, Value, Momentum, Quality, Crypto, ETF, Hedge Funds, Technology, Biotech, Growth, from Asset Classes to Style Factors: pick the best investment strategies for your portfolio.'
-coverImage: '/assets/blog/investing/investment-styles.webp'
+coverImage: '/assets/blog/investing/investment-styles.jpg'
 date: '2023-12-30T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/investing/investment-styles.webp'
+    url: '/assets/blog/investing/investment-styles.jpg'
 ---
 
 &nbsp;

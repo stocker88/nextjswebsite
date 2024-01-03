@@ -2,13 +2,13 @@
 title: 'Bitcoin Advanced Analysis and Price Prediction'
 excerpt: '1) Bitcoin Calendar 2) Opportunities and Risks 3) Bitcoin Competitors 4) Social Trend Data 5) Technical Trading Analysis 6) Social Hype Data'
 seoExcerpt: '1) Bitcoin Calendar 2) Opportunities and Risks 3) Bitcoin Competitors 4) Social Trend Data 5) Technical Trading Analysis 6) Social Hype Data'
-coverImage: '/assets/blog/bitcoin/bitcoin.webp'
+coverImage: '/assets/blog/bitcoin/bitcoin.jpg'
 date: '2023-12-30T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/bitcoin/bitcoin.webp'
+    url: '/assets/blog/bitcoin/bitcoin.jpg'
 ---
 
 

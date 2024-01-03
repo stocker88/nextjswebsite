@@ -21,10 +21,36 @@ type Props = {
 }
 
 const Home =  ({ posts }: Props) =>  {
+{/*
+  const [showModal, setShowModal] = useState(false);
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+*/}
   return (
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
+{/*    import { useState } from 'react';
+import SignUpModal from '../SignUpModal';
+ <div>
+      <header>
+        <button
+         onClick={toggleModal}
+            style={{
+              'position': 'fixed',
+              'top': '20px',
+              'right': '20px',
+              'padding': '8px 16px',
+              'background-color': '#3498db',
+              'border-radius': '5px',
+              'cursor': 'pointer',
+              'z-index': '999',
+              }}>Login</button>
+      </header>
+      {showModal && <SignUpModal onClose={toggleModal} />}
+    </div>
+*/}
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #3700B3)" }}/>
       <br></br>
           <br></br>

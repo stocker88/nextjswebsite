@@ -2,13 +2,13 @@
 title: 'Tesla vs Ferrari Price Prediction Analysis in Stocks To Buy AI App'
 excerpt: '1) Competition Analysis 2) Similarities and Disparities 3) Earnings per Share 4) Price to Earnings 5) Profit Margins'
 seoExcerpt: '1) Competition Analysis 2) Similarities and Disparities 3) Earnings per Share 4) Price to Earnings 5) Profit Margins'
-coverImage: '/assets/blog/teslarace/teslarace.webp'
+coverImage: '/assets/blog/teslarace/teslarace.jpg'
 date: '2024-01-01T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
-    url: '/assets/blog/teslarace/teslarace.webp'
+    url: '/assets/blog/teslarace/teslarace.jpg'
 ---
 
 
