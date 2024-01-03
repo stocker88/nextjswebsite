@@ -108,6 +108,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="description" property="og:description" content={post.seoExcerpt} />
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:title" content={post.title} />
+                <meta property="og:type" content="website">
                 <meta name="og:description" content={post.seoExcerpt} />
                 <link rel="apple-touch-icon" href={'https://www.stockstobuynow.ai'+post.ogImage.url} />
                 <meta property="og:url" content={"https://www.stockstobuynow.ai/posts/"+post.slug} />

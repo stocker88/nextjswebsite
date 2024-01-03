@@ -98,7 +98,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
           <meta property="og:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now" />
           <meta name="og:description" content="StocksToBuyNow AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
-          <meta property="og:type" content="video.movie" />
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           <meta name="twitter:title" content="StocksToBuyNow AI App - Best Stocks To Buy Now"/>
