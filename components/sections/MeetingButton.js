@@ -99,7 +99,7 @@ const MeetingButton = ({
 
         <Container>
 
-        <center>
+
             <Image
                 src='/assets/images/usersRating.webp'
                 alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
@@ -117,22 +117,13 @@ const MeetingButton = ({
 
             <br></br>
 
-    </center>
-</Container>
-    </div>
 
-        </div>
 <br></br><br></br><br></br>
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
      <CompanyList companies={stockData} />
 
-        </center>
-        </div>
 
-        <Container>
-
-        <center>
               <div className="container-sm has-animations" style={{  zIndex: 10 }}>
                   <div className="hero-content">
              <div style={{paddingTop: 'max(70px,5vw)'}}></div>
@@ -169,8 +160,12 @@ const MeetingButton = ({
 </div>
 </div>
 </div>
-                 </center>
-                 </Container>
+             </Container>
+                 </div>
+
+                     </div>
+                     </center>
+                     </div>
                 <NewsletterSignUp from='Final Footer'/>
         <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 
