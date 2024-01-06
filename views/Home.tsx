@@ -3,7 +3,9 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Blog from '../components/sections/Blog';
-
+import Swipe from '../components/swiper/swipe';
+import IntroVideo from '../components/introVideo';
+import IntroApp from '../components/introApp';
 import YoutubeSection from '../components/sections/YoutubeSection';
 import TitleSplit from '../components/sections/TitleSplit';
 import TitleSplit2 from '../components/sections/Title2Split';
@@ -68,9 +70,12 @@ import SignUpModal from '../SignUpModal';
         <Container>
         <br></br>
         <br></br>
+<IntroApp/>
+        <Swipe/>
 
         <SearchStocks stockData={stockDataSearch} />
         <TryWebAppLink/>
+         <br></br>
 <br></br>
         <br></br>
         <Intro />

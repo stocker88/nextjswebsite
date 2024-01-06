@@ -6,11 +6,8 @@ import Image from 'next/image';
 import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
-import Swipe from '../swiper/swipe';
 import SwipeVideo from '../swiper/swipevideo';
-import IntroApp from '../../components/introApp';
 import WhyStocksToBuyNow from '../../components/whyHellostocker';
-import IntroVideo from '../../components/introVideo';
 import Container from '../../components/container'
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import { isMobile} from "react-device-detect";
@@ -18,6 +15,8 @@ import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
 import Testimonial from './Testimonial'
 import QuoteDisplay from '../../components/inspiration';
+import AboutUs from '../../components/aboutUs';
+import LinkedInButton from '../../components/connectLinkedin';
 
 type Props = {
   posts: Post[]
@@ -72,8 +71,44 @@ const FeaturesSplit = ({
         <br></br>
 
 
-        <IntroApp/>
-        <Swipe/>
+
+
+ <br></br>
+ <br></br>
+ <center>
+       <AboutUs/>
+</center>
+
+
+         <center>
+
+         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                 Ex Goldman Sachs, Bank of America and OpenAI Directors
+
+                 </h2>
+
+
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                 <br></br> Over 15 Years in Investing and AI
+                 <br></br>
+
+                 <br></br>
+
+                    <LinkedInButton/>
+
+               </h3>
+
+
+                 <br></br>
+
+                     </center>
+
+
+
+        <br></br>
+        <br></br>
+
+
 
 {/*
                   <center><div style={{maxWidth: "550px"}}>  <div className="grid grid-cols-1 md:grid-cols- md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">

@@ -14,6 +14,19 @@ const SearchStocks = ({ stockData }) => {
 
 
 const db = getFirestore();
+
+  const [imageExists, setImageExists] = useState({});
+
+  useEffect(() => {
+    stockData.forEach((company) => {
+      const img = new Image();
+      img.src = `/assets/assets/logo/${company.ticker}.webp`;
+      img.onload = () => setImageExists((prev) => ({ ...prev, [company.ticker]: true }));
+      img.onerror = () => setImageExists((prev) => ({ ...prev, [company.ticker]: false }));
+    });
+  }, [stockData]);
+
+
     const { sessionData, setSessionData } = useSession();
         const [deviceInfo, setDeviceInfo] = useState({
             userAgent: '',
@@ -53,16 +66,18 @@ const db = getFirestore();
 
 
 
-  const handleSearch = (e) => {
-    const query = e.target.value.toLowerCase();
-    setSearchQuery(query);
+    const handleSearch = (e) => {
+      const query = e.target.value.toLowerCase();
+      setSearchQuery(query);
 
-    const filteredResults = stockData.filter(
-      (stock) =>
-        stock.ticker.toLowerCase().includes(query) || stock.name.toLowerCase().includes(query)
-    );
-    setSearchResults(filteredResults);
-  };
+      const filteredResults = stockData.filter(
+        (stock) =>
+          stock.ticker.toLowerCase().includes(query) || stock.name.toLowerCase().includes(query)
+      );
+
+      // If the query is empty, display no elements
+      setSearchResults(query === '' ? [] : filteredResults);
+    };
 
 
   useEffect(() => {
@@ -121,7 +136,15 @@ const db = getFirestore();
           width: '300px', // Adjust width as needed
         }}
       />
-      <ul>
+      <div style={{
+                      display: 'flex',
+                      justifyContent: 'center', // Center the content horizontally
+                    }}>
+      <ul style={{
+             display: 'flex',
+             flexDirection: 'column',
+             alignItems: 'flex-start', // Align items to the left side of the column
+           }}>
         {searchResults.map((stock, index) => (
          <div style={{ display: 'flex', justifyContent: 'center' }}>
            <Link
@@ -130,29 +153,51 @@ const db = getFirestore();
             onClick={() => handleClick(stock.ticker)}
            >
                      <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', marginTop: '20px' }}>
-                       <img
-                                    src={`/assets/assets/logo/${stock.ticker}.webp`}
-                                    alt={`Logo of ${stock.ticker} ${stock.name}`}
-                                    style={{
-                                      width: '50px',
-                                      height: '50px',
-                                      marginRight: '30px',
-                                      borderRadius: '50%', // Set border radius to create a circular shape
-                                      objectFit: 'cover', // Maintain aspect ratio and cover the entire space
-                                      overflow: 'hidden', // Hide any image overflow beyond the circle
-                                    }}
-                                  />
+                {imageExists[stock.ticker] ? (
+                            <img
+                                          src={`/assets/assets/logo/${stock.ticker}.webp`}
+                                          alt={`Logo of ${stock.ticker}`}
+                                          style={{
+                                          'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
+                                            width: '50px',
+                                            height: '50px',
+                                            marginRight: '30px',
+                                            borderRadius: '50%', // Set border radius to create a circular shape
+                                            objectFit: 'cover', // Maintain aspect ratio and cover the entire space
+                                            overflow: 'hidden', // Hide any image overflow beyond the circle
+                                          }}
+                                        />
+                         ) : (
+                            <div
+                                         style={{
+                                           cursor: 'pointer',
+                                           display: 'flex',
+                                           'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
+                                           alignItems: 'center',
+                                           marginBottom: '20px',
+                                            marginRight: '30px',
+                                           borderRadius: '50%', // Round the placeholder
+                                           width: '50px',
+                                           height: '50px',
+                                           justifyContent: 'center',
+                                           overflow: 'hidden', // Hide any content overflow
+                                           backgroundColor: 'black',
+                                         }}
+                                       ><span style={{ fontSize: '24px', color: 'white' }}>{stock.logo.charAt(0)}</span>
+                                       </div>
+                         )}
+
                        <div style={{ display: 'flex', flexDirection: 'column' }}>
                          <div style={{ display: 'flex', alignItems: 'center' }}>
-                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', marginRight: '30px' }}>{stock.ticker}</span>
-                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white' }}>{stock.name}</span>
+                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', marginRight: '30px' , 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>{stock.ticker}</span>
+                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)' }}>{stock.name}</span>
                          </div>
                        </div>
                      </div>
                    </Link>
                    </div>
         ))}
-      </ul>
+      </ul></div>
       </center>
     </div>
   );
