@@ -8,7 +8,7 @@ const LayoutDefault = ({ children }) => (
     <main className="site-content">
       {children}
     </main>
-    <Footer  style={{  background: "linear-gradient(#1387FF, #00D9FF)" }}/>
+    <Footer  />
   </>
 );
 

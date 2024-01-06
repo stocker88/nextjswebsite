@@ -15,6 +15,10 @@ import type Post from '../interfaces/post';
 import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
+import SearchStocks from '../components/SearchStocks';
+import TryWebAppLink from '../components/TryWebAppLink';
+import { stockDataSearch } from '../components/constants';
+
 
 type Props = {
   posts: Post[]
@@ -28,6 +32,12 @@ const Home =  ({ posts }: Props) =>  {
     setShowModal(!showModal);
   };
 */}
+
+const stockData = [
+  { ticker: 'AAPL', name: 'Apple Inc.', logo: 'aapl.webp' },
+  // Add more company data here...
+];
+
   return (
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
@@ -56,6 +66,12 @@ import SignUpModal from '../SignUpModal';
           <br></br>
           <br></br>
         <Container>
+        <br></br>
+        <br></br>
+
+        <SearchStocks stockData={stockDataSearch} />
+        <TryWebAppLink/>
+<br></br>
         <br></br>
         <Intro />
       {/*  {heroPost && (
