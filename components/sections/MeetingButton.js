@@ -33,7 +33,7 @@ const innerClasses = classNames(
 'hero-inner section-inner',
 );
 
-export const MeetingButton = ({
+const MeetingButton = ({
   ...props
 }) => {
 
@@ -130,11 +130,6 @@ export const MeetingButton = ({
         </center>
         </div>
 
-
-
-
-
-
         <Container>
 
         <center>
@@ -171,7 +166,9 @@ export const MeetingButton = ({
                             We send you hot stocks to buy before they blow up: you save time, improve your trading, and check the best opportunities.
                             </h2>
         <br></br>
-
+</div>
+</div>
+</div>
                  </center>
                  </Container>
                 <NewsletterSignUp from='Final Footer'/>
@@ -185,4 +182,4 @@ export const MeetingButton = ({
 MeetingButton.propTypes = propTypes;
 MeetingButton.defaultProps = defaultProps;
 
-export { MeetingButton };
+export default MeetingButton;
