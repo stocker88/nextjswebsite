@@ -33,7 +33,7 @@ const innerClasses = classNames(
 'hero-inner section-inner',
 );
 
-const MeetingButton = ({
+export const MeetingButton = ({
   ...props
 }) => {
 
