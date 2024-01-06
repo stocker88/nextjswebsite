@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-
+import { stockDataSearch } from '../../../components/constants';
 type Props = {
   ticker: string;
 };
@@ -56,8 +56,28 @@ export default function Ticker({ ticker }) {
     </>
   );
 }
+export async function fetchAvailableTickers() {
+  const availableTickers = stockDataSearch.map((stock) => stock.ticker);
+  return availableTickers;
+}
 
-// This method is called at build time
+// This method tells Next.js which dynamic routes to pre-render
+export async function getStaticPaths() {
+  // Fetch available tickers from your API or source
+  const availableTickers = await fetchAvailableTickers(); // Implement your fetching logic
+
+  // Map available tickers to the paths Next.js should pre-render
+  const paths = availableTickers.map((ticker) => ({
+    params: { ticker },
+  }));
+
+  return {
+    paths,
+    fallback: true, // or 'blocking' for incremental static regeneration
+  };
+}
+
+// This method is called at build time to fetch data for a specific ticker
 export async function getStaticProps({ params }) {
   const { ticker } = params;
   // Fetch data for the ticker from your API or server
