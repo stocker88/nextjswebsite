@@ -20,7 +20,7 @@ import MoreStories from '../components/more-stories'
 import SearchStocks from '../components/SearchStocks';
 import TryWebAppLink from '../components/TryWebAppLink';
 import { stockDataSearch } from '../components/constants';
-
+import { isMobile, browserName } from "react-device-detect";
 
 type Props = {
   posts: Post[]
@@ -73,8 +73,8 @@ import SignUpModal from '../SignUpModal';
 <IntroApp/>
         <Swipe/>
 
-        <SearchStocks stockData={stockDataSearch} />
-        <TryWebAppLink/>
+        {!isMobile && <SearchStocks stockData={stockDataSearch} />}
+        {!isMobile && <TryWebAppLink/>}
          <br></br>
 <br></br>
         <br></br>
