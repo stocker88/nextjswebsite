@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -5,12 +6,19 @@ const TickerPage = () => {
   const router = useRouter();
   const { ticker } = router.query;
 
-  const logoPath = `/assets/assets/logo/${ticker}.webp`;
+  const [iframeSrc, setIframeSrc] = useState('');
+
+  useEffect(() => {
+    if (ticker) {
+      const newIframeSrc = `${window.location.origin}/web-app#/financial/${ticker}`;
+      setIframeSrc(newIframeSrc);
+    }
+  }, [ticker]);
+
+  const logoPath = `/assets/logo/${ticker}.webp`;
 
   const pageTitle = `${ticker}`;
   const pageDescription = 'Stocks to buy now';
-
-  const iframeSrc = `${window.location.origin}/web-app#/financial/${ticker}`;
 
   return (
     <>
@@ -23,7 +31,7 @@ const TickerPage = () => {
       </Head>
 
       <div className="iframe-container">
-        <iframe src={iframeSrc}></iframe>
+        {iframeSrc && <iframe src={iframeSrc}></iframe>}
         <style jsx>{`
           .iframe-container {
             position: fixed;
