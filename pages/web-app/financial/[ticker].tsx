@@ -18,7 +18,7 @@ const Ticker = ({ ticker }: Props) => {
   }
 
   // Check for an invalid ticker value or handle other error scenarios
-  if (!isValidTicker(ticker)) {
+  if (ticker==='') {
     return <ErrorPage statusCode={404} />;
   }
 
