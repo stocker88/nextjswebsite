@@ -124,8 +124,7 @@ const MeetingButton = ({
      <CompanyList companies={stockData} />
 
 
-              <div className="container-sm has-animations" style={{  zIndex: 10 }}>
-                  <div className="hero-content">
+
              <div style={{paddingTop: 'max(70px,5vw)'}}></div>
 
                  {/*    <Image
@@ -158,8 +157,7 @@ const MeetingButton = ({
                             </h2>
         <br></br>
 </div>
-</div>
-</div>
+
              </Container>
                  </div>
 
