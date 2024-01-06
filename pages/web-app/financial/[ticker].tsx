@@ -11,7 +11,7 @@ export default function Ticker({ ticker }) {
 
   const logoPath = `https://www.stockstobuynow.ai/assets/assets/logo/${ticker}.webp`;
   const pageTitle = `${ticker} AI Analysis: Financial Economic, Social Hype, and Technical Trading in Stocks To Buy Now`;
-  const pageDescription = '${ticker} Financial Forecast and Price Prediction on Stocks To Buy Now AI'; // Update with your description
+  const pageDescription = `${ticker} Financial Forecast and Price Prediction on Stocks To Buy Now AI`; // Update with your description
 
   if (router.isFallback || !ticker) {
     return <b>Loading…</b>;
