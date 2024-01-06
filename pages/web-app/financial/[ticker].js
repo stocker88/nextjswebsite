@@ -1,60 +1,64 @@
-import { useEffect, useState } from 'react';
+// pages/web-app/financial/[ticker].js
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
-const TickerPage = () => {
-  const router = useRouter();
-  const { ticker } = router.query;
 
-  const [iframeSrc, setIframeSrc] = useState('');
+const TickerPage = ({ ticker }) => {
 
-  useEffect(() => {
-    if (ticker) {
-      const origin = process.browser ? window.location.origin : ''; // Check if in the browser
-      const newIframeSrc = `${origin}/web-app#/financial/${ticker}`;
-      setIframeSrc(newIframeSrc);
-    }
-  }, [ticker]);
-
+// Assuming the logo path follows a specific structure: /assets/logo/ticker.webp
   const logoPath = `/assets/logo/${ticker}.webp`;
 
   const pageTitle = `${ticker}`;
-  const pageDescription = 'Stocks to buy now';
+  const pageDescription = 'Stocks to buy now'; // Update with your description
 
   return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
+  <>
+    <Head>
+          <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={logoPath} />
-      </Head>
+        </Head>
 
-      <div className="iframe-container">
-        {iframeSrc && <iframe src={iframeSrc}></iframe>}
-        <style jsx>{`
-          .iframe-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-          }
+    <div className="iframe-container">
 
-          iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-            display: block;
-          }
-        `}</style>
-      </div>
-    </>
+      <iframe
+        src={`https://www.stockstobuynow.ai/web-app#/financial/${ticker}`}
+
+      ></iframe>
+
+      <style jsx>{`
+        .iframe-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        iframe {
+          border: none;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      `}</style>
+    </div>
+      </>
   );
+};
+
+// Fetch data for the ticker
+TickerPage.getInitialProps = async ({ query }) => {
+  const { ticker } = query;
+  // Fetch additional data for the ticker from your API or server
+  // Example: const tickerData = await fetchTickerData(ticker);
+
+  // Return the ticker data as props
+  return { ticker };
 };
 
 export default TickerPage;
