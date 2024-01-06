@@ -185,4 +185,4 @@ export const MeetingButton = ({
 MeetingButton.propTypes = propTypes;
 MeetingButton.defaultProps = defaultProps;
 
-export default MeetingButton;
+export { MeetingButton };
