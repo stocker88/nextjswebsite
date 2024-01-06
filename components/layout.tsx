@@ -1,6 +1,6 @@
 import Alert from './alert'
 import Meta from './meta'
-import MeetingButton from '../components/sections/MeetingButton';
+import {MeetingButton} from '../components/sections/MeetingButton';
 import Footer from '../components/layout/Footer';
 
 type Props = {
