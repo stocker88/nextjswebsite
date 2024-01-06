@@ -158,13 +158,18 @@ const MeetingButton = ({
         <br></br>
 </div>
 
+  <NewsletterSignUp from='Final Footer'/>
+
              </Container>
                  </div>
 
                      </div>
                      </center>
                      </div>
-                <NewsletterSignUp from='Final Footer'/>
+
+        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
         <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 
 </section>
