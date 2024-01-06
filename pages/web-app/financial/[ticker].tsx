@@ -57,9 +57,10 @@ export default function Ticker({ ticker }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
-  const { ticker } = query;
-  // Fetch additional data for the ticker from your API or server
+// This method is called at build time
+export async function getStaticProps({ params }) {
+  const { ticker } = params;
+  // Fetch data for the ticker from your API or server
   // Example: const tickerData = await fetchTickerData(ticker);
 
   // Return the ticker data as props
