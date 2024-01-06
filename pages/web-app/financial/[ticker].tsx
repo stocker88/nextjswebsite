@@ -6,7 +6,7 @@ type Props = {
   ticker: string;
 };
 
-const Ticker = ({ ticker }: Props) => {
+export default function Ticker({ ticker }) {
   const router = useRouter();
 
   const logoPath = `/assets/assets/logo/${ticker}.webp`;
@@ -18,7 +18,7 @@ const Ticker = ({ ticker }: Props) => {
   }
 
   // Check for an invalid ticker value or handle other error scenarios
-  if (ticker==='') {
+  if (ticker === '') {
     return <ErrorPage statusCode={404} />;
   }
 
@@ -55,7 +55,7 @@ const Ticker = ({ ticker }: Props) => {
       </div>
     </>
   );
-};
+}
 
 export async function getServerSideProps({ query }) {
   const { ticker } = query;
@@ -65,5 +65,3 @@ export async function getServerSideProps({ query }) {
   // Return the ticker data as props
   return { props: { ticker } };
 }
-
-export default Ticker;
