@@ -23,7 +23,6 @@ const FlutterAppPage = () => {
                           "applicationCategory": "Investing",
                           "screenshot": [
                             "https://www.stockstobuynow.ai/assets/images/chatgpt.webp",
-                            "https://www.stockstobuynow.ai/assets/images/portfolio.webp",
                             "https://www.stockstobuynow.ai/assets/images/tslavsrace.webp",
                             "https://www.stockstobuynow.ai/assets/images/dividends.webp"
                           ],

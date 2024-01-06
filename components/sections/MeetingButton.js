@@ -167,10 +167,11 @@ const MeetingButton = ({
                      </center>
                      </div>
 
-        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-        <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
+        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
+        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
+        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
+
 
 </section>
 
