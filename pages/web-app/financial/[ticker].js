@@ -10,7 +10,8 @@ const TickerPage = () => {
 
   useEffect(() => {
     if (ticker) {
-      const newIframeSrc = `${window.location.origin}/web-app#/financial/${ticker}`;
+      const origin = process.browser ? window.location.origin : ''; // Check if in the browser
+      const newIframeSrc = `${origin}/web-app#/financial/${ticker}`;
       setIframeSrc(newIframeSrc);
     }
   }, [ticker]);
