@@ -7,6 +7,7 @@ import { serverTimestamp } from "firebase/firestore";
 import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
 import { format } from 'date-fns';
+import { isMobile } from "react-device-detect";
 
 const TryWebAppLink = () => {
 const db = getFirestore();
@@ -105,7 +106,7 @@ const linkStyle = {
                          fontSize: '16px',
                          textDecoration: 'underline',
                          cursor: 'pointer',
-                       }}>Try the web app (beta)</div>
+                       }}>{isMobile?Try the web app (beta):Try the web app (beta for Desktop)}</div>
         </Link>
       </div>
     </div>

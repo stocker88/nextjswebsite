@@ -73,8 +73,8 @@ import SignUpModal from '../SignUpModal';
 <IntroApp/>
         <Swipe/>
 
-        {!isMobile && <SearchStocks stockData={stockDataSearch} />}
-        {!isMobile && <TryWebAppLink/>}
+        <SearchStocks stockData={stockDataSearch} />
+        <TryWebAppLink/>
          <br></br>
 <br></br>
         <br></br>
