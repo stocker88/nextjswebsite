@@ -23,7 +23,7 @@ const TickerPage = ({ ticker }) => {
     <div className="iframe-container">
 
       <iframe
-        src={`http://localhost:3000/web-app#/financial/${ticker}`}
+        src={`http://www.stockstobuynow.ai/web-app#/financial/${ticker}`}
 
       ></iframe>
 
