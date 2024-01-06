@@ -106,7 +106,7 @@ const linkStyle = {
                          fontSize: '16px',
                          textDecoration: 'underline',
                          cursor: 'pointer',
-                       }}>{isMobile?Try the web app (beta):Try the web app (beta for Desktop)}</div>
+                       }}>{isMobile?'Try the web app (beta)':'Try the web app (beta for Desktop)'}</div>
         </Link>
       </div>
     </div>
