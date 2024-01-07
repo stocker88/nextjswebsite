@@ -122,7 +122,7 @@ const MeetingButton = ({
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
      <CompanyList companies={stockData} />
-
+<div style={{paddingTop: 'max(100px,10vw)'}}></div>
 
 
              <div style={{paddingTop: 'max(70px,5vw)'}}></div>
@@ -167,10 +167,10 @@ const MeetingButton = ({
                      </center>
                      </div>
 
-        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
-        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
-        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
-        <div style={{paddingTop: 'max(50px,5vw)'}}></div>
+        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
+        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
+        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
+        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
 
 
 </section>

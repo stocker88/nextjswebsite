@@ -152,20 +152,20 @@ export default function Post({ post, morePosts, preview }: Props) {
 
 
                 <div style={{
-                   'position': 'fixed',
-                   'bottom': '1rem',
-                   'left': isMobile?'5%':'min(50px, 1vw)',
-                   'backgroundColor': '#493bc3',
-                   'padding': 'min(10px, 0.8vw)',
-                   'boxShadow': '0px 0px 8px rgba(250, 250, 250, 0.4)',
-                   'zIndex': '100', /* Adjust the z-index to ensure it appears above other content */
-                   'borderRadius': '30px 30px 30px 30px',
-                    'display': 'flex',
-                     'flexDirection': isMobile? 'row' :'column',
-                    'whiteSpace': isMobile ? 'nowrap' : 'normal',
-                    'overflowX': isMobile ? 'auto' : 'visible',
-                    'justifyContent': isMobile ?'center': 'flex-start',
-                 }}>
+                  'position': 'fixed',
+                  'bottom': '1rem',
+                  'left': isMobile ? '5%' : 'min(50px, 1vw)',
+                  'backgroundColor': 'rgba(18, 18, 18, 0.9)', /* Dark color with opacity */
+                  'padding': 'min(10px, 0.8vw)',
+                  'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)', /* Lighter shadow for dark mode */
+                  'zIndex': '100',
+                  'borderRadius': '30px',
+                  'display': 'flex',
+                  'flexDirection': isMobile ? 'row' : 'column',
+                  'whiteSpace': isMobile ? 'nowrap' : 'normal',
+                  'overflowX': isMobile ? 'auto' : 'visible',
+                  'justifyContent': isMobile ? 'center' : 'flex-start',
+                }}>
             <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
               <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>

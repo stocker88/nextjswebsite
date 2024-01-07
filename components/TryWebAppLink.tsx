@@ -97,6 +97,7 @@ const linkStyle = {
     };
   return (
     <div style={containerStyle}>
+    <br></br>
       <div>
 
         <Link href="/web-app" onClick={handleClick}>
@@ -106,6 +107,10 @@ const linkStyle = {
                          textDecoration: 'underline',
                          cursor: 'pointer',
                        }}>{'Try the web app (beta for Desktop)'}</div>
+                       <br></br>
+                       <br></br>
+                       <br></br>
+                       <br></br>
         </Link>
       </div>
     </div>

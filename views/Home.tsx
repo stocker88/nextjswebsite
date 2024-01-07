@@ -90,7 +90,11 @@ import SignUpModal from '../SignUpModal';
               alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
                 width={384}
                 height={216}
-                style={{ borderRadius: '20px' }}
+                style={{
+                    borderRadius: '20px',
+                    boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                  }}
+
               />
 
 </center><br></br>

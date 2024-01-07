@@ -84,6 +84,10 @@ if(isMobile) {
                           width={160}
                           height={160}
                           alt='StocksToBuyNow ai app'
+                          style={{
+                              boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                            }}
+
                            /></Zoom>
 
                                  <div style={{paddingTop: 10}}></div>

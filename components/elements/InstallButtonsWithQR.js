@@ -69,6 +69,10 @@ if(isMobile) {
                            src={'/assets/images/qrcode.webp'}
                           width={140}
                           height={140}
+                          style={{
+                            'borderRadius': '10px',
+                            boxShadow: '0px 0px 15px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                          }}
                           alt='StocksToBuyNow ai financial advisor hot stocks to buy now logo'
                            /></Zoom>
 

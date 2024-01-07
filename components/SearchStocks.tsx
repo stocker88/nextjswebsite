@@ -154,6 +154,8 @@ const db = getFirestore();
           backgroundColor: 'white',
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
           width: '300px', // Adjust width as needed
+          color: 'black',
+          WebkitTextFillColor: 'black',
         }}
       />}
       {selectedTicker==''&& <div style={{
