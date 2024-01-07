@@ -21,6 +21,7 @@ import SearchStocks from '../components/SearchStocks';
 import TryWebAppLink from '../components/TryWebAppLink';
 import { stockDataSearch } from '../components/constants';
 import { isMobile, browserName } from "react-device-detect";
+import Image from 'next/image';
 
 type Props = {
   posts: Post[]
@@ -65,6 +66,7 @@ import SignUpModal from '../SignUpModal';
 */}
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(#00D9FF, #3700B3)" }}/>
       <br></br>
+
           <br></br>
           <br></br>
         <Container>
@@ -72,7 +74,27 @@ import SignUpModal from '../SignUpModal';
         <br></br>
 <IntroApp/>
         <Swipe/>
+<center>
+      <Image
+       src='/assets/images/stockstobuynow.webp'
+       alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
+      width={151}
+      height={151}
 
+       />
+<br></br>
+         <br></br>
+
+             <Image
+              src='/assets/images/aboutus.jpg'
+              alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
+                width={384}
+                height={216}
+                style={{ borderRadius: '20px' }}
+              />
+
+</center><br></br>
+         <br></br>
         <SearchStocks stockData={stockDataSearch} />
         <TryWebAppLink/>
          <br></br>

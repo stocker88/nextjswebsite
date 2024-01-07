@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/web-app/financial/[ticker]": [
+    "/web-app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/web-app/financial/[ticker].js"
+      "static/chunks/pages/web-app.js"
     ]
   },
   "ampFirstPages": []

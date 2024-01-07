@@ -83,7 +83,7 @@ const FeaturesSplit = ({
          <center>
 
          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-                 Ex Goldman Sachs, Bank of America and OpenAI Directors
+                 Ex Goldman Sachs, Bank of America, Google and OpenAI Directors
 
                  </h2>
 

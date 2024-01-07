@@ -6,12 +6,15 @@ import { serverTimestamp } from "firebase/firestore";
 import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
 import { format } from 'date-fns';
+import ConfettiExplosion from 'react-confetti-explosion';
+import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
 
 const SearchStocks = ({ stockData }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-
+const [selectedTicker, setSelectedTicker] = useState('');
+const [isExploding, setIsExploding] = useState(false);
 
 const db = getFirestore();
 
@@ -112,6 +115,10 @@ const db = getFirestore();
           screenWidth: deviceInfo.screenWidth,
           screenHeight: deviceInfo.screenHeight,
         }, { merge: true });
+
+
+        setSelectedTicker(ticker)
+        setIsExploding(true)
   };
 
 
@@ -120,23 +127,36 @@ const db = getFirestore();
   return (
     <div>
     <center>
+       <>{isExploding && <ConfettiExplosion
+                              width={1600}
+                              particleCount={350} // Equivalent to particleCount
+                              duration={4000} // Equivalent to duration
+                               force={0.8} // Equivalent to force
+                              />}</>
+                 {selectedTicker!=='' &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
+                    {`Access ${selectedTicker} Forecast and Price Target Now`}
+                    <br></br>
+                    <br></br>
+                      </h1>    </center>}
+                  {selectedTicker!=='' && <InstallButtonsWithQR/>}
+      {selectedTicker==''&&
       <input
         type="text"
         placeholder="Search by ticker or name..."
         value={searchQuery}
         onChange={handleSearch}
         style={{
-          padding: '15px',
-          paddingLeft: '20px',
+          padding: '25px',
+          paddingLeft: '25px',
           paddingRight: '20px',
-          borderRadius: '30px',
+          borderRadius: '20px',
           border: 'none',
           backgroundColor: 'white',
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
           width: '300px', // Adjust width as needed
         }}
-      />
-      <div style={{
+      />}
+      {selectedTicker==''&& <div style={{
                       display: 'flex',
                       justifyContent: 'center', // Center the content horizontally
                     }}>
@@ -147,11 +167,7 @@ const db = getFirestore();
            }}>
         {searchResults.map((stock, index) => (
          <div style={{ display: 'flex', justifyContent: 'center' }}>
-           <Link
-           href={`/web-app/financial/${stock.ticker}`}
-           key={index}
-            onClick={() => handleClick(stock.ticker)}
-           >
+                    <a onClick={() => handleClick(stock.ticker)}>
                      <div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', marginTop: '20px' }}>
                 {imageExists[stock.ticker] ? (
                             <img
@@ -194,10 +210,10 @@ const db = getFirestore();
                          </div>
                        </div>
                      </div>
-                   </Link>
+                    </a>
                    </div>
         ))}
-      </ul></div>
+      </ul></div>}
       </center>
     </div>
   );
