@@ -33,6 +33,7 @@ TelegramIcon,
     RedditShareCount,
 
 } from "react-share";
+import { isMobile} from "react-device-detect";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
@@ -68,15 +69,6 @@ const trackPage = page => {
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
 export default function Index({ allPosts }: Props) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
-    };
-
-  }, []);
-
 
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(0,-1)
