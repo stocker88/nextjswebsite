@@ -164,7 +164,6 @@ export default function Index({ allPosts }: Props) {
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
 
 
-
         </Head>
 
       </Layout>

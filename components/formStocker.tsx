@@ -171,34 +171,6 @@ const Div = styled.div`
             setIsSubmitted(true)
             setIsExploding(true)
 
-          const url = 'https://graph.facebook.com/v2.8/act_<AD_ACCOUNT_ID>/customconversions';
-          const accessToken = '<ACCESS_TOKEN>';
-          const pixelId = '3644450535825105';
-
-          const data = {
-            name: 'Example Custom conversion',
-            pixel_id: pixelId,
-            custom_event_type: 'PURCHASE',
-            access_token: accessToken,
-          };
-
-          try {
-            const response = await fetch(url, {
-              method: 'POST',
-              body: JSON.stringify(data),
-              headers: {
-                'Content-Type': 'application/json',
-              },
-            });
-
-            const result = await response.json();
-            console.log(result);
-
-            // Handle the result as needed
-          } catch (error) {
-            console.error('Error:', error);
-            // Handle the error
-          }
            {/*
            setMessage(<InstallButtonsWithQR/>);
            setTimeout(
