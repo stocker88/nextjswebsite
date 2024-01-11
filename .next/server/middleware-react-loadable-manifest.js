@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"../components/formStocker.tsx -> react-facebook-pixel\":{\"id\":\"../components/formStocker.tsx -> react-facebook-pixel\",\"files\":[\"static/chunks/node_modules_react-facebook-pixel_dist_fb-pixel_js.js\"]}}"

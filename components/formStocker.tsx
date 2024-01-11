@@ -124,10 +124,17 @@ const Div = styled.div`
         }
       };
 
-
       useEffect(() => {
         // Fetch device information when the component mounts
         fetchDeviceInfo();
+            import("react-facebook-pixel")
+              .then((x) => x.default)
+              .then((ReactPixel) => {
+                ReactPixel.init('3644450535825105');
+
+
+                ReactPixel.pageView();
+              });
       }, []); // Empty dependency array ensures the effect runs only once after initial render
 
 
@@ -139,37 +146,46 @@ const Div = styled.div`
     const submitHandler = ()=> {
 
 
-            console.log(input);
-            //add to firebase
-            const dateTime = Date.now();
-            const unixTime = Math.floor(dateTime / 1000);
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('3644450535825105');
 
-            const sessionId = sessionData.sessionId || '';
 
-            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-            const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
-
-             setDoc(doc(db, "contactList", docId), {
-
-                emailTime: serverTimestamp(),
-                time: serverTimestamp(),
-                unixTime: unixTime,
-              userAgent: deviceInfo.userAgent,
-              platform: deviceInfo.platform,
-              language: deviceInfo.language,
-              screenWidth: deviceInfo.screenWidth,
-              screenHeight: deviceInfo.screenHeight,
-              from: from,
-                }, { merge: true });
-
-            if (sessionId === ''){
-                setSessionData({ ...sessionData, sessionId: docId });
-            }
-
-            setShowDropdown(true)
-            setInput("");
-            setIsSubmitted(true)
-            setIsExploding(true)
+        ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
+      });
+//
+//             console.log(input);
+//             //add to firebase
+//             const dateTime = Date.now();
+//             const unixTime = Math.floor(dateTime / 1000);
+//
+//             const sessionId = sessionData.sessionId || '';
+//
+//             const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
+//             const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
+//
+//              setDoc(doc(db, "contactList", docId), {
+//
+//                 emailTime: serverTimestamp(),
+//                 time: serverTimestamp(),
+//                 unixTime: unixTime,
+//               userAgent: deviceInfo.userAgent,
+//               platform: deviceInfo.platform,
+//               language: deviceInfo.language,
+//               screenWidth: deviceInfo.screenWidth,
+//               screenHeight: deviceInfo.screenHeight,
+//               from: from,
+//                 }, { merge: true });
+//
+//             if (sessionId === ''){
+//                 setSessionData({ ...sessionData, sessionId: docId });
+//             }
+//
+//             setShowDropdown(true)
+//             setInput("");
+//             setIsSubmitted(true)
+//             setIsExploding(true)
 
            {/*
            setMessage(<InstallButtonsWithQR/>);
