@@ -12,7 +12,6 @@ import Home from '../views/Home';
 import ReactGA from 'react-ga4';
 import { initializeApp } from "firebase/app";
 import { useState, useEffect } from 'react';
-import Script from 'next/script';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -164,20 +163,6 @@ export default function Index({ allPosts }: Props) {
           <link rel="apple-touch-icon" href="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
 
-
-     // In your component or page
-     <div dangerouslySetInnerHTML={{ __html: `
-       !function(f,b,e,v,n,t,s)
-       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-       n.queue=[];t=b.createElement(e);t.async=!0;
-       t.src=v;s=b.getElementsByTagName(e)[0];
-       s.parentNode.insertBefore(t,s)}(window, document,'script',
-       'https://connect.facebook.net/en_US/fbevents.js');
-       fbq('init', '3644450535825105');
-       fbq('track', 'PageView');
-     ` }} />
 
 
         </Head>
