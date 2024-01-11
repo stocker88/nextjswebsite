@@ -12,6 +12,7 @@ import Home from '../views/Home';
 import ReactGA from 'react-ga4';
 import { initializeApp } from "firebase/app";
 import { useState, useEffect } from 'react';
+import Script from 'next/script';
 import {
   FacebookShareButton,
   LinkedinShareButton,

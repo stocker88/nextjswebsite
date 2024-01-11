@@ -1,7 +1,6 @@
 // flutter-app.js
 import Head from 'next/head';
 import FlutterAppContainer from '../components/sections/FlutterAppContainer'; // Update the path
-import Script from 'next/script';
 
 const FlutterAppPage = () => {
     console.log('Loading Flutter script...');
