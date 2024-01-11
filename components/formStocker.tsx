@@ -154,38 +154,38 @@ const Div = styled.div`
 
         ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
       });
-//
-//             console.log(input);
-//             //add to firebase
-//             const dateTime = Date.now();
-//             const unixTime = Math.floor(dateTime / 1000);
-//
-//             const sessionId = sessionData.sessionId || '';
-//
-//             const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-//             const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
-//
-//              setDoc(doc(db, "contactList", docId), {
-//
-//                 emailTime: serverTimestamp(),
-//                 time: serverTimestamp(),
-//                 unixTime: unixTime,
-//               userAgent: deviceInfo.userAgent,
-//               platform: deviceInfo.platform,
-//               language: deviceInfo.language,
-//               screenWidth: deviceInfo.screenWidth,
-//               screenHeight: deviceInfo.screenHeight,
-//               from: from,
-//                 }, { merge: true });
-//
-//             if (sessionId === ''){
-//                 setSessionData({ ...sessionData, sessionId: docId });
-//             }
-//
-//             setShowDropdown(true)
-//             setInput("");
-//             setIsSubmitted(true)
-//             setIsExploding(true)
+
+            console.log(input);
+            //add to firebase
+            const dateTime = Date.now();
+            const unixTime = Math.floor(dateTime / 1000);
+
+            const sessionId = sessionData.sessionId || '';
+
+            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
+            const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
+
+             setDoc(doc(db, "contactList", docId), {
+
+                emailTime: serverTimestamp(),
+                time: serverTimestamp(),
+                unixTime: unixTime,
+              userAgent: deviceInfo.userAgent,
+              platform: deviceInfo.platform,
+              language: deviceInfo.language,
+              screenWidth: deviceInfo.screenWidth,
+              screenHeight: deviceInfo.screenHeight,
+              from: from,
+                }, { merge: true });
+
+            if (sessionId === ''){
+                setSessionData({ ...sessionData, sessionId: docId });
+            }
+
+            setShowDropdown(true)
+            setInput("");
+            setIsSubmitted(true)
+            setIsExploding(true)
 
            {/*
            setMessage(<InstallButtonsWithQR/>);
