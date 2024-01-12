@@ -73,11 +73,11 @@ const FeaturesSplit = ({
 
 
 
- <br></br>
- <br></br>
- <center>
-       <AboutUs/>
-</center>
+{/*  <br></br> */}
+{/*  <br></br> */}
+{/*  <center> */}
+{/*        <AboutUs/> */}
+{/* </center> */}
 
 
          <center>

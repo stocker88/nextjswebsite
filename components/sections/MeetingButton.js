@@ -109,7 +109,7 @@ const MeetingButton = ({
 
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of +12,800 investors who receive high quality stocks adapted to their own preferences
+       Join a community of +12,800 investors
 
        </div>
 

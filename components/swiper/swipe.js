@@ -43,44 +43,82 @@ const containerStyle = {
   return (
     <>
 
-    <div style={{ ...containerStyle, ...desktopStyles }}>
-      <div style={splitItemStyle}>
       <center>
-        <div className={classNames('split-item-image', 'center-content-mobile')}>
           <Zoom>
             <Image
-              width={320}
-              height={693}
+              width={600}
+              height={337.5}
               className="shadow-md"
-              src="/assets/images/chatgpt2.webp"
+              src="/assets/images/1.webp"
               style={splitItemImageStyle}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
           </Zoom>
-        </div>
-        </center>
-      </div>
 
-      <div style={splitItemStyle}>
+        </center>
+
       <center>
-        <div className={classNames('split-item-image', 'center-content-mobile')}>
           <Zoom>
             <Image
-              src="/assets/images/portfolio2.webp"
-              width={320}
-              height={693}
+              width={600}
+              height={337.5}
               className="shadow-md"
+              src="/assets/images/2.webp"
               style={splitItemImageStyle}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-              alt="Unlimited Virtual Money StocksToBuyNow Screenshot"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
           </Zoom>
-        </div>
-            </center>
-      </div>
 
-    </div>
+        </center>
+
+      <center>
+          <Zoom>
+            <Image
+              width={600}
+              height={337.5}
+              className="shadow-md"
+              src="/assets/images/3.webp"
+              style={splitItemImageStyle}
+              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
+            />
+          </Zoom>
+
+        </center>
+
+      <center>
+          <Zoom>
+            <Image
+              width={600}
+              height={337.5}
+              className="shadow-md"
+              src="/assets/images/4.webp"
+              style={splitItemImageStyle}
+              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
+            />
+          </Zoom>
+
+        </center>
+
+      <center>
+          <Zoom>
+            <Image
+              width={600}
+              height={337.5}
+              className="shadow-md"
+              src="/assets/images/5.webp"
+              style={splitItemImageStyle}
+              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
+            />
+          </Zoom>
+
+        </center>
+
+
 
 
 

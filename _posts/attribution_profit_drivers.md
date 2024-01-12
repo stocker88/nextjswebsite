@@ -1,7 +1,7 @@
 ---
 title: 'How Can You Beat the S&P500 Stock Market?'
-excerpt: 'We will explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, like technology and healthcare. Imagine it as a team of 500 players, each player being a stock from various companies, Tesla, Nvidia, Palantir, OpenAI etc. All these players work together, and their combined stocks performance affects how well the entire team, or stock market, is doing. We teach you how to become the next Warren Buffett and beat the stock market...'
-seoExcerpt: 'We will explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, like technology and healthcare. Imagine it as a team of 500 players, each player being a stock from various companies, Tesla, Nvidia, Palantir, OpenAI etc. All these players work together, and their combined stocks performance affects how well the entire team, or stock market, is doing. We teach you how to become the next Warren Buffett and beat the stock market...'
+excerpt: 'We explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, like technology and healthcare... Imagine it as a team of 500 players...'
+seoExcerpt: 'We will explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, like technology and healthcare. Imagine it as a team of 500 players...'
 coverImage: '/assets/blog/attribution/performance_attribution.jpg'
 date: '2023-12-01T05:35:07.322Z'
 author:

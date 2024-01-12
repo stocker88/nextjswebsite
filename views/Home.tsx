@@ -12,6 +12,7 @@ import TitleSplit2 from '../components/sections/Title2Split';
 import TitleSplit3 from '../components/sections/Title3Split';
 import TitleSplit4 from '../components/sections/Title4Split';
 import Testimonial from '../components/sections/Testimonial';
+import NewsletterSignUp from '../components/formStocker'
 import Header from '../components/layout/Header';
 import type Post from '../interfaces/post';
 import Container from '../components/container'
@@ -96,7 +97,9 @@ import SignUpModal from '../SignUpModal';
                   }}
 
               />
-
+              <br></br>
+                       <br></br>
+<NewsletterSignUp from='Hero2'/>
 </center><br></br>
          <br></br>
         <SearchStocks stockData={stockDataSearch} />

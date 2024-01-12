@@ -1,5 +1,5 @@
 ---
-title: 'This AI Investing App beats Email Newsletters and Whatsapp Channels'
+title: 'AI Investing Recommendations beats Email Newsletters and Whatsapp Channels'
 excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
 coverImage: '/assets/blog/ai-advisor/ai-advisor.jpg'

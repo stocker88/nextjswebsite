@@ -72,7 +72,11 @@ const Hero = ({
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-            We send you hot stocks to buy before they blow up: you save time, improve your trading, and check the best opportunities.
+            Maximize Profits, Minimize Risks.
+            <br></br>
+            Our cutting-edge AI stock recommendations outperform the rest.
+            <br></br>
+            Unleash financial success – download now!
             </h2>
           </div>
 
@@ -95,7 +99,7 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of +12,800 investors who receive high quality stocks adapted to their own preferences
+       Join a community of +12,800 investors
 
        </div>
 
