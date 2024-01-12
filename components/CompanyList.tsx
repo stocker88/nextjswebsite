@@ -70,45 +70,39 @@ const tableTextStyle: CSSProperties = {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div style={{ width: '80%', maxWidth: '600px' }}>
-        {companies.map((company, index) => (
-     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-
-       <tbody>
-         {companies.map((company, index) => (
-           <tr key={index} style={tableRowStyle}>
-             <td style={tableCellStyle}>
-               <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
-                 {imageExists[company.ticker] ? (
-                   <img
-                     src={`/assets/assets/logo/${company.ticker}.webp`}
-                     alt={`Logo of ${company.ticker}`}
-                     style={tableImageStyle}
-                   />
-                 ) : (
-                   <div style={tablePlaceholderStyle}>
-                     <span style={tablePlaceholderTextStyle}>{company.logo.charAt(0)}</span>
-                   </div>
-                 )}
-               </Link>
-             </td>
-             <td style={tableCellStyle}>
-               <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
-                 <span style={tableTextStyle}>{company.ticker}</span>
-               </Link>
-             </td>
-             <td style={tableCellStyle}>
-               <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
-                 <span style={tableTextStyle}>{company.name}</span>
-               </Link>
-             </td>
-           </tr>
-         ))}
-       </tbody>
-     </table>
-
-
-
-        ))}
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <tbody>
+            {companies.map((company) => (
+              <tr key={company.id} style={tableRowStyle}>
+                <td style={tableCellStyle}>
+                  <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                    {imageExists[company.ticker] ? (
+                      <img
+                        src={`/assets/assets/logo/${company.ticker}.webp`}
+                        alt={`Logo of ${company.ticker}`}
+                        style={tableImageStyle}
+                      />
+                    ) : (
+                      <div style={tablePlaceholderStyle}>
+                        <span style={tablePlaceholderTextStyle}>{company.logo.charAt(0)}</span>
+                      </div>
+                    )}
+                  </Link>
+                </td>
+                <td style={tableCellStyle}>
+                  <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                    <span style={tableTextStyle}>{company.ticker}</span>
+                  </Link>
+                </td>
+                <td style={tableCellStyle}>
+                  <Link href={`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                    <span style={tableTextStyle}>{company.name}</span>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
