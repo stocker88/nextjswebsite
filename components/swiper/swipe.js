@@ -47,7 +47,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/1.webp"
               style={splitItemImageStyle}
@@ -62,7 +62,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/2.webp"
               style={splitItemImageStyle}
@@ -77,7 +77,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/3.webp"
               style={splitItemImageStyle}
@@ -92,7 +92,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/4.webp"
               style={splitItemImageStyle}
@@ -107,7 +107,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/5.webp"
               style={splitItemImageStyle}
@@ -122,7 +122,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/6.webp"
               style={splitItemImageStyle}
@@ -137,7 +137,7 @@ const containerStyle = {
           <Zoom>
             <Image
               width={600}
-              height={337.5}
+              height={434.4}
               className="shadow-md"
               src="/assets/images/7.webp"
               style={splitItemImageStyle}
