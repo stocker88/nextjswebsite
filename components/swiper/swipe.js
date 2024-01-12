@@ -118,6 +118,37 @@ const containerStyle = {
 
         </center>
 
+      <center>
+          <Zoom>
+            <Image
+              width={600}
+              height={337.5}
+              className="shadow-md"
+              src="/assets/images/6.webp"
+              style={splitItemImageStyle}
+              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
+            />
+          </Zoom>
+
+        </center>
+
+      <center>
+          <Zoom>
+            <Image
+              width={600}
+              height={337.5}
+              className="shadow-md"
+              src="/assets/images/7.webp"
+              style={splitItemImageStyle}
+              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
+            />
+          </Zoom>
+
+        </center>
+
+
 
 
 

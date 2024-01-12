@@ -224,7 +224,7 @@ const Div = styled.div`
               'background': from==='Hero'? 'black':from==='Footer'? 'black':from==='Hero2'? 'black':from==='FinalFooter'? 'black':'#493bc3',
               'maxWidth':'240px',
               'boxShadow': from==='Hero'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='Footer'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='Hero2'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='FinalFooter'? '0px 0px 13px rgba(250, 250, 250, 0.5)':'0px 0px 13px rgba(0, 0, 0, 0.5)',
-               }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get the App →</b>
+               }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Install Now→</b>
                 </button>
 
             }

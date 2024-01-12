@@ -93,7 +93,7 @@ const [deviceInfo, setDeviceInfo] = useState({
 
     <center>
         <button onClick={onClickedButton}>
-        <a href='https://www.linkedin.com/company/stockstobuynow-ai' target="_blank" >
+        <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
          <div style={{
             'paddingTop': '16px',
             'paddingBottom': '16px',
@@ -105,7 +105,7 @@ const [deviceInfo, setDeviceInfo] = useState({
             'background': '#493bc3',
             'maxWidth':'280px',
             'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
-        }}>Follow on LinkedIn</div></a>
+        }}>Connect on LinkedIn</div></a>
         </button>
       </center>
     </div>
