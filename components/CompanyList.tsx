@@ -1,35 +1,28 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { CSSProperties } from 'react';
 
 const CompanyList = ({ companies }) => {
   const [imageExists, setImageExists] = useState({});
 
 // Styles
-const tableHeaderStyle = {
+
+const tableHeaderStyle: CSSProperties = {
   textAlign: 'left',
   padding: '10px',
   borderBottom: '1px solid #ddd',
 };
 
-const tableRowStyle = {
+const tableRowStyle: CSSProperties = {
   borderBottom: '1px solid #ddd',
 };
 
-const tableCellStyle = {
+const tableCellStyle: CSSProperties = {
   padding: '10px',
 };
 
-const tableImageStyle = {
-  width: '50px',
-  height: '50px',
-  borderRadius: '50%',
-  objectFit: 'cover',
-  overflow: 'hidden',
-  boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.4)',
-  marginRight: '10px',
-};
 
-const tablePlaceholderStyle = {
+const tablePlaceholderStyle: CSSProperties = {
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
@@ -43,12 +36,12 @@ const tablePlaceholderStyle = {
   marginRight: '10px',
 };
 
-const tablePlaceholderTextStyle = {
+const tablePlaceholderTextStyle: CSSProperties = {
   fontSize: '24px',
   color: 'white',
 };
 
-const tableTextStyle = {
+const tableTextStyle: CSSProperties = {
   fontSize: '1.2em',
   fontWeight: 'bold',
   color: 'white',
