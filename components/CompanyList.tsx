@@ -22,6 +22,15 @@ const tableCellStyle: CSSProperties = {
 };
 
 
+const tableImageStyle: CSSProperties = {
+  width: '50px',
+  height: '50px',
+  borderRadius: '50%',
+  objectFit: 'cover',
+  overflow: 'hidden',
+  boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.4)',
+  marginRight: '10px',
+};
 const tablePlaceholderStyle: CSSProperties = {
   cursor: 'pointer',
   display: 'flex',
