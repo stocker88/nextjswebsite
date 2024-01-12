@@ -70,11 +70,20 @@ export default function Post({ post, morePosts, preview }: Props) {
   const title = `${post.title}`
 
   const [isMobile, setIsMobile] = useState(false);
+  const [scaleFactor, setScaleFactor] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
     };
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
+      setScaleFactor(newScaleFactor);
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     handleResize(); // Set initial state based on window width
 
@@ -82,6 +91,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -165,6 +175,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                   'whiteSpace': isMobile ? 'nowrap' : 'normal',
                   'overflowX': isMobile ? 'auto' : 'visible',
                   'justifyContent': isMobile ? 'center' : 'flex-start',
+                  transform: `scale(${scaleFactor})`,
                 }}>
             <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
               <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>

@@ -14,6 +14,29 @@ import { initializeApp } from "firebase/app";
 import { useState, useEffect } from 'react';
 import Script from 'next/script'
 
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  PinterestShareButton,
+  RedditShareButton,
+  TwitterShareButton,
+FacebookIcon,
+InstapaperIcon,
+LinkedinIcon,
+PinterestIcon,
+RedditIcon,
+TwitterIcon,
+WhatsappIcon,
+TelegramIcon,
+  WhatsappShareButton,
+  TelegramShareButton,
+  FacebookShareCount,
+    PinterestShareCount,
+    RedditShareCount,
+
+} from "react-share";
+import { isMobile} from "react-device-detect";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
   authDomain: "stocker-fcda2.firebaseapp.com",
@@ -49,13 +72,68 @@ const trackPage = page => {
 
 export default function Index({ allPosts }: Props) {
 
+  const [scaleFactor, setScaleFactor] = useState(0);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
+      setScaleFactor(newScaleFactor);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
+
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(0,-1)
   return (
     <>
        <Layout>
        {morePosts.length > 0 && <Home posts={morePosts} />}
+{<div style={{
+                          'position': 'fixed',
+                          bottom: 0,
+                          'left': 'min(50px, 1vw)',
+                          'backgroundColor': 'rgba(18, 18, 18, 0.9)',
+                          'padding': 'min(10px, 0.8vw)',
+                          'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)',
+                          'zIndex': '100',
+                          'borderRadius': '30px',
+                          'display': 'flex',
 
+                          transform: `scale(${scaleFactor})`,
+                          'flexDirection': isMobile ? 'row' : 'column',
+                            'whiteSpace': isMobile ? 'nowrap' : 'normal',
+                            'overflowX': isMobile ? 'auto' : 'visible',
+                            'justifyContent': isMobile ? 'center' : 'flex-start',
+                          'transition': 'bottom 0.3s ease-in-out', // Add smooth transition
+                        }}>
+
+            <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <TwitterShareButton aria-label="Twitter" children={<TwitterIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"} media={'https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png'}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
+              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
+
+                </div>}
         <Head>
 
          <script type="application/ld+json"
