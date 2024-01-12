@@ -137,7 +137,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
 
                    <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-                  We send you hot stocks to buy before they blow up: you save time, improve your trading, and check the best opportunities.
+                  Maximize Profits, Minimize Risks. Our cutting-edge AI stock recommendations outperform the rest. Unleash financial success!
                   </h2>
                   <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
                   <NewsletterSignUp from={post.slug}/>
