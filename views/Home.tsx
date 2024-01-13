@@ -103,7 +103,7 @@ import SignUpModal from '../SignUpModal';
 </center><br></br>
          <br></br>
         <SearchStocks stockData={stockDataSearch} />
-        <TryWebAppLink/>
+{/*         <TryWebAppLink/> */}
          <br></br>
 <br></br>
         <br></br>
@@ -118,7 +118,7 @@ import SignUpModal from '../SignUpModal';
             excerpt={heroPost.excerpt}
           />
         )}*/}
-        {posts.length > 0 && <MoreStories posts={posts} />}
+        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(0, 5):posts} />}
 
       </Container>
       {posts.length > 0 && <FeaturesSplit className="illustration-section-02" posts={posts} hasBgColor={true} invertMobile={true} imageFill={true}/>}

@@ -121,7 +121,7 @@ const MeetingButton = ({
 <br></br><br></br><br></br>
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
-     <CompanyList companies={stockData} />
+     {(isMobile && <CompanyList companies={stockData} />)}
 <div style={{paddingTop: 'max(100px,10vw)'}}></div>
 
 
@@ -146,8 +146,8 @@ const MeetingButton = ({
                           }}
 
                           />
-        
 
+<br></br><br></br>
   <NewsletterSignUp from='FinalFooter'/>
 <br></br>
 <br></br>
