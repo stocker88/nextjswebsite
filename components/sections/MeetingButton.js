@@ -118,10 +118,10 @@ const MeetingButton = ({
             <br></br>
 
 
-<br></br><br></br><br></br>
+<br></br><br></br>
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
-     {(isMobile && <CompanyList companies={stockData} />)}
+     {(!isMobile && <CompanyList companies={stockData} />)}
 <div style={{paddingTop: 'max(100px,10vw)'}}></div>
 
 
@@ -134,21 +134,21 @@ const MeetingButton = ({
                       height={58.33}
                       />*/}
 
-          <Image
-                          src='/assets/images/stockstobuynow.webp'
-                          alt="StocksToBuyNow AI App"
-                          priority={true}
-                          width={256}
-                          height={256}
-                         style={{
-                         width:'min(max(165px,14vw),250px)',
-                          height:'min(max(165px,14vw),250px)',
-                          }}
+         {(!isMobile && <Image
+                                                  src='/assets/images/stockstobuynow.webp'
+                                                  alt="StocksToBuyNow AI App"
+                                                  priority={true}
+                                                  width={256}
+                                                  height={256}
+                                                 style={{
+                                                 width:'min(max(165px,14vw),250px)',
+                                                  height:'min(max(165px,14vw),250px)',
+                                                  }}
 
-                          />
+                                                  />)}
 
 <br></br><br></br>
-  <NewsletterSignUp from='FinalFooter'/>
+   {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
 <br></br>
 <br></br>
 <br></br>
