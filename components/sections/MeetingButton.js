@@ -149,11 +149,7 @@ const MeetingButton = ({
 
 <br></br><br></br>
    {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+   {(!isMobile && <><br></br><br></br><br></br><br></br><br></br></>)}
              </Container>
                  </div>
 
@@ -161,7 +157,7 @@ const MeetingButton = ({
                      </center>
                      </div>
 
-        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
+        {(!isMobile &&<div style={{paddingTop: 'max(100px,20vw)'}}></div>)}
         <div style={{paddingTop: 'max(100px,20vw)'}}></div>
 
 
