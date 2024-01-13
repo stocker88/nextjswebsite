@@ -70,11 +70,12 @@ import SignUpModal from '../SignUpModal';
 
           <br></br>
           <br></br>
-        <Container>
+
         <br></br>
         <br></br>
 <IntroApp/>
         <Swipe/>
+        <Container>
 <center>
       <Image
        src='/assets/images/stockstobuynow.webp'
