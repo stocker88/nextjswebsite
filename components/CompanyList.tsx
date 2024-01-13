@@ -14,7 +14,7 @@ const tableHeaderStyle: CSSProperties = {
 };
 
 const tableRowStyle: CSSProperties = {
-  borderBottom: '1px solid #ddd',
+  borderBottom: 'none',
 };
 
 const tableCellStyle: CSSProperties = {
