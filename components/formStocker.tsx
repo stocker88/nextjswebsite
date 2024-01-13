@@ -219,7 +219,7 @@ const Div = styled.div`
               'color': 'black',
                'width':'40vw',
               'textAlign': 'center',
-              'fontSize': 'min(20px,max(15px,2vw))',
+              'fontSize': 'min(20px,max(16px,2.3vw))',
               'borderRadius': '30px 30px 30px 30px',
               'background': from==='Hero'? 'black':from==='Footer'? 'black':from==='Hero2'? 'black':from==='FinalFooter'? 'black':'#493bc3',
               'maxWidth':'240px',
