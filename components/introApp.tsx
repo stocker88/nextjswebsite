@@ -9,7 +9,7 @@ const IntroApp = () => {
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         Maximize Profits With AI Trading Signals Based On:
         </h2>
-        <p className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)', textAlign: 'center' }}>
+        <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ 'color': 'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)', 'textAlign': 'center' }}>
           <br></br>
           <div style={{ textAlign: 'left' }}>
           - Social Hype Sentiment Data
@@ -21,7 +21,7 @@ const IntroApp = () => {
         - Technical Trading Projections
 
           </div>
-        </p>
+        </h2>
 
 
 
