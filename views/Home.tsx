@@ -23,6 +23,7 @@ import TryWebAppLink from '../components/TryWebAppLink';
 import { stockDataSearch } from '../components/constants';
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
+import LinkedInButton from '../components/connectLinkedin';
 
 type Props = {
   posts: Post[]
@@ -41,6 +42,13 @@ const stockData = [
   { ticker: 'AAPL', name: 'Apple Inc.', logo: 'aapl.webp' },
   // Add more company data here...
 ];
+  const circleImageStyle = {
+    width: '350px', // Set your desired width
+    height: '350px', // Set your desired height
+    borderRadius: '50%', // Make it a circle
+    overflow: 'hidden', // Hide overflow (optional)
+    boxShadow: '0 0 50px rgba(0, 0, 0, 0.5)',
+  };
 
   return (
     <>
@@ -78,17 +86,41 @@ import SignUpModal from '../SignUpModal';
         </Container>
         <Swipe/>
         <Container>
-<center>
-      <Image
-       src='/assets/images/stockstobuynow.webp'
-       alt="AI powered Virtual Investing Advisor App analysing hedge fund trading economic and financial data to find the next Nvidia, Tesla, Roblox, the Next Apple"
-      width={151}
-      height={151}
 
-       />
+
+
+         <center>
+
+
+
+
 <br></br>
          <br></br>
 
+<br></br>
+         <br></br>
+
+<br></br>
+         <br></br>
+ <div style={circleImageStyle} className="circle-image-container">
+      <img src={'/assets/images/aness.jpeg'}
+      alt='Stocks To Buy Now AI  Founders'
+       style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    </div>
+<br></br>
+<h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                               Ex Goldman Sachs, Bank of America and Google Directors
+
+                               </h2>
+                                <h3 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                               <br></br>
+                               Over 15 Years in Investing and AI
+           <br></br>
+         <br></br>
+
+    <LinkedInButton/>
+  <br></br>
+   <br></br>
              <Image
               src='/assets/images/aboutus.jpg'
               alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
@@ -100,13 +132,44 @@ import SignUpModal from '../SignUpModal';
                   }}
 
               />
+                               <br></br>
+                               <br></br>
+                               <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+<h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ 'color': 'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)', 'textAlign': 'center' }}>
+          We leverage Statistical Methods & AI:
+          <br></br>
+          <br></br>
+          <div style={{ textAlign: 'left' }}>
+          - Social Hype Sentiment Data
+          <br></br>
+          - AI Quantitative Factors
+          <br></br>
+        - Financial Economic Analysis
+            <br></br>
+        - Technical Trading Projections
+
+          </div>
+        </h2>
+        </section>
+
+
+                             </h3>
+
+
+
               <br></br>
                        <br></br>
-<NewsletterSignUp from='Hero2'/>
-</center><br></br>
-         <br></br>
+
+</center>
         <SearchStocks stockData={stockDataSearch} />
+        <br></br>
+                 <br></br>
+
 {/*         <TryWebAppLink/> */}
+         <br></br>
+         <br></br>
+         <br></br>
+         <br></br>
          <br></br>
 <br></br>
         <br></br>

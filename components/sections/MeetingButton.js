@@ -74,22 +74,32 @@ const MeetingButton = ({
           <div className="hero-content">
 <Container>
 <center>
+<br></br><br></br>
 
- <div className="container-sm reveal-from-bottom">
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-      <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 8px rgba(1, 74, 1, 0.7)'}}>
-                  Unlock the Power of Big Data
-     </h2>
-                     </div>
-<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+  <Image
+                  src='/assets/images/stockstobuynow.webp'
+                  alt="StocksToBuyNow AI App"
+                  priority={true}
+                  width={256}
+                  height={256}
+                 style={{
+                 width:'min(max(165px,14vw),250px)',
+                  height:'min(max(165px,14vw),250px)',
+                  }}
+
+                  />
+
+            <br></br>
+            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.2,textShadow: '0px 0px 7px rgba(1, 0, 1, 0.7)', maxWidth: "800px" }} >
+                Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
+              </h1>
+              <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
+
            <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
                     Maximize Profits, Minimize Risks. Our cutting-edge AI stock recommendations outperform the rest. Unleash financial success!
                     </h2>
-<br></br>
 
+<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
          </center>
          </Container>
         <NewsletterSignUp from='Footer'/>
@@ -122,10 +132,10 @@ const MeetingButton = ({
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
      {(!isMobile && <CompanyList companies={stockData} />)}
-<div style={{paddingTop: 'max(100px,10vw)'}}></div>
+<div style={{paddingTop: 'max(10px,5vw)'}}></div>
 
 
-             <div style={{paddingTop: 'max(70px,5vw)'}}></div>
+
 
                  {/*    <Image
                       src={require('assets/images/stockstobuynow.png')}
@@ -134,22 +144,8 @@ const MeetingButton = ({
                       height={58.33}
                       />*/}
 
-         {(!isMobile && <Image
-                                                  src='/assets/images/stockstobuynow.webp'
-                                                  alt="StocksToBuyNow AI App"
-                                                  priority={true}
-                                                  width={256}
-                                                  height={256}
-                                                 style={{
-                                                 width:'min(max(165px,14vw),250px)',
-                                                  height:'min(max(165px,14vw),250px)',
-                                                  }}
-
-                                                  />)}
-
-<br></br><br></br>
    {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
-   {(!isMobile && <><br></br><br></br><br></br><br></br><br></br></>)}
+
              </Container>
                  </div>
 

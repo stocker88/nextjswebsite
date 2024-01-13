@@ -16,7 +16,6 @@ import type Post from '../../interfaces/post'
 import Testimonial from './Testimonial'
 import QuoteDisplay from '../../components/inspiration';
 import AboutUs from '../../components/aboutUs';
-import LinkedInButton from '../../components/connectLinkedin';
 
 type Props = {
   posts: Post[]
@@ -71,45 +70,6 @@ const FeaturesSplit = ({
         <br></br>
 
 
-
-
- <br></br>
- <br></br>
- <center>
-       <AboutUs/>
-</center>
-
-
-         <center>
-
-         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-                 Ex Goldman Sachs, Bank of America, Google and OpenAI Directors
-
-                 </h2>
-
-
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-                 <br></br> Over 15 Years in Investing and AI
-                 <br></br>
-
-                 <br></br>
-
-                    <LinkedInButton/>
-
-               </h3>
-
-
-                 <br></br>
-                 <br></br>
-                 <br></br>
-                 <br></br>
-                 <br></br>
-                 <br></br>
-
-                     </center>
-
-
-
         <br></br>
         <br></br>
 
@@ -134,15 +94,7 @@ const FeaturesSplit = ({
 */}
 <center>
 
-    <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h2 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Testimonials
-      </h2>
-     {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        You have control over your own success
 
-      </h4>*/}
-    </section>
     <Testimonial/>
 
     <br></br> <br></br>

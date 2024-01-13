@@ -142,13 +142,13 @@ const db = getFirestore();
       {selectedTicker==''&&
       <input
         type="text"
-        placeholder="Search by ticker or name..."
+        placeholder="Search a ticker or company..."
         value={searchQuery}
         onChange={handleSearch}
         style={{
-          padding: '25px',
-          paddingLeft: '25px',
-          paddingRight: '20px',
+          padding: '30px',
+          paddingLeft: '20px',
+          paddingRight: '10px',
           borderRadius: '20px',
           border: 'none',
           backgroundColor: 'white',
@@ -156,6 +156,8 @@ const db = getFirestore();
           width: '300px', // Adjust width as needed
           color: 'black',
           WebkitTextFillColor: 'black',
+          fontSize: '18px', // Adjust the font size
+
         }}
       />}
       {selectedTicker==''&& <div style={{
