@@ -158,7 +158,7 @@ const MeetingButton = ({
                      </div>
 
         {(!isMobile &&<div style={{paddingTop: 'max(100px,20vw)'}}></div>)}
-        <div style={{paddingTop: 'max(100px,20vw)'}}></div>
+        {(!isMobile &&<div style={{paddingTop: 'max(100px,20vw)'}}></div>)}
 
 
 </section>

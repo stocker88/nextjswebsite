@@ -73,7 +73,9 @@ import SignUpModal from '../SignUpModal';
 
         <br></br>
         <br></br>
-<IntroApp/>
+        <Container>
+        <IntroApp/>
+        </Container>
         <Swipe/>
         <Container>
 <center>
