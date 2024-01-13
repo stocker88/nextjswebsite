@@ -167,23 +167,23 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>Stocks To Buy Now AI Trading Signals & Virtual Investing App</title>
+          <title>AI Trading Signals & Virtual Investing App</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive ai trading signals & invest in a virtual investing app" />
+          <meta name="description" property="og:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#00D9FF" />
-          <meta name="description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive ai trading signals & invest in a virtual investing app"/>
+          <meta name="description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app"/>
           <meta property="og:title" content="Maximize Profits: this AI App - Best Stocks To Buy Now" />
-          <meta name="og:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive ai trading signals & invest in a virtual investing app" />
+          <meta name="og:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.Maximize Profits: this.ai/" />
           <meta property="og:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           <meta name="twitter:title" content="Maximize Profits: this AI App - Best Stocks To Buy Now"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive ai trading signals & invest in a virtual investing app"/>
+          <meta name="twitter:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app"/>
           <meta name="twitter:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
