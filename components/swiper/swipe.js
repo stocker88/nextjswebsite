@@ -13,6 +13,7 @@ import IntroDataset from '../../components/introDataset';
 import SwiperCore, {
   EffectCoverflow,Pagination,Autoplay
 } from 'swiper';
+import Container from '../../components/container'
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import BookingMeetingButton from '../../components/bookingMeetingButton';
@@ -118,9 +119,8 @@ const containerStyle = {
 
         </center>
 
+<Container>
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-
-
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         Ask AI: Should you Buy Tesla?
         <br></br>
@@ -128,24 +128,27 @@ const containerStyle = {
         AI recommended Ferrari as a better alternative
         <br></br>
         <br></br>
-        Since then Tesla did -5%, Ferrari took +20%
+        Since then Tesla did -5%
+        <br></br>
+        <br></br>
+        Ferrari took +20%
         </h2>
     </section>
+    </Container>
 
     <center>
     <Zoom>
-                <Image
-                  width={600}
-                  height={900.451}
-                  className="shadow-md"
-                  src="/assets/images/teslarace.webp"
-                  style={splitItemImageStyle}
-                  sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-                  alt="Tesla vs Ferrari"
-                />
-              </Zoom>
+        <Image
+          width={600}
+          height={600}
+          className="shadow-md"
+          src="/assets/images/teslarace.webp"
+          style={splitItemImageStyle}
+          sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+          alt="Tesla vs Ferrari"
+        />
+      </Zoom>
     </center>
-
 
       <center>
           <Zoom>
