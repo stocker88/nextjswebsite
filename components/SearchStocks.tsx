@@ -93,6 +93,14 @@ const db = getFirestore();
     const dateTime = Date.now();
     const unixTime = Math.floor(dateTime / 1000);
 
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('3644450535825105');
+
+
+        ReactPixel.trackCustom('getTheAppClicked', {location: 'selectedStock'});
+      });
 
     const sessionId = sessionData.sessionId || '';
 
