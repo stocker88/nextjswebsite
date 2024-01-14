@@ -137,7 +137,7 @@ const [deviceInfo, setDeviceInfo] = useState({
             style={{
 
                  }}>  <div style={{
-                 'padding': '0.8rem',
+                 'padding': '0.95rem',
                  'color': 'white',
                   'width':'31vw',
                  'textAlign': 'center',

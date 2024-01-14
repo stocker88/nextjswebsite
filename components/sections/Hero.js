@@ -72,7 +72,7 @@ const Hero = ({
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-            Maximize Profits, Minimize Risks. Our cutting-edge AI stock recommendations outperform the rest. Unleash financial success!
+            Maximize Profits, Minimize Risks. Our cutting-edge AI stock recommendations outperform the market. Unleash financial success!
             </h2>
           </div>
 
