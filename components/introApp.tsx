@@ -7,8 +7,18 @@ const IntroApp = () => {
 
 
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Receive AI Trading Signals and Test in Our Virtual Investing App
+        Receive AI Trading Signals With Explanations
         </h2>
+        <br></br>
+        <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+        Test in Our Virtual Investing App
+        </h2>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+              Past AI Stock Price Predictions:
+              </h2>
 
 
 
