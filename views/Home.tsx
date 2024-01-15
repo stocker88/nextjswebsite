@@ -73,7 +73,7 @@ import SignUpModal from '../SignUpModal';
       {showModal && <SignUpModal onClose={toggleModal} />}
     </div>
 */}
-      <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 40%))" }}/>
+      <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 30%))" }}/>
       <br></br>
 
           <br></br>
