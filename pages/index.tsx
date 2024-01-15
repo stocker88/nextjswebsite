@@ -174,7 +174,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#00D9FF" />
+          <meta name="theme-color" content="hsl(200, 100%, 48%)" />
           <meta name="description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app"/>
           <meta property="og:title" content="Maximize Profits: this AI App - Best Stocks To Buy Now" />
           <meta name="og:description" content="Maximize Profits: this AI sends you the best stocks and crypto to buy today: receive hot ai trading signals & invest in a virtual investing app" />
