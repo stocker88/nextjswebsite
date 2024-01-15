@@ -73,7 +73,7 @@ import SignUpModal from '../SignUpModal';
       {showModal && <SignUpModal onClose={toggleModal} />}
     </div>
 */}
-      <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 30%))" }}/>
+      <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
       <br></br>
 
           <br></br>
@@ -145,9 +145,8 @@ import SignUpModal from '../SignUpModal';
           - AI Quantitative Factors
           <br></br>
         - Financial Economic Analysis
-            <br></br>
+         <br></br>
         - Technical Trading Projections
-
           </div>
         </h2>
         </section>
