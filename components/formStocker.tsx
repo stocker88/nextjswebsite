@@ -13,6 +13,8 @@ import 'firebase/firestore';
 
 import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
+import { emitEvent } from '../contexts/store';
+
 
 type Props = {
   from: string
@@ -143,7 +145,7 @@ const Div = styled.div`
 
     const submitHandler = ()=> {
 
-
+emitEvent('updateVariable', 3);
             console.log(input);
             //add to firebase
             const dateTime = Date.now();
@@ -199,8 +201,8 @@ const Div = styled.div`
 
     <>{isExploding && <ConfettiExplosion
                 width={1600}
-                particleCount={350} // Equivalent to particleCount
-                duration={4000} // Equivalent to duration
+                particleCount={250} // Equivalent to particleCount
+                duration={2000} // Equivalent to duration
                  force={0.8} // Equivalent to force
                 />}</>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
