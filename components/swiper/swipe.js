@@ -58,21 +58,7 @@ const containerStyle = {
           </Zoom>
 
         </center>
-
-      <center>
-          <Zoom>
-            <Image
-              width={600}
-              height={434.4}
-              className="shadow-md"
-              src="/assets/images/2.webp"
-              style={splitItemImageStyle}
-              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
-            />
-          </Zoom>
-
-        </center>
+<br></br>
 
       <center>
           <Zoom>
@@ -88,14 +74,14 @@ const containerStyle = {
           </Zoom>
 
         </center>
-
+        <br></br>
       <center>
           <Zoom>
             <Image
               width={600}
               height={434.4}
               className="shadow-md"
-              src="/assets/images/4.webp"
+              src="/assets/images/2.webp"
               style={splitItemImageStyle}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
@@ -104,21 +90,7 @@ const containerStyle = {
 
         </center>
 
-      <center>
-          <Zoom>
-            <Image
-              width={600}
-              height={434.4}
-              className="shadow-md"
-              src="/assets/images/5.webp"
-              style={splitItemImageStyle}
-              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
-              alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
-            />
-          </Zoom>
-
-        </center>
-
+<br></br>
 <Container>
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
@@ -134,6 +106,7 @@ const containerStyle = {
         Ferrari Took +20%
         </h2>
     </section>
+    <br></br>
     </Container>
 
     <center>
@@ -150,13 +123,14 @@ const containerStyle = {
       </Zoom>
     </center>
 
+<br></br>
       <center>
           <Zoom>
             <Image
               width={600}
               height={434.4}
               className="shadow-md"
-              src="/assets/images/6.webp"
+              src="/assets/images/4.webp"
               style={splitItemImageStyle}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
@@ -164,14 +138,14 @@ const containerStyle = {
           </Zoom>
 
         </center>
-
+<br></br>
       <center>
           <Zoom>
             <Image
               width={600}
               height={434.4}
               className="shadow-md"
-              src="/assets/images/7.webp"
+              src="/assets/images/5.webp"
               style={splitItemImageStyle}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
@@ -179,10 +153,6 @@ const containerStyle = {
           </Zoom>
 
         </center>
-
-
-
-
 
 
 <br></br>
