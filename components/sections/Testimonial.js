@@ -169,7 +169,7 @@ const Testimonial = ({
 <br></br> <br></br>
       <br></br><br></br>
 
-     <QuoteDisplay/>
+     <QuoteDisplay from='inspiration_button_homePage'/>
      <br></br> <br></br>
      <br></br> <br></br>
 

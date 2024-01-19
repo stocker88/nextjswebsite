@@ -165,7 +165,7 @@ const Div = styled.div`
               language: deviceInfo.language,
               screenWidth: deviceInfo.screenWidth,
               screenHeight: deviceInfo.screenHeight,
-              from: 'Inspiration Button',
+              from: from,
                 }, { merge: true });
 
             if (sessionId === ''){

@@ -206,7 +206,7 @@ export default function Post({ post, morePosts, preview }: Props) {
               <br></br>
               <br></br>
               <br></br>
-                                            <QuoteDisplay/>
+                                            <QuoteDisplay from={'inspiration_button_'+post.slug}/>
 
                               <br></br>
                               <br></br>
