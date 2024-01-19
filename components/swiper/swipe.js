@@ -47,7 +47,7 @@ const containerStyle = {
       <center>
           <Zoom>
             <Image
-              width={600}
+              width={493.75}
               height={434.4}
               className="shadow-md"
               src="/assets/images/1.webp"
@@ -63,7 +63,7 @@ const containerStyle = {
       <center>
           <Zoom>
             <Image
-              width={600}
+              width={493.75}
               height={434.4}
               className="shadow-md"
               src="/assets/images/3.webp"
@@ -78,7 +78,7 @@ const containerStyle = {
       <center>
           <Zoom>
             <Image
-              width={600}
+              width={493.75}
               height={434.4}
               className="shadow-md"
               src="/assets/images/2.webp"
@@ -112,8 +112,8 @@ const containerStyle = {
     <center>
     <Zoom>
         <Image
-          width={600}
-          height={600}
+          width={493.75}
+          height={493.75}
           className="shadow-md"
           src="/assets/images/teslarace.webp"
           style={splitItemImageStyle}
@@ -127,7 +127,7 @@ const containerStyle = {
       <center>
           <Zoom>
             <Image
-              width={600}
+              width={493.75}
               height={434.4}
               className="shadow-md"
               src="/assets/images/4.webp"
@@ -142,7 +142,7 @@ const containerStyle = {
       <center>
           <Zoom>
             <Image
-              width={600}
+              width={493.75}
               height={434.4}
               className="shadow-md"
               src="/assets/images/5.webp"
