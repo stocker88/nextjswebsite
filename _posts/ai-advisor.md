@@ -1,7 +1,7 @@
 ---
-title: 'AI Investing Recommendations beats Email Newsletters and Whatsapp Channels'
-excerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
-seoExcerpt: 'Have you ever wondered how financial gurus get paid? Do you know why Newsletters are overrated?'
+title: 'How does AI Stock Prediction Work? When Financial Expertise Meets Big Data'
+excerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to HelloStocker AI scientific approach...'
+seoExcerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to HelloStocker AI scientific approach...'
 coverImage: '/assets/blog/ai-advisor/ai-advisor.jpg'
 date: '2023-11-05T05:35:07.322Z'
 author:
@@ -12,179 +12,95 @@ ogImage:
 ---
 
 
-## 1) Email Newsletters are outdated
 
 &nbsp;
 
 &nbsp;
 
-### Newsletters send you 1 email per month, your AI sends you 60 recommendations per month (2 per day)
-z
-&nbsp;
-
-&nbsp;
-
-There are 500 stocks in the SP500
-
-&nbsp;
-
-3000 stocks in the Russell 3000
-
-&nbsp;
-
-2500 tech stocks in the Nasdaq.
-
-&nbsp;
-
-And even more ETFs and Cryptos (let's not get you overwhelmed).
-
-&nbsp;
-
-With a Newsletter, by the end of the year, you followed 12 stocks.
-
-&nbsp;
-
-You cannot possibly enjoy benefits from Diversification.
-
-&nbsp;
-
-And most likely you won't be learning much.
-
-&nbsp;
-
-
-With StocksToBuyNow AI, by the end of the year:
-
-&nbsp;
-
-&nbsp; - you diversified your portfolio with stocks that beat the SP500 market,
-
-&nbsp;
-
-&nbsp; - you get better at investing and understand the subtilities of macro economics, technical trading, and financial reportings.
+#### 🌟 We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.
 
 &nbsp;
 
 &nbsp;
 
-### Newsletter are slow to respond, your AI is available 24/7
+
+#### 🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:
 
 &nbsp;
 
-Have you tried emailing a newsletter?
+#### - Social Platform and Sentiment Analysis: 
 
 &nbsp;
 
-They respond within 30 days (if they don't forget about you).
-
-&nbsp;
-
-Do you know by how much can a stock price move within a month?
-
-&nbsp;
-
-Enough for you to review the price again and send them another email.
-
-&nbsp;
-
-StocksToBuyNow is available 24/7 and replies instantly.
-
+Analyzing social platform trends and sentiment analysis to predict which stocks are about to blow up.
 
 &nbsp;
 
 &nbsp;
 
-&nbsp;
-
-## 2) You shouldn't trust Whatsapp Gurus
+#### - Financial Statement and Wall Street Analysts ratings: 
 
 &nbsp;
 
-![](/assets/blog/ai-advisor/how-finance-gurus-make-money.webp)
-
-&nbsp;
-
-The Guru makes money with trading?
-
-&nbsp;
-
-**Not with his trading, with yours.**
-
-&nbsp;
-
-
-\- 1) The Guru shows you expensive cars rented in Dubai
-
-&nbsp;
-
-\- 2) The Guru pushes you to trade
-
-&nbsp;
-
-\- 3) You open an account with his affiliate broker
-
-&nbsp;
-
-\- 4) 🧐The affiliate pays the Guru $600
-
-&nbsp;
-
-\- 5) 🤯The Guru pushes you to day trade and takes 50% commissions on your trades
+Leveraging revenues, profitability and earnings report to predict which companies will outperform / are undervalued.
 
 &nbsp;
 
 &nbsp;
 
-### The Guru takes half your commissions!
-
-![](/assets/blog/ai-advisor/how_trading_gurus_make_money.png)
-
-
-Unless you live in Puerto Rico, your commissions and taxes will eat all your gains.
+#### - Macro Economic and Investment Styles: 
 
 &nbsp;
 
-Short term trading is taxes 40%.
+Studying which stage of the economy we are at to predict which investment style factor will be performing better.
 
 &nbsp;
-
-Long term investing is taxed 20%.
-
-&nbsp;
-
-Dividends are taxed 0%.
 
 &nbsp;
 
 
-&nbsp;
-
-
-## 3 lessons from 15 years in investing?
+![](/assets/blog/ai-advisor/aitrader.jpg)
 
 &nbsp;
 
-**🦄 Social influencers and 'Finance Gurus' don't make money with their trading: they make money with your trading.**
+&nbsp;
+
+
+#### - Company Competitive Advantage: 
 
 &nbsp;
 
-**💾 Email Newsletter are outdated and overrated for the service they offer.**
+Understanding what makes a company attractive with respect to peers and leverage insights to select future outperformers.
 
 &nbsp;
 
-**🧠 There is a smarter and cheaper way for you to profit from investing: StocksToBuyNow AI.**
+&nbsp;
+
+#### - Technical Trading Analysis: 
 
 &nbsp;
 
-After over 15 years in Goldman Sachs Asset Management Investment team office in New York City, managing alone a multi billion dollars book on Kerviel's ex trading desk, building automated AI trading analytics for Hedge Funds in London...
+Using technical trading and volume techniques to understand when is the best point to buy or sell a stock.
 
 &nbsp;
 
-After speaking with thousands of customers and investors: I understood each of you have slightly different needs.
+&nbsp;
+
+#### - Artificial Intelligence and Big Data: 
 
 &nbsp;
 
-![](/assets/blog/ai-advisor/ai advisor.webp)
+We use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+![](/assets/blog/ai-advisor/aitrading.jpg)
 
 &nbsp;
 

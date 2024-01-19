@@ -15,7 +15,6 @@ import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
 import { emitEvent } from '../contexts/store';
 
-
 type Props = {
   from: string
 }
@@ -146,6 +145,7 @@ const Div = styled.div`
     const submitHandler = ()=> {
 
 emitEvent('updateVariable', 3);
+
             console.log(input);
             //add to firebase
             const dateTime = Date.now();
@@ -198,13 +198,13 @@ emitEvent('updateVariable', 3);
     return (
     <center>
 
-
     <>{isExploding && <ConfettiExplosion
                 width={1600}
                 particleCount={250} // Equivalent to particleCount
                 duration={2000} // Equivalent to duration
                  force={0.8} // Equivalent to force
                 />}</>
+
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
             {isSubmitted===false &&
@@ -218,9 +218,9 @@ emitEvent('updateVariable', 3);
               'textAlign': 'center',
               'fontSize': 'min(20px,max(16px,2.3vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': from==='Hero'? 'black':from==='Footer'? 'black':from==='Hero2'? 'black':from==='FinalFooter'? 'black':'#493bc3',
+              'background': 'black',
               'maxWidth':'240px',
-              'boxShadow': from==='Hero'? '0px 0px 30px rgba(250, 250, 250, 0.8)':from==='Footer'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='Hero2'? '0px 0px 13px rgba(250, 250, 250, 0.5)':from==='FinalFooter'? '0px 0px 13px rgba(250, 250, 250, 0.5)':'0px 0px 13px rgba(0, 0, 0, 0.5)',
+              'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get It Now→</b>
                 </button>
 

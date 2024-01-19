@@ -8,20 +8,25 @@ import { useState, useEffect } from 'react';
 export default function MyApp({ Component, pageProps }: AppProps) {
 
 const [myVariable, setMyVariable] = useState(1);
+const [myColor, setMyColor] = useState("black");
 
   const updateVariable = (newValue) => {
     setMyVariable(newValue);
   };
+  const updateColors = (newValue) => {
+    setMyColor(newValue);
+  };
 
   // Subscribe to the custom event
   subscribeToEvent('updateVariable', updateVariable);
+  subscribeToEvent('updateColors', updateColors);
 
   return <div className="App">
                <Starfield
                  starCount={1000*(myVariable)}
                  starColor={[255, 255, 255]}
                  speedFactor={0.17*(myVariable)}
-                 backgroundColor="black"
+                 backgroundColor={myColor}
                />
                <SessionProvider> { <Component {...pageProps} />} </SessionProvider>
              </div>

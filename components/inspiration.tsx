@@ -1,37 +1,103 @@
-import React, { Component } from 'react';
 import { useState, useEffect } from "react";
-import ConfettiExplosion from 'react-confetti-explosion';
-import Layout from '../components/layout'
-import { format } from 'date-fns';
-
-
-import { doc, setDoc } from "firebase/firestore";
-import 'firebase/firestore';
-import {getFirestore} from 'firebase/firestore';
 import { serverTimestamp } from "firebase/firestore";
-import { useSession } from '../stockerSession';
+import ConfettiExplosion from 'react-confetti-explosion';
 
-function QuoteDisplay () {
-const db = getFirestore();
+import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
+import { doc, setDoc } from "firebase/firestore";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import 'firebase/firestore';
+
+import {getFirestore} from 'firebase/firestore';
+import { useSession } from '../stockerSession';
+import { emitEvent } from '../contexts/store';
+
+type Props = {
+  from: string
+}
+
+
+//export db from other script and import it here
+
+function QuoteDisplay({ from }: Props){
+{/*
+const Alert = styled.p`
+    position: relative;
+    padding: 0.4rem;
+    margin: 0.5rem;
+    color: white;
+    text-align: center; font-size: 1.2rem;
+    border: 1px solid rgba (255, 255, 255, 0.2); border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1); backdrop-filter: blur (10px);
+    z- index: 3;
+`;
+
+const Button = styled.button`
+    position: relative;
+    padding: 0.4rem;
+    margin: 0.5rem;
+    color: white;
+    text-align: center; font-size: 1.2rem;
+    border: 1px solid rgba (255, 255, 255, 0.2); border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1); backdrop-filter: blur (10px);
+    z- index: 3;
+`;
+
+const Form = styled.form`
+    position: relative;
+    padding: 3rem; min-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #333;
+    background: rgba (255, 255, 255, 0.1);
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    backgroud-clip: padding-box;
+    backdrop-filter: blur(10px);
+    z-index:2;
+`;
+
+const Input = styled.input`
+    padding:10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    with: 80%;
+    outline: none;
+    color: #cf1d22;
+`;
+
+
+const Container = styled.div`
+    position:relative;
+`;
+const Div = styled.div`
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: Linear-gradient(to right, #414345. #232526);
+    overflow:hidden;
+`;
+*/}
     const { sessionData, setSessionData } = useSession();
 
-
-  const [quotes, setQuotes] = useState([
-    "Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett",
-    "If you don't find a way to make money while you sleep, you will work until you die. - Warren Buffett",
-    "Use your money to make more money. - Robert Kiyosaki",
-    "Risk comes from not knowing what you're doing, always double check with an advisor. - Warren Buffett",
-    "The stock market is a device for making the money work. - Warren Buffett",
-    "Price is what you pay. Value is what you get. - Warren Buffett",
-    "Your net worth is determined by your network – the people you learn from and grow with. - Warren Buffett",
-    "A well-diversified portfolio is the shield that guards your financial future. - Benjamin Graham",
-    "The stock market doesn't discriminate; it's open to anyone willing to learn and take action. - Warren Buffett",
-    "Success in investing is built on a foundation of sound research and thoughtful decisions. - Warren Buffett",
-    "The market is a giant discount machine. When everything goes on sale, people run out of the store. – Mark Cuban",
-    // Add more quotes here as needed
-  ]);
-
- const fetchDeviceInfo = () => {
+    const [input,setInput] = useState("");
+    const [message,setMessage] = useState("");
+    const [deviceInfo, setDeviceInfo] = useState({
+        userAgent: '',
+        platform: '',
+        language: '',
+        screenWidth: '',
+        screenHeight: '',
+        // Add more properties based on available browser APIs
+//         latitude: null,
+//         longitude: null,
+      });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isExploding, setIsExploding] = useState(false);
+    let [showDropdown, setShowDropdown] = useState(false);
+    const fetchDeviceInfo = () => {
         try {
           // Get basic device information
           setDeviceInfo({
@@ -45,7 +111,6 @@ const db = getFirestore();
           });
         } catch (error) {
           console.error('Error fetching device information:', error);
-
           // Set empty string ('') as default values if fetching device information fails
           setDeviceInfo({
             ...deviceInfo,
@@ -58,97 +123,125 @@ const db = getFirestore();
           });
         }
       };
-const [deviceInfo, setDeviceInfo] = useState({
-        userAgent: '',
-        platform: '',
-        language: '',
-        screenWidth: '',
-        screenHeight: '',
-        // Add more properties based on available browser APIs
-//         latitude: null,
-//         longitude: null,
-      });
 
-    const [isExploding, setIsExploding] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
-  const [numberClicks, setNumberClicks] = useState(0);
-
-  useEffect(() => {
+      useEffect(() => {
         // Fetch device information when the component mounts
         fetchDeviceInfo();
+            import("react-facebook-pixel")
+              .then((x) => x.default)
+              .then((ReactPixel) => {
+                ReactPixel.init('3644450535825105');
+                ReactPixel.pageView();
+              });
       }, []); // Empty dependency array ensures the effect runs only once after initial render
 
 
-  const generateRandomQuote = () => {
-    const newIndex = Math.floor(Math.random() * quotes.length);
-    setCurrentQuoteIndex((newIndex)%quotes.length);
-    setNumberClicks(numberClicks+1)
-    setIsSubmitted(true)
-    setIsExploding(true)
-    setTimeout(() => {
-      setIsExploding(false);
-    }, 1000);
+    const inputHandler = (e) => {
+        setInput(e.target.value);
+    };
+    const db = getFirestore();
 
-    const dateTime = Date.now();
-    const unixTime = Math.floor(dateTime / 1000);
+    const submitHandler = ()=> {
 
+    emitEvent('updateVariable', 3);
 
+            console.log(input);
+            //add to firebase
+            const dateTime = Date.now();
+            const unixTime = Math.floor(dateTime / 1000);
 
-    const sessionId = sessionData.sessionId || '';
+            const sessionId = sessionData.sessionId || '';
 
+            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
+            const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
 
-  const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-    const docId = sessionId ===''?deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString: sessionId;
-    if (sessionId === ''){
-        setSessionData({ ...sessionData, sessionId: docId });
+             setDoc(doc(db, "contactList", docId), {
+
+                emailTime: serverTimestamp(),
+                time: serverTimestamp(),
+                unixTime: unixTime,
+              userAgent: deviceInfo.userAgent,
+              platform: deviceInfo.platform,
+              language: deviceInfo.language,
+              screenWidth: deviceInfo.screenWidth,
+              screenHeight: deviceInfo.screenHeight,
+              from: 'Inspiration Button',
+                }, { merge: true });
+
+            if (sessionId === ''){
+                setSessionData({ ...sessionData, sessionId: docId });
+            }
+
+            setShowDropdown(true)
+            setInput("");
+            setIsSubmitted(true)
+            setIsExploding(true)
+
+            import("react-facebook-pixel")
+              .then((x) => x.default)
+              .then((ReactPixel) => {
+                ReactPixel.init('3644450535825105');
+                ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
+              });
+           {/*
+           setMessage(<InstallButtonsWithQR/>);
+           setTimeout(
+                () => {
+                    setMessage("");
+                },
+                3000,
+            )*/}
+
     }
 
-     setDoc(doc(db, "contactList", docId), {
-        timeLastClickQuoteInspiration: serverTimestamp(),
-        time: serverTimestamp(),
-        unixTimeLastClickQuoteInspiration: unixTime,
-      numberClicksQuoteInspiration:numberClicks,
-        userAgent: deviceInfo.userAgent,
-        platform: deviceInfo.platform,
-        language: deviceInfo.language,
-        screenWidth: deviceInfo.screenWidth,
-        screenHeight: deviceInfo.screenHeight,
-        }, { merge: true });
-  };
-
-
-  return (
-    <div>
-
+    return (
     <center>
+
     <>{isExploding && <ConfettiExplosion
-                    width={1600}
-                    particleCount={250} // Equivalent to particleCount
-                    duration={2000} // Equivalent to duration
-                     force={0.8} // Equivalent to force
-                    />}</>
-      <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight " style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 10px rgba(0, 0, 0, 1)' }}>
-      {quotes[currentQuoteIndex]}</h2>
-           <br></br>
+                width={1600}
+                particleCount={250} // Equivalent to particleCount
+                duration={2000} // Equivalent to duration
+                 force={0.8} // Equivalent to force
+                />}</>
+{!showDropdown &&<h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight " style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 10px rgba(0, 0, 0, 1)' }}>Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett</h2>}
+<br></br>
+    <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
+
+            {isSubmitted===false &&
+                <button type="submit"
+                onClick={submitHandler}
+                style={{
+                 'paddingTop': '16px',
+              'paddingBottom': '16px',
+              'color': 'black',
+               'width':'40vw',
+              'textAlign': 'center',
+              'fontSize': 'min(20px,max(16px,2.3vw))',
+              'borderRadius': '30px 30px 30px 30px',
+              'background': 'black',
+              'maxWidth':'240px',
+              'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
+               }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Investment Tips</b>
+                </button>
+
+            }
+           {showDropdown &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
+                    Access Investment Tips, Predictions, and more
+                </h1>    </center>}
+
+            {showDropdown &&<div style={{paddingTop: 20}}></div>}
+            {showDropdown &&<InstallButtonsWithQR/>}
 
 
-        <button onClick={generateRandomQuote}
-            style={{
-
-                 }}>  <div style={{
-                 'padding': '0.95rem',
-                 'color': 'white',
-                  'width':'31vw',
-                 'textAlign': 'center',
-                 'fontSize': 'min(19px,max(15px,2vw))',
-                 'borderRadius': '30px 30px 30px 30px',
-                 'background': '#493bc3',
-                 'maxWidth':'280px'
-                }}><b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Show me another quote</b></div></button>
-      </center>
+            {/*
+            {message && <alert> {message} </alert>}
+            )*/}
     </div>
-  );
-};
+    </center>
+    )
+
+}
+
+
 
 export default QuoteDisplay;
