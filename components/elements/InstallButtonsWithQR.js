@@ -127,7 +127,7 @@ label: 'Android'
 const InstallButtons = ({...props}) => {
 
         const [dynamicLink, setDynamicLink] = useState(null);
-
+        const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
             const fetchData = async () => {
               const link = await generateDynamicLink();
@@ -135,10 +135,11 @@ const InstallButtons = ({...props}) => {
             };
 
             fetchData();
+            setIsVisible(true);
         }, []); // Empty depend
 
         if (isMobile){
-        return (
+        return ({isVisible && (
         <section
                      {...props}
                    >
@@ -150,6 +151,10 @@ const InstallButtons = ({...props}) => {
                      alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                     width={151 }
                     height={44.7966}
+                      style={{
+                                transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                transition: 'transform 0.3s ease-in-out',
+                              }}
                      />
                      </a>
 
@@ -160,22 +165,30 @@ const InstallButtons = ({...props}) => {
                       alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                      width={151 }
                     height={44.7966}
+                      style={{
+                                transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                transition: 'transform 0.3s ease-in-out',
+                              }}
                       />
                       </a>
                       <br></br>
                     <br></br>
-                     </section>
+                     </section>)}
 
         )
         }
 
               return (
-                <section
+               {isVisible && ( <section
                            {...props}
                          >
                  <Zoom>
                 <div style={containerStyle}>
-                  <QRCode value={dynamicLink} style={imageStyle} />
+                  {dynamicLink && <QRCode value={dynamicLink} style={{
+                                                                          ...imageStyle,
+                                                                          transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                                                          transition: 'transform 0.3s ease-in-out',
+                                                                        }} />}
                 </div>
                 </Zoom>
              <div style={{paddingTop: 10}}></div>
@@ -185,6 +198,10 @@ const InstallButtons = ({...props}) => {
                                alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                               width={131}
                               height={38.863}
+                                style={{
+                                          transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                          transition: 'transform 0.3s ease-in-out',
+                                        }}
                                />
 
 
@@ -195,10 +212,14 @@ const InstallButtons = ({...props}) => {
                                 alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                                width={130}
                                height={38.566}
+                                 style={{
+                                           transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                           transition: 'transform 0.3s ease-in-out',
+                                         }}
                                 />
 
           <br></br>
-          </section>
+          </section>)}
               );
 
 }
