@@ -17,6 +17,8 @@ import QuoteDisplay from '../../components/inspiration';
 import { useState, useEffect } from 'react';
 import NewsletterSignUp from '../../components/formStocker'
 import Image from 'next/image';
+import Script from 'next/script'
+import ReactGA from 'react-ga4';
 
 import {
   FacebookShareButton,
@@ -77,6 +79,23 @@ export default function Post({ post, morePosts, preview }: Props) {
       setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
     };
 
+    ReactGA.initialize('G-JPXMZYD5DY');
+    const intervalId = setInterval(() => {
+      if (window.gtag) {
+        clearInterval(intervalId);
+
+        // Replace with your analytics tracking code
+        window.gtag('config', 'G-JPXMZYD5DY', {
+          page_title: post.slug,
+          page_location: window.location.href,
+          page_path: location.pathname,
+          screen_name: post.slug,
+        });
+      }
+    }, 100);
+
+
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
@@ -128,6 +147,17 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="twitter:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
+                    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
+                    <Script>
+                      {`
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag() {
+                        window.dataLayer.push(arguments);
+                      }
+                      gtag('js', new Date());
+                      gtag('config', 'G-JPXMZYD5DY');
+                      `}
+                    </Script>
               </Head>
               <div>
              <center>

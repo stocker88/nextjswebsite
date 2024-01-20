@@ -15,25 +15,24 @@ import { useState, useEffect } from 'react';
 import Script from 'next/script'
 
 import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  PinterestShareButton,
-  RedditShareButton,
-  TwitterShareButton,
-FacebookIcon,
-InstapaperIcon,
-LinkedinIcon,
-PinterestIcon,
-RedditIcon,
-TwitterIcon,
-WhatsappIcon,
-TelegramIcon,
-  WhatsappShareButton,
-  TelegramShareButton,
-  FacebookShareCount,
+    FacebookShareButton,
+    LinkedinShareButton,
+    PinterestShareButton,
+    RedditShareButton,
+    TwitterShareButton,
+    FacebookIcon,
+    InstapaperIcon,
+    LinkedinIcon,
+    PinterestIcon,
+    RedditIcon,
+    TwitterIcon,
+    WhatsappIcon,
+    TelegramIcon,
+    WhatsappShareButton,
+    TelegramShareButton,
+    FacebookShareCount,
     PinterestShareCount,
     RedditShareCount,
-
 } from "react-share";
 import { isMobile} from "react-device-detect";
 
@@ -53,6 +52,12 @@ const firebaseConfig = {
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// On your website
+function getQueryParam(name) {
+    // Function to get the value of a URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
 
 
 type Props = {
@@ -76,6 +81,40 @@ export default function Index({ allPosts }: Props) {
 
 
   useEffect(() => {
+
+          // Get the utm_campaign_value from the URL
+          var utmCampaignValue = getQueryParam('utm_campaign');
+          var utmSourceValue = getQueryParam('utm_source');
+          var utmMediumValue = getQueryParam('utm_medium');
+
+          var utmParams = {};
+
+          if (utmCampaignValue !== null) {
+              utmParams.campaign = utmCampaignValue;
+          }
+
+          if (utmSourceValue !== null) {
+              utmParams.source = utmSourceValue;
+          }
+
+          if (utmMediumValue !== null) {
+              utmParams.medium = utmMediumValue;
+          }
+
+          if (Object.keys(utmParams).length > 0) {
+
+              var utmParams = {
+                  source: utmSourceValue || 'notDefined',
+                  medium: utmMediumValue || 'notDefined',
+                  campaign: utmCampaignValue || 'notDefined'
+              };
+              localStorage.setItem('utmParams', JSON.stringify(utmParams));
+
+//               console.log('UTM Value stored:', JSON.stringify(utmParams));
+          } else {
+              console.log('UTM Campaign Value not found in the URL.');
+          }
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
@@ -87,6 +126,10 @@ export default function Index({ allPosts }: Props) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
+
+
+
   }, []);
 
 
@@ -204,6 +247,17 @@ export default function Index({ allPosts }: Props) {
           </script>
           <noscript><img height="1" width="1" style="display:none"
           src="https://www.facebook.com/tr?id=3644450535825105&ev=PageView&noscript=1"
+      `}
+    </Script>
+    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
+    <Script>
+      {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-JPXMZYD5DY');
       `}
     </Script>
 
