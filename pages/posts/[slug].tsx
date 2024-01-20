@@ -83,7 +83,7 @@ export default function Post({ post, morePosts, preview }: Props) {
     const intervalId = setInterval(() => {
       if (window.gtag) {
         clearInterval(intervalId);
-
+        console.log('gtagslug');
         // Replace with your analytics tracking code
         window.gtag('config', 'G-JPXMZYD5DY', {
           page_title: post.slug,
@@ -91,7 +91,9 @@ export default function Post({ post, morePosts, preview }: Props) {
           page_path: location.pathname,
           screen_name: post.slug,
         });
-      }
+      } else {
+        console.log('no gtagslug');
+        }
     }, 100);
 
 

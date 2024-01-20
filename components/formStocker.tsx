@@ -10,7 +10,7 @@ import { doc, setDoc } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import 'firebase/firestore';
-
+import ReactGA from 'react-ga4';
 import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
 import { emitEvent } from '../contexts/store';
@@ -195,14 +195,24 @@ const Div = styled.div`
                 }
 
               // Log a custom event to Google Analytics
-              window.gtag('event', 'getTheAppClicked', {
-                'from': from,
-                'action': 'clicked',
-                'utm_campaign': utmCampaignValue||'notDefined',
-                'utm_source': utmSourceValue||'notDefined',
-                'utm_medium': utmMediumValue||'notDefined',
-                // Add any additional parameters you want to track
-              });
+              ReactGA.initialize('G-JPXMZYD5DY');
+              const intervalId = setInterval(() => {
+                    if (window.gtag) {
+                      clearInterval(intervalId);
+                      console.log('gtag');
+                      // Replace with your analytics tracking code
+                      window.gtag('event', 'getTheAppClicked', {
+                        'from': from,
+                        'action': 'clicked',
+                        'utm_campaign': utmCampaignValue||'notDefined',
+                        'utm_source': utmSourceValue||'notDefined',
+                        'utm_medium': utmMediumValue||'notDefined',
+                        // Add any additional parameters you want to track
+                      });
+                    } else {
+                  console.log('no gtag');}
+              }, 100);
+
 
             import("react-facebook-pixel")
               .then((x) => x.default)
