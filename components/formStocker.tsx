@@ -195,7 +195,7 @@ const Div = styled.div`
                 }
 
               // Log a custom event to Google Analytics
-              gtag('event', 'getTheAppClicked', {
+              window.gtag('event', 'getTheAppClicked', {
                 'from': from,
                 'action': 'clicked',
                 'utm_campaign': utmCampaignValue||'notDefined',
