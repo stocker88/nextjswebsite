@@ -139,7 +139,7 @@ const InstallButtons = ({...props}) => {
         }, []); // Empty depend
 
         if (isMobile){
-        return ({isVisible && (
+        return (isVisible && (
         <section
                      {...props}
                    >
@@ -173,13 +173,13 @@ const InstallButtons = ({...props}) => {
                       </a>
                       <br></br>
                     <br></br>
-                     </section>)}
+                     </section>)
 
         )
         }
 
               return (
-               {isVisible && ( <section
+               isVisible && ( <section
                            {...props}
                          >
                  <Zoom>
@@ -219,7 +219,7 @@ const InstallButtons = ({...props}) => {
                                 />
 
           <br></br>
-          </section>)}
+          </section>)
               );
 
 }
