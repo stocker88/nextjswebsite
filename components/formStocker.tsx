@@ -170,7 +170,7 @@ const Div = styled.div`
             const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
 
 
-          var storedUtmParams = localStorage.getItem('utmParams');
+              var storedUtmParams = localStorage.getItem('utmParams');
              var utmCampaignValue='defaultWeb';
              var utmSourceValue='defaultWeb';
              var utmMediumValue='defaultWeb';
@@ -211,21 +211,6 @@ const Div = styled.div`
             setIsSubmitted(true)
             setIsExploding(true)
 
-                // On your website
-                var storedUtmParams = localStorage.getItem('utmParams');
-                var utmCampaignValue;
-                var utmSourceValue;
-                var utmMediumValue;
-                // Check if UTM parameters are stored
-                if (storedUtmParams) {
-                    // Parse the stored JSON string
-                    var utmParams = JSON.parse(storedUtmParams);
-
-                    // Retrieve the specific UTM parameter
-                    utmCampaignValue = utmParams.campaign;
-                    utmSourceValue = utmParams.source;
-                    utmMediumValue = utmParams.medium;
-                }
 
               // Log a custom event to Google Analytics
               ReactGA.initialize('G-JPXMZYD5DY');
