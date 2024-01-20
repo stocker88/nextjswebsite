@@ -14,10 +14,23 @@ import ReactGA from 'react-ga4';
 import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
 import { emitEvent } from '../contexts/store';
+import { useSpring, animated } from 'react-spring';
 
 type Props = {
   from: string
 }
+
+
+const handleMouseOver = () => {
+emitEvent('updateVariable', 3);
+// Your function for mouse-over
+};
+
+const handleMouseLeave = () => {
+emitEvent('updateVariable', 1);
+// Your function for mouse-leave
+};
+
 
 
 //export db from other script and import it here
@@ -241,8 +254,13 @@ const Div = styled.div`
                  force={0.8} // Equivalent to force
                 />}</>
 
+
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 
+ <animated.div
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
+    >
             {isSubmitted===false &&
                 <button type="submit"
                 onClick={submitHandler}
@@ -259,8 +277,8 @@ const Div = styled.div`
               'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get It Now→</b>
                 </button>
-
             }
+            </animated.div>
            {showDropdown &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
 
                 </h1>    </center>}
