@@ -6,6 +6,8 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import ReactGA from 'react-ga4';
 import QRCode from 'qrcode.react';
+import { useSpring, animated } from 'react-spring';
+
 
 const generateDynamicLink = async () => {
   const apiKey = 'AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU';
@@ -138,12 +140,17 @@ const InstallButtons = ({...props}) => {
             setIsVisible(true);
         }, []); // Empty depend
 
+          const springProps = useSpring({
+            transform: isVisible ? 'scale(1)' : 'scale(0)',
+            config: { duration: 1000 }, // Adjust the duration as needed
+          });
+
         if (isMobile){
-        return (isVisible && (
-        <section
+        return (isVisible && (<section
                      {...props}
                    >
-
+                   <animated.section style={springProps} {...props}>
+                <div>
                  <br></br>
                        <a href={dynamicLink} target="_blank" onClick={sendOutboundApple}>
                     <Image
@@ -151,10 +158,6 @@ const InstallButtons = ({...props}) => {
                      alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                     width={151 }
                     height={44.7966}
-                      style={{
-                                transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                transition: 'transform 0.3s ease-in-out',
-                              }}
                      />
                      </a>
 
@@ -165,14 +168,12 @@ const InstallButtons = ({...props}) => {
                       alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                      width={151 }
                     height={44.7966}
-                      style={{
-                                transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                transition: 'transform 0.3s ease-in-out',
-                              }}
                       />
                       </a>
                       <br></br>
                     <br></br>
+                    </div>
+                    </animated.section>
                      </section>)
 
         )
@@ -182,13 +183,11 @@ const InstallButtons = ({...props}) => {
                isVisible && ( <section
                            {...props}
                          >
+             <animated.section style={springProps} {...props}>
+               <div>
                  <Zoom>
                 <div style={containerStyle}>
-                  {dynamicLink && <QRCode value={dynamicLink} style={{
-                                                                          ...imageStyle,
-                                                                          transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                                                          transition: 'transform 0.3s ease-in-out',
-                                                                        }} />}
+                  {dynamicLink && <QRCode value={dynamicLink} style={imageStyle} />}
                 </div>
                 </Zoom>
              <div style={{paddingTop: 10}}></div>
@@ -198,10 +197,10 @@ const InstallButtons = ({...props}) => {
                                alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                               width={131}
                               height={38.863}
-                                style={{
-                                          transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                          transition: 'transform 0.3s ease-in-out',
-                                        }}
+                              style={{
+                             transform: isVisible ? 'scale(1)' : 'scale(0)',
+                               transition: 'transform 3s ease-in-out',
+                             }}
                                />
 
 
@@ -212,13 +211,18 @@ const InstallButtons = ({...props}) => {
                                 alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                                width={130}
                                height={38.566}
-                                 style={{
-                                           transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                           transition: 'transform 0.3s ease-in-out',
-                                         }}
+                               style={{
+                              transform: isVisible ? 'scale(1)' : 'scale(0)',
+                                maxWidth: isVisible ? '400px' : '0',
+                                 maxHeight: isVisible ? '400px' : '0',
+                             transition: 'max-width 2s ease-in-out, max-height 2s ease-in-out, transform 3s ease-in-out',
+
+                              }}
                                 />
 
           <br></br>
+          </div>
+           </animated.section>
           </section>)
               );
 
