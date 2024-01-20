@@ -163,11 +163,12 @@ const Div = styled.div`
             //add to firebase
             const dateTime = Date.now();
             const unixTime = Math.floor(dateTime / 1000);
+            const unixTimeStr = unixTime.toString();
 
             const sessionId = sessionData.sessionId || '';
 
             const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-            const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
+            const docId = unixTimeStr + (sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString);
 
 
               var storedUtmParams = localStorage.getItem('utmParams');

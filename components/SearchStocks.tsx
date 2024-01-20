@@ -92,6 +92,7 @@ const db = getFirestore();
   const handleClick = (ticker) => {
     const dateTime = Date.now();
     const unixTime = Math.floor(dateTime / 1000);
+    const unixTimeStr = unixTime.toString();
 
     import("react-facebook-pixel")
       .then((x) => x.default)
@@ -106,24 +107,42 @@ const db = getFirestore();
 
 
     const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-    const docId = deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
+    const docId = unixTimeStr + deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
     if (sessionId === ''){
         setSessionData({ ...sessionData, sessionId: docId });
     }
 
-     setDoc(doc(db, "a_selectedStockWebPage", docId), {
-        time_clicked_stock: serverTimestamp(),
-        time: serverTimestamp(),
-         time_clicked_stockunix: unixTime,
-          userAgent: deviceInfo.userAgent,
-          ticker: ticker,
-          sessionId:sessionId,
-          platform: deviceInfo.platform,
-          language: deviceInfo.language,
-          screenWidth: deviceInfo.screenWidth,
-          screenHeight: deviceInfo.screenHeight,
-        }, { merge: true });
+      var storedUtmParams = localStorage.getItem('utmParams');
+     var utmCampaignValue='defaultWeb';
+     var utmSourceValue='defaultWeb';
+     var utmMediumValue='defaultWeb';
+     // Check if UTM parameters are stored
+     if (storedUtmParams) {
+         // Parse the stored JSON string
+         var utmParams = JSON.parse(storedUtmParams);
 
+         // Retrieve the specific UTM parameter
+         utmCampaignValue = utmParams.campaign;
+         utmSourceValue = utmParams.source;
+         utmMediumValue = utmParams.medium;
+    }
+     setDoc(
+        doc(db, "contactList", docId), {
+            time_clicked_stock: serverTimestamp(),
+            a_type: 'selectedStock',
+            time: serverTimestamp(),
+            time_clicked_stockunix: unixTime,
+            userAgent: deviceInfo.userAgent,
+            ticker: ticker,
+            sessionId:sessionId,
+            platform: deviceInfo.platform,
+            language: deviceInfo.language,
+            screenWidth: deviceInfo.screenWidth,
+            screenHeight: deviceInfo.screenHeight,
+            utmCampaignValue:utmCampaignValue,
+            utmSourceValue:utmSourceValue,
+            utmMediumValue:utmMediumValue,
+        }, { merge: true });
 
         setSelectedTicker(ticker)
         setIsExploding(true)
