@@ -153,22 +153,30 @@ const InstallButtons = ({...props}) => {
                 <div>
                  <br></br>
                        <a href={dynamicLink} target="_blank" onClick={sendOutboundApple}>
+                       <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
                      alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                     width={151 }
-                    height={44.7966}
+                    height={45}
+                    layout="responsive"
+                    priority={true}
                      />
+                     </div>
                      </a>
 
             <div style={{paddingTop: 10}}></div>
                     <a href={dynamicLink} target="_blank" onClick={sendOutboundAndroid}>
+                    <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
                       alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                      width={151 }
-                    height={44.7966}
+                    height={45}
+                    layout="responsive"
+                    priority={true}
                       />
+                      </div>
                       </a>
                       <br></br>
                     <br></br>
@@ -192,33 +200,27 @@ const InstallButtons = ({...props}) => {
                 </Zoom>
              <div style={{paddingTop: 10}}></div>
                       <div style={{paddingTop: 10}}></div>
+                      <div style={{ width: '140px'}}>
                               <Image
                                src='/assets/images/appledownloadlogo.webp'
                                alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
                               width={131}
                               height={38.863}
-                              style={{
-                             transform: isVisible ? 'scale(1)' : 'scale(0)',
-                               transition: 'transform 3s ease-in-out',
-                             }}
+                              layout="responsive"
                                />
-
+                        </div>
 
                       <div style={{paddingTop: 10}}></div>
-
+                            <div style={{ width: '140px'}}>
                                  <Image
                                 src='/assets/images/googledownloadlogo.webp'
                                 alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
                                width={130}
                                height={38.566}
-                               style={{
-                              transform: isVisible ? 'scale(1)' : 'scale(0)',
-                                maxWidth: isVisible ? '400px' : '0',
-                                 maxHeight: isVisible ? '400px' : '0',
-                             transition: 'max-width 2s ease-in-out, max-height 2s ease-in-out, transform 3s ease-in-out',
+                               layout="responsive"
 
-                              }}
                                 />
+                                </div>
 
           <br></br>
           </div>

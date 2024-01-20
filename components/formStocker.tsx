@@ -169,6 +169,23 @@ const Div = styled.div`
             const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
             const docId = sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
 
+
+          var storedUtmParams = localStorage.getItem('utmParams');
+             var utmCampaignValue='defaultWeb';
+             var utmSourceValue='defaultWeb';
+             var utmMediumValue='defaultWeb';
+             // Check if UTM parameters are stored
+             if (storedUtmParams) {
+                 // Parse the stored JSON string
+                 var utmParams = JSON.parse(storedUtmParams);
+
+                 // Retrieve the specific UTM parameter
+                 utmCampaignValue = utmParams.campaign;
+                 utmSourceValue = utmParams.source;
+                 utmMediumValue = utmParams.medium;
+            }
+
+
              setDoc(doc(db, "contactList", docId), {
 
                 emailTime: serverTimestamp(),
@@ -180,6 +197,9 @@ const Div = styled.div`
               screenWidth: deviceInfo.screenWidth,
               screenHeight: deviceInfo.screenHeight,
               from: from,
+                utmCampaignValue:utmCampaignValue,
+                utmSourceValue:utmSourceValue,
+                utmMediumValue:utmMediumValue,
                 }, { merge: true });
 
             if (sessionId === ''){
