@@ -134,7 +134,7 @@ const db = getFirestore();
             time_clicked_stockunix: unixTime,
             userAgent: deviceInfo.userAgent,
             ticker: ticker,
-            sessionId:sessionId,
+            sessionId: sessionId,
             platform: deviceInfo.platform,
             language: deviceInfo.language,
             screenWidth: deviceInfo.screenWidth,
