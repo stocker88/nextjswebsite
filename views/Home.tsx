@@ -184,7 +184,7 @@ import SignUpModal from '../SignUpModal';
             excerpt={heroPost.excerpt}
           />
         )}*/}
-        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(0, 5):posts} />}
+        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 5):posts.slice(1)} />}
 
       </Container>
       {posts.length > 0 && <FeaturesSplit className="illustration-section-02" posts={posts} hasBgColor={true} invertMobile={true} imageFill={true}/>}
