@@ -112,13 +112,14 @@ const containerStyle = {
     <center>
     <Zoom>
         <Image
-          width={493.75}
-          height={493.75}
+          width={800}
+          height={500}
           className="shadow-md"
           src="/assets/images/teslarace.jpg"
           style={splitItemImageStyle}
           sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
           alt="Tesla vs Ferrari"
+          layout="responsive"
         />
       </Zoom>
     </center>
