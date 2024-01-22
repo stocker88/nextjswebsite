@@ -172,7 +172,7 @@ export default function Index({ allPosts }: Props) {
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
               <TwitterShareButton aria-label="Twitter" children={<TwitterIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"} media={'https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png'}/>
+              <PinterestShareButton aria-label="Pinterest" children={<PinterestIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"} media={'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg" alt="hot-stocks-to-buy-now-hellostocker-ai'}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
               <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
               <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
@@ -227,13 +227,13 @@ export default function Index({ allPosts }: Props) {
           <meta name="og:description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
-          <meta property="og:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
+          <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg" alt="hot-stocks-to-buy-now-hellostocker-ai"  />
           <meta name="twitter:title" content="This AI Send You Hot Stocks To Buy Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
           <meta name="twitter:description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks"/>
-          <meta name="twitter:image" content="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
+          <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg" alt="hot-stocks-to-buy-now-hellostocker-ai"  />
           <meta name="twitter:card" content="summary_large_image"/>
-          <link rel="apple-touch-icon" href="https://i.ibb.co/5hZHsP6/best-stocks-to-buy-now-ai.png"  />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg" alt="hot-stocks-to-buy-now-hellostocker-ai"  />
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
 
  <Script id="facebook-pixel">
