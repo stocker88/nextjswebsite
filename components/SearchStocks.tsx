@@ -113,9 +113,9 @@ const db = getFirestore();
     }
 
       var storedUtmParams = localStorage.getItem('utmParams');
-     var utmCampaignValue='defaultWeb';
-     var utmSourceValue='defaultWeb';
-     var utmMediumValue='defaultWeb';
+     var utmCampaignValue=`defaultWeb_search_${ticker}`;
+     var utmSourceValue=`defaultWeb`;
+     var utmMediumValue=`defaultWeb_search${ticker}`;
      // Check if UTM parameters are stored
      if (storedUtmParams) {
          // Parse the stored JSON string
@@ -126,8 +126,10 @@ const db = getFirestore();
          utmSourceValue = utmParams.source;
          utmMediumValue = utmParams.medium;
     }
+    localStorage.setItem('userId', encodeURIComponent(docId));
      setDoc(
         doc(db, "contactList", docId), {
+            id: encodeURIComponent(docId),
             time_clicked_stock: serverTimestamp(),
             a_type: 'selectedStock',
             time: serverTimestamp(),

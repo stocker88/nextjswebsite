@@ -18,9 +18,13 @@ const generateDynamicLink = async () => {
   const iosBundleId = 'com.newcompany.stocker';
 
   var storedUtmParams = localStorage.getItem('utmParams');
+
+     var userIdValue = localStorage.getItem('userId')||'defaultUserId';
+
      var utmCampaignValue='defaultWeb';
      var utmSourceValue='defaultWeb';
      var utmMediumValue='defaultWeb';
+
      // Check if UTM parameters are stored
      if (storedUtmParams) {
          // Parse the stored JSON string
@@ -46,7 +50,7 @@ const generateDynamicLink = async () => {
     body: JSON.stringify({
       dynamicLinkInfo: {
         domainUriPrefix: 'https://applink.stockstobuynow.ai',
-        link: link,
+        link: `${link}/userIdPassed?userId=${encodeURIComponent(userIdValue)}`,
         androidInfo: {
           androidPackageName: androidPackageName,
         },

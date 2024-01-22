@@ -74,7 +74,7 @@ const [deviceInfo, setDeviceInfo] = useState({
     if (sessionId === ''){
         setSessionData({ ...sessionData, sessionId: docId });
     }
-
+    localStorage.setItem('userId', encodeURIComponent(docId));
      setDoc(doc(db, "contactList", docId), {
         timeViewLinkedIn: serverTimestamp(),
         time: serverTimestamp(),
@@ -84,6 +84,7 @@ const [deviceInfo, setDeviceInfo] = useState({
       language: deviceInfo.language,
       screenWidth: deviceInfo.screenWidth,
       screenHeight: deviceInfo.screenHeight,
+      type: 'LINKEDIN',
         }, { merge: true });
   };
 

@@ -76,7 +76,23 @@ const db = getFirestore();
         setSessionData({ ...sessionData, sessionId: docId });
     }
 
+      var storedUtmParams = localStorage.getItem('utmParams');
+     var utmCampaignValue=`defaultWeb_${slug}`;
+     var utmSourceValue=`defaultWeb`;
+     var utmMediumValue=`defaultWeb_${slug}`;
+     // Check if UTM parameters are stored
+     if (storedUtmParams) {
+         // Parse the stored JSON string
+         var utmParams = JSON.parse(storedUtmParams);
+
+         // Retrieve the specific UTM parameter
+         utmCampaignValue = utmParams.campaign;
+         utmSourceValue = utmParams.source;
+         utmMediumValue = utmParams.medium;
+    }
+    localStorage.setItem('userId', encodeURIComponent(docId));
      setDoc(doc(db, "contactList", docId), {
+        id: encodeURIComponent(docId),
         [ `time_clickedBackToHome_${slug}` ]: serverTimestamp(),
         time: serverTimestamp(),
          [ `unixTime_clickedBackToHome_${slug}` ]: unixTime,
@@ -85,6 +101,9 @@ const db = getFirestore();
           language: deviceInfo.language,
           screenWidth: deviceInfo.screenWidth,
           screenHeight: deviceInfo.screenHeight,
+        utmCampaignValue:utmCampaignValue,
+        utmSourceValue:utmSourceValue,
+        utmMediumValue:utmMediumValue,
         }, { merge: true });
   };
 
