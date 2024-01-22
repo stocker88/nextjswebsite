@@ -121,6 +121,15 @@ import SignUpModal from '../SignUpModal';
     <LinkedInButton/>
   <br></br>
    <br></br>
+   <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+   <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ 'color': 'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)', 'textAlign': 'center' }}>
+             <Link as={`/posts/ai-advisor`} href="/posts/[slug]" aria-label={'How does AI Stock Prediction Work? When Financial Expertise Meets Big Data'} >How does AI Stock Prediction Work? When Financial Expertise Meets Big Data</Link>
+           </h2>
+           </section>
+
+               <br></br>
+              <br></br>
+
              <Image
               src='/assets/images/aboutus.jpg'
               alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
@@ -132,24 +141,8 @@ import SignUpModal from '../SignUpModal';
                   }}
 
               />
-                               <br></br>
-                               <br></br>
-                               <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-<h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ 'color': 'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)', 'textAlign': 'center' }}>
-          We leverage Statistical Methods & AI:
-          <br></br>
-          <br></br>
-          <div style={{ textAlign: 'left' }}>
-          - Social Hype Sentiment Data
-          <br></br>
-          - AI Quantitative Factors
-          <br></br>
-        - Financial Economic Analysis
-         <br></br>
-        - Technical Trading Projections
-          </div>
-        </h2>
-        </section>
+
+
 
 
                              </h3>

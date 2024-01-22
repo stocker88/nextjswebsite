@@ -95,15 +95,15 @@ const [deviceInfo, setDeviceInfo] = useState({
         <button onClick={onClickedButton}>
         <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
          <div style={{
-            'paddingTop': '20px',
-            'paddingBottom': '20px',
+            'paddingTop': '18px',
+            'paddingBottom': '18px',
             'color': 'white',
-            'width':'31vw',
+            'width':'25vw',
             'textAlign': 'center',
-            'fontSize': 'min(20px,max(15px,2vw))',
+            'fontSize': 'min(18px,max(14px,2vw))',
             'borderRadius': '30px 30px 30px 30px',
             'background': '#493bc3',
-            'maxWidth':'280px',
+            'maxWidth':'250px',
             'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
         }}>Connect on LinkedIn</div></a>
         </button>
