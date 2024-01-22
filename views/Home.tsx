@@ -51,6 +51,8 @@ const stockData = [
     boxShadow: '0 0 50px rgba(0, 0, 0, 0.5)',
   };
 
+const heroPost = posts[0]
+
   return (
     <>
     <Header navPosition="right" className="reveal-from-bottom" />
@@ -122,11 +124,15 @@ import SignUpModal from '../SignUpModal';
     <LinkedInButton/>
   <br></br>
    <br></br>
-   <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-   <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ 'color': 'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)', 'textAlign': 'center' }}>
-             <Link as={`/posts/ai-advisor`} href="/posts/[slug]" aria-label={'How does AI Stock Prediction Work? When Financial Expertise Meets Big Data'} >How does AI Stock Prediction Work? When Financial Expertise Meets Big Data</Link>
-           </h2>
-           </section>
+         <PostPreview
+             key={heroPost.slug}
+             title={heroPost.title}
+             coverImage={heroPost.coverImage}
+             date={heroPost.date}
+             author={heroPost.author}
+             slug={heroPost.slug}
+             excerpt={heroPost.excerpt}
+           />
 
                <br></br>
               <br></br>

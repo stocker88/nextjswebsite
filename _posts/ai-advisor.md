@@ -3,7 +3,7 @@ title: 'How does AI Stock Prediction Work? When Financial Expertise Meets Big Da
 excerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to HelloStocker AI scientific approach...'
 seoExcerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to HelloStocker AI scientific approach...'
 coverImage: '/assets/blog/ai-advisor/ai-advisor.jpg'
-date: '2023-11-05T05:35:07.322Z'
+date: '2024-01-12T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
