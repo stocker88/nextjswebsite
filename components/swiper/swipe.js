@@ -39,7 +39,6 @@ const containerStyle = {
 
   const splitItemImageStyle = {
     borderRadius: '10px',
-    maxWidth:'800px',
   };
 
   return (
@@ -120,7 +119,6 @@ const containerStyle = {
           style={splitItemImageStyle}
           sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
           alt="Tesla vs Ferrari"
-          layout="responsive"
         />
       </Zoom>
     </center>

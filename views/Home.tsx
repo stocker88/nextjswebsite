@@ -106,19 +106,7 @@ import SignUpModal from '../SignUpModal';
 
 <br></br>
          <br></br>
-           <Image
-                       src='/assets/images/aboutus.jpg'
-                       alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
-                         width={384}
-                         height={216}
-                         style={{
-                             borderRadius: '20px',
-                             boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
-                           }}
-                       />
 
-<br></br>
-         <br></br>
  <div style={circleImageStyle} className="circle-image-container">
       <img src={'/assets/images/aness.jpeg'}
       alt='Stocks To Buy Now AI  Founders'
@@ -132,9 +120,22 @@ import SignUpModal from '../SignUpModal';
                                 <h3 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
                                <br></br>
                                Over 15 Years in Investing and AI
+
            <br></br>
          <br></br>
+      <Image
+                       src='/assets/images/aboutus.jpg'
+                       alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
+                         width={384}
+                         height={216}
+                         style={{
+                             borderRadius: '20px',
+                             boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                           }}
+                       />
 
+<br></br>
+         <br></br>
     <LinkedInButton/>
   <br></br>
    <br></br>
