@@ -24,6 +24,7 @@ import { stockDataSearch } from '../components/constants';
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
 import LinkedInButton from '../components/connectLinkedin';
+import Link from 'next/link';
 
 type Props = {
   posts: Post[]
