@@ -138,6 +138,10 @@ import SignUpModal from '../SignUpModal';
          <br></br>
     <LinkedInButton/>
   <br></br>
+
+              <br></br>
+                       <br></br>
+
    <br></br>
          <PostPreview
              key={heroPost.slug}
@@ -156,6 +160,9 @@ import SignUpModal from '../SignUpModal';
                              </h3>
 
 
+
+              <br></br>
+                       <br></br>
 
               <br></br>
                        <br></br>
