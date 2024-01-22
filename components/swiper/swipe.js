@@ -39,6 +39,7 @@ const containerStyle = {
 
   const splitItemImageStyle = {
     borderRadius: '10px',
+    maxWidth:'800px',
   };
 
   return (
@@ -112,8 +113,8 @@ const containerStyle = {
     <center>
     <Zoom>
         <Image
-          width={800}
-          height={500}
+          width={600}
+          height={600}
           className="shadow-md"
           src="/assets/images/teslarace.jpg"
           style={splitItemImageStyle}
