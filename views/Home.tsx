@@ -25,6 +25,7 @@ import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
 import LinkedInButton from '../components/connectLinkedin';
 import Link from 'next/link';
+import PostPreview from '../components/post-preview'
 
 type Props = {
   posts: Post[]
@@ -105,6 +106,19 @@ import SignUpModal from '../SignUpModal';
 
 <br></br>
          <br></br>
+           <Image
+                       src='/assets/images/aboutus.jpg'
+                       alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
+                         width={384}
+                         height={216}
+                         style={{
+                             borderRadius: '20px',
+                             boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                           }}
+                       />
+
+<br></br>
+         <br></br>
  <div style={circleImageStyle} className="circle-image-container">
       <img src={'/assets/images/aness.jpeg'}
       alt='Stocks To Buy Now AI  Founders'
@@ -134,20 +148,6 @@ import SignUpModal from '../SignUpModal';
              excerpt={heroPost.excerpt}
            />
 
-               <br></br>
-              <br></br>
-
-             <Image
-              src='/assets/images/aboutus.jpg'
-              alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
-                width={384}
-                height={216}
-                style={{
-                    borderRadius: '20px',
-                    boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
-                  }}
-
-              />
 
 
 
