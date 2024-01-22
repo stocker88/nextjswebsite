@@ -223,12 +223,12 @@ export default function Index({ allPosts }: Props) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="hsl(200, 100%, 48%)" />
           <meta name="description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks"/>
-          <meta property="og:title" content="This AI Send You Hot Stocks To Buy Before They Blow Up" />
+          <meta property="og:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up" />
           <meta name="og:description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
-          <meta name="twitter:title" content="This AI Send You Hot Stocks To Buy Before They Blow Up"/>
+          <meta name="twitter:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
           <meta name="twitter:description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks"/>
           <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
