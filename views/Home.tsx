@@ -93,6 +93,7 @@ import SignUpModal from '../SignUpModal';
                                <br></br>
 
            <br></br>
+           <center>
                  <PostPreview
                      key={heroPost.slug}
                      title={heroPost.title}
@@ -116,6 +117,7 @@ import SignUpModal from '../SignUpModal';
         <SearchStocks stockData={stockDataSearch} />
         <br></br>
                  <br></br>
+                 </center>
         <Container>
 
 
