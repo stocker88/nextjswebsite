@@ -11,11 +11,10 @@ const IntroApp = () => {
         </h2>
         <br></br>
         <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Test In The Virtual Investing App
+        A Safe PlayGround For Learning: Test In The Virtual Investing App
         </h2>
-        <br></br>
         <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Access AI Price Predictions:
+
         </h2>
 </center>
 

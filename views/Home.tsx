@@ -89,6 +89,21 @@ import SignUpModal from '../SignUpModal';
         <IntroApp/>
         </Container>
         <Swipe/>
+
+                               <br></br>
+
+           <br></br>
+                 <PostPreview
+                     key={heroPost.slug}
+                     title={heroPost.title}
+                     coverImage={heroPost.coverImage}
+                     date={heroPost.date}
+                     author={heroPost.author}
+                     slug={heroPost.slug}
+                     excerpt={heroPost.excerpt}
+                   />
+
+
         <Container>
 
 
@@ -140,18 +155,6 @@ import SignUpModal from '../SignUpModal';
   <br></br>
 
               <br></br>
-                       <br></br>
-
-   <br></br>
-         <PostPreview
-             key={heroPost.slug}
-             title={heroPost.title}
-             coverImage={heroPost.coverImage}
-             date={heroPost.date}
-             author={heroPost.author}
-             slug={heroPost.slug}
-             excerpt={heroPost.excerpt}
-           />
 
 
 
@@ -168,6 +171,12 @@ import SignUpModal from '../SignUpModal';
                        <br></br>
 
 </center>
+<section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+      <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+        Access AI Price Predictions:
+  </h2>
+    </section>
+        <br></br>
         <SearchStocks stockData={stockDataSearch} />
         <br></br>
                  <br></br>
