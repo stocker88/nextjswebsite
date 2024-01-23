@@ -113,11 +113,12 @@ import SignUpModal from '../SignUpModal';
         Access AI Price Predictions:
   </h2>
     </section>
-        <br></br>
+
         <SearchStocks stockData={stockDataSearch} />
         <br></br>
                  <br></br>
                  </center>
+                 <br></br>
         <Container>
 
 
