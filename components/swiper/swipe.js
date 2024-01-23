@@ -92,9 +92,10 @@ const containerStyle = {
 
 <br></br>
 <Container>
+<center>
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Should You Buy Tesla?
+        Should You Buy Tesla? Ask AI for alternatives
         <br></br>
         <br></br>
         HelloStocker AI Recommended Ferrari instead +50% outperformance
@@ -102,6 +103,7 @@ const containerStyle = {
         <br></br>
         </h2>
     </section>
+    </center>
     <br></br>
     </Container>
 
