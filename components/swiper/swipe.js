@@ -101,7 +101,7 @@ const containerStyle = {
         Should You Buy Tesla? Ask AI for alternatives
         <br></br>
         <br></br>
-        HelloStocker AI Recommended Ferrari instead +50% outperformance
+        HelloStocker AI Recommended Ferrari instead +28% outperformance
 
         </h2>
     </section>

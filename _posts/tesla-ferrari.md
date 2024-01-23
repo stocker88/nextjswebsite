@@ -37,7 +37,7 @@ Sorting by valuation we can see that Toyota comes second (right after Tesla) fol
 &nbsp;
 
 
-Since then, Ferrari took +50%! StocksToBuy AI predicted over 20 companies with similar returns!
+Since then, Ferrari took +28%! StocksToBuy AI predicted over 20 companies with similar returns!
 
 
 &nbsp;
