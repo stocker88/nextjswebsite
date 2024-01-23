@@ -97,10 +97,9 @@ const containerStyle = {
         Should You Buy Tesla?
         <br></br>
         <br></br>
-        HelloStocker AI Recommended Ferrari instead
+        HelloStocker AI Recommended Ferrari instead +50% outperformance
         <br></br>
         <br></br>
-        Since then Tesla Did -5%, Ferrari Took +20%
         </h2>
     </section>
     <br></br>
