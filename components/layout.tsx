@@ -16,8 +16,8 @@ const Layout = ({ preview, children }: Props) => {
         {/*<Alert preview={preview} />*/}
         <main>{children}</main>
       </div>
-      <MeetingButton style={{  background:  "#3700B3" }}/>
-      <Footer  style={{  background: "linear-gradient(#3700B3, #1387FF)" }}/>
+      <MeetingButton />
+      <Footer />
     </>
   )
 }
