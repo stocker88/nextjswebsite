@@ -28,7 +28,12 @@ ogImage:
 
 &nbsp;
 
-#### Our AI models generate investment decisions driven by the optimization of a utility function that takes all the following parameters into account:
+
+![](/assets/blog/ai-advisor/aitrader.jpg)
+
+&nbsp;
+
+#### 🧠 Our AI models generate investment decisions driven by the optimization of a utility function that takes all the following parameters into account:
 
 &nbsp;
 
@@ -58,12 +63,6 @@ Leveraging revenues, profitability and earnings report to predict which companie
 
 Studying which stage of the economy we are at to predict which investment style factor will be performing better.
 
-&nbsp;
-
-&nbsp;
-
-
-![](/assets/blog/ai-advisor/aitrader.jpg)
 
 &nbsp;
 
