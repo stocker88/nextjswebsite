@@ -24,7 +24,11 @@ ogImage:
 &nbsp;
 
 
-#### 🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:
+#### 🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals.
+
+&nbsp;
+
+#### Our AI models generate investment decisions driven by the optimization of a utility function that takes all the following parameters into account:
 
 &nbsp;
 
@@ -85,12 +89,6 @@ Using technical trading and volume techniques to understand when is the best poi
 &nbsp;
 
 &nbsp;
-
-#### - Artificial Intelligence and Big Data: 
-
-&nbsp;
-
-We use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account.
 
 &nbsp;
 
