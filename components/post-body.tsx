@@ -59,7 +59,7 @@ const CustomImage = ({ alt, src, title }) => (
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto" style={{'color':'lightgrey'}}>
+    <div className="max-w-2xl mx-auto" style={{'color':'lightgrey', letterSpacing: '1px'}}>
       <Markdown
       components={{
           a: CustomLink,
