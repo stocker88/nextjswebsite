@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { isMobile } from "react-device-detect";
-import Zoom from 'react-medium-image-zoom'
+
 import 'react-medium-image-zoom/dist/styles.css'
 import ReactGA from 'react-ga4';
 import QRCode from 'qrcode.react';
@@ -197,11 +197,11 @@ const InstallButtons = ({...props}) => {
                          >
              <animated.section style={springProps} {...props}>
                <div>
-                 <Zoom>
+
                 <div style={containerStyle}>
                   {dynamicLink && <QRCode value={dynamicLink} style={imageStyle} />}
                 </div>
-                </Zoom>
+
              <div style={{paddingTop: 10}}></div>
                       <div style={{paddingTop: 10}}></div>
                       <div style={{ width: '140px'}}>

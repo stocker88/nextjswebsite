@@ -11,7 +11,7 @@ const IntroApp = () => {
         </h2>
         <br></br>
         <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        A Safe PlayGround For Learning: Test In The Virtual Investing App
+        A Safe Ground For Learning: Test In The Virtual Investing App
         </h2>
 </center>
 

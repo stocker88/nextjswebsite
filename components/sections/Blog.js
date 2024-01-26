@@ -7,7 +7,7 @@ import Button from '../elements/Button';
 import ButtonGroup from '../elements/ButtonGroup';
 import { useState } from 'react';
 import SectionHeader from './partials/SectionHeader';
-import Zoom from 'react-medium-image-zoom'
+
 import 'react-medium-image-zoom/dist/styles.css'
 import Link from 'next/link';
 

@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import { useState } from 'react';
 import { isMobile } from "react-device-detect";
-import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import ReactGA from 'react-ga4';
 const innerClasses = classNames(
@@ -79,7 +78,7 @@ if(isMobile) {
 
                         />
          <br></br>
-           <Zoom><Image
+           <Image
                            src={'/assets/images/qrcode.webp'}
                           width={160}
                           height={160}
@@ -88,7 +87,7 @@ if(isMobile) {
                               boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
                             }}
 
-                           /></Zoom>
+                           />
 
                                  <div style={{paddingTop: 10}}></div>
                                                                          <Image

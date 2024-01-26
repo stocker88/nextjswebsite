@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import "swiper/css";
 import "swiper/css/pagination"
 import { isMobile, browserName } from "react-device-detect";
-import Zoom from 'react-medium-image-zoom'
 import IntroDataset from '../../components/introDataset';
 // import Swiper core and required modules
 import SwiperCore, {
@@ -45,7 +44,7 @@ const containerStyle = {
     <>
 
       <center>
-          <Zoom>
+
             <Image
               width={493.75}
               height={434.4}
@@ -55,13 +54,13 @@ const containerStyle = {
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
-          </Zoom>
+
 
         </center>
 <br></br>
 
       <center>
-          <Zoom>
+
             <Image
               width={493.75}
               height={434.4}
@@ -71,12 +70,12 @@ const containerStyle = {
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
-          </Zoom>
+
 
         </center>
         <br></br>
       <center>
-          <Zoom>
+
             <Image
               width={493.75}
               height={434.4}
@@ -86,7 +85,7 @@ const containerStyle = {
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
-          </Zoom>
+
 
         </center>
 
@@ -110,7 +109,7 @@ const containerStyle = {
     </Container>
 
     <center>
-    <Zoom>
+
         <Image
           width={600}
           height={600}
@@ -120,7 +119,7 @@ const containerStyle = {
           sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
           alt="Tesla vs Ferrari"
         />
-      </Zoom>
+
     </center>
 
 

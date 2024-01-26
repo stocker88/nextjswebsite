@@ -219,7 +219,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
                 <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
               <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-              
+
                 </div>
 
                 <br></br>
