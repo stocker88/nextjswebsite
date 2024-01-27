@@ -7,7 +7,7 @@ import Swipe from '../components/swiper/swipe';
 import IntroVideo from '../components/introVideo';
 import IntroApp from '../components/introApp';
 import YoutubeSection from '../components/sections/YoutubeSection';
-import CompoundInterestCalculator from '../components/CompoundInterestCalculator';
+import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 import TitleSplit from '../components/sections/TitleSplit';
 import TitleSplit2 from '../components/sections/Title2Split';
 import TitleSplit3 from '../components/sections/Title3Split';
