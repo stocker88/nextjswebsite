@@ -6,6 +6,7 @@ import {
   YAxis,
   Tooltip,
 } from 'recharts';
+import Slider from '@mui/material/Slider';
 
 const CompoundInterestCalculator = () => {
   const [principal, setPrincipal] = useState('10000');
@@ -14,9 +15,34 @@ const CompoundInterestCalculator = () => {
   const [investmentYears, setInvestmentYears] = useState('30');
   const [data, setData] = useState([]);
 
+  const [sliderValue, setSliderValue] = useState(30);
+  const [sliderMonthlyReturnValue, setSliderMonthlyReturnValue] = useState(1.4);
+  const [sliderDailyContribValue, setSliderDailyContribValue] = useState(30);
+  const [sliderPrincipalValue, setSliderPrincipalValue] = useState(10000);
+
+  const handleSliderChange = (value) => {
+    setInvestmentYears(value);
+    setSliderValue(value);
+  };
+
+    const handleSliderMonthlyReturnChange = (value) => {
+      setMonthlyReturn(value);
+      setSliderMonthlyReturnValue(value);
+    };
+
+    const handleSliderPrincipalChange = (value) => {
+      setPrincipal(value);
+      setSliderPrincipalValue(value);
+    };
+
+    const handleSliderDailyContribChange = (value) => {
+      setDailyContrib(value);
+      setSliderDailyContribValue(value);
+    };
+
   useEffect(() => {
     calculateCompoundInterest();
-  }, []); // Empty dependency array to run the effect only once on mount
+  }, [principal, dailyContrib, monthlyReturn, investmentYears]); // Empty dependency array to run the effect only once on mount
 
   const calculateCompoundInterest = () => {
     const monthlyInterestRate = monthlyReturn / 100;
@@ -53,60 +79,88 @@ const CompoundInterestCalculator = () => {
        Compound Interest Calculator
      </h2>
 
+
      <div style={{ marginTop: '20px', display: 'inline-block', textAlign: 'left' }}>
+
+
+
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Initial Amount:</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Initial Amount ($)</span>
          <input
            type="number"
            value={principal}
-           onChange={(e) => setPrincipal(e.target.value)}
+           onChange={(e) => handleSliderPrincipalChange(e.target.value)}
            style={{ textAlign: 'center', borderRadius: '5px' }}
          />
        </label>
 
+        <Slider
+             min={0}
+             max={20000}
+             step={100}
+             value={sliderPrincipalValue}
+             onChange={(e) => handleSliderPrincipalChange(e.target.value)}
+
+           />
+
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Daily Contribution:</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Daily Contribution ($)</span>
          <input
            type="number"
            value={dailyContrib}
-           onChange={(e) => setDailyContrib(e.target.value)}
+           onChange={(e) => handleSliderDailyContribChange(e.target.value)}
            style={{ textAlign: 'center', borderRadius: '5px' }}
          />
        </label>
 
-       <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Monthly Return (%):</span>
-         <input
-           type="number"
-           value={monthlyReturn}
-           onChange={(e) => setMonthlyReturn(e.target.value)}
-           style={{ textAlign: 'center', borderRadius: '5px' }}
-         />
-       </label>
+
+          <Slider
+             min={0}
+             max={150}
+             step={1}
+             value={sliderDailyContribValue}
+             onChange={(e) => handleSliderDailyContribChange(e.target.value)}
+
+           />
+
 
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Investment Period (Years):</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Investment Period (Years)</span>
          <input
            type="number"
            value={investmentYears}
-           onChange={(e) => setInvestmentYears(e.target.value)}
+           onChange={(e) => handleSliderChange(e.target.value)}
            style={{ textAlign: 'center', borderRadius: '5px' }}
          />
        </label>
 
-       <button
-         style={{
-           padding: '8px',
-           cursor: 'pointer',
-           backgroundColor: '#4CAF50',
-           color: 'white',
-           border: 'none',
-           borderRadius: '5px',
-         }}
-         onClick={calculateCompoundInterest}
-       >
-         Calculate
-       </button>
+            <Slider
+              min={1}
+              max={50}
+              step={1}
+              value={sliderValue}
+              onChange={(e) => handleSliderChange(e.target.value)}
+
+            />
+
+       <label style={{ display: 'block', marginBottom: '10px' }}>
+         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Monthly Return (%)</span>
+         <input
+           type="number"
+           value={monthlyReturn}
+           onChange={(e) => handleSliderMonthlyReturnChange(e.target.value)}
+           style={{ textAlign: 'center', borderRadius: '5px' }}
+         />
+       </label>
+
+
+          <Slider
+             min={0}
+             max={5}
+             step={0.1}
+             value={sliderMonthlyReturnValue}
+             onChange={(e) => handleSliderMonthlyReturnChange(e.target.value)}
+           />
      </div>
 
 <br></br>
