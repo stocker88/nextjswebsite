@@ -20,6 +20,7 @@ import BookingMeetingButton from '../../components/bookingMeetingButton';
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
 import CompoundInterestCalculator from '../../components/compoundInterestCalculator';
 import SearchStocks from '../../components/SearchStocks';
+import { stockDataSearch } from '../../components/constants';
 
 export default function Swipe() {
 const containerStyle = {

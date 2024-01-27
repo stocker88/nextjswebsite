@@ -19,7 +19,6 @@ import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
 import TryWebAppLink from '../components/TryWebAppLink';
-import { stockDataSearch } from '../components/constants';
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
 import LinkedInButton from '../components/connectLinkedin';
