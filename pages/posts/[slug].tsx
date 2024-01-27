@@ -195,11 +195,12 @@ export default function Post({ post, morePosts, preview }: Props) {
 
                 <div style={{
                   'position': 'fixed',
-                  'bottom': '1rem',
-                  'left': isMobile ? '5%' : 'min(50px, 1vw)',
-                  'backgroundColor': 'rgba(18, 18, 18, 0.9)', /* Dark color with opacity */
+                  'top':  'min(10px, 0.8vw)',
+                  'left': isMobile?'unset':'min(50px, 1vw)',
+                  'right': isMobile?'min(50px, 1vw)':'unset',
+                  'backgroundColor': 'rgba(18, 18, 18, 0.9)',
                   'padding': 'min(10px, 0.8vw)',
-                  'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)', /* Lighter shadow for dark mode */
+                  'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)',
                   'zIndex': '100',
                   'borderRadius': '30px',
                   'display': 'flex',
