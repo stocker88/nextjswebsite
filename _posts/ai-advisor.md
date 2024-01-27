@@ -99,7 +99,7 @@ Using technical trading and volume techniques to understand when is the best poi
 
 &nbsp;
 
-![](/assets/blog/ai-advisor/aitrading.jpg)
+![](/assets/blog/ai-advisor/aitrader.jpg)
 
 &nbsp;
 
