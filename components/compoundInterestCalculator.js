@@ -121,8 +121,8 @@ const CompoundInterestCalculator = () => {
                 contentStyle={{ textShadow: '0px 0px 3px rgba(0, 0, 0, 1)', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '30px', fontWeight: 'bold' }}
               />
 
-            <Line type="monotone" dataKey="totalWithInterest" stroke="#8884d8" name="Total with Compound Growth" />
-            <Line type="monotone" dataKey="onlyAmountSaved" stroke="#82ca9d" name="Amount Saved without Compounding" />
+            <Line type="monotone" dataKey="totalWithInterest" stroke="#8884d8" name="Amount with Profits" />
+            <Line type="monotone" dataKey="onlyAmountSaved" stroke="#82ca9d" name="Amount Saved" />
           </LineChart>
         )}
 
