@@ -153,7 +153,7 @@ export default function Index({ allPosts }: Props) {
                           'left': isMobile?'unset':'min(50px, 1vw)',
                           'right': isMobile?'min(50px, 1vw)':'unset',
                           'backgroundColor': 'rgba(18, 18, 18, 0.9)',
-                          'padding': 'min(10px, 0.8vw)',
+                          'padding': 'min(10px, 0.8vw) min(10px, 0.8vw)',
                           'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)',
                           'zIndex': '100',
                           'borderRadius': '30px',
