@@ -18,6 +18,8 @@ import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo
 import BookingMeetingButton from '../../components/bookingMeetingButton';
 // install Swiper modules
 SwiperCore.use([EffectCoverflow,Pagination,Autoplay]);
+import CompoundInterestCalculator from '../../components/compoundInterestCalculator';
+import SearchStocks from '../../components/SearchStocks';
 
 export default function Swipe() {
 const containerStyle = {
@@ -91,6 +93,47 @@ const containerStyle = {
 
 <br></br>
 <br></br>
+ <center>
+
+
+
+
+<br></br>
+         <br></br>
+    <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <CompoundInterestCalculator/>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+                               <br></br>
+<br></br>
+         <br></br>
+              <br></br>
+
+         <br></br>
+                  <br></br>
+             <br></br>
+         <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+               <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+                 Access AI Price Predictions:
+           </h2>
+             </section>
+
+                 <SearchStocks stockData={stockDataSearch} />
+                 <br></br>
+                          <br></br>
+
+                          <br></br>
+
+
+         </center>
 <br></br>
 <br></br>
 <Container>

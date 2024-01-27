@@ -7,7 +7,6 @@ import Swipe from '../components/swiper/swipe';
 import IntroVideo from '../components/introVideo';
 import IntroApp from '../components/introApp';
 import YoutubeSection from '../components/sections/YoutubeSection';
-import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 import TitleSplit from '../components/sections/TitleSplit';
 import TitleSplit2 from '../components/sections/Title2Split';
 import TitleSplit3 from '../components/sections/Title3Split';
@@ -19,7 +18,6 @@ import type Post from '../interfaces/post';
 import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
-import SearchStocks from '../components/SearchStocks';
 import TryWebAppLink from '../components/TryWebAppLink';
 import { stockDataSearch } from '../components/constants';
 import { isMobile, browserName } from "react-device-detect";
@@ -110,49 +108,9 @@ import SignUpModal from '../SignUpModal';
               <br></br>
                        <br></br>
      <br></br>
-        <br></br>
-
-<br></br>
-         <br></br>
-    <br></br>
-<section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Access AI Price Predictions:
-  </h2>
-    </section>
-
-        <SearchStocks stockData={stockDataSearch} />
-        <br></br>
-                 <br></br>
-                 </center>
-                 <br></br>
+   </center>
 
 
-
-
-         <center>
-
-
-
-
-<br></br>
-         <br></br>
-    <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <CompoundInterestCalculator/>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-<br></br>
-         <br></br>
-         </center>
         <Container>
 
 

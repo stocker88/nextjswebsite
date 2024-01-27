@@ -11,12 +11,12 @@ import Slider from '@mui/material/Slider';
 const CompoundInterestCalculator = () => {
   const [principal, setPrincipal] = useState('10000');
   const [dailyContrib, setDailyContrib] = useState('30');
-  const [monthlyReturn, setMonthlyReturn] = useState('1.4');
+  const [monthlyReturn, setMonthlyReturn] = useState('0.9');
   const [investmentYears, setInvestmentYears] = useState('30');
   const [data, setData] = useState([]);
 
   const [sliderValue, setSliderValue] = useState(30);
-  const [sliderMonthlyReturnValue, setSliderMonthlyReturnValue] = useState(1.4);
+  const [sliderMonthlyReturnValue, setSliderMonthlyReturnValue] = useState(0.9);
   const [sliderDailyContribValue, setSliderDailyContribValue] = useState(30);
   const [sliderPrincipalValue, setSliderPrincipalValue] = useState(10000);
 
