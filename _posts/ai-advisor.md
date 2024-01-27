@@ -17,23 +17,25 @@ ogImage:
 
 &nbsp;
 
-#### 🌟 We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.
+#### 🌟 About Us
 
 &nbsp;
 
-&nbsp;
-
-
-#### 🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals.
+We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.
 
 &nbsp;
 
-
-![](/assets/blog/ai-advisor/aitrader.jpg)
+We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals.
 
 &nbsp;
 
-#### 🧠 Our AI models generate investment decisions driven by the optimization of a utility function that takes all the following parameters into account:
+
+#### 🚀 How we use AI
+
+
+&nbsp;
+ 
+Our AI models generate investment decisions by processing millions of internet and financial data points that look into:
 
 &nbsp;
 
