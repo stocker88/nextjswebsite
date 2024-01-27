@@ -148,8 +148,7 @@ export default function Index({ allPosts }: Props) {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 {<div style={{
                           'position': 'fixed',
-                          bottom:  isMobile?'unset':0,
-                          top:  isMobile?0:'unset',
+                          top:  0,
                           'left': isMobile?'unset':'min(50px, 1vw)',
                           'right': isMobile?'min(50px, 1vw)':'unset',
                           'backgroundColor': 'rgba(18, 18, 18, 0.9)',
