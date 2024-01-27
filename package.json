@@ -27,6 +27,7 @@
     "react-share": "^5.0.2",
     "react-spring": "^9.7.3",
     "react-starfield": "^1.0.3",
+    "recharts": "^2.10.4",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "swiper": "^7.4.1",
