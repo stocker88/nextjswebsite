@@ -109,10 +109,10 @@ const CompoundInterestCalculator = () => {
        </button>
      </div>
 
-
+<br></br>
 
         {data.length > 0 && (
-          <LineChart width={window.innerWidth < 300 ? 250 : window.innerWidth < 400 ? 350:window.innerWidth < 540 ? 500: window.innerWidth < 600 ? 480:500} height={400} data={data} margin={{ top: 20, right: 30, left: 37, bottom: 10 }}>
+          <LineChart width={window.innerWidth < 340 ? 250 : window.innerWidth < 460 ? 340:window.innerWidth < 540 ? 460: window.innerWidth < 600 ? 480:500} height={400} data={data} margin={{ top: 20, right: 30, left: 37, bottom: 10 }}>
             <XAxis dataKey="year" label={{ value: 'Years', position: 'insideBottomRight', offset: -10 }} tickFormatter={formatXAxisValue} />
             <YAxis label={{ value: '', angle: -90, position: 'insideLeft' }} tickFormatter={formatYAxisValue} />
               <Tooltip
