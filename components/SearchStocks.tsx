@@ -102,6 +102,14 @@ const db = getFirestore();
 
         ReactPixel.trackCustom('getTheAppClicked', {location: 'selectedStock'});
       });
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('569234290211542');
+
+
+        ReactPixel.trackCustom('getTheAppClicked', {location: 'selectedStock'});
+      });
 
     const sessionId = sessionData.sessionId || '';
 
