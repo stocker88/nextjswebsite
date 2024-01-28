@@ -126,7 +126,7 @@ export default function Index({ allPosts }: Props) {
             import("react-facebook-pixel")
               .then((x) => x.default)
               .then((ReactPixel) => {
-                ReactPixel.init('569234290211542');
+                ReactPixel.init('1831807650591569');
                 ReactPixel.pageView();
               });
     const handleScroll = () => {
@@ -273,11 +273,11 @@ export default function Index({ allPosts }: Props) {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '569234290211542');
+          fbq('init', '1831807650591569');
           fbq('track', 'PageView');
           </script>
           <noscript><img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=569234290211542&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=1831807650591569&ev=PageView&noscript=1"
       `}
     </Script>
     <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
