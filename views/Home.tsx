@@ -24,6 +24,7 @@ import Image from 'next/image';
 import LinkedInButton from '../components/connectLinkedin';
 import Link from 'next/link';
 import PostPreview from '../components/post-preview'
+import QuoteDisplay from '../components/inspiration';
 
 type Props = {
   posts: Post[]
@@ -190,6 +191,11 @@ import SignUpModal from '../SignUpModal';
         )}*/}
         {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 5):posts.slice(1)} />}
 
+      <br></br><br></br>
+
+     <QuoteDisplay from='inspiration_button_homePage'/>
+     <br></br> <br></br>
+     <br></br> <br></br>
       </Container>
       {posts.length > 0 && <FeaturesSplit className="illustration-section-02" posts={posts} hasBgColor={true} invertMobile={true} imageFill={true}/>}
     </>

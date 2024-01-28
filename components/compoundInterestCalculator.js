@@ -12,18 +12,14 @@ const CompoundInterestCalculator = () => {
   const [principal, setPrincipal] = useState('10000');
   const [dailyContrib, setDailyContrib] = useState('30');
   const [monthlyReturn, setMonthlyReturn] = useState('0.9');
-  const [investmentYears, setInvestmentYears] = useState('30');
+  const [investmentYears, setInvestmentYears] = useState('20');
   const [data, setData] = useState([]);
 
   const [sliderValue, setSliderValue] = useState(30);
   const [sliderMonthlyReturnValue, setSliderMonthlyReturnValue] = useState(0.9);
-  const [sliderDailyContribValue, setSliderDailyContribValue] = useState(30);
+  const [sliderDailyContribValue, setSliderDailyContribValue] = useState(20);
   const [sliderPrincipalValue, setSliderPrincipalValue] = useState(10000);
 
-  const handleSliderChange = (value) => {
-    setInvestmentYears(value);
-    setSliderValue(value);
-  };
 
     const handleSliderMonthlyReturnChange = (value) => {
       setMonthlyReturn(value);
@@ -74,7 +70,8 @@ const CompoundInterestCalculator = () => {
   return (
    <div style={{ color: 'black', padding: '2px' }}>
      <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
-       Each +0.1% matters:
+       Even +0.1% Makes A Difference
+       <br />
        <br />
        Compound Interest Calculator
      </h2>
@@ -122,26 +119,6 @@ const CompoundInterestCalculator = () => {
              onChange={(e) => handleSliderDailyContribChange(e.target.value)}
 
            />
-
-
-       <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Investment Period (Years)</span>
-         <input
-           type="number"
-           value={investmentYears}
-           onChange={(e) => handleSliderChange(e.target.value)}
-           style={{ textAlign: 'center', borderRadius: '5px' }}
-         />
-       </label>
-
-            <Slider
-              min={1}
-              max={50}
-              step={1}
-              value={sliderValue}
-              onChange={(e) => handleSliderChange(e.target.value)}
-
-            />
 
        <label style={{ display: 'block', marginBottom: '10px' }}>
          <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Monthly Return (%)</span>

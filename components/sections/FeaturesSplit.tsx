@@ -13,7 +13,6 @@ import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo
 import { isMobile} from "react-device-detect";
 import PostPreview from './../post-preview'
 import type Post from '../../interfaces/post'
-import Testimonial from './Testimonial'
 import QuoteDisplay from '../../components/inspiration';
 import AboutUs from '../../components/aboutUs';
 
@@ -95,7 +94,7 @@ const FeaturesSplit = ({
 <center>
 
 
-    <Testimonial/>
+
 
     <br></br> <br></br>
     <br></br><br></br>
