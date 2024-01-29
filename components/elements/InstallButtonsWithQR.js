@@ -142,7 +142,8 @@ const InstallButtons = ({...props}) => {
               const link = await generateDynamicLink();
               setDynamicLink(link);
               console.log('open1')
-              if (link) {
+
+              if (link && isMobile()) {
                 console.log('open2')
                 window.open(link, '_blank');
               }
