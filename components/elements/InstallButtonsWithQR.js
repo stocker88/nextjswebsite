@@ -165,7 +165,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink} target="_blank" rel="noreferrer" onClick={sendOutboundApple}>
+                       <a href={dynamicLink} target="_blank" rel="noreferrer" >
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -179,7 +179,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink} target="_blank" rel="noreferrer" onClick={sendOutboundAndroid}>
+                    <a href={dynamicLink} target="_blank" rel="noreferrer">
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
