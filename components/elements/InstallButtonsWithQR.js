@@ -54,6 +54,9 @@ const generateDynamicLink = async () => {
         androidInfo: {
           androidPackageName: androidPackageName,
         },
+        navigationInfo: {
+          enableForcedRedirect: 1,
+        },
         iosInfo: {
           iosBundleId: iosBundleId,
           iosAppStoreId: '1565527320',
@@ -135,9 +138,14 @@ const InstallButtons = ({...props}) => {
         const [dynamicLink, setDynamicLink] = useState(null);
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
-            const fetchData = async () => {
+           const fetchData = async () => {
               const link = await generateDynamicLink();
               setDynamicLink(link);
+              console.log('open1')
+              if (link) {
+                console.log('open2')
+                window.open(link, '_blank');
+              }
             };
 
             fetchData();
