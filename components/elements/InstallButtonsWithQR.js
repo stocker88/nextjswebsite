@@ -54,9 +54,6 @@ const generateDynamicLink = async () => {
         androidInfo: {
           androidPackageName: androidPackageName,
         },
-        navigationInfo: {
-          enableForcedRedirect: 1,
-        },
         iosInfo: {
           iosBundleId: iosBundleId,
           iosAppStoreId: '1565527320',
@@ -165,7 +162,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink} target="_blank" rel="noreferrer" >
+                       <a href={dynamicLink} target="_blank" onClick={sendOutboundApple}>
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -179,7 +176,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink} target="_blank" rel="noreferrer">
+                    <a href={dynamicLink} target="_blank" onClick={sendOutboundAndroid}>
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
