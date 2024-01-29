@@ -141,6 +141,12 @@ const InstallButtons = ({...props}) => {
            const fetchData = async () => {
               const link = await generateDynamicLink();
               setDynamicLink(link);
+              console.log('open1')
+
+              if (link && isMobile) {
+                console.log('open2')
+                window.open(link, '_blank');
+              }
             };
 
             fetchData();
