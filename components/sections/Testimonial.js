@@ -1,13 +1,99 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from 'next/image'
 import { useSpringCarousel } from 'react-spring-carousel'
+import { isMobile } from "react-device-detect";
 
 const propTypes = {
   ...SectionTilesProps.types
 }
+
+
+const generateDynamicLink = async () => {
+  const apiKey = 'AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU';
+  const endpoint = `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${apiKey}`;
+
+  const link = 'https://stockstobuynow.ai';
+  const androidPackageName = 'com.newcompany.stocker';
+  const iosBundleId = 'com.newcompany.stocker';
+
+  var storedUtmParams = localStorage.getItem('utmParams');
+
+     var userIdValue = localStorage.getItem('userId')||'defaultUserId';
+
+     var utmCampaignValue='defaultWeb';
+     var utmSourceValue='defaultWeb';
+     var utmMediumValue='defaultWeb';
+
+     // Check if UTM parameters are stored
+     if (storedUtmParams) {
+         // Parse the stored JSON string
+         var utmParams = JSON.parse(storedUtmParams);
+
+         // Retrieve the specific UTM parameter
+         utmCampaignValue = utmParams.campaign;
+         utmSourceValue = utmParams.source;
+         utmMediumValue = utmParams.medium;
+    }
+
+  const utmParamsFinal = {
+    campaign: utmCampaignValue,
+    medium: utmMediumValue,
+    source: utmSourceValue,
+  };
+
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      dynamicLinkInfo: {
+        domainUriPrefix: 'https://applink.stockstobuynow.ai',
+        link: `${link}/userIdPassed?userId=${encodeURIComponent(userIdValue)}`,
+        androidInfo: {
+          androidPackageName: androidPackageName,
+        },
+        navigationInfo: {
+          enableForcedRedirect: 1,
+        },
+        iosInfo: {
+          iosBundleId: iosBundleId,
+          iosAppStoreId: '1565527320',
+        },
+        socialMetaTagInfo: {
+            socialImageLink: 'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg',
+            socialTitle:'HelloStocker AI',
+            socialDescription: "🌟 We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:  - Social Platform and Sentiment Analysis: Analyzing social platform trends and sentiment analysis to predict which stocks are about to blow up,  - Financial Statement and Wall Street Analysts ratings: Leveraging revenues, profitability and earnings report to predict which companies will outperform / are undervalued,  - Macro Economic and Investment Styles: Studying which stage of the economy we are at to predict which investment style factor will be performing better,  - Company Competitive Advantage: Understanding what makes a company attractive with respect to peers  - Technical Trading: Using technical trading and volume techniques to understand when is the best point to buy or sell a stock  - Artificial Intelligence and Big Data: we use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account"
+        },
+        analyticsInfo: {
+          googlePlayAnalytics: {
+            utmCampaign: utmParamsFinal.campaign,
+            utmMedium: utmParamsFinal.medium,
+            utmSource: utmParamsFinal.source,
+          },
+           itunesConnectAnalytics: {
+              at: utmSourceValue,
+              ct: utmCampaignValue,
+              mt: utmMediumValue,
+              pt: utmSourceValue
+            },
+        },
+        },
+    }),
+  });
+
+  if (!response.ok) {
+     console.log('Response:', await response.text());
+
+    throw new Error(`Failed to generate dynamic link: ${response.status}`);
+  }
+
+  const result = await response.json();
+  return result.shortLink;
+};
 
 const defaultProps = {
   ...SectionTilesProps.defaults
@@ -32,13 +118,18 @@ const Testimonial = ({
     borderRadius: '10px',
   };
 
+const [index, setIndex] = useState(0);
+    const [dynamicLink, setDynamicLink] = useState(null);
+
 const slides =    [
       {
         id: 'item-0',
         renderItem: (
 
 
+
     <center style={{width:'100%'}}>
+    <a href={dynamicLink} target="_blank">
         <Image
           width={438*0.8}
           height={875*0.8}
@@ -48,8 +139,9 @@ const slides =    [
 
           alt="App Store Ratings Reviews "
         />
-
+</a>
     </center>
+
 
         )
       },{
@@ -76,12 +168,8 @@ const slides =    [
 
 
 
-                    HelloStocker AI tells me what to buy and sends data and explanations.
-                    Once I understand why and agree I can pass my trades with eToro or Robinhood.
-<br></br>
-                    What I love the most is when the AI sends me notifications when it's time to sell and take profits.
-<br></br>
-                    They advise me and have my final interests in mind: big gains.
+                    <i>"HelloStocker AI tells me what to buy and sends data and explanations.
+                    Once I understand why and agree I can pass my trades with eToro or Robinhood. What I love the most is when the AI sends me notifications when it's time to sell and take profits. They advise me and have my final interests in mind: big gains."</i>
                     <br></br>
                     <br></br>
                <b>  Jerome Hagege
@@ -116,10 +204,11 @@ const slides =    [
 
                       <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
-                      <br></br>The AI tailors recommendations to match my preferences.
+                      <br></br>
+                      <i>"The AI tailors recommendations to match my preferences.
                        I ask the AI what he thinks before making any trade, it's like a personnal coach.
-                       <br></br>
-                       Your personal genie available 24/7! It's not just about stocks; it's about the right stocks that deliver profits.
+
+                       Your personal genie available 24/7! It's not just about stocks; it's about the right stocks that deliver profits."</i>
 
                       <br></br>
                       <br></br>
@@ -151,18 +240,17 @@ const slides =    [
                'border': '2px solid rgba(255, 255, 255, 1)'
                }}
               />
-              
+
               <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
                   <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
                   <br></br>
                  <br></br>
-                 I wanted dividend stocks for passive income.
+                 <i>"I wanted dividend stocks for passive income.
                   StocksToBuyNow AI trading advisor sent me stock recommendations well explained and straight to the point.
-<br></br>
                  Finally financial advises that don't require a finance degree💪
                  I receive concise messages with easy-to-read graphs.
                  They have a user friendly ChatGPT like interface.
-                 No more financial jargon Harvard show off.
+                 No more financial jargon Harvard show off."</i>
                   <br></br>
                   <br></br>
              <b>  Fabien Nieto
@@ -198,11 +286,10 @@ const slides =    [
                 <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
                 <br></br>
                <br></br>
-               Practise trading ideas without the risk! StocksToBuyNow App nails it!
+               <i>"Practise trading ideas without the risk! StocksToBuyNow App nails it!
                 It's about making sure you acquire the skillset and profit from it.
-                <br></br>
                 I use the virtual reality trading platform to practice investing ideas in all safety!
-                It's a safe playground for learning and gaining confidence in their AI technology.
+                It's a safe playground for learning and gaining confidence in their AI technology."</i>
                 <br></br>
                 <br></br>
            <b>  Maxime Lonné
@@ -217,7 +304,7 @@ const slides =    [
         )
       }
     ];
-      const [index, setIndex] = useState(0);
+
 
         const {
           carouselFragment,
@@ -227,6 +314,18 @@ const slides =    [
           withLoop: true, // -> make me loop!
         items: slides,
         });
+
+        useEffect(() => {
+            if (isMobile) {
+               const fetchData = async () => {
+                  const link = await generateDynamicLink();
+                  setDynamicLink(link);
+                  console.log('open1')
+                };
+
+                fetchData();
+            }
+        }, []); // Empty depend
 
 
   return (
