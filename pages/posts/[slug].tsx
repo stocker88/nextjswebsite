@@ -168,7 +168,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                    />
 
 
-                   <h2  style={{ color: 'white',fontWeight: 600, fontFamily: 'arial',fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+                   <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
                   Maximize Profits, Minimize Risks. Our cutting-edge AI sends you hot stocks to buy before they blow up!
                   </h2>
                   <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
@@ -183,7 +183,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                  height={50}
                   />
 
-                <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", fontFamily: 'arial', lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+                <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))",  lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
                     Join a community of +6,300 investors
                 </div>
                 <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
@@ -193,35 +193,6 @@ export default function Post({ post, morePosts, preview }: Props) {
 
 
 
-                <div style={{
-                  'position': 'fixed',
-                  'top':  'min(10px, 0.8vw)',
-                  'left': isMobile?'unset':'min(50px, 1vw)',
-                  'right': isMobile?'min(50px, 1vw)':'unset',
-                  'backgroundColor': 'rgba(18, 18, 18, 0.9)',
-                  'padding': 'min(10px, 0.8vw)',
-                  'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)',
-                  'zIndex': '100',
-                  'borderRadius': '30px',
-                  'display': 'flex',
-                  'flexDirection': isMobile ? 'row' : 'column',
-                  'whiteSpace': isMobile ? 'nowrap' : 'normal',
-                  'overflowX': isMobile ? 'auto' : 'visible',
-                  'justifyContent': isMobile ? 'center' : 'flex-start',
-                  transform: `scale(${scaleFactor})`,
-                }}>
-                <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-            <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-                <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-                <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai/posts/"+post.slug}/>
-
-                </div>
 
                 <br></br>
               <Container>

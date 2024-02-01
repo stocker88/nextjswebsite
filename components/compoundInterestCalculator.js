@@ -68,6 +68,15 @@ const CompoundInterestCalculator = () => {
   const formatXAxisValue = (value) => Math.round(value) % 5 === 0 ? Math.round(value) : '';
 
   return (
+          <section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}>
+
    <div style={{ color: 'black', padding: '2px' }}>
      <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
        Even +0.1% Makes A Difference
@@ -158,6 +167,14 @@ const CompoundInterestCalculator = () => {
         )}
 
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+    </section>
   );
 };
 

@@ -170,7 +170,7 @@ const db = getFirestore();
                               duration={4000} // Equivalent to duration
                                force={0.8} // Equivalent to force
                               />}</>
-                 {selectedTicker!=='' &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', fontFamily: 'arial',lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
+                 {selectedTicker!=='' &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
                     {`Access ${selectedTicker} Forecast and Price Target Now`}
                     <br></br>
                     <br></br>

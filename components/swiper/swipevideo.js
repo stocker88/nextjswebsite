@@ -62,7 +62,7 @@ export default function SwipeVideo() {
                   <div className="container">
    <div className="split-item">
                 <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                  <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
+                  <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue',  fontWeight: 'bold'}}>
                     Discuss new with the Stocker community
                     </div>
                   <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>
@@ -94,7 +94,7 @@ export default function SwipeVideo() {
                                 <div className="container">
                  <div className="split-item">
                               <div className="split-item-content reveal-from-left" data-reveal-container=".split-item">
-                                <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue', fontFamily: 'arial', fontWeight: 'bold'}}>
+                                <div className="text-xxs text-color-cyan fw-600 tt-u mb-8 center-content-mobile" style={{color:'blue',  fontWeight: 'bold'}}>
                                   Competition Analysis
                                   </div>
                                 <h3 className="mt-0 mb-12 center-content-mobile" style={{color:'black', fontWeight: 600, fontSize:"min(25px,max(17px,2.3vw))", fontFamily: 'arial'}}>

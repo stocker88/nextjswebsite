@@ -117,8 +117,15 @@ import SignUpModal from '../SignUpModal';
 
          <center>
 
-
-
+<section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}/>
+<br/>
 
 <br></br>
          <br></br>
@@ -157,14 +164,21 @@ import SignUpModal from '../SignUpModal';
 
               <br></br>
 
-
-
+<br></br>
+<section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}/>
 
 
                              </h3>
 
 
-              <br></br>
+
                        <br></br>
 
 </center>
@@ -194,10 +208,14 @@ import SignUpModal from '../SignUpModal';
       <br></br><br></br>
 
      <QuoteDisplay from='inspiration_button_homePage'/>
-     <br></br> <br></br>
-     <br></br> <br></br>
+
       </Container>
-      {posts.length > 0 && <FeaturesSplit className="illustration-section-02" posts={posts} hasBgColor={true} invertMobile={true} imageFill={true}/>}
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </>
   );
 }

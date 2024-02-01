@@ -36,7 +36,14 @@ const containerStyle = {
 
   return (
     <>
-
+        <section style={{
+                           borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                              paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                              marginBottom: '10px', // Adjust the margin to give some space between sections
+                              width: '90%', // Take up 90% of the screen width
+                              maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                              margin: '0 auto', // Center the sections horizontally
+                           }}>
       <center>
 
             <Image
@@ -86,8 +93,19 @@ const containerStyle = {
 <br></br>
 <br></br>
 <br></br>
+</section>
+<br></br>
+<br></br>
 <br></br>
  <center>
+ <section style={{
+                   borderBottom: '0.03px solid #333', // Adjust the color and style as needed
+                      paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                      marginBottom: '10px', // Adjust the margin to give some space between sections
+                      width: '90%', // Take up 90% of the screen width
+                      maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                      margin: '0 auto', // Center the sections horizontally
+                   }}>
 <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         A Safe Ground For Testing
         <br></br>
@@ -102,7 +120,7 @@ const containerStyle = {
          <br></br>
     <br></br>
                                <br></br>
-                               <br></br>
+                               <br></br></section>
                                <br></br>
                                <br></br>
                                <br></br>
@@ -118,12 +136,9 @@ const containerStyle = {
 
          </center>
 
-<br></br>
-<br></br>
 <Container>
 <center>
-     <br></br>
-        <br></br>
+
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         Should You Buy Tesla?
@@ -161,6 +176,14 @@ const containerStyle = {
 
 <br></br><br></br>
               <br></br>
+          <section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}/>
 
          <br></br>
                   <br></br>
@@ -177,11 +200,19 @@ const containerStyle = {
 
                           <br></br>
 
-
-
-
-
  <br></br>
+<section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}/>
+
+
+
+
 
 
  <br></br>

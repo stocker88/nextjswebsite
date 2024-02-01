@@ -156,40 +156,7 @@ export default function Index({ allPosts }: Props) {
     <>
        <Layout>
        {morePosts.length > 0 && <Home posts={morePosts} />}
-{<div style={{
-                          'position': 'fixed',
-                          'top':  'min(10px, 0.8vw)',
-                          'left': isMobile?'unset':'min(50px, 1vw)',
-                          'right': isMobile?'min(50px, 1vw)':'unset',
-                          'backgroundColor': 'rgba(18, 18, 18, 0.9)',
-                          'padding': 'min(10px, 0.8vw)',
-                          'boxShadow': '0px 0px 8px rgba(255, 255, 255, 0.4)',
-                          'zIndex': '100',
-                          'borderRadius': '30px',
-                          'display': 'flex',
 
-                          transform: `scale(${scaleFactor})`,
-                          'flexDirection': isMobile ? 'row' : 'column',
-                            'whiteSpace': isMobile ? 'nowrap' : 'normal',
-                            'overflowX': isMobile ? 'auto' : 'visible',
-                            'justifyContent': isMobile ? 'center' : 'flex-start',
-                          'transition': 'bottom 0.3s ease-in-out', // Add smooth transition
-                        }}>
-
-            <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <WhatsappShareButton aria-label="Whatsapp" children={<WhatsappIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
-              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <TelegramShareButton aria-label="Telegram" children={<TelegramIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
-            <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <FacebookShareButton aria-label="Facebook" children={<FacebookIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
-              <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <RedditShareButton aria-label="Reddit" children={<RedditIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
-            <div style={isMobile?{paddingRight:'max(1.5px,0.4vw)'}:{paddingTop:'max(1.5px,0.4vw)'}}></div>
-              <LinkedinShareButton aria-label="Linkedin" children={<LinkedinIcon size={'min(max(5vw,32px),40px)'} round={true} />} url={"https://www.stockstobuynow.ai"}/>
-
-
-
-                </div>}
         <Head>
 
          <script type="application/ld+json"
