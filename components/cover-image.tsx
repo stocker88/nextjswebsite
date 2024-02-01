@@ -81,7 +81,7 @@ const db = getFirestore();
 
 
       var storedUtmParams = localStorage.getItem('utmParams');
-     var utmCampaignValue=`defaultWeb_coverImage`;
+     var utmCampaignValue=`defaultWeb_coverImage_${slug}`;
      var utmSourceValue='defaultWeb';
      var utmMediumValue='defaultWeb_coverImage';
      // Check if UTM parameters are stored
@@ -106,9 +106,6 @@ const db = getFirestore();
           language: deviceInfo.language,
           screenWidth: deviceInfo.screenWidth,
           screenHeight: deviceInfo.screenHeight,
-            utmCampaignValue:utmCampaignValue,
-            utmSourceValue:utmSourceValue,
-            utmMediumValue:utmMediumValue,
         }, { merge: true });
   };
 
