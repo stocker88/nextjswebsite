@@ -180,7 +180,7 @@ export default function Index({ allPosts }: Props) {
                         "@type": "Review",
                         "author": {
                           "@type": "Person",
-                          "name": "itsjayhi"
+                          "name": "Jerome"
                         },
                         "reviewRating": {
                           "@type": "Rating",
