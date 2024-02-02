@@ -26,16 +26,15 @@ const generateDynamicLink = async () => {
      var utmMediumValue='defaultWeb';
 
      // Check if UTM parameters are stored
-     if (storedUtmParams || (!isMobile)) {
+     if (storedUtmParams) {
          // Parse the stored JSON string
-         if (storedUtmParams){
-           var utmParams = JSON.parse(storedUtmParams);
+         var utmParams = JSON.parse(storedUtmParams);
 
-          // Retrieve the specific UTM parameter
-          utmCampaignValue = utmParams.campaign;
-          utmSourceValue = utmParams.source;
-          utmMediumValue = utmParams.medium;
-         }
+         // Retrieve the specific UTM parameter
+         utmCampaignValue = utmParams.campaign;
+         utmSourceValue = utmParams.source;
+         utmMediumValue = utmParams.medium;
+    }
 
   const utmParamsFinal = {
     campaign: utmCampaignValue,
@@ -92,9 +91,6 @@ const generateDynamicLink = async () => {
 
   const result = await response.json();
   return result.shortLink;
-    } else {
-    return null;
-    }
 };
 
 
@@ -139,18 +135,18 @@ label: 'Android'
 
 const InstallButtons = ({...props}) => {
 
-        const [dynamicLink1, setDynamicLink1] = useState('https://apps.apple.com/us/app/hot-stocks-to-buy-ai-signals/id1565527320');
-        const [dynamicLink2, setDynamicLink2] = useState('https://play.google.com/store/apps/details?id=com.newcompany.stocker');
+        const [dynamicLink, setDynamicLink] = useState(null);
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
            const fetchData = async () => {
-//              const link = await generateDynamicLink();
-//              if (link!==null){
-//                setDynamicLink1(link);
-//                setDynamicLink2(link);
-//              }
+              const link = await generateDynamicLink();
+              setDynamicLink(link);
+              console.log('open1')
 
-//
+              if (link && isMobile) {
+                console.log('open2')
+                window.open(link, '_blank');
+              }
             };
 
             fetchData();
@@ -169,7 +165,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink1} onClick={sendOutboundApple}>
+                       <a href={dynamicLink} onClick={sendOutboundApple}>
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -183,7 +179,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink2} onClick={sendOutboundAndroid}>
+                    <a href={dynamicLink} onClick={sendOutboundAndroid}>
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
@@ -212,7 +208,7 @@ const InstallButtons = ({...props}) => {
                <div>
 
                 <div style={containerStyle}>
-                  {dynamicLink1 && <QRCode value={dynamicLink1} style={imageStyle} />}
+                  {dynamicLink && <QRCode value={dynamicLink} style={imageStyle} />}
                 </div>
 
              <div style={{paddingTop: 10}}></div>
