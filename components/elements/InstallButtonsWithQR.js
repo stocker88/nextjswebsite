@@ -150,11 +150,11 @@ const InstallButtons = ({...props}) => {
 //                setDynamicLink2(link);
 //              }
 
-              console.log('open1')
-
-              if (link!==null && isMobile) {
-                console.log('open2')
-                window.open(link);
+//              console.log('open1')
+//
+//              if (link!==null && isMobile) {
+//                console.log('open2')
+//                window.open(link);
               }
             };
 
