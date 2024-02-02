@@ -152,10 +152,6 @@ const InstallButtons = ({...props}) => {
 
 //              console.log('open1')
 //
-//              if (link!==null && isMobile) {
-//                console.log('open2')
-//                window.open(link);
-              }
             };
 
             fetchData();
