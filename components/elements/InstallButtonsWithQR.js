@@ -217,7 +217,7 @@ const InstallButtons = ({...props}) => {
                <div>
 
                 <div style={containerStyle}>
-                  {dynamicLink && <QRCode value={dynamicLink} style={imageStyle} />}
+                  {dynamicLink1 && <QRCode value={dynamicLink1} style={imageStyle} />}
                 </div>
 
              <div style={{paddingTop: 10}}></div>
