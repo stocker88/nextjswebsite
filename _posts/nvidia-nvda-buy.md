@@ -396,11 +396,7 @@ AMD price 2 years ago has been scaled to match Nvidia price.
 
 &nbsp;
 
-\- 1) Nvidia stock price outperformed AMD x 2.
-
-&nbsp;
-
-\- 2) Nvidia's Net Income also did x2 
+\- 1) Nvidia stock price did x4, Nvidia's Net Income and EPS also did x4 
 
 &nbsp;
 
@@ -408,16 +404,20 @@ AMD price 2 years ago has been scaled to match Nvidia price.
 
 &nbsp;
 
-\- 3) AMD Net Income decreased a lot 
+\- 2) AMD Share Price Increased, but AMD Net Income decreased a lot and its EPS decreased 
+
+&nbsp;
+
+\- 3) This confirms AMD is undervalued, people are buying it because they think the 'price is low', but price doesn't mean anything, company market value matters.
+
+&nbsp;
+
+\- 4) People also think Nvidia increased but AMD has not so ir should increase, but AMD financial performance has nothing to do with Nvidia.
 
 
 &nbsp;
 
-→ its share price should have decreased more.
-
-&nbsp;
-
-\- 4) Earnings per Share change confirms AMD is overvalued
+\- 5) You might make money with AMD, but not as much as with Nvidia, the price will rally back to match its financial performance and it will underperform.
 
 
 &nbsp;
