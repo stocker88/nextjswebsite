@@ -144,11 +144,11 @@ const InstallButtons = ({...props}) => {
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
            const fetchData = async () => {
-              const link = await generateDynamicLink();
-              if (link!==null){
-                setDynamicLink1(link);
-                setDynamicLink2(link);
-              }
+//              const link = await generateDynamicLink();
+//              if (link!==null){
+//                setDynamicLink1(link);
+//                setDynamicLink2(link);
+//              }
 
               console.log('open1')
 
