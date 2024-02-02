@@ -139,7 +139,7 @@ label: 'Android'
 
 const InstallButtons = ({...props}) => {
 
-        const [dynamicLink1, setDynamicLink1] = useState('https://apps.apple.com/us/app/hot-stocks-to-buy-ai-signals/id1565527320?platform=iphone');
+        const [dynamicLink1, setDynamicLink1] = useState('https://apps.apple.com/us/app/hot-stocks-to-buy-ai-signals/id1565527320');
         const [dynamicLink2, setDynamicLink2] = useState('https://play.google.com/store/apps/details?id=com.newcompany.stocker');
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
@@ -169,7 +169,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink1} onClick={sendOutboundApple} target="_blank">
+                       <a href={dynamicLink1} onClick={sendOutboundApple}>
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -183,7 +183,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink2} onClick={sendOutboundAndroid} target="_blank">
+                    <a href={dynamicLink2} onClick={sendOutboundAndroid}>
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
