@@ -150,7 +150,6 @@ const InstallButtons = ({...props}) => {
 //                setDynamicLink2(link);
 //              }
 
-//              console.log('open1')
 //
             };
 
@@ -170,7 +169,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink1} onClick={sendOutboundApple}>
+                       <a href={dynamicLink1} onClick={sendOutboundApple} target="_blank">
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -184,7 +183,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink2} onClick={sendOutboundAndroid}>
+                    <a href={dynamicLink2} onClick={sendOutboundAndroid} target="_blank">
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
