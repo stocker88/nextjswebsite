@@ -54,6 +54,9 @@ const generateDynamicLink = async () => {
         androidInfo: {
           androidPackageName: androidPackageName,
         },
+        navigationInfo: {
+          enableForcedRedirect: 1,
+        },
         iosInfo: {
           iosBundleId: iosBundleId,
           iosAppStoreId: '1565527320',
