@@ -413,7 +413,7 @@ AMD price 2 years ago has been scaled to match Nvidia price.
 
 &nbsp;
 
-\- 5) You might make money with AMD, but not as much as with Nvidia, the price will rally back to match its financial performance and it will underperform.
+\- 5) You might make money with AMD, but not as much as you would with Nvidia, the price will rally back to match its financial performance and it will underperform.
 
 
 &nbsp;
