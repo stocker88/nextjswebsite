@@ -190,7 +190,7 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>Stocks To Buy Now : AI Trading Virtual App</title>
+          <title>Stocks To Buy Now : AI Virtual Trading App</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Receive hot ai trading signals & invest in a virtual investing app: trade the best stocks and crypto to buy today - Maximize Profits, Minimize Risks" />
