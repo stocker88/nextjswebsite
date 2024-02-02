@@ -26,15 +26,16 @@ const generateDynamicLink = async () => {
      var utmMediumValue='defaultWeb';
 
      // Check if UTM parameters are stored
-     if (storedUtmParams) {
+     if (storedUtmParams || (!isMobile)) {
          // Parse the stored JSON string
-         var utmParams = JSON.parse(storedUtmParams);
+         if (storedUtmParams){
+           var utmParams = JSON.parse(storedUtmParams);
 
-         // Retrieve the specific UTM parameter
-         utmCampaignValue = utmParams.campaign;
-         utmSourceValue = utmParams.source;
-         utmMediumValue = utmParams.medium;
-    }
+          // Retrieve the specific UTM parameter
+          utmCampaignValue = utmParams.campaign;
+          utmSourceValue = utmParams.source;
+          utmMediumValue = utmParams.medium;
+         }
 
   const utmParamsFinal = {
     campaign: utmCampaignValue,
@@ -63,8 +64,8 @@ const generateDynamicLink = async () => {
         },
         socialMetaTagInfo: {
             socialImageLink: 'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg',
-            socialTitle:'HelloStocker AI',
-            socialDescription: "🌟 We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:  - Social Platform and Sentiment Analysis: Analyzing social platform trends and sentiment analysis to predict which stocks are about to blow up,  - Financial Statement and Wall Street Analysts ratings: Leveraging revenues, profitability and earnings report to predict which companies will outperform / are undervalued,  - Macro Economic and Investment Styles: Studying which stage of the economy we are at to predict which investment style factor will be performing better,  - Company Competitive Advantage: Understanding what makes a company attractive with respect to peers  - Technical Trading: Using technical trading and volume techniques to understand when is the best point to buy or sell a stock  - Artificial Intelligence and Big Data: we use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account"
+            socialTitle:'This AI sends you hot stocks to buy before they blow up',
+            socialDescription: "Join a community of +6,300 investors"
         },
         analyticsInfo: {
           googlePlayAnalytics: {
@@ -91,6 +92,9 @@ const generateDynamicLink = async () => {
 
   const result = await response.json();
   return result.shortLink;
+    } else {
+    return null;
+    }
 };
 
 
@@ -135,12 +139,17 @@ label: 'Android'
 
 const InstallButtons = ({...props}) => {
 
-        const [dynamicLink, setDynamicLink] = useState(null);
+        const [dynamicLink1, setDynamicLink1] = useState('https://apps.apple.com/us/app/hot-stocks-to-buy-ai-signals/id1565527320?platform=iphone');
+        const [dynamicLink2, setDynamicLink2] = useState('https://play.google.com/store/apps/details?id=com.newcompany.stocker');
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
            const fetchData = async () => {
               const link = await generateDynamicLink();
-              setDynamicLink(link);
+              if (link!==null){
+                setDynamicLink1(link);
+                setDynamicLink2(link);
+              }
+
               console.log('open1')
 
               if (link && isMobile) {
@@ -165,7 +174,7 @@ const InstallButtons = ({...props}) => {
                    <animated.section style={springProps} {...props}>
                 <div>
                  <br></br>
-                       <a href={dynamicLink} onClick={sendOutboundApple}>
+                       <a href={dynamicLink1} onClick={sendOutboundApple}>
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
@@ -179,7 +188,7 @@ const InstallButtons = ({...props}) => {
                      </a>
 
             <div style={{paddingTop: 10}}></div>
-                    <a href={dynamicLink} onClick={sendOutboundAndroid}>
+                    <a href={dynamicLink2} onClick={sendOutboundAndroid}>
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
