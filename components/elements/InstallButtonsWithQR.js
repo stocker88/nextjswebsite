@@ -152,9 +152,9 @@ const InstallButtons = ({...props}) => {
 
               console.log('open1')
 
-              if (link && isMobile) {
+              if (link!==null && isMobile) {
                 console.log('open2')
-                window.open(link, '_blank');
+                window.open(link);
               }
             };
 

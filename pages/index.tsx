@@ -110,7 +110,7 @@ export default function Index({ allPosts }: Props) {
               utmParams.medium = utmMediumValue;
           }
 
-          if (Object.keys(utmParams).length > 0) {
+          if (Object.keys(utmParams).length > 0 && (utmParams.source!='notDefined' || utmParams.medium!='notDefined' || utmParams.campaign!='notDefined') ) {
               localStorage.setItem('utmParams', JSON.stringify(utmParams));
 
 //               console.log('UTM Value stored:', JSON.stringify(utmParams));
