@@ -20,6 +20,8 @@ But first let's remember what is the SP500.
 
 &nbsp;
 
+&nbsp;
+
 The S&P500 stock market is a big financial playground.
 
 &nbsp;
@@ -57,10 +59,6 @@ It is well known that over the long run, only very few investors manage to outpe
 
 &nbsp;
 
-Warren Buffet is one of them.
-
-&nbsp;
-
 &nbsp;
 
 We will teach you how to beat the S&P500 stock market.
@@ -75,7 +73,11 @@ You will know what stocks to buy and focus your trading on.
 
 &nbsp;
 
-You can become the next Warren Buffett thanks to the mathematics of investing: performance Attribution!
+You could become the next Warren Buffett by understanding what drives your performance and how to make better investment decisions.
+
+&nbsp;
+
+Welcome: Performance Attribution!
 
 &nbsp;
 
@@ -88,7 +90,7 @@ You can become the next Warren Buffett thanks to the mathematics of investing: p
 
 &nbsp;
 
-StocksToBuyNow performance attribution allows you to understand what are your skills.
+Our in-app performance attribution allows you to understand what are your skills.
 
 
 &nbsp;
@@ -103,11 +105,13 @@ And what are the stocks you should invest in.
 
 &nbsp;
 
+&nbsp;
+
 Attribution explains your performance over the S&P500 or any other market benchmark.
 
 &nbsp;
 
-It gives you the best stocks and market segmentations for you to maximize your profits.
+It tells you what are the best stocks and market segmentations for you to focus on in order to maximize your profits.
 
 &nbsp;
 
