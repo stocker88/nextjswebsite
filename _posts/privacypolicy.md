@@ -11,6 +11,35 @@ ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
 
+### Disclosure
+
+&nbsp;
+
+Investing is Risky.
+
+&nbsp;
+
+Never invest what you can't afford to lose.
+
+&nbsp;
+
+Always diversify your positions to maximize your average chance of winning, minimize your risk: do not put all your eggs in the same basket.
+
+&nbsp;
+
+Hellotocker AI is a safe playground to practise and learn with virtual money, if you trade with your real money you are at risk of loss.
+
+&nbsp;
+
+Build some understanding with virtual money: we do not recommend taking real life risks.
+
+&nbsp;
+
+AI recommendations are non financial advise and cannot be guaranteed.
+
+&nbsp;
+
+
 ### 1. Purpose of this Privacy Policy 
 
 &nbsp;
@@ -293,5 +322,35 @@ Protect against legal liability
  
 
  If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@stockstobuynow.ai) or in the app directly.
- 
+
+
+### Disclosure
+
+&nbsp;
+
+Investing is Risky.
+
+&nbsp;
+
+Never invest what you can't afford to lose.
+
+&nbsp;
+
+Always diversify your positions to maximize your average chance of winning, minimize your risk: do not put all your eggs in the same basket.
+
+&nbsp;
+
+Hellotocker AI is a safe playground to practise and learn with virtual money, if you trade with your real money you are at risk of loss.
+
+&nbsp;
+
+Build some understanding with virtual money: we do not recommend taking real life risks.
+
+&nbsp;
+
+AI recommendations are non financial advise and cannot be guaranteed.
+
+&nbsp;
+
+
  
