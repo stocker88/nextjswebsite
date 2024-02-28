@@ -187,6 +187,8 @@ const containerStyle = {
                           <br></br>
                           <br></br>
                           <br></br>
+    <Container>
+    <center>
 
     <div style={{
         width: 'min(100%,400px)',
@@ -201,6 +203,8 @@ const containerStyle = {
 
           />
           </div>
+              </center>
+              </Container>
           <br></br>
 
                           <br></br>
