@@ -18,41 +18,40 @@ const tableRowStyle: CSSProperties = {
 };
 
 const tableCellStyle: CSSProperties = {
-  padding: '10px',
+  padding: '5px',
 };
 
 
 const tableImageStyle: CSSProperties = {
-  width: '50px',
-  height: '50px',
+  width: '30px',
+  height: '30px',
   borderRadius: '50%',
   objectFit: 'cover',
   overflow: 'hidden',
   boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.4)',
-  marginRight: '10px',
+  marginRight: '5px',
 };
 const tablePlaceholderStyle: CSSProperties = {
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',
   borderRadius: '50%',
-  width: '50px',
-  height: '50px',
+  width: '30px',
+  height: '30px',
   justifyContent: 'center',
   overflow: 'hidden',
   backgroundColor: 'black',
   boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.4)',
-  marginRight: '10px',
+  marginRight: '5px',
 };
 
 const tablePlaceholderTextStyle: CSSProperties = {
-  fontSize: '24px',
+  fontSize: '16px',
   color: 'white',
 };
 
 const tableTextStyle: CSSProperties = {
   fontSize: '1.2em',
-  fontWeight: 'bold',
   color: 'white',
   textShadow: '0px 0px 3px rgba(0, 0, 0, 0.5)',
   marginBottom: '5px',

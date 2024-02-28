@@ -123,28 +123,6 @@ const [index, setIndex] = useState(0);
 
 const slides =    [
       {
-        id: 'item-0',
-        renderItem: (
-
-
-
-    <center style={{width:'100%'}}>
-    <a href={dynamicLink} target="_blank">
-        <Image
-          width={438*0.8}
-          height={875*0.8}
-          className="shadow-md"
-          src="/assets/images/appstorerating.png"
-          style={splitItemImageStyle}
-
-          alt="App Store Ratings Reviews "
-        />
-</a>
-    </center>
-
-
-        )
-      },{
         id: 'item-1',
         renderItem: (
              <center style={{width:'100%'}}>
@@ -162,14 +140,14 @@ const slides =    [
                 />
                  <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                    <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
+                    <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
                     <br></br>
                    <br></br>
 
 
 
-                    <i>"HelloStocker AI tells me what to buy and sends data and explanations.
-                    Once I understand why and agree I can pass my trades with eToro or Robinhood. What I love the most is when the AI sends me notifications when it's time to sell and take profits. They advise me and have my final interests in mind: big gains."</i>
+                    <i>"You'll receive clear AI Trade Signals: what to buy, when to sell, what's the current price, what's the target price...
+                    What I love most are the live notifications on AI earnings predictions (for my call spreads). Their customer support is great too, always available even on weekends."</i>
                     <br></br>
                     <br></br>
                <b>  Jerome Hagege
@@ -202,7 +180,7 @@ const slides =    [
                   />
                    <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                      <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
+                      <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
                       <br></br>
                       <i>"The AI tailors recommendations to match my preferences.
@@ -242,15 +220,12 @@ const slides =    [
               />
 
               <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
-                  <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
+                  <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
                   <br></br>
                  <br></br>
                  <i>"I wanted dividend stocks for passive income.
-                  StocksToBuyNow AI trading advisor sent me stock recommendations well explained and straight to the point.
-                 Finally financial advises that don't require a finance degree💪
-                 I receive concise messages with easy-to-read graphs.
-                 They have a user friendly ChatGPT like interface.
-                 No more financial jargon Harvard show off."</i>
+                  The AI Advisor sent me stock recommendations straight to the point.
+                 Everything is backed up by data. The UX is friendly, easy to use. Great app ad great customer support, I recommend."</i>
                   <br></br>
                   <br></br>
              <b>  Fabien Nieto
@@ -283,7 +258,7 @@ const slides =    [
             />
              <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                <b className="text-2xl md:text-5xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
+                <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
                 <br></br>
                <br></br>
                <i>"Practise trading ideas without the risk! StocksToBuyNow App nails it!

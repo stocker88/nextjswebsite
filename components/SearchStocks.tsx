@@ -170,7 +170,7 @@ const db = getFirestore();
                               duration={4000} // Equivalent to duration
                                force={0.8} // Equivalent to force
                               />}</>
-                 {selectedTicker!=='' &&     <center> <h1 className="text-4xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
+                 {selectedTicker!=='' &&     <center> <h1 className="text-3xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.3,textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',  }} >
                     {`Access ${selectedTicker} Forecast and Price Target Now`}
                     <br></br>
                     <br></br>
@@ -193,7 +193,7 @@ const db = getFirestore();
           width: '300px', // Adjust width as needed
           color: 'black',
           WebkitTextFillColor: 'black',
-          fontSize: '17px', // Adjust the font size
+          fontSize: '15px', // Adjust the font size
 
         }}
       />}
@@ -216,9 +216,9 @@ const db = getFirestore();
                                           alt={`Logo of ${stock.ticker}`}
                                           style={{
                                           'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
-                                            width: '50px',
-                                            height: '50px',
-                                            marginRight: '30px',
+                                            width: '30px',
+                                            height: '30px',
+                                            marginRight: '10px',
                                             borderRadius: '50%', // Set border radius to create a circular shape
                                             objectFit: 'cover', // Maintain aspect ratio and cover the entire space
                                             overflow: 'hidden', // Hide any image overflow beyond the circle
@@ -226,28 +226,28 @@ const db = getFirestore();
                                         />
                          ) : (
                             <div
-                                         style={{
-                                           cursor: 'pointer',
-                                           display: 'flex',
-                                           'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
-                                           alignItems: 'center',
-                                           marginBottom: '20px',
-                                            marginRight: '30px',
-                                           borderRadius: '50%', // Round the placeholder
-                                           width: '50px',
-                                           height: '50px',
-                                           justifyContent: 'center',
-                                           overflow: 'hidden', // Hide any content overflow
-                                           backgroundColor: 'black',
-                                         }}
-                                       ><span style={{ fontSize: '24px', color: 'white' }}>{stock.logo.charAt(0)}</span>
-                                       </div>
+                                 style={{
+                                   cursor: 'pointer',
+                                   display: 'flex',
+                                   'boxShadow': '0px 0px 5px rgba(0, 0, 0, 0.4)',
+                                   alignItems: 'center',
+                                   marginBottom: '20px',
+                                    marginRight: '30px',
+                                   borderRadius: '50%', // Round the placeholder
+                                   width: '30px',
+                                   height: '30px',
+                                   justifyContent: 'center',
+                                   overflow: 'hidden', // Hide any content overflow
+                                   backgroundColor: 'black',
+                                 }}
+                               ><span style={{ fontSize: '20px', color: 'white' }}>{stock.logo.charAt(0)}</span>
+                               </div>
                          )}
 
                        <div style={{ display: 'flex', flexDirection: 'column' }}>
                          <div style={{ display: 'flex', alignItems: 'center' }}>
-                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', marginRight: '30px' , 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>{stock.ticker}</span>
-                           <span style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)' }}>{stock.name}</span>
+                           <span style={{ fontSize: '1em',  color: 'white', marginRight: '10px' , 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>{stock.ticker}</span>
+                           <span style={{ fontSize: '1em',  color: 'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)' }}>{stock.name}</span>
                          </div>
                        </div>
                      </div>

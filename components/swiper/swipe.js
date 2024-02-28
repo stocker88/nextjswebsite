@@ -11,6 +11,7 @@ import BookingMeetingButton from '../../components/bookingMeetingButton';
 import SearchStocks from '../../components/SearchStocks';
 import { stockDataSearch } from '../../components/constants';
 import Testimonial from '../../components/sections/Testimonial'
+import Ratings from '../../components/sections/Ratings'
 import NewsletterSignUp from '../../components/formStocker'
 
 export default function Swipe() {
@@ -112,7 +113,7 @@ const containerStyle = {
         Install The Virtual Investing App
         </h2>
 
-    <Testimonial/>
+<Ratings/>
 
 
 
@@ -131,25 +132,64 @@ const containerStyle = {
       <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         Better than Tesla: AI Picked Ferrari
          <br></br>
-         <br></br>
          +42% Over Performance
 
         </h2>
     </section>
-    </center>
 
-    </Container>
+    <div style={{
+        width: 'min(100%,400px)',
+
+    }}>
+        <Image
+          src='/assets/images/ferrari.jpg'
+          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+         width={151}
+        height={45}
+        layout="responsive"
+
+        style={{borderRadius:'10px'}}
+          />
+          </div>
+
+    <br></br>
+    <br></br>
+    <br></br>
 
          <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-               <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+               <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
                 <center> Earnings Surprise AI Predictions and Price Targets:</center>
            </h2>
              </section>
 
+    <div style={{
+        width: 'min(100%,400px)',
+    }}>
+        <Image
+          src='/assets/images/prediction.png'
+          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+         width={151}
+        height={45}
+        style={{borderRadius:'10px'}}
+        layout="responsive"
+
+          />
+          </div>
+          </center>
+    </Container>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
                  <SearchStocks stockData={stockDataSearch} />
                  <br></br>
-                          <br></br>
 
+                          <br></br>
+                          <br></br>
+                          <br></br>
+<Testimonial/>
+                          <br></br>
+                          <br></br>
                           <br></br>
 
  <br></br>
