@@ -223,7 +223,7 @@ const Div = styled.div`
                 duration={2000} // Equivalent to duration
                  force={0.8} // Equivalent to force
                 />}</>
-{!showDropdown &&<h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight " style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 10px rgba(0, 0, 0, 1)' }}>Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett</h2>}
+{!showDropdown &&<h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight " style={{maxWidth:'900px','color':'white', 'textShadow': '0px 0px 10px rgba(0, 0, 0, 1)' }}>Opportunities in the stock market are like sunrises; if you wait too long, you'll miss them. - Warren Buffett</h2>}
 <br></br>
     <div style={{'background': 'Linear-gradient(to right, #414345. #232526)', 'display': 'fixed'}}>
 

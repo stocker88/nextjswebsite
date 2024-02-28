@@ -23,9 +23,9 @@ const [myColor, setMyColor] = useState("black");
 
   return <div className="App">
                <Starfield
-                 starCount={1000*(myVariable)}
+                 starCount={100*(myVariable)}
                  starColor={[255, 255, 255]}
-                 speedFactor={0.17*(myVariable)}
+                 speedFactor={0.1*(myVariable)}
                  backgroundColor={myColor}
                />
                <SessionProvider> { <Component {...pageProps} />} </SessionProvider>

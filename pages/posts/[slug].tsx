@@ -132,7 +132,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="#00D9FF" />
+                <meta name="theme-color" content="black" />
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
                 <meta property="og:description" content={post.seoExcerpt} />
@@ -169,24 +169,13 @@ export default function Post({ post, morePosts, preview }: Props) {
 
 
                    <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-                  Maximize Profits, Minimize Risks. Our cutting-edge AI sends you hot stocks to buy before they blow up!
+                  Maximize Profits: our cutting-edge AI sends you hot stocks to buy before they blow up!
                   </h2>
                   <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
                   <NewsletterSignUp from={post.slug}/>
 
                   <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-                <Image
-                  src='/assets/images/usersRating.webp'
-                  alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
-                  priority={true}
-                 width={200}
-                 height={50}
-                  />
 
-                <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))",  lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-                    Join a community of +6,300 investors
-                </div>
-                <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
              </center>
             </div>
               <article className="mb-32">

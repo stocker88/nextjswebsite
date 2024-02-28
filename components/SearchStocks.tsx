@@ -183,7 +183,7 @@ const db = getFirestore();
         value={searchQuery}
         onChange={handleSearch}
         style={{
-          padding: '30px',
+          padding: '17px',
           paddingLeft: '20px',
           paddingRight: '10px',
           borderRadius: '20px',
@@ -193,7 +193,7 @@ const db = getFirestore();
           width: '300px', // Adjust width as needed
           color: 'black',
           WebkitTextFillColor: 'black',
-          fontSize: '18px', // Adjust the font size
+          fontSize: '17px', // Adjust the font size
 
         }}
       />}

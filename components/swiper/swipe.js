@@ -106,20 +106,16 @@ const containerStyle = {
                       maxWidth: '1000px', // Set a maximum width of 1000 pixels
                       margin: '0 auto', // Center the sections horizontally
                    }}>
-<h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+<h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         A Safe Ground For Testing
         <br></br>
         Install The Virtual Investing App
         </h2>
-<br></br>
+
     <Testimonial/>
 
 
-<br></br>
-<NewsletterSignUp from='PostTestimonial'/>
-         <br></br>
-    <br></br>
-                               <br></br>
+
                                <br></br></section>
                                <br></br>
                                <br></br>
@@ -129,10 +125,7 @@ const containerStyle = {
                                <br></br>
                                <br></br>
                                <br></br>
-                               <br></br>
-                               <br></br>
-<br></br>
-         <br></br>
+
 
          </center>
 
@@ -140,17 +133,12 @@ const containerStyle = {
 <center>
 
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Should You Buy Tesla?
-        <br></br>
-        <br></br>
-        AI Picked Ferrari
+      <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+        Better than Tesla: AI Picked Ferrari
          <br></br>
          <br></br>
-         Better Alternative: +28% Over Performance
-<br></br>
-         <br></br>
-         Maximize Your Profits
+         +42% Over Performance
+
         </h2>
     </section>
     </center>
@@ -189,7 +177,7 @@ const containerStyle = {
                   <br></br>
              <br></br>
          <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-               <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+               <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
                  Access AI Price Predictions:
            </h2>
              </section>

@@ -8,19 +8,19 @@ type Props = {
 }
 
 const CustomP = ({ children }) => (
-  <h2 className="text-xl">{children}</h2>
+  <h2 className="text-base">{children}</h2>
 );
 
 const CustomH2 = ({ children }) => (
-  <h2 className="text-6xl font-bold" style={{paddingTop: 20}}>{children}</h2>
+  <h2 className="text-5xl font-bold" style={{paddingTop: 20}}>{children}</h2>
 );
 
 const CustomH3 = ({ children }) => (
-  <h3 className="text-5xl" style={{paddingTop: 20}}>{children}</h3>
+  <h3 className="text-4xl" style={{paddingTop: 20}}>{children}</h3>
 );
 
 const CustomH4 = ({ children }) => (
-  <h4 className="text-3xl font-bold" style={{paddingTop: 20}}>{children}</h4>
+  <h4 className="text-2xl font-bold" style={{paddingTop: 20}}>{children}</h4>
 );
 
 const CustomH5 = ({ children }) => (
@@ -59,7 +59,7 @@ const CustomImage = ({ alt, src, title }) => (
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto" style={{'color':'lightgrey', letterSpacing: '1px'}}>
+    <div className="max-w-2xl mx-auto" style={{'color':'lightgrey', letterSpacing: '0.5px', fontSize:'14px'}}>
       <Markdown
       components={{
           a: CustomLink,

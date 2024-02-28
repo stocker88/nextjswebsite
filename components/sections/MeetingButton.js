@@ -72,74 +72,10 @@ const MeetingButton = ({
     <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
-<Container>
-<center>
-<br></br><br></br>
-
-  <Image
-                  src='/assets/images/crown.png'
-                  alt="StocksToBuyNow AI App"
-                  priority={true}
-                  width={256}
-                  height={256}
-                 style={{
-                 width:'min(max(165px,14vw),250px)',
-                  height:'min(max(165px,14vw),250px)',
-                  }}
-
-                  />
-
-            <br></br>
-            <h1 className="text-4xl md:text-7xl tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.2,textShadow: '0px 0px 7px rgba(1, 0, 1, 0.7)', maxWidth: "800px" }} >
-                Wish someone told you about Nvidia when it was <b>$50 instead of $500</b>?
-              </h1>
-              <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-
-           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-                    Maximize Profits, Minimize Risks. Our cutting-edge AI sends you hot stocks to buy before they blow up!
-                    </h2>
-
-<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-         </center>
-         </Container>
-        <NewsletterSignUp from='Footer'/>
-<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-
-
 
         <Container>
 
 
-            <Image
-                src='/assets/images/usersRating.webp'
-                alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
-                width={240}
-                height={60}
-            />
-
-
-    <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))",  lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of +6,300 investors
-
-       </div>
-
-            <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-
-            <br></br>
-
-
-<br></br>
-<section style={{
-                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                marginBottom: '10px', // Adjust the margin to give some space between sections
-                                width: '90%', // Take up 90% of the screen width
-                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                margin: '0 auto', // Center the sections horizontally
-                             }}/>
-
-<br></br>
-<br></br>
 <br></br>
 <SearchStocks stockData={stockDataSearch} />
 <br></br>
