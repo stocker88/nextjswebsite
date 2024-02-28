@@ -150,7 +150,8 @@ const [index, setIndex] = useState(0);
           className="shadow-md"
           src="/assets/images/appstorerating.png"
           style={splitItemImageStyle}
-
+            layout="responsive"
+        priority={true}
           alt="App Store Ratings Reviews "
         />
 </a>
