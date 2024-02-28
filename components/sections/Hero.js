@@ -92,8 +92,8 @@ const Hero = ({
            src='/assets/images/usersRating.webp'
            alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
            priority={true}
-          width={200}
-          height={50}
+          width={150}
+          height={50*3/4}
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">

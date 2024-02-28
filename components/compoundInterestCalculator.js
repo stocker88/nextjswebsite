@@ -69,17 +69,18 @@ const CompoundInterestCalculator = () => {
 
   return (
           <section style={{
-                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                             borderTop: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingTop: '20px', // Adjust the padding to give some space between the line and content
                                 width: '90%', // Take up 90% of the screen width
                                 maxWidth: '1000px', // Set a maximum width of 1000 pixels
                                 margin: '0 auto', // Center the sections horizontally
                              }}>
 
    <div style={{ color: 'black', padding: '2px' }}>
+   <br/>
+   <br/>
      <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
-       +0.1% Makes A Difference
+       +0.1% grows exponentially
        <br />
        <br />
        Compound Interest Calculator
@@ -91,7 +92,7 @@ const CompoundInterestCalculator = () => {
 
 
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Initial Amount ($)</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Initial Amount ($)</span>
          <input
            type="number"
            value={principal}
@@ -110,7 +111,7 @@ const CompoundInterestCalculator = () => {
            />
 
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Daily Contribution ($)</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Daily Contribution ($)</span>
          <input
            type="number"
            value={dailyContrib}
@@ -130,7 +131,7 @@ const CompoundInterestCalculator = () => {
            />
 
        <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '5px' }}>Monthly Return (%)</span>
+         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Monthly Return (%)</span>
          <input
            type="number"
            value={monthlyReturn}
@@ -169,9 +170,7 @@ const CompoundInterestCalculator = () => {
     </div>
     <br/>
     <br/>
-    <br/>
-    <br/>
-    <br/>
+
 
 
     </section>

@@ -7,7 +7,7 @@ import Container from '../../components/container'
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import BookingMeetingButton from '../../components/bookingMeetingButton';
-import CompoundInterestCalculator from '../../components/compoundInterestCalculator';
+
 import SearchStocks from '../../components/SearchStocks';
 import { stockDataSearch } from '../../components/constants';
 import Testimonial from '../../components/sections/Testimonial'
@@ -117,12 +117,7 @@ const containerStyle = {
 
 
                                <br></br></section>
-                               <br></br>
-                               <br></br>
-                               <br></br>
-                               <CompoundInterestCalculator/>
-                               <br></br>
-                               <br></br>
+
                                <br></br>
                                <br></br>
 
@@ -142,43 +137,12 @@ const containerStyle = {
         </h2>
     </section>
     </center>
-    <br></br>
+
     </Container>
 
-    <center>
-
-        <Image
-          width={500}
-          height={500}
-          className="shadow-md"
-          src="/assets/images/teslarace.webp"
-          style={splitItemImageStyle}
-          sizes="(max-width: 70%) 33vw, (max-width: 70%) 50vw, 33vw"
-          alt="Tesla vs Ferrari"
-        />
-
-    </center>
-
-
-<br></br>
-
-<br></br><br></br>
-              <br></br>
-          <section style={{
-                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                marginBottom: '10px', // Adjust the margin to give some space between sections
-                                width: '90%', // Take up 90% of the screen width
-                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                margin: '0 auto', // Center the sections horizontally
-                             }}/>
-
-         <br></br>
-                  <br></br>
-             <br></br>
          <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-               <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-                 Access AI Price Predictions:
+               <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+                <center> Earnings Surprise AI Predictions and Price Targets:</center>
            </h2>
              </section>
 

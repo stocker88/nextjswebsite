@@ -25,6 +25,7 @@ import LinkedInButton from '../components/connectLinkedin';
 import Link from 'next/link';
 import PostPreview from '../components/post-preview'
 import QuoteDisplay from '../components/inspiration';
+import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 
 type Props = {
   posts: Post[]
@@ -43,13 +44,6 @@ const stockData = [
   { ticker: 'AAPL', name: 'Apple Inc.', logo: 'aapl.webp' },
   // Add more company data here...
 ];
-  const circleImageStyle = {
-    width: '350px', // Set your desired width
-    height: '350px', // Set your desired height
-    borderRadius: '50%', // Make it a circle
-    overflow: 'hidden', // Hide overflow (optional)
-    boxShadow: '0 0 50px rgba(0, 0, 0, 0.5)',
-  };
 
 const heroPost = posts[0]
 
@@ -92,6 +86,7 @@ import SignUpModal from '../SignUpModal';
 
            <br></br>
            <center>
+           <Container>
                  <PostPreview
                      key={heroPost.slug}
                      title={heroPost.title}
@@ -102,7 +97,7 @@ import SignUpModal from '../SignUpModal';
                      excerpt={heroPost.excerpt}
                    />
 
-
+</Container>
               <br></br>
 
               <br></br>
@@ -130,17 +125,26 @@ import SignUpModal from '../SignUpModal';
 <br></br>
          <br></br>
 
- <div style={circleImageStyle} className="circle-image-container">
-      <img src={'/assets/images/aness.jpeg'}
-      alt='Stocks To Buy Now AI  Founders'
-       style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-    </div>
+
+           <Image
+                        src='/assets/images/aness.jpeg'
+                        alt="StocksToBuyNow AI App"
+
+                        width={156}
+                        height={156}
+                       style={{
+                       borderRadius: '40px',
+                       opacity:0.9,
+                       width:'min(max(145px,13vw),160px)',
+                        height:'min(max(145px,13vw),160px)',
+                        }}/>
+
 <br></br>
-<h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+<h2 className="text-xl md:text-2xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
                                Ex Goldman Sachs, Bank of America and Google Directors
 
                                </h2>
-                                <h3 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                                <h3 className="text-xl md:text-2xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
                                <br></br>
                                Over 15 Years in Investing and AI
 
@@ -149,9 +153,10 @@ import SignUpModal from '../SignUpModal';
       <Image
                        src='/assets/images/aboutus.jpg'
                        alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
-                         width={384}
-                         height={216}
+                         width={384/2}
+                         height={216/2}
                          style={{
+                            opacity:0.95,
                              borderRadius: '20px',
                              boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
                            }}
@@ -213,6 +218,14 @@ import SignUpModal from '../SignUpModal';
       <br/>
       <br/>
       <br/>
+           <br></br>
+         <br></br>
+         <br></br>
+         <center>
+         <CompoundInterestCalculator/>
+         </center>
+         <br></br>
+         <br></br>
       <br/>
       <br/>
       <br/>

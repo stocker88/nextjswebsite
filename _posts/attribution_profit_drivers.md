@@ -3,7 +3,7 @@ title: 'How Can You Beat the S&P500 Stock Market?'
 excerpt: 'We explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, technology, healthcare... Imagine it as a team of 500 players...'
 seoExcerpt: 'We will explain the methodology used at Goldman Sachs Asset Management. The stock market is like a big financial playground made up of different industries, technology, healthcare. Imagine it as a team of 500 players...'
 coverImage: '/assets/blog/attribution/performance_attribution.jpg'
-date: '2023-12-01T05:35:07.322Z'
+date: '2024-01-24T05:35:07.322Z'
 author:
     name: StocksToBuyNow AI
     picture: '/assets/blog/authors/stockstobuynow.png'
