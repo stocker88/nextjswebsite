@@ -191,7 +191,7 @@ const containerStyle = {
                                </b>
                                 <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
                                <br></br>
-                               A team with over 15 years in Investing and AI
+                               Over 15 years in Investing and AI
 
            <br></br>
          <br></br>
