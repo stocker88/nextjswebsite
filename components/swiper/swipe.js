@@ -137,23 +137,6 @@ const containerStyle = {
         </h2>
     </section>
 
-    <div style={{
-        width: 'min(100%,400px)',
-
-    }}>
-        <Image
-          src='/assets/images/ferrari.jpg'
-          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
-         width={151}
-        height={45}
-        layout="responsive"
-
-        style={{borderRadius:'10px'}}
-          />
-          </div>
-
-    <br></br>
-    <br></br>
     <br></br>
 
          <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
@@ -162,19 +145,7 @@ const containerStyle = {
            </h2>
              </section>
 
-    <div style={{
-        width: 'min(100%,400px)',
-    }}>
-        <Image
-          src='/assets/images/prediction.png'
-          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
-         width={151}
-        height={45}
-        style={{borderRadius:'10px'}}
-        layout="responsive"
 
-          />
-          </div>
           </center>
     </Container>
 <br></br>
@@ -186,29 +157,7 @@ const containerStyle = {
 
                           <br></br>
                           <br></br>
-                          <br></br>
-    <Container>
-    <center>
-
-    <div style={{
-        width: 'min(100%,400px)',
-    }}>
-        <Image
-          src='/assets/images/prediction2.png'
-          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
-         width={151}
-        height={45}
-        style={{borderRadius:'10px'}}
-        layout="responsive"
-
-          />
-          </div>
-              </center>
-              </Container>
-          <br></br>
-
-                          <br></br>
-                          <br></br>
+                         
                           <br></br>
 <Testimonial/>
                           <br></br>
