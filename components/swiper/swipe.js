@@ -95,18 +95,18 @@ const containerStyle = {
 <br></br>
 <br></br>
 </section>
-<br></br>
-<br></br>
-<br></br>
  <center>
  <section style={{
+                    background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))",
                    borderBottom: '0.03px solid #333', // Adjust the color and style as needed
-                      paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                      marginBottom: '10px', // Adjust the margin to give some space between sections
-                      width: '90%', // Take up 90% of the screen width
-                      maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                      margin: '0 auto', // Center the sections horizontally
+                  paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                  marginBottom: '10px', // Adjust the margin to give some space between sections
+                  margin: '0 auto', // Center the sections horizontally
                    }}>
+
+<br></br>
+<br></br>
+<br></br>
 <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
         A Safe Ground For Testing
         <br></br>
@@ -154,21 +154,24 @@ const containerStyle = {
                           <br></br>
 
                           <br></br>
+                          <Container>
                           <center  style={{
                                                                borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                                                  paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                                                  marginBottom: '10px', // Adjust the margin to give some space between sections
-                                                                  width: '90%', // Take up 90% of the screen width
+                                                                   // Adjust the margin to give some space between sections
+                                                                  width: '100%', // Take up 90% of the screen width
                                                                   maxWidth: '1000px', // Set a maximum width of 1000 pixels
                                                                   margin: '0 auto', // Center the sections horizontally
                                                                }}>
 <Testimonial/>
 </center>
-                          <br></br>
-  <Container><center >
+
+</Container>
+
+  <center style={{background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))"}} >
+  <Container>
 <br></br>
          <br></br>
-
+  <br></br>
 
            <Image
                         src='/assets/images/aness.jpg'
@@ -184,15 +187,17 @@ const containerStyle = {
                         }}/>
 
 <br></br>
-<b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}>
+<br></br>
+<h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
                                Former Goldman Sachs and
                                 <br></br>Bank of America Directors
 
-                               </b>
-                                <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+
+
+                               <br></br>
                                <br></br>
                                Over 15 years in Investing and AI
-
+</h3>
            <br></br>
          <br></br>
       <Image
@@ -211,10 +216,20 @@ const containerStyle = {
          <br></br>
     <LinkedInButton/>
   <br></br>
+  <br></br>
+  <br></br>
 
+              <br></br>
               <br></br>
 
 <br></br>
+</Container>
+</center>
+
+
+
+  <Container>
+  <center>
 <section style={{
                              borderBottom: '0.3px solid #333', // Adjust the color and style as needed
                                 paddingBottom: '5px', // Adjust the padding to give some space between the line and content
@@ -225,7 +240,7 @@ const containerStyle = {
                              }}/>
 
 
-                             </h3>
+
 
                           <br ></br>
                      <br></br>
@@ -236,44 +251,12 @@ const containerStyle = {
            </h2>
              </section>
 
-    <div style={{
-        width: 'min(100%,400px)',
-    }}>
-        <Image
-          src='/assets/images/prediction.png'
-          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
-         width={151}
-        height={45}
-        style={{borderRadius:'10px'}}
-        layout="responsive"
-
-          />
-          </div>
-                                   <br></br>
-                                    <br></br>
-
-
-              <div style={{
-                  width: 'min(100%,400px)',
-              }}>
-                  <Image
-                    src='/assets/images/predictions2.jpg'
-                    alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
-                   width={151}
-                  height={45}
-                  style={{borderRadius:'10px'}}
-                  layout="responsive"
-
-                    />
-                    </div>
-<br></br>
-<br></br>
-<br></br>
 
                  <SearchStocks stockData={stockDataSearch} />
                  <br></br>
-</center></Container>
 
+</center>
+</Container>
  <br></br>
 <section style={{
                              borderBottom: '0.3px solid #333', // Adjust the color and style as needed

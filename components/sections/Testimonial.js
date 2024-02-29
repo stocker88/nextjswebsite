@@ -318,8 +318,8 @@ const slides =    [
 
 
       </div>
-</center>
 
+<br></br> <br></br>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0px' }}>
           {slides.map((_, i) => (
             <div
@@ -357,8 +357,9 @@ const slides =    [
                                   }}>Next</button>
               </div>
 <br></br> <br></br>
+<br></br> <br></br>
 
-
+</center>
 
     </section>
   );
