@@ -103,7 +103,6 @@ const [deviceInfo, setDeviceInfo] = useState({
               'textAlign': 'center',
               'fontSize': 'min(16px,max(14px,2vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': 'rgba(47, 86, 255, 0.8)',
               'background': 'black',
               'maxWidth':'200px',
               'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
