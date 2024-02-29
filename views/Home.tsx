@@ -21,7 +21,6 @@ import MoreStories from '../components/more-stories'
 import TryWebAppLink from '../components/TryWebAppLink';
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
-import LinkedInButton from '../components/connectLinkedin';
 import Link from 'next/link';
 import PostPreview from '../components/post-preview'
 import QuoteDisplay from '../components/inspiration';
@@ -121,66 +120,6 @@ import SignUpModal from '../SignUpModal';
                                 margin: '0 auto', // Center the sections horizontally
                              }}/>
 <br/>
-
-<br></br>
-         <br></br>
-
-
-           <Image
-                        src='/assets/images/aness.jpeg'
-                        alt="StocksToBuyNow AI App"
-
-                        width={156}
-                        height={156}
-                       style={{
-                       borderRadius: '40px',
-                       opacity:0.9,
-                       width:'min(max(145px,13vw),160px)',
-                        height:'min(max(145px,13vw),160px)',
-                        }}/>
-
-<br></br>
-<h2 className="text-xl md:text-2xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-                               Ex Goldman Sachs, Bank of America and Google Directors
-
-                               </h2>
-                                <h3 className="text-xl md:text-2xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-                               <br></br>
-                               Over 15 Years in Investing and AI
-
-           <br></br>
-         <br></br>
-      <Image
-                       src='/assets/images/aboutus.jpg'
-                       alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
-                         width={384/2}
-                         height={216/2}
-                         style={{
-                            opacity:0.95,
-                             borderRadius: '20px',
-                             boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
-                           }}
-                       />
-
-<br></br>
-         <br></br>
-    <LinkedInButton/>
-  <br></br>
-
-              <br></br>
-
-<br></br>
-<section style={{
-                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                marginBottom: '10px', // Adjust the margin to give some space between sections
-                                width: '90%', // Take up 90% of the screen width
-                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                margin: '0 auto', // Center the sections horizontally
-                             }}/>
-
-
-                             </h3>
 
 
 

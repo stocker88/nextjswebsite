@@ -146,8 +146,8 @@ const slides =    [
 
 
 
-                    <i>"You'll receive clear AI Trade Signals: what to buy, when to sell, what's the current price, what's the target price...
-                    What I love most are the live notifications on AI earnings predictions (for my call spreads). Their customer support is great too, always available even on weekends."</i>
+                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what is the current price and the target sell price.
+                    What I love most are the live notifications on AI earnings predictions (for my call spreads). Their customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
                <b>  Jerome Hagege
@@ -183,10 +183,9 @@ const slides =    [
                       <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
                       <br></br>
-                      <i>"The AI tailors recommendations to match my preferences.
-                       I ask the AI what he thinks before making any trade, it's like a personnal coach.
-
-                       Your personal genie available 24/7! It's not just about stocks; it's about the right stocks that deliver profits."</i>
+                      "The AI tailors recommendations to match my preferences.
+                       It's like a personnal coach who listens to you, available 24/7.
+                       It's not just about stocks; it's about market views and profits."
 
                       <br></br>
                       <br></br>
@@ -223,9 +222,9 @@ const slides =    [
                   <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
                   <br></br>
                  <br></br>
-                 <i>"I wanted dividend stocks for passive income.
-                  The AI Advisor sent me stock recommendations straight to the point.
-                 Everything is backed up by data. The UX is friendly, easy to use. Great app ad great customer support, I recommend."</i>
+                 "I asked for dividend stocks for passive income. Ideally a low risk company with stable yield.
+                  I received suggestions straight to the point.
+                 Everything is backed up by data, it is easy to review. The UX is friendly and easy to use. Great app and great customer support, I recommend."
                   <br></br>
                   <br></br>
              <b>  Fabien Nieto
@@ -261,10 +260,9 @@ const slides =    [
                 <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
                 <br></br>
                <br></br>
-               <i>"Practise trading ideas without the risk! StocksToBuyNow App nails it!
-                It's about making sure you acquire the skillset and profit from it.
-                I use the virtual reality trading platform to practice investing ideas in all safety!
-                It's a safe playground for learning and gaining confidence in their AI technology."</i>
+               "Practise trading ideas without the risk!
+                I used the virtual reality trading platform to make sure it's working well.
+                It's a safe playground for learning and gaining confidence in their AI technology."
                 <br></br>
                 <br></br>
            <b>  Maxime Lonné

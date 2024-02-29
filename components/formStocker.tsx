@@ -363,9 +363,9 @@ const Div = styled.div`
               'textAlign': 'center',
               'fontSize': 'min(18px,max(16px,2vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': 'rgba(47, 86, 255, 0.8)',
+              'background': 'black',
               'maxWidth':'200px',
-              'boxShadow': '0px 0px 30px black',
+              'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
                }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get It Now→</b>
                 </button>
             }

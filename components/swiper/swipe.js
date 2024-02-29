@@ -7,7 +7,7 @@ import Container from '../../components/container'
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
 import BookingMeetingButton from '../../components/bookingMeetingButton';
-
+import LinkedInButton from '../../components/connectLinkedin';
 import SearchStocks from '../../components/SearchStocks';
 import { stockDataSearch } from '../../components/constants';
 import Testimonial from '../../components/sections/Testimonial'
@@ -126,18 +126,109 @@ const containerStyle = {
          </center>
 
 <Container>
-<center>
+<center  style={{
+                                     borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                        paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                        marginBottom: '10px', // Adjust the margin to give some space between sections
+                                        width: '90%', // Take up 90% of the screen width
+                                        maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                        margin: '0 auto', // Center the sections horizontally
+                                     }}>
 
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Better than Tesla: AI Picked Ferrari
+        Ask for Nvidia Competitors!<br></br>Better than Tesla: AI Picked Ferrari
          <br></br>
          +42% Over Performance
 
         </h2>
     </section>
-
+<br></br>
+                 <SearchStocks stockData={stockDataSearch} />
+                 <br></br>
     <br></br>
+
+          </center>
+    </Container>
+
+                          <br></br>
+
+                          <br></br>
+                          <center  style={{
+                                                               borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                                                  paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                                                  marginBottom: '10px', // Adjust the margin to give some space between sections
+                                                                  width: '90%', // Take up 90% of the screen width
+                                                                  maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                                                  margin: '0 auto', // Center the sections horizontally
+                                                               }}>
+<Testimonial/>
+</center>
+                          <br></br>
+  <Container><center >
+<br></br>
+         <br></br>
+
+
+           <Image
+                        src='/assets/images/aness.jpg'
+                        alt="StocksToBuyNow AI App"
+
+                        width={156}
+                        height={156}
+                       style={{
+                       borderRadius: '40px',
+                       opacity:0.9,
+                       width:'min(max(145px,13vw),160px)',
+                        height:'min(max(145px,13vw),160px)',
+                        }}/>
+
+<br></br>
+<b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}>
+                               Former Goldman Sachs and
+                                <br></br>Bank of America Directors
+
+                               </b>
+                                <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                               <br></br>
+                               A team with over 15 years in Investing and AI
+
+           <br></br>
+         <br></br>
+      <Image
+                       src='/assets/images/aboutus.jpg'
+                       alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
+                         width={384/2}
+                         height={216/2}
+                         style={{
+                            opacity:0.95,
+                             borderRadius: '20px',
+                             boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
+                           }}
+                       />
+
+<br></br>
+         <br></br>
+    <LinkedInButton/>
+  <br></br>
+
+              <br></br>
+
+<br></br>
+<section style={{
+                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
+                                marginBottom: '10px', // Adjust the margin to give some space between sections
+                                width: '90%', // Take up 90% of the screen width
+                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                margin: '0 auto', // Center the sections horizontally
+                             }}/>
+
+
+                             </h3>
+
+                          <br ></br>
+                     <br></br>
 
          <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
                <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
@@ -145,24 +236,43 @@ const containerStyle = {
            </h2>
              </section>
 
+    <div style={{
+        width: 'min(100%,400px)',
+    }}>
+        <Image
+          src='/assets/images/prediction.png'
+          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+         width={151}
+        height={45}
+        style={{borderRadius:'10px'}}
+        layout="responsive"
 
-          </center>
-    </Container>
+          />
+          </div>
+                                   <br></br>
+                                    <br></br>
+
+
+              <div style={{
+                  width: 'min(100%,400px)',
+              }}>
+                  <Image
+                    src='/assets/images/predictions2.jpg'
+                    alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                   width={151}
+                  height={45}
+                  style={{borderRadius:'10px'}}
+                  layout="responsive"
+
+                    />
+                    </div>
 <br></br>
 <br></br>
 <br></br>
-<br></br>
+
                  <SearchStocks stockData={stockDataSearch} />
                  <br></br>
-
-                          <br></br>
-                          <br></br>
-                         
-                          <br></br>
-<Testimonial/>
-                          <br></br>
-                          <br></br>
-                          <br></br>
+</center></Container>
 
  <br></br>
 <section style={{
