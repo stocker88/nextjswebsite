@@ -1,4 +1,5 @@
-import {React, useRef} from 'react';
+import React from 'react';
+import {useRef} from 'react';
 // import sections
 import Hero from '../components/sections/Hero';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
