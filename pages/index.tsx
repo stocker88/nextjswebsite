@@ -197,7 +197,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
+          <meta name="theme-color" content="hsl(200, 100%, 48%)" />
           <meta name="description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>
           <meta property="og:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up" />
           <meta name="og:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
