@@ -190,23 +190,23 @@ export default function Index({ allPosts }: Props) {
                       }
                     })}}
                 />
-          <title>Stocks to Buy AI Trading Signals Virtual Investing App</title>
+          <title>We Send You Hot Stocks to Buy Now: AI Trading Signals</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
+          <meta name="description" property="og:description" content="Receive Momentum Signals, Social Hype Alerts, Earnings Surprise Prediction, Stock Options View Signal and more AI Trading Signals that make sense! Ask for Stock Price Prediction, Tesla Best Alternative, and Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#1D0059" />
-          <meta name="description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>
+          <meta name="theme-color" content="hsl(200, 100%, 48%)" />
+          <meta name="description" content="Receive Momentum Signals, Social Hype Alerts, Earnings Surprise Prediction, Stock Options View Signal and more AI Trading Signals that make sense! Ask for Stock Price Prediction, Tesla Best Alternative, and Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>
           <meta property="og:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up" />
-          <meta name="og:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
+          <meta name="og:description" content="Receive Momentum Signals, Social Hype Alerts, Earnings Surprise Prediction, Stock Options View Signal and more AI Trading Signals that make sense! Ask for Stock Price Prediction, Tesla Best Alternative, and Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"/>
           <meta name="twitter:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>
+          <meta name="twitter:description" content="Receive Momentum Signals, Social Hype Alerts, Earnings Surprise Prediction, Stock Options View Signal and more AI Trading Signals that make sense! Ask for Stock Price Prediction, Tesla Best Alternative, and Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>
           <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />

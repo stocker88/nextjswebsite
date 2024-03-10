@@ -47,7 +47,7 @@ const FlutterAppPage = () => {
               <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
               <link rel="shortcut icon" href="favicon.ico"/>
               <meta name="viewport" content="width=device-width, initial-scale=1" />
-              <meta name="theme-color" content="#1D0059" />
+              <meta name="theme-color" content="hsl(200, 100%, 48%)" />
               <meta name="description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading"/>
               <meta property="og:title" content="HelloStocker AI - Best Stocks To Buy Now" />
               <meta name="og:description" content="HelloStocker AI sends you the best stocks and crypto to buy today: trade & invest in virtual trading" />
