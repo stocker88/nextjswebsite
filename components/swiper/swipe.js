@@ -97,7 +97,7 @@ const containerStyle = {
 </section>
  <center>
  <section style={{
-                    background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))",
+
                    borderBottom: '0.03px solid #333', // Adjust the color and style as needed
                   paddingBottom: '5px', // Adjust the padding to give some space between the line and content
                   marginBottom: '10px', // Adjust the margin to give some space between sections
@@ -167,7 +167,7 @@ const containerStyle = {
 
 </Container>
 
-  <center style={{background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))"}} >
+  <center >
   <Container>
 <br></br>
          <br></br>

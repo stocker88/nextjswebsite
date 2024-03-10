@@ -145,7 +145,7 @@ const slides =    [
                    <br></br>
 
                     "You'll receive clear AI Trade Signals: what to buy, when to sell, what signal drives AI, what is the current price and the target sell price...
-                    What I love most are live signals by category, Social Hype, Momentum, Option Trading and Earnings Forecast: AI powered trading signals that work and make sense. Their customer support is great too, always available even on weekends."
+                    What I love most is the 3 hot stocks to buy every week before they blow up. I get notified live and can track AI recommendation performance. Their customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
                <b>  Jerome Hagege
