@@ -26,7 +26,6 @@ import Link from 'next/link';
 import PostPreview from '../components/post-preview'
 import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 
 type Props = {
   posts: Post[]
@@ -47,7 +46,6 @@ const stockData = [
 ];
 
 const heroPost = posts[0]
-const parallax = useRef<IParallax>(null!)
   return (
     <>
 
@@ -74,7 +72,7 @@ import SignUpModal from '../SignUpModal';
 */}
 
 
-<ParallaxLayer offset={0} speed={1} style={{ background: 'hsl(250, 100%, 25%)', zIndex:-20 }} />
+
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
 
       <br></br>
@@ -102,8 +100,8 @@ import SignUpModal from '../SignUpModal';
                      slug={heroPost.slug}
                      excerpt={heroPost.excerpt}
                    />
-<ParallaxLayer offset={2} speed={1} style={{ background: 'linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))', zIndex:-20 }} />
-</Container>
+
+        </Container>
               <br></br>
 
               <br></br>
@@ -117,7 +115,7 @@ import SignUpModal from '../SignUpModal';
 
 
          <center>
-<ParallaxLayer offset={2} speed={1} style={{ background: 'linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))', zIndex:-20 }} />
+
 <section style={{
                              borderBottom: '0.3px solid #333', // Adjust the color and style as needed
                                 paddingBottom: '5px', // Adjust the padding to give some space between the line and content
@@ -127,7 +125,7 @@ import SignUpModal from '../SignUpModal';
                                 margin: '0 auto', // Center the sections horizontally
                              }}/>
 <br/>
-<ParallaxLayer offset={2} speed={1} style={{ background: 'linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))', zIndex:-20 }} />
+
 
 
                        <br></br>

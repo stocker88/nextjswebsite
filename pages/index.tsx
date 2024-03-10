@@ -203,7 +203,7 @@ export default function Index({ allPosts }: Props) {
           <meta name="og:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
-          <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
+          <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"/>
           <meta name="twitter:title" content="This AI Sends You Hot Stocks To Buy Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
           <meta name="twitter:description" content="👉Ask AI for any Stock Price Prediction 👉Ask AI for Earnings Forecasts 👉Ask AI for Tesla Best Alternative 👉Ask AI for Hot Stocks to Buy Now! Receive AI Trading Signals and practise in a safe virtual investing app: we predicted NVDA ARM PLTR and more"/>

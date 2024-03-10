@@ -4,18 +4,16 @@ import { SessionProvider } from '../stockerSession';
 import Starfield from 'react-starfield';
 import { subscribeToEvent, emitEvent } from '../contexts/store'
 import { useState, useEffect, useRef } from 'react';
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 export default function MyApp({ Component, pageProps }: AppProps) {
 const [myVariable, setMyVariable] = useState(1);
 const [myColor, setMyColor] = useState("black");
-const parallax = useRef<IParallax>(null!)
-const [numPages, setNumPages] = useState<number>(1);
+
 useEffect(() => {
   const calculateNumPages = () => {
     const contentHeight = document.body.scrollHeight;
     const viewportHeight = window.innerHeight;
     const calculatedPages = Math.ceil(contentHeight / viewportHeight);
-    setNumPages(calculatedPages);
+
   };
 
   calculateNumPages();
@@ -41,7 +39,6 @@ useEffect(() => {
 
   return <div className="App">
   <div style={{ width: '100%', height: '100%'}}>
-      <Parallax ref={parallax} pages={numPages}>
        <Starfield
          starCount={150*(myVariable)}
          starColor={[255, 255, 255]}
@@ -49,7 +46,6 @@ useEffect(() => {
          backgroundColor={myColor}
        />
        <SessionProvider> { <Component {...pageProps} />} </SessionProvider>
-     </Parallax>
      </div>
      </div>
 
