@@ -140,14 +140,12 @@ const slides =    [
                 />
                  <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                    <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Saves 130+ Hours of Investing Research per Month </b>
+                    <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
                     <br></br>
                    <br></br>
 
-
-
-                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what is the current price and the target sell price.
-                    What I love most are the live notifications on AI earnings predictions (for my call spreads). Their customer support is great too, always available even on weekends."
+                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what signal drives AI, what is the current price and the target sell price...
+                    What I love most are live signals by category, Social Hype, Momentum, Option Trading and Earnings Forecast: AI powered trading signals that work and make sense. Their customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
                <b>  Jerome Hagege
