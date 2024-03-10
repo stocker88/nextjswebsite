@@ -132,7 +132,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="black" />
+                <meta name="theme-color" content="#1D0059" />
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
                 <meta property="og:description" content={post.seoExcerpt} />
