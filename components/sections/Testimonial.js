@@ -127,9 +127,9 @@ const slides =    [
         renderItem: (
              <center style={{width:'100%'}}>
 
-            <a href='https://www.linkedin.com/in/hagege/' target="_blank" >
+            <a href='https://www.linkedin.com/in/dorianbilinski/' target="_blank" >
               <Image
-                 src='/assets/images/testimonies/jerome.webp'
+                 src='/assets/images/testimonies/dorian.webp'
                  alt="Features tile icon 06"
                  width={130}
                  height={130}
@@ -148,7 +148,7 @@ const slides =    [
                     What I love most is the 3 hot stocks to buy every week before they blow up. I get notified live and can track AI recommendation performance. Their customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
-               <b>  Jerome Hagege
+               <b>  Dorian Bilinski
                  <br></br>
                  Data Science Manager - NLP Research   </b>
 
