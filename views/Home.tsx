@@ -152,7 +152,7 @@ import SignUpModal from '../SignUpModal';
             excerpt={heroPost.excerpt}
           />
         )}*/}
-        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 6):posts.slice(1)} />}
+        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
 
       <br></br><br></br>
 

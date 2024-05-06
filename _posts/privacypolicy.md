@@ -68,7 +68,7 @@ AI recommendations are non financial advise and cannot be guaranteed.
 
 &nbsp;
 
- By [email](mailto:support@stockstobuynow.ai) or in the app directly.
+ By [email](mailto:support@hellostocker.com) or in the app directly.
 
 &nbsp;
 
