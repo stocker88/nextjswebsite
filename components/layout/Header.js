@@ -3,21 +3,6 @@ import Image from 'next/image';
 import { isMobile, browserName } from "react-device-detect";
 
 class Header extends Component {
-constructor(props) {
-    super(props);
-    this.state = {
-      isMobile: true
-    };
-  }
-
-  componentDidMount() {
-    // Check if the window object is available before accessing it
-    if (typeof window !== 'undefined') {
-      const isMobile = window.innerWidth < 768;
-      this.setState({ isMobile });
-    }
-  }
-
 
   render() {
 
@@ -37,7 +22,7 @@ constructor(props) {
 
     <header id="home">
 
-                {!isMobile && (<ul id="nav" className="nav" style={{ backgroundColor: 'hsl(200, 100%, 48%)' , padding: '20px 20px 0px 20px' }}>
+                <ul id="nav" className="nav" style={{ backgroundColor: 'hsl(200, 100%, 48%)' , padding: '20px 20px 0px 20px' }}>
 
                  <li>
                       <a href="https://www.instagram.com/stockstobuynow.ai/">
@@ -133,7 +118,7 @@ constructor(props) {
                                                                               </a>
                                                                             </li>
 */}
-              </ul>)}
+              </ul>
 
 
 
