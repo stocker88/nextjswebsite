@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import LinkedInIcon from '../../components/LinkedInIcon';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from 'next/image'
@@ -138,6 +139,7 @@ const slides =    [
                  'border': '2px solid rgba(255, 255, 255, 1)'
                  }}
                 />
+
                  <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
                     <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
@@ -148,11 +150,21 @@ const slides =    [
                     What I love most are the 3 hot stocks to buy every week before they blow up. I get notified live and track AI recommendations performance. Customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
+                    <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '10px', // Adjust the gap between the icon and the text as needed
+                                  }}>
+                    <LinkedInIcon/>
+
+                          <div style={{
+                                          marginLeft: '10px', // Adjust this if needed to space out the text from the icon
+                                        }}>
                <b>  Dorian Bilinski
                  <br></br>
                  Data Science Manager - NLP Research   </b>
 
-
+                </div></div>
                   </p>
 
                  </a>
@@ -187,10 +199,20 @@ const slides =    [
 
                       <br></br>
                       <br></br>
+                      <div style={{
+                                                          display: 'flex',
+                                                          alignItems: 'center',
+                                                          gap: '10px', // Adjust the gap between the icon and the text as needed
+                                                        }}>
+                                          <LinkedInIcon/>
+
+                                                <div style={{
+                                                                marginLeft: '10px', // Adjust this if needed to space out the text from the icon
+                                                              }}>
                  <b>  Adrien Chenin
                    <br></br>
                    Quantitative Researcher @ Millenium Hedge Fund   </b>
-
+</div></div>
 
                     </p>
 
@@ -225,10 +247,20 @@ const slides =    [
                  Everything is backed up by data, it is easy to review. The UX is friendly and easy to use. Great app and great customer support, I recommend."
                   <br></br>
                   <br></br>
+                  <div style={{
+                                                      display: 'flex',
+                                                      alignItems: 'center',
+                                                      gap: '10px', // Adjust the gap between the icon and the text as needed
+                                                    }}>
+                                      <LinkedInIcon/>
+
+                                            <div style={{
+                                                            marginLeft: '10px', // Adjust this if needed to space out the text from the icon
+                                                          }}>
              <b>  Fabien Nieto
                                        <br></br>
                                        CEO & Founder @ SEO Marketing Agency   </b>
-
+</div></div>
 
                 </p>
 
@@ -263,10 +295,20 @@ const slides =    [
                 It's a safe playground for learning and gaining confidence in their AI technology."
                 <br></br>
                 <br></br>
+                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '10px', // Adjust the gap between the icon and the text as needed
+                                                  }}>
+                                    <LinkedInIcon/>
+
+                                          <div style={{
+                                                          marginLeft: '10px', // Adjust this if needed to space out the text from the icon
+                                                        }}>
            <b>  Maxime Lonné
              <br></br>
              Paid Media Director @ Eskimoz   </b>
-
+</div></div>
 
               </p>
 

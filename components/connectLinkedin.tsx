@@ -4,7 +4,7 @@ import ConfettiExplosion from 'react-confetti-explosion';
 import Layout from '../components/layout'
 import { format } from 'date-fns';
 
-
+import LinkedInIcon from '../components/LinkedInIcon';
 import { doc, setDoc } from "firebase/firestore";
 import 'firebase/firestore';
 import {getFirestore} from 'firebase/firestore';
@@ -95,18 +95,13 @@ const [deviceInfo, setDeviceInfo] = useState({
     <center>
         <button onClick={onClickedButton}>
         <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
-         <div style={{
-                 'paddingTop': '14px',
-              'paddingBottom': '14px',
-
-               'width':'40vw',
-              'textAlign': 'center',
-              'fontSize': 'min(16px,max(14px,2vw))',
-              'borderRadius': '30px 30px 30px 30px',
-              'background': 'black',
-              'maxWidth':'200px',
-              'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
-               }}><b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Connect on LinkedIn</b></div></a>
+        <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px', // Adjust the gap between the icon and the text as needed
+                  padding:'10px'
+                }}>
+              <LinkedInIcon/><div style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}> Connect on LinkedIn </div></div> </a>
         </button>
       </center>
     </div>
