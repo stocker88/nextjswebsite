@@ -145,8 +145,8 @@ const [index, setIndex] = useState(0);
     <center style={{width:'100%'}}>
     <a href={dynamicLink} target="_blank">
         <Image
-          width={438*0.8}
-          height={875*0.8}
+          width={438*0.85}
+          height={875*0.85}
           className="shadow-md"
           src="/assets/images/appstorerating.png"
           style={splitItemImageStyle}

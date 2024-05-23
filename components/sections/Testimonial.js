@@ -138,14 +138,14 @@ const slides =    [
                  'border': '2px solid rgba(255, 255, 255, 1)'
                  }}
                 />
-                 <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
+                 <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                    <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
+                    <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
                     <br></br>
                    <br></br>
 
-                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what signal drives AI, what is the current price and the target sell price...
-                    What I love most is the 3 hot stocks to buy every week before they blow up. I get notified live and can track AI recommendation performance. Their customer support is great too, always available even on weekends."
+                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what signal drives AI, explanations and target sell price...
+                    What I love most are the 3 hot stocks to buy every week before they blow up. I get notified live and track AI recommendations performance. Customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
                <b>  Dorian Bilinski
@@ -176,12 +176,12 @@ const slides =    [
                    'border': '2px solid rgba(255, 255, 255, 1)'
                    }}
                   />
-                   <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
+                   <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                      <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
+                      <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
                       <br></br>
-                      "The AI tailors recommendations to match my preferences.
+                      "The AI tailors recommendations to match my preferences. You can access Long Term and Short Term strategies and pick what works best for you.
                        It's like a personnal coach who listens to you, available 24/7.
                        It's not just about stocks; it's about market views and profits."
 
@@ -216,8 +216,8 @@ const slides =    [
                }}
               />
 
-              <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
-                  <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
+              <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
+                  <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
                   <br></br>
                  <br></br>
                  "I asked for dividend stocks for passive income. Ideally a low risk company with stable yield.
@@ -253,9 +253,9 @@ const slides =    [
              'border': '2px solid rgba(255, 255, 255, 1)'
              }}
             />
-             <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey', padding:'2rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
+             <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                <b className="text-2xl md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
+                <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
                 <br></br>
                <br></br>
                "Practise trading ideas without the risk!
@@ -317,7 +317,7 @@ const slides =    [
 
       </div>
 
-<br></br> <br></br>
+
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0px' }}>
           {slides.map((_, i) => (
             <div

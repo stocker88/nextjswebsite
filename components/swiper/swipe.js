@@ -41,19 +41,19 @@ const containerStyle = {
                            borderBottom: '0.3px solid #333', // Adjust the color and style as needed
                               paddingBottom: '5px', // Adjust the padding to give some space between the line and content
                               marginBottom: '10px', // Adjust the margin to give some space between sections
-                              width: '90%', // Take up 90% of the screen width
-                              maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                              width: '100%', // Take up 90% of the screen width
+                              maxWidth: '1800px', // Set a maximum width of 1000 pixels
                               margin: '0 auto', // Center the sections horizontally
                            }}>
       <center>
 
             <Image
-              width={493.75}
-              height={434.4}
+              width={493.75*1.1}
+              height={434.4*1.1}
               className="shadow-md"
               src="/assets/images/1.webp"
               style={splitItemImageStyle}
-              sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
+              sizes="(max-width: 80%) 83vw, (max-width: 80%) 90vw, 53vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
 
@@ -64,8 +64,8 @@ const containerStyle = {
       <center>
 
             <Image
-              width={493.75}
-              height={434.4}
+              width={493.75*1.1}
+              height={434.4*1.1}
               className="shadow-md"
               src="/assets/images/2.webp"
               style={splitItemImageStyle}
@@ -79,8 +79,8 @@ const containerStyle = {
       <center>
 
             <Image
-              width={493.75}
-              height={434.4}
+              width={493.75*1.1}
+              height={434.4*1.1}
               className="shadow-md"
               src="/assets/images/3.webp"
               style={splitItemImageStyle}
@@ -137,7 +137,7 @@ const containerStyle = {
 
     <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h2 className="text-xl md:text-4xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Ask for Nvidia Competitors!<br></br>Better than Tesla: AI Picked Ferrari
+        Ask for Nvidia Best Alternative!<br></br>Better than Tesla: AI Picked Ferrari
          <br></br>
          +42% Over Performance
 

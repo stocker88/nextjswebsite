@@ -139,8 +139,7 @@ import SignUpModal from '../SignUpModal';
          <br></br>
          <br></br>
          <br></br>
-<br></br>
-        <br></br>
+
         <Intro />
       {/*  {heroPost && (
           <HeroPost

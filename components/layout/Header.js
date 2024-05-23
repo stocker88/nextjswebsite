@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Image from 'next/image';
-import { isMobile, browserName } from "react-device-detect";
 
 class Header extends Component {
 

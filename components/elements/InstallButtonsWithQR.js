@@ -64,7 +64,7 @@ const generateDynamicLink = async () => {
         socialMetaTagInfo: {
             socialImageLink: 'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg',
             socialTitle:'StocksToBuyNow AI Sends You Hot Stocks Before They Blow Up: Maxout Profits 30x Faster',
-            socialDescription: "Join a community of +26,300 investors"
+            socialDescription: "Join a community of +48,000 investors"
         },
         analyticsInfo: {
           googlePlayAnalytics: {
