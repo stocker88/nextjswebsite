@@ -4,7 +4,7 @@ import ConfettiExplosion from 'react-confetti-explosion';
 import Layout from '../components/layout'
 import { format } from 'date-fns';
 
-import LinkedInIcon from '../components/LinkedInIcon';
+import LinkedInIcon from '../components/linkedinicon';
 import { doc, setDoc } from "firebase/firestore";
 import 'firebase/firestore';
 import {getFirestore} from 'firebase/firestore';

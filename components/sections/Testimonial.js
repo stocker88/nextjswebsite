@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import LinkedInIcon from '../../components/LinkedInIcon';
+import LinkedInIcon from '../../components/linkedinicon';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from 'next/image'

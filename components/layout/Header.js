@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Image from 'next/image';
-import LinkedInIconWhite from '../../components/LinkedInIconWhite';
+import LinkedInIconWhite from '../../components/linkediniconwhite';
 class Header extends Component {
 
   render() {
