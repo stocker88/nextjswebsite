@@ -229,11 +229,46 @@ The Company will also retain Usage Data for internal analysis purposes. Usage Da
 
 &nbsp;
 
+&nbsp;
+
 Deletion and or modification of your Personal Data
+
+&nbsp;
 
 The full history of your information, including personal data, can be deleted andor modified on your request at any time. The request can be done directly in the profile settings page of the mobile application.
 
+&nbsp;
+
+You can contact us by [email](mailto:support@hellostocker.com).
+
+&nbsp;
+
+&nbsp;
+
+Users can delete their account in the app using these steps:
+
+&nbsp;
+
+&nbsp;
+
+- From your portfolio tap your user profile on the top right to access your profile page,
+
+&nbsp;
+
+- From your user profile page you can click on settings.
+
+&nbsp;
+
+- Scroll down and click on « End User License Agreement ».
+
+&nbsp;
+
+- Scroll down and click on Delete Account. It will take care of deleting the account and clearing all the data collected!
+
+
 Transfer of Your Personal Data
+
+&nbsp;
 
 Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
 Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
@@ -264,7 +299,11 @@ We have no tolerance for Objectionable Content or abusive users, and will remove
 
 &nbsp;
 
-The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@stockstobuynow.ai. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
+The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@hellostocker.com. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
+
+&nbsp;
+
+&nbsp;
 
 Deletion and or modification of your personal data
 
@@ -272,8 +311,35 @@ Deletion and or modification of your personal data
 
 The full history of your information, including personal data, can be deleted andor modified on your request at any time. The request can be done directly in the profile settings page of the mobile application.
 
+&nbsp;
 
 &nbsp;
+
+You can contact us by [email](mailto:support@hellostocker.com).
+
+&nbsp;
+
+&nbsp;
+
+Users can delete their account in the app using these steps:
+
+&nbsp;
+
+&nbsp;
+
+- From your portfolio tap your user profile on the top right to access your profile page,
+
+&nbsp;
+
+- From your user profile page you can click on settings.
+
+&nbsp;
+
+- Scroll down and click on « End User License Agreement ».
+
+&nbsp;
+
+- Scroll down and click on Delete Account. It will take care of deleting the account and clearing all the data collected!
 
 &nbsp;
 
@@ -321,7 +387,7 @@ Protect against legal liability
 
  
 
- If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@stockstobuynow.ai) or in the app directly.
+ If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@hellostocker.com) or in the app directly.
 
 
 ### Disclosure

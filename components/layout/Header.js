@@ -108,7 +108,7 @@ class Header extends Component {
                                                                           </a>
                                                                         </li>
                                                                            <li>
-                                                           <a href={`mailto:support@stockstobuynow.ai`} >
+                                                           <a href={`mailto:support@hellostocker.com`} >
 
                                                                                 <svg
                                                                                   width="19"
