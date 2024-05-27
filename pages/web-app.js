@@ -14,7 +14,7 @@ const FlutterAppPage = () => {
                       JSON.stringify({
                           "@context": "http://schema.org",
                           "@type": "SoftwareApplication",
-                          "name": "StocksToBuyNow AI Trading Advisor App ChatGPT Powered",
+                          "name": "Stocks To Buy Now AI Trading Signals App",
                           "image": "https://www.stockstobuynow.ai/assets/images/stockstobuynow.webp",
                           "author": {
                             "@type": "Person",

@@ -146,7 +146,7 @@ const slides =    [
                     <br></br>
                    <br></br>
 
-                    "You'll receive clear AI Trade Signals: what to buy, when to sell, what signal drives AI, explanations and target sell price...
+                    "You'll receive clear AI Stock Trading Signals: what to buy, when to sell, what signal drives AI, explanations and target sell price...
                     What I love most are the 3 hot stocks to buy every week before they blow up. I get notified live and track AI recommendations performance. Customer support is great too, always available even on weekends."
                     <br></br>
                     <br></br>
@@ -193,8 +193,8 @@ const slides =    [
                       <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
                       <br></br>
-                      "The AI tailors recommendations to match my preferences. You can access Long Term and Short Term strategies and pick what works best for you.
-                       It's like a personnal coach who listens to you, available 24/7.
+                      "The AI tailors recommendations to match my preferences. You can access Long Term and Short Term strategies and pick AI Trading Signals that works best for you.
+                       It's like a personal coach who listens to you, available 24/7.
                        It's not just about stocks; it's about market views and profits."
 
                       <br></br>
