@@ -311,13 +311,6 @@ const Div = styled.div`
                   console.log('no gtag');}
               }, 100);
 
-
-            import("react-facebook-pixel")
-              .then((x) => x.default)
-              .then((ReactPixel) => {
-                ReactPixel.init('3644450535825105');
-                ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
-              });
            {/*
            setMessage(<InstallButtonsWithQR/>);
            setTimeout(

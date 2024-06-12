@@ -191,12 +191,6 @@ const Div = styled.div`
             setIsSubmitted(true)
             setIsExploding(true)
 
-            import("react-facebook-pixel")
-              .then((x) => x.default)
-              .then((ReactPixel) => {
-                ReactPixel.init('3644450535825105');
-                ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
-              });
            {/*
            setMessage(<InstallButtonsWithQR/>);
            setTimeout(
