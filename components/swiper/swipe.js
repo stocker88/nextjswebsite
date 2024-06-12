@@ -48,12 +48,10 @@ const containerStyle = {
       <center>
 
             <Image
-              width={493.75*1.1}
-              height={434.4*1.1}
-              className="shadow-md"
+              width={543.125}
+              height={477.84}
               src="/assets/images/1.webp"
               style={splitItemImageStyle}
-              priority={true}
               sizes="(max-width: 80%) 83vw, (max-width: 80%) 90vw, 53vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
@@ -65,12 +63,10 @@ const containerStyle = {
       <center>
 
             <Image
-              width={493.75*1.1}
-              height={434.4*1.1}
-              className="shadow-md"
+              width={543.125}
+              height={477.84}
               src="/assets/images/2.webp"
               style={splitItemImageStyle}
-              priority={true}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />
@@ -81,12 +77,10 @@ const containerStyle = {
       <center>
 
             <Image
-              width={493.75*1.1}
-              height={434.4*1.1}
-              className="shadow-md"
+              width={543.125}
+              height={477.84}
               src="/assets/images/3.webp"
               style={splitItemImageStyle}
-              priority={true}
               sizes="(max-width: 50%) 33vw, (max-width: 50%) 50vw, 33vw"
               alt="We Predicted Netflix +40% StocksToBuyNow AI Screenshot"
             />

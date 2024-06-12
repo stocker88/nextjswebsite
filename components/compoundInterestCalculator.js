@@ -41,23 +41,23 @@ const CompoundInterestCalculator = () => {
   }, [principal, dailyContrib, monthlyReturn, investmentYears]); // Empty dependency array to run the effect only once on mount
 
   const calculateCompoundInterest = () => {
-    const monthlyInterestRate = monthlyReturn / 100;
-    const periods = investmentYears * 12;
+    const annualInterestRate = (monthlyReturn*1.04) / 100*12;
+    const periods = investmentYears;
 
     let principalAmount = parseFloat(principal);
-    let dailyContribution = parseFloat(dailyContrib) * 32;
+    let dailyContribution = parseFloat(dailyContrib) * 32 * 12;
 
     const dataPoints = [];
 
     for (let month = 0; month < periods; month++) {
       principalAmount += dailyContribution;
-      const interest = principalAmount * monthlyInterestRate;
+      const interest = principalAmount * annualInterestRate;
       principalAmount += interest;
 
       dataPoints.push({
-        year: month / 12, // convert months to years
+        year: month, // convert months to years
         totalWithInterest: principalAmount, // convert to thousands
-        onlyAmountSaved: parseFloat(principal) + parseFloat(dailyContrib) * 32 * month,
+        onlyAmountSaved: parseFloat(principal) + parseFloat(dailyContrib) * 32 * 12* month,
       });
     }
 
