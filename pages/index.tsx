@@ -123,12 +123,7 @@ export default function Index({ allPosts }: Props) {
                 ReactPixel.init('3644450535825105');
                 ReactPixel.pageView();
               });
-            import("react-facebook-pixel")
-              .then((x) => x.default)
-              .then((ReactPixel) => {
-                ReactPixel.init('1831807650591569');
-                ReactPixel.pageView();
-              });
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
@@ -227,35 +222,6 @@ export default function Index({ allPosts }: Props) {
           </script>
           <noscript><img height="1" width="1" style="display:none"
           src="https://www.facebook.com/tr?id=3644450535825105&ev=PageView&noscript=1"
-      `}
-    </Script>
-
- <Script  id="facebook-pixel2">
-      {`
-            !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1831807650591569');
-          fbq('track', 'PageView');
-          </script>
-          <noscript><img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=1831807650591569&ev=PageView&noscript=1"
-      `}
-    </Script>
-    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
-    <Script>
-      {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-JPXMZYD5DY');
       `}
     </Script>
 

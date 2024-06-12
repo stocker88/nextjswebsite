@@ -197,12 +197,6 @@ const Div = styled.div`
                 ReactPixel.init('3644450535825105');
                 ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
               });
-            import("react-facebook-pixel")
-              .then((x) => x.default)
-              .then((ReactPixel) => {
-                ReactPixel.init('1831807650591569');
-                ReactPixel.trackCustom('getTheAppClicked', {location: 'hero'});
-              });
            {/*
            setMessage(<InstallButtonsWithQR/>);
            setTimeout(
