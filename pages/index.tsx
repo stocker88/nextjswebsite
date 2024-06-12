@@ -183,7 +183,7 @@ export default function Index({ allPosts }: Props) {
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="⭐⭐️⭐️⭐️⭐️️️️️ over 26,300 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
-          <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
+//           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="hsl(200, 100%, 48%)" />

@@ -129,7 +129,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>{title}</title>
                 <meta charSet="utf-8" />
                 <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-                <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
+//                 <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="hsl(200, 100%, 48%)" />
