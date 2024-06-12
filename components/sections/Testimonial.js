@@ -66,7 +66,7 @@ const generateDynamicLink = async () => {
         },
         socialMetaTagInfo: {
             socialImageLink: 'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg',
-            socialTitle:'HelloStocker AI',
+            socialTitle:'Stocks to Buy Now AI',
             socialDescription: "🌟 We are a team of ex Goldman Sachs and Bank of America Portfolio Managers and Traders with over 15 years of experience in investing.🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:  - Social Platform and Sentiment Analysis: Analyzing social platform trends and sentiment analysis to predict which stocks are about to blow up,  - Financial Statement and Wall Street Analysts ratings: Leveraging revenues, profitability and earnings report to predict which companies will outperform / are undervalued,  - Macro Economic and Investment Styles: Studying which stage of the economy we are at to predict which investment style factor will be performing better,  - Company Competitive Advantage: Understanding what makes a company attractive with respect to peers  - Technical Trading: Using technical trading and volume techniques to understand when is the best point to buy or sell a stock  - Artificial Intelligence and Big Data: we use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account"
         },
         analyticsInfo: {
