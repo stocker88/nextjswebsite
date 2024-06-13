@@ -128,9 +128,9 @@ const slides =    [
         renderItem: (
              <center style={{width:'100%'}}>
 
-            <a href='https://www.linkedin.com/in/dorianbilinski/' target="_blank" >
+            <a href='https://www.linkedin.com/in/charles-elie-labroy-6500b480/' target="_blank" >
               <Image
-                 src='/assets/images/testimonies/dorian.webp'
+                 src='/assets/images/testimonies/charles.webp'
                  alt="Features tile icon 06"
                  width={130}
                  height={130}
@@ -160,9 +160,9 @@ const slides =    [
                           <div style={{
                                           marginLeft: '10px', // Adjust this if needed to space out the text from the icon
                                         }}>
-               <b>  Dorian Bilinski
+               <b>  Charles-Elie Labroy
                  <br></br>
-                 Data Science Manager - NLP Research   </b>
+                 Data Science Manager - Predictive Research   </b>
 
                 </div></div>
                   </p>
