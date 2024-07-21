@@ -16,16 +16,6 @@ const [isExploding, setIsExploding] = useState(false);
 
   const [imageExists, setImageExists] = useState({});
 
-  useEffect(() => {
-    stockData.forEach((company) => {
-      const img = new Image();
-      img.src = `/assets/assets/logo/${company.ticker}.webp`;
-      img.onload = () => setImageExists((prev) => ({ ...prev, [company.ticker]: true }));
-      img.onerror = () => setImageExists((prev) => ({ ...prev, [company.ticker]: false }));
-    });
-  }, [stockData]);
-
-
     const handleSearch = (e) => {
       const query = e.target.value.toLowerCase();
       setSearchQuery(query);
@@ -34,6 +24,13 @@ const [isExploding, setIsExploding] = useState(false);
         (stock) =>
           stock.ticker.toLowerCase().includes(query) || stock.name.toLowerCase().includes(query)
       );
+
+      filteredResults.forEach((company) => {
+        const img = new Image();
+        img.src = `/assets/assets/logo/${company.ticker}.webp`;
+        img.onload = () => setImageExists((prev) => ({ ...prev, [company.ticker]: true }));
+        img.onerror = () => setImageExists((prev) => ({ ...prev, [company.ticker]: false }));
+      });
 
       // If the query is empty, display no elements
       setSearchResults(query === '' ? [] : filteredResults);
@@ -44,8 +41,6 @@ const [isExploding, setIsExploding] = useState(false);
         setSelectedTicker(ticker)
         setIsExploding(true)
   };
-
-
 
 
   return (

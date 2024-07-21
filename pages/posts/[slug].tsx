@@ -42,8 +42,6 @@ import {
 
 } from "react-share";
 
-
-
 type Props = {
   post: PostType
   morePosts: Post[]
@@ -55,7 +53,6 @@ export default function Post({ post, morePosts, preview }: Props) {
   const title = `${post.title}`
 
   const [isMobile, setIsMobile] = useState(false);
-  const [scaleFactor, setScaleFactor] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -80,22 +77,12 @@ export default function Post({ post, morePosts, preview }: Props) {
     }, 100);
 
 
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
-      setScaleFactor(newScaleFactor);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     handleResize(); // Set initial state based on window width
 
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -112,7 +99,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>{title}</title>
                 <meta charSet="utf-8" />
                 <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-//                 <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
                 <link rel="shortcut icon" href="favicon.ico"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="hsl(200, 100%, 48%)" />

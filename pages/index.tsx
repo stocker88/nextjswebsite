@@ -23,7 +23,6 @@ import Script from 'next/script'
 import {
     FacebookShareButton,
     LinkedinShareButton,
-
     RedditShareButton,
     TwitterShareButton,
     FacebookIcon,
@@ -59,12 +58,6 @@ import { isMobile} from "react-device-detect";
 // const app = initializeApp(firebaseConfig);
 
 // On your website
-function getQueryParam(name) {
-    // Function to get the value of a URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
-
 
 type Props = {
   allPosts: Post[]
@@ -83,34 +76,14 @@ const trackPage = page => {
 
 export default function Index({ allPosts }: Props) {
 
-  const [scaleFactor, setScaleFactor] = useState(0);
-
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(0,-1)
 
   useEffect(() => {
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const newScaleFactor = Math.min(scrollY / 400, 1); // Adjust the divisor for a faster or slower scaling effect
-      setScaleFactor(newScaleFactor);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
-
-
-
+    trackPage(window.location.pathname);
   }, []);
 
 
-
-
-
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(0,-1)
   return (
     <>
        <Layout>
@@ -123,11 +96,11 @@ export default function Index({ allPosts }: Props) {
                   JSON.stringify({
                       "@context": "http://schema.org",
                       "@type": "SoftwareApplication",
-                      "name": "AI Trading Advisor App ChatGPT Powered",
+                      "name": "Stocks to Buy Now AI Trading Signals App",
                       "image": "https://stockstobuynow/assets/images/Maximize Profits: this.webp",
                       "author": {
                         "@type": "Person",
-                        "name": "Stocks To Buy Now"
+                        "name": "Stocks to Buy Now AI Trading Signals"
                       },
                       "applicationCategory": "Investing",
                       "screenshot": [
@@ -145,27 +118,26 @@ export default function Index({ allPosts }: Props) {
                           "@type": "Rating",
                           "ratingValue": "5/5"
                         },
-                        "reviewBody": "Maximize Profits: this is an amazing virtual investing app! Their AI Advisor helps me find the best stocks to invest in. +++ recommend Maximize Profits: this"
+                        "reviewBody": "Stocks to buy now ai app sends you the best stocks signals and features relevant market information and trading strategies! The best trading app out there."
                       }
                     })}}
                 />
-          <title>Stocks to Buy Now: AI Trading Signals</title>
+          <title>Stocks to Buy : AI Trading Signals</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="⭐⭐️⭐️⭐️⭐️️️️️ over 26,300 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
-//           <meta name="facebook-domain-verification" content="8yjz6qlp98g8lnhvo6zso6lywe0037" />
+          <meta name="description" property="og:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="hsl(200, 100%, 48%)" />
-          <meta name="description" content="⭐⭐️⭐️⭐️⭐️️️️️ over 26,300 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
+          <meta name="description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
           <meta property="og:title" content="Profit 30x Faster with AI Stock Trading Signals: Stocks To Buy Now AI Sends You Hot Stocks Before They Blow Up" />
-          <meta name="og:description" content="⭐⭐️⭐️⭐️⭐️️️️️ over 26,300 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
+          <meta name="og:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️ | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"/>
           <meta name="twitter:title" content="Profit 30x Faster with AI Stock Trading Signals : Stocks To Buy Now AI Sends You Hot Stocks Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="⭐⭐️⭐️⭐️⭐️️️️️ over 26,300 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
+          <meta name="twitter:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
           <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
