@@ -115,9 +115,6 @@ const Div = styled.div`
                   window.gtag('event', 'getTheAppClicked', {
                     'from': from,
                     'action': 'clicked',
-                    'utm_campaign': utmCampaignValue||'notDefined',
-                    'utm_source': utmSourceValue||'notDefined',
-                    'utm_medium': utmMediumValue||'notDefined',
                     // Add any additional parameters you want to track
                   });
                 } else {
