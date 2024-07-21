@@ -59,7 +59,7 @@ const slides =    [
 
                  <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                    <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
+                    <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#7153FF'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
                     <br></br>
                    <br></br>
 
@@ -107,7 +107,7 @@ const slides =    [
                   />
                    <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                      <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Stock Recommendations that Drive Performance </b>
+                      <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#7153FF'}}> Stock Recommendations that Drive Performance </b>
                       <br></br>
                       <br></br>
                       "The AI tailors recommendations to match my preferences. You can access Long Term and Short Term strategies and pick AI Trading Signals that works best for you.
@@ -156,7 +156,7 @@ const slides =    [
               />
 
               <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
-                  <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> Simple and Easy to Understand </b>
+                  <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#7153FF'}}> Simple and Easy to Understand </b>
                   <br></br>
                  <br></br>
                  "I asked for dividend stocks for passive income. Ideally a low risk company with stable yield.
@@ -204,7 +204,7 @@ const slides =    [
             />
              <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#493bc3'}}> A Safe Playground for Learning </b>
+                <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#7153FF'}}> A Safe Playground for Learning </b>
                 <br></br>
                <br></br>
                "Practise trading ideas without the risk!
