@@ -1,8 +1,4 @@
 import Link from 'next/link';
-import { doc, setDoc } from "firebase/firestore";
-import 'firebase/firestore';
-import {getFirestore} from 'firebase/firestore';
-import { serverTimestamp } from "firebase/firestore";
 import { useSession } from '../stockerSession';
 import { useState, useEffect } from "react";
 import { format } from 'date-fns';
@@ -13,10 +9,10 @@ const SearchStocks = ({ stockData }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
+//REMOVED FIREBASE
+
 const [selectedTicker, setSelectedTicker] = useState('');
 const [isExploding, setIsExploding] = useState(false);
-
-const db = getFirestore();
 
   const [imageExists, setImageExists] = useState({});
 
@@ -28,45 +24,6 @@ const db = getFirestore();
       img.onerror = () => setImageExists((prev) => ({ ...prev, [company.ticker]: false }));
     });
   }, [stockData]);
-
-
-    const { sessionData, setSessionData } = useSession();
-        const [deviceInfo, setDeviceInfo] = useState({
-            userAgent: '',
-            platform: '',
-            language: '',
-            screenWidth: '',
-            screenHeight: '',
-        });
-
- const fetchDeviceInfo = () => {
-        try {
-          // Get basic device information
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: navigator.userAgent,
-            platform: navigator.platform,
-            language: navigator.language,
-            screenWidth: String(window.screen.width),
-            screenHeight: String(window.screen.height),
-            // Add or update other properties as needed
-          });
-        } catch (error) {
-          console.error('Error fetching device information:', error);
-
-          // Set empty string ('') as default values if fetching device information fails
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: '',
-            platform: '',
-            language: '',
-            screenWidth: '',
-            screenHeight: '',
-            // Set other properties to empty strings as needed
-          });
-        }
-      };
-
 
 
     const handleSearch = (e) => {
@@ -83,60 +40,7 @@ const db = getFirestore();
     };
 
 
-  useEffect(() => {
-        // Fetch device information when the component mounts
-        fetchDeviceInfo();
-      }, []); // Empty dependency array ensures the effect runs only once after initial render
-
-
   const handleClick = (ticker) => {
-    const dateTime = Date.now();
-    const unixTime = Math.floor(dateTime / 1000);
-    const unixTimeStr = unixTime.toString();
-
-    const sessionId = sessionData.sessionId || '';
-
-
-    const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-    const docId = unixTimeStr + deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString;
-    if (sessionId === ''){
-        setSessionData({ ...sessionData, sessionId: docId });
-    }
-
-      var storedUtmParams = localStorage.getItem('utmParams');
-     var utmCampaignValue=`defaultWeb_search_${ticker}`;
-     var utmSourceValue=`defaultWeb`;
-     var utmMediumValue=`defaultWeb_search${ticker}`;
-     // Check if UTM parameters are stored
-     if (storedUtmParams) {
-         // Parse the stored JSON string
-         var utmParams = JSON.parse(storedUtmParams);
-
-         // Retrieve the specific UTM parameter
-         utmCampaignValue = utmParams.campaign;
-         utmSourceValue = utmParams.source;
-         utmMediumValue = utmParams.medium;
-    }
-    localStorage.setItem('userId', encodeURIComponent(docId));
-     setDoc(
-        doc(db, "contactList", docId), {
-            id: encodeURIComponent(docId),
-            time_clicked_stock: serverTimestamp(),
-            a_type: 'selectedStock',
-            time: serverTimestamp(),
-            time_clicked_stockunix: unixTime,
-            userAgent: deviceInfo.userAgent,
-            ticker: ticker,
-            sessionId: sessionId,
-            platform: deviceInfo.platform,
-            language: deviceInfo.language,
-            screenWidth: deviceInfo.screenWidth,
-            screenHeight: deviceInfo.screenHeight,
-            utmCampaignValue:utmCampaignValue,
-            utmSourceValue:utmSourceValue,
-            utmMediumValue:utmMediumValue,
-        }, { merge: true });
-
         setSelectedTicker(ticker)
         setIsExploding(true)
   };

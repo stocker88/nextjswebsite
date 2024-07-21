@@ -19,7 +19,6 @@ import type Post from '../interfaces/post';
 import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
-import TryWebAppLink from '../components/TryWebAppLink';
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
 import Link from 'next/link';

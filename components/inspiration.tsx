@@ -1,23 +1,16 @@
 import { useState, useEffect } from "react";
-import { serverTimestamp } from "firebase/firestore";
 import ConfettiExplosion from 'react-confetti-explosion';
-
 import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
-import { doc, setDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-import 'firebase/firestore';
-
-import {getFirestore} from 'firebase/firestore';
-import { useSession } from '../stockerSession';
 import { emitEvent } from '../contexts/store';
 
 type Props = {
   from: string
 }
+
+//REMOVED FIREBASE
 
 
 //export db from other script and import it here
@@ -80,125 +73,25 @@ const Div = styled.div`
     overflow:hidden;
 `;
 */}
-    const { sessionData, setSessionData } = useSession();
+
+//REMOVED FIREBASE
 
     const [input,setInput] = useState("");
     const [message,setMessage] = useState("");
-    const [deviceInfo, setDeviceInfo] = useState({
-        userAgent: '',
-        platform: '',
-        language: '',
-        screenWidth: '',
-        screenHeight: '',
-        // Add more properties based on available browser APIs
-//         latitude: null,
-//         longitude: null,
-      });
+
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isExploding, setIsExploding] = useState(false);
     let [showDropdown, setShowDropdown] = useState(false);
-    const fetchDeviceInfo = () => {
-        try {
-          // Get basic device information
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: navigator.userAgent,
-            platform: navigator.platform,
-            language: navigator.language,
-            screenWidth: String(window.screen.width),
-            screenHeight: String(window.screen.height),
-            // Add or update other properties as needed
-          });
-        } catch (error) {
-          console.error('Error fetching device information:', error);
-          // Set empty string ('') as default values if fetching device information fails
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: '',
-            platform: '',
-            language: '',
-            screenWidth: '',
-            screenHeight: '',
-            // Set other properties to empty strings as needed
-          });
-        }
-      };
 
-      useEffect(() => {
-        // Fetch device information when the component mounts
-        fetchDeviceInfo();
-      }, []); // Empty dependency array ensures the effect runs only once after initial render
-
-
-    const inputHandler = (e) => {
-        setInput(e.target.value);
-    };
-    const db = getFirestore();
+//REMOVED FIREBASE
 
     const submitHandler = ()=> {
 
-    emitEvent('updateVariable', 3);
-
-            console.log(input);
-            //add to firebase
-            const dateTime = Date.now();
-            const unixTime = Math.floor(dateTime / 1000);
-            const unixTimeStr = Math.floor(dateTime / 1000).toString();
-            const sessionId = sessionData.sessionId || '';
-
-            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-            const docId = unixTimeStr + (sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString);
-
-
-              var storedUtmParams = localStorage.getItem('utmParams');
-             var utmCampaignValue=`defaultWeb_${from}`;
-             var utmSourceValue=`defaultWeb`;
-             var utmMediumValue=`defaultWeb_${from}`;
-             // Check if UTM parameters are stored
-             if (storedUtmParams) {
-                 // Parse the stored JSON string
-                 var utmParams = JSON.parse(storedUtmParams);
-
-                 // Retrieve the specific UTM parameter
-                 utmCampaignValue = utmParams.campaign;
-                 utmSourceValue = utmParams.source;
-                 utmMediumValue = utmParams.medium;
-            }
-
-            localStorage.setItem('userId', encodeURIComponent(docId));
-             setDoc(doc(db, "contactList", docId), {
-                id: encodeURIComponent(docId),
-                emailTime: serverTimestamp(),
-                time: serverTimestamp(),
-                unixTime: unixTime,
-              userAgent: deviceInfo.userAgent,
-              platform: deviceInfo.platform,
-              language: deviceInfo.language,
-              screenWidth: deviceInfo.screenWidth,
-              screenHeight: deviceInfo.screenHeight,
-              from: from,
-              utmCampaignValue:utmCampaignValue,
-              utmSourceValue:utmSourceValue,
-              utmMediumValue:utmMediumValue,
-                }, { merge: true });
-
-            if (sessionId === ''){
-                setSessionData({ ...sessionData, sessionId: docId });
-            }
-
-            setShowDropdown(true)
-            setInput("");
-            setIsSubmitted(true)
-            setIsExploding(true)
-
-           {/*
-           setMessage(<InstallButtonsWithQR/>);
-           setTimeout(
-                () => {
-                    setMessage("");
-                },
-                3000,
-            )*/}
+        emitEvent('updateVariable', 3);
+        setShowDropdown(true)
+        setInput("");
+        setIsSubmitted(true)
+        setIsExploding(true)
 
     }
 

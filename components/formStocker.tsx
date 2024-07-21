@@ -1,17 +1,12 @@
 import { useState, useEffect } from "react";
-import { serverTimestamp } from "firebase/firestore";
 import ConfettiExplosion from 'react-confetti-explosion';
-
 import InstallButtonsWithQR from './elements/InstallButtonsWithQR';
-import { doc, setDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-import 'firebase/firestore';
 import ReactGA from 'react-ga4';
-import {getFirestore} from 'firebase/firestore';
 import { useSession } from '../stockerSession';
 import { emitEvent } from '../contexts/store';
 import { useSpring, animated } from 'react-spring';
@@ -32,92 +27,6 @@ emitEvent('updateVariable', 1);
 };
 
 
-
-//export db from other script and import it here
-
-const generateDynamicLink = async () => {
-  const apiKey = 'AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU';
-  const endpoint = `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${apiKey}`;
-
-  const link = 'https://stockstobuynow.ai';
-  const androidPackageName = 'com.newcompany.stocker';
-  const iosBundleId = 'com.newcompany.stocker';
-
-  var storedUtmParams = localStorage.getItem('utmParams');
-
-     var userIdValue = localStorage.getItem('userId')||'defaultUserId';
-
-     var utmCampaignValue='defaultWeb';
-     var utmSourceValue='defaultWeb';
-     var utmMediumValue='defaultWeb';
-
-     // Check if UTM parameters are stored
-     if (storedUtmParams) {
-         // Parse the stored JSON string
-         var utmParams = JSON.parse(storedUtmParams);
-
-         // Retrieve the specific UTM parameter
-         utmCampaignValue = utmParams.campaign;
-         utmSourceValue = utmParams.source;
-         utmMediumValue = utmParams.medium;
-    }
-
-  const utmParamsFinal = {
-    campaign: utmCampaignValue,
-    medium: utmMediumValue,
-    source: utmSourceValue,
-  };
-
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      dynamicLinkInfo: {
-        domainUriPrefix: 'https://applink.stockstobuynow.ai',
-        link: `${link}/userIdPassed?userId=${encodeURIComponent(userIdValue)}`,
-        androidInfo: {
-          androidPackageName: androidPackageName,
-        },
-        navigationInfo: {
-          enableForcedRedirect: 1,
-        },
-        iosInfo: {
-          iosBundleId: iosBundleId,
-          iosAppStoreId: '1565527320',
-        },
-        socialMetaTagInfo: {
-            socialImageLink: 'https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg',
-            socialTitle:'HelloStocker AI',
-            socialDescription: "🌟 We are a team of ex Goldman Sachs and Bank of America Investment Managers with over 15 years of trading experience🚀 We combined our efforts with ex Google AI and Open AI Engineers to build an AI model that sends you buy and sell signals based on:  - Social Platform and Sentiment Analysis: Analyzing social platform trends and sentiment analysis to predict which stocks are about to blow up,  - Financial Statement and Wall Street Analysts ratings: Leveraging revenues, profitability and earnings report to predict which companies will outperform / are undervalued,  - Macro Economic and Investment Styles: Studying which stage of the economy we are at to predict which investment style factor will be performing better,  - Company Competitive Advantage: Understanding what makes a company attractive with respect to peers  - Technical Trading: Using technical trading and volume techniques to understand when is the best point to buy or sell a stock  - Artificial Intelligence and Big Data: we use AI models to generate investing decisions driven by the optimization of a utility function that takes all the previous parameters into account"
-        },
-        analyticsInfo: {
-          googlePlayAnalytics: {
-            utmCampaign: utmParamsFinal.campaign,
-            utmMedium: utmParamsFinal.medium,
-            utmSource: utmParamsFinal.source,
-          },
-           itunesConnectAnalytics: {
-              at: utmSourceValue,
-              ct: utmCampaignValue,
-              mt: utmMediumValue,
-              pt: utmSourceValue
-            },
-        },
-        },
-    }),
-  });
-
-  if (!response.ok) {
-     console.log('Response:', await response.text());
-
-    throw new Error(`Failed to generate dynamic link: ${response.status}`);
-  }
-
-  const result = await response.json();
-  return result.shortLink;
-};
 
 
 function NewsletterSignUp({ from }: Props){
@@ -178,138 +87,42 @@ const Div = styled.div`
     overflow:hidden;
 `;
 */}
-    const { sessionData, setSessionData } = useSession();
 
-    const [input,setInput] = useState("");
-    const [message,setMessage] = useState("");
-    const [deviceInfo, setDeviceInfo] = useState({
-        userAgent: '',
-        platform: '',
-        language: '',
-        screenWidth: '',
-        screenHeight: '',
-        // Add more properties based on available browser APIs
-//         latitude: null,
-//         longitude: null,
-      });
+//REMOVED FIREBASE
+
     const [isExploding, setIsExploding] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     let [showDropdown, setShowDropdown] = useState(false);
-    const fetchDeviceInfo = () => {
-        try {
-          // Get basic device information
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: navigator.userAgent,
-            platform: navigator.platform,
-            language: navigator.language,
-            screenWidth: String(window.screen.width),
-            screenHeight: String(window.screen.height),
-            // Add or update other properties as needed
-          });
-        } catch (error) {
-          console.error('Error fetching device information:', error);
-          // Set empty string ('') as default values if fetching device information fails
-          setDeviceInfo({
-            ...deviceInfo,
-            userAgent: '',
-            platform: '',
-            language: '',
-            screenWidth: '',
-            screenHeight: '',
-            // Set other properties to empty strings as needed
-          });
-        }
-      };
 
-      useEffect(() => {
-        // Fetch device information when the component mounts
-        fetchDeviceInfo();
-      }, []); // Empty dependency array ensures the effect runs only once after initial render
-
-
-    const inputHandler = (e) => {
-        setInput(e.target.value);
-    };
-    const db = getFirestore();
 
     const submitHandler = ()=> {
 
             emitEvent('updateVariable', 3);
 
-            console.log(input);
-            //add to firebase
-            const dateTime = Date.now();
-            const unixTime = Math.floor(dateTime / 1000);
-            const unixTimeStr = unixTime.toString();
-
-            const sessionId = sessionData.sessionId || '';
-
-            const randomString = Math.random().toString(20).substring(2, 14) + Math.random().toString(20).substring(2, 14);
-            const docId = unixTimeStr + (sessionData.sessionId || deviceInfo.language + deviceInfo.platform + deviceInfo.screenWidth + deviceInfo.screenHeight+randomString);
-
-
-              var storedUtmParams = localStorage.getItem('utmParams');
-             var utmCampaignValue=`defaultWeb_${from}`;
-             var utmSourceValue=`defaultWeb`;
-             var utmMediumValue=`defaultWeb_${from}`;
-             // Check if UTM parameters are stored
-             if (storedUtmParams) {
-                 // Parse the stored JSON string
-                 var utmParams = JSON.parse(storedUtmParams);
-
-                 // Retrieve the specific UTM parameter
-                 utmCampaignValue = utmParams.campaign;
-                 utmSourceValue = utmParams.source;
-                 utmMediumValue = utmParams.medium;
-            }
-
-                localStorage.setItem('userId', encodeURIComponent(docId));
-             setDoc(doc(db, "contactList", docId), {
-                id: encodeURIComponent(docId),
-                emailTime: serverTimestamp(),
-                time: serverTimestamp(),
-                unixTime: unixTime,
-              userAgent: deviceInfo.userAgent,
-              platform: deviceInfo.platform,
-              language: deviceInfo.language,
-              screenWidth: deviceInfo.screenWidth,
-              screenHeight: deviceInfo.screenHeight,
-              from: from,
-                utmCampaignValue:utmCampaignValue,
-                utmSourceValue:utmSourceValue,
-                utmMediumValue:utmMediumValue,
-                }, { merge: true });
-
-            if (sessionId === ''){
-                setSessionData({ ...sessionData, sessionId: docId });
-            }
-
             setShowDropdown(true)
-            setInput("");
+
             setIsSubmitted(true)
             setIsExploding(true)
 
-
-              // Log a custom event to Google Analytics
-              ReactGA.initialize('G-JPXMZYD5DY');
-              const intervalId = setInterval(() => {
-                    if (window.gtag) {
-                      clearInterval(intervalId);
-                      console.log('gtag');
-                      // Replace with your analytics tracking code
-                      window.gtag('event', 'getTheAppClicked', {
-                        'from': from,
-                        'action': 'clicked',
-                        'utm_campaign': utmCampaignValue||'notDefined',
-                        'utm_source': utmSourceValue||'notDefined',
-                        'utm_medium': utmMediumValue||'notDefined',
-                        // Add any additional parameters you want to track
-                      });
-                    } else {
-                  console.log('no gtag');}
-              }, 100);
+          // Log a custom event to Google Analytics
+          ReactGA.initialize('G-JPXMZYD5DY');
+          const intervalId = setInterval(() => {
+                if (window.gtag) {
+                  clearInterval(intervalId);
+                  console.log('gtag');
+                  // Replace with your analytics tracking code
+                  window.gtag('event', 'getTheAppClicked', {
+                    'from': from,
+                    'action': 'clicked',
+                    'utm_campaign': utmCampaignValue||'notDefined',
+                    'utm_source': utmSourceValue||'notDefined',
+                    'utm_medium': utmMediumValue||'notDefined',
+                    // Add any additional parameters you want to track
+                  });
+                } else {
+              console.log('no gtag');}
+          }, 100);
 
            {/*
            setMessage(<InstallButtonsWithQR/>);

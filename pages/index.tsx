@@ -16,7 +16,7 @@ import Post from '../interfaces/post'
 import Home from '../views/Home';
 //import './App.css';
 import ReactGA from 'react-ga4';
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 import { useState, useEffect } from 'react';
 import Script from 'next/script'
 
@@ -41,22 +41,22 @@ import {
     RedditShareCount,
 } from "react-share";
 import { isMobile} from "react-device-detect";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
-  authDomain: "stocker-fcda2.firebaseapp.com",
-  projectId: "stocker-fcda2",
-  storageBucket: "stocker-fcda2.appspot.com",
-  messagingSenderId: "269261832880",
-  appId: "1:269261832880:web:4b6affd899a01f5f0cf175",
-  measurementId: "G-WXHHGB6FSV"
-};
-
-// Initialize Firebase
-//const firebaseApp = initializeApp(firebaseConfig);
-
-  // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+//
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCa9vdoGvXZqMLKg9jZlK0TDsFi23V2qzU",
+//   authDomain: "stocker-fcda2.firebaseapp.com",
+//   projectId: "stocker-fcda2",
+//   storageBucket: "stocker-fcda2.appspot.com",
+//   messagingSenderId: "269261832880",
+//   appId: "1:269261832880:web:4b6affd899a01f5f0cf175",
+//   measurementId: "G-WXHHGB6FSV"
+// };
+//
+// // Initialize Firebase
+// //const firebaseApp = initializeApp(firebaseConfig);
+//
+//   // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
 
 // On your website
 function getQueryParam(name) {
@@ -87,36 +87,6 @@ export default function Index({ allPosts }: Props) {
 
 
   useEffect(() => {
-          // Get the utm_campaign_value from the URL
-          var utmCampaignValue = getQueryParam('utm_campaign');
-          var utmSourceValue = getQueryParam('utm_source');
-          var utmMediumValue = getQueryParam('utm_medium');
-
-          var utmParams = {
-              source: 'notDefined',
-              medium: 'notDefined',
-              campaign: 'notDefined'
-          };
-
-          if (utmCampaignValue !== null) {
-              utmParams.campaign = utmCampaignValue;
-          }
-
-          if (utmSourceValue !== null) {
-              utmParams.source = utmSourceValue;
-          }
-
-          if (utmMediumValue !== null) {
-              utmParams.medium = utmMediumValue;
-          }
-
-          if (Object.keys(utmParams).length > 0 && (utmParams.source!='notDefined' || utmParams.medium!='notDefined' || utmParams.campaign!='notDefined') ) {
-              localStorage.setItem('utmParams', JSON.stringify(utmParams));
-
-//               console.log('UTM Value stored:', JSON.stringify(utmParams));
-          } else {
-              console.log('UTM Campaign Value not found in the URL.');
-          }
 
     const handleScroll = () => {
       const scrollY = window.scrollY;

@@ -16,7 +16,6 @@
     "axios": "^1.6.4",
     "classnames": "^2.3.1",
     "date-fns": "^2.30.0",
-    "firebase": "^10.6.0",
     "gray-matter": "^4.0.3",
     "qrcode.react": "^3.1.0",
     "react": "^18.2.0",

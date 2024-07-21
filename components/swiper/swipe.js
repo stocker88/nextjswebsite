@@ -6,7 +6,6 @@ import IntroDataset from '../../components/introDataset';
 import Container from '../../components/container'
 import IntroDownload from '../../components/introDownload';
 import InstallButtonsWithQRAndLogo from '../elements/InstallButtonsWithQRAndLogo';
-import BookingMeetingButton from '../../components/bookingMeetingButton';
 import LinkedInButton from '../../components/connectLinkedin';
 import SearchStocks from '../../components/SearchStocks';
 import { stockDataSearch } from '../../components/constants';
