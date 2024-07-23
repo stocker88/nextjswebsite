@@ -31,7 +31,7 @@ class Header extends Component {
                     </li>
 
                     <li style={{paddingLeft:'10px'}}>
-                                          <a href="https://www.instagram.com/stockstobuynow.ai/">
+                                          <a href="https://www.instagram.com/stockstobuynow.ai?igsh=MWs4dTVndzk3NXkzZA%3D%3D&utm_source=qr">
                                             <svg
                                               width="34"
                                               height="34"
