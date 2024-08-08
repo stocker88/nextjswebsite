@@ -125,19 +125,19 @@ export default function Index({ allPosts }: Props) {
           <title>Stocks to Buy : AI Trading Signals</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
+          <meta name="description" property="og:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="hsl(200, 100%, 48%)" />
-          <meta name="description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
-          <meta property="og:title" content="Profit 30x Faster with AI Stock Trading Signals: Stocks To Buy Now AI Sends You Hot Stocks Before They Blow Up" />
+          <meta name="description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
+          <meta property="og:title" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
           <meta name="og:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️ | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster" />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"/>
           <meta name="twitter:title" content="Profit 30x Faster with AI Stock Trading Signals : Stocks To Buy Now AI Sends You Hot Stocks Before They Blow Up"/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="Profit 30X faster with the best stocks signals, Nvidia paid +36,000%️: join over 126,000 active investors | About us: 15 years in investing, Math PhDs & Goldman Sachs Directors | You receive Politician Trades (Nancy Pelosi), AI Earnings Prediction, Momentum Signals, Hedge Funds & Stock Options traders activity - Apple AAPL Nvidia NVDA Meta Netflix NFLX Google GOOG Amazon AMZN Microsoft MSFT Price Prediction | learn make money and get rich 30x faster"/>
+          <meta name="twitter:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
           <meta name="twitter:image" content="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"  />
