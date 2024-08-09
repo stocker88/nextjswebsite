@@ -134,13 +134,13 @@ export default function Index({ allPosts }: Props) {
           <meta name="og:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
-          <meta property="og:image" content="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"/>
+          <meta property="og:image" content="https://i.ibb.co/S7KSDCV/stocks-to-buy-now-ai-app.jpg"/>
           <meta name="twitter:title" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
           <meta name="twitter:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
-          <meta name="twitter:image" content="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"  />
+          <meta name="twitter:image" content="https://i.ibb.co/S7KSDCV/stocks-to-buy-now-ai-app.jpg"  />
           <meta name="twitter:card" content="summary_large_image"/>
-          <link rel="apple-touch-icon" href="https://i.ibb.co/DQRC0Bg/stocks-to-buy-now-ai.jpg"  />
+          <link rel="apple-touch-icon" href="https://i.ibb.co/S7KSDCV/stocks-to-buy-now-ai-app.jpg"  />
           {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
 
 
