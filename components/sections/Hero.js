@@ -74,7 +74,7 @@ const Hero = ({
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-             Profit 30x Faster with AI Stock Trading Signals: Stocks to Buy Now AI sends you hot stocks to buy before they blow up!
+             Stocks to Buy Now AI sends you hot stocks to buy before they blow up! Profit 30x Faster with AI Stock Trading Signals
             </h2>
           </div>
 
