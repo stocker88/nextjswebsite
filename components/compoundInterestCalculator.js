@@ -80,10 +80,9 @@ const CompoundInterestCalculator = () => {
    <br/>
    <br/>
      <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
-       +0.1% grows exponentially
-       <br />
-       <br />
-       Compound Interest Calculator
+
+
+       Compounding Interest: Make your money work
      </h2>
 
 

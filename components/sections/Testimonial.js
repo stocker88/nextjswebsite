@@ -79,7 +79,7 @@ const slides =    [
                                         }}>
                <b>  Charles-Elie Labroy
                  <br></br>
-                 Data Science Manager - Predictive Research   </b>
+                 Data Science Manager @ META   </b>
 
                 </div></div>
                   </p>
@@ -273,8 +273,8 @@ const slides =    [
               style={{
                 backgroundColor: index === i ? 'white' : 'grey',
                 boxShadow: index === i ? '0 0 5px rgba(255, 255, 255, 1)' : 'none',
-                width: '10px',
-                height: '10px',
+                width: '15px',
+                height: '15px',
                 borderRadius: '50%',
                 margin: '0 5px', // Adjust as needed
                 cursor: 'pointer',
@@ -294,7 +294,7 @@ const slides =    [
                 >Previous</button>
 
                 {/* Next Button */}
-                <button style={{ padding: '10px 20px', color: 'white',}}
+                <button style={{ padding: '20px 20px', color: 'white',}}
                    onClick={() => {
                                     console.log('Previous button clicked');
                                     slideToNextItem();

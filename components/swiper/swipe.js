@@ -12,6 +12,7 @@ import { stockDataSearch } from '../../components/constants';
 import Testimonial from '../../components/sections/Testimonial'
 import Ratings from '../../components/sections/Ratings'
 import NewsletterSignUp from '../../components/formStocker'
+import LinkedInIconWhite from '../../components/linkediniconwhite';
 
 export default function Swipe() {
 const containerStyle = {
@@ -109,6 +110,7 @@ const containerStyle = {
         Install The Virtual Investing App
         </h2>
 
+
 <Ratings/>
 
 
@@ -121,47 +123,8 @@ const containerStyle = {
 
          </center>
 
-<Container>
-<center  style={{
-                                     borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                        paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                        marginBottom: '10px', // Adjust the margin to give some space between sections
-                                        width: '90%', // Take up 90% of the screen width
-                                        maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                        margin: '0 auto', // Center the sections horizontally
-                                     }}>
 
-    <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Ask for Nvidia Best Alternative!<br></br><br></br>Better than Tesla: AI Picked Ferrari
-         <br></br>
-         +42% Over Performance
 
-        </h2>
-    </section>
-<br></br>
-                 <SearchStocks stockData={stockDataSearch} />
-                 <br></br>
-    <br></br>
-
-          </center>
-    </Container>
-
-                          <br></br>
-
-                          <br></br>
-                          <Container>
-                          <center  style={{
-                                                               borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                                                   // Adjust the margin to give some space between sections
-                                                                  width: '100%', // Take up 90% of the screen width
-                                                                  maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                                                  margin: '0 auto', // Center the sections horizontally
-                                                               }}>
-<Testimonial/>
-</center>
-
-</Container>
 
   <center >
   <Container>
@@ -170,7 +133,7 @@ const containerStyle = {
   <br></br>
 <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
 <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-Speak with our Advisors
+Meet Your Trading Advisors
 <br></br>
 <br></br>
 </h3>
@@ -189,7 +152,7 @@ Speak with our Advisors
 </a>
 <br></br>
 <br></br>
-<h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+<h3 className="text2xl md:text-3xl tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
 
                                Former Goldman Sachs and
                                 <br></br>Bank of America Directors
@@ -209,7 +172,7 @@ Speak with our Advisors
 
 
                                <br></br>
-                               <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
+                               <h3 className="text2xl md:text-3xl tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
 Over 15 years in Investing and AI
 </h3>
 
@@ -256,6 +219,14 @@ Over 15 years in Investing and AI
 
                  <SearchStocks stockData={stockDataSearch} />
                  <br></br>
+                  <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+                       <h2 className="text-xl md:text-3xl tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+                         Ask for Nvidia Best Alternative!<br></br>Better than Tesla: AI Picked Ferrari
+                          <br></br>
+                          +48% Over Performance
+
+                         </h2>
+                     </section>
 
 </center>
 </Container>

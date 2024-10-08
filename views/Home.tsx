@@ -18,6 +18,8 @@ import Header from '../components/layout/Header';
 import type Post from '../interfaces/post';
 import Container from '../components/container'
 import Intro from '../components/intro'
+import SearchStocks from '../components/SearchStocks';
+import { stockDataSearch } from '../components/constants';
 import MoreStories from '../components/more-stories'
 import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
@@ -74,14 +76,30 @@ import SignUpModal from '../SignUpModal';
 
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
 
+        <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
+
       <br></br>
 
           <br></br>
           <br></br>
+                <br></br>
 
+                          <br></br>
+                          <Container>
+                          <center  style={{
+                                                               borderBottom: '0.3px solid #333', // Adjust the color and style as needed
+                                                                   // Adjust the margin to give some space between sections
+                                                                  width: '100%', // Take up 90% of the screen width
+                                                                  maxWidth: '1000px', // Set a maximum width of 1000 pixels
+                                                                  margin: '0 auto', // Center the sections horizontally
+                                                               }}>
+<Testimonial/>
+</center>
+
+</Container>
         <br></br>
         <br></br>
-        <Container>
+        <Container >
         <IntroApp/>
         </Container>
         <Swipe/>
@@ -90,6 +108,8 @@ import SignUpModal from '../SignUpModal';
            <br></br>
            <center>
            <Container>
+           <center  style={{paddingLeft:'20%',paddingRight:'20%' }}>
+ <Intro />
                  <PostPreview
                      key={heroPost.slug}
                      title={heroPost.title}
@@ -99,13 +119,11 @@ import SignUpModal from '../SignUpModal';
                      slug={heroPost.slug}
                      excerpt={heroPost.excerpt}
                    />
+            </center>
 
         </Container>
-              <br></br>
 
-              <br></br>
-                       <br></br>
-     <br></br>
+
    </center>
 
 
@@ -115,19 +133,11 @@ import SignUpModal from '../SignUpModal';
 
          <center>
 
-<section style={{
-                             borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingBottom: '5px', // Adjust the padding to give some space between the line and content
-                                marginBottom: '10px', // Adjust the margin to give some space between sections
-                                width: '90%', // Take up 90% of the screen width
-                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                margin: '0 auto', // Center the sections horizontally
-                             }}/>
-<br/>
+<section />
 
 
 
-                       <br></br>
+
 
 </center>
 
@@ -139,7 +149,7 @@ import SignUpModal from '../SignUpModal';
          <br></br>
          <br></br>
 
-        <Intro />
+
       {/*  {heroPost && (
           <HeroPost
             title={heroPost.title}
@@ -152,9 +162,7 @@ import SignUpModal from '../SignUpModal';
         )}*/}
         {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
 
-      <br></br><br></br>
 
-     <QuoteDisplay from='inspiration_button_homePage'/>
 
       </Container>
       <br/>
@@ -168,9 +176,12 @@ import SignUpModal from '../SignUpModal';
          </center>
          <br></br>
          <br></br>
+
+
       <br/>
       <br/>
       <br/>
+      </div>
 
     </>
   );
