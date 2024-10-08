@@ -108,7 +108,7 @@ import SignUpModal from '../SignUpModal';
            <br></br>
            <center>
            <Container>
-           <center  style={{paddingLeft:'20%',paddingRight:'20%' }}>
+           <center  style={{paddingLeft:'10%',paddingRight:'10%' }}>
  <Intro />
                  <PostPreview
                      key={heroPost.slug}
