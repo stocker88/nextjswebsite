@@ -329,11 +329,6 @@ We are saying if you planned on putting $100 in Tesla, we would recommend you pu
 
 &nbsp;
 
-
-&nbsp;
-
-Starting in late 2020 and continuing into early 2021, Bitcoin's price surged to new all-time highs, reaching around $60,000 in April 2021.
-
 &nbsp;
 
 #### Price to Earnings

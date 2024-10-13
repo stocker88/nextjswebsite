@@ -75,8 +75,8 @@ const slides =    [
                     <LinkedInIcon/>
 
                           <div style={{
-                                          marginLeft: '10px', // Adjust this if needed to space out the text from the icon
-                                        }}>
+                              marginLeft: '10px', // Adjust this if needed to space out the text from the icon
+                            }}>
                <b>  Charles-Elie Labroy
                  <br></br>
                  Data Science Manager @ META   </b>
