@@ -130,7 +130,7 @@ Focus your time and energy on what you are good at.
 
 &nbsp;
 
-### **1) Selection Skill**
+### 1) Selection Skill
 
 
 &nbsp;
@@ -170,7 +170,7 @@ Selection skills tell you how good you are at selecting the stocks that will out
 
 &nbsp;
 
-### **2) Allocation Skill**
+### 2) Allocation Skill
 
 &nbsp;
 
@@ -233,7 +233,7 @@ Use StocksToBuyNow app to receive insights on allocation timing!
 &nbsp;
 
 
-### **3) Interaction Skill**
+### 3) Interaction Skill
 
 
 &nbsp;
@@ -354,7 +354,7 @@ It will develop trust in our tools and further improve your trading skills.
 &nbsp;
 
 
-### **1) Selection Skill**
+### 1) Selection Skill
 
 &nbsp;
 
@@ -404,7 +404,7 @@ The Selection Effect for the Technology stocks is calculated using the below met
 
 &nbsp;
 
-### **2) Allocation Skill**
+### 2) Allocation Skill
 
 &nbsp;
 
@@ -450,7 +450,7 @@ The Allocation Effect for the Technology stock is calculated using the below for
 &nbsp;
 
 
-### **3) Interaction Skill**
+### 3) Interaction Skill
 
 &nbsp;
 
