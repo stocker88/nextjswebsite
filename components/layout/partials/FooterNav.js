@@ -31,7 +31,7 @@ const FooterNav = ({
       <ul className="list-reset">
 
              <li>
-                                              <a href={`mailto:support@hellostocker.com`} >
+                                              <a href={`mailto:support@stockstobuynow.ai`} >
 
                                                 <svg
                                                   width="20"

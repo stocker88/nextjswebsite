@@ -74,7 +74,7 @@ const tableTextStyle: CSSProperties = {
             {companies.map((company) => (
               <tr key={company.id} style={tableRowStyle}>
                 <td style={tableCellStyle}>
-                  <Link href={isMobile?'https://applink.hellostocker.com/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                  <Link href={isMobile?'https://applink.stockstobuynow.ai/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
                     {imageExists[company.ticker] ? (
                       <img
                         src={`/assets/assets/logo/${company.ticker}.webp`}
@@ -89,12 +89,12 @@ const tableTextStyle: CSSProperties = {
                   </Link>
                 </td>
                 <td style={tableCellStyle}>
-                  <Link href={isMobile?'https://applink.hellostocker.com/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                  <Link href={isMobile?'https://applink.stockstobuynow.ai/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
                     <span style={tableTextStyle}>{company.ticker}</span>
                   </Link>
                 </td>
                 <td style={tableCellStyle}>
-                  <Link href={isMobile?'https://applink.hellostocker.com/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
+                  <Link href={isMobile?'https://applink.stockstobuynow.ai/invite':`/web-app/financial/${company.ticker}`} style={{ textDecoration: 'none' }}>
                     <span style={tableTextStyle}>{company.name}</span>
                   </Link>
                 </td>

@@ -68,7 +68,7 @@ AI recommendations are non financial advise and cannot be guaranteed.
 
 &nbsp;
 
- By [email](mailto:support@hellostocker.com) or in the app directly.
+ By [email](mailto:support@stockstobuynow.ai) or in the app directly.
 
 &nbsp;
 
@@ -239,7 +239,7 @@ The full history of your information, including personal data, can be deleted an
 
 &nbsp;
 
-You can contact us by [email](mailto:support@hellostocker.com).
+You can contact us by [email](mailto:support@stockstobuynow.ai).
 
 &nbsp;
 
@@ -299,7 +299,7 @@ We have no tolerance for Objectionable Content or abusive users, and will remove
 
 &nbsp;
 
-The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@hellostocker.com. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
+The Posting of any Objectionable Content may subject you to third party claims and none of the rights granted to you in this EULA may be raised as a defense against such third party claims. If you encounter any Objectionable Content on the Service, then please immediately email support@stockstobuynow.ai. We may, in our sole discretion,  take any actions we deem necessary and/or appropriate against any User who Posts Objectionable Content on the Service.
 
 &nbsp;
 
@@ -315,7 +315,7 @@ The full history of your information, including personal data, can be deleted an
 
 &nbsp;
 
-You can contact us by [email](mailto:support@hellostocker.com).
+You can contact us by [email](mailto:support@stockstobuynow.ai).
 
 &nbsp;
 
@@ -387,7 +387,7 @@ Protect against legal liability
 
  
 
- If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@hellostocker.com) or in the app directly.
+ If you have any questions about this Privacy Policy, you can contact us by [email](mailto:support@stockstobuynow.ai) or in the app directly.
 
 
 ### Disclosure
