@@ -93,6 +93,29 @@ import SignUpModal from '../SignUpModal';
                                                                   maxWidth: '1000px', // Set a maximum width of 1000 pixels
                                                                   margin: '0 auto', // Center the sections horizontally
                                                                }}>
+
+<center>
+      <h2 className="text-xl md:textxl tracking-tighter leading-tight " style={{'color':'white', letterSpacing: '0.5px', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+        We just claimed the Trustpilot account (October 23rd)!
+        </h2>
+</center>
+<br/><br/>
+ <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" >
+
+                 <Image
+                   src='/assets/images/trustpilot.png'
+                   alt="Features tile icon 06"
+                   width={460}
+                   height={130}
+                   style={{
+                   'borderRadius': '15px 15px 15px 15px',
+                   'border': '2px solid rgba(255, 255, 255, 1)'
+                   }}
+                  />
+  </a>
+  <br/>
+  <br/>
+  <br/>
 <Testimonial/>
 </center>
 
@@ -103,8 +126,6 @@ import SignUpModal from '../SignUpModal';
         <IntroApp/>
         </Container>
         <Swipe/>
-
-
            <br></br>
            <center>
            <Container>
