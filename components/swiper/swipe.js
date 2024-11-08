@@ -104,15 +104,14 @@ const containerStyle = {
 <br></br>
 <br></br>
 <br></br>
-<h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        A Safe Ground For Testing
+<h2 className="text-xl md:text-3xl tracking-tighter leading-tight " style={{letterSpacing: '0.5px','color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
+        U.S. 🇺🇸 Apple Store Reviews
         <br></br>
-        Install The Social Virtual Investing App
         <br></br>
-        Members are Posting Reviews and Results
+        &quot;Made 200k from 40k<br/>in 3 months you won't believe it&quot;
         </h2>
 
-
+      <br></br>      <br></br>
 <Ratings/>
 
 
