@@ -160,22 +160,12 @@ Meet Your Trading Advisors
                                 <br></br>Bank of America Directors
                                 </h3>
 <br></br>
-      <Image
-           src='/assets/images/aboutus.jpg'
-           alt="About us: a team of ex Goldman Sachs, JP Morgan, Bank of America, Google AI and OpenAI Directors with over 15 years experience in Investing and AI"
-             width={384/2}
-             height={216/2}
-             style={{
-                opacity:0.95,
-                 borderRadius: '20px',
-                 boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
-               }}
-           />
+
 
 
                                <br></br>
                                <h3 className="text2xl md:text-3xl tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
-Over 15 years in Investing and AI
+Over 15 years of Trading Experience, for you!
 </h3>
 
 

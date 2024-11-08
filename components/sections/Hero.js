@@ -53,7 +53,7 @@ const Hero = ({
               height={58.33}
               />*/}
 
-        <Image
+            <Image
                   src='/assets/images/stockerRobotIcon.png'
                   alt="StocksToBuyNow AI App"
                   priority={true}
@@ -62,8 +62,8 @@ const Hero = ({
                  style={{
                  borderRadius: '10px',
                  opacity:0.9,
-                 width:'min(max(145px,13vw),160px)',
-                  height:'min(max(145px,13vw),160px)',
+                 width:'min(max(145px,13vw),200px)',
+                  height:'min(max(145px,13vw),200px)',
                   }}
 
                   />

@@ -59,12 +59,11 @@ const slides =    [
 
                  <p className="text-1xl leading-relaxed mb-4" style={{'color':'lightgrey', padding:'1.5rem','textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' , 'maxWidth':'650px', 'textAlign': 'left',}}>
 
-                    <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#8577FF'}}> Social Hype, Momentum, Option Trading and Earnings Forecast: AI trading signals that work </b>
+                    <b className="text-lg md:text-3xl font-bold mt-0 mb-12 center-content-mobile" style={{color:'#8577FF'}}> Receive Buy & Sell Signals on Stocks and on Options </b>
                     <br></br>
                    <br></br>
 
-                    "You'll receive clear AI Stock Trading Signals: what to buy, when to sell, what signal drives AI, explanations and target sell price...
-                    What I love most are the 3 hot stocks to buy every week before they blow up. I get notified live and track AI recommendations performance. Customer support is great too, always available even on weekends."
+                    "I was sceptical at first but after trying it out for a few weeks I am now ultimately convinced of this app's effectiveness.<br/><br/>Not only are the signals expertly researched with detailed breakdowns but also having a community of like-minded individuals, who all aim to support and inform each other is worth every penny."
                     <br></br>
                     <br></br>
                     <div style={{

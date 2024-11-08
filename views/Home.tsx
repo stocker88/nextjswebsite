@@ -94,29 +94,157 @@ import SignUpModal from '../SignUpModal';
                                                                   margin: '0 auto', // Center the sections horizontally
                                                                }}>
 
-<center>
-      <h2 className="text-xl md:textxl tracking-tighter leading-tight " style={{'color':'white', letterSpacing: '0.5px', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        We just claimed the Trustpilot account (October 23rd)!
-        </h2>
-</center>
-<br/><br/>
- <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" >
+<div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '2rem',
+  padding: '20px',
+  maxWidth: '400px',
+  margin: '0 auto'
+}}>
 
-                 <Image
-                   src='/assets/images/trustpilot.png'
-                   alt="Features tile icon 06"
-                   width={460}
-                   height={130}
-                   style={{
-                   'borderRadius': '15px 15px 15px 15px',
-                   'border': '2px solid rgba(255, 255, 255, 1)'
-                   }}
-                  />
+
+
+  {/* Android Store Row */}
+  <a href='https://play.google.com/store/apps/details?id=com.newcompany.stocker' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+    <Image
+      src='/assets/images/androidstore.png'
+      alt="StocksToBuyNow AI App"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
+           // Add responsive font size based on screen width
+           '@media (min-width: 768px)': {
+             fontSize: '1.5rem',  // Adjust text size for larger screens
+           },
+           '@media (min-width: 1200px)': {
+             fontSize: '2rem',    // Larger text for very wide screens
+           }
+     }}>Android Store<br/>Reviews</span>
+  </div>
   </a>
+
+  {/* Apple Store Row */}
+  <a href='https://apps.apple.com/app/stocker/id1565527320?platform=iphone' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+    <Image
+      src='/assets/images/applestore.png'
+      alt="StocksToBuyNow AI App"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
+           // Add responsive font size based on screen width
+           '@media (min-width: 768px)': {
+             fontSize: '1.5rem',  // Adjust text size for larger screens
+           },
+           '@media (min-width: 1200px)': {
+             fontSize: '2rem',    // Larger text for very wide screens
+           }
+     }}>Apple Store<br/>Reviews</span>
+  </div>
+  </a>
+
+  {/* Trustpilot Row */}
+  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+    <Image
+      src='/assets/images/trustpilot.png'
+      alt="Trustpilot Reviews"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
+           // Add responsive font size based on screen width
+           '@media (min-width: 768px)': {
+             fontSize: '1.5rem',  // Adjust text size for larger screens
+           },
+           '@media (min-width: 1200px)': {
+             fontSize: '2rem',    // Larger text for very wide screens
+           }
+           }}>Trustpilot<br/>Reviews</span>
+  </div>
+  </a>
+
+
+  {/* Stocker Robot Row */}
+  <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+
+    <Image
+      src='/assets/images/linkedin.png'
+      alt="Stocker AI Robot"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
+       // Add responsive font size based on screen width
+       '@media (min-width: 768px)': {
+         fontSize: '1.5rem',  // Adjust text size for larger screens
+       },
+       '@media (min-width: 1200px)': {
+         fontSize: '2rem',    // Larger text for very wide screens
+       }
+ }}>LinkedIn<br/>& CV</span>
+  </div>
+  </a>
+</div>
+
+
   <br/>
   <br/>
   <br/>
-<Testimonial/>
+  <br/>
+  <br/>
+  <br/>
 </center>
 
 </Container>
@@ -126,6 +254,7 @@ import SignUpModal from '../SignUpModal';
         <IntroApp/>
         </Container>
         <Swipe/>
+        <Testimonial/>
            <br></br>
            <center>
            <Container>
