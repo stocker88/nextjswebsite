@@ -126,15 +126,8 @@ import SignUpModal from '../SignUpModal';
         height: 'min(max(145px,13vw),200px)',
       }}
     />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
-           // Add responsive font size based on screen width
-           '@media (min-width: 768px)': {
-             fontSize: '1.5rem',  // Adjust text size for larger screens
-           },
-           '@media (min-width: 1200px)': {
-             fontSize: '2rem',    // Larger text for very wide screens
-           }
-     }}>Android Store<br/>Reviews</span>
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    Android Store<br/>Reviews</span>
   </div>
   </a>
 
@@ -158,15 +151,8 @@ import SignUpModal from '../SignUpModal';
         height: 'min(max(145px,13vw),200px)',
       }}
     />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
-           // Add responsive font size based on screen width
-           '@media (min-width: 768px)': {
-             fontSize: '1.5rem',  // Adjust text size for larger screens
-           },
-           '@media (min-width: 1200px)': {
-             fontSize: '2rem',    // Larger text for very wide screens
-           }
-     }}>Apple Store<br/>Reviews</span>
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    Apple Store<br/>Reviews</span>
   </div>
   </a>
 
@@ -190,15 +176,8 @@ import SignUpModal from '../SignUpModal';
         height: 'min(max(145px,13vw),200px)',
       }}
     />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
-           // Add responsive font size based on screen width
-           '@media (min-width: 768px)': {
-             fontSize: '1.5rem',  // Adjust text size for larger screens
-           },
-           '@media (min-width: 1200px)': {
-             fontSize: '2rem',    // Larger text for very wide screens
-           }
-           }}>Trustpilot<br/>Reviews</span>
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    Trustpilot<br/>Reviews</span>
   </div>
   </a>
 
@@ -225,15 +204,8 @@ import SignUpModal from '../SignUpModal';
       }}
     />
 
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: '1.3rem',   // Default text size
-       // Add responsive font size based on screen width
-       '@media (min-width: 768px)': {
-         fontSize: '1.5rem',  // Adjust text size for larger screens
-       },
-       '@media (min-width: 1200px)': {
-         fontSize: '2rem',    // Larger text for very wide screens
-       }
- }}>LinkedIn<br/>& CV</span>
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    LinkedIn<br/>& CV</span>
   </div>
   </a>
 </div>
