@@ -132,7 +132,7 @@ import SignUpModal from '../SignUpModal';
   </a>
 
   {/* Apple Store Row */}
-  <a href='https://apps.apple.com/app/stocker/id1565527320?platform=iphone' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <a href='https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
   <div style={{
     display: 'flex',
     alignItems: 'center',
@@ -183,7 +183,7 @@ import SignUpModal from '../SignUpModal';
 
 
   {/* Stocker Robot Row */}
-  <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <a href='https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
   <div style={{
     display: 'flex',
     alignItems: 'center',

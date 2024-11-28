@@ -583,7 +583,7 @@ Buy Nvidia.
 
 &nbsp;
 
-**[Connect and share your thoughts on LinkedIn](https://www.linkedin.com/in/anesshusseinali/)**
+**[Connect and share your thoughts on LinkedIn](https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q)**
 
 &nbsp;
 

@@ -132,7 +132,7 @@ const containerStyle = {
 <br></br>
          <br></br>
   <br></br>
-<a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
+<a href='https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q' target="_blank" >
 <h3 className="text2xl md:text-3xl font-bold tracking-tighter leading-tight " style={{'color':'lightGrey', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)'}} >
 Meet Your Trading Advisors
 <br></br>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout'
 import LinkedInIcon from '../components/linkedinicon';
+import YouTubeEmbed from '../components/sections/Youtube';
 
 function LinkedInButton () {
  //REMOVED FIREBASE
@@ -8,7 +9,7 @@ function LinkedInButton () {
     <div>
     <center>
         <button>
-        <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
+        <a href='https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q' target="_blank" >
         <div style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -44,6 +45,15 @@ function LinkedInButton () {
 
         <div style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}> Follow on Instagram </div></div> </a>
         </button>
+      </center>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <center>
+      <YouTubeEmbed videoId="HeibUpVZ3ow" />
       </center>
     </div>
   );

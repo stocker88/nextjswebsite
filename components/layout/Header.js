@@ -25,7 +25,7 @@ class Header extends Component {
 
 
                  <li>
-                      <a href='https://www.linkedin.com/in/anesshusseinali/' target="_blank" >
+                      <a href='https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q' target="_blank" >
                         <LinkedInIconWhite/>
                       </a>
                     </li>
