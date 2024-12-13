@@ -97,7 +97,7 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of 100,000+ investors
+       Join 100,000+ investors now - it's free!
 
        </div>
 

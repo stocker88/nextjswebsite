@@ -105,6 +105,30 @@ import SignUpModal from '../SignUpModal';
 }}>
 
 
+  {/* Trustpilot Row */}
+  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+    <Image
+      src='/assets/images/trustpilot.png'
+      alt="Trustpilot Reviews"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    Trustpilot<br/>Reviews</span>
+  </div>
+  </a>
 
   {/* Android Store Row */}
   <a href='https://play.google.com/store/apps/details?id=com.newcompany.stocker' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
@@ -113,6 +137,7 @@ import SignUpModal from '../SignUpModal';
     alignItems: 'center',
     gap: '1rem'
   }}>
+
     <Image
       src='/assets/images/androidstore.png'
       alt="StocksToBuyNow AI App"
@@ -156,30 +181,6 @@ import SignUpModal from '../SignUpModal';
   </div>
   </a>
 
-  {/* Trustpilot Row */}
-  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
-  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem'
-  }}>
-    <Image
-      src='/assets/images/trustpilot.png'
-      alt="Trustpilot Reviews"
-      priority={true}
-      width={156}
-      height={156}
-      style={{
-        borderRadius: '20px',
-        opacity: 0.9,
-        width: 'min(max(145px,13vw),200px)',
-        height: 'min(max(145px,13vw),200px)',
-      }}
-    />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
-    Trustpilot<br/>Reviews</span>
-  </div>
-  </a>
 
 
   {/* Stocker Robot Row */}
@@ -217,6 +218,13 @@ import SignUpModal from '../SignUpModal';
   <br/>
   <br/>
   <br/>
+
+<div>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270830320004784129" height="796" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+    </div>
+  <br/>
+  <br/>
+  <br/>
 </center>
 
 </Container>
@@ -250,7 +258,6 @@ import SignUpModal from '../SignUpModal';
 
 
         <Container>
-
 
 
          <center>
