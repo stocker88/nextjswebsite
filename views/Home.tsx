@@ -220,7 +220,15 @@ import SignUpModal from '../SignUpModal';
   <br/>
 
 <div>
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270830320004784129" height="796" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <iframe
+    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7270830320004784129"
+    height="796"
+    width="504"
+    frameBorder="0"
+    allowFullScreen
+    title="Embedded post"
+    style={{ borderRadius: '15px', overflow: 'hidden' }}
+  ></iframe>
     </div>
   <br/>
   <br/>
