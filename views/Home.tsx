@@ -105,30 +105,6 @@ import SignUpModal from '../SignUpModal';
 }}>
 
 
-  {/* Trustpilot Row */}
-  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
-  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem'
-  }}>
-    <Image
-      src='/assets/images/trustpilot.png'
-      alt="Trustpilot Reviews"
-      priority={true}
-      width={156}
-      height={156}
-      style={{
-        borderRadius: '20px',
-        opacity: 0.9,
-        width: 'min(max(145px,13vw),200px)',
-        height: 'min(max(145px,13vw),200px)',
-      }}
-    />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
-    Trustpilot<br/>Reviews</span>
-  </div>
-  </a>
 
   {/* Android Store Row */}
   <a href='https://play.google.com/store/apps/details?id=com.newcompany.stocker' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
@@ -182,6 +158,30 @@ import SignUpModal from '../SignUpModal';
   </a>
 
 
+  {/* Trustpilot Row */}
+  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+  }}>
+    <Image
+      src='/assets/images/trustpilot.png'
+      alt="Trustpilot Reviews"
+      priority={true}
+      width={156}
+      height={156}
+      style={{
+        borderRadius: '20px',
+        opacity: 0.9,
+        width: 'min(max(145px,13vw),200px)',
+        height: 'min(max(145px,13vw),200px)',
+      }}
+    />
+    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
+    Trustpilot<br/>Reviews</span>
+  </div>
+  </a>
 
   {/* Stocker Robot Row */}
   <a href='https://www.linkedin.com/posts/anesshusseinali_multibagger-activity-7260416453328138242-S41Q' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
