@@ -174,7 +174,7 @@ function FAQ() {
             You can start with $100 if you want to jump on option plays.
             <br/>Some plays deliver x35 within a month, +$3,500 per $100 invested.
             <br/>However we recommended long term stock investing.
-            <br/>You can start stock investing is $500.
+            <br/>You can start stock investing with $200.
           </div>
         )}
 
