@@ -301,6 +301,67 @@ import SignUpModal from '../SignUpModal';
         <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
       </svg>
     </span>
+    Want to access stock price predictions driven by ai, statistical and financial analysis?
+  </p>
+
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Want to find the best alternative to any stocks your friends already bought?
+  </p>
+
+
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Want to find the next Nvidia?
+  </p>
+
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
     Want to create a side income alongside your job?
   </p>
   <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
