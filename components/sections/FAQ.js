@@ -81,7 +81,7 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('results')}
         >
-          <p style={{ fontSize: '1.3rem' }}>How long will  it take to get results?</p>
+          <p style={{ fontSize: '1.3rem' }}>How long will it take to get results?</p>
           <span style={iconStyle}>
             {isOpen.results ? '-' : '+'}
           </span>
@@ -97,59 +97,46 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('strategy')}
         >
-          <p style={{ fontSize: '1.3rem' }}>I have already tried other strategies and have not obtained results</p>
+          <p style={{ fontSize: '1.3rem' }}>Will I receive coaching?</p>
           <span style={iconStyle}>
             {isOpen.strategy ? '-' : '+'}
           </span>
         </div>
         {isOpen.strategy && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            We are different, and we are making a difference.
-            <br/>
-            <br/>Our advisors:
+            <br/>Yes! Both from AI and from your human trading advisors who:
             <br/>
              <br/>- Managed billions for Wall Street Hedge Funds.
-             <br/>- Achieved Post Graduate Education: Math PhDs, Financial Engineers and Macro Economic Experts.
-             <br/>- Built AI tools for big tech giants.
+             <br/>- Achieved Post Graduate Education from Ivy League: Math PhDs, Financial Engineers and Macro Economic Experts.
+             <br/>- Built AI tools for big tech giants, including META and GOOGLE.
              <br/>- Delivered x5 to x30 stock picks returns on over 100 stocks:
              <br/>
              <br/>Nvidia Stock: +3,100% bought at $5,
              <br/>Palantir Stock : +680% in 2 years,
              <br/>SoundHound AI Options: +3,280% in 1 month,
              <br/>
-             <br/>You will receiving coaching from Goldman Sachs & Bank of America investors with over 15 years of trading experience.
+             <br/>Stocks To Buy Now ai was funded by 3 former GOLDMAN SACHS & BANK OF AMERICA investors and META / GOOGLE engineers with over 15 years of trading and engineering experience.
+             <br/>
+             <br/>Resumes/CVs and recommendations/LinkedIn endorsements from current Goldman Sachs employees are available on LinkedIn.
           </div>
         )}
 
-        {/* Question 3 */}
-        <div
-          style={questionBlockStyle}
-          onClick={() => toggleAnswer('works')}
-        >
-          <p style={{ fontSize: '1.3rem' }}>It will work for me?</p>
-          <span style={iconStyle}>
-            {isOpen.works ? '-' : '+'}
-          </span>
-        </div>
-        {isOpen.works && (
-          <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            This works for anyone, no matter your age, country, gender, or economic situation, because it is a method that is validated with numbers, and all you have to do is make the same decisions as I did to get similar results and that is exactly what I teach in the program.
-          </div>
-        )}
+
 
         {/* Question 4 */}
         <div
           style={questionBlockStyle}
           onClick={() => toggleAnswer('work')}
         >
-          <p style={{ fontSize: '1.3rem' }}>What happens if I work?</p>
+          <p style={{ fontSize: '1.3rem' }}>How much time should I dedicate?</p>
           <span style={iconStyle}>
             {isOpen.work ? '-' : '+'}
           </span>
         </div>
         {isOpen.work && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            You can dedicate only 10 minutes to trade the markets and the rest of the day do whatever you have or prefer to do.
+            10 minutes or even less is enough if you already know the strategy.
+            <br/>If you are just starting, 30 minutes would be enough to ramp up.
           </div>
         )}
 
@@ -165,7 +152,8 @@ function FAQ() {
         </div>
         {isOpen.miner && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            Many parents have been bringing their kids on the platform.
+            Many husbands and wives enjoy trading together.
+            <br/>Many parents have been bringing their kids on the platform as well.
             <br/>They can learn the strategies and practise in our virtual trading simulator.
             <br/>Who else will teach them investing for less than $20?
           </div>
@@ -176,7 +164,7 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('money')}
         >
-          <p style={{ fontSize: '1.3rem' }}>I don’t have much money to invest</p>
+          <p style={{ fontSize: '1.3rem' }}>How much do I need to get started?</p>
           <span style={iconStyle}>
             {isOpen.money ? '-' : '+'}
           </span>
@@ -191,24 +179,6 @@ function FAQ() {
         )}
 
         {/* Question 7 */}
-
-        <div
-          style={questionBlockStyle}
-          onClick={() => toggleAnswer('timeInvest')}
-        >
-          <p style={{ fontSize: '1.3rem' }}>How much time do I have to invest?</p>
-          <span style={iconStyle}>
-            {isOpen.timeInvest ? '-' : '+'}
-          </span>
-        </div>
-        {isOpen.timeInvest && (
-          <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            10 minutes or even less is enough if you already know the strategy.
-            <br/>If you are just starting, 30 minutes would be enough to ramp up.
-          </div>
-        )}
-
-        {/* Question 8 */}
         <div
           style={questionBlockStyle}
           onClick={() => toggleAnswer('noKnowledge')}
@@ -221,7 +191,12 @@ function FAQ() {
         {isOpen.noKnowledge && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
             You don't need to know anything to get started.
+             <br/>
              <br/>We will teach you everything you need and save you 200 hours of research.
+             <br/>
+             <br/>There is also a free onboarding course, with app screenshots and strategies, available in the app at no cost.
+             <br/>
+             <br/>We want to make a difference and hope you will help us grow the community by bringing your friends and follow us on social networks.
           </div>
         )}
       </div>
