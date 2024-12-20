@@ -107,12 +107,12 @@ import SignUpModal from '../SignUpModal';
                               No one can guarantee that you’ll make money from investments you make.
                               </p>
                               <p style={{ marginBottom: '20px' , fontSize: 'min(20px,max(18px,3.5vw)' }}>
-                              But if you get the facts about saving and investing and follow through with an intelligent
-                              plan, you should be able to gain financial security over the years and enjoy the benefits of managing your money.
+                              But if you get the facts about saving and investing and follow through the intelligent
+                              plan and recommendations we provide, you should be able to gain financial security over the years and enjoy the benefits of managing your money.
                             </p>
 
                               <p style={{ marginBottom: '20px' , fontSize: 'min(20px,max(18px,3.5vw)' }}>
-                              This will change your life.
+                              We will change your life.
                             </p>
                             <br/>
                             <br/>
