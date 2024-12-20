@@ -108,7 +108,7 @@ import SignUpModal from '../SignUpModal';
                               </p>
                               <p style={{ marginBottom: '20px' , fontSize: 'min(20px,max(18px,3.5vw)' }}>
                               But if you get the facts about saving and investing and follow through the intelligent
-                              plan and recommendations we provide, you should be able to gain financial security over the years and enjoy the benefits of managing your money.
+                              plan and recommendations we provide, you should be able to gain financial freedom and enjoy the benefits of managing your money.
                             </p>
 
                               <p style={{ marginBottom: '20px' , fontSize: 'min(20px,max(18px,3.5vw)' }}>
