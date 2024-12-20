@@ -8,6 +8,7 @@ import Swipe from '../components/swiper/swipe';
 import IntroVideo from '../components/introVideo';
 import IntroApp from '../components/introApp';
 import YoutubeSection from '../components/sections/YoutubeSection';
+import FAQ from '../components/sections/FAQ';
 import TitleSplit from '../components/sections/TitleSplit';
 import TitleSplit2 from '../components/sections/Title2Split';
 import TitleSplit3 from '../components/sections/Title3Split';
@@ -61,7 +62,7 @@ import SignUpModal from '../SignUpModal';
               'position': 'fixed',
               'top': '20px',
               'right': '20px',
-              'padding': '8px 16px',
+              'padding': '8px 30px',
               'background-color': '#3498db',
               'border-radius': '5px',
               'cursor': 'pointer',
@@ -230,9 +231,121 @@ import SignUpModal from '../SignUpModal';
         <Testimonial/>
            <br></br>
            <center>
-           <Container>
-           <center  style={{paddingLeft:'10%',paddingRight:'10%' }}>
+
+
+           <div
+             style={{
+               display: 'flex',
+               flexDirection: 'column',
+               alignItems: 'center',
+               paddingLeft: '10%',
+               paddingRight: '10%',
+               textAlign: 'center', // Center content overall
+             }}
+           >
+
+
  <Intro />
+ <br/>
+<h3
+  className="text2xl md:text-3xl tracking-tighter leading-tight"
+  style={{
+    color: 'lightGrey',
+    textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',
+    letterSpacing: '0.05em',
+    textAlign: 'left',
+    marginBottom: '60px',
+    fontSize: '1.4rem'
+  }}
+>
+  If you say <strong> YES </strong> to any of the below,
+  <strong> StocksToBuyNow AI </strong> is for you:
+</h3>
+<br/>
+<div style={{ color: 'lightGrey', fontSize: '1.3rem', lineHeight: '1.8', letterSpacing: '0.05em', textAlign: 'left' }}>
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Want to create a side income alongside your job?
+  </p>
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Seeking flexibility to work from anywhere?
+  </p>
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Looking to take control of your financial future?
+  </p>
+  <p style={{ display: 'flex', alignItems: 'center', marginBottom: '60px' }}>
+    <span
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '48px',
+        height: '48px',
+        backgroundColor: 'green',
+        borderRadius: '8px',
+        marginRight: '20px',
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32">
+        <path d="M10 15.172l8.292-8.292 1.415 1.415-9.707 9.707-5.707-5.707 1.415-1.415z"/>
+      </svg>
+    </span>
+    Interested in reliable strategies for steady financial growth?
+  </p>
+</div>
+
+
+
+<br></br><br></br><br></br><br></br><br></br><br></br>
+
+ {/*
                  <PostPreview
                      key={heroPost.slug}
                      title={heroPost.title}
@@ -242,10 +355,11 @@ import SignUpModal from '../SignUpModal';
                      slug={heroPost.slug}
                      excerpt={heroPost.excerpt}
                    />
-            </center>
+                   */}
+            </div>
 
-        </Container>
 
+<FAQ/>
 
    </center>
 
@@ -265,11 +379,7 @@ import SignUpModal from '../SignUpModal';
 
 
 {/*         <TryWebAppLink/> */}
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
-         <br></br>
+
 
 
       {/*  {heroPost && (
@@ -282,8 +392,9 @@ import SignUpModal from '../SignUpModal';
             excerpt={heroPost.excerpt}
           />
         )}*/}
+         {/*
         {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
-
+*/}
 
 
       </Container>

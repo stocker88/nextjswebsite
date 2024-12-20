@@ -155,15 +155,15 @@ const Div = styled.div`
                 style={{
                  'paddingTop': '14px',
               'paddingBottom': '14px',
-              'color': 'black',
+              'color': 'green',
                'width':'40vw',
               'textAlign': 'center',
-              'fontSize': 'min(18px,max(16px,2vw))',
+              'fontSize': 'min(18px,max(16px,1.8vw))',
               'borderRadius': '30px 30px 30px 30px',
-              'background': 'black',
+              'background': 'rgb(54, 199, 121)',
               'maxWidth':'200px',
-              'boxShadow': '0px 0px 30px rgba(250, 250, 250, 0.8)',
-               }}>  <b style={{'color':'white', 'textShadow': '0px 0px 4px rgba(0, 0, 0, 0.5)'}}>Get It Now→</b>
+              'boxShadow': '0px 0px 50px rgba(54, 199, 151)',
+               }}>  <p style={{'color':'black', 'fontWeight': '500'}}>Start Now →</p>
                 </button>
             }
             </animated.div>

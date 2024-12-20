@@ -69,8 +69,6 @@ const CompoundInterestCalculator = () => {
 
   return (
           <section style={{
-                             borderTop: '0.3px solid #333', // Adjust the color and style as needed
-                                paddingTop: '20px', // Adjust the padding to give some space between the line and content
                                 width: '90%', // Take up 90% of the screen width
                                 maxWidth: '1000px', // Set a maximum width of 1000 pixels
                                 margin: '0 auto', // Center the sections horizontally
@@ -82,9 +80,10 @@ const CompoundInterestCalculator = () => {
      <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
 
 
-       Compounding Interest: Make your money work
+       Compounding Interest: You Should Start Now
      </h2>
-
+<br/>
+<br/>
 
      <div style={{ marginTop: '20px', display: 'inline-block', textAlign: 'left' }}>
 
