@@ -81,7 +81,7 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('results')}
         >
-          <p style={{ fontSize: '1.3rem' }}>How long will  it nowit take to get results?</p>
+          <p style={{ fontSize: '1.3rem' }}>How long will  it take to get results?</p>
           <span style={iconStyle}>
             {isOpen.results ? '-' : '+'}
           </span>
