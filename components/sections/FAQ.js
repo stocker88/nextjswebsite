@@ -168,7 +168,7 @@ function FAQ() {
         </div>
         {isOpen.money && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            With only $100 USD you can start, either with your own account or by buying a funding account as explained in the video, and be able to access 25k – 50k – 100k capitals.
+            With only $100 USD you can start.
           </div>
         )}
 
