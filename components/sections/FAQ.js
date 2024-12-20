@@ -109,6 +109,7 @@ function FAQ() {
             <br/>Our advisors:
             <br/>
              <br/>- Managed billions for Wall Street Hedge Funds.
+             <br/>- Achieved Post Graduate Education: Math PhDs, Financial Engineers and Macro Economic Experts.
              <br/>- Built AI tools for big tech giants.
              <br/>- Delivered x5 to x30 stock picks returns on over 100 stocks:
              <br/>
@@ -116,7 +117,7 @@ function FAQ() {
              <br/>Palantir Stock : +680% in 2 years,
              <br/>SoundHound AI Options: +3,280% in 1 month,
              <br/>
-             <br/>You will receiving coaching from Goldman Sachs and Bank of America investors, Math PhDs and Macro Economics experts who have been investing for over 15 years.
+             <br/>You will receiving coaching from Goldman Sachs & Bank of America investors with over 15 years of trading experience.
           </div>
         )}
 
