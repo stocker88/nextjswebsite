@@ -20,9 +20,9 @@ function FAQ() {
 
   // Styles for the overall container with gradient and border
   const containerStyle = {
-    background: 'linear-gradient(rgb(46, 105, 61), black)', // Green to Black gradient
+    background: 'linear-gradient(#5348A3, black)', // Green to Black gradient
     borderRadius: '30px', // Rounded corners
-    border: '2px solid rgb(46, 105, 61)', // Green border around the container
+    border: '2px solid #5348A3', // Green border around the container
    padding: '20px',
     width: '95%',
     maxWidth: '1000px',
@@ -52,14 +52,14 @@ function FAQ() {
   return (
     <section style={containerStyle}>
       <h2
-        className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight"
+        className="text-2xl md:text-4xl tracking-tighter leading-tight"
         style={{
           letterSpacing: '0.5px',
           color: 'white',
           textShadow: '0px 0px 3px rgba(0, 0, 0, 1)',
           marginBottom: '20px',
           textAlign: 'center',
-          fontSize: '2rem', // Smaller title size
+          fontSize: '1.7rem', // Smaller title size
         }}
       >
         FREQUENTLY ASKED QUESTIONS...
@@ -88,7 +88,7 @@ function FAQ() {
         </div>
         {isOpen.results && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            If you dedicate between 1 to 2 hours a day and follow the indications, you should get your first results in 1 to 3 months.
+            If you dedicate between 10 to 20 minutes a day and follow the indications, you should get results within 1 month.
           </div>
         )}
 
@@ -104,7 +104,19 @@ function FAQ() {
         </div>
         {isOpen.strategy && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            This is normal, most methods focus on things that do not generate profitability, with Stocks To Buy Now ai we keep it simple, we focus on very few things, but on the right things that work and that allow us to make money every day in the market.
+            We are different, and we are making a difference.
+            <br/>
+            <br/>Our advisors:
+            <br/>
+             <br/>- Managed billions for Wall Street Hedge Funds.
+             <br/>- Built AI tools for big tech giants.
+             <br/>- Delivered x5 to x30 stock picks returns on over 100 stocks:
+             <br/>
+             <br/>Nvidia Stock: +3,100% bought at $5,
+             <br/>Palantir Stock : +680% in 2 years,
+             <br/>SoundHound AI Options: +3,280% in 1 month,
+             <br/>
+             <br/>You will receiving coaching from Goldman Sachs and Bank of America investors, Math PhDs and Macro Economics experts who have been investing for over 15 years.
           </div>
         )}
 
@@ -136,7 +148,7 @@ function FAQ() {
         </div>
         {isOpen.work && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            Absolutely nothing happens, with Stocks To Buy Now ai you can dedicate only 1 hour to trade the markets and the rest of the day do whatever you have or prefer to do.
+            You can dedicate only 10 minutes to trade the markets and the rest of the day do whatever you have or prefer to do.
           </div>
         )}
 
@@ -145,14 +157,16 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('miner')}
         >
-          <p style={{ fontSize: '1.3rem' }}>I am a miner, can I do it?</p>
+          <p style={{ fontSize: '1.3rem' }}>Can my kids get the app?</p>
           <span style={iconStyle}>
             {isOpen.miner ? '-' : '+'}
           </span>
         </div>
         {isOpen.miner && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            You can learn the strategy practise in our virtual trading simulator and be profitable with it. Then help your family members of legal age.
+            Many parents have been bringing their kids on the platform.
+            <br/>They can learn the strategies and practise in our virtual trading simulator.
+            <br/>Who else will teach them investing for less than $20?
           </div>
         )}
 
@@ -168,7 +182,10 @@ function FAQ() {
         </div>
         {isOpen.money && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            With only $100 USD you can start.
+            You can start with $100 if you want to jump on option plays.
+            <br/>Some plays deliver x35 within a month, +$3,500 per $100 invested.
+            <br/>However we recommended long term stock investing.
+            <br/>You can start stock investing is $500.
           </div>
         )}
 
@@ -185,7 +202,8 @@ function FAQ() {
         </div>
         {isOpen.timeInvest && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            1 hour or even less is enough if you already know the strategy. If you are just starting, 2 hours would be enough.
+            10 minutes or even less is enough if you already know the strategy.
+            <br/>If you are just starting, 30 minutes would be enough to ramp up.
           </div>
         )}
 
@@ -201,7 +219,8 @@ function FAQ() {
         </div>
         {isOpen.noKnowledge && (
           <div style={{ marginLeft: '40px', color: 'white', fontSize: '1.2rem', marginBottom: '40px' }}>
-            You don't need to know anything about the financial markets to make money in it, however, We will teach you everything you need to understand what you are doing.
+            You don't need to know anything to get started.
+             <br/>We will teach you everything you need and save you 200 hours of research.
           </div>
         )}
       </div>

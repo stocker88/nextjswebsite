@@ -92,11 +92,42 @@ const MeetingButton = ({
                       height={58.33}
                       />*/}
 
-   {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
 
+
+ <div style={{ color: 'lightGrey', fontSize: '1.2rem', lineHeight: '1.8', letterSpacing: '0.05em', textAlign: 'center', paddingLeft: '10%', paddingRight: '10%' }}>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)'}}>
+                              While money doesn’t grow on trees, it can grow when you invest wisely.
+                            </p>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              Securing your financial well-being is the most important thing you need in life.
+                            </p>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              You don’t have to be a genius to do it.
+                            </p>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              You just need to know basics, form a plan, and stick to it.
+                            </p>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              No matter how much money you have, educate yourself about opportunities.
+                            </p>
+                            <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              No one can guarantee that you’ll make money from investments you make.
+                              </p>
+                              <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              But if you follow through the intelligent
+                               recommendations we provide
+                              </p>
+                              <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)' }}>
+                              You should gain financial freedom.
+                            </p>
+                            <br/>
+                            <br/>
+                          </div>
+                          {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
              </Container>
                  </div>
-
+                                                             <br/>
+                                                             <br/>
                      </div>
                      </center>
                      </div>
