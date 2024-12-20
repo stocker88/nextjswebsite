@@ -157,7 +157,7 @@ function FAQ() {
           style={questionBlockStyle}
           onClick={() => toggleAnswer('miner')}
         >
-          <p style={{ fontSize: '1.3rem' }}>Can my kids get the app?</p>
+          <p style={{ fontSize: '1.3rem' }}>I made huge profits, could you please teach my kids?</p>
           <span style={iconStyle}>
             {isOpen.miner ? '-' : '+'}
           </span>
