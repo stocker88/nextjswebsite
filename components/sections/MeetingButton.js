@@ -93,7 +93,7 @@ const MeetingButton = ({
                       />*/}
 
 
-
+   {/*
  <div style={{ color: 'lightGrey', fontSize: '1.2rem', lineHeight: '1.8', letterSpacing: '0.05em', textAlign: 'center', paddingLeft: '10%', paddingRight: '10%' }}>
                             <p style={{ marginBottom: '10px' , fontSize: 'min(16px,max(12px,2.5vw)'}}>
                               While money doesn’t grow on trees, it can grow when you invest wisely.
@@ -122,7 +122,7 @@ const MeetingButton = ({
                             </p>
                             <br/>
                             <br/>
-                          </div>
+                          </div>*/}
                           {(!isMobile && <NewsletterSignUp from='FinalFooter'/>)}
              </Container>
                  </div>

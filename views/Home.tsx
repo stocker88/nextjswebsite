@@ -249,6 +249,72 @@ import SignUpModal from '../SignUpModal';
 
  <Intro />
  <br/>
+
+
+                 <PostPreview
+                     key={heroPost.slug}
+                     title={heroPost.title}
+                     coverImage={heroPost.coverImage}
+                     date={heroPost.date}
+                     author={heroPost.author}
+                     slug={heroPost.slug}
+                     excerpt={heroPost.excerpt}
+                   />
+
+            </div>
+<br/><br/><br/><br/>
+   </center>
+
+
+        <Container>
+
+
+         <center>
+
+<section />
+
+
+
+
+
+</center>
+
+
+{/*         <TryWebAppLink/> */}
+
+
+
+      {/*  {heroPost && (
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+          />
+        )}*/}
+
+        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
+
+
+
+      </Container>
+      <br/>
+      <br/>
+      <br/>
+           <br></br>
+         <br></br>
+         <br></br>
+         <center>
+         <CompoundInterestCalculator/>
+         </center>
+         <br></br>
+         <br></br>
+         <center>
+<FAQ/>
+</center>
+{/*
 <h3
   className="text2xl md:text-3xl tracking-tighter leading-tight"
   style={{
@@ -406,73 +472,7 @@ import SignUpModal from '../SignUpModal';
 
 
 
-<br></br><br></br><br></br><br></br><br></br><br></br>
-
- {/*
-                 <PostPreview
-                     key={heroPost.slug}
-                     title={heroPost.title}
-                     coverImage={heroPost.coverImage}
-                     date={heroPost.date}
-                     author={heroPost.author}
-                     slug={heroPost.slug}
-                     excerpt={heroPost.excerpt}
-                   />
-                   */}
-            </div>
-
-
-<FAQ/>
-
-   </center>
-
-
-        <Container>
-
-
-         <center>
-
-<section />
-
-
-
-
-
-</center>
-
-
-{/*         <TryWebAppLink/> */}
-
-
-
-      {/*  {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}*/}
-         {/*
-        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
-*/}
-
-
-      </Container>
-      <br/>
-      <br/>
-      <br/>
-           <br></br>
-         <br></br>
-         <br></br>
-         <center>
-         <CompoundInterestCalculator/>
-         </center>
-         <br></br>
-         <br></br>
-
+<br></br><br></br><br></br><br></br><br></br><br></br>*/}
 
       <br/>
       <br/>
