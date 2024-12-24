@@ -311,9 +311,10 @@ import SignUpModal from '../SignUpModal';
          </center>
          <br></br>
          <br></br>
-         <center>
+{/*         <center>
 <FAQ/>
-</center>
+</center>*/}
+
 {/*
 <h3
   className="text2xl md:text-3xl tracking-tighter leading-tight"
