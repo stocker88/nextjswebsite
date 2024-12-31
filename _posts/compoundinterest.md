@@ -1,7 +1,7 @@
 ---
 title: 'How To Be A Millionaire: The Science of Compound Interest'
-excerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love for stock market investing when he bought his first stock...'
-seoExcerpt: 'If you save $10 a day in 10 year you will have $90,000. If you invest $10 a day in the stock market in 10 years you will have $2,000,000! Warren Buffett was hustling for pennies and at 11 years he launched his love for stock market investing when he bought his first stock...'
+excerpt: 'If you invest $1,000 a month it takes 4 years to reach $100,000. But it only takes 2 years to grow from $700,000 to $1,000,000! Eventually you will reach a point your money makes more money.'
+seoExcerpt: 'If you invest $1,000 a month it takes 4 years to reach $100,000. But it only takes 2 years to grow from $700,000 to $1,000,000! Eventually you will reach a point your money makes more money.'
 coverImage: '/assets/blog/millionnairescience/millionnairescience.jpg'
 date: '2023-12-02T05:35:07.322Z'
 author:
@@ -11,141 +11,79 @@ ogImage:
     url: '/assets/blog/millionnairescience/millionnairescience.jpg'
 ---
 
-If you save $10 a day:
+## 1. Warren Buffet's life
+
+&nbsp;
+
+Warren Buffet's life is a case study of Compounding!
+
+&nbsp;
+
+Age:
+
+14 ~ $5k
+
+21 ~ $20k
+
+26~ $26k
+
+30 ~ $1M
+
+33 ~ $2.4M
+
+35 ~ $7M
+
+37 ~ $10M
+
+39 ~ $25M
+
+43 ~ $43M
+
+44 ~ $19M
+
+47 ~ $67M
+
+52 ~ $376M
+
+53 ~ $620M
+
+56 ~ $1.4B
+
+58 ~ $2.3B
+
+59 ~ $3.8B
+
+66 ~ $17B
+
+72 ~ $36B
+
+83 ~ $58.5B
+
+92 ~ $109B
+
+&nbsp;
+
+The earlier you start the more you make!
+
+&nbsp;
+
+If you invest $1,000 a month it takes 4 years to reach $100,000
+
+&nbsp;
+
+But it only takes 2 years to grow from $700,000 to $1,000,000!
+
+&nbsp;
+
+Eventually you will reach a point your money makes more money.
+
  
-\- in 10 years, you will have **$36,000**
-
-\- in 20 years, you will have **$90,000**
-
-&nbsp;
-
-If you save $10 a day, and invest it with 10% return:
-
-\- in 10 years, you will have **$62,000**
-
-\- in 20 years, you will have **$600,000!**
-
-&nbsp;  
-
-If you save $20 (not $10) a day, and invest it with 10% return:
-
-\- in 10 years, you will have **$160,000**
-
-\- in 20 years, you will have **$2,000,000!**
-
 &nbsp;  
 
 
-You would be surprised to know how many high income earners making over $100,000 are living pay check to pay check because they have no money management skills.
-
-&nbsp;  
-
-They only know how to spend: that's it.
-
-&nbsp;  
-
-There are 2 main factors that contribute to whether you will be rich or not.
-
-&nbsp;  
-
-It’s not how much money you make: it's not your job.
-
-&nbsp;  
-
-Especially not when 55% of your income goes in taxes.
-
-&nbsp;  
-
-And it's not by taking a mortgage at 10% interest either.
-
-&nbsp;  
-&nbsp;  
-
-## 1. Trade off your instincts for rational thinking
-
-&nbsp;  
-
-In the history of mankind, money was not such a thing. 
-
-&nbsp;  
-
-People used to take logical decisions based on their instinct.
-
-&nbsp;  
-
-People would seek pleasures: PLEASURES.
-
-&nbsp;  
-
-80% of people don’t even look at prices when they go out.
-
-&nbsp;  
-
-Most of us have no barrier check: we just want to enjoy.
-
-&nbsp;  
-
-We go for whatever gives us the «easiest / quickest» form of pleasure.
-
-&nbsp;  
-
-**Money did not exist for over 99% of men’s existence - our instincts have not adapted.**
-
-&nbsp;  
-
-The concepts of money management, compound interest, personal finance, budgeting and investing were inexistent. 
-
-&nbsp;  
-
-We did not need money saving hacks, there was no retirement, no stocks or real estate to invest in.
-
-&nbsp;  
 
 
-Financial freedom were not even a concept: all we had is **our instincts**.
-
-&nbsp;  
-&nbsp;  
-
-## 2. Warren Buffett started investing at 11 years old
-
-&nbsp;  
-Health matters most.
-
-&nbsp;  
-Love is second.
-
-&nbsp;  
-What comes third? 
-
-&nbsp;  
-That expensive dinner? 
-
-&nbsp;  
-Or the luxurious car you saw on Social Media?
-
-&nbsp;  
-
-Money. 
-
-&nbsp;  
-
-Money comes third.
-
-&nbsp;    
-
-Apart from Health and Love, there is not much you can’t afford without money.
-
-
-&nbsp;
-
-&nbsp;
-
-## 3. Understand the math behind Compounding
-
-&nbsp;
-
-There is no easy trick without a mathematical formula, you don’t need to be a genius with a financial education to understand what is compounding.
+## 2. The math behind Compounding
 
 &nbsp;
 
@@ -219,11 +157,15 @@ Three shares of an oil company called Cities Service at about $38 each. He sold 
 
 &nbsp;
 
-His first trade: he invested $114 and made $6. Today he manages $270,636,932,292: $270 Billions.
+His first trade: he invested $114 and made $6. 
 
 &nbsp;
 
-## 4. Conclusion
+Today he manages $301,636,932,292! $301 Billions
+
+&nbsp;
+
+## Start Early
 
 &nbsp;
 
