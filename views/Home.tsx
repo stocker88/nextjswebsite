@@ -22,7 +22,6 @@ import Intro from '../components/intro'
 import SearchStocks from '../components/SearchStocks';
 import { stockDataSearch } from '../components/constants';
 import MoreStories from '../components/more-stories'
-import { isMobile, browserName } from "react-device-detect";
 import Image from 'next/image';
 import Link from 'next/link';
 import PostPreview from '../components/post-preview'
@@ -295,7 +294,7 @@ import SignUpModal from '../SignUpModal';
           />
         )}*/}
 
-        {posts.length > 0 && <MoreStories posts={isMobile?posts.slice(1, 7):posts.slice(1)} />}
+        {posts.length > 0 && <MoreStories posts={posts.slice(1)} />}
 
 
 
