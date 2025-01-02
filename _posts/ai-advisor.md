@@ -91,6 +91,16 @@ Using technical trading and volume techniques to understand when is the best poi
 
 &nbsp;
 
+#### - Hedge Fund and Politician Trades for Profit: 
+
+&nbsp;
+
+Hedge Fund and Politician trades offer profitable opportunities: +7% short-term upside, mid-term reversal leverage, and long-term alpha growth. Receive live alerts on your phone and buy the stocks before they rise!
+
+&nbsp;
+
+&nbsp;
+
 &nbsp;
 
 &nbsp;
