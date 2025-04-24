@@ -47,11 +47,11 @@ Our dual Trump Signal Play strategy (volatility + value) delivered a stunning re
 
 &nbsp;
 
-## 1.	Analysis
+## Analysis
 
 &nbsp;
 
-### Trump First Presidency
+### 1. Trump First Presidency
 
 &nbsp;
 
@@ -88,7 +88,7 @@ More volatility.
 
 &nbsp;
 
-### Why We Bought VIX and How We Gained x11
+### 2. Why We Bought VIX and How We Gained x11
 
 &nbsp;
 
@@ -136,7 +136,7 @@ Our AI Signal flagged the breakout, and we acted fast.
 
 &nbsp;
 
-### Why We Pivoted into RGLD
+### 3. Why We Pivoted into RGLD
 
 &nbsp;
 
@@ -186,7 +186,7 @@ Royal Gold (RGLD) is a royalty play on gold — but more than that, it’s a con
 
 &nbsp;
 
-### The Trump Volatility Trade Isn’t Over
+## The Trump Volatility Trade Isn’t Over
 
 &nbsp;
 
