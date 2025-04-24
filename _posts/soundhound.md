@@ -81,7 +81,7 @@ The high-reward option play signal, focusing on near-term expiration to capitali
 
 &nbsp;
 
-### Stock are up +350% in a couple of weeks
+### The Stock gained +350% in a couple of weeks
 
 &nbsp;
 
