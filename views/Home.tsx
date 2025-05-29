@@ -94,7 +94,7 @@ import SignUpModal from '../SignUpModal';
                               margin: '0 auto', // Center the sections horizontally
                            }}>
 
-<div class="trustpilot-widget" data-locale="en-US" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="1500px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en">
+<div className="trustpilot-widget" data-locale="en-US" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="1500px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en">
   <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
 </div>
 
