@@ -73,7 +73,6 @@ import SignUpModal from '../SignUpModal';
 */}
 
 
-
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
@@ -95,6 +94,9 @@ import SignUpModal from '../SignUpModal';
                               margin: '0 auto', // Center the sections horizontally
                            }}>
 
+<div class="trustpilot-widget" data-locale="en-US" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="1500px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en">
+  <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
+</div>
 
 <div style={{
   display: 'flex',
@@ -156,32 +158,6 @@ import SignUpModal from '../SignUpModal';
     />
     <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
     Apple Store<br/>Reviews</span>
-  </div>
-  </a>
-
-
-  {/* Trustpilot Row */}
-  <a href='https://www.trustpilot.com/review/stockstobuynow.ai' target="_blank" style={{ display: 'inline-flex', textDecoration: 'none' }}>
-  <div style={{
-    display: 'flex',
-    alignItems: 'center',
-    gap: '1rem'
-  }}>
-    <Image
-      src='/assets/images/trustpilot.png'
-      alt="Trustpilot Reviews"
-      priority={true}
-      width={156}
-      height={156}
-      style={{
-        borderRadius: '20px',
-        opacity: 0.9,
-        width: 'min(max(145px,13vw),200px)',
-        height: 'min(max(145px,13vw),200px)',
-      }}
-    />
-    <span style={{ fontWeight: 'bold', color: 'white',minWidth: '200px',fontSize: 'min(20px,max(18px,3.5vw)'}}>
-    Trustpilot<br/>Reviews</span>
   </div>
   </a>
 
