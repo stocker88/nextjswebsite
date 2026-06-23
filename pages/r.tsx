@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 function getPlatform(userAgent: string) {
@@ -8,14 +7,11 @@ function getPlatform(userAgent: string) {
 }
 
 export default function ReferralPage() {
-  const router = useRouter();
-
   useEffect(() => {
-    if (!router.isReady) return;
+    const params = new URLSearchParams(window.location.search);
+    const referralCode = String(params.get("code") || "").trim().toUpperCase();
 
-    const referralCode = String(router.query.code || "").trim().toUpperCase();
     if (!referralCode) {
-      window.location.href = "https://stockstobuynow.ai";
       return;
     }
 
@@ -33,14 +29,16 @@ export default function ReferralPage() {
         platform,
       }),
     }).finally(() => {
-      window.location.href =
+      const redirectUrl =
         platform === "android"
           ? "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
           : platform === "ios"
           ? "https://apps.apple.com/app/id1565527320"
           : "https://stockstobuynow.ai";
+
+      window.location.href = redirectUrl;
     });
-  }, [router.isReady, router.query.code]);
+  }, []);
 
   return null;
 }
