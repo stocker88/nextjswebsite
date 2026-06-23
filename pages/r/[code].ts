@@ -1,4 +1,5 @@
-import { GetServerSideProps } from "next";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function getPlatform(userAgent: string) {
   if (/Android/i.test(userAgent)) return "android";
@@ -6,49 +7,31 @@ function getPlatform(userAgent: string) {
   return "web";
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  params,
-  req,
-}) => {
-  const referralCode = String(params?.code || "").trim().toUpperCase();
-
-  const userAgent = String(req.headers["user-agent"] || "");
-  const platform = getPlatform(userAgent);
-
-  try {
-    await fetch(
-      "https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          referralCode,
-          userAgent,
-          platform,
-        }),
-      }
-    );
-  } catch (e) {
-    console.error("storeReferralClick error:", e);
-  }
-
-  const redirectUrl =
-    platform === "android"
-      ? "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
-      : platform === "ios"
-      ? "https://apps.apple.com/app/id1565527320"
-      : "https://stockstobuynow.ai";
-
-  return {
-    redirect: {
-      destination: redirectUrl,
-      permanent: false,
-    },
-  };
-};
-
 export default function ReferralPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const referralCode = String(router.query.code || "").trim().toUpperCase();
+    if (!referralCode) return;
+
+    const userAgent = navigator.userAgent || "";
+    const platform = getPlatform(userAgent);
+
+    fetch("https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ referralCode, userAgent, platform }),
+    }).finally(() => {
+      const redirectUrl =
+        platform === "android"
+          ? "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
+          : platform === "ios"
+          ? "https://apps.apple.com/app/id1565527320"
+          : "https://stockstobuynow.ai";
+
+      window.location.href = redirectUrl;
+    });
+  }, [router.query.code]);
+
   return null;
 }
