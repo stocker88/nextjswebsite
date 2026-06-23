@@ -11,27 +11,36 @@ export default function ReferralPage() {
   const router = useRouter();
 
   useEffect(() => {
+    if (!router.isReady) return;
+
     const referralCode = String(router.query.code || "").trim().toUpperCase();
-    if (!referralCode) return;
+    if (!referralCode) {
+      window.location.href = "https://stockstobuynow.ai";
+      return;
+    }
 
     const userAgent = navigator.userAgent || "";
     const platform = getPlatform(userAgent);
 
     fetch("https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ referralCode, userAgent, platform }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        referralCode,
+        userAgent,
+        platform,
+      }),
     }).finally(() => {
-      const redirectUrl =
+      window.location.href =
         platform === "android"
           ? "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
           : platform === "ios"
           ? "https://apps.apple.com/app/id1565527320"
           : "https://stockstobuynow.ai";
-
-      window.location.href = redirectUrl;
     });
-  }, [router.query.code]);
+  }, [router.isReady, router.query.code]);
 
   return null;
 }
