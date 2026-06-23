@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { GetServerSideProps } from "next";
 
 function getPlatform(userAgent: string) {
   if (/Android/i.test(userAgent)) return "android";
@@ -6,8 +6,12 @@ function getPlatform(userAgent: string) {
   return "web";
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const referralCode = String(req.query.code || "").trim().toUpperCase();
+export const getServerSideProps: GetServerSideProps = async ({
+  params,
+  req,
+}) => {
+  const referralCode = String(params?.code || "").trim().toUpperCase();
+
   const userAgent = String(req.headers["user-agent"] || "");
   const platform = getPlatform(userAgent);
 
@@ -20,11 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: {
-            referralCode,
-            userAgent,
-            platform,
-          },
+          referralCode,
+          userAgent,
+          platform,
         }),
       }
     );
@@ -39,5 +41,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ? "https://apps.apple.com/app/id1565527320"
       : "https://stockstobuynow.ai";
 
-  res.redirect(302, redirectUrl);
+  return {
+    redirect: {
+      destination: redirectUrl,
+      permanent: false,
+    },
+  };
+};
+
+export default function ReferralPage() {
+  return null;
 }
