@@ -79,9 +79,38 @@ export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(0,-1)
 
-  useEffect(() => {
-    trackPage(window.location.pathname);
-  }, []);
+useEffect(() => {
+  trackPage(window.location.pathname);
+
+  const params = new URLSearchParams(window.location.search);
+  const referralCode = params.get("code");
+
+  if (!referralCode) return;
+
+  const userAgent = navigator.userAgent;
+
+  const platform =
+    /Android/i.test(userAgent)
+      ? "android"
+      : /iPhone|iPad|iPod/i.test(userAgent)
+      ? "ios"
+      : "web";
+
+  localStorage.setItem("referralCode", referralCode);
+
+  fetch("https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      referralCode,
+      userAgent,
+      platform,
+    }),
+  }).catch(console.error);
+
+}, []);
 
 
   return (
