@@ -83,7 +83,7 @@ useEffect(() => {
   trackPage(window.location.pathname);
 
   const params = new URLSearchParams(window.location.search);
-  const referralCode = params.get("code");
+  const referralCode = params.get("goal");
 
   if (!referralCode) return;
 
