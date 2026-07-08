@@ -84,6 +84,9 @@ useEffect(() => {
 
   const params = new URLSearchParams(window.location.search);
   const referralCode = params.get("goal");
+  const campaign = params.get("campaign") || params.get("utm_campaign") || "";
+  const source = params.get("source") || params.get("utm_source") || "";
+  const medium = params.get("medium") || params.get("utm_medium") || "";
 
   if (!referralCode) return;
 
@@ -105,6 +108,9 @@ useEffect(() => {
     },
     body: JSON.stringify({
       referralCode,
+      campaign,
+      source,
+      medium,
       userAgent,
       platform,
     }),
