@@ -91,6 +91,7 @@ useEffect(() => {
   if (!referralCode) return;
 
   const userAgent = navigator.userAgent;
+  const countryCode = (navigator.language.split("-")[1] || "").toUpperCase();
 
   const platform =
     /Android/i.test(userAgent)
@@ -112,6 +113,7 @@ useEffect(() => {
       source,
       medium,
       userAgent,
+      countryCode,
       platform,
     }),
   }).catch(console.error);
