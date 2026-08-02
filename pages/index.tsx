@@ -159,22 +159,22 @@ useEffect(() => {
                     })}}
                 />
           <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-          <title>Stocks to Buy : AI Trading Signals</title>
+          <title>Stocks to Buy Now: Trading Signals</title>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
+          <meta name="description" property="og:description" content="Wish someone told you about Nvidia when it was $5 instead of $100? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
           <link rel="shortcut icon" href="favicon.ico"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="hsl(200, 100%, 48%)" />
-          <meta name="description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
-          <meta property="og:title" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
-          <meta name="og:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
+          <meta name="description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
+          <meta property="og:title" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
+          <meta name="og:description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
           <meta property="og:type" content="summary_large_image" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"/>
-          <meta name="twitter:title" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
+          <meta name="twitter:title" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
           <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="Stocks To Buy Now AI sends you the best stocks to buy before they blow up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
+          <meta name="twitter:description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
           <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
           <meta name="twitter:card" content="summary_large_image"/>
           <link rel="apple-touch-icon" href="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
