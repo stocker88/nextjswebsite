@@ -4,20 +4,9 @@ module.exports = {
       if (!url.endsWith('.bundle')) {
         return url;
       }
-
-      return (
-        url +'?platform=ios&dev=true&minify=false&modulesOnly=false&runModule=true'
-      );
-    },
-  },
-
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        destination: 'https://anesshusseinali.com',
-        permanent: false,
-      },
-    ];
-  },
-};
+      // https://github.com/facebook/react-native/issues/36794
+      // JavaScriptCore strips query strings, so try to re-add them with a best guess.
+      return url + '?platform=ios&dev=true&minify=false&modulesOnly=false&runModule=true';
+    }, // ...
+  }, // ...
+}
