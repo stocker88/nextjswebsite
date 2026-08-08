@@ -73,30 +73,8 @@ import SignUpModal from '../SignUpModal';
 */}
 
 
-
-        <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
-
-      <br></br>
-
-          <br></br>
-          <br></br>
-                <br></br>
-
-                          <br></br>
-                          <Container>
-
-                          <center  style={{
-                           borderBottom: '0.3px solid #333', // Adjust the color and style as needed
-                               // Adjust the margin to give some space between sections
-                              width: '100%', // Take up 90% of the screen width
-                              maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                              margin: '0 auto', // Center the sections horizontally
-                           }}>
-<div style={{marginLeft: '10%',marginRight: '10%'}}>
-
 <div className="trustpilot-widget" data-locale="en-US" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="1500px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en">
   <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
-</div>
 </div>
 
     </>
