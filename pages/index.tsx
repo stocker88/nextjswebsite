@@ -123,24 +123,20 @@ useEffect(() => {
 
   return (
     <>
-       <Layout>
-       {morePosts.length > 0 && <Home posts={morePosts} />}
-<Head>
-  <meta
-    httpEquiv="refresh"
-    content="0;url=https://anesshusseinali.com"
-  />
+      <Head>
+        <meta
+          httpEquiv="refresh"
+          content="0;url=https://anesshusseinali.com"
+        />
 
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `window.location.replace("https://anesshusseinali.com");`,
-    }}
-  />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.location.replace("https://anesshusseinali.com");`,
+          }}
+        />
 
-  {/* your existing title and meta tags */}
-</Head>
-
-      </Layout>
+        {/* your existing title and meta tags */}
+      </Head>
     </>
   )
 }
