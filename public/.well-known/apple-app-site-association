@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "TFLR7J57P2.com.newcompany.stocker"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Open StocksToBuyNow links"
+          }
+        ]
+      }
+    ]
+  }
+}
