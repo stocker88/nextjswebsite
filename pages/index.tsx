@@ -1,9 +1,6 @@
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    Trustpilot?: {
-          loadFromElement: (element: Element | HTMLElement | null) => void;
-        };
   }
 }
 
@@ -84,13 +81,7 @@ export default function Index({ allPosts }: Props) {
 
 useEffect(() => {
   trackPage(window.location.pathname);
-    if (window.Trustpilot) {
-      const elements = document.getElementsByClassName('trustpilot-widget');
-      // Loop through all widgets found on the page and initialize them
-      for (let i = 0; i < elements.length; i++) {
-        window.Trustpilot.loadFromElement(elements[i]);
-      }
-    }
+
   const params = new URLSearchParams(window.location.search);
   const referralCode = params.get('goal') || params.get('referrerUid') || '';
   const campaign = params.get("campaign") || params.get("utm_campaign") || "";
@@ -162,7 +153,7 @@ useEffect(() => {
               "https://www.stockstobuynow.ai/assets/images/3.webp"
             ]
           }) }} />
-
+          <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
           <title>Stocks to Buy Now AI | Stock Signals &amp; Market Insights</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
@@ -186,19 +177,6 @@ useEffect(() => {
 
         </Head>
 
-          <Script
-                  src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-                  strategy="afterInteractive"
-                  onLoad={() => {
-                    // Fallback initialization if the script loads after the DOM is ready
-                    if (window.Trustpilot) {
-                      const elements = document.getElementsByClassName('trustpilot-widget');
-                      for (let i = 0; i < elements.length; i++) {
-                        window.Trustpilot.loadFromElement(elements[i]);
-                      }
-                    }
-                  }}
-                />
       </Layout>
     </>
   )

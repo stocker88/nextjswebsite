@@ -488,6 +488,50 @@ html {
 	}
 }
 
+/* --- TRUSPILOT CONTAINER SECTION --- */
+.trustpilot-widget-container-flat {
+  /* This stretches the container background edge-to-edge across the screen */
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  box-sizing: border-box;
+
+  /* Your exact background styling rules copied from your founder section */
+  background:
+    radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
+    #070b18;
+}
+
+/* Injects variables fluidly once initialization completes */
+.trustpilot-widget-container-flat.is-active {
+  display: block;
+  opacity: 1;
+}
+
+/* --- THE FIX: MATCHING THE FOUNDER SHELL ALIGNMENT --- */
+.trustpilot-widget-container-flat .trustpilot-widget {
+  background: transparent !important;
+  background-color: transparent !important;
+
+  /* Matches your exact padding and layout boundaries from the founder layout */
+  padding: clamp(72px, 10vw, 132px) 20px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Keeps internal structures fully transparent */
+.trustpilot-widget-container-flat iframe {
+  background: transparent !important;
+  background-color: transparent !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+
 .trustpilot-top-strip {
 	width: 100%;
 	max-height: 0;

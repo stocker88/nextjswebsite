@@ -22,6 +22,7 @@ import MoreStories from '../components/more-stories'
 import Link from 'next/link';
 import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
+import TrustpilotWidget from '../components/TrustpilotWidget';
 
 type Props = {
   posts: Post[]
@@ -108,22 +109,12 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
-      <div className="trustpilot-top-strip is-loaded">
-        <div
-          className="trustpilot-widget"
-          data-locale="en-US"
-          data-template-id="53aa8912dec7e10d38f59f36"
-          data-businessunit-id="670a2355c53c6130a02f3e50"
-          data-style-height="140px"
-          data-style-width="100%"
-          data-stars="4,5"
-          data-theme="dark"
-          data-review-languages="en"
-          data-schema-type="Organization"
-        >
-          <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
-        </div>
-      </div>
+      <div className="container mx-auto my-8 px-4">
+               <TrustpilotWidget
+                 templateId="53aa8912dec7e10d38f59f36"
+                 businessUnitId="670a2355c53c6130a02f3e50"
+               />
+             </div>
 
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
         <Testimonial/>
@@ -177,22 +168,14 @@ import SignUpModal from '../SignUpModal';
             </div>
           </div>
 
-          <div className="review-trustpilot is-loaded">
-            <div
-              className="trustpilot-widget"
-              data-locale="en-US"
-              data-template-id="53aa8912dec7e10d38f59f36"
-              data-businessunit-id="670a2355c53c6130a02f3e50"
-              data-style-height="140px"
-              data-style-width="100%"
-              data-stars="4,5"
-              data-theme="dark"
-              data-review-languages="en"
-              data-schema-type="Organization"
-            >
-              <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
-            </div>
+          <div className="w-full">
+            <TrustpilotWidget
+              templateId="53aa8912dec7e10d38f59f36"
+              businessUnitId="670a2355c53c6130a02f3e50"
+            />
           </div>
+
+
           <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
         </center>
       </Container>
