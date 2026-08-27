@@ -2,8 +2,8 @@ declare global {
   interface Window {
     gtag: (...args: any[]) => void;
     Trustpilot?: {
-      loadFromElement: (element: Element | HTMLElement | null) => void;
-    };
+        loadFromElement: (element: HTMLElement, fallback?: boolean) => void;
+      };
   }
 }
 

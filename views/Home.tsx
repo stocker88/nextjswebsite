@@ -76,13 +76,6 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
 const Home = ({ posts, topWidgetRef, bodyWidgetRef }: Props) => {
 
 
-    useEffect(() => {
-      // Wakes up the Trustpilot parser engine safely after Next.js layout compilation completes
-      const trustpilot = (window as any).Trustpilot;
-      if (trustpilot) {
-        trustpilot.loadFromElement();
-      }
-    }, []);
 
 {/*
   const [showModal, setShowModal] = useState(false);
@@ -122,7 +115,14 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
-        <div ref={topWidgetRef} className="trustpilot-top-strip is-loaded" style={{ width: '100%', minHeight: '140px' }} />
+
+              <TrustpilotWidget
+                templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
+                businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
+                height="140px"
+                isTopStrip={true}
+              />
+
 
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
         <Testimonial/>
@@ -170,7 +170,12 @@ import SignUpModal from '../SignUpModal';
             </div>
           </div>
 
-          <div ref={bodyWidgetRef} className="trustpilot-top-strip is-loaded" style={{ width: '100%', minHeight: '140px' }} />
+              <TrustpilotWidget
+                          templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
+                          businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
+                          height="140px"
+                          isTopStrip={true}
+                        />
 
 
           <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
