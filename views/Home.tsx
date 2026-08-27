@@ -77,6 +77,12 @@ const Home =  ({ posts }: Props) =>  {
     setShowModal(!showModal);
   };
 */}
+    useEffect(() => {
+      if (window.Trustpilot) {
+        window.Trustpilot.loadFromElement(document.getElementsByClassName('trustpilot-widget')[0]);
+        window.Trustpilot.loadFromElement(document.getElementsByClassName('trustpilot-widget')[1]);
+      }
+    }, []);
 
   return (
     <>
