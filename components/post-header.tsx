@@ -15,9 +15,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <br></br>
-      <br></br>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      <div className="post-detail-cover">
         <CoverImage title={title} src={coverImage} />
       </div>
       <div className="max-w-2xl mx-auto">

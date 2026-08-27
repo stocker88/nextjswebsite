@@ -96,28 +96,43 @@ export default function Post({ post, morePosts, preview }: Props) {
         ) : (
           <>
               <Head>
-                <title>{title}</title>
-                <meta charSet="utf-8" />
+                <title>{title} | Stocks To Buy Now AI</title>
                 <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-                <link rel="shortcut icon" href="favicon.ico"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="theme-color" content="hsl(200, 100%, 48%)" />
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
                 <meta property="og:description" content={post.seoExcerpt} />
-                <meta name="description" property="og:description" content={post.seoExcerpt} />
-                <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:title" content={post.title} />
-                <meta property="og:type" content="summary_large_image"/>
-                <meta name="og:description" content={post.seoExcerpt} />
-                <link rel="apple-touch-icon" href={'https://www.stockstobuynow.ai'+post.ogImage.url} />
+                <meta property="og:type" content="article"/>
                 <meta property="og:url" content={"https://www.stockstobuynow.ai/posts/"+post.slug} />
+                <meta property="article:published_time" content={post.date} />
                 <meta name="twitter:title" content={post.title}/>
-                <meta name="twitter:text:title" content={post.title}/>
                 <meta name="twitter:description" content={post.seoExcerpt}/>
                 <meta name="twitter:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Article",
+                  "headline": post.title,
+                  "description": post.seoExcerpt,
+                  "datePublished": post.date,
+                  "dateModified": post.date,
+                  "mainEntityOfPage": `https://www.stockstobuynow.ai/posts/${post.slug}`,
+                  "image": `https://www.stockstobuynow.ai${post.ogImage.url}`,
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Stocks To Buy Now AI",
+                    "url": "https://www.stockstobuynow.ai/"
+                  },
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Stocks To Buy Now AI",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png"
+                    }
+                  }
+                }) }} />
                     <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
                     <Script>
                       {`
@@ -147,7 +162,7 @@ export default function Post({ post, morePosts, preview }: Props) {
 
              </center>
             </div>
-              <article className="mb-32">
+              <article className="post-detail">
 
 
 

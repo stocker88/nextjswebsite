@@ -424,8 +424,10 @@ html {
 .playlist-frame {
 	position: relative;
 	overflow: hidden;
-	width: 100%;
-	padding-top: 56.25%;
+	width: min(600px, 100%);
+	margin-right: auto;
+	margin-left: auto;
+	aspect-ratio: 16 / 9;
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 22px;
 	background: #000;
@@ -452,6 +454,38 @@ html {
 
 .playlist-link:hover {
 	color: #fff;
+}
+
+.post-detail {
+	margin-bottom: 0;
+	padding: clamp(36px, 5vw, 72px) 0 clamp(72px, 9vw, 120px);
+	background:
+		radial-gradient(circle at 20% 10%, rgba(22, 131, 255, 0.13), transparent 34%),
+		#070b18;
+}
+
+.post-detail-cover {
+	width: min(720px, 100%);
+	margin: 20px auto 32px;
+}
+
+.post-detail-cover img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 18px !important;
+}
+
+@media (max-width: 600px) {
+	.post-detail {
+		padding-top: 24px;
+	}
+
+	.post-detail-cover {
+		margin-top: 14px;
+		margin-bottom: 24px;
+	}
 }
 
 .trustpilot-top-strip {
@@ -519,11 +553,6 @@ html {
 	line-height: 1.65;
 }
 
-.editorial-featured {
-	max-width: 860px;
-	margin: 0 auto 28px;
-}
-
 .article-card {
 	overflow: hidden;
 	height: 100%;
@@ -564,14 +593,14 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 24px 26px 26px;
+	padding: 19px 20px 21px;
 	text-align: left;
 }
 
 .article-card__title {
 	margin: 0;
 	color: #fff;
-	font-size: clamp(20px, 2vw, 27px);
+	font-size: clamp(17px, 1.45vw, 21px);
 	font-weight: 720;
 	line-height: 1.28;
 	letter-spacing: -0.025em;
@@ -591,10 +620,10 @@ html {
 	overflow: hidden;
 	margin: 13px 0 0;
 	color: #aab3c5;
-	font-size: 15px;
-	line-height: 1.65;
+	font-size: 13px;
+	line-height: 1.55;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: 2;
 }
 
 .article-card__read-more {
@@ -608,22 +637,29 @@ html {
 }
 
 .more-stories {
-	margin-top: 28px;
+	margin-top: 0;
 }
 
 .more-stories__grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 24px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 940px) {
+	.more-stories__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 620px) {
 	.more-stories__grid {
 		grid-template-columns: 1fr;
+		gap: 16px;
 	}
 
 	.article-card__body {
-		padding: 20px;
+		padding: 18px;
 	}
 }
 

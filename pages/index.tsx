@@ -127,59 +127,52 @@ useEffect(() => {
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
-         <script type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html:
-                  JSON.stringify({
-                      "@context": "http://schema.org",
-                      "@type": "SoftwareApplication",
-                      "name": "Stocks to Buy Now AI Trading Signals App",
-                      "image": "https://stockstobuynow/assets/images/Maximize Profits: this.webp",
-                      "author": {
-                        "@type": "Person",
-                        "name": "Stocks to Buy Now AI Trading Signals"
-                      },
-                      "applicationCategory": "Investing",
-                      "screenshot": [
-                        "https://stockstobuynow/assets/images/chatgpt.webp",
-                        "https://stockstobuynow/assets/images/tslavsrace.webp",
-                        "https://stockstobuynow/assets/images/dividends.webp"
-                      ],
-                      "review": {
-                        "@type": "Review",
-                        "author": {
-                          "@type": "Person",
-                          "name": "Jerome"
-                        },
-                        "reviewRating": {
-                          "@type": "Rating",
-                          "ratingValue": "5/5"
-                        },
-                        "reviewBody": "Stocks to buy now ai app sends you the best stocks signals and features relevant market information and trading strategies! The best trading app out there."
-                      }
-                    })}}
-                />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Stocks To Buy Now AI",
+            "url": "https://www.stockstobuynow.ai/",
+            "image": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "FinanceApplication",
+            "description": "AI-powered stock signals, market analysis and practical investing tools.",
+            "author": {
+              "@type": "Person",
+              "name": "Aness Hussein Ali",
+              "url": "https://anesshusseinali.com/",
+              "sameAs": "https://www.linkedin.com/in/anesshusseinali/"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "screenshot": [
+              "https://www.stockstobuynow.ai/assets/images/1.webp",
+              "https://www.stockstobuynow.ai/assets/images/2.webp",
+              "https://www.stockstobuynow.ai/assets/images/3.webp"
+            ]
+          }) }} />
           <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-          <title>Stocks to Buy Now: Trading Signals</title>
+          <title>Stocks to Buy Now AI | Stock Signals &amp; Market Insights</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
-          <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" property="og:description" content="Wish someone told you about Nvidia when it was $5 instead of $100? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
-          <link rel="shortcut icon" href="favicon.ico"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="hsl(200, 100%, 48%)" />
-          <meta name="description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
-          <meta property="og:title" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
-          <meta name="og:description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
-          <meta property="og:type" content="summary_large_image" />
+          <meta name="description" content="Discover AI-powered stock signals, market analysis and practical investing tools designed to help investors identify opportunities and understand risk."/>
+          <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+          <link rel="canonical" href="https://www.stockstobuynow.ai/" />
+          <meta property="og:title" content="Stocks to Buy Now AI | Stock Signals &amp; Market Insights" />
+          <meta property="og:description" content="Discover AI-powered stock signals, market analysis and practical investing tools designed to help investors identify opportunities and understand risk." />
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
-          <meta property="og:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"/>
-          <meta name="twitter:title" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
-          <meta name="twitter:text:title" content="StocksToBuy AI App sends you stocks before they blow up"/>
-          <meta name="twitter:description" content="Wish someone told you about Nvidia when it was $5 instead of $180? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals."/>
-          <meta name="twitter:image" content="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
+          <meta property="og:site_name" content="Stocks To Buy Now AI" />
+          <meta property="og:image" content="https://www.stockstobuynow.ai/assets/images/1.webp"/>
+          <meta property="og:image:width" content="1680" />
+          <meta property="og:image:height" content="992" />
+          <meta property="og:image:alt" content="Stocks To Buy Now AI market signal example" />
           <meta name="twitter:card" content="summary_large_image"/>
-          <link rel="apple-touch-icon" href="https://i.ibb.co/fCGQ4jv/hot-stocks-to-buy-now-hellostocker-ai.jpg"  />
-          {/*<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143613046.js"></script>*/}
+          <meta name="twitter:title" content="Stocks to Buy Now AI | Stock Signals &amp; Market Insights"/>
+          <meta name="twitter:description" content="Discover AI-powered stock signals, market analysis and practical investing tools."/>
+          <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/1.webp" />
 
 
         </Head>

@@ -20,7 +20,6 @@ import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
 import Link from 'next/link';
-import PostPreview from '../components/post-preview'
 import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 
@@ -129,7 +128,6 @@ const Home =  ({ posts }: Props) =>  {
   };
 */}
 
-const heroPost = posts[0]
   return (
     <>
 
@@ -228,19 +226,7 @@ import SignUpModal from '../SignUpModal';
         <section className="editorial-section">
           <div className="editorial-shell">
             <Intro />
-            <div className="editorial-featured">
-              <PostPreview
-                     key={heroPost.slug}
-                     title={heroPost.title}
-                     coverImage={heroPost.coverImage}
-                     date={heroPost.date}
-                     author={heroPost.author}
-                     slug={heroPost.slug}
-                     excerpt={heroPost.excerpt}
-              />
-            </div>
-
-            {posts.length > 0 && <MoreStories posts={posts.slice(1)} />}
+            {posts.length > 0 && <MoreStories posts={posts} />}
           </div>
         </section>
         <CompoundInterestCalculator/>

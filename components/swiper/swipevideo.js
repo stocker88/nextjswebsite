@@ -37,7 +37,7 @@ export default function SwipeVideo() {
 
              <SwiperSlide>
                   <div className="container">
-   <center><iframe width="321" height="571" src="https://www.youtube.com/embed/YbEra3h44oo" title="The mathematics of compounding: personal finance can make you a millionnaire" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+   <center><iframe width="321" height="571" src="https://www.youtube.com/watch?v=Fpin1GiI8i0&list=PLiBfVBTk2-F8r-7NsUrJ9Zjle_WIANUye" title="The mathematics of compounding: personal finance can make you a millionnaire" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
               <br></br><br></br>
               </div>
               </SwiperSlide>

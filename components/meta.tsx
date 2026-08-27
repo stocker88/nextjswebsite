@@ -31,10 +31,9 @@ const Meta = () => {
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="hsl(200, 100%, 48%)" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content="Stocker AI App is an Investing Advisory App to design strategies and practice with virtual trading, learn how to make money and earn passive income with Stocker Ai App"
+        content="Discover AI-powered stock signals, market analysis and practical investing tools from Stocks To Buy Now AI."
       />
     </Head>
   )
