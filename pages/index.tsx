@@ -20,7 +20,7 @@ import Home from '../views/Home';
 //import './App.css';
 import ReactGA from 'react-ga4';
 // import { initializeApp } from "firebase/app";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Script from 'next/script'
 
 import {
@@ -81,10 +81,7 @@ export default function Index({ allPosts }: Props) {
 
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(0,-1)
-  const topWidgetRef = useRef<HTMLDivElement>(null);
-  const bodyWidgetRef = useRef<HTMLDivElement>(null);
 
-  const [isMounted, setIsMounted] = useState(false)
 useEffect(() => {
   trackPage(window.location.pathname);
 
@@ -127,86 +124,9 @@ useEffect(() => {
 }, []);
 
 
-  // Stage 1: Verify document compilation layer is completely ready
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Stage 2: Programmatically generate the frames using Trustpilot's execution blueprint
-  useEffect(() => {
-    if (!isMounted) return;
-
-    const renderWidget = (targetRef: React.RefObject<HTMLDivElement>, isTop: boolean) => {
-      if (!targetRef.current) return;
-
-      // Clean up previous elements to prevent layout duplicates on mobile switches
-      targetRef.current.innerHTML = '';
-
-      const trustbox = document.createElement("div");
-      trustbox.className = "trustpilot-widget";
-      trustbox.setAttribute("data-locale", "en-US");
-      trustbox.setAttribute("data-template-id", "53aa8912dec7e10d38f59f36");
-      trustbox.setAttribute("data-businessunit-id", "670a2355c53c6130a02f3e50");
-      trustbox.setAttribute("data-style-height", "140px");
-      trustbox.setAttribute("data-style-width", "100%");
-      trustbox.setAttribute("data-stars", "4,5");
-      trustbox.setAttribute("data-theme", isTop ? "dark" : "light");
-      trustbox.setAttribute("data-review-languages", "en");
-      trustbox.setAttribute("data-schema-type", "Organization");
-      trustbox.style.minHeight = "140px";
-      trustbox.style.display = "block";
-
-      const fallbackAnchor = document.createElement("a");
-      fallbackAnchor.href = "https://trustpilot.com";
-      fallbackAnchor.target = "_blank";
-      fallbackAnchor.rel = "noopener noreferrer";
-      fallbackAnchor.textContent = "Trustpilot";
-      trustbox.appendChild(fallbackAnchor);
-
-      targetRef.current.appendChild(trustbox);
-
-      // Force immediate API activation pass
-      const trustpilotAPI = (window as any).Trustpilot;
-      if (trustpilotAPI && trustpilotAPI.loadFromElement) {
-        trustpilotAPI.loadFromElement(trustbox);
-      }
-    };
-
-    // Trigger explicit render sweeps across both container targets
-    const runForcedRender = () => {
-      renderWidget(topWidgetRef, true);
-      renderWidget(bodyWidgetRef, false);
-    };
-
-    // Macro-task queue break to accommodate slow network connectivity frames
-    if ((window as any).Trustpilot) {
-      runForcedRender();
-    } else {
-      const checkScriptInterval = setInterval(() => {
-        if ((window as any).Trustpilot) {
-          runForcedRender();
-          clearInterval(checkScriptInterval);
-        }
-      }, 100);
-      setTimeout(() => clearInterval(checkScriptInterval), 4000);
-    }
-  }, [isMounted]);
-
   return (
     <>
-       {/* Enforce absolute HTTPS protocol mapping routes across all browsers */}
-       <Script
-         src="https://trustpilot.com"
-         strategy="afterInteractive"
-         onLoad={() => {
-           const tp = (window as any).Trustpilot;
-           if (tp && tp.loadFromElement) tp.loadFromElement();
-         }}
-       />
-
        <Layout>
-         {/* A: THE TOP STRIP COMPONENT TARGET CONTAINER */}
-         <div ref={topWidgetRef} className="trustpilot-top-strip is-loaded" style={{ width: '100%' }} />
        {morePosts.length > 0 && <Home posts={morePosts} />}
 
         <Head>
@@ -259,54 +179,7 @@ useEffect(() => {
 
 
         </Head>
-<Script id="trustpilot-observer-fix" strategy="afterInteractive">
-  {`
-    (function () {
-      let observer = null;
-      let debounceTimer = null;
 
-      function reloadTrustpilotWidgets() {
-        if (typeof Trustpilot !== "undefined" && typeof Trustpilot.loadFromElement === "function") {
-          document.querySelectorAll(".trustpilot-widget").forEach((widget) => {
-            // Force an immediate layout engine refresh pass
-            Trustpilot.loadFromElement(widget);
-          });
-        }
-      }
-
-      function debounceReload() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-          reloadTrustpilotWidgets();
-        }, 200);
-      }
-
-      // Initialize the mutation listener engine once Next.js hydrates
-      if (typeof window !== 'undefined') {
-        observer = new MutationObserver((mutationsList) => {
-          let foundWidgetChange = false;
-          for (const mutation of mutationsList) {
-            if (mutation.addedNodes && Array.from(mutation.addedNodes).some(node =>
-              node.nodeType === 1 && (node.classList.contains("trustpilot-widget") || node.querySelector?.(".trustpilot-widget"))
-            )) {
-              foundWidgetChange = true;
-              break;
-            }
-          }
-          if (foundWidgetChange) debounceReload();
-        });
-
-        observer.observe(document.body, {
-          childList: true,
-          subtree: true
-        });
-
-        // Initial fallback execution check
-        setTimeout(reloadTrustpilotWidgets, 300);
-      }
-    })();
-  `}
-</Script>
       </Layout>
     </>
   )
