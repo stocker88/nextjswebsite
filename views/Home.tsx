@@ -68,11 +68,15 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
     </span>
   );
 };
+const MAX_ATTEMPTS = 6;
+const RETRY_DELAYS = [500, 1000, 2000, 3000, 5000, 8000]; // ms, cumulative ~19.5s
 
 const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
   const widgetRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const attemptRef = useRef(0);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => setIsMounted(true), []);
 
@@ -83,26 +87,46 @@ const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
     if (!widget) return;
 
     const revealWhenReady = () => {
-      if (widget.querySelector('iframe')) setIsLoaded(true);
+      if (widget.querySelector('iframe')) {
+        setIsLoaded(true);
+        if (timerRef.current) window.clearTimeout(timerRef.current);
+      }
     };
 
     revealWhenReady();
     const observer = new MutationObserver(revealWhenReady);
     observer.observe(widget, { childList: true, subtree: true });
 
-    const loadWidget = () => {
+    const attemptLoad = () => {
+      if (widget.querySelector('iframe')) return; // already succeeded
+
       const trustpilot = (window as any).Trustpilot;
       if (trustpilot?.loadFromElement) {
         trustpilot.loadFromElement(widget, true);
       }
+
+      const nextAttempt = attemptRef.current;
+      attemptRef.current += 1;
+
+      if (nextAttempt < MAX_ATTEMPTS) {
+        timerRef.current = window.setTimeout(attemptLoad, RETRY_DELAYS[nextAttempt]);
+      }
     };
 
-    loadWidget();
-    const retryTimer = window.setTimeout(loadWidget, 800);
+    // also re-check script availability itself in case the <script> tag
+    // is still loading when this component mounts
+    const scriptCheckInterval = window.setInterval(() => {
+      if ((window as any).Trustpilot?.loadFromElement) {
+        window.clearInterval(scriptCheckInterval);
+      }
+    }, 300);
+
+    attemptLoad();
 
     return () => {
       observer.disconnect();
-      window.clearTimeout(retryTimer);
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+      window.clearInterval(scriptCheckInterval);
     };
   }, [isMounted]);
 

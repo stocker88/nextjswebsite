@@ -490,21 +490,15 @@ html {
 
 .trustpilot-top-strip {
 	width: 100%;
-	min-height: 52px; /* Gives the Trustpilot iframe immediate layout room */
+	max-height: 0;
 	margin: 0 auto;
-	padding: 12px 20px; /* Provides uniform vertical separation */
-	overflow: visible;
-	opacity: 1;
-	background: radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%), #070b18;
-	pointer-events: auto;
-}
-
-/* Optional mobile fine-tuning */
-@media (max-width: 860px) {
-	.trustpilot-top-strip {
-		padding: 8px 14px;
-		min-height: 44px; /* Slightly more compact for mobile viewport sizes */
-	}
+	padding: 0 20px;
+	overflow: hidden;
+	opacity: 0;
+	background:
+		radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
+		#070b18;
+	pointer-events: none;
 }
 
 .trustpilot-top-strip.is-loaded {
