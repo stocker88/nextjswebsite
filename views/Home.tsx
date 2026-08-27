@@ -110,10 +110,54 @@ import SignUpModal from '../SignUpModal';
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
       <div className="container mx-auto my-8 px-4">
-               <TrustpilotWidget
-                 templateId="53aa8912dec7e10d38f59f36"
-                 businessUnitId="670a2355c53c6130a02f3e50"
-               />
+              <div
+                className="w-full"
+                style={{
+                  width: '100%',
+                  display: 'block',
+                  boxSizing: 'border-box',
+                  /* Your exact radial blue gradient background color configuration */
+                  background: 'radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%), #070b18',
+                  /* Adds the fluid spacing clamps on top and bottom natively */
+                  paddingTop: 'clamp(64px, 8vw, 112px)',
+                  paddingBottom: 'clamp(64px, 8vw, 112px)'
+                }}
+              >
+                {/* The centering shell layout container rules */}
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '1140px',
+                    margin: '0 auto',
+                    paddingLeft: '24px',
+                    paddingRight: '24px',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  {/*
+                     THE CAROUSEL CODE: Hardcoding data-theme="light" strips out Trustpilot's
+                     grey card layer, making the carousel perfectly transparent.
+                     Setting a minHeight of 140px guarantees that Safari never collapses it.
+                  */}
+                  <div
+                    className="trustpilot-widget"
+                    data-locale="en-US"
+                    data-template-id="53aa8912dec7e10d38f59f36"
+                    data-businessunit-id="670a2355c53c6130a02f3e50"
+                    data-style-height="140px"
+                    data-style-width="100%"
+                    data-stars="4,5"
+                    data-theme="dark"
+                    data-review-languages="en"
+                    data-schema-type="Organization"
+                    style={{ minHeight: '140px', display: 'block', width: '100%' }}
+                  >
+                    <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer">
+                      Trustpilot
+                    </a>
+                  </div>
+                </div>
+              </div>
              </div>
 
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
@@ -169,10 +213,54 @@ import SignUpModal from '../SignUpModal';
           </div>
 
           <div className="w-full">
-            <TrustpilotWidget
-              templateId="53aa8912dec7e10d38f59f36"
-              businessUnitId="670a2355c53c6130a02f3e50"
-            />
+            <div
+              className="w-full"
+              style={{
+                width: '100%',
+                display: 'block',
+                boxSizing: 'border-box',
+                /* Your exact radial blue gradient background color configuration */
+                background: 'radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%), #070b18',
+                /* Adds the fluid spacing clamps on top and bottom natively */
+                paddingTop: 'clamp(64px, 8vw, 112px)',
+                paddingBottom: 'clamp(64px, 8vw, 112px)'
+              }}
+            >
+              {/* The centering shell layout container rules */}
+              <div
+                style={{
+                  width: '100%',
+                  maxWidth: '1140px',
+                  margin: '0 auto',
+                  paddingLeft: '24px',
+                  paddingRight: '24px',
+                  boxSizing: 'border-box'
+                }}
+              >
+                {/*
+                   THE CAROUSEL CODE: Hardcoding data-theme="light" strips out Trustpilot's
+                   grey card layer, making the carousel perfectly transparent.
+                   Setting a minHeight of 140px guarantees that Safari never collapses it.
+                */}
+                <div
+                  className="trustpilot-widget"
+                  data-locale="en-US"
+                  data-template-id="53aa8912dec7e10d38f59f36"
+                  data-businessunit-id="670a2355c53c6130a02f3e50"
+                  data-style-height="140px"
+                  data-style-width="100%"
+                  data-stars="4,5"
+                  data-theme="dark"
+                  data-review-languages="en"
+                  data-schema-type="Organization"
+                  style={{ minHeight: '140px', display: 'block', width: '100%' }}
+                >
+                  <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer">
+                    Trustpilot
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
 
