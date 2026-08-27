@@ -82,6 +82,13 @@ export default function Index({ allPosts }: Props) {
 useEffect(() => {
   trackPage(window.location.pathname);
 
+  if (window.Trustpilot) {
+    const trustpilotTarget = document.querySelector('.trustpilot-widget');
+    if (trustpilotTarget) {
+      window.Trustpilot.loadFromElement(trustpilotTarget);
+    }
+  }
+  
   const params = new URLSearchParams(window.location.search);
   const referralCode = params.get('goal') || params.get('referrerUid') || '';
   const campaign = params.get("campaign") || params.get("utm_campaign") || "";
