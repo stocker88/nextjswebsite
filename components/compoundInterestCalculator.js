@@ -1,172 +1,191 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
-  LineChart,
+  CartesianGrid,
+  Legend,
   Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
 } from 'recharts';
 import Slider from '@mui/material/Slider';
 
+const currency = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
+
 const CompoundInterestCalculator = () => {
-  const [principal, setPrincipal] = useState('10000');
-  const [dailyContrib, setDailyContrib] = useState('30');
-  const [monthlyReturn, setMonthlyReturn] = useState('0.9');
-  const [investmentYears, setInvestmentYears] = useState('20');
-  const [data, setData] = useState([]);
+  const [principal, setPrincipal] = useState(10000);
+  const [dailyContrib, setDailyContrib] = useState(30);
+  const [monthlyReturn, setMonthlyReturn] = useState(0.9);
+  const [investmentYears, setInvestmentYears] = useState(20);
 
-  const [sliderValue, setSliderValue] = useState(30);
-  const [sliderMonthlyReturnValue, setSliderMonthlyReturnValue] = useState(0.9);
-  const [sliderDailyContribValue, setSliderDailyContribValue] = useState(20);
-  const [sliderPrincipalValue, setSliderPrincipalValue] = useState(10000);
+  const data = useMemo(() => {
+    const annualInterestRate = (monthlyReturn * 1.04) / 100 * 12;
+    const annualContribution = dailyContrib * 32 * 12;
+    let balance = principal;
+    const points = [{ year: 0, totalWithInterest: principal, onlyAmountSaved: principal }];
 
-
-    const handleSliderMonthlyReturnChange = (value) => {
-      setMonthlyReturn(value);
-      setSliderMonthlyReturnValue(value);
-    };
-
-    const handleSliderPrincipalChange = (value) => {
-      setPrincipal(value);
-      setSliderPrincipalValue(value);
-    };
-
-    const handleSliderDailyContribChange = (value) => {
-      setDailyContrib(value);
-      setSliderDailyContribValue(value);
-    };
-
-  useEffect(() => {
-    calculateCompoundInterest();
-  }, [principal, dailyContrib, monthlyReturn, investmentYears]); // Empty dependency array to run the effect only once on mount
-
-  const calculateCompoundInterest = () => {
-    const annualInterestRate = (monthlyReturn*1.04) / 100*12;
-    const periods = investmentYears;
-
-    let principalAmount = parseFloat(principal);
-    let dailyContribution = parseFloat(dailyContrib) * 32 * 12;
-
-    const dataPoints = [];
-
-    for (let month = 0; month < periods; month++) {
-      principalAmount += dailyContribution;
-      const interest = principalAmount * annualInterestRate;
-      principalAmount += interest;
-
-      dataPoints.push({
-        year: month, // convert months to years
-        totalWithInterest: principalAmount, // convert to thousands
-        onlyAmountSaved: parseFloat(principal) + parseFloat(dailyContrib) * 32 * 12* month,
+    for (let year = 1; year <= investmentYears; year += 1) {
+      balance += annualContribution;
+      balance += balance * annualInterestRate;
+      points.push({
+        year,
+        totalWithInterest: balance,
+        onlyAmountSaved: principal + annualContribution * year,
       });
     }
 
-    setData(dataPoints);
-  };
+    return points;
+  }, [principal, dailyContrib, monthlyReturn, investmentYears]);
 
-  const formatYAxisValue = (value) => `$${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
-  const formatXAxisValue = (value) => Math.round(value) % 5 === 0 ? Math.round(value) : '';
+  const finalPoint = data[data.length - 1];
+  const projectedTotal = finalPoint?.totalWithInterest || 0;
+  const amountSaved = finalPoint?.onlyAmountSaved || 0;
+  const projectedGrowth = Math.max(0, projectedTotal - amountSaved);
+
+  const controls = [
+    {
+      id: 'principal',
+      label: 'Initial investment',
+      prefix: '$',
+      value: principal,
+      min: 0,
+      max: 100000,
+      step: 500,
+      setValue: setPrincipal,
+    },
+    {
+      id: 'contribution',
+      label: 'Daily contribution',
+      prefix: '$',
+      value: dailyContrib,
+      min: 0,
+      max: 250,
+      step: 1,
+      setValue: setDailyContrib,
+    },
+    {
+      id: 'return',
+      label: 'Estimated monthly return',
+      suffix: '%',
+      value: monthlyReturn,
+      min: 0,
+      max: 5,
+      step: 0.1,
+      setValue: setMonthlyReturn,
+    },
+    {
+      id: 'years',
+      label: 'Investment period',
+      suffix: ' years',
+      value: investmentYears,
+      min: 1,
+      max: 40,
+      step: 1,
+      setValue: setInvestmentYears,
+    },
+  ];
 
   return (
-          <section style={{
-                                width: '90%',
-                                maxWidth: '1000px',
-                                margin: '0 auto',
-                             }}>
+    <section className="compound-section" aria-labelledby="compound-title">
+      <div className="compound-shell">
+        <header className="compound-heading">
+          <p>Interactive calculator</p>
+          <h2 id="compound-title">See the power of compounding</h2>
+          <span>Adjust the assumptions to explore how regular contributions and returns may affect long-term growth.</span>
+        </header>
 
-   <div style={{ color: 'black', padding: '2px' }}>
-   <br/>
-   <br/>
-     <h2 className="text-xl md:text-3xl font-bold tracking-tighter leading-tight" style={{ letterSpacing: '0.5px', color: 'white', textShadow: '0px 0px 3px rgba(0, 0, 0, 1)' }}>
+        <div className="compound-card">
+          <div className="compound-controls">
+            <div className="compound-controls__title">
+              <span>Your assumptions</span>
+              <small>Move the sliders or enter a value</small>
+            </div>
 
+            {controls.map((control) => (
+              <div className="compound-control" key={control.id}>
+                <div className="compound-control__topline">
+                  <label htmlFor={`compound-${control.id}`}>{control.label}</label>
+                  <div className="compound-input-wrap">
+                    {control.prefix && <span>{control.prefix}</span>}
+                    <input
+                      id={`compound-${control.id}`}
+                      type="number"
+                      min={control.min}
+                      max={control.max}
+                      step={control.step}
+                      value={control.value}
+                      onChange={(event) => control.setValue(Number(event.target.value) || 0)}
+                    />
+                    {control.suffix && <span>{control.suffix}</span>}
+                  </div>
+                </div>
+                <Slider
+                  min={control.min}
+                  max={control.max}
+                  step={control.step}
+                  value={control.value}
+                  onChange={(_, value) => control.setValue(Array.isArray(value) ? value[0] : value)}
+                  aria-label={control.label}
+                  sx={{
+                    color: '#1683ff',
+                    '& .MuiSlider-rail': { backgroundColor: 'rgba(81, 165, 255, 0.28)' },
+                    '& .MuiSlider-thumb': { boxShadow: '0 0 0 5px rgba(22, 131, 255, 0.14)' },
+                  }}
+                />
+              </div>
+            ))}
+          </div>
 
-       Compounding Interest: Watch Your Money Snowball!
-     </h2>
-<br/>
-<br/>
-     <div style={{ marginTop: '20px', display: 'inline-block', textAlign: 'left' }}>
+          <div className="compound-results">
+            <div className="compound-summary">
+              <div className="compound-summary__primary">
+                <span>Projected value</span>
+                <strong>{currency.format(projectedTotal)}</strong>
+                <small>After {investmentYears} years</small>
+              </div>
+              <div className="compound-summary__stat">
+                <span>Total contributed</span>
+                <strong>{currency.format(amountSaved)}</strong>
+              </div>
+              <div className="compound-summary__stat">
+                <span>Projected growth</span>
+                <strong>{currency.format(projectedGrowth)}</strong>
+              </div>
+            </div>
 
+            <div className="compound-chart" aria-label="Projected compound growth chart">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data} margin={{ top: 12, right: 12, left: 2, bottom: 4 }}>
+                  <CartesianGrid stroke="rgba(255,255,255,0.07)" vertical={false} />
+                  <XAxis dataKey="year" tick={{ fill: '#7f8ba3', fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <YAxis
+                    width={66}
+                    tick={{ fill: '#7f8ba3', fontSize: 11 }}
+                    axisLine={false}
+                    tickLine={false}
+                    tickFormatter={(value) => value >= 1000000 ? `$${(value / 1000000).toFixed(1)}m` : `$${Math.round(value / 1000)}k`}
+                  />
+                  <Tooltip
+                    formatter={(value, name) => [currency.format(value), name]}
+                    labelFormatter={(year) => `Year ${year}`}
+                    contentStyle={{ background: '#10182a', border: '1px solid rgba(255,255,255,.12)', borderRadius: 12, color: '#fff' }}
+                  />
+                  <Legend wrapperStyle={{ color: '#aab3c5', fontSize: 12, paddingTop: 10 }} />
+                  <Line type="monotone" dataKey="totalWithInterest" stroke="#5daaff" strokeWidth={3} dot={false} name="Projected value" />
+                  <Line type="monotone" dataKey="onlyAmountSaved" stroke="#55d69e" strokeWidth={2} dot={false} name="Contributions" />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </div>
 
-
-       <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Initial Amount ($)</span>
-         <input
-           type="number"
-           value={principal}
-           onChange={(e) => handleSliderPrincipalChange(e.target.value)}
-           style={{ textAlign: 'center', borderRadius: '5px' }}
-         />
-       </label>
-
-        <Slider
-             min={0}
-             max={20000}
-             step={100}
-             value={sliderPrincipalValue}
-             onChange={(e) => handleSliderPrincipalChange(e.target.value)}
-
-           />
-
-       <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Daily Contribution ($)</span>
-         <input
-           type="number"
-           value={dailyContrib}
-           onChange={(e) => handleSliderDailyContribChange(e.target.value)}
-           style={{ textAlign: 'center', borderRadius: '5px' }}
-         />
-       </label>
-
-
-          <Slider
-             min={0}
-             max={150}
-             step={1}
-             value={sliderDailyContribValue}
-             onChange={(e) => handleSliderDailyContribChange(e.target.value)}
-
-           />
-
-       <label style={{ display: 'block', marginBottom: '10px' }}>
-         <span style={{ color: 'white', display: 'block', marginBottom: '0px' }}>Monthly Return (%)</span>
-         <input
-           type="number"
-           value={monthlyReturn}
-           onChange={(e) => handleSliderMonthlyReturnChange(e.target.value)}
-           style={{ textAlign: 'center', borderRadius: '5px' }}
-         />
-       </label>
-
-
-          <Slider
-             min={0}
-             max={5}
-             step={0.1}
-             value={sliderMonthlyReturnValue}
-             onChange={(e) => handleSliderMonthlyReturnChange(e.target.value)}
-           />
-     </div>
-
-<br></br>
-
-        {data.length > 0 && (
-          <LineChart width={window.innerWidth < 340 ? 250 : window.innerWidth < 460 ? 340:window.innerWidth < 540 ? 460: window.innerWidth < 600 ? 480:500} height={400} data={data} margin={{ top: 20, right: 30, left: 37, bottom: 10 }}>
-            <XAxis dataKey="year" label={{ value: 'Years', position: 'insideBottomRight', offset: -10 }} tickFormatter={formatXAxisValue} />
-            <YAxis label={{ value: '', angle: -90, position: 'insideLeft' }} tickFormatter={formatYAxisValue} />
-              <Tooltip
-                formatter={(value) => `$${value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}
-                labelFormatter={(label) => <span style={{ color: 'white' }}>{`${label.toFixed(1)} years`}</span>}
-                contentStyle={{ textShadow: '0px 0px 3px rgba(0, 0, 0, 1)', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '30px', fontWeight: 'bold' }}
-              />
-
-            <Line type="monotone" dataKey="totalWithInterest" stroke="#8884d8" name="Amount with Profits" />
-            <Line type="monotone" dataKey="onlyAmountSaved" stroke="#82ca9d" name="Amount Saved" />
-          </LineChart>
-        )}
-
-    </div>
-    <br/>
-    <br/>
+        <p className="compound-disclaimer">Illustrative projections only. Returns are not guaranteed and this is not financial advice.</p>
+      </div>
     </section>
   );
 };

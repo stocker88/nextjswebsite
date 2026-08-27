@@ -18,7 +18,6 @@ const navItems = [
   { label: 'About Aness', href: '#about-aness' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Features', href: '#features' },
   { label: 'Watch & Learn', href: '#watch-and-learn' },
   { label: 'Download', href: '#download' },
 ];

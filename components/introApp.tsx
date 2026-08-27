@@ -1,18 +1,13 @@
-import { CMS_NAME } from '../lib/constants'
-
 const IntroApp = () => {
   return (
-
-    <section className="flex-col  flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-
-<center>
-      <h2 className="text-xl md:text-3xl tracking-tighter leading-tight " style={{'color':'white', letterSpacing: '0.5px', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-        Receive AI Trading Signals
-        </h2>
-</center>
-
+    <section className="signals-heading" aria-labelledby="signals-title">
+      <p>Built for better decisions</p>
+      <h2 id="signals-title">Get the best stocks before the crowd</h2>
+      <span>
+        Clear, actionable insights designed to help members identify opportunities,
+        understand risk and make more informed investment decisions.
+      </span>
     </section>
-
   )
 }
 

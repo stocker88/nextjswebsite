@@ -27,25 +27,26 @@ const PostPreview = ({
 //REMOVED FIREBASE
 
   return (
-    <div>
-         <div className="mb-5">
+    <article className="article-card">
+         <div className="article-card__image">
            <CoverImage slug={slug} title={title} src={coverImage} />
          </div>
-         <h3 className="text-2xl mb-3 leading-snug excerpt_snug" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }}>
+         <div className="article-card__body">
+         <h3 className="article-card__title">
            <Link
              as={`/posts/${slug}`}
              href="/posts/[slug]"
-             className="hover:underline"
+             className="article-card__title-link"
            >
              {title}
            </Link>
          </h3>
-         <div className="text-lg mb-4" style={{'color':'grey'}}>
-           {/*<DateFormatter dateString={date} />*/}
+         <p className="article-card__excerpt">{excerpt}</p>
+         <Link as={`/posts/${slug}`} href="/posts/[slug]" className="article-card__read-more">
+           Read article <span aria-hidden="true">→</span>
+         </Link>
          </div>
-         <p className="text-lg leading-relaxed mb-4" style={{'color':'lightgrey'}}>{excerpt}</p>
-        {/* <Avatar name={author.name} picture={author.picture} />*/}
-       </div>
+       </article>
   )
 }
 
