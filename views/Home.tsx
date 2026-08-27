@@ -98,7 +98,7 @@ const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
     };
 
     loadWidget();
-    const retryTimer = window.setTimeout(loadWidget, 1600);
+    const retryTimer = window.setTimeout(loadWidget, 2600);
 
     return () => {
       observer.disconnect();
