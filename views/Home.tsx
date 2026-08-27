@@ -68,28 +68,6 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
     </span>
   );
 };
-const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
-  const widgetRef = useRef<HTMLDivElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => setIsMounted(true), []);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    const trustpilot = (window as any).Trustpilot;
-    if (trustpilot) {
-      trustpilot.loadFromElement(widgetRef.current);
-    }
-  }, [isMounted]);
-
-  if (!isMounted) return null;
-
-  return (
-    <div className={placement === 'top' ? 'trustpilot-top-strip is-loaded' : 'review-trustpilot is-loaded'}>
-      <div ref={widgetRef} className="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="140px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en" data-schema-type="Organization" />
-    </div>
-  );
-};
 
 const Home =  ({ posts }: Props) =>  {
 {/*
@@ -130,7 +108,22 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
-      <TrustpilotReviews placement="top" />
+      <div className="trustpilot-top-strip is-loaded">
+        <div
+          className="trustpilot-widget"
+          data-locale="en-US"
+          data-template-id="53aa8912dec7e10d38f59f36"
+          data-businessunit-id="670a2355c53c6130a02f3e50"
+          data-style-height="140px"
+          data-style-width="100%"
+          data-stars="4,5"
+          data-theme="dark"
+          data-review-languages="en"
+          data-schema-type="Organization"
+        >
+          <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+      </div>
 
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
         <Testimonial/>
@@ -184,7 +177,22 @@ import SignUpModal from '../SignUpModal';
             </div>
           </div>
 
-          <TrustpilotReviews placement="reviews" />
+          <div className="review-trustpilot is-loaded">
+            <div
+              className="trustpilot-widget"
+              data-locale="en-US"
+              data-template-id="53aa8912dec7e10d38f59f36"
+              data-businessunit-id="670a2355c53c6130a02f3e50"
+              data-style-height="140px"
+              data-style-width="100%"
+              data-stars="4,5"
+              data-theme="dark"
+              data-review-languages="en"
+              data-schema-type="Organization"
+            >
+              <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+          </div>
           <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
         </center>
       </Container>
