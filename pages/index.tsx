@@ -156,7 +156,7 @@ useEffect(() => {
               "https://www.stockstobuynow.ai/assets/images/3.webp"
             ]
           }) }} />
-          <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+          <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
           <title>Stocks to Buy Now AI | Stock Signals &amp; Market Insights</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
