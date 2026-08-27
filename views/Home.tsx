@@ -68,50 +68,24 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
     </span>
   );
 };
-
 const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
   const widgetRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => setIsMounted(true), []);
 
   useEffect(() => {
     if (!isMounted) return;
-
-    const widget = widgetRef.current;
-    if (!widget) return;
-
-    const revealWhenReady = () => {
-      if (widget.querySelector('iframe')) setIsLoaded(true);
-    };
-
-    revealWhenReady();
-    const observer = new MutationObserver(revealWhenReady);
-    observer.observe(widget, { childList: true, subtree: true });
-
-    const loadWidget = () => {
-      const trustpilot = (window as any).Trustpilot;
-      if (trustpilot?.loadFromElement) {
-        trustpilot.loadFromElement(widget, true);
-      }
-    };
-
-    loadWidget();
-    const retryTimer = window.setTimeout(loadWidget, 2600);
-
-    return () => {
-      observer.disconnect();
-      window.clearTimeout(retryTimer);
-    };
+    const trustpilot = (window as any).Trustpilot;
+    if (trustpilot) {
+      trustpilot.loadFromElement(widgetRef.current);
+    }
   }, [isMounted]);
 
-    if (!isMounted) return null;
+  if (!isMounted) return null;
 
   return (
-    <div
-      className={`${placement === 'top' ? 'trustpilot-top-strip is-loaded' : 'review-trustpilot is-loaded' }`}
-    >
+    <div className={placement === 'top' ? 'trustpilot-top-strip is-loaded' : 'review-trustpilot is-loaded'}>
       <div ref={widgetRef} className="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="140px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en" data-schema-type="Organization" />
     </div>
   );
