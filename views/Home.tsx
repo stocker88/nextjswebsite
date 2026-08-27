@@ -98,7 +98,7 @@ const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
     };
 
     loadWidget();
-    const retryTimer = window.setTimeout(loadWidget, 800);
+    const retryTimer = window.setTimeout(loadWidget, 1600);
 
     return () => {
       observer.disconnect();
@@ -106,13 +106,11 @@ const TrustpilotReviews = ({ placement }: { placement: 'top' | 'reviews' }) => {
     };
   }, [isMounted]);
 
-
+    if (!isMounted) return null;
 
   return (
     <div
-      className={`${placement === 'top' ? 'trustpilot-top-strip' : 'review-trustpilot'}${isLoaded ? ' is-loaded' : ''}`}
-      aria-label={isLoaded ? 'Customer reviews' : undefined}
-      aria-hidden={!isLoaded}
+      className={`${placement === 'top' ? 'trustpilot-top-strip is-loaded' : 'review-trustpilot is-loaded' }`}
     >
       <div ref={widgetRef} className="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="670a2355c53c6130a02f3e50" data-style-height="140px" data-style-width="100%" data-stars="4,5" data-theme="dark" data-review-languages="en" data-schema-type="Organization" />
     </div>
