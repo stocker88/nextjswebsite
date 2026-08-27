@@ -18,24 +18,33 @@ export default function TrustpilotWidget({
 
   useEffect(() => {
     let attempts = 0;
-    const maxAttempts = 50;
+    const maxAttempts = 30;
 
-    const loadWidget = () => {
+    const forceMobileRender = () => {
+      // 1. Double check if the third-party window object downloaded successfully
       if (window.Trustpilot) {
         if (containerRef.current) {
+          /*
+            2. CRITICAL MOBILE FIX: Force an explicit document context reload targeting
+               the active container ref element to wake up the WebKit layout engine.
+          */
           window.Trustpilot.loadFromElement(containerRef.current);
-          setTimeout(() => setIsLoaded(true), 50);
+
+          // Smoothly toggle container visibility flags after a layout paint break
+          setTimeout(() => setIsLoaded(true), 100);
         }
       } else if (attempts < maxAttempts) {
         attempts++;
-        setTimeout(loadWidget, 100);
+        // 3. Retry on the macro-task execution queue if the network loop is slow
+        setTimeout(forceMobileRender, 150);
       }
     };
 
-    loadWidget();
-  }, []);
+    // Run the parser loop after the component mounts
+    forceMobileRender();
+  }, [templateId, businessUnitId]);
 
-  // Switches class namespaces cleanly to target the appropriate CSS rules
+  // Determine structural style assignments
   const containerClassName = isTopStrip
     ? `trustpilot-top-strip ${isLoaded ? 'is-loaded' : ''}`
     : `trustpilot-widget-container-flat ${isLoaded ? 'is-active' : ''}`;
@@ -56,11 +65,11 @@ export default function TrustpilotWidget({
         data-schema-type="Organization"
       >
         <a
-          href="https://trustpilot.com"
+          href="https://www.trustpilot.com/review/stockstobuynow.ai"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Trustpilot
+          Trustpilot Reviews
         </a>
       </div>
     </div>
