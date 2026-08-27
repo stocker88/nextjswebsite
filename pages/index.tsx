@@ -179,7 +179,54 @@ useEffect(() => {
 
 
         </Head>
+<Script id="trustpilot-observer-fix" strategy="afterInteractive">
+  {`
+    (function () {
+      let observer = null;
+      let debounceTimer = null;
 
+      function reloadTrustpilotWidgets() {
+        if (typeof Trustpilot !== "undefined" && typeof Trustpilot.loadFromElement === "function") {
+          document.querySelectorAll(".trustpilot-widget").forEach((widget) => {
+            // Force an immediate layout engine refresh pass
+            Trustpilot.loadFromElement(widget);
+          });
+        }
+      }
+
+      function debounceReload() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          reloadTrustpilotWidgets();
+        }, 200);
+      }
+
+      // Initialize the mutation listener engine once Next.js hydrates
+      if (typeof window !== 'undefined') {
+        observer = new MutationObserver((mutationsList) => {
+          let foundWidgetChange = false;
+          for (const mutation of mutationsList) {
+            if (mutation.addedNodes && Array.from(mutation.addedNodes).some(node =>
+              node.nodeType === 1 && (node.classList.contains("trustpilot-widget") || node.querySelector?.(".trustpilot-widget"))
+            )) {
+              foundWidgetChange = true;
+              break;
+            }
+          }
+          if (foundWidgetChange) debounceReload();
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+
+        // Initial fallback execution check
+        setTimeout(reloadTrustpilotWidgets, 300);
+      }
+    })();
+  `}
+</Script>
       </Layout>
     </>
   )
