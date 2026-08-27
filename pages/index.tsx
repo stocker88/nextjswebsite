@@ -83,7 +83,7 @@ useEffect(() => {
   trackPage(window.location.pathname);
 
   const params = new URLSearchParams(window.location.search);
-  const referralCode = params.get("goal");
+  const referralCode = params.get('goal') || params.get('referrerUid') || '';
   const campaign = params.get("campaign") || params.get("utm_campaign") || "";
   const source = params.get("source") || params.get("utm_source") || "";
   const medium = params.get("medium") || params.get("utm_medium") || "";
@@ -160,10 +160,7 @@ useEffect(() => {
                 />
           <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
           <title>Stocks to Buy Now: Trading Signals</title>
-          <meta
-              name="apple-itunes-app"
-              content="app-id=1565527320"
-            />
+          <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta charSet="utf-8" />
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" property="og:description" content="Wish someone told you about Nvidia when it was $5 instead of $100? Stocks To Buy Now AI sends you the best stocks to buy before they go up. Maximize profits 30x faster. Invest better using financials, economics, and AI statistical methods. Receive the best trading signals." />
