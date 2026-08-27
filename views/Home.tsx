@@ -71,6 +71,15 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
 };
 
 const Home =  ({ posts }: Props) =>  {
+
+    useEffect(() => {
+      // Wakes up the Trustpilot parser engine safely after Next.js layout compilation completes
+      const trustpilot = (window as any).Trustpilot;
+      if (trustpilot) {
+        trustpilot.loadFromElement();
+      }
+    }, []);
+
 {/*
   const [showModal, setShowModal] = useState(false);
 
