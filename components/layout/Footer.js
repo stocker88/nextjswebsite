@@ -26,39 +26,28 @@ const Footer = ({
   return (
     <footer
       {...props}
-      className={classes}
+      className="professional-footer"
     >
     <Container>
-      <div className="container">
-        <div className={
-          classNames(
-            'site-footer-inner',
-            'has-top-divider',
-          )}>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <nav
-                  {...props}
-                  className={classes}
-                ></nav>
-            <div className="footer-copyright" style={{color:"white", fontFamily: 'arial'}}>
-                        <Link href="/posts/privacypolicy" style={{color:"white", fontFamily: 'arial'}}> Privacy Policy </Link>
-
-                        <br></br>
-                        <br></br>
-
-                        <a href={`mailto:support@stockstobuynow.ai`} style={{color:"white", fontFamily: 'arial'}}> Email Customer Service: support@stockstobuynow.ai </a>
-
-                        <br></br>
-                        <br></br>
-
-                        Made by Stocks To Buy Now AI team, for you
-
-            </div>
-            <br></br>
-            <br></br>
-            <br></br>
-          </div>
+      <div className="professional-footer-inner">
+        <div className="footer-brand-block">
+          <strong>Stocks To Buy Now AI</strong>
+          <span>Market insights, signals and investor education.</span>
         </div>
+
+        <div className="footer-link-block">
+          <span>Company</span>
+          <Link href="/posts/privacypolicy">Privacy Policy</Link>
+        </div>
+
+        <div className="footer-link-block">
+          <span>Support</span>
+          <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a>
+        </div>
+      </div>
+      <div className="footer-bottom-line">
+        <span>© {new Date().getFullYear()} Stocks To Buy Now AI</span>
+        <span>Made by the Stocks To Buy Now AI team, for you.</span>
       </div>
       </Container>
     </footer>

@@ -38,13 +38,14 @@ const Hero = ({
     <section
       {...props}
       className={outerClasses}
+      id="home"
     >
 <Container>
 
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
-     <div style={{paddingTop: 'min(110px,20.5vw)'}}></div>
+     <div style={{paddingTop: 'clamp(72px, 9vw, 110px)'}}></div>
 
          {/*    <Image
               src={require('assets/images/stockstobuynow.png')}
@@ -69,11 +70,11 @@ const Hero = ({
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-3xl md:text-6xl tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.2,textShadow: '0px 0px 7px rgba(1, 0, 1, 0.7)', maxWidth: "800px" }} >
+            <h1 className="text-3xl md:text-6xl tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.2, maxWidth: "800px" }} >
                 Wish someone told you about Nvidia when it was <b>$5 instead of $100</b>?
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-          <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
+          <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
              Stocks to Buy Now AI sends you hot stocks to buy before they blow up!
             </h2>
           </div>
@@ -97,7 +98,7 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of 100,000+ investors
+       Join a community of 300,000+ investors
 
        </div>
 
@@ -113,14 +114,7 @@ const Hero = ({
        height={54.46667}
        priority={true}
         />*/}
-                <br></br>
-             <br></br>
-                <br></br>
-                <br></br>
-                                          <br></br>
-                <br></br>
-
-                   <br></br>
+                <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 
 
           </div>

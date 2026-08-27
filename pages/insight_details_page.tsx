@@ -144,7 +144,7 @@ export default function InsightDetailsPage() {
 
           <div className="trust">
             <span>★★★★★</span>
-            <small>Join 100,000+ investors</small>
+            <small>Join 300,000+ investors</small>
           </div>
         </section>
       </main>

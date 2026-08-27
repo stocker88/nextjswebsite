@@ -69,9 +69,9 @@ const CompoundInterestCalculator = () => {
 
   return (
           <section style={{
-                                width: '90%', // Take up 90% of the screen width
-                                maxWidth: '1000px', // Set a maximum width of 1000 pixels
-                                margin: '0 auto', // Center the sections horizontally
+                                width: '90%',
+                                maxWidth: '1000px',
+                                margin: '0 auto',
                              }}>
 
    <div style={{ color: 'black', padding: '2px' }}>
@@ -84,7 +84,6 @@ const CompoundInterestCalculator = () => {
      </h2>
 <br/>
 <br/>
-
      <div style={{ marginTop: '20px', display: 'inline-block', textAlign: 'left' }}>
 
 
@@ -168,9 +167,6 @@ const CompoundInterestCalculator = () => {
     </div>
     <br/>
     <br/>
-
-
-
     </section>
   );
 };
