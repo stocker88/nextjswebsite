@@ -20,7 +20,8 @@ import Home from '../views/Home';
 //import './App.css';
 import ReactGA from 'react-ga4';
 // import { initializeApp } from "firebase/app";
-import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useState, useEffect, useRef } from 'react';
 import Script from 'next/script'
 
 import {
@@ -123,11 +124,88 @@ useEffect(() => {
 
 }, []);
 
+    const router = useRouter(); // Initialize the SPA route monitor
+
+  // Set up isolated reference containers for your page layout zones
+  const topWidgetRef = useRef<HTMLDivElement>(null);
+  const bodyWidgetRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Stage 1: Verify the component layout tree is attached to the view context
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Stage 2: Centralized Single-Page Application core compilation engine
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const renderWidget = (targetRef: React.RefObject<HTMLDivElement | null>, isTop: boolean) => {
+      if (!targetRef.current || typeof window === 'undefined') return;
+
+      // Flush stale DOM inner nodes to prevent duplicate widget blocks on route changes
+      targetRef.current.innerHTML = '';
+
+      const trustbox = document.createElement("div");
+      trustbox.className = "trustpilot-widget";
+      trustbox.setAttribute("data-locale", "en-US");
+      trustbox.setAttribute("data-template-id", "53aa8912dec7e10d38f59f36");
+      trustbox.setAttribute("data-businessunit-id", "670a2355c53c6130a02f3e50");
+      trustbox.setAttribute("data-style-height", "140px");
+      trustbox.setAttribute("data-style-width", "100%");
+      trustbox.setAttribute("data-stars", "4,5");
+      trustbox.setAttribute("data-theme", isTop ? "dark" : "light");
+      trustbox.setAttribute("data-review-languages", "en");
+      trustbox.setAttribute("data-schema-type", "Organization");
+      trustbox.style.minHeight = "140px";
+      trustbox.style.display = "block";
+
+      const fallbackAnchor = document.createElement("a");
+      fallbackAnchor.href = "https://trustpilot.com";
+      fallbackAnchor.target = "_blank";
+      fallbackAnchor.rel = "noopener noreferrer";
+      fallbackAnchor.textContent = "Trustpilot";
+      trustbox.appendChild(fallbackAnchor);
+
+      targetRef.current.appendChild(trustbox);
+
+      // SPA Fix: Force Trustpilot to compile the programmatically injected node element
+      const trustpilotAPI = (window as any).Trustpilot;
+      if (trustpilotAPI && trustpilotAPI.loadFromElement) {
+        // True flag parameter forces a deep iframe cache override pass on mobile engines
+        trustpilotAPI.loadFromElement(trustbox, true);
+      }
+    };
+
+    const triggerFullUIRefresh = () => {
+      renderWidget(topWidgetRef, true);
+      renderWidget(bodyWidgetRef, true);
+    };
+
+    // Run initial execution sweep
+    if ((window as any).Trustpilot) {
+      triggerFullUIRefresh();
+    }
+
+    // --- THE SPA ROUTING SHIELD ---
+    // Watches your router context and re-runs the compiler when a route change finishes
+    router.events.on('routeChangeComplete', triggerFullUIRefresh);
+
+    // Clean up event listeners when the parent component unmounts
+    return () => {
+      router.events.off('routeChangeComplete', triggerFullUIRefresh);
+    };
+  }, [isMounted, router.events]);
 
   return (
     <>
+       {/* Force-load absolute secure script assets */}
+       <Script
+         src="https://trustpilot.com"
+         strategy="afterInteractive"
+       />
        <Layout>
-       {morePosts.length > 0 && <Home posts={morePosts} />}
+       {morePosts.length > 0 && <Home posts={morePosts} topWidgetRef={topWidgetRef} bodyWidgetRef={bodyWidgetRef}  />}
 
         <Head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
