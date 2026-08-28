@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const iosAppStoreUrl =
@@ -9,7 +9,6 @@ const androidPlayStoreUrl =
 
 const getAppStoreUrl = () => {
   if (typeof window === 'undefined') return iosAppStoreUrl;
-
   const isAndroid = /Android/i.test(navigator.userAgent);
   return isAndroid ? androidPlayStoreUrl : iosAppStoreUrl;
 };
@@ -24,11 +23,25 @@ const navItems = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <nav className="site-nav" aria-label="Main navigation">
         <a className="site-brand" href="#home" onClick={closeMenu}>
           <Image
@@ -41,18 +54,7 @@ export default function Header() {
           <span>Stocks To Buy Now AI</span>
         </a>
 
-        <button
-          className="nav-toggle"
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded={isOpen}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
+        {/* Links container (Collapses into dropdown on mobile) */}
         <div className={`nav-content${isOpen ? ' is-open' : ''}`}>
           <div className="nav-links">
             {navItems.map((item) => (
@@ -61,7 +63,10 @@ export default function Header() {
               </a>
             ))}
           </div>
+        </div>
 
+        {/* Right side actions (Horizontal alignment on mobile) */}
+        <div className="nav-actions">
           <a
             className="nav-cta"
             href={getAppStoreUrl()}
@@ -71,6 +76,18 @@ export default function Header() {
           >
             Get the App
           </a>
+
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
       </nav>
     </header>

@@ -3,67 +3,98 @@
 @tailwind utilities;
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+/* ==========================================================================
+   SITE HEADER
+   ========================================================================== */
+
 .site-header {
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	background: rgba(7, 12, 26, 0.94);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Initial state: vibrant blue */
+    background: hsl(200, 100%, 48%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Scrolled state: dark navy matching page background */
+.site-header.is-scrolled {
+    background: rgba(8, 13, 27, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: min(1180px, calc(100% - 40px));
-	min-height: 72px;
-	margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1180px, calc(100% - 40px));
+    min-height: 72px;
+    margin: 0 auto;
 }
 
 .site-brand {
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	color: #fff;
-	font-size: 16px;
-	font-weight: 700;
-	text-decoration: none;
-	white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .site-brand img {
-	border-radius: 9px;
+    border-radius: 9px;
 }
+
+/* ==========================================================================
+   NAVIGATION LINKS & CONTENT
+   ========================================================================== */
 
 .nav-content,
 .nav-links {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-content {
-	gap: 28px;
+    gap: 28px;
 }
 
 .nav-links {
-	gap: 24px;
+    gap: 24px;
 }
 
 .nav-links a {
-	color: rgba(255, 255, 255, 0.76);
-	font-size: 14px;
-	font-weight: 500;
-	text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-	color: #fff;
+    color: #fff;
 }
 
+/* ==========================================================================
+   RIGHT ACTION GROUP (CTA + HAMBURGER TOGGLE)
+   ========================================================================== */
+
+.nav-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+/* Base CTA Button State */
 .nav-cta {
 	display: inline-flex;
 	align-items: center;
@@ -78,141 +109,195 @@ html {
 	text-decoration: none;
 }
 
-.app-download-cta {
-	min-width: 180px;
-	min-height: 50px;
-	font-size: 15px;
-}
-
-.download-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: clamp(64px, 8vw, 104px) 20px;
-	text-align: center;
-	background: #080d1b;
-}
-
-.download-section p {
-	margin: 0 0 12px;
-	color: #51a5ff;
-	font-size: 12px;
-	font-weight: 800;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-}
-
-.download-section h2 {
-	max-width: 680px;
-	margin: 0 0 28px;
-	color: #fff;
-	font-size: clamp(28px, 4vw, 46px);
-	line-height: 1.12;
-	letter-spacing: -0.035em;
-}
-
+/* Hamburger Toggle Button */
 .nav-toggle {
-	display: none;
-	padding: 8px;
-	border: 0;
-	background: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
 .nav-toggle span {
-	display: block;
-	width: 22px;
-	height: 2px;
-	margin: 4px 0;
-	background: #fff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 2px 0; /* Reduced to ensure pixel-perfect vertical centering */
+    background: #fff;
 }
+
+/* ==========================================================================
+   DOWNLOAD SECTION
+   ========================================================================== */
+
+.app-download-cta {
+    min-width: 180px;
+    min-height: 50px;
+    font-size: 15px;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(64px, 8vw, 104px) 20px;
+    text-align: center;
+    background: #080d1b;
+}
+
+.download-section p {
+    margin: 0 0 12px;
+    color: #51a5ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.download-section h2 {
+    max-width: 680px;
+    margin: 0 0 28px;
+    color: #fff;
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (< 860px)
+   ========================================================================== */
 
 @media (max-width: 860px) {
-	.site-nav {
-		width: min(100% - 28px, 1180px);
-		min-height: 64px;
-	}
+    .site-nav {
+        width: min(100% - 24px, 1180px);
+        min-height: 64px;
+    }
 
-	.nav-toggle {
-		display: block;
-	}
+    .nav-toggle {
+        display: flex;
+    }
 
-	.nav-content {
-		display: none;
-		position: absolute;
-		top: 64px;
-		left: 0;
-		right: 0;
-		padding: 18px 20px 22px;
-		background: #090f20;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	}
+    /* Small, perfectly vertically-centered CTA on mobile */
+    .site-nav .nav-cta {
+        min-height: 32px;
+        padding: 0 14px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        white-space: nowrap;
+    }
 
-	.nav-content.is-open,
-	.nav-links {
-		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-	}
+    /* Collapsible Navigation Dropdown */
+    .nav-content {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        padding: 18px 20px 22px;
+        background: hsl(200, 100%, 48%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        transition: background-color 0.3s ease;
+    }
 
-	.nav-links {
-		gap: 0;
-	}
+    .site-header.is-scrolled .nav-content {
+        background: #080d1b;
+    }
 
-	.nav-links a {
-		padding: 12px 4px;
-	}
+    .nav-content.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-	.nav-cta {
-		margin-top: 12px;
-	}
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        width: 100%;
+    }
 }
-
 .founder-section {
 	padding: clamp(72px, 10vw, 132px) 20px;
 	background:
 		radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
 		#070b18;
 }
-
+/* Container Layout */
 .founder-shell {
-	display: grid;
-	grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.15fr);
-	align-items: center;
-	gap: clamp(44px, 7vw, 96px);
-	width: min(1120px, 100%);
-	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 
+/* Vertical / Stacked State (Default / Mobile) */
 .founder-portrait-wrap {
-	position: relative;
-	width: min(100%, 430px);
-	margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
 }
 
 .founder-portrait {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: 28px;
-	border: 1px solid rgba(255, 255, 255, 0.14);
-	object-fit: cover;
+    display: block;
+    width: 156px;
+    height: 156px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    object-fit: cover;
 }
 
 .founder-portrait-caption {
-	position: absolute;
-	right: 18px;
-	bottom: 18px;
-	display: inline-flex;
-	align-items: center;
-	gap: 9px;
-	padding: 11px 15px;
-	border: 1px solid rgba(255, 255, 255, 0.14);
-	border-radius: 999px;
-	background: rgba(7, 11, 24, 0.86);
-	backdrop-filter: blur(12px);
-	color: rgba(255, 255, 255, 0.86);
-	font-size: 12px;
-	font-weight: 600;
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(7, 11, 24, 0.86);
+    backdrop-filter: blur(12px);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Horizontal / Side-by-Side State (Desktop Layout) */
+@media (min-width: 900px) {
+    .founder-shell {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .founder-portrait-wrap {
+        display: block;
+        width: 420px;
+        flex-shrink: 0;
+    }
+
+    .founder-portrait {
+        width: 420px;
+        height: 420px;
+        border-radius: 28px;
+    }
+
+    .founder-portrait-caption {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        padding: 11px 15px;
+    }
 }
 
 .founder-status {

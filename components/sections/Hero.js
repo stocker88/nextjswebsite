@@ -102,7 +102,8 @@ const Hero = ({
 
        </div>
 
-
+<br></br>
+<br></br>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">
 
