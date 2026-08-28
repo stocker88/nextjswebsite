@@ -48,8 +48,8 @@ export default function TrustpilotWidget({
         trustbox.setAttribute("data-businessunit-id", businessUnitId);
         trustbox.setAttribute("data-style-height", height);
         trustbox.setAttribute("data-style-width", "100%");
-        trustbox.setAttribute("data-stars", "4,5");
-        trustbox.setAttribute("data-theme", isTopStrip ? "dark" : "light");
+        trustbox.setAttribute("data-stars", "5");
+        trustbox.setAttribute("data-theme", "dark");
         trustbox.setAttribute("data-review-languages", "en");
         trustbox.setAttribute("data-schema-type", "Organization");
         trustbox.style.minHeight = height;
