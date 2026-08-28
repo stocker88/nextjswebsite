@@ -31,7 +31,7 @@ export default function TrustpilotWidget({
       if (!isCancelled) {
         setRenderMode((prev) => (prev === 'widget' ? 'widget' : 'fallback'));
       }
-    }, 1000);
+    }, 2200);
 
     const renderWidget = () => {
       if (!containerRef.current || typeof window === 'undefined' || isCancelled) return;
