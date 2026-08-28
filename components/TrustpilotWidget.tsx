@@ -22,11 +22,11 @@ export default function TrustpilotWidget({
 
   useEffect(() => {
     let attempts = 0;
-    const maxAttempts = 10;
+    const maxAttempts = 20; // Expanded retries for mobile Safari latency
     let timeoutId: NodeJS.Timeout;
     let isCancelled = false;
 
-    // Strict 1-second fallback trigger
+    // Fallback timer: trigger fallback mode after 2.2 seconds if widget fails to load
     const fallbackTimer = setTimeout(() => {
       if (!isCancelled) {
         setRenderMode((prev) => (prev === 'widget' ? 'widget' : 'fallback'));
@@ -91,6 +91,9 @@ export default function TrustpilotWidget({
     };
   }, [templateId, businessUnitId, height, isTopStrip, trustpilotUrl]);
 
+  // Render fallback UI during initial loading state and fallback state
+  const showFallback = renderMode === 'loading' || renderMode === 'fallback';
+
   return (
     <a
       href={trustpilotUrl}
@@ -99,11 +102,11 @@ export default function TrustpilotWidget({
       style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%' }}
     >
       <div
-        className={isTopStrip ? `trustpilot-top-strip ${renderMode === 'widget' ? 'is-loaded' : ''}` : `trustpilot-widget-container-flat ${renderMode === 'widget' ? 'is-active' : ''}`}
+        className={isTopStrip ? `trustpilot-top-strip ${renderMode === 'widget' ? 'is-loaded' : 'is-active'}` : `trustpilot-widget-container-flat ${renderMode === 'widget' ? 'is-active' : 'is-active'}`}
         style={{ position: 'relative', minHeight: height }}
       >
-        {/* Render ONLY the fallback if renderMode evaluates to fallback */}
-        {renderMode === 'fallback' && (
+        {/* Render fallback immediately while loading or when script times out */}
+        {showFallback && (
           <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -155,7 +158,7 @@ export default function TrustpilotWidget({
           </div>
         )}
 
-        {/* Dynamic Trustpilot Target: Kept in DOM for script initialization, strictly unmounted/hidden when fallback renders */}
+        {/* Dynamic Trustpilot Target: Hidden until widget successfully initializes */}
         <div
           ref={containerRef}
           style={{
