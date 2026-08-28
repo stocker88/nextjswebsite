@@ -35,7 +35,7 @@ const Testimonial = () => {
 
         <div className="founder-copy">
           <p className="founder-eyebrow">Built by market expertise</p>
-          <h2 id="founder-title">Meet Our Founder</h2>
+          <h2 id="founder-title">$4 Billion Managed</h2>
           <p className="founder-role">
             Statistician, economist, trader, data scientist and software engineer.
           </p>

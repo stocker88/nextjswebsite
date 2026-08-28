@@ -15,9 +15,9 @@ const getAppStoreUrl = () => {
 
 const navItems = [
   { label: 'Reviews', href: '#reviews' },
-  { label: 'About Aness', href: '#about-aness' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Watch & Learn', href: '#watch-and-learn' },
+  { label: 'Expertise', href: '#about-aness' },
   { label: 'Download', href: '#download' },
 ];
 

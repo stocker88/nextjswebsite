@@ -87,7 +87,7 @@ const Home = ({ posts, topWidgetRef, bodyWidgetRef }: Props) => {
 
   return (
     <>
-<div style={{ width: '100%', overflowX: 'hidden', position: 'relative' }}>
+<div style={{ width: '100%', overflowX: 'clip', position: 'relative' }}>
     <Header />
 {/*    import { useState } from 'react';
 import SignUpModal from '../SignUpModal';
@@ -174,26 +174,27 @@ import SignUpModal from '../SignUpModal';
                         />
 
 
-      <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
-        <Testimonial/>
-      </div>
-
-          <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
-
         <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
           <div className="signals-shell">
             <IntroApp/>
             <Swipe/>
           </div>
         </section>
+
         <YoutubeSection/>
+      <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
+        <Testimonial/>
+      </div>
+
+
+ <CompoundInterestCalculator/>
         <section className="editorial-section">
           <div className="editorial-shell">
             <Intro />
             {posts.length > 0 && <MoreStories posts={posts} />}
           </div>
         </section>
-        <CompoundInterestCalculator/>
+
 {/*         <center>
 <FAQ/>
 </center>*/}

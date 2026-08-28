@@ -5,31 +5,42 @@ interface TrustProps {
   businessUnitId: string;
   height?: string;
   isTopStrip?: boolean;
+  trustpilotUrl?: string;
 }
 
 export default function TrustpilotWidget({
   templateId,
   businessUnitId,
   height = "140px",
-  isTopStrip = false
+  isTopStrip = false,
+  trustpilotUrl = "https://www.trustpilot.com/review/stockstobuynow.ai"
 }: TrustProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+
+  // States: 'loading' | 'widget' | 'fallback'
+  const [renderMode, setRenderMode] = useState<'loading' | 'widget' | 'fallback'>('loading');
 
   useEffect(() => {
     let attempts = 0;
-    const maxAttempts = 30;
+    const maxAttempts = 10;
+    let timeoutId: NodeJS.Timeout;
+    let isCancelled = false;
+
+    // Strict 1-second fallback trigger
+    const fallbackTimer = setTimeout(() => {
+      if (!isCancelled) {
+        setRenderMode((prev) => (prev === 'widget' ? 'widget' : 'fallback'));
+      }
+    }, 1000);
 
     const renderWidget = () => {
-      if (!containerRef.current || typeof window === 'undefined') return;
+      if (!containerRef.current || typeof window === 'undefined' || isCancelled) return;
 
       const trustpilotAPI = (window as any).Trustpilot;
 
       if (trustpilotAPI) {
-        // 1. Flush stale DOM inner nodes to prevent duplicate widget blocks on route changes
         containerRef.current.innerHTML = '';
 
-        // 2. Programmatically create the widget container
         const trustbox = document.createElement("div");
         trustbox.className = "trustpilot-widget";
         trustbox.setAttribute("data-locale", "en-US");
@@ -44,47 +55,116 @@ export default function TrustpilotWidget({
         trustbox.style.minHeight = height;
         trustbox.style.display = "block";
 
-        // 3. Attach fallback anchor context layout
         const fallbackAnchor = document.createElement("a");
-        fallbackAnchor.href = "https://trustpilot.com";
+        fallbackAnchor.href = trustpilotUrl;
         fallbackAnchor.target = "_blank";
         fallbackAnchor.rel = "noopener noreferrer";
         fallbackAnchor.textContent = "Trustpilot Reviews";
         trustbox.appendChild(fallbackAnchor);
 
-        // 4. Inject it into the reactive reference target
         containerRef.current.appendChild(trustbox);
 
-        // 5. SPA Fix: Force Trustpilot to compile the programmatically injected node element
         if (trustpilotAPI.loadFromElement) {
-          // True flag parameter forces a deep iframe cache override pass on mobile engines
           trustpilotAPI.loadFromElement(trustbox, true);
         }
 
-        // Toggle visibility state flags safely after layout paint execution
-        setTimeout(() => setIsLoaded(true), 100);
+        clearTimeout(fallbackTimer);
+        if (!isCancelled) {
+          setRenderMode('widget');
+        }
       } else if (attempts < maxAttempts) {
         attempts++;
-        // Retry execution macro-task loop step if network script is parsing
-        setTimeout(renderWidget, 150);
+        timeoutId = setTimeout(renderWidget, 100);
+      } else {
+        if (!isCancelled) {
+          setRenderMode('fallback');
+        }
       }
     };
 
     renderWidget();
-  }, [templateId, businessUnitId, height, isTopStrip]); // Perfectly updates if props change dynamically
 
-  const containerClassName = isTopStrip
-    ? `trustpilot-top-strip ${isLoaded ? 'is-loaded' : ''}`
-    : `trustpilot-widget-container-flat ${isLoaded ? 'is-active' : ''}`;
+    return () => {
+      isCancelled = true;
+      clearTimeout(fallbackTimer);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [templateId, businessUnitId, height, isTopStrip, trustpilotUrl]);
 
   return (
-    <div className={containerClassName}>
-      {/*
-        This empty wrapper is preserved across page renders.
-        The useEffect completely wipes its internals and reconstructs the widget layout
-        cleanly every single time the route updates on iPhone.
-      */}
-      <div ref={containerRef} style={{ width: '100%', minHeight: height }} />
-    </div>
+    <a
+      href={trustpilotUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%' }}
+    >
+      <div
+        className={isTopStrip ? `trustpilot-top-strip ${renderMode === 'widget' ? 'is-loaded' : ''}` : `trustpilot-widget-container-flat ${renderMode === 'widget' ? 'is-active' : ''}`}
+        style={{ position: 'relative', minHeight: height }}
+      >
+        {/* Render ONLY the fallback if renderMode evaluates to fallback */}
+        {renderMode === 'fallback' && (
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: height,
+            color: '#ffffff',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            textAlign: 'center',
+            padding: '16px 0',
+            boxSizing: 'border-box'
+          }}>
+            <div style={{ fontSize: '26px', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: '8px' }}>
+              Excellent
+            </div>
+
+            <div style={{ display: 'flex', gap: '3px', marginBottom: '8px' }}>
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  style={{
+                    backgroundColor: '#00b67a',
+                    width: '32px',
+                    height: '32px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ fontSize: '13px', color: '#aab3c5', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span>Based on <strong style={{ color: '#fff', textDecoration: 'underline' }}>3,440 reviews</strong></span>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '6px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#00b67a">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <span style={{ fontSize: '18px', fontWeight: '700', color: '#ffffff', letterSpacing: '-0.03em' }}>
+                Trustpilot
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* Dynamic Trustpilot Target: Kept in DOM for script initialization, strictly unmounted/hidden when fallback renders */}
+        <div
+          ref={containerRef}
+          style={{
+            width: '100%',
+            minHeight: height,
+            display: renderMode === 'widget' ? 'block' : 'none'
+          }}
+        />
+      </div>
+    </a>
   );
 }

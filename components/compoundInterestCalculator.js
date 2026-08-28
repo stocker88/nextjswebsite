@@ -18,10 +18,10 @@ const currency = new Intl.NumberFormat('en-US', {
 });
 
 const CompoundInterestCalculator = () => {
-  const [principal, setPrincipal] = useState(10000);
+  const [principal, setPrincipal] = useState(100);
   const [dailyContrib, setDailyContrib] = useState(30);
-  const [monthlyReturn, setMonthlyReturn] = useState(0.9);
-  const [investmentYears, setInvestmentYears] = useState(20);
+  const [monthlyReturn, setMonthlyReturn] = useState(20);
+  const [investmentYears, setInvestmentYears] = useState(4);
 
   const data = useMemo(() => {
     const annualInterestRate = (monthlyReturn * 1.04) / 100 * 12;
@@ -70,11 +70,11 @@ const CompoundInterestCalculator = () => {
     },
     {
       id: 'return',
-      label: 'Estimated monthly return',
+      label: 'Option monthly return',
       suffix: '%',
       value: monthlyReturn,
       min: 0,
-      max: 5,
+      max: 100,
       step: 0.1,
       setValue: setMonthlyReturn,
     },
@@ -84,7 +84,7 @@ const CompoundInterestCalculator = () => {
       suffix: ' years',
       value: investmentYears,
       min: 1,
-      max: 40,
+      max: 10,
       step: 1,
       setValue: setInvestmentYears,
     },
@@ -185,6 +185,7 @@ const CompoundInterestCalculator = () => {
         </div>
 
         <p className="compound-disclaimer">Illustrative projections only. Returns are not guaranteed and this is not financial advice.</p>
+        <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
       </div>
     </section>
   );
