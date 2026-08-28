@@ -119,7 +119,7 @@ import SignUpModal from '../SignUpModal';
               <TrustpilotWidget
                 templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                 businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
-                height="140px"
+                height="200px"
                 isTopStrip={true}
               />
 
@@ -169,9 +169,10 @@ import SignUpModal from '../SignUpModal';
               <TrustpilotWidget
                           templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                           businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
-                          height="140px"
-                          isTopStrip={true}
+                          height="160px"
+                          isTopStrip={false}
                         />
+                        <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
 
 
         <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>

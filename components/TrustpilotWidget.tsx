@@ -11,7 +11,7 @@ interface TrustProps {
 export default function TrustpilotWidget({
   templateId,
   businessUnitId,
-  height = "140px",
+  height = "200px",
   isTopStrip = false,
   trustpilotUrl = "https://www.trustpilot.com/review/stockstobuynow.ai"
 }: TrustProps) {
@@ -22,16 +22,16 @@ export default function TrustpilotWidget({
 
   useEffect(() => {
     let attempts = 0;
-    const maxAttempts = 20; // Expanded retries for mobile Safari latency
+    const maxAttempts = 20;
     let timeoutId: NodeJS.Timeout;
     let isCancelled = false;
 
-    // Fallback timer: trigger fallback mode after 2.2 seconds if widget fails to load
+    // Trigger fallback mode after 1.2s if widget fails to load
     const fallbackTimer = setTimeout(() => {
       if (!isCancelled) {
         setRenderMode((prev) => (prev === 'widget' ? 'widget' : 'fallback'));
       }
-    }, 2200);
+    }, 800);
 
     const renderWidget = () => {
       if (!containerRef.current || typeof window === 'undefined' || isCancelled) return;
@@ -91,21 +91,24 @@ export default function TrustpilotWidget({
     };
   }, [templateId, businessUnitId, height, isTopStrip, trustpilotUrl]);
 
-  // Render fallback UI during initial loading state and fallback state
-  const showFallback = renderMode === 'loading' || renderMode === 'fallback';
+  const showFallback = renderMode === 'fallback';
 
   return (
     <a
       href={trustpilotUrl}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%' , minHeight: height,}}
+      style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%', minHeight: height }}
     >
       <div
         className={isTopStrip ? `trustpilot-top-strip ${renderMode === 'widget' ? 'is-loaded' : 'is-active'}` : `trustpilot-widget-container-flat ${renderMode === 'widget' ? 'is-active' : 'is-active'}`}
-        style={{ position: 'relative', minHeight: height }}
+        style={{
+          position: 'relative',
+          minHeight: height,
+          background: isTopStrip ? undefined : 'transparent' // Explicitly transparent when not top strip
+        }}
       >
-        {/* Render fallback immediately while loading or when script times out */}
+        {/* Fallback displayed only after timeout */}
         {showFallback && (
           <div style={{
             display: 'flex',
@@ -117,7 +120,8 @@ export default function TrustpilotWidget({
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             textAlign: 'center',
             padding: '16px 0',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            background: 'transparent'
           }}>
             <div style={{ fontSize: '26px', fontWeight: '700', letterSpacing: '-0.02em', marginBottom: '8px' }}>
               Excellent
@@ -158,13 +162,14 @@ export default function TrustpilotWidget({
           </div>
         )}
 
-        {/* Dynamic Trustpilot Target: Hidden until widget successfully initializes */}
+        {/* Dynamic Trustpilot Target */}
         <div
           ref={containerRef}
           style={{
             width: '100%',
             minHeight: height,
-            display: renderMode === 'widget' ? 'block' : 'none'
+            display: renderMode === 'widget' ? 'block' : 'none',
+            background: 'transparent'
           }}
         />
       </div>

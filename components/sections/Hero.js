@@ -41,7 +41,7 @@ const Hero = ({
       id="home"
     >
 <Container>
-
+<br></br>
 <center>
       <div className="container-sm has-animations" style={{  zIndex: 10 }}>
           <div className="hero-content">

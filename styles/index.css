@@ -574,14 +574,15 @@ html {
 }
 
 /* --- TRUSPILOT CONTAINER SECTION --- */
-/* --- TRUSPILOT CONTAINER SECTION --- */
 .trustpilot-widget-container-flat {
+  /* This stretches the container background edge-to-edge across the screen */
   width: 100%;
-  display: block; /* Ensure it is visible by default */
-  opacity: 1; /* Ensure opacity is visible */
+
+  opacity: 1;
   transition: opacity 0.4s ease-in-out;
   box-sizing: border-box;
 
+  /* Your exact background styling rules copied from your founder section */
   background:
     radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
     #070b18;
@@ -622,7 +623,7 @@ html {
 	margin: 0 auto;
 	padding: 0 20px;
 	overflow: hidden;
-	opacity: 0;
+	opacity: 1;
 	background:
 		radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
 		#070b18;

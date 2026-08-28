@@ -201,8 +201,8 @@ useEffect(() => {
     <>
        {/* Force-load absolute secure script assets */}
        <Script
-         src="https://trustpilot.com"
-         strategy="afterInteractive"
+         src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+         strategy="lazyOnload"
        />
        <Layout>
        {morePosts.length > 0 && <Home posts={morePosts} topWidgetRef={topWidgetRef} bodyWidgetRef={bodyWidgetRef}  />}
