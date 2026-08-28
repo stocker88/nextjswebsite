@@ -423,7 +423,9 @@ import SignUpModal from '../SignUpModal';
         }
 
         .trustpilot-widget > a {
-          display: none;
+          display: block;
+          text-decoration: none;
+          color: inherit;
         }
 
         .review-source-card {

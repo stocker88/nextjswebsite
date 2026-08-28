@@ -99,7 +99,7 @@ export default function TrustpilotWidget({
       href={trustpilotUrl}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%' }}
+      style={{ display: 'block', textDecoration: 'none', cursor: 'pointer', width: '100%' , minHeight: height,}}
     >
       <div
         className={isTopStrip ? `trustpilot-top-strip ${renderMode === 'widget' ? 'is-loaded' : 'is-active'}` : `trustpilot-widget-container-flat ${renderMode === 'widget' ? 'is-active' : 'is-active'}`}
