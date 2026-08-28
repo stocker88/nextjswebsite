@@ -87,7 +87,7 @@ const Home = ({ posts, topWidgetRef, bodyWidgetRef }: Props) => {
 
   return (
     <>
-
+<div style={{ width: '100%', overflowX: 'hidden', position: 'relative' }}>
     <Header />
 {/*    import { useState } from 'react';
 import SignUpModal from '../SignUpModal';
@@ -549,6 +549,7 @@ import SignUpModal from '../SignUpModal';
         }
       `}</style>
 
+    </div>
     </>
   );
 }
