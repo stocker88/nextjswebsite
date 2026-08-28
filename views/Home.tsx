@@ -124,13 +124,9 @@ import SignUpModal from '../SignUpModal';
               />
 
 
-      <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
-        <Testimonial/>
-      </div>
-
       <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
 
-          <div id="reviews" className="review-sources" style={{ scrollMarginTop: '90px' }}>
+          <div id="reviews" className="review-sources" style={{ scrollMarginTop: '90px' ,scrollMarginBottom: '90px' }}>
             <div className="review-sources__heading">
               <span>Trusted across platforms</span>
               <h2>See what investors are saying</h2>
@@ -169,7 +165,7 @@ import SignUpModal from '../SignUpModal';
               </a>
             </div>
           </div>
-
+<div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
               <TrustpilotWidget
                           templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                           businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
@@ -177,6 +173,10 @@ import SignUpModal from '../SignUpModal';
                           isTopStrip={true}
                         />
 
+
+      <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
+        <Testimonial/>
+      </div>
 
           <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
 
