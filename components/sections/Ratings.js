@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useSpringCarousel } from 'react-spring-carousel'
 import { isMobile } from "react-device-detect";
 import { isIOS, isMac } from '../../utils/deviceUtils';
+import { trackAppStoreClick } from '../../lib/analytics';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -54,7 +55,15 @@ const [index, setIndex] = useState(0);
 
 
     <center style={{width:'100%'}}>
-    <a href={dynamicLink} target="_blank">
+    <a
+      href={dynamicLink}
+      target="_blank"
+      onClick={() => trackAppStoreClick({
+        store: isIOS() ? 'apple' : 'google',
+        placement: 'ratings',
+        linkUrl: dynamicLink,
+      })}
+    >
         <Image
           width={438*0.85}
           height={875*0.85}

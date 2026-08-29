@@ -18,7 +18,6 @@ import { useState, useEffect } from 'react';
 import NewsletterSignUp from '../../components/formStocker'
 import Image from 'next/image';
 import Script from 'next/script'
-import ReactGA from 'react-ga4';
 
 import {
   FacebookShareButton,
@@ -58,24 +57,6 @@ export default function Post({ post, morePosts, preview }: Props) {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Adjust the width threshold as needed
     };
-
-    ReactGA.initialize('G-JPXMZYD5DY');
-    const intervalId = setInterval(() => {
-      if (window.gtag) {
-        clearInterval(intervalId);
-        console.log('gtagslug');
-        // Replace with your analytics tracking code
-        window.gtag('config', 'G-JPXMZYD5DY', {
-          page_title: post.slug,
-          page_location: window.location.href,
-          page_path: location.pathname,
-          screen_name: post.slug,
-        });
-      } else {
-        console.log('no gtagslug');
-        }
-    }, 100);
-
 
     handleResize(); // Set initial state based on window width
 
@@ -133,17 +114,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                     }
                   }
                 }) }} />
-                    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXMZYD5DY"/>
-                    <Script>
-                      {`
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag() {
-                        window.dataLayer.push(arguments);
-                      }
-                      gtag('js', new Date());
-                      gtag('config', 'G-JPXMZYD5DY');
-                      `}
-                    </Script>
               </Head>
               <div>
              <center>

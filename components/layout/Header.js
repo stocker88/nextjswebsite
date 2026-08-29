@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { trackAppStoreClick } from '../../lib/analytics';
 
 const iosAppStoreUrl =
   'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
@@ -40,6 +41,16 @@ export default function Header() {
 
   const closeMenu = () => setIsOpen(false);
 
+  const trackHeaderDownload = () => {
+    const linkUrl = getAppStoreUrl();
+    trackAppStoreClick({
+      store: /Android/i.test(navigator.userAgent) ? 'google' : 'apple',
+      placement: 'header',
+      linkUrl,
+    });
+    closeMenu();
+  };
+
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <nav className="site-nav" aria-label="Main navigation">
@@ -72,7 +83,7 @@ export default function Header() {
             href={getAppStoreUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={closeMenu}
+            onClick={trackHeaderDownload}
           >
             Get the App
           </a>

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { trackAppStoreClick } from '../lib/analytics';
 
 const APP_STORE_URL =
   'https://apps.apple.com/app/id1565527320';
@@ -133,12 +134,21 @@ export default function InsightDetailsPage() {
             signals and analysis.
           </p>
 
-          <a className="primaryButton" href={storeUrl}>
+          <a
+            className="primaryButton"
+            href={storeUrl}
+            onClick={() => trackAppStoreClick({
+              store: storeUrl === PLAY_STORE_URL ? 'google' : 'apple',
+              placement: 'shared_insight',
+              linkUrl: storeUrl,
+            })}
+          >
             Continue in the app →
           </a>
 
           <p className="installed">
-            Already have the app? Tap <strong>OPEN</strong> in
+            Already have the app?
+            Tap <strong>OPEN</strong> in
             Safari’s app banner above.
           </p>
 

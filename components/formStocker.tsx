@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { trackAppStoreClick } from '../lib/analytics';
 
 type Props = {
   from: string;
@@ -20,12 +21,11 @@ function NewsletterSignUp({ from }: Props) {
   }, []);
 
   const trackDownload = () => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'getTheAppClicked', {
-        from,
-        action: 'clicked',
-      });
-    }
+    trackAppStoreClick({
+      store: storeUrl === androidPlayStoreUrl ? 'google' : 'apple',
+      placement: from,
+      linkUrl: storeUrl,
+    });
   };
 
   return (
@@ -36,7 +36,7 @@ function NewsletterSignUp({ from }: Props) {
       rel="noopener noreferrer"
       onClick={trackDownload}
     >
-      Get the App
+      Get the App →
     </a>
   );
 }

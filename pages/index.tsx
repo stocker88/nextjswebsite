@@ -18,7 +18,6 @@ import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
 import Home from '../views/Home';
 //import './App.css';
-import ReactGA from 'react-ga4';
 // import { initializeApp } from "firebase/app";
 import { useRouter } from 'next/router';
 import { useState, useEffect, useRef } from 'react';
@@ -66,14 +65,6 @@ import { isMobile} from "react-device-detect";
 type Props = {
   allPosts: Post[]
 }
-ReactGA.initialize('G-JPXMZYD5DY');
-
-const trackPage = page => {
-  ReactGA.set({ page });
-  ReactGA.send("pageview");
-};
-
-
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
@@ -84,8 +75,6 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(0,-1)
 
 useEffect(() => {
-  trackPage(window.location.pathname);
-
   const params = new URLSearchParams(window.location.search);
   const referralCode = params.get('goal') || params.get('referrerUid') || '';
   const campaign = params.get("campaign") || params.get("utm_campaign") || "";

@@ -4,26 +4,26 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { isMobile } from "react-device-detect";
 import 'react-medium-image-zoom/dist/styles.css'
-import ReactGA from 'react-ga4';
+import { trackAppStoreClick } from '../../lib/analytics';
 const innerClasses = classNames(
 'hero-inner section-inner',
 );
 
 const sendOutboundApple = (event) => {
 
-  ReactGA.event({
-   category: 'StoreRedirect',
-   action: 'storeClick',
-   label: 'AAPL'
- });
+  trackAppStoreClick({
+    store: 'apple',
+    placement: 'install_buttons_with_qr_and_logo',
+    linkUrl: event.currentTarget.href,
+  });
 }
 
 const sendOutboundAndroid = (event) => {
-ReactGA.event({
-category: 'StoreRedirect',
-action: 'storeClick',
-label: 'Android'
-});
+  trackAppStoreClick({
+    store: 'google',
+    placement: 'install_buttons_with_qr_and_logo',
+    linkUrl: event.currentTarget.href,
+  });
 }
 
 const InstallButtonsWithQRAndLogo = ({...props}) => {

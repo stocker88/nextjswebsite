@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { isMobile } from "react-device-detect";
 
 import 'react-medium-image-zoom/dist/styles.css'
-import ReactGA from 'react-ga4';
+import { trackAppStoreClick } from '../../lib/analytics';
 import QRCode from 'qrcode.react';
 import { useSpring, animated } from 'react-spring';
 
@@ -33,19 +33,19 @@ const innerClasses = classNames(
 );
 
 const sendOutboundApple = (event) => {
-  ReactGA.event({
-   category: 'StoreRedirect',
-   action: 'storeClick',
-   label: 'AAPL'
- });
+  trackAppStoreClick({
+    store: 'apple',
+    placement: 'install_buttons_with_qr',
+    linkUrl: event.currentTarget.href,
+  });
 }
 
 const sendOutboundAndroid = (event) => {
-ReactGA.event({
-category: 'StoreRedirect',
-action: 'storeClick',
-label: 'Android'
-});
+  trackAppStoreClick({
+    store: 'google',
+    placement: 'install_buttons_with_qr',
+    linkUrl: event.currentTarget.href,
+  });
 }
 
 const InstallButtons = ({...props}) => {
