@@ -10,6 +10,11 @@ const PLAY_STORE_URL =
 
 export default function InsightDetailsPage() {
   const [storeUrl, setStoreUrl] = useState(APP_STORE_URL);
+  const [appUrl, setAppUrl] = useState('');
+  const [isSocialBrowser, setIsSocialBrowser] = useState(false);
+  const [smartBannerContent, setSmartBannerContent] = useState(
+    'app-id=1565527320, app-argument=https://www.stockstobuynow.ai/insight_details_page',
+  );
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -39,6 +44,26 @@ export default function InsightDetailsPage() {
       postId;
 
     const userAgent = navigator.userAgent;
+
+    const isAndroid = /Android/i.test(userAgent);
+
+    setIsSocialBrowser(
+      /Instagram|FBAN|FBAV|TikTok|Twitter|X\//i.test(userAgent),
+    );
+
+    // Keep the route in Uri.path so it matches the existing Flutter handler.
+    // The query string preserves the post and campaign attribution fields.
+    setAppUrl(
+      `${
+        isAndroid
+          ? 'ai.stockstobuynow'
+          : 'com.newcompany.stocker'
+      }:///insight_details_page?${params.toString()}`,
+    );
+
+    setSmartBannerContent(
+      `app-id=1565527320, app-argument=${window.location.href}`,
+    );
 
     const platform = /Android/i.test(userAgent)
       ? 'android'
@@ -89,6 +114,27 @@ export default function InsightDetailsPage() {
     ).catch(console.error);
   }, []);
 
+  const openApp = () => {
+    if (!appUrl) return;
+
+    window.location.href = appUrl;
+
+    // A successful app open backgrounds this page. If it remains visible,
+    // the app is unavailable (or the in-app browser blocked the request), so
+    // continue to the correct store.
+    window.setTimeout(() => {
+      if (document.visibilityState !== 'visible') return;
+
+      trackAppStoreClick({
+        store: storeUrl === PLAY_STORE_URL ? 'google' : 'apple',
+        placement: 'shared_insight_fallback',
+        linkUrl: storeUrl,
+      });
+
+      window.location.href = storeUrl;
+    }, 1600);
+  };
+
   return (
     <>
       <Head>
@@ -101,7 +147,7 @@ export default function InsightDetailsPage() {
 
         <meta
           name="apple-itunes-app"
-          content="app-id=1565527320"
+          content={smartBannerContent}
         />
 
         <meta
@@ -134,22 +180,18 @@ export default function InsightDetailsPage() {
             signals and analysis.
           </p>
 
-          <a
+          <button
             className="primaryButton"
-            href={storeUrl}
-            onClick={() => trackAppStoreClick({
-              store: storeUrl === PLAY_STORE_URL ? 'google' : 'apple',
-              placement: 'shared_insight',
-              linkUrl: storeUrl,
-            })}
+            type="button"
+            onClick={openApp}
           >
-            Continue in the app →
-          </a>
+            Open this insight in the app →
+          </button>
 
           <p className="installed">
-            Already have the app?
-            Tap <strong>OPEN</strong> in
-            Safari’s app banner above.
+            {isSocialBrowser
+              ? 'If the app does not open, tap ••• and choose Open in browser.'
+              : 'If you do not have the app, we’ll take you to the App Store.'}
           </p>
 
           <div className="trust">
@@ -234,9 +276,12 @@ export default function InsightDetailsPage() {
           width: 100%;
           margin-top: 28px;
           padding: 17px 22px;
+          border: 0;
           border-radius: 999px;
           background: white;
           color: #07133e;
+          cursor: pointer;
+          font-family: inherit;
           text-decoration: none;
           font-size: 17px;
           font-weight: 800;
