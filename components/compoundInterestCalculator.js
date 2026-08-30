@@ -17,6 +17,21 @@ const currency = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 });
 
+const CompactCompoundTooltip = ({ active, payload, label }) => {
+  if (!active || !payload?.length) return null;
+
+  const projected = payload.find((item) => item.dataKey === 'totalWithInterest');
+  const contributed = payload.find((item) => item.dataKey === 'onlyAmountSaved');
+
+  return (
+    <div className="compound-tooltip">
+      <strong>Year {label}</strong>
+      <span className="compound-tooltip__projected">Value <b>{currency.format(projected?.value || 0)}</b></span>
+      <span className="compound-tooltip__contributed">Added <b>{currency.format(contributed?.value || 0)}</b></span>
+    </div>
+  );
+};
+
 const CompoundInterestCalculator = () => {
   const [principal, setPrincipal] = useState(100);
   const [dailyContrib, setDailyContrib] = useState(30);
@@ -92,6 +107,7 @@ const CompoundInterestCalculator = () => {
 
   return (
     <section className="compound-section" aria-labelledby="compound-title">
+    <br></br>
       <div className="compound-shell">
         <header className="compound-heading">
           <p>Interactive calculator</p>
@@ -171,9 +187,8 @@ const CompoundInterestCalculator = () => {
                     tickFormatter={(value) => value >= 1000000 ? `$${(value / 1000000).toFixed(1)}m` : `$${Math.round(value / 1000)}k`}
                   />
                   <Tooltip
-                    formatter={(value, name) => [currency.format(value), name]}
-                    labelFormatter={(year) => `Year ${year}`}
-                    contentStyle={{ background: '#10182a', border: '1px solid rgba(255,255,255,.12)', borderRadius: 12, color: '#fff' }}
+                    content={<CompactCompoundTooltip />}
+                    allowEscapeViewBox={{ x: false, y: false }}
                   />
                   <Legend wrapperStyle={{ color: '#aab3c5', fontSize: 12, paddingTop: 10 }} />
                   <Line type="monotone" dataKey="totalWithInterest" stroke="#5daaff" strokeWidth={3} dot={false} name="Projected value" />
@@ -187,6 +202,8 @@ const CompoundInterestCalculator = () => {
         <p className="compound-disclaimer">Illustrative projections only. Returns are not guaranteed and this is not financial advice.</p>
         <div style={{ height: 'clamp(32px, 5vw, 64px)' }} />
       </div>
+      <br></br>
+      <br></br>
     </section>
   );
 };

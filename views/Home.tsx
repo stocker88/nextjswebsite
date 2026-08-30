@@ -23,6 +23,7 @@ import Link from 'next/link';
 import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 import TrustpilotWidget from '../components/TrustpilotWidget';
+import ProductProof from '../components/sections/ProductProof';
 
 type Props = {
   posts: Post[];
@@ -172,6 +173,8 @@ import SignUpModal from '../SignUpModal';
             <Swipe/>
           </div>
         </section>
+
+        <ProductProof />
 
         <YoutubeSection/>
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>

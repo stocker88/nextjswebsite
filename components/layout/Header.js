@@ -18,7 +18,7 @@ const getAppStoreUrl = () => {
 const navItems = [
   { label: 'Reviews', href: '#reviews' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Watch & Learn', href: '#watch-and-learn' },
+  { label: 'Learn for Free', href: '#watch-and-learn' },
   { label: 'Expertise', href: '#about-aness' },
   { label: 'Download', href: '#download' },
 ];
@@ -39,18 +39,24 @@ export default function Header({
 
   useEffect(() => {
     const updateBrowserTheme = (isPageScrolled) => {
-      let themeMeta = document.querySelector('meta[name="theme-color"]');
+      const themeColor = isPageScrolled ? '#080d1b' : '#00a3f5';
+      let themeMetas = document.querySelectorAll('meta[name="theme-color"]');
 
-      if (!themeMeta) {
-        themeMeta = document.createElement('meta');
+      if (themeMetas.length === 0) {
+        const themeMeta = document.createElement('meta');
         themeMeta.setAttribute('name', 'theme-color');
         document.head.appendChild(themeMeta);
+        themeMetas = document.querySelectorAll('meta[name="theme-color"]');
       }
 
-      themeMeta.setAttribute(
-        'content',
-        isPageScrolled ? '#080d1b' : '#00a3f5',
-      );
+      themeMetas.forEach((themeMeta) => {
+        themeMeta.setAttribute('content', themeColor);
+      });
+
+      // Newer physical iOS Safari versions may derive browser chrome from
+      // the document background rather than honoring a dynamic theme-color.
+      document.documentElement.style.backgroundColor = themeColor;
+      document.body.style.backgroundColor = themeColor;
     };
 
     const handleScroll = () => {

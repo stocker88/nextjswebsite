@@ -7,8 +7,8 @@ const YoutubeSection = () => {
     <section id="watch-and-learn" className="playlist-section" aria-labelledby="playlist-title">
       <div className="playlist-shell">
         <div className="playlist-heading">
-          <p>Watch and learn</p>
-          <h2 id="playlist-title">Learn how to use Stocks To Buy Now AI</h2>
+          <p>Learn for Free</p>
+          <h2 id="playlist-title">Learn for Free</h2>
           <span>
             Explore the complete video playlist for practical walkthroughs,
             market insights and investing education.
