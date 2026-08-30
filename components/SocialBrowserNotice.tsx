@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 
 export function detectSocialBrowser(userAgent: string) {
-  if (/Instagram/i.test(userAgent)) return 'Instagram';
-  if (/FBAN|FBAV/i.test(userAgent)) return 'Facebook';
   if (/TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)) {
     return 'TikTok';
   }
-  if (/Twitter|X\//i.test(userAgent)) return 'X';
+
   return '';
 }
 
@@ -28,7 +26,7 @@ export default function SocialBrowserNotice() {
           <span>Tap the browser menu above, then select <b>Open in Browser</b></span>
         </span>
       </div>
-      <span className="browserNoticeArrow" aria-hidden="true">↗</span>
+      <span className="browserNoticeArrow" aria-hidden="true">↑</span>
 
       <style jsx>{`
         .browserNotice {
@@ -61,11 +59,11 @@ export default function SocialBrowserNotice() {
           min-width: 0;
           flex-direction: column;
           gap: 7px;
-          padding-right: 42px;
+          padding-right: 52px;
         }
 
         .browserNotice strong {
-          font-size: 15px;
+          font-size: 19px;
           line-height: 1.25;
         }
 
@@ -84,21 +82,21 @@ export default function SocialBrowserNotice() {
           border-radius: 10px;
           background: rgba(104, 216, 255, 0.08);
           color: rgba(255, 255, 255, 0.88);
-          font-size: 13px;
+          font-size: 17px;
           font-weight: 500;
           line-height: 1.35;
         }
 
         .browserNoticeAction small {
           color: #68d8ff;
-          font-size: 9px;
+          font-size: 11px;
           font-weight: 800;
           letter-spacing: 0.12em;
         }
 
         .browserNotice .browserNoticeAction > span {
           color: rgba(255, 255, 255, 0.88);
-          font-size: 13px;
+          font-size: 17px;
           line-height: 1.35;
         }
 
@@ -112,19 +110,19 @@ export default function SocialBrowserNotice() {
           top: 14px;
           right: 16px;
           color: #68d8ff;
-          font-size: 30px;
+          font-size: 48px;
           font-weight: 800;
           line-height: 1;
-          transform: translateY(-2px);
+          transform: rotate(8deg) translateY(-2px);
           animation: pointToMenu 1.4s ease-in-out infinite;
         }
 
         @keyframes pointToMenu {
           0%, 100% {
-            transform: translate(-1px, 1px);
+            transform: rotate(8deg) translateY(1px);
           }
           50% {
-            transform: translate(3px, -3px);
+            transform: rotate(8deg) translateY(-5px);
           }
         }
 
