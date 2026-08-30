@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-function detectSocialBrowser(userAgent: string) {
+export function detectSocialBrowser(userAgent: string) {
   if (/Instagram/i.test(userAgent)) return 'Instagram';
   if (/FBAN|FBAV/i.test(userAgent)) return 'Facebook';
   if (/TikTok/i.test(userAgent)) return 'TikTok';
   if (/Twitter|X\//i.test(userAgent)) return 'X';
-  return '';
+  return 'X';
 }
 
 export default function SocialBrowserNotice() {
@@ -21,9 +21,12 @@ export default function SocialBrowserNotice() {
     <aside className="browserNotice" role="status">
       <div>
         <strong>You’re inside {browserName}</strong>
-        <span>Tap ••• above, then choose Open in browser</span>
+        <span className="browserNoticeAction">
+          <small>TO CONTINUE</small>
+          <span>Tap the browser menu above, then select <b>Open in Browser</b></span>
+        </span>
       </div>
-      <span className="browserNoticeArrow" aria-hidden="true">↗</span>
+      <span className="browserNoticeArrow" aria-hidden="true">↑</span>
 
       <style jsx>{`
         .browserNotice {
@@ -35,8 +38,8 @@ export default function SocialBrowserNotice() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 12px;
-          padding: 13px 14px 13px 16px;
+          gap: 14px;
+          padding: 15px 16px;
           border: 1px solid rgba(255, 255, 255, 0.3);
           border-radius: 16px;
           background: rgba(5, 13, 42, 0.96);
@@ -55,11 +58,12 @@ export default function SocialBrowserNotice() {
           display: flex;
           min-width: 0;
           flex-direction: column;
-          gap: 2px;
+          gap: 7px;
+          padding-right: 42px;
         }
 
         .browserNotice strong {
-          font-size: 14px;
+          font-size: 15px;
           line-height: 1.25;
         }
 
@@ -69,13 +73,63 @@ export default function SocialBrowserNotice() {
           line-height: 1.35;
         }
 
+        .browserNotice .browserNoticeAction {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          padding: 9px 11px;
+          border: 1px solid rgba(104, 216, 255, 0.25);
+          border-radius: 10px;
+          background: rgba(104, 216, 255, 0.08);
+          color: rgba(255, 255, 255, 0.88);
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.35;
+        }
+
+        .browserNoticeAction small {
+          color: #68d8ff;
+          font-size: 9px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+        }
+
+        .browserNotice .browserNoticeAction > span {
+          color: rgba(255, 255, 255, 0.88);
+          font-size: 13px;
+          line-height: 1.35;
+        }
+
+        .browserNoticeAction b {
+          color: #fff;
+          font-weight: 800;
+        }
+
         .browserNotice .browserNoticeArrow {
-          flex: 0 0 auto;
+          position: absolute;
+          top: 14px;
+          right: 16px;
           color: #68d8ff;
           font-size: 30px;
           font-weight: 800;
           line-height: 1;
-          transform: translateY(-2px);
+          transform: rotate(18deg) translateY(-2px);
+          animation: pointToMenu 1.4s ease-in-out infinite;
+        }
+
+        @keyframes pointToMenu {
+          0%, 100% {
+            transform: rotate(18deg) translateY(1px);
+          }
+          50% {
+            transform: rotate(18deg) translateY(-5px);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .browserNotice .browserNoticeArrow {
+            animation: none;
+          }
         }
       `}</style>
     </aside>

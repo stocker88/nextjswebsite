@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { trackAppStoreClick } from '../../lib/analytics';
+import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
 
 const iosAppStoreUrl =
   'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
@@ -25,6 +26,11 @@ const navItems = [
 export default function Header({ homeHref = '#home', navBasePath = '' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSocialBrowser, setIsSocialBrowser] = useState(null);
+
+  useEffect(() => {
+    setIsSocialBrowser(Boolean(detectSocialBrowser(navigator.userAgent)));
+  }, []);
 
   useEffect(() => {
     const updateBrowserTheme = (isPageScrolled) => {
@@ -64,6 +70,12 @@ export default function Header({ homeHref = '#home', navBasePath = '' }) {
     });
     closeMenu();
   };
+
+  if (isSocialBrowser === null) return null;
+
+  if (isSocialBrowser) {
+    return <SocialBrowserNotice />;
+  }
 
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>

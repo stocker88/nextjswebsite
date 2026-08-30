@@ -14,7 +14,6 @@ export default function InsightDetailsPage() {
   const [storeUrl, setStoreUrl] = useState(APP_STORE_URL);
   const [appUrl, setAppUrl] = useState('');
   const [isSocialBrowser, setIsSocialBrowser] = useState(false);
-  const [socialBrowserName, setSocialBrowserName] = useState('social app');
   const [smartBannerContent, setSmartBannerContent] = useState(
     'app-id=1565527320, app-argument=https://www.stockstobuynow.ai/insight_details_page',
   );
@@ -61,10 +60,6 @@ export default function InsightDetailsPage() {
       : '';
 
     setIsSocialBrowser(Boolean(detectedSocialBrowser));
-
-    if (detectedSocialBrowser) {
-      setSocialBrowserName(detectedSocialBrowser);
-    }
 
     // Keep the route in Uri.path so it matches the existing Flutter handler.
     // The query string preserves the post and campaign attribution fields.
@@ -212,16 +207,6 @@ export default function InsightDetailsPage() {
 
         <meta name="theme-color" content="#00a3f5" />
       </Head>
-
-      {isSocialBrowser && (
-        <aside className="browserNotice" role="status">
-          <div>
-            <strong>You’re inside {socialBrowserName}</strong>
-            <span>Tap ••• above, then choose "Open in Browser"</span>
-          </div>
-          <span className="browserNoticeArrow" aria-hidden="true">↗</span>
-        </aside>
-      )}
 
       <Header homeHref="/" navBasePath="/" />
 
