@@ -154,15 +154,6 @@ import SignUpModal from '../SignUpModal';
                 </div>
               </a>
 
-              <a className="review-source-card" href="https://www.linkedin.com/in/anesshusseinali/" target="_blank" rel="noopener noreferrer">
-                <PlatformIcon platform="linkedin" />
-                <div className="review-source-card__content">
-                  <span className="review-source-card__eyebrow">LinkedIn</span>
-                  <h3>Founder profile</h3>
-                  <p>Experience, background and professional updates.</p>
-                  <span className="review-source-card__link">View profile <span aria-hidden="true">↗</span></span>
-                </div>
-              </a>
             </div>
           </div>
 <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />

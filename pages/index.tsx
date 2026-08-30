@@ -22,6 +22,7 @@ import Home from '../views/Home';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useRef } from 'react';
 import Script from 'next/script'
+import SocialBrowserNotice from '../components/SocialBrowserNotice';
 
 import {
     FacebookShareButton,
@@ -188,6 +189,7 @@ useEffect(() => {
 
   return (
     <>
+       <SocialBrowserNotice />
        {/* Force-load absolute secure script assets */}
        <Script
          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"

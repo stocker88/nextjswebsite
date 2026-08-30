@@ -22,19 +22,33 @@ const navItems = [
   { label: 'Download', href: '#download' },
 ];
 
-export default function Header() {
+export default function Header({ homeHref = '#home', navBasePath = '' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+    const updateBrowserTheme = (isPageScrolled) => {
+      let themeMeta = document.querySelector('meta[name="theme-color"]');
+
+      if (!themeMeta) {
+        themeMeta = document.createElement('meta');
+        themeMeta.setAttribute('name', 'theme-color');
+        document.head.appendChild(themeMeta);
       }
+
+      themeMeta.setAttribute(
+        'content',
+        isPageScrolled ? '#080d1b' : '#00a3f5',
+      );
     };
 
+    const handleScroll = () => {
+      const isPageScrolled = window.scrollY > 50;
+      setIsScrolled(isPageScrolled);
+      updateBrowserTheme(isPageScrolled);
+    };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -54,7 +68,7 @@ export default function Header() {
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <nav className="site-nav" aria-label="Main navigation">
-        <a className="site-brand" href="#home" onClick={closeMenu}>
+        <a className="site-brand" href={homeHref} onClick={closeMenu}>
           <Image
             src="/assets/images/stockerRobotIcon.png"
             alt="Stocks To Buy Now AI"
@@ -69,7 +83,7 @@ export default function Header() {
         <div className={`nav-content${isOpen ? ' is-open' : ''}`}>
           <div className="nav-links">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} onClick={closeMenu}>
+              <a key={item.href} href={`${navBasePath}${item.href}`} onClick={closeMenu}>
                 {item.label}
               </a>
             ))}

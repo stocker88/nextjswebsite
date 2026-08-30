@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
 import PostBody from '../../components/post-body'
-import Header from '../../components/header'
+import SiteHeader from '../../components/layout/Header'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
@@ -115,29 +115,16 @@ export default function Post({ post, morePosts, preview }: Props) {
                   }
                 }) }} />
               </Head>
-              <div>
-             <center>
-                     <Header
-                     slug={post.slug}
-                   />
+              <SiteHeader homeHref="/" navBasePath="/" />
 
+              <section className="article-promo" aria-label="StocksToBuyNow AI app">
+                <span>STOCKSTOBUYNOW AI</span>
+                <h2>Smarter stock research, wherever you invest</h2>
+                <p>Discover AI-powered signals, analysis and investing insights in the app.</p>
+                <NewsletterSignUp from={post.slug}/>
+              </section>
 
-                   <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(20px,max(18px,3.5vw))", lineHeight: 1.3,textShadow: '0px 0px 5px rgba(1, 0, 1, 0.7)', maxWidth: "650px" }} >
-                  Maximize Profits: our cutting-edge AI sends you hot stocks to buy before they blow up!
-                  </h2>
-                  <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-                  <NewsletterSignUp from={post.slug}/>
-
-                  <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-
-             </center>
-            </div>
               <article className="post-detail">
-
-
-
-
-                <br></br>
               <Container>
               <PostHeader
                 title={post.title}
@@ -146,27 +133,15 @@ export default function Post({ post, morePosts, preview }: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-              <br></br>
-              <br></br>
-              <br></br>
+              <div className="article-inspiration">
                                             <QuoteDisplay from={'inspiration_button_'+post.slug}/>
+              </div>
 
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                              <br></br>
-                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight md:pr-8" style={{'color':'white', 'textShadow': '0px 0px 3px rgba(0, 0, 0, 1)' }} >
-                  Suggested Blog Stories
-                </h2>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                <section className="article-more">
+                <span>KEEP READING</span>
+                <h2>More investing insights</h2>
               <MoreStories posts={morePosts} />
+                </section>
 
               </Container>
             </article>
