@@ -130,7 +130,7 @@ import SignUpModal from '../SignUpModal';
             <div className="review-sources__heading">
               <span>Trusted across platforms</span>
               <h2>See what investors are saying</h2>
-              <p>Explore independent reviews and learn more about the people behind Stocks To Buy Now AI.</p>
+              <p>Explore independent ratings and reviews on Google Play and the Apple App Store.</p>
             </div>
 
             <div className="review-sources__grid">
@@ -391,7 +391,7 @@ import SignUpModal from '../SignUpModal';
 
         .review-sources__grid {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 16px;
         }
 
