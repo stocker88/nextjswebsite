@@ -23,13 +23,18 @@ const navItems = [
   { label: 'Download', href: '#download' },
 ];
 
-export default function Header({ homeHref = '#home', navBasePath = '' }) {
+export default function Header({
+  homeHref = '#home',
+  navBasePath = '',
+  socialNoticeMode = 'all',
+  socialNoticeVariant = 'standard',
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSocialBrowser, setIsSocialBrowser] = useState(null);
+  const [socialBrowserName, setSocialBrowserName] = useState(null);
 
   useEffect(() => {
-    setIsSocialBrowser(Boolean(detectSocialBrowser(navigator.userAgent)));
+    setSocialBrowserName(detectSocialBrowser(navigator.userAgent));
   }, []);
 
   useEffect(() => {
@@ -71,10 +76,18 @@ export default function Header({ homeHref = '#home', navBasePath = '' }) {
     closeMenu();
   };
 
-  if (isSocialBrowser === null) return null;
+  if (socialBrowserName === null) return null;
 
-  if (isSocialBrowser) {
-    return <SocialBrowserNotice />;
+  const shouldShowSocialNotice = Boolean(socialBrowserName) &&
+    (socialNoticeMode === 'all' || socialBrowserName === 'TikTok');
+
+  if (shouldShowSocialNotice) {
+    return (
+      <SocialBrowserNotice
+        browserName={socialBrowserName}
+        variant={socialNoticeVariant}
+      />
+    );
   }
 
   return (

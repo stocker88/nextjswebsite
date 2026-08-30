@@ -208,7 +208,12 @@ export default function InsightDetailsPage() {
         <meta name="theme-color" content="#00a3f5" />
       </Head>
 
-      <Header homeHref="/" navBasePath="/" />
+      <Header
+        homeHref="/"
+        navBasePath="/"
+        socialNoticeMode="all"
+        socialNoticeVariant="insight"
+      />
 
       <main className="page">
         <div className="content">

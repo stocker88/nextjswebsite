@@ -1,19 +1,33 @@
 import { useEffect, useState } from 'react';
 
 export function detectSocialBrowser(userAgent: string) {
+  if (/Instagram/i.test(userAgent)) return 'Instagram';
+  if (/FBAN|FBAV/i.test(userAgent)) return 'Facebook';
   if (/TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)) {
     return 'TikTok';
   }
-
+  if (/Twitter|X\//i.test(userAgent)) return 'X';
   return '';
 }
 
-export default function SocialBrowserNotice() {
-  const [browserName, setBrowserName] = useState('');
+type Props = {
+  browserName?: string;
+  variant?: 'standard' | 'insight';
+};
+
+export default function SocialBrowserNotice({
+  browserName: suppliedBrowserName = '',
+  variant = 'standard',
+}: Props) {
+  const [detectedBrowserName, setDetectedBrowserName] = useState('');
 
   useEffect(() => {
-    setBrowserName(detectSocialBrowser(navigator.userAgent));
-  }, []);
+    if (!suppliedBrowserName) {
+      setDetectedBrowserName(detectSocialBrowser(navigator.userAgent));
+    }
+  }, [suppliedBrowserName]);
+
+  const browserName = suppliedBrowserName || detectedBrowserName;
 
   if (!browserName) return null;
 
@@ -22,8 +36,14 @@ export default function SocialBrowserNotice() {
       <div>
         <strong>You’re inside {browserName}</strong>
         <span className="browserNoticeAction">
-          <small>TO CONTINUE</small>
-          <span>Tap the browser menu above, then select <b>Open in Browser</b></span>
+          <small>{variant === 'insight' ? 'SHARED LINK' : 'TO CONTINUE'}</small>
+          <span>
+            {variant === 'insight' ? (
+              <>For this link to work, tap the browser menu above and select <b>Open in Browser</b></>
+            ) : (
+              <>Tap the browser menu above, then select <b>Open in Browser</b></>
+            )}
+          </span>
         </span>
       </div>
       <span className="browserNoticeArrow" aria-hidden="true">↑</span>
