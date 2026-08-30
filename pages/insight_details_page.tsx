@@ -53,7 +53,7 @@ export default function InsightDetailsPage() {
       ? 'Instagram'
       : /FBAN|FBAV/i.test(userAgent)
       ? 'Facebook'
-      : /TikTok/i.test(userAgent)
+      : /TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)
       ? 'TikTok'
       : /Twitter|X\//i.test(userAgent)
       ? 'X'

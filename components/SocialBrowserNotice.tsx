@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 export function detectSocialBrowser(userAgent: string) {
   if (/Instagram/i.test(userAgent)) return 'Instagram';
   if (/FBAN|FBAV/i.test(userAgent)) return 'Facebook';
-  if (/TikTok/i.test(userAgent)) return 'TikTok';
+  if (/TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)) {
+    return 'TikTok';
+  }
   if (/Twitter|X\//i.test(userAgent)) return 'X';
-  return 'X';
+  return '';
 }
 
 export default function SocialBrowserNotice() {
@@ -26,7 +28,7 @@ export default function SocialBrowserNotice() {
           <span>Tap the browser menu above, then select <b>Open in Browser</b></span>
         </span>
       </div>
-      <span className="browserNoticeArrow" aria-hidden="true">↑</span>
+      <span className="browserNoticeArrow" aria-hidden="true">↗</span>
 
       <style jsx>{`
         .browserNotice {
@@ -113,16 +115,16 @@ export default function SocialBrowserNotice() {
           font-size: 30px;
           font-weight: 800;
           line-height: 1;
-          transform: rotate(18deg) translateY(-2px);
+          transform: translateY(-2px);
           animation: pointToMenu 1.4s ease-in-out infinite;
         }
 
         @keyframes pointToMenu {
           0%, 100% {
-            transform: rotate(18deg) translateY(1px);
+            transform: translate(-1px, 1px);
           }
           50% {
-            transform: rotate(18deg) translateY(-5px);
+            transform: translate(3px, -3px);
           }
         }
 
