@@ -112,6 +112,21 @@ html {
 	text-decoration: none;
 }
 
+.hero-cta-group .app-download-cta:not(.app-download-cta--secondary) {
+	animation: hero-cta-pulse 700ms ease-in-out 4s 1;
+}
+
+@keyframes hero-cta-pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.035); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-cta-group .app-download-cta:not(.app-download-cta--secondary) {
+		animation: none;
+	}
+}
+
 /* Hamburger Toggle Button */
 .nav-toggle {
     display: none;
@@ -140,6 +155,38 @@ html {
     min-width: 180px;
     min-height: 50px;
     font-size: 15px;
+}
+
+.hero-cta-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.app-download-cta--secondary {
+	border: 1px solid rgba(255, 255, 255, 0.58);
+	background: rgba(7, 17, 55, 0.26);
+	box-shadow: inset 0 0 0 1px rgba(81, 165, 255, 0.08);
+	backdrop-filter: blur(10px);
+}
+
+.app-download-cta--secondary:hover {
+	background: rgba(7, 17, 55, 0.42);
+	color: #fff;
+}
+
+@media (max-width: 520px) {
+	.hero-cta-group {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.app-download-cta--secondary {
+		min-height: 38px;
+		font-size: 12px;
+	}
 }
 
 .download-section {

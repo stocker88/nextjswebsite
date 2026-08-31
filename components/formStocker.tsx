@@ -3,6 +3,8 @@ import { trackAppStoreClick } from '../lib/analytics';
 
 type Props = {
   from: string;
+  label?: string;
+  secondary?: boolean;
 };
 
 const iosAppStoreUrl =
@@ -11,7 +13,11 @@ const iosAppStoreUrl =
 const androidPlayStoreUrl =
   'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
-function NewsletterSignUp({ from }: Props) {
+function NewsletterSignUp({
+  from,
+  label = 'Get the App →',
+  secondary = false,
+}: Props) {
   const [storeUrl, setStoreUrl] = useState(iosAppStoreUrl);
 
   useEffect(() => {
@@ -30,13 +36,13 @@ function NewsletterSignUp({ from }: Props) {
 
   return (
     <a
-      className="nav-cta app-download-cta"
+      className={`nav-cta app-download-cta${secondary ? ' app-download-cta--secondary' : ''}`}
       href={storeUrl}
       target="_blank"
       rel="noopener noreferrer"
       onClick={trackDownload}
     >
-      Get the App →
+      {label}
     </a>
   );
 }

@@ -1,10 +1,19 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import SocialBrowserNotice from '../components/SocialBrowserNotice';
+import Index from './index';
+import { getAllPosts } from '../lib/api';
+import { trackAppStoreClick } from '../lib/analytics';
+import type Post from '../interfaces/post';
 
 const RESOLVE_SHORT_LINK_URL =
   'https://us-central1-stocker-fcda2.cloudfunctions.net/resolveShortLink';
+const STORE_REFERRAL_URL =
+  'https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick';
+const APP_STORE_URL = 'https://apps.apple.com/app/id1565527320';
+const PLAY_STORE_URL =
+  'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
 type ResolvedLink = {
   type?: string;
@@ -18,7 +27,11 @@ type ResolvedLink = {
   campaign?: string;
 };
 
-function destinationFor(link: ResolvedLink) {
+type Props = {
+  allPosts: Post[];
+};
+
+function queryFor(link: ResolvedLink) {
   const params = new URLSearchParams();
 
   if (link.postId) params.set('postId', link.postId);
@@ -29,17 +42,53 @@ function destinationFor(link: ResolvedLink) {
   if (link.medium) params.set('utm_medium', link.medium);
   if (link.campaign) params.set('utm_campaign', link.campaign);
 
-  const path = link.destinationPath
-    ? `/${link.destinationPath.replace(/^\/+|\/+$/g, '')}`
-    : '/';
-  const query = params.toString();
-
-  return query ? `${path}?${query}` : path;
+  return params.toString();
 }
 
-export default function ShortLinkPage() {
+function storeAttribution(code: string, link: ResolvedLink) {
+  const referralCode = link.goal || link.referrerUid || '';
+  if (!referralCode) return;
+
+  const trackingKey = `shortLinkTracked:${code}`;
+  if (sessionStorage.getItem(trackingKey)) return;
+
+  sessionStorage.setItem(trackingKey, 'true');
+  localStorage.setItem('referralCode', referralCode);
+
+  if (link.postId) {
+    sessionStorage.setItem(
+      `sharedPostTracked:${referralCode}:${link.postId}`,
+      'true',
+    );
+  }
+
+  const userAgent = navigator.userAgent;
+  const platform = /Android/i.test(userAgent)
+    ? 'android'
+    : /iPhone|iPad|iPod/i.test(userAgent)
+    ? 'ios'
+    : 'web';
+
+  fetch(STORE_REFERRAL_URL, {
+    method: 'POST',
+    keepalive: true,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      referralCode,
+      campaign: link.campaign || '',
+      source: link.source || '',
+      medium: link.medium || '',
+      postId: link.postId || '',
+      userAgent,
+      countryCode: (navigator.language.split('-')[1] || '').toUpperCase(),
+      platform,
+    }),
+  }).catch(console.error);
+}
+
+export default function ShortLinkPage({ allPosts }: Props) {
   const router = useRouter();
-  const [error, setError] = useState('');
+  const [showInsightPrompt, setShowInsightPrompt] = useState(false);
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -48,10 +97,7 @@ export default function ShortLinkPage() {
       ? router.query.c.trim()
       : '';
 
-    if (!code) {
-      setError('This link is incomplete.');
-      return;
-    }
+    if (!code) return;
 
     fetch(RESOLVE_SHORT_LINK_URL, {
       method: 'POST',
@@ -60,102 +106,201 @@ export default function ShortLinkPage() {
     })
       .then(async (response) => {
         const body = await response.json();
-
-        if (!response.ok || !body.result) {
-          throw new Error('Short link could not be resolved');
-        }
-
-        return router.replace(destinationFor(body.result));
+        if (!response.ok || !body.result) throw new Error('Unable to resolve link');
+        return body.result as ResolvedLink;
       })
-      .catch(() => {
-        setError('This link is unavailable or has expired.');
+      .then((link) => {
+        storeAttribution(code, link);
+
+        if (link.type === 'insight' || link.postId) {
+          sessionStorage.setItem('pendingSharedInsight', queryFor(link));
+          setShowInsightPrompt(true);
+        }
+      })
+      .catch(console.error);
+  }, [router.isReady, router.query.c]);
+
+  const openInsight = () => {
+    const query = sessionStorage.getItem('pendingSharedInsight') || '';
+    if (!query) return;
+
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const appUrl = `${
+      isAndroid ? 'ai.stockstobuynow' : 'com.newcompany.stocker'
+    }:///insight_details_page?${query}`;
+    const storeUrl = isAndroid ? PLAY_STORE_URL : APP_STORE_URL;
+    const appFrame = document.createElement('iframe');
+    let appOpened = false;
+
+    appFrame.setAttribute('aria-hidden', 'true');
+    appFrame.style.display = 'none';
+    appFrame.src = appUrl;
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') appOpened = true;
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.body.appendChild(appFrame);
+
+    window.setTimeout(() => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      appFrame.remove();
+
+      if (appOpened || document.visibilityState !== 'visible') return;
+
+      trackAppStoreClick({
+        store: isAndroid ? 'google' : 'apple',
+        placement: 'short_link_insight_fallback',
+        linkUrl: storeUrl,
       });
-  }, [router]);
+
+      window.location.href = storeUrl;
+    }, 1600);
+  };
 
   return (
     <>
+      <Index allPosts={allPosts} />
+
       <Head>
-        <title>Opening shared link | StocksToBuyNow AI</title>
         <meta name="robots" content="noindex,nofollow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#080b14" />
       </Head>
 
-      <SocialBrowserNotice />
+      {showInsightPrompt && (
+        <div className="share-prompt-backdrop" role="presentation">
+          <section
+            className="share-prompt"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="share-prompt-title"
+          >
+            <button
+              className="share-prompt-close"
+              type="button"
+              aria-label="Close shared insight"
+              onClick={() => setShowInsightPrompt(false)}
+            >
+              ×
+            </button>
 
-      <main className="page">
-        <img
-          src="/assets/images/stockerRobotIcon.png"
-          alt="StocksToBuyNow AI"
-        />
+            <Image
+              src="/assets/images/stockerRobotIcon.png"
+              alt="Stocks To Buy Now AI"
+              width={76}
+              height={76}
+            />
 
-        {error ? (
-          <>
-            <h1>We couldn’t open this link</h1>
-            <p>{error}</p>
-            <a href="/">Go to StocksToBuyNow AI</a>
-          </>
-        ) : (
-          <>
-            <h1>Opening your shared link…</h1>
-            <span className="spinner" aria-label="Loading" />
-          </>
-        )}
-      </main>
+            <span>SHARED APP INSIGHT</span>
+            <h1 id="share-prompt-title">Someone shared an investment insight with you</h1>
+            <p>Open the shared insight to view its signals and analysis.</p>
+            <button className="share-prompt-action" type="button" onClick={openInsight}>
+              Open the shared insight in the app →
+            </button>
+          </section>
+        </div>
+      )}
 
       <style jsx>{`
-        .page {
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          gap: 18px;
-          padding: 24px;
+        .share-prompt-backdrop {
+          position: fixed;
+          z-index: 1200;
+          inset: 0;
+          display: grid;
+          place-items: center;
+          padding: 18px;
+          background: rgba(2, 7, 20, 0.68);
+          backdrop-filter: blur(10px);
+        }
+
+        .share-prompt {
+          position: relative;
+          width: min(480px, 100%);
+          padding: 34px;
+          border: 1px solid rgba(116, 168, 255, 0.3);
+          border-radius: 28px;
+          background: linear-gradient(155deg, #0d5795, #0d2474 60%, #130a62);
+          box-shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+          color: #fff;
           text-align: center;
-          color: white;
-          background: radial-gradient(circle at top, #087dd1, #102a9d 42%, #080b2c);
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
 
-        img {
-          width: 84px;
-          height: 84px;
-          border-radius: 20px;
+        .share-prompt img {
+          border-radius: 18px;
         }
 
-        h1 {
+        .share-prompt > span {
+          display: block;
+          margin-top: 18px;
+          color: #62d6ff;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.15em;
+        }
+
+        .share-prompt h1 {
+          margin: 12px 0;
+          font-size: clamp(25px, 6vw, 38px);
+          line-height: 1.08;
+          letter-spacing: -0.04em;
+        }
+
+        .share-prompt p {
           margin: 0;
-          font-size: 27px;
+          color: rgba(255, 255, 255, 0.76);
+          line-height: 1.5;
         }
 
-        p {
-          margin: 0;
-          color: rgba(255, 255, 255, 0.78);
-        }
-
-        a {
-          padding: 13px 20px;
+        .share-prompt-action {
+          width: 100%;
+          margin-top: 24px;
+          padding: 14px 18px;
+          border: 0;
           border-radius: 999px;
-          color: #07133e;
-          background: white;
-          font-weight: 700;
-          text-decoration: none;
+          background: #fff;
+          color: #07143e;
+          font-size: 15px;
+          font-weight: 800;
+          cursor: pointer;
         }
 
-        .spinner {
-          width: 26px;
-          height: 26px;
-          border: 3px solid rgba(255, 255, 255, 0.28);
-          border-top-color: white;
+        .share-prompt-close {
+          position: absolute;
+          top: 12px;
+          right: 14px;
+          width: 34px;
+          height: 34px;
+          padding: 0;
+          border: 1px solid rgba(255, 255, 255, 0.16);
           border-radius: 50%;
-          animation: spin 0.8s linear infinite;
+          background: rgba(0, 0, 0, 0.16);
+          color: #fff;
+          font-size: 24px;
+          line-height: 30px;
+          cursor: pointer;
         }
 
-        @keyframes spin {
-          to { transform: rotate(360deg); }
+        @media (max-width: 520px) {
+          .share-prompt {
+            padding: 28px 22px 22px;
+            border-radius: 24px;
+          }
         }
       `}</style>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+    'seoExcerpt',
+  ]);
+
+  return { props: { allPosts } };
+};

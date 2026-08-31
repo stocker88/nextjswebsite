@@ -19,7 +19,16 @@ export default function InsightDetailsPage() {
   );
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    let params = new URLSearchParams(window.location.search);
+
+    // Short links keep their resolved attribution out of the browser URL.
+    // Recover it only after the visitor chooses to open the shared insight.
+    if (!params.get('postId')) {
+      const pendingSharedInsight = sessionStorage.getItem('pendingSharedInsight');
+      if (pendingSharedInsight) {
+        params = new URLSearchParams(pendingSharedInsight);
+      }
+    }
 
     const postId = params.get('postId') || '';
 
@@ -72,7 +81,7 @@ export default function InsightDetailsPage() {
     );
 
     setSmartBannerContent(
-      `app-id=1565527320, app-argument=${window.location.href}`,
+      `app-id=1565527320, app-argument=https://www.stockstobuynow.ai/insight_details_page?${params.toString()}`,
     );
 
     const platform = /Android/i.test(userAgent)

@@ -15,7 +15,7 @@ export default function ProductProof() {
 
     trackAppStoreClick({
       store: isAndroid ? 'google' : 'apple',
-      placement: 'daily_routine',
+      placement: event.currentTarget.dataset.placement || 'daily_routine',
       linkUrl,
     });
 
@@ -57,7 +57,7 @@ export default function ProductProof() {
       <section className="proof-section predictions-section">
         <div className="proof-heading">
           <span className="proof-eyebrow">PAST SIGNAL EXAMPLES</span>
-          <h2>See how earlier AI signals played out</h2>
+          <h2>See how earlier market signals played out</h2>
           <p>
             Explore historical examples alongside the business growth data
             available inside the app.
@@ -108,6 +108,17 @@ export default function ProductProof() {
           Historical examples are shown for educational purposes only. Past
           performance does not guarantee future results.
         </p>
+
+        <a
+          href={iosAppStoreUrl}
+          className="proof-link prediction-cta"
+          data-placement="past_signals_paper_trading"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={openAppStore}
+        >
+          Try Risk-Free Paper Trading →
+        </a>
       </section>
 
       <section className="proof-section founder-trades-section">
@@ -319,6 +330,18 @@ export default function ProductProof() {
           font-size: 12px;
           line-height: 1.55;
           text-align: center;
+        }
+
+        .prediction-cta {
+          display: flex;
+          width: fit-content;
+          min-width: 180px;
+          min-height: 50px;
+          align-items: center;
+          justify-content: center;
+          margin: 22px auto 0;
+          background: #1683ff;
+          box-shadow: none;
         }
 
         .trade-grid {
