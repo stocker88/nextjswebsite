@@ -226,7 +226,7 @@ export default function InsightDetailsPage() {
 
       <main className="page">
         <div className="content">
-        <div className="topArea">
+        <div className={`topArea${isSocialBrowser ? ' topAreaWithNotice' : ''}`}>
         <section className="card heroCard">
           <img
             src="/assets/images/stockerRobotIcon.png"
@@ -374,6 +374,10 @@ export default function InsightDetailsPage() {
             hsl(200, 100%, 48%),
             hsl(250, 100%, 25%)
           );
+        }
+
+        .topAreaWithNotice {
+          padding-top: 186px;
         }
 
         .bottomArea {
@@ -638,6 +642,10 @@ export default function InsightDetailsPage() {
         @media (max-width: 520px) {
           .topArea {
             padding: 20px 14px 26px;
+          }
+
+          .topAreaWithNotice {
+            padding-top: 180px;
           }
 
           .bottomArea {
