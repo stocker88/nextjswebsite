@@ -15,6 +15,7 @@ const escapeXml = (value) => value
 
 const urls = [
   { loc: `${siteUrl}/`, priority: '1.0', changefreq: 'weekly' },
+  { loc: `${siteUrl}/facts`, priority: '0.9', changefreq: 'monthly' },
   { loc: `${siteUrl}/web-app`, priority: '0.7', changefreq: 'monthly' },
 ];
 

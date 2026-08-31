@@ -199,28 +199,72 @@ useEffect(() => {
         <Head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Stocks To Buy Now AI",
-            "url": "https://www.stockstobuynow.ai/",
-            "image": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png",
-            "operatingSystem": "iOS, Android",
-            "applicationCategory": "FinanceApplication",
-            "description": "AI-powered stock signals, market analysis and practical investing tools.",
-            "author": {
-              "@type": "Person",
-              "name": "Aness Hussein Ali",
-              "url": "https://anesshusseinali.com/",
-              "sameAs": "https://www.linkedin.com/in/anesshusseinali/"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "screenshot": [
-              "https://www.stockstobuynow.ai/assets/images/1.webp",
-              "https://www.stockstobuynow.ai/assets/images/2.webp",
-              "https://www.stockstobuynow.ai/assets/images/3.webp"
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://www.stockstobuynow.ai/#organization",
+                "name": "Stocks To Buy Now AI",
+                "url": "https://www.stockstobuynow.ai/",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png"
+                },
+                "founder": {
+                  "@type": "Person",
+                  "name": "Aness Hussein Ali",
+                  "url": "https://anesshusseinali.com/",
+                  "sameAs": "https://www.linkedin.com/in/anesshusseinali/"
+                },
+                "sameAs": [
+                  "https://apps.apple.com/app/id1565527320",
+                  "https://play.google.com/store/apps/details?id=com.newcompany.stocker",
+                  "https://www.trustpilot.com/review/stockstobuynow.ai"
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.stockstobuynow.ai/#website",
+                "url": "https://www.stockstobuynow.ai/",
+                "name": "Stocks To Buy Now AI",
+                "publisher": {
+                  "@id": "https://www.stockstobuynow.ai/#organization"
+                }
+              },
+              {
+                "@type": "SoftwareApplication",
+                "@id": "https://www.stockstobuynow.ai/#app",
+                "name": "Stocks To Buy Now AI",
+                "url": "https://www.stockstobuynow.ai/",
+                "image": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png",
+                "operatingSystem": "iOS, Android",
+                "applicationCategory": "FinanceApplication",
+                "description": "AI-powered stock signals, market analysis, paper trading and practical investing tools.",
+                "publisher": {
+                  "@id": "https://www.stockstobuynow.ai/#organization"
+                },
+                "downloadUrl": [
+                  "https://apps.apple.com/app/id1565527320",
+                  "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1",
+                  "ratingCount": "20000"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "description": "Free to download; optional in-app purchases may apply."
+                },
+                "screenshot": [
+                  "https://www.stockstobuynow.ai/assets/images/1.webp",
+                  "https://www.stockstobuynow.ai/assets/images/2.webp",
+                  "https://www.stockstobuynow.ai/assets/images/3.webp"
+                ]
+              }
             ]
           }) }} />
           <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
