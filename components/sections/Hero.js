@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { openInbox } from 'react'
 import Container from '../container'
 import NewsletterSignUp from '../formStocker'
+import FeaturedMedia from './FeaturedMedia'
 
 const propTypes = {
   ...SectionProps.types
@@ -103,26 +104,9 @@ const Hero = ({
        Join a community of 300,000+ investors
 
        </div>
+<div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
+      <FeaturedMedia />
 
-<br></br>
-<br></br>
-      <div className="container-sm has-animations" style={{  zIndex: 10 }}>
-          <div className="hero-content">
-
-<div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
-        {/*<Image
-        src='/assets/images/chatgptgooglecloud.webp'
-        alt="Google Cloud Platform Security and ChatGPT Open AI partners logos"
-       width={130}
-       height={54.46667}
-       priority={true}
-        />*/}
-                <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
-
-
-          </div>
-
-        </div>
 
 
  </center>

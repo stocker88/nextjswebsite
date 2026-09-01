@@ -4,16 +4,12 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Index from './index';
 import { getAllPosts } from '../lib/api';
-import { trackAppStoreClick } from '../lib/analytics';
 import type Post from '../interfaces/post';
 
 const RESOLVE_SHORT_LINK_URL =
   'https://us-central1-stocker-fcda2.cloudfunctions.net/resolveShortLink';
 const STORE_REFERRAL_URL =
   'https://us-central1-stocker-fcda2.cloudfunctions.net/storeReferralClick';
-const APP_STORE_URL = 'https://apps.apple.com/app/id1565527320';
-const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
 type ResolvedLink = {
   type?: string;
@@ -124,39 +120,7 @@ export default function ShortLinkPage({ allPosts }: Props) {
     const query = sessionStorage.getItem('pendingSharedInsight') || '';
     if (!query) return;
 
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    const appUrl = `${
-      isAndroid ? 'ai.stockstobuynow' : 'com.newcompany.stocker'
-    }:///insight_details_page?${query}`;
-    const storeUrl = isAndroid ? PLAY_STORE_URL : APP_STORE_URL;
-    const appFrame = document.createElement('iframe');
-    let appOpened = false;
-
-    appFrame.setAttribute('aria-hidden', 'true');
-    appFrame.style.display = 'none';
-    appFrame.src = appUrl;
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'hidden') appOpened = true;
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    document.body.appendChild(appFrame);
-
-    window.setTimeout(() => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      appFrame.remove();
-
-      if (appOpened || document.visibilityState !== 'visible') return;
-
-      trackAppStoreClick({
-        store: isAndroid ? 'google' : 'apple',
-        placement: 'short_link_insight_fallback',
-        linkUrl: storeUrl,
-      });
-
-      window.location.href = storeUrl;
-    }, 1600);
+    window.location.assign(`/insight_details_page?${query}`);
   };
 
   return (
@@ -195,7 +159,7 @@ export default function ShortLinkPage({ allPosts }: Props) {
             <h1 id="share-prompt-title">Someone shared an investment insight with you</h1>
             <p>Open the shared insight to view its signals and analysis.</p>
             <button className="share-prompt-action" type="button" onClick={openInsight}>
-              Open the shared insight in the app →
+              View the shared insight →
             </button>
           </section>
         </div>

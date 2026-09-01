@@ -89,10 +89,20 @@ export default function Header({
 
   if (shouldShowSocialNotice) {
     return (
-      <SocialBrowserNotice
-        browserName={socialBrowserName}
-        variant={socialNoticeVariant}
-      />
+      <>
+        <SocialBrowserNotice
+          browserName={socialBrowserName}
+          variant={socialNoticeVariant}
+        />
+        <div
+          aria-hidden="true"
+          style={{
+            height: socialNoticeVariant === 'insight'
+              ? 'clamp(160px, 20vw, 190px)'
+              : 'clamp(150px, 18vw, 180px)',
+          }}
+        />
+      </>
     );
   }
 
