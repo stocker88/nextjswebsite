@@ -13,9 +13,9 @@ const outlets = [
 
 const FeaturedMedia = () => (
   <section className="featured-media" aria-labelledby="featured-media-title">
-    <p id="featured-media-title" className="featured-media-title">
+    <h2 id="featured-media-title" className="featured-media-title">
       Featured in the media
-    </p>
+    </h2>
 
     <div className="featured-media-outlets">
       {outlets.map((outlet) => {
@@ -50,19 +50,22 @@ const FeaturedMedia = () => (
 
     <style jsx>{`
       .featured-media {
-        width: min(920px, calc(100% - 32px));
-        margin: clamp(30px, 4vw, 48px) auto 0;
-        padding: clamp(22px, 3vw, 30px) clamp(18px, 4vw, 42px);
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        margin: 0;
+        padding: clamp(42px, 6vw, 72px) max(18px, calc((100% - 920px) / 2));
+        background:
+          radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
+          #070b18;
       }
 
       .featured-media-title {
         margin: 0 0 clamp(18px, 2.5vw, 26px);
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.2em;
+        color: #4da3ff;
+        font-size: clamp(13px, 1.4vw, 16px);
+        font-weight: 800;
+        letter-spacing: 0.18em;
         line-height: 1.2;
+        text-align: center;
         text-transform: uppercase;
       }
 
@@ -152,9 +155,7 @@ const FeaturedMedia = () => (
 
       @media (max-width: 640px) {
         .featured-media {
-          width: calc(100% - 28px);
-          padding-right: 10px;
-          padding-left: 10px;
+          padding: 42px 24px 48px;
         }
 
         .featured-media-outlets {

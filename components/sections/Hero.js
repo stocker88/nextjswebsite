@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { openInbox } from 'react'
 import Container from '../container'
 import NewsletterSignUp from '../formStocker'
-import FeaturedMedia from './FeaturedMedia'
+
 
 const propTypes = {
   ...SectionProps.types
@@ -105,7 +105,9 @@ const Hero = ({
 
        </div>
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
-      <FeaturedMedia />
+<div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
+<div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
+
 
 
 

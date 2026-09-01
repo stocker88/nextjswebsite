@@ -24,6 +24,7 @@ import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
 import TrustpilotWidget from '../components/TrustpilotWidget';
 import ProductProof from '../components/sections/ProductProof';
+import FeaturedMedia from '../components/sections/FeaturedMedia'
 
 type Props = {
   posts: Post[];
@@ -166,7 +167,6 @@ import SignUpModal from '../SignUpModal';
                         />
                         <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
 
-
         <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
           <div className="signals-shell">
             <IntroApp/>
@@ -177,10 +177,12 @@ import SignUpModal from '../SignUpModal';
         <ProductProof />
 
         <YoutubeSection/>
+
       <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
         <Testimonial/>
       </div>
 
+<FeaturedMedia />
 
  <CompoundInterestCalculator/>
         <section className="editorial-section">
