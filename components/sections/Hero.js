@@ -100,10 +100,11 @@ const Hero = ({
           height={50*3/4}
            />
 
-    <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join a community of 300,000+ investors
-
-       </div>
+    <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1.35,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
+       60 Million monthly readers
+       <br />
+       Join the #1 investor community on Trustpilot
+    </div>
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
