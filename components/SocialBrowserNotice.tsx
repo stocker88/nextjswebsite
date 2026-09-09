@@ -1,12 +1,28 @@
 import { useEffect, useState } from 'react';
 
-export function detectSocialBrowser(userAgent: string) {
-  if (/Instagram/i.test(userAgent)) return 'Instagram';
-  if (/FBAN|FBAV/i.test(userAgent)) return 'Facebook';
-  if (/TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)) {
+export function detectSocialBrowser(
+  userAgent = '',
+  referrer = '',
+  currentUrl = '',
+) {
+  // TikTok can use different webviews for bio and Story links. Some Story
+  // webviews look like Safari, so also inspect the referrer and campaign URL.
+  const browserContext = `${userAgent} ${referrer} ${currentUrl}`;
+
+  if (/Instagram|instagram\.com/i.test(browserContext)) return 'Instagram';
+  if (/FBAN|FBAV|FB_IAB|Facebook|facebook\.com/i.test(browserContext)) {
+    return 'Facebook';
+  }
+  if (
+    /TikTok|tiktok\.com|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview|TikTokWebView|zhiliaoapp|tiktokstory|storytiktok|tiktoklink/i.test(
+      browserContext,
+    )
+  ) {
     return 'TikTok';
   }
-  if (/Twitter|X\//i.test(userAgent)) return 'X';
+  if (/Twitter|twitter\.com|(?:^|\s)X\/|x\.com/i.test(browserContext)) {
+    return 'X';
+  }
   return '';
 }
 
@@ -23,7 +39,13 @@ export default function SocialBrowserNotice({
 
   useEffect(() => {
     if (!suppliedBrowserName) {
-      setDetectedBrowserName(detectSocialBrowser(navigator.userAgent));
+      setDetectedBrowserName(
+        detectSocialBrowser(
+          navigator.userAgent,
+          document.referrer,
+          window.location.href,
+        ),
+      );
     }
   }, [suppliedBrowserName]);
 
