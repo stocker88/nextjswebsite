@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { trackAppStoreClick } from '../lib/analytics';
 import TrustpilotWidget from '../components/TrustpilotWidget';
 import Header from '../components/layout/Header';
+import { detectSocialBrowser } from '../components/SocialBrowserNotice';
 
 const APP_STORE_URL =
   'https://apps.apple.com/app/id1565527320';
@@ -58,15 +59,11 @@ export default function InsightDetailsPage() {
 
     const isAndroid = /Android/i.test(userAgent);
 
-    const detectedSocialBrowser = /Instagram/i.test(userAgent)
-      ? 'Instagram'
-      : /FBAN|FBAV/i.test(userAgent)
-      ? 'Facebook'
-      : /TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview/i.test(userAgent)
-      ? 'TikTok'
-      : /Twitter|X\//i.test(userAgent)
-      ? 'X'
-      : '';
+    const detectedSocialBrowser = detectSocialBrowser(
+      userAgent,
+      document.referrer,
+      window.location.href,
+    );
 
     setIsSocialBrowser(Boolean(detectedSocialBrowser));
 

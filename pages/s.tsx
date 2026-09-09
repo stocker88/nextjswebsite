@@ -108,6 +108,20 @@ export default function ShortLinkPage({ allPosts }: Props) {
       .then((link) => {
         storeAttribution(code, link);
 
+        const socialBrowserAttribution = [
+          link.source,
+          link.medium,
+          link.campaign,
+          link.destinationPath,
+        ]
+          .filter(Boolean)
+          .join(' ');
+        sessionStorage.setItem(
+          'socialBrowserAttribution',
+          socialBrowserAttribution,
+        );
+        window.dispatchEvent(new Event('social-browser-attribution'));
+
         if (link.type === 'insight' || link.postId) {
           sessionStorage.setItem('pendingSharedInsight', queryFor(link));
           setShowInsightPrompt(true);

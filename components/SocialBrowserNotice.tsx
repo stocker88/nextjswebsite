@@ -4,25 +4,44 @@ export function detectSocialBrowser(
   userAgent = '',
   referrer = '',
   currentUrl = '',
+  attribution = '',
 ) {
   // TikTok can use different webviews for bio and Story links. Some Story
   // webviews look like Safari, so also inspect the referrer and campaign URL.
   const browserContext = `${userAgent} ${referrer} ${currentUrl}`;
+  const linkContext = `${referrer} ${currentUrl} ${attribution}`;
 
   if (/Instagram|instagram\.com/i.test(browserContext)) return 'Instagram';
   if (/FBAN|FBAV|FB_IAB|Facebook|facebook\.com/i.test(browserContext)) {
     return 'Facebook';
   }
-  if (
-    /TikTok|tiktok\.com|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview|TikTokWebView|zhiliaoapp|tiktokstory|storytiktok|tiktoklink/i.test(
-      browserContext,
-    )
-  ) {
-    return 'TikTok';
-  }
+  const hasTikTokUserAgent =
+    /TikTok|BytedanceWebview|ByteDance|musical[_\s.-]?ly|musically|Aweme|ttwebview|TikTokWebView|zhiliaoapp/i.test(
+      userAgent,
+    );
+  if (hasTikTokUserAgent) return 'TikTok';
   if (/Twitter|twitter\.com|(?:^|\s)X\/|x\.com/i.test(browserContext)) {
     return 'X';
   }
+
+  const isIOSWebView =
+    /iPhone|iPad|iPod/i.test(userAgent) &&
+    /AppleWebKit/i.test(userAgent) &&
+    /Mobile\//i.test(userAgent) &&
+    !/Version\/[^\s]+.*Safari/i.test(userAgent) &&
+    !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(userAgent);
+  const isAndroidWebView =
+    /Android/i.test(userAgent) &&
+    /(?:;\s*wv\)|\bwv\b|Version\/4\.0.*Chrome)/i.test(userAgent);
+  const isEmbeddedWebView = isIOSWebView || isAndroidWebView;
+  const hasTikTokAttribution =
+    /TikTok|tiktok\.com|tiktokstory|storytiktok|tiktoklink/i.test(linkContext);
+
+  // Campaign data identifies TikTok only while the page is embedded. A real
+  // Safari/Chrome window must not keep showing the in-app-browser notice.
+  if (isEmbeddedWebView && hasTikTokAttribution) return 'TikTok';
+  if (isEmbeddedWebView) return 'an in-app browser';
+
   return '';
 }
 

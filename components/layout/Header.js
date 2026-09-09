@@ -34,7 +34,23 @@ export default function Header({
   const [socialBrowserName, setSocialBrowserName] = useState(null);
 
   useEffect(() => {
-    setSocialBrowserName(detectSocialBrowser(navigator.userAgent));
+    const detect = () => {
+      const attribution =
+        sessionStorage.getItem('socialBrowserAttribution') || '';
+      setSocialBrowserName(
+        detectSocialBrowser(
+          navigator.userAgent,
+          document.referrer,
+          window.location.href,
+          attribution,
+        ),
+      );
+    };
+
+    detect();
+    window.addEventListener('social-browser-attribution', detect);
+    return () =>
+      window.removeEventListener('social-browser-attribution', detect);
   }, []);
 
   useEffect(() => {
