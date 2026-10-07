@@ -6,7 +6,7 @@ export default function ResearchArticle({item}: {item:ResearchPreview}) {
      <span className="insight-bubble">
        {item.symbols[0] ? <img className="ticker-logo" src={`/assets/logo/${item.symbols[0].toUpperCase()}.webp`} alt="" onError={(event) => { event.currentTarget.style.display = 'none'; }} /> : <span className="insight-dot" />}
        {item.symbols[0] ? `$${item.symbols[0].toUpperCase()} INSIGHTS` : 'MARKET INSIGHTS'} →</span>
-     <p className="research-meta">{item.symbols.join(' · ')} · {Math.max(1, Math.ceil(item.title.length / 55))} min read · ♡ {(Number(item.likes) || 0) * 3} · ▢ {(Number(item.comments) || 0) * 3} · ↗ {(Number(item.shares) || 0) * 3}</p>
+     <p className="research-meta">{item.symbols.join(' · ')} · {Math.max(1, Math.ceil(item.title.length / 55))} min read · ♡ {(Number(item.likes) || 0) * 7} · ▢ {(Number(item.comments) || 0) * 3} · ↗ {(Number(item.shares) || 0) * 3}</p>
      <h1>{item.title}</h1>
      {item.attachedTitle && <div className="research-card"><strong>Attached thread</strong><h2>{item.attachedTitle}</h2><p className="research-meta">Related insight from the community.</p></div>}
      <div className="research-card"><h2>Read the full research in the app</h2>

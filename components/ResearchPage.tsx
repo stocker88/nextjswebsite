@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from './layout/Header';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
 export default function ResearchPage({title, path, children}: {title:string; path:string; children:ReactNode}) {
@@ -11,10 +12,29 @@ export default function ResearchPage({title, path, children}: {title:string; pat
       <meta property="og:title" content={title} />
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />
     </Head>
-    <main><nav className="site-nav"><Link href="/">Home</Link><Link href="/stocks-to-buy-now">Research</Link><Link href="/stocks-to-buy">Stocks to buy</Link></nav>{children}</main>
+    <Header homeHref="/" navBasePath="/" forceDark />
+    <main>
+      <nav className="research-navigation" aria-label="Research sections">
+        <Link href="/stocks-to-buy-now" aria-current={path.startsWith('/stocks-to-buy-now') ? 'page' : undefined}>
+          <span>ANALYST INSIGHTS</span><strong>View Analyst Insights →</strong>
+        </Link>
+        <Link href="/stocks-to-buy" aria-current={path === '/stocks-to-buy' ? 'page' : undefined}>
+          <span>STOCK SIGNALS</span><strong>View Stocks to Buy Signals →</strong>
+        </Link>
+      </nav>
+      {children}
+    </main>
     <style jsx>{`
-      main {min-height:100vh;background:#070b18;color:white;padding:40px max(20px,calc((100vw - 1000px)/2));}
-      nav {margin-bottom:40px;color:#59aaff;display:flex;gap:22px;flex-wrap:wrap;} nav a {color:#59aaff;text-decoration:none;} nav a:hover {color:#bca5ff;}
+      main {min-height:100vh;background:#070b18;color:white;padding:120px max(20px,calc((100vw - 1000px)/2)) 40px;}
+      .research-navigation {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:38px;}
+      .research-navigation :global(a) {display:flex;flex-direction:column;gap:8px;min-width:0;padding:18px 20px;border:1px solid #303c55;border-radius:16px;background:#111a2b;color:#c7d2e6;text-decoration:none;transition:background .2s,border-color .2s;}
+      .research-navigation :global(a[aria-current="page"]) {background:linear-gradient(120deg,#232045,#152a40);border-color:#9770e9;color:white;}
+      .research-navigation :global(a:hover) {border-color:#a586ee;background:#202b43;}
+      .research-navigation :global(a:focus-visible) {outline:2px solid #bfa0ff;outline-offset:3px;}
+      .research-navigation span {font-size:10px;letter-spacing:.12em;color:#98b9eb;font-weight:700;}
+      .research-navigation strong {font-size:clamp(12px,1.6vw,17px);line-height:1.4;}
+      @media(max-width:600px) {.research-navigation {gap:8px;} .research-navigation :global(a) {padding:12px 10px;}}
+
       main :global(h1) {font-size:clamp(28px,5vw,48px);line-height:1.2;}
       main :global(.research-board) {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.8vw,22px);margin-top:42px;align-items:start;width:100%;}
       main :global(.research-column) {min-width:0;}

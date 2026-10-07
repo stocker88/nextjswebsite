@@ -25,6 +25,7 @@ const navItems = [
 
 export default function Header({
   homeHref = '#home',
+  forceDark = false,
   navBasePath = '',
   socialNoticeMode = 'all',
   socialNoticeVariant = 'standard',
@@ -76,7 +77,7 @@ export default function Header({
     };
 
     const handleScroll = () => {
-      const isPageScrolled = window.scrollY > 50;
+      const isPageScrolled = forceDark || window.scrollY > 50;
       setIsScrolled(isPageScrolled);
       updateBrowserTheme(isPageScrolled);
     };
@@ -84,7 +85,7 @@ export default function Header({
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [forceDark]);
 
   const closeMenu = () => setIsOpen(false);
 
@@ -123,7 +124,7 @@ export default function Header({
   }
 
   return (
-    <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
+    <header className={`site-header ${forceDark || isScrolled ? 'is-scrolled' : ''}`}>
       <nav className="site-nav" aria-label="Main navigation">
         <a className="site-brand" href={homeHref} onClick={closeMenu}>
           <Image

@@ -22,7 +22,7 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
     </span>
     <h2>{item.title}</h2>
     <div className="research-meta">{item.symbols.slice(0,4).map(s => `$${s.toUpperCase()}`).join(' · ')}</div>
-    <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(Number(item.likes) || 0) * 3}</span><span>▢ {(Number(item.comments) || 0) * 3}</span><span>↗ {(Number(item.shares) || 0) * 3}</span></div>
+    <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(Number(item.likes) || 0) * 7}</span><span>▢ {(Number(item.comments) || 0) * 3}</span><span>↗ {(Number(item.shares) || 0) * 3}</span></div>
   </Link>;
 }
 
