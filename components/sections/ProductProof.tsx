@@ -7,7 +7,7 @@ const iosAppStoreUrl =
 const androidPlayStoreUrl =
   'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
-export default function ProductProof() {
+export default function ProductProof({ founderOnly = false }: { founderOnly?: boolean }) {
   const openAppStore = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const isAndroid = /Android/i.test(navigator.userAgent);
@@ -24,6 +24,7 @@ export default function ProductProof() {
 
   return (
     <div className="product-proof">
+      {!founderOnly && <>
       <section className="proof-section routine-section">
         <div className="proof-copy">
           <span className="proof-eyebrow">A SIMPLE DAILY ROUTINE</span>
@@ -121,7 +122,9 @@ export default function ProductProof() {
         </a>
       </section>
 
-      <section className="proof-section founder-trades-section">
+      </>}
+
+      {founderOnly && <section className="proof-section founder-trades-section">
         <div className="proof-heading">
           <span className="proof-eyebrow">FOUNDER’S REAL-LIFE EXAMPLES</span>
           <h2>Built from an investor’s point of view</h2>
@@ -158,10 +161,9 @@ export default function ProductProof() {
         </div>
 
         <p className="proof-disclaimer">
-          These are selected personal historical examples, not investment
-          advice. Outcomes vary and losses are possible.
+          These are professional investors past performance. Past performance does not guarantee future performance.
         </p>
-      </section>
+      </section>}
 
       <style jsx>{`
         .product-proof {

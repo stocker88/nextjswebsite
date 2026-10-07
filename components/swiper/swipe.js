@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 const signalScreenshots = [
-  '/assets/images/1.webp',
   '/assets/images/2.webp',
   '/assets/images/3.webp',
 ];
