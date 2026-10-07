@@ -3,12 +3,13 @@
   "scripts": {
     "dev": "next dev",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run generate:sitemap",
+    "prebuild": "npm run sync:research && npm run generate:sitemap",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "sync:research": "node scripts/sync-research.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

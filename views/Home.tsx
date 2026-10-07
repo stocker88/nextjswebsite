@@ -176,6 +176,8 @@ import SignUpModal from '../SignUpModal';
 
 
 
+        <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
+
         <ProductProof />
 
         <YoutubeSection/>

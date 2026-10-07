@@ -39,6 +39,11 @@ for (const filename of fs.readdirSync(postsDirectory)) {
   });
 }
 
+urls.push({loc: `${siteUrl}/stocks-to-buy-now`, priority: '0.9', changefreq: 'daily'});
+for (const item of JSON.parse(fs.readFileSync(path.join(projectRoot, 'data/research.json'), 'utf8'))) {
+  urls.push({loc: `${siteUrl}/stocks-to-buy-now/${encodeURIComponent(item.id)}`, priority: '0.8', changefreq: 'weekly'});
+}
+
 const urlXml = urls.map(({ loc, lastmod, priority, changefreq }) => [
   '  <url>',
   `    <loc>${escapeXml(loc)}</loc>`,
