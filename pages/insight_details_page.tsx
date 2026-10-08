@@ -133,13 +133,14 @@ export default function InsightDetailsPage() {
   const openApp = () => {
     if (!appUrl) return;
 
-    // Attempt the custom scheme in a hidden frame. Navigating the top-level
-    // Instagram/TikTok webview to an unavailable scheme makes it replace our
-    // page with its own "problem loading" screen before the store fallback.
-    const appFrame = document.createElement('iframe');
-    appFrame.setAttribute('aria-hidden', 'true');
-    appFrame.style.display = 'none';
-    appFrame.src = appUrl;
+    // Normal browsers must launch from the user's top-level click. Some social
+    // webviews replace the page on unsupported schemes, so retain their fallback.
+    const appFrame = isSocialBrowser ? document.createElement('iframe') : null;
+    if (appFrame) {
+      appFrame.setAttribute('aria-hidden', 'true');
+      appFrame.style.display = 'none';
+      appFrame.src = appUrl;
+    }
 
     let appOpened = false;
 
@@ -154,7 +155,10 @@ export default function InsightDetailsPage() {
       handleVisibilityChange,
     );
 
-    document.body.appendChild(appFrame);
+    window.addEventListener('pagehide', handlePageHide, {once: true});
+    function handlePageHide() { appOpened = true; }
+    if (appFrame) document.body.appendChild(appFrame);
+    else window.location.assign(appUrl);
 
     // A successful app open backgrounds this page. If it remains visible,
     // the app is unavailable (or the in-app browser blocked the request), so
@@ -164,7 +168,8 @@ export default function InsightDetailsPage() {
         'visibilitychange',
         handleVisibilityChange,
       );
-      appFrame.remove();
+      window.removeEventListener('pagehide', handlePageHide);
+      appFrame?.remove();
 
       if (appOpened || document.visibilityState !== 'visible') return;
 
@@ -175,7 +180,7 @@ export default function InsightDetailsPage() {
       });
 
       window.location.href = storeUrl;
-    }, 1600);
+    }, 3000);
   };
 
   const isGooglePlay = storeUrl === PLAY_STORE_URL;
