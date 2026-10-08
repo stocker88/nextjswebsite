@@ -271,11 +271,11 @@ useEffect(() => {
           <title>Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" content="🟢Just 1 year ago Sandisk was $39 now it’s $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now"/>
+          <meta name="description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now"/>
           <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
           <link rel="canonical" href="https://www.stockstobuynow.ai/" />
           <meta property="og:title" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course" />
-          <meta property="og:description" content="🟢Just 1 year ago Sandisk was $39 now it’s $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now" />
+          <meta property="og:description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:site_name" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course" />
@@ -283,12 +283,12 @@ useEffect(() => {
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Founder’s personal trade chart" />
+          <meta property="og:image:alt" content="Founder's personal trade chart" />
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:title" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course"/>
-          <meta name="twitter:description" content="Discover AI-powered stock signals, market analysis and practical investing tools."/>
+          <meta name="twitter:description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now"/>
           <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
-          <meta name="twitter:image:alt" content="Founder’s personal trade chart" />
+          <meta name="twitter:image:alt" content="Founder's personal trade chart" />
 
 
         </Head>

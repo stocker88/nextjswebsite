@@ -17,7 +17,7 @@ ogImage:
 
 &nbsp;
 
-Here are three reasons why Reddit’s IPO could be an exciting investment opportunity:
+Here are three reasons why Reddit's IPO could be an exciting investment opportunity:
 
 &nbsp;
 
@@ -53,7 +53,7 @@ As a driver of online trends and consumer behavior, Reddit is increasingly recog
 
 &nbsp;
 
-Its revenue streams—advertising, premium memberships, virtual goods, and more—are growing, as advertisers capitalize on Reddit’s influence in sectors like tech, finance, and gaming.
+Its revenue streams—advertising, premium memberships, virtual goods, and more—are growing, as advertisers capitalize on Reddit's influence in sectors like tech, finance, and gaming.
 
 &nbsp;
 

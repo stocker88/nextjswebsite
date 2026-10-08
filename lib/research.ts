@@ -1,5 +1,5 @@
 import data from '../data/research.json';
-export type ResearchPreview = {id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; attachedTitle?: string};
+export type ResearchPreview = {id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; educationPreview?: string; attachedTitle?: string};
 export const research = data as ResearchPreview[];
 export const researchUrl = (id: string) => `/stocks-to-buy-now/${encodeURIComponent(id)}`;
 

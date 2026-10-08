@@ -8,6 +8,7 @@ export default function ResearchArticle({item}: {item:ResearchPreview}) {
        {item.symbols[0] ? `$${item.symbols[0].toUpperCase()} INSIGHTS` : 'MARKET INSIGHTS'} →</span>
      <p className="research-meta">{item.symbols.join(' · ')} · {Math.max(1, Math.ceil(item.title.length / 55))} min read · ♡ {(Number(item.likes) || 0) * 7} · ▢ {(Number(item.comments) || 0) * 3} · ↗ {(Number(item.shares) || 0) * 3}</p>
      <h1>{item.title}</h1>
+    {item.educationPreview && item.symbols.some(symbol => symbol.trim().replace(/^[#$]/, '').toLowerCase() === 'education') && <p style={{fontSize:'16px',lineHeight:1.5,color:'#b9c5d8',margin:'8px 0 14px'}}>{item.educationPreview}</p>}
      {item.attachedTitle && <div className="research-card"><strong>Attached thread</strong><h2>{item.attachedTitle}</h2><p className="research-meta">Related insight from the community.</p></div>}
      <div className="research-card"><h2>Read the full research in the app</h2>
        <p>A subscription is required to access the full thread.</p>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import ResearchPage from '../../components/ResearchPage';
 import {fetchResearch, researchUrl, ResearchPreview} from '../../lib/research';
 
@@ -21,6 +21,7 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
       {ticker ? `$${ticker} INSIGHTS` : 'MARKET INSIGHTS'} →
     </span>
     <h2>{item.title}</h2>
+    {item.educationPreview && item.symbols.some(symbol => symbol.trim().replace(/^[#$]/, '').toLowerCase() === 'education') && <p style={{fontSize:'clamp(10px, 1.1vw, 14px)',lineHeight:1.5,color:'#b9c5d8',margin:'8px 0 14px'}}>{item.educationPreview}</p>}
     <div className="research-meta">{item.symbols.slice(0,4).map(s => `$${s.toUpperCase()}`).join(' · ')}</div>
     <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(Number(item.likes) || 0) * 7}</span><span>▢ {(Number(item.comments) || 0) * 3}</span><span>↗ {(Number(item.shares) || 0) * 3}</span></div>
   </Link>;
@@ -28,7 +29,25 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
 
 function Column({items}: {items:ResearchPreview[]}) { return <div className="research-column">{items.map(item => <Card item={item} compact key={item.id} />)}</div>; }
 
-export default function ResearchHub({items}: {items:ResearchPreview[]}) {
+export default function ResearchHub({items: initialItems}: {items:ResearchPreview[]}) {
+  const [items, setItems] = useState(initialItems);
+  useEffect(() => {
+    let disposed = false;
+    const controller = new AbortController();
+    const refresh = async () => {
+      try {
+        const response = await fetch('https://us-central1-stocker-fcda2.cloudfunctions.net/researchPreviews', {signal: controller.signal});
+        if (!response.ok) return;
+        const payload = await response.json();
+        // Old endpoints paginate; keep the complete server-rendered archive
+        // until the scheduled snapshot is available.
+        if (!disposed && Array.isArray(payload.items) && !payload.next) setItems(payload.items);
+      } catch (_) { /* Keep the last successful preview on network failure. */ }
+    };
+    refresh();
+    const timer = setInterval(refresh, 30 * 60 * 1000);
+    return () => { disposed = true; controller.abort(); clearInterval(timer); };
+  }, []);
  const [visibleCount, setVisibleCount] = useState(40);
  const columns: ResearchPreview[][] = [[], [], []];
  const heights = [0, 0, 0];

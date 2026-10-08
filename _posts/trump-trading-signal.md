@@ -118,7 +118,7 @@ We positioned accordingly:
 
 &nbsp;
 
-•	It’s also a tool for timing market bottoms, as volatility tends to peak at inflection points.
+•	it's also a tool for timing market bottoms, as volatility tends to peak at inflection points.
 
 &nbsp;
 
@@ -151,7 +151,7 @@ Our AI Signal flagged the breakout, and we acted fast.
 
 &nbsp;
 
-Royal Gold (RGLD) is a royalty play on gold — but more than that, it’s a conservative hedge against inflation and economic uncertainty:
+Royal Gold (RGLD) is a royalty play on gold — but more than that, it's a conservative hedge against inflation and economic uncertainty:
 
 
 &nbsp;
@@ -160,7 +160,7 @@ Royal Gold (RGLD) is a royalty play on gold — but more than that, it’s a con
 
 &nbsp;
 
-•	RGLD isn’t just a gold proxy — it’s a lean, cash-generative business with strong margins and minimal debt.
+•	RGLD isn’t just a gold proxy — it's a lean, cash-generative business with strong margins and minimal debt.
 
 &nbsp;
 
@@ -199,7 +199,7 @@ Expect volatility. Plan for dislocation. And know that:
 
 &nbsp;
 
-•	Volatility can be timed — it’s measurable and seasonal.
+•	Volatility can be timed — it's measurable and seasonal.
 
 &nbsp;
 
@@ -207,7 +207,7 @@ Expect volatility. Plan for dislocation. And know that:
 
 &nbsp;
 
-Whether you’re hedging your tech exposure or playing the next wave, this was the Trump trade that worked — and it’s still in play.
+Whether you’re hedging your tech exposure or playing the next wave, this was the Trump trade that worked — and it's still in play.
 
 &nbsp;
 

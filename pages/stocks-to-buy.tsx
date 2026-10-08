@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import ResearchPage from '../components/ResearchPage';
 
 type Point = {x?:number;y1?:number;y2?:number;y3?:number};
@@ -62,7 +62,26 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
   </article>;
 }
 const SIGNAL_PREVIEW_LIMIT = 21;
-export default function StocksToBuy({items}:{items:Signal[]}) {
+export default function StocksToBuy({items: initialItems}:{items:Signal[]}) {
+  const [items, setItems] = useState(initialItems);
+  useEffect(() => {
+    let disposed = false;
+    const controller = new AbortController();
+    const refresh = async () => {
+      try {
+        const response = await fetch('https://us-central1-stocker-fcda2.cloudfunctions.net/stockSignals', {signal: controller.signal});
+        if (!response.ok) return;
+        const payload = await response.json();
+        // Old endpoints paginate; keep the complete server-rendered archive
+        // until the scheduled snapshot is available.
+        if (!disposed && Array.isArray(payload.items) && !payload.next) setItems(payload.items);
+      } catch (_) { /* Keep the last successful preview on network failure. */ }
+    };
+    refresh();
+    const timer = setInterval(refresh, 30 * 60 * 1000);
+    return () => { disposed = true; controller.abort(); clearInterval(timer); };
+  }, []);
+
   const [showAppLink, setShowAppLink] = useState(false);
   const downloadDialog = useRef<HTMLDialogElement>(null);
   const openDownloads = () => downloadDialog.current?.showModal();
