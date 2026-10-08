@@ -1,3 +1,6 @@
+import HomeResearch from '../components/HomeResearch';
+import {fetchResearch} from '../lib/research-server';
+import type {ResearchPreview} from '../lib/research';
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
@@ -63,13 +66,13 @@ import { isMobile} from "react-device-detect";
 // On your website
 
 type Props = {
-  allPosts: Post[]
+  allPosts: Post[]; news?: ResearchPreview[]
 }
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-export default function Index({ allPosts }: Props) {
+export default function Index({ allPosts, news }: Props) {
 
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(0,-1)
@@ -196,6 +199,7 @@ useEffect(() => {
        <Layout>
        {morePosts.length > 0 && <Home posts={morePosts} topWidgetRef={topWidgetRef} bodyWidgetRef={bodyWidgetRef}  />}
 
+        <HomeResearch items={news || []}/>
         <Head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -246,13 +250,6 @@ useEffect(() => {
                   "https://apps.apple.com/app/id1565527320",
                   "https://play.google.com/store/apps/details?id=com.newcompany.stocker"
                 ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "5",
-                  "bestRating": "5",
-                  "worstRating": "1",
-                  "ratingCount": "20000"
-                },
                 "offers": {
                   "@type": "Offer",
                   "price": "0",
@@ -271,11 +268,11 @@ useEffect(() => {
           <title>Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
-          <meta name="description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now"/>
+          <meta name="description" content="Explore stock market news, company research and AI-assisted trading signals. Review business drivers, earnings and investing concepts before making decisions."/>
           <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
           <link rel="canonical" href="https://www.stockstobuynow.ai/" />
           <meta property="og:title" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course" />
-          <meta property="og:description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now" />
+          <meta property="og:description" content="Explore stock market news, company research and AI-assisted trading signals. Review business drivers, earnings and investing concepts before making decisions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
           <meta property="og:site_name" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course" />
@@ -286,7 +283,7 @@ useEffect(() => {
           <meta property="og:image:alt" content="Founder's personal trade chart" />
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:title" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course"/>
-          <meta name="twitter:description" content="🟢Just 1 year ago Sandisk was $39 now it's $1,570 🎯 we said buy, but you didn't know us. Join 300k+ investors who receive free trading signals, ai stocks to buy today, biotech stocks to buy before earnings, the next Nvidia, the best stocks to buy now"/>
+          <meta name="twitter:description" content="Explore stock market news, company research and AI-assisted trading signals. Review business drivers, earnings and investing concepts before making decisions."/>
           <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
           <meta name="twitter:image:alt" content="Founder's personal trade chart" />
 
@@ -310,6 +307,7 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: { allPosts, news:(await fetchResearch()).slice(0,6) },
+    revalidate:60,
   }
 }

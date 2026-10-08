@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "sync:research": "node scripts/sync-research.js"
+    "deploy": "bash scripts/deploy-firebase.sh",
+    "sync:research": "node scripts/sync-research.js",
+    "test:seo": "node scripts/seo-check.cjs",
+    "publish:article": "node scripts/publish-public-article.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

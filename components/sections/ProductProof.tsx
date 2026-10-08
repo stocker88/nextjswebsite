@@ -28,7 +28,7 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
       <section className="proof-section routine-section">
         <div className="proof-copy">
           <span className="proof-eyebrow">A SIMPLE DAILY ROUTINE</span>
-          <h2>It takes 5 minutes a day to be a pro</h2>
+          <h2>Build a focused daily research routine</h2>
           <p>
             Review active signals, expert insights, earnings opportunities and
             the market updates that may affect your portfolio.
@@ -127,7 +127,7 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
       {founderOnly && <section className="proof-section founder-trades-section">
         <div className="proof-heading">
           <span className="proof-eyebrow">FOUNDER’S REAL-LIFE EXAMPLES</span>
-          <h2>Built from an investor’s point of view</h2>
+          <h2>A founder’s historical trading case study</h2>
           <p>
             Personal trades from the founder, based on past signals, industry growth prospects and business competitive MOAT analysis.
           </p>

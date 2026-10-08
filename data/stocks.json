@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "nvda",
+    "ticker": "NVDA",
+    "name": "Nvidia",
+    "investorUrl": "https://investor.nvidia.com/",
+    "earningsUrl": "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx",
+    "overview": "Nvidia designs accelerated-computing platforms used in data centers, AI and graphics.",
+    "drivers": [
+      "Data-center revenue",
+      "Gross margin",
+      "Customer capital expenditure",
+      "Export restrictions",
+      "Competition and customer concentration"
+    ]
+  },
+  {
+    "slug": "aapl",
+    "ticker": "AAPL",
+    "name": "Apple",
+    "investorUrl": "https://investor.apple.com/",
+    "earningsUrl": "https://investor.apple.com/sec-filings/default.aspx",
+    "overview": "Apple sells devices, software and services through an integrated ecosystem.",
+    "drivers": [
+      "iPhone revenue",
+      "Services growth",
+      "Gross margin",
+      "China demand",
+      "Product replacement cycles"
+    ]
+  },
+  {
+    "slug": "msft",
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "investorUrl": "https://www.microsoft.com/en-us/Investor",
+    "earningsUrl": "https://www.microsoft.com/en-us/Investor/earnings",
+    "overview": "Microsoft operates enterprise software, cloud infrastructure and consumer technology businesses.",
+    "drivers": [
+      "Azure growth",
+      "Cloud margins",
+      "AI infrastructure spending",
+      "Enterprise demand",
+      "Capital expenditure"
+    ]
+  },
+  {
+    "slug": "tsla",
+    "ticker": "TSLA",
+    "name": "Tesla",
+    "investorUrl": "https://ir.tesla.com/",
+    "earningsUrl": "https://ir.tesla.com/#quarterly-disclosure",
+    "overview": "Tesla produces electric vehicles and energy storage systems.",
+    "drivers": [
+      "Vehicle deliveries",
+      "Automotive margin",
+      "Energy storage revenue",
+      "Free cash flow",
+      "Competition and regulation"
+    ]
+  },
+  {
+    "slug": "amzn",
+    "ticker": "AMZN",
+    "name": "Amazon",
+    "investorUrl": "https://ir.aboutamazon.com/",
+    "earningsUrl": "https://ir.aboutamazon.com/quarterly-results/default.aspx",
+    "overview": "Amazon operates retail, logistics, advertising and cloud-computing businesses.",
+    "drivers": [
+      "AWS growth",
+      "Operating income",
+      "Retail margins",
+      "Capital expenditure",
+      "Consumer demand"
+    ]
+  },
+  {
+    "slug": "meta",
+    "ticker": "META",
+    "name": "Meta Platforms",
+    "investorUrl": "https://investor.atmeta.com/",
+    "earningsUrl": "https://investor.atmeta.com/financials/",
+    "overview": "Meta operates social platforms and advertising businesses and invests in AI infrastructure.",
+    "drivers": [
+      "Advertising revenue",
+      "Engagement",
+      "Capital expenditure",
+      "Operating margin",
+      "Regulation"
+    ]
+  },
+  {
+    "slug": "googl",
+    "ticker": "GOOGL",
+    "name": "Alphabet",
+    "investorUrl": "https://abc.xyz/investor/",
+    "earningsUrl": "https://abc.xyz/investor/",
+    "overview": "Alphabet operates Google Search, advertising, cloud and other technology businesses.",
+    "drivers": [
+      "Search revenue",
+      "Cloud margin",
+      "Capital expenditure",
+      "AI competition",
+      "Regulation"
+    ]
+  },
+  {
+    "slug": "xom",
+    "ticker": "XOM",
+    "name": "ExxonMobil",
+    "investorUrl": "https://investor.exxonmobil.com/",
+    "earningsUrl": "https://investor.exxonmobil.com/financial-information/quarterly-results",
+    "overview": "ExxonMobil operates oil and gas production, refining and chemical businesses.",
+    "drivers": [
+      "Oil and gas prices",
+      "Production volumes",
+      "Refining margins",
+      "Capital spending",
+      "Free cash flow"
+    ]
+  },
+  {
+    "slug": "cvx",
+    "ticker": "CVX",
+    "name": "Chevron",
+    "investorUrl": "https://www.chevron.com/investors",
+    "earningsUrl": "https://www.chevron.com/investors/financial-information",
+    "overview": "Chevron operates oil and gas production and downstream energy businesses.",
+    "drivers": [
+      "Commodity prices",
+      "Production",
+      "Capital expenditure",
+      "Cash flow",
+      "Operational risks"
+    ]
+  },
+  {
+    "slug": "vst",
+    "ticker": "VST",
+    "name": "Vistra",
+    "investorUrl": "https://investor.vistracorp.com/",
+    "earningsUrl": "https://investor.vistracorp.com/financials",
+    "overview": "Vistra combines electricity generation with retail energy operations.",
+    "drivers": [
+      "Power demand",
+      "Hedging",
+      "Fuel costs",
+      "Plant availability",
+      "Debt and capital spending"
+    ]
+  },
+  {
+    "slug": "cmg",
+    "ticker": "CMG",
+    "name": "Chipotle Mexican Grill",
+    "investorUrl": "https://ir.chipotle.com/",
+    "earningsUrl": "https://ir.chipotle.com/quarterly-results",
+    "overview": "Chipotle operates fast-casual restaurants with a focus on freshly prepared food.",
+    "drivers": [
+      "Comparable sales",
+      "Transactions versus pricing",
+      "Restaurant margins",
+      "New openings",
+      "Food and labor costs"
+    ]
+  }
+]

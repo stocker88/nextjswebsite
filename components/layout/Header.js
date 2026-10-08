@@ -20,7 +20,7 @@ const navItems = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Free Course', href: '#watch-and-learn' },
   { label: 'Expertise', href: '#about-aness' },
-  { label: 'Stock Market News', href: '/stocks-to-buy-now' },
+  { label: 'Stock Market News', href: '/stock-market-news' },
   { label: 'Trading Signals', href: '/stocks-to-buy' },
 ];
 

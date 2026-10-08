@@ -1,0 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const input = process.argv[2];
+if (!input) throw Error('Pass the app stocklist_json.dart path');
+const raw = fs.readFileSync(input, 'utf8').match(/const stockListDefaultJson\s*=\s*'''([\s\S]*?)'''/);
+if (!raw) throw Error('stockListDefaultJson was not found');
+const records = JSON.parse(raw[1].replace(/\\'/g, "'").replace(/\\\$/g, '$'));
+const items = Object.entries(records).map(([symbol, value]) => ({symbol, name:value.shortName || symbol, sector:value.sector || '', industry:value.industry || '', type:value.quoteType || '', marketCap: typeof value.marketCap === 'number' && Number.isFinite(value.marketCap) && value.marketCap > 0 ? value.marketCap : null}));
+if (!items.length || new Set(items.map(i=>i.symbol)).size !== items.length) throw Error('Invalid catalog');
+items.sort((a,b)=>a.symbol.localeCompare(b.symbol));
+fs.writeFileSync(path.join(__dirname,'../data/app-stock-catalog.json'),JSON.stringify(items,null,2)+'\n');
+console.log(`Imported ${items.length} instruments`);

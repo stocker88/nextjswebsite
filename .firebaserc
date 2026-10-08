@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "stocker-fcda2": {
+      "hosting": {
+        "website": [
+          "stocker-marketing-website"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

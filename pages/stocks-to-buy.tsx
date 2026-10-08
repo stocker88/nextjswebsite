@@ -87,6 +87,7 @@ export default function StocksToBuy({items: initialItems}:{items:Signal[]}) {
   const openDownloads = () => downloadDialog.current?.showModal();
   return <ResearchPage title="Stocks to buy now: latest signals" path="/stocks-to-buy">
     <div className="hero"><span className="eyebrow">STOCK BUY SIGNALS</span><h1>Stocks to buy now</h1><p>Recent stock setups and market signals. Open each insight in the app for the full analysis.</p></div>
+    <section className="public-copy"><h2>How to evaluate a stock-to-buy setup</h2><p>Look for a clear business thesis, incoming business catalysts, and supportive short term technical setup,  a valuation supported by earnings or cash flow, a defined time horizon and a reason the thesis could fail. A green chart or selected historical winner alone is not evidence of an attractive investment.</p><p>Read the summary analysis on this beta web version. The full analysis is available in the app.</p><p><a href="/stocks">Research companies by ticker</a> · <a href="/methodology">Understand the methodology and limitations</a></p></section>
     <div className="research-board">{items.slice(0, SIGNAL_PREVIEW_LIMIT).map(item=><SignalCard item={item} key={item.id} onGetApp={openDownloads}/>)}</div>
     {items.length > 0 && <div className="more-signals" aria-live="polite">
       {showAppLink ? <button type="button" className="research-cta" onClick={openDownloads}>View more signals in the app →</button> : <button type="button" className="research-cta" onClick={()=>setShowAppLink(true)}>More ↓</button>}
@@ -119,4 +120,4 @@ export default function StocksToBuy({items: initialItems}:{items:Signal[]}) {
     `}</style>
   </ResearchPage>;
 }
-export async function getStaticProps() { let items:Signal[]=[]; try { const r=await fetch('https://us-central1-stocker-fcda2.cloudfunctions.net/stockSignals'); if(r.ok) items=(await r.json()).items||[]; } catch (_) {} return {props:{items:items.slice(0, SIGNAL_PREVIEW_LIMIT)},revalidate:1800}; }
+export async function getStaticProps() { let items:Signal[]=[]; try { const r=await fetch('https://us-central1-stocker-fcda2.cloudfunctions.net/stockSignals'); if(r.ok) items=(await r.json()).items||[]; } catch (_) {} return {props:{items:items.slice(0, SIGNAL_PREVIEW_LIMIT)},revalidate:60}; }

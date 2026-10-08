@@ -2,17 +2,17 @@ import Head from 'next/head';
 import Header from './layout/Header';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children}: {title:string; path:string; children:ReactNode}) {
+export default function ResearchPage({title, path, children, description = title, noindex = false}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean}) {
   return <>
     <Head>
-      <title>{title} | Stocks To Buy Now AI</title>
-      <meta name="description" content={title} />
+      <title>{`${title} | Stocks To Buy Now AI`}</title>
+      <meta name="description" content={description} />
       <link rel="canonical" href={`https://www.stockstobuynow.ai${path}`} />
-      <meta name="robots" content="index,follow" />
+      <meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large"} />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />
       <meta property="og:type" content="website" />
-      <meta property="og:description" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Stocks To Buy Now AI" />
       <meta property="og:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
       <meta property="og:image:type" content="image/jpeg" />
@@ -21,25 +21,56 @@ export default function ResearchPage({title, path, children}: {title:string; pat
       <meta property="og:image:alt" content="Founder’s personal trade chart" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
       <meta name="twitter:image:alt" content="Founder’s personal trade chart" />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark />
     <main>
       <nav className="research-navigation" aria-label="Research sections">
-        <Link href="/stocks-to-buy-now" aria-current={path.startsWith('/stocks-to-buy-now') ? 'page' : undefined}>
+        <Link href="/stock-market-news" aria-current={path.startsWith('/stock-market-news') ? 'page' : undefined}>
           <span>STOCK MARKET NEWS</span><strong>View Stock Market News →</strong>
         </Link>
         <Link href="/stocks-to-buy" aria-current={path === '/stocks-to-buy' ? 'page' : undefined}>
           <span>STOCK SIGNALS</span><strong>View Stocks to Buy Signals →</strong>
         </Link>
       </nav>
+      <nav className="research-resources" aria-label="Research resources">
+        {[
+          {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
+          {href:'/glossary',label:'Investing glossary',icon:'M12 5v15 M12 5C8 2 4 3 2 4v15c3-2 7-2 10 1 3-3 7-3 10-1V4c-2-1-6-2-10 1'},
+          {href:'/editorial-policy',label:'Editorial standards',icon:'M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3 M8 12l3 3 5-6'},
+          {href:'/methodology',label:'Research methodology',icon:'M4 6h16 M4 12h16 M4 18h16 M8 3v6 M16 9v6 M10 15v6'},
+        ].map(resource => {
+          const current = path.split('?')[0];
+          const active = current === resource.href || current.startsWith(resource.href + '/') || (resource.href === '/stocks' && current.startsWith('/instruments/'));
+          return <Link key={resource.href} href={resource.href} aria-current={active ? 'page' : undefined}>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={resource.icon}/></svg>
+            <span>{resource.label}</span>
+          </Link>;
+        })}
+      </nav>
       {children}
     </main>
     <style jsx>{`
+      .research-resources {display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px;}
+      .research-resources :global(a) {display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:10px 15px;border:1px solid #2b3750;border-radius:12px;background:#10192a;color:#b9c9e1;font-size:13px;font-weight:600;line-height:1.4;text-decoration:none;transition:background .15s,border-color .15s,color .15s;}
+      .research-resources svg {flex-shrink:0;color:#94b6e7;}
+      .research-resources :global(a:hover) {background:#1b2940;border-color:#6f89b6;color:#fff;}
+      .research-resources :global(a[aria-current="page"]) {background:#25203e;border-color:#9d7bdd;color:#e7dbff;}
+      .research-resources :global(a[aria-current="page"]) svg {color:#c6a8ff;}
+      .research-resources :global(a:focus-visible) {outline:2px solid #c6a8ff;outline-offset:3px;}
+      @media(max-width:600px) {.research-resources {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:26px;} .research-resources :global(a) {min-width:0;padding:10px;font-size:12px;gap:8px;}}
+      @media(prefers-reduced-motion:reduce) {.research-resources :global(a) {transition:none;}}
+      main :global(.public-copy) {max-width:760px;font-size:16px;line-height:1.75;}
+      main :global(.public-copy h2) {font-size:24px;margin-top:32px;}
+      main :global(.public-copy a) {color:#8dc8ff;text-decoration:underline;}
+      main :global(.public-copy li) {margin:10px 0;}
+      main :global(.stock-grid) {display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+      main :global(.pagination) {display:flex;justify-content:space-between;gap:18px;margin:32px 0;}
+      main :global(.pagination a) {color:#a5caff;}
       main {min-height:100vh;background:#070b18;color:white;padding:120px max(20px,calc((100vw - 1000px)/2)) 40px;}
-      .research-navigation {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:38px;}
+      .research-navigation {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:20px;}
       .research-navigation :global(a) {display:flex;flex-direction:column;gap:8px;min-width:0;padding:18px 20px;border:1px solid #303c55;border-radius:16px;background:#111a2b;color:#c7d2e6;text-decoration:none;transition:background .2s,border-color .2s;}
       .research-navigation :global(a[aria-current="page"]) {background:linear-gradient(120deg,#232045,#152a40);border-color:#9770e9;color:white;}
       .research-navigation :global(a:hover) {border-color:#a586ee;background:#202b43;}

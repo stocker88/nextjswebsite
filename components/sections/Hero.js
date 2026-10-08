@@ -76,7 +76,7 @@ const Hero = ({
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
-             Stocks to Buy Now AI sends you hot stocks to buy before they blow up!
+             Research stocks to buy with AI-powered insights and trading tools.
             </h2>
           </div>
 
@@ -101,10 +101,10 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1.35,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       Join the #1 investor community on{' '}
+       Read investor reviews on{' '}
        <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Trustpilot</a>
        <div>
-         Receive live alerts from{' '}
+         Get the app on{' '}
          <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Apple</a>
          {' '}and{' '}
          <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Google</a>

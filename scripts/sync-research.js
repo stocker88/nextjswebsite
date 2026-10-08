@@ -15,6 +15,6 @@ const endpoint = 'https://us-central1-stocker-fcda2.cloudfunctions.net/researchP
     if (after) cursors.add(after);
   } while (after);
   items.sort((a,b) => (b.time || 0) - (a.time || 0));
-  fs.writeFileSync(path.join(__dirname, '../data/research.json'), JSON.stringify(items, null, 2));
+  fs.writeFileSync(path.join(__dirname, '../data/research.json'), JSON.stringify(items));
   console.log(`Synced ${items.length} research previews`);
 })().catch(error => {console.error(error.message); process.exit(1);});
