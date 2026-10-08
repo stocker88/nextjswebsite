@@ -11,6 +11,19 @@ export default function ResearchPage({title, path, children}: {title:string; pat
       <meta name="robots" content="index,follow" />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content={title} />
+      <meta property="og:site_name" content="Stocks To Buy Now AI" />
+      <meta property="og:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Founder’s personal trade chart" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={title} />
+      <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
+      <meta name="twitter:image:alt" content="Founder’s personal trade chart" />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark />
     <main>
