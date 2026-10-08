@@ -10,7 +10,8 @@
     "deploy": "bash scripts/deploy-firebase.sh",
     "sync:research": "node scripts/sync-research.js",
     "test:seo": "node scripts/seo-check.cjs",
-    "publish:article": "node scripts/publish-public-article.cjs"
+    "publish:article": "node scripts/publish-public-article.cjs",
+    "build:pages": "node scripts/github-pages/build.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

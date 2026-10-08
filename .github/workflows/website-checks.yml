@@ -1,7 +1,5 @@
 name: Website checks
 on:
-  push:
-    branches: [main]
   pull_request:
 jobs:
   check:
@@ -15,4 +13,5 @@ jobs:
       - run: corepack enable
       - run: yarn install --frozen-lockfile
       - run: yarn test:seo
-      - run: yarn build
+      - run: yarn build:pages
+      - run: node scripts/github-pages/verify.cjs

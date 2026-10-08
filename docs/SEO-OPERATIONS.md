@@ -1,7 +1,18 @@
 # Search and public research operations
 
-## Hosting and deployment
-The website is prepared for Firebase Hosting in front of a Next.js standalone server on Cloud Run. GitHub Pages cannot serve these dynamic routes. The old Pages workflow is disabled; it does not delete the currently published site.
+## Current deployment: GitHub Pages
+Push to `main` to build and deploy the current website through `.github/workflows/nextjs.yml`. In GitHub Settings → Pages, the source must be **GitHub Actions**. Keep the existing GitHub Pages DNS/custom domain while using this mode.
+
+`npm run build:pages` builds a disposable `.github-pages-build/` copy and writes the upload artifact to `out/`. It preserves the current design, stock catalog/logos/search, glossary, news headline URLs, article previews, signal charts and metadata. The adapter fails if an expected route changes instead of silently skipping it. It never replaces the Firebase source files.
+
+GitHub builds are also scheduled at minutes 17 and 47 each hour. Each build fetches the Firebase research archive and signals, then pre-renders the pages and sitemap. These scheduled runs can be delayed by GitHub; updates appear after a successful build and deployment, not exactly every 30 minutes. A failed build leaves the previous release live. Existing tabs need a reload. Full static rebuilds use GitHub Actions minutes; remove the schedule if only push/manual deployments are wanted.
+
+Stock search runs in the browser; directory pagination, news and stock profiles have generated HTML. GitHub Pages cannot send server redirects, so known legacy article IDs and the old news hub use canonical HTML redirects. Unknown or newly published article URLs require the next successful deployment. The Firebase version still supports server redirects and on-demand rendering.
+
+Local verification: install with `yarn install --frozen-lockfile`, run `yarn test:seo`, then `yarn build:pages`. `node scripts/github-pages/build.cjs --snapshot` is for offline archive testing only; production workflows always fetch fresh research.
+
+## Optional Firebase deployment (preserved)
+The original server build is preserved for Firebase Hosting in front of a Next.js standalone server on Cloud Run. Switching to it remains optional.
 
 1. Install Google Cloud CLI and Firebase CLI, then authenticate with `gcloud auth login` and `firebase login`.
 2. Use the existing project `stocker-fcda2` with billing enabled. Enable Cloud Run, Cloud Build and Artifact Registry APIs in its console. The deploying account needs the relevant build, service-account and deployment permissions.
@@ -12,7 +23,7 @@ The website is prepared for Firebase Hosting in front of a Next.js standalone se
 
 Cloud Run scales to zero and caps at three instances in the supplied command. This can introduce cold-start latency and usage charges. Increase minimum instances only if that tradeoff is wanted. Cloud Run's local ISR cache is per instance and can disappear on restart; rebuilding on demand remains safe. `pinTag` keeps the Hosting release tied to its Cloud Run revision. Roll back Hosting and its pinned revision together if necessary.
 
-## What refreshes
+## What refreshes in Firebase server mode
 The existing Firebase refreshWebsiteFeeds job produces the public news/signals snapshot every 30 minutes. The website checks the preview API cache every minute and rendered pages become eligible for on-request regeneration every minute. This avoids layering another full 30-minute website cache over the Firebase schedule. An idle page regenerates when visited; it is not an exact deadline or a guarantee of Google recrawling. Existing browser tabs do not automatically poll the full archive.
 
 ## Content publication
