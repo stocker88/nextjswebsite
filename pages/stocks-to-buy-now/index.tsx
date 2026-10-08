@@ -48,8 +48,8 @@ export default function ResearchHub({items}: {items:ResearchPreview[]}) {
      heights[column] += 160 + item.title.length;
    }
  }
- return <ResearchPage title="Stocks to buy now: research and stock analysis" path="/stocks-to-buy-now">
-   <div className="hero"><span className="eyebrow">AI MARKET INSIGHTS</span><h1>Stocks to buy now</h1><p>Research previews, market catalysts and investor insights. Subscribe in the app to read the full analysis.</p></div>
+ return <ResearchPage title="Stock Market News: latest news and analysis" path="/stocks-to-buy-now">
+   <div className="hero"><span className="eyebrow">STOCK MARKET NEWS</span><h1>Stock Market News</h1><p>Research previews, market catalysts and investor insights. Subscribe in the app to read the full analysis.</p></div>
    {!items.length && <p>No research previews are available yet.</p>}
    <div className="research-board"><Column items={columns[0]} /><Column items={columns[1]} /><Column items={columns[2]} /></div>
    {visibleCount < items.length && <button style={{display:'block',margin:'32px auto',padding:'14px 24px',borderRadius:'999px',border:'1px solid #895cff',background:'#171d31',color:'white',cursor:'pointer'}} onClick={() => setVisibleCount(count => count + 40)}>Load more research ({Math.min(40, items.length-visibleCount)} more)</button>}

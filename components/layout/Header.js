@@ -18,9 +18,10 @@ const getAppStoreUrl = () => {
 const navItems = [
   { label: 'Reviews', href: '#reviews' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Learn for Free', href: '#watch-and-learn' },
+  { label: 'Free Course', href: '#watch-and-learn' },
   { label: 'Expertise', href: '#about-aness' },
-  { label: 'Download', href: '#download' },
+  { label: 'Stock Market News', href: '/stocks-to-buy-now' },
+  { label: 'Trading Signals', href: '/stocks-to-buy' },
 ];
 
 export default function Header({
@@ -141,7 +142,7 @@ export default function Header({
         <div className={`nav-content${isOpen ? ' is-open' : ''}`}>
           <div className="nav-links">
             {navItems.map((item) => (
-              <a key={item.href} href={`${navBasePath}${item.href}`} onClick={closeMenu}>
+              <a key={item.href} href={item.href.startsWith('#') ? `${navBasePath}${item.href}` : item.href} onClick={closeMenu}>
                 {item.label}
               </a>
             ))}

@@ -16,7 +16,7 @@ export default function ResearchPage({title, path, children}: {title:string; pat
     <main>
       <nav className="research-navigation" aria-label="Research sections">
         <Link href="/stocks-to-buy-now" aria-current={path.startsWith('/stocks-to-buy-now') ? 'page' : undefined}>
-          <span>ANALYST INSIGHTS</span><strong>View Analyst Insights →</strong>
+          <span>STOCK MARKET NEWS</span><strong>View Stock Market News →</strong>
         </Link>
         <Link href="/stocks-to-buy" aria-current={path === '/stocks-to-buy' ? 'page' : undefined}>
           <span>STOCK SIGNALS</span><strong>View Stocks to Buy Signals →</strong>

@@ -101,9 +101,14 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1.35,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom" data-reveal-delay="150">
-       60 Million monthly readers
-       <br />
-       Join the #1 investor community on Trustpilot
+       Join the #1 investor community on{' '}
+       <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Trustpilot</a>
+       <div>
+         Receive live alerts from{' '}
+         <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Apple</a>
+         {' '}and{' '}
+         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Google</a>
+       </div>
     </div>
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
