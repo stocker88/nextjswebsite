@@ -76,7 +76,7 @@ const Hero = ({
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
-             Research stocks to buy with AI-powered insights and trading tools.
+             Stocks to buy now and stock market news today.
             </h2>
           </div>
 

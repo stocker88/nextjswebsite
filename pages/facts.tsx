@@ -10,7 +10,7 @@ const factsSchema = {
   '@type': 'AboutPage',
   '@id': 'https://www.stockstobuynow.ai/facts#page',
   url: 'https://www.stockstobuynow.ai/facts',
-  name: 'Stocks To Buy Now AI: Product Facts',
+  name: 'Stocks To Buy Now: Product Facts',
   description: 'Official product facts, features, platforms and disclosures for Stocks To Buy Now AI.',
   isPartOf: { '@id': 'https://www.stockstobuynow.ai/#website' },
   about: { '@id': 'https://www.stockstobuynow.ai/#app' },
@@ -20,14 +20,14 @@ export default function FactsPage() {
   return (
     <>
       <Head>
-        <title>Product Facts | Stocks To Buy Now AI</title>
+        <title>Product Facts | Stocks To Buy Now</title>
         <meta
           name="description"
-          content="Official facts about Stocks To Buy Now AI, including features, supported platforms, ratings, paper trading and important risk disclosures."
+          content="Official facts about Stocks To Buy Now, including features, supported platforms, ratings, paper trading and important risk disclosures."
         />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
         <link rel="canonical" href="https://www.stockstobuynow.ai/facts" />
-        <meta property="og:title" content="Stocks To Buy Now AI: Product Facts" />
+        <meta property="og:title" content="Stocks To Buy Now: Product Facts" />
         <meta property="og:description" content="Official product features, platforms, ratings and disclosures." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.stockstobuynow.ai/facts" />
