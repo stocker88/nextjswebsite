@@ -15,7 +15,7 @@ export default function Policy() {
         </p>
         <h2>Sources and dates</h2>
         <p>
-          Full public articles should identify primary sources, their author and
+          Full public articles identify primary sources, their author and
           publication date. Updated timestamps reflect substantive revisions,
           not automatic page refreshes. Quotes and market data must identify
           their source and observation time.
@@ -26,13 +26,6 @@ export default function Policy() {
           reviewer, sources and an explicit publication decision. AI assistance
           must be disclosed. Legacy previews without that information are
           labeled as previews, not presented as reviewed full articles.
-        </p>
-        <h2>Conflicts and performance</h2>
-        <p>
-          Authors always disclose relevant positions and commercial
-          relationships on the article. Selected success stories are not a
-          complete track record. Engagement counts should reflect recorded
-          activity.
         </p>
         <h2>Corrections</h2>
         <p>

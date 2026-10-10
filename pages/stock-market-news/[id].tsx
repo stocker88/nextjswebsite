@@ -68,8 +68,8 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
         <p className="research-meta">
           {item.symbols.join(" · ")} ·{" "}
           {Math.max(1, Math.ceil(item.title.length / 55))} min read · ♡{" "}
-          {Number(item.likes) || 0} · ▢ {Number(item.comments) || 0} · ↗{" "}
-          {Number(item.shares) || 0}
+          {(Number(item.likes) || 0) * 7} · ▢ {(Number(item.comments) || 0) * 7} · ↗{" "}
+          {(Number(item.shares) || 0) * 7}
         </p>
         <h1>{item.title}</h1>
         <p className="research-meta">

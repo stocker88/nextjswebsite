@@ -1,4 +1,4 @@
-import HomeResearch from '../components/HomeResearch';
+
 import {fetchResearch} from '../lib/research-server';
 import type {ResearchPreview} from '../lib/research';
 declare global {
@@ -197,9 +197,9 @@ useEffect(() => {
          strategy="lazyOnload"
        />
        <Layout>
-       {morePosts.length > 0 && <Home posts={morePosts} topWidgetRef={topWidgetRef} bodyWidgetRef={bodyWidgetRef}  />}
+       {morePosts.length > 0 && <Home news={news || []} posts={morePosts} topWidgetRef={topWidgetRef} bodyWidgetRef={bodyWidgetRef}  />}
 
-        <HomeResearch items={news || []}/>
+
         <Head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -306,8 +306,19 @@ export const getStaticProps = async () => {
     'seoExcerpt',
   ])
 
+  const now = Date.now();
+  const cutoff = now - 10 * 24 * 60 * 60 * 1000;
+  const news = (await fetchResearch()).filter((item) => {
+    if (!item.time || !Number.isFinite(item.time)) return false;
+    const published = item.time < 1e12 ? item.time * 1000 : item.time;
+    return published >= cutoff && published <= now;
+  }).sort((a, b) => {
+    const milliseconds = (time: number) => time < 1e12 ? time * 1000 : time;
+    return milliseconds(b.time!) - milliseconds(a.time!);
+  });
+
   return {
-    props: { allPosts, news:(await fetchResearch()).slice(0,6) },
+    props: { allPosts, news },
     revalidate:60,
   }
 }

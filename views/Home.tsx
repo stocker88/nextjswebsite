@@ -1,3 +1,6 @@
+import HomeSignalPreview from "../components/HomeSignalPreview";
+import HomeResearch from "../components/HomeResearch";
+import type { ResearchPreview } from "../lib/research";
 import React, { useEffect, useRef, useState } from 'react';
 // import sections
 import Hero from '../components/sections/Hero';
@@ -28,6 +31,7 @@ import FeaturedMedia from '../components/sections/FeaturedMedia'
 
 type Props = {
   posts: Post[];
+  news: ResearchPreview[];
   topWidgetRef: React.RefObject<HTMLDivElement | null>;
   bodyWidgetRef: React.RefObject<HTMLDivElement | null>;
 }
@@ -75,7 +79,7 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
   );
 };
 
-const Home = ({ posts, topWidgetRef, bodyWidgetRef }: Props) => {
+const Home = ({ news, posts, topWidgetRef, bodyWidgetRef }: Props) => {
 
 
 
@@ -117,6 +121,7 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
+  <HomeResearch items={news} section="news" />
   <ProductProof founderOnly />
 
   <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
@@ -125,6 +130,7 @@ import SignUpModal from '../SignUpModal';
             <Swipe/>
           </div>
         </section>
+        <HomeSignalPreview />
               <TrustpilotWidget
                 templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                 businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
@@ -189,6 +195,7 @@ import SignUpModal from '../SignUpModal';
 <FeaturedMedia />
 
  <CompoundInterestCalculator/>
+ <HomeResearch items={news} section="resources"/>
         <section className="editorial-section">
           <div className="editorial-shell">
             <Intro />

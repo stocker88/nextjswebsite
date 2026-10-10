@@ -21,7 +21,7 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
     <h2 className="news-headline">{item.title}</h2></Link>
     {quickTake && <div className="news-quick-take"><span>Quick take</span><p>{quickTake}</p></div>}
     <ResearchImages images={item.images} />
-    <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(Number(item.likes) || 0)}</span><span>▢ {(Number(item.comments) || 0)}</span><span>↗ {(Number(item.shares) || 0)}</span></div>
+    <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {((Number(item.likes) || 0) * 7)}</span><span>▢ {((Number(item.comments) || 0) * 7)}</span><span>↗ {((Number(item.shares) || 0) * 7)}</span></div>
   </article>;
 }
 
