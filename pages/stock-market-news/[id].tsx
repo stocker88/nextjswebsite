@@ -138,7 +138,6 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
               {item.educationPreview}
             </p>
           )}
-        <ResearchImages images={item.images} />
         {item.attachedTitle && (
           <div className="research-card">
             <strong>Attached thread</strong>
@@ -156,6 +155,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
             Open in the app →
           </a>
         </div>
+        <ResearchImages images={item.images} />
       </article>
     </ResearchPage>
   );
