@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import type {ResearchImage} from '../lib/research';
 
-export default function ResearchImages({images = []}: {images?: ResearchImage[]}) {
+export default function ResearchImages({images = [], compact = false}: {images?: ResearchImage[]; compact?: boolean}) {
   const [active, setActive] = useState<number | null>(null);
   const [closing, setClosing] = useState(false);
   const [zoom, setZoom] = useState(1);
@@ -44,13 +44,13 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
     setZoom(1);setPan({x:0,y:0});setActive(index);
   };
   return <>
-    <div className={'pictures '+(items.length===2?'pair':'')}>
+    <div className={'pictures '+(items.length===2?'pair':'')+(compact?' compact':'')}>
       {items.map((i,index)=><div key={i.url}>
         <button className="picture" onClick={e=>open(index,e.currentTarget)} aria-label={'Expand '+(title(i)||'image '+(index+1))}>
           <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy"/>
           <span className="expand" aria-hidden="true">⛶</span>
         </button>
-        {title(i)&&<span className="caption">{title(i)}</span>}
+        {!compact&&title(i)&&<span className="caption">{title(i)}</span>}
       </div>)}
     </div>
     {active!==null && createPortal(
@@ -116,6 +116,7 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
       .pictures{margin:16px 0;display:grid;gap:12px}.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
       .picture{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080f20;cursor:zoom-in}
       .picture img{display:block;width:100%;height:auto}.pair .picture{aspect-ratio:1}.pair .picture img{width:100%;height:100%;object-fit:contain}
+      .pictures.compact{display:flex;gap:6px;margin:0;flex-shrink:0}.compact .picture{width:56px;height:56px;aspect-ratio:1}.compact .picture img{width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
       .expand{position:absolute;right:6px;bottom:6px;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
       .caption{display:block;text-align:center;margin-top:6px;font-size:12px;color:#cbd5e7}.picture:focus-visible{outline:2px solid #b594ff;outline-offset:3px}
     `}</style>

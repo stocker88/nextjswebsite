@@ -1,3 +1,4 @@
+import ResearchImages from "../../components/ResearchImages";
 import FallbackLogo from '../../components/FallbackLogo';
 import Head from "next/head";
 import Link from "next/link";
@@ -137,6 +138,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
               {item.educationPreview}
             </p>
           )}
+        <ResearchImages images={item.images} />
         {item.attachedTitle && (
           <div className="research-card">
             <strong>Attached thread</strong>

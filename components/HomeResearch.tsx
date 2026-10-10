@@ -1,3 +1,4 @@
+import ResearchImages from "./ResearchImages";
 import Link from "next/link";
 import Head from "next/head";
 import { ResearchPreview, researchUrl } from "../lib/research";
@@ -23,7 +24,7 @@ export default function HomeResearch({ items }: { items: ResearchPreview[] }) {
           }}
         />
       </Head>
-      <h2>Latest public research</h2>
+      <h2>Stock market news today</h2>
       <p>
         Recent app research previews, dated when published. These are not live
         quotes or a ranked list of buys.
@@ -41,7 +42,10 @@ export default function HomeResearch({ items }: { items: ResearchPreview[] }) {
               <tr key={i.id}>
                 <td>{displayDate(i.time)}</td>
                 <td>
-                  <Link href={researchUrl(i.id, i.title)}>{i.title}</Link>
+                  <div className="headline-with-pictures">
+                    <Link href={researchUrl(i.id, i.title)}>{i.title}</Link>
+                    <ResearchImages images={i.images} compact />
+                  </div>
                 </td>
               </tr>
             ))}
@@ -86,6 +90,8 @@ export default function HomeResearch({ items }: { items: ResearchPreview[] }) {
         .home-research :global(a) {
           color: #8dc8ff;
         }
+        .headline-with-pictures {display:flex;align-items:center;justify-content:space-between;gap:16px;}
+        @media(max-width:600px){.headline-with-pictures{flex-direction:column;align-items:flex-start;gap:8px;}}
         .table-wrap {
           overflow: auto;
         }
