@@ -12,7 +12,7 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
   const modal = useRef<HTMLDivElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const points = useRef(new Map<number,{x:number,y:number}>());
-  const gesture = useRef({distance:0,zoom:1,x:0,y:0,startX:0});
+  const gesture = useRef({distance:0,zoom:1,x:0,y:0,startX:0,startY:0,canSwipe:false});
   const items = images.filter(i => /^https?:\/\//.test(i.url)).slice(0,2);
   const close = () => {
     if (closing) return;
@@ -80,7 +80,7 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
               e.currentTarget.setPointerCapture(e.pointerId);
               points.current.set(e.pointerId,{x:e.clientX,y:e.clientY});
               const p=Array.from(points.current.values());
-              gesture.current={distance:p.length===2?Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y):0,zoom,x:e.clientX,y:e.clientY,startX:e.clientX};
+              gesture.current={distance:p.length===2?Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y):0,zoom,x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,canSwipe:p.length===1&&zoom===1};
             }}
             onPointerMove={e=>{
               if(!points.current.has(e.pointerId))return;
@@ -89,19 +89,27 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
               if(p.length===2&&gesture.current.distance){
                 setZoom(Math.max(1,Math.min(6,gesture.current.zoom*Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)/gesture.current.distance)));
               } else if(p.length===1&&zoom>1){
-                setPan(v=>({x:v.x+e.clientX-gesture.current.x,y:v.y+e.clientY-gesture.current.y}));
+                // Capture deltas before mutating the gesture ref: React batches updates.
+                const dx=e.clientX-gesture.current.x,dy=e.clientY-gesture.current.y;
+                setPan(v=>({x:v.x+dx,y:v.y+dy}));
                 gesture.current.x=e.clientX;gesture.current.y=e.clientY;
               }
             }}
             onPointerUp={e=>{
-              if(points.current.size===1&&zoom===1&&Math.abs(e.clientX-gesture.current.startX)>60)change(e.clientX<gesture.current.startX?1:-1);
+              const dx=e.clientX-gesture.current.startX,dy=e.clientY-gesture.current.startY;
+              if(points.current.size===1&&gesture.current.canSwipe&&zoom===1&&Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy))change(dx<0?1:-1);
               points.current.delete(e.pointerId);
+              const remaining=Array.from(points.current.values())[0];
+              if(remaining){
+                gesture.current.x=remaining.x;gesture.current.y=remaining.y;
+                gesture.current.distance=0;gesture.current.canSwipe=false;
+              }
             }}
             onPointerCancel={()=>points.current.clear()}>
             <img src={items[active].url} alt={title(items[active])||'Expanded research illustration'} draggable={false}
               style={{transform:`translate(${pan.x}px,${pan.y}px) scale(${zoom})`}}/>
           </div>
-          <p className="lightbox-hint">Pinch or double-click to zoom{items.length>1?' · Swipe or use arrows to switch':''}</p>
+          <p className="lightbox-hint">Pinch or double-click to zoom · Drag to explore{items.length>1?' · Swipe when zoomed out to switch':''}</p>
         </div>
       </div>,document.body)}
     <style jsx>{`
@@ -119,7 +127,7 @@ export default function ResearchImages({images = []}: {images?: ResearchImage[]}
       .lightbox-tools button{min-width:44px;min-height:44px;border:0;border-radius:9px;background:#243047;color:white;font-size:24px;cursor:pointer}
       .lightbox-tools button:focus-visible{outline:2px solid #b594ff}
       .lightbox-stage{flex:1;min-height:0;display:flex;justify-content:center;align-items:center;overflow:hidden;touch-action:none;cursor:grab}
-      .lightbox-stage img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none}
+      .lightbox-stage img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;pointer-events:none;-webkit-user-drag:none}
       .lightbox-hint{font-size:12px;color:#b9c5d8;text-align:center;padding:12px;margin:0}
       @keyframes researchExpand{from{transform:var(--from);opacity:0}to{transform:translate(0,0) scale(1);opacity:1}}
       @keyframes researchCollapse{from{transform:translate(0,0) scale(1);opacity:1}to{transform:var(--from);opacity:0}}
