@@ -10,13 +10,16 @@ import {fetchResearch} from '../../lib/research-server';
 
 function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean}) {
   const ticker = item.symbols[0]?.toUpperCase();
+  const isEducation = item.symbols.some(symbol => symbol.trim().replace(/^[#$]/, '').toLowerCase() === 'education');
+  // educationPreview contains the second non-empty source line.
+  const quickTake = isEducation ? item.educationPreview : (item.quickTake || item.educationPreview);
   return <article className={`research-card ${compact ? 'research-card-compact' : ''}`} >
     <Link href={researchUrl(item.id, item.title)}><span className="insight-bubble">
       <FallbackLogo className="ticker-logo" src={ticker ? `/assets/logo/${ticker}.webp` : null} />
       {ticker ? `$${ticker} INSIGHTS` : 'MARKET INSIGHTS'} →
     </span>
     <h2 className="news-headline">{item.title}</h2></Link>
-    {(item.quickTake || item.educationPreview) && <div className="news-quick-take"><span>Quick take</span><p>{item.quickTake || item.educationPreview}</p></div>}
+    {quickTake && <div className="news-quick-take"><span>Quick take</span><p>{quickTake}</p></div>}
     <ResearchImages images={item.images} />
     <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(Number(item.likes) || 0)}</span><span>▢ {(Number(item.comments) || 0)}</span><span>↗ {(Number(item.shares) || 0)}</span></div>
   </article>;
