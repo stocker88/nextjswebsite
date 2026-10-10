@@ -1,3 +1,4 @@
+import FallbackLogo from '../../components/FallbackLogo';
 import Head from "next/head";
 import Link from "next/link";
 import { publicArticles } from "../../lib/public-articles";
@@ -57,18 +58,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
       </Head>
       <article>
         <span className="insight-bubble">
-          {item.symbols[0] ? (
-            <img
-              className="ticker-logo"
-              src={`/assets/logo/${item.symbols[0].toUpperCase()}.webp`}
-              alt=""
-              onError={(event) => {
-                event.currentTarget.style.display = "none";
-              }}
-            />
-          ) : (
-            <span className="insight-dot" />
-          )}
+          <FallbackLogo className="ticker-logo" src={item.symbols[0] ? `/assets/logo/${item.symbols[0].toUpperCase()}.webp` : null} />
           {item.symbols[0]
             ? `$${item.symbols[0].toUpperCase()} INSIGHTS`
             : "MARKET INSIGHTS"}{" "}

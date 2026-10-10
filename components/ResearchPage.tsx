@@ -89,6 +89,11 @@ export default function ResearchPage({title, path, children, description = title
       main :global(.research-card-compact .metrics) {font-size:11px;gap:9px;flex-wrap:wrap;}
       main :global(.research-card) {display:block;min-width:0;overflow:hidden;overflow-wrap:anywhere;padding:28px;margin:18px 0;border:1px solid rgba(120,145,190,.25);border-radius:24px;background:linear-gradient(145deg,#121c2d,#0c1220);box-shadow:0 18px 44px rgba(0,0,0,.2);transition:transform .2s,border-color .2s;}
       main :global(.research-card:hover) {transform:translateY(-3px);border-color:#8d68ff;}
+      main :global(.news-headline) {display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+      main :global(.research-card > a) {color:inherit;text-decoration:none;}
+      main :global(.news-quick-take) {background:rgba(155,92,255,.09);border:1px solid rgba(155,92,255,.25);border-radius:12px;padding:12px;margin:12px 0;}
+      main :global(.news-quick-take > span) {font-size:12px;font-weight:700;color:#c5a4ff;}
+      main :global(.news-quick-take p) {font-size:14px;line-height:1.5;color:#b9c5d8;margin:6px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
       main :global(.research-card h2) {margin:14px 0 10px;font-size:clamp(15px,1.7vw,20px);line-height:1.32;overflow-wrap:anywhere;}
       main :global(.insight-bubble) {display:inline-flex;align-items:center;gap:9px;border:1px solid #895cff;border-radius:999px;padding:8px 14px;color:#d9c8ff;background:rgba(91,49,172,.22);font-size:13px;font-weight:800;letter-spacing:.06em;}
       main :global(.ticker-logo) {width:24px;height:24px;border-radius:50%;object-fit:contain;background:#fff;}
@@ -99,6 +104,18 @@ main :global(.chart-label) {font-size:10px;font-weight:800;letter-spacing:.12em;
       main :global(.metrics) {display:flex;gap:18px;color:#aeb8ca;font-size:13px;}
       main :global(.research-meta) {color:#aeb8ca;font-size:14px;margin:14px 0;}
       @media (max-width: 700px) { main {padding-left:10px;padding-right:10px;} main :global(.research-board) {grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:26px;} main :global(.research-column + .research-column) {padding-left:7px;} main :global(.research-card-compact) {padding:10px;margin-bottom:8px;border-radius:12px;} main :global(.research-card-compact h2) {font-size:12px;margin:8px 0 6px;} main :global(.insight-bubble) {font-size:8px;padding:5px 6px;gap:4px;letter-spacing:.02em;} main :global(.ticker-logo) {width:16px;height:16px;} main :global(.metrics) {font-size:8px;gap:4px;} }
+      main :global(.news-feed) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:42px;align-items:start;}
+      main :global(.news-feed .research-card) {min-width:0;margin-bottom:0;}
+      @media(max-width:900px) {
+        main :global(.news-headline) {-webkit-line-clamp:4;}
+        main :global(.news-feed) {grid-template-columns:minmax(0,1fr);gap:16px;max-width:680px;margin:26px auto 0;}
+        main :global(.news-feed .research-card) {padding:20px;margin:0;border-radius:18px;}
+        main :global(.news-feed h2) {font-size:21px;line-height:1.35;margin:14px 0 12px;}
+        main :global(.news-feed .insight-bubble) {font-size:11px;padding:8px 12px;gap:8px;}
+        main :global(.news-feed .ticker-logo) {width:26px;height:26px;}
+        main :global(.news-feed .metrics) {font-size:12px;gap:12px;flex-wrap:wrap;}
+        main :global(.news-feed .education-preview) {font-size:15px!important;line-height:1.55!important;}
+      }
       main :global(.research-cta) {display:inline-block;background:#1683ff;padding:14px 22px;border-radius:28px;margin:18px 0;color:white;font-weight:750;}
     `}</style>
   </>;

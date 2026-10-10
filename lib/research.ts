@@ -1,4 +1,5 @@
-export type ResearchPreview = {id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; educationPreview?: string; attachedTitle?: string};
+export type ResearchImage = {url: string; filename?: string; width?: number; height?: number};
+export type ResearchPreview = {id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; quickTake?: string; images?: ResearchImage[]; educationPreview?: string; attachedTitle?: string};
 export function researchSlug(title: string) {
   const words = title.split(/\r?\n/)[0].normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '').toLowerCase()
