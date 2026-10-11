@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ResearchImages from "./ResearchImages";
 import Link from "next/link";
 import Head from "next/head";
@@ -6,6 +7,65 @@ import { displayDate, isoDate, jsonLd } from "../lib/seo";
 import { stocks } from "../lib/stocks";
 import faq from "../data/research-faq.json";
 export default function HomeResearch({ items, section = "all" }: { items: ResearchPreview[]; section?: "all" | "news" | "resources" }) {
+  const [recovered, setRecovered] = useState<ResearchPreview[] | null>(null);
+  const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [attempt, setAttempt] = useState(0);
+  const news = items.length ? items : recovered || [];
+  useEffect(() => {
+    if (section === "resources" || items.length) return;
+    let disposed = false;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    setStatus("loading");
+    // Recover empty HTML snapshots cached by in-app browsers without downloading
+    // the archive again when the server already supplied recent previews.
+    (async () => {
+      try {
+        const archive: ResearchPreview[] = [];
+        const cursors = new Set<string>();
+        let cursor: string | null = null;
+        do {
+          const response = await fetch(
+            "https://us-central1-stocker-fcda2.cloudfunctions.net/researchPreviews" +
+              (cursor ? "?after=" + encodeURIComponent(cursor) : ""),
+            { signal: controller.signal, cache: "no-store" },
+          );
+          if (!response.ok) throw new Error("Research refresh failed");
+          const payload = await response.json();
+          if (!Array.isArray(payload.items) || payload.items.some((item: ResearchPreview) =>
+            !item || typeof item.id !== "string" || typeof item.title !== "string" || !Array.isArray(item.symbols)))
+            throw new Error("Invalid research response");
+          archive.push(...payload.items);
+          cursor = payload.next || null;
+          if (cursor && (typeof cursor !== "string" || cursors.has(cursor)))
+            throw new Error("Invalid research cursor");
+          if (cursor) cursors.add(cursor);
+        } while (cursor);
+        const now = Date.now();
+        const cutoff = now - 10 * 24 * 60 * 60 * 1000;
+        const milliseconds = (time: number) => time < 1e12 ? time * 1000 : time;
+        const recent = Array.from(new Map(archive.map(item => [item.id, item])).values())
+          .filter(item => typeof item.time === "number" && Number.isFinite(item.time) &&
+            milliseconds(item.time) >= cutoff && milliseconds(item.time) <= now)
+          .sort((a, b) => milliseconds(b.time!) - milliseconds(a.time!));
+        if (!disposed) { setRecovered(recent); setStatus("ready"); }
+      } catch {
+        if (!disposed) setStatus("error");
+      } finally {
+        clearTimeout(timeout);
+      }
+    })();
+    const retryOnRestore = (event: PageTransitionEvent) => {
+      if (event.persisted) setAttempt(value => value + 1);
+    };
+    window.addEventListener("pageshow", retryOnRestore);
+    return () => {
+      disposed = true;
+      clearTimeout(timeout);
+      controller.abort();
+      window.removeEventListener("pageshow", retryOnRestore);
+    };
+  }, [items, section, attempt]);
   return (
     <section className={"home-research " + section}>
       {section !== "news" && <Head>
@@ -33,8 +93,12 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
       </p></header>
       <div className="news-grid">
         <div className="news-columns" aria-hidden="true"><span>Published (UTC)</span><span>Research headline</span></div>
-        {!items.length && <p className="empty-news">No research previews published in the past 10 days.</p>}
-        {items.map(i => {
+        {!news.length && <div className="empty-news" role="status">
+          {status === "loading" ? "Loading recent research previews…" :
+            status === "error" ? <>Recent previews could not be loaded. <button type="button" onClick={() => setAttempt(value => value + 1)}>Try again</button></> :
+            "No research previews published in the past 10 days."}
+        </div>}
+        {news.map(i => {
           const education = i.symbols.some(symbol => symbol.replace(/^[#$]/, '').toLowerCase() === 'education');
           const quickTake = education ? i.educationPreview : i.quickTake;
           const category = education ? 'Market education' : 'Market insight';
@@ -95,6 +159,8 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         }
         .subsection-heading { margin-top: 80px; }
         .resources .subsection-heading:first-child { margin-top: 0; }
+        .empty-news { grid-column:1 / -1; color:#aab9cd; }
+        .empty-news button { background:transparent; border:0; color:#8cc8ff; text-decoration:underline; cursor:pointer; font:inherit; }
         .news-grid { display:grid; gap:18px; max-width:960px; margin:0 auto; }
         .news-columns,.news-row { display:grid; grid-template-columns:150px minmax(0,1fr); gap:24px; align-items:start; }
         .news-columns { color:#aab9cd; font-size:13px; font-weight:650; padding-bottom:12px; border-bottom:1px solid #24334a; }
