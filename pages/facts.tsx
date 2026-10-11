@@ -37,7 +37,7 @@ export default function FactsPage() {
         />
       </Head>
 
-      <Header homeHref="/" navBasePath="/" socialNoticeMode="tiktok" />
+      <Header homeHref="/" navBasePath="/" socialNoticeMode="all" />
 
       <main className="factsPage">
         <section className="hero">

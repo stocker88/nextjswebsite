@@ -8,11 +8,10 @@ export function detectSocialBrowser(
 ) {
   // TikTok can use different webviews for bio and Story links. Some Story
   // webviews look like Safari, so also inspect the referrer and campaign URL.
-  const browserContext = `${userAgent} ${referrer} ${currentUrl}`;
   const linkContext = `${referrer} ${currentUrl} ${attribution}`;
 
-  if (/Instagram|instagram\.com/i.test(browserContext)) return 'Instagram';
-  if (/FBAN|FBAV|FB_IAB|Facebook|facebook\.com/i.test(browserContext)) {
+  if (/Instagram/i.test(userAgent)) return 'Instagram';
+  if (/FBAN|FBAV|FB_IAB|Facebook/i.test(userAgent)) {
     return 'Facebook';
   }
   const hasTikTokUserAgent =
@@ -20,7 +19,7 @@ export function detectSocialBrowser(
       userAgent,
     );
   if (hasTikTokUserAgent) return 'TikTok';
-  if (/Twitter|twitter\.com|(?:^|\s)X\/|x\.com/i.test(browserContext)) {
+  if (/Twitter|(?:^|\s)X\//i.test(userAgent)) {
     return 'X';
   }
 
@@ -39,6 +38,9 @@ export function detectSocialBrowser(
 
   // Campaign data identifies TikTok only while the page is embedded. A real
   // Safari/Chrome window must not keep showing the in-app-browser notice.
+  if (isEmbeddedWebView && /Instagram|instagram\.com/i.test(linkContext)) return 'Instagram';
+  if (isEmbeddedWebView && /Facebook|facebook\.com/i.test(linkContext)) return 'Facebook';
+  if (isEmbeddedWebView && /Twitter|twitter\.com|https?:\/\/(?:www\.)?x\.com(?:[/?#]|$)/i.test(linkContext)) return 'X';
   if (isEmbeddedWebView && hasTikTokAttribution) return 'TikTok';
   if (isEmbeddedWebView) return 'an in-app browser';
 
@@ -77,12 +79,12 @@ export default function SocialBrowserNotice({
       <div>
         <strong>You’re inside {browserName}</strong>
         <span className="browserNoticeAction">
-          <small>{variant === 'insight' ? 'SHARED LINK' : 'TO CONTINUE'}</small>
+          <small>{variant === 'insight' ? 'SHARED LINK' : 'OPEN IN YOUR BROWSER'}</small>
           <span>
             {variant === 'insight' ? (
-              <>For this link to work, tap the browser menu above and select <b>Open in Browser</b></>
+              <>To open this link in your browser, tap the browser menu above, then select <b>“Open in browser”</b></>
             ) : (
-              <>Tap the browser menu above, then select <b>Open in Browser</b></>
+              <>Tap the browser menu above, then select <b>“Open in browser”</b></>
             )}
           </span>
         </span>

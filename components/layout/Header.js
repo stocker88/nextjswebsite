@@ -37,8 +37,8 @@ export default function Header({
 
   useEffect(() => {
     const detect = () => {
-      const attribution =
-        sessionStorage.getItem('socialBrowserAttribution') || '';
+      let attribution = '';
+      try { attribution = sessionStorage.getItem('socialBrowserAttribution') || ''; } catch { /* Storage may be unavailable in embedded browsers. */ }
       setSocialBrowserName(
         detectSocialBrowser(
           navigator.userAgent,

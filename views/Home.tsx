@@ -94,7 +94,7 @@ const Home = ({ news, posts, topWidgetRef, bodyWidgetRef }: Props) => {
   return (
     <>
 <div style={{ width: '100%', overflowX: 'clip', position: 'relative' }}>
-    <Header socialNoticeMode="tiktok" />
+    <Header socialNoticeMode="all" />
 {/*    import { useState } from 'react';
 import SignUpModal from '../SignUpModal';
  <div>
