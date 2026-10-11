@@ -3,6 +3,7 @@ import {createPortal} from 'react-dom';
 import type {ResearchImage} from '../lib/research';
 
 export default function ResearchImages({images = [], compact = false, thumbnailSize = 56}: {images?: ResearchImage[]; compact?: boolean; thumbnailSize?: number}) {
+  const [failed, setFailed] = useState<Record<string, boolean>>({});
   const [active, setActive] = useState<number | null>(null);
   const [closing, setClosing] = useState(false);
   const [zoom, setZoom] = useState(1);
@@ -46,9 +47,10 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
   return <>
     <div className={'pictures '+(items.length===2?'pair':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
-        <button className="picture" onClick={e=>open(index,e.currentTarget)} aria-label={'Expand '+(title(i)||'image '+(index+1))}>
-          <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy"/>
-          <span className="expand" aria-hidden="true">⛶</span>
+        <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={'Expand '+(title(i)||'image '+(index+1))}>
+          <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
+          {failed[i.url] && <span className="image-error">Image unavailable</span>}
+          {!failed[i.url] && <span className="expand" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></span>}
         </button>
         {!compact&&title(i)&&<span className="caption">{title(i)}</span>}
       </div>)}
@@ -115,9 +117,10 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     <style jsx>{`
       .pictures{margin:16px 0;display:grid;gap:12px}.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
       .picture{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080f20;cursor:zoom-in}
-      .picture img{display:block;width:100%;height:auto}.pair .picture{aspect-ratio:1}.pair .picture img{width:100%;height:100%;object-fit:contain}
-      .pictures.compact{display:flex;gap:6px;margin:0;flex-shrink:0}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
-      .expand{position:absolute;right:6px;bottom:6px;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
+      .picture img{display:block;width:100%;height:auto}.pair .picture{aspect-ratio:1}.pair .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+      .pictures.compact{display:flex;gap:6px;margin:0;flex-shrink:0}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
+      .picture:disabled{cursor:default;min-height:100px}.picture:disabled img{visibility:hidden}.image-error{position:absolute;inset:0;display:grid;place-items:center;color:#93a3bb;font-size:13px;background:#121e31;}
+      .expand{display:grid;place-items:center;min-width:28px;min-height:28px;position:absolute;right:6px;bottom:6px;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
       .caption{display:block;text-align:center;margin-top:6px;font-size:12px;color:#cbd5e7}.picture:focus-visible{outline:2px solid #b594ff;outline-offset:3px}
     `}</style>
     <style jsx global>{`
