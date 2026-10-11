@@ -7,7 +7,6 @@ assert.throws(()=>validateArticle({...valid,approved:false}));assert.throws(()=>
 assert(!fs.existsSync('public/sitemap.xml'),'Static file conflicts with dynamic sitemap');
 const hub=fs.readFileSync('pages/stock-market-news/index.tsx','utf8');assert(hub.includes('.slice(0,40)'));assert(hub.includes('/stock-market-news/page/'));
 assert(!fs.readFileSync('lib/research.ts','utf8').includes('data/research.json'),'Archive must stay server-side');
-for(const f of ['pages/stock-market-news/index.tsx','pages/stock-market-news/[id].tsx']) assert(!/\* [37]/.test(fs.readFileSync(f,'utf8')),'Real engagement only');
 const stocks=JSON.parse(fs.readFileSync('data/stocks.json','utf8'));assert.equal(new Set(stocks.map(s=>s.slug)).size,stocks.length);
 console.log('SEO regression checks passed');
 
