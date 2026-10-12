@@ -1,3 +1,5 @@
+import MarketNewsFeed from './MarketNewsFeed';
+import MarketFeedTabs from './MarketFeedTabs';
 import EngagementIcon from './EngagementIcon';
 import {loadRecentResearch} from '../lib/research-feed';
 import AttachedThreads from './AttachedThreads';
@@ -66,6 +68,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         All app research previews published in the past 10 days. These are not live
         quotes or a ranked list of buys.
       </p></header>
+      <MarketFeedTabs/>
       <div className="news-grid">
         <div className="news-columns" aria-hidden="true"><span>Published (UTC)</span><span>Research headline</span></div>
         {!news.length && <div className="empty-news" role="status">
@@ -102,6 +105,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
           </article></div>;
         })}
       </div>
+      <MarketNewsFeed compact/>
       <p className="section-action">
         <Link className="research-cta" href="/stock-market-news">All market news →</Link>
       </p>

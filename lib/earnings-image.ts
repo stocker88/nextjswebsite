@@ -1,9 +1,10 @@
 import {Event,day,shortDate} from './earnings';
 export const snapshotShareUrl='https://www.stockstobuynow.ai/earnings-calendar/';
 function loadImage(src:string):Promise<HTMLImageElement|null>{return new Promise(resolve=>{const img=new Image();const timer=setTimeout(()=>{img.src='';resolve(null)},6000);img.onload=()=>{clearTimeout(timer);resolve(img)};img.onerror=()=>{clearTimeout(timer);resolve(null)};img.src=src;});}
-export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=false):Promise<Blob>{
+export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=false,showRevenue=false):Promise<Blob>{
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1200;
  const c=canvas.getContext('2d');if(!c)throw new Error('Image export is unavailable in this browser.');
+ const badge=(item:Event)=>[showBeat?((showRevenue?'E ':'')+(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'—')):'',showRevenue?'R '+(item.research?.revenueBeat?.total?Math.round(item.research.revenueBeat.rate!)+'%':'—'):''].filter(Boolean);
  const isRange=Date.parse(end)-Date.parse(week)>6*86400000;
  const imageDates=isRange?dates.slice(0,42):dates;
  const weekdays=dates.filter(d=>{const n=new Date(d+'T12:00:00Z').getUTCDay();return n>0&&n<6});
@@ -36,7 +37,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
   imageDates.forEach((date,n)=>{const index=offset+n,x=36+(index%7)*cw,y=210+Math.floor(index/7)*rh;const all=events.filter(e=>e.date===date),items=all.slice(0,3);included+=items.length;
    box(x,y,cw-6,rh-6,'#0f1a2d','#30405d');text(shortDate(date),x+8,y+7,15,'#dfeaff',700);text(String(all.length),x+cw-15,y+9,11,'#91a7c5',400,'right');
    const step=Math.min(30,(rh-48)/3);
-   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);if(showBeat)text(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'—',x+cw-13,ty+3,10,'#85dbc1',600,'right')});
+   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);badge(item).forEach((b,j)=>text(b,x+cw-13,ty+j*11,9,'#85dbc1',600,'right'))});
    if(all.length>3)text('+'+(all.length-3)+' more',x+8,y+rh-23,10,'#92a8c7');
   });
  }else{
@@ -46,13 +47,13 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
   text(shortDate(date),x+14,236,24,'#edf1ff',700);
   let y=279;
   sessions.forEach(session=>{const all=groups(date,session),items=all.slice(0,9);if(!all.length)return;included+=items.length;
-   const active=sessions.filter(s=>groups(date,s).length).length;const rowHeight=Math.min(showBeat?78:68,Math.floor((600/active-60)/Math.ceil(items.length/3)));const height=35+Math.ceil(items.length/3)*rowHeight+(all.length>9?22:0);
+   const active=sessions.filter(s=>groups(date,s).length).length;const rowHeight=Math.min(showRevenue?90:showBeat?78:68,Math.floor((600/active-60)/Math.ceil(items.length/3)));const height=35+Math.ceil(items.length/3)*rowHeight+(all.length>9?22:0);
    const fill=session==='bmo'?'#2b271f':session==='amc'?'#172b3c':'#202236';const accent=session==='bmo'?'#e9bd79':session==='amc'?'#91c9f3':'#beb5e2';
    box(x+8,y,width-16,height,fill);
    text(session==='bmo'?'Before open':session==='amc'?'After close':'Time unconfirmed',x+15,y+10,12,accent,700);
    text(String(all.length),x+width-15,y+10,12,accent,400,'right');
    const tile=(width-24)/3;
-   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,rowHeight-(showBeat?30:17));logo(item.symbol,cx-size/2,ty,size);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');if(showBeat)text(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'—',cx,ty+size+17,10,'#85dbc1',600,'center');});
+   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,Math.max(12,rowHeight-(showRevenue?43:showBeat?30:17)));logo(item.symbol,cx-size/2,ty,size);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');badge(item).forEach((b,j)=>text(b,cx,ty+size+17+j*11,10,'#85dbc1',600,'center'));});
    if(all.length>9)text(`+ ${all.length-9} more in calendar`,x+width/2,y+height-20,11,'#b8c8de',400,'center');
    y+=height+10;
   });
@@ -66,7 +67,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
  text('www.StocksToBuyNow.ai',108,1008,29,'#eef2ff',700);
  text(`${included} of ${events.length} matching reports shown · Full details online`,108,1048,16,'#b2c2db');
  text('Data: Financial Modeling Prep · Release windows: Nasdaq',36,1100,16,'#b2c2db');
- text(showBeat?'EPS beat %: up to 8 reports · — history unavailable · Dates may change.':'Selected largest reporters per session. Dates may change.',36,1126,15,'#92a6c5');
+ text(showBeat||showRevenue?'E: EPS · R: Revenue beat % · Up to 8 reports · — unavailable.':'Selected largest reporters per session. Dates may change.',36,1126,15,'#92a6c5');
  text('No affiliation or endorsement by data providers.',36,1150,14,'#8296b5');
  c.imageSmoothingEnabled=false;c.drawImage(qrImage,1164-qrSize,996,qrSize,qrSize);c.imageSmoothingEnabled=true;
  text('Scan for full calendar',1164-qrSize/2,1170,13,'#b5c5df',400,'center');

@@ -2,11 +2,11 @@ import {useEffect,useRef,useState} from 'react';
 import {QRCodeSVG} from 'qrcode.react';
 import type {Event} from '../../lib/earnings';
 import {snapshotShareUrl} from '../../lib/earnings-image';
-export default function ShareSnapshot({events,dates,week,end,showBeat}:{events:Event[];dates:string[];week:string;end:string;showBeat:boolean}){
+export default function ShareSnapshot({events,dates,week,end,showBeat,showRevenue=false}:{events:Event[];dates:string[];week:string;end:string;showBeat:boolean;showRevenue?:boolean}){
  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[image,setImage]=useState<{url:string;file:File}|null>(null);
  const qr=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null);
  useEffect(()=>{if(!image)return;dialog.current?.showModal();return()=>{dialog.current?.close();URL.revokeObjectURL(image.url);trigger.current?.focus();}},[image]);
- async function generate(){setBusy(true);setError('');try{const {createEarningsImage}=await import('../../lib/earnings-image');const svg=qr.current?.querySelector('svg');if(!svg)throw new Error('QR code unavailable.');const blob=await createEarningsImage(events,dates,week,svg,end,showBeat);setImage({url:URL.createObjectURL(blob),file:new File([blob],`earnings-${week}-to-${end}.png`,{type:'image/png'})});}catch(e){setError(e instanceof Error?e.message:'Could not create the image. Please try again.')}finally{setBusy(false)}}
+ async function generate(){setBusy(true);setError('');try{const {createEarningsImage}=await import('../../lib/earnings-image');const svg=qr.current?.querySelector('svg');if(!svg)throw new Error('QR code unavailable.');const blob=await createEarningsImage(events,dates,week,svg,end,showBeat,showRevenue);setImage({url:URL.createObjectURL(blob),file:new File([blob],`earnings-${week}-to-${end}.png`,{type:'image/png'})});}catch(e){setError(e instanceof Error?e.message:'Could not create the image. Please try again.')}finally{setBusy(false)}}
  async function share(){if(!image)return;try{if(navigator.canShare?.({files:[image.file]})){await navigator.share({files:[image.file],title:'Earnings snapshot · Stocks To Buy Now'});}else{const a=document.createElement('a');a.href=image.url;a.download=image.file.name;a.click();}}catch(e){if((e as Error).name!=='AbortError')setError('Sharing is unavailable here. Use Download PNG instead.')}}
  return <div className="ews-export"><button className="ews-share" ref={trigger} onClick={generate} disabled={busy||!events.length}>{busy?'Preparing image…':'Share image ↗'}</button>
   <div ref={qr} hidden><QRCodeSVG value={snapshotShareUrl} size={164} level="M" includeMargin/></div>

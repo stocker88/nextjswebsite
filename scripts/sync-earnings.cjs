@@ -5,7 +5,7 @@ async function json(url){const r=await fetch(url,{signal:AbortSignal.timeout(900
 (async()=>{
  let data;
  try{data=await json(endpoint);if(data.schemaVersion!==1||!Array.isArray(data.items)||!data.items.length)throw new Error('Invalid earnings snapshot');}
- catch(e){const file=path.join(root,'data/earnings-calendar.json');if(!fs.existsSync(file))throw e;const old=JSON.parse(fs.readFileSync(file,'utf8'));if(Date.now()-Date.parse(old.updatedAt)>7*86400000)throw new Error('Earnings snapshot is over seven days old. Restore the scheduled refresh.');console.warn('Keeping last earnings snapshot:',e.message);return;}
+ catch(e){const file=path.join(root,'data/earnings-calendar.json');if(!fs.existsSync(file))throw e;const old=JSON.parse(fs.readFileSync(file,'utf8'));console.warn('Keeping last earnings snapshot:',e.message);return;}
  const oldPath=path.join(root,'data/earnings-calendar.json');const previous=fs.existsSync(oldPath)?JSON.parse(fs.readFileSync(oldPath,'utf8')).detailSymbols||[]:[];
  const upcoming=[...new Set(data.items.filter(i=>i.research&&i.date>=data.today).sort((a,b)=>(b.marketCap||0)-(a.marketCap||0)).map(i=>i.symbol))].slice(0,60);
  const candidates=[...new Set([...upcoming,...previous])];

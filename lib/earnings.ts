@@ -1,9 +1,9 @@
 export type Beat={beats:number;total:number;rate:number|null};
-export type Summary={pe:number|null;ps:number|null;forwardPe:number|null;forwardPs:number|null;estimatePeriod:string|null;beat:Beat;oneYear:number|null;updatedAt:string};
+export type Summary={pe:number|null;ps:number|null;forwardPe:number|null;forwardPs:number|null;estimatePeriod:string|null;beat:Beat;revenueBeat?:Beat;oneYear:number|null;updatedAt:string};
 export type Event={symbol:string;name:string;date:string;session:string;marketCap:number|null;price:number|null;sector:string;industry:string;exchange:string;epsEstimate:number|null;epsActual:number|null;revenueEstimate:number|null;revenueActual:number|null;research?:Summary};
 export type Calendar={updatedAt:string;today:string;from:string;to:string;items:Event[];detailSymbols?:string[]};
 export type Point={date:string;close:number;volume:number|null};
-export type Report={date:string;actual:number;estimate:number|null;surprise:number|null;outcome:string;revenueActual:number|null;revenueEstimate:number|null;windowChange:number|null;fiveSessionChange:number|null};
+export type Report={date:string;actual:number|null;estimate:number|null;surprise:number|null;outcome:string;revenueActual:number|null;revenueEstimate:number|null;windowChange:number|null;fiveSessionChange:number|null};
 export type Detail=Summary & {symbol:string;name:string;currency:string|null;price:number|null;marketCap:number|null;priceDate:string|null;sector:string;industry:string;history:Report[];prices:Point[];technical:{sma50:number|null;sma200:number|null;rsi14:number|null;support:number|null;resistance:number|null;low52:number|null;high52:number|null;relativeVolume:number|null;oneYear:number|null};peers:{symbol:string;name:string}[];unavailable:string[];stale?:boolean};
 export const endpoint='https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar';
 export const money=(v:number|null|undefined)=>v==null?'—':new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(v);
@@ -20,7 +20,7 @@ export async function getDetail(symbol:string):Promise<Detail>{
  let fallback:Detail|null=null;
  // Same-origin snapshots make popular research quick even inside social browsers.
  for(const url of ['/earnings-data/'+encodeURIComponent(symbol)+'.json',endpoint+'?symbol='+encodeURIComponent(symbol)]){
-  try{const r=await fetch(url,{signal:AbortSignal.timeout(25000)});if(!r.ok)continue;const d=await r.json();if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){if(url.startsWith('/')&&Date.now()-Date.parse(d.updatedAt)>26*3600000){fallback=d;continue;}cache.set(symbol,d);return d;}}catch{}
+  try{const r=await fetch(url,{signal:AbortSignal.timeout(25000)});if(!r.ok)continue;const d=await r.json();if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){if(url.startsWith('/')&&Date.now()-Date.parse(d.updatedAt)>7*86400000){fallback=d;continue;}cache.set(symbol,d);return d;}}catch{}
  }
  if(fallback)return {...fallback,stale:true};
  throw new Error('Could not load this company’s research. Please try again.');

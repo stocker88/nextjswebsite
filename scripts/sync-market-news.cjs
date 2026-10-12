@@ -1,0 +1,2 @@
+const fs=require('node:fs'),path=require('node:path');
+(async()=>{try{const r=await fetch('https://us-central1-stocker-fcda2.cloudfunctions.net/generalNews',{signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('News unavailable');const d=await r.json();if(!Array.isArray(d.items)||!d.items.length)throw Error('No headlines');fs.writeFileSync(path.join(__dirname,'../data/market-news.json'),JSON.stringify(d));console.log('Saved',d.items.length,'headlines');}catch(e){console.warn('Keeping previous headline snapshot:',e.message);}})();

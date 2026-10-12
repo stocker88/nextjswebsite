@@ -1,3 +1,4 @@
+import {savedNews,newsSlug} from '../lib/market-news';
 import earningsCalendar from '../data/earnings-calendar.json';
 import {researchUrl} from '../lib/research';
 import {catalog} from '../lib/catalog';
@@ -26,6 +27,7 @@ export async function getServerSideProps({ res }: any) {
     "/earnings-calendar/this-week/",
     "/earnings-calendar/next-week/",
     "/stock-market-news",
+    "/market-news/",
     "/stocks",
     "/facts",
     "/methodology",
@@ -34,6 +36,7 @@ export async function getServerSideProps({ res }: any) {
     "/glossary",
   ].map((path) => ({ path }));
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
+  savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>

@@ -1,3 +1,5 @@
+import MarketFeedTabs from '../../components/MarketFeedTabs';
+import MarketNewsFeed from '../../components/MarketNewsFeed';
 import EarningsSnapshot from '../../components/earnings/EarningsSnapshot';
 import AttachedThreads from '../../components/AttachedThreads';
 import FallbackLogo from '../../components/FallbackLogo';
@@ -53,6 +55,7 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
  return <ResearchPage title={page === 1 ? "Stock Market News: latest news and analysis" : `Stock Market News — Page ${page}`} path={page === 1 ? "/stock-market-news" : `/stock-market-news/page/${page}`}>
    <div className="hero"><span className="eyebrow">STOCK MARKET NEWS</span><h1>Stock Market News</h1><p>Research previews, market catalysts and investor insights. Install the app to read the full analysis.</p></div>
    {page === 1 && <EarningsSnapshot />}
+   <MarketFeedTabs/>
    {!items.length && <p>No research previews are available yet.</p>}
    <div className="news-feed">{orderedItems.map(item=><Card item={item} compact key={item.id}/>)}</div>
    {error&&<p role="alert">{error}</p>}
@@ -60,6 +63,7 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
      {page > 1 && <Link href={page === 2 ? '/stock-market-news' : `/stock-market-news/page/${page-1}`}>← Newer articles</Link>}
      {loadedPage * 40 < total && <Link href={`/stock-market-news/page/${loadedPage+1}`} onClick={loadMore} aria-disabled={loading}>{loading?'Loading…':'More news →'}</Link>}
    </nav>
+   {page===1&&<MarketNewsFeed compact/>}
  </ResearchPage>;
 }
 export async function getStaticProps() {const items = await fetchResearch(); return {props:{items:items.slice(0,40), total:items.length, page:1}, revalidate:60};}
