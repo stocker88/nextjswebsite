@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './layout/Header';
+import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
 export default function ResearchPage({title, path, children, description = title, noindex = false}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean}) {
@@ -27,17 +28,9 @@ export default function ResearchPage({title, path, children, description = title
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark />
     <main>
-      <nav className="research-navigation" aria-label="Research sections">
-        <Link href="/stock-market-news" aria-current={path.startsWith('/stock-market-news') ? 'page' : undefined}>
-          <span>STOCK MARKET NEWS</span><strong>View Stock Market News →</strong>
-        </Link>
-        <Link href="/stocks-to-buy" aria-current={path === '/stocks-to-buy' ? 'page' : undefined}>
-          <span>STOCK SIGNALS</span><strong>View Stocks to Buy Signals →</strong>
-        </Link>
-      </nav>
+      <ResearchSections path={path} />
       <nav className="research-resources" aria-label="Research resources">
         {[
-          {href:'/earnings-calendar/',label:'Earnings calendar',icon:'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
           {href:'/glossary',label:'Investing glossary',icon:'M12 5v15 M12 5C8 2 4 3 2 4v15c3-2 7-2 10 1 3-3 7-3 10-1V4c-2-1-6-2-10 1'},
           {href:'/editorial-policy',label:'Editorial standards',icon:'M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3 M8 12l3 3 5-6'},
@@ -71,14 +64,7 @@ export default function ResearchPage({title, path, children, description = title
       main :global(.pagination) {display:flex;justify-content:space-between;gap:18px;margin:32px 0;}
       main :global(.pagination a) {color:#a5caff;}
       main {min-height:100vh;background:#070b18;color:white;padding:120px max(20px,calc((100vw - 1000px)/2)) 40px;}
-      .research-navigation {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:20px;}
-      .research-navigation :global(a) {display:flex;flex-direction:column;gap:8px;min-width:0;padding:18px 20px;border:1px solid #303c55;border-radius:16px;background:#111a2b;color:#c7d2e6;text-decoration:none;transition:background .2s,border-color .2s;}
-      .research-navigation :global(a[aria-current="page"]) {background:linear-gradient(120deg,#232045,#152a40);border-color:#9770e9;color:white;}
-      .research-navigation :global(a:hover) {border-color:#a586ee;background:#202b43;}
-      .research-navigation :global(a:focus-visible) {outline:2px solid #bfa0ff;outline-offset:3px;}
-      .research-navigation span {font-size:10px;letter-spacing:.12em;color:#98b9eb;font-weight:700;}
-      .research-navigation strong {font-size:clamp(12px,1.6vw,17px);line-height:1.4;}
-      @media(max-width:600px) {.research-navigation {gap:8px;} .research-navigation :global(a) {padding:12px 10px;}}
+
 
       main :global(h1) {font-size:clamp(28px,5vw,48px);line-height:1.2;}
       main :global(.research-board) {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.8vw,22px);margin-top:42px;align-items:start;width:100%;}
