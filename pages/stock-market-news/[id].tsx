@@ -1,3 +1,4 @@
+import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
 import FallbackLogo from '../../components/FallbackLogo';
 import Head from "next/head";
@@ -6,7 +7,7 @@ import { publicArticles } from "../../lib/public-articles";
 import { stocks } from "../../lib/stocks";
 import { SITE, jsonLd, isoDate, displayDate, breadcrumbs } from "../../lib/seo";
 import ResearchPage from "../../components/ResearchPage";
-import { researchUrl, findResearchByRoute, ResearchPreview } from "../../lib/research";
+import { researchUrl, findResearchByRoute, findAttachedResearchByRoute, ResearchPreview, displayEngagementCount } from "../../lib/research";
 import { fetchResearch } from "../../lib/research-server";
 export default function ResearchArticle({ item }: { item: ResearchPreview }) {
   const article = publicArticles.find((a) => a.postId === item.id);
@@ -68,8 +69,8 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
         <p className="research-meta">
           {item.symbols.join(" · ")} ·{" "}
           {Math.max(1, Math.ceil(item.title.length / 55))} min read · ♡{" "}
-          {(Number(item.likes) || 0) * 7} · ▢ {(Number(item.comments) || 0) * 7} · ↗{" "}
-          {(Number(item.shares) || 0) * 7}
+          {displayEngagementCount(item.likes)} · ▢ {displayEngagementCount(item.comments)} · ↗{" "}
+          {displayEngagementCount(item.shares)}
         </p>
         <h1>{item.title}</h1>
         <p className="research-meta">
@@ -138,13 +139,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
               {item.educationPreview}
             </p>
           )}
-        {item.attachedTitle && (
-          <div className="research-card">
-            <strong>Attached thread</strong>
-            <h2>{item.attachedTitle}</h2>
-            <p className="research-meta">Related insight from the community.</p>
-          </div>
-        )}
+
         <div className="research-card">
           <h2>Read the full research in the app</h2>
           <p>A subscription is required to access the full thread.</p>
@@ -156,6 +151,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
           </a>
         </div>
         <ResearchImages images={item.images} />
+            <AttachedThreads item={item} />
       </article>
     </ResearchPage>
   );
@@ -165,7 +161,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const items = await fetchResearch();
-  const item = findResearchByRoute(items, params.id);
+  const item = findResearchByRoute(items, params.id) || findAttachedResearchByRoute(items, params.id);
   if (!item) return {notFound:true, revalidate:60};
   const canonical = researchUrl(item.id, item.title);
   if (decodeURIComponent(canonical.slice('/stock-market-news/'.length)) !== params.id) {

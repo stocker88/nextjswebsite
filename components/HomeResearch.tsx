@@ -1,8 +1,9 @@
+import AttachedThreads from './AttachedThreads';
 import { useEffect, useState } from "react";
 import ResearchImages from "./ResearchImages";
 import Link from "next/link";
 import Head from "next/head";
-import { ResearchPreview, researchUrl } from "../lib/research";
+import { ResearchPreview, researchUrl, displayEngagementCount } from "../lib/research";
 import { displayDate, isoDate, jsonLd } from "../lib/seo";
 import { stocks } from "../lib/stocks";
 import faq from "../data/research-faq.json";
@@ -111,11 +112,12 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
             <h3><Link href={researchUrl(i.id, i.title)}>{i.title}</Link></h3>
             {quickTake && <p className="quick-take">{quickTake}</p>}
             <ResearchImages images={i.images} />
+            <AttachedThreads item={i} />
             <div className="card-footer">
               <div className="engagement" aria-label="Post engagement">
-                <span aria-label={`${(Number(i.likes) || 0) * 7} likes`}><EngagementIcon kind="likes" />{(Number(i.likes) || 0) * 7}</span>
-                <span aria-label={`${(Number(i.comments) || 0) * 7} comments`}><EngagementIcon kind="comments" />{(Number(i.comments) || 0) * 7}</span>
-                <span aria-label={`${(Number(i.shares) || 0) * 7} shares`}><EngagementIcon kind="shares" />{(Number(i.shares) || 0) * 7}</span>
+                <span aria-label={`${displayEngagementCount(i.likes)} likes`}><EngagementIcon kind="likes" />{displayEngagementCount(i.likes)}</span>
+                <span aria-label={`${displayEngagementCount(i.comments)} comments`}><EngagementIcon kind="comments" />{displayEngagementCount(i.comments)}</span>
+                <span aria-label={`${displayEngagementCount(i.shares)} shares`}><EngagementIcon kind="shares" />{displayEngagementCount(i.shares)}</span>
               </div>
               <Link className="read-link" href={researchUrl(i.id, i.title)} aria-label={`Read preview: ${i.title}`}>Read preview <span aria-hidden="true">↗</span></Link>
             </div>

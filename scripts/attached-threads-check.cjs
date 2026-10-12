@@ -1,0 +1,23 @@
+const ts = require('typescript');
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const m = {exports:{}};
+new Function('module','exports', ts.transpileModule(fs.readFileSync('lib/research.ts','utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(m,m.exports);
+const {researchUrl,researchPages,findResearchByRoute,findAttachedResearchByRoute} = m.exports;
+const child={id:'child id',title:'Attached ACN insight',time:123,symbols:['ACN']};
+const parent={id:'parent',title:'Main news',time:124,symbols:[],likes:1,comments:0,shares:0,attachedThreads:[child]};
+const route=decodeURIComponent(researchUrl(child.id,child.title).split('/').pop());
+assert.equal(findResearchByRoute([parent],route),undefined);
+assert.equal(findAttachedResearchByRoute([parent],route).id,child.id);
+assert.equal(findAttachedResearchByRoute([parent], 'an-old-title--'+child.id).title,child.title);
+assert.equal(findAttachedResearchByRoute([parent],child.id).id,child.id);
+assert.equal(findAttachedResearchByRoute([parent],'missing'),undefined);
+assert.equal(findAttachedResearchByRoute([{...parent,attachedThreads:undefined}],'missing'),undefined);
+console.log('Attached thread routes passed (standalone, renamed, missing and legacy posts).');
+
+const renamed={...parent,id:child.id,title:'Updated headline',attachedThreads:[]};
+const duplicate={...parent,id:'another',attachedThreads:[{...child,title:'Older snapshot'}]};
+assert.equal(researchPages([parent,duplicate]).filter(p=>p.id===child.id).length,1);
+assert.equal(researchPages([parent,duplicate]).find(p=>p.id===child.id).title,child.title);
+assert.equal(findAttachedResearchByRoute([parent,renamed],child.id).title,'Updated headline');
+console.log('Canonical attachment pages passed (duplicates and edited headlines).');

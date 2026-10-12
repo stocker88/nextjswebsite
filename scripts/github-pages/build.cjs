@@ -27,7 +27,7 @@ async function main(){
  if(!process.argv.includes('--snapshot'))run(['scripts/sync-research.js']);
  write('lib/research-server.ts',`import data from '../data/research.json';\nimport type {ResearchPreview} from './research';\nexport async function fetchResearch():Promise<ResearchPreview[]>{return data as ResearchPreview[];}\n`);
  write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:2}};\n`);
- replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); return {paths:items.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);
+ replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); const {researchPages} = await import('../../lib/research'); const pages = researchPages(items); return {paths:pages.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);
  replace('pages/stock-market-news/page/[page].tsx',"export function getStaticPaths() {return {paths:[],fallback:'blocking'};}","export async function getStaticPaths() {const all=await fetchResearch();return {paths:Array.from({length:Math.max(0,Math.ceil(all.length/40)-1)},(_,i)=>({params:{page:String(i+2)}})),fallback:false};}");
  replace('pages/instruments/[symbol].tsx',"return {paths:[],fallback:'blocking'};","return {paths:catalog.map(item=>({params:{symbol:item.symbol}})),fallback:false};");
  replace('pages/web-app/financial/[ticker].tsx','fallback: true,','fallback: false,');
@@ -66,8 +66,8 @@ async function main(){
  fs.unlinkSync(path.join(stage,'pages/sitemap.xml.tsx'));
  run([path.join(root,'node_modules/next/dist/bin/next'),'build']);
  // Pages cannot send HTTP 301s. Preserve old URLs with canonical HTML redirects.
- const {researchUrl}=require(path.join(stage,'lib/research.ts'));
- const articles=require(path.join(stage,'data/research.json'));
+ const {researchUrl,researchPages}=require(path.join(stage,'lib/research.ts'));
+ const articles=researchPages(require(path.join(stage,'data/research.json')));
  const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
  function redirect(from,to){
   const dest=path.join(stage,'out',from,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});
