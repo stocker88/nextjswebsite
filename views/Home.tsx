@@ -1,3 +1,4 @@
+import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
 import HomeSignalPreview from "../components/HomeSignalPreview";
 import ExploreWebsite from '../components/ExploreWebsite';
 import HomeResearch from "../components/HomeResearch";
@@ -123,6 +124,7 @@ import SignUpModal from '../SignUpModal';
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
   <ExploreWebsite />
+  <EarningsSnapshot home />
   <HomeResearch items={news} section="news" />
   <ProductProof founderOnly />
 
