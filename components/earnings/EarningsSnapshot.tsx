@@ -48,7 +48,7 @@ export default function EarningsSnapshot({home=false}:{home?:boolean}) {
    .snapshot-status button{padding:8px 12px;background:#29233f;border:1px solid #655789;border-radius:8px;color:#d9c7fc;font-size:12px}.snapshot-status a{font-size:12px;margin-left:10px}
    .snapshot-spinner{width:18px;height:18px;border:2px solid #38425c;border-top-color:#b29bf5;border-radius:50%;animation:snapshot-spin .8s linear infinite}
    @keyframes snapshot-spin{to{transform:rotate(360deg)}}
-   @media(max-width:700px){.earnings-snapshot-home{padding:0 16px}.earnings-snapshot .ews-board{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x proximity;padding-bottom:12px}.earnings-snapshot .ews-day{flex:0 0 92%;scroll-snap-align:start}.earnings-snapshot .ews-hint:after{content:' · Swipe to see each day'}.earnings-snapshot .ews-week>span{font-size:14px}}
+   @media(max-width:700px){.earnings-snapshot-home{padding:0 10px}}
    @media(prefers-reduced-motion:reduce){.snapshot-spinner{animation:none}}
   `}</style>
  </div>;
