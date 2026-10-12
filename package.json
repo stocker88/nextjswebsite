@@ -3,15 +3,17 @@
   "scripts": {
     "dev": "next dev",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run sync:research && npm run generate:sitemap",
+    "prebuild": "npm run sync:research && npm run sync:earnings && npm run generate:sitemap",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
     "deploy": "bash scripts/deploy-firebase.sh",
     "sync:research": "node scripts/sync-research.js",
-    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs",
+    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs && node scripts/earnings-check.cjs",
     "publish:article": "node scripts/publish-public-article.cjs",
-    "build:pages": "node scripts/github-pages/build.cjs"
+    "build:pages": "node scripts/github-pages/build.cjs",
+    "sync:earnings": "node scripts/sync-earnings.cjs",
+    "test:earnings": "node scripts/earnings-check.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

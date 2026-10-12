@@ -37,6 +37,7 @@ export default function ResearchPage({title, path, children, description = title
       </nav>
       <nav className="research-resources" aria-label="Research resources">
         {[
+          {href:'/earnings-calendar/',label:'Earnings calendar',icon:'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
           {href:'/glossary',label:'Investing glossary',icon:'M12 5v15 M12 5C8 2 4 3 2 4v15c3-2 7-2 10 1 3-3 7-3 10-1V4c-2-1-6-2-10 1'},
           {href:'/editorial-policy',label:'Editorial standards',icon:'M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3 M8 12l3 3 5-6'},

@@ -16,6 +16,7 @@ const getAppStoreUrl = () => {
 };
 
 const navItems = [
+  { label: 'Earnings Calendar', href: '/earnings-calendar/' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Free Course', href: '#watch-and-learn' },

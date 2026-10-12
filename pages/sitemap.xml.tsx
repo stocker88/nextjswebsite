@@ -1,3 +1,4 @@
+import earningsCalendar from '../data/earnings-calendar.json';
 import {researchUrl} from '../lib/research';
 import {catalog} from '../lib/catalog';
 import { fetchResearch } from "../lib/research-server";
@@ -21,6 +22,9 @@ export async function getServerSideProps({ res }: any) {
   const entries: { path: string; modified?: string | null }[] = [
     "/",
     "/stocks-to-buy",
+    "/earnings-calendar/",
+    "/earnings-calendar/this-week/",
+    "/earnings-calendar/next-week/",
     "/stock-market-news",
     "/stocks",
     "/facts",
@@ -29,6 +33,7 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
