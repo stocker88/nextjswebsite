@@ -28,7 +28,7 @@ export default function EarningsSnapshot({home=false}:{home?:boolean}) {
   load();return()=>{active=false};
  },[attempt]);
  return <div id="weekly-earnings" className={'earnings-snapshot'+(home?' earnings-snapshot-home':'')}>
-  {calendar&&from?<WeeklySummary rows={calendar.items} from={from} to={day(from,6)} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="This week’s earnings snapshot">
+  {calendar&&from?<WeeklySummary onRangeChange={f=>setFrom(f)} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={day(from,6)} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="This week’s earnings snapshot">
    <h2>Earnings snapshot</h2>
    {error?<><p>This week’s earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading this week’s earnings…</p>}
   </section>}
