@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import {ResearchPreview} from '../lib/research';
+import {ResearchPreview, AttachedThread, displayEngagementCount} from '../lib/research';
 import {displayDate, isoDate} from '../lib/seo';
 import ResearchImages from './ResearchImages';
+import EngagementIcon from './EngagementIcon';
 
 export default function AttachedThreads({item}: {item: ResearchPreview}) {
-  const threads = item.attachedThreads?.length ? item.attachedThreads :
+  const threads: AttachedThread[] = item.attachedThreads?.length ? item.attachedThreads :
     item.attachedTitle ? [{id: '', title: item.attachedTitle, time: null, symbols: []}] : [];
   if (!threads.length) return null;
   return <aside className="attached-threads" aria-label="Attached threads">
@@ -18,6 +19,12 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
       </div>}
       {thread.quickTake && <p>{thread.quickTake}</p>}
       <ResearchImages images={thread.images} compact thumbnailSize={128} />
+      {thread.likes != null && <div className="attachment-engagement" aria-label="Thread engagement">
+        {(['likes', 'comments', 'shares'] as const).map(kind =>
+          <span key={kind} aria-label={`${displayEngagementCount(thread[kind] ?? 0)} ${kind}`}>
+            <EngagementIcon kind={kind} />{displayEngagementCount(thread[kind] ?? 0)}
+          </span>)}
+      </div>}
     </div>)}
     <style jsx>{`
       .attached-threads { display:grid; gap:10px; margin-top:18px; min-width:0; }
@@ -28,6 +35,8 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
       .attachment-heading :global(a:hover) { color:#9ccaff; }
       .attachment-heading :global(a:focus-visible) { outline:2px solid #b99aff; outline-offset:3px; }
       .attachment-meta { display:flex; flex-wrap:wrap; gap:6px 14px; margin:6px 0; color:#98a9c0; font-size:12px; line-height:1.5; }
+      .attachment-engagement { display:flex; flex-wrap:wrap; gap:18px; margin-top:12px; color:#98a9c0; font-size:12px; line-height:1.5; }
+      .attachment-engagement span { display:inline-flex; gap:6px; align-items:center; }
       p { color:#afbdd1; font-size:14px; line-height:1.55; margin:8px 0 12px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
       .attached-thread :global(.pictures) { margin-top:12px; flex-wrap:wrap; }
       .attached-thread :global(.picture) { max-width:100%; }

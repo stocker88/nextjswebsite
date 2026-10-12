@@ -21,3 +21,10 @@ assert.equal(researchPages([parent,duplicate]).filter(p=>p.id===child.id).length
 assert.equal(researchPages([parent,duplicate]).find(p=>p.id===child.id).title,child.title);
 assert.equal(findAttachedResearchByRoute([parent,renamed],child.id).title,'Updated headline');
 console.log('Canonical attachment pages passed (duplicates and edited headlines).');
+
+const countedChild={...child,likes:4,comments:2,shares:5};
+const countedPage=findAttachedResearchByRoute([{...parent,attachedThreads:[countedChild]}],child.id);
+assert.deepEqual([countedPage.likes,countedPage.comments,countedPage.shares],[4,2,5]);
+assert.deepEqual([4,2,5].map(m.exports.displayEngagementCount),[29,16,37]);
+assert.equal(findAttachedResearchByRoute([parent],child.id).likes,0);
+console.log('Attached engagement preserves raw counts and uses the shared display formula.');
