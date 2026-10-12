@@ -1,6 +1,5 @@
 import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
 import HomeSignalPreview from "../components/HomeSignalPreview";
-import ExploreWebsite from '../components/ExploreWebsite';
 import HomeResearch from "../components/HomeResearch";
 import type { ResearchPreview } from "../lib/research";
 import React, { useEffect, useRef, useState } from 'react';
@@ -123,9 +122,8 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
-  <ExploreWebsite />
-  <EarningsSnapshot home />
   <HomeResearch items={news} section="news" />
+  <EarningsSnapshot home />
   <ProductProof founderOnly />
 
   <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>

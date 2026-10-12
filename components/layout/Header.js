@@ -10,7 +10,7 @@ const desktopLabels = {
   '/earnings-calendar/': ['Earnings', 'Calendar'],
   '#how-it-works': ['How It', 'Works'],
   '#watch-and-learn': ['Free', 'Course'],
-  '/#stock-search': ['Stock', 'Search'],
+  '/stocks/': ['Stock', 'Search'],
 };
 
 const iosAppStoreUrl =

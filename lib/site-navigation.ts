@@ -6,5 +6,5 @@ export const siteNavigation = [
   {label: 'How It Works', href: '#how-it-works', detail: 'Get to know the app', icon: 'M9 6l10 6-10 6z M3 4v16'},
   {label: 'Free Course', href: '#watch-and-learn', detail: 'Build your investing skills', icon: 'm2 8 10-5 10 5-10 5z M6 10v7q6 5 12 0v-7 M22 8v9'},
   {label: 'Expertise', href: '#about-aness', detail: 'Meet the founder', icon: 'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0 M4 21v-3a8 8 0 0 1 16 0v3'},
-  {label: 'Search for a Stock', href: '/#stock-search', detail: 'Find company research', icon: 'M16 16l5 5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0'},
+  {label: 'Search for a Stock', href: '/stocks/', detail: 'Find company research', icon: 'M16 16l5 5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0'},
 ];
