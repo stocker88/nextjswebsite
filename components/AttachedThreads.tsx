@@ -17,7 +17,7 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
         {thread.time != null && <time dateTime={isoDate(thread.time) || undefined}>{displayDate(thread.time)}</time>}
       </div>}
       {thread.quickTake && <p>{thread.quickTake}</p>}
-      <ResearchImages images={thread.images} compact thumbnailSize={64} />
+      <ResearchImages images={thread.images} compact thumbnailSize={128} />
     </div>)}
     <style jsx>{`
       .attached-threads { display:grid; gap:10px; margin-top:18px; min-width:0; }
@@ -29,7 +29,8 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
       .attachment-heading :global(a:focus-visible) { outline:2px solid #b99aff; outline-offset:3px; }
       .attachment-meta { display:flex; flex-wrap:wrap; gap:6px 14px; margin:6px 0; color:#98a9c0; font-size:12px; line-height:1.5; }
       p { color:#afbdd1; font-size:14px; line-height:1.55; margin:8px 0 12px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-      .attached-thread :global(.pictures) { margin-top:10px; }
+      .attached-thread :global(.pictures) { margin-top:12px; flex-wrap:wrap; }
+      .attached-thread :global(.picture) { max-width:100%; }
       @media(max-width:480px) { .attached-thread { padding:12px; } .attachment-heading { font-size:15px; } }
     `}</style>
   </aside>;
