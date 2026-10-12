@@ -77,15 +77,11 @@ export default function SocialBrowserNotice({
   return (
     <aside className="browserNotice" role="status">
       <div>
-        <strong>You’re inside {browserName}</strong>
+        <strong>Open in your phone’s browser</strong>
         <span className="browserNoticeAction">
-          <small>{variant === 'insight' ? 'SHARED LINK' : 'OPEN IN YOUR BROWSER'}</small>
+          <small>{variant === 'insight' ? 'VIEW THE SHARED INSIGHT' : 'FOR FASTER LOADING'}</small>
           <span>
-            {variant === 'insight' ? (
-              <>To open this link in your browser, tap the browser menu above, then select <b>“Open in browser”</b></>
-            ) : (
-              <>Tap the browser menu above, then select <b>“Open in browser”</b></>
-            )}
+            Tap the menu in the top-right corner, then select <b>“Open in browser”</b>.
           </span>
         </span>
       </div>
@@ -96,8 +92,9 @@ export default function SocialBrowserNotice({
           position: fixed;
           z-index: 10000;
           top: max(10px, env(safe-area-inset-top));
-          left: 12px;
           right: 12px;
+          width: min(360px, calc(100vw - 24px));
+          box-sizing: border-box;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -122,11 +119,11 @@ export default function SocialBrowserNotice({
           min-width: 0;
           flex-direction: column;
           gap: 7px;
-          padding-right: 52px;
+          padding-right: 30px;
         }
 
         .browserNotice strong {
-          font-size: 19px;
+          font-size: 15px;
           line-height: 1.25;
         }
 
@@ -145,7 +142,7 @@ export default function SocialBrowserNotice({
           border-radius: 10px;
           background: rgba(104, 216, 255, 0.08);
           color: rgba(255, 255, 255, 0.88);
-          font-size: 17px;
+          font-size: 15px;
           font-weight: 500;
           line-height: 1.35;
         }
@@ -159,7 +156,7 @@ export default function SocialBrowserNotice({
 
         .browserNotice .browserNoticeAction > span {
           color: rgba(255, 255, 255, 0.88);
-          font-size: 17px;
+          font-size: 15px;
           line-height: 1.35;
         }
 
@@ -173,7 +170,7 @@ export default function SocialBrowserNotice({
           top: 14px;
           right: 16px;
           color: #68d8ff;
-          font-size: 48px;
+          font-size: 32px;
           font-weight: 800;
           line-height: 1;
           transform: rotate(8deg) translateY(-2px);

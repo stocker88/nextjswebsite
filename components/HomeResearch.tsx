@@ -68,7 +68,11 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
       <div className="news-grid">
         <div className="news-columns" aria-hidden="true"><span>Published (UTC)</span><span>Research headline</span></div>
         {!news.length && <div className="empty-news" role="status">
-          {status === "loading" ? "Loading recent research previews…" :
+          {status === "loading" ? <div className="research-loading">
+            <span className="research-spinner" aria-hidden="true" />
+            <div><strong>Loading recent research previews</strong>
+              <p>Fetching the latest headlines and images. Please wait…</p></div>
+          </div> :
             status === "error" ? <>Recent previews could not be loaded. <button type="button" onClick={() => setAttempt(value => value + 1)}>Try again</button></> :
             "No research previews published in the past 10 days."}
         </div>}
@@ -135,6 +139,12 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         .subsection-heading { margin-top: 80px; }
         .resources .subsection-heading:first-child { margin-top: 0; }
         .empty-news { grid-column:1 / -1; color:#aab9cd; }
+        .research-loading { display:flex; align-items:center; justify-content:center; gap:16px; padding:30px 20px; border:1px solid #293b56; border-radius:16px; background:linear-gradient(135deg,#122038,#19172d); text-align:left; }
+        .research-loading strong { display:block; color:#edf3ff; font-size:16px; line-height:1.4; }
+        .research-loading p { margin:6px 0 0; font-size:14px; line-height:1.5; color:#aebed5; }
+        .research-spinner { display:block; flex:0 0 34px; width:34px; height:34px; box-sizing:border-box; border:3px solid #334360; border-top-color:#86baff; border-right-color:#b598f5; border-radius:50%; animation:research-spin .9s linear infinite; }
+        @keyframes research-spin { to { transform:rotate(360deg); } }
+        @media(prefers-reduced-motion:reduce) { .research-spinner { animation:none; } }
         .empty-news button { background:transparent; border:0; color:#8cc8ff; text-decoration:underline; cursor:pointer; font:inherit; }
         .news-grid { display:grid; gap:18px; max-width:960px; margin:0 auto; }
         .news-columns,.news-row { display:grid; grid-template-columns:150px minmax(0,1fr); gap:24px; align-items:start; }
