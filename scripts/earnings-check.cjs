@@ -7,3 +7,7 @@ const data=JSON.parse(fs.readFileSync(path.join(root,'data/earnings-calendar.jso
 for(const s of data.detailSymbols){const d=JSON.parse(fs.readFileSync(path.join(root,'public/earnings-data',s+'.json')));assert.equal(d.symbol,s);assert.ok(d.beat.total<=8);assert.ok(d.beat.beats<=d.beat.total);assert.ok(d.prices.every(p=>p.close>0));}
 for(const file of ['pages/earnings-calendar/index.tsx','pages/earnings-calendar/this-week.tsx','pages/earnings-calendar/next-week.tsx','pages/earnings-calendar/[symbol].tsx'])assert.ok(fs.existsSync(path.join(root,file)));
 console.log('Earnings filters, data contracts, static routes and company snapshots passed.');
+
+const caps=[{...base,symbol:'BIG',marketCap:9e9},{...base,symbol:'MISSING',marketCap:null},{...base,symbol:'SMALL',marketCap:1e9}];
+assert.equal(filterEvents(caps,{...f,sort:'cap'}).map(i=>i.symbol).join(','),'BIG,SMALL,MISSING');
+assert.equal(filterEvents(caps,{...f,sort:'cap-asc'}).map(i=>i.symbol).join(','),'SMALL,BIG,MISSING');

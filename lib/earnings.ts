@@ -28,7 +28,7 @@ export async function getDetail(symbol:string):Promise<Detail>{
 export function filterEvents(items:Event[],filters:{from:string;to:string;query:string;session:string;cap:string;sector:string;sort:string}){
  const q=filters.query.trim().replace(/^\$/,'').toLowerCase();
  return items.filter(i=>i.date>=filters.from&&i.date<=filters.to&&(!q||i.symbol.toLowerCase().includes(q)||i.name.toLowerCase().includes(q))&&(filters.session==='all'||i.session===filters.session)&&(!filters.sector||i.sector===filters.sector)&&(filters.cap==='all'||filters.cap==='mega'&&(i.marketCap??-1)>=200e9||filters.cap==='large'&&(i.marketCap??-1)>=10e9||filters.cap==='mid'&&(i.marketCap??-1)>=2e9&&(i.marketCap??Infinity)<10e9||filters.cap==='small'&&(i.marketCap??Infinity)<2e9)).sort((a,b)=>{
-  if(filters.sort==='cap')return(b.marketCap??-1)-(a.marketCap??-1)||a.date.localeCompare(b.date);
+  if(filters.sort==='cap'||filters.sort==='cap-asc'){if(a.marketCap==null&&b.marketCap==null)return a.date.localeCompare(b.date);if(a.marketCap==null)return 1;if(b.marketCap==null)return -1;return (filters.sort==='cap'?b.marketCap-a.marketCap:a.marketCap-b.marketCap)||a.date.localeCompare(b.date);}
   if(filters.sort==='beat')return(b.research?.beat.rate??-1)-(a.research?.beat.rate??-1)||a.date.localeCompare(b.date);
   if(filters.sort==='pe'){const av=a.research?.pe??Infinity,bv=b.research?.pe??Infinity;return av===bv?a.date.localeCompare(b.date):av-bv;}
   return a.date.localeCompare(b.date)||(b.marketCap??-1)-(a.marketCap??-1);
