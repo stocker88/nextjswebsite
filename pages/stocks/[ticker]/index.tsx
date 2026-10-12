@@ -46,6 +46,7 @@ export default function Stock({
           <a href={stock.investorUrl}>Company investor relations</a>
         </p>
       </div>
+      <ResearchCTA placement={`ticker_${stock.slug}_before_analysis`} variant="stock"/>
       <StockEarnings symbol={stock.ticker}/>
       <div className="public-copy">
         <h2>What can move {stock.ticker}?</h2>
@@ -90,8 +91,8 @@ export default function Stock({
           adjusted figures, and read forward guidance and the cash-flow
           statement.
         </p>
-        <ResearchCTA placement={`ticker_${stock.slug}`} />
       </div>
+      <ResearchCTA placement={`ticker_${stock.slug}_end`} variant="stock"/>
     </ResearchPage>
   );
 }

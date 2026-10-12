@@ -28,6 +28,7 @@ export default function StockResearchDetail({
           {earnings ? "earnings research" : "valuation and forecast scenarios"}
         </h1>
       </div>
+      <ResearchCTA placement={`${stock.slug}_${mode}_before_analysis`} variant="stock"/>
       {earnings && <StockEarnings symbol={stock.ticker}/>}
       <div className="public-copy">
         {earnings ? (
@@ -113,8 +114,8 @@ export default function StockResearchDetail({
             How to assess evidence and uncertainty
           </Link>
         </p>
-        <ResearchCTA placement={`${stock.slug}_${mode}`} />
       </div>
+      <ResearchCTA placement={`${stock.slug}_${mode}_end`} variant="stock"/>
     </ResearchPage>
   );
 }
