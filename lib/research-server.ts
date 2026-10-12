@@ -1,3 +1,4 @@
+import {fetchResearchPage, researchEndpoint} from './research-feed';
 import data from "../data/research.json";
 import type { ResearchPreview } from "./research";
 const research = data as ResearchPreview[];
@@ -20,35 +21,21 @@ const cache: ResearchCache = cacheHost.__researchArchiveCache || {
 cacheHost.__researchArchiveCache = cache;
 
 async function loadResearch(): Promise<ResearchPreview[]> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15000);
-  try {
-    const items: ResearchPreview[] = [];
-    const cursors = new Set<string>();
-    let cursor: string | null = null;
-    do {
-      const response = await fetch(
-        "https://us-central1-stocker-fcda2.cloudfunctions.net/researchPreviews" +
-          (cursor ? "?after=" + encodeURIComponent(cursor) : ""),
-        { signal: controller.signal },
-      );
-      if (!response.ok)
-        throw new Error(`Research request failed: ${response.status}`);
-      const payload = await response.json();
-      if (!Array.isArray(payload.items))
-        throw new Error("Invalid research response");
-      items.push(...payload.items);
-      cursor = payload.next || null;
-      if (cursor && cursors.has(cursor))
-        throw new Error("Repeated research cursor");
-      if (cursor) cursors.add(cursor);
-    } while (cursor);
-    return Array.from(
-      new Map(items.map((item) => [item.id, item])).values(),
-    ).sort((a, b) => (b.time || 0) - (a.time || 0) || a.id.localeCompare(b.id));
-  } finally {
-    clearTimeout(timeout);
-  }
+  const items: ResearchPreview[] = [];
+  const cursors = new Set<string>();
+  let cursor: string | null = null;
+  do {
+    const {payload} = await fetchResearchPage(researchEndpoint +
+      (cursor ? '?after=' + encodeURIComponent(cursor) : ''));
+    items.push(...payload.items);
+    cursor = payload.next || null;
+    if (cursor && cursors.has(cursor))
+      throw new Error("Repeated research cursor");
+    if (cursor) cursors.add(cursor);
+  } while (cursor);
+  return Array.from(
+    new Map(items.map((item) => [item.id, item])).values(),
+  ).sort((a, b) => (b.time || 0) - (a.time || 0) || a.id.localeCompare(b.id));
 }
 
 export async function fetchResearch(): Promise<ResearchPreview[]> {

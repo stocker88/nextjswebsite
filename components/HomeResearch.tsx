@@ -1,3 +1,4 @@
+import {loadRecentResearch} from '../lib/research-feed';
 import AttachedThreads from './AttachedThreads';
 import { useEffect, useState } from "react";
 import ResearchImages from "./ResearchImages";
@@ -16,44 +17,17 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
     if (section === "resources" || items.length) return;
     let disposed = false;
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
     setStatus("loading");
     // Recover empty HTML snapshots cached by in-app browsers without downloading
     // the archive again when the server already supplied recent previews.
     (async () => {
       try {
-        const archive: ResearchPreview[] = [];
-        const cursors = new Set<string>();
-        let cursor: string | null = null;
-        do {
-          const response = await fetch(
-            "https://us-central1-stocker-fcda2.cloudfunctions.net/researchPreviews" +
-              (cursor ? "?after=" + encodeURIComponent(cursor) : ""),
-            { signal: controller.signal, cache: "no-store" },
-          );
-          if (!response.ok) throw new Error("Research refresh failed");
-          const payload = await response.json();
-          if (!Array.isArray(payload.items) || payload.items.some((item: ResearchPreview) =>
-            !item || typeof item.id !== "string" || typeof item.title !== "string" || !Array.isArray(item.symbols)))
-            throw new Error("Invalid research response");
-          archive.push(...payload.items);
-          cursor = payload.next || null;
-          if (cursor && (typeof cursor !== "string" || cursors.has(cursor)))
-            throw new Error("Invalid research cursor");
-          if (cursor) cursors.add(cursor);
-        } while (cursor);
-        const now = Date.now();
-        const cutoff = now - 10 * 24 * 60 * 60 * 1000;
-        const milliseconds = (time: number) => time < 1e12 ? time * 1000 : time;
-        const recent = Array.from(new Map(archive.map(item => [item.id, item])).values())
-          .filter(item => typeof item.time === "number" && Number.isFinite(item.time) &&
-            milliseconds(item.time) >= cutoff && milliseconds(item.time) <= now)
-          .sort((a, b) => milliseconds(b.time!) - milliseconds(a.time!));
+        const recent = await loadRecentResearch(controller.signal, partial => {
+          if (!disposed && partial.length) setRecovered(partial);
+        });
         if (!disposed) { setRecovered(recent); setStatus("ready"); }
       } catch {
         if (!disposed) setStatus("error");
-      } finally {
-        clearTimeout(timeout);
       }
     })();
     const retryOnRestore = (event: PageTransitionEvent) => {
@@ -62,7 +36,6 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
     window.addEventListener("pageshow", retryOnRestore);
     return () => {
       disposed = true;
-      clearTimeout(timeout);
       controller.abort();
       window.removeEventListener("pageshow", retryOnRestore);
     };

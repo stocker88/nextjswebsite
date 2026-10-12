@@ -16,5 +16,12 @@ const endpoint = 'https://us-central1-stocker-fcda2.cloudfunctions.net/researchP
   } while (after);
   items.sort((a,b) => (b.time || 0) - (a.time || 0));
   fs.writeFileSync(path.join(__dirname, '../data/research.json'), JSON.stringify(items));
+  const now = Date.now();
+  const milliseconds = time => time < 1e12 ? time * 1000 : time;
+  const recent = items.filter(item => Number.isFinite(item.time) &&
+    milliseconds(item.time) >= now - 10 * 86400000 && milliseconds(item.time) <= now);
+  const destination = path.join(__dirname, '../public/research-previews.json');
+  fs.mkdirSync(path.dirname(destination), {recursive:true});
+  fs.writeFileSync(destination, JSON.stringify({kind:'recent-research', updatedAt:new Date(now).toISOString(), items:recent}));
   console.log(`Synced ${items.length} research previews`);
 })().catch(error => {console.error(error.message); process.exit(1);});
