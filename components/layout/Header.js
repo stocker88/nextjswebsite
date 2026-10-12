@@ -1,3 +1,4 @@
+import {siteNavigation} from '../../lib/site-navigation';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { trackAppStoreClick } from '../../lib/analytics';
@@ -15,15 +16,7 @@ const getAppStoreUrl = () => {
   return isAndroid ? androidPlayStoreUrl : iosAppStoreUrl;
 };
 
-const navItems = [
-  { label: 'Earnings Calendar', href: '/earnings-calendar/' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Free Course', href: '#watch-and-learn' },
-  { label: 'Expertise', href: '#about-aness' },
-  { label: 'Stock Market News', href: '/stock-market-news' },
-  { label: 'Trading Signals', href: '/stocks-to-buy' },
-];
+
 
 export default function Header({
   homeHref = '#home',
@@ -89,6 +82,13 @@ export default function Header({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [forceDark]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = event => { if (event.key === 'Escape') setIsOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isOpen]);
+
   const closeMenu = () => setIsOpen(false);
 
   const trackHeaderDownload = () => {
@@ -140,9 +140,9 @@ export default function Header({
         </a>
 
         {/* Links container (Collapses into dropdown on mobile) */}
-        <div className={`nav-content${isOpen ? ' is-open' : ''}`}>
+        <div id="site-navigation-links" className={`nav-content${isOpen ? ' is-open' : ''}`}>
           <div className="nav-links">
-            {navItems.map((item) => (
+            {siteNavigation.map((item) => (
               <a key={item.href} href={item.href.startsWith('#') ? `${navBasePath}${item.href}` : item.href} onClick={closeMenu}>
                 {item.label}
               </a>
@@ -167,8 +167,10 @@ export default function Header({
             type="button"
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
+            aria-controls="site-navigation-links"
             onClick={() => setIsOpen(!isOpen)}
           >
+            <b className="nav-explore-label">Explore</b>
             <span />
             <span />
             <span />

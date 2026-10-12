@@ -69,7 +69,7 @@ html {
 }
 
 .nav-links {
-    gap: 24px;
+    gap: 14px;
 }
 
 .nav-links a {
@@ -220,7 +220,7 @@ html {
    MOBILE RESPONSIVENESS (< 860px)
    ========================================================================== */
 
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
     .site-nav {
         width: min(100% - 24px, 1180px);
         min-height: 64px;
@@ -3220,4 +3220,19 @@ body {
   --bg--color: 	map-push($bg--color, $footer--bg);
   --font--size: 	map-push($font--size, $footer--size);
   --font--weight: 	map-push($font--weight, $footer--weight);
+}
+
+/* A compact directory keeps every destination visible together on mobile. */
+.nav-explore-label { display:none; }
+@media (max-width:1180px) {
+    .nav-content { max-height:calc(100dvh - 64px); overflow-y:auto; }
+    .nav-links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+    .nav-links a { display:flex; align-items:center; min-height:48px; padding:10px 12px; border:1px solid #33415c; border-radius:10px; background:#162139; font-size:13px; }
+    .nav-links a:first-child { grid-column:1 / -1; background:#302749; border-color:#65568a; }
+    .site-header.is-scrolled .nav-content { background:#0c1424; }
+    .site-header.is-scrolled .nav-explore-label { display:block; color:#e9e1ff; font-size:12px; font-weight:600; }
+    .site-header.is-scrolled .nav-toggle { min-height:36px; padding:6px 12px; border:1px solid #61517e; border-radius:9px; background:#27213c; }
+    .site-header.is-scrolled .nav-toggle span { display:none; }
+    .site-header.is-scrolled .site-brand span { display:none; }
+    .nav-links a:focus-visible,.nav-toggle:focus-visible { outline:2px solid #c2a2ff; outline-offset:3px; }
 }

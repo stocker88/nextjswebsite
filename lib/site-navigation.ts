@@ -1,0 +1,9 @@
+export const siteNavigation = [
+  {label: 'Earnings Calendar', href: '/earnings-calendar/', detail: 'Plan the week ahead', icon: 'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
+  {label: 'Stock Market News', href: '/stock-market-news/', detail: 'Follow the latest research', icon: 'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h5'},
+  {label: 'Trading Signals', href: '/stocks-to-buy/', detail: 'Explore stock ideas', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
+  {label: 'Reviews', href: '#reviews', detail: 'Hear from our community', icon: 'm12 3 3 6 6 1-4.5 4.5 1 6.5-5.5-3-5.5 3 1-6.5L3 10l6-1z'},
+  {label: 'How It Works', href: '#how-it-works', detail: 'Get to know the app', icon: 'M9 6l10 6-10 6z M3 4v16'},
+  {label: 'Free Course', href: '#watch-and-learn', detail: 'Build your investing skills', icon: 'm2 8 10-5 10 5-10 5z M6 10v7q6 5 12 0v-7 M22 8v9'},
+  {label: 'Expertise', href: '#about-aness', detail: 'Meet the founder', icon: 'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0 M4 21v-3a8 8 0 0 1 16 0v3'},
+];
