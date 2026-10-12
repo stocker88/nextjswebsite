@@ -1,3 +1,4 @@
+import StockEarnings from './earnings/StockEarnings';
 import Link from "next/link";
 import ResearchPage from "./ResearchPage";
 import ResearchCTA from "./ResearchCTA";
@@ -26,6 +27,9 @@ export default function StockResearchDetail({
           {stock.ticker}{" "}
           {earnings ? "earnings research" : "valuation and forecast scenarios"}
         </h1>
+      </div>
+      {earnings && <StockEarnings symbol={stock.ticker}/>}
+      <div className="public-copy">
         {earnings ? (
           <>
             <p>
@@ -57,9 +61,9 @@ export default function StockResearchDetail({
             </p>
             <h2>Reporting date and estimates</h2>
             <p>
-              A verified upcoming reporting date and consensus feed are not
-              available on this page yet. Use the company source above; no
-              estimated dates or earnings numbers are presented as confirmed.
+              Review the expected date and consensus estimates above, then
+              confirm the final release schedule with the company. Estimates
+              and reporting dates may change.
             </p>
           </>
         ) : (

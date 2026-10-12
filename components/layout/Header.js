@@ -4,6 +4,15 @@ import Image from 'next/image';
 import { trackAppStoreClick } from '../../lib/analytics';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
 
+const desktopLabels = {
+  '/stock-market-news/': ['Stock Market', 'News'],
+  '/stocks-to-buy/': ['Stock Buy', 'Signals'],
+  '/earnings-calendar/': ['Earnings', 'Calendar'],
+  '#how-it-works': ['How It', 'Works'],
+  '#watch-and-learn': ['Free', 'Course'],
+  '/#stock-search': ['Stock', 'Search'],
+};
+
 const iosAppStoreUrl =
   'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
 
@@ -144,7 +153,8 @@ export default function Header({
           <div className="nav-links">
             {siteNavigation.map((item) => (
               <a key={item.href} href={item.href.startsWith('#') ? `${navBasePath}${item.href}` : item.href} onClick={closeMenu}>
-                {item.label}
+                <span className="nav-mobile-label">{item.label}</span>
+                <span className="nav-desktop-label">{(desktopLabels[item.href] || [item.label]).map(line=><span key={line}>{line}</span>)}</span>
               </a>
             ))}
           </div>

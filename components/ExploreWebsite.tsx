@@ -1,3 +1,4 @@
+import StockQuickSearch from './StockQuickSearch';
 import {siteNavigation} from '../lib/site-navigation';
 
 export default function ExploreWebsite() {
@@ -7,7 +8,7 @@ export default function ExploreWebsite() {
       <h2 id="explore-title">Explore the website</h2>
       <p>Your next idea starts here.</p>
       <nav className="explore-grid" aria-label="Explore the website">
-        {siteNavigation.map((item, index) => <a key={item.href} href={item.href} className={index === 0 ? 'featured' : ''}>
+        {siteNavigation.map(item => item.href === '/#stock-search' ? <StockQuickSearch key={item.href}/> : <a key={item.href} href={item.href}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={item.icon}/></svg>
           <span><strong>{item.label}</strong><small>{item.detail}</small></span>
           <span className="explore-arrow" aria-hidden="true">↗</span>
@@ -22,7 +23,6 @@ export default function ExploreWebsite() {
       p { margin:0 0 20px; color:#9faec5; font-size:14px; }
       .explore-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
       a { display:flex; align-items:center; gap:11px; padding:16px; min-height:76px; border:1px solid #2d3b53; border-radius:12px; background:#131e30; color:#99bdf6; text-decoration:none; transition:background .15s,border-color .15s; }
-      a.featured { grid-column:span 2; background:linear-gradient(110deg,#26395c,#302447); border-color:#65568a; color:#c6a7fb; }
       a:hover { background:#21324c; border-color:#809ac0; }
       a:focus-visible { outline:2px solid #ba9bfa; outline-offset:3px; }
       svg { flex-shrink:0; }
@@ -38,9 +38,7 @@ export default function ExploreWebsite() {
         a { padding:12px 10px; gap:8px; min-height:62px; }
         strong { font-size:12px; }
         small { display:none; }
-        .featured small { display:block; }
         .explore-arrow { display:none; }
-        .featured .explore-arrow { display:block; }
       }
     `}</style>
   </section>;

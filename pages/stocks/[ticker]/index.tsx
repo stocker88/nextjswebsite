@@ -1,3 +1,4 @@
+import StockEarnings from '../../../components/earnings/StockEarnings';
 import Head from "next/head";
 import Link from "next/link";
 import ResearchPage from "../../../components/ResearchPage";
@@ -44,6 +45,9 @@ export default function Stock({
           <Link href={`${path}/forecast`}>Valuation scenarios</Link> ·{" "}
           <a href={stock.investorUrl}>Company investor relations</a>
         </p>
+      </div>
+      <StockEarnings symbol={stock.ticker}/>
+      <div className="public-copy">
         <h2>What can move {stock.ticker}?</h2>
         <p>
           A price move may reflect company news, sector conditions or changes in
