@@ -36,5 +36,5 @@ export function findAttachedResearchByRoute(items: ResearchPreview[], route: str
 
 export function displayEngagementCount(value: number): number {
   const original = Number(value) || 0;
-  return original * 7 + (original % 6);
+  return original * 7 + (original % 3);
 }
