@@ -14,7 +14,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const points = useRef(new Map<number,{x:number,y:number}>());
   const gesture = useRef({distance:0,zoom:1,x:0,y:0,startX:0,startY:0,canSwipe:false});
-  const items = images.filter(i => /^https?:\/\//.test(i.url)).slice(0,2);
+  const items = images.filter(i => /^https?:\/\//.test(i.url)).slice(0,3);
   const close = () => {
     if (closing) return;
     setClosing(true);
@@ -45,7 +45,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     setZoom(1);setPan({x:0,y:0});setActive(index);
   };
   return <>
-    <div className={'pictures '+(items.length===2?'pair':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
+    <div className={'pictures '+(items.length>1?'multiple':'')+(items.length===3?' triple':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
         <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={'Expand '+(title(i)||'image '+(index+1))}>
           <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
@@ -115,10 +115,11 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
         </div>
       </div>,document.body)}
     <style jsx>{`
-      .pictures{margin:16px 0;display:grid;gap:12px}.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .pictures{margin:16px 0;display:grid;gap:12px}.multiple{grid-template-columns:repeat(2,minmax(0,1fr))}
+      @media(min-width:640px){.triple{grid-template-columns:repeat(3,minmax(0,1fr))}}
       .picture{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080f20;cursor:zoom-in}
-      .picture img{display:block;width:100%;height:auto}.pair .picture{aspect-ratio:1}.pair .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-      .pictures.compact{display:flex;gap:6px;margin:0;flex-shrink:0}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
+      .picture img{display:block;width:100%;height:auto}.multiple .picture{aspect-ratio:1}.multiple .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+      .pictures.compact{display:flex;flex-wrap:wrap;gap:6px;margin:0;max-width:100%}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
       .picture:disabled{cursor:default;min-height:100px}.picture:disabled img{visibility:hidden}.image-error{position:absolute;inset:0;display:grid;place-items:center;color:#93a3bb;font-size:13px;background:#121e31;}
       .expand{display:grid;place-items:center;min-width:28px;min-height:28px;position:absolute;right:6px;bottom:6px;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
       .caption{display:block;text-align:center;margin-top:6px;font-size:12px;color:#cbd5e7}.picture:focus-visible{outline:2px solid #b594ff;outline-offset:3px}
