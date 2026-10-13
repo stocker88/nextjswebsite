@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
-import {Event,day,weekStart,shortDate,sessionName} from '../../lib/earnings';
+import {Event,combinedBeatRate,beatRingColor,day,weekStart,shortDate,sessionName} from '../../lib/earnings';
 
-export default function RangeOverview({events,from,to,showBeat,showRevenue=false,onSelect}:{events:Event[];from:string;to:string;showBeat:boolean;showRevenue?:boolean;onSelect:(symbol:string)=>void}) {
+export default function RangeOverview({events,from,to,showBeat,showRevenue=true,onSelect}:{events:Event[];from:string;to:string;showBeat:boolean;showRevenue?:boolean;onSelect:(symbol:string)=>void}) {
  const [selected,setSelected]=useState(''),[all,setAll]=useState(false);
  useEffect(()=>{setSelected('');setAll(false)},[from,to]);
  const start=weekStart(from),end=day(weekStart(to),6);
@@ -13,7 +13,7 @@ export default function RangeOverview({events,from,to,showBeat,showRevenue=false
    {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=><div className="erm-weekday" key={d}>{d}</div>)}
    {dates.map(date=>{const outside=date<from||date>to;const rows=events.filter(e=>e.date===date);return outside?<div key={date} className="erm-outside" aria-hidden="true"/>:<button key={date} className={'erm-day'+(selected===date?' is-selected':'')} aria-label={`${shortDate(date)}: ${rows.length} reports. Show companies`} aria-expanded={selected===date} onClick={()=>{setSelected(selected===date?'':date);setAll(false)}}>
     <span className="erm-date">{shortDate(date)}</span><small>{rows.length} <span>reports</span></small>
-    <span className="erm-picks">{rows.slice(0,3).map(e=><span className={'erm-pick '+e.session} key={e.symbol}><img src={'/assets/logo/'+encodeURIComponent(e.symbol)+'.webp'} alt="" width={20} height={20} loading="lazy" onError={e=>{e.currentTarget.style.display='none'}}/><b>{e.symbol}</b>{showBeat&&<em>{showRevenue?"E ":""}{beat(e)}</em>}{showRevenue&&<em>R {beat(e,true)}</em>}</span>)}</span>
+    <span className="erm-picks">{rows.slice(0,3).map(e=><span className={'erm-pick '+e.session} key={e.symbol}><img style={showBeat&&showRevenue?{boxShadow:`0 0 0 1px #0d1626, 0 0 0 3px ${beatRingColor(combinedBeatRate(e))}`} : undefined} src={'/assets/logo/'+encodeURIComponent(e.symbol)+'.webp'} alt="" width={20} height={20} loading="lazy" onError={e=>{e.currentTarget.style.display='none'}}/><b>{e.symbol}</b>{showBeat&&<em>{showRevenue?"E ":""}{beat(e)}</em>}{showRevenue&&<em>R {beat(e,true)}</em>}</span>)}</span>
     {rows.length>3&&<span className="erm-count">+{rows.length-3} more</span>}
    </button>})}
   </div>

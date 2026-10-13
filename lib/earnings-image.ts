@@ -1,7 +1,7 @@
-import {Event,day,shortDate} from './earnings';
+import {combinedBeatRate,beatRingColor,Event,day,shortDate} from './earnings';
 export const snapshotShareUrl='https://www.stockstobuynow.ai/earnings-calendar/';
 function loadImage(src:string):Promise<HTMLImageElement|null>{return new Promise(resolve=>{const img=new Image();const timer=setTimeout(()=>{img.src='';resolve(null)},6000);img.onload=()=>{clearTimeout(timer);resolve(img)};img.onerror=()=>{clearTimeout(timer);resolve(null)};img.src=src;});}
-export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=false,showRevenue=false):Promise<Blob>{
+export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=true,showRevenue=true):Promise<Blob>{
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1200;
  const c=canvas.getContext('2d');if(!c)throw new Error('Image export is unavailable in this browser.');
  const badge=(item:Event)=>[showBeat?((showRevenue?'E ':'')+(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'—')):'',showRevenue?'R '+(item.research?.revenueBeat?.total?Math.round(item.research.revenueBeat.rate!)+'%':'—'):''].filter(Boolean);
@@ -23,7 +23,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
  if(!qrImage)throw new Error('Could not generate the QR code. Please try again.');
  const box=(x:number,y:number,w:number,h:number,fill:string,stroke?:string)=>{c.fillStyle=fill;c.beginPath();const radius=12;c.moveTo(x+radius,y);c.arcTo(x+w,y,x+w,y+h,radius);c.arcTo(x+w,y+h,x,y+h,radius);c.arcTo(x,y+h,x,y,radius);c.arcTo(x,y,x+w,y,radius);c.closePath();c.fill();if(stroke){c.strokeStyle=stroke;c.lineWidth=1;c.stroke();}};
  const text=(value:string,x:number,y:number,size:number,color='#ecf1ff',weight=400,align:CanvasTextAlign='left')=>{c.font=`${weight} ${size}px Arial, sans-serif`;c.fillStyle=color;c.textAlign=align;c.textBaseline='top';c.fillText(value,x,y);};
- const logo=(symbol:string,x:number,y:number,size:number)=>{c.save();c.beginPath();c.arc(x+size/2,y+size/2,size/2,0,2*Math.PI);c.clip();c.fillStyle='#f7f8fc';c.fillRect(x,y,size,size);const img=logos.get(symbol);if(img){const scale=Math.min(size/img.width,size/img.height);const w=img.width*scale,h=img.height*scale;c.drawImage(img,x+(size-w)/2,y+(size-h)/2,w,h);}else text(symbol.slice(0,3),x+size/2,y+size/2-7,12,'#17233c',700,'center');c.restore();};
+ const logo=(symbol:string,x:number,y:number,size:number,event?:Event)=>{c.save();c.beginPath();c.arc(x+size/2,y+size/2,size/2,0,2*Math.PI);c.clip();c.fillStyle='#f7f8fc';c.fillRect(x,y,size,size);const img=logos.get(symbol);if(img){const scale=Math.min(size/img.width,size/img.height);const w=img.width*scale,h=img.height*scale;c.drawImage(img,x+(size-w)/2,y+(size-h)/2,w,h);}else text(symbol.slice(0,3),x+size/2,y+size/2-7,12,'#17233c',700,'center');c.restore();if(showBeat&&showRevenue&&event){c.beginPath();c.arc(x+size/2,y+size/2,size/2+1.5,0,2*Math.PI);c.strokeStyle=beatRingColor(combinedBeatRate(event));c.lineWidth=3;c.stroke();}};
  c.fillStyle='#080f20';c.fillRect(0,0,1200,1200);
  text(isRange?'YOUR EARNINGS CALENDAR':'YOUR WEEKLY EARNINGS SNAPSHOT',36,30,39,'#edf1ff',700);
  text(`${shortDate(week)} – ${shortDate(isRange?imageDates[imageDates.length-1]:end)}, ${week.slice(0,4)} · US-listed companies`,36,85,22,'#b5c5df');
@@ -37,7 +37,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
   imageDates.forEach((date,n)=>{const index=offset+n,x=36+(index%7)*cw,y=210+Math.floor(index/7)*rh;const all=events.filter(e=>e.date===date),items=all.slice(0,3);included+=items.length;
    box(x,y,cw-6,rh-6,'#0f1a2d','#30405d');text(shortDate(date),x+8,y+7,15,'#dfeaff',700);text(String(all.length),x+cw-15,y+9,11,'#91a7c5',400,'right');
    const step=Math.min(30,(rh-48)/3);
-   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);badge(item).forEach((b,j)=>text(b,x+cw-13,ty+j*11,9,'#85dbc1',600,'right'))});
+   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18,item);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);badge(item).forEach((b,j)=>text(b,x+cw-13,ty+j*11,9,'#85dbc1',600,'right'))});
    if(all.length>3)text('+'+(all.length-3)+' more',x+8,y+rh-23,10,'#92a8c7');
   });
  }else{
@@ -53,13 +53,13 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
    text(session==='bmo'?'Before open':session==='amc'?'After close':'Time unconfirmed',x+15,y+10,12,accent,700);
    text(String(all.length),x+width-15,y+10,12,accent,400,'right');
    const tile=(width-24)/3;
-   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,Math.max(12,rowHeight-(showRevenue?43:showBeat?30:17)));logo(item.symbol,cx-size/2,ty,size);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');badge(item).forEach((b,j)=>text(b,cx,ty+size+17+j*11,10,'#85dbc1',600,'center'));});
+   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,Math.max(12,rowHeight-(showRevenue?43:showBeat?30:17)));logo(item.symbol,cx-size/2,ty,size,item);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');badge(item).forEach((b,j)=>text(b,cx,ty+size+17+j*11,10,'#85dbc1',600,'center'));});
    if(all.length>9)text(`+ ${all.length-9} more in calendar`,x+width/2,y+height-20,11,'#b8c8de',400,'center');
    y+=height+10;
   });
   if(!events.some(e=>e.date===date))text('No reports',x+width/2,307,15,'#8da2c0',400,'center');
  });
- if(weekend.length){box(36,906,1128,55,'#172136');text('WEEKEND',50,923,14,'#b59bdd',700);weekend.slice(0,8).forEach((item,i)=>{const x=170+i*110;logo(item.symbol,x,916,30);text(item.symbol,x+37,925,12,'#e8effb',700)});if(weekend.length>8)text(`+${weekend.length-8}`,1128,925,12,'#b5c5df',400,'right');included+=Math.min(8,weekend.length);}
+ if(weekend.length){box(36,906,1128,55,'#172136');text('WEEKEND',50,923,14,'#b59bdd',700);weekend.slice(0,8).forEach((item,i)=>{const x=170+i*110;logo(item.symbol,x,916,30,item);text(item.symbol,x+37,925,12,'#e8effb',700)});if(weekend.length>8)text(`+${weekend.length-8}`,1128,925,12,'#b5c5df',400,'right');included+=Math.min(8,weekend.length);}
  else text('Dates and release windows may change. Check the full calendar before trading.',36,922,16,'#98adca');
  }
  c.strokeStyle='#30405d';c.beginPath();c.moveTo(36,979);c.lineTo(1164,979);c.stroke();

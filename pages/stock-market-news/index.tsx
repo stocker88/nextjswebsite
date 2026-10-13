@@ -1,7 +1,7 @@
 import MarketFeedTabs from '../../components/MarketFeedTabs';
 import MarketNewsFeed from '../../components/MarketNewsFeed';
 import AttachedThreads from '../../components/AttachedThreads';
-import FallbackLogo from '../../components/FallbackLogo';
+import ResearchCompanyLogo from '../../components/ResearchCompanyLogo';
 import ResearchImages from '../../components/ResearchImages';
 import {useEffect, useState} from 'react';
 import {mobileNewsBatch} from '../../lib/news-layout';
@@ -18,10 +18,9 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
   const quickTake = isEducation ? item.educationPreview : (item.quickTake || item.educationPreview);
   return <article className={`research-card ${compact ? 'research-card-compact' : ''}`} >
     <Link href={researchUrl(item.id, item.title)}><span className="insight-bubble">
-      <FallbackLogo className="ticker-logo" src={ticker ? `/assets/logo/${ticker}.webp` : null} />
       {ticker ? `$${ticker} INSIGHTS` : 'MARKET INSIGHTS'} →
     </span>
-    <h2 className="news-headline">{item.title}</h2></Link>
+    <h2 className="news-headline"><ResearchCompanyLogo symbols={item.symbols} title={item.title}/>{item.title}</h2></Link>
     {quickTake && <div className="news-quick-take"><span>Quick take</span><p>{quickTake}</p></div>}
     <ResearchImages images={item.images} />
             <AttachedThreads item={item} />

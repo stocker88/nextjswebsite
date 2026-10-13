@@ -1,6 +1,6 @@
 import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
-import FallbackLogo from '../../components/FallbackLogo';
+import ResearchCompanyLogo from '../../components/ResearchCompanyLogo';
 import Head from "next/head";
 import Link from "next/link";
 import { publicArticles } from "../../lib/public-articles";
@@ -60,7 +60,6 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
       </Head>
       <article>
         <span className="insight-bubble">
-          <FallbackLogo className="ticker-logo" src={item.symbols[0] ? `/assets/logo/${item.symbols[0].toUpperCase()}.webp` : null} />
           {item.symbols[0]
             ? `$${item.symbols[0].toUpperCase()} INSIGHTS`
             : "MARKET INSIGHTS"}{" "}
@@ -72,7 +71,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
           {displayEngagementCount(item.likes)} · ▢ {displayEngagementCount(item.comments)} · ↗{" "}
           {displayEngagementCount(item.shares)}
         </p>
-        <h1>{item.title}</h1>
+        <h1><ResearchCompanyLogo symbols={item.symbols} title={item.title}/>{item.title}</h1>
         <p className="research-meta">
           {published && (
             <time dateTime={published}>

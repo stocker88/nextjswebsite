@@ -18,7 +18,7 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
         {thread.time != null && <time dateTime={isoDate(thread.time) || undefined}>{displayDate(thread.time)}</time>}
       </div>}
       {thread.quickTake && <p>{thread.quickTake}</p>}
-      <ResearchImages images={thread.images} compact thumbnailSize={128} />
+      <ResearchImages images={thread.images?.slice(0, 2)} compact thumbnailSize={128} />
       {thread.likes != null && <div className="attachment-engagement" aria-label="Thread engagement">
         {(['likes', 'comments', 'shares'] as const).map(kind =>
           <span key={kind} aria-label={`${displayEngagementCount(thread[kind] ?? 0)} ${kind}`}>

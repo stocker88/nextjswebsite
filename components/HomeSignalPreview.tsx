@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SignalChart, {type Point} from './SignalChart';
 
 type Preview = {id:string; content:string; graph1:Point[]; graph3?:Point[]; graphType3?:string};
+const PREVIEW_LIMIT = 6;
 
 export default function HomeSignalPreview() {
   const [items, setItems] = useState<Preview[]>([]);
@@ -17,7 +18,7 @@ export default function HomeSignalPreview() {
         if (!response.ok) throw new Error('Signals unavailable');
         const payload = await response.json();
         if (!disposed && Array.isArray(payload.items)) {
-          setItems(payload.items.filter((item:Preview) => item && typeof item.id === 'string' && typeof item.content === 'string' && Array.isArray(item.graph1)).slice(0,2));
+          setItems(payload.items.filter((item:Preview) => item && typeof item.id === 'string' && typeof item.content === 'string' && Array.isArray(item.graph1)).slice(0,PREVIEW_LIMIT));
         }
       } catch (_) { /* Keep the catalog link available if the preview cannot load. */ }
       finally { clearTimeout(timeout); if (!disposed) setLoading(false); }
@@ -33,7 +34,7 @@ export default function HomeSignalPreview() {
       <p>A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.</p>
     </header>
     <div className="preview-grid" aria-busy={loading}>
-      {loading ? [0,1].map(i => <div className="loading-card" key={i} aria-hidden="true" />) : items.map(item => {
+      {loading ? Array.from({length:PREVIEW_LIMIT}, (_,i) => <div className="loading-card" key={i} aria-hidden="true" />) : items.map(item => {
         const metric = item.graphType3 || 'Financial metric';
         return <Link href="/stocks-to-buy" className="preview-card" key={item.id}>
           <span className="badge">STOCK TO BUY</span>

@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {QRCodeSVG} from 'qrcode.react';
 import type {Event} from '../../lib/earnings';
 import {snapshotShareUrl} from '../../lib/earnings-image';
-export default function ShareSnapshot({events,dates,week,end,showBeat,showRevenue=false}:{events:Event[];dates:string[];week:string;end:string;showBeat:boolean;showRevenue?:boolean}){
+export default function ShareSnapshot({events,dates,week,end,showBeat,showRevenue=true}:{events:Event[];dates:string[];week:string;end:string;showBeat:boolean;showRevenue?:boolean}){
  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[image,setImage]=useState<{url:string;file:File}|null>(null);
  const qr=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null),trigger=useRef<HTMLButtonElement>(null);
  useEffect(()=>{if(!image)return;dialog.current?.showModal();return()=>{dialog.current?.close();URL.revokeObjectURL(image.url);trigger.current?.focus();}},[image]);

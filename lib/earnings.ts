@@ -1,4 +1,16 @@
 export type Beat={beats:number;total:number;rate:number|null};
+// Equal weight for EPS and revenue, regardless of their individual sample counts.
+export function combinedBeatRate(event:Event):number|null {
+ const eps=event.research?.beat,rev=event.research?.revenueBeat;
+ const valid=(b:Beat|undefined)=>!!b&&b.total>0&&typeof b.rate==='number'&&Number.isFinite(b.rate)&&b.rate>=0&&b.rate<=100;
+ return valid(eps)&&valid(rev)?(eps!.rate!+rev!.rate!)/2:null;
+}
+export function beatRingColor(rate:number|null):string {
+ if(rate===null||!Number.isFinite(rate))return '#778397';
+ const stops=[[239,107,115],[242,201,76],[66,211,154]],v=Math.max(0,Math.min(100,rate))/50;
+ const a=stops[v<=1?0:1],b=stops[v<=1?1:2],t=v<=1?v:v-1;
+ return '#'+a.map((c,i)=>Math.round(c+(b[i]-c)*t).toString(16).padStart(2,'0')).join('');
+}
 export type Summary={pe:number|null;ps:number|null;forwardPe:number|null;forwardPs:number|null;estimatePeriod:string|null;beat:Beat;revenueBeat?:Beat;oneYear:number|null;updatedAt:string};
 export type Event={symbol:string;name:string;date:string;session:string;marketCap:number|null;price:number|null;sector:string;industry:string;exchange:string;epsEstimate:number|null;epsActual:number|null;revenueEstimate:number|null;revenueActual:number|null;research?:Summary};
 export type Calendar={updatedAt:string;today:string;from:string;to:string;items:Event[];detailSymbols?:string[]};

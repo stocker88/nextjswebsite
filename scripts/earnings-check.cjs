@@ -11,3 +11,11 @@ console.log('Earnings filters, data contracts, static routes and company snapsho
 const caps=[{...base,symbol:'BIG',marketCap:9e9},{...base,symbol:'MISSING',marketCap:null},{...base,symbol:'SMALL',marketCap:1e9}];
 assert.equal(filterEvents(caps,{...f,sort:'cap'}).map(i=>i.symbol).join(','),'BIG,SMALL,MISSING');
 assert.equal(filterEvents(caps,{...f,sort:'cap-asc'}).map(i=>i.symbol).join(','),'SMALL,BIG,MISSING');
+
+const {combinedBeatRate,beatRingColor}=m.exports;
+const pair=(eps,rev,total=8)=>({research:{beat:{rate:eps,total},revenueBeat:{rate:rev,total}}});
+assert.equal(combinedBeatRate(pair(100,50)),75);
+assert.equal(combinedBeatRate(pair(0,0)),0);
+for(const e of [pair(100,null),pair(100,75,0),pair(NaN,75),pair(101,75),{}])assert.equal(combinedBeatRate(e),null);
+assert.equal(beatRingColor(0),'#ef6b73');assert.equal(beatRingColor(50),'#f2c94c');assert.equal(beatRingColor(100),'#42d39a');assert.equal(beatRingColor(75),'#9ace73');assert.equal(beatRingColor(null),'#778397');
+console.log('Combined EPS/revenue rings: average, missing history and color scale passed.');

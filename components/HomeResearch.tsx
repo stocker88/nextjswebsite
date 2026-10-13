@@ -1,3 +1,4 @@
+import ResearchCompanyLogo from './ResearchCompanyLogo';
 import MarketNewsFeed from './MarketNewsFeed';
 import EngagementIcon from './EngagementIcon';
 import {loadRecentResearch} from '../lib/research-feed';
@@ -88,7 +89,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
             <div className="news-meta">
               <span className={education ? 'category education' : 'category'}>{category}</span>
             </div>
-            <h3><Link href={researchUrl(i.id, i.title)}>{i.title}</Link></h3>
+            <h3><Link href={researchUrl(i.id, i.title)}><ResearchCompanyLogo symbols={i.symbols} title={i.title}/>{i.title}</Link></h3>
             {quickTake && <p className="quick-take">{quickTake}</p>}
             <ResearchImages images={i.images} />
             <AttachedThreads item={i} />
