@@ -17,14 +17,13 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
   const [recovered, setRecovered] = useState<ResearchPreview[] | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const [attempt, setAttempt] = useState(0);
-  const news = items.length ? items : recovered || [];
+  const news = recovered ?? items;
   useEffect(() => {
-    if (section === "resources" || items.length) return;
+    if (section === "resources") return;
     let disposed = false;
     const controller = new AbortController();
     setStatus("loading");
-    // Recover empty HTML snapshots cached by in-app browsers without downloading
-    // the archive again when the server already supplied recent previews.
+    // Revalidate populated static HTML too; GitHub Pages rebuilds can be delayed.
     (async () => {
       try {
         const recent = await loadRecentResearch(controller.signal, partial => {
@@ -38,10 +37,17 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
     const retryOnRestore = (event: PageTransitionEvent) => {
       if (event.persisted) setAttempt(value => value + 1);
     };
+    const refreshVisible = () => {
+      if (document.visibilityState === "visible") setAttempt(value => value + 1);
+    };
+    const interval = window.setInterval(refreshVisible, 5 * 60 * 1000);
+    document.addEventListener("visibilitychange", refreshVisible);
     window.addEventListener("pageshow", retryOnRestore);
     return () => {
       disposed = true;
       controller.abort();
+      window.clearInterval(interval);
+      document.removeEventListener("visibilitychange", refreshVisible);
       window.removeEventListener("pageshow", retryOnRestore);
     };
   }, [items, section, attempt]);
@@ -64,10 +70,10 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         />
       </Head>}
       {section !== "resources" && <>
-      <header className="editorial-heading"><span>Market updates · Past 10 days</span>
+      <header className="editorial-heading"><span>Market updates · Past week</span>
       <h2>Stock market news today</h2>
       <p>
-        All app research previews published in the past 10 days. These are not live
+        All app research previews published in the past week. These are not live
         quotes or a ranked list of buys.
       </p></header>
       <div className="news-grid">
@@ -79,7 +85,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
               <p>Fetching the latest headlines and images. Please wait…</p></div>
           </div> :
             status === "error" ? <>Recent previews could not be loaded. <button type="button" onClick={() => setAttempt(value => value + 1)}>Try again</button></> :
-            "No research previews published in the past 10 days."}
+            "No research previews published in the past week."}
         </div>}
         {news.map(i => {
           const education = i.symbols.some(symbol => symbol.replace(/^[#$]/, '').toLowerCase() === 'education');

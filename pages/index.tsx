@@ -307,7 +307,7 @@ export const getStaticProps = async () => {
   ])
 
   const now = Date.now();
-  const cutoff = now - 10 * 24 * 60 * 60 * 1000;
+  const cutoff = now - 7 * 24 * 60 * 60 * 1000;
   const news = (await fetchResearch()).filter((item) => {
     if (!item.time || !Number.isFinite(item.time)) return false;
     const published = item.time < 1e12 ? item.time * 1000 : item.time;

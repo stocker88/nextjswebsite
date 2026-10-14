@@ -19,7 +19,7 @@ const endpoint = 'https://us-central1-stocker-fcda2.cloudfunctions.net/researchP
   const now = Date.now();
   const milliseconds = time => time < 1e12 ? time * 1000 : time;
   const recent = items.filter(item => Number.isFinite(item.time) &&
-    milliseconds(item.time) >= now - 10 * 86400000 && milliseconds(item.time) <= now);
+    milliseconds(item.time) >= now - 7 * 86400000 && milliseconds(item.time) <= now);
   const destination = path.join(__dirname, '../public/research-previews.json');
   fs.mkdirSync(path.dirname(destination), {recursive:true});
   fs.writeFileSync(destination, JSON.stringify({kind:'recent-research', updatedAt:new Date(now).toISOString(), items:recent}));
