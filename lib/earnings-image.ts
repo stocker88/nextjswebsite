@@ -37,7 +37,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
   imageDates.forEach((date,n)=>{const index=offset+n,x=36+(index%7)*cw,y=210+Math.floor(index/7)*rh;const all=events.filter(e=>e.date===date),items=all.slice(0,3);included+=items.length;
    box(x,y,cw-6,rh-6,'#0f1a2d','#30405d');text(shortDate(date),x+8,y+7,15,'#dfeaff',700);text(String(all.length),x+cw-15,y+9,11,'#91a7c5',400,'right');
    const step=Math.min(30,(rh-48)/3);
-   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18,item);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);badge(item).forEach((b,j)=>text(b,x+cw-13,ty+j*11,9,'#85dbc1',600,'right'))});
+   items.forEach((item,i)=>{const ty=y+31+i*step;logo(item.symbol,x+8,ty,18,item);text(item.symbol,x+31,ty+3,11,'#ecf1ff',700);badge(item).forEach((b,j)=>text(b,x+cw-13,ty+j*11,9,showBeat&&showRevenue?beatRingColor(combinedBeatRate(item)):'#85dbc1',600,'right'))});
    if(all.length>3)text('+'+(all.length-3)+' more',x+8,y+rh-23,10,'#92a8c7');
   });
  }else{
@@ -53,7 +53,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
    text(session==='bmo'?'Before open':session==='amc'?'After close':'Time unconfirmed',x+15,y+10,12,accent,700);
    text(String(all.length),x+width-15,y+10,12,accent,400,'right');
    const tile=(width-24)/3;
-   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,Math.max(12,rowHeight-(showRevenue?43:showBeat?30:17)));logo(item.symbol,cx-size/2,ty,size,item);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');badge(item).forEach((b,j)=>text(b,cx,ty+size+17+j*11,10,'#85dbc1',600,'center'));});
+   items.forEach((item,i)=>{const cx=x+12+(i%3)*tile+tile/2,ty=y+33+Math.floor(i/3)*rowHeight;const size=Math.min(44,Math.max(12,rowHeight-(showRevenue?43:showBeat?30:17)));logo(item.symbol,cx-size/2,ty,size,item);text(item.symbol,cx,ty+size+3,11,'#edf1ff',700,'center');badge(item).forEach((b,j)=>text(b,cx,ty+size+17+j*11,10,showBeat&&showRevenue?beatRingColor(combinedBeatRate(item)):'#85dbc1',600,'center'));});
    if(all.length>9)text(`+ ${all.length-9} more in calendar`,x+width/2,y+height-20,11,'#b8c8de',400,'center');
    y+=height+10;
   });

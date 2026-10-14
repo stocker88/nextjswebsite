@@ -1,5 +1,7 @@
 import ResearchCompanyLogo from './ResearchCompanyLogo';
 import MarketNewsFeed from './MarketNewsFeed';
+import NewsMentionsPromo from './NewsMentionsPromo';
+import AppDownloadButton from './formStocker';
 import EngagementIcon from './EngagementIcon';
 import {loadRecentResearch} from '../lib/research-feed';
 import AttachedThreads from './AttachedThreads';
@@ -105,9 +107,14 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         })}
       </div>
       <MarketNewsFeed compact/>
-      <p className="section-action">
+      <p className="section-action market-news-action">
         <Link className="research-cta" href="/stock-market-news">All market news →</Link>
       </p>
+      <NewsMentionsPromo/>
+      <div className="section-action hottest-stocks-action">
+        <AppDownloadButton from="home_hottest_stocks" label="Hottest stock now →"/>
+        <p>Explore in the app · iOS & Android</p>
+      </div>
       </>}
       {section !== "news" && <>
       <header className="editorial-heading subsection-heading"><span>Company insights</span><h2>Explore company research</h2></header>
@@ -181,7 +188,11 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
           .home-research { padding-left:16px; padding-right:16px; }
           .engagement { gap:12px; }
         }
+        .hottest-stocks-action :global(a.app-download-cta) { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:15px 28px; border:1px solid #c5a5ff; border-radius:999px; background:#c5a5ff; color:#171024!important; font-size:17px; font-weight:750; text-decoration:none; }
+        .hottest-stocks-action :global(a.app-download-cta:hover) { background:#d4bdff; }
+        .hottest-stocks-action p { margin:10px 0 0; color:#9eafc9; font-size:12px; }
         .section-action { text-align: center; margin: 30px 0 0; }
+        .market-news-action { margin-bottom: 56px; }
         .home-research :global(.research-cta) {
           display: inline-flex; align-items: center; justify-content: center;
           background: #1985ff; color: #fff; border-radius: 999px;

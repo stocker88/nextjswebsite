@@ -2,6 +2,7 @@ import {useEffect,useState} from 'react';
 import {useRouter} from 'next/router';
 import {Calendar,day,endpoint,weekStart} from '../../lib/earnings';
 import WeeklySummary from './WeeklySummary';
+import AppDownloadButton from '../formStocker';
 
 export default function EarningsSnapshot({home=false}:{home?:boolean}) {
  const router=useRouter();
@@ -32,7 +33,15 @@ export default function EarningsSnapshot({home=false}:{home?:boolean}) {
    <h2>Earnings snapshot</h2>
    {error?<><p>This week’s earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading this week’s earnings…</p>}
   </section>}
+  <div className="snapshot-app-action">
+   <AppDownloadButton from="earnings_snapshot_best_stock" label="Best stock to buy now →"/>
+   <p>Explore in the app · iOS & Android</p>
+  </div>
   <style jsx global>{`
+   .snapshot-app-action{text-align:center;margin:30px 0 48px}
+   .earnings-snapshot .snapshot-app-action a.app-download-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:15px 28px;border:1px solid #c5a5ff;border-radius:999px;background:#c5a5ff;color:#171024!important;font-size:17px;font-weight:750;text-decoration:none}
+   .earnings-snapshot .snapshot-app-action a.app-download-cta:hover{background:#d4bdff;text-decoration:none}
+   .snapshot-app-action p{margin:10px 0 0;color:#9eafc9;font-size:12px}
    .earnings-snapshot{color:#e9eefb;line-height:1.5;min-width:0;scroll-margin-top:90px}
    .earnings-snapshot-home{max-width:1160px;margin:auto;padding:0 20px}
    .earnings-snapshot .ews{margin-top:20px}
