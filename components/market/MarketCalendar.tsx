@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import schedule from '../../data/market-calendar.json';
 import {day, shortDate, weekStart} from '../../lib/earnings';
 
-const categories: Record<string,string> = {macro:'Economy',fed:'Federal Reserve',filings:'13F filings',indices:'Index reviews',trading:'Trading dates'};
+const categories: Record<string,string> = {indices:'Index announcements',filings:'13F filings',trading:'Trading dates',macro:'Economy',fed:'Federal Reserve'};
 type MarketEvent = typeof schedule.events[number];
 export default function MarketCalendar() {
   const [from,setFrom] = useState(''), [category,setCategory] = useState('all');

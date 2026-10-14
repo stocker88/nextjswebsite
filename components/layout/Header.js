@@ -8,6 +8,7 @@ const desktopLabels = {
   '/stock-market-news/': ['Stock Market', 'News'],
   '/stocks-to-buy/': ['Stock Buy', 'Signals'],
   '/earnings-calendar/': ['Earnings', 'Calendar'],
+  '/#market-calendar': ['Market', 'Calendar'],
   '#how-it-works': ['How It', 'Works'],
   '#watch-and-learn': ['Free', 'Course'],
   '/stocks/': ['Stock', 'Search'],
