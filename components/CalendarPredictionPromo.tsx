@@ -15,7 +15,7 @@ export default function CalendarPredictionPromo({kind}:{kind:'market'|'earnings'
  };
  return <section className="prediction-promo" aria-labelledby={titleId}>
   <div className="prediction-copy">
-   <span className="eyebrow"><span aria-hidden="true">✦</span> {market?'DAILY MARKET OUTLOOK':'EARNINGS INTELLIGENCE'} · IN THE APP</span>
+   <span className="eyebrow"><span aria-hidden="true">✦</span> {market?'DAILY MARKET OUTLOOK':'AI EARNINGS INTELLIGENCE'} · IN THE APP</span>
    <h2 id={titleId}>{market?'The next market move.':'Before the earnings release.'}<br/><span>{market?'See the research behind it.':'Explore the beat potential.'}</span></h2>
    <p>{market?'Review our daily S&P 500 and QQQ predictions. We combine market events, statistical analysis, news research and Wall Street research to estimate how the market could move.':'Will a company beat earnings expectations this quarter? We use market conditions, industry reporting, product releases and recent company news to inform our earnings predictions.'}</p>
    {market&&<p style={{marginTop:16}}>Explore potential holdings ahead of 13F filings using recent public data, news and previously disclosed position changes. Assess possible index additions using eligibility rules, company rankings and corporate developments. These are research candidates until filings or index announcements confirm them.</p>}
