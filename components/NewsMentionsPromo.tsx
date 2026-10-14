@@ -35,7 +35,7 @@ export default function NewsMentionsPromo() {
         </div>
       </div>
       {selected && <div className="mentions-download">
-        <AppDownloadButton from={'news_mentions_' + selected.id} label="Get the app →"/>
+        <AppDownloadButton popup from={'news_mentions_' + selected.id} label="Get the app →"/>
         <span>Available on iOS & Android</span>
       </div>}
     </div>

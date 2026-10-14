@@ -1,18 +1,17 @@
-import {useEffect,useState} from 'react';
+import {useEffect,useState,ReactNode} from 'react';
 import {useRouter} from 'next/router';
 import {Calendar,day,endpoint,weekStart} from '../../lib/earnings';
 import WeeklySummary from './WeeklySummary';
-import AppDownloadButton from '../formStocker';
 
-export default function EarningsSnapshot({home=false}:{home?:boolean}) {
+export default function EarningsSnapshot({home=false,children}:{home?:boolean;children?:ReactNode}) {
  const router=useRouter();
- const [calendar,setCalendar]=useState<Calendar|null>(null),[from,setFrom]=useState(''),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
+ const [calendar,setCalendar]=useState<Calendar|null>(null),[from,setFrom]=useState(''),[to,setTo]=useState(''),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
  useEffect(()=>{
   let active=true;
   const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
   const value=(type:string)=>parts.find(p=>p.type===type)!.value;
   const start=weekStart(`${value('year')}-${value('month')}-${value('day')}`);
-  setFrom(start);setError(false);
+  setFrom(start);setTo(day(start,6));setError(false);
   async function load(){
    for(const url of ['/earnings-calendar.json',endpoint]){
     try{
@@ -29,19 +28,15 @@ export default function EarningsSnapshot({home=false}:{home?:boolean}) {
   load();return()=>{active=false};
  },[attempt]);
  return <div id="weekly-earnings" className={'earnings-snapshot'+(home?' earnings-snapshot-home':'')}>
-  {calendar&&from?<WeeklySummary onRangeChange={f=>setFrom(f)} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={day(from,6)} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="This week’s earnings snapshot">
+  {calendar&&from?<WeeklySummary onRangeChange={(f,t)=>{setFrom(f);setTo(t)}} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={to} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="This week’s earnings snapshot">
    <h2>Earnings snapshot</h2>
    {error?<><p>This week’s earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading this week’s earnings…</p>}
   </section>}
-  <div className="snapshot-app-action">
-   <AppDownloadButton from="earnings_snapshot_best_stock" label="Best stock to buy now →"/>
-   <p>Explore in the app · iOS & Android</p>
-  </div>
+  {children}
+  <div className="snapshot-section-divider" aria-hidden="true"/>
   <style jsx global>{`
-   .snapshot-app-action{text-align:center;margin:30px 0 48px}
-   .earnings-snapshot .snapshot-app-action a.app-download-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:15px 28px;border:1px solid #c5a5ff;border-radius:999px;background:#c5a5ff;color:#171024!important;font-size:17px;font-weight:750;text-decoration:none}
-   .earnings-snapshot .snapshot-app-action a.app-download-cta:hover{background:#d4bdff;text-decoration:none}
-   .snapshot-app-action p{margin:10px 0 0;color:#9eafc9;font-size:12px}
+   .snapshot-section-divider{height:1px;max-width:480px;margin:40px auto 56px;background:linear-gradient(90deg,transparent,#8d75ba30,transparent)}
+   @media(max-width:700px){.snapshot-section-divider{max-width:70%;margin:28px auto 36px}}
    .earnings-snapshot{color:#e9eefb;line-height:1.5;min-width:0;scroll-margin-top:90px}
    .earnings-snapshot-home{max-width:1160px;margin:auto;padding:0 20px}
    .earnings-snapshot .ews{margin-top:20px}

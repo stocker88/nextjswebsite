@@ -1,3 +1,4 @@
+import AppDownloadModal from './AppDownloadModal';
 import { useEffect, useState } from 'react';
 import { trackAppStoreClick } from '../lib/analytics';
 
@@ -5,6 +6,7 @@ type Props = {
   from: string;
   label?: string;
   secondary?: boolean;
+  popup?: boolean;
 };
 
 const iosAppStoreUrl =
@@ -17,7 +19,9 @@ function NewsletterSignUp({
   from,
   label = 'Get the App →',
   secondary = false,
+  popup = false,
 }: Props) {
+  const [showPrompt,setShowPrompt]=useState(false);
   const [storeUrl, setStoreUrl] = useState(iosAppStoreUrl);
 
   useEffect(() => {
@@ -35,15 +39,19 @@ function NewsletterSignUp({
   };
 
   return (
+    <>
     <a
       className={`nav-cta app-download-cta${secondary ? ' app-download-cta--secondary' : ''}`}
       href={storeUrl}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={trackDownload}
+      aria-haspopup={popup?"dialog":undefined}
+      onClick={e=>{if(popup){e.preventDefault();setShowPrompt(true)}else trackDownload()}}
     >
       {label}
     </a>
+    {showPrompt&&<AppDownloadModal placement={from} onClose={()=>setShowPrompt(false)}/>}
+    </>
   );
 }
 

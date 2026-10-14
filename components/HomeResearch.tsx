@@ -1,3 +1,4 @@
+import StockResearchPromo from './StockResearchPromo';
 import {isEarningsFirst} from '../lib/research';
 import ResearchCompanyLogo from './ResearchCompanyLogo';
 import MarketNewsFeed from './MarketNewsFeed';
@@ -113,13 +114,14 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
           </article></div>;
         })}
       </div>
+      <StockResearchPromo/>
       <MarketNewsFeed compact/>
       <p className="section-action market-news-action">
         <Link className="research-cta" href="/stock-market-news">All market news →</Link>
       </p>
       <NewsMentionsPromo/>
       <div className="section-action hottest-stocks-action">
-        <AppDownloadButton from="home_hottest_stocks" label="Hottest stock now →"/>
+        <AppDownloadButton popup from="home_hottest_stocks" label="Hottest stock now →"/>
         <p>Explore in the app · iOS & Android</p>
       </div>
       </>}

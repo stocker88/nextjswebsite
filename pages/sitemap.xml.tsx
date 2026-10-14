@@ -24,6 +24,7 @@ export async function getServerSideProps({ res }: any) {
     "/",
     "/stocks-to-buy",
     "/earnings-calendar/",
+    "/stock-market-calendar/",
     "/earnings-calendar/this-week/",
     "/earnings-calendar/next-week/",
     "/stock-market-news",
