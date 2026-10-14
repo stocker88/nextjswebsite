@@ -28,7 +28,7 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
       <section className="proof-section routine-section">
         <div className="proof-copy">
           <span className="proof-eyebrow">A SIMPLE DAILY ROUTINE</span>
-          <h2>Build a focused daily research routine</h2>
+          <h2>It takes 5 minutes a day to be a Pro</h2>
           <p>
             Review active signals, expert insights, earnings opportunities and
             the market updates that may affect your portfolio.

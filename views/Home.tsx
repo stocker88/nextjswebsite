@@ -21,8 +21,6 @@ import NewsletterSignUp from '../components/formStocker'
 import Header from '../components/layout/Header';
 import type Post from '../interfaces/post';
 import Container from '../components/container'
-import Intro from '../components/intro'
-import MoreStories from '../components/more-stories'
 import Link from 'next/link';
 import QuoteDisplay from '../components/inspiration';
 import CompoundInterestCalculator from '../components/compoundInterestCalculator';
@@ -80,7 +78,7 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
   );
 };
 
-const Home = ({ news, posts, topWidgetRef, bodyWidgetRef }: Props) => {
+const Home = ({ news, topWidgetRef, bodyWidgetRef }: Props) => {
 
 
 
@@ -198,12 +196,6 @@ import SignUpModal from '../SignUpModal';
 
  <CompoundInterestCalculator/>
  <HomeResearch items={news} section="resources"/>
-        <section className="editorial-section">
-          <div className="editorial-shell">
-            <Intro />
-            {posts.length > 0 && <MoreStories posts={posts} />}
-          </div>
-        </section>
 
 {/*         <center>
 <FAQ/>
