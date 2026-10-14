@@ -120,17 +120,6 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
-  <HomeResearch items={news} section="news" />
-  <EarningsSnapshot home />
-  <ProductProof founderOnly />
-
-  <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
-          <div className="signals-shell">
-            <IntroApp/>
-            <Swipe/>
-          </div>
-        </section>
-        <HomeSignalPreview />
               <TrustpilotWidget
                 templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                 businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
@@ -182,20 +171,29 @@ import SignUpModal from '../SignUpModal';
 
 
 
+        <ProductProof section="routine" />
+
+  <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
+          <div className="signals-shell">
+            <IntroApp/>
+            <Swipe/>
+          </div>
+        </section>
+        <HomeSignalPreview />
+        <EarningsSnapshot home />
+        <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
 
-        <ProductProof />
+        <ProductProof founderOnly />
+        <ProductProof section="signals" />
 
+        <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
+          <Testimonial/>
+        </div>
+        <FeaturedMedia />
         <YoutubeSection/>
-
-      <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
-        <Testimonial/>
-      </div>
-
-<FeaturedMedia />
-
- <CompoundInterestCalculator/>
- <HomeResearch items={news} section="resources"/>
+        <CompoundInterestCalculator/>
+        <HomeResearch items={news} section="resources"/>
 
 {/*         <center>
 <FAQ/>

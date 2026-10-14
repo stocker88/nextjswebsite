@@ -7,7 +7,10 @@ const iosAppStoreUrl =
 const androidPlayStoreUrl =
   'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
-export default function ProductProof({ founderOnly = false }: { founderOnly?: boolean }) {
+export default function ProductProof({ founderOnly = false, section = 'all' }: {
+  founderOnly?: boolean;
+  section?: 'all' | 'routine' | 'signals';
+}) {
   const openAppStore = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const isAndroid = /Android/i.test(navigator.userAgent);
@@ -24,8 +27,7 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
 
   return (
     <div className="product-proof">
-      {!founderOnly && <>
-      <section className="proof-section routine-section">
+      {!founderOnly && section !== 'signals' && <section className="proof-section routine-section">
         <div className="proof-copy">
           <span className="proof-eyebrow">A SIMPLE DAILY ROUTINE</span>
           <h2>It takes 5 minutes a day to be a Pro</h2>
@@ -53,9 +55,9 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
             sizes="(max-width: 760px) 88vw, 420px"
           />
         </div>
-      </section>
+      </section>}
 
-      <section className="proof-section predictions-section">
+      {!founderOnly && section !== 'routine' && <section className="proof-section predictions-section">
         <div className="proof-heading">
           <span className="proof-eyebrow">PAST SIGNAL EXAMPLES</span>
           <h2>See how earlier market signals played out</h2>
@@ -120,9 +122,7 @@ export default function ProductProof({ founderOnly = false }: { founderOnly?: bo
         >
           Try Risk-Free Paper Trading →
         </a>
-      </section>
-
-      </>}
+      </section>}
 
       {founderOnly && <section className="proof-section founder-trades-section">
         <div className="proof-heading">
