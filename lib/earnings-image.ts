@@ -4,7 +4,7 @@ function loadImage(src:string):Promise<HTMLImageElement|null>{return new Promise
 export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=true,showRevenue=true):Promise<Blob>{
  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1200;
  const c=canvas.getContext('2d');if(!c)throw new Error('Image export is unavailable in this browser.');
- const badge=(item:Event)=>[showBeat?((showRevenue?'E ':'')+(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'—')):'',showRevenue?'R '+(item.research?.revenueBeat?.total?Math.round(item.research.revenueBeat.rate!)+'%':'—'):''].filter(Boolean);
+ const badge=(item:Event)=>[showBeat?((showRevenue?'E ':'')+(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'N/A')):'',showRevenue?'R '+(item.research?.revenueBeat?.total?Math.round(item.research.revenueBeat.rate!)+'%':'N/A'):''].filter(Boolean);
  const isRange=Date.parse(end)-Date.parse(week)>6*86400000;
  const imageDates=isRange?dates.slice(0,42):dates;
  const weekdays=dates.filter(d=>{const n=new Date(d+'T12:00:00Z').getUTCDay();return n>0&&n<6});
@@ -67,7 +67,7 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
  text('www.StocksToBuyNow.ai',108,1008,29,'#eef2ff',700);
  text(`${included} of ${events.length} matching reports shown · Full details online`,108,1048,16,'#b2c2db');
  text('Data: Nasdaq · Release windows: Nasdaq',36,1100,16,'#b2c2db');
- text(showBeat||showRevenue?'E: EPS · R: Revenue beat % · Up to 8 reports · — unavailable.':'Selected largest reporters per session. Dates may change.',36,1126,15,'#92a6c5');
+ text(showBeat||showRevenue?'E: EPS · R: Revenue beat % · Up to 8 reports ·, unavailable.':'Selected largest reporters per session. Dates may change.',36,1126,15,'#92a6c5');
  text('No affiliation or endorsement by data providers.',36,1150,14,'#8296b5');
  c.imageSmoothingEnabled=false;c.drawImage(qrImage,1164-qrSize,996,qrSize,qrSize);c.imageSmoothingEnabled=true;
  text('Scan for full calendar',1164-qrSize/2,1170,13,'#b5c5df',400,'center');

@@ -31,7 +31,7 @@ export default function NewsMentionsPromo() {
         <span className="mentions-result-icon" aria-hidden="true">{selected ? '✦' : '↗'}</span>
         <div>
           <h3>{selected ? 'Go deeper with AI analytics' : 'Find the hottest stock now'}</h3>
-          <p>{selected ? `${selected.label} selected · ${selected.hint}. AI analytics are available in the app — explore news mentions alongside financials and technical setups.` : 'Select a window above to see which stocks are mentioned the most. Turn the news you read into companies worth researching.'}</p>
+          <p>{selected ? `${selected.label} selected · ${selected.hint}. AI analytics are available in the app. Explore news mentions alongside financials and technical setups.` : 'Select a window above to see which stocks are mentioned the most. Turn the news you read into companies worth researching.'}</p>
         </div>
       </div>
       {selected && <div className="mentions-download">

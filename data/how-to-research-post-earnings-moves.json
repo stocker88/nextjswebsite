@@ -1,0 +1,40 @@
+{
+  "title": "What matters after earnings are released?",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "Reconcile the headline with the report",
+      "body": "Start with the company’s release and financial statements. Compare actual EPS and revenue with estimates on the same accounting basis. Identify one-off gains, tax effects, share-count changes or adjustments that may explain a beat without stronger underlying demand."
+    },
+    {
+      "title": "Read the outlook and the call",
+      "body": "The app’s earnings-day lesson emphasizes guidance and expectations. Compare the new outlook with both prior guidance and the market’s expectations. Read management’s discussion of demand, pricing, margins and cash flow, then note whether the conference call clarifies or challenges the initial headline."
+    },
+    {
+      "title": "Put the price reaction in context",
+      "body": "Compare the move with the run-up before results and the sector’s performance. Thin after-hours trading can produce a different reaction from the next regular session. Price, volume and whether the move persists are useful observations, but none confirms future returns on its own."
+    },
+    {
+      "title": "Distinguish a changed business from a changed expectation",
+      "body": "A strong quarter can meet expectations that were already high. A weak quarter can be accompanied by an improving outlook. Write down what changed in the long-term thesis and what merely changed in sentiment. Avoid explaining every price move using EPS alone."
+    },
+    {
+      "title": "Reassess options and risk",
+      "body": "After the event, lower implied volatility and time decay can change an option position’s value. Recheck the remaining premium, expiry and liquidity rather than relying only on the stock chart. A post-earnings trend can reverse; do not assume a gap must continue or must fill."
+    },
+    {
+      "title": "Update the research before the next decision",
+      "body": "Record the actual results, guidance and the evidence that would invalidate your view. Compare the revised outlook with valuation and alternatives. Research a continuation, a reversal and a no-trade scenario before deciding whether the new information justifies a position."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Investor.gov: quarterly reports (10-Q)",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/quarterly-reports-10q"
+    },
+    {
+      "title": "Options Industry Council: The Crush Is Real",
+      "url": "https://www.optionseducation.org/news/the-crush-is-real"
+    }
+  ]
+}

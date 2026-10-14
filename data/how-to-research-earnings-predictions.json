@@ -1,0 +1,36 @@
+{
+  "title": "Could this company beat earnings expectations?",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "Define the expectation you are testing",
+      "body": "Record the fiscal quarter, estimate date, reporting currency and whether EPS is GAAP or adjusted. Compare like with like. Revenue and EPS can tell different stories, so write down both expectations rather than treating one headline number as the whole report."
+    },
+    {
+      "title": "Build the operating picture",
+      "body": "The app’s earnings lessons look beyond a company in isolation. Review results and guidance from close competitors, relevant industry releases, product launches and recent company news. Ask which evidence affects sales volumes, pricing, costs or margins this quarter. A product announcement may matter much later than the next report."
+    },
+    {
+      "title": "Check how similar the peers really are",
+      "body": "A competitor’s beat is a clue, not a result you can transfer. Compare customer mix, geography, fiscal periods, currency exposure and business model. Separate an industry-wide improvement from one company’s market-share gain. Look for evidence that contradicts the thesis as well as evidence that supports it."
+    },
+    {
+      "title": "Use history as context, not a probability",
+      "body": "The calendar’s historical beat rates summarize available past reports. They are not the probability of beating next quarter or the chance of a profitable trade. Likewise, a model score is not automatically a percentage probability or a predicted stock-price return. Check its definition and validation before interpreting it."
+    },
+    {
+      "title": "Separate the beat from the market reaction",
+      "body": "A company can beat EPS and still fall if guidance disappoints, margins weaken or investors expected more. Consider the pre-earnings rally, valuation and outlook alongside the reported quarter. Build upside, base and downside scenarios and identify which new evidence would change each view."
+    },
+    {
+      "title": "Bring the question into the app",
+      "body": "Ask about the company’s upcoming earnings, peer results and guidance, then review the available financial, technical and earnings research together. Keep the forecast dated and revisit it when estimates or news change. The aim is an informed research decision, not certainty about the release."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Investor.gov: using EDGAR to research investments",
+      "url": "https://www.investor.gov/introduction-investing/getting-started/researching-investments/using-edgar-research-investments"
+    }
+  ]
+}

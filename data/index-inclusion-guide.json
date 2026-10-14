@@ -1,0 +1,52 @@
+{
+  "title": "How to predict which stocks could join an index",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "Start with a shortlist, not a certainty",
+      "body": "Index research starts with eligibility, then ranking, then the announcement calendar. A candidate is not a confirmed addition, and inclusion does not guarantee a price rise. This guide covers Russell U.S. indexes, the S&P 500 and the Nasdaq-100 (the index tracked by QQQ, not the entire Nasdaq Composite)."
+    },
+    {
+      "title": "Russell: rebuild the eligible universe",
+      "body": "Screen for eligible U.S. companies, exchanges and security types, then apply the current investability rules. Rank eligible companies by total market capitalization at the official rank date; use float-adjusted capitalization for weights. The Russell 1000 broadly represents the largest 1,000 companies and the Russell 2000 the next 2,000. Apply the provider’s banding and migration rules instead of assuming every company crossing rank 1,000 changes indexes. Starting in 2026, reconstitution occurs in June and December; IPO additions also have a separate process. Build a watchlist around the relevant boundaries, stress-test price and share-count changes, and compare it with preliminary lists before treating additions as confirmed."
+    },
+    {
+      "title": "S&P 500: eligibility comes before committee selection",
+      "body": "Check U.S. domicile, eligible listing and share type, current market-cap and float requirements, liquidity and IPO seasoning. For ordinary corporate candidates, GAAP income from continuing operations must be positive in the latest quarter and across the latest four quarters combined; REIT provisions differ. Use the provider’s current thresholds rather than an old fixed market-cap cutoff. Eligibility does not secure a seat: the index committee also considers representation of the market. Watch potential vacancies, mergers and sector balance, but do not present a ranking as the committee’s decision. Changes can happen during the year. Separate an eligible shortlist from an official addition announcement."
+    },
+    {
+      "title": "Nasdaq-100: rank candidates and account for incumbents",
+      "body": "Start with eligible Nasdaq-listed, non-financial companies. Check security type, liquidity, listing seasoning and other eligibility rules before ranking by full company market capitalization at the reference date. At the annual December reconstitution, the top 75 are selected first. Existing members in the top 100 are retained; qualifying incumbents ranked 101–125 can also retain a place under the methodology’s prior-ranking conditions. Remaining places are filled from eligible non-members in the top 100. This is why being the 100th-largest candidate is not enough. Quarterly weight rebalances are different from annual membership selection, and replacements can occur between reviews."
+    },
+    {
+      "title": "Build a repeatable research process",
+      "body": "Record the methodology version, data timestamp and upcoming rank, announcement and effective dates. Reconcile share counts, corporate actions, float and industry classification against filings. Run a base case and alternative price/share-count scenarios; document why each candidate passes or fails. Use news and Wall Street research to investigate mergers, exchange transfers and changing eligibility, not to override official rules. Label the result “candidate,” “preliminary” or “confirmed,” with the evidence and date beside it. Validate the approach on past reviews using only data available at the time, tracking false positives as well as successful calls. Do not publish a numerical probability unless the model has been calibrated out of sample."
+    },
+    {
+      "title": "Estimate demand separately from membership",
+      "body": "As a research scenario, approximate tracking demand using assets actually tracking the index multiplied by the proposed change in weight, then divide by share price. Adjust for positions already held, fund overlap, sampling and implementation differences. Compare estimated shares with normal trading volume and available float. This is an approximation of potential flows, not a price target. Anticipation, arbitrage, wider market moves and selling after implementation can overwhelm the effect. A correct membership prediction can still produce a losing trade."
+    },
+    {
+      "title": "13F watchlists: a different kind of prediction",
+      "body": "For potential institutional holdings, compare prior filings, publicly disclosed position changes, manager commentary and recent company news. Changes in reported share counts are more informative than value changes alone, which may reflect price moves. Form 13F generally arrives within 45 days of quarter-end and reports a historical holdings snapshot, not a live trading ledger. It cannot reveal undisclosed purchases in advance or establish exact trade dates or prices. Treat a possible new holding as a hypothesis until the filing is public; then check the reporting period and any amendments. Institutional holdings and index membership are separate signals."
+    }
+  ],
+  "sources": [
+    {
+      "title": "FTSE Russell: reconstitution calendar and methodology",
+      "url": "https://www.lseg.com/en/ftse-russell/russell-reconstitution"
+    },
+    {
+      "title": "S&P U.S. Indices Methodology",
+      "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+    },
+    {
+      "title": "Nasdaq-100 methodology",
+      "url": "https://indexes.nasdaq.com/docs/Methodology_NDX.pdf"
+    },
+    {
+      "title": "SEC Investor.gov: Form 13F",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/form-13f-reports-filed-institutional-investment"
+    }
+  ]
+}

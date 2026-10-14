@@ -1,3 +1,5 @@
+import EarningsLearningGuides from '../components/EarningsLearningGuides';
+import MarketLearningGuides from '../components/MarketLearningGuides';
 import CalendarPredictionPromo from '../components/CalendarPredictionPromo';
 import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
 import MarketCalendar from '../components/market/MarketCalendar';
@@ -183,9 +185,11 @@ import SignUpModal from '../SignUpModal';
         </section>
         <HomeSignalPreview />
         <EarningsSnapshot home>
-          <CalendarPredictionPromo kind="earnings"/>
+          <EarningsLearningGuides/>
+ <CalendarPredictionPromo kind="earnings"/>
         </EarningsSnapshot>
         <MarketCalendar />
+        <MarketLearningGuides/>
         <CalendarPredictionPromo kind="market"/>
         <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>

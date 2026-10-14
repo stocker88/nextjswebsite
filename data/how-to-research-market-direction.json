@@ -1,0 +1,48 @@
+{
+  "title": "How to research the next market move",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "Forecast the surprise, not just the headline",
+      "body": "Start with the calendar, consensus expectations, the range of forecasts and the market’s recent reaction to similar news. Compare the actual release with what investors expected, not only with the previous reading. A strong economy can support earnings while keeping interest rates high; weak data can ease rate expectations while raising recession concerns. The same headline can therefore produce different market reactions in different regimes."
+    },
+    {
+      "title": "Map inflation, jobs and the Fed",
+      "body": "For CPI and PPI, distinguish monthly changes from annual changes and headline from underlying components. For employment, review payrolls, wages, unemployment and revisions together. BLS seasonal adjustments can revise historical CPI readings, so save the data vintage used in research. For the Fed, separate the rate decision from guidance, projections and the press conference. The Federal Reserve explains that expected policy, not just today’s rate, affects longer-term rates and asset prices."
+    },
+    {
+      "title": "Build three scenarios before the date",
+      "body": "Write a constructive, mixed and adverse scenario, with the evidence that would support each one. For example, softer inflation alongside resilient activity might support equities; softer inflation with worsening employment might instead raise growth concerns. Describe the expected response in Treasury yields, the dollar, market breadth and relevant sectors. These are hypotheses to check after the release, not mechanical trading rules. Distinguish the first minutes of reaction from the closing move and the following sessions."
+    },
+    {
+      "title": "Check the market environment",
+      "body": "Compare the S&P 500 with QQQ, sector participation, breadth, credit conditions and volatility. Concentrated leadership may make an index vulnerable even when its headline price looks strong. Use options-implied moves as a rough indication of priced uncertainty, not a directional forecast. Historical event studies should separate inflation and growth regimes, include losing observations, account for costs and avoid using revised data that was unavailable at the time."
+    },
+    {
+      "title": "Position ahead of the event with a risk budget",
+      "body": "Before the calendar date, review concentration, correlated positions, liquidity and the loss your portfolio could sustain in an adverse scenario. Decide whether to reduce exposure, keep cash, hold through the event or hedge. Define the hedge horizon, cost budget and conditions for removing it before placing an order. Pre-event selling and post-event rallies are possible, not a dependable sequence. Stops can fill below their trigger during gaps; being early does not guarantee a better outcome."
+    },
+    {
+      "title": "Choose the hedge that fits the exposure",
+      "body": "A protective put on shares you own can limit downside below its strike through expiry, at the cost of a premium. A collar adds a covered call to help fund the put, but caps upside and introduces assignment risk. A broad-index hedge may only partly offset a concentrated portfolio; correlations and option sensitivity change. Compare expiry, strike, premium, spreads and position size. Puts can lose value through time decay or falling implied volatility even when stocks decline modestly. Volatility-linked products are not direct ownership of spot VIX and require separate research into their structure."
+    },
+    {
+      "title": "Update the forecast after the release",
+      "body": "Compare the actual data and revisions with your scenarios. Check whether bond yields, breadth and price action support the first move. Reduce confidence when signals conflict, and reassess if the expected mechanism does not appear. Keep a dated journal of the forecast, evidence, hedge cost and outcome. A useful process measures calibration and drawdowns as well as directional accuracy; it does not promise to predict every session."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Federal Reserve: how monetary policy works",
+      "url": "https://www.federalreserve.gov/monetarypolicy/monetary-policy-what-are-its-goals-how-does-it-work.htm"
+    },
+    {
+      "title": "BLS: CPI seasonal adjustments",
+      "url": "https://www.bls.gov/cpi/seasonal-adjustment/"
+    },
+    {
+      "title": "Options Industry Council: protective collars",
+      "url": "https://prd-web.optionseducation.org/strategies/all-strategies/collar-protective-collar"
+    }
+  ]
+}

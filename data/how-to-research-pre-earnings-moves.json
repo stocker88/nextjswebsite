@@ -1,0 +1,30 @@
+{
+  "title": "What moves a stock before earnings?",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "Start with the event, then the setup",
+      "body": "Confirm the release date and whether results arrive before open or after close on the company’s investor relations page. A move before the announcement reflects changing expectations, not knowledge of the result. Decide whether your research concerns the run-up or the announcement itself."
+    },
+    {
+      "title": "Look for attention with evidence",
+      "body": "The app’s pre-earnings strategy combines trading volume, news attention and historical price action. Compare volume with the stock’s normal activity and price strength with its sector and the broader market. More mentions can flag attention, but do not establish buying demand or a bullish outcome."
+    },
+    {
+      "title": "Study comparable windows",
+      "body": "Review several previous quarters using the same window before each release. Compare both gains and losses, the market backdrop and how much of the move occurred overnight. A handful of rallies is not a reliable rule. Include costs and avoid selecting only successful examples."
+    },
+    {
+      "title": "Understand what options already price in",
+      "body": "Options can become more expensive as uncertainty builds before earnings. Implied volatility can fall after the announcement, reducing an option’s value even when the stock moves in the expected direction. An implied move describes priced uncertainty, not a forecast of direction. Check expiry, spreads and liquidity alongside the premium."
+    },
+    {
+      "title": "Make the timing decision before the release",
+      "body": "A plan to exit before results is different from accepting an overnight earnings gap. Record the thesis, exit timing and maximum loss you can tolerate. Stop orders do not guarantee an exit price through a gap. If the move has already happened or the evidence changes, waiting is a valid outcome."
+    }
+  ],
+  "sources": [
+    {
+    }
+  ]
+}

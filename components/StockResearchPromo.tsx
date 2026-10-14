@@ -11,7 +11,7 @@ export default function StockResearchPromo(){
  return <section className="prediction-promo" aria-labelledby="stock-research-promo-title">
   <div className="prediction-copy"><span className="eyebrow"><span aria-hidden="true">✦</span> STOCK IDEAS · RESEARCH IN THE APP</span>
    <h2 id="stock-research-promo-title">More than a ticker.<br/><span>A complete investment picture.</span></h2>
-   <p>We track fundamentals, technicals, earnings catalysts and the market environment to identify our best stocks to buy now—and send you research-backed ideas through the app.</p>
+   <p>We track fundamentals, technicals, earnings catalysts and the market environment to identify our best stocks to buy now and send you research-backed ideas through the app.</p>
    <div className="features"><span>Company research</span><span>Timely catalysts</span><span>Stock idea alerts</span></div>
   </div>
   <div className="prediction-panel"><div className="panel-heading"><strong>What goes into each idea</strong><span>AI RESEARCH ↗</span></div>

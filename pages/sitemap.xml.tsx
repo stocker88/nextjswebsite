@@ -28,6 +28,14 @@ export async function getServerSideProps({ res }: any) {
     "/earnings-calendar/this-week/",
     "/earnings-calendar/next-week/",
     "/stock-market-news",
+    "/how-to-predict-index-inclusions/",
+    "/how-to-research-hedge-fund-buys/",
+    "/how-to-research-market-direction/",
+    "/how-to-research-pre-earnings-moves/",
+    "/how-to-research-earnings-predictions/",
+    "/how-to-research-post-earnings-moves/",
+
+
     "/market-news/",
     "/stocks",
     "/facts",

@@ -51,7 +51,7 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
   finally{setLoading(false);}
  }
  const orderedItems=batches.flatMap(mobileNewsBatch);
- return <ResearchPage title={page === 1 ? "Stock Market News: latest news and analysis" : `Stock Market News — Page ${page}`} path={page === 1 ? "/stock-market-news" : `/stock-market-news/page/${page}`}>
+ return <ResearchPage title={page === 1 ? "Stock Market News: latest news and analysis" : `Stock Market News: Page ${page}`} path={page === 1 ? "/stock-market-news" : `/stock-market-news/page/${page}`}>
    <div className="hero"><span className="eyebrow">STOCK MARKET NEWS</span><h1>Stock Market News</h1><p>Research previews, market catalysts and investor insights. Install the app to read the full analysis.</p></div>
    <MarketFeedTabs/>
    {!items.length && <p>No research previews are available yet.</p>}

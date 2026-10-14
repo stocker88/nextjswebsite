@@ -102,7 +102,7 @@ export default function FactsPage() {
 
         <section className="disclosure">
           <span className="eyebrow">IMPORTANT DISCLOSURE</span>
-          <h2>Research and education—not personalized financial advice</h2>
+          <h2>Research and education, not personalized financial advice</h2>
           <p>
             Investing involves risk, including possible loss of principal. Signals, examples and historical results do not guarantee future performance. Users should independently evaluate each idea and consider their objectives, experience and risk tolerance.
           </p>

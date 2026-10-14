@@ -7,7 +7,7 @@ export default function RangeOverview({events,from,to,showBeat,showRevenue=true,
  const start=weekStart(from),end=day(weekStart(to),6);
  const dates=Array.from({length:Math.round((Date.parse(end)-Date.parse(start))/86400000)+1},(_,i)=>day(start,i));
  const reports=events.filter(e=>e.date===selected);
- const beat=(e:Event,revenue=false)=>{const b=revenue?e.research?.revenueBeat:e.research?.beat;return b?.total?Math.round(b.rate!)+'%':'—'};
+ const beat=(e:Event,revenue=false)=>{const b=revenue?e.research?.revenueBeat:e.research?.beat;return b?.total?Math.round(b.rate!)+'%':'N/A'};
  return <div className="erm">
   <div className="erm-grid">
    {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=><div className="erm-weekday" key={d}>{d}</div>)}

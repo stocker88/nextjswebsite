@@ -4,7 +4,7 @@ import { jsonLd, SITE } from "../../lib/seo";
 export default function Author() {
   return (
     <ResearchPage
-      title="Aness Hussein Ali — founder of Stocks To Buy Now AI"
+      title="Aness Hussein Ali, founder of Stocks To Buy Now AI"
       path="/authors/aness-hussein-ali"
     >
       <Head>

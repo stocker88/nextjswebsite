@@ -1,0 +1,36 @@
+{
+  "title": "What could hedge funds buy next?",
+  "reviewed": "October 14, 2026",
+  "sections": [
+    {
+      "title": "The next filing starts with the last one",
+      "body": "Build a manager-specific watchlist rather than a generic list of famous holdings. Compare several quarters of split-adjusted share counts, new positions, exits and portfolio weights. Separate an increase in shares from a rise in the stock price. Repeated additions can suggest accumulation, but do not prove dollar-cost averaging or a commitment to buy again. This is a research framework, not access to a fund’s orders."
+    },
+    {
+      "title": "Combine position history with public catalysts",
+      "body": "Look for shareholder letters, public interviews, company announcements, earnings revisions, product launches and industry developments that fit the manager’s disclosed investment approach. Check whether an existing position is small enough to expand relative to that manager’s historical concentration, and whether liquidity permits it. A public activist campaign can strengthen a thesis; an acquisition, mandate change or redemptions can weaken it. Date every piece of evidence and distinguish the manager’s own statements from speculation."
+    },
+    {
+      "title": "A more disciplined candidate score",
+      "body": "Use an evidence checklist: persistence of share-count increases, relevance to the manager’s mandate, valuation change since the last disclosure, company catalysts, liquidity and counter-evidence. Keep accumulation candidates separate from entirely new-name candidates. Do not turn this checklist into a percentage probability without historical calibration. Test it using only information available before each filing; compare false positives and missed positions against a simple baseline such as unchanged holdings."
+    },
+    {
+      "title": "Prepare your positioning plan before the filing date",
+      "body": "Mark the expected filing window and prepare your watchlist, valuation range, maximum exposure and invalidation conditions ahead of it. If considering a position before disclosure, size it for the possibility that the fund did not buy or already sold. Staged entries can reduce dependence on one entry price, but averaging down increases exposure and does not repair a broken thesis. Waiting for confirmation is a valid choice. The goal is to have a plan before the date, not to buy automatically because a deadline is approaching."
+    },
+    {
+      "title": "What a 13F can (and cannot) tell you",
+      "body": "Form 13F is generally due within 45 days of quarter-end. It describes reportable holdings at quarter-end, not holdings on filing day. Short equity positions and written options are not reported; confidential treatment and amendments can also affect the picture. A reported long holding is not the manager’s complete net exposure. The filing does not reveal exact execution prices or every trade during the quarter. Check the reporting period, security type and amendments before comparing positions."
+    },
+    {
+      "title": "After release: compare evidence with your hypothesis",
+      "body": "Match the new filing to your shortlist. Reconcile share classes, splits, options versus common shares and reporting-manager changes before interpreting a position change. Record confirmed additions, unchanged holdings and reductions. Revisit your own valuation and risk budget even when the prediction was correct: publicity may already be reflected in the price, and the manager’s horizon or hedge may differ from yours."
+    }
+  ],
+  "sources": [
+    {
+      "title": "SEC: Form 13F FAQ",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/frequently-asked-questions-about-form-13f"
+    }
+  ]
+}
