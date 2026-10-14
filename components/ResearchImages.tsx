@@ -1,8 +1,9 @@
+import ResearchCTA from './ResearchCTA';
 import {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import type {ResearchImage} from '../lib/research';
 
-export default function ResearchImages({images = [], compact = false, thumbnailSize = 56}: {images?: ResearchImage[]; compact?: boolean; thumbnailSize?: number}) {
+export default function ResearchImages({images = [], compact = false, thumbnailSize = 56, appOnly = true}: {images?: ResearchImage[]; compact?: boolean; thumbnailSize?: number; appOnly?: boolean}) {
   const [failed, setFailed] = useState<Record<string, boolean>>({});
   const [active, setActive] = useState<number | null>(null);
   const [closing, setClosing] = useState(false);
@@ -47,7 +48,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
   return <>
     <div className={'pictures '+(items.length>1?'multiple':'')+(items.length===3?' triple':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
-        <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={'Expand '+(title(i)||'image '+(index+1))}>
+        <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={(appOnly?'Get the app to view ':'Expand ')+(title(i)||'image '+(index+1))}>
           <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
           {failed[i.url] && <span className="image-error">Image unavailable</span>}
           {!failed[i.url] && <span className="expand" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></span>}
@@ -57,19 +58,20 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     </div>
     {active!==null && createPortal(
       <div className={'research-lightbox '+(closing?'closing':'')} onClick={e=>{if(e.target===e.currentTarget)close();}}>
-        <div ref={modal} className="lightbox-panel" role="dialog" aria-modal="true" aria-label="Research images"
+        <div ref={modal} className={'lightbox-panel'+(appOnly?' app-only':'')} role="dialog" aria-modal="true" aria-label={appOnly?'Get the app to view':'Research images'}
           style={{'--from':`translate(${origin.x}px,${origin.y}px) scale(${origin.sx},${origin.sy})`} as React.CSSProperties}
           onKeyDown={e=>{
             if(e.key==='Escape'){e.preventDefault();close();}
-            if(e.key==='ArrowRight'){e.preventDefault();change(1);}
-            if(e.key==='ArrowLeft'){e.preventDefault();change(-1);}
+            if(!appOnly&&e.key==='ArrowRight'){e.preventDefault();change(1);}
+            if(!appOnly&&e.key==='ArrowLeft'){e.preventDefault();change(-1);}
             if(e.key==='Tab'){
-              const buttons=Array.from(modal.current?.querySelectorAll<HTMLButtonElement>('button')||[]);
+              const buttons=Array.from(modal.current?.querySelectorAll<HTMLElement>('button, a[href]')||[]);
               const first=buttons[0],last=buttons[buttons.length-1];
               if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}
               if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}
             }
           }}>
+          {appOnly?<div className="image-app-prompt"><button className="prompt-close" onClick={close} aria-label="Close app prompt">✕</button><h2>Get the app to view</h2><p>View full research pictures, financials and technical setups in StocksToBuyNow.ai.</p><ResearchCTA placement="research_picture" variant="stock"/></div>:<>
           <div className="lightbox-tools">
             <span>{title(items[active])}</span>
             {items.length>1&&<><button aria-label="Previous image" onClick={()=>change(-1)}>‹</button><span>{active+1} / {items.length}</span><button aria-label="Next image" onClick={()=>change(1)}>›</button></>}
@@ -111,17 +113,19 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
             <img src={items[active].url} alt={title(items[active])||'Expanded research illustration'} draggable={false}
               style={{transform:`translate(${pan.x}px,${pan.y}px) scale(${zoom})`}}/>
           </div>
-          <p className="lightbox-hint">Pinch or double-click to zoom · Drag to explore{items.length>1?' · Swipe when zoomed out to switch':''}</p>
+          <p className="lightbox-hint">Pinch or double-click to zoom · Drag to explore{items.length>1?' · Swipe when zoomed out to switch':''}</p></>
+          }
         </div>
       </div>,document.body)}
     <style jsx>{`
-      .pictures{margin:16px 0;display:grid;gap:12px}.multiple{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .lightbox-panel.app-only{height:auto;max-height:90dvh;max-width:520px;overflow:auto}.image-app-prompt{position:relative;padding:40px 28px;background:linear-gradient(140deg,#251c3b,#101d30)}.image-app-prompt h2{font-size:28px;margin:12px 0}.image-app-prompt p{color:#b9c5d8;line-height:1.6}.prompt-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:10px;background:#ffffff15;color:white;cursor:pointer}
+      .pictures{margin:16px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.multiple{grid-template-columns:repeat(2,minmax(0,1fr))}
       @media(min-width:640px){.triple{grid-template-columns:repeat(3,minmax(0,1fr))}}
-      .picture{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080f20;cursor:zoom-in}
-      .picture img{display:block;width:100%;height:auto}.multiple .picture{aspect-ratio:1}.multiple .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-      .pictures.compact{display:flex;flex-wrap:wrap;gap:6px;margin:0;max-width:100%}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;right:2px;bottom:2px}
+      .picture{display:block;position:relative;width:100%;padding:0;border:0;border-radius:12px;overflow:hidden;background:#080f20;cursor:pointer}
+      .picture img{display:block;width:100%;height:auto}.picture{aspect-ratio:1}.picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+      .pictures.compact{display:flex;flex-wrap:wrap;gap:6px;margin:0;max-width:100%}.compact .picture{width:var(--thumbnail-size);height:var(--thumbnail-size);aspect-ratio:1}.compact .picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.compact .expand{font-size:14px;padding:0 3px;left:50%;top:50%;right:auto;bottom:auto}
       .picture:disabled{cursor:default;min-height:100px}.picture:disabled img{visibility:hidden}.image-error{position:absolute;inset:0;display:grid;place-items:center;color:#93a3bb;font-size:13px;background:#121e31;}
-      .expand{display:grid;place-items:center;min-width:28px;min-height:28px;position:absolute;right:6px;bottom:6px;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
+      .expand{display:grid;place-items:center;min-width:40px;min-height:40px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);right:auto;bottom:auto;background:#0009;color:white;border-radius:6px;padding:2px 7px;font-size:24px}
       .caption{display:block;text-align:center;margin-top:6px;font-size:12px;color:#cbd5e7}.picture:focus-visible{outline:2px solid #b594ff;outline-offset:3px}
     `}</style>
     <style jsx global>{`

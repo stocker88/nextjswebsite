@@ -1,3 +1,4 @@
+import {isEarningsFirst} from '../../lib/research';
 import MarketFeedTabs from '../../components/MarketFeedTabs';
 import MarketNewsFeed from '../../components/MarketNewsFeed';
 import AttachedThreads from '../../components/AttachedThreads';
@@ -15,14 +16,14 @@ function Card({item, compact = false}: {item: ResearchPreview; compact?: boolean
   const ticker = item.symbols[0]?.toUpperCase();
   const isEducation = item.symbols.some(symbol => symbol.trim().replace(/^[#$]/, '').toLowerCase() === 'education');
   // educationPreview contains the second non-empty source line.
-  const quickTake = isEducation ? item.educationPreview : (item.quickTake || item.educationPreview);
+  const quickTake = isEarningsFirst(item.symbols) ? undefined : isEducation ? item.educationPreview : (item.quickTake || item.educationPreview);
   return <article className={`research-card ${compact ? 'research-card-compact' : ''}`} >
     <Link href={researchUrl(item.id, item.title)}><span className="insight-bubble">
       {ticker ? `$${ticker} INSIGHTS` : 'MARKET INSIGHTS'} →
     </span>
     <h2 className="news-headline"><ResearchCompanyLogo symbols={item.symbols} title={item.title}/>{item.title}</h2></Link>
     {quickTake && <div className="news-quick-take"><span>Quick take</span><p>{quickTake}</p></div>}
-    <ResearchImages images={item.images} />
+    <ResearchImages appOnly images={item.images} />
             <AttachedThreads item={item} />
     <div className="metrics"><span>◷ {Math.max(1, Math.ceil(item.title.length / 55))} min read</span><span>♡ {(displayEngagementCount(item.likes))}</span><span>▢ {(displayEngagementCount(item.comments))}</span><span>↗ {(displayEngagementCount(item.shares))}</span></div>
   </article>;

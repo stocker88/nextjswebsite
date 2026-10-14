@@ -11,6 +11,8 @@ function Logo({symbol,event,showRing}:{symbol:string;event:Event;showRing:boolea
 }
 export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRangeChange,minDate,maxDate,includeUnconfirmed=false}:{rows:Event[];from:string;to:string;onSelect:(symbol:string)=>void;calendarHref?:string;onRangeChange?:(from:string,to:string)=>void;minDate?:string;maxDate?:string;includeUnconfirmed?:boolean}) {
  const [extra,setExtra]=useState<string[]>([]),[expanded,setExpanded]=useState<string[]>([]),[showUnknown,setShowUnknown]=useState(includeUnconfirmed),[showBeat,setShowBeat]=useState(true),[showRevenue,setShowRevenue]=useState(true);
+ const [mobile,setMobile]=useState(false);
+ useEffect(()=>{const mq=window.matchMedia('(max-width: 700px)');const update=()=>setMobile(mq.matches);update();mq.addEventListener('change',update);return()=>mq.removeEventListener('change',update);},[]);
  useEffect(()=>{setExpanded([])},[from,to]);
  useEffect(()=>setShowUnknown(includeUnconfirmed),[includeUnconfirmed]);
  const current=from,rangeDays=Math.round((Date.parse(to)-Date.parse(from))/86400000)+1,isRange=rangeDays>7;
@@ -30,9 +32,9 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
    {days.map(date=><section className={"ews-day"+([0,6].includes(new Date(date+'T12:00:00Z').getUTCDay())?" ews-weekend":"")} key={date} aria-label={shortDate(date)+' earnings'}>
     <header className="ews-day-heading"><span><span className="ews-wide-label">{new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'long',timeZone:'UTC'})}</span><span className="ews-dense-label">{new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',timeZone:'UTC'})}</span></span><strong>{shortDate(date)}</strong><small>{events.filter(i=>i.date===date).length} reports</small></header>
     {['bmo','amc','unknown'].map(session=>{
-     const group=events.filter(i=>i.date===date&&i.session===session);const key=date+session;const all=expanded.includes(key);if(!group.length)return null;
+     const dayEvents=events.filter(i=>i.date===date);const visible=mobile&&!expanded.includes(date)?dayEvents.slice(0,4):dayEvents;const group=visible.filter(i=>i.session===session);const key=date+session;const all=expanded.includes(key);if(!group.length)return null;
      return <div className={'ews-session '+session} key={session}><h3><span aria-hidden="true">{session==='bmo'?'☀':session==='amc'?'☾':'◷'}</span><span className="ews-wide-label">{sessionName(session)}</span><span className="ews-dense-label">{session==='bmo'?'BMO':session==='amc'?'AMC':'?'}</span><small>{group.length}</small></h3>
-      <div className={'ews-tiles'+(all?' is-expanded':'')}>{group.slice(0,all?group.length:9).map(i=><button className="ews-tile" key={i.symbol+i.date} title={i.name} aria-label={'Explore '+i.symbol+' earnings from weekly summary'} onClick={()=>onSelect(i.symbol)}>
+      <div className={'ews-tiles'+(all?' is-expanded':'')}>{group.slice(0,mobile||all?group.length:9).map(i=><button className="ews-tile" key={i.symbol+i.date} title={i.name} aria-label={'Explore '+i.symbol+' earnings from weekly summary'} onClick={()=>onSelect(i.symbol)}>
        <Logo symbol={i.symbol} event={i} showRing={showBeat&&showRevenue}/><span className="ews-ticker"><strong>{i.symbol}</strong>{showBeat&&<span className="ews-beat" style={showBeat&&showRevenue?{color:beatRingColor(combinedBeatRate(i))}:undefined} title={i.research?.beat.total?`${i.research.beat.beats} of ${i.research.beat.total} recent reports beat EPS estimates`:"EPS beat history not loaded"}>{showRevenue?"EPS ":""}{i.research?.beat.total?Math.round(i.research.beat.rate!)+"%":"—"}</span>}{showRevenue&&<span className="ews-beat" style={showBeat&&showRevenue?{color:beatRingColor(combinedBeatRate(i))}:undefined} title="Revenue actual above analyst estimates">Rev {i.research?.revenueBeat?.total?Math.round(i.research.revenueBeat.rate!)+"%":"—"}</span>}</span>
        {extra.length>0&&<div className="ews-data">
         {extra.includes('cap')&&<span>Cap <b>{i.marketCap==null?'—':'$'+money(i.marketCap)}</b></span>}
@@ -43,9 +45,10 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
         {extra.includes('return')&&<span>1Y price <b className={i.research?.oneYear==null?'':i.research.oneYear>=0?'ec-positive':'ec-negative'}>{percent(i.research?.oneYear)}</b></span>}
        </div>}
       </button>)}</div>
-      {group.length>9&&<button className="ews-more" aria-expanded={all} onClick={()=>setExpanded(keys=>all?keys.filter(k=>k!==key):[...keys,key])}>{all?'Show fewer':'+ '+(group.length-9)+' more'}<span className="sr-only"> {sessionName(session)} on {shortDate(date)}</span></button>}
+      {!mobile&&group.length>9&&<button className="ews-more" aria-expanded={all} onClick={()=>setExpanded(keys=>all?keys.filter(k=>k!==key):[...keys,key])}>{all?'Show fewer':'+ '+(group.length-9)+' more'}<span className="sr-only"> {sessionName(session)} on {shortDate(date)}</span></button>}
      </div>;
     })}
+    {mobile&&events.filter(i=>i.date===date).length>4&&<button className="ews-more" aria-expanded={expanded.includes(date)} onClick={()=>setExpanded(keys=>keys.includes(date)?keys.filter(k=>k!==date):[...keys,date])}>{expanded.includes(date)?'Show less':'+ '+(events.filter(i=>i.date===date).length-4)+' more'}<span className="sr-only"> on {shortDate(date)}</span></button>}
     {!events.some(i=>i.date===date)&&<p className="ews-empty-day">No confirmed reports</p>}
    </section>)}
   </div>}

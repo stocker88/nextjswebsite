@@ -1,3 +1,4 @@
+import {isEarningsFirst} from '../lib/research';
 import Link from 'next/link';
 import {ResearchPreview, AttachedThread, displayEngagementCount} from '../lib/research';
 import {displayDate, isoDate} from '../lib/seo';
@@ -17,8 +18,8 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
         {thread.symbols.length > 0 && <span>{thread.symbols.join(' · ')}</span>}
         {thread.time != null && <time dateTime={isoDate(thread.time) || undefined}>{displayDate(thread.time)}</time>}
       </div>}
-      {thread.quickTake && <p>{thread.quickTake}</p>}
-      <ResearchImages images={thread.images?.slice(0, 2)} compact thumbnailSize={128} />
+      {!isEarningsFirst(thread.symbols) && thread.quickTake && <p>{thread.quickTake}</p>}
+      <ResearchImages appOnly images={thread.images?.slice(0, 2)} compact thumbnailSize={128} />
       {thread.likes != null && <div className="attachment-engagement" aria-label="Thread engagement">
         {(['likes', 'comments', 'shares'] as const).map(kind =>
           <span key={kind} aria-label={`${displayEngagementCount(thread[kind] ?? 0)} ${kind}`}>

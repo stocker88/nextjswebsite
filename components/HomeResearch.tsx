@@ -1,3 +1,4 @@
+import {isEarningsFirst} from '../lib/research';
 import ResearchCompanyLogo from './ResearchCompanyLogo';
 import MarketNewsFeed from './MarketNewsFeed';
 import NewsMentionsPromo from './NewsMentionsPromo';
@@ -89,7 +90,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         </div>}
         {news.map(i => {
           const education = i.symbols.some(symbol => symbol.replace(/^[#$]/, '').toLowerCase() === 'education');
-          const quickTake = education ? i.educationPreview : i.quickTake;
+          const quickTake = isEarningsFirst(i.symbols) ? undefined : education ? i.educationPreview : i.quickTake;
           const category = education ? 'Market education' : 'Market insight';
           return <div className="news-row" key={i.id}>
             <time dateTime={isoDate(i.time) || undefined} title="Publication date (UTC)">{displayDate(i.time)}</time>
@@ -99,7 +100,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
             </div>
             <h3><Link href={researchUrl(i.id, i.title)}><ResearchCompanyLogo symbols={i.symbols} title={i.title}/>{i.title}</Link></h3>
             {quickTake && <p className="quick-take">{quickTake}</p>}
-            <ResearchImages images={i.images} />
+            <ResearchImages appOnly images={i.images} />
             <AttachedThreads item={i} />
             <div className="card-footer">
               <div className="engagement" aria-label="Post engagement">

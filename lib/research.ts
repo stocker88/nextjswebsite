@@ -38,3 +38,5 @@ export function displayEngagementCount(value: number): number {
   const original = Number(value) || 0;
   return original * 7 + (original % 3);
 }
+
+export const isEarningsFirst = (symbols: string[] = []) => symbols[0]?.trim().replace(/^[#$]/, '').toLowerCase() === 'earnings';

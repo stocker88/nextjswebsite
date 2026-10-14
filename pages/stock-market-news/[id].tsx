@@ -1,3 +1,4 @@
+import {isEarningsFirst} from '../../lib/research';
 import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
 import ResearchCompanyLogo from '../../components/ResearchCompanyLogo';
@@ -122,7 +123,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
             {article.correction && <p>Correction: {article.correction}</p>}
           </div>
         )}
-        {item.educationPreview &&
+        {!isEarningsFirst(item.symbols) && item.educationPreview &&
           item.symbols.some(
             (symbol) =>
               symbol.trim().replace(/^[#$]/, "").toLowerCase() === "education",
@@ -149,7 +150,7 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
             Open in the app →
           </a>
         </div>
-        <ResearchImages images={item.images} />
+        <ResearchImages appOnly images={item.images} />
             <AttachedThreads item={item} />
       </article>
     </ResearchPage>

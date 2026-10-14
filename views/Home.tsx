@@ -1,4 +1,5 @@
 import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
+import MarketCalendar from '../components/market/MarketCalendar';
 import HomeSignalPreview from "../components/HomeSignalPreview";
 import HomeResearch from "../components/HomeResearch";
 import type { ResearchPreview } from "../lib/research";
@@ -181,6 +182,7 @@ import SignUpModal from '../SignUpModal';
         </section>
         <HomeSignalPreview />
         <EarningsSnapshot home />
+        <MarketCalendar />
         <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
 
