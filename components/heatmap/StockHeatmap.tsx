@@ -1,5 +1,5 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {HeatSnapshot,HeatStock,Period,PERIOD_OPTIONS,periodLabel,periodScale,tile,heatColor,percent,dateLabel,validSnapshot,TileSizing,HeatGrouping,sizeLabels,stockWeight,stockGroups,fixedGroupTiles,readWatchlist,returnColor} from '../../lib/market-heatmap';
+import {HeatSnapshot,HeatStock,Period,PERIOD_OPTIONS,periodLabel,periodScale,tile,heatColor,percent,dateLabel,validSnapshot,heatmapEndpoint,TileSizing,HeatGrouping,sizeLabels,stockWeight,stockGroups,fixedGroupTiles,readWatchlist,returnColor} from '../../lib/market-heatmap';
 import HeatmapShare from './HeatmapShare';
 import HeatmapZoom from './HeatmapZoom';
 import {Movers,SectorLeaderboard,IndustryPeers} from './HeatmapInsights';
@@ -69,7 +69,7 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   return()=>{document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',key);window.removeEventListener('scroll',scroll,true);window.removeEventListener('resize',resize)};
  },[]);
  useEffect(()=>{setPreview(null);setCopied(false);setLinkFallback('')},[period,sector,query,limit,view,mobileLayout,sizing,grouping,industry,direction,colorblind,fixed,watchOnly,sharedSymbols]);
- const refresh=async()=>{setRefreshing(true);try{const r=await fetch('/api/market-heatmap/');if(!r.ok)throw Error();const d=await r.json();if(!validSnapshot(d))throw Error();setData(d);}catch{/* Keep the dated snapshot until the next automatic check. */}finally{setRefreshing(false)}};
+ const refresh=async()=>{setRefreshing(true);try{const r=await fetch(heatmapEndpoint);if(!r.ok)throw Error();const d=await r.json();if(!validSnapshot(d))throw Error();setData(d);}catch{/* Keep the dated snapshot until the next automatic check. */}finally{setRefreshing(false)}};
  useEffect(()=>{refresh();const timer=setInterval(()=>{if(document.visibilityState==='visible')refresh()},300000);return()=>clearInterval(timer)},[]);
  const sectors=useMemo(()=>Array.from(new Set(data.rows.map(r=>r.sector))).sort(),[data]);
  const baseRows=useMemo(()=>{const q=query.trim().replace(/^\$/,'').toLowerCase();return data.rows.filter(r=>(!watchOnly||(sharedSymbols??watchlist).includes(r.symbol))&&(sector==='all'||r.sector===sector)&&(industry==='all'||r.industry===industry)&&(!q||[r.symbol,r.name,r.industry].some(s=>s.toLowerCase().includes(q)))).slice(0,watchOnly?100:limit)},[data,sector,industry,query,limit,watchOnly,watchlist,sharedSymbols]);

@@ -1,21 +1,36 @@
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
-import {HeatSnapshot,HeatStock,dateLabel,heatColor,percent,stockGroups,tile,validSnapshot} from '../lib/market-heatmap';
+import {HeatSnapshot,HeatStock,dateLabel,heatColor,percent,stockGroups,tile,validSnapshot,heatmapEndpoint} from '../lib/market-heatmap';
 import styles from './HomeHeatmap.module.css';
+import savedSnapshot from '../data/market-heatmap.json';
 
 export default function HomeHeatmap(){
   const root=useRef<HTMLElement>(null),map=useRef<HTMLDivElement>(null);
-  const [data,setData]=useState<HeatSnapshot|null>(null),[loading,setLoading]=useState(true);
+  const [data,setData]=useState<HeatSnapshot|null>(validSnapshot(savedSnapshot)?savedSnapshot:null),[loading,setLoading]=useState(false);
   const [width,setWidth]=useState(1000),[selected,setSelected]=useState<HeatStock|null>(null);
   useEffect(()=>{
     const controller=new AbortController();
+    let interval:ReturnType<typeof setInterval>|undefined;
+    let pending=false;
+    const refresh=async()=>{
+      if(pending||document.visibilityState==='hidden')return;
+      pending=true;
+      try{
+        const response=await fetch(heatmapEndpoint,{signal:controller.signal});
+        if(!response.ok)throw Error('Feed unavailable');
+        const snapshot=await response.json();
+        if(validSnapshot(snapshot)&&!controller.signal.aborted)setData(snapshot);
+      }catch{/* Keep the dated saved snapshot if the feed is unavailable. */}
+      finally{pending=false;if(!controller.signal.aborted)setLoading(false)}
+    };
     const observer=new IntersectionObserver(entries=>{
       if(!entries.some(entry=>entry.isIntersecting))return;
       observer.disconnect();
-      fetch('/api/market-heatmap/',{signal:controller.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{if(!validSnapshot(d))throw Error();setData(d)}).catch(()=>{}).finally(()=>{if(!controller.signal.aborted)setLoading(false)});
+      void refresh();
+      interval=setInterval(refresh,300000);
     },{rootMargin:'300px'});
     if(root.current)observer.observe(root.current);
-    return()=>{observer.disconnect();controller.abort()};
+    return()=>{observer.disconnect();controller.abort();clearInterval(interval)};
   },[]);
   useEffect(()=>{
     if(!map.current)return;
