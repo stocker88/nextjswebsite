@@ -28,7 +28,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
   return (
     <div className="product-proof">
       {!founderOnly && section !== 'signals' && <section className="proof-section routine-section">
-        <div className="proof-copy">
+        <div className="proof-copy" data-motion-reveal>
           <span className="proof-eyebrow">A SIMPLE DAILY ROUTINE</span>
           <h2>It takes 5 minutes a day to be a Pro</h2>
           <p>
@@ -46,7 +46,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
           </a>
         </div>
 
-        <div className="phone-frame routine-phone">
+        <div className="phone-frame routine-phone" data-motion-depth="22">
           <Image
             src="/assets/images/daily-investing-routine.png"
             alt="Five-minute daily Stocks To Buy Now AI workflow"
@@ -58,7 +58,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
       </section>}
 
       {!founderOnly && section !== 'routine' && <section className="proof-section predictions-section">
-        <div className="proof-heading">
+        <div className="proof-heading" data-motion-reveal>
           <span className="proof-eyebrow">PAST SIGNAL EXAMPLES</span>
           <h2>See how earlier market signals played out</h2>
           <p>
@@ -68,7 +68,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         </div>
 
         <div className="prediction-grid">
-          <figure className="prediction-card">
+          <figure className="prediction-card" data-motion-reveal>
             <div className="phone-frame prediction-phone">
               <div className="phone-speaker" aria-hidden="true" />
               <div className="prediction-crop prediction-crop--lly">
@@ -87,7 +87,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
             </figcaption>
           </figure>
 
-          <figure className="prediction-card">
+          <figure className="prediction-card" data-motion-reveal data-motion-delay="1">
             <div className="phone-frame prediction-phone">
               <div className="phone-speaker" aria-hidden="true" />
               <div className="prediction-crop prediction-crop--nvda">
@@ -125,7 +125,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
       </section>}
 
       {founderOnly && <section className="proof-section founder-trades-section">
-        <div className="proof-heading">
+        <div className="proof-heading" data-motion-reveal>
           <span className="proof-eyebrow">FOUNDER’S REAL-LIFE EXAMPLES</span>
           <h2>A founder’s historical trading case study</h2>
           <p>

@@ -47,7 +47,7 @@ export default function HomeHeatmap(){
   const groupTiles=tile(groups,g=>g.rows.reduce((s,r)=>s+(r.weight||1),0),width,350);
   const change=(r:HeatStock)=>r.asOf===data?.asOf?r.changes[period]:null;
   return <section ref={root} className={styles.section} aria-labelledby="home-heatmap-title">
-    <header className={styles.header}>
+    <header className={styles.header} data-motion-reveal>
       <div><span className={styles.eyebrow}>THE MARKET AT A GLANCE</span><h2 id="home-heatmap-title">See where the market is moving.</h2><p>Explore the largest S&P 500 stocks, grouped by sector.</p></div>
     </header>
     <div className={styles.panel}>
@@ -70,6 +70,6 @@ export default function HomeHeatmap(){
       <div className={styles.detail} aria-live="polite">{selected?<><div><strong>{selected.symbol} <span>{selected.name}</span></strong><p>{selected.sector} · {percent(change(selected))} · {selected.price>0?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(selected.price):'Price unavailable'} · {dateLabel(selected.asOf)}</p></div><Link href={'/stock-market-heatmap/?q='+encodeURIComponent(selected.symbol)+'&period='+period}>Explore {selected.symbol} →</Link></>:<p>Hover or tap a stock to explore its performance.</p>}</div>
       <p className={styles.caption}>{rows.length?`${rows.length} largest holdings shown · `:''}Tile size reflects index weight. Gray means unavailable data.</p>
     </div>
-    <div className={styles.action}><Link href={fullHeatmapUrl}>Explore the market heatmap →</Link></div>
+    <div className={styles.action}><Link data-motion-action href={fullHeatmapUrl}>Explore the market heatmap →</Link></div>
   </section>;
 }

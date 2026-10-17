@@ -72,7 +72,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         />
       </Head>}
       {section !== "resources" && <>
-      <header className="editorial-heading"><span>Market updates · Past week</span>
+      <header data-motion-reveal className="editorial-heading"><span>Market updates · Past week</span>
       <h2>Stock market news today</h2>
       <p>
         All app research previews published in the past week. These are not live
@@ -126,7 +126,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
       </div>
       </>}
       {section !== "news" && <>
-      <header className="editorial-heading subsection-heading"><span>Company insights</span><h2>Explore company research</h2></header>
+      <header data-motion-reveal className="editorial-heading subsection-heading"><span>Company insights</span><h2>Explore company research</h2></header>
       <div className="tickers">
         {stocks.map((s) => (
           <Link href={`/stocks/${s.slug}`} key={s.slug}>
@@ -135,7 +135,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         ))}
       </div>
       <p className="section-action"><Link className="research-cta" href="/stocks">Search the app’s full stock catalog →</Link></p>
-      <header className="editorial-heading subsection-heading"><span>Research essentials</span><h2>Stock research questions</h2></header>
+      <header data-motion-reveal className="editorial-heading subsection-heading"><span>Research essentials</span><h2>Stock research questions</h2></header>
       {faq.map((f) => (
         <details key={f.q}>
           <summary>{f.q}</summary>

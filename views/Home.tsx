@@ -1,3 +1,6 @@
+import ReviewEntrance from '../components/ReviewEntrance';
+import ScrollShowcase from '../components/ScrollShowcase';
+import HomeMotion from '../components/HomeMotion';
 import OptionsLearningGuides from "../components/OptionsLearningGuides";
 import EarningsLearningGuides from '../components/EarningsLearningGuides';
 import MarketLearningGuides from '../components/MarketLearningGuides';
@@ -100,7 +103,8 @@ const Home = ({ news, topWidgetRef, bodyWidgetRef }: Props) => {
 
   return (
     <>
-<div style={{ width: '100%', overflowX: 'clip', position: 'relative' }}>
+<div data-home-motion style={{ width: '100%', overflowX: 'clip', position: 'relative' }}>
+    <HomeMotion />
     <Header socialNoticeMode="all" />
 {/*    import { useState } from 'react';
 import SignUpModal from '../SignUpModal';
@@ -128,15 +132,18 @@ import SignUpModal from '../SignUpModal';
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
+        <ReviewEntrance>
+          <div data-review-top>
               <TrustpilotWidget
                 templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
                 businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
-                height="200px"
+                height="140px"
                 isTopStrip={true}
               />
+          </div>
 
 
-      <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
+
 
           <div id="reviews" className="review-sources" style={{ scrollMarginTop: '90px' ,scrollMarginBottom: '90px' }}>
             <div className="review-sources__heading">
@@ -168,19 +175,16 @@ import SignUpModal from '../SignUpModal';
 
             </div>
           </div>
-<div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
-              <TrustpilotWidget
-                          templateId="53aa8912dec7e10d38f59f36" // Replace with your Trustpilot Template ID
-                          businessUnitId="670a2355c53c6130a02f3e50" // Replace with your Trustpilot Business ID
-                          height="160px"
-                          isTopStrip={false}
-                        />
-                        <div style={{ height: 'clamp(36px, 6vw, 72px)' }} />
 
 
+        </ReviewEntrance>
+          <div className="review-followup" data-motion-reveal>
+            <TrustpilotWidget templateId="53aa8912dec7e10d38f59f36" businessUnitId="670a2355c53c6130a02f3e50" height="140px" isTopStrip={false}/>
+          </div>
 
+        <ScrollShowcase />
         <HomeHeatmap />
-        <ProductProof section="routine" />
+
 
   <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
           <div className="signals-shell">

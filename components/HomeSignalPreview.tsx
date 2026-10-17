@@ -28,7 +28,7 @@ export default function HomeSignalPreview() {
   }, []);
 
   return <section className="signal-preview" aria-labelledby="signal-preview-title">
-    <header className="editorial-heading">
+    <header data-motion-reveal className="editorial-heading">
       <span>Inside the app</span>
       <h2 id="signal-preview-title">Explore stock signals</h2>
       <p>A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.</p>

@@ -1,20 +1,9 @@
-import {siteNavigation} from '../../lib/site-navigation';
+import SiteMenu from '../SiteMenu';
+import menuStyles from '../../styles/SiteMenu.module.css';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { trackAppStoreClick } from '../../lib/analytics';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
-
-const desktopLabels = {
-  '/stock-market-heatmap/': ['Stock Market', 'Heatmap'],
-  '/options-activity/': ['Options', 'Tools'],
-  '/stock-market-news/': ['Stock Market', 'News'],
-  '/stocks-to-buy/': ['Stock Buy', 'Signals'],
-  '/earnings-calendar/': ['Earnings', 'Calendar'],
-  '/stock-market-calendar/': ['Stock Market', 'Calendar'],
-  '#how-it-works': ['How It', 'Works'],
-  '#watch-and-learn': ['Free', 'Course'],
-  '/stocks/': ['Stock', 'Search'],
-};
 
 const iosAppStoreUrl =
   'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
@@ -83,23 +72,19 @@ export default function Header({
       document.body.style.backgroundColor = themeColor;
     };
 
+    let previousScrolled = null;
     const handleScroll = () => {
       const isPageScrolled = forceDark || window.scrollY > 50;
+      if (isPageScrolled === previousScrolled) return;
+      previousScrolled = isPageScrolled;
       setIsScrolled(isPageScrolled);
       updateBrowserTheme(isPageScrolled);
     };
 
     handleScroll();
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [forceDark]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    const onKey = event => { if (event.key === 'Escape') setIsOpen(false); };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
 
@@ -139,8 +124,8 @@ export default function Header({
 
   return (
     <header className={`site-header ${forceDark || isScrolled ? 'is-scrolled' : ''}`}>
-      <nav className="site-nav" aria-label="Main navigation">
-        <a className="site-brand" href={homeHref} onClick={closeMenu}>
+      <nav className={menuStyles.nav} aria-label="Main navigation">
+        <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
           <Image
             src="/assets/images/stockerRobotIcon.png"
             alt="Stocks To Buy Now AI"
@@ -151,22 +136,12 @@ export default function Header({
           <span>Stocks To Buy Now AI</span>
         </a>
 
-        {/* Links container (Collapses into dropdown on mobile) */}
-        <div id="site-navigation-links" className={`nav-content${isOpen ? ' is-open' : ''}`}>
-          <div className="nav-links">
-            {siteNavigation.map((item) => (
-              <a key={item.href} href={item.href.startsWith('#') ? `${navBasePath}${item.href}` : item.href} onClick={closeMenu}>
-                <span className="nav-mobile-label">{item.label}</span>
-                <span className="nav-desktop-label">{(desktopLabels[item.href] || [item.label]).map(line=><span key={line}>{line}</span>)}</span>
-              </a>
-            ))}
-          </div>
-        </div>
+        <SiteMenu isOpen={isOpen} onClose={closeMenu} navBasePath={navBasePath} />
 
         {/* Right side actions (Horizontal alignment on mobile) */}
-        <div className="nav-actions">
+        <div className={menuStyles.actions}>
           <a
-            className="nav-cta"
+            className={menuStyles.download}
             href={getAppStoreUrl()}
             target="_blank"
             rel="noopener noreferrer"
@@ -176,17 +151,15 @@ export default function Header({
           </a>
 
           <button
-            className="nav-toggle"
+            className={menuStyles.toggle}
             type="button"
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
             aria-controls="site-navigation-links"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <b className="nav-explore-label">Explore</b>
-            <span />
-            <span />
-            <span />
+            <b>{isOpen ? 'Close' : 'Explore'}</b>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={isOpen ? 'm5 5 10 10 M15 5 5 15' : 'M3 6h14 M3 14h14'} /></svg>
           </button>
         </div>
       </nav>

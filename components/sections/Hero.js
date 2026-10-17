@@ -41,6 +41,7 @@ const Hero = ({
       className={outerClasses}
       id="home"
     >
+<div className="hero-atmosphere" data-motion-depth="28" aria-hidden="true"><i /><i /></div>
 <Container>
 <br></br>
 <center>
@@ -71,7 +72,7 @@ const Hero = ({
                   />
             <div className="container-xs">
             <br></br>
-            <h1 className="text-3xl md:text-6xl tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.2, maxWidth: "800px" }} >
+            <h1 data-motion-intro className="text-3xl md:text-6xl tracking-tighter leading-tight" style={{ color: 'white', lineHeight: 1.2, maxWidth: "800px" }} >
                 Wish someone told you about Nvidia when it was <b>$5 instead of $100</b>?
               </h1>
               <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
@@ -85,7 +86,7 @@ const Hero = ({
  </div>
  </center>
  </Container>
-<div className="hero-cta-group">
+<div className="hero-cta-group" data-motion-intro="later">
   <NewsletterSignUp from='Hero'/>
 </div>
 <div style={{paddingTop: 'max(25px,2.2vw)'}}></div>
@@ -110,8 +111,6 @@ const Hero = ({
          <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Google</a>
        </div>
     </div>
-<div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
-<div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 <div style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 
 

@@ -37,6 +37,9 @@ const Footer = ({
 
         <div className="footer-link-block">
           <span>Company</span>
+          <Link href="/company/">About us</Link>
+          <Link href="/company/culture/">Culture</Link>
+          <Link href="/company/careers/">Careers</Link>
           <Link href="/posts/privacypolicy">Privacy Policy</Link>
         </div>
 

@@ -2,6 +2,7 @@ import { AppProps } from 'next/app'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '../styles/index.css'
+import '../styles/motion.css'
 import { SessionProvider } from '../stockerSession';
 import { initializeAnalytics, trackPageView } from '../lib/analytics';
 
