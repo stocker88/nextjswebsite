@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import SignalChart, {type Point} from './SignalChart';
 
-type Preview = {id:string; content:string; graph1:Point[]; graph3?:Point[]; graphType3?:string};
+type Preview = {id:string; content:string; graph1:Point[]; graph3?:Point[]; graphType3?:string; recommendationTimeInt?:number; timestampInt?:number};
 const PREVIEW_LIMIT = 6;
 
 export default function HomeSignalPreview() {
@@ -34,15 +34,15 @@ export default function HomeSignalPreview() {
       <p>A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.</p>
     </header>
     <div className="preview-grid" aria-busy={loading}>
-      {loading ? Array.from({length:PREVIEW_LIMIT}, (_,i) => <div className="loading-card" key={i} aria-hidden="true" />) : items.map(item => {
+      {loading ? Array.from({length:PREVIEW_LIMIT}, (_,i) => <div className="loading-card" key={i} aria-hidden="true" />) : items.map((item,index) => {
         const metric = item.graphType3 || 'Financial metric';
-        return <Link href="/stocks-to-buy" className="preview-card" key={item.id}>
+        return <Link href="/stocks-to-buy" className="preview-card" data-motion-reveal="card" data-motion-delay={index%2} key={item.id}>
           <span className="badge">STOCK TO BUY</span>
           <h3>Price trend</h3>
-          <SignalChart points={item.graph1} />
+          <SignalChart points={item.graph1} signalTimestamp={item.recommendationTimeInt ?? item.timestampInt} />
           {Array.isArray(item.graph3) && item.graph3.length > 0 && <>
             <h3 className="metric-title">{metric}</h3>
-            <SignalChart points={item.graph3} bars={metric !== 'Price' && !metric.includes('Value')} title={metric} />
+            <SignalChart points={item.graph3} bars={metric !== 'Price' && !metric.includes('Value')} title={metric} projectionDirection={metric.toLowerCase().includes('short interest') ? 'down' : 'up'} />
           </>}
           <p className="summary">{item.content.split('\n').find(line => line.trim()) || 'Explore this stock setup.'}</p>
           <span className="card-link">Explore this setup →</span>

@@ -26,6 +26,21 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
       - run: yarn test:seo
+      - name: Restore sentiment cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/fear-greed
+          key: fear-greed-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: fear-greed-v1-
+      - name: Refresh sentiment when due
+        id: sentiment
+        run: node scripts/sync-fear-greed.cjs
+      - name: Preserve sentiment snapshot and attempt date
+        if: steps.sentiment.outputs.updated == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/fear-greed
+          key: fear-greed-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: yarn build:pages
       - run: node scripts/github-pages/verify.cjs
       - uses: actions/upload-pages-artifact@v3

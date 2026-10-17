@@ -1,7 +1,11 @@
-import {useState} from 'react';
+import {useRef,useState} from 'react';
+import useChartEntrance from '../useChartEntrance';
+import ChartReveal from '../ChartReveal';
 import {Detail,decimal,percent,shortDate} from '../../lib/earnings';
 export default function PriceChart({data}:{data:Detail}){
  const [showReports,setShowReports]=useState(false);const [period,setPeriod]=useState(252);const [hover,setHover]=useState<number|null>(null);
+ const chartRef=useRef<SVGSVGElement>(null);
+ useChartEntrance(chartRef,JSON.stringify([data.symbol,period,data.prices]));
  const all=data.prices;const p=all.slice(-(period+1));if(!p.length)return <div className="ec-empty">Price history is unavailable for this stock.</div>;
  const reportDates=Array.from(new Set((data.history||[]).map(r=>r.date).filter(d=>/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number.isFinite(Date.parse(d))))).sort();
  const visibleReports=reportDates.filter(d=>d>=p[0].date&&d<=p.at(-1)!.date).map(date=>{
@@ -15,10 +19,10 @@ export default function PriceChart({data}:{data:Detail}){
  const index=hover===null?p.length-1:Math.min(hover,p.length-1);const chosen=p[index];const ret=(p.at(-1)!.close/p[0].close-1)*100;
  return <section className="ec-chart"><div className="ec-chart-top"><div><span className="ec-eyebrow">Adjusted closing price · {data.currency||'currency unconfirmed'}</span><strong>{decimal(chosen.close)} <small>{shortDate(chosen.date)}</small></strong></div><div className="ec-segments" aria-label="Chart period">{[[21,'1M'],[63,'3M'],[126,'6M'],[252,'1Y']].map(([n,label])=><button key={n} aria-pressed={period===n} onClick={()=>{setPeriod(Number(n));setHover(null)}}>{label}</button>)}</div></div>
  {reportDates.length>0&&<div className="ec-report-control"><button type="button" aria-pressed={showReports} onClick={()=>setShowReports(v=>!v)}>Reporting dates {showReports?'✓':'＋'}</button>{showReports&&<small>{visibleReports.length?`${visibleReports.length} reports in view · E marks reporting dates`:'No reporting dates in this period'}</small>}</div>}
- <svg viewBox="0 0 700 265" role="img" aria-label={`${data.symbol} adjusted closing prices from ${p[0].date} to ${p.at(-1)!.date}, ${percent(ret)}`} onPointerMove={e=>{const r=e.currentTarget.getBoundingClientRect();setHover(Math.max(0,Math.min(p.length-1,Math.round(((e.clientX-r.left)/r.width*700-52)/600*(p.length-1)))))}} onPointerLeave={()=>setHover(null)}>
+ <svg ref={chartRef} viewBox="0 0 700 265" role="img" aria-label={`${data.symbol} adjusted closing prices from ${p[0].date} to ${p.at(-1)!.date}, ${percent(ret)}`} onPointerMove={e=>{const r=e.currentTarget.getBoundingClientRect();setHover(Math.max(0,Math.min(p.length-1,Math.round(((e.clientX-r.left)/r.width*700-52)/600*(p.length-1)))))}} onPointerLeave={()=>setHover(null)}>
  {[0,1,2,3].map(i=>{const v=lo+span*i/3;return <g key={i}><line x1="52" x2="652" y1={y(v)} y2={y(v)} stroke="#25334c"/><text x="45" y={y(v)+4} textAnchor="end" fill="#93a5c4" fontSize="11">{v.toFixed(v<10?2:0)}</text></g>})}
- <path d={line(p.map(v=>v.close))+` L${x(p.length-1)},225 L52,225 Z`} fill="#648bff" opacity=".09"/>
- <path d={line(sma200)} fill="none" stroke="#bc96ff" strokeWidth="1.5" strokeDasharray="4 3"/><path d={line(sma50)} fill="none" stroke="#efbe72" strokeWidth="1.5"/><path d={line(p.map(v=>v.close))} fill="none" stroke="#6b9fff" strokeWidth="2.6"/>
+ <ChartReveal width={700} height={265}><path d={line(p.map(v=>v.close))+` L${x(p.length-1)},225 L52,225 Z`} fill="#648bff" opacity=".09"/>
+ <path d={line(sma200)} fill="none" stroke="#bc96ff" strokeWidth="1.5" strokeDasharray="4 3"/><path d={line(sma50)} fill="none" stroke="#efbe72" strokeWidth="1.5"/><path d={line(p.map(v=>v.close))} fill="none" stroke="#6b9fff" strokeWidth="2.6"/></ChartReveal>
  {showReports&&visibleReports.map(r=><g key={r.date} aria-label={`Earnings reported ${r.date}`}><title>Earnings reported {r.date}</title><line x1={x(r.index)} x2={x(r.index)} y1="30" y2="225" stroke="#82d8c0" strokeWidth="1.2" strokeDasharray="4 4"/><text x={x(r.index)} y="22" textAnchor="middle" fill="#82d8c0" fontSize="10">E</text></g>)}
  {[0,Math.floor((p.length-1)/2),p.length-1].map((i,n)=><text key={n} x={x(i)} y="250" textAnchor={n===0?'start':n===2?'end':'middle'} fill="#93a5c4" fontSize="12">{shortDate(p[i].date)}</text>)}
  {hover!==null&&<g><line x1={x(index)} x2={x(index)} y1="25" y2="225" stroke="#93a5c4" strokeDasharray="3 3"/><circle cx={x(index)} cy={y(chosen.close)} r="4" fill="#fff"/></g>}

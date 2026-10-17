@@ -68,7 +68,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         </div>
 
         <div className="prediction-grid">
-          <figure className="prediction-card" data-motion-reveal>
+          <figure className="prediction-card" data-motion-reveal="card">
             <div className="phone-frame prediction-phone">
               <div className="phone-speaker" aria-hidden="true" />
               <div className="prediction-crop prediction-crop--lly">
@@ -87,7 +87,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
             </figcaption>
           </figure>
 
-          <figure className="prediction-card" data-motion-reveal data-motion-delay="1">
+          <figure className="prediction-card" data-motion-reveal="card" data-motion-delay="1">
             <div className="phone-frame prediction-phone">
               <div className="phone-speaker" aria-hidden="true" />
               <div className="prediction-crop prediction-crop--nvda">
@@ -134,7 +134,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         </div>
 
         <div className="trade-grid">
-          <figure className="trade-card trade-card--chart">
+          <figure className="trade-card trade-card--chart" data-motion-reveal="panel">
             <Image
               src="/assets/images/founder-trade-chart.jpg"
               alt="Founder personal historical trade chart"
@@ -144,7 +144,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
             />
           </figure>
 
-          <div className="trade-card trade-summary">
+          <div className="trade-card trade-summary" data-motion-reveal="card" data-motion-delay="1">
             <span>PERSONAL POSITION EXAMPLE</span>
             <h3>NVDA</h3>
             <Image

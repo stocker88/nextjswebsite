@@ -1,3 +1,6 @@
+import useChartEntrance from '../../components/useChartEntrance';
+import ChartReveal from '../../components/ChartReveal';
+import motion from '../../styles/ChartMotion.module.css';
 import {optionsEndpoint} from '../../lib/options-endpoint';
 import OptionsLearningGuides from '../../components/OptionsLearningGuides';
 import OptionsSignalsPromo from '../../components/OptionsSignalsPromo';
@@ -8,7 +11,7 @@ import OITotals from '../../components/options/OITotals';
 import {OptionsToolNav} from '../../components/options/OptionsToolLayout';
 import AppDownloadModal from '../../components/AppDownloadModal';
 import {useRouter} from 'next/router';
-import {ReactNode,useEffect,useMemo,useState} from 'react';
+import {ReactNode,useEffect,useMemo,useRef,useState} from 'react';
 import Header from '../../components/layout/Header';
 import {OPTIONS_SYMBOLS,Contract,OptionSnapshot,OptionTrade,activity,aggregate,evidence,payoff} from '../../lib/options';
 import styles from '../../components/options/OptionsExplorer.module.css';
@@ -20,19 +23,23 @@ function OIChart({rows,onPick,view}:{rows:Contract[];onPick:(c:Contract)=>void;v
  const byStrike=new Map<number,{call:number;put:number;contract:Contract}>();
  rows.forEach(c=>{if(c.oi===null)return;const r=byStrike.get(c.strike)||{call:0,put:0,contract:c};r[c.type]+=c.oi;byStrike.set(c.strike,r)});
  const all=Array.from(byStrike.entries());const bars=all.sort((a,b)=>(b[1].call+b[1].put)-(a[1].call+a[1].put)).slice(0,16).sort((a,b)=>a[0]-b[0]);
+ const chartRef=useRef<HTMLDivElement>(null);
+ useChartEntrance(chartRef,JSON.stringify(bars.map(([strike,r])=>[r.contract.symbol,strike,r.call,r.put])));
  const max=Math.max(1,...bars.map(([,r])=>Math.max(r.call,r.put)));
  if(!bars.length)return <><div className={styles.legend}><span>● Calls</span><span>● Puts</span></div><div className={styles.chartPlaceholder}><span>Open interest by strike</span>{view("open interest by strike")}</div></>;
- return <><div className={styles.legend}><span>● Calls</span><span>● Puts</span><small>{all.length>16?'16 largest OI strikes':'All available strikes'} · selected expirations</small></div><div className={styles.barChart} aria-label="Open interest by strike">{bars.map(([strike,r])=><button key={strike} onClick={()=>onPick(r.contract)} title={`${strike}: ${n(r.call)} calls, ${n(r.put)} puts`}><span className={styles.bars}><i style={{height:`${r.call/max*100}%`}}/><i style={{height:`${r.put/max*100}%`}}/></span><b>{n(strike)}</b><small>{compact(r.call+r.put)}</small></button>)}</div><p className={styles.note}>Open interest counts outstanding contracts after clearing. Every contract has a long and a short; call/put totals alone do not reveal market direction.</p></>;
+ return <><div className={styles.legend}><span>● Calls</span><span>● Puts</span><small>{all.length>16?'16 largest OI strikes':'All available strikes'} · selected expirations</small></div><div ref={chartRef} className={styles.barChart} aria-label="Open interest by strike">{bars.map(([strike,r],index)=><button key={strike} onClick={()=>onPick(r.contract)} title={`${strike}: ${n(r.call)} calls, ${n(r.put)} puts`}><span className={styles.bars}><i className={motion.bar} style={{height:`${r.call/max*100}%`,animationDelay:`${index*40}ms`}}/><i className={motion.bar} style={{height:`${r.put/max*100}%`,animationDelay:`${index*40+30}ms`}}/></span><b>{n(strike)}</b><small>{compact(r.call+r.put)}</small></button>)}</div><p className={styles.note}>Open interest counts outstanding contracts after clearing. Every contract has a long and a short; call/put totals alone do not reveal market direction.</p></>;
 }
 function Payoff({contract:c}:{contract:Contract}){
  const [premium,setPremium]=useState(''),[quantity,setQuantity]=useState('1');
  useEffect(()=>{setPremium(String(c.ask??c.last??''));setQuantity('1')},[c.id]);
  const p=premium.trim()===''?NaN:Number(premium),q=Number(quantity),valid=Number.isFinite(p)&&p>=0&&Number.isInteger(q)&&q>=1&&q<=10000&&c.multiplier===100;
+ const chartRef=useRef<SVGSVGElement>(null);
+ useChartEntrance(chartRef,`${c.id}:${valid}`);
  const span=Math.max(c.strike*.25,p*2||1),low=Math.max(0,c.strike-span),high=c.strike+span;
  const points=Array.from({length:41},(_,i)=>{const s=low+(high-low)*i/40;return {s,v:valid?payoff(c,p,s,q)!:0}});
  const min=Math.min(0,...points.map(x=>x.v)),max=Math.max(1,...points.map(x=>x.v)),y=(v:number)=>140-(v-min)/(max-min)*115;
  const path=points.map((x,i)=>`${i?'L':'M'}${35+i/40*490},${y(x.v)}`).join(' ');
- return <div className={styles.simulator}><h3>Explore the payoff</h3><p>Long {c.type} at expiration · standard 100-share contracts</p><div className={styles.filters}><label>Premium / share<input aria-label="Premium per share" type="number" min="0" step="0.01" value={premium} onChange={e=>setPremium(e.target.value)}/></label><label>Contracts<input aria-label="Number of contracts" type="number" min="1" max="10000" step="1" value={quantity} onChange={e=>setQuantity(e.target.value)}/></label></div>{valid?<><div className={styles.payoffStats}><span>Maximum loss <b>{money(p*100*q)}</b></span><span>Break-even <b>{c.type==='put'&&p>c.strike?'Not attainable':money(c.type==='call'?c.strike+p:c.strike-p)}</b></span></div><svg viewBox="0 0 560 190" role="img" aria-label="Option profit or loss at expiration in USD"><line x1="35" x2="525" y1={y(0)} y2={y(0)} stroke="#46536c"/><path d={path} fill="none" stroke="#86d7c2" strokeWidth="3"/><text x="35" y="16" fill="#aebed3" fontSize="11">P/L USD · {money(max)}</text><text x="35" y="155" fill="#aebed3" fontSize="11">{money(min)}</text><text x="35" y="178" fill="#aebed3" fontSize="12">{money(low)}</text><text x="525" y="178" textAnchor="end" fill="#aebed3" fontSize="12">{money(high)}</text></svg><p className={styles.note}>Stock price at expiration (USD). Premium starts at the quoted ask when available; edit it to model your fill. Excludes fees, early exercise and changes in value before expiration.</p></>:<p className={styles.empty}>{c.multiplier!==100?'Adjusted or unknown contract terms: this simulator is unavailable.':'Enter a valid premium and a whole number of contracts (1–10,000).'}</p>}</div>;
+ return <div className={styles.simulator}><h3>Explore the payoff</h3><p>Long {c.type} at expiration · standard 100-share contracts</p><div className={styles.filters}><label>Premium / share<input aria-label="Premium per share" type="number" min="0" step="0.01" value={premium} onChange={e=>setPremium(e.target.value)}/></label><label>Contracts<input aria-label="Number of contracts" type="number" min="1" max="10000" step="1" value={quantity} onChange={e=>setQuantity(e.target.value)}/></label></div>{valid?<><div className={styles.payoffStats}><span>Maximum loss <b>{money(p*100*q)}</b></span><span>Break-even <b>{c.type==='put'&&p>c.strike?'Not attainable':money(c.type==='call'?c.strike+p:c.strike-p)}</b></span></div><svg ref={chartRef} viewBox="0 0 560 190" role="img" aria-label="Option profit or loss at expiration in USD"><line x1="35" x2="525" y1={y(0)} y2={y(0)} stroke="#46536c"/><ChartReveal width={560} height={190}><path d={path} fill="none" stroke="#86d7c2" strokeWidth="3"/></ChartReveal><text x="35" y="16" fill="#aebed3" fontSize="11">P/L USD · {money(max)}</text><text x="35" y="155" fill="#aebed3" fontSize="11">{money(min)}</text><text x="35" y="178" fill="#aebed3" fontSize="12">{money(low)}</text><text x="525" y="178" textAnchor="end" fill="#aebed3" fontSize="12">{money(high)}</text></svg><p className={styles.note}>Stock price at expiration (USD). Premium starts at the quoted ask when available; edit it to model your fill. Excludes fees, early exercise and changes in value before expiration.</p></>:<p className={styles.empty}>{c.multiplier!==100?'Adjusted or unknown contract terms: this simulator is unavailable.':'Enter a valid premium and a whole number of contracts (1–10,000).'}</p>}</div>;
 }
 export default function OptionsExplorer(){
  const router=useRouter();const symbol=typeof router.query.symbol==='string'&&/^[A-Z][A-Z0-9.-]{0,9}$/.test(router.query.symbol.toUpperCase())?router.query.symbol.toUpperCase():'SPY';

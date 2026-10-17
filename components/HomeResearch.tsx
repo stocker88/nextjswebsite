@@ -93,7 +93,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
           const education = i.symbols.some(symbol => symbol.replace(/^[#$]/, '').toLowerCase() === 'education');
           const quickTake = isEarningsFirst(i.symbols) ? undefined : education ? i.educationPreview : i.quickTake;
           const category = education ? 'Market education' : 'Market insight';
-          return <div className="news-row" key={i.id}>
+          return <div className="news-row" data-motion-reveal="slide" key={i.id}>
             <time dateTime={isoDate(i.time) || undefined} title="Publication date (UTC)">{displayDate(i.time)}</time>
             <article className="news-card">
             <div className="news-meta">

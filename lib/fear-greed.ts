@@ -22,4 +22,31 @@ export function normalizeFearGreed(raw:any){
   .map((p:any)=>({date:new Date(p.x).toISOString(),value:p.y as number}))
   .sort((a:any,b:any)=>a.date.localeCompare(b.date))};
 }
-export type FearGreedSnapshot=NonNullable<ReturnType<typeof normalizeFearGreed>>;
+export const FINICA_URL = 'https://finica.io/api/fear-greed';
+export type FearGreedSnapshot=NonNullable<ReturnType<typeof normalizeFearGreed>> & {
+ source?: 'finica'; fetchedAt?: string; dateOnly?: boolean;
+};
+/** Finica supplies daily dates, not a precise CNN publication timestamp. */
+export function normalizeFinicaFearGreed(raw:any, now = new Date()):FearGreedSnapshot|null {
+ if(score(raw?.score)===null || !Array.isArray(raw?.historical))return null;
+ const historyByDate=new Map<string,number>();
+ for(const p of raw.historical){
+  if(typeof p?.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(p.date)||score(p.value)===null)continue;
+  const ms=Date.parse(p.date+'T00:00:00Z');
+  if(!Number.isFinite(ms)||new Date(ms).toISOString().slice(0,10)!==p.date||ms>now.getTime())continue;
+  historyByDate.set(p.date,p.value);
+ }
+ const history=Array.from(historyByDate,([date,value])=>({date:date+'T00:00:00.000Z',value})).sort((a,b)=>a.date.localeCompare(b.date));
+ const latest=history[history.length-1];
+ if(!latest||latest.value!==raw.score)return null;
+ const names=['Market Momentum','Stock Price Strength','Stock Price Breadth','Put/Call Ratio','Market Volatility','Safe Haven Demand','Junk Bond Demand'];
+ const components=Array.isArray(raw.components)?raw.components:[];
+ const previous=(days:number)=>{
+  const target=Date.parse(latest.date)-days*86400000;
+  const point=[...history].reverse().find(p=>Date.parse(p.date)<=target);
+  return point&&target-Date.parse(point.date)<=4*86400000?point.value:null;
+ };
+ return {score:raw.score,timestamp:latest.date,dateOnly:true,source:'finica',fetchedAt:now.toISOString(),
+  previousClose:score(raw.previousClose),weekAgo:previous(7),monthAgo:previous(30),yearAgo:previous(365),history,
+  indicators:indicators.map(([key],i)=>({key,score:score(components.find((c:any)=>c?.name===names[i])?.value)}))};
+}

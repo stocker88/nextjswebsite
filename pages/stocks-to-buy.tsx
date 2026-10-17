@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import ResearchPage from '../components/ResearchPage';
 
 import Chart, {type Point} from "../components/SignalChart";
-type Signal = {id:string; content:string; graph1:Point[]; graph2:Point[]; graph3?:Point[]; graphType3?:string; likes:number; comments:number; shares:number};
+type Signal = {id:string; content:string; graph1:Point[]; graph2:Point[]; graph3?:Point[]; graphType3?:string; recommendationTimeInt?:number; timestampInt?:number; likes:number; comments:number; shares:number};
 const metricOptions = [
   'Earnings per Share', 'Revenues', 'Net Income', 'Profit Margins', 'Bubble Hype',
   'Price to Earnings ratio', 'Short Interest Ratio', 'Debt to Equity ratio',
@@ -23,7 +23,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
   return <article className="research-card research-card-compact signal-card">
     <span className="insight-bubble">STOCK TO BUY</span>
     <div className="chart-label price-label">PRICE TREND</div>
-    <Chart points={item.graph1}/>
+    <Chart points={item.graph1} signalTimestamp={item.recommendationTimeInt ?? item.timestampInt}/>
     <label className="metric-picker">
       <span className="sr-label">Select a metric</span>
       <select aria-label="Select a metric" value={selectedMetric ?? title} onChange={event=>setSelectedMetric(event.target.value)}>
@@ -33,7 +33,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
     {selectedMetric !== null ? <div className="metric-app-gate" aria-live="polite">
       <button type="button" className="metric-app-button" onClick={onGetApp}>Get the app to view {selectedMetric} →</button>
       <button type="button" onClick={()=>setSelectedMetric(null)}>Back to {title} preview</button>
-    </div> : <Chart points={item.graph3} bars={bars} title={title}/>}
+    </div> : <Chart points={item.graph3} bars={bars} title={title} projectionDirection={title.toLowerCase().includes('short interest') ? 'down' : 'up'}/>}
     <style jsx>{`
       .research-cta {border:0;cursor:pointer;font:inherit;}
       .signal-description {font-size:14px;line-height:1.65;white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden;}

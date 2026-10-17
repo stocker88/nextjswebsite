@@ -1,3 +1,5 @@
+import NewsMentionsPromo from '../../components/NewsMentionsPromo';
+import AppDownloadButton from '../../components/formStocker';
 import {isEarningsFirst} from '../../lib/research';
 import MarketFeedTabs from '../../components/MarketFeedTabs';
 import MarketNewsFeed from '../../components/MarketNewsFeed';
@@ -62,8 +64,18 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
      {loadedPage * 40 < total && <Link href={`/stock-market-news/page/${loadedPage+1}`} onClick={loadMore} aria-disabled={loading}>{loading?'Loading…':'More news →'}</Link>}
    </nav>
    {page===1&&<MarketNewsFeed compact/>}
-   <div className="hottest-news-action"><Link className="research-cta" href="/market-news/">Review hottest news now →</Link></div>
-   <style jsx>{`.hottest-news-action{display:flex;justify-content:center;margin:32px 0 12px}.hottest-news-action :global(a){text-align:center}.hottest-news-action :global(a:focus-visible){outline:2px solid #c7b5ff;outline-offset:4px}`}</style>
+   <NewsMentionsPromo/>
+   <div className="hottest-stocks-action">
+     <AppDownloadButton popup from="stock_market_news_hottest_stocks" label="Hottest stocks now →"/>
+     <p>Explore in the app · iOS & Android</p>
+   </div>
+   <style jsx>{`
+     .hottest-stocks-action{text-align:center;margin:30px 0 12px}
+     .hottest-stocks-action :global(a.app-download-cta){display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:15px 28px;border:1px solid #c5a5ff;border-radius:999px;background:#c5a5ff;color:#171024!important;font-size:17px;font-weight:750;text-decoration:none}
+     .hottest-stocks-action :global(a.app-download-cta:hover){background:#d4bdff}
+     .hottest-stocks-action :global(a:focus-visible){outline:2px solid #dfcbff;outline-offset:4px}
+     .hottest-stocks-action p{margin:10px 0 0;color:#9eafc9;font-size:12px}
+   `}</style>
  </ResearchPage>;
 }
 export async function getStaticProps() {const items = await fetchResearch(); return {props:{items:items.slice(0,40), total:items.length, page:1}, revalidate:60};}

@@ -4,6 +4,8 @@ import {HeatSnapshot,HeatStock,dateLabel,heatColor,percent,stockGroups,tile,vali
 import styles from './HomeHeatmap.module.css';
 import HeatmapShare from './heatmap/HeatmapShare';
 import savedSnapshot from '../data/market-heatmap.json';
+import useHeatmapAssembly from './heatmap/useHeatmapAssembly';
+import {heatmapPieceMotion} from '../lib/heatmap-motion';
 
 export default function HomeHeatmap(){
   const periodId=useId();
@@ -44,10 +46,11 @@ export default function HomeHeatmap(){
   const mobile=width<600;
   const rows=[...(data?.rows||[])].sort((a,b)=>(b.weight||0)-(a.weight||0)||b.marketCap-a.marketCap).slice(0,mobile?12:30).map(row=>row.asOf===data?.asOf?row:{...row,changes:{...row.changes,[period]:null}});
   const groups=stockGroups(rows,'sector');
+  useHeatmapAssembly(map,JSON.stringify([width,rows.map(row=>[row.symbol,row.weight,row.sector])]),mobile);
   const groupTiles=tile(groups,g=>g.rows.reduce((s,r)=>s+(r.weight||1),0),width,350);
   const change=(r:HeatStock)=>r.asOf===data?.asOf?r.changes[period]:null;
   return <section ref={root} className={styles.section} aria-labelledby="home-heatmap-title">
-    <header className={styles.header} data-motion-reveal>
+    <header className={styles.header}>
       <div><span className={styles.eyebrow}>THE MARKET AT A GLANCE</span><h2 id="home-heatmap-title">See where the market is moving.</h2><p>Explore the largest S&P 500 stocks, grouped by sector.</p></div>
     </header>
     <div className={styles.panel}>
@@ -61,9 +64,9 @@ export default function HomeHeatmap(){
         {!rows.length?<div className={styles.empty} role="status">{loading?'Loading market snapshot…':<>Market snapshot is currently unavailable. <Link href="/stock-market-heatmap/">View heatmap →</Link></>}</div>:groupTiles.map(g=>{
           const w=mobile?width:g.width,h=mobile?Math.max(100,Math.min(180,g.item.rows.length*40)):g.height;
           const cells=tile(g.item.rows,r=>r.weight||1,w,Math.max(1,h-24));
-          return <div key={g.item.name} className={styles.group} style={mobile?{position:'relative',height:h,width:'100%'}:{position:'absolute',left:g.x,top:g.y,width:w,height:h}}>
+          return <div key={g.item.name} data-assembly-group className={styles.group} style={mobile?{position:'relative',height:h,width:'100%'}:{position:'absolute',left:g.x,top:g.y,width:w,height:h}}>
             <div className={styles.groupLabel} title={g.item.name}>{g.item.name}</div>
-            <div className={styles.cells}>{cells.map(c=><button key={c.item.symbol} className={styles.stock} style={{left:c.x,top:c.y,width:c.width,height:c.height,background:heatColor(change(c.item),periodScale[period]),fontSize:Math.max(10,Math.min(23,c.width/5,c.height/3))}} aria-label={`${c.item.name} (${c.item.symbol}), ${percent(change(c.item))}`} aria-pressed={selected?.symbol===c.item.symbol} onMouseEnter={()=>setSelected(c.item)} onFocus={()=>setSelected(c.item)} onClick={()=>setSelected(c.item)}><b>{c.item.symbol}</b>{c.height>34&&c.width>42&&<span>{change(c.item)===null?'—':percent(change(c.item))}</span>}</button>)}</div>
+            <div className={styles.cells}>{cells.map(c=><button key={c.item.symbol} className={styles.stock} style={{...heatmapPieceMotion(c.item.symbol,(mobile?0:g.x)+c.x+c.width/2,(mobile?0:g.y)+c.y+c.height/2,mobile?w:width,mobile?h:350,mobile),left:c.x,top:c.y,width:c.width,height:c.height,background:heatColor(change(c.item),periodScale[period]),fontSize:Math.max(10,Math.min(23,c.width/5,c.height/3))}} aria-label={`${c.item.name} (${c.item.symbol}), ${percent(change(c.item))}`} aria-pressed={selected?.symbol===c.item.symbol} onMouseEnter={()=>setSelected(c.item)} onFocus={()=>setSelected(c.item)} onClick={()=>setSelected(c.item)}><b>{c.item.symbol}</b>{c.height>34&&c.width>42&&<span>{change(c.item)===null?'—':percent(change(c.item))}</span>}</button>)}</div>
           </div>;
         })}
       </div>

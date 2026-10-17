@@ -51,3 +51,24 @@
   [data-home-motion] [data-motion-reveal] { opacity: 1 !important; translate: none !important; }
   .hero-atmosphere { display: none; }
 }
+
+/* Editorial panels open wider; cards lift into place with a slight tilt. */
+@media(prefers-reduced-motion:no-preference){
+ [data-home-motion] [data-motion-reveal="card"][data-motion-state],
+ [data-home-motion] [data-motion-reveal="panel"][data-motion-state],
+ [data-home-motion] [data-motion-reveal="slide"][data-motion-state]{transition:opacity 850ms ease,translate 950ms cubic-bezier(.22,1,.36,1),scale 950ms cubic-bezier(.22,1,.36,1),rotate 950ms cubic-bezier(.22,1,.36,1),clip-path 1100ms cubic-bezier(.22,1,.36,1),border-color 220ms ease,box-shadow 220ms ease;transition-delay:var(--motion-delay,0ms)}
+ [data-home-motion] [data-motion-reveal="card"][data-motion-state="waiting"]{translate:0 48px;scale:.95;rotate:-1.5deg;transform-origin:50% 100%}
+ [data-home-motion] [data-motion-reveal="card"][data-motion-delay="1"][data-motion-state="waiting"]{rotate:1.5deg}
+ [data-home-motion] [data-motion-reveal="panel"][data-motion-state="waiting"]{translate:0 32px;scale:.97;clip-path:inset(0 7% 0 7% round 24px)}
+ [data-home-motion] [data-motion-reveal="slide"][data-motion-state="waiting"]{translate:28px 18px}
+ [data-home-motion] [data-motion-state="entered"]{scale:1;rotate:0deg}
+ [data-home-motion] [data-motion-reveal="panel"][data-motion-state="entered"]{clip-path:inset(-60px -60px -60px -60px round 0px)}
+ [data-home-motion] [data-motion-state]:focus-within{scale:1;rotate:0deg;clip-path:none;transition:none}
+}
+@media(max-width:650px) and (prefers-reduced-motion:no-preference){
+ [data-home-motion] [data-motion-reveal="card"][data-motion-state="waiting"]{translate:0 24px;rotate:0deg;scale:.97}
+ [data-home-motion] [data-motion-reveal="card"][data-motion-delay="1"][data-motion-state="waiting"]{rotate:0deg}
+ [data-home-motion] [data-motion-reveal="slide"][data-motion-state="waiting"]{translate:12px 12px}
+}
+@media(prefers-reduced-motion:reduce){[data-home-motion] [data-motion-reveal]{scale:none;rotate:none;clip-path:none}}
+@media print{[data-home-motion] [data-motion-reveal]{scale:none!important;rotate:none!important;clip-path:none!important}}

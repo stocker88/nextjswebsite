@@ -1,5 +1,7 @@
 import {useEffect,useRef} from 'react';
 import Image from 'next/image';
+import useChartEntrance from './useChartEntrance';
+import ChartReveal from './ChartReveal';
 import styles from '../styles/ScrollShowcase.module.css';
 const chapters=[
   {eyebrow:'01 / THE BIG PICTURE',title:'Less noise.\nMore perspective.',text:'Start with the market. Explore the heatmap, follow the calendar and put the day’s moves in context.',href:'/stock-market-heatmap/',link:'Explore the market'},
@@ -8,6 +10,8 @@ const chapters=[
 ];
 export default function ScrollShowcase(){
   const root=useRef<HTMLElement>(null);
+  const chartRef=useRef<SVGSVGElement>(null);
+  useChartEntrance(chartRef);
   useEffect(()=>{
     const element=root.current;if(!element)return;
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');let frame=0;let observer:IntersectionObserver|undefined;
@@ -26,7 +30,7 @@ export default function ScrollShowcase(){
         <span>{chapter.eyebrow}</span><h2>{chapter.title.split('\n').map((line,i)=><span key={line}>{line}{i===0&&<br/>}</span>)}</h2><p>{chapter.text}</p><a href={chapter.href}>{chapter.link} <span aria-hidden="true">↗</span></a>
       </article>)}</div>
       <div className={styles.visual} aria-label="Preview of the app’s daily investing routine">
-        <div className={styles.backCard}><span>RESEARCH</span><strong>See the bigger picture.</strong><div className={styles.chart} aria-hidden="true"><svg viewBox="0 0 240 100"><path d="M0 85 25 70 45 78 65 49 90 60 110 30 135 43 150 20 180 38 200 15 240 5"/></svg></div><small>Context before decisions.</small></div>
+        <div className={styles.backCard}><span>RESEARCH</span><strong>See the bigger picture.</strong><div className={styles.chart} aria-hidden="true"><svg ref={chartRef} viewBox="0 0 240 100"><ChartReveal width={240} height={100}><path d="M0 85 25 70 45 78 65 49 90 60 110 30 135 43 150 20 180 38 200 15 240 5"/></ChartReveal></svg></div><small>Context before decisions.</small></div>
         <div className={styles.phone}><Image src="/assets/images/daily-investing-routine.png" width={864} height={1821} sizes="(max-width: 700px) 190px, 320px" alt="The Stocks To Buy Now AI app: signals, insights, earnings and market updates"/></div>
         <div className={styles.frontCard}><span className={styles.spark} aria-hidden="true">✦</span><div><small>YOUR DAILY ROUTINE</small><strong>Research. Learn. Repeat.</strong></div></div>
         <span className={styles.caption}>APP PREVIEW · ILLUSTRATIVE RESEARCH VISUAL</span>

@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
+import useChartEntrance from './useChartEntrance';
+import motion from '../styles/ChartMotion.module.css';
 import {
   CartesianGrid,
   Legend,
@@ -33,6 +35,8 @@ const CompactCompoundTooltip = ({ active, payload, label }) => {
 };
 
 const CompoundInterestCalculator = () => {
+  const chartRef = useRef(null);
+  useChartEntrance(chartRef);
   const [principal, setPrincipal] = useState(100);
   const [dailyContrib, setDailyContrib] = useState(30);
   const [monthlyReturn, setMonthlyReturn] = useState(20);
@@ -174,7 +178,7 @@ const CompoundInterestCalculator = () => {
               </div>
             </div>
 
-            <div className="compound-chart" aria-label="Projected compound growth chart">
+            <div ref={chartRef} className={`compound-chart ${motion.compound}`} aria-label="Projected compound growth chart">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data} margin={{ top: 12, right: 12, left: 2, bottom: 4 }}>
                   <CartesianGrid stroke="rgba(255,255,255,0.07)" vertical={false} />
@@ -191,8 +195,8 @@ const CompoundInterestCalculator = () => {
                     allowEscapeViewBox={{ x: false, y: false }}
                   />
                   <Legend wrapperStyle={{ color: '#aab3c5', fontSize: 12, paddingTop: 10 }} />
-                  <Line type="monotone" dataKey="totalWithInterest" stroke="#5daaff" strokeWidth={3} dot={false} name="Projected value" />
-                  <Line type="monotone" dataKey="onlyAmountSaved" stroke="#55d69e" strokeWidth={2} dot={false} name="Contributions" />
+                  <Line isAnimationActive={false} type="monotone" dataKey="totalWithInterest" stroke="#5daaff" strokeWidth={3} dot={false} name="Projected value" />
+                  <Line isAnimationActive={false} type="monotone" dataKey="onlyAmountSaved" stroke="#55d69e" strokeWidth={2} dot={false} name="Contributions" />
                 </LineChart>
               </ResponsiveContainer>
             </div>

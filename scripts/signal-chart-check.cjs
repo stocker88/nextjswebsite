@@ -5,3 +5,37 @@ const values=m.exports.signalChartValues;
 assert.deepEqual(values([{y1:12},{y1:'N/A'},{y1:NaN},{y1:null},{y1:''},{y1:' '},null,{y1:Infinity},{y1:0},{y1:-4},{y1:'18.5'},{y1:true}]),[12,0,-4,18.5]);
 assert.deepEqual(values([{y1:'NA'},{y1:'NaN'}]),[]);
 console.log('Missing values skipped; zero, negative and valid numeric values retained.');
+
+const {signalChartObservations:observations,signalChartDate:date}=m.exports;
+assert.deepEqual(observations([{x:1700000000,y1:10},{x:1700100000,y1:'N/A'},{x:1700200000,y1:11}],1700150000),[{value:10,x:1700000000}]);
+assert.equal(date(1700000000),'Nov 14, 2023');
+assert.equal(date(20),null);
+assert.equal(date(NaN),null);
+assert.equal(date('1700000000'),null);
+console.log('Signal cutoff, missing values and saved price dates verified.');
+
+const project=m.exports.signalChartProjection;
+const history=[{x:1700000000,value:10},{x:1700100000,value:20},{x:1700200000,value:18}];
+const projected=project(history);
+assert.equal(projected.length,41);
+assert.deepEqual(projected[0],history[2]);
+assert.ok(projected[1].value>projected[0].value);
+assert.ok(projected.some((p,i)=>i>0&&p.value<projected[i-1].value));
+assert.ok(projected.every((p,i)=>Number.isFinite(p.value)&&(i===0||p.x>projected[i-1].x)));
+assert.equal(projected[40].x,1700260000);
+assert.ok(Math.abs(projected[40].value-24)<1e-9);
+assert.deepEqual(project(history),projected);
+assert.deepEqual(project([{value:1},{value:2}]),[]);
+assert.deepEqual(project([{x:1700000000,value:2},{x:1700100000,value:1}]),[]);
+assert.deepEqual(project(history.slice().reverse()),[]);
+console.log('Illustrative slope, elapsed-time scale, upward start and small fluctuations verified.');
+
+const declining=project([{x:1700000000,value:9},{x:1700100000,value:5},{x:1700200000,value:2}],'down');
+assert.equal(declining.length,41);
+assert.ok(declining.every((p,i)=>p.value>0&&(i===0||p.value<declining[i-1].value)));
+assert.ok(declining[40].value>=1.2);
+assert.equal(declining[40].x,projected[40].x);
+const negative=project([{x:1700000000,value:-3},{x:1700100000,value:-2},{x:1700200000,value:-1}]);
+assert.equal(negative.length,41);
+assert.ok(negative[40].value>negative[0].value);
+console.log('Financial projections support negative metrics; short interest declines gradually above zero.');

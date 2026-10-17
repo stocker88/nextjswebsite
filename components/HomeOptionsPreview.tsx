@@ -1,3 +1,5 @@
+import useChartEntrance from './useChartEntrance';
+import motion from '../styles/ChartMotion.module.css';
 import {optionsEndpoint} from '../lib/options-endpoint';
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
@@ -29,18 +31,20 @@ export default function HomeOptionsPreview(){
   const grouped=new Map<number,{strike:number;call:number;put:number}>();
   contracts.forEach(c=>{if(c.oi===null)return;const row=grouped.get(c.strike)||{strike:c.strike,call:0,put:0};row[c.type]+=c.oi;grouped.set(c.strike,row)});
   const bars=Array.from(grouped.values()).sort((a,b)=>(b.call+b.put)-(a.call+a.put)).slice(0,8).sort((a,b)=>a.strike-b.strike);
+  const chartRef=useRef<HTMLDivElement>(null);
+  useChartEntrance(chartRef,JSON.stringify([tab,symbol,bars]));
   const maximum=Math.max(1,...bars.flatMap(b=>[b.call,b.put]));
   const legs:Leg[]=[{type:'call',side:'buy',strike,premium,quantity:1}],valid=!validateLegs(legs),metrics=valid?expirationMetrics(legs):null;
   const calculatorHref=valid?setupHref({version:1,name:'Long call',symbol:'',expiry:'',asOf:'',reference:strike,fee:0,legs}):'/options-profit-calculator/';
   return <section ref={root} className={styles.section} aria-labelledby="home-options-title">
     <header className={styles.header} data-motion-reveal><span className={styles.eyebrow}>EXPLORE YOUR NEXT SETUP</span><h2 id="home-options-title">From market moves<br/><em>to options possibilities.</em></h2><p>Explore positioning, model a payoff and compare ways to express your view.</p></header>
     <div className={styles.tabs} role="group" aria-label="Options tools preview">{tabs.map(t=><button key={t.id} aria-pressed={tab===t.id} aria-controls="home-options-panel" onClick={()=>setTab(t.id)}>{t.label} <span aria-hidden="true">→</span></button>)}</div>
-    <div id="home-options-panel" className={styles.panel}>
+    <div id="home-options-panel" data-motion-reveal="panel" className={styles.panel}>
       {tab==='activity'&&<>
         <div className={styles.top}><div><h3>Where are positions concentrated?</h3><p>Call and put open interest across available expirations.</p></div><div className={styles.symbols} role="group" aria-label="Preview ticker">{['SPY','QQQ','AAPL','NVDA'].map(s=><button key={s} aria-pressed={s===symbol} onClick={()=>setSymbol(s)}>{s}</button>)}</div></div>
         <div className={styles.activity} aria-busy={loading}>
           <div className={styles.stats}><div><span>Call open interest</span><strong className={styles.call}>{loading?'…':compact(totals.callOi)}</strong></div><div><span>Put open interest</span><strong className={styles.put}>{loading?'…':compact(totals.putOi)}</strong></div><p>{loading?'Loading options snapshot…':snapshot?.asOf?new Date(snapshot.asOf).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'})+' ET · Saved snapshot':'Snapshot unavailable'}<br/>Totals cover available contracts.</p></div>
-          <div><div className={styles.legend}><span className={styles.call}>● Calls</span><span className={styles.put}>● Puts</span></div><div className={styles.bars}>{bars.length?bars.map(b=><div key={b.strike} className={styles.barColumn} aria-label={`Strike ${b.strike}: ${b.call.toLocaleString()} call OI, ${b.put.toLocaleString()} put OI`} title={`Calls: ${b.call.toLocaleString()} · Puts: ${b.put.toLocaleString()}`}><div className={styles.barPair}><i style={{height:160*b.call/maximum}}/><i style={{height:160*b.put/maximum}}/></div><span>{b.strike}</span></div>):<div className={styles.empty}>{loading?'Loading concentration chart…':<Link href={'/options-activity/?symbol='+symbol}>View available options data →</Link>}</div>}</div><p className={styles.note}>Largest open-interest strikes. Call/put totals do not establish market direction.</p></div>
+          <div><div className={styles.legend}><span className={styles.call}>● Calls</span><span className={styles.put}>● Puts</span></div><div ref={chartRef} className={styles.bars}>{bars.length?bars.map((b,index)=><div key={b.strike} className={styles.barColumn} aria-label={`Strike ${b.strike}: ${b.call.toLocaleString()} call OI, ${b.put.toLocaleString()} put OI`} title={`Calls: ${b.call.toLocaleString()} · Puts: ${b.put.toLocaleString()}`}><div className={styles.barPair}><i className={motion.bar} style={{height:160*b.call/maximum,animationDelay:`${index*65}ms`}}/><i className={motion.bar} style={{height:160*b.put/maximum,animationDelay:`${index*65+45}ms`}}/></div><span>{b.strike}</span></div>):<div className={styles.empty}>{loading?'Loading concentration chart…':<Link href={'/options-activity/?symbol='+symbol}>View available options data →</Link>}</div>}</div><p className={styles.note}>Largest open-interest strikes. Call/put totals do not establish market direction.</p></div>
         </div><Link className={styles.cta} href={'/options-activity/?symbol='+symbol}>Explore {symbol} options activity →</Link>
       </>}
       {tab==='calculator'&&<>
@@ -50,7 +54,7 @@ export default function HomeOptionsPreview(){
       </>}
       {tab==='strategies'&&<>
         <div className={styles.top}><div><h3>Different ways to express a view.</h3><p>Explore the trade-offs before choosing a strategy.</p></div></div>
-        <div className={styles.strategies}>{['long-call','bull-call-spread','covered-call'].map(id=>{const s=strategies.find(s=>s.id===id)!;return <Link key={id} href={'/options-profit-calculator/?strategy='+id} className={styles.strategy}><span className={styles.badge}>{s.outlook}</span><h4>{s.name} <span aria-hidden="true">→</span></h4><ExpirationChart legs={s.legs} mini/><p>{s.risk}</p></Link>})}</div><p className={styles.note}>Illustrative expiration payoff shapes; each chart uses its own scale.</p>
+        <div className={styles.strategies}>{['long-call','bull-call-spread','covered-call'].map(id=>{const s=strategies.find(s=>s.id===id)!;return <Link key={id} href={'/options-profit-calculator/?strategy='+id} className={styles.strategy} data-motion-reveal="card"><span className={styles.badge}>{s.outlook}</span><h4>{s.name} <span aria-hidden="true">→</span></h4><ExpirationChart legs={s.legs} mini/><p>{s.risk}</p></Link>})}</div><p className={styles.note}>Illustrative expiration payoff shapes; each chart uses its own scale.</p>
         <Link className={styles.cta} href="/options-strategies/">Explore all strategies →</Link>
       </>}
     </div>

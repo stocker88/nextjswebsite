@@ -1,0 +1,33 @@
+.chart{min-width:0}.plot{position:relative}.plot svg{display:block;width:100%}
+.endpoint{position:absolute;pointer-events:none;z-index:1}
+.endpoint i{display:block;width:8px;height:8px;border:2px solid #d6ffec;background:#21c989;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 4px #21c98925}
+.endpoint span{position:absolute;right:0;bottom:14px;white-space:nowrap;font-size:10px;line-height:1.2;font-weight:700;letter-spacing:.015em;color:#c9ffe6;background:#092e26;border:1px solid #37c88e70;padding:5px 7px;border-radius:6px;box-shadow:0 3px 12px #0003}
+.endpoint .below{top:14px;bottom:auto}
+@media(prefers-reduced-motion:no-preference){
+ .chart[data-chart-motion=waiting] .wipe{width:0}
+ .chart[data-chart-motion=playing] .wipe{animation:draw 1900ms cubic-bezier(.35,.05,.25,1) both}
+ .chart[data-chart-motion=waiting] .bar{transform:scaleY(0)}
+ .chart[data-chart-motion=playing] .bar{animation:grow 700ms cubic-bezier(.22,1,.36,1) both;animation-delay:var(--bar-delay,0ms)}
+ .chart[data-chart-motion=waiting] .endpoint{opacity:0}
+ .chart[data-chart-motion=playing] .endpoint{animation:mark 400ms ease-out 1900ms both}
+ .chart:focus-within .wipe{animation:none;width:100px}
+ @keyframes draw{from{width:0}to{width:var(--history-width,100px)}}
+ @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+ @keyframes mark{from{opacity:0;translate:0 5px}to{opacity:1;translate:0 0}}
+}
+@media(max-width:600px){.endpoint span{font-size:8px;padding:4px 5px}}
+@media print{.chart .wipe{animation:none!important;width:100px!important}.chart .line,.chart .bar,.chart .endpoint{animation:none!important;transform:none!important;opacity:1!important;stroke-dashoffset:0!important}}
+
+@media(prefers-reduced-motion:no-preference){
+ .chart[data-chart-motion=waiting] .projectionArea{opacity:0}
+ .chart[data-chart-motion=playing] .projectionArea{animation:projectionArea 450ms ease 2300ms both}
+ .chart[data-chart-motion=waiting] .projectionWipe{width:0}
+ .chart[data-chart-motion=playing] .projectionWipe{animation:project 1600ms ease-in-out 2450ms both}
+ @keyframes project{from{width:0}to{width:var(--projection-width,100px)}}
+ @keyframes projectionArea{from{opacity:0}to{opacity:1}}
+}
+@media print{.chart .projectionWipe{animation:none!important;width:100px!important}.chart .projectionArea{animation:none!important;opacity:1!important}}
+.illustration{position:absolute;top:91%;right:0;text-align:center;font-size:8px;line-height:1;color:#d4bdf2;pointer-events:none;letter-spacing:.02em}
+@media(prefers-reduced-motion:no-preference){.chart[data-chart-motion=waiting] .illustration{opacity:0}.chart[data-chart-motion=playing] .illustration{animation:projectionArea 450ms ease 2300ms both}}
+@media(max-width:600px){.illustration{font-size:7px;letter-spacing:0}}
+@media print{.chart .illustration{animation:none!important;opacity:1!important}}

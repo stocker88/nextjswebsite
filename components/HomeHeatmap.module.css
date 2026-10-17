@@ -7,3 +7,21 @@
 @media(max-width:650px){.section{padding:24px 16px 40px}.header{align-items:flex-start;flex-direction:column;gap:14px}.panel{padding:12px;border-radius:18px}.meta{font-size:10px;gap:10px}.group{position:relative;width:100%;margin-bottom:8px}.detail{align-items:flex-start;flex-direction:column;gap:6px;min-height:92px}.detail strong span{display:block;margin:4px 0 0}.caption{font-size:10px}}
 
 .toolbar{display:flex;align-items:center;gap:12px;margin-bottom:20px}.share{min-width:0}.share>button{min-height:42px;padding:10px 15px;border:1px solid #cfbdf0;border-radius:10px;background:linear-gradient(135deg,#c2afe5,#a58aca);box-shadow:inset 0 1px 0 #fff5,0 3px 12px #0002;color:#251a3b;font:inherit;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}.share>button:hover{background:#cab5ee}.share>button:disabled{opacity:.6;cursor:wait}.period select{min-height:42px;width:100%;border:1px solid #85709f;border-radius:10px;background:#201e35;color:#eee5ff;padding:9px 10px;font:inherit;font-size:14px;cursor:pointer}.fullLink{display:inline-flex;align-items:center;gap:5px;min-height:42px;color:#a6e8d9;text-decoration:none;font-size:14px;white-space:nowrap}.toolbar button:focus-visible,.toolbar select:focus-visible{outline:2px solid #e0d0ff;outline-offset:3px}.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:650px){.toolbar{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(62px,.85fr) minmax(0,1fr);gap:8px;margin-bottom:16px}.share>button{width:100%;padding:9px 5px;font-size:12px}.period select{padding:8px 4px;font-size:12px;min-width:0}.fullLink{font-size:12px;justify-content:flex-end;gap:3px}}@media(max-width:360px){.toolbar{gap:6px}.share>button,.period select,.fullLink{font-size:11px}}
+
+/* Only stock tiles assemble. The title, controls and sector labels stay fixed. */
+.map[data-assembly=enabled]{isolation:isolate;overflow:clip;overflow-clip-margin:12px}
+@media(prefers-reduced-motion:no-preference){
+ .map[data-assembly=enabled] .group{overflow:visible}
+ .map[data-assembly=enabled] .stock{
+  --tile-progress:clamp(0,calc((var(--assembly-progress,1) - var(--piece-delay,0))*var(--piece-rate,1)),1);
+  transform:translate(calc((1 - var(--tile-progress))*var(--piece-x,0px)),calc((1 - var(--tile-progress))*var(--piece-y,0px))) rotate(calc((1 - var(--tile-progress))*var(--piece-turn,0deg))) scale(calc(.76 + .24*var(--tile-progress)));
+  opacity:calc(.22 + .78*var(--tile-progress));
+  transform-origin:center;
+ }
+ .map[data-assembly=enabled] .group[data-assembly-settled=false] .stock{pointer-events:none}
+ /* Keyboard navigation reveals the plot immediately and keeps focus targets stable. */
+ .map:has(:focus-visible) .stock{transform:none!important;opacity:1!important;pointer-events:auto!important}
+}
+@media print{
+ .map[data-assembly] .stock{transform:none!important;opacity:1!important;pointer-events:auto!important}
+}

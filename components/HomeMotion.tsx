@@ -12,7 +12,7 @@ export default function HomeMotion() {
     const setup = () => {
       dispose();
       if (reduced.matches) return;
-      const reveals = Array.from(root.querySelectorAll<HTMLElement>('[data-motion-reveal]'));
+      const reveals = new Set<HTMLElement>();
       const enter = (element: HTMLElement) => { element.dataset.motionState = 'entered'; };
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -21,15 +21,35 @@ export default function HomeMotion() {
           observer.unobserve(entry.target);
         });
       }, { rootMargin: '0px 0px -24px 0px', threshold: 0 });
-      reveals.forEach(element => {
-        // Never hide a restored scroll position, anchor destination or focused control.
-        if (element.getBoundingClientRect().top < window.innerHeight || element.contains(document.activeElement)) {
+      const register = (element:HTMLElement, restored = false) => {
+        if (reveals.has(element)) return;
+        reveals.add(element);
+        // Preserve restored positions and focused controls; animate new content once.
+        if ((restored && element.getBoundingClientRect().top < window.innerHeight) || element.contains(document.activeElement)) {
           enter(element);
         } else {
           element.dataset.motionState = 'waiting';
           observer.observe(element);
         }
+      };
+      root.querySelectorAll<HTMLElement>('[data-motion-reveal]').forEach(element => register(element, true));
+      // Signals and research cards arrive asynchronously after the initial mount.
+      const additions = new MutationObserver(records => {
+        records.forEach(record => {
+          record.removedNodes.forEach(node => {
+            if (!(node instanceof HTMLElement)) return;
+            [node, ...Array.from(node.querySelectorAll<HTMLElement>('[data-motion-reveal]'))].forEach(element => {
+              observer.unobserve(element);reveals.delete(element);
+            });
+          });
+          record.addedNodes.forEach(node => {
+            if (!(node instanceof HTMLElement)) return;
+            if (node.matches('[data-motion-reveal]')) register(node);
+            node.querySelectorAll<HTMLElement>('[data-motion-reveal]').forEach(element => register(element));
+          });
+        });
       });
+      additions.observe(root,{childList:true,subtree:true});
       const focus = (event: FocusEvent) => {
         if (!(event.target instanceof Element)) return;
         const target = event.target.closest<HTMLElement>('[data-motion-reveal]');
@@ -68,6 +88,7 @@ export default function HomeMotion() {
       }
       dispose = () => {
         observer.disconnect();
+        additions.disconnect();
         depthObserver.disconnect();
         cancelAnimationFrame(frame);
         root.removeEventListener('focusin', focus);

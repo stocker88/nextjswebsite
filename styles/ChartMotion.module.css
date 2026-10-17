@@ -1,0 +1,17 @@
+.bar{transform-origin:center bottom}
+@media(prefers-reduced-motion:no-preference){
+ :global([data-chart-entrance=waiting]) .bar{transform:scaleY(0)}
+ :global([data-chart-entrance=playing]) .bar{animation:grow 700ms cubic-bezier(.22,1,.36,1) both}
+ :global([data-chart-entrance=waiting]) .wipe{width:0}
+ :global([data-chart-entrance=playing]) .wipe{animation:draw 1500ms cubic-bezier(.35,.05,.25,1) both}
+ .compound:global([data-chart-entrance=waiting]) :global(.recharts-line-curve){clip-path:inset(0 100% 0 0)}
+ .compound:global([data-chart-entrance=playing]) :global(.recharts-line-curve){animation:line 1500ms cubic-bezier(.35,.05,.25,1) both}
+ @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+ @keyframes draw{from{width:0}to{width:var(--chart-width)}}
+ @keyframes line{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(-8px)}}
+}
+@media print{
+ .bar{animation:none!important;transform:none!important}
+ .wipe{animation:none!important;width:var(--chart-width)!important}
+ .compound :global(.recharts-line-curve){animation:none!important;clip-path:none!important}
+}

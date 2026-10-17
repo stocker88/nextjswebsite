@@ -3,3 +3,5 @@ node_modules
 .github-pages-build/
 out/
 *.tsbuildinfo
+
+.cache/fear-greed/
