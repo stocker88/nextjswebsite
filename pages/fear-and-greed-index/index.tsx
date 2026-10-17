@@ -2,6 +2,7 @@ import {useRef,useState} from 'react';
 import useChartEntrance from '../../components/useChartEntrance';
 import ChartReveal from '../../components/ChartReveal';
 import Head from 'next/head';
+import FearGreedShare from '../../components/FearGreedShare';
 import Header from '../../components/layout/Header';
 import saved from '../../data/fear-greed.json';
 import {CNN_URL,indicators,rating,color,FearGreedSnapshot} from '../../lib/fear-greed';
@@ -25,6 +26,7 @@ export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|nul
  <Header forceDark navBasePath="/"/><main className={styles.page}><div className={styles.container}>
  <a className={styles.back} href="/">Home / Market sentiment</a>
  <header className={styles.hero}><span className={styles.eyebrow}>THE MOOD OF THE MARKET</span><h1>Fear or greed?<br/><em>See the bigger picture.</em></h1><p>Explore CNN’s Fear &amp; Greed Index alongside the market signals behind it.</p><nav aria-label="Related tools"><a href="/stock-market-heatmap/">Market heatmap →</a><a href="/stock-market-calendar/">Market calendar →</a><a href="/options-activity/">Options activity →</a></nav></header>
+ <div className={styles.share}><FearGreedShare/></div>
  <section className={styles.overview} aria-label="Index overview"><article className={styles.card}><div className={styles.cardHeader}><div><span className={styles.eyebrow}>CNN FEAR &amp; GREED INDEX</span><h2>Market sentiment</h2></div><View/></div>
  <div className={styles.gauge}><svg ref={gaugeRef} viewBox="0 0 420 240" role="img" aria-label={value===null?'Index reading unavailable':`Fear and Greed Index ${value.toFixed(1)} out of 100, ${rating(value)}`}>
  <defs><linearGradient id="sentiment" x1="0" x2="1"><stop offset="0%" stopColor="#f17886"/><stop offset="30%" stopColor="#efa46b"/><stop offset="50%" stopColor="#e7cc7b"/><stop offset="75%" stopColor="#8bd8bf"/><stop offset="100%" stopColor="#42c99a"/></linearGradient></defs>

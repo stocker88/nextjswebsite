@@ -20,3 +20,17 @@
 @media(max-width:680px){.mapSettings[open]{flex-basis:100%}.mapSettings[open]>div{position:static;width:100%;max-width:100%;margin-top:6px;box-shadow:none}}
 
 @media(max-width:680px),(hover:none) and (pointer:coarse){.desktopFullscreen{display:none}}
+
+/* Stock tiles assemble on page scroll; labels and the zoom canvas remain stable. */
+@media(prefers-reduced-motion:no-preference){
+ .map[data-assembly=enabled]{isolation:isolate}
+ .map[data-assembly=enabled] .sector,.map[data-assembly=enabled] .cells{overflow:visible}
+ .map[data-assembly=enabled] .sectorTitle{position:relative;z-index:4;border-radius:5px 5px 0 0}
+ .map[data-assembly=enabled] .stock{
+  --tile-progress:clamp(0,calc((var(--assembly-progress,1) - var(--piece-delay,0))*var(--piece-rate,1)),1);
+  transform:translate(calc((1 - var(--tile-progress))*var(--piece-x,0px)),calc((1 - var(--tile-progress))*var(--piece-y,0px))) rotate(calc((1 - var(--tile-progress))*var(--piece-turn,0deg))) scale(calc(.76 + .24*var(--tile-progress)));
+  opacity:calc(.22 + .78*var(--tile-progress));transform-origin:center;
+ }
+ .map:has(:focus-visible) .stock,.map [data-zoom-active=true] .stock,.expanded .map .stock{transform:none!important;opacity:1!important}
+}
+@media print{.map[data-assembly] .stock{transform:none!important;opacity:1!important}}

@@ -42,7 +42,7 @@ export default function HomeSignalPreview() {
           <SignalChart points={item.graph1} signalTimestamp={item.recommendationTimeInt ?? item.timestampInt} />
           {Array.isArray(item.graph3) && item.graph3.length > 0 && <>
             <h3 className="metric-title">{metric}</h3>
-            <SignalChart points={item.graph3} bars={metric !== 'Price' && !metric.includes('Value')} title={metric} projectionDirection={metric.toLowerCase().includes('short interest') ? 'down' : 'up'} />
+            <SignalChart points={item.graph3} bars={metric !== 'Price' && !metric.includes('Value')} title={metric} projectionMode="financial" projectionDirection={metric.toLowerCase().includes('short interest') ? 'down' : 'up'} />
           </>}
           <p className="summary">{item.content.split('\n').find(line => line.trim()) || 'Explore this stock setup.'}</p>
           <span className="card-link">Explore this setup →</span>

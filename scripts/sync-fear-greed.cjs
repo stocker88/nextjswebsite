@@ -29,4 +29,4 @@ async function sync({root=path.join(__dirname,'..'),fetcher=fetch,now=Date.now()
  }catch(error){log('Fear & Greed snapshot unchanged: '+error.message);return {updated:true,snapshot};}
 }
 module.exports={sync,TTL};
-if(require.main===module)sync().then(result=>{if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,'updated='+result.updated+'\n');}).catch(error=>{console.error(error);process.exitCode=1;});
+if(require.main===module)sync().then(result=>{if(result.snapshot)require('./render-fear-greed-share.cjs').render();if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,'updated='+result.updated+'\n');}).catch(error=>{console.error(error);process.exitCode=1;});

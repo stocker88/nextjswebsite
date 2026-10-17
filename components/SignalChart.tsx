@@ -3,14 +3,14 @@ import {signalChartObservations, signalChartDate, signalChartProjection} from '.
 import styles from '../styles/SignalChart.module.css';
 export type Point = {x?:number;y1?:number;y2?:number;y3?:number};
 
-export default function SignalChart({points = [], bars = false, title = 'Price trend', signalTimestamp, projectionDirection}:{points?:Point[]; bars?:boolean; title?:string; signalTimestamp?:number; projectionDirection?:'up'|'down'}) {
+export default function SignalChart({points = [], bars = false, title = 'Price trend', signalTimestamp, projectionDirection, projectionMode = bars ? 'financial' : 'price'}:{points?:Point[]; bars?:boolean; title?:string; signalTimestamp?:number; projectionDirection?:'up'|'down'; projectionMode?:'price'|'financial'}) {
   const root = useRef<HTMLDivElement>(null);
   const clipId = useId().replace(/:/g,'');
   const observations = signalChartObservations(points, signalTimestamp);
   const values = observations.map(point => point.value);
   const sentDate = signalChartDate(signalTimestamp);
-  const projection = projectionDirection || (!bars && sentDate) ? signalChartProjection(observations, projectionDirection || 'up') : [];
-  const animationKey = JSON.stringify([bars, observations, signalTimestamp, projectionDirection]);
+  const projection = projectionDirection || (!bars && sentDate) ? signalChartProjection(observations, projectionDirection || 'up', projectionMode) : [];
+  const animationKey = JSON.stringify([bars, observations, signalTimestamp, projectionDirection, projectionMode]);
   useEffect(() => {
     const element = root.current;
     if (!element || !('IntersectionObserver' in window)) return;

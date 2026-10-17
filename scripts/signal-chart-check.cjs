@@ -39,3 +39,27 @@ const negative=project([{x:1700000000,value:-3},{x:1700100000,value:-2},{x:17002
 assert.equal(negative.length,41);
 assert.ok(negative[40].value>negative[0].value);
 console.log('Financial projections support negative metrics; short interest declines gradually above zero.');
+
+
+// A one-day EPS correction used to extrapolate across years and flatten history.
+const day=86400,start=1700000000;
+const eps=[.02,.03,.05,.08,-.2,.12,.11,.13,.14].map((value,i)=>({x:start+i*90*day,value}));
+eps.splice(5,0,{x:eps[4].x+day,value:.5});
+const soft=project(eps,'up','financial'),old=project(eps);
+assert.ok(old.at(-1).value>10,'regression fixture reproduces the extreme old slope');
+assert.equal(soft.length,41);
+assert.deepEqual(soft[0],eps.at(-1));
+const span=Math.max(0,...eps.map(p=>p.value))-Math.min(0,...eps.map(p=>p.value));
+assert.ok(soft.every(p=>p.value>=eps.at(-1).value&&p.value<=eps.at(-1).value+span*.25+1e-10));
+const expanded=Math.max(0,...eps.map(p=>p.value),...soft.map(p=>p.value))-Math.min(0,...eps.map(p=>p.value),...soft.map(p=>p.value));
+assert.ok(span/expanded>=.8-1e-10,'historical bars retain at least 80% of their original scale');
+assert.equal(soft.at(-1).x,old.at(-1).x,'projection boundary and horizon stay aligned');
+const steady=[1,2,3,4].map((value,i)=>({x:start+i*90*day,value}));
+assert.ok(project(steady,'up','financial').at(-1).value>4);
+const flat=steady.map(p=>({...p,value:4}));
+assert.ok(project(flat,'up','financial').every(p=>p.value===4),'flat histories do not acquire invented growth');
+const shrinking=project(steady.map(p=>({...p,value:5-p.value})),'down','financial');
+assert.ok(shrinking.every((p,i)=>p.value>=.6&&(i===0||p.value<=shrinking[i-1].value)));
+const losses=project(steady.map(p=>({...p,value:p.value-5})),'up','financial');
+assert.ok(losses.every(p=>p.value>=-1&&p.value<=0));
+console.log('Financial trend damping, EPS jump regression, scale cap, flat history and short-interest limits verified.');

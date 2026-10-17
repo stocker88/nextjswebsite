@@ -22,6 +22,7 @@ async function main(){
   const sync=spawnSync(process.execPath,['scripts/sync-fear-greed.cjs'],{cwd:root,stdio:'inherit'});
   if(sync.status!==0)throw new Error('Fear & Greed cache preparation failed');
  }
+ require('../render-fear-greed-share.cjs').render(root);
  fs.rmSync(stage,{recursive:true,force:true}); fs.mkdirSync(stage);
  const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store','.cache']);
  for(const entry of fs.readdirSync(root)) {

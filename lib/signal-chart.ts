@@ -25,12 +25,37 @@ export function signalChartDate(seconds:unknown):string|null {
 
 /** A visual scenario, never market data or a model forecast. Uses an earlier
  * low-to-high move and its elapsed time, then deterministic small fluctuations. */
-export function signalChartProjection(points:{value:number;x?:number}[], direction:'up'|'down'='up'):{value:number;x:number}[] {
+export function signalChartProjection(points:{value:number;x?:number}[], direction:'up'|'down'='up',mode:'price'|'financial'='price'):{value:number;x:number}[] {
  if(points.length<2||points.some(p=>!signalChartDate(p.x)||!Number.isFinite(p.value)))return [];
  if(points.some((p,i)=>i>0&&p.x!<=points[i-1].x!))return [];
  const first=points[0],last=points[points.length-1];
  const span=last.x!-first.x!;
  if(span<=0)return [];
+ if(mode==='financial'){
+  const median=(values:number[])=>{const sorted=[...values].sort((a,b)=>a-b),middle=Math.floor(sorted.length/2);return sorted.length%2?sorted[middle]:(sorted[middle-1]+sorted[middle])/2};
+  const intervals=points.slice(1).map((point,i)=>({elapsed:point.x!-points[i].x!,change:point.value-points[i].value}));
+  const cadence=median(intervals.map(interval=>interval.elapsed));
+  // Ignore near-duplicate reporting dates, then use the typical recent change,
+  // including flat/negative periods, rather than the largest historical jump.
+  const rates=intervals.filter(interval=>interval.elapsed>=cadence*.5).slice(-8).map(interval=>interval.change/interval.elapsed);
+  if(!rates.length)return [];
+  const signedRate=median(rates),horizon=span*.3;
+  const historicalSpan=Math.max(0,...points.map(p=>p.value))-Math.min(0,...points.map(p=>p.value));
+  if(!historicalSpan)return [];
+  const rate=direction==='down'?Math.max(0,-signedRate):Math.max(0,signedRate);
+  // At most 25% extra range: history always retains >=80% of the chart scale.
+  const drift=Math.min(rate*horizon*.5,historicalSpan*.25);
+  if(!Number.isFinite(drift))return [];
+  if(direction==='down'){
+   if(last.value<=0)return [];
+   const drop=Math.min(drift,last.value*.4),decay=-Math.log(1-drop/last.value);
+   return Array.from({length:41},(_,i)=>({x:last.x!+horizon*i/40,value:last.value*Math.exp(-decay*i/40)}));
+  }
+  return Array.from({length:41},(_,i)=>{
+   const t=i/40,ripple=.025*Math.sin(4*Math.PI*t);
+   return {x:last.x!+horizon*t,value:last.value+drift*Math.max(0,Math.min(1,t+ripple))};
+  });
+ }
  if(direction==='down'){
   if(last.value<=0)return [];
   let high=first,fall=0,rate=0;

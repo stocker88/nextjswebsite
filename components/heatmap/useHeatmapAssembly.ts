@@ -1,7 +1,7 @@
 import {RefObject,useEffect} from 'react';
 import {heatmapAssemblyProgress} from '../../lib/heatmap-motion';
 
-export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,layoutKey:string,mobile:boolean){
+export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,layoutKey:string,mobile:boolean,perItem=false){
  useEffect(()=>{
   const map=ref.current;if(!map)return;
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -10,8 +10,8 @@ export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,la
   const draw=()=>{
    frame=0;if(document.hidden)return;
    const top=map.getBoundingClientRect().top;
-   // Read geometry first. Mobile groups assemble as each enters the viewport.
-   const updates=groups.map(group=>({group,progress:heatmapAssemblyProgress(top+(mobile?group.offsetTop:0),window.innerHeight)}));
+   // Read geometry before writes. Calendar wrappers stay still while their cards move.
+   const updates=groups.map(group=>({group,progress:heatmapAssemblyProgress(perItem?group.getBoundingClientRect().top:top+(mobile?group.offsetTop:0),window.innerHeight)}));
    updates.forEach(({group,progress})=>{
     group.style.setProperty('--assembly-progress',String(progress));
     group.dataset.assemblySettled=progress>=.995?'true':'false';
@@ -43,5 +43,5 @@ export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,la
    delete map.dataset.assembly;
    groups.forEach(group=>{group.style.removeProperty('--assembly-progress');delete group.dataset.assemblySettled});
   };
- },[ref,layoutKey,mobile]);
+ },[ref,layoutKey,mobile,perItem]);
 }

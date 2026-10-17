@@ -33,7 +33,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
     {selectedMetric !== null ? <div className="metric-app-gate" aria-live="polite">
       <button type="button" className="metric-app-button" onClick={onGetApp}>Get the app to view {selectedMetric} →</button>
       <button type="button" onClick={()=>setSelectedMetric(null)}>Back to {title} preview</button>
-    </div> : <Chart points={item.graph3} bars={bars} title={title} projectionDirection={title.toLowerCase().includes('short interest') ? 'down' : 'up'}/>}
+    </div> : <Chart points={item.graph3} bars={bars} title={title} projectionMode="financial" projectionDirection={title.toLowerCase().includes('short interest') ? 'down' : 'up'}/>}
     <style jsx>{`
       .research-cta {border:0;cursor:pointer;font:inherit;}
       .signal-description {font-size:14px;line-height:1.65;white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden;}

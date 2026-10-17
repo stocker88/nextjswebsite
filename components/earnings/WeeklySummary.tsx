@@ -1,8 +1,10 @@
 import AppDownloadModal from '../AppDownloadModal';
 import CalendarPeriodControls from '../CalendarPeriodControls';
 import RangeOverview from './RangeOverview';
+import useHeatmapAssembly from '../heatmap/useHeatmapAssembly';
+import {heatmapPieceMotion} from '../../lib/heatmap-motion';
 import ShareSnapshot from './ShareSnapshot';
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useState,useRef} from 'react';
 import {Event,combinedBeatRate,beatRingColor,day,shortDate,money,decimal,multiple,percent,sessionName} from '../../lib/earnings';
 
 const fields = [['cap','Market cap'],['price','Price'],['estimates','EPS & revenue estimates'],['valuation','P/E & P/S'],['return','1-year return']] as const;
@@ -22,6 +24,8 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
  const events=allEvents.filter(i=>showUnknown||i.session!=='unknown');
  const unknownCount=allEvents.filter(i=>i.session==='unknown').length;
  const days=Array.from({length:Math.max(0,rangeDays)},(_,n)=>day(from,n)).filter(date=>isRange||events.some(i=>i.date===date));
+ const board=useRef<HTMLDivElement>(null);
+ useHeatmapAssembly(board,JSON.stringify([from,to,isRange,mobile,expanded,extra,showBeat,showRevenue,events.map(i=>[i.symbol,i.date,i.session])]),mobile,true);
  const toggle=(field:string)=>setExtra(all=>all.includes(field)?all.filter(f=>f!==field):[...all,field]);
  return <section className="ews" aria-labelledby="ews-title">
   <header className="ews-heading"><div><span className="ec-eyebrow">{isRange?'THE PERIOD AT A GLANCE':'THE WEEK AT A GLANCE'}</span><h2 id="ews-title">Earnings snapshot</h2><p>See who’s reporting. Tap a company to explore its research.</p></div><a href={calendarHref||"#earnings-details"}>{calendarHref?"Full earnings calendar ↗":"Detailed calendar ↓"}</a></header>
@@ -29,13 +33,13 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
   <p className="ews-hint">Largest companies first · Expected release times · US Eastern Time<span className="ews-mobile-legend">BMO: before open · AMC: after close · ?: unconfirmed</span></p>
   {showBeat&&showRevenue&&<p className="ews-ring-legend"><span aria-hidden="true"/>Logo ring: average EPS + revenue beat rate · red 0% · yellow 50% · green 100% · gray: missing history</p>}
   {((minDate&&from<minDate)||(maxDate&&to>maxDate))&&<p className="ews-hint">Available coverage: {minDate&&shortDate(minDate)} – {maxDate&&shortDate(maxDate)}. Dates outside this range have not been loaded.</p>}
-  {isRange?<RangeOverview events={events} from={from} to={to} showBeat={showBeat} showRevenue={showRevenue} onSelect={onSelect}/>:!events.length?<div className="ews-no-results">No reports match this view. Try another period or show unconfirmed times below.</div>:<div className={'ews-board '+(extra.length?'with-data ':'')+(showBeat&&showRevenue?'with-beat-rings':'')} style={{'--ews-days':Math.min(days.length,5)} as React.CSSProperties}>
+  {isRange?<RangeOverview events={events} from={from} to={to} showBeat={showBeat} showRevenue={showRevenue} onSelect={onSelect}/>:!events.length?<div className="ews-no-results">No reports match this view. Try another period or show unconfirmed times below.</div>:<div ref={board} className={'ews-board '+(extra.length?'with-data ':'')+(showBeat&&showRevenue?'with-beat-rings':'')} style={{'--ews-days':Math.min(days.length,5)} as React.CSSProperties}>
    {days.map(date=><section className={"ews-day"+([0,6].includes(new Date(date+'T12:00:00Z').getUTCDay())?" ews-weekend":"")} key={date} aria-label={shortDate(date)+' earnings'}>
     <header className="ews-day-heading"><span><span className="ews-wide-label">{new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'long',timeZone:'UTC'})}</span><span className="ews-dense-label">{new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',timeZone:'UTC'})}</span></span><strong>{shortDate(date)}</strong><small>{events.filter(i=>i.date===date).length} reports</small></header>
     {['bmo','amc','unknown'].map(session=>{
      const dayEvents=events.filter(i=>i.date===date);const visible=mobile&&!expanded.includes(date)?dayEvents.slice(0,4):dayEvents;const group=visible.filter(i=>i.session===session);const key=date+session;const all=expanded.includes(key);if(!group.length)return null;
      return <div className={'ews-session '+session} key={session}><h3><span aria-hidden="true">{session==='bmo'?'☀':session==='amc'?'☾':'◷'}</span><span className="ews-wide-label">{sessionName(session)}</span><span className="ews-dense-label">{session==='bmo'?'BMO':session==='amc'?'AMC':'?'}</span><small>{group.length}</small></h3>
-      <div className={'ews-tiles'+(all?' is-expanded':'')}>{group.slice(0,mobile||all?group.length:9).map(i=><div className="ews-tile" key={i.symbol+i.date}><button className="ews-company" title={i.name} aria-label={'Explore '+i.symbol+' earnings from weekly summary'} onClick={()=>onSelect(i.symbol)}>
+      <div className={'ews-tiles'+(all?' is-expanded':'')}>{group.slice(0,mobile||all?group.length:9).map((i,index)=><div className="ews-piece" data-assembly-group key={i.symbol+i.date} style={heatmapPieceMotion(i.symbol,days.indexOf(date)+.5,(index%3)+.5,days.length,3,mobile)}><div className="ews-tile"><button className="ews-company" title={i.name} aria-label={'Explore '+i.symbol+' earnings from weekly summary'} onClick={()=>onSelect(i.symbol)}>
        <Logo symbol={i.symbol} event={i} showRing={showBeat&&showRevenue}/><span className="ews-ticker"><strong>{i.symbol}</strong>{showBeat&&!!i.research?.beat.total&&i.research.beat.rate!=null&&<span className="ews-beat" style={showBeat&&showRevenue?{color:beatRingColor(combinedBeatRate(i))}:undefined} title={i.research?.beat.total?`${i.research.beat.beats} of ${i.research.beat.total} recent reports beat EPS estimates`:"EPS beat history not loaded"}>{showRevenue?"EPS ":""}{i.research?.beat.total?Math.round(i.research.beat.rate!)+"%":"N/A"}</span>}{showRevenue&&!!i.research?.revenueBeat?.total&&i.research.revenueBeat.rate!=null&&<span className="ews-beat" style={showBeat&&showRevenue?{color:beatRingColor(combinedBeatRate(i))}:undefined} title="Revenue actual above analyst estimates">Rev {i.research?.revenueBeat?.total?Math.round(i.research.revenueBeat.rate!)+"%":"N/A"}</span>}</span>
        {extra.length>0&&<div className="ews-data">
         {extra.includes('cap')&&<span>Cap <b>{i.marketCap==null?'N/A':'$'+money(i.marketCap)}</b></span>}
@@ -47,7 +51,7 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
        </div>}
       </button>
       {((showBeat&&(!i.research?.beat.total||i.research.beat.rate==null))||(showRevenue&&(!i.research?.revenueBeat?.total||i.research.revenueBeat.rate==null)))&&<button type="button" className="ews-history-button" aria-haspopup="dialog" aria-label={'View '+i.symbol+' EPS and revenue beat history in the app'} title="Explore EPS and revenue beat history in the app" onClick={()=>setShowApp(true)}><span>{showBeat&&(!i.research?.beat.total||i.research.beat.rate==null)?'EPS':''}{showBeat&&(!i.research?.beat.total||i.research.beat.rate==null)&&showRevenue&&(!i.research?.revenueBeat?.total||i.research.revenueBeat.rate==null)?' + ':''}{showRevenue&&(!i.research?.revenueBeat?.total||i.research.revenueBeat.rate==null)?'Rev':''}</span><span className="ews-history-action">View <span aria-hidden="true">↗</span></span></button>}
-      </div>)}</div>
+      </div></div>)}</div>
       {!mobile&&group.length>9&&<button className="ews-more" aria-expanded={all} onClick={()=>setExpanded(keys=>all?keys.filter(k=>k!==key):[...keys,key])}>{all?'Show fewer':'+ '+(group.length-9)+' more'}<span className="sr-only"> {sessionName(session)} on {shortDate(date)}</span></button>}
      </div>;
     })}
@@ -60,6 +64,19 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
   {extra.length>0&&<p className="ec-footnote">“N/A” means not loaded or unavailable. Open a company to load its research. Market cap is USD; estimates and quotes use source currencies. Forward ratios use fiscal-year estimates, not the next 12 months. EPS beat rate is historical earnings performance, not the probability of a stock-price gain.</p>}
   {showApp&&<AppDownloadModal placement="earnings_missing_history" onClose={()=>setShowApp(false)}/>}
   <style jsx global>{`
+   .ews-piece{display:flex;min-width:0}.ews-piece>.ews-tile{width:100%}
+   @media(prefers-reduced-motion:no-preference){
+    .ews-board[data-assembly=enabled]{isolation:isolate;overflow:clip;overflow-clip-margin:8px}
+    .ews-board[data-assembly=enabled] :is(.ews-day,.ews-session){overflow:visible}
+    .ews-board[data-assembly=enabled] .ews-tile{
+     --tile-progress:clamp(0,calc((var(--assembly-progress,1) - var(--piece-delay,0))*var(--piece-rate,1)),1);
+     transform:translate(calc((1 - var(--tile-progress))*var(--piece-x,0px)),calc((1 - var(--tile-progress))*var(--piece-y,0px))) rotate(calc((1 - var(--tile-progress))*var(--piece-turn,0deg))) scale(calc(.76 + .24*var(--tile-progress)));
+     opacity:calc(.22 + .78*var(--tile-progress));
+    }
+    .ews-board[data-assembly=enabled]:has(:focus-visible) .ews-tile{transform:none;opacity:1;pointer-events:auto}
+   }
+   @media print{.ews-board[data-assembly] .ews-tile{transform:none!important;opacity:1!important;pointer-events:auto!important}}
+
    .with-beat-rings .ews-logo{margin:3px;max-width:min(48px,calc(100% - 8px))}.ews-ring-legend{display:flex;align-items:center;gap:8px;font-size:10px;color:#a6b8d2;line-height:1.5;margin:0 0 16px}.ews-ring-legend>span{width:48px;height:7px;flex-shrink:0;border-radius:6px;background:linear-gradient(90deg,#ef6b73,#f2c94c,#42d39a)}
    .ews-ticker{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;min-width:0}.ews-beat{font-size:9px;font-weight:600;color:#80d8bc;background:#173a34;padding:2px 4px;border-radius:4px;line-height:1.3}.ews-auto,.ews-unknown-toggle{padding:9px 12px;border:1px solid #52648a;border-radius:8px;background:#202e49;color:#d9e5ff;font-size:12px;cursor:pointer}.ews-auto[aria-pressed=true]{background:#183831;border-color:#366958;color:#93ddc6}.ews-unknown-toggle{display:block;margin:14px auto 0}.ews-beat-note{font-size:10px;color:#95a8c7;margin:12px 0 0;line-height:1.5}
    .ews-toolbar-actions{display:flex;align-items:flex-start;flex-wrap:wrap;gap:8px}.ews-dense-label,.ews-mobile-legend,.ews-more.ews-mobile-only{display:none}.ews-wide-label{display:inline}

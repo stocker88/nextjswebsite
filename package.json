@@ -3,13 +3,13 @@
   "scripts": {
     "dev": "next dev",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run sync:research && npm run sync:earnings && npm run generate:sitemap",
+    "prebuild": "npm run sync:fear-greed && npm run sync:research && npm run sync:earnings && npm run generate:sitemap",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
     "deploy": "bash scripts/deploy-firebase.sh",
     "sync:research": "node scripts/sync-research.js",
-    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs && node scripts/earnings-check.cjs && node scripts/fear-greed-check.cjs",
+    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs && node scripts/earnings-check.cjs && node scripts/fear-greed-check.cjs && node scripts/fear-greed-share-check.cjs",
     "publish:article": "node scripts/publish-public-article.cjs",
     "build:pages": "node scripts/github-pages/build.cjs",
     "sync:earnings": "node scripts/sync-earnings.cjs",
@@ -44,6 +44,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
     "@types/node": "^18.0.3",
     "@types/react": "19.3.0",
     "@types/react-dom": "^18.0.6",
