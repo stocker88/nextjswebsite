@@ -35,7 +35,13 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   if(['up','down','missing'].includes(q.get('moves')||''))setDirection(q.get('moves')!);
   if(q.get('view')==='table')setView('table');
   if(q.get('limit')==='50')setLimit(50);
-  if(q.has('q'))setQuery(q.get('q')!.slice(0,100));
+  if(q.has('q')){
+   const search=q.get('q')!.slice(0,100);
+   setQuery(search);
+   // Homepage stock links should open their comparison, not just filter the map.
+   const stock=initial.rows.find(row=>row.symbol.toUpperCase()===search.trim().replace(/^\$/,'').toUpperCase());
+   if(stock)setSelected(stock);
+  }
   if(q.has('sector'))setSector(q.get('sector')!);
   if(q.has('industry'))setIndustry(q.get('industry')!);
  },[]);

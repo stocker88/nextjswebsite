@@ -1,3 +1,4 @@
+import StockPeerPerformance from '../../../components/heatmap/StockPeerPerformance';
 import StockEarnings from '../../../components/earnings/StockEarnings';
 import Head from "next/head";
 import Link from "next/link";
@@ -93,6 +94,7 @@ export default function Stock({
         </p>
       </div>
       <ResearchCTA placement={`ticker_${stock.slug}_end`} variant="stock"/>
+      <StockPeerPerformance symbol={stock.ticker}/>
     </ResearchPage>
   );
 }
