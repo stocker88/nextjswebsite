@@ -15,6 +15,8 @@ function run(args) {
  const result=spawnSync(process.execPath,args,{cwd:stage,stdio:'inherit',env:{...process.env,NEXT_TELEMETRY_DISABLED:'1'}});
  if(result.status!==0) throw new Error(`Build command failed: ${args.join(' ')}`);
 }
+// GitHub Pages has no API runtime; serve saved snapshots from the public cache.
+process.env.NEXT_PUBLIC_OPTIONS_API_URL ||= 'https://us-central1-stocker-fcda2.cloudfunctions.net/optionsPublicSnapshots';
 async function main(){
  fs.rmSync(stage,{recursive:true,force:true}); fs.mkdirSync(stage);
  const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store']);

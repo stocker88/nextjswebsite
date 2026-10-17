@@ -1,3 +1,4 @@
+import {optionsEndpoint} from '../lib/options-endpoint';
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {aggregate,OptionSnapshot} from '../lib/options';
@@ -18,7 +19,7 @@ export default function HomeOptionsPreview(){
     if(!visible||tab!=='activity'||snapshots[symbol]!==undefined)return;
     const controller=new AbortController();
     // Read saved coverage only. Never enqueue a provider fetch from this preview.
-    fetch('/api/options/?symbol='+symbol,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{
+    fetch(optionsEndpoint+'?symbol='+symbol,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{
       if(d.symbol!==symbol||d.mode==='example'||!Array.isArray(d.contracts))throw Error();
       setSnapshots(v=>({...v,[symbol]:d}));
     }).catch(()=>{if(!controller.signal.aborted)setSnapshots(v=>({...v,[symbol]:null}))});

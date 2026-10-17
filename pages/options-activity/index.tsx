@@ -1,3 +1,4 @@
+import {optionsEndpoint} from '../../lib/options-endpoint';
 import OptionsLearningGuides from '../../components/OptionsLearningGuides';
 import OptionsSignalsPromo from '../../components/OptionsSignalsPromo';
 import ExpirationComparison from '../../components/options/ExpirationComparison';
@@ -38,7 +39,7 @@ export default function OptionsExplorer(){
  const expiry=typeof router.query.expiry==='string'?router.query.expiry:'all',selectedId=typeof router.query.contract==='string'?router.query.contract:'';
  const [showApp,setShowApp]=useState(false),[missingLabel,setMissingLabel]=useState('data'),[queueMessage,setQueueMessage]=useState('');
 
- const requestSymbol=async(s:string)=>{setQueueMessage('Checking saved coverage…');try{const r=await fetch('/api/options',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:s})});const data=await r.json();setQueueMessage(data.message||data.error||'Request received')}catch{setQueueMessage('Unable to queue this symbol. Please try again.')}};
+ const requestSymbol=async(s:string)=>{if(optionsEndpoint.startsWith('https://')){setQueueMessage('No saved coverage is available for this ticker yet. Please check again after the next update.');return;}setQueueMessage('Checking saved coverage…');try{const r=await fetch(optionsEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:s})});const data=await r.json();setQueueMessage(data.message||data.error||'Request received')}catch{setQueueMessage('Unable to queue this symbol. Please try again.')}};
  const [snapshot,setSnapshot]=useState<OptionSnapshot|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(''),[refresh,setRefresh]=useState(0);
  const requestKey=JSON.stringify([symbol,expiry,refresh]);
  const [settledKey,setSettledKey]=useState(''),[settledFlowKey,setSettledFlowKey]=useState('');
@@ -49,7 +50,7 @@ export default function OptionsExplorer(){
  useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem('options-watchlist-v1')||'[]');if(Array.isArray(saved))setWatch(saved.filter(s=>typeof s==='string').slice(0,200))}catch{}setSavedReady(true)},[]);
  useEffect(()=>{if(savedReady)try{localStorage.setItem('options-watchlist-v1',JSON.stringify(watch))}catch{}},[watch,savedReady]);
  useEffect(()=>{if(!router.isReady)return;const controller=new AbortController();setError('');setLoading(true);setSnapshot(null);
- fetch(`/api/options?symbol=${symbol}${expiry!=='all'?'&expiry='+encodeURIComponent(expiry):''}`,{signal:controller.signal}).then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Unable to load options');return d}).then(d=>{if(!controller.signal.aborted)setSnapshot(d)}).catch(e=>{if(!controller.signal.aborted)setError(e.message)}).finally(()=>{if(!controller.signal.aborted){setSettledKey(requestKey);setLoading(false)}});return()=>controller.abort();
+ fetch(`${optionsEndpoint}?symbol=${symbol}${expiry!=='all'?'&expiry='+encodeURIComponent(expiry):''}`,{signal:controller.signal}).then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Unable to load options');return d}).then(d=>{if(!controller.signal.aborted)setSnapshot(d)}).catch(e=>{if(!controller.signal.aborted)setError(e.message)}).finally(()=>{if(!controller.signal.aborted){setSettledKey(requestKey);setLoading(false)}});return()=>controller.abort();
  },[router.isReady,symbol,refresh,expiry]);
  const contracts=pending?[]:snapshot?.contracts||[];const expiries=Array.from(new Set(contracts.map(c=>c.expiry))).sort();
  const rows=useMemo(()=>contracts.filter(c=>(expiry==='all'||c.expiry===expiry)&&(type==='all'||c.type===type)&&(Number(minVolume)<=0||(c.volume!==null&&c.volume>=Number(minVolume)))&&(!onlyWatch||watch.includes(c.id))).sort((a,b)=>{
@@ -59,7 +60,7 @@ export default function OptionsExplorer(){
  const flowKey=JSON.stringify([symbol,selected?.id,refresh]);
  const pick=(c:Contract)=>navigate({contract:c.id});const toggle=(id:string)=>setWatch(v=>v.includes(id)?v.filter(s=>s!==id):[...v,id]);
  useEffect(()=>{setFlow([]);setFlowPartial(false);setSettledFlowKey('');if(!selected){setFlowStatus('Select a contract to inspect its recent trades.');return}const controller=new AbortController();setFlowStatus('Loading trades…');
- fetch(`/api/options?symbol=${symbol}&contract=${encodeURIComponent(selected.id)}`,{signal:controller.signal}).then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Trades unavailable');return d}).then(d=>{if(!controller.signal.aborted){setFlow(d.trades);setFlowPartial(d.partial);setFlowStatus(d.message||(d.trades.length?'Saved reported trades':'No trades returned for this contract'))}}).catch(e=>{if(!controller.signal.aborted)setFlowStatus(e.message)}).finally(()=>{if(!controller.signal.aborted)setSettledFlowKey(flowKey)});return()=>controller.abort();
+ fetch(`${optionsEndpoint}?symbol=${symbol}&contract=${encodeURIComponent(selected.id)}`,{signal:controller.signal}).then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Trades unavailable');return d}).then(d=>{if(!controller.signal.aborted){setFlow(d.trades);setFlowPartial(d.partial);setFlowStatus(d.message||(d.trades.length?'Saved reported trades':'No trades returned for this contract'))}}).catch(e=>{if(!controller.signal.aborted)setFlowStatus(e.message)}).finally(()=>{if(!controller.signal.aborted)setSettledFlowKey(flowKey)});return()=>controller.abort();
  },[selected?.id,symbol,refresh]);
  useEffect(()=>{setVisibleCount(25)},[symbol,expiry,type,minVolume,sort,onlyWatch]);
  useEffect(()=>{if(selected)document.getElementById('options-contract-detail')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})},[selected?.id]);
