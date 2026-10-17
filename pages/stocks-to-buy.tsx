@@ -36,6 +36,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
     </div> : <Chart points={item.graph3} bars={bars} title={title}/>}
     <style jsx>{`
       .research-cta {border:0;cursor:pointer;font:inherit;}
+      .signal-description {font-size:14px;line-height:1.65;white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden;}
       .metric-picker {display:block;margin-top:16px;}
       .sr-label {position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
       select {width:100%;min-height:44px;background:#151d2b;color:white;border:1px solid #556079;border-radius:10px;padding:10px;font-size:16px;cursor:pointer;}
@@ -45,7 +46,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
       .metric-app-gate button:not(.metric-app-button) {background:none;border:0;color:#cdb9ff;text-decoration:underline;cursor:pointer;font-size:12px;min-height:32px;}
       select:focus-visible, .metric-app-gate :global(a:focus-visible), button:focus-visible {outline:2px solid #bfa0ff;outline-offset:3px;}
     `}</style>
-    <p style={{fontSize:14,lineHeight:1.65,whiteSpace:'pre-line'}}>{formatSignalText(item.content)}</p>
+    <p className="signal-description">{formatSignalText(item.content)}</p>
     <button type="button" className="research-cta" onClick={onGetApp}>View in the app →</button>
   </article>;
 }

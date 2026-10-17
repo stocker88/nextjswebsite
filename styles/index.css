@@ -3255,3 +3255,6 @@ body {
  .site-header.is-scrolled .nav-links a:hover,.site-header.is-scrolled .nav-links a:focus-visible{background:rgba(177,192,221,.12)}
 }
 @media(max-width:1180px){.nav-mobile-label{display:inline}.nav-desktop-label{display:none}}
+
+/* Keep the expanded desktop navigation clear of the brand on narrow laptops. */
+@media(min-width:1181px) and (max-width:1340px){.nav-links a{padding-left:4px;padding-right:4px}}

@@ -1,0 +1,51 @@
+Stock market heatmap — 2026-10-17
+
+Route: /stock-market-heatmap/
+Public API: /api/market-heatmap/ -> Cloud Function marketHeatmap
+
+The default map shows the largest 100 holdings from State Street's SPY workbook,
+with a largest-50 option. SPY weights are an index-weight proxy, not official index
+weights. Missing top holdings are retained as gray tiles, not replaced by smaller
+stocks. The holdings snapshot is refreshed by the repair job, validated for date,
+unique symbols, expected constituent count and total weight before it is saved.
+
+Prices: existing cachedMarketData daily adjusted-close histories. Primary refresh
+starts daily at 18:00 America/New_York. All daily groups now run before long history
+groups; a failed document does not abort remaining groups. The repair job checks
+all S&P 500 holdings at 19:00 and 21:00 NY on weekdays, and downloads only missing,
+invalid or stale histories. Exchange sessions include holidays and early closes.
+It retains data when the provider fails and reports any unresolved symbols.
+
+The browser checks saved data every five visible minutes. This is not a live quote
+feed. Returns compare adjusted closes; they can differ from raw intraday quotes.
+Colors are unavailable for older price dates. Fund weights and FMP classifications
+have independent timestamps. Future premarket data must use separate session-labeled
+snapshots, not overwrite these adjusted history documents.
+
+Share image: 1600 x 1800 navy PNG of current filtered stocks and selected period,
+with actual price date, legend, exact footer www.StocksToBuyNow.ai and a QR code
+linking to https://www.stockstobuynow.ai/stock-market-heatmap/ . Preview offers native
+file sharing where available and PNG download. No third-party images are fetched.
+
+Validation: TypeScript, history/repair unit checks, heatmap core checks, isolated
+headless desktop/mobile checks, PNG export and decoded QR. User simulator untouched.
+
+Period selector (2026-10-17): immediately right of Share image. Options: 1 day,
+1 week, 1 month, 3 months, 6 months, YTD, 1 year, 3 years, 5 years. The endpoint
+reads existing daily/weekly/monthly documents, never fetches provider quotes.
+Long returns require a fresh source timestamp and a latest bucket whose adjusted
+close matches the current daily close. This prevents stale retained symbols and
+mixed adjustment scales from producing misleading returns. The starting weekly
+or monthly bucket must be on/before the target, with bounded tolerance. YTD uses
+the previous December monthly close. Details disclose the starting bucket; longer
+ranges are approximate. Missing histories stay gray. Color scales and PNG labels
+follow the selected range. PNG text is constrained to tile width for large returns.
+
+Browser-only exploration tools
+- Pinch or Ctrl/Command + wheel zooms the compact map; drag pans when zoomed. Buttons and keyboard controls also work. One-finger scrolling is preserved at 100%.
+- Biggest movers and the sector leaderboard use displayed stocks and the selected return period. Sector averages are equal-weight averages excluding unavailable returns, with coverage counts.
+- Peer comparisons use the same saved industry and the loaded universe; the peer average excludes the selected symbol.
+- Fixed group positions use equal-size slots in alphabetical order, with proportional stock sizing within groups. Filters may leave slots empty.
+- Colorblind blue/orange colors apply to the map, text, legend and exported image. The preference is saved locally.
+- Stars are stored in localStorage in this browser. Shared watchlist links include the selected symbols but do not overwrite the recipient's stars unless Save this list is clicked.
+- These features add no provider API requests and do not change the existing snapshot refresh schedule.

@@ -62,6 +62,8 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
      {loadedPage * 40 < total && <Link href={`/stock-market-news/page/${loadedPage+1}`} onClick={loadMore} aria-disabled={loading}>{loading?'Loading…':'More news →'}</Link>}
    </nav>
    {page===1&&<MarketNewsFeed compact/>}
+   <div className="hottest-news-action"><Link className="research-cta" href="/market-news/">Review hottest news now →</Link></div>
+   <style jsx>{`.hottest-news-action{display:flex;justify-content:center;margin:32px 0 12px}.hottest-news-action :global(a){text-align:center}.hottest-news-action :global(a:focus-visible){outline:2px solid #c7b5ff;outline-offset:4px}`}</style>
  </ResearchPage>;
 }
 export async function getStaticProps() {const items = await fetchResearch(); return {props:{items:items.slice(0,40), total:items.length, page:1}, revalidate:60};}

@@ -1,4 +1,4 @@
-import {monthRange} from '../../lib/calendar-period';
+import {monthRange,marketToday,defaultCalendarWeek} from '../../lib/calendar-period';
 import CalendarPeriodControls from '../CalendarPeriodControls';
 import {marketEventIcon} from '../../lib/market-event-icons';
 import {useEffect, useRef, useState} from 'react';
@@ -15,9 +15,7 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
   useEffect(()=>{if(selectedEvent)eventDialog.current?.showModal();},[selectedEvent]);
   const [busy,setBusy] = useState(false), [error,setError] = useState('');
   useEffect(() => {
-    const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-    const part = (t:string) => parts.find(p=>p.type===t)!.value;
-    setFrom(weekStart(`${part('year')}-${part('month')}-${part('day')}`));
+    setFrom(defaultCalendarWeek(marketToday()));
   },[]);
   const to = from ? (monthly?monthRange(from)[1]:day(from,6)) : '';
   const changePeriod=(f:string,t:string)=>{setFrom(f);setMonthly((Date.parse(t)-Date.parse(f))/86400000>6);setSelectedDate('')};

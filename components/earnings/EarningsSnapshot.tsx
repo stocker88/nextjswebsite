@@ -1,6 +1,7 @@
 import {useEffect,useState,ReactNode} from 'react';
 import {useRouter} from 'next/router';
-import {Calendar,day,endpoint,weekStart} from '../../lib/earnings';
+import {Calendar,day,endpoint} from '../../lib/earnings';
+import {marketToday,defaultCalendarWeek} from '../../lib/calendar-period';
 import WeeklySummary from './WeeklySummary';
 
 export default function EarningsSnapshot({home=false,children}:{home?:boolean;children?:ReactNode}) {
@@ -8,9 +9,7 @@ export default function EarningsSnapshot({home=false,children}:{home?:boolean;ch
  const [calendar,setCalendar]=useState<Calendar|null>(null),[from,setFrom]=useState(''),[to,setTo]=useState(''),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
  useEffect(()=>{
   let active=true;
-  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-  const value=(type:string)=>parts.find(p=>p.type===type)!.value;
-  const start=weekStart(`${value('year')}-${value('month')}-${value('day')}`);
+  const start=defaultCalendarWeek(marketToday());
   setFrom(start);setTo(day(start,6));setError(false);
   async function load(){
    for(const url of ['/earnings-calendar.json',endpoint]){
@@ -28,9 +27,9 @@ export default function EarningsSnapshot({home=false,children}:{home?:boolean;ch
   load();return()=>{active=false};
  },[attempt]);
  return <div id="weekly-earnings" className={'earnings-snapshot'+(home?' earnings-snapshot-home':'')}>
-  {calendar&&from?<WeeklySummary onRangeChange={(f,t)=>{setFrom(f);setTo(t)}} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={to} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="This week’s earnings snapshot">
+  {calendar&&from?<WeeklySummary onRangeChange={(f,t)=>{setFrom(f);setTo(t)}} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={to} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="Earnings snapshot">
    <h2>Earnings snapshot</h2>
-   {error?<><p>This week’s earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading this week’s earnings…</p>}
+   {error?<><p>Earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading earnings…</p>}
   </section>}
   {children}
   <div className="snapshot-section-divider" aria-hidden="true"/>

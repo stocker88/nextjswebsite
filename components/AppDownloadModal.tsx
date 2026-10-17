@@ -1,7 +1,7 @@
 import {useEffect,useRef} from 'react';
 import {createPortal} from 'react-dom';
 import ResearchCTA from './ResearchCTA';
-export default function AppDownloadModal({placement,onClose}:{placement:string;onClose:()=>void}){
+export default function AppDownloadModal({placement,onClose,title="Get the app to explore",description="Continue your research with stock ideas, market outlooks, earnings predictions, financials and technical setups in StocksToBuyNow.ai."}:{placement:string;onClose:()=>void;title?:string;description?:string}){
  const panel=useRef<HTMLDivElement>(null);
  useEffect(()=>{
   const previous=document.activeElement as HTMLElement|null,overflow=document.body.style.overflow;
@@ -9,7 +9,7 @@ export default function AppDownloadModal({placement,onClose}:{placement:string;o
   return()=>{document.body.style.overflow=overflow;previous?.focus()};
  },[]);
  return createPortal(<div className="download-overlay" onClick={e=>{if(e.target===e.currentTarget)onClose()}}>
-  <div className="download-dialog" ref={panel} role="dialog" aria-modal="true" aria-label="Get the app to explore" onKeyDown={e=>{
+  <div className="download-dialog" ref={panel} role="dialog" aria-modal="true" aria-label={title} onKeyDown={e=>{
    if(e.key==='Escape'){e.preventDefault();onClose()}
    if(e.key==='Tab'){
     const items=Array.from(panel.current?.querySelectorAll<HTMLElement>('button,a[href]')||[]),first=items[0],last=items[items.length-1];
@@ -17,7 +17,7 @@ export default function AppDownloadModal({placement,onClose}:{placement:string;o
     if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus()}
    }
   }}><button className="download-close" onClick={onClose} aria-label="Close app prompt">✕</button>
-   <h2>Get the app to explore</h2><p>Continue your research with stock ideas, market outlooks, earnings predictions, financials and technical setups in StocksToBuyNow.ai.</p>
+   <h2>{title}</h2><p>{description}</p>
    <ResearchCTA placement={placement} variant="stock"/>
   </div>
   <style jsx>{`

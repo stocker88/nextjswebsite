@@ -1,0 +1,12 @@
+import {useEffect,useState} from 'react';
+import {Setup,readSetup,setupHref} from '../../lib/options-workspace';
+import {exportSetupPng} from '../../lib/options-export';
+import styles from './OptionsTools.module.css';
+const KEY='options-setups-v1';
+export default function SavedSetups({setup,valid,onLoad}:{setup:Setup;valid:boolean;onLoad:(s:Setup)=>void}){
+ const [saved,setSaved]=useState<Setup[]>([]),[name,setName]=useState(''),[message,setMessage]=useState(''),[busy,setBusy]=useState(false);
+ useEffect(()=>{try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(data))setSaved(data.map(v=>readSetup(v)).filter((v):v is Setup=>!!v).slice(0,20))}catch{setMessage('Saved setups could not be read in this browser.')}},[]);
+ const current={...setup,name:name.trim().slice(0,80)||setup.name};
+ function persist(next:Setup[]){try{localStorage.setItem(KEY,JSON.stringify(next));setSaved(next);setMessage('Saved on this device.')}catch{setMessage('Unable to save. Browser storage may be full or disabled.')}}
+ return <section className={styles.panel} style={{marginTop:24}}><h2>Save & share your setup</h2><p className={styles.note}>Save up to 20 positions on this device. Shared links include the entered legs and prices; anyone with the link can open them.</p><div className={styles.actions}><label>Setup name<input maxLength={80} placeholder={setup.name} value={name} onChange={e=>setName(e.target.value)}/></label><button disabled={!valid} onClick={()=>persist([current,...saved].slice(0,20))}>Save setup</button><button disabled={!valid} onClick={async()=>{try{await navigator.clipboard.writeText(window.location.origin+setupHref(current));setMessage('Setup link copied.')}catch{setMessage('Could not copy the link. Check clipboard permission.')}}}>Copy setup link</button><button disabled={!valid||busy} onClick={async()=>{setBusy(true);try{await exportSetupPng(current);setMessage('PNG downloaded.')}catch(e){setMessage((e as Error).message)}finally{setBusy(false)}}}>{busy?'Preparing image…':'Download PNG + QR'}</button></div>{!valid&&<p className={styles.note}>Complete the position’s prices before saving or sharing.</p>}{message&&<p role="status" className={styles.note}>{message}</p>}<div className={styles.savedList}>{saved.map((s,i)=><div key={i}><button onClick={()=>{onLoad(s);setName(s.name);setMessage('Saved setup loaded.')}}>{s.symbol?s.symbol+' · ':''}{s.name} →</button><button aria-label={`Remove saved setup ${i+1}`} onClick={()=>persist(saved.filter((_,j)=>j!==i))}>Remove</button></div>)}</div></section>
+}

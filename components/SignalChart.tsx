@@ -1,6 +1,7 @@
+import {signalChartValues} from '../lib/signal-chart';
 export type Point = {x?:number;y1?:number;y2?:number;y3?:number};
 export default function SignalChart({points = [], bars = false, title = 'Price trend'}:{points?:Point[]; bars?:boolean; title?:string}) {
-  const values = points.map(p => p.y1 ?? p.y2 ?? p.y3).filter(v => v != null && String(v) !== '' && Number.isFinite(Number(v))).map(Number);
+  const values = signalChartValues(points);
   if (!values.length) return <p className="research-meta">Chart unavailable. Check in the app.</p>;
   const min = bars ? Math.min(0, ...values) : Math.min(...values);
   const max = Math.max(...values), range = max - min || 1;

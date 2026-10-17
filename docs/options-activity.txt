@@ -1,0 +1,39 @@
+OPTIONS ACTIVITY — activated 17 October 2026
+
+Preview: http://127.0.0.1:3077/options-activity
+No synthetic fallback or example UI. Existing ?example=1 links also read real saved data.
+
+Firebase project: stocker-fcda2
+Deployed functions: optionsDailyBatch, optionsQueueWorker, optionsSnapshots
+Daily schedule: 08:45 America/New_York, Monday–Friday, skipping US exchange holidays.
+Queue worker: every minute, up to two provider requests per invocation, shared transactional lease and minimum 16-second reservation spacing. No parallel provider requests.
+Universe: latest 10 stocksToBuyAnalyst signal documents plus top 30 unique companies by cached market cap from the app's maintained S&P constituent list, plus SPY. First batch: 39 distinct tickers.
+S&P membership is a maintained copy in functions/src/options/sp500-members.json; rankings use the existing earnings company-screener cache and retain its timestamp. Update membership alongside the app list when constituents change.
+
+Limits enforced in Firestore before every outbound Massive request:
+- 100 total per New York calendar day, including failures, retries, previous-close requests and pagination.
+- Scheduled allocation: 55; explicit on-demand requests: 40; retries: 5.
+- At most 20 distinct extra tickers requested per day. Requests are deduplicated; repeat searches of saved tickers spend no provider calls.
+- The first activation day reserves six earlier subscription-test calls against its 100-call total.
+- Pending requests carry into the next trading-day seed, subject to that day's quota. New requests beyond the 20-ticker cap receive an explicit limit message.
+
+Coverage: third-Friday monthly stock expirations (holiday adjusted) within 90 days; SPY also has current/next-week expirations. Strike band +/-15% of the dated cached underlying price. SPY/missing prices use one counted previous-close request. Up to two chain pages per stock and five for SPY, bounded by the total budget. First pages are prioritised across tickers and expirations; pagination can remain incomplete. Partial totals are labelled and are not whole-market put/call ratios.
+
+Storage, all server-only:
+optionsActivity/control — enabled kill switch, lease, next request time, exceptional closedDates
+optionsActivity/universe — selected tickers and cache timestamps
+optionsActivity/queue/jobs/{NY-date}_{symbol} — queue, cursor, progress
+optionsActivity/budgets/days/{NY-date} — shared counters and requested symbols
+optionsActivity/latest_{symbol} — latest successful snapshot
+optionsActivity/latest_{symbol}/history/{NY-date} — daily snapshots for future reports
+Failure preserves the previous successful snapshot. Real timestamps are retained. Relative volume requires at least five distinct earlier daily observations; previous OI compares saved snapshots. Individual trade prints are not fetched by browsing.
+
+Secrets: MASSIVE_API_KEY and OPTIONS_BACKEND_TOKEN in Firebase Secret Manager. Never expose either to browser code or commit them. optionsSnapshots requires the server-only bearer token. Firestore rules exclude optionsActivity from authenticated client access.
+Next.js server settings: OPTIONS_BACKEND_URL, OPTIONS_BACKEND_TOKEN.
+Local-only development preview: OPTIONS_PRIVATE_PREVIEW=true with NODE_ENV != production.
+Public production remains disabled unless OPTIONS_DISPLAY_LICENSE_CONFIRMED=true after suitable redistribution rights are confirmed. A personal data subscription alone is not treated as that confirmation. No public website deployment was performed.
+
+Disable collection: set optionsActivity/control.enabled to false (admin SDK or Firebase console).
+Missing options metrics/chains show View -> research/app links. Missing EPS/revenue history in both earnings week and month views uses the same modal pattern.
+
+Validation: backend date/holiday/universe/budget/concurrent-reservation tests, offline website data/payoff/privacy/API tests, TypeScript compilation, browser checks on desktop and mobile.

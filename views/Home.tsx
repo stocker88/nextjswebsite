@@ -1,9 +1,13 @@
+import OptionsLearningGuides from "../components/OptionsLearningGuides";
 import EarningsLearningGuides from '../components/EarningsLearningGuides';
 import MarketLearningGuides from '../components/MarketLearningGuides';
 import CalendarPredictionPromo from '../components/CalendarPredictionPromo';
 import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
 import MarketCalendar from '../components/market/MarketCalendar';
 import HomeSignalPreview from "../components/HomeSignalPreview";
+import HomeHeatmap from "../components/HomeHeatmap";
+import HomeOptionsPreview from "../components/HomeOptionsPreview";
+import OptionsSignalsPromo from "../components/OptionsSignalsPromo";
 import HomeResearch from "../components/HomeResearch";
 import type { ResearchPreview } from "../lib/research";
 import React, { useEffect, useRef, useState } from 'react';
@@ -175,6 +179,7 @@ import SignUpModal from '../SignUpModal';
 
 
 
+        <HomeHeatmap />
         <ProductProof section="routine" />
 
   <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
@@ -191,6 +196,9 @@ import SignUpModal from '../SignUpModal';
         <MarketCalendar />
         <MarketLearningGuides/>
         <CalendarPredictionPromo kind="market"/>
+        <HomeOptionsPreview/>
+        <OptionsLearningGuides home/>
+        <OptionsSignalsPromo home from="home_options"/>
         <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
 

@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript');
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,f);
+const w=require('../lib/options-workspace.ts'),o=require('../lib/options-strategies.ts');
+const c={id:'call',symbol:'SPY',expiry:'2026-11-20',type:'call',strike:100,multiplier:100,volume:50,oi:200,iv:.3,asOf:'2026-10-16T20:00:00Z'};
+const chain=[c,{...c,id:'higher',strike:105,iv:null,volume:null},{...c,id:'wrong-date',strike:101,expiry:'2026-12-18'},{...c,id:'put',type:'put',oi:600,strike:100,iv:.5}];
+const spread=w.contractSetup(c,chain,101,true);
+assert.equal(spread.legs[1].strike,105);assert.ok(Number.isNaN(spread.legs[0].premium));assert.ok(o.validateLegs(spread.legs));
+const imported=w.readSetup(JSON.parse(JSON.stringify(spread)),true);assert.equal(imported.symbol,'SPY');assert.ok(Number.isNaN(imported.legs[0].premium));assert.equal(w.readSetup(spread),null);
+const valid={...spread,legs:spread.legs.map((l,i)=>({...l,premium:i?2:4}))};assert.deepEqual(w.readSetup(JSON.stringify(valid)),valid);
+assert.equal(w.readSetup({...valid,legs:Array(9).fill(valid.legs[0])}),null);assert.equal(w.readSetup({...valid,reference:-1}),null);assert.equal(w.readSetup({...valid,symbol:'<script>'}),null);assert.equal(w.readSetup({...valid,expiry:'2026-02-30'}),null);
+const href=w.setupHref(valid,true),query=new URL('https://example.com'+href).searchParams;assert.deepEqual(w.readSetup(query.get('setup')),valid);assert.equal(query.get('compare'),'1');
+const rows=w.expirationRows(chain);assert.equal(rows.length,2);assert.equal(rows[0].callOi,400);assert.equal(rows[0].putOi,600);assert.equal(rows[0].putCallOi,1.5);assert.equal(rows[0].medianIv,.4);assert.equal(rows[0].ivCount,2);assert.equal(rows[0].callVolume,50);
+assert.equal(w.expirationRows([{...c,iv:null,oi:null,volume:null}])[0].medianIv,null);
+assert.equal(w.participation({...c,volume:0})[0].value,'0');assert.equal(w.participation({...c,volume:null})[0].value,'Not available');assert.deepEqual(w.MOVES,[-10,-5,0,5,10]);
+console.log('PASS context handoff, missing premiums, setup roundtrip/validation, expiry aggregation, missing-vs-zero activity');

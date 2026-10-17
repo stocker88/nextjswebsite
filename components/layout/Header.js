@@ -5,6 +5,8 @@ import { trackAppStoreClick } from '../../lib/analytics';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
 
 const desktopLabels = {
+  '/stock-market-heatmap/': ['Stock Market', 'Heatmap'],
+  '/options-activity/': ['Options', 'Tools'],
   '/stock-market-news/': ['Stock Market', 'News'],
   '/stocks-to-buy/': ['Stock Buy', 'Signals'],
   '/earnings-calendar/': ['Earnings', 'Calendar'],
@@ -29,7 +31,7 @@ const getAppStoreUrl = () => {
 
 
 export default function Header({
-  homeHref = '#home',
+  homeHref = '/',
   forceDark = false,
   navBasePath = '',
   socialNoticeMode = 'all',
