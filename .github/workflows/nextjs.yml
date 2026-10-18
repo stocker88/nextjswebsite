@@ -26,6 +26,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
       - run: yarn test:seo
+      - run: node scripts/macro-check.cjs
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4
         with:
@@ -41,6 +42,21 @@ jobs:
         with:
           path: .cache/fear-greed
           key: fear-greed-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Restore macro history and refresh schedule
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/macro
+          key: macro-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: macro-v1-
+      - name: Refresh due macro series and reconcile history monthly
+        id: macro
+        run: node scripts/sync-macro.cjs
+      - name: Preserve macro history and attempt dates
+        if: always() && steps.macro.outcome != 'skipped'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/macro
+          key: macro-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: yarn build:pages
       - run: node scripts/github-pages/verify.cjs
       - uses: actions/upload-pages-artifact@v3
