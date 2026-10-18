@@ -1,3 +1,4 @@
+import {resolveResearchArticle} from '../../lib/featured-research';
 import {isEarningsFirst} from '../../lib/research';
 import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
@@ -8,7 +9,7 @@ import { publicArticles } from "../../lib/public-articles";
 import { stocks } from "../../lib/stocks";
 import { SITE, jsonLd, isoDate, displayDate, breadcrumbs } from "../../lib/seo";
 import ResearchPage from "../../components/ResearchPage";
-import { researchUrl, findResearchByRoute, findAttachedResearchByRoute, ResearchPreview, displayEngagementCount } from "../../lib/research";
+import { researchUrl, ResearchPreview, displayEngagementCount } from "../../lib/research";
 import { fetchResearch } from "../../lib/research-server";
 export default function ResearchArticle({ item }: { item: ResearchPreview }) {
   const article = publicArticles.find((a) => a.postId === item.id);
@@ -160,8 +161,7 @@ export async function getStaticPaths() {
   return { paths: [], fallback: "blocking" };
 }
 export async function getStaticProps({ params }: { params: { id: string } }) {
-  const items = await fetchResearch();
-  const item = findResearchByRoute(items, params.id) || findAttachedResearchByRoute(items, params.id);
+  const item = await resolveResearchArticle(params.id, fetchResearch);
   if (!item) return {notFound:true, revalidate:60};
   const canonical = researchUrl(item.id, item.title);
   if (decodeURIComponent(canonical.slice('/stock-market-news/'.length)) !== params.id) {

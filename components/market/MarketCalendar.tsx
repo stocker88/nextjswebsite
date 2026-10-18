@@ -60,7 +60,7 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
     finally {setBusy(false);}
   }
   return <section id="market-calendar" className="market-calendar" aria-labelledby="market-calendar-title">
-    <header><div data-motion-reveal><span className="eyebrow">PLAN YOUR WEEK</span><h2 id="market-calendar-title">Stock market calendar</h2><p>Economic releases, Fed decisions, 13F filings and index reviews.</p></div>
+    <header><div data-motion-reveal><span className="eyebrow">PLAN YOUR WEEK</span><h2 id="market-calendar-title">Market Events Calendar</h2><p>Economic releases, Fed decisions, 13F filings and index reviews.</p></div>
       {!fullPage&&<a className="full-calendar" href="/stock-market-calendar/">Full stock market calendar ↗</a>}<button className="share" disabled={busy||!covered} onClick={shareImage}>{busy?'Preparing image…':'↗ Share calendar image'}</button></header>
     {!from?<p role="status">Loading your week…</p>:<>
       <div className="week"><CalendarPeriodControls from={from} to={to} onChange={changePeriod} minDate={schedule.from} maxDate={schedule.to} disabled={busy} detail={`${events.length} selected events · U.S. Eastern time`}/></div>

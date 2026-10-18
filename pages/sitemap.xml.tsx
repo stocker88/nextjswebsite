@@ -1,3 +1,4 @@
+import {featuredResearch} from '../lib/featured-research';
 import {savedNews,newsSlug} from '../lib/market-news';
 import earningsCalendar from '../data/earnings-calendar.json';
 import {researchUrl} from '../lib/research';
@@ -58,7 +59,7 @@ export async function getServerSideProps({ res }: any) {
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),
   );
-  items.forEach((i) =>
+  [...items.filter(i => !featuredResearch.some(featured => featured.id === i.id)), ...featuredResearch].forEach((i) =>
     entries.push({
       path: researchUrl(i.id, i.title),
       modified:

@@ -1,3 +1,4 @@
+import HeroProductReveal from '../components/HeroProductReveal';
 import ReviewEntrance from '../components/ReviewEntrance';
 import ScrollShowcase from '../components/ScrollShowcase';
 import HomeMotion from '../components/HomeMotion';
@@ -129,6 +130,7 @@ import SignUpModal from '../SignUpModal';
 
 
       <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
+      <HeroProductReveal />
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 

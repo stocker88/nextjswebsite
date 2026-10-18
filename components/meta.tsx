@@ -30,7 +30,7 @@ const Meta = () => {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="hsl(200, 100%, 48%)" />
+      <meta key="theme-color" name="theme-color" content="hsl(200, 100%, 48%)" />
       <meta
         name="description"
         content="Discover AI-powered stock signals, market analysis and practical investing tools from Stocks To Buy Now AI."

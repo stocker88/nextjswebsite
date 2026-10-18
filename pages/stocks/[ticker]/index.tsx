@@ -38,7 +38,7 @@ export default function Stock({
       </Head>
       <div className="public-copy">
         <h1>
-          {stock.name} ({stock.ticker}) stock research
+          {stock.name} (<span data-stock-symbol={stock.ticker}>{stock.ticker}</span>) stock research
         </h1>
         <p>{stock.overview}</p>
         <p>

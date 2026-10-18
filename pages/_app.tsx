@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '../styles/index.css'
 import '../styles/motion.css'
+import '../styles/interaction.css'
+import InteractionPolish from '../components/InteractionPolish';
 import { SessionProvider } from '../stockerSession';
 import { initializeAnalytics, trackPageView } from '../lib/analytics';
 
@@ -24,6 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="App">
       <SessionProvider>
+        <InteractionPolish />
         <Component {...pageProps} />
       </SessionProvider>
     </div>

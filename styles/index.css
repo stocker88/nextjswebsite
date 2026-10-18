@@ -14,20 +14,53 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* Keep the original vivid blue while the page is at the top. */
-    background: hsl(200, 100%, 48%);
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    transition: border-color .3s ease;
 }
 
-/* Scrolled state: dark navy matching page background */
-.site-header.is-scrolled {
-    background: rgba(8, 13, 27, 0.72);
+/* Safari samples a 2px band 4px inside the viewport and ignores boxes
+   <=10px tall. Keep an 11px box, hiding 5px above the viewport so only
+   6px extends below the safe area, separate from the blurred layer. */
+.site-header-edge {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: calc(env(safe-area-inset-top, 0px) + 11px);
+    background-color: var(--header-edge-color, #00a3f5);
+    pointer-events: none;
+}
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsl(200, 100%, 48%);
+    pointer-events: none;
+    transition: background-color .3s ease;
+}
+/* Only iOS needs an unblurred strip for the browser status-bar sampler. */
+@supports (-webkit-touch-callout: none) {
+    .site-header {
+        --header-edge-space: 6px;
+        padding-top: calc(env(safe-area-inset-top, 0px) + var(--header-edge-space));
+    }
+    .site-header-edge { display: block; }
+    .site-header::before {
+        top: calc(env(safe-area-inset-top, 0px) + 6px);
+    }
+}
+.site-header.is-scrolled { border-bottom-color: rgba(255, 255, 255, .08); }
+.site-header.is-scrolled::before {
+    background: rgba(8, 13, 27, var(--header-glass-opacity, .68));
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     backdrop-filter: blur(20px) saturate(135%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-nav {

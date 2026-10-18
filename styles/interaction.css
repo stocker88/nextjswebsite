@@ -1,0 +1,13 @@
+/* Small, local surface treatments; the page's background stays unchanged. */
+[data-depth-card]{position:relative;isolation:isolate;transition:box-shadow .25s ease,border-color .25s ease,background-color .25s ease}
+[data-depth-card]::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(220px circle at var(--light-x,50%) var(--light-y,50%),#b8caff14,transparent 75%);opacity:0;transition:opacity .25s ease}
+[data-depth-card][data-lit=true]::after{opacity:1}
+@media(hover:hover) and (pointer:fine){a[data-depth-card]:hover{border-color:#9baee783;box-shadow:0 12px 28px #02071740,inset 0 1px 0 #ffffff12}}
+[data-depth-card]:focus-visible{outline:2px solid #bcaaff;outline-offset:4px}
+[data-stock-symbol]{display:inline-block}
+::view-transition-group(stock-identity){animation-duration:.42s;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+::view-transition-old(root){animation:page-soft-out .16s ease both}
+::view-transition-new(root){animation:page-soft-in .32s ease both}
+@keyframes page-soft-out{to{opacity:0}}
+@keyframes page-soft-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){[data-depth-card],[data-depth-card]::after{transition:none}[data-depth-card]::after{display:none}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}

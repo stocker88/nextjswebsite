@@ -2,6 +2,7 @@ import SiteMenu from '../SiteMenu';
 import menuStyles from '../../styles/SiteMenu.module.css';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import { trackAppStoreClick } from '../../lib/analytics';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
 
@@ -28,6 +29,8 @@ export default function Header({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [chromeColor, setChromeColor] = useState(forceDark ? '#080d1b' : '#00a3f5');
+  const [glassOpacity, setGlassOpacity] = useState(forceDark ? .68 : 0);
   const [socialBrowserName, setSocialBrowserName] = useState(null);
 
   useEffect(() => {
@@ -51,39 +54,38 @@ export default function Header({
   }, []);
 
   useEffect(() => {
-    const updateBrowserTheme = (isPageScrolled) => {
-      const themeColor = isPageScrolled ? '#080d1b' : '#00a3f5';
-      let themeMetas = document.querySelectorAll('meta[name="theme-color"]');
-
-      if (themeMetas.length === 0) {
-        const themeMeta = document.createElement('meta');
-        themeMeta.setAttribute('name', 'theme-color');
-        document.head.appendChild(themeMeta);
-        themeMetas = document.querySelectorAll('meta[name="theme-color"]');
-      }
-
-      themeMetas.forEach((themeMeta) => {
-        themeMeta.setAttribute('content', themeColor);
-      });
-
-      // Newer physical iOS Safari versions may derive browser chrome from
-      // the document background rather than honoring a dynamic theme-color.
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const y = Math.max(0, window.scrollY);
+      const progress = forceDark ? 1 : Math.min(1, y / 180);
+      const opacity = Math.round(progress * .68 * 100) / 100;
+      setIsScrolled(forceDark || y > 0);
+      setGlassOpacity(opacity);
+      // Safari accepts a tint rather than our CSS backdrop blur. Match the
+      // hero gradient beneath the glass instead of jumping straight to navy.
+      const hero = document.getElementById('home');
+      const heroHeight = hero?.getBoundingClientRect().height || 1;
+      const fraction = Math.min(1, y / heroHeight);
+      const base = forceDark || !hero ? [8, 13, 27] :
+        [0, 163, 245].map((v, i) => v + ([21, 0, 128][i] - v) * fraction);
+      const color = '#' + base.map((v, i) =>
+        Math.round(v * (1 - opacity) + [8, 13, 27][i] * opacity)
+          .toString(16).padStart(2, '0')).join('');
+      const themeColor = forceDark || (hero && y >= heroHeight) ? '#080d1b' : color;
+      setChromeColor(themeColor);
       document.documentElement.style.backgroundColor = themeColor;
       document.body.style.backgroundColor = themeColor;
     };
-
-    let previousScrolled = null;
-    const handleScroll = () => {
-      const isPageScrolled = forceDark || window.scrollY > 50;
-      if (isPageScrolled === previousScrolled) return;
-      previousScrolled = isPageScrolled;
-      setIsScrolled(isPageScrolled);
-      updateBrowserTheme(isPageScrolled);
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
     };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
   }, [forceDark]);
 
   const closeMenu = () => setIsOpen(false);
@@ -98,7 +100,18 @@ export default function Header({
     closeMenu();
   };
 
-  if (socialBrowserName === null) return null;
+  const browserTheme = (
+    <Head>
+      <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta
+        key="theme-color"
+        name="theme-color"
+        content={chromeColor}
+      />
+    </Head>
+  );
+
+  if (socialBrowserName === null) return browserTheme;
 
   const shouldShowSocialNotice = Boolean(socialBrowserName) &&
     (socialNoticeMode === 'all' || socialBrowserName === 'TikTok');
@@ -106,6 +119,7 @@ export default function Header({
   if (shouldShowSocialNotice) {
     return (
       <>
+        {browserTheme}
         <SocialBrowserNotice
           browserName={socialBrowserName}
           variant={socialNoticeVariant}
@@ -123,46 +137,50 @@ export default function Header({
   }
 
   return (
-    <header className={`site-header ${forceDark || isScrolled ? 'is-scrolled' : ''}`}>
-      <nav className={menuStyles.nav} aria-label="Main navigation">
-        <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
-          <Image
-            src="/assets/images/stockerRobotIcon.png"
-            alt="Stocks To Buy Now AI"
-            width={38}
-            height={38}
-            priority
-          />
-          <span>Stocks To Buy Now AI</span>
-        </a>
-
-        <SiteMenu isOpen={isOpen} onClose={closeMenu} navBasePath={navBasePath} />
-
-        {/* Right side actions (Horizontal alignment on mobile) */}
-        <div className={menuStyles.actions}>
-          <a
-            className={menuStyles.download}
-            href={getAppStoreUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={trackHeaderDownload}
-          >
-            Get the App
+    <>
+      {browserTheme}
+      <header className={`site-header ${forceDark || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-glass-opacity': glassOpacity, '--header-edge-color': chromeColor}}>
+        <span className="site-header-edge" aria-hidden="true" />
+        <nav className={menuStyles.nav} aria-label="Main navigation">
+          <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
+            <Image
+              src="/assets/images/stockerRobotIcon.png"
+              alt="Stocks To Buy Now AI"
+              width={38}
+              height={38}
+              priority
+            />
+            <span>Stocks To Buy Now AI</span>
           </a>
 
-          <button
-            className={menuStyles.toggle}
-            type="button"
-            aria-label="Toggle navigation"
-            aria-expanded={isOpen}
-            aria-controls="site-navigation-links"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <b>{isOpen ? 'Close' : 'Explore'}</b>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={isOpen ? 'm5 5 10 10 M15 5 5 15' : 'M3 6h14 M3 14h14'} /></svg>
-          </button>
-        </div>
-      </nav>
-    </header>
+          <SiteMenu isOpen={isOpen} onClose={closeMenu} navBasePath={navBasePath} />
+
+          {/* Right side actions (Horizontal alignment on mobile) */}
+          <div className={menuStyles.actions}>
+            <a
+              className={menuStyles.download}
+              href={getAppStoreUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackHeaderDownload}
+            >
+              Get the App
+            </a>
+
+            <button
+              className={menuStyles.toggle}
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded={isOpen}
+              aria-controls="site-navigation-links"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <b>{isOpen ? 'Close' : 'Explore'}</b>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={isOpen ? 'm5 5 10 10 M15 5 5 15' : 'M3 6h14 M3 14h14'} /></svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }
