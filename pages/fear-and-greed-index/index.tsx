@@ -5,7 +5,7 @@ import Head from 'next/head';
 import FearGreedShare from '../../components/FearGreedShare';
 import Header from '../../components/layout/Header';
 import saved from '../../data/fear-greed.json';
-import {CNN_URL,indicators,rating,color,FearGreedSnapshot} from '../../lib/fear-greed';
+import {CNN_URL,indicators,rating,color,historyMaximum,FearGreedSnapshot} from '../../lib/fear-greed';
 import {SITE,breadcrumbs,jsonLd} from '../../lib/seo';
 import styles from '../../styles/FearGreed.module.css';
 const date=(s:string)=>new Date(s).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
@@ -17,7 +17,9 @@ export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|nul
  const end=history.length?Date.parse(history[history.length-1].date):0;
  const points=history.filter(p=>Date.parse(p.date)>=end-range*86400000);
  const start=points.length?Date.parse(points[0].date):end;
- const path=points.map((p,i)=>`${i?'L':'M'}${30+(Date.parse(p.date)-start)/Math.max(1,end-start)*940},${210-p.value*1.8}`).join(' ');
+ const ceiling=historyMaximum(points);
+ const ticks=Array.from({length:5},(_,i)=>ceiling*i/4);
+ const path=points.map((p,i)=>`${i?'L':'M'}${30+(Date.parse(p.date)-start)/Math.max(1,end-start)*940},${210-p.value/ceiling*180}`).join(' ');
  const historyRef=useRef<SVGSVGElement>(null),gaugeRef=useRef<SVGSVGElement>(null);
  useChartEntrance(historyRef,JSON.stringify([range,points]));
  useChartEntrance(gaugeRef,String(value));
@@ -36,7 +38,7 @@ export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|nul
  <p className={styles.asof}>{snapshot?`Saved reading · ${snapshot.dateOnly?new Date(snapshot.timestamp).toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric',year:'numeric'}):date(snapshot.timestamp)}`:'An index reading is not available here yet.'}</p></article>
  <div className={styles.comparisons}>{([['Previous close',snapshot?.previousClose],['One week ago',snapshot?.weekAgo],['One month ago',snapshot?.monthAgo],['One year ago',snapshot?.yearAgo]] as const).map(([label,n])=><article className={styles.card} key={label}><h3>{label}</h3>{n==null?<View/>:<><strong style={{color:color(n)}}>{Math.round(n)}</strong><span>{rating(n)}</span></>}</article>)}</div></section>
  <section className={styles.card}><div className={styles.cardHeader}><div><span className={styles.eyebrow}>SENTIMENT OVER TIME</span><h2>How the mood has changed</h2></div><div className={styles.ranges} aria-label="History period">{[[30,'1M'],[90,'3M'],[365,'1Y']].map(([n,label])=><button key={n} aria-pressed={range===n} onClick={()=>setRange(Number(n))}>{label}</button>)}</div></div>
- {points.length>1?<><svg ref={historyRef} className={styles.chart} viewBox="0 0 1000 240" role="img" aria-label="Historical Fear and Greed scores">{[0,25,50,75,100].map(n=><g key={n}><line x1="30" x2="970" y1={210-n*1.8} y2={210-n*1.8} stroke="#29344a"/><text x="4" y={214-n*1.8} fill="#a8b9d0" fontSize="12">{n}</text></g>)}<ChartReveal width={1000} height={240}><path d={path} fill="none" stroke="#bfa6ff" strokeWidth="3"/></ChartReveal></svg><p className={styles.asof}>{points[0].date.slice(0,10)} — {points[points.length-1].date.slice(0,10)}</p></>:<div className={styles.empty}><span>Historical readings</span><View/></div>}
+ {points.length>1?<><svg ref={historyRef} className={styles.chart} viewBox="0 0 1000 240" role="img" aria-label="Historical Fear and Greed scores, colored from red at 0 to green at 100"><defs><linearGradient id="history-sentiment" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="210" y2={210-180*100/ceiling}><stop offset="0%" stopColor="#f17886"/><stop offset="30%" stopColor="#efa46b"/><stop offset="50%" stopColor="#e7cc7b"/><stop offset="75%" stopColor="#8bd8bf"/><stop offset="100%" stopColor="#42c99a"/></linearGradient></defs>{ticks.map(n=><g key={n}><line x1="30" x2="970" y1={210-n/ceiling*180} y2={210-n/ceiling*180} stroke="#29344a"/><text x="4" y={214-n/ceiling*180} fill="#a8b9d0" fontSize="12">{Number(n.toFixed(1))}</text></g>)}<ChartReveal width={1000} height={240}><path d={path} fill="none" stroke="url(#history-sentiment)" strokeWidth="3"/></ChartReveal></svg><p className={styles.asof}>{points[0].date.slice(0,10)} — {points[points.length-1].date.slice(0,10)}</p></>:<div className={styles.empty}><span>Historical readings</span><View/></div>}
  </section>
  <section className={styles.indicators}><div className={styles.sectionHeading}><span className={styles.eyebrow}>SEVEN PIECES OF THE PICTURE</span><h2>What’s driving sentiment?</h2></div><div className={styles.grid}>{indicators.map(([key,title,description],i)=>{const n=snapshot?.indicators.find(v=>v.key===key)?.score??null;return <article className={styles.card} key={key}><div className={styles.cardHeader}><span className={styles.number}>0{i+1}</span>{n===null?<View/>:<span style={{color:color(n)}}>{Math.round(n)} · {rating(n)}</span>}</div><h3>{title}</h3><p>{description}</p>{n!==null&&<div className={styles.meter} role="meter" aria-label={title} aria-valuemin={0} aria-valuemax={100} aria-valuenow={n}><i style={{width:`${n}%`,background:color(n)}}/></div>}</article>})}</div></section>
  <section className={styles.guide}><span className={styles.eyebrow}>TURN SENTIMENT INTO A RESEARCH QUESTION</span><h2>Read the mood. Then look underneath.</h2><p>CNN combines seven indicators into a score from 0 to 100. Lower readings indicate fear; higher readings indicate greed. Compare the score with market breadth, sector performance and upcoming events. Sentiment can remain extreme, so the index alone is not a timing signal.</p><a href="/stock-market-heatmap/">Explore the market heatmap →</a></section>

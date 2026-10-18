@@ -1,31 +1,99 @@
-import {ReactNode,useEffect,useRef} from 'react';
+import {ReactNode, useEffect, useRef} from 'react';
 import styles from '../styles/ReviewEntrance.module.css';
-/** A scroll-driven blue-to-navy scene. Reviews remain ordinary links and content. */
-export default function ReviewEntrance({children}:{children:ReactNode}){
- const root=useRef<HTMLElement>(null);
- useEffect(()=>{
-  const element=root.current;if(!element)return;
-  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
-  const short=window.matchMedia('(max-height: 650px)');
-  let frame=0;let observer:IntersectionObserver|undefined;
-  const clamp=(value:number)=>Math.max(0,Math.min(1,value));
-  const draw=()=>{frame=0;const rect=element.getBoundingClientRect();const header=window.innerWidth<1000?68:80;const p=clamp((header-rect.top)/Math.max(1,rect.height-window.innerHeight+header));
-   // Continue the hero’s actual decorative gradient across the section boundary.
-   const halo=document.querySelector('.hero-atmosphere i:last-child')?.getBoundingClientRect();
-   if(halo){element.style.setProperty('--halo-x',`${halo.left-rect.left}px`);element.style.setProperty('--halo-y',`${halo.top-rect.top}px`);element.style.setProperty('--halo-w',`${halo.width}px`);element.style.setProperty('--halo-h',`${halo.height}px`);}
-   element.style.setProperty('--reviews-progress',String(p));
-   element.style.setProperty('--review-panel',String(clamp(.12+p/0.75)));
-   element.style.setProperty('--review-top',String(clamp(.12+p/.35)));
-   element.style.setProperty('--review-cards',String(clamp((p-.25)/.4)));
-   element.style.setProperty('--review-bottom',String(clamp((p-.55)/.3)));
-  };
-  const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};
-  const setup=()=>{observer?.disconnect();window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);cancelAnimationFrame(frame);frame=0;
-   if(reduced.matches||short.matches){delete element.dataset.enhanced;element.removeAttribute('style');return;}
-   element.dataset.enhanced='true';draw();observer=new IntersectionObserver(entries=>{if(entries[0].isIntersecting){window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();}else{window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);}});observer.observe(element);
-  };
-  setup();reduced.addEventListener('change',setup);short.addEventListener('change',setup);
-  return()=>{observer?.disconnect();cancelAnimationFrame(frame);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);reduced.removeEventListener('change',setup);short.removeEventListener('change',setup);};
- },[]);
- return <section ref={root} className={styles.entrance} aria-label="Investor reviews"><div className={styles.gradientTail} aria-hidden="true"><i/></div><div className={styles.stage}><div className={styles.darkPanel} aria-hidden="true"/><div className={styles.reviews}>{children}</div></div></section>;
+
+/** Scroll-driven reviews, with an unpinned reveal when the viewport is short. */
+export default function ReviewEntrance({children}: {children: ReactNode}) {
+  const root = useRef<HTMLElement>(null);
+  const viewport = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = root.current;
+    const measure = viewport.current;
+    if (!element || !measure) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const stage = element.querySelector<HTMLElement>(`.${styles.stage}`)!;
+    let frame = 0;
+    let visible = false;
+    const clamp = (value: number) => Math.max(0, Math.min(1, value));
+    // offsetTop is unaffected by our transforms, so the reveal cannot feed
+    // back into its own scroll measurements.
+    const flowProgress = (selector: string, top: number, height: number) => {
+      let node = element.querySelector<HTMLElement>(selector);
+      if (!node) return 1;
+      let offset = 0;
+      while (node && node !== element) {
+        offset += node.offsetTop;
+        node = node.offsetParent as HTMLElement | null;
+      }
+      return clamp((height * .95 - top - offset) / (height * .55));
+    };
+    const draw = () => {
+      frame = 0;
+      const rect = element.getBoundingClientRect();
+      // svh is stable when Safari's address bar expands/collapses.
+      const height = measure.offsetHeight || window.innerHeight;
+      const compact = height <= 650;
+      element.dataset.layout = compact ? 'flow' : 'pinned';
+      const header = window.innerWidth < 1000 ? 68 : 80;
+      const p = compact
+        ? clamp((height - rect.top) / (height * .7))
+        : clamp((header - rect.top) / Math.max(1, element.offsetHeight - stage.offsetHeight));
+      const halo = document.querySelector('.hero-atmosphere i:last-child')?.getBoundingClientRect();
+      if (halo) {
+        element.style.setProperty('--halo-x', `${halo.left - rect.left}px`);
+        element.style.setProperty('--halo-y', `${halo.top - rect.top}px`);
+        element.style.setProperty('--halo-w', `${halo.width}px`);
+        element.style.setProperty('--halo-h', `${halo.height}px`);
+      }
+      const set = (name: string, value: number) => element.style.setProperty(name, String(value));
+      set('--reviews-progress', p);
+      set('--review-panel', clamp(.12 + p / .75));
+      set('--review-top', compact ? flowProgress('[data-review-top]', rect.top, height) : clamp(.12 + p / .35));
+      set('--review-heading', compact ? flowProgress('.review-sources__heading', rect.top, height) : clamp((p - .25) / .4));
+      set('--review-cards', compact ? flowProgress('.review-sources__grid', rect.top, height) : clamp((p - .25) / .4));
+      set('--review-bottom', compact ? flowProgress('[data-review-bottom]', rect.top, height) : clamp((p - .55) / .3));
+    };
+    const schedule = () => {
+      if (visible && !reduced.matches && !frame) frame = requestAnimationFrame(draw);
+    };
+    const setup = () => {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      if (reduced.matches) {
+        delete element.dataset.enhanced;
+        delete element.dataset.layout;
+        element.removeAttribute('style');
+      } else {
+        element.dataset.enhanced = 'true';
+        draw();
+      }
+    };
+    const observer = new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      schedule();
+    }, {rootMargin: '100px 0px'});
+    const resize = new ResizeObserver(schedule);
+    setup();
+    observer.observe(element);
+    resize.observe(measure);
+    resize.observe(stage);
+    window.addEventListener('scroll', schedule, {passive: true});
+    window.addEventListener('resize', schedule);
+    reduced.addEventListener('change', setup);
+    return () => {
+      observer.disconnect();
+      resize.disconnect();
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      reduced.removeEventListener('change', setup);
+    };
+  }, []);
+  return <section ref={root} className={styles.entrance} aria-label="Investor reviews">
+    <div ref={viewport} className={styles.viewportMeasure} aria-hidden="true" />
+    <div className={styles.gradientTail} aria-hidden="true"><i /></div>
+    <div className={styles.stage}>
+      <div className={styles.darkPanel} aria-hidden="true" />
+      <div className={styles.reviews}>{children}</div>
+    </div>
+  </section>;
 }

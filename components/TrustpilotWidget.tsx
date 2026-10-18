@@ -148,7 +148,7 @@ export default function TrustpilotWidget({
             </div>
 
             <div style={{ fontSize: '13px', color: '#aab3c5', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span>Based on <strong style={{ color: '#fff', textDecoration: 'underline' }}>3,440 reviews</strong></span>
+              <span>Based on <strong style={{ color: '#fff', textDecoration: 'underline' }}>3,465 reviews</strong></span>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '6px' }}>

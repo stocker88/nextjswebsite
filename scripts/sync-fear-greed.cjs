@@ -6,23 +6,35 @@ compiled._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerO
 const TTL=48*60*60*1000;
 const read=file=>{try{return JSON.parse(fs.readFileSync(file,'utf8'));}catch{return null;}};
 function write(file,value){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file+'.tmp',JSON.stringify(value)+'\n');fs.renameSync(file+'.tmp',file);}
-async function sync({root=path.join(__dirname,'..'),fetcher=fetch,now=Date.now(),log=console.log}={}){
+async function sync({root=path.join(__dirname,'..'),fetcher=fetch,publishedFetcher=fetch,now=Date.now(),log=console.log}={}){
  const file=path.join(root,'data/fear-greed.json'),cache=path.join(root,'.cache/fear-greed/state.json');
  const state=read(cache)||{},saved=read(file);
  const valid=s=>compiled.exports.score(s?.score)!==null&&Number.isFinite(Date.parse(s?.timestamp));
  const candidates=[state.snapshot,saved].filter(valid).sort((a,b)=>Date.parse(b.timestamp)-Date.parse(a.timestamp)||Date.parse(b.fetchedAt||b.timestamp)-Date.parse(a.fetchedAt||a.timestamp));
- const snapshot=candidates[0]||null;
- if(snapshot){write(file,snapshot);write(path.join(root,'public/data/fear-greed.json'),snapshot);}
+ let snapshot=candidates.length?compiled.exports.preserveFearGreedHistory(candidates[0],...candidates.slice(1).reverse()):null;
+ if(snapshot){write(file,snapshot);write(path.join(root,'public/data/fear-greed.json'),snapshot);write(cache,{...state,snapshot});}
  const last=Math.max(Number(state.lastAttempt)||0,Date.parse(snapshot?.fetchedAt)||0);
  if(last>0&&now-last<TTL){log('Fear & Greed: using saved snapshot; next attempt '+new Date(last+TTL).toISOString());return {updated:false,snapshot};}
+ // The deployed snapshot is a durable recovery copy if the CI cache expires.
+ // Read it only when the 48-hour refresh is due; a failure leaves local history intact.
+ if(publishedFetcher)try{
+  const response=await publishedFetcher('https://www.stockstobuynow.ai/data/fear-greed.json',{signal:AbortSignal.timeout(12000)});
+  const published=response.ok?await response.json():null;
+  if(valid(published)&&Date.parse(published.timestamp)<=now){
+   const latest=!snapshot||Date.parse(published.timestamp)>Date.parse(snapshot.timestamp)?published:snapshot;
+   snapshot=compiled.exports.preserveFearGreedHistory(latest,published,snapshot);
+   write(file,snapshot);write(path.join(root,'public/data/fear-greed.json'),snapshot);
+  }
+ }catch{ /* Keep the local and restored-cache history. */ }
  // Persist failures too, so repeated deployments cannot hammer the provider.
  write(cache,{lastAttempt:now,snapshot});
  try{
   const response=await fetcher(compiled.exports.FINICA_URL,{signal:AbortSignal.timeout(12000)});
   if(!response.ok)throw Error('HTTP '+response.status);
-  const next=compiled.exports.normalizeFinicaFearGreed(await response.json(),new Date(now));
+  let next=compiled.exports.normalizeFinicaFearGreed(await response.json(),new Date(now));
   if(!next)throw Error('Invalid index response');
   if(snapshot&&Date.parse(next.timestamp)<Date.parse(snapshot.timestamp))throw Error('Provider returned an older reading');
+  next=compiled.exports.preserveFearGreedHistory(next,snapshot);
   write(file,next);write(path.join(root,'public/data/fear-greed.json'),next);write(cache,{lastAttempt:now,snapshot:next});
   log('Saved CNN Fear & Greed via Finica, data date '+next.timestamp.slice(0,10));
   return {updated:true,snapshot:next};

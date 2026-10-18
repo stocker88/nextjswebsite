@@ -50,3 +50,27 @@ export function normalizeFinicaFearGreed(raw:any, now = new Date()):FearGreedSna
   previousClose:score(raw.previousClose),weekAgo:previous(7),monthAgo:previous(30),yearAgo:previous(365),history,
   indicators:indicators.map(([key],i)=>({key,score:score(components.find((c:any)=>c?.name===names[i])?.value)}))};
 }
+
+/** Scale only the visible history, retaining a 50-point minimum ceiling. */
+export function historyMaximum(points:readonly {value:number}[]):number {
+ return points.reduce((max,p)=>score(p.value)===null?max:Math.max(max,p.value),50);
+}
+
+/** Merge daily observations without discarding older history. The newest input wins overlaps. */
+export function preserveFearGreedHistory(next:FearGreedSnapshot, ...older:(FearGreedSnapshot|null|undefined)[]):FearGreedSnapshot {
+ const byDay=new Map<string,number>();
+ const end=next.timestamp.slice(0,10);
+ for(const snapshot of [...older,next])for(const point of snapshot?.history||[]){
+  if(typeof point?.date!=='string'||score(point.value)===null)continue;
+  const day=point.date.slice(0,10),ms=Date.parse(day+'T00:00:00Z');
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(day)||!Number.isFinite(ms)||new Date(ms).toISOString().slice(0,10)!==day||day>end)continue;
+  byDay.set(day,point.value);
+ }
+ const history=Array.from(byDay,([day,value])=>({date:day+'T00:00:00.000Z',value})).sort((a,b)=>a.date.localeCompare(b.date));
+ const previous=(days:number)=>{
+  const target=Date.parse(end+'T00:00:00Z')-days*86400000;
+  const p=[...history].reverse().find(p=>Date.parse(p.date)<=target);
+  return p&&target-Date.parse(p.date)<=4*86400000?p.value:null;
+ };
+ return {...next,history,weekAgo:next.weekAgo??previous(7),monthAgo:next.monthAgo??previous(30),yearAgo:next.yearAgo??previous(365)};
+}

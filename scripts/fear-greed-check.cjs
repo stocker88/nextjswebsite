@@ -18,7 +18,7 @@ assert.equal(normalizeFinicaFearGreed({score:18,historical:[]},now),null);
  const os=require('os');const root=fs.mkdtempSync(path.join(os.tmpdir(),'sentiment-check-'));
  const {sync,TTL}=require('./sync-fear-greed.cjs');let calls=0;
  const fetcher=async()=>{calls++;return {ok:true,json:async()=>fixture};};
- const options={root,now:now.getTime(),fetcher,log:()=>{}};
+ const options={root,publishedFetcher:null,now:now.getTime(),fetcher,log:()=>{}};
  try{
   await sync(options);assert.equal(calls,1);
   // Simulate a fresh CI checkout with only the restored cache state.
@@ -32,5 +32,30 @@ assert.equal(normalizeFinicaFearGreed({score:18,historical:[]},now),null);
   await sync({...options,now:options.now+TTL+1000,fetcher:failure});assert.equal(calls,2);
   await sync({...options,now:options.now+TTL*2,fetcher});assert.equal(calls,3);
   console.log('Finica normalization, 48-hour throttle, CI restoration and failure retention passed.');
+ }finally{fs.rmSync(root,{recursive:true,force:true});}
+})().catch(e=>{console.error(e);process.exitCode=1;});
+
+for(const [values,expected] of [[[],50],[[0,18,47],50],[[50],50],[[18,78.5],78.5],[[100],100]])assert.equal(m.exports.historyMaximum(values.map(value=>({value}))),expected);
+
+const merge=m.exports.preserveFearGreedHistory;
+const historical={...normalized,history:[{date:'2025-10-16',value:28},{date:'2026-10-09',value:40},{date:'2026-10-20',value:100},{date:'bad',value:50},{date:'2025-10-17',value:101}]};
+const merged=merge(normalized,historical);
+assert.equal(merged.history.length,3);assert.equal(merged.yearAgo,28);assert.equal(merged.history[1].value,46);
+(async()=>{
+ const root=fs.mkdtempSync(path.join(require('os').tmpdir(),'history-merge-'));
+ const {sync,TTL}=require('./sync-fear-greed.cjs');
+ fs.mkdirSync(path.join(root,'data'),{recursive:true});fs.writeFileSync(path.join(root,'data/fear-greed.json'),JSON.stringify(merged));
+ const options={root,now:now.getTime()+TTL,log:()=>{},publishedFetcher:null,fetcher:async()=>({ok:true,json:async()=>fixture})};
+ try{
+  const refreshed=await sync(options);assert.equal(refreshed.snapshot.history.length,3);assert.equal(refreshed.snapshot.yearAgo,28);
+  // A newer but shorter CI cache must not erase the committed backfill.
+  fs.writeFileSync(path.join(root,'.cache/fear-greed/state.json'),JSON.stringify({lastAttempt:options.now,snapshot:normalized}));
+  const cached=await sync(options);assert.equal(cached.snapshot.history.length,3);
+  // Recover missing history from the deployed snapshot even when upstream fails.
+  fs.writeFileSync(path.join(root,'data/fear-greed.json'),JSON.stringify(normalized));
+  fs.rmSync(path.join(root,'.cache'),{recursive:true});
+  const recovered=await sync({...options,publishedFetcher:async()=>({ok:true,json:async()=>merged}),fetcher:async()=>{throw Error('offline')}});
+  assert.equal(recovered.snapshot.history.length,3);assert.equal(recovered.snapshot.yearAgo,28);
+  console.log('Backfill survives truncated refreshes, shorter caches and upstream failures.');
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 })().catch(e=>{console.error(e);process.exitCode=1;});

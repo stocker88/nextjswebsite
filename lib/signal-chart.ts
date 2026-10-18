@@ -43,8 +43,11 @@ export function signalChartProjection(points:{value:number;x?:number}[], directi
   const historicalSpan=Math.max(0,...points.map(p=>p.value))-Math.min(0,...points.map(p=>p.value));
   if(!historicalSpan)return [];
   const rate=direction==='down'?Math.max(0,-signedRate):Math.max(0,signedRate);
+  // Illustrative direction stays visible even when the typical change is flat.
+  // Use the chart scale (including zero) so negative EPS also drifts upward.
   // At most 25% extra range: history always retains >=80% of the chart scale.
-  const drift=Math.min(rate*horizon*.5,historicalSpan*.25);
+  const minimumDrift=historicalSpan*.08;
+  const drift=Math.min(Math.max(rate*horizon*.5,minimumDrift),historicalSpan*.25);
   if(!Number.isFinite(drift))return [];
   if(direction==='down'){
    if(last.value<=0)return [];

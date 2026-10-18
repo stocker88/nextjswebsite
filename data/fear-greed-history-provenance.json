@@ -1,0 +1,9 @@
+{
+  "source": "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/b10745cfa2f4b00d1eb9a419b1274c3643d420d6/fear-greed.csv",
+  "sha256": "20b13c64e6dff3576b60c5e28297270cbe7d4a1c5594f2bfdb6324869b5ef991",
+  "importedReadings": 262,
+  "verifiedOverlaps": 29,
+  "from": "2025-10-01T00:00:00.000Z",
+  "through": "2026-10-16T00:00:00.000Z",
+  "policy": "Older missing dates imported; existing saved daily readings preserved."
+}
