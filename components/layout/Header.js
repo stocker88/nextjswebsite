@@ -30,7 +30,7 @@ export default function Header({
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [chromeColor, setChromeColor] = useState(forceDark ? '#080d1b' : '#00a3f5');
-  const [glassOpacity, setGlassOpacity] = useState(forceDark ? .68 : 0);
+  const [bannerColors, setBannerColors] = useState({ top: '#00a3f5', bottom: '#00a3f5' });
   const [socialBrowserName, setSocialBrowserName] = useState(null);
 
   useEffect(() => {
@@ -58,21 +58,27 @@ export default function Header({
     const update = () => {
       frame = 0;
       const y = Math.max(0, window.scrollY);
-      const progress = forceDark ? 1 : Math.min(1, y / 180);
-      const opacity = Math.round(progress * .68 * 100) / 100;
-      setIsScrolled(forceDark || y > 0);
-      setGlassOpacity(opacity);
-      // Safari accepts a tint rather than our CSS backdrop blur. Match the
-      // hero gradient beneath the glass instead of jumping straight to navy.
+      setIsScrolled(y > 0);
+      if (y === 0) setIsOpen(false);
+      // Match the continuous hero gradient, including the mobile status strip.
+      // Keep the initial reveal blue; ease toward navy near the end of the hero.
       const hero = document.getElementById('home');
       const heroHeight = hero?.getBoundingClientRect().height || 1;
-      const fraction = Math.min(1, y / heroHeight);
-      const base = forceDark || !hero ? [8, 13, 27] :
-        [0, 163, 245].map((v, i) => v + ([21, 0, 128][i] - v) * fraction);
-      const color = '#' + base.map((v, i) =>
-        Math.round(v * (1 - opacity) + [8, 13, 27][i] * opacity)
-          .toString(16).padStart(2, '0')).join('');
-      const themeColor = forceDark || (hero && y >= heroHeight) ? '#080d1b' : color;
+      const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 80;
+      const progress = Math.min(1, y / heroHeight);
+      const fade = Math.max(0, Math.min(1, (progress - .55) / .45));
+      const darkness = fade * fade * (3 - 2 * fade);
+      const colorAt = offset => {
+        if (forceDark || !hero) return '#080d1b';
+        const fraction = Math.min(1, (y + offset) / heroHeight);
+        return '#' + [0, 163, 245].map((start, i) => {
+          const heroChannel = start + ([21, 0, 128][i] - start) * fraction;
+          return Math.round(heroChannel * (1 - darkness) + [8, 13, 27][i] * darkness)
+            .toString(16).padStart(2, '0');
+        }).join('');
+      };
+      const themeColor = colorAt(0);
+      setBannerColors({ top: themeColor, bottom: colorAt(headerHeight) });
       setChromeColor(themeColor);
       document.documentElement.style.backgroundColor = themeColor;
       document.body.style.backgroundColor = themeColor;
@@ -139,7 +145,7 @@ export default function Header({
   return (
     <>
       {browserTheme}
-      <header className={`site-header ${forceDark || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-glass-opacity': glassOpacity, '--header-edge-color': chromeColor}}>
+      <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor}}>
         <span className="site-header-edge" aria-hidden="true" />
         <nav className={menuStyles.nav} aria-label="Main navigation">
           <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>

@@ -16,8 +16,42 @@ html {
     z-index: 1000;
     padding-top: env(safe-area-inset-top, 0px);
     background: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid transparent;
     transition: border-color .3s ease;
+}
+
+/* Keep the sticky footprint so revealing the banner cannot move the page or
+   change the scroll offset. Hidden links are also removed from keyboard focus. */
+.site-header > nav { transition: opacity .16s ease; }
+.site-header:not(.is-scrolled) > nav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    .site-header > nav { transition: none; }
+}
+
+/* Let the hero paint through the hidden header's footprint. Equal padding
+   preserves content positions and keeps the sticky navigation stable. */
+[data-home-motion] {
+    --home-nav-height: 80px;
+    --home-edge-height: 0px;
+    --home-header-height: calc(var(--home-nav-height) + var(--home-edge-height) + env(safe-area-inset-top, 0px) + 1px);
+}
+[data-home-motion] > .site-header + #home {
+    margin-top: calc(-1 * var(--home-header-height));
+    padding-top: var(--home-header-height);
+}
+[data-home-motion] .hero-atmosphere {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 160px);
+    mask-image: linear-gradient(to bottom, transparent, #000 160px);
+}
+@media (max-width: 999px) {
+    [data-home-motion] { --home-nav-height: 68px; }
+}
+@supports (-webkit-touch-callout: none) {
+    [data-home-motion] { --home-edge-height: 6px; }
 }
 
 /* Safari samples a 2px band 4px inside the viewport and ignores boxes
@@ -41,7 +75,7 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background: hsl(200, 100%, 48%);
+    background: transparent;
     pointer-events: none;
     transition: background-color .3s ease;
 }
@@ -56,9 +90,9 @@ html {
         top: calc(env(safe-area-inset-top, 0px) + 6px);
     }
 }
-.site-header.is-scrolled { border-bottom-color: rgba(255, 255, 255, .08); }
+.site-header.is-scrolled { border-bottom-color: transparent; }
 .site-header.is-scrolled::before {
-    background: rgba(8, 13, 27, var(--header-glass-opacity, .68));
+    background: linear-gradient(180deg, var(--header-top-color, #00a3f5), var(--header-bottom-color, #0095eb));
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     backdrop-filter: blur(20px) saturate(135%);
 }
