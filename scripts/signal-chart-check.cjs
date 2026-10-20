@@ -45,15 +45,15 @@ console.log('Financial projections support negative metrics; short interest decl
 const day=86400,start=1700000000;
 const eps=[.02,.03,.05,.08,-.2,.12,.11,.13,.14].map((value,i)=>({x:start+i*90*day,value}));
 eps.splice(5,0,{x:eps[4].x+day,value:.5});
-const soft=project(eps,'up','financial'),old=project(eps);
-assert.ok(old.at(-1).value>10,'regression fixture reproduces the extreme old slope');
+const soft=project(eps,'up','financial'),priceScenario=project(eps);
+assert.ok(priceScenario.every(p=>p.value<=.5),'deep price drawdowns cap the former extreme slope at the displayed high');
 assert.equal(soft.length,41);
 assert.deepEqual(soft[0],eps.at(-1));
 const span=Math.max(0,...eps.map(p=>p.value))-Math.min(0,...eps.map(p=>p.value));
 assert.ok(soft.every(p=>p.value>=eps.at(-1).value&&p.value<=eps.at(-1).value+span*.25+1e-10));
 const expanded=Math.max(0,...eps.map(p=>p.value),...soft.map(p=>p.value))-Math.min(0,...eps.map(p=>p.value),...soft.map(p=>p.value));
 assert.ok(span/expanded>=.8-1e-10,'historical bars retain at least 80% of their original scale');
-assert.equal(soft.at(-1).x,old.at(-1).x,'projection boundary and horizon stay aligned');
+assert.equal(soft.at(-1).x,priceScenario.at(-1).x,'projection boundary and horizon stay aligned');
 const steady=[1,2,3,4].map((value,i)=>({x:start+i*90*day,value}));
 assert.ok(project(steady,'up','financial').at(-1).value>4);
 const flat=steady.map(p=>({...p,value:4}));
@@ -76,3 +76,18 @@ assert.ok(shrinking.every((p,i)=>p.value>=.6&&(i===0||p.value<=shrinking[i-1].va
 const losses=project(steady.map(p=>({...p,value:p.value-5})),'up','financial');
 assert.ok(losses.every(p=>p.value>=-1&&p.value<=0));
 console.log('Financial trend damping, EPS jump regression, scale cap, flat history and short-interest limits verified.');
+
+const drawdownHistory=values=>values.map((value,i)=>({x:1700000000+i*100000,value}));
+for(const last of [50,59]){
+ const points=drawdownHistory([10,100,last]),result=project(points);
+ assert.equal(result[0].value,last);
+ assert.ok(Math.abs(result.at(-1).value-100)<1e-9);
+ assert.ok(result.every(p=>p.value<=100));
+ assert.equal(result.at(-1).x,1700260000);
+ assert.equal(points[1].value,100);
+}
+assert.ok(Math.abs(project(drawdownHistory([10,100,60])).at(-1).value-114)<1e-9);
+assert.ok(Math.abs(project(drawdownHistory([10,100,61])).at(-1).value-115)<1e-9);
+assert.ok(Math.abs(project(drawdownHistory([80,100,50])).at(-1).value-62)<1e-9);
+assert.ok(project(drawdownHistory([-1000,100,50]),'up','financial').at(-1).value>100);
+console.log('Price drawdowns greater than 40% stay below the displayed high; weaker scenarios, financial charts and threshold boundaries are preserved.');

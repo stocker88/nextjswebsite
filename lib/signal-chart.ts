@@ -23,6 +23,17 @@ export function signalChartDate(seconds:unknown):string|null {
  return new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(seconds*1000));
 }
 
+/** Rescale upside only when price is more than 40% below the displayed high. */
+export function capSignalPriceProjection(history:{value:number}[],projection:{value:number;x:number}[]):{value:number;x:number}[] {
+ if(!history.length||!projection.length)return projection;
+ const last=history[history.length-1].value,high=Math.max(...history.map(p=>p.value));
+ if(last<=0||high<=0||last>=high*.6)return projection;
+ const gain=projection[projection.length-1].value-last;
+ if(gain<=0||!Number.isFinite(gain))return projection;
+ const scale=Math.min(1,(high-last)/gain);
+ return projection.map(point=>({x:point.x,value:Math.min(high,last+(point.value-last)*scale)}));
+}
+
 /** A visual scenario, never market data or a model forecast. Uses an earlier
  * low-to-high move and its elapsed time, then deterministic small fluctuations. */
 export function signalChartProjection(points:{value:number;x?:number}[], direction:'up'|'down'='up',mode:'price'|'financial'='price'):{value:number;x:number}[] {
@@ -82,9 +93,9 @@ export function signalChartProjection(points:{value:number;x?:number}[], directi
  if(slope<=0)return [];
  const horizon=span*.3, drift=slope*horizon;
  if(!Number.isFinite(drift))return [];
- return Array.from({length:41},(_,i)=>{
+ return capSignalPriceProjection(points,Array.from({length:41},(_,i)=>{
   const t=i/40;
   const ripple=.06*Math.sin(6*Math.PI*t)+.025*Math.sin(14*Math.PI*t);
   return {x:last.x!+horizon*t,value:last.value+drift*(t+ripple)};
- });
+ }));
 }
