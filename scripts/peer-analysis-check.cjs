@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),ts=require('typescript'),vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+function load(file){const mod={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(root,file),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,{exports:mod.exports,module:mod,require:(id)=>id==='./peer-analysis'?api:require(id),process,console,Date,Intl,Map,Set});return mod.exports;}
+const api=load('lib/peer-analysis.ts');
+const {observationChange,peHistogram,quantile}=api;
+const rows=[{date:'2025-10-20',value:100},{date:'2026-10-16',value:110},{date:'2026-10-19',value:120},{date:'2026-10-20',value:132}];
+assert.equal(observationChange(rows,'1D','2026-10-20').value,10);
+assert.equal(observationChange(rows,'1Y','2026-10-20').value,32);
+assert.equal(observationChange(rows,'5Y','2026-10-20').value,null);
+assert.equal(observationChange(rows,'1D','2026-11-20').value,null);
+assert.equal(observationChange([{date:'2025-10-20',value:0},{date:'2026-10-20',value:10}],'1Y','2026-10-20',true).value,null);
+assert.equal(observationChange([{date:'2025-10-20',value:-10},{date:'2026-10-20',value:5}],'1Y','2026-10-20',true).value,150);
+assert.equal(observationChange([{date:'2026-07-20',value:5}],'1W','2026-10-20',true).value,0);
+const values=[10,11,12,13,14,1000,null,-2,NaN];const companies=values.map((pe,i)=>({symbol:String(i),pe}));
+const focused=peHistogram(companies),all=peHistogram(companies,true);
+assert.equal(focused.hidden,1);assert.equal(all.hidden,0);assert.equal(focused.median,12.5);assert.equal(quantile([4,1,2,3],.25),1.75);
+assert.equal(focused.bins.reduce((n,b)=>n+b.companies.length,0),5);assert.equal(all.bins.reduce((n,b)=>n+b.companies.length,0),6);
+for(const b of all.bins)for(const c of b.companies)assert(c.pe>=b.low&&c.pe<=b.high);
+assert.equal(peHistogram([]).median,null);
+const {loadStockResearch}=load('lib/stock-research-server.ts');
+const result=loadStockResearch('TSLA');
+assert.equal(result.peerAnalysis.length,11);assert(!result.peerAnalysis.some(c=>c.symbol.includes('.')));assert(result.peerAnalysis.some(c=>c.symbol==='TM'));assert.equal(new Set(result.peerAnalysis.map(c=>c.symbol)).size,11);
+assert(result.peerAnalysis.filter(c=>c.changes['1Y'].eps.value!=null&&c.changes['1Y'].price.value!=null).length>=2);
+assert(result.peerAnalysis.every(c=>c.changes['5Y'].price.value===null));
+JSON.stringify(result);console.log('Peer analysis: dated changes, negative/zero bases, missing history, P/E outliers and same-market TSLA cohort passed.');
