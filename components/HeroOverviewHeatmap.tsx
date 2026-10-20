@@ -25,7 +25,7 @@ export default function HeroOverviewHeatmap({rows, period, asOf}: Props) {
       group.rows.push(row); group.weight += row.weight && row.weight > 0 ? row.weight : 1;
       byIndustry.set(key, group);
     }
-    return tile([...byIndustry.values()], group => group.weight, size, size);
+    return tile(Array.from(byIndustry.values()), group => group.weight, size, size);
   }, [rows, size]);
   const current = rows.find(row => row.symbol === selected);
   const change = (row: HeatStock) => row.asOf === asOf ? row.changes[period] : null;
