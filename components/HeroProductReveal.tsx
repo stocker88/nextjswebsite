@@ -47,7 +47,7 @@ export default function HeroProductReveal() {
     const connect = () => {
       events?.close();
       if (document.visibilityState === 'hidden') return;
-      events = new EventSource('https://us-central1-stocker-fcda2.cloudfunctions.net/marketSnapshotEvents');
+      events = new EventSource('https://us-central1-stocker-fcda2.cloudfunctions.net/marketSnapshotStream');
       events.addEventListener('snapshot', event => {
         const next = (event as MessageEvent).data;
         if (next === revision) return;
