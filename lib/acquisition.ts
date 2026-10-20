@@ -2,7 +2,7 @@ const ENDPOINT = 'https://us-central1-stocker-fcda2.cloudfunctions.net/recordWeb
 const IDENTITY = 'stocker.acquisition.v1';
 const SESSION = 'stocker.acquisition.session.v1';
 type Identity = {visitorId:string; visitorToken:string};
-type Campaign = {source?:string; medium?:string; campaign?:string};
+type Campaign = {source?:string; medium?:string; campaign?:string;referrerUid?:string;goal?:string};
 let memory: Identity | null = null;
 let sessionMemory = '';
 let previousKey = '';
@@ -31,14 +31,14 @@ export function captureAcquisition(campaign:Campaign={}, store?:'apple'|'google'
   try {
     const params=new URLSearchParams(location.search);
     if(originalReferrer===null)originalReferrer=document.referrer;
-    for (const key of ['source','medium','campaign'] as const) {
-      const value=campaign[key]||params.get(key)||params.get(`utm_${key}`);
+    for (const key of ['source','medium','campaign','referrerUid'] as const) {
+      const value=campaign[key]||(key==='referrerUid'?campaign.goal||params.get('goal'):'')||params.get(key)||params.get(`utm_${key}`);
       if(value)savedCampaign[key]=value;
     }
     const data={...identity(),sessionId:session(),path:location.pathname,referrer:originalReferrer,
       source:savedCampaign.source||'',
       medium:savedCampaign.medium||'',
-      campaign:savedCampaign.campaign||'',store};
+      campaign:savedCampaign.campaign||'',referrerUid:savedCampaign.referrerUid||'',store};
     // Capture landings, resolved campaigns and store exits, not every rerender.
     const key=JSON.stringify({...data,path:undefined});if(key===previousKey&&!store)return;previousKey=key;
     void fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).catch(()=>{previousKey='';});

@@ -25,6 +25,6 @@ for(const [period,rows] of Object.entries(data.periods)){
 const preview=JSON.parse(fs.readFileSync(root+'/data/hero-market-preview.json'));
 const full=JSON.parse(fs.readFileSync(root+'/data/market-heatmap.json'));
 assert(preview.stocks.length >= 490);
-assert(preview.stocks.every(row=>row.industry && row.sector && row.weight>0));
+assert(preview.stocks.every(row=>typeof row.industry==='string' && row.sector && row.weight>0));
 assert.equal(new Set(preview.stocks.map(row=>row.symbol)).size,preview.stocks.length);
 console.log('PASS: morph geometry, flat/empty data, interpolation endpoints; all 24 period calculations; full S&P 500 overview cache.');

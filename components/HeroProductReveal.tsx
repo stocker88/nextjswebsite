@@ -5,7 +5,7 @@ import HeroMarketPulse from './HeroMarketPulse';
 import HeroFeatureExplorer from './HeroFeatureExplorer';
 import { useEffect, useRef, useState } from 'react';
 import snapshot from '../data/hero-market-preview.json';
-import { HeatSnapshot, heatmapEndpoint, validSnapshot } from '../lib/market-heatmap';
+import { HeatStock, HeatSnapshot, heatmapEndpoint, validSnapshot } from '../lib/market-heatmap';
 import styles from '../styles/HeroProductReveal.module.css';
 
 
@@ -16,7 +16,7 @@ export default function HeroProductReveal() {
   const root = useRef<HTMLDivElement>(null);
   const [latest, setLatest] = useState<HeatSnapshot | null>(null);
   const date = latest?.overviewRows?.length ? new Date(latest.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}) : savedDate;
-  const stocks = latest?.overviewRows?.length ? latest.overviewRows : snapshot.stocks;
+  const stocks = latest?.overviewRows?.length ? latest.overviewRows : snapshot.stocks as HeatStock[];
   useEffect(() => {
     const controller = new AbortController();
     let pending = false;
