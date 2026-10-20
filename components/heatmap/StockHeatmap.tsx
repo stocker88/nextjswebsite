@@ -1,3 +1,4 @@
+import {scheduleMarketRefresh} from '../../lib/scheduled-market-refresh';
 import AppDownloadModal from '../AppDownloadModal';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {HeatSnapshot,HeatStock,Period,PERIOD_OPTIONS,periodLabel,periodScale,tile,heatColor,percent,dateLabel,validSnapshot,heatmapEndpoint,TileSizing,HeatGrouping,sizeLabels,stockWeight,stockGroups,fixedGroupTiles,readWatchlist,returnColor} from '../../lib/market-heatmap';
@@ -80,8 +81,8 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   return()=>{document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',key);window.removeEventListener('scroll',scroll,true);window.removeEventListener('resize',resize)};
  },[]);
  useEffect(()=>{setPreview(null);setCopied(false);setLinkFallback('')},[period,sector,query,limit,view,mobileLayout,sizing,grouping,industry,direction,colorblind,fixed,watchOnly,sharedSymbols]);
- const refresh=async()=>{setRefreshing(true);try{const r=await fetch(heatmapEndpoint);if(!r.ok)throw Error();const d=await r.json();if(!validSnapshot(d))throw Error();setData(d);}catch{/* Keep the dated snapshot until the next automatic check. */}finally{setRefreshing(false)}};
- useEffect(()=>{refresh();const timer=setInterval(()=>{if(document.visibilityState==='visible')refresh()},300000);return()=>clearInterval(timer)},[]);
+ const refresh=async()=>{setRefreshing(true);try{const r=await fetch(heatmapEndpoint,{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(!validSnapshot(d))throw Error();setData(d);}catch{/* Keep the dated snapshot until the next automatic check. */}finally{setRefreshing(false)}};
+ useEffect(()=>{void refresh();return scheduleMarketRefresh(refresh)},[]);
  const sectors=useMemo(()=>Array.from(new Set(data.rows.map(r=>r.sector))).sort(),[data]);
  const baseRows=useMemo(()=>{const q=query.trim().replace(/^\$/,'').toLowerCase();return data.rows.filter(r=>(!watchOnly||(sharedSymbols??watchlist).includes(r.symbol))&&(sector==='all'||r.sector===sector)&&(industry==='all'||r.industry===industry)&&(!q||[r.symbol,r.name,r.industry].some(s=>s.toLowerCase().includes(q)))).slice(0,watchOnly?100:limit)},[data,sector,industry,query,limit,watchOnly,watchlist,sharedSymbols]);
  const rows=baseRows.filter(r=>direction==='all'||(direction==='up'&&(r.changes[period]??0)>0)||(direction==='down'&&(r.changes[period]??0)<0)||(direction==='missing'&&r.changes[period]===null));

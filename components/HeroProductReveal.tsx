@@ -1,3 +1,4 @@
+import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
 import AppDownloadModal from './AppDownloadModal';
 import marketSnapshot from '../data/market-heatmap.json';
 import HeroMarketPulse from './HeroMarketPulse';
@@ -30,8 +31,6 @@ export default function HeroProductReveal() {
     const controller = new AbortController();
     let pending = false;
     let queued = false;
-    let revision = '';
-    let events: EventSource | undefined;
     const refresh = async () => {
       if (document.visibilityState === 'hidden') return;
       if (pending) { queued = true; return; }
@@ -44,21 +43,9 @@ export default function HeroProductReveal() {
       } catch { /* Retain the last successfully loaded, dated snapshot. */ }
       finally { pending = false; if (queued && !controller.signal.aborted) { queued = false; void refresh(); } }
     };
-    const connect = () => {
-      events?.close();
-      if (document.visibilityState === 'hidden') return;
-      events = new EventSource('https://us-central1-stocker-fcda2.cloudfunctions.net/marketSnapshotStream');
-      events.addEventListener('snapshot', event => {
-        const next = (event as MessageEvent).data;
-        if (next === revision) return;
-        revision = next;
-        void refresh();
-      });
-    };
     void refresh();
-    connect();
-    document.addEventListener('visibilitychange', connect);
-    return () => { controller.abort(); events?.close(); document.removeEventListener('visibilitychange', connect); };
+    const stop = scheduleMarketRefresh(refresh);
+    return () => { controller.abort(); stop(); };
   }, []);
   const tiles = tile(stocks, row => row.weight, mapSize.width, mapSize.height);
   useEffect(() => {

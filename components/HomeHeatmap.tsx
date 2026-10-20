@@ -1,3 +1,4 @@
+import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
 import {useEffect,useId,useRef,useState} from 'react';
 import Link from 'next/link';
 import {HeatSnapshot,HeatStock,dateLabel,heatColor,percent,stockGroups,tile,validSnapshot,heatmapEndpoint,Period,PERIOD_OPTIONS,periodLabel,periodScale} from '../lib/market-heatmap';
@@ -16,13 +17,13 @@ export default function HomeHeatmap(){
   const [width,setWidth]=useState(1000),[selected,setSelected]=useState<HeatStock|null>(null);
   useEffect(()=>{
     const controller=new AbortController();
-    let interval:ReturnType<typeof setInterval>|undefined;
+    let stopScheduledRefresh:(()=>void)|undefined;
     let pending=false;
     const refresh=async()=>{
       if(pending||document.visibilityState==='hidden')return;
       pending=true;
       try{
-        const response=await fetch(heatmapEndpoint,{signal:controller.signal});
+        const response=await fetch(heatmapEndpoint,{signal:controller.signal,cache:'no-store'});
         if(!response.ok)throw Error('Feed unavailable');
         const snapshot=await response.json();
         if(validSnapshot(snapshot)&&!controller.signal.aborted)setData(snapshot);
@@ -33,10 +34,10 @@ export default function HomeHeatmap(){
       if(!entries.some(entry=>entry.isIntersecting))return;
       observer.disconnect();
       void refresh();
-      interval=setInterval(refresh,300000);
+      stopScheduledRefresh=scheduleMarketRefresh(refresh);
     },{rootMargin:'300px'});
     if(root.current)observer.observe(root.current);
-    return()=>{observer.disconnect();controller.abort();clearInterval(interval)};
+    return()=>{observer.disconnect();controller.abort();stopScheduledRefresh?.()};
   },[]);
   useEffect(()=>{
     if(!map.current)return;
