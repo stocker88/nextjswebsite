@@ -66,7 +66,7 @@ export function installAcquisitionCapture():()=>void {
     const url=new URL(target.href,location.origin);
     if(url.hostname==='apps.apple.com')captureAcquisition({},'apple');
     if(url.hostname==='play.google.com')captureAcquisition({},'google');
-    target.href=attributionLink(target.href);
+    if (['com.newcompany.stocker:','ai.stockstobuynow:'].includes(url.protocol)||url.hostname==='play.google.com') target.href=attributionLink(target.href);
   };
   // Capture phase updates the destination before React handlers or navigation.
   document.addEventListener('click',click,true);
