@@ -3,7 +3,7 @@ import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children, description = title, noindex = false, stockPage = false}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; stockPage?:boolean}) {
+export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean}) {
   return <>
     <Head>
       <title>{`${title} | Stocks To Buy Now AI`}</title>
@@ -26,9 +26,9 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
       <meta name="twitter:image:alt" content="Founder’s personal trade chart" />
     </Head>
-    <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={stockPage} />
-    <main className={stockPage ? "stock-page" : undefined}>
-      {!stockPage && <ResearchSections path={path} />}
+    <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
+    <main>
+      <ResearchSections path={path} />
       <nav className="research-resources" aria-label="Research resources">
         {[
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
@@ -66,7 +66,6 @@ export default function ResearchPage({title, path, children, description = title
       main {min-height:100vh;background:#070b18;color:white;padding:120px max(20px,calc((100vw - 1000px)/2)) 40px;}
 
 
-      main.stock-page {padding-left:max(16px,calc((100vw - 1180px)/2));padding-right:max(16px,calc((100vw - 1180px)/2));}
       main :global(h1) {font-size:clamp(28px,5vw,48px);line-height:1.2;}
       main :global(.research-board) {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.8vw,22px);margin-top:42px;align-items:start;width:100%;}
       main :global(.research-column) {min-width:0;}
