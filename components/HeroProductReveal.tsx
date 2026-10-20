@@ -29,8 +29,12 @@ export default function HeroProductReveal() {
   useEffect(() => {
     const controller = new AbortController();
     let pending = false;
+    let queued = false;
+    let revision = '';
+    let events: EventSource | undefined;
     const refresh = async () => {
-      if (pending || document.visibilityState === 'hidden') return;
+      if (document.visibilityState === 'hidden') return;
+      if (pending) { queued = true; return; }
       pending = true;
       try {
         const response = await fetch(heatmapEndpoint, {signal: controller.signal, cache: 'no-store'});
@@ -38,12 +42,23 @@ export default function HeroProductReveal() {
         const data = await response.json();
         if (validSnapshot(data) && !controller.signal.aborted) setLatest(previous => !previous || data.asOf >= previous.asOf ? data : previous);
       } catch { /* Retain the last successfully loaded, dated snapshot. */ }
-      finally { pending = false; }
+      finally { pending = false; if (queued && !controller.signal.aborted) { queued = false; void refresh(); } }
+    };
+    const connect = () => {
+      events?.close();
+      if (document.visibilityState === 'hidden') return;
+      events = new EventSource('https://us-central1-stocker-fcda2.cloudfunctions.net/marketSnapshotEvents');
+      events.addEventListener('snapshot', event => {
+        const next = (event as MessageEvent).data;
+        if (next === revision) return;
+        revision = next;
+        void refresh();
+      });
     };
     void refresh();
-    const interval = setInterval(refresh, 60000);
-    document.addEventListener('visibilitychange', refresh);
-    return () => { controller.abort(); clearInterval(interval); document.removeEventListener('visibilitychange', refresh); };
+    connect();
+    document.addEventListener('visibilitychange', connect);
+    return () => { controller.abort(); events?.close(); document.removeEventListener('visibilitychange', connect); };
   }, []);
   const tiles = tile(stocks, row => row.weight, mapSize.width, mapSize.height);
   useEffect(() => {
