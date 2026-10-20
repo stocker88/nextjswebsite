@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { trackAppStoreClick } from '../../lib/analytics';
+import { usesLegacySafariChrome } from '../../lib/safari-chrome';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
 
 const iosAppStoreUrl =
@@ -55,6 +56,11 @@ export default function Header({
 
   useEffect(() => {
     let frame = 0;
+    const legacySafari = usesLegacySafariChrome(navigator.userAgent, navigator.maxTouchPoints);
+    const canvas = document.documentElement;
+    const previousLegacyMode = canvas.getAttribute('data-legacy-safari-chrome');
+    const previousLegacyColor = canvas.style.getPropertyValue('--legacy-safari-color');
+    let ownsLegacyCanvas = false;
     const update = () => {
       frame = 0;
       const y = Math.max(0, window.scrollY);
@@ -80,6 +86,13 @@ export default function Header({
       const themeColor = colorAt(0);
       setBannerColors({ top: themeColor, bottom: colorAt(headerHeight) });
       setChromeColor(themeColor);
+      // Older Safari needs a painted document canvas for its bottom toolbar.
+      // Scope it to the homepage and never set this on Safari 26's glass UI.
+      if (legacySafari && hero && !forceDark) {
+        canvas.setAttribute('data-legacy-safari-chrome', 'true');
+        canvas.style.setProperty('--legacy-safari-color', themeColor);
+        ownsLegacyCanvas = true;
+      }
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
     update();
@@ -89,6 +102,12 @@ export default function Header({
       cancelAnimationFrame(frame);
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('resize', schedule);
+      if (ownsLegacyCanvas) {
+        if (previousLegacyMode === null) canvas.removeAttribute('data-legacy-safari-chrome');
+        else canvas.setAttribute('data-legacy-safari-chrome', previousLegacyMode);
+        if (previousLegacyColor) canvas.style.setProperty('--legacy-safari-color', previousLegacyColor);
+        else canvas.style.removeProperty('--legacy-safari-color');
+      }
     };
   }, [forceDark]);
 
@@ -107,11 +126,9 @@ export default function Header({
   const browserTheme = (
     <Head>
       <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta
-        key="theme-color"
-        name="theme-color"
-        content={forceDark ? '#080d1b' : '#00a3f5'}
-      />
+      {/* Older Safari uses this for the status bar; Safari 26 samples the
+          independent top edge. Keep both tied to the same scroll tint. */}
+      <meta key="theme-color" name="theme-color" content={chromeColor} />
     </Head>
   );
 
@@ -130,6 +147,7 @@ export default function Header({
           variant={socialNoticeVariant}
         />
         <div
+          className="social-browser-notice-spacer"
           aria-hidden="true"
           style={{
             height: socialNoticeVariant === 'insight'

@@ -10,6 +10,10 @@ export default function ReviewEntrance({children}: {children: ReactNode}) {
     const measure = viewport.current;
     if (!element || !measure) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // Full-height sticky scenes touch Safari's bottom edge and cause it to
+    // extend a solid color behind the toolbar. Keep the animated flow layout
+    // on iOS so ordinary page content can scroll beneath the browser controls.
+    const useFlowLayout = CSS.supports('-webkit-touch-callout', 'none');
     const stage = element.querySelector<HTMLElement>(`.${styles.stage}`)!;
     let frame = 0;
     let visible = false;
@@ -31,7 +35,7 @@ export default function ReviewEntrance({children}: {children: ReactNode}) {
       const rect = element.getBoundingClientRect();
       // svh is stable when Safari's address bar expands/collapses.
       const height = measure.offsetHeight || window.innerHeight;
-      const compact = height <= 650;
+      const compact = useFlowLayout || height <= 650;
       element.dataset.layout = compact ? 'flow' : 'pinned';
       const header = window.innerWidth < 1000 ? 68 : 80;
       const p = compact

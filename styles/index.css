@@ -14,7 +14,8 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding-top: env(safe-area-inset-top, 0px);
+    --header-edge-space: 6px;
+    padding-top: calc(env(safe-area-inset-top, 0px) + var(--header-edge-space));
     background: transparent;
     border-bottom: 1px solid transparent;
     transition: border-color .3s ease;
@@ -36,12 +37,24 @@ html {
    preserves content positions and keeps the sticky navigation stable. */
 [data-home-motion] {
     --home-nav-height: 80px;
-    --home-edge-height: 0px;
+    --home-edge-height: 6px;
     --home-header-height: calc(var(--home-nav-height) + var(--home-edge-height) + env(safe-area-inset-top, 0px) + 1px);
+    /* Paint the hidden header's footprint as part of the scrolling page.
+       This is a bounded image at the top, not a document background color
+       that Safari can reuse behind its bottom toolbar. */
+    background-image: linear-gradient(#00a3f5, #00a3f5);
+    background-position: top;
+    background-size: 100% var(--home-header-height);
+    background-repeat: no-repeat;
 }
 [data-home-motion] > .site-header + #home {
     margin-top: calc(-1 * var(--home-header-height));
     padding-top: var(--home-header-height);
+}
+/* In-app browsers replace the header with a taller notice. Paint its entire
+   reserved space so the transparent canvas cannot show through as white. */
+[data-home-motion] > .social-browser-notice-spacer {
+    background: #00a3f5;
 }
 [data-home-motion] .hero-atmosphere {
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 160px);
@@ -50,15 +63,12 @@ html {
 @media (max-width: 999px) {
     [data-home-motion] { --home-nav-height: 68px; }
 }
-@supports (-webkit-touch-callout: none) {
-    [data-home-motion] { --home-edge-height: 6px; }
-}
 
 /* Safari samples a 2px band 4px inside the viewport and ignores boxes
    <=10px tall. Keep an 11px box, hiding 5px above the viewport so only
    6px extends below the safe area, separate from the blurred layer. */
 .site-header-edge {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1001;
     top: -5px;
@@ -71,7 +81,7 @@ html {
 .site-header::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: calc(env(safe-area-inset-top, 0px) + 6px);
     bottom: 0;
     left: 0;
     right: 0;
@@ -79,16 +89,12 @@ html {
     pointer-events: none;
     transition: background-color .3s ease;
 }
-/* Only iOS needs an unblurred strip for the browser status-bar sampler. */
-@supports (-webkit-touch-callout: none) {
-    .site-header {
-        --header-edge-space: 6px;
-        padding-top: calc(env(safe-area-inset-top, 0px) + var(--header-edge-space));
-    }
-    .site-header-edge { display: block; }
-    .site-header::before {
-        top: calc(env(safe-area-inset-top, 0px) + 6px);
-    }
+/* Desktop navigation sits flush with the top; retain the inset on mobile. */
+@media (min-width: 1000px) {
+    .site-header { --header-edge-space: 0px; padding-top: 0; }
+    .site-header-edge { display: none; }
+    .site-header::before { top: 0; }
+    [data-home-motion] { --home-edge-height: 0px; }
 }
 .site-header.is-scrolled { border-bottom-color: transparent; }
 .site-header.is-scrolled::before {
@@ -3326,9 +3332,8 @@ body {
 /* Keep the expanded desktop navigation clear of the brand on narrow laptops. */
 @media(min-width:1181px) and (max-width:1340px){.nav-links a{padding-left:4px;padding-right:4px}}
 
-/* Leave the homepage canvas clear for Safari's translucent bottom controls.
-   Header colors belong to the header, not the document's scrolling backdrop.
-   Override the legacy inline body fill and let the body grow with the page. */
+/* The homepage has no browser-chrome palette. Sections paint their own
+   backgrounds; only the independent top edge receives the header's tint. */
 html:has([data-home-motion]),
 html:has([data-home-motion]) body {
     background: transparent !important;
@@ -3336,4 +3341,20 @@ html:has([data-home-motion]) body {
 html:has([data-home-motion]) body {
     height: auto;
     min-height: 100%;
+}
+
+/* Match the hero when desktop rubber-band scrolling exposes the page canvas.
+   Keep mobile's canvas clear for the translucent browser controls. */
+@media (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+    html:has([data-home-motion]),
+    html:has([data-home-motion]) body {
+        background: #00a3f5 !important;
+    }
+}
+
+/* Pre-26 mobile Safari uses the scrolling header tint as its canvas color.
+   Safari 26+, desktop browsers, and unrecognized webviews never opt in. */
+html[data-legacy-safari-chrome="true"]:has([data-home-motion]),
+html[data-legacy-safari-chrome="true"]:has([data-home-motion]) body {
+    background: var(--legacy-safari-color) !important;
 }

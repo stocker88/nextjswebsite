@@ -14,6 +14,9 @@ export default function ScrollShowcase(){
   useChartEntrance(chartRef);
   useEffect(()=>{
     const element=root.current;if(!element)return;
+    // Use the existing unpinned layout on iOS. A viewport-height sticky stage
+    // is sampled as a bottom toolbar background by Safari's chrome renderer.
+    if(CSS.supports('-webkit-touch-callout','none'))return;
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');let frame=0;let observer:IntersectionObserver|undefined;
     const draw=()=>{frame=0;const rect=element.getBoundingClientRect();const travel=Math.max(1,rect.height-window.innerHeight+80);const p=Math.max(0,Math.min(1,(80-rect.top)/travel));element.style.setProperty('--journey',String(p));if(!element.contains(document.activeElement))element.dataset.chapter=String(Math.min(2,Math.floor(p*3)));};
     const schedule=()=>{if(!frame)frame=requestAnimationFrame(draw);};

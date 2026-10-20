@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
 
 const Meta = () => {
+  const { pathname } = useRouter()
   return (
     <Head>
       <link
@@ -30,7 +32,7 @@ const Meta = () => {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta key="theme-color" name="theme-color" content="hsl(200, 100%, 48%)" />
+      {pathname !== "/" && <meta key="theme-color" name="theme-color" content="hsl(200, 100%, 48%)" />}
       <meta
         name="description"
         content="Discover AI-powered stock signals, market analysis and practical investing tools from Stocks To Buy Now AI."
