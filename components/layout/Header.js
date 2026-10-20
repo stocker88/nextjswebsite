@@ -24,6 +24,7 @@ const getAppStoreUrl = () => {
 export default function Header({
   homeHref = '/',
   forceDark = false,
+  hideAppDownload = false,
   navBasePath = '',
   socialNoticeMode = 'all',
   socialNoticeVariant = 'standard',
@@ -180,7 +181,7 @@ export default function Header({
 
           {/* Right side actions (Horizontal alignment on mobile) */}
           <div className={menuStyles.actions}>
-            <a
+            {!hideAppDownload && <a
               className={menuStyles.download}
               href={getAppStoreUrl()}
               target="_blank"
@@ -188,7 +189,7 @@ export default function Header({
               onClick={trackHeaderDownload}
             >
               Get the App
-            </a>
+            </a>}
 
             <button
               className={menuStyles.toggle}
