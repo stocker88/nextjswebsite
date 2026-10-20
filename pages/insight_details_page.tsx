@@ -1,3 +1,4 @@
+import { attributionLink, captureAcquisition } from '../lib/acquisition';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { trackAppStoreClick } from '../lib/analytics';
@@ -55,6 +56,7 @@ export default function InsightDetailsPage() {
       params.get('utm_medium') ||
       postId;
 
+    captureAcquisition({source, medium, campaign});
     const userAgent = navigator.userAgent;
 
     const isAndroid = /Android/i.test(userAgent);
@@ -70,15 +72,15 @@ export default function InsightDetailsPage() {
     // Keep the route in Uri.path so it matches the existing Flutter handler.
     // The query string preserves the post and campaign attribution fields.
     setAppUrl(
-      `${
+      attributionLink(`${
         isAndroid
           ? 'ai.stockstobuynow'
           : 'com.newcompany.stocker'
-      }:///insight_details_page?${params.toString()}`,
+      }:///insight_details_page?${params.toString()}`),
     );
 
     setSmartBannerContent(
-      `app-id=1565527320, app-argument=https://www.stockstobuynow.ai/insight_details_page?${params.toString()}`,
+      `app-id=1565527320, app-argument=${attributionLink(`https://www.stockstobuynow.ai/insight_details_page?${params.toString()}`)}`,
     );
 
     const platform = /Android/i.test(userAgent)
@@ -123,6 +125,7 @@ export default function InsightDetailsPage() {
           medium,
           postId,
           userAgent,
+          referrer: document.referrer,
           countryCode,
           platform,
         }),
@@ -179,7 +182,8 @@ export default function InsightDetailsPage() {
         linkUrl: storeUrl,
       });
 
-      window.location.href = storeUrl;
+      captureAcquisition({}, storeUrl === PLAY_STORE_URL ? 'google' : 'apple');
+      window.location.href = attributionLink(storeUrl);
     }, 3000);
   };
 

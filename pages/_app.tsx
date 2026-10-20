@@ -1,3 +1,4 @@
+import { captureAcquisition, installAcquisitionCapture } from '../lib/acquisition';
 import { AppProps } from 'next/app'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -10,12 +11,13 @@ import { initializeAnalytics, trackPageView } from '../lib/analytics';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  useEffect(() => installAcquisitionCapture(), []);
 
   useEffect(() => {
     initializeAnalytics();
     trackPageView(router.asPath);
 
-    const handleRouteChange = (url: string) => trackPageView(url);
+    const handleRouteChange = (url: string) => { trackPageView(url); captureAcquisition(); };
     router.events.on('routeChangeComplete', handleRouteChange);
 
     return () => {

@@ -27,7 +27,7 @@ export default function HeroMarketPulse({latest, period, label, periodControls}:
     <p className={styles.pulseNote}>Price moves · Treasury changes in bp</p>
     {periodControls}
     <div className={styles.pulseGrid}>
-      {rows.map(row => <article data-depth-card key={row.id} className={styles.pulseCard} data-tone={row.yieldRate ? 'yield' : row.change === null ? 'unavailable' : row.change >= 0 ? 'positive' : 'negative'}>
+      {rows.filter(row => row.id !== 'DGS30').map(row => <article data-depth-card key={row.id} className={styles.pulseCard} data-tone={row.yieldRate ? 'yield' : row.change === null ? 'unavailable' : row.change >= 0 ? 'positive' : 'negative'}>
         <h4>{row.name}</h4><p>{row.detail}</p>
         <div className={styles.pulseValue}>{row.yieldRate ? `${row.value.toFixed(2)}%` : row.change === null ? 'Unavailable' : `${signed(row.change,2)}%`}</div>
         {row.yieldRate && <span className={styles.pulseDelta}>{row.change === null ? 'Change unavailable' : `${signed(row.change,0)} bp`}</span>}

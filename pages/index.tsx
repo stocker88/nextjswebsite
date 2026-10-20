@@ -109,6 +109,7 @@ useEffect(() => {
       source,
       medium,
       userAgent,
+      referrer: document.referrer,
       countryCode,
       platform,
     }),

@@ -1,32 +1,22 @@
 import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
 import AppDownloadModal from './AppDownloadModal';
-import marketSnapshot from '../data/market-heatmap.json';
+import HeroOverviewHeatmap from './HeroOverviewHeatmap';
 import HeroMarketPulse from './HeroMarketPulse';
 import HeroFeatureExplorer from './HeroFeatureExplorer';
-import { CSSProperties, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import snapshot from '../data/hero-market-preview.json';
-import { HeatSnapshot, heatmapEndpoint, validSnapshot, heatColor, percent, tile } from '../lib/market-heatmap';
+import { HeatSnapshot, heatmapEndpoint, validSnapshot } from '../lib/market-heatmap';
 import styles from '../styles/HeroProductReveal.module.css';
 
-
-const previewStocks = snapshot.stocks.map(stock => ({...stock, changes: {
-  ...stock.changes,
-  day: marketSnapshot.rows.find(row => row.symbol === stock.symbol && row.asOf === snapshot.asOf)?.changes.day ?? null,
-}}));
 
 const savedDate = new Date(snapshot.asOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 /** Isolated hero experiment. Remove its single Home.tsx mount to revert. */
 export default function HeroProductReveal() {
   const root = useRef<HTMLDivElement>(null);
-  const heatRef = useRef<HTMLDivElement>(null);
-  const [mapSize, setMapSize] = useState({width:400,height:290});
   const [latest, setLatest] = useState<HeatSnapshot | null>(null);
-  const date = latest ? new Date(latest.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}) : savedDate;
-  const stocks = latest ? previewStocks.map(stock => {
-    const row = latest.rows.find(row => row.symbol === stock.symbol);
-    return {...stock, changes: {day: null, week: null, month: null, year: null, ...(row?.asOf === latest.asOf ? row.changes : {})}};
-  }) : previewStocks;
+  const date = latest?.overviewRows?.length ? new Date(latest.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}) : savedDate;
+  const stocks = latest?.overviewRows?.length ? latest.overviewRows : snapshot.stocks;
   useEffect(() => {
     const controller = new AbortController();
     let pending = false;
@@ -39,24 +29,13 @@ export default function HeroProductReveal() {
         const response = await fetch(heatmapEndpoint, {signal: controller.signal, cache: 'no-store'});
         if (!response.ok) throw new Error('Market feed unavailable');
         const data = await response.json();
-        if (validSnapshot(data) && !controller.signal.aborted) setLatest(previous => !previous || data.asOf >= previous.asOf ? data : previous);
+        if (validSnapshot(data) && (!data.overviewRows || validSnapshot({...data, rows:data.overviewRows})) && !controller.signal.aborted) setLatest(previous => !previous || data.asOf >= previous.asOf ? data : previous);
       } catch { /* Retain the last successfully loaded, dated snapshot. */ }
       finally { pending = false; if (queued && !controller.signal.aborted) { queued = false; void refresh(); } }
     };
     void refresh();
     const stop = scheduleMarketRefresh(refresh);
     return () => { controller.abort(); stop(); };
-  }, []);
-  const tiles = tile(stocks, row => row.weight, mapSize.width, mapSize.height);
-  useEffect(() => {
-    const map = heatRef.current;
-    if (!map) return;
-    const observer = new ResizeObserver(([entry]) => {
-      const width = Math.round(entry.contentRect.width), height = Math.round(entry.contentRect.height);
-      if (width > 0 && height > 0) setMapSize(previous => previous.width===width && previous.height===height ? previous : {width,height});
-    });
-    observer.observe(map);
-    return () => observer.disconnect();
   }, []);
   const [period, setPeriod] = useState<'day'|'week'|'month'|'year'>('year');
   const [showPreMarket, setShowPreMarket] = useState<'pre-market'|'after-hours'|null>(null);
@@ -140,11 +119,9 @@ export default function HeroProductReveal() {
         <div className={styles.panels}>
           <HeroMarketPulse latest={latest} period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
           <div className={styles.heatPanel}>
-            <div className={styles.panelHeading}><span>Market leaders</span><span className={styles.tag}>{label}</span></div>
-            <div className={styles.mobileHeatControls}>{periodSelector('Market leaders period')}</div>
-            <div ref={heatRef} className={styles.heatmap} role="img" aria-label={`${label} performance of fourteen leading S&P 500 holdings, ${date}`}>
-              {tiles.map(({item,x,y,width,height}, index)=><div key={item.symbol} className={styles.tile} style={{left:`${x/mapSize.width*100}%`,top:`${y/mapSize.height*100}%`,width:`${width/mapSize.width*100}%`,height:`${height/mapSize.height*100}%`,'--tile-color':heatColor(item.changes[period],period==='year'?60:period==='month'?12:period==='week'?6:4),'--order':index} as CSSProperties}><div><b>{item.symbol}</b><span>{percent(item.changes[period])}</span></div></div>)}
-            </div>
+            <div className={styles.panelHeading}><span>S&P 500 by industry</span><span className={styles.tag}>{label}</span></div>
+            <div className={styles.mobileHeatControls}>{periodSelector('S&P 500 by industry period')}</div>
+            <HeroOverviewHeatmap rows={stocks} period={period} asOf={latest?.overviewRows?.length ? latest.asOf : snapshot.asOf} />
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
         </div>

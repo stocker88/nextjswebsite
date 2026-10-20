@@ -1,3 +1,4 @@
+import { attributionLink, captureAcquisition } from '../../lib/acquisition';
 import Image from 'next/image';
 import type { MouseEvent } from 'react';
 import { trackAppStoreClick } from '../../lib/analytics';
@@ -22,7 +23,8 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
       linkUrl,
     });
 
-    window.open(linkUrl, '_blank', 'noopener,noreferrer');
+    captureAcquisition({}, /play.google.com/.test(linkUrl) ? 'google' : 'apple');
+    window.open(attributionLink(linkUrl), '_blank', 'noopener,noreferrer');
   };
 
   return (

@@ -1,3 +1,4 @@
+import { captureAcquisition } from './acquisition';
 import ReactGA from 'react-ga4';
 
 export const GA_MEASUREMENT_ID = 'G-JPXMZYD5DY';
@@ -36,6 +37,7 @@ export function trackAppStoreClick({
   placement,
   linkUrl,
 }: AppStoreClick) {
+  captureAcquisition({}, store);
   initializeAnalytics();
   ReactGA.event('app_store_click', {
     store,

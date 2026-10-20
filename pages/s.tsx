@@ -1,3 +1,4 @@
+import { captureAcquisition } from '../lib/acquisition';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -42,6 +43,7 @@ function queryFor(link: ResolvedLink) {
 }
 
 function storeAttribution(code: string, link: ResolvedLink) {
+  captureAcquisition(link);
   const referralCode = link.goal || link.referrerUid || '';
   if (!referralCode) return;
 
@@ -76,6 +78,7 @@ function storeAttribution(code: string, link: ResolvedLink) {
       medium: link.medium || '',
       postId: link.postId || '',
       userAgent,
+      referrer: document.referrer,
       countryCode: (navigator.language.split('-')[1] || '').toUpperCase(),
       platform,
     }),
