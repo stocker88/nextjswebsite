@@ -4,7 +4,7 @@ import HeroMarketPulse from './HeroMarketPulse';
 import HeroFeatureExplorer from './HeroFeatureExplorer';
 import { CSSProperties, useEffect, useRef, useState } from 'react';
 import snapshot from '../data/hero-market-preview.json';
-import { heatColor, percent, tile } from '../lib/market-heatmap';
+import { HeatSnapshot, heatmapEndpoint, validSnapshot, heatColor, percent, tile } from '../lib/market-heatmap';
 import styles from '../styles/HeroProductReveal.module.css';
 
 
@@ -13,14 +13,39 @@ const previewStocks = snapshot.stocks.map(stock => ({...stock, changes: {
   day: marketSnapshot.rows.find(row => row.symbol === stock.symbol && row.asOf === snapshot.asOf)?.changes.day ?? null,
 }}));
 
-const date = new Date(snapshot.asOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const savedDate = new Date(snapshot.asOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 /** Isolated hero experiment. Remove its single Home.tsx mount to revert. */
 export default function HeroProductReveal() {
   const root = useRef<HTMLDivElement>(null);
   const heatRef = useRef<HTMLDivElement>(null);
   const [mapSize, setMapSize] = useState({width:400,height:290});
-  const tiles = tile(previewStocks, row => row.weight, mapSize.width, mapSize.height);
+  const [latest, setLatest] = useState<HeatSnapshot | null>(null);
+  const date = latest ? new Date(latest.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}) : savedDate;
+  const stocks = latest ? previewStocks.map(stock => {
+    const row = latest.rows.find(row => row.symbol === stock.symbol);
+    return {...stock, changes: {day: null, week: null, month: null, year: null, ...(row?.asOf === latest.asOf ? row.changes : {})}};
+  }) : previewStocks;
+  useEffect(() => {
+    const controller = new AbortController();
+    let pending = false;
+    const refresh = async () => {
+      if (pending || document.visibilityState === 'hidden') return;
+      pending = true;
+      try {
+        const response = await fetch(heatmapEndpoint, {signal: controller.signal, cache: 'no-store'});
+        if (!response.ok) throw new Error('Market feed unavailable');
+        const data = await response.json();
+        if (validSnapshot(data) && !controller.signal.aborted) setLatest(previous => !previous || data.asOf >= previous.asOf ? data : previous);
+      } catch { /* Retain the last successfully loaded, dated snapshot. */ }
+      finally { pending = false; }
+    };
+    void refresh();
+    const interval = setInterval(refresh, 60000);
+    document.addEventListener('visibilitychange', refresh);
+    return () => { controller.abort(); clearInterval(interval); document.removeEventListener('visibilitychange', refresh); };
+  }, []);
+  const tiles = tile(stocks, row => row.weight, mapSize.width, mapSize.height);
   useEffect(() => {
     const map = heatRef.current;
     if (!map) return;
@@ -110,7 +135,7 @@ export default function HeroProductReveal() {
           </div>
         </div>
         <div className={styles.panels}>
-          <HeroMarketPulse period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
+          <HeroMarketPulse latest={latest} period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>Market leaders</span><span className={styles.tag}>{label}</span></div>
             <div className={styles.mobileHeatControls}>{periodSelector('Market leaders period')}</div>

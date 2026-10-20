@@ -3,7 +3,8 @@ export const PERIOD_OPTIONS:{value:Period;label:string}[]=[{value:'day',label:'1
 export const periodLabel=(period:Period)=>PERIOD_OPTIONS.find(p=>p.value===period)!.label;
 export const periodScale:Record<Period,number>={day:4,week:8,month:15,quarter:25,halfyear:40,ytd:40,year:60,threeYears:100,fiveYears:150};
 export type HeatStock={symbol:string;weight?:number;name:string;sector:string;industry:string;marketCap:number;price:number;asOf:string;sourceUpdatedAt:string|null;periodDetails?:Partial<Record<Period,{basis:'weekly'|'monthly';basePeriod:string;targetDate:string}>>;changes:Record<Period,number|null>};
-export type HeatSnapshot={version:number;universeAsOf?:string;weightSource?:string;weightCovered?:number;asOf:string;assembledAt:string;metadataUpdatedAt:string|null;source:string;priceBasis:string;refreshSchedule:string;rows:HeatStock[];coverage:{total:number;current:number;outdated:number};stale?:boolean};
+export type PulseQuote={price:number;previousClose:number;quotedAt:string;sourceSymbol?:string};
+export type HeatSnapshot={preMarket?:{asOf:string;analyticsContext?:{treasury?:Record<string,{date:string;value:number}[]>}};pulse?:Record<string,PulseQuote>;version:number;universeAsOf?:string;weightSource?:string;weightCovered?:number;asOf:string;assembledAt:string;metadataUpdatedAt:string|null;source:string;priceBasis:string;refreshSchedule:string;rows:HeatStock[];coverage:{total:number;current:number;outdated:number};stale?:boolean};
 export const heatmapEndpoint='https://us-central1-stocker-fcda2.cloudfunctions.net/marketHeatmap';
 export const percent=(v:number|null)=>v===null?'Unavailable':`${v>0?'+':''}${v.toFixed(2)}%`;
 export const dateLabel=(date:string)=>!date?'Unavailable':new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
