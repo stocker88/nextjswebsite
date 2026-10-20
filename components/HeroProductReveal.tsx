@@ -63,8 +63,8 @@ export default function HeroProductReveal() {
   const options = [{id:'day',label:'1D'}, {id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
   const label = options.find(option => option.id === period)!.label;
   const periodSelector = (ariaLabel: string) => <div className={styles.periods} role="group" aria-label={ariaLabel}>
-    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="PreMarket — available in app" onClick={() => setShowPreMarket('pre-market')}><span className={styles.inAppBadge}>In app</span>PreMarket</button>
-    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="After Hours — available in app" onClick={() => setShowPreMarket('after-hours')}><span className={styles.inAppBadge}>In app</span>After Hours</button>
+    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="Pre-Market — available in app" onClick={() => setShowPreMarket('pre-market')}><span className={styles.inAppBadge}>In app</span>Pre-Market</button>
+    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="After-Hours — available in app" onClick={() => setShowPreMarket('after-hours')}><span className={styles.inAppBadge}>In app</span>After-Hours</button>
     {options.map(option => <button type="button" key={option.id} aria-pressed={period===option.id} onClick={() => setPeriod(option.id)}>{option.label}</button>)}
   </div>;
   useEffect(() => {
