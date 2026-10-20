@@ -59,11 +59,12 @@ export default function HeroProductReveal() {
     return () => observer.disconnect();
   }, []);
   const [period, setPeriod] = useState<'day'|'week'|'month'|'year'>('year');
-  const [showPreMarket, setShowPreMarket] = useState(false);
+  const [showPreMarket, setShowPreMarket] = useState<'pre-market'|'after-hours'|null>(null);
   const options = [{id:'day',label:'1D'}, {id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
   const label = options.find(option => option.id === period)!.label;
   const periodSelector = (ariaLabel: string) => <div className={styles.periods} role="group" aria-label={ariaLabel}>
-    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="PreMarket — available in app" onClick={() => setShowPreMarket(true)}><span className={styles.inAppBadge}>In app</span>PreMarket</button>
+    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="PreMarket — available in app" onClick={() => setShowPreMarket('pre-market')}><span className={styles.inAppBadge}>In app</span>PreMarket</button>
+    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="After Hours — available in app" onClick={() => setShowPreMarket('after-hours')}><span className={styles.inAppBadge}>In app</span>After Hours</button>
     {options.map(option => <button type="button" key={option.id} aria-pressed={period===option.id} onClick={() => setPeriod(option.id)}>{option.label}</button>)}
   </div>;
   useEffect(() => {
@@ -115,7 +116,7 @@ export default function HeroProductReveal() {
   }, []);
 
   return <div ref={root} className={styles.reveal} id="product-reveal">
-    {showPreMarket && <AppDownloadModal placement="hero_premarket" onClose={() => setShowPreMarket(false)} title="Get the app for pre-market" description="Explore pre-market moves in StocksToBuyNow.ai. Download the app to see what's moving before the market opens." />}
+    {showPreMarket && <AppDownloadModal placement="hero_premarket" onClose={() => setShowPreMarket(null)} title={`Get the app for ${showPreMarket}`} description={`Explore ${showPreMarket} moves in StocksToBuyNow.ai. Download the app to see extended-hours snapshots.`} />}
     <div className={styles.gradientTail} aria-hidden="true"><i /></div>
     <div data-preview-heading data-title-visible="false" className={styles.heading}>
       <span className={styles.eyebrow}>A CLEARER VIEW OF THE MARKET</span>

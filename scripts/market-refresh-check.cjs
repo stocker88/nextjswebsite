@@ -10,7 +10,10 @@ for(const [from,to]of [
  ['2026-11-02T15:00Z','2026-11-02T15:08:00Z'],
  ['2026-11-26T14:00Z','2026-11-27T12:39:30Z'],
  ['2026-11-27T18:00Z','2026-11-27T18:06:30Z'],
- ['2026-11-27T18:07Z','2026-11-30T12:39:30Z'],
+ ['2026-11-27T18:07Z','2026-11-27T18:10:30Z'],
+ ['2026-10-20T20:07Z','2026-10-20T20:10:30Z'],
+ ['2026-10-20T20:17Z','2026-10-20T20:45:30Z'],
+ ['2026-10-21T00:00Z','2026-10-21T11:39:30Z'],
  ['2026-10-24T14:00Z','2026-10-26T11:39:30Z']
 ])assert.equal(new Date(nextMarketRefresh(Date.parse(from))).toISOString(),new Date(to).toISOString(),from);
 for(const file of ['components/HeroProductReveal.tsx','components/HomeHeatmap.tsx','components/heatmap/StockHeatmap.tsx']){

@@ -19,7 +19,9 @@ export function nextMarketRefresh(now:number):number {
   const slots=[450,510,540,565,571,576,581,591];
   for(let minute=606;minute<close;minute+=15)slots.push(minute);
   slots.push(close+1);
-  const checks=slots.map(minute=>midnight+(minute+(minute<570?9.5:minute>=606&&(minute-606)%30===0?2:5.5))*60000).sort((a,b)=>a-b);
+  slots.push(close+5,close+10);
+  for(let minute=close+40;minute<=1200;minute+=30)slots.push(minute);
+  const checks=slots.map(minute=>midnight+(minute+(minute<570?9.5:minute>close?5.5:minute>=606&&(minute-606)%30===0?2:5.5))*60000).sort((a,b)=>a-b);
   const next=checks.find(check=>check>now);
   if(next)return next;
  }
