@@ -36,7 +36,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
   if (!items.length) return null;
   const title = (i:ResearchImage) => {
     const stem = (i.filename || '').replace(/\.[^.]+$/,'').trim();
-    return !stem || /^\d+$/.test(stem) ? '' : stem.charAt(0).toUpperCase()+stem.slice(1).toLowerCase();
+    return !stem || /^\d+$/.test(stem) || /^image_picker[_-]/i.test(stem) ? '' : stem.charAt(0).toUpperCase()+stem.slice(1).toLowerCase();
   };
   const open = (index:number, button:HTMLButtonElement) => {
     restore.current=button;

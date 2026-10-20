@@ -1,8 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
-const {poster}=require('./render-fear-greed-share.cjs');
+const {poster,historySeries}=require('./render-fear-greed-share.cjs');
 const snapshot=require('../data/fear-greed.json'),manifest=require('../data/fear-greed-share.json');
 const svg=poster(snapshot),png=fs.readFileSync(require('node:path').join(__dirname,'../public',manifest.image));
-assert.equal(png.readUInt32BE(16),1600);assert.equal(png.readUInt32BE(20),1800);
+assert.equal(png.readUInt32BE(16),1600);assert.equal(png.readUInt32BE(20),2200);
 assert.ok(manifest.image.includes(crypto.createHash('sha256').update(png).digest('hex').slice(0,20)));
 assert.ok(svg.includes('www.StocksToBuyNow.ai'));assert.ok(!/Finica|CNN|optionseducation/.test(svg));
 assert.equal((svg.match(/<svg /g)||[]).length,2,'poster includes a QR SVG');
@@ -10,3 +10,14 @@ assert.equal(manifest.timestamp,snapshot.timestamp);
 assert.ok(poster({...snapshot,score:0,history:[],indicators:[],previousClose:null}).includes('Unavailable'));
 assert.throws(()=>poster({...snapshot,score:NaN}));
 console.log('Shared PNG, branding, QR embedding, missing-data and content-hash checks passed.');
+
+assert.equal(manifest.layoutVersion,2);
+assert.equal(manifest.historyRange,'1Y');
+const end=Date.parse(snapshot.timestamp);
+const point=days=>({date:new Date(end-days*86400000).toISOString(),value:40});
+const yearly=historySeries({...snapshot,history:[point(400),point(300),point(100),point(0),point(-1)]});
+assert.equal(yearly.points.length,3,'Include the full year, excluding older and future readings');
+assert.ok(yearly.points.some(p=>p.date===point(300).date));
+assert.ok(svg.includes('HOW THE MOOD HAS CHANGED · 1 YEAR'));
+assert.ok(svg.indexOf('id="sentiment-gauge"')<svg.indexOf('id="history-chart"'));
+console.log('Full-width gauge, one-year history and revised image dimensions passed.');

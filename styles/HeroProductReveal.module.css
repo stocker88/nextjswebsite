@@ -61,3 +61,45 @@
 @media(prefers-reduced-motion:reduce){.periods button,.tile>div,.pulseSpark path{transition:none}}
 
 @media(max-width:440px){.heatPanel .heatmap{min-height:320px}}
+
+/* Overlap the badge without changing the selector's button heights. */
+.periods .appPeriod{position:relative;padding-inline:12px}
+.inAppBadge{position:absolute;top:-13px;right:4px;padding:2px 6px;border:1px solid #a58ad080;border-radius:6px;background:#302541;color:#d0b5f3;font-size:9px;font-weight:650;line-height:1;white-space:nowrap;pointer-events:none}
+.pulseCard[data-tone=unavailable] .pulseValue{color:#95a9c7;font-size:18px}
+
+/* Keep period controls within reach when the two market panels stack. */
+.mobileHeatControls{display:none}
+@media(min-width:701px){
+  .previewControls{flex-wrap:nowrap}
+  .periods button{min-height:42px;min-width:46px;padding:9px 12px;font-size:12px}
+  .snapshot{text-align:right}
+}
+@media(min-width:1000px){
+  .toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:24px}
+  .previewControls{display:contents}
+  .snapshot{justify-self:end}
+}
+@media(min-width:701px) and (max-width:999px){
+  .toolbar{flex-wrap:wrap}
+  .previewControls{flex:1;justify-content:center;gap:16px}
+}
+@media(max-width:700px){
+  .previewControls{flex-direction:column;align-items:flex-start;gap:14px}
+  .previewControls .snapshot{order:-1}
+  .mobileHeatControls{display:block;margin:22px 0 4px}
+  .mobileHeatControls .periods{width:100%}
+  .mobileHeatControls .periods button{flex:1;min-width:0;padding-inline:6px}
+  .mobileHeatControls .periods .appPeriod{flex:1.8}
+}
+
+/* Lead with the heatmap in the stacked mobile overview. */
+@media(max-width:700px){.heatPanel{order:-1}}
+
+@media(max-width:700px){
+  .previewControls > .periods{display:none}
+  .pulsePanel .mobileHeatControls{margin-bottom:16px}
+}
+
+/* App-only cards use the same purple marker as the period selectors. */
+.featureCard{position:relative}
+.featureAppBadge{position:absolute;top:-9px;right:14px;padding:3px 8px;border:1px solid #a58ad080;border-radius:6px;background:#302541;color:#d0b5f3;font-size:10px;font-weight:650;line-height:1;white-space:nowrap}

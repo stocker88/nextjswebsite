@@ -80,8 +80,6 @@ export default function Header({
       const themeColor = colorAt(0);
       setBannerColors({ top: themeColor, bottom: colorAt(headerHeight) });
       setChromeColor(themeColor);
-      document.documentElement.style.backgroundColor = themeColor;
-      document.body.style.backgroundColor = themeColor;
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
     update();
@@ -112,12 +110,13 @@ export default function Header({
       <meta
         key="theme-color"
         name="theme-color"
-        content={chromeColor}
+        content={forceDark ? '#080d1b' : '#00a3f5'}
       />
     </Head>
   );
 
-  if (socialBrowserName === null) return browserTheme;
+  // Render the normal header during SSR and browser detection so its sticky
+  // footprint is present from the first paint and cannot push the hero down.
 
   const shouldShowSocialNotice = Boolean(socialBrowserName) &&
     (socialNoticeMode === 'all' || socialBrowserName === 'TikTok');

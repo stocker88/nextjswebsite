@@ -1,3 +1,5 @@
+import AppDownloadModal from './AppDownloadModal';
+import marketSnapshot from '../data/market-heatmap.json';
 import HeroMarketPulse from './HeroMarketPulse';
 import HeroFeatureExplorer from './HeroFeatureExplorer';
 import { CSSProperties, useEffect, useRef, useState } from 'react';
@@ -6,6 +8,11 @@ import { heatColor, percent, tile } from '../lib/market-heatmap';
 import styles from '../styles/HeroProductReveal.module.css';
 
 
+const previewStocks = snapshot.stocks.map(stock => ({...stock, changes: {
+  ...stock.changes,
+  day: marketSnapshot.rows.find(row => row.symbol === stock.symbol && row.asOf === snapshot.asOf)?.changes.day ?? null,
+}}));
+
 const date = new Date(snapshot.asOf + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 /** Isolated hero experiment. Remove its single Home.tsx mount to revert. */
@@ -13,7 +20,7 @@ export default function HeroProductReveal() {
   const root = useRef<HTMLDivElement>(null);
   const heatRef = useRef<HTMLDivElement>(null);
   const [mapSize, setMapSize] = useState({width:400,height:290});
-  const tiles = tile(snapshot.stocks, row => row.weight, mapSize.width, mapSize.height);
+  const tiles = tile(previewStocks, row => row.weight, mapSize.width, mapSize.height);
   useEffect(() => {
     const map = heatRef.current;
     if (!map) return;
@@ -24,9 +31,14 @@ export default function HeroProductReveal() {
     observer.observe(map);
     return () => observer.disconnect();
   }, []);
-  const [period, setPeriod] = useState<'week'|'month'|'year'>('year');
-  const options = [{id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
+  const [period, setPeriod] = useState<'day'|'week'|'month'|'year'>('year');
+  const [showPreMarket, setShowPreMarket] = useState(false);
+  const options = [{id:'day',label:'1D'}, {id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
   const label = options.find(option => option.id === period)!.label;
+  const periodSelector = (ariaLabel: string) => <div className={styles.periods} role="group" aria-label={ariaLabel}>
+    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="PreMarket — available in app" onClick={() => setShowPreMarket(true)}><span className={styles.inAppBadge}>In app</span>PreMarket</button>
+    {options.map(option => <button type="button" key={option.id} aria-pressed={period===option.id} onClick={() => setPeriod(option.id)}>{option.label}</button>)}
+  </div>;
   useEffect(() => {
     const element = root.current;
     if (!element) return;
@@ -76,6 +88,7 @@ export default function HeroProductReveal() {
   }, []);
 
   return <div ref={root} className={styles.reveal} id="product-reveal">
+    {showPreMarket && <AppDownloadModal placement="hero_premarket" onClose={() => setShowPreMarket(false)} title="Get the app for pre-market" description="Explore pre-market moves in StocksToBuyNow.ai. Download the app to see what's moving before the market opens." />}
     <div className={styles.gradientTail} aria-hidden="true"><i /></div>
     <div data-preview-heading data-title-visible="false" className={styles.heading}>
       <span className={styles.eyebrow}>A CLEARER VIEW OF THE MARKET</span>
@@ -89,13 +102,20 @@ export default function HeroProductReveal() {
           <div className={styles.brand}><img src="/assets/images/stockerRobotIcon.png" width="30" height="30" alt="" /><span>Stocks to Buy Now<span className={styles.brandAI}> AI</span></span></div>
           <span className={styles.previewLabel}><i /> PRODUCT PREVIEW</span>
         </div>
-        <div className={styles.toolbar}><div><span className={styles.eyebrow}>THE BIG PICTURE</span><h3>Market overview</h3></div><div className={styles.previewControls}><span className={styles.snapshot}>Saved snapshot · {date}</span><div className={styles.periods} role="group" aria-label="Market overview period">{options.map(option => <button type="button" key={option.id} aria-pressed={period===option.id} onClick={() => setPeriod(option.id)}>{option.label}</button>)}</div></div></div>
+        <div className={styles.toolbar}>
+          <div><span className={styles.eyebrow}>THE BIG PICTURE</span><h3>Market overview</h3></div>
+          <div className={styles.previewControls}>
+            {periodSelector('Market overview period')}
+            <span className={styles.snapshot}>Saved snapshot · {date}</span>
+          </div>
+        </div>
         <div className={styles.panels}>
-          <HeroMarketPulse period={period} label={label} />
+          <HeroMarketPulse period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>Market leaders</span><span className={styles.tag}>{label}</span></div>
+            <div className={styles.mobileHeatControls}>{periodSelector('Market leaders period')}</div>
             <div ref={heatRef} className={styles.heatmap} role="img" aria-label={`${label} performance of fourteen leading S&P 500 holdings, ${date}`}>
-              {tiles.map(({item,x,y,width,height}, index)=><div key={item.symbol} className={styles.tile} style={{left:`${x/mapSize.width*100}%`,top:`${y/mapSize.height*100}%`,width:`${width/mapSize.width*100}%`,height:`${height/mapSize.height*100}%`,'--tile-color':heatColor(item.changes[period],period==='year'?60:period==='month'?12:6),'--order':index} as CSSProperties}><div><b>{item.symbol}</b><span>{percent(item.changes[period])}</span></div></div>)}
+              {tiles.map(({item,x,y,width,height}, index)=><div key={item.symbol} className={styles.tile} style={{left:`${x/mapSize.width*100}%`,top:`${y/mapSize.height*100}%`,width:`${width/mapSize.width*100}%`,height:`${height/mapSize.height*100}%`,'--tile-color':heatColor(item.changes[period],period==='year'?60:period==='month'?12:period==='week'?6:4),'--order':index} as CSSProperties}><div><b>{item.symbol}</b><span>{percent(item.changes[period])}</span></div></div>)}
             </div>
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
