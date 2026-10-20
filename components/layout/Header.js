@@ -3,6 +3,7 @@ import menuStyles from '../../styles/SiteMenu.module.css';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { trackAppStoreClick } from '../../lib/analytics';
 import { usesLegacySafariChrome } from '../../lib/safari-chrome';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
@@ -29,10 +30,13 @@ export default function Header({
   socialNoticeMode = 'all',
   socialNoticeVariant = 'standard',
 }) {
+  const { pathname } = useRouter();
+  const isHomePage = pathname === '/';
+  const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [chromeColor, setChromeColor] = useState(forceDark ? '#080d1b' : '#00a3f5');
-  const [bannerColors, setBannerColors] = useState({ top: '#00a3f5', bottom: '#00a3f5' });
+  const [chromeColor, setChromeColor] = useState(darkHeader ? '#080d1b' : '#00a3f5');
+  const [bannerColors, setBannerColors] = useState({ top: darkHeader ? '#080d1b' : '#00a3f5', bottom: darkHeader ? '#080d1b' : '#00a3f5' });
   const [socialBrowserName, setSocialBrowserName] = useState(null);
 
   useEffect(() => {
@@ -76,7 +80,7 @@ export default function Header({
       const fade = Math.max(0, Math.min(1, (progress - .55) / .45));
       const darkness = fade * fade * (3 - 2 * fade);
       const colorAt = offset => {
-        if (forceDark || !hero) return '#080d1b';
+        if (darkHeader || !hero) return '#080d1b';
         const fraction = Math.min(1, (y + offset) / heroHeight);
         return '#' + [0, 163, 245].map((start, i) => {
           const heroChannel = start + ([21, 0, 128][i] - start) * fraction;
@@ -89,7 +93,7 @@ export default function Header({
       setChromeColor(themeColor);
       // Older Safari needs a painted document canvas for its bottom toolbar.
       // Scope it to the homepage and never set this on Safari 26's glass UI.
-      if (legacySafari && hero && !forceDark) {
+      if (legacySafari && hero && !darkHeader) {
         canvas.setAttribute('data-legacy-safari-chrome', 'true');
         canvas.style.setProperty('--legacy-safari-color', themeColor);
         ownsLegacyCanvas = true;
@@ -110,7 +114,7 @@ export default function Header({
         else canvas.style.removeProperty('--legacy-safari-color');
       }
     };
-  }, [forceDark]);
+  }, [darkHeader]);
 
   const closeMenu = () => setIsOpen(false);
 
@@ -163,7 +167,7 @@ export default function Header({
   return (
     <>
       {browserTheme}
-      <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor}}>
+      <header className={`site-header ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor}}>
         <span className="site-header-edge" aria-hidden="true" />
         <nav className={menuStyles.nav} aria-label="Main navigation">
           <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
