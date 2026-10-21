@@ -25,3 +25,5 @@ assert(html('stocks-to-buy').includes('Earnings per Share'),'Signal metric previ
 assert(fs.existsSync(path.join(out,'404.html'))||fs.existsSync(path.join(out,'404/index.html')));
 assert(fs.existsSync(path.join(out,'.nojekyll')));
 console.log(`Static deployment checks passed: ${urls.length} sitemap URLs resolve to exported HTML.`);
+
+for(const route of ['premarket-stock-heatmap','after-hours-stock-heatmap']){const page=html(route);assert(page.includes('<table'),'Extended-hours quotes must be pre-rendered');assert(page.includes('NVDA'));assert(page.includes('FREE SNAPSHOT'));assert(page.includes('America/New_York')||page.includes('EDT')||page.includes('EST'));assert(sitemap.includes('/'+route+'/'));}

@@ -8,13 +8,15 @@ for(const [from,to]of [
  ['2026-10-19T14:00Z','2026-10-19T14:08:00Z'],
  ['2026-10-19T14:10Z','2026-10-19T14:26:30Z'],
  ['2026-11-02T15:00Z','2026-11-02T15:08:00Z'],
- ['2026-11-26T14:00Z','2026-11-27T12:39:30Z'],
+ ['2026-11-26T14:00Z','2026-11-27T09:14:30Z'],
  ['2026-11-27T18:00Z','2026-11-27T18:06:30Z'],
  ['2026-11-27T18:07Z','2026-11-27T18:10:30Z'],
  ['2026-10-20T20:07Z','2026-10-20T20:10:30Z'],
  ['2026-10-20T20:17Z','2026-10-20T20:45:30Z'],
- ['2026-10-21T00:00Z','2026-10-21T11:39:30Z'],
- ['2026-10-24T14:00Z','2026-10-26T11:39:30Z']
+ ['2026-10-21T00:00Z','2026-10-21T00:10:30Z'],
+ ['2026-10-21T00:11Z','2026-10-21T08:14:30Z'],
+ ['2026-10-21T08:15Z','2026-10-21T10:09:30Z'],
+ ['2026-10-24T14:00Z','2026-10-26T08:14:30Z']
 ])assert.equal(new Date(nextMarketRefresh(Date.parse(from))).toISOString(),new Date(to).toISOString(),from);
 for(const file of ['components/HeroProductReveal.tsx','components/HomeHeatmap.tsx','components/heatmap/StockHeatmap.tsx']){
  const s=fs.readFileSync(file,'utf8');assert(s.includes('scheduleMarketRefresh('),file);

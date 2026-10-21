@@ -1,5 +1,7 @@
 import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
-import AppDownloadModal from './AppDownloadModal';
+import ExtendedHoursSnapshot from './ExtendedHoursSnapshot';
+import savedExtended from '../data/extended-hours.json';
+import {ExtendedSession} from '../lib/extended-hours';
 import HeroOverviewHeatmap from './HeroOverviewHeatmap';
 import HeroMarketPulse from './HeroMarketPulse';
 import HeroFeatureExplorer from './HeroFeatureExplorer';
@@ -38,13 +40,13 @@ export default function HeroProductReveal() {
     return () => { controller.abort(); stop(); };
   }, []);
   const [period, setPeriod] = useState<'day'|'week'|'month'|'year'>('year');
-  const [showPreMarket, setShowPreMarket] = useState<'pre-market'|'after-hours'|null>(null);
+  const [sessionKind,setSessionKind]=useState<'preMarket'|'afterHours'|null>(null);
   const options = [{id:'day',label:'1D'}, {id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
   const label = options.find(option => option.id === period)!.label;
   const periodSelector = (ariaLabel: string) => <div className={styles.periods} role="group" aria-label={ariaLabel}>
-    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="Pre-Market — available in app" onClick={() => setShowPreMarket('pre-market')}><span className={styles.inAppBadge}>In app</span>Pre-Market</button>
-    <button type="button" className={styles.appPeriod} aria-haspopup="dialog" aria-label="After-Hours — available in app" onClick={() => setShowPreMarket('after-hours')}><span className={styles.inAppBadge}>In app</span>After-Hours</button>
-    {options.map(option => <button type="button" key={option.id} aria-pressed={period===option.id} onClick={() => setPeriod(option.id)}>{option.label}</button>)}
+    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='preMarket'} onClick={() => setSessionKind('preMarket')}>Pre-Market</button>
+    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='afterHours'} onClick={() => setSessionKind('afterHours')}>After-Hours</button>
+    {options.map(option => <button type="button" key={option.id} aria-pressed={!sessionKind&&period===option.id} onClick={() => {setSessionKind(null);setPeriod(option.id)}}>{option.label}</button>)}
   </div>;
   useEffect(() => {
     const element = root.current;
@@ -95,7 +97,6 @@ export default function HeroProductReveal() {
   }, []);
 
   return <div ref={root} className={styles.reveal} id="product-reveal">
-    {showPreMarket && <AppDownloadModal placement="hero_premarket" onClose={() => setShowPreMarket(null)} title={`Get the app for ${showPreMarket}`} description={`Explore ${showPreMarket} moves in StocksToBuyNow.ai. Download the app to see extended-hours snapshots.`} />}
     <div className={styles.gradientTail} aria-hidden="true"><i /></div>
     <div data-preview-heading data-title-visible="false" className={styles.heading}>
       <span className={styles.eyebrow}>A CLEARER VIEW OF THE MARKET</span>
@@ -113,10 +114,10 @@ export default function HeroProductReveal() {
           <div><span className={styles.eyebrow}>THE BIG PICTURE</span><h3>Market overview</h3></div>
           <div className={styles.previewControls}>
             {periodSelector('Market overview period')}
-            <span className={styles.snapshot}>Saved snapshot · {date}</span>
+            <span className={styles.snapshot}>{sessionKind?'Free extended-hours snapshot':`Saved snapshot · ${date}`}</span>
           </div>
         </div>
-        <div className={styles.panels}>
+        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession}/></div>:<div className={styles.panels}>
           <HeroMarketPulse latest={latest} period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>S&P 500 by industry</span><span className={styles.tag}>{label}</span></div>
@@ -125,6 +126,7 @@ export default function HeroProductReveal() {
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+        }
         <div className={styles.bottomBar}><span><i /> Perspective starts here.</span><span>Research <b>·</b> Compare <b>·</b> Understand</span></div>
       </div>
     </div>

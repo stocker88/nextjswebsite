@@ -31,7 +31,7 @@ async function main(){
  }
  fs.symlinkSync(path.join(root,'node_modules'),path.join(stage,'node_modules'),'dir');
  // Fetch once. Every generated page uses the same archive and timestamps.
- if(!process.argv.includes('--snapshot')){run(['scripts/sync-research.js']);run(['scripts/sync-earnings.cjs']);run(['scripts/sync-stock-research.cjs']);run(['scripts/sync-market-news.cjs']);}
+ if(!process.argv.includes('--snapshot')){run(['scripts/sync-research.js']);run(['scripts/sync-earnings.cjs']);run(['scripts/sync-stock-research.cjs']);run(['scripts/sync-market-news.cjs']);run(['scripts/sync-market-overview.cjs']);}
  write('lib/research-server.ts',`import data from '../data/research.json';\nimport type {ResearchPreview} from './research';\nexport async function fetchResearch():Promise<ResearchPreview[]>{return data as ResearchPreview[];}\n`);
  write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:2}};\n`);
  replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); const {researchPages} = await import('../../lib/research'); const pages = researchPages(items); return {paths:pages.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);

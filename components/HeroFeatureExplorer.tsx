@@ -5,6 +5,8 @@ import styles from '../styles/HeroProductReveal.module.css';
 const app = 'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
 const features = [
   {group:'Markets',title:'Stock Market Heatmap',copy:'See the largest stocks and sector performance.',href:'/stock-market-heatmap/',icon:'▦'},
+  {group:'Markets',title:'Premarket heatmap',copy:'Explore a free snapshot of stock moves before the opening bell.',href:'/premarket-stock-heatmap/',icon:'▦'},
+  {group:'Markets',title:'After-hours heatmap',copy:'See saved stock moves after the regular session closes.',href:'/after-hours-stock-heatmap/',icon:'▦'},
   {group:'Markets',title:'Fear & Greed',copy:'Explore market sentiment and its seven indicators.',href:'/fear-and-greed-index/',icon:'◔'},
   {group:'Markets',title:'Market pulse',copy:'Follow indices, gold, oil and Treasury yields.',href:app,icon:'⌁'},
   {group:'Signals',title:'Stocks to Buy',copy:'Explore stock ideas and the research behind them.',href:'/stocks-to-buy/',icon:'↗'},

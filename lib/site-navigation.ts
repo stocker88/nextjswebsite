@@ -1,5 +1,7 @@
 export const siteNavigation = [
   {label: 'Stock Market Heatmap', href: '/stock-market-heatmap/', detail: 'See the largest stocks and sector performance', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
+  {label: 'Premarket Heatmap', href: '/premarket-stock-heatmap/', detail: 'Free saved stock moves before the opening bell', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
+  {label: 'After-Hours Heatmap', href: '/after-hours-stock-heatmap/', detail: 'Free saved stock moves after the closing bell', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
   {label: 'Fear & Greed', href: '/fear-and-greed-index/', detail: 'Explore market sentiment and its seven indicators', icon: 'M3 17a9 9 0 0 1 18 0 M12 17l5-8'},
   {label: 'Stock Market News', href: '/stock-market-news/', detail: 'Follow the latest research', icon: 'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h5'},
   {label: 'Stocks to Buy', href: '/stocks-to-buy/', detail: 'Explore stock ideas', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
