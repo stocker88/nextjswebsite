@@ -1,3 +1,4 @@
+import {loadIndustryDirectory} from '../lib/stock-research-server';
 import {featuredResearch} from '../lib/featured-research';
 import {savedNews,newsSlug} from '../lib/market-news';
 import earningsCalendar from '../data/earnings-calendar.json';
@@ -52,6 +53,8 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  entries.push({path:'/industries/'});
+  loadIndustryDirectory().forEach(i=>entries.push({path:'/industries/'+i.slug+'/'}));
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));

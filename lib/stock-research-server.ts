@@ -1,4 +1,5 @@
-import {makePeerCompany} from './peer-analysis';
+import {makePeerCompany,industrySlug,quantile} from './peer-analysis';
+import type {IndustrySummary} from './peer-analysis';
 import fs from 'fs';
 import path from 'path';
 import type {ResearchBundle,Snapshot,Macro} from './stock-research';
@@ -20,22 +21,47 @@ export function loadStockResearch(symbol:string):ResearchBundle{
  const current=catalog.find((p:any)=>p.symbol===symbol);
  const industry=current?.industry||snapshot?.detail?.industry;
  const listingSuffix=(ticker:string)=>ticker.includes('.')?ticker.slice(ticker.indexOf('.')):'';
- const related=industry?catalog.filter((p:any)=>p.type==='EQUITY'&&p.industry===industry&&p.symbol!==symbol&&listingSuffix(p.symbol)===listingSuffix(symbol)).sort((a:any,b:any)=>(b.marketCap||0)-(a.marketCap||0)).slice(0,11):[];
+ const related=industry?catalog.filter((p:any)=>p.type==='EQUITY'&&p.industry===industry&&p.symbol!==symbol&&listingSuffix(p.symbol)===listingSuffix(symbol)).sort((a:any,b:any)=>(b.marketCap||0)-(a.marketCap||0)):[];
  const cohort=[{symbol,name:snapshot?.detail?.name||current?.name||symbol,industry,marketCap:current?.marketCap},...(related.length?related:(snapshot?.peers||[]))];
- const peerAnalysis=cohort.map((p:any)=>{
-  const cached=p.symbol===symbol?snapshot:saved[p.symbol]||snapshot?.peers.find(peer=>peer.symbol===p.symbol);
-  const cachedDetail=cached?.detail;
-  const publicDetail=read('public/earnings-data/'+p.symbol+'.json');
-  // Keep the newest quote, while retaining dated history from a fuller public snapshot.
-  const latest=cachedDetail&&(!publicDetail||cachedDetail.updatedAt>=publicDetail.updatedAt)?cachedDetail:publicDetail;
-  const historyDetail=latest?{...latest,prices:latest.prices?.length?latest.prices:(cachedDetail?.prices||publicDetail?.prices||[]),history:latest.history?.length?latest.history:(cachedDetail?.history||publicDetail?.history||[])}:null;
-  return makePeerCompany(p.symbol,p.name,industry||'Related companies',p.marketCap??null,historyDetail,cached?.financials||[],today);
- });
- return {snapshot,peerAnalysis,macro,events,today};
+ const peerAnalysis=loadPeerCompanies(cohort,today,snapshot);
+ return {snapshot,peerAnalysis,industries:loadIndustryDirectory(),macro,events,today};
 }
 export function loadStockEarnings(symbol:string):Calendar|null{
  const calendar:Calendar|null=read('data/earnings-calendar.json');if(!calendar)return null;
  const symbols=[symbol,...symbol==='GOOG'?['GOOGL']:symbol==='GOOGL'?['GOOG']:[]];
  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
  return {...calendar,today,detailSymbols:[symbol],items:calendar.items.filter(e=>symbols.includes(e.symbol))};
+}
+
+// All industry pages share the app's existing public U.S.-listing catalog and saved research.
+function industryCatalog(){return (read('data/app-stock-catalog.json')||[]).filter((p:any)=>p.type==='EQUITY'&&p.industry?.trim()&&!p.symbol.includes('.'));}
+function todayET(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+function loadPeerCompanies(cohort:any[],today:string,snapshot:Snapshot|null=null){
+ const saved=read('data/stock-research-snapshots.json')||{};
+ const nested=Object.values(saved).flatMap((s:any)=>s.peers||[]);
+ return cohort.map((p:any)=>{
+  const cached=saved[p.symbol]||snapshot?.peers.find(peer=>peer.symbol===p.symbol)||nested.find((peer:any)=>peer.symbol===p.symbol);
+  const cachedDetail=cached?.detail,publicDetail=read('public/earnings-data/'+p.symbol+'.json');
+  const latest=cachedDetail&&(!publicDetail||cachedDetail.updatedAt>=publicDetail.updatedAt)?cachedDetail:publicDetail;
+  const historyDetail=latest?{...latest,prices:latest.prices?.length?latest.prices:(cachedDetail?.prices?.length?cachedDetail.prices:publicDetail?.prices||[]),history:latest.history?.length?latest.history:(cachedDetail?.history?.length?cachedDetail.history:publicDetail?.history||[])}:null;
+  const company=makePeerCompany(p.symbol,p.name,p.industry||snapshot?.detail?.industry||'Related companies',p.marketCap??null,historyDetail,cached?.financials||[],today);
+  return {...company,logo:fs.existsSync(path.join(process.cwd(),'public/assets/logo',p.symbol+'.webp'))?'/assets/logo/'+encodeURIComponent(p.symbol)+'.webp':null};
+ });
+}
+let industryCache:{key:string;rows:IndustrySummary[]}|null=null;
+export function loadIndustryDirectory():IndustrySummary[]{
+ const stamp=(file:string)=>{try{return fs.statSync(path.join(process.cwd(),file)).mtimeMs}catch{return 0}};
+ const key=[stamp('data/app-stock-catalog.json'),stamp('data/stock-research-snapshots.json'),stamp('public/earnings-data'),Math.floor(Date.now()/300000)].join(':');
+ if(industryCache?.key===key)return industryCache.rows;
+ const companies=loadPeerCompanies(industryCatalog(),todayET());
+ const groups=new Map<string,typeof companies>();
+ for(const c of companies){const group=groups.get(c.industry)||[];group.push(c);groups.set(c.industry,group);}
+ const rows=Array.from(groups,([name,group])=>{const pe=group.map(c=>c.pe).filter((v):v is number=>v!=null&&v>0);return {name,slug:industrySlug(name),count:group.length,medianPE:quantile(pe,.5),peCount:pe.length}}).sort((a,b)=>a.name.localeCompare(b.name));
+ industryCache={key,rows};return rows;
+}
+export function loadIndustryResearch(slug:string){
+ const industries=loadIndustryDirectory(),industry=industries.find(i=>i.slug===slug);
+ if(!industry)return null;
+ const cohort=industryCatalog().filter((p:any)=>p.industry===industry.name).sort((a:any,b:any)=>(b.marketCap||0)-(a.marketCap||0));
+ return {industry,industries,companies:loadPeerCompanies(cohort,todayET())};
 }

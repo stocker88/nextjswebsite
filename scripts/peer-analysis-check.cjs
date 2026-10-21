@@ -17,9 +17,21 @@ assert.equal(focused.hidden,1);assert.equal(all.hidden,0);assert.equal(focused.m
 assert.equal(focused.bins.reduce((n,b)=>n+b.companies.length,0),5);assert.equal(all.bins.reduce((n,b)=>n+b.companies.length,0),6);
 for(const b of all.bins)for(const c of b.companies)assert(c.pe>=b.low&&c.pe<=b.high);
 assert.equal(peHistogram([]).median,null);
-const {loadStockResearch}=load('lib/stock-research-server.ts');
+const {loadStockResearch,loadIndustryDirectory,loadIndustryResearch}=load('lib/stock-research-server.ts');
 const result=loadStockResearch('TSLA');
 assert.equal(result.peerAnalysis.length,11);assert(!result.peerAnalysis.some(c=>c.symbol.includes('.')));assert(result.peerAnalysis.some(c=>c.symbol==='TM'));assert.equal(new Set(result.peerAnalysis.map(c=>c.symbol)).size,11);
 assert(result.peerAnalysis.filter(c=>c.changes['1Y'].eps.value!=null&&c.changes['1Y'].price.value!=null).length>=2);
 assert(result.peerAnalysis.every(c=>c.changes['5Y'].price.value===null));
 JSON.stringify(result);console.log('Peer analysis: dated changes, negative/zero bases, missing history, P/E outliers and same-market TSLA cohort passed.');
+
+const directory=loadIndustryDirectory();
+assert(directory.length>100);assert.equal(new Set(directory.map(i=>i.slug)).size,directory.length);
+assert.equal(loadIndustryResearch('does-not-exist'),null);
+const semis=loadIndustryResearch('semiconductors');
+assert(semis.companies.length>12);assert.equal(semis.companies.length,semis.industry.count);
+assert(semis.companies.some(c=>c.symbol==='NVDA'));assert(semis.companies.every(c=>c.industry==='Semiconductors'&&!c.symbol.includes('.')));
+assert.equal(semis.industry.medianPE,peHistogram(semis.companies).median);
+assert.equal(semis.industry.peCount,semis.companies.filter(c=>c.pe>0).length);
+assert.equal(loadStockResearch('NVDA').peerAnalysis.length,semis.companies.length);
+assert.equal(api.industrySlug('Aerospace & Defense'),'aerospace-and-defense');
+console.log('Industry research: full cohorts, unique routes, valid P/E coverage and directory/detail parity passed.');

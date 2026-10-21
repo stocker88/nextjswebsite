@@ -1,12 +1,14 @@
 import type {Detail} from './earnings';
 import type {Financial} from './stock-research';
+export type IndustrySummary = {slug:string;name:string;count:number;medianPE:number|null;peCount:number};
+export const industrySlug=(name:string)=>name.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 export const periods = ['1D','1W','3M','1Y','2Y','5Y'] as const;
 export type Period = typeof periods[number];
 export type ChangeMetric = 'eps'|'revenue'|'netIncome';
 export type Metric = 'marketCap'|'pe'|'forwardPe'|'ps'|'oneYear'|'rsi'|'netMargin'|'debtToEquity';
 export type Observation = {value:number|null;from:string|null;to:string|null};
 export type ComparisonChange = {price:Observation;eps:Observation;revenue:Observation;netIncome:Observation};
-export type PeerCompany = {symbol:string;name:string;industry:string;marketCap:number|null;pe:number|null;forwardPe:number|null;ps:number|null;oneYear:number|null;rsi:number|null;netMargin:number|null;debtToEquity:number|null;priceDate:string|null;financialDate:string|null;updatedAt:string|null;changes:Record<Period,ComparisonChange>};
+export type PeerCompany = {logo?:string|null;symbol:string;name:string;industry:string;marketCap:number|null;pe:number|null;forwardPe:number|null;ps:number|null;oneYear:number|null;rsi:number|null;netMargin:number|null;debtToEquity:number|null;priceDate:string|null;financialDate:string|null;updatedAt:string|null;changes:Record<Period,ComparisonChange>};
 export const finite = (value:unknown):value is number => typeof value==='number'&&Number.isFinite(value);
 export const quantile=(values:number[],q:number):number|null=>{if(!values.length)return null;const a=[...values].sort((a,b)=>a-b),i=(a.length-1)*q;return a[Math.floor(i)]+(a[Math.ceil(i)]-a[Math.floor(i)])*(i-Math.floor(i))};
 const empty=():Observation=>({value:null,from:null,to:null});
