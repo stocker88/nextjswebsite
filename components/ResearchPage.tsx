@@ -3,7 +3,7 @@ import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean}) {
+export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg", socialImageAlt = "Founder’s personal trade chart", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
   return <>
     <Head>
       <title>{`${title} | Stocks To Buy Now AI`}</title>
@@ -12,19 +12,19 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large"} />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Stocks To Buy Now AI" />
-      <meta property="og:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Founder’s personal trade chart" />
+      <meta property="og:image" content={socialImageUrl} />
+      <meta property="og:image:type" content={socialImageUrl.includes(".png")?"image/png":"image/jpeg"} />
+      <meta property="og:image:width" content={String(socialImageWidth)} />
+      <meta property="og:image:height" content={String(socialImageHeight)} />
+      <meta property="og:image:alt" content={socialImageAlt} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg" />
-      <meta name="twitter:image:alt" content="Founder’s personal trade chart" />
+      <meta name="twitter:image" content={socialImageUrl} />
+      <meta name="twitter:image:alt" content={socialImageAlt} />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
     <main>

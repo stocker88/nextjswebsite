@@ -3,13 +3,13 @@
   "scripts": {
     "dev": "next dev",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run sync:fear-greed && npm run sync:research && npm run sync:earnings && npm run sync:stock-research && npm run generate:sitemap && npm run sync:market-overview",
+    "prebuild": "npm run sync:mover-research && npm run sync:fear-greed && npm run sync:research && npm run sync:earnings && npm run sync:stock-research && npm run generate:sitemap && npm run sync:market-overview",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
     "deploy": "bash scripts/deploy-firebase.sh",
     "sync:research": "node scripts/sync-research.js",
-    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs && node scripts/earnings-check.cjs && node scripts/fear-greed-check.cjs && node scripts/fear-greed-share-check.cjs && node scripts/market-refresh-check.cjs && node scripts/acquisition-check.cjs && node scripts/peer-analysis-check.cjs && node scripts/extended-hours-check.cjs && node scripts/session-pulse-check.cjs",
+    "test:seo": "node scripts/seo-check.cjs && node scripts/news-layout-check.cjs && node scripts/attached-threads-check.cjs && node scripts/research-feed-check.cjs && node scripts/earnings-check.cjs && node scripts/fear-greed-check.cjs && node scripts/fear-greed-share-check.cjs && node scripts/market-refresh-check.cjs && node scripts/acquisition-check.cjs && node scripts/peer-analysis-check.cjs && node scripts/extended-hours-check.cjs && node scripts/session-pulse-check.cjs && node scripts/mover-news-check.cjs",
     "publish:article": "node scripts/publish-public-article.cjs",
     "build:pages": "node scripts/github-pages/build.cjs",
     "sync:stock-research": "node scripts/sync-stock-research.cjs",
@@ -17,7 +17,8 @@
     "test:earnings": "node scripts/earnings-check.cjs",
     "sync:fear-greed": "node scripts/sync-fear-greed.cjs",
     "test:featured-research": "node scripts/featured-research-check.cjs",
-    "sync:market-overview": "node scripts/sync-market-overview.cjs"
+    "sync:market-overview": "node scripts/sync-market-overview.cjs",
+    "sync:mover-research": "node scripts/sync-mover-research.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

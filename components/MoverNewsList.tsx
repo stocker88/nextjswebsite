@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import {moverArticles} from '../lib/mover-research';
+import MoverNewsCard from './MoverNewsCard';
+export default function MoverNewsList({symbol,limit=4}:{symbol?:string;limit?:number}){const items=moverArticles.filter(a=>!symbol||a.symbol===symbol).slice(0,limit);if(!items.length)return null;return <section className="mover-news-list"><h2>{symbol?symbol+' stock news and earnings':'Why stocks are moving today'}</h2><div className="cards">{items.map(a=><MoverNewsCard key={a.id} article={a} compact/>)}</div>{!symbol&&<Link href="/news/">All stock-mover news →</Link>}<style jsx>{`.mover-news-list{margin:32px 0}.mover-news-list>h2{margin-bottom:20px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:18px}.mover-news-list>:global(a){color:#c8afff}@media(max-width:700px){.cards{grid-template-columns:1fr}}`}</style></section>}

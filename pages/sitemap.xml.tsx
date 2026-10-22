@@ -1,3 +1,4 @@
+import {moverArticles,moverArticleUrl} from '../lib/mover-research';
 import {loadIndustryDirectory} from '../lib/stock-research-server';
 import {featuredResearch} from '../lib/featured-research';
 import {savedNews,newsSlug} from '../lib/market-news';
@@ -56,6 +57,8 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  entries.push({path:'/news/'});
+  moverArticles.forEach(a=>entries.push({path:moverArticleUrl(a),modified:a.updatedAt}));
   entries.push({path:'/industries/'});
   loadIndustryDirectory().forEach(i=>entries.push({path:'/industries/'+i.slug+'/'}));
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
