@@ -20,4 +20,7 @@ export function sessionRows(session:ExtendedSession,kind:SessionKind):HeatStock[
   return {...row,changes:Object.fromEntries(PERIOD_OPTIONS.map(({value})=>[value,value==='day'&&current?row.changes.day:null])) as HeatStock['changes']};
  });
 }
-export const sessionTime=(value:string)=>new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(value));
+export type SessionClock={locale:string;timeZone:string};
+// Stable Eastern fallback for static HTML and first hydration render.
+// After mounting, callers pass the browser’s detected locale and timezone.
+export const sessionTime=(value:string,clock:SessionClock={locale:'en-US',timeZone:'America/New_York'})=>new Intl.DateTimeFormat(clock.locale,{timeZone:clock.timeZone,month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(value));

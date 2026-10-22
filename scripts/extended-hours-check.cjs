@@ -16,3 +16,8 @@ const early={...saved.afterHours,asOf:'2026-11-27',rows:[{...saved.afterHours.ro
 assert.notEqual(sessionRows(early,'afterHours')[0].changes.day,null);
 assert.match(sessionTime('2026-10-21T13:25:00Z'),/9:25 AM EDT/);assert.match(sessionTime('2026-11-27T18:05:00Z'),/1:05 PM EST/);
 console.log('PASS: saved-session validation, missing/stale/regular-session quote exclusion, correct price basis, early close and DST timestamps.');
+
+assert.match(sessionTime('2026-10-22T00:05:00Z',{locale:'en-GB',timeZone:'Asia/Dubai'}),/22 Oct 2026, 04:05 (GST|GMT\+4)/);
+assert.match(sessionTime('2026-10-22T00:05:00Z',{locale:'en-US',timeZone:'America/Los_Angeles'}),/Oct 21, 2026, 5:05 PM PDT/);
+assert.match(sessionTime('2026-11-27T18:05:00Z',{locale:'en-GB',timeZone:'Europe/London'}),/18:05 GMT/);
+console.log('PASS: browser locale/timezone formatting, 12/24-hour preferences, local date rollover and DST.');
