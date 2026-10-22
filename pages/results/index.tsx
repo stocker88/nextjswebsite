@@ -8,7 +8,7 @@ import styles from '../../styles/OptionResults.module.css';
 const money=(n:number)=>n.toLocaleString('en-US',{style:'currency',currency:'USD'});
 export default function Results(){
  const result=reports[0];
- return <ResearchPage title="Options results" path="/results/" description="Review two ROP call price moves from October 21 to October 22, 2026, with dated prices, contract values and the attached earnings research." socialImageUrl={result.images[0].url} socialImageAlt="ROP $420 call: $6.00 to $25.80, +330% since previous session close" socialImageWidth={1200} socialImageHeight={1200}>
+ return <ResearchPage title="Options results" path="/results/" description="Review verified call-price moves with dated prices, contract values and related stock research." socialImageUrl={result.images[0].url} socialImageAlt={result.title} socialImageWidth={1200} socialImageHeight={1200}>
   <MarketFeedTabs active="results"/>
   <header className={styles.heading}><span className={styles.eyebrow}>RESEARCH IN REVIEW</span><h1>Results</h1><p>Dated option-price moves, with the numbers and research behind them.</p></header>
   {reports.map(result=><article key={result.id} className={styles.report} id={result.id}>
@@ -26,7 +26,7 @@ export default function Results(){
    <ResearchImages images={result.images} appOnly={false}/>
    {result.moves.some(m=>m.lowActivity)&&<aside className={styles.activity}><strong>Low trading activity</strong><p>{result.moves.map(m=>`$${m.strike} call: ${m.previousVolume} contracts in the previous session`).join(' · ')}. Historical trade prices may be difficult to replicate.</p></aside>}
    <section className={styles.recap}><h3>What happened</h3><ul>{result.recap.map((bullet,i)=><li key={i}>{bullet}</li>)}</ul></section>
-   <Link className={styles.attachment} href={result.earningsUrl}><span>ATTACHED EARNINGS RESEARCH</span><strong>{result.companyName} · Earnings research <span aria-hidden="true">↗</span></strong><p>Read the revenue, earnings and outlook recap.</p></Link>
+   {result.earningsUrl&&<Link className={styles.attachment} href={result.earningsUrl}><span>RELATED RESEARCH</span><strong>{result.companyName} · Latest insight <span aria-hidden="true">↗</span></strong><p>Read the related company research.</p></Link>}
    <footer className={styles.footer}>Source: <a href="https://www.StocksToBuyNow.ai">www.StocksToBuyNow.ai</a><p>Historical option-price results, not a record of executed trades or realized profits. Options can lose their entire premium.</p></footer>
   </article>)}
   <ResearchCTA placement="option_results" variant="stock"/>
