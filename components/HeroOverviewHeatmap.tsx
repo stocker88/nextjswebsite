@@ -1,3 +1,4 @@
+import {stockPageHref} from '../lib/stock-page';
 import {CSSProperties, useEffect, useMemo, useRef, useState} from 'react';
 import {HeatStock, Period, heatColor, percent, periodScale, tile} from '../lib/market-heatmap';
 import styles from '../styles/HeroProductReveal.module.css';
@@ -6,7 +7,6 @@ type Props = {rows: HeatStock[]; period: Period; asOf: string};
 export default function HeroOverviewHeatmap({rows, period, asOf}: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState(640);
-  const [selected, setSelected] = useState<string | null>(null);
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
@@ -27,7 +27,6 @@ export default function HeroOverviewHeatmap({rows, period, asOf}: Props) {
     }
     return tile(Array.from(byIndustry.values()), group => group.weight, size, size);
   }, [rows, size]);
-  const current = rows.find(row => row.symbol === selected);
   const change = (row: HeatStock) => row.asOf === asOf ? row.changes[period] : null;
   return <>
     <div ref={ref} className={styles.overviewMap} aria-label={`S&P 500 heatmap, ${rows.length} holdings grouped by industry`}>
@@ -42,14 +41,14 @@ export default function HeroOverviewHeatmap({rows, period, asOf}: Props) {
             {stocks.map(({item, x: sx, y: sy, width: sw, height: sh}) => {
               const font = Math.max(2, Math.min(size < 450 ? 11 : 19, (sw - 2) / (Math.max(item.symbol.length, 6) * .7), (sh - 2) / 2.7));
               const value = change(item);
-              return <button type="button" key={item.symbol} className={styles.overviewTile} data-symbol={item.symbol} aria-label={`${item.name} (${item.symbol}), ${group.name}, ${percent(value)}`} aria-pressed={selected === item.symbol} title={`${item.symbol} · ${item.name}\n${group.name} · ${percent(value)}`} onClick={() => setSelected(item.symbol)} style={{left:`${sx / w * 100}%`,top:`${sy / h * 100}%`,width:`${sw / w * 100}%`,height:`${sh / h * 100}%`,fontSize:font,background:heatColor(value,periodScale[period])}}>
+              return <a href={stockPageHref(item.symbol)} key={item.symbol} className={styles.overviewTile} data-symbol={item.symbol} aria-label={`${item.name} (${item.symbol}), ${group.name}, ${percent(value)}`} title={`${item.symbol} · ${item.name}\n${group.name} · ${percent(value)}`} style={{left:`${sx / w * 100}%`,top:`${sy / h * 100}%`,width:`${sw / w * 100}%`,height:`${sh / h * 100}%`,fontSize:font,background:heatColor(value,periodScale[period])}}>
                 <b>{item.symbol}</b><span>{value === null ? '—' : `${value > 0 ? '+' : ''}${value.toFixed(sw < 34 ? 1 : 2)}%`}</span>
-              </button>;
+              </a>;
             })}
           </div>
         </div>;
       })}
     </div>
-    <div className={styles.overviewDetail} aria-live="polite">{current ? <><strong>{current.symbol} · {percent(change(current))}</strong><span>{current.name} · {current.industry || current.sector}</span></> : <><strong>{rows.length} S&P 500 holdings · Sized by index weight</strong><span>Tap a tile for details. Gray means unavailable data.</span></>}</div>
+    <div className={styles.overviewDetail}><strong>{rows.length} S&P 500 holdings · Sized by index weight</strong><span>Tap a stock to open its company page. Gray means unavailable data.</span></div>
   </>;
 }

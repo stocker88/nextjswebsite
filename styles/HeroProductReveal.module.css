@@ -128,3 +128,5 @@
 @media(prefers-reduced-motion:reduce){.overviewTile{transition:none}}
 
 .regularSnapshot{padding:0 24px 24px}.regularSnapshot .pulseGrid,.widePulseGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.pulseCard[data-tone=unavailable]{--pulse-tone:#93a6c2}@media(max-width:700px){.regularSnapshot{padding:0 12px 14px}.regularSnapshot .pulseGrid,.widePulseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.overviewTile{text-decoration:none}

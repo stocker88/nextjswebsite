@@ -27,3 +27,15 @@ assert(fs.existsSync(path.join(out,'.nojekyll')));
 console.log(`Static deployment checks passed: ${urls.length} sitemap URLs resolve to exported HTML.`);
 
 for(const route of ['premarket-stock-heatmap','after-hours-stock-heatmap']){const page=html(route);assert(page.includes('<table'),'Extended-hours quotes must be pre-rendered');assert(page.includes('NVDA'));assert(!page.includes('FREE SNAPSHOT'),'Removed snapshot badge must stay hidden');assert(page.includes('America/New_York')||page.includes('EDT')||page.includes('EST'));assert(sitemap.includes('/'+route+'/'));}
+
+// Every overview tile and mover must lead to an exported company page.
+const curated=require('../../data/stocks.json');
+const profiles=require(path.resolve(out,'../.github-pages-build/data/heatmap-stock-profiles.json'));
+const homepage=html('');
+for(const stock of profiles){
+ const match=curated.find(item=>item.ticker===stock.symbol);
+ const route=match?'stocks/'+match.slug:'instruments/'+encodeURIComponent(stock.symbol);
+ assert(fs.existsSync(path.join(out,route,'index.html')),`Missing heatmap company page: ${stock.symbol}`);
+ assert(homepage.includes(`href="/${route}/"`),`Missing overview stock link: ${stock.symbol}`);
+}
+console.log(`Stock links verified for all ${profiles.length} heatmap companies.`);

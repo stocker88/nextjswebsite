@@ -1,4 +1,7 @@
-import catalog from '../data/app-stock-catalog.json';
+import appCatalog from '../data/app-stock-catalog.json';
+import heatmapProfiles from '../data/heatmap-stock-profiles.json';
+// Include every saved heatmap company in the statically generated stock pages.
+const catalog=[...appCatalog,...heatmapProfiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
 export {catalog};
 const aliases:Record<string,string[]>={GOOGL:['google','goog'],META:['facebook'],TSM:['tsmc','taiwan semiconductor'],JPM:['jpmorgan','jp morgan','chase']};
 const normalize=(value:string)=>value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
