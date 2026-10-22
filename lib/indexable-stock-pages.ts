@@ -1,0 +1,2 @@
+import fs from 'fs';import path from 'path';import {stockPageHref} from './stock-page';
+export function indexableStockPages(){try{const rows=JSON.parse(fs.readFileSync(path.join(process.cwd(),'data/stock-research-snapshots.json'),'utf8'));return Object.entries(rows).filter(([symbol,s]:[string,any])=>stockPageHref(symbol).startsWith('/instruments/')&&s.detail&&s.financials?.filter((f:any)=>f.revenue!=null).length>=3).map(([symbol,s]:[string,any])=>({path:stockPageHref(symbol),modified:s.updatedAt as string}));}catch{return [];}}

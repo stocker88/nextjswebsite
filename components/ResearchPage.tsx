@@ -8,7 +8,7 @@ export default function ResearchPage({title, path, children, description = title
     <Head>
       <title>{`${title} | Stocks To Buy Now AI`}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={`https://www.stockstobuynow.ai${path}`} />
+      <link key="canonical" rel="canonical" href={`https://www.stockstobuynow.ai${path}`} />
       <meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large"} />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />

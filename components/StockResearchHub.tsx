@@ -1,3 +1,5 @@
+import StockSearchMetadata from './StockSearchMetadata';
+import StockCatalystLinks from './StockCatalystLinks';
 import MoverNewsList from './MoverNewsList';
 import StockPeerAnalysis from './StockPeerAnalysis';
 import {useState} from 'react';
@@ -32,7 +34,7 @@ export default function StockResearchHub({symbol,name,bundle,earningsDate}:{symb
  const s=bundle.snapshot,d=s?.detail,f=s?.financials.at(-1);const [metric,setMetric]=useState<keyof Financial>('revenue');const [peerMetric,setPeerMetric]=useState('valuation');
  const peers=[{symbol,name,detail:d||null,financials:s?.financials||[]},...(s?.peers||[])];
  const positivePE=(s?.peers||[]).map(p=>p.detail?.pe).filter((v):v is number=>typeof v==='number'&&v>0).sort((a,b)=>a-b);const middle=positivePE.length?positivePE.length%2?positivePE[Math.floor(positivePE.length/2)]:(positivePE[positivePE.length/2-1]+positivePE[positivePE.length/2])/2:null;
- return <div className={styles.research}>
+ return <div className={styles.research}><StockSearchMetadata symbol={symbol} name={name} bundle={bundle} earningsDate={earningsDate}/><StockCatalystLinks symbol={symbol}/>
  <section id="financials" className={styles.panel}><header><span className={styles.eyebrow}>02 / FINANCIALS</span><h2>{name} financials</h2><p>Revenue, earnings, cash flow and financial strength in one view.</p></header>
  <p className={styles.note}>{f?.date&&<>Financial statements: {f.date} · </>}{f?.currency||'Reporting currency unconfirmed'}.</p>
  <div className={styles.toolbar}><label htmlFor="financial-metric">Financial history</label><select id="financial-metric" value={metric} onChange={e=>setMetric(e.target.value as keyof Financial)}>{fields.map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></div>

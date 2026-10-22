@@ -1,0 +1,114 @@
+[
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_MSFT_2026_10_28",
+    "postId": "briefing_earnings_preview_MSFT_2026_10_28",
+    "kind": "earnings_preview",
+    "slug": "microsoft-msft-earnings-october-28-2026-preview",
+    "title": "Microsoft (MSFT) Earnings October 28, 2026: Date, Estimates and AI Catalysts",
+    "summary": "Microsoft reports fiscal Q1 2027 results after the close on October 28. Review the dated estimates, Azure and Copilot context, recently reported enterprise-technology peers and risks ahead of the announcement.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T18:19:18.288084+00:00",
+    "updatedAt": "2026-10-22T18:19:18.288084+00:00",
+    "symbols": [
+      "MSFT"
+    ],
+    "sections": [
+      {
+        "text": "Microsoft has confirmed that fiscal Q1 2027 results will be released after the US market closes on October 28, 2026. The earnings webcast begins at 2:30 p.m. Pacific, or 5:30 p.m. Eastern. This is the quarter ending September 2026. The release and webcast are separate events, so the first price reaction can occur before management speaks.",
+        "heading": "When is Microsoft’s next earnings report?"
+      },
+      {
+        "text": "The saved earnings-calendar feed, updated October 22 at 16:35 UTC, lists an EPS estimate of $4.71 and revenue of $90.62 billion. These are vendor-supplied estimates, not company guidance or reported results. The feed does not identify an EPS accounting basis, so a like-for-like beat or miss requires checking the reported GAAP and adjusted definitions when the release arrives.",
+        "heading": "What are the earnings expectations?"
+      },
+      {
+        "text": "For the quarter ended June 30, Microsoft reported $90.0 billion in revenue, 18% above the prior year, with Azure and other cloud-services revenue growth of 43%. Microsoft Cloud revenue was $59.3 billion. These are historical Q4 fiscal 2026 figures, not predictions for the October report; the September quarter has a different seasonal and comparison base.",
+        "heading": "The latest completed quarter sets the context"
+      },
+      {
+        "text": "Microsoft earns revenue from business productivity subscriptions such as Microsoft 365, cloud infrastructure and services through Azure, enterprise software and support, and consumer products including Windows, gaming and search advertising. Recurring subscriptions and cloud consumption differ from hardware and transactional sales, so segment mix matters alongside the total revenue headline.",
+        "heading": "How the business makes money"
+      },
+      {
+        "text": "Research priorities for the report include Azure growth, whether new capacity translates into revenue, paid Copilot adoption and the balance between AI demand and infrastructure spending. Management’s July discussion described rapid data-center expansion. These are factors to assess, not evidence that the forthcoming numbers will beat expectations. Guidance and cash flow can change the interpretation of an earnings headline.",
+        "heading": "What to watch"
+      },
+      {
+        "text": "IBM released third-quarter results on October 21: revenue increased 5%, software revenue rose 8% and consulting revenue was flat on a reported basis. IBM’s mix of software, consulting and infrastructure is different from Microsoft’s. Its report adds context on enterprise technology budgets but cannot establish Azure demand or Microsoft’s earnings outcome; IBM’s reported growth rates should not be treated as Microsoft estimates.",
+        "heading": "Recently reported peers"
+      },
+      {
+        "text": "The main research risks are weaker-than-expected cloud consumption, slower conversion of AI adoption into paid revenue, and infrastructure costs rising before the associated revenue arrives. Currency movements, segment mix and investment-related items can also complicate comparisons. In the prior quarter Microsoft reported different GAAP and adjusted EPS figures, so the accounting basis must be checked before drawing conclusions about valuation or a surprise.",
+        "heading": "Risks into the report"
+      }
+    ],
+    "events": [
+      {
+        "symbol": "MSFT",
+        "sector": "Technology",
+        "price": 533.52,
+        "dateStatus": "issuer_confirmed",
+        "revenueEstimate": 90619870000,
+        "session": "amc",
+        "date": "2026-10-28",
+        "research": {
+          "estimatePeriod": "2027-06-30",
+          "revenueBeat": {
+            "total": 8,
+            "rate": 100,
+            "beats": 8
+          },
+          "beatUpdatedAt": "2026-10-20T10:13:05.631Z",
+          "ps": 12.109295117511806,
+          "pe": 30.063888888888886,
+          "forwardPe": 27.015558555483878,
+          "beat": {
+            "total": 8,
+            "rate": 100,
+            "beats": 8
+          },
+          "forwardPs": 10.2818956806837,
+          "updatedAt": "2026-10-20T10:13:07.952Z",
+          "oneYear": 5.14159588514671
+        },
+        "epsEstimate": 4.71,
+        "name": "Microsoft Corporation",
+        "epsActual": null,
+        "revenueActual": null,
+        "exchange": "NASDAQ",
+        "industry": "Software - Infrastructure",
+        "priceDate": "2026-10-19",
+        "marketCap": 4007050289055
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "title": "Microsoft: confirmed October 28 fiscal Q1 2027 release and webcast",
+        "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/"
+      },
+      {
+        "title": "Microsoft fiscal Q4 2026 earnings release: prior-quarter financials and business segments",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+      },
+      {
+        "title": "Microsoft fiscal Q4 2026 call: infrastructure and capacity commentary",
+        "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+      },
+      {
+        "title": "IBM third-quarter 2026 results, released October 21",
+        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS"
+      },
+      {
+        "title": "Saved earnings calendar: dated analyst estimates, October 22 snapshot",
+        "url": "https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk."
+  }
+]

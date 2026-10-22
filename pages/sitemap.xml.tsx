@@ -1,3 +1,5 @@
+import {indexableStockPages} from '../lib/indexable-stock-pages';
+import {briefings,briefingUrl} from '../lib/market-briefings';
 import {moverArticles,moverArticleUrl} from '../lib/mover-research';
 import {loadIndustryDirectory} from '../lib/stock-research-server';
 import {featuredResearch} from '../lib/featured-research';
@@ -58,6 +60,9 @@ export async function getServerSideProps({ res }: any) {
     "/glossary",
   ].map((path) => ({ path }));
   entries.push({path:'/news/'});
+  entries.push({path:'/catalysts/'});
+  entries.push(...indexableStockPages());
+  briefings.forEach(a=>entries.push({path:briefingUrl(a),modified:a.updatedAt}));
   moverArticles.forEach(a=>entries.push({path:moverArticleUrl(a),modified:a.updatedAt}));
   entries.push({path:'/industries/'});
   loadIndustryDirectory().forEach(i=>entries.push({path:'/industries/'+i.slug+'/'}));
