@@ -1,6 +1,198 @@
 [
   {
     "version": 1,
+    "id": "briefing_earnings_preview_GOOG_2026_10_28",
+    "postId": "briefing_earnings_preview_GOOG_2026_10_28",
+    "kind": "earnings_preview",
+    "slug": "alphabet-goog-earnings-october-28-2026-preview",
+    "title": "Alphabet (GOOG) Earnings October 28, 2026: Estimates, AI Spending and Peer Results",
+    "summary": "Alphabet reports Q3 results on October 28. Review dated estimates, Search and Cloud drivers, AI investment, previous earnings reactions and recent IBM and Meta results.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T20:21:56.317585+00:00",
+    "updatedAt": "2026-10-22T20:45:06.888233+00:00",
+    "symbols": [
+      "GOOG"
+    ],
+    "sections": [
+      {
+        "heading": "When is Alphabet reporting Q3 earnings?",
+        "text": "Alphabet’s October 6 issuer announcement schedules the Q3 2026 earnings conference call for October 28 at 4:30 PM Eastern, with the release available before the call. GOOG and GOOGL represent different common share classes in the same issuer; this report uses GOOG prices."
+      },
+      {
+        "heading": "What are the dated earnings expectations?",
+        "text": "The saved earnings-calendar feed updated October 22, 2026 at 12:35 PM Eastern lists EPS of $3.03 and revenue of $127.9199 billion. These are vendor estimates rather than company guidance. Its EPS accounting definition is not supplied, so this preview does not treat the figure as comparable with investment-influenced GAAP EPS without reconciliation."
+      },
+      {
+        "heading": "How should investors read the previous results?",
+        "text": "The Q2 filing reports $119.796 billion of revenue and $9.11 GAAP diluted EPS. Other income included a $98.0 billion net gain, chiefly unrealized equity gains. The third graphic therefore shows verified revenue surprises while marking the company EPS surprise as unverified, rather than presenting an unreconciled earnings beat."
+      },
+      {
+        "heading": "Guidance and the market can tell different stories",
+        "text": "The July conference remarks raised 2026 capital expenditure guidance to $195–205 billion. The price comparison uses the regular close on the release date through the next trading close; it is an observed window, not proof that a single earnings item caused the move. The charts use the completed October 22 session."
+      },
+      {
+        "heading": "How the business makes money",
+        "text": "Alphabet earns revenue through advertising on Search, YouTube and partner properties, cloud infrastructure and enterprise services, subscriptions, app distribution and devices. Its scale and mix make both advertiser demand and enterprise compute spending relevant, while investments outside Google have different economics."
+      },
+      {
+        "heading": "What to watch",
+        "text": "Research priorities are whether AI increases monetizable Search activity, whether Cloud demand converts to profitable revenue, and what management says about capital intensity. Server purchases, depreciation and outside capacity costs can affect margins and cash generation before the related revenue arrives."
+      },
+      {
+        "heading": "Recently reported peers",
+        "text": "IBM’s October 21 release and Meta’s October 21 release offer different lenses on enterprise technology and advertising. Their revenue surprises, guidance and timestamped after-hours reactions are shown separately. Meta reported $3.83 GAAP EPS and $7.40 excluding a legal charge; its unreconciled EPS surprise is deliberately not asserted. Neither peer establishes Alphabet’s forthcoming outcome."
+      },
+      {
+        "heading": "Risks into the report",
+        "text": "Risks include slower advertiser spending, competition in AI-assisted discovery, regulatory remedies, infrastructure costs and execution of capacity expansion. Equity-investment gains can move GAAP EPS independently of operating progress; vendor consensus must be compared on a matching basis."
+      }
+    ],
+    "events": [
+      {
+        "revenueEstimate": 127919900000,
+        "name": "Alphabet Inc.",
+        "industry": "Internet Content & Information",
+        "epsActual": null,
+        "session": "amc",
+        "priceDate": "2026-10-19",
+        "date": "2026-10-28",
+        "research": {
+          "oneYear": 35.403232226733564,
+          "forwardPe": 16.510641685196,
+          "revenueBeat": {
+            "beats": 7,
+            "total": 8,
+            "rate": 87.5
+          },
+          "forwardPs": 8.501552735863873,
+          "pe": 17.32720953326713,
+          "estimatePeriod": "2026-12-31",
+          "updatedAt": "2026-10-20T10:13:05.352Z",
+          "ps": 9.498517219689324,
+          "beat": {
+            "beats": 8,
+            "total": 8,
+            "rate": 100
+          },
+          "beatUpdatedAt": "2026-10-20T10:13:02.040Z"
+        },
+        "dateStatus": "issuer_confirmed",
+        "revenueActual": null,
+        "symbol": "GOOG",
+        "epsEstimate": 3.03,
+        "marketCap": 4235308596723,
+        "price": 340.16,
+        "exchange": "NASDAQ",
+        "sector": "Communication Services"
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "url": "https://www.marketscreener.com/news/alphabet-announces-date-of-third-quarter-2026-financial-results-conference-call-ce785dd9dc89f62d",
+        "title": "Alphabet issuer date announcement, syndicated unchanged"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "title": "Alphabet FY2025 annual report"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000130817924000614/lgoog2023_ars.pdf",
+        "title": "Alphabet FY2023 annual report"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm",
+        "title": "Alphabet Q1 2026 results"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+        "title": "Alphabet Q2 2026 results and June share count"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-30-alphabet-inc-stock/",
+        "title": "Alphabet Q1 issuer conference remarks / consensus"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-23-alphabet-inc-stock/",
+        "title": "Alphabet Q2 issuer conference remarks / consensus"
+      },
+      {
+        "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+        "title": "META Q3 2026 guidance"
+      },
+      {
+        "url": "https://finance.yahoo.com/markets/stocks/articles/meta-platforms-q3-earnings-revenue-201155968.html",
+        "title": "META Q3 2026 revenueComparison"
+      },
+      {
+        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+        "title": "IBM Q3 2026 guidance"
+      },
+      {
+        "url": "https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar",
+        "title": "Saved earnings calendar snapshot"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/GOOG?range=5y&interval=1d",
+        "title": "GOOG Q2 2026 reaction"
+      },
+      {
+        "url": "https://www.benzinga.com/markets/earnings/26/10/62512362/ibm-stock-jumps-after-q3-results-top-expectations",
+        "title": "IBM Q3 2026 revenueComparison"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/IBM?range=5d&interval=5m&includePrePost=true",
+        "title": "IBM Q3 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/META?range=5d&interval=5m&includePrePost=true",
+        "title": "META Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_GOOG_2026_10_28%2F1%2F68b561406a891663d66eeb3bfc538a69bdd594c9a14af8bf23ad3ac5d0b3694a-15fb64ba-5a79-41b1-b319-c6610e1b0d63%2FFinancials.jpg?alt=media&token=15fb64ba-5a79-41b1-b319-c6610e1b0d63",
+        "height": 1200,
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Alphabet Inc. Financials research infographic"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_GOOG_2026_10_28%2F2%2F0f1ac864ed51f7b94d68b1f7f839eedd6d8bfad54f887e3c3436140031148b38-2ce1dde2-230d-4aa9-a869-69a3cf89f851%2FTechnicals.jpg?alt=media&token=2ce1dde2-230d-4aa9-a869-69a3cf89f851",
+        "height": 1200,
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Alphabet Inc. Technicals research infographic"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_GOOG_2026_10_28%2F3%2F617fd1a93136b756a77656aa3faf5fb388b4811b4cb127d5f84e760b5ba69bbc-52cffc25-169d-485a-8da2-0e97573234ce%2FEarnings-Peers.jpg?alt=media&token=52cffc25-169d-485a-8da2-0e97573234ce",
+        "height": 1200,
+        "title": "Earnings & Peers",
+        "width": 1200,
+        "alt": "Alphabet Inc. Earnings & Peers research infographic"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fgoog%2F048013906091aa615889ef3141c4fbf7913945eb7d4f7a6c27eb916212a3398b.jpg?alt=media&token=f4aff7cf-d6ac-4b12-a0be-7997c45ebc7f",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Aerial view of Google campus buildings in Mountain View, California",
+      "caption": "Google’s main campus in Mountain View, California, photographed in May 2013.",
+      "credit": "Austin McKinley",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Google_Campus,_Mountain_View,_CA.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dateTaken": "2013-05-25 11:46:29",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
     "id": "briefing_earnings_preview_MSFT_2026_10_28",
     "postId": "briefing_earnings_preview_MSFT_2026_10_28",
     "kind": "earnings_preview",
@@ -9,7 +201,7 @@
     "summary": "Microsoft reports fiscal Q1 2027 results after the close on October 28. Review the dated estimates, Azure and Copilot context, recently reported enterprise-technology peers and risks ahead of the announcement.",
     "sessionDate": "2026-10-22",
     "publishedAt": "2026-10-22T18:19:18.288084+00:00",
-    "updatedAt": "2026-10-22T19:38:28.124499+00:00",
+    "updatedAt": "2026-10-22T20:46:32.116476+00:00",
     "symbols": [
       "MSFT"
     ],
@@ -172,25 +364,25 @@
     "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
     "images": [
       {
-        "title": "Financials",
         "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F1%2F474eb892638dbb41115dcebadcebb647061051b1ee59460f7bd24700fa0599fc-05ffa6da-1184-4bdd-97e4-83aa67bc57e5%2FFinancials.jpg?alt=media&token=05ffa6da-1184-4bdd-97e4-83aa67bc57e5",
+        "height": 1200,
         "alt": "Microsoft Corporation Financials research infographic",
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F1%2F474eb892638dbb41115dcebadcebb647061051b1ee59460f7bd24700fa0599fc-33ba552b-4121-479a-beb8-f9c247255ef9%2FFinancials.jpg?alt=media&token=33ba552b-4121-479a-beb8-f9c247255ef9",
-        "height": 1200
+        "title": "Financials"
       },
       {
-        "title": "Technicals",
         "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F2%2F9ebd4a058d771d3996787199f59b6d66ab4e3ed8ff24d736e02537afcfa7b4d3-b6b955cf-e42a-4c1a-951d-4ef994d3b772%2FTechnicals.jpg?alt=media&token=b6b955cf-e42a-4c1a-951d-4ef994d3b772",
+        "height": 1200,
         "alt": "Microsoft Corporation Technicals research infographic",
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F2%2F9ebd4a058d771d3996787199f59b6d66ab4e3ed8ff24d736e02537afcfa7b4d3-2123dc9b-f215-473d-b116-c3bff5aca6c8%2FTechnicals.jpg?alt=media&token=2123dc9b-f215-473d-b116-c3bff5aca6c8",
-        "height": 1200
+        "title": "Technicals"
       },
       {
-        "title": "Earnings & Peers",
         "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F3%2F82c9b3997b7c17f27ea5abfac46e81166921ae59e8b10909f82c3c8befe5784a-c6592171-9a90-4190-aea6-16b12fe591eb%2FEarnings-Peers.jpg?alt=media&token=c6592171-9a90-4190-aea6-16b12fe591eb",
+        "height": 1200,
         "alt": "Microsoft Corporation Earnings & Peers research infographic",
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F3%2F8d6dd112ea23014812d60ee95b8eeb3f60b276c75992dd564a3e65ac1669f979-80304fe1-7dbf-4dea-9fde-81d56a724d93%2FEarnings-Peers.jpg?alt=media&token=80304fe1-7dbf-4dea-9fde-81d56a724d93",
-        "height": 1200
+        "title": "Earnings & Peers"
       }
     ],
     "leadImage": {
