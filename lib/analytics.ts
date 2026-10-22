@@ -58,7 +58,7 @@ export function trackAppStoreClick({
     placement,
     link_url: safeAnalyticsUrl(linkUrl),
     landing_page: typeof window !== 'undefined' ? window.location.pathname : '',
-    landing_referrer: typeof document !== 'undefined' ? document.referrer : '',
+    landing_referrer: typeof document !== 'undefined' ? safeAnalyticsUrl(document.referrer) : '',
     utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
     utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') || '' : '',
     utm_campaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') || '' : '',

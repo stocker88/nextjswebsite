@@ -1,6 +1,8 @@
 const ENDPOINT = 'https://us-central1-stocker-fcda2.cloudfunctions.net/recordWebsiteVisit';
 const IDENTITY = 'stocker.acquisition.v1';
 const SESSION = 'stocker.acquisition.session.v1';
+const ARRIVAL = 'stocker.acquisition.arrival.v1';
+const APPLE_PROVIDER = process.env.NEXT_PUBLIC_APPLE_PROVIDER_TOKEN || '';
 type Identity = {visitorId:string; visitorToken:string};
 type Campaign = {source?:string; medium?:string; campaign?:string;referrerUid?:string;goal?:string};
 let memory: Identity | null = null;
@@ -26,33 +28,67 @@ function session():string {
   }
   return sessionMemory;
 }
+function arrival(campaign:Campaign={}) {
+  const params=new URLSearchParams(location.search);
+  if(originalReferrer===null){
+    try { const stored=JSON.parse(sessionStorage.getItem(ARRIVAL)||'null');
+      if(stored && Date.now()-stored.at<30*60*1000){savedCampaign=stored.campaign||{};originalReferrer=stored.referrer||'';}
+      else {sessionMemory='';sessionStorage.removeItem(SESSION);}
+    }catch(_){}
+    if(originalReferrer===null)originalReferrer=document.referrer;
+  }
+  const incoming:Campaign={};
+  for(const key of ['source','medium','campaign','referrerUid'] as const){
+    const value=campaign[key]||(key==='referrerUid'?campaign.goal||params.get('goal'):'')||params.get(key)||params.get(`utm_${key}`);
+    if(value)incoming[key]=value.slice(0,160);
+  }
+  // A new campaign must not inherit the previous campaign's medium or invite.
+  if(Object.keys(incoming).length) savedCampaign=incoming;
+  try{sessionStorage.setItem(ARRIVAL,JSON.stringify({campaign:savedCampaign,referrer:originalReferrer,at:Date.now()}));}catch(_){}
+}
+function payload(campaign:Campaign={},store?:'apple'|'google') {
+  arrival(campaign);
+  return {...identity(),sessionId:session(),path:location.pathname,referrer:originalReferrer,...savedCampaign,store};
+}
 export function captureAcquisition(campaign:Campaign={}, store?:'apple'|'google') {
   if(typeof window==='undefined')return;
   try {
-    const params=new URLSearchParams(location.search);
-    if(originalReferrer===null)originalReferrer=document.referrer;
-    for (const key of ['source','medium','campaign','referrerUid'] as const) {
-      const value=campaign[key]||(key==='referrerUid'?campaign.goal||params.get('goal'):'')||params.get(key)||params.get(`utm_${key}`);
-      if(value)savedCampaign[key]=value;
-    }
-    const data={...identity(),sessionId:session(),path:location.pathname,referrer:originalReferrer,
-      source:savedCampaign.source||'',
-      medium:savedCampaign.medium||'',
-      campaign:savedCampaign.campaign||'',referrerUid:savedCampaign.referrerUid||'',store};
+    const data=payload(campaign,store);
     // Capture landings, resolved campaigns and store exits, not every rerender.
     const key=JSON.stringify({...data,path:undefined});if(key===previousKey&&!store)return;previousKey=key;
-    void fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).catch(()=>{previousKey='';});
+    void fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true}).then(response=>{if(!response.ok)previousKey='';}).catch(()=>{previousKey='';});
   }catch(_){/* Analytics must never block navigation. */}
+}
+export async function createAcquisitionRecoveryCode():Promise<string> {
+  const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload(),issueCode:true})});
+  if(!response.ok)throw new Error('Unable to create a code. Please try again.');
+  const result=await response.json();
+  if(typeof result.recoveryCode!=='string')throw new Error('Please try again.');
+  return result.recoveryCode;
 }
 export function attributionLink(raw:string):string {
   if(typeof window==='undefined')return raw;
   try{
+    arrival();
     const url=new URL(raw,location.origin);
     const isPlay=url.hostname==='play.google.com'&&url.pathname==='/store/apps/details'&&url.searchParams.get('id')==='com.newcompany.stocker';
     const isApp=['com.newcompany.stocker:','ai.stockstobuynow:'].includes(url.protocol);
     const isInsight=url.origin===location.origin&&url.pathname==='/insight_details_page';
+    const isApple=url.hostname==='apps.apple.com'&&/\/id1565527320(?:$|\/)/.test(url.pathname);
+    if(isApple){
+      if(APPLE_PROVIDER && /^[0-9]+$/.test(APPLE_PROVIDER)){
+        if(!url.searchParams.has('pt'))url.searchParams.set('pt',APPLE_PROVIDER);
+        if(!url.searchParams.has('ct'))url.searchParams.set('ct',(savedCampaign.campaign||savedCampaign.source||'website').slice(0,30));
+        url.searchParams.set('mt','8');
+      }
+      return url.toString();
+    }
     if(!isPlay&&!isApp&&!isInsight)return raw;
     const id=identity();const target=isPlay?new URLSearchParams(url.searchParams.get('referrer')||''):url.searchParams;
+    for(const key of ['source','medium','campaign'] as const){
+      if(savedCampaign[key]&&!target.has(`utm_${key}`))target.set(`utm_${key}`,savedCampaign[key]!);
+    }
+    if(savedCampaign.referrerUid&&!target.has('referrerUid'))target.set('referrerUid',savedCampaign.referrerUid);
     target.set('web_visit',id.visitorId);target.set('web_token',id.visitorToken);
     if(isPlay)url.searchParams.set('referrer',target.toString());
     return url.toString();
@@ -66,7 +102,7 @@ export function installAcquisitionCapture():()=>void {
     const url=new URL(target.href,location.origin);
     if(url.hostname==='apps.apple.com')captureAcquisition({},'apple');
     if(url.hostname==='play.google.com')captureAcquisition({},'google');
-    if (['com.newcompany.stocker:','ai.stockstobuynow:'].includes(url.protocol)||url.hostname==='play.google.com') target.href=attributionLink(target.href);
+    if (['com.newcompany.stocker:','ai.stockstobuynow:'].includes(url.protocol)||['play.google.com','apps.apple.com'].includes(url.hostname)) target.href=attributionLink(target.href);
   };
   // Capture phase updates the destination before React handlers or navigation.
   document.addEventListener('click',click,true);

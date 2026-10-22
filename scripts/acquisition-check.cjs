@@ -2,9 +2,9 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const root=require('path').resolve(__dirname,'..');
 const ts=require(root+'/node_modules/typescript');
 const source=ts.transpileModule(fs.readFileSync(root+'/lib/acquisition.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
-const calls=[],storage=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v)}};
+const calls=[],storage=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)}};
 const clientExports={};const location={origin:'https://www.stockstobuynow.ai',pathname:'/',search:'?utm_source=sharedFromAppUser&utm_campaign=postShares'};
-const context={exports:clientExports,window:{},location,crypto:require('crypto').webcrypto,URL,URLSearchParams,Uint8Array,localStorage:storage(),sessionStorage:storage(),document:{referrer:'https://l.instagram.com/'},fetch:async(url,options)=>{calls.push(JSON.parse(options.body));return {ok:true}}};
+const context={process:{env:{}},exports:clientExports,window:{},location,crypto:require('crypto').webcrypto,URL,URLSearchParams,Uint8Array,localStorage:storage(),sessionStorage:storage(),document:{referrer:'https://l.instagram.com/'},fetch:async(url,options)=>{calls.push(JSON.parse(options.body));return {ok:true}}};
 vm.runInNewContext(source,context);
 clientExports.captureAcquisition();location.search='';clientExports.captureAcquisition({},'google');
 assert.equal(calls[1].source,'sharedFromAppUser');assert.equal(calls[1].campaign,'postShares');
@@ -17,3 +17,18 @@ assert.equal(clientExports.attributionLink('https://evil.test/insight_details_pa
 const app=new URL(clientExports.attributionLink('com.newcompany.stocker:///insight_details_page?postId=123'));
 assert.equal(app.searchParams.get('postId'),'123');assert.equal(app.searchParams.get('web_token'),calls[0].visitorToken);
 console.log('Website capture, campaign persistence, secure handoff and destination checks passed.');
+
+// A full page load retains the original campaign and external referrer.
+const reloaded={...context,exports:{},document:{referrer:'https://www.stockstobuynow.ai/'}};
+vm.runInNewContext(source,reloaded);reloaded.exports.captureAcquisition({},'google');
+assert.equal(calls.at(-1).source,'sharedFromAppUser');assert.equal(calls.at(-1).referrer,'https://l.instagram.com/');
+const enriched=new URL(reloaded.exports.attributionLink('https://play.google.com/store/apps/details?id=com.newcompany.stocker'));
+assert.equal(new URLSearchParams(enriched.searchParams.get('referrer')).get('utm_campaign'),'postShares');
+const apple={...context,exports:{},process:{env:{NEXT_PUBLIC_APPLE_PROVIDER_TOKEN:'123456'}}};
+vm.runInNewContext(source,apple);
+const appleLink=new URL(apple.exports.attributionLink('https://apps.apple.com/app/id1565527320'));
+assert.equal(appleLink.searchParams.get('pt'),'123456');assert.equal(appleLink.searchParams.get('ct'),'postShares');
+assert(!appleLink.searchParams.has('web_token'));
+location.search='?utm_source=x';reloaded.exports.captureAcquisition({},'apple');
+assert.equal(calls.at(-1).source,'x');assert.equal(calls.at(-1).campaign,undefined);
+console.log('Reload persistence, Play campaign, Apple campaign and campaign isolation checks passed.');
