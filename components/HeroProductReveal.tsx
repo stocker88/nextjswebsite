@@ -1,3 +1,5 @@
+import MarketMovers from './MarketMovers';
+import extendedStyles from '../styles/ExtendedHours.module.css';
 import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
 import ExtendedHoursSnapshot from './ExtendedHoursSnapshot';
 import savedExtended from '../data/extended-hours.json';
@@ -117,15 +119,14 @@ export default function HeroProductReveal() {
             <span className={styles.snapshot}>{sessionKind?'Free extended-hours snapshot':`Saved snapshot · ${date}`}</span>
           </div>
         </div>
-        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession}/></div>:<div className={styles.panels}>
-          <HeroMarketPulse latest={latest} period={period} label={label} periodControls={<div className={styles.mobileHeatControls}>{periodSelector('Market pulse period')}</div>} />
+        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession}/></div>:<div className={styles.regularSnapshot}><div className={styles.mobileHeatControls}>{periodSelector('Regular-session period')}</div><div className={extendedStyles.grid}>
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>S&P 500 by industry</span><span className={styles.tag}>{label}</span></div>
-            <div className={styles.mobileHeatControls}>{periodSelector('S&P 500 by industry period')}</div>
             <HeroOverviewHeatmap rows={stocks} period={period} asOf={latest?.overviewRows?.length ? latest.asOf : snapshot.asOf} />
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
-        </div>
+          <MarketMovers rows={stocks} period={period} label={label}/>
+        </div><div className={extendedStyles.sessionPulse}><HeroMarketPulse latest={latest} period={period} label={label}/></div></div>
         }
         <div className={styles.bottomBar}><span><i /> Perspective starts here.</span><span>Research <b>·</b> Compare <b>·</b> Understand</span></div>
       </div>

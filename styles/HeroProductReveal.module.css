@@ -126,3 +126,5 @@
 @media(min-width:701px) and (max-width:999px){.panels{grid-template-columns:minmax(240px,1fr) minmax(0,1.4fr);gap:12px;padding-inline:16px}.heatPanel{padding-inline:12px}.pulsePanel{padding-inline:12px}.pulseCard{padding:10px 8px}.pulseValue{font-size:21px}.overviewMap{margin-top:15px}}
 @media(max-width:700px){.panels{grid-template-columns:1fr}.pulseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.overviewMap{margin-top:18px}.heatPanel{padding-inline:10px}.industryGroup{border-width:.5px}.overviewDetail{font-size:9px;min-height:40px}.overviewTile{border-width:.35px}}
 @media(prefers-reduced-motion:reduce){.overviewTile{transition:none}}
+
+.regularSnapshot{padding:0 24px 24px}.regularSnapshot .pulseGrid,.widePulseGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.pulseCard[data-tone=unavailable]{--pulse-tone:#93a6c2}@media(max-width:700px){.regularSnapshot{padding:0 12px 14px}.regularSnapshot .pulseGrid,.widePulseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
