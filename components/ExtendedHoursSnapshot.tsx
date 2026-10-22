@@ -14,7 +14,7 @@ export default function ExtendedHoursSnapshot({session,kind}:{session?:ExtendedS
  const available=validSession(session,kind), rows=available?sessionRows(session,kind):[];
  const quotes=rows.filter(r=>r.changes.day!==null);
  return <section className={styles.snapshot} aria-label={info.title}>
-  <div className={styles.intro}><div><span className={styles.badge}>FREE SNAPSHOT · NO SIGN-IN</span><h2>{info.title}</h2><p>Price changes versus the {info.basis}.</p></div><nav aria-label="Extended-hours views"><a href={sessionInfo.preMarket.path}>Premarket</a><a href={sessionInfo.afterHours.path}>After-hours</a><a href="/stock-market-heatmap/">Regular session</a></nav></div>
+  <div className={styles.intro}><div><h2>{info.title}</h2><p>Price changes versus the {info.basis}.</p></div><nav aria-label="Extended-hours views"><a href={sessionInfo.preMarket.path}>Premarket</a><a href={sessionInfo.afterHours.path}>After-hours</a><a href="/stock-market-heatmap/">Regular session</a></nav></div>
   {available?<>
    <p className={styles.timestamp}>Latest saved snapshot · <time dateTime={session.quotedAt}>{formatTime(session.quotedAt)}</time><br/>Collected <time dateTime={session.assembledAt}>{formatTime(session.assembledAt)}</time> · {quotes.length} of {rows.length} holdings have a usable session quote.<br/><small>{clock?`Times in your timezone · ${clock.timeZone.replace(/_/g,' ')}`:'Times in U.S. Eastern time'}</small></p>
    <div className={styles.grid}><div className={styles.map}><HeroOverviewHeatmap rows={rows} period="day" asOf={session.asOf}/></div><MarketMovers rows={rows} period="day"/></div>
