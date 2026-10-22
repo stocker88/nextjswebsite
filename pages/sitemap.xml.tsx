@@ -33,6 +33,7 @@ export async function getServerSideProps({ res }: any) {
     "/after-hours-stock-heatmap/",
     "/stock-market-heatmap/",
     "/options-activity/",
+    "/results/",
     "/fear-and-greed-index/",
     "/options-profit-calculator/",
     "/options-strategies/",

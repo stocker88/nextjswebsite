@@ -1,0 +1,83 @@
+[
+  {
+    "id": "options_results_ROP_2026-10-22",
+    "symbol": "ROP",
+    "companyName": "Roper Technologies",
+    "sessionDay": "2026-10-22",
+    "title": "+330.00% since previous close · ROP $420 Call · $6.00 → $25.80",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+330.00% since previous close · ROP $420 Call · $6.00 → $25.80\n\nPrevious-session daily close → session aggregate close. Historical price changes, not executable quotes or realized profits.\n\n• ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.\n\n• The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.\n\n• The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.\n\n• The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.\n\n• The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.\n\n• These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.\n\n• Liquidity needs caution: previous-session volumes were only 7 and 1 contracts. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30. Prices from thin trading may be difficult to replicate.\n\n• The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain.\n\nSource: www.StocksToBuyNow.ai",
+    "recap": [
+      "ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.",
+      "The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.",
+      "The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.",
+      "The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.",
+      "The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.",
+      "These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.",
+      "Liquidity needs caution: previous-session volumes were only 7 and 1 contracts. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30. Prices from thin trading may be difficult to replicate.",
+      "The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain."
+    ],
+    "moves": [
+      {
+        "id": "O:ROP261120C00420000",
+        "symbol": "ROP",
+        "strike": 420,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 6,
+        "sessionOpen": 12.7,
+        "sessionClose": 25.8,
+        "openChangePct": 111.66666666666667,
+        "sessionPct": 330,
+        "openDollarChange": 669.9999999999999,
+        "sessionDollarChange": 1980,
+        "previousVolume": 7,
+        "volume": 113,
+        "openInterest": 93,
+        "aggregateAsOf": "2026-10-22T19:42:02.731Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close"
+      },
+      {
+        "id": "O:ROP261120C00430000",
+        "symbol": "ROP",
+        "strike": 430,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 3.5,
+        "sessionOpen": 10,
+        "sessionClose": 18,
+        "openChangePct": 185.71428571428572,
+        "sessionPct": 414.28571428571433,
+        "openDollarChange": 650,
+        "sessionDollarChange": 1450,
+        "previousVolume": 1,
+        "volume": 27,
+        "openInterest": 30,
+        "aggregateAsOf": "2026-10-22T17:24:02.545Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Ff01a6433890dc946267384a6cd164429291224e5eafb37387d7b42d935f3f8a4%2FROP-2026-11-20-420-call.png?alt=media&token=f01a6433890dc946267384a6cd164429291224e5eafb37387d7b42d935f3f8a4",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $420 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2F279e50398ea7c60e3dfc13833a745ffb5e7bdc6b2388cb0f41c23952df534b1c%2FROP-2026-11-20-430-call.png?alt=media&token=279e50398ea7c60e3dfc13833a745ffb5e7bdc6b2388cb0f41c23952df534b1c",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $430 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261022_ROP",
+    "earningsUrl": "/news/why-roper-technologies-rop-stock-is-up-today-2026-10-22/"
+  }
+]
