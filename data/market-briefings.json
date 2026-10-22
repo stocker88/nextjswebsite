@@ -9,7 +9,7 @@
     "summary": "Microsoft reports fiscal Q1 2027 results after the close on October 28. Review the dated estimates, Azure and Copilot context, recently reported enterprise-technology peers and risks ahead of the announcement.",
     "sessionDate": "2026-10-22",
     "publishedAt": "2026-10-22T18:19:18.288084+00:00",
-    "updatedAt": "2026-10-22T18:19:18.288084+00:00",
+    "updatedAt": "2026-10-22T18:49:23.580181+00:00",
     "symbols": [
       "MSFT"
     ],
@@ -85,30 +85,85 @@
     "rows": [],
     "sources": [
       {
-        "title": "Microsoft: confirmed October 28 fiscal Q1 2027 release and webcast",
-        "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/"
+        "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
+        "title": "Microsoft: confirmed October 28 fiscal Q1 2027 release and webcast"
       },
       {
-        "title": "Microsoft fiscal Q4 2026 earnings release: prior-quarter financials and business segments",
-        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+        "title": "Previous company earnings release: FY26 Q4"
       },
       {
-        "title": "Microsoft fiscal Q4 2026 call: infrastructure and capacity commentary",
-        "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+        "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+        "title": "Microsoft fiscal Q4 2026 call: infrastructure and capacity commentary"
       },
       {
-        "title": "IBM third-quarter 2026 results, released October 21",
-        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS"
+        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+        "title": "IBM Q3 2026 issuer results"
       },
       {
-        "title": "Saved earnings calendar: dated analyst estimates, October 22 snapshot",
-        "url": "https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar"
+        "url": "https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar",
+        "title": "Saved earnings calendar: dated analyst estimates, October 22 snapshot"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q1/press-release-webcast",
+        "title": "Previous company earnings release: FY26 Q1"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast",
+        "title": "Previous company earnings release: FY26 Q2"
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast",
+        "title": "Previous company earnings release: FY26 Q3"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/sap-quarterly-statement-q3-2026-302915956.html",
+        "title": "SAP Q3 2026 issuer results"
+      },
+      {
+        "url": "https://www.microsoft.com/investor/reports/ar26/index.html",
+        "title": "Microsoft FY2026 annual report: revenue, segments, EPS and shares"
+      },
+      {
+        "url": "https://www.microsoft.com/investor/reports/ar25/index.html",
+        "title": "Microsoft FY2025 annual report"
+      },
+      {
+        "url": "https://www.microsoft.com/investor/reports/ar23/index.html",
+        "title": "Microsoft FY2023 annual report: FY2022 comparative revenue"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/MSFT?range=5y&interval=1d",
+        "title": "Microsoft daily OHLC and volume"
       }
     ],
     "author": {
       "name": "Stocks To Buy Now AI Research",
       "url": "https://www.stockstobuynow.ai/editorial-policy/"
     },
-    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk."
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F1%2F474eb892638dbb41115dcebadcebb647061051b1ee59460f7bd24700fa0599fc-ee577dc8-3029-4a7b-937e-a9462771b9b1%2FFinancials.jpg?alt=media&token=ee577dc8-3029-4a7b-937e-a9462771b9b1",
+        "width": 1200,
+        "alt": "Microsoft Corporation Financials research infographic",
+        "height": 1200,
+        "title": "Financials"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F2%2F9ebd4a058d771d3996787199f59b6d66ab4e3ed8ff24d736e02537afcfa7b4d3-4424b114-83fe-4187-8244-fba650340d04%2FTechnicals.jpg?alt=media&token=4424b114-83fe-4187-8244-fba650340d04",
+        "width": 1200,
+        "alt": "Microsoft Corporation Technicals research infographic",
+        "height": 1200,
+        "title": "Technicals"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MSFT_2026_10_28%2F3%2F83322a8099bfbb927fc7de4f9856276eccc8f678e8e9f866586d27c1a787460b-f9d3116b-4185-426e-9633-42512d5c9eff%2FEarnings-Peers.jpg?alt=media&token=f9d3116b-4185-426e-9633-42512d5c9eff",
+        "width": 1200,
+        "alt": "Microsoft Corporation Earnings & Peers research infographic",
+        "height": 1200,
+        "title": "Earnings & Peers"
+      }
+    ]
   }
 ]
