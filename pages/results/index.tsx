@@ -14,7 +14,7 @@ export default function Results(){
   {reports.map(result=><article key={result.id} className={styles.report} id={result.id}>
    <div className={styles.top}><span className={styles.tag}>${result.symbol} · OPTIONS PERFORMANCE</span><time dateTime={result.sessionDay}>{new Date(result.sessionDay+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})}</time></div>
    <div className={styles.company}><img src={`/assets/logo/${result.symbol}.webp`} alt="" width={48} height={48}/><div><strong>{result.companyName}</strong><span>Earnings &amp; option results</span></div></div>
-   <h2>{result.symbol} calls · {result.moves.length} verified price moves</h2>
+   <h2>{result.title}</h2>
    <p className={styles.intro}>{result.moves[0].previousSession} daily close → {result.sessionDay} session aggregate close. These are historical price changes, before costs.</p>
    <div className={styles.calls}>{result.moves.map(m=><section key={m.id} className={styles.call} aria-label={`${result.symbol} $${m.strike} call performance`}>
     <div className={styles.callLabel}>${m.strike} CALL <span>{m.expiry} expiry</span></div>
@@ -24,7 +24,6 @@ export default function Results(){
     <small>Snapshot: {m.aggregateAsOf?new Date(m.aggregateAsOf).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):'Not available'} ET</small>
    </section>)}</div>
    <ResearchImages images={result.images} appOnly={false}/>
-   {result.moves.some(m=>m.lowActivity)&&<aside className={styles.activity}><strong>Low trading activity</strong><p>{result.moves.map(m=>`$${m.strike} call: ${m.previousVolume} contracts in the previous session`).join(' · ')}. Historical trade prices may be difficult to replicate.</p></aside>}
    <section className={styles.recap}><h3>What happened</h3><ul>{result.recap.map((bullet,i)=><li key={i}>{bullet}</li>)}</ul></section>
    {result.earningsUrl&&<Link className={styles.attachment} href={result.earningsUrl}><span>RELATED RESEARCH</span><strong>{result.companyName} · Latest insight <span aria-hidden="true">↗</span></strong><p>Read the related company research.</p></Link>}
    <footer className={styles.footer}>Source: <a href="https://www.StocksToBuyNow.ai">www.StocksToBuyNow.ai</a><p>Historical option-price results, not a record of executed trades or realized profits. Options can lose their entire premium.</p></footer>
