@@ -46,6 +46,26 @@ export function signalChartProjection(points:{value:number;x?:number}[], directi
   const median=(values:number[])=>{const sorted=[...values].sort((a,b)=>a-b),middle=Math.floor(sorted.length/2);return sorted.length%2?sorted[middle]:(sorted[middle-1]+sorted[middle])/2};
   const intervals=points.slice(1).map((point,i)=>({elapsed:point.x!-points[i].x!,change:point.value-points[i].value}));
   const cadence=median(intervals.map(interval=>interval.elapsed));
+  // Prefer the latest year of reporting when growth has changed pace.
+  // Require a consistent fit; isolated jumps still use the bounded fallback.
+  for(const window of [4,8]) {
+  const recent=points.slice(-window);
+  if(direction==='up' && recent.length>=4 && recent.every(p=>p.value>0)) {
+   const elapsed=recent.at(-1)!.x!-recent[0].x!;
+   const xs=recent.map(p=>(p.x!-recent[0].x!)/elapsed);
+   const meanX=xs.reduce((a,b)=>a+b,0)/xs.length,meanY=recent.reduce((sum,p)=>sum+p.value,0)/recent.length;
+   let xx=0,yy=0,xy=0,rising=0,regular=true;
+   recent.forEach((p,i)=>{
+    const dx=xs[i]-meanX,dy=p.value-meanY;xx+=dx*dx;yy+=dy*dy;xy+=dx*dy;
+    if(i>0){if(p.value>recent[i-1].value)rising++;const gap=p.x!-recent[i-1].x!;regular=regular&&gap>=cadence*.5&&gap<=cadence*1.5;}
+   });
+   const fit=xx>0&&yy>0?xy*xy/(xx*yy):0;
+   if(regular&&xy>0&&fit>=.95&&rising/(recent.length-1)>=.8){
+    const horizon=span*.3,growth=xy/xx/elapsed*horizon;
+    if(Number.isFinite(growth))return Array.from({length:41},(_,i)=>({x:last.x!+horizon*i/40,value:last.value+growth*i/40}));
+   }
+  }
+  }
   // Ignore near-duplicate reporting dates, then use the typical recent change,
   // including flat/negative periods, rather than the largest historical jump.
   const rates=intervals.filter(interval=>interval.elapsed>=cadence*.5).slice(-8).map(interval=>interval.change/interval.elapsed);

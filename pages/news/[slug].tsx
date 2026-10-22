@@ -13,8 +13,8 @@ export default function MoverStory({article:a}:{article:MoverArticle}){
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(moverArticleSchema(a))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Stock Movers News',path:'/news/'},{name:a.title,path}]))}}/><meta property="article:published_time" content={a.publishedAt}/><meta property="article:modified_time" content={a.updatedAt}/></Head>
  <article className="mover-story"><Link href="/news/">← Stock movers news</Link><p className="eyebrow">{a.symbol} · {a.earningsPeriod?'EARNINGS RESULTS':'MARKET MOVERS'} · {a.sessionDate}</p><h1>{a.title}</h1>
  <p className="meta">By {a.author.name} · Published <time dateTime={a.publishedAt}>{new Date(a.publishedAt).toISOString().slice(0,16).replace('T',' ')} UTC</time></p>
- <div className="move" data-direction={a.direction}><span>{a.symbol} {a.move>0?'+':''}{a.move.toFixed(2)}%</span><p>{money(a.quotePrice)} · Snapshot as of <time dateTime={a.quoteAsOf}>{quoted} New York time</time></p></div>
- <p className="meta">This is a dated snapshot, not a live quote. “Today” refers to the {a.sessionDate} U.S. market session.</p>
+ <div className="move" data-direction={a.direction}><span>{a.symbol} {a.move>0?'+':''}{a.move.toFixed(2)}%{a.marketSession==='afterhours'?' after hours':''}</span><p>{money(a.quotePrice)} · Snapshot as of <time dateTime={a.quoteAsOf}>{quoted} New York time</time></p></div>
+ <p className="meta">This is a dated snapshot, not a live quote. {a.marketSession==='afterhours'?<>After-hours change versus the same-day regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {a.sessionDate} U.S. market session.</>}</p>
  <EditorialPhoto photo={a.leadImage} priority/>
  <h2>{a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p>
  <h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p>

@@ -91,3 +91,26 @@ assert.ok(Math.abs(project(drawdownHistory([10,100,61])).at(-1).value-115)<1e-9)
 assert.ok(Math.abs(project(drawdownHistory([80,100,50])).at(-1).value-62)<1e-9);
 assert.ok(project(drawdownHistory([-1000,100,50]),'up','financial').at(-1).value>100);
 console.log('Price drawdowns greater than 40% stay below the displayed high; weaker scenarios, financial charts and threshold boundaries are preserved.');
+
+const stable=Array.from({length:20},(_,i)=>({x:1700000000+i*90*86400,value:100+i*10}));
+const aligned=project(stable,'up','financial');
+assert.equal(aligned[0].value,290);
+assert.ok(Math.abs(aligned.at(-1).value-347)<1e-9,'steady revenue must retain full slope');
+for(let i=1;i<aligned.length;i++)assert.ok(Math.abs((aligned[i].value-aligned[i-1].value)/(aligned[i].x-aligned[i-1].x)-10/(90*86400))<1e-12);
+const mildlyNoisy=[100,110,121,130,139,150,161,170].map((value,i)=>({x:1700000000+i*90*86400,value}));
+assert.ok(Math.abs(project(mildlyNoisy,'up','financial').at(-1).value-191)<1);
+console.log('Stable revenue slope, continuity, and mildly noisy trend verified.');
+
+// CRWV's saved preview accelerates in the latest reporting periods.
+const crwvTimes=[1735603200,1743379200,1751241600,1759190400,1767139200,1774915200,1782777600];
+const crwvValues=[747430000,982000000,1212000000,1364676000,1571904000,2078000000,2575000000];
+const crwv=crwvValues.map((value,i)=>({x:crwvTimes[i],value}));
+const accelerated=project(crwv,'up','financial');
+assert.deepEqual(accelerated[0],crwv.at(-1));
+assert.ok(Math.abs(accelerated.at(-1).value-3320008469.648249)<1);
+const latestRate=(crwv.at(-1).value-crwv.at(-3).value)/(crwv.at(-1).x-crwv.at(-3).x);
+const forecastRate=(accelerated.at(-1).value-accelerated[0].value)/(accelerated.at(-1).x-accelerated[0].x);
+assert.ok(forecastRate>latestRate*.8&&forecastRate<latestRate*1.1,'recent acceleration must not fall back to the halved older trend');
+const isolated=[1,1,1,1,1,1,10].map((value,i)=>({x:start+i*90*day,value}));
+assert.ok(project(isolated,'up','financial').at(-1).value<=12.5,'one-off jump stays bounded');
+console.log('CRWV latest reporting trend and isolated-jump guard verified.');
