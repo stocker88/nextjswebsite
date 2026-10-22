@@ -1,3 +1,4 @@
+import EditorialPhoto from '../../components/EditorialPhoto';
 import Head from 'next/head';
 import Link from 'next/link';
 import ResearchPage from '../../components/ResearchPage';
@@ -8,12 +9,13 @@ import {jsonLd,breadcrumbs} from '../../lib/seo';
 export default function MoverStory({article:a}:{article:MoverArticle}){
  const c=a.stockContext;const path=moverArticleUrl(a);const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
  const quoted=new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/New_York'}).format(new Date(a.quoteAsOf));
- return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.images[0].url} socialImageAlt={a.images[0].alt} socialImageWidth={1200} socialImageHeight={1200} ogType="article">
+ return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.leadImage?.url||a.images[0].url} socialImageAlt={a.leadImage?.alt||a.images[0].alt} socialImageWidth={a.leadImage?.width||1200} socialImageHeight={a.leadImage?.height||1200} ogType="article">
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(moverArticleSchema(a))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Stock Movers News',path:'/news/'},{name:a.title,path}]))}}/><meta property="article:published_time" content={a.publishedAt}/><meta property="article:modified_time" content={a.updatedAt}/></Head>
  <article className="mover-story"><Link href="/news/">← Stock movers news</Link><p className="eyebrow">{a.symbol} · {a.earningsPeriod?'EARNINGS RESULTS':'MARKET MOVERS'} · {a.sessionDate}</p><h1>{a.title}</h1>
  <p className="meta">By {a.author.name} · Published <time dateTime={a.publishedAt}>{new Date(a.publishedAt).toISOString().slice(0,16).replace('T',' ')} UTC</time></p>
  <div className="move" data-direction={a.direction}><span>{a.symbol} {a.move>0?'+':''}{a.move.toFixed(2)}%</span><p>{money(a.quotePrice)} · Snapshot as of <time dateTime={a.quoteAsOf}>{quoted} New York time</time></p></div>
  <p className="meta">This is a dated snapshot, not a live quote. “Today” refers to the {a.sessionDate} U.S. market session.</p>
+ <EditorialPhoto photo={a.leadImage} priority/>
  <h2>{a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p>
  <h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p>
  <h2>Financials and technicals</h2><p>Technical charts use the {a.technicalDate} completed close. The intraday move above may reflect news released after that close.</p>

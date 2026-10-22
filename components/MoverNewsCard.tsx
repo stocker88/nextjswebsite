@@ -15,7 +15,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
         <span className={'performance '+(a.move>0?'positive':'negative')} aria-label={'Session price change '+a.move.toFixed(2)+' percent'}>{a.move>0?'+':''}{a.move.toFixed(2)}%<small>Session snapshot</small></span>
       </div>
       <h2>{a.title}</h2>
-      <p className="preview">{preview}</p>
+      <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
       {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={i.url} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
       <div className="card-footer"><span>{a.earningsPeriod||'Stock research'}</span><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
     </Link>
@@ -37,7 +37,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       .performance small{display:block;font-size:9px;letter-spacing:.02em;font-weight:400;margin-top:2px}
       h2{font-size:23px;line-height:1.35;letter-spacing:-.025em;margin:0 0 12px;color:#f0f4fc;font-weight:650}
       .preview{font-size:14px;line-height:1.65;color:#aabbd0;margin:0 0 22px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-      .image-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:auto;margin-bottom:20px}
+      .lead-thumb{margin:0 0 20px}.lead-thumb img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:13px}.lead-thumb figcaption{font-size:9px;text-align:left;color:#91a4bc}.image-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:auto;margin-bottom:20px}
       figure{margin:0;min-width:0}.image-frame{aspect-ratio:1;background:#080f20;border-radius:13px;overflow:hidden;border:1px solid #ffffff08}
       .image-frame img{width:100%;height:100%;object-fit:contain;display:block}
       figcaption{text-align:center;font-size:12px;color:#b9c8dc;padding-top:9px}

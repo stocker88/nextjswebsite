@@ -78,6 +78,19 @@
       "forwardYear": 2026,
       "business": "Builds and sells homes; provides mortgage, title and closing services.",
       "ttmPE": 14.632767786862937
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Flen%2Fe719dc9ecd533dd5c5bf673076c9d8ff9050a031842aca988471e6caba322812.jpg?alt=media&token=a7911340-e940-4597-af81-5d98adeb752f",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Wood framing and sheathing on a house under construction",
+      "caption": "Home construction in Massachusetts, 2020. Illustrative housing-sector photo.",
+      "credit": "Kgacs",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:New_construction_framing_and_sheathing_underway.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2020-02-10",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   },
   {
@@ -171,6 +184,337 @@
       "atr14": 3.3957970963578306,
       "fiscalLabel": "FY2025",
       "marketCapB": 13.521360000000001
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Falle%2F324e85aa0e8ed9784fb321547ba8d32786425a9c3ff987b88be25fe7c68f1339.jpg?alt=media&token=a6052447-3bfa-4236-b4cd-bcf361b7b648",
+      "width": 1920,
+      "height": 886,
+      "alt": "Schlage smart lock and video doorbell on a residential entrance",
+      "caption": "A Schlage smart lock and Ring doorbell, photographed in 2019. Illustrative access-control photo.",
+      "credit": "AG20044018",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ring_and_Schlage_in_MI_home.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2019-05-29",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_BX",
+    "postId": "research_mover_20261022_BX",
+    "slug": "why-blackstone-bx-stock-is-up-today-2026-10-22",
+    "title": "Why Blackstone (BX) Stock Is Up Today: Q3 2026 Earnings",
+    "symbol": "BX",
+    "companyName": "Blackstone",
+    "sessionDate": "2026-10-22",
+    "direction": "up",
+    "move": 6.543761978643792,
+    "quoteAsOf": "2026-10-22T17:22:00.000Z",
+    "quotePrice": 116.74,
+    "publishedAt": "2026-10-22T17:43:43.673720+00:00",
+    "updatedAt": "2026-10-22T17:43:43.673720+00:00",
+    "summary": "Blackstone (BX) was up 6.54% in the 2026-10-22 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Blackstone shares rose in the October 22 regular-session snapshot following its Q3 2026 earnings release. The update showed higher fee-related earnings and assets under management, alongside lower distributable earnings and net realizations. These results provide earnings context for the move; attributing the entire price reaction to any one line item would be an inference. GAAP revenue, segment revenue and distributable earnings use different definitions and should not be compared interchangeably.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Blackstone’s Q3 fee-related earnings increased 6% to $1.572 billion, while distributable earnings declined 9% to $1.716 billion.",
+      "Total assets under management reached $1.368 trillion, up about 10% from a year earlier.",
+      "Fee-earning assets under management increased about 9% to $989.7 billion.",
+      "Quarterly inflows were $63.3 billion, while capital deployed totaled $30.1 billion and realizations reached $33.1 billion.",
+      "Management and advisory fees on a segment basis rose about 6% to $2.159 billion.",
+      "Net realizations fell about 34% to $331.5 million, weighing on distributable earnings despite higher recurring fees.",
+      "GAAP revenue was $3.063 billion, slightly below the prior year; net income attributable to Blackstone rose about 6% to $662.4 million.",
+      "Fundraising, fee growth and the pace of exits remain key; stronger fee earnings do not guarantee stronger distributable earnings every quarter."
+    ],
+    "setup": "Conditional recovery: a close above $116 and a successful retest would improve the short-term structure, with prior $121–125 trading acting as further overhead supply. A close below $105 would undermine the recent base. Levels come from completed daily bars through October 21; the October 22 earnings reaction is excluded from the charts. Confirm with volume rather than assuming the intraday move will persist.",
+    "technicalDate": "2026-10-21",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_BX%2F1%2F746111d6204178ba0f97732b02b6b9e72f8fade5449023609da427df494dd33a-14997a08-2998-4603-893e-d5be42a43aad%2FFinancials.jpg?alt=media&token=14997a08-2998-4603-893e-d5be42a43aad",
+        "alt": "Blackstone (BX) financials research infographic",
+        "width": 1200,
+        "title": "Financials",
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_BX%2F2%2F9182cce1f072f1ee5bdb8438ecd772c6d2c0bc4e94353d8783d0e93683c8fb99-6e42350a-0b90-4241-be72-8d2ca00dd43a%2FTechnicals.jpg?alt=media&token=6e42350a-0b90-4241-be72-8d2ca00dd43a",
+        "alt": "Blackstone (BX) technicals research infographic",
+        "width": 1200,
+        "title": "Technicals",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.marketscreener.com/news/blackstone-third-quarter-2026-earnings-supplemental-financial-data-pdf-ce785cded98cf225",
+        "title": "Financial data and estimates — www.marketscreener.com"
+      },
+      {
+        "url": "https://www.blackstone.com/wp-content/uploads/sites/2/2026/01/Blackstone4Q25SupplementalFinancialData.pdf",
+        "title": "Financial data and estimates — www.blackstone.com"
+      },
+      {
+        "url": "https://www.blackstone.com/wp-content/uploads/sites/2/2026/01/Blackstone4Q25EarningsPressRelease.pdf",
+        "title": "Financial data and estimates — www.blackstone.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/bx/forecast/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/bx/statistics/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/BX",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardPE": 18.47723434988604,
+      "marketCapB": 136.23991801283282,
+      "annualRevenueB": 14.450265,
+      "atr14": 3.672969613398641,
+      "forwardYear": 2026,
+      "ttmPE": 24.403117972121205,
+      "fiscalLabel": "FY2025",
+      "priceDate": "2026-10-21",
+      "rsi14": 38.580716307803606,
+      "industry": "ALTERNATIVE ASSET MANAGEMENT",
+      "business": "Earns management fees, incentive fees and investment-related income.",
+      "close": 109.56999969482422
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fbx%2Ff7db815d4ee01a1680f5e4e5512cbe9731faf9ede071417334b1d2cf7bb0654f.jpg?alt=media&token=728451af-4850-493f-9337-0cd7b1197fb2",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Blackstone company signage outside its offices",
+      "caption": "Blackstone signage, photographed in 2026.",
+      "credit": "Ajay Suresh",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blackstone_(55283755213).jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dateTaken": "2026-05-18",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_COHR",
+    "postId": "research_mover_20261022_COHR",
+    "slug": "why-coherent-cohr-stock-is-down-today-2026-10-22",
+    "title": "Why Coherent (COHR) Stock Is Down Today",
+    "symbol": "COHR",
+    "companyName": "Coherent",
+    "sessionDate": "2026-10-22",
+    "direction": "down",
+    "move": -12.585778638487778,
+    "quoteAsOf": "2026-10-22T17:22:45.000Z",
+    "quotePrice": 207.635,
+    "publishedAt": "2026-10-22T17:28:19.202414+00:00",
+    "updatedAt": "2026-10-22T17:28:19.202414+00:00",
+    "summary": "Coherent (COHR) was down 12.59% in the 2026-10-22 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Coherent was sharply lower in the October 22 regular-session snapshot. No single same-day company announcement was verified as the cause, so this report does not attribute the decline to a new earnings release. The latest published results cover fiscal Q4 2026, released August 12; the next earnings announcement is scheduled for November 4 after the close. The financial background and conditional chart levels below should be distinguished from today’s intraday move.",
+    "earningsPeriod": null,
+    "recap": [
+      "Coherent’s latest reported quarter delivered $2.05 billion in revenue, up 34% year over year; its next results are due November 4 after the close.",
+      "Fiscal 2026 revenue reached $7.118 billion, increasing 22.5% from fiscal 2025.",
+      "Fourth-quarter GAAP EPS was $1.19, while adjusted EPS reached $1.74 versus $1.00 a year earlier.",
+      "Fourth-quarter gross margin was 38.5% on a GAAP basis and 40.2% on an adjusted basis.",
+      "Datacenter and Communications generated $5.275 billion of annual revenue, about 74% of the total; Industrial contributed $1.844 billion.",
+      "Management’s August outlook called for fiscal Q1 2027 revenue of $2.2–$2.4 billion and adjusted EPS of $1.85–$2.05.",
+      "The October 21 close was $237.53; today’s selloff is separate from the completed-session charts and is not a new earnings release.",
+      "A sustained recovery requires price stabilization and reclaimed resistance; a large decline alone does not confirm a reversal."
+    ],
+    "setup": "Conditional recovery: reclaim and hold $244, then reassess the prior $248–264 resistance area. The $231–236 and $217–222 zones come from completed daily bars and may already be broken by the October 22 selloff. Below $217, downside risk remains; require stabilization rather than treating a large decline or low RSI as a buy signal.",
+    "technicalDate": "2026-10-21",
+    "images": [
+      {
+        "alt": "Coherent (COHR) financials research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_COHR%2F1%2F622479af037240e5727efe531ae93b2dc5eaf0bf21825bd22c0e3a7715fb855f-a079d78f-e0f6-4d73-83ce-2a856e2ae72e%2FFinancials.jpg?alt=media&token=a079d78f-e0f6-4d73-83ce-2a856e2ae72e",
+        "width": 1200,
+        "title": "Financials"
+      },
+      {
+        "alt": "Coherent (COHR) technicals research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_COHR%2F2%2Fb0c9ad38015e86d2a60a40989325c496ff254c9d3d7d5e477b3a5295a954f0c6-17d341e1-2899-4a98-92c0-0f651e6660c3%2FTechnicals.jpg?alt=media&token=17d341e1-2899-4a98-92c0-0f651e6660c3",
+        "width": 1200,
+        "title": "Technicals"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf",
+        "title": "Financial data and estimates — www.coherent.com"
+      },
+      {
+        "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/annual-filings/2024/coherent-annual-report-2024.pdf",
+        "title": "Financial data and estimates — www.coherent.com"
+      },
+      {
+        "url": "https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings",
+        "title": "Financial data and estimates — ir.coherent.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/cohr/forecast/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/cohr/statistics/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/COHR",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardPE": 25.215498808842558,
+      "atr14": 20.947134844826596,
+      "priceDate": "2026-10-21",
+      "industry": "PHOTONICS & OPTICAL CONNECTIVITY",
+      "rsi14": 35.51314482925886,
+      "annualRevenueB": 7.1182,
+      "close": 237.52999877929688,
+      "fiscalLabel": "FY2026",
+      "business": "Sells optical components, lasers and materials to datacenters and industry.",
+      "forwardYear": 2027,
+      "marketCapB": 46.77678265960694,
+      "ttmPE": 57.65291232507206
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcohr%2F1b1bba8661f901d38c1e008762dbc861f6df424cc4c50efedd8362b6b8919920.jpg?alt=media&token=f83ce04e-b155-44d6-bb07-7e3e75bfebd9",
+      "width": 1920,
+      "height": 1278,
+      "alt": "Optical research equipment in a nanophotonics laboratory",
+      "caption": "A laser demonstration in an FDA optical research laboratory, 2011. Illustrative photonics-sector photo.",
+      "credit": "The U.S. Food and Drug Administration",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Optical_Therapeutics_and_Medical_Nanophotonics_Laboratory_(5426178304).jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "dateTaken": "2011-02-04 12:57",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_LRCX",
+    "postId": "research_mover_20261022_LRCX",
+    "slug": "why-lam-research-lrcx-stock-is-down-today-2026-10-22",
+    "title": "Why Lam Research (LRCX) Stock Is Down Today: Fiscal Q1 2027 Earnings",
+    "symbol": "LRCX",
+    "companyName": "Lam Research",
+    "sessionDate": "2026-10-22",
+    "direction": "down",
+    "move": -10.962002990682873,
+    "quoteAsOf": "2026-10-22T17:51:19.000Z",
+    "quotePrice": 232.22,
+    "publishedAt": "2026-10-22T17:58:05.548997+00:00",
+    "updatedAt": "2026-10-22T17:58:05.548997+00:00",
+    "summary": "Lam Research (LRCX) was down 10.96% in the 2026-10-22 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Lam Research shares fell in the October 22 regular-session snapshot after its October 21 release for fiscal Q1 2027, the quarter ended September 27. Revenue, margins and earnings increased, and management guided the December quarter to $8.6 billion in revenue at the midpoint. The observed selloff is an earnings reaction; the verified release alone does not establish a single cause for the decline, so this report does not label the guidance a miss or invent a negative company announcement. Technical charts use the October 21 completed session and exclude the following day’s selloff.",
+    "earningsPeriod": "Fiscal Q1 2027",
+    "recap": [
+      "Lam Research reported fiscal Q1 2027 revenue of $8.22 billion, up 54% year over year and 22% from the previous quarter.",
+      "GAAP diluted EPS reached $2.19, compared with $1.24 a year earlier; adjusted diluted EPS was $2.20.",
+      "Gross margin reached 52.3% on a GAAP basis and 52.4% on an adjusted basis.",
+      "GAAP operating margin was 40.0%, while adjusted operating margin reached 40.2%.",
+      "Systems revenue totaled $5.733 billion, while customer support-related revenue and other contributed $2.487 billion.",
+      "December-quarter guidance calls for revenue of $8.6 billion, plus or minus $400 million, and diluted EPS of $2.33, plus or minus $0.15.",
+      "Cash, cash equivalents and restricted cash increased to $7.45 billion; deferred revenue reached $2.66 billion.",
+      "Strong reported growth can coexist with a falling share price; semiconductor spending cycles and execution remain key risks."
+    ],
+    "setup": "Conditional recovery: reclaiming $278 and holding a retest would improve the damaged short-term structure. The prior $259–266 and $250–254 zones come from completed daily bars and may already be broken by the October 22 earnings reaction. Below $250, downside risk remains; require stabilization and volume confirmation rather than assuming a falling stock is a bargain. No new support below the observed range is asserted.",
+    "technicalDate": "2026-10-21",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_LRCX%2F1%2F3933e8db3d296a8161f8433b3b13e0e869d70434ba7b7d94859cc19cb9c10282-d2d06c5c-3260-472c-9d1f-b0b336c48c97%2FFinancials.jpg?alt=media&token=d2d06c5c-3260-472c-9d1f-b0b336c48c97",
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Lam Research (LRCX) financials research infographic"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_LRCX%2F2%2F34391687023b61a26316c0f0b1db3e74ef421707de395f37e9a707d4b5e683d1-2bb76ea7-ee3f-4935-a818-947138ac3afb%2FTechnicals.jpg?alt=media&token=2bb76ea7-ee3f-4935-a818-947138ac3afb",
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Lam Research (LRCX) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — investor.lamresearch.com",
+        "url": "https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27%2C-2026"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754926000037/lrcx-20260628.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/707549/000070754924000106/lrcx-20240630.htm"
+      },
+      {
+        "title": "Financial data and estimates — stockanalysis.com",
+        "url": "https://stockanalysis.com/stocks/lrcx/forecast/"
+      },
+      {
+        "title": "Financial data and estimates — stockanalysis.com",
+        "url": "https://stockanalysis.com/stocks/lrcx/statistics/"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/LRCX"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "ttmPE": 38.86885209517045,
+      "annualRevenueB": 23.23269,
+      "priceDate": "2026-10-21",
+      "forwardYear": 2027,
+      "rsi14": 31.783185307070056,
+      "business": "Sells deposition, etch and clean systems plus spares, upgrades and service.",
+      "forwardPE": 27.51160311799512,
+      "industry": "SEMICONDUCTOR FABRICATION EQUIPMENT",
+      "close": 260.80999755859375,
+      "marketCapB": 326.3570269550171,
+      "fiscalLabel": "FY2026",
+      "atr14": 14.151052890105717
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Flrcx%2F5e7fcee374230979cf7b72a56294783795b4e77866a8211322f41189b83a94e7.jpg?alt=media&token=c5179340-cccd-4ca7-b79f-228e4a9d1deb",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Researcher in a laboratory holding a silicon wafer",
+      "caption": "A researcher holding a silicon wafer, 2013. Illustrative semiconductor-sector photo.",
+      "credit": "U.S. Department of Energy",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Silicon_wafer_researcher.jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "dateTaken": "2013-08-05 20:09:20",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   },
   {
@@ -264,6 +608,19 @@
       "fiscalLabel": "FY2025",
       "priceDate": "2026-10-21",
       "annualRevenueB": 7.9025
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Frop%2F3498355cb8613011b87506359523c2b3248d384492a671ed1918b9307326a2d5.jpg?alt=media&token=b2ec5b92-96ab-41be-b818-d0dc61a4c0d4",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Programming code displayed on a laptop computer",
+      "caption": "Programming code on a laptop. Illustrative software-sector photo.",
+      "credit": "Negative Space",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laptop_Programmcode.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dateTaken": "23 March 2021 (upload date)",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   },
   {
@@ -345,6 +702,19 @@
       "forwardYear": 2026,
       "business": "Earns fees from trading, listings, market data, indexes and financial software.",
       "ttmPE": 26.26229583239946
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fndaq%2F90c67a3165b2abe326cb0e80acaa59871f75856028f565ef4df904282b65cb43.jpg?alt=media&token=f34137c5-d303-499f-b60e-3111e7f624b9",
+      "width": 1920,
+      "height": 1920,
+      "alt": "The Nasdaq MarketSite building in New York City",
+      "caption": "Nasdaq MarketSite in New York, photographed in 2021.",
+      "credit": "ajay_suresh",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nasdaq_MarketSite_(51494550508).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2021-09-19 15:40",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   }
 ]
