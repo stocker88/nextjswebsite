@@ -50,6 +50,7 @@ export default function HeroProductReveal() {
     <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='afterHours'} onClick={() => setSessionKind('afterHours')}>After-Hours</button>
     {options.map(option => <button type="button" key={option.id} aria-pressed={!sessionKind&&period===option.id} onClick={() => {setSessionKind(null);setPeriod(option.id)}}>{option.label}</button>)}
   </div>;
+  const sectionSelector=(name:string)=><div className={`${styles.mobileHeatControls} ${styles.sectionPeriodControls}`}>{periodSelector(name)}</div>;
   useEffect(() => {
     const element = root.current;
     if (!element) return;
@@ -119,14 +120,14 @@ export default function HeroProductReveal() {
             <span className={styles.snapshot}>{sessionKind?'Free extended-hours snapshot':`Saved snapshot · ${date}`}</span>
           </div>
         </div>
-        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession}/></div>:<div className={styles.regularSnapshot}><div className={styles.mobileHeatControls}>{periodSelector('Regular-session period')}</div><div className={extendedStyles.grid}>
+        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession} moversControls={sectionSelector('Top movers period')} pulseControls={sectionSelector('Market pulse period')}/></div>:<div className={styles.regularSnapshot}><div className={styles.mobileHeatControls}>{periodSelector('Regular-session period')}</div><div className={extendedStyles.grid}>
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>S&P 500 by industry</span><span className={styles.tag}>{label}</span></div>
             <HeroOverviewHeatmap rows={stocks} period={period} asOf={latest?.overviewRows?.length ? latest.asOf : snapshot.asOf} />
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
-          <MarketMovers rows={stocks} period={period} label={label}/>
-        </div><div className={extendedStyles.sessionPulse}><HeroMarketPulse latest={latest} period={period} label={label}/></div></div>
+          <MarketMovers rows={stocks} period={period} label={label} periodControls={sectionSelector('Top movers period')}/>
+        </div><div className={extendedStyles.sessionPulse}><HeroMarketPulse latest={latest} period={period} label={label} periodControls={sectionSelector('Market pulse period')}/></div></div>
         }
         <div className={styles.bottomBar}><span><i /> Perspective starts here.</span><span>Research <b>·</b> Compare <b>·</b> Understand</span></div>
       </div>

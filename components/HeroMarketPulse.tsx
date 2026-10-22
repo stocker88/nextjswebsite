@@ -23,9 +23,9 @@ export default function HeroMarketPulse({latest, period, label, periodControls}:
     return {...row, change: available ? (quote.price / quote.previousClose - 1) * 100 : null, asOf: available ? quote.quotedAt.slice(0,10) : latest.asOf};
   }) : snapshot.periods[period];
   return <section className={styles.pulsePanel} aria-label={`Market pulse · ${label}`}>
+    {periodControls}
     <div className={styles.panelHeading}><strong>Market pulse</strong><span className={styles.tag}>{label}</span></div>
     <p className={styles.pulseNote}>Price moves · Treasury changes in bp</p>
-    {periodControls}
     <div className={styles.pulseGrid}>
       {rows.filter(row => row.id !== 'DGS30').map(row => <article data-depth-card key={row.id} className={styles.pulseCard} data-tone={row.yieldRate ? 'yield' : row.change === null ? 'unavailable' : row.change >= 0 ? 'positive' : 'negative'}>
         <h4>{row.name}</h4><p>{row.detail}</p>
