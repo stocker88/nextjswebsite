@@ -1,4 +1,4 @@
-import {useId,useState} from 'react';
+import {useEffect,useId,useState} from 'react';
 import Link from 'next/link';
 import IndustryExplorer from './IndustryExplorer';
 import StockLogo from './StockLogo';
@@ -17,10 +17,12 @@ const href=(symbol:string)=>{const stock=stocks.find(s=>s.ticker===symbol);retur
 const domain=(values:number[],nonnegative=false)=>{const low=Math.min(...values),high=Math.max(...values),pad=Math.max((high-low)*.12,Math.abs(low)*.02,.5);return [nonnegative?Math.max(0,low-pad):low-pad,high+pad]};
 export default function StockPeerAnalysis({symbol='',companies=[],industries=[],industry}:{symbol?:string;companies?:PeerCompany[];industries?:IndustrySummary[];industry?:string}){
  const id=useId();
+ const [companyLimit,setCompanyLimit]=useState(8);
  const [mode,setMode]=useState<'change'|'metrics'>('change'),[period,setPeriod]=useState<Period>('1Y'),[changeMetric,setChangeMetric]=useState<ChangeMetric>('eps');
  const [xMetric,setXMetric]=useState<Metric>('marketCap'),[yMetric,setYMetric]=useState<Metric>('pe');
  const [selected,setSelected]=useState(symbol||companies[0]?.symbol||''),[hidden,setHidden]=useState<string[]>([]),[query,setQuery]=useState(''),[sort,setSort]=useState<'cap'|'pe'|'name'>('cap');
  const [allPE,setAllPE]=useState(false),[bin,setBin]=useState<number|null>(null),[app,setApp]=useState(false);
+ useEffect(()=>setCompanyLimit(8),[query,sort,bin,symbol]);
  const current=companies.find(c=>c.symbol===symbol),chosen=companies.find(c=>c.symbol===selected);
  const label=changeMetrics.find(([k])=>k===changeMetric)![1];
  const xLabel=mode==='change'?`${period} price change`:metricLabel(xMetric),yLabel=mode==='change'?`${period} ${label.toLowerCase()} change`:metricLabel(yMetric);
@@ -68,10 +70,11 @@ export default function StockPeerAnalysis({symbol='',companies=[],industries=[],
    <p className={styles.note}>{companies.length-hist.values.length} companies excluded from P/E statistics because earnings are non-positive or the saved multiple is missing. Statistics include all valid positive values, including those outside the focused chart range.</p>
   </div>
   <div className={styles.card}>
-   <h3>Companies</h3><p>{list.length} of {companies.length} companies · {sort==='cap'?'Largest market cap first':sort==='pe'?'Lowest positive P/E first':'Company name'}</p>
+   <h3>Companies</h3><p aria-live="polite">Showing {Math.min(companyLimit,list.length)} of {list.length} matching companies · {sort==='cap'?'Largest market cap first':sort==='pe'?'Lowest positive P/E first':'Company name'}</p>
    <div className={styles.search}><label htmlFor={id+'-search'} className={styles.srOnly}>Search peer companies</label><input id={id+'-search'} type="search" placeholder="Search company or ticker" value={query} onChange={e=>setQuery(e.target.value)}/><label htmlFor={id+'-sort'} className={styles.srOnly}>Sort peer companies</label><select id={id+'-sort'} value={sort} onChange={e=>setSort(e.target.value as typeof sort)}><option value="cap">Sort by market cap</option><option value="pe">Sort by P/E</option><option value="name">Sort by name</option></select></div>
    {bin!=null&&<div className={styles.foot}>P/E range: {multiple(hist.bins[bin].low)} to {multiple(hist.bins[bin].high)}<button type="button" onClick={()=>setBin(null)}>Clear P/E filter ×</button></div>}
-   <ul className={styles.companies}>{list.map(c=><li key={c.symbol} data-selected={c.symbol===selected}><button type="button" className={styles.companyName} onClick={()=>choose(c.symbol)} aria-label={`Inspect ${c.symbol}`}><StockLogo symbol={c.symbol} src={c.logo||null}/><span><strong>{c.symbol}</strong><span>{c.name}</span></span></button><div className={styles.companyFacts}><span>Market cap {display(c.marketCap,money(c.marketCap))}</span><span>P/E {display(c.pe,multiple(c.pe))}</span><small>{c.priceDate?`Price snapshot: ${c.priceDate}`:'Catalog snapshot'}{c.financialDate?` · Financials: ${c.financialDate}`:''}</small></div><Link className={styles.companyLink} href={href(c.symbol)} aria-label={`Open ${c.symbol} research`}>↗</Link></li>)}</ul>
+   <ul id={id+'-companies'} className={styles.companies+(companies.length>8?' '+styles.compactCompanies:'')}>{list.slice(0,companyLimit).map(c=><li key={c.symbol} data-selected={c.symbol===selected}><button type="button" className={styles.companyName} onClick={()=>choose(c.symbol)} aria-label={`Inspect ${c.symbol}`}><StockLogo symbol={c.symbol} src={c.logo||null}/><span><strong>{c.symbol}</strong><span>{c.name}</span></span></button><div className={styles.companyFacts}><span>Market cap {display(c.marketCap,money(c.marketCap))}</span><span>P/E {display(c.pe,multiple(c.pe))}</span><small>{c.priceDate?`Price snapshot: ${c.priceDate}`:'Catalog snapshot'}{c.financialDate?` · Financials: ${c.financialDate}`:''}</small></div><Link className={styles.companyLink} href={href(c.symbol)} aria-label={`Open ${c.symbol} research`}>↗</Link></li>)}</ul>
+   {list.length>8&&<div className={styles.companyPaging}>{companyLimit<list.length&&<button type="button" aria-controls={id+'-companies'} onClick={()=>setCompanyLimit(n=>n+8)}>Show {Math.min(8,list.length-companyLimit)} more <span>({list.length-companyLimit} remaining)</span></button>}{companyLimit>8&&<button type="button" aria-controls={id+'-companies'} onClick={()=>setCompanyLimit(8)}>Show fewer</button>}</div>}
    {!list.length&&<p>No companies match these filters.</p>}
   </div>
   {industries.length>0&&<IndustryExplorer industries={industries} current={industry||current?.industry}/>}
