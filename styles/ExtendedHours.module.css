@@ -2,3 +2,21 @@
 .sessionPulse{margin-top:24px}.sessionPulse small{color:#a6b7cf;font-size:11px;margin-top:8px}
 
 .mobileCount{display:none}@media(min-width:701px){.extraMover{display:none}}@media(max-width:700px){.desktopCount{display:none}.mobileCount{display:inline}}
+
+/* The heatmap determines the desktop row height; movers fit within that space. */
+@media(min-width:701px){
+ .grid>.movers{contain:size;display:flex;flex-direction:column;min-height:0;padding:16px}
+ .movers h3{font-size:17px;line-height:1.3}
+ .movers>p{font-size:11px;line-height:1.5;margin:7px 0 14px;flex-shrink:0}
+ .moverGroups{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#475775 transparent;scrollbar-gutter:stable;padding-right:3px}
+ .moverGroups:focus-visible{outline:2px solid #c5b2ef;outline-offset:3px;border-radius:4px}
+ .moverGroup h4{font-size:12px;line-height:1.4;margin:14px 0 5px;color:#b9c9de}
+ .moverGroup:first-child h4{margin-top:0}
+ .moverRow{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;column-gap:9px}
+ .moverRow>button{justify-self:end}
+ .movers .moverRow>a{min-height:43px;font-size:12px;gap:8px}
+ .moverRow>a>span{min-width:0}
+ .moverRow small{font-size:10px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .moverRow strong{white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums}
+ .moverRow.extraMover{display:none}
+}

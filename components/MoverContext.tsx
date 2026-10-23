@@ -5,7 +5,7 @@ import {findMoverContext,isSessionExplanation,MoverContextArticle} from '../lib/
 import type {HeatStock,Period} from '../lib/market-heatmap';
 import styles from '../styles/MoverContext.module.css';
 
-export default function MoverContext({stock,period,marketSession='intraday'}:{stock:HeatStock;period:Period;marketSession?:string}) {
+export default function MoverContext({stock,period,marketSession='intraday',compact=false}:{stock:HeatStock;period:Period;marketSession?:string;compact?:boolean}) {
   const [now,setNow]=useState<number|null>(null),[open,setOpen]=useState(false);
   const [position,setPosition]=useState<{left:number;top:number}|null>(null);
   const trigger=useRef<HTMLButtonElement>(null),panel=useRef<HTMLDivElement>(null),id=useId();
@@ -27,7 +27,7 @@ export default function MoverContext({stock,period,marketSession='intraday'}:{st
   const explanation=isSessionExplanation(article,period,stock.asOf,stock.changes[period],marketSession),label=explanation?'Why it’s moving':article.kind==='recap'?'Mentioned in recap':article.kind==='coverage'?'Related coverage':'Recent news';
   const date=new Date(article.publishedAt).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
   return <>
-    <button ref={trigger} type="button" className={styles.trigger} aria-label={`${label}: ${stock.symbol}`} aria-expanded={open} aria-controls={open?id:undefined} aria-haspopup="dialog" onClick={()=>{setPosition(null);setOpen(!open);}}><span aria-hidden="true">✦</span> {label}</button>
+    <button ref={trigger} type="button" className={`${styles.trigger} ${compact?styles.compactTrigger:''}`} title={label} aria-label={`${label}: ${stock.symbol}`} aria-expanded={open} aria-controls={open?id:undefined} aria-haspopup="dialog" onClick={()=>{setPosition(null);setOpen(!open);}}><span aria-hidden="true">✦</span><span className={styles.fullLabel}>{label}</span>{compact&&<span className={styles.shortLabel} aria-hidden="true">{explanation?'Why':article.kind==='recap'?'Recap':'News'}</span>}</button>
     {open&&createPortal(<div ref={panel} id={id} className={styles.popover} role="dialog" aria-label={`${stock.symbol} recent article`} style={{left:position?.left||12,top:position?.top||12,visibility:position?'visible':'hidden'}}>
       <button className={styles.close} type="button" aria-label="Close article preview" onClick={()=>{setOpen(false);trigger.current?.focus();}}>×</button>
       <a href={article.href} className={styles.article}>
