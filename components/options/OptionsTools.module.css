@@ -8,3 +8,6 @@
 .page section[id]{scroll-margin-top:100px}
 
 .compareLegs{display:flex;flex-direction:column;gap:16px;min-height:210px}@media(max-width:1000px){.compareLegs{min-height:0}}
+
+.chart[role="slider"]{touch-action:none;user-select:none;cursor:crosshair}
+.page .chart:focus:not(:focus-visible){outline:none;box-shadow:none}
