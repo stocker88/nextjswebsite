@@ -30,6 +30,7 @@ jobs:
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
       - run: node scripts/article-posts-check.cjs
+      - run: node scripts/mover-headlines-check.cjs
       - run: node scripts/mover-trades-check.cjs
       - run: node scripts/mover-context-check.cjs
       - run: node scripts/default-market-view-check.cjs

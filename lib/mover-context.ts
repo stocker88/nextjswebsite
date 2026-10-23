@@ -1,6 +1,6 @@
 export type MoverContextArticle = {
   symbol: string; title: string; summary: string; href: string; publishedAt: string;
-  kind: 'mover' | 'earnings' | 'preview' | 'news' | 'recap' | 'coverage'; sessionDate?: string;
+  kind: 'mover' | 'earnings' | 'preview' | 'news' | 'recap' | 'coverage' | 'headline'; source?: string; sessionDate?: string;
   marketSession?: 'intraday' | 'premarket' | 'afterhours'; direction?: 'up' | 'down' | 'flat';
 };
 const WEEK = 7 * 86400000;
