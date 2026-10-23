@@ -6,14 +6,23 @@
     "sessionDay": "2026-10-22",
     "title": "+380% since previous close · ACN $245 Call · $2.28 → $10.94",
     "source": "www.StocksToBuyNow.ai",
-    "text": "+380% since previous close · ACN $245 Call · $2.28 → $10.94\n\nPrevious-session daily close → session aggregate close.\n\n• ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.\n\n• The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.\n\n• The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.\n\n• For one standard 100-share contract, the historical price values were $228 → $1,094, a change of $866 before transaction costs.\n\n• Recorded contract volume was 262 on October 21 and 2,460 on October 22.\n\n• The collected option-chain snapshot reports open interest of 1,548 contracts. Open interest does not identify whether investors were buying or selling.\n\n• The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.\n\n• Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report.\n\nSource: www.StocksToBuyNow.ai",
+    "text": "+380% since previous close · ACN $245 Call · $2.28 → $10.94\n\nPrevious-session daily close → session aggregate close.\n\n• ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.\n\n• The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.\n\n• The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.\n\n• One standard 100-share contract increased from $228 to $1,094 in value, an $866 gain before transaction costs.\n\n• If ACN fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $2.28 per share or $228 for one contract, plus costs.\n\n• Recorded volume was 262 contracts on October 21 and 2,460 on October 22, with open interest of 1,548 contracts; these figures do not identify buying or selling direction.\n\n• The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.\n\n• Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report.\n\nIf ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +7.70% since the previous close, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
+    "stock": {
+      "movePct": 7.704149671189553,
+      "price": 258.76999,
+      "asOf": "2026-10-22T19:59:59.000Z",
+      "basis": "previous_session_close",
+      "baselineAt": null,
+      "previousClose": 240.26
+    },
+    "quickTake": "If ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +7.70% since the previous close, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
     "recap": [
       "ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.",
       "The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.",
       "The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.",
-      "For one standard 100-share contract, the historical price values were $228 → $1,094, a change of $866 before transaction costs.",
-      "Recorded contract volume was 262 on October 21 and 2,460 on October 22.",
-      "The collected option-chain snapshot reports open interest of 1,548 contracts. Open interest does not identify whether investors were buying or selling.",
+      "One standard 100-share contract increased from $228 to $1,094 in value, an $866 gain before transaction costs.",
+      "If ACN fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $2.28 per share or $228 for one contract, plus costs.",
+      "Recorded volume was 262 contracts on October 21 and 2,460 on October 22, with open interest of 1,548 contracts; these figures do not identify buying or selling direction.",
       "The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.",
       "Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report."
     ],
@@ -44,7 +53,7 @@
     ],
     "images": [
       {
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F103078f21aa465dbe059a15aa64faf0ccdfeaec4722f75d3d05d8ac195f205f2%2FACN-2026-10-23-245-call.png?alt=media&token=103078f21aa465dbe059a15aa64faf0ccdfeaec4722f75d3d05d8ac195f205f2",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2Fe41c1f7b05c321ac18d295e5045ae1107234edde255e02d585e4051b5aa8f9fb%2FACN-2026-10-23-245-call.png?alt=media&token=e41c1f7b05c321ac18d295e5045ae1107234edde255e02d585e4051b5aa8f9fb",
         "width": 1200,
         "height": 1200,
         "filename": "ACN $245 call.png"
