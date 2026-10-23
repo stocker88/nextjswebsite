@@ -23,3 +23,5 @@
 .strategyRiskRow>span{color:var(--muted);font-size:12px}
 .strategyRiskRow button{font-size:12px;padding:8px 14px}
 @media(max-width:600px){.strategyFilterGroup{gap:6px}.strategyFilterGroup button{padding:9px 13px}.strategyRiskRow{gap:8px}.strategyRiskRow>span{flex-basis:100%}.strategyRiskRow button{padding:8px 10px}}
+
+.strategyPreviewLink{display:block;cursor:pointer;border-radius:8px}.strategyPreviewLink:focus:not(:focus-visible){outline:none}.strategyPreviewLink svg{pointer-events:none}
