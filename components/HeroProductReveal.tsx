@@ -1,6 +1,7 @@
 import MarketMovers from './MarketMovers';
 import extendedStyles from '../styles/ExtendedHours.module.css';
 import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
+import {useDefaultMarketView} from '../lib/use-default-market-view';
 import ExtendedHoursSnapshot from './ExtendedHoursSnapshot';
 import savedExtended from '../data/extended-hours.json';
 import {ExtendedSession} from '../lib/extended-hours';
@@ -41,14 +42,15 @@ export default function HeroProductReveal() {
     const stop = scheduleMarketRefresh(refresh);
     return () => { controller.abort(); stop(); };
   }, []);
-  const [period, setPeriod] = useState<'day'|'week'|'month'|'year'>('year');
-  const [sessionKind,setSessionKind]=useState<'preMarket'|'afterHours'|null>(null);
+  const [view,selectView] = useDefaultMarketView();
+  const sessionKind = view==='preMarket'||view==='afterHours' ? view : null;
+  const period = sessionKind ? 'day' : view as 'day'|'week'|'month'|'year';
   const options = [{id:'day',label:'1D'}, {id:'week',label:'1W'}, {id:'month',label:'1M'}, {id:'year',label:'1Y'}] as const;
   const label = options.find(option => option.id === period)!.label;
   const periodSelector = (ariaLabel: string) => <div className={styles.periods} role="group" aria-label={ariaLabel}>
-    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='preMarket'} onClick={() => setSessionKind('preMarket')}>Pre-Market</button>
-    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='afterHours'} onClick={() => setSessionKind('afterHours')}>After-Hours</button>
-    {options.map(option => <button type="button" key={option.id} aria-pressed={!sessionKind&&period===option.id} onClick={() => {setSessionKind(null);setPeriod(option.id)}}>{option.label}</button>)}
+    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='preMarket'} onClick={() => selectView('preMarket')}>Pre-Market</button>
+    <button type="button" className={styles.appPeriod} aria-pressed={sessionKind==='afterHours'} onClick={() => selectView('afterHours')}>After-Hours</button>
+    {options.map(option => <button type="button" key={option.id} aria-pressed={!sessionKind&&period===option.id} onClick={() => selectView(option.id)}>{option.label}</button>)}
   </div>;
   const sectionSelector=(name:string)=><div className={`${styles.mobileHeatControls} ${styles.sectionPeriodControls}`}>{periodSelector(name)}</div>;
   useEffect(() => {

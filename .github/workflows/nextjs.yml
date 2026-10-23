@@ -29,6 +29,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - run: yarn test:seo
       - run: node scripts/mover-context-check.cjs
+      - run: node scripts/default-market-view-check.cjs
       - run: node scripts/macro-check.cjs
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4
