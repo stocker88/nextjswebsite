@@ -1,6 +1,6 @@
 export type MoverContextArticle = {
   symbol: string; title: string; summary: string; href: string; publishedAt: string;
-  kind: 'mover' | 'earnings' | 'preview' | 'news'; sessionDate?: string;
+  kind: 'mover' | 'earnings' | 'preview' | 'news' | 'recap' | 'coverage'; sessionDate?: string;
   marketSession?: 'intraday' | 'premarket' | 'afterhours'; direction?: 'up' | 'down' | 'flat';
 };
 const WEEK = 7 * 86400000;
@@ -16,5 +16,6 @@ export function findMoverContext(items: MoverContextArticle[], symbol: string, n
   return items.filter(a => contextSymbol(a.symbol) === contextSymbol(symbol) && a.href.startsWith('/') && !a.href.startsWith('//') &&
     Number.isFinite(Date.parse(a.publishedAt)) && Date.parse(a.publishedAt) <= now && Date.parse(a.publishedAt) >= now - WEEK)
     .sort((a,b) => Number(isSessionExplanation(b,period,sessionDate,change,marketSession)) - Number(isSessionExplanation(a,period,sessionDate,change,marketSession)) ||
+      Number(['recap','coverage'].includes(a.kind)) - Number(['recap','coverage'].includes(b.kind)) ||
       Date.parse(b.publishedAt) - Date.parse(a.publishedAt))[0];
 }

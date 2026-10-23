@@ -24,14 +24,14 @@ export default function MoverContext({stock,period,marketSession='intraday'}:{st
   },[open]);
   useEffect(()=>{if(open&&position)panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true});},[open,position]);
   if(!article)return null;
-  const explanation=isSessionExplanation(article,period,stock.asOf,stock.changes[period],marketSession),label=explanation?'Why it’s moving':'Recent news';
+  const explanation=isSessionExplanation(article,period,stock.asOf,stock.changes[period],marketSession),label=explanation?'Why it’s moving':article.kind==='recap'?'Mentioned in recap':article.kind==='coverage'?'Related coverage':'Recent news';
   const date=new Date(article.publishedAt).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'});
   return <>
     <button ref={trigger} type="button" className={styles.trigger} aria-label={`${label}: ${stock.symbol}`} aria-expanded={open} aria-controls={open?id:undefined} aria-haspopup="dialog" onClick={()=>{setPosition(null);setOpen(!open);}}><span aria-hidden="true">✦</span> {label}</button>
     {open&&createPortal(<div ref={panel} id={id} className={styles.popover} role="dialog" aria-label={`${stock.symbol} recent article`} style={{left:position?.left||12,top:position?.top||12,visibility:position?'visible':'hidden'}}>
       <button className={styles.close} type="button" aria-label="Close article preview" onClick={()=>{setOpen(false);trigger.current?.focus();}}>×</button>
       <a href={article.href} className={styles.article}>
-        <span className={styles.eyebrow}>{stock.symbol} · {article.kind==='preview'?'Earnings preview':article.kind==='earnings'?'Earnings review':explanation?'Move context':'Recent research'}</span>
+        <span className={styles.eyebrow}>{stock.symbol} · {article.kind==='preview'?'Earnings preview':article.kind==='earnings'?'Earnings review':article.kind==='recap'?'Market recap':article.kind==='coverage'?'Feed coverage':explanation?'Move context':'Recent research'}</span>
         <strong>{article.title}</strong><time dateTime={article.publishedAt}>{date} ET</time>
         <p>{article.summary}</p><span className={styles.read}>Read article <span aria-hidden="true">↗</span></span>
       </a>
