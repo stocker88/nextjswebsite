@@ -21,7 +21,7 @@ export default function OptionResultCard({result,compact=false}:{result:OptionRe
    <ResearchImages images={result.images} appOnly={false}/>
    <section className={styles.recap}><h3>What happened</h3><ul>{result.recap.map((bullet,i)=><li key={i}>{bullet}</li>)}</ul></section>
    {result.earningsUrl&&<Link className={styles.attachment} href={result.earningsUrl}><span>RELATED RESEARCH</span><strong>{result.companyName} · Latest insight <span aria-hidden="true">↗</span></strong><p>Read the related company research.</p></Link>}
-   <footer className={styles.footer}>Source: <a href="https://www.StocksToBuyNow.ai">www.StocksToBuyNow.ai</a><p>Historical option-price results, not a record of executed trades or realized profits. Options can lose their entire premium.</p></footer>
+   <footer className={styles.footer}>Source: <a href="https://www.StocksToBuyNow.ai">www.StocksToBuyNow.ai</a><p>Options can lose their entire premium.</p></footer>
   </>}
  </article>;
 }

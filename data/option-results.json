@@ -1,12 +1,66 @@
 [
   {
+    "id": "options_results_ACN_2026-10-22",
+    "symbol": "ACN",
+    "companyName": "Accenture plc",
+    "sessionDay": "2026-10-22",
+    "title": "+380% since previous close · ACN $245 Call · $2.28 → $10.94",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+380% since previous close · ACN $245 Call · $2.28 → $10.94\n\nPrevious-session daily close → session aggregate close.\n\n• ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.\n\n• The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.\n\n• The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.\n\n• For one standard 100-share contract, the historical price values were $228 → $1,094, a change of $866 before transaction costs.\n\n• Recorded contract volume was 262 on October 21 and 2,460 on October 22.\n\n• The collected option-chain snapshot reports open interest of 1,548 contracts. Open interest does not identify whether investors were buying or selling.\n\n• The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.\n\n• Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report.\n\nSource: www.StocksToBuyNow.ai",
+    "recap": [
+      "ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.",
+      "The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.",
+      "The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.",
+      "For one standard 100-share contract, the historical price values were $228 → $1,094, a change of $866 before transaction costs.",
+      "Recorded contract volume was 262 on October 21 and 2,460 on October 22.",
+      "The collected option-chain snapshot reports open interest of 1,548 contracts. Open interest does not identify whether investors were buying or selling.",
+      "The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.",
+      "Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report."
+    ],
+    "moves": [
+      {
+        "id": "O:ACN261023C00245000",
+        "symbol": "ACN",
+        "strike": 245,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 2.28,
+        "sessionOpen": 2.2,
+        "sessionClose": 10.94,
+        "openChangePct": -3.50877192982455,
+        "sessionPct": 379.8245614035088,
+        "openDollarChange": -7.999999999999963,
+        "sessionDollarChange": 866,
+        "previousVolume": 262,
+        "volume": 2460,
+        "openInterest": 1548,
+        "aggregateAsOf": "2026-10-22T19:47:02.735Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F103078f21aa465dbe059a15aa64faf0ccdfeaec4722f75d3d05d8ac195f205f2%2FACN-2026-10-23-245-call.png?alt=media&token=103078f21aa465dbe059a15aa64faf0ccdfeaec4722f75d3d05d8ac195f205f2",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ACN $245 call.png"
+      }
+    ],
+    "earningsPostId": "FyilnV3vuKCJ0CB6tC0g",
+    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g"
+  },
+  {
     "id": "options_results_ROP_2026-10-22",
     "symbol": "ROP",
     "companyName": "Roper Technologies",
     "sessionDay": "2026-10-22",
     "title": "+414% since previous close · ROP $430 Call · $3.50 → $18.00",
     "source": "www.StocksToBuyNow.ai",
-    "text": "+414% since previous close · ROP $430 Call · $3.50 → $18.00\n\nPrevious-session daily close → session aggregate close. Historical price changes, not executable quotes or realized profits.\n\n• ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.\n\n• The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.\n\n• The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.\n\n• The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.\n\n• The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.\n\n• These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.\n\n• Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.\n\n• The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain.\n\nSource: www.StocksToBuyNow.ai",
+    "text": "+414% since previous close · ROP $430 Call · $3.50 → $18.00\n\nPrevious-session daily close → session aggregate close.\n\n• ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.\n\n• The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.\n\n• The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.\n\n• The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.\n\n• The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.\n\n• These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.\n\n• Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.\n\n• The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain.\n\nSource: www.StocksToBuyNow.ai",
     "recap": [
       "ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.",
       "The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.",
