@@ -13,3 +13,13 @@
 .page .chart:focus:not(:focus-visible){outline:none;box-shadow:none}
 
 .page .chart[data-pointer-focus="true"]:focus{outline:none;box-shadow:none}
+
+.strategyFilters{display:flex;flex-direction:column;gap:14px;margin-bottom:18px}
+.strategyFilters .filters{margin-bottom:0}
+.strategyFilterGroup{display:flex;flex-wrap:wrap;gap:8px}
+.strategyFilterGroup button{padding:10px 20px;border-radius:12px;background:#131f31;color:#b4c3da;border-color:#36445b;font-size:14px;font-weight:600}
+.strategyFilterGroup button[aria-pressed="true"]{background:#3c315b;border-color:#a58bdc;color:#f5edff}
+.strategyRiskRow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.strategyRiskRow>span{color:var(--muted);font-size:12px}
+.strategyRiskRow button{font-size:12px;padding:8px 14px}
+@media(max-width:600px){.strategyFilterGroup{gap:6px}.strategyFilterGroup button{padding:9px 13px}.strategyRiskRow{gap:8px}.strategyRiskRow>span{flex-basis:100%}.strategyRiskRow button{padding:8px 10px}}
