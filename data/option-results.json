@@ -1,23 +1,159 @@
 [
   {
+    "id": "options_results_ROP_2026-10-22",
+    "symbol": "ROP",
+    "companyName": "Roper Technologies",
+    "sessionDay": "2026-10-22",
+    "title": "+414% since previous close · ROP $430 Call · $3.50 → $18.00",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+414% since previous close · ROP $430 Call · $3.50 → $18.00\n\nPrevious-session daily close → session aggregate close.\n\n• For the $430 call’s 1:24 PM ET option aggregate on October 22, ROP’s corresponding minute-bar open was approximately $433.58, up 9.06% from the $397.56 previous close; this is an approximate time match.\n\n• The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.\n\n• The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.\n\n• The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.\n\n• The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.\n\n• The $420 call’s later 3:42 PM ET aggregate uses a separate stock-minute reference of approximately $436.89, up 9.89%; neither comparison is a verified overnight opening-gap return.\n\n• Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.\n\n• The linked earnings research provides context, not proof of a trade at the starting premium; these are historical option-price comparisons and exclude transaction costs.\n\nIf ROP fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $3.50 per share ($350.00 for one 100-share contract). In this case, ROP moved +9.06% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $3.50 to $18.00 per share: $1,800.00 ending value and $1,450.00 gain for one contract, before costs.",
+    "stock": {
+      "price": 433.5849914550781,
+      "previousClose": 397.56,
+      "movePct": 9.061523155015117,
+      "asOf": "2026-10-22T17:24:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+      "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 433.5849914550781,
+      "previousClose": 397.56,
+      "movePct": 9.061523155015117,
+      "asOf": "2026-10-22T17:24:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+      "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If ROP fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $3.50 per share ($350.00 for one 100-share contract). In this case, ROP moved +9.06% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $3.50 to $18.00 per share: $1,800.00 ending value and $1,450.00 gain for one contract, before costs.",
+    "recap": [
+      "For the $430 call’s 1:24 PM ET option aggregate on October 22, ROP’s corresponding minute-bar open was approximately $433.58, up 9.06% from the $397.56 previous close; this is an approximate time match.",
+      "The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.",
+      "The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.",
+      "The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.",
+      "The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.",
+      "The $420 call’s later 3:42 PM ET aggregate uses a separate stock-minute reference of approximately $436.89, up 9.89%; neither comparison is a verified overnight opening-gap return.",
+      "Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.",
+      "The linked earnings research provides context, not proof of a trade at the starting premium; these are historical option-price comparisons and exclude transaction costs."
+    ],
+    "moves": [
+      {
+        "id": "O:ROP261120C00420000",
+        "symbol": "ROP",
+        "strike": 420,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 6,
+        "sessionOpen": 12.7,
+        "sessionClose": 25.8,
+        "openChangePct": 111.66666666666667,
+        "sessionPct": 330,
+        "openDollarChange": 669.9999999999999,
+        "sessionDollarChange": 1980,
+        "previousVolume": 7,
+        "volume": 113,
+        "openInterest": 93,
+        "aggregateAsOf": "2026-10-22T19:42:02.731Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 436.8900146484375,
+          "previousClose": 397.56,
+          "movePct": 9.892850047398504,
+          "asOf": "2026-10-22T19:42:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792698120&period2=1792698180&interval=1m",
+          "note": "Stock ≈ $436.89 (+9.89%): Oct 22, 3:42 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:ROP261120C00430000",
+        "symbol": "ROP",
+        "strike": 430,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 3.5,
+        "sessionOpen": 10,
+        "sessionClose": 18,
+        "openChangePct": 185.71428571428572,
+        "sessionPct": 414.28571428571433,
+        "openDollarChange": 650,
+        "sessionDollarChange": 1450,
+        "previousVolume": 1,
+        "volume": 27,
+        "openInterest": 30,
+        "aggregateAsOf": "2026-10-22T17:24:02.545Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 433.5849914550781,
+          "previousClose": 397.56,
+          "movePct": 9.061523155015117,
+          "asOf": "2026-10-22T17:24:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+          "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fa302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1%2FROP-2026-11-20-420-call.png?alt=media&token=a302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $420 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fb703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b%2FROP-2026-11-20-430-call.png?alt=media&token=b703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $430 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261022_ROP",
+    "earningsUrl": "/news/why-roper-technologies-rop-stock-is-up-today-2026-10-22/"
+  },
+  {
     "id": "options_results_ACN_2026-10-22",
     "symbol": "ACN",
     "companyName": "Accenture plc",
     "sessionDay": "2026-10-22",
     "title": "+380% since previous close · ACN $245 Call · $2.28 → $10.94",
     "source": "www.StocksToBuyNow.ai",
-    "text": "+380% since previous close · ACN $245 Call · $2.28 → $10.94\n\nPrevious-session daily close → session aggregate close.\n\n• ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.\n\n• The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.\n\n• The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.\n\n• One standard 100-share contract increased from $228 to $1,094 in value, an $866 gain before transaction costs.\n\n• If ACN fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $2.28 per share or $228 for one contract, plus costs.\n\n• Recorded volume was 262 contracts on October 21 and 2,460 on October 22, with open interest of 1,548 contracts; these figures do not identify buying or selling direction.\n\n• The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.\n\n• Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report.\n\nIf ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +7.70% since the previous close, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
+    "text": "+380% since previous close · ACN $245 Call · $2.28 → $10.94\n\nPrevious-session daily close → session aggregate close.\n\n• ACN’s October 22 3:47 PM ET minute-bar open was approximately $256.33, up 6.69% from the $240.26 previous close, used as an approximate stock reference near the call’s 3:47:02 PM ET aggregate timestamp.\n\n• The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.\n\n• The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.\n\n• One standard 100-share contract increased from $228 to $1,094 in value, an $866 gain before transaction costs.\n\n• If ACN fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $2.28 per share or $228 for one contract, plus costs.\n\n• Recorded volume was 262 contracts on October 21 and 2,460 on October 22, with open interest of 1,548 contracts; these figures do not identify buying or selling direction.\n\n• The attached October 1 ACN insight discussed earlier earnings, bookings and guidance. It provides prior research context; it does not establish the cause of the October 22 move or a realized trade.\n\n• Only the verified near-expiry call is included. The about-one-month and about-one-year buckets did not qualify for this report.\n\nIf ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +6.69% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
     "stock": {
-      "movePct": 7.704149671189553,
-      "price": 258.76999,
-      "asOf": "2026-10-22T19:59:59.000Z",
+      "price": 256.3299865722656,
+      "previousClose": 240.26,
+      "movePct": 6.688581774854585,
+      "asOf": "2026-10-22T19:47:00.000Z",
       "basis": "previous_session_close",
-      "baselineAt": null,
-      "previousClose": 240.26
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+      "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
     },
-    "quickTake": "If ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +7.70% since the previous close, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
+    "graphStock": {
+      "price": 256.3299865722656,
+      "previousClose": 240.26,
+      "movePct": 6.688581774854585,
+      "asOf": "2026-10-22T19:47:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+      "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If ACN fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $2.28 per share ($228.00 for one 100-share contract). In this case, ACN moved +6.69% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $2.28 to $10.94 per share: $1,094.00 ending value and $866.00 gain for one contract, before costs.",
     "recap": [
-      "ACN rose 7.70% from its October 21 previous close of $240.26 to $258.77 at 3:59:59 PM ET on October 22, 2026. This is a previous-close comparison, not a rolling 24-hour return.",
+      "ACN’s October 22 3:47 PM ET minute-bar open was approximately $256.33, up 6.69% from the $240.26 previous close, used as an approximate stock reference near the call’s 3:47:02 PM ET aggregate timestamp.",
       "The verified near-expiry contract is the ACN $245 call expiring October 23, 2026—one day after the measured session.",
       "The call moved from a $2.28 October 21 daily close to a $10.94 October 22 session aggregate close: +379.82%. Its aggregate timestamp is October 22 at 3:47 PM ET.",
       "One standard 100-share contract increased from $228 to $1,094 in value, an $866 gain before transaction costs.",
@@ -48,109 +184,28 @@
         "aggregateAsOf": "2026-10-22T19:47:02.735Z",
         "lowActivity": false,
         "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
-        "quoteSpread": null
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 256.3299865722656,
+          "previousClose": 240.26,
+          "movePct": 6.688581774854585,
+          "asOf": "2026-10-22T19:47:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+          "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
+        }
       }
     ],
     "images": [
       {
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F7cc96dcecdbe40b80f6cbd1d0c7ffcc66d0ef6e6715dbb9ffebf3403a44d6121%2FACN-2026-10-23-245-call.png?alt=media&token=7cc96dcecdbe40b80f6cbd1d0c7ffcc66d0ef6e6715dbb9ffebf3403a44d6121",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898%2FACN-2026-10-23-245-call.png?alt=media&token=21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898",
         "width": 1200,
         "height": 1200,
         "filename": "ACN $245 call.png"
       }
     ],
     "earningsPostId": "FyilnV3vuKCJ0CB6tC0g",
-    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g",
-    "graphStock": {
-      "price": 256.3299865722656,
-      "previousClose": 240.26,
-      "movePct": 6.688581774854585,
-      "asOf": "2026-10-22T19:47:00.000Z",
-      "basis": "minute_bar_open_near_option_snapshot",
-      "approximate": true,
-      "note": "Stock endpoint ≈ $256.33 (+6.69%): 3:47 PM ET minute-bar open; option aggregate 3:47:02 PM ET. Approximate time match.",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698360&period2=1792698540&interval=1m"
-    }
-  },
-  {
-    "id": "options_results_ROP_2026-10-22",
-    "symbol": "ROP",
-    "companyName": "Roper Technologies",
-    "sessionDay": "2026-10-22",
-    "title": "+414% since previous close · ROP $430 Call · $3.50 → $18.00",
-    "source": "www.StocksToBuyNow.ai",
-    "text": "+414% since previous close · ROP $430 Call · $3.50 → $18.00\n\nPrevious-session daily close → session aggregate close.\n\n• ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.\n\n• The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.\n\n• The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.\n\n• The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.\n\n• The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.\n\n• These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.\n\n• Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.\n\n• The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain.\n\nSource: www.StocksToBuyNow.ai",
-    "recap": [
-      "ROP traded at $431.42 in the saved Oct 22, 12:22 PM ET stock snapshot, up 8.52%. This stock snapshot is earlier than the option snapshots below.",
-      "The earnings thread reports Q3 revenue of $2.172B, up 8%, with 7% organic growth; adjusted EPS rose 15% to $5.89.",
-      "The same thread reports full-year adjusted EPS guidance raised to $22.35–$22.40. These results provide context for the stock move.",
-      "The Nov 20 $420 call moved from an Oct 21 daily close of $6.00 to an Oct 22 aggregate close of $25.80: +330%, or +$1,980 for a standard 100-share contract before costs.",
-      "The Nov 20 $430 call moved from $3.50 to $18.00 on the same date basis: +414.29%, or +$1,450 per standard contract before costs.",
-      "These are since-previous-close moves, not verified opening-gap returns. Daily first eligible trades were $12.70 and $10.00; exact trade times were not returned.",
-      "Previous-session volume was 7 contracts for the $420 call and 1 for the $430 call. Current aggregate volumes were 113 and 27; returned open interest was 93 and 30.",
-      "The recent earnings thread and signal were published after the shown stock snapshot. These are historical option-price results; the linked research and signal do not establish an earlier recommendation at these prices. Near-expiry and one-year ROP calls were not found in the checked chain."
-    ],
-    "moves": [
-      {
-        "id": "O:ROP261120C00420000",
-        "symbol": "ROP",
-        "strike": 420,
-        "expiry": "2026-11-20",
-        "multiplier": 100,
-        "previousSession": "2026-10-21",
-        "sessionDay": "2026-10-22",
-        "previousClose": 6,
-        "sessionOpen": 12.7,
-        "sessionClose": 25.8,
-        "openChangePct": 111.66666666666667,
-        "sessionPct": 330,
-        "openDollarChange": 669.9999999999999,
-        "sessionDollarChange": 1980,
-        "previousVolume": 7,
-        "volume": 113,
-        "openInterest": 93,
-        "aggregateAsOf": "2026-10-22T19:42:02.731Z",
-        "lowActivity": true,
-        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close"
-      },
-      {
-        "id": "O:ROP261120C00430000",
-        "symbol": "ROP",
-        "strike": 430,
-        "expiry": "2026-11-20",
-        "multiplier": 100,
-        "previousSession": "2026-10-21",
-        "sessionDay": "2026-10-22",
-        "previousClose": 3.5,
-        "sessionOpen": 10,
-        "sessionClose": 18,
-        "openChangePct": 185.71428571428572,
-        "sessionPct": 414.28571428571433,
-        "openDollarChange": 650,
-        "sessionDollarChange": 1450,
-        "previousVolume": 1,
-        "volume": 27,
-        "openInterest": 30,
-        "aggregateAsOf": "2026-10-22T17:24:02.545Z",
-        "lowActivity": true,
-        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close"
-      }
-    ],
-    "images": [
-      {
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Ff01a6433890dc946267384a6cd164429291224e5eafb37387d7b42d935f3f8a4%2FROP-2026-11-20-420-call.png?alt=media&token=f01a6433890dc946267384a6cd164429291224e5eafb37387d7b42d935f3f8a4",
-        "width": 1200,
-        "height": 1200,
-        "filename": "ROP $420 call.png"
-      },
-      {
-        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2F279e50398ea7c60e3dfc13833a745ffb5e7bdc6b2388cb0f41c23952df534b1c%2FROP-2026-11-20-430-call.png?alt=media&token=279e50398ea7c60e3dfc13833a745ffb5e7bdc6b2388cb0f41c23952df534b1c",
-        "width": 1200,
-        "height": 1200,
-        "filename": "ROP $430 call.png"
-      }
-    ],
-    "earningsPostId": "research_mover_20261022_ROP",
-    "earningsUrl": "/news/why-roper-technologies-rop-stock-is-up-today-2026-10-22/"
+    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g"
   }
 ]
