@@ -14,7 +14,13 @@ for(const url of urls){
 }
 assert(html('stocks').includes('NVDA'),'Stock directory is not pre-rendered');
 assert(html('stocks/page/2').replace(/<!--.*?-->/g,'').includes('Page 2'),'Directory pagination missing');
-assert(html('stock-market-news').includes('EDUCATION'),'Education previews missing');
+// The newest forty posts need not contain education after fresh reports publish.
+// Check the exported page where an education post actually belongs.
+const archive=require(path.resolve(out,'../.github-pages-build/data/research.json'));
+const educationIndex=archive.findIndex(item=>(item.symbols||[]).some(symbol=>symbol.trim().replace(/^[#$]/,'').toLowerCase()==='education'));
+if(educationIndex>=0){const page=Math.floor(educationIndex/40)+1;assert(html(page===1?'stock-market-news':'stock-market-news/page/'+page).includes('EDUCATION'),'Education preview missing from its archive page');}
+const newsData=JSON.parse(html('stock-market-news').match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]);
+assert.equal(newsData.props.pageProps.items.length,Math.min(40,archive.length),'Latest news previews missing');
 assert(html('stocks-to-buy-now').includes('http-equiv="refresh"'),'Old hub redirect missing');
 const article=urls.find(url=>url.includes('/stock-market-news/')&&url.includes('--'));
 const articlePath=new URL(article).pathname;
