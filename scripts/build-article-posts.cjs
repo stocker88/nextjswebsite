@@ -19,7 +19,7 @@ function projectPosts(articles,research){
 }
 function build(root=path.join(__dirname,'..')){
  const read=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name+'.json'),'utf8'));
- const items=projectPosts([...read('mover-research'),...read('market-briefings')],read('research'));
+ const items=projectPosts([...read('mover-research'),...read('market-briefings'),...read('option-results').map(r=>({postId:r.id}))],read('research'));
  fs.writeFileSync(path.join(root,'data/article-posts.json'),JSON.stringify(items,null,2)+'\n');
  console.log('Saved',items.length,'original app post media and engagement records');return items;
 }

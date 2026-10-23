@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import OptionResultPayoff from './OptionResultPayoff';
 import ResearchImages from './ResearchImages';
-import type {OptionResult} from '../lib/option-results';
+import {optionResultUrl,type OptionResult} from '../lib/option-results';
 import styles from '../styles/OptionResults.module.css';
 const money=(n:number)=>n.toLocaleString('en-US',{style:'currency',currency:'USD'});
 const date=(value:string)=>new Date(value+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
@@ -27,7 +27,7 @@ export default function OptionResultCard({result,compact=false}:{result:OptionRe
    <p><strong>Ending value: {money(m.sessionClose*m.multiplier)}</strong> · Gain: {money((m.sessionClose-m.previousClose)*m.multiplier)}, before costs.</p>
    <small>Snapshot: {m.aggregateAsOf?new Date(m.aggregateAsOf).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):'Not available'} ET</small>
   </section>)}</div>
-  {compact?<Link className={styles.attachment} href={'/results/#'+encodeURIComponent(result.id)}><strong>View {result.symbol} full results <span aria-hidden="true">↗</span></strong><p>See the option charts and the research behind these moves.</p></Link>:<>
+  {compact?<Link className={styles.attachment} href={optionResultUrl(result)}><strong>View {result.symbol} full results <span aria-hidden="true">↗</span></strong><p>See the option charts and the research behind these moves.</p></Link>:<>
    {result.earningsUrl&&<Link className={styles.attachment} href={result.earningsUrl}><span>RELATED RESEARCH</span><strong>{result.companyName} · Latest insight <span aria-hidden="true">↗</span></strong><p>Read the related company research.</p></Link>}
    <footer className={styles.footer}>Source: <a href="https://www.StocksToBuyNow.ai">www.StocksToBuyNow.ai</a><p>Options can lose their entire premium.</p></footer>
   </>}

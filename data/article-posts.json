@@ -1,5 +1,24 @@
 [
   {
+    "id": "options_results_PANW_2026-10-23",
+    "likes": 0,
+    "comments": 0,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2F5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de%2FPANW-2026-10-23-357.5-call.png?alt=media&token=5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de",
+        "filename": "PANW-2026-10-23-357.5-call.png",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2Fc25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0%2FPANW-2026-11-20-350-call.png?alt=media&token=c25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0",
+        "filename": "PANW-2026-11-20-350-call.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
     "id": "research_mover_20261023_TMUS",
     "likes": 2,
     "comments": 2,
@@ -51,6 +70,25 @@
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CRWD%2F2%2F3e9bc35e1f7bac5262448cb417f51ccd6821d8e34853206fa17703d30b45854b-eb619d32-29ad-499d-a726-65f1d5bb3d73%2FTechnicals.jpg?alt=media&token=eb619d32-29ad-499d-a726-65f1d5bb3d73",
         "filename": "Technicals.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
+    "id": "options_results_SLB_2026-10-23",
+    "likes": 9,
+    "comments": 1,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809%2FSLB-2026-10-23-49.5-call.png?alt=media&token=53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809",
+        "filename": "SLB-2026-10-23-49.5-call.png",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95%2FSLB-2026-11-20-50-call.png?alt=media&token=702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95",
+        "filename": "SLB-2026-11-20-50-call.png",
         "width": 1200,
         "height": 1200
       }
@@ -127,6 +165,19 @@
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CBRE%2F2%2F2c41ec0e23fdba790e4654d9cd0b6df2bc3cc48f1c6795e641c23ecc8e3c5cca-31ba6889-0997-490c-ad16-3e6e909845d9%2FTechnicals.jpg?alt=media&token=31ba6889-0997-490c-ad16-3e6e909845d9",
         "filename": "Technicals.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
+    "id": "options_results_CCI_2026-10-23",
+    "likes": 6,
+    "comments": 1,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_CCI_2026-10-23%2F3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18%2FCCI-2026-11-20-75-call.png?alt=media&token=3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18",
+        "filename": "CCI-2026-11-20-75-call.png",
         "width": 1200,
         "height": 1200
       }
@@ -272,6 +323,19 @@
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261022_BE%2F3%2F801fe9757a6767a4f730c97fdcbf5bf7342684ef9ab79f78e84bfcebdd0fd04c-c7b57779-4de5-44e4-b525-928510bf3f8e%2FEarnings-Peers.jpg?alt=media&token=c7b57779-4de5-44e4-b525-928510bf3f8e",
         "filename": "Earnings-Peers.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
+    "id": "options_results_ACN_2026-10-22",
+    "likes": 12,
+    "comments": 2,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898%2FACN-2026-10-23-245-call.png?alt=media&token=21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898",
+        "filename": "ACN-2026-10-23-245-call.png",
         "width": 1200,
         "height": 1200
       }
@@ -498,6 +562,25 @@
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_AMZN_2026_10_29%2F3%2F4554827d204f2f1b2370c9931294132443a58e45863fed91d81b7d143adf9f7d-b8bc24bd-edb7-4f84-b27e-4a7e03e2797f%2FEarnings-Peers.jpg?alt=media&token=b8bc24bd-edb7-4f84-b27e-4a7e03e2797f",
         "filename": "Earnings-Peers.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
+    "id": "options_results_ROP_2026-10-22",
+    "likes": 6,
+    "comments": 2,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fa302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1%2FROP-2026-11-20-420-call.png?alt=media&token=a302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1",
+        "filename": "ROP-2026-11-20-420-call.png",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fb703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b%2FROP-2026-11-20-430-call.png?alt=media&token=b703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b",
+        "filename": "ROP-2026-11-20-430-call.png",
         "width": 1200,
         "height": 1200
       }

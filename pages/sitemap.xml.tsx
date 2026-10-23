@@ -1,3 +1,4 @@
+import {optionResults,optionResultUrl} from '../lib/option-results';
 import {indexableStockPages} from '../lib/indexable-stock-pages';
 import {briefings,briefingUrl} from '../lib/market-briefings';
 import {moverArticles,moverArticleUrl} from '../lib/mover-research';
@@ -60,6 +61,7 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  optionResults.forEach(result=>entries.push({path:optionResultUrl(result)}));
   entries.push({path:'/news/'});
   entries.push({path:'/catalysts/'});
   entries.push(...indexableStockPages());

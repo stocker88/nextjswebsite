@@ -45,3 +45,16 @@ for(const stock of profiles){
  assert(homepage.includes(`href="/${route}/"`),`Missing overview stock link: ${stock.symbol}`);
 }
 console.log(`Stock links verified for all ${profiles.length} heatmap companies.`);
+
+// Result cards must resolve to individually exported reports, including after feed refreshes.
+const optionReports=require(path.resolve(out,'../.github-pages-build/data/option-results.json'));
+for(const report of optionReports){
+ const route='results/'+report.id.toLowerCase().replace(/_/g,'-');
+ const canonical='https://www.stockstobuynow.ai/'+route+'/';
+ assert(html('results').includes('href="/'+route+'/"'),'Missing result card link: '+report.id);
+ assert(html(route).includes(canonical),'Missing result canonical: '+report.id);
+ assert(sitemap.includes(canonical),'Missing result sitemap entry: '+report.id);
+ assert(html(route).includes('What happened'),'Full result recap missing: '+report.id);
+ for(const image of report.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Full result image missing: '+report.id);
+}
+console.log(`Verified ${optionReports.length} individual result pages and archive links.`);
