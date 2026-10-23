@@ -35,11 +35,11 @@ export default function MoverStory({article:a,research}:{article:MoverArticle;re
  <div className={styles.quote}>
  {a.move!==null&&a.quotePrice!==null&&a.quoteAsOf!==null?<>
  <div><span className={styles.label}>Price snapshot</span><strong>{money(a.quotePrice)}</strong></div>
- <div className={a.move>0?styles.up:styles.down}><span className={styles.label}>{a.marketSession==='afterhours'?'After-hours move':'Session move'}</span><strong>{a.move>0?'↑ +':'↓ '}{a.move.toFixed(2)}%</strong></div>
+ <div className={a.move>0?styles.up:styles.down}><span className={styles.label}>{a.marketSession==='afterhours'?'After-hours move':a.marketSession==='premarket'?'Pre-market move':'Session move'}</span><strong>{a.move>0?'↑ +':'↓ '}{a.move.toFixed(2)}%</strong></div>
  <p><time dateTime={a.quoteAsOf}>{date(a.quoteAsOf)}<br/>{time(a.quoteAsOf)} ET</time><span>Delayed snapshot</span></p>
  </> : <div><span className={styles.label}>Reported quarter</span><strong>{a.earningsPeriod}</strong></div>}
  </div>
- {a.kind!=='earnings_review'&&<p className={styles.note}>{a.marketSession==='afterhours'?<>After-hours change versus the {session} regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {session} U.S. market session.</>}</p>}
+ {a.kind!=='earnings_review'&&<p className={styles.note}>{a.marketSession==='afterhours'?<>After-hours change versus the {session} regular close of {money(a.regularClose!)}.</>:a.marketSession==='premarket'?<>Pre-market change versus the previous trading-day close of {money(a.regularClose!)}; quote time shown above.</>:<>“Today” refers to the {session} U.S. market session.</>}</p>}
  <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">Financials & technicals</a><a href="#company-research">Explore {a.symbol} ↓</a></nav>
  </header>
  <EditorialPhoto photo={a.leadImage} priority/>
