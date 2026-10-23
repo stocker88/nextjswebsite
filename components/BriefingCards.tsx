@@ -1,5 +1,7 @@
-import Link from 'next/link';
 import MarketInsightCard from './MarketInsightCard';
-import ArticlePostEngagement from './ArticlePostEngagement';
-import {briefingUrl,type Briefing} from '../lib/market-briefings';
-export default function BriefingCards({items}:{items:Briefing[]}){return <div className="briefing-cards">{items.map(a=>a.kind==='premarket'?<MarketInsightCard key={a.id} article={a}/>:<article key={a.id} data-app-post-id={a.postId}><span>{a.kind.replace(/_/g,' ').toUpperCase()} · {a.sessionDate}</span><h2><Link href={briefingUrl(a)}>{a.title}</Link></h2><p>{a.summary}</p><ArticlePostEngagement postId={a.postId}/><Link href={briefingUrl(a)}>Read the research →</Link></article>)}<style jsx>{`.briefing-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0}.briefing-cards article{padding:24px;border:1px solid #34415b;border-radius:20px;background:#111b2c}.briefing-cards span{font-size:11px;letter-spacing:.07em;color:#8edacc}.briefing-cards h2{font-size:23px;line-height:1.35}.briefing-cards p{font-size:15px;line-height:1.65;color:#afc1d9}.briefing-cards :global(a){color:#d0bbff;text-decoration:none}@media(max-width:650px){.briefing-cards{grid-template-columns:1fr}.briefing-cards article{padding:20px}}`}</style></div>}
+import CatalystNewsCard from './CatalystNewsCard';
+import type {Briefing} from '../lib/market-briefings';
+export default function BriefingCards({items}:{items:Briefing[]}){
+ return <><div className="briefing-cards">{items.map(a=>a.kind==='premarket'?<MarketInsightCard key={a.id} article={a}/>:<CatalystNewsCard key={a.id} article={a}/>)}</div>
+ <style jsx>{`.briefing-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:24px 0}@media(max-width:700px){.briefing-cards{grid-template-columns:1fr;gap:18px}}`}</style></>;
+}
