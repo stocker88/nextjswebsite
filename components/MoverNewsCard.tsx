@@ -1,3 +1,4 @@
+import ArticlePostEngagement from './ArticlePostEngagement';
 import Link from 'next/link';
 import {useState} from 'react';
 import {moverArticleUrl, type MoverArticle} from '../lib/mover-research';
@@ -6,7 +7,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
   const [logoFailed,setLogoFailed]=useState(false);
   const date=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(a.sessionDate+'T12:00:00Z'));
   const preview=a.recap[0].replace(/^[•\s]+/,'').match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim()||a.recap[0];
-  return <article className={'mover-card'+(compact?' compact':'')}>
+  return <article className={'mover-card'+(compact?' compact':'')} data-app-post-id={a.postId}>
     <Link className="card-link" href={moverArticleUrl(a)}>
       <div className="card-top"><span className="topic">${a.symbol} insights <span aria-hidden="true">↗</span></span><time dateTime={a.sessionDate}>{date}</time></div>
       <div className="company-row">
@@ -17,7 +18,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       <h2>{a.title}</h2>
       <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
       {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={i.url} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
-      <div className="card-footer"><span>{a.earningsPeriod||'Stock research'}</span><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
+      <div className="card-footer"><div className="footer-stats"><ArticlePostEngagement postId={a.postId}/><span>{a.earningsPeriod||'Stock research'}</span></div><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
     </Link>
     <style jsx>{`
       .mover-card{height:100%;min-width:0;border:1px solid #2c3b52;border-radius:24px;background:linear-gradient(145deg,#111d2e,#0c1422);transition:border-color .2s,box-shadow .2s,transform .2s;overflow:hidden}
@@ -41,7 +42,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       figure{margin:0;min-width:0}.image-frame{aspect-ratio:1;background:#080f20;border-radius:13px;overflow:hidden;border:1px solid #ffffff08}
       .image-frame img{width:100%;height:100%;object-fit:contain;display:block}
       figcaption{text-align:center;font-size:12px;color:#b9c8dc;padding-top:9px}
-      .card-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #29394c;padding-top:16px;font-size:11px;color:#91a4bc;margin-top:auto}
+      .footer-stats{display:flex;flex-direction:column;gap:8px}.card-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #29394c;padding-top:16px;font-size:11px;color:#91a4bc;margin-top:auto}
       .read-link{font-size:13px;font-weight:600;color:#c8afff}.read-link>span{display:inline-block;margin-left:6px;transition:transform .2s}
       .compact h2{font-size:20px}.compact .card-top{margin-bottom:18px}
       @media(hover:hover){.mover-card:hover{transform:translateY(-3px);border-color:#9877e5;box-shadow:0 12px 30px #0004,0 0 24px #8b5cf60d}.mover-card:hover .read-link>span{transform:translateX(4px)}}

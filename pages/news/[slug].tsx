@@ -1,3 +1,4 @@
+import ArticlePostEngagement from '../../components/ArticlePostEngagement';
 import StockResults from '../../components/StockResults';
 import EditorialPhoto from '../../components/EditorialPhoto';
 import Head from 'next/head';
@@ -25,13 +26,14 @@ export default function MoverStory({article:a,research}:{article:MoverArticle;re
  const session=date(a.sessionDate+'T12:00:00Z');
  return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.leadImage?.url||a.images[0].url} socialImageAlt={a.leadImage?.alt||a.images[0].alt} socialImageWidth={a.leadImage?.width||1200} socialImageHeight={a.leadImage?.height||1200} ogType="article" hideAppDownload>
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(moverArticleSchema(a))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Stock Movers News',path:'/news/'},{name:a.title,path}]))}}/><meta property="article:published_time" content={a.publishedAt}/><meta property="article:modified_time" content={a.updatedAt}/></Head>
- <article className={styles.story}>
+ <article className={styles.story} data-app-post-id={a.postId}>
  <Link className={styles.back} href="/news/">← Stock movers news</Link>
  <header className={styles.hero}>
  <div className={styles.topline}><span className={styles.tag}>{a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
  <div className={styles.identity}><StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/><span><strong>{a.companyName}</strong><small>{a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
  <h1>{a.title}</h1>
  <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)} · {time(a.publishedAt)} ET</time></span></p>
+ <ArticlePostEngagement postId={a.postId}/>
  <div className={styles.quote}>
  {a.move!==null&&a.quotePrice!==null&&a.quoteAsOf!==null?<>
  <div><span className={styles.label}>Price snapshot</span><strong>{money(a.quotePrice)}</strong></div>
