@@ -4,7 +4,7 @@ import type {OptionResult} from '../lib/option-results';
 import styles from '../styles/OptionResults.module.css';
 export default function OptionResultPayoff({result}:{result:OptionResult}){
  const [selected,setSelected]=useState<number|null>(null);
- const m=result.moves.reduce((a,b)=>a.sessionPct>b.sessionPct?a:b),before=result.stock?.previousClose,after=result.stock?.price;
+ const m=result.moves.reduce((a,b)=>a.sessionPct>b.sessionPct?a:b),before=result.graphStock?.previousClose??result.stock?.previousClose,after=result.graphStock?.price??result.stock?.price;
  const gain=(m.sessionClose-m.previousClose)*100,high=Math.max(m.previousClose,m.sessionClose,Math.max(0,(before??0)-m.strike),Math.max(0,(after??0)-m.strike));
  const y=(v:number)=>112-v/(high||1)*84;
  const x=(v:number)=>60+(v-(before??0))/((after??0)-(before??0)||1)*152;
@@ -27,7 +27,8 @@ export default function OptionResultPayoff({result}:{result:OptionResult}){
     <text x="50" y="132">{usd(before)}</text><text x="218" y="132" textAnchor="end">{usd(after)}</text><text x="0" y="154">Stock · previous → observed</text>
    </svg>:<small>Stock endpoints unavailable</small>}
   </div>
-  {selected!==null&&<small aria-live="polite" style={{color:'#79d5c8'}}>{t===0||t===1?'Saved observation':'Illustrative'} · Stock {usd((before??0)+((after??0)-(before??0))*t)} · Contract {usd(premium*100)} · Return {premium>=m.previousClose?'+':''}{((premium/m.previousClose-1)*100).toFixed(2)}%</small>}
+  {selected!==null&&<small aria-live="polite" style={{color:'#79d5c8'}}>{t===1&&result.graphStock?.approximate?'Approximate time match':t===0||t===1?'Saved observation':'Illustrative'} · Stock {usd((before??0)+((after??0)-(before??0))*t)} · Contract {usd(premium*100)} · Return {premium>=m.previousClose?'+':''}{((premium/m.previousClose-1)*100).toFixed(2)}%</small>}
+  {result.graphStock&&<small>{result.graphStock.note}</small>}
   <small>Tap or drag the mint curve (arrow keys also work). Mint dashed: illustrative guide between saved values · Purple: expiry value, before premium cost.</small>
   <p className={styles.resultPayoffLine}><strong>Payoff · {usd(m.previousClose)} → {usd(m.sessionClose)} / share · {m.sessionPct>=0?'+':''}{m.sessionPct.toFixed(2)}%</strong><br/>One contract: {usd(m.previousClose*100)} → {usd(m.sessionClose*100)} · {gain>=0?'+':''}{usd(gain)} gain before costs</p>
  </section>;

@@ -60,7 +60,17 @@
       }
     ],
     "earningsPostId": "FyilnV3vuKCJ0CB6tC0g",
-    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g"
+    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g",
+    "graphStock": {
+      "price": 256.3299865722656,
+      "previousClose": 240.26,
+      "movePct": 6.688581774854585,
+      "asOf": "2026-10-22T19:47:00.000Z",
+      "basis": "minute_bar_open_near_option_snapshot",
+      "approximate": true,
+      "note": "Stock endpoint ≈ $256.33 (+6.69%): 3:47 PM ET minute-bar open; option aggregate 3:47:02 PM ET. Approximate time match.",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698360&period2=1792698540&interval=1m"
+    }
   },
   {
     "id": "options_results_ROP_2026-10-22",
