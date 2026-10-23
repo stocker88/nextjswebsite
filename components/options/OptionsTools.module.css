@@ -11,3 +11,5 @@
 
 .chart[role="slider"]{touch-action:none;user-select:none;cursor:crosshair}
 .page .chart:focus:not(:focus-visible){outline:none;box-shadow:none}
+
+.page .chart[data-pointer-focus="true"]:focus{outline:none;box-shadow:none}

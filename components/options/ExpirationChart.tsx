@@ -21,12 +21,12 @@ export default function ExpirationChart({legs,fee=0,low=60,high=140,price,onPric
   onPriceChange?.(Math.round((low+fraction*(high-low))*100)/100);
  };
  return <svg ref={ref} tabIndex={interactive?0:undefined}
- onPointerDown={interactive?e=>{if(e.button!==0)return;e.preventDefault();e.currentTarget.focus();e.currentTarget.setPointerCapture(e.pointerId);pickPrice(e.currentTarget,e.clientX,e.clientY)}:undefined}
+ onPointerDown={interactive?e=>{if(e.button!==0)return;e.preventDefault();e.currentTarget.dataset.pointerFocus="true";e.currentTarget.focus();e.currentTarget.setPointerCapture(e.pointerId);pickPrice(e.currentTarget,e.clientX,e.clientY)}:undefined}
  onPointerMove={interactive?e=>{if(e.currentTarget.hasPointerCapture(e.pointerId))pickPrice(e.currentTarget,e.clientX,e.clientY)}:undefined}
  onPointerUp={interactive?e=>{if(e.currentTarget.hasPointerCapture(e.pointerId)){pickPrice(e.currentTarget,e.clientX,e.clientY);e.currentTarget.releasePointerCapture(e.pointerId)}}:undefined}
  onPointerCancel={interactive?e=>{if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId)}:undefined}
- onKeyDown={interactive?e=>{const step=(high-low)/100;let next=price??low;if(e.key==='ArrowRight'||e.key==='ArrowUp')next+=step;else if(e.key==='ArrowLeft'||e.key==='ArrowDown')next-=step;else if(e.key==='Home')next=low;else if(e.key==='End')next=high;else return;e.preventDefault();onPriceChange?.(Math.round(Math.max(low,Math.min(high,next))*100)/100)}:undefined}
- aria-valuemin={interactive?low:undefined} aria-valuemax={interactive?high:undefined} aria-valuenow={interactive?price:undefined}
+ onKeyDown={interactive?e=>{delete e.currentTarget.dataset.pointerFocus;const step=(high-low)/100;let next=price??low;if(e.key==='ArrowRight'||e.key==='ArrowUp')next+=step;else if(e.key==='ArrowLeft'||e.key==='ArrowDown')next-=step;else if(e.key==='Home')next=low;else if(e.key==='End')next=high;else return;e.preventDefault();onPriceChange?.(Math.round(Math.max(low,Math.min(high,next))*100)/100)}:undefined}
+ onBlur={e=>{delete e.currentTarget.dataset.pointerFocus}} aria-valuemin={interactive?low:undefined} aria-valuemax={interactive?high:undefined} aria-valuenow={interactive?price:undefined}
  className={mini?styles.miniChart:styles.chart} viewBox={`0 0 ${w} ${h}`} role={interactive?"slider":"img"} aria-label={mini?'Illustrative expiration payoff shape':'Profit and loss at expiration across underlying prices'} preserveAspectRatio={mini?'none':'xMidYMid meet'}><defs><clipPath id={id+'pos'}><rect x="0" y="0" width={w} height={y(0)}/></clipPath><clipPath id={id+'neg'}><rect x="0" y={y(0)} width={w} height={h-y(0)}/></clipPath></defs>
  {!mini&&[0,.5,1].map(t=>{const v=min+(max-min)*t;return <g key={t}><line x1={left} x2={w-right} y1={y(v)} y2={y(v)} stroke="#29364d"/><text x={left-10} y={y(v)+4} textAnchor="end" fill="#9cacc2" fontSize="12">{axisMoney(v)}</text></g>})}
  <line x1={left} x2={w-right} y1={y(0)} y2={y(0)} stroke="#637187" strokeDasharray="4 5"/>
