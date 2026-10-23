@@ -38,6 +38,7 @@ function build(root=path.join(__dirname,'..')) {
   const read=name=>JSON.parse(fs.readFileSync(path.join(root,'data',name+'.json'),'utf8'));
   const items=buildContext({movers:read('mover-research'),briefings:read('market-briefings'),research:read('research')});
   writeContext(root,items);
+  require('./build-mover-trades.cjs').build(root);
   console.log('Saved',items.length,'recent stock article links for movers'); return items;
 }
 function writeContext(root,items) {

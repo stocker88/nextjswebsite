@@ -1,0 +1,47 @@
+[
+  {
+    "symbol": "PANW",
+    "postId": "options_results_PANW_2026-10-23",
+    "isAIAdvisor": true,
+    "title": "+336% since previous close · PANW $357.5 Call · $5.20 → $22.66",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T19:11:05.000Z",
+    "href": "/results/options-results-panw-2026-10-23/"
+  },
+  {
+    "symbol": "SLB",
+    "postId": "options_results_SLB_2026-10-23",
+    "isAIAdvisor": true,
+    "title": "+276% since previous close · SLB $49.5 Call · $1.01 → $3.80",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T17:01:21.000Z",
+    "href": "/results/options-results-slb-2026-10-23/"
+  },
+  {
+    "symbol": "CCI",
+    "postId": "options_results_CCI_2026-10-23",
+    "isAIAdvisor": true,
+    "title": "+117% since previous close · CCI $75 Call · $6.05 → $13.10",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T15:59:48.000Z",
+    "href": "/results/options-results-cci-2026-10-23/"
+  },
+  {
+    "symbol": "ACN",
+    "postId": "options_results_ACN_2026-10-22",
+    "isAIAdvisor": true,
+    "title": "+380% since previous close · ACN $245 Call · $2.28 → $10.94",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-23T05:57:38.000Z",
+    "href": "/results/options-results-acn-2026-10-22/"
+  },
+  {
+    "symbol": "ROP",
+    "postId": "options_results_ROP_2026-10-22",
+    "isAIAdvisor": true,
+    "title": "+414% since previous close · ROP $430 Call · $3.50 → $18.00",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T20:39:28.000Z",
+    "href": "/results/options-results-rop-2026-10-22/"
+  }
+]
