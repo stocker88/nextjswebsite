@@ -33,17 +33,19 @@ export default function MoverStory({article:a,research}:{article:MoverArticle;re
  <h1>{a.title}</h1>
  <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)} · {time(a.publishedAt)} ET</time></span></p>
  <div className={styles.quote}>
+ {a.move!==null&&a.quotePrice!==null&&a.quoteAsOf!==null?<>
  <div><span className={styles.label}>Price snapshot</span><strong>{money(a.quotePrice)}</strong></div>
  <div className={a.move>0?styles.up:styles.down}><span className={styles.label}>{a.marketSession==='afterhours'?'After-hours move':'Session move'}</span><strong>{a.move>0?'↑ +':'↓ '}{a.move.toFixed(2)}%</strong></div>
  <p><time dateTime={a.quoteAsOf}>{date(a.quoteAsOf)}<br/>{time(a.quoteAsOf)} ET</time><span>Delayed snapshot</span></p>
+ </> : <div><span className={styles.label}>Reported quarter</span><strong>{a.earningsPeriod}</strong></div>}
  </div>
- <p className={styles.note}>{a.marketSession==='afterhours'?<>After-hours change versus the {session} regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {session} U.S. market session.</>}</p>
+ {a.kind!=='earnings_review'&&<p className={styles.note}>{a.marketSession==='afterhours'?<>After-hours change versus the {session} regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {session} U.S. market session.</>}</p>}
  <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">Financials & technicals</a><a href="#company-research">Explore {a.symbol} ↓</a></nav>
  </header>
  <EditorialPhoto photo={a.leadImage} priority/>
- <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
+ <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.kind==='earnings_review'?'What the company reported':a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
  <section id="recap" className={styles.recap}><span className={styles.kicker}>AT A GLANCE</span><h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p></section>
- <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>Financials and technicals</h2><p className={styles.note}>Charts through {a.technicalDate}. The session move above may reflect later news.</p>
+ <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>{a.kind==='earnings_review'?'Financials, technicals and earnings':'Financials and technicals'}</h2><p className={styles.note}>Charts through {date(a.technicalDate+'T12:00:00Z')}. {a.kind!=='earnings_review'&&'The session move above may reflect later news.'}</p>
  <ResearchImages appOnly={false} images={a.images.map(image=>({url:image.url,filename:image.title+'.png',width:image.width,height:image.height}))}/>
 </section>
  <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>Technical setup and risks</h2><p>{a.setup}</p></section>
