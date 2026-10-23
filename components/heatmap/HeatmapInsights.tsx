@@ -1,8 +1,9 @@
 import {HeatStock,Period,biggestMovers,sectorRankings,percent,periodLabel,returnColor} from '../../lib/market-heatmap';
 import styles from './Heatmap.module.css';
+import MoverContext from '../MoverContext';
 export function Movers({rows,period,colorblind,onPick}:{rows:HeatStock[];period:Period;colorblind:boolean;onPick:(r:HeatStock)=>void}){
  const {gainers,losers}=biggestMovers(rows,period);
- return <section className={styles.movers} aria-label="Biggest movers"><span className={styles.moversTitle}>Biggest movers · {periodLabel(period)}</span>{[['Gainers',gainers],['Losers',losers]].map(([label,items])=><div className={styles.moverLine} key={label as string}><span>{label as string}</span><div>{(items as HeatStock[]).length?(items as HeatStock[]).map(r=><button key={r.symbol} onClick={()=>onPick(r)} aria-label={`Highlight ${r.symbol}`}><strong>{r.symbol}</strong> <span style={{color:returnColor(r.changes[period],colorblind)}}>{percent(r.changes[period])}</span></button>):<small>None in this view</small>}</div></div>)}</section>;
+ return <section className={styles.movers} aria-label="Biggest movers"><span className={styles.moversTitle}>Biggest movers · {periodLabel(period)}</span>{[['Gainers',gainers],['Losers',losers]].map(([label,items])=><div className={styles.moverLine} key={label as string}><span>{label as string}</span><div>{(items as HeatStock[]).length?(items as HeatStock[]).map((r,index)=><div key={r.symbol} className={`${styles.moverChip} ${index>=7?styles.extraMover:''}`}><button onClick={()=>onPick(r)} aria-label={`Highlight ${r.symbol}`}><strong>{r.symbol}</strong> <span style={{color:returnColor(r.changes[period],colorblind)}}>{percent(r.changes[period])}</span></button><MoverContext stock={r} period={period}/></div>):<small>None in this view</small>}</div></div>)}</section>;
 }
 export function SectorLeaderboard({rows,period,colorblind,onSector}:{rows:HeatStock[];period:Period;colorblind:boolean;onSector:(s:string)=>void}){
  const rankings=sectorRankings(rows,period);

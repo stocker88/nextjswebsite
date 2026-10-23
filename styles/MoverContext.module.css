@@ -1,0 +1,12 @@
+.trigger{display:inline-flex;align-items:center;gap:5px;width:fit-content;min-height:28px;margin:0 0 10px;padding:3px 8px;border:1px solid #bba0ee4d;border-radius:20px;background:#c1a4fa12;color:#d4baff;cursor:pointer;font:inherit;font-size:10px;line-height:1.4;white-space:nowrap}
+.trigger:hover,.trigger[aria-expanded=true]{background:#c1a4fa26;border-color:#bba0ee}
+.trigger:focus-visible,.popover a:focus-visible,.close:focus-visible{outline:2px solid #d4baff;outline-offset:3px}
+.popover{position:fixed;z-index:10000;box-sizing:border-box;width:min(340px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow-y:auto;border:1px solid #705f94;border-radius:16px;background:linear-gradient(140deg,#211c35,#101c2d);color:#eaf1ff;box-shadow:0 16px 60px #0009;font-family:inherit;text-align:left}
+.article{display:block;padding:20px;color:inherit;text-decoration:none}
+.eyebrow{display:block;margin-right:22px;color:#cfb4ff;font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.article strong{display:block;margin:12px 0 8px;font-size:16px;line-height:1.4;font-weight:600}
+.article time{color:#9cacc5;font-size:11px}
+.article p{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;color:#bdc9db;font-size:13px;line-height:1.65;margin:12px 0 16px}
+.read{color:#d4baff;font-size:12px;font-weight:600}
+.article:hover .read{text-decoration:underline}
+.close{position:absolute;right:8px;top:8px;display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:transparent;color:#bdc9db;font-size:22px;cursor:pointer}

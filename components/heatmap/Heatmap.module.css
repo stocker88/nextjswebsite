@@ -43,3 +43,5 @@
 .periodButtons button:hover,.periodButtons a:hover{color:#fff;background:#1b2c45}
 .periodButtons button:focus-visible,.periodButtons a:focus-visible{outline:2px solid #bcaaff;outline-offset:2px}
 @media(max-width:680px){.periodButtons{width:100%}.periodButtons button{flex:1;padding-inline:9px}.periodButtons a{flex:1 0 40%}.mapShare{width:100%}}
+
+.moverChip{display:flex;flex-direction:column;flex-shrink:0;align-items:flex-start}.moverChip>button+button{font-size:9px;min-height:24px;margin:4px 0 0;padding:2px 6px;color:#d4baff;background:#c1a4fa12;border-radius:20px}@media(min-width:701px){.moverChip.extraMover{display:none}}
