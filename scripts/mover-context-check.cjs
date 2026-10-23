@@ -16,7 +16,7 @@ assert.equal(pick([{...current,href:'//external.example/'}]),undefined);
 assert(isSessionExplanation(current,'day','2026-10-23',5));
 for(const args of [['year','2026-10-23',5],['day','2026-10-22',5],['day','2026-10-23',-5],['day','2026-10-23',null],['day','2026-10-23',5,'premarket']])assert(!isSessionExplanation(current,...args));
 assert(!isSessionExplanation(preview,'day','2026-10-23',5));
-const mover={...current,slug:'cci',catalyst:'Source checked context'};
+const mover={...current,postId:'cci-original-post',slug:'cci',catalyst:'Source checked context'};
 const stockPost={id:'stock-post',title:'CCI update',time:now/1000-3600,symbols:['cci','earnings'],quickTake:'New company results.'};
 const recap={...preview,slug:'recap',kind:'premarket',postId:'briefing_premarket_20261023',symbols:['CCI','TMUS'],sections:[{heading:'Wireless carriers',text:'TMUS reported a premarket decline.'}]};
 const result=buildContext({movers:[mover],briefings:[{...preview,slug:'cci-preview',kind:'earnings_preview',symbols:['CCI']},recap],research:[stockPost,{...stockPost,id:'multi-stock',symbols:['CCI','SLB']},{...stockPost,id:recap.postId},{...stockPost,id:'options_results_CCI_20261023'},{...stockPost,id:'no-summary',quickTake:undefined}]},now);
@@ -24,9 +24,11 @@ assert.equal(result.length,8);assert(result.some(a=>a.href==='/news/cci/'&&a.sum
 assert(result.some(a=>a.href==='/catalysts/cci-preview/'&&a.kind==='preview'));
 assert(result.some(a=>a.href==='/stock-market-news/cci-update--stock-post/'));
 const tmus=pick(result,'TMUS');assert.equal(tmus.kind,'recap');assert.equal(tmus.href,'/news/briefings/recap/');assert.equal(tmus.summary,'TMUS reported a premarket decline.');
+assert.equal(tmus.postId,recap.postId);assert.equal(pick(result).postId,'cci-original-post');
 assert(!isSessionExplanation(tmus,'day','2026-10-23',-5));
 assert(result.some(a=>a.symbol==='SLB'&&a.kind==='coverage'));
 assert(result.some(a=>a.href.endsWith('--no-summary/')&&a.summary==='CCI update'));
+assert.equal(result.find(a=>a.href.endsWith('--no-summary/')).postId,'no-summary');
 assert(!result.some(a=>a.href.includes('options_results_')||a.href.includes('--briefing_premarket_')));
 assert.equal(pick(result).kind,'mover'); // Dedicated reports retain priority over recap mentions.
 assert.equal(buildContext({movers:[{...mover,publishedAt:'2020-01-01'}]},now).length,0);
