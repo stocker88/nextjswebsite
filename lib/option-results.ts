@@ -1,5 +1,5 @@
 import saved from '../data/option-results.json';
-export type OptionResult=Omit<(typeof saved)[number], 'quickTake'|'stock'> & {quickTake?:string;stock?:{movePct:number;price:number;asOf:string;basis:string}|null};
+export type OptionResult=Omit<(typeof saved)[number], 'quickTake'|'stock'> & {quickTake?:string;stock?:{movePct:number;price:number;previousClose?:number|null;asOf:string;basis:string}|null};
 export const optionResults:OptionResult[]=saved;
 const canonical=(symbol:string)=>symbol.trim().toUpperCase().replace(/\./g,'-');
 export function latestOptionResult(symbol:string,reports:OptionResult[]=optionResults):OptionResult|null{
