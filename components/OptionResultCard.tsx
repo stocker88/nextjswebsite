@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import OptionResultPayoff from './OptionResultPayoff';
 import ResearchImages from './ResearchImages';
 import type {OptionResult} from '../lib/option-results';
 import styles from '../styles/OptionResults.module.css';
@@ -11,6 +12,7 @@ export default function OptionResultCard({result,compact=false}:{result:OptionRe
   <h2>{result.title}</h2>
   <p className={styles.intro}>{date(result.moves[0].previousSession)} daily close → {date(result.sessionDay)} session aggregate close. These are historical price changes, before costs.</p>
   {result.stock&&<p className={styles.intro}><strong>{result.symbol} stock: {result.stock.movePct>=0?'+':''}{result.stock.movePct.toFixed(2)}%</strong> {result.stock.basis==='past_24_hours'?'over the measured 24 hours':'since the previous close'} · {money(result.stock.price)} at {new Date(result.stock.asOf).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET.</p>}
+  <OptionResultPayoff key={result.id} result={result}/>
   <div className={styles.calls}>{result.moves.map(m=><section key={m.id} className={styles.call} aria-label={`${result.symbol} $${m.strike} call performance`}>
    <div className={styles.callLabel}>${m.strike} CALL <span>{date(m.expiry)} expiry</span></div>
    <strong className={styles.performance}>{m.sessionPct>0?'+':''}{m.sessionPct.toFixed(2)}%</strong><span className={styles.basis}>Since previous session close</span>
