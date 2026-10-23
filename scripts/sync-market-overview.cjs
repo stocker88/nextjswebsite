@@ -11,7 +11,7 @@ async function main(){
  fs.writeFileSync(file+'.tmp',JSON.stringify(snapshot,null,2)+'\n');fs.renameSync(file+'.tmp',file);
  const profiles=rows.map(({symbol,name,sector,industry,marketCap})=>({symbol,name,sector,industry,type:'EQUITY',marketCap}));
  fs.writeFileSync(path.join(root,'data/heatmap-stock-profiles.json'),JSON.stringify(profiles)+'\n');
- const sessions={}; for(const key of ['preMarket','afterHours']){const value=data[key];if(value?.version===1&&Array.isArray(value.rows)&&value.rows.length&&value.quotedAt){sessions[key]=Object.fromEntries(['version','mode','asOf','assembledAt','quotedAt','priceBasis','source','rows','pulse'].map(k=>[k,value[k]]));}}
+ const sessions={}; for(const key of ['preMarket','afterHours']){const value=data[key];if(value?.version===1&&Array.isArray(value.rows)&&value.rows.length&&value.quotedAt){sessions[key]=Object.fromEntries(['version','mode','asOf','assembledAt','quotedAt','priceBasis','source','rows','moverRows','pulse'].map(k=>[k,value[k]]));}}
  const extended=path.join(root,'data/extended-hours.json');const previous=fs.existsSync(extended)?JSON.parse(fs.readFileSync(extended,'utf8')):{};fs.writeFileSync(extended+'.tmp',JSON.stringify({...previous,...sessions})+'\n');fs.renameSync(extended+'.tmp',extended);
  console.log(`Saved ${rows.length} S&P 500 holdings across ${new Set(rows.map(r=>r.industry)).size} industries, as of ${data.asOf}.`);
 }

@@ -126,7 +126,7 @@ export default function HeroProductReveal() {
             <HeroOverviewHeatmap rows={stocks} period={period} asOf={latest?.overviewRows?.length ? latest.asOf : snapshot.asOf} />
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
-          <MarketMovers rows={stocks} period={period} label={label} periodControls={sectionSelector('Top movers period')}/>
+          <MarketMovers rows={latest?.moverRows ?? stocks} period={period} label={label} periodControls={sectionSelector('Top movers period')}/>
         </div><div className={extendedStyles.sessionPulse}><HeroMarketPulse latest={latest} period={period} label={label} periodControls={sectionSelector('Market pulse period')}/></div></div>
         }
         <div className={styles.bottomBar}><span><i /> Perspective starts here.</span><span>Research <b>·</b> Compare <b>·</b> Understand</span></div>

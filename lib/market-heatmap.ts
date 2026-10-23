@@ -4,7 +4,7 @@ export const periodLabel=(period:Period)=>PERIOD_OPTIONS.find(p=>p.value===perio
 export const periodScale:Record<Period,number>={day:4,week:8,month:15,quarter:25,halfyear:40,ytd:40,year:60,threeYears:100,fiveYears:150};
 export type HeatStock={symbol:string;weight?:number;name:string;sector:string;industry:string;marketCap:number;price:number;asOf:string;sourceUpdatedAt:string|null;periodDetails?:Partial<Record<Period,{basis:'weekly'|'monthly';basePeriod:string;targetDate:string}>>;changes:Record<Period,number|null>};
 export type PulseQuote={price:number;previousClose:number;quotedAt:string;sourceSymbol?:string};
-export type HeatSnapshot={overviewRows?:HeatStock[];preMarket?:import('./extended-hours').ExtendedSession;afterHours?:import('./extended-hours').ExtendedSession;pulse?:Record<string,PulseQuote>;version:number;universeAsOf?:string;weightSource?:string;weightCovered?:number;asOf:string;assembledAt:string;metadataUpdatedAt:string|null;source:string;priceBasis:string;refreshSchedule:string;rows:HeatStock[];coverage:{total:number;current:number;outdated:number};stale?:boolean};
+export type HeatSnapshot={moverRows?:HeatStock[];overviewRows?:HeatStock[];preMarket?:import('./extended-hours').ExtendedSession;afterHours?:import('./extended-hours').ExtendedSession;pulse?:Record<string,PulseQuote>;version:number;universeAsOf?:string;weightSource?:string;weightCovered?:number;asOf:string;assembledAt:string;metadataUpdatedAt:string|null;source:string;priceBasis:string;refreshSchedule:string;rows:HeatStock[];coverage:{total:number;current:number;outdated:number};stale?:boolean};
 export const heatmapEndpoint='https://us-central1-stocker-fcda2.cloudfunctions.net/marketHeatmap';
 export const percent=(v:number|null)=>v===null?'Unavailable':`${v>0?'+':''}${v.toFixed(2)}%`;
 export const dateLabel=(date:string)=>!date?'Unavailable':new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
@@ -49,8 +49,8 @@ export function sectorRankings(rows:HeatStock[],period:Period){
  }).sort((a,b)=>(b.average??-Infinity)-(a.average??-Infinity)||a.name.localeCompare(b.name));
 }
 export function biggestMovers(rows:HeatStock[],period:Period){
- const valid=rows.filter(r=>r.changes[period]!==null);
- return {gainers:valid.filter(r=>r.changes[period]!>0).sort((a,b)=>b.changes[period]!-a.changes[period]!).slice(0,5),losers:valid.filter(r=>r.changes[period]!<0).sort((a,b)=>a.changes[period]!-b.changes[period]!).slice(0,5)};
+ const valid=rows.filter(r=>Number.isFinite(r.changes[period]));
+ return {gainers:valid.filter(r=>r.changes[period]!>0).sort((a,b)=>b.changes[period]!-a.changes[period]!||a.symbol.localeCompare(b.symbol)).slice(0,10),losers:valid.filter(r=>r.changes[period]!<0).sort((a,b)=>a.changes[period]!-b.changes[period]!||a.symbol.localeCompare(b.symbol)).slice(0,10)};
 }
 // Fixed slots keep group coordinates unchanged when returns or tile sizing change.
 // Groups occupy equal space; sizing remains proportional within each group.
