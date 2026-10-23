@@ -3,36 +3,60 @@ import EditorialPhoto from '../../components/EditorialPhoto';
 import Head from 'next/head';
 import Link from 'next/link';
 import ResearchPage from '../../components/ResearchPage';
-import MoverNewsList from '../../components/MoverNewsList';
+import StockLogo from '../../components/StockLogo';
+import ResearchImages from '../../components/ResearchImages';
+import {type InstrumentResearchProps} from '../../components/InstrumentResearch';
+import CompanyResearchSection from '../../components/CompanyResearchSection';
+import StockAppCTA from '../../components/StockAppCTA';
 import {MoverArticle,moverArticles,moverArticleUrl,moverArticleSchema} from '../../lib/mover-research';
 import {stockPageHref} from '../../lib/stock-page';
 import {jsonLd,breadcrumbs} from '../../lib/seo';
-export default function MoverStory({article:a}:{article:MoverArticle}){
- const c=a.stockContext;const path=moverArticleUrl(a);const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
- const readableDay=(value:string)=>new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'America/New_York'}).format(new Date(value+'T12:00:00Z'));
- const readableStamp=(value:string)=>new Intl.DateTimeFormat('en-US',{dateStyle:'long',timeStyle:'short',timeZone:'America/New_York'}).format(new Date(value))+' Eastern';
- const quoted=new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/New_York'}).format(new Date(a.quoteAsOf));
- return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.leadImage?.url||a.images[0].url} socialImageAlt={a.leadImage?.alt||a.images[0].alt} socialImageWidth={a.leadImage?.width||1200} socialImageHeight={a.leadImage?.height||1200} ogType="article">
+import {catalog} from '../../lib/catalog';
+import {loadStockResearch,loadStockEarnings} from '../../lib/stock-research-server';
+import {recentStockNews} from '../../lib/stocks';
+import {fetchResearch} from '../../lib/research-server';
+import styles from '../../styles/MoverStory.module.css';
+
+export default function MoverStory({article:a,research}:{article:MoverArticle;research:InstrumentResearchProps|null}){
+ const path=moverArticleUrl(a);
+ const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
+ const date=(value:string)=>new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/New_York'}).format(new Date(value));
+ const time=(value:string)=>new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}).format(new Date(value));
+ const session=date(a.sessionDate+'T12:00:00Z');
+ return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.leadImage?.url||a.images[0].url} socialImageAlt={a.leadImage?.alt||a.images[0].alt} socialImageWidth={a.leadImage?.width||1200} socialImageHeight={a.leadImage?.height||1200} ogType="article" hideAppDownload>
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(moverArticleSchema(a))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Stock Movers News',path:'/news/'},{name:a.title,path}]))}}/><meta property="article:published_time" content={a.publishedAt}/><meta property="article:modified_time" content={a.updatedAt}/></Head>
- <article className="mover-story"><Link href="/news/">← Stock movers news</Link><p className="eyebrow">{a.symbol} · {a.earningsPeriod?'EARNINGS RESULTS':'MARKET MOVERS'} · {readableDay(a.sessionDate)}</p><h1>{a.title}</h1>
- <p className="meta">By {a.author.name} · Published <time dateTime={a.publishedAt}>{readableStamp(a.publishedAt)}</time></p>
- <div className="move" data-direction={a.direction}><span>{a.symbol} {a.move>0?'+':''}{a.move.toFixed(2)}%{a.marketSession==='afterhours'?' after hours':''}</span><p>{money(a.quotePrice)} · Snapshot as of <time dateTime={a.quoteAsOf}>{quoted} New York time</time></p></div>
- <p className="meta">This is a dated snapshot, not a live quote. {a.marketSession==='afterhours'?<>After-hours change versus the same-day regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {readableDay(a.sessionDate)} U.S. market session.</>}</p>
+ <article className={styles.story}>
+ <Link className={styles.back} href="/news/">← Stock movers news</Link>
+ <header className={styles.hero}>
+ <div className={styles.topline}><span className={styles.tag}>{a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
+ <div className={styles.identity}><StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/><span><strong>{a.companyName}</strong><small>{a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
+ <h1>{a.title}</h1>
+ <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)} · {time(a.publishedAt)} ET</time></span></p>
+ <div className={styles.quote}>
+ <div><span className={styles.label}>Price snapshot</span><strong>{money(a.quotePrice)}</strong></div>
+ <div className={a.move>0?styles.up:styles.down}><span className={styles.label}>{a.marketSession==='afterhours'?'After-hours move':'Session move'}</span><strong>{a.move>0?'↑ +':'↓ '}{a.move.toFixed(2)}%</strong></div>
+ <p><time dateTime={a.quoteAsOf}>{date(a.quoteAsOf)}<br/>{time(a.quoteAsOf)} ET</time><span>Delayed snapshot</span></p>
+ </div>
+ <p className={styles.note}>{a.marketSession==='afterhours'?<>After-hours change versus the {session} regular close of {money(a.regularClose!)}.</>:<>“Today” refers to the {session} U.S. market session.</>}</p>
+ <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">Financials & technicals</a><a href="#company-research">Explore {a.symbol} ↓</a></nav>
+ </header>
  <EditorialPhoto photo={a.leadImage} priority/>
- <h2>{a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p>
- <h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p>
- <h2>Financials and technicals</h2><p>Technical charts use the {a.technicalDate} completed close. The session move above may reflect news released after that close.</p>
- <div className="report-images">{a.images.map((image,i)=><figure key={image.url}><h3>{image.title}</h3><a href={image.url} target="_blank" rel="noopener noreferrer" aria-label={'Open full-size '+a.symbol+' '+image.title}><img src={image.url} alt={image.alt} width="1200" height="1200" loading={i===0?'eager':'lazy'}/></a><figcaption>{image.title} · Open image to inspect the full-size report.</figcaption></figure>)}</div>
- <h2>{a.companyName} ({a.symbol}) stock information</h2><p>{c.business}</p><p>{c.industry}. Financial and valuation snapshot at the {readableDay(c.priceDate)} completed close; estimates and reporting dates are shown in the financial infographic.</p>
- <dl><div><dt>Completed close · {readableDay(c.priceDate)}</dt><dd>{money(c.close)}</dd></div><div><dt>Indicative market capitalization</dt><dd>${c.marketCapB.toFixed(2)} billion</dd></div><div><dt>{c.fiscalLabel} revenue</dt><dd>${c.annualRevenueB.toFixed(2)} billion</dd></div>{c.ttmPE>0&&<div><dt>P/E · TTM GAAP</dt><dd>{c.ttmPE.toFixed(2)}×</dd></div>}{c.forwardPE>0&&<div><dt>Forward P/E · FY{c.forwardYear}E</dt><dd>{c.forwardPE.toFixed(2)}×</dd></div>}<div><dt>RSI (14) · {readableDay(c.priceDate)}</dt><dd>{c.rsi14.toFixed(1)}</dd></div></dl>
- <p><Link href={stockPageHref(a.symbol)}>Explore {a.companyName} stock financials, earnings and research →</Link></p>
- <h2>Technical setup and risks</h2><p>{a.setup}</p>
- <p className="meta">{a.disclosure}</p>
- <div className="app-link"><h2>Follow the research in the app</h2><p>Open this report and follow the discussion.</p><a href={'/insight_details_page?postId='+encodeURIComponent(a.postId)+'&utm_source=website&utm_medium=organic&utm_campaign=mover_research'}>Open {a.symbol} research in the app →</a></div>
- <MoverNewsList symbol={a.symbol}/></article>
+ <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
+ <section id="recap" className={styles.recap}><span className={styles.kicker}>AT A GLANCE</span><h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p></section>
+ <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>Financials and technicals</h2><p className={styles.note}>Charts through {a.technicalDate}. The session move above may reflect later news.</p>
+ <ResearchImages appOnly={false} images={a.images.map(image=>({url:image.url,filename:image.title+'.png',width:image.width,height:image.height}))}/>
+</section>
+ <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>Technical setup and risks</h2><p>{a.setup}</p></section>
+ <p className={styles.disclosure}>{a.disclosure}</p>
+ </article>
  <StockResults symbol={a.symbol}/>
- <style jsx>{`.mover-story{max-width:1100px;margin:auto}.mover-story h1{font-size:clamp(32px,5vw,52px);line-height:1.15}.mover-story h2{margin-top:36px;font-size:28px}.mover-story p,.mover-story li{font-size:18px;line-height:1.75;color:#c6d1e3}.mover-story li{margin:12px 0}.mover-story :global(a){color:#a5d6ff}.meta{font-size:14px!important;color:#9fafc8!important}.eyebrow{font-size:14px!important;letter-spacing:.1em;color:#a9b7ff!important}.move{padding:24px;border:1px solid #33506a;border-radius:18px;background:#101e32}.move span{font-size:36px;color:#74e4b6}.move[data-direction=down] span{color:#ff929f}.move p{margin-bottom:0}.report-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.report-images figure{margin:0}.report-images img{display:block;width:100%;height:auto;border-radius:14px}.report-images figcaption{font-size:14px;color:#afbdd4;margin-top:10px}.report-images h3{font-size:22px}dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}dl div{padding:20px;background:#111e32;border-radius:14px}dt{color:#afbdd4;font-size:14px}dd{margin:10px 0 0;font-size:24px}.app-link{padding:24px;background:#202242;border:1px solid #60528d;border-radius:18px;margin-top:32px}@media(max-width:700px){.report-images{grid-template-columns:1fr}dl{grid-template-columns:repeat(2,minmax(0,1fr))}.mover-story p,.mover-story li{font-size:17px}}`}</style>
- </ResearchPage>
+ <div id="company-research">{research?<CompanyResearchSection research={research}/>:<StockAppCTA symbol={a.symbol}/>}</div>
+ </ResearchPage>;
 }
 export function getStaticPaths(){return {paths:moverArticles.map(a=>({params:{slug:a.slug}})),fallback:false};}
-export function getStaticProps({params}:{params:{slug:string}}){const article=moverArticles.find(a=>a.slug===params.slug);return article?{props:{article}}:{notFound:true};}
+export async function getStaticProps({params}:{params:{slug:string}}){
+ const article=moverArticles.find(a=>a.slug===params.slug);if(!article)return {notFound:true};
+ const item=catalog.find(i=>i.symbol===article.symbol);
+ const research=item?{item,news:recentStockNews(await fetchResearch(),item.symbol),bundle:item.type==='EQUITY'?loadStockResearch(item.symbol):null,calendar:item.type==='EQUITY'?loadStockEarnings(item.symbol):null}:null;
+ return {props:{article,research}};
+}
