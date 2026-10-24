@@ -13,12 +13,12 @@ import {jsonLd,breadcrumbs} from '../../lib/seo';
 import styles from '../../styles/OptionResults.module.css';
 export default function ResultDetails({result,research}:{result:OptionResult;research:InstrumentResearchProps|null}){
  const path=optionResultUrl(result),{image}=optionResultHighlight(result);
- const title=result.symbol+' Options Results · '+result.sessionDay;
+ const title=result.symbol+' Options · '+result.sessionDay;
  const description=`${result.companyName} option-price results for ${result.sessionDay}: dated premium changes, contract values, charts and related stock research.`;
  return <ResearchPage title={title} path={path} description={description} socialImageUrl={image?.url} socialImageAlt={result.title} socialImageWidth={1200} socialImageHeight={1200} ogType="article">
   <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Results',path:'/results/'},{name:title,path}]))}}/></Head>
   <MarketFeedTabs active="results"/><Link className={styles.backLink} href="/results/">← All results</Link>
-  <header className={styles.heading}><span className={styles.eyebrow}>OPTIONS PERFORMANCE</span><h1>{result.companyName} options results</h1><ArticlePostEngagement postId={result.id}/></header>
+  <header className={styles.heading}><span className={styles.eyebrow}>OPTIONS PERFORMANCE</span><h1>{result.companyName} options</h1><ArticlePostEngagement postId={result.id}/></header>
   <div data-app-post-id={result.id}><OptionResultCard result={result}/></div>
   {research&&<CompanyResearchSection research={research}/>}
   <ResearchCTA placement="option_result_details" variant="stock"/>
