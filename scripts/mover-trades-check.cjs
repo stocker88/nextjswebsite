@@ -1,9 +1,9 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript');
 const {buildTrades}=require('./build-mover-trades.cjs');
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);
-const {findMoverTrade}=require('../lib/mover-trades.ts');
+const {findMoverTrade,formatOptionPerformance}=require('../lib/mover-trades.ts');
 const now=Date.parse('2026-10-24T00:00:00Z');
-const result={id:'options_results_ACN_2026-10-23',symbol:'ACN',sessionDay:'2026-10-23',title:'ACN call results'};
+const result={id:'options_results_ACN_2026-10-23',symbol:'ACN',sessionDay:'2026-10-23',title:'ACN call results',moves:[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:58.79},{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:335.77}]};
 const post={id:result.id,symbols:['acn','options','results'],time:now/1000-3600};
 const items=buildTrades([result],[post],now);
 assert.equal(items.length,1);assert.equal(items[0].isAIAdvisor,true);assert.equal(items[0].postId,post.id);
@@ -18,3 +18,10 @@ for(const change of [{isAIAdvisor:false},{href:'//evil.example/'},{publishedAt:n
 assert.equal(findMoverTrade([{...items[0],symbol:'BRK.B'}],'BRK-B',now).symbol,'BRK.B');
 assert.equal(findMoverTrade([items[0],{...items[0],postId:'newer',publishedAt:new Date(now-1).toISOString()}],'ACN',now).postId,'newer');
 console.log('PASS: recent AI-only result-post joins, exact tickers, original IDs, canonical detail links, expiry, future dates and newest-result selection.');
+
+assert.equal(items[0].performancePct,335.77);assert.equal(items[0].contractCount,2);assert.equal(formatOptionPerformance(items[0].performancePct),'+336%');
+assert.equal(formatOptionPerformance(-10.6),'-11%');assert.equal(formatOptionPerformance(-0.3),'0%');
+assert.equal(buildTrades([{...result,moves:[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:-80},{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:-10}]}],[post],now)[0].performancePct,-10);
+for(const moves of [[],[{symbol:'OTHER',sessionDay:'2026-10-23',sessionPct:999}],[{symbol:'ACN',sessionDay:'2026-10-22',sessionPct:999}],[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:null}],[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:Infinity}]])assert.equal(buildTrades([{...result,moves}],[post],now).length,0);
+assert.equal(findMoverTrade([{...items[0],performancePct:NaN}],'ACN',now),undefined);
+console.log('PASS: highest reported contract return, signed rounding and invalid/mismatched performance exclusion.');

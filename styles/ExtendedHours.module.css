@@ -12,7 +12,7 @@
  .moverGroups:focus-visible{outline:2px solid #c5b2ef;outline-offset:3px;border-radius:4px}
  .moverGroup h4{font-size:12px;line-height:1.4;margin:14px 0 5px;color:#b9c9de}
  .moverGroup:first-child h4{margin-top:0}
- .moverRow{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;column-gap:9px}
+ .moverRow{display:grid;grid-template-columns:minmax(0,1fr) 80px;align-items:center;column-gap:9px}
  .moverActions{display:flex;flex-direction:column;align-items:flex-end;gap:4px;padding:4px 0;justify-self:end}
  .movers .moverRow>a{min-height:43px;font-size:12px;gap:8px}
  .moverRow>a>span{min-width:0}

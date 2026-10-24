@@ -10,7 +10,10 @@ function buildTrades(results,research,now=Date.now()){
   const session=Date.parse(result.sessionDay+'T12:00:00Z');
   if(!post||!Number.isFinite(time)||time>now||time<now-WEEK||!Number.isFinite(session)||session<now-WEEK||session>now+86400000)return [];
   if(!/^options_results_[A-Z0-9.-]+_\d{4}-\d{2}-\d{2}$/.test(result.id)||!post.symbols?.some(s=>symbol(s)===symbol(result.symbol)))return [];
-  return [{symbol:result.symbol,postId:result.id,isAIAdvisor:true,title:result.title,sessionDate:result.sessionDay,publishedAt:new Date(time).toISOString(),href:'/results/'+result.id.toLowerCase().replace(/_/g,'-')+'/'}];
+  const moves=(result.moves||[]).filter(m=>symbol(m.symbol)===symbol(result.symbol)&&m.sessionDay===result.sessionDay&&Number.isFinite(m.sessionPct)&&m.sessionPct>=-100);
+  if(!moves.length)return [];
+  const performancePct=Math.max(...moves.map(m=>m.sessionPct));
+  return [{symbol:result.symbol,postId:result.id,isAIAdvisor:true,performancePct,contractCount:moves.length,title:result.title,sessionDate:result.sessionDay,publishedAt:new Date(time).toISOString(),href:'/results/'+result.id.toLowerCase().replace(/_/g,'-')+'/'}];
  }).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
 }
 function build(root=path.join(__dirname,'..')){
