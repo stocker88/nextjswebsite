@@ -13,7 +13,7 @@
 .shortLabel{display:none}
 @media(min-width:701px){.compactTrigger{min-height:26px;margin:0;padding:3px 7px;font-size:10px;gap:4px}.compactTrigger .fullLabel{display:none}.compactTrigger .shortLabel{display:inline}}
 
-.trade{color:#9de4cb;border-color:#7de0bc66;background:#7de0bc12;text-decoration:none}.trade:hover{background:#7de0bc26;border-color:#7de0bc}
+.trade{color:#e8c66a;border-color:#d8b35673;background:#d8b35614;text-decoration:none}.trade:hover{background:#d8b35626;border-color:#e8c66a}.trade:focus-visible{outline-color:#e8c66a}
 
 .source{display:block;margin-bottom:6px;color:#bdc9db;font-size:12px}.article time+.read{display:block;margin-top:16px}
 
