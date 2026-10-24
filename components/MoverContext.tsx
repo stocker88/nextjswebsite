@@ -25,7 +25,7 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
     if(now===null||blocked||!headlinesAllowed)return;
     let active=true;
     const refresh=()=>{if(document.hidden)return;void loadHeadlines().then(data=>{if(active)setHeadlines(data.items);});};
-    refresh();const timer=window.setInterval(refresh,3*60*60*1000);window.addEventListener('focus',refresh);
+    refresh();const timer=window.setInterval(refresh,5*60*1000);window.addEventListener('focus',refresh);
     return()=>{active=false;window.clearInterval(timer);window.removeEventListener('focus',refresh);};
   },[blocked,now===null,headlinesAllowed]);
   const article=researchArticle||(now===null||!headlinesAllowed?undefined:findMoverHeadline(headlines,stock.symbol,now,{trade:!!trade},period));
