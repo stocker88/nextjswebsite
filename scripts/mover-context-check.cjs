@@ -34,3 +34,17 @@ assert.equal(pick(result).kind,'mover'); // Dedicated reports retain priority ov
 assert.equal(buildContext({movers:[{...mover,publishedAt:'2020-01-01'}]},now).length,0);
 assert(fs.readFileSync('scripts/sync-market-briefings.cjs','utf8').includes("require('./build-mover-context.cjs').build()"));
 console.log('PASS: stock/date/session matching, canonical links, recap/explicit feed coverage fallback, missing summaries, dedicated-report priority and result-post exclusion.');
+
+const {signalWindow}=require('../lib/mover-context.ts');
+const sig=(id,date)=>({...current,postId:id,href:'/stock-market-news/'+id+'/',kind:'signal',isAIAdvisor:true,sourceCollection:'posts',publishedAt:date});
+const older=sig('oldest','2026-07-23T16:40:00Z'),newer=sig('newer','2026-09-20T16:40:00Z'),annual=sig('annual','2024-10-23T16:40:00Z');
+assert.equal(pick([newer,older,annual],'CCI','month').postId,'oldest');
+assert.equal(pick([newer,older,annual],'CCI','year').postId,'annual');
+for(const change of [0,-1,null,NaN,Infinity])assert.equal(pick([older],'CCI','month',change),undefined);
+for(const period of ['day','week'])assert.equal(pick([older],'CCI',period),undefined);
+assert.equal(pick([older,{...current,kind:'recap'}],'CCI','month').kind,'recap');
+assert.equal(pick([{...older,isAIAdvisor:false}],'CCI','month'),undefined);
+assert.equal(pick([{...older,sourceCollection:'comments'}],'CCI','month'),undefined);
+assert.equal(pick([sig('early','2026-07-23T16:39:59Z'),sig('late','2026-09-23T16:40:01Z')],'CCI','month'),undefined);
+assert.deepEqual(signalWindow('month',Date.parse('2024-03-31T12:00:00Z')).map(t=>new Date(t).toISOString()),['2023-12-31T12:00:00.000Z','2024-02-29T12:00:00.000Z']);
+console.log('PASS: oldest Signals, provenance, date bounds, leap years, positive-only and existing-research precedence.');
