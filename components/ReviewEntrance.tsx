@@ -39,7 +39,7 @@ export default function ReviewEntrance({children}: {children: ReactNode}) {
       element.dataset.layout = compact ? 'flow' : 'pinned';
       const header = window.innerWidth < 1000 ? 68 : 80;
       const p = compact
-        ? clamp((height - rect.top) / (height * .7))
+        ? flowProgress('[data-review-top]', rect.top, height)
         : clamp((header - rect.top) / Math.max(1, element.offsetHeight - stage.offsetHeight));
       const halo = document.querySelector('.hero-atmosphere i:last-child')?.getBoundingClientRect();
       if (halo) {
@@ -50,8 +50,8 @@ export default function ReviewEntrance({children}: {children: ReactNode}) {
       }
       const set = (name: string, value: number) => element.style.setProperty(name, String(value));
       set('--reviews-progress', p);
-      set('--review-panel', clamp(.12 + p / .75));
-      set('--review-top', compact ? flowProgress('[data-review-top]', rect.top, height) : clamp(.12 + p / .35));
+      set('--review-panel', compact ? p : clamp(.12 + p / .75));
+      set('--review-top', compact ? p : clamp(.12 + p / .35));
       set('--review-heading', compact ? flowProgress('.review-sources__heading', rect.top, height) : clamp((p - .25) / .4));
       set('--review-cards', compact ? flowProgress('.review-sources__grid', rect.top, height) : clamp((p - .25) / .4));
       set('--review-bottom', compact ? flowProgress('[data-review-bottom]', rect.top, height) : clamp((p - .55) / .3));
