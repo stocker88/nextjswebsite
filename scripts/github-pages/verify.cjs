@@ -58,3 +58,15 @@ for(const report of optionReports){
  for(const image of report.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Full result image missing: '+report.id);
 }
 console.log(`Verified ${optionReports.length} individual result pages and archive links.`);
+
+const closingRecaps=require(path.resolve(out,'../.github-pages-build/data/market-briefings.json')).filter(a=>a.kind==='post_close');
+for(const recap of closingRecaps){
+ const route='news/briefings/'+recap.slug,canonical='https://www.stockstobuynow.ai/'+route+'/';
+ assert(html('news').includes('href="/'+route+'/"'),'Missing closing recap in Movers');
+ assert(html(route).includes(canonical),'Missing closing recap canonical');
+ assert(html(route).includes('AFTER THE CLOSE'),'Missing closing session label');
+ assert(html(route).includes(recap.postId),'Missing original app recap identity');
+ assert(sitemap.includes(canonical),'Missing closing recap sitemap entry');
+ for(const image of recap.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Missing closing recap image');
+}
+console.log(`Verified ${closingRecaps.length} closing recaps, original galleries and Movers archive links.`);

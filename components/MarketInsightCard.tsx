@@ -5,7 +5,7 @@ import {useArticlePost} from '../lib/use-article-post';
 import ArticlePostEngagement from './ArticlePostEngagement';
 export default function MarketInsightCard({article:a}:{article:Briefing}){
  const post=useArticlePost(a.postId),[coverFailed,setCoverFailed]=useState(false);
- const images=a.images?.length?a.images.slice(0,2):(post?.images||[]).slice(0,2).map((i,n)=>({...i,title:i.filename?.replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ').replace(/^./,c=>c.toUpperCase())||'Market insight '+(n+1),alt:i.filename||'Market insight '+(n+1)}));
+ const images=a.images?.length?(a.kind==='post_close'&&a.images.length===3?[a.images[0],{...a.images[2],title:'After-hours heatmap & movers'}]:a.images.slice(0,2)):(post?.images||[]).slice(0,2).map((i,n)=>({...i,title:i.filename?.replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ').replace(/^./,c=>c.toUpperCase())||'Market insight '+(n+1),alt:i.filename||'Market insight '+(n+1)}));
  const date=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(a.sessionDate+'T12:00:00Z'));
  return <article className="market-insight-card" data-app-post-id={a.postId}>
   <Link className="card-link" href={briefingUrl(a)}>

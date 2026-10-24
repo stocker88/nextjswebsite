@@ -11,7 +11,7 @@ function buildContext({movers=[],briefings=[],research=[]}, now=Date.now()) {
   for (const a of briefings) {
     if (a.kind==='earnings_preview'&&a.symbols?.length===1) {
       items.push({symbol:a.symbols[0],postId:a.postId,title:a.title,summary:a.summary,href:'/catalysts/'+a.slug+'/',publishedAt:a.publishedAt,kind:'preview',sessionDate:a.sessionDate});
-    } else if(a.kind==='premarket') {
+    } else if((a.kind==='premarket'||a.kind==='post_close')) {
       for(const symbol of a.symbols||[]) {
         const escaped=symbol.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
         const mention=new RegExp('(^|[^A-Z0-9])'+escaped+'([^A-Z0-9]|$)','i');
