@@ -5,17 +5,18 @@ import styles from '../styles/OptionResults.module.css';
 export default function OptionResultPayoff({result}:{result:OptionResult}){
  const [selected,setSelected]=useState<number|null>(null);
  const m=result.moves.reduce((a,b)=>a.sessionPct>b.sessionPct?a:b),before=result.graphStock?.previousClose??result.stock?.previousClose,after=result.graphStock?.price??result.stock?.price;
- const gain=(m.sessionClose-m.previousClose)*100,high=Math.max(m.previousClose,m.sessionClose,Math.max(0,(before??0)-m.strike),Math.max(0,(after??0)-m.strike));
+ const isPut=m.optionType==='put';
+ const intrinsic=(v:number)=>Math.max(0,isPut?m.strike-v:v-m.strike);
+ const gain=(m.sessionClose-m.previousClose)*100,high=Math.max(m.previousClose,m.sessionClose,intrinsic(before??0),intrinsic(after??0));
  const y=(v:number)=>112-v/(high||1)*84;
  const x=(v:number)=>60+(v-(before??0))/((after??0)-(before??0)||1)*152;
- const intrinsic=(v:number)=>Math.max(0,v-m.strike);
  const kink=before&&after&&m.strike>Math.min(before,after)&&m.strike<Math.max(before,after)?` L${x(m.strike)} ${y(0)}`:'';
  const t=selected??0, premium=m.previousClose+(m.sessionClose-m.previousClose)*t*t;
  const inspect=(event:React.PointerEvent<SVGSVGElement>)=>{const box=event.currentTarget.getBoundingClientRect();setSelected(Math.max(0,Math.min(1,((event.clientX-box.left)/box.width*220-60)/152)));};
  return <section className={styles.resultTool} aria-label={`${result.symbol} results payoff`}>
-  <strong>{result.symbol} · Call result</strong><small>Expiry {m.expiry} · Result {m.sessionDay}</small>
+  <strong>{result.symbol} · {isPut?'Put':'Call'} result</strong><small>Expiry {m.expiry} · Result {m.sessionDay}</small>
   <div className={styles.resultHorizontal}>
-   <dl><dt>Previous stock price</dt><dd>{before?usd(before):'Unavailable'}</dd><dt>Strike</dt><dd>{usd(m.strike)}</dd><dt>Breakeven at expiry</dt><dd>{usd(m.strike+m.previousClose)}</dd></dl>
+   <dl><dt>Previous stock price</dt><dd>{before?usd(before):'Unavailable'}</dd><dt>Strike</dt><dd>{usd(m.strike)}</dd><dt>Breakeven at expiry</dt><dd>{usd(isPut?m.strike-m.previousClose:m.strike+m.previousClose)}</dd></dl>
    {before&&after?<svg viewBox="0 0 220 160" style={{touchAction:'pan-y',cursor:'crosshair'}} tabIndex={0} role="slider" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(t*100)} aria-valuetext={`Return ${((premium/m.previousClose-1)*100).toFixed(2)} percent`} onPointerDown={event=>{event.currentTarget.setPointerCapture(event.pointerId);inspect(event);}} onPointerMove={event=>{if(event.buttons)inspect(event);}} onKeyDown={event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();setSelected(event.key==='Home'?0:event.key==='End'?1:Math.max(0,Math.min(1,t+(event.key==='ArrowRight'?.05:-.05))));}}} aria-label={`Observed contract value ${usd(m.previousClose*100)} to ${usd(m.sessionClose*100)}, stock ${usd(before)} to ${usd(after)}`}>
     <text x="0" y="12">One contract</text>
     <path d="M60 28V112H212" fill="none" stroke="#293d50"/>

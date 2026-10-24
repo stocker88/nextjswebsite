@@ -1,5 +1,424 @@
 [
   {
+    "id": "options_results_BE_2026-10-23",
+    "symbol": "BE",
+    "companyName": "Bloom Energy Corporation",
+    "sessionDay": "2026-10-23",
+    "title": "+35% since previous close · BE $225 Put · $26.75 → $36.21",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+35% since previous close · BE $225 Put · $26.75 → $36.21\n\nPrevious-session daily close → session aggregate close.\n\n• Bloom Energy fell 11.33% to $193.0902 in Friday’s October 23 closing stock snapshot, versus the October 22 close of $217.77. It ranked first among the 503-stock universe’s 1D decliners.\n\n• The attached Bloom Energy Q3 earnings review was published before Friday’s regular session. It discusses reported revenue, raised guidance and cash conversion; the option return below measures prices and does not establish a trade entry or a cause for the decline.\n\n• The $225 put expiring November 13, 2026 increased from the October 22 daily close of $26.75 to a $36.21 aggregate observation on October 23 at 3:31 PM Eastern: +35.36% since the previous close.\n\n• For one standard 100-share contract, those premiums equal $2,675 → $3,621, a $946 increase before costs. The ending value is distinct from the gain.\n\n• A bought put gains intrinsic value as the stock falls below its strike at expiry; its market premium before expiry also reflects remaining time and other pricing inputs. This is an observed premium change.\n\n• The selected put had previous/current observation volumes of 98/34 contracts and open interest of 307. Volume and open interest do not establish whether participants were buying or selling.\n\n• If BE finishes at or above $225 at expiry and the bought, unexercised put expires worthless, the maximum premium loss is $26.75 per share, or $2,675 per standard contract, plus costs.\n\n• Only the about-one-month bucket qualified. Near-expiry and about-one-year contracts are omitted. The graph uses an approximate stock minute-bar open near the option timestamp; Friday’s separate closing-stock snapshot is not a synchronous option quote.\n\nIf BE finished at or above the $225 strike at expiry and this bought put became worthless, your maximum premium loss would be $26.75 per share ($2,675.00 for one 100-share contract). In this case, BE moved -11.43% since the previous close using an approximate minute-bar reference near the option snapshot, and the put went from $26.75 to $36.21 per share: $3,621.00 ending value and $946.00 gain for one contract, before costs.",
+    "stock": {
+      "price": 192.8800048828125,
+      "previousClose": 217.77,
+      "movePct": -11.429487586530518,
+      "asOf": "2026-10-23T19:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+      "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 192.8800048828125,
+      "previousClose": 217.77,
+      "movePct": -11.429487586530518,
+      "asOf": "2026-10-23T19:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+      "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If BE finished at or above the $225 strike at expiry and this bought put became worthless, your maximum premium loss would be $26.75 per share ($2,675.00 for one 100-share contract). In this case, BE moved -11.43% since the previous close using an approximate minute-bar reference near the option snapshot, and the put went from $26.75 to $36.21 per share: $3,621.00 ending value and $946.00 gain for one contract, before costs.",
+    "recap": [
+      "Bloom Energy fell 11.33% to $193.0902 in Friday’s October 23 closing stock snapshot, versus the October 22 close of $217.77. It ranked first among the 503-stock universe’s 1D decliners.",
+      "The attached Bloom Energy Q3 earnings review was published before Friday’s regular session. It discusses reported revenue, raised guidance and cash conversion; the option return below measures prices and does not establish a trade entry or a cause for the decline.",
+      "The $225 put expiring November 13, 2026 increased from the October 22 daily close of $26.75 to a $36.21 aggregate observation on October 23 at 3:31 PM Eastern: +35.36% since the previous close.",
+      "For one standard 100-share contract, those premiums equal $2,675 → $3,621, a $946 increase before costs. The ending value is distinct from the gain.",
+      "A bought put gains intrinsic value as the stock falls below its strike at expiry; its market premium before expiry also reflects remaining time and other pricing inputs. This is an observed premium change.",
+      "The selected put had previous/current observation volumes of 98/34 contracts and open interest of 307. Volume and open interest do not establish whether participants were buying or selling.",
+      "If BE finishes at or above $225 at expiry and the bought, unexercised put expires worthless, the maximum premium loss is $26.75 per share, or $2,675 per standard contract, plus costs.",
+      "Only the about-one-month bucket qualified. Near-expiry and about-one-year contracts are omitted. The graph uses an approximate stock minute-bar open near the option timestamp; Friday’s separate closing-stock snapshot is not a synchronous option quote."
+    ],
+    "moves": [
+      {
+        "optionType": "put",
+        "id": "O:BE261113P00225000",
+        "symbol": "BE",
+        "strike": 225,
+        "expiry": "2026-11-13",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 26.75,
+        "sessionOpen": 37.95,
+        "sessionClose": 36.21,
+        "openChangePct": 41.869158878504685,
+        "sessionPct": 35.36448598130841,
+        "openDollarChange": 1120.0000000000002,
+        "sessionDollarChange": 946.0000000000001,
+        "previousVolume": 98,
+        "volume": 34,
+        "openInterest": 307,
+        "aggregateAsOf": "2026-10-23T19:31:02.512Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 192.8800048828125,
+          "previousClose": 217.77,
+          "movePct": -11.429487586530518,
+          "asOf": "2026-10-23T19:31:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+          "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_BE_2026-10-23%2Ff0e6bbc6920c48dd19d3561a0202eb8e535b74dca6b162087e660110a6af3031%2FBE-2026-11-13-225-put.png?alt=media&token=f0e6bbc6920c48dd19d3561a0202eb8e535b74dca6b162087e660110a6af3031",
+        "width": 1200,
+        "height": 1200,
+        "filename": "BE $225 put.png"
+      }
+    ],
+    "earningsPostId": "earnings_review_20261022_BE",
+    "earningsUrl": "/stock-market-news/bloom-energy-be-q3-2026-earnings-review--earnings_review_20261022_BE"
+  },
+  {
+    "id": "options_results_PANW_2026-10-23",
+    "symbol": "PANW",
+    "companyName": "Palo Alto Networks, Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+336% since previous close · PANW $357.5 Call · $5.20 → $22.66",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+336% since previous close · PANW $357.5 Call · $5.20 → $22.66\n\nPrevious-session daily close → session aggregate close.\n\n• PANW rose 7.03% to $379.8857 in the saved October 23, 2:51 PM ET stock snapshot versus the $354.92 October 22 close, ranking third among the measured positive movers. The option observations below have their own saved timestamps.\n\n• The app’s PANW buy signal was published earlier on October 23. That signal is dated context; the call comparisons begin at the prior session close and do not establish an entry at the signal time or a cause for the rally.\n\n• The $357.50 call expiring October 23 moved from a $5.20 October 22 daily close to $22.66 at the October 23 2:57 PM ET aggregate: +335.77%. One standard 100-share contract increased from $520 to $2,266, a $1,746 change before costs.\n\n• The $350 call expiring November 20 moved from a $28.15 October 22 daily close to $44.70 at the October 23 2:42 PM ET aggregate: +58.79%. One standard 100-share contract increased from $2,815 to $4,470, a $1,655 change before costs.\n\n• PANW’s corresponding stock minute-bar opens were approximately $379.58 at 2:57 PM ET and $380.17 at 2:42 PM ET, up 6.95% and 7.12% from the previous close. These are approximate time matches to the respective option observations.\n\n• The October 23 call had previous/current snapshot volumes of 137/98 and open interest of 301; the November 20 call had volumes of 76/984 and open interest of 836. These figures do not identify buying direction.\n\n• If PANW fell 100% to $0 and these bought, unexercised calls became worthless, maximum premium losses would be $520 and $2,815 per contract respectively, plus fees. The loss cap does not describe exercised shares.\n\n• The near-expiry and about-one-month calls qualified; no about-one-year call is included. These returns are measured since the previous close, not verified overnight opening-gap returns.\n\nIf PANW fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $5.20 per share ($520.00 for one 100-share contract). In this case, PANW moved +6.95% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $5.20 to $22.66 per share: $2,266.00 ending value and $1,746.00 gain for one contract, before costs.",
+    "stock": {
+      "price": 379.5799865722656,
+      "previousClose": 354.92,
+      "movePct": 6.948040846462744,
+      "asOf": "2026-10-23T18:57:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+      "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 379.5799865722656,
+      "previousClose": 354.92,
+      "movePct": 6.948040846462744,
+      "asOf": "2026-10-23T18:57:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+      "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If PANW fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $5.20 per share ($520.00 for one 100-share contract). In this case, PANW moved +6.95% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $5.20 to $22.66 per share: $2,266.00 ending value and $1,746.00 gain for one contract, before costs.",
+    "recap": [
+      "PANW rose 7.03% to $379.8857 in the saved October 23, 2:51 PM ET stock snapshot versus the $354.92 October 22 close, ranking third among the measured positive movers. The option observations below have their own saved timestamps.",
+      "The app’s PANW buy signal was published earlier on October 23. That signal is dated context; the call comparisons begin at the prior session close and do not establish an entry at the signal time or a cause for the rally.",
+      "The $357.50 call expiring October 23 moved from a $5.20 October 22 daily close to $22.66 at the October 23 2:57 PM ET aggregate: +335.77%. One standard 100-share contract increased from $520 to $2,266, a $1,746 change before costs.",
+      "The $350 call expiring November 20 moved from a $28.15 October 22 daily close to $44.70 at the October 23 2:42 PM ET aggregate: +58.79%. One standard 100-share contract increased from $2,815 to $4,470, a $1,655 change before costs.",
+      "PANW’s corresponding stock minute-bar opens were approximately $379.58 at 2:57 PM ET and $380.17 at 2:42 PM ET, up 6.95% and 7.12% from the previous close. These are approximate time matches to the respective option observations.",
+      "The October 23 call had previous/current snapshot volumes of 137/98 and open interest of 301; the November 20 call had volumes of 76/984 and open interest of 836. These figures do not identify buying direction.",
+      "If PANW fell 100% to $0 and these bought, unexercised calls became worthless, maximum premium losses would be $520 and $2,815 per contract respectively, plus fees. The loss cap does not describe exercised shares.",
+      "The near-expiry and about-one-month calls qualified; no about-one-year call is included. These returns are measured since the previous close, not verified overnight opening-gap returns."
+    ],
+    "moves": [
+      {
+        "id": "O:PANW261023C00357500",
+        "symbol": "PANW",
+        "strike": 357.5,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 5.2,
+        "sessionOpen": 1.51,
+        "sessionClose": 22.66,
+        "openChangePct": -70.96153846153847,
+        "sessionPct": 335.7692307692307,
+        "openDollarChange": -369.00000000000006,
+        "sessionDollarChange": 1746,
+        "previousVolume": 137,
+        "volume": 98,
+        "openInterest": 301,
+        "aggregateAsOf": "2026-10-23T18:57:02.550Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 379.5799865722656,
+          "previousClose": 354.92,
+          "movePct": 6.948040846462744,
+          "asOf": "2026-10-23T18:57:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+          "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:PANW261120C00350000",
+        "symbol": "PANW",
+        "strike": 350,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 28.15,
+        "sessionOpen": 27,
+        "sessionClose": 44.7,
+        "openChangePct": -4.085257548845467,
+        "sessionPct": 58.79218472468919,
+        "openDollarChange": -114.99999999999986,
+        "sessionDollarChange": 1655.0000000000005,
+        "previousVolume": 76,
+        "volume": 984,
+        "openInterest": 836,
+        "aggregateAsOf": "2026-10-23T18:42:02.720Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 380.17498779296875,
+          "previousClose": 354.92,
+          "movePct": 7.115684603000316,
+          "asOf": "2026-10-23T18:42:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792780920&period2=1792780980&interval=1m",
+          "note": "Stock ≈ $380.17 (+7.12%): Oct 23, 2:42 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2F5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de%2FPANW-2026-10-23-357.5-call.png?alt=media&token=5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de",
+        "width": 1200,
+        "height": 1200,
+        "filename": "PANW $357.5 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2Fc25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0%2FPANW-2026-11-20-350-call.png?alt=media&token=c25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0",
+        "width": 1200,
+        "height": 1200,
+        "filename": "PANW $350 call.png"
+      }
+    ],
+    "earningsPostId": "",
+    "earningsUrl": ""
+  },
+  {
+    "id": "options_results_SLB_2026-10-23",
+    "symbol": "SLB",
+    "companyName": "Slb N.V.",
+    "sessionDay": "2026-10-23",
+    "title": "+276% since previous close · SLB $49.5 Call · $1.01 → $3.80",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+276% since previous close · SLB $49.5 Call · $1.01 → $3.80\n\nPrevious-session daily close → session aggregate close.\n\n• SLB ranked first in the saved full-universe 24-hour comparison, rising 8.14% to $53.245 at 12:52 PM ET on October 23 versus the archived October 22 12:52 PM ET observation. This rolling comparison is separate from the previous-close basis used for the calls.\n\n• The attached SLB earnings insight reports Q3 revenue of $9.449 billion, GAAP diluted EPS of $0.49 and EPS excluding charges and credits of $0.64. It notes 6% year-over-year revenue growth, or 2% excluding the ChampionX acquisition effect, alongside a 7% decline in adjusted EPS.\n\n• The $49.50 call expiring October 23 moved from a $1.01 October 22 daily close to $3.80 at the October 23 12:53 PM ET aggregate: +276.24%. One standard 100-share contract increased from $101 to $380, a $279 change before costs.\n\n• The $50 call expiring November 20 moved from a $2.10 October 22 daily close to $4.36 at the October 23 12:57 PM ET aggregate: +107.62%. One standard 100-share contract increased from $210 to $436, a $226 change before costs.\n\n• Underlying stock minute-bar opens were approximately $53.19 at 12:53 PM ET and $53.13 at 12:57 PM ET, up 7.34% and 7.23% from the $49.55 previous close. Each is an approximate time match to its own option observation.\n\n• The October 23 call had previous/current snapshot volumes of 674/599 and open interest of 845; the November 20 call had volumes of 584/740 and open interest of 12,090. These figures do not identify buying direction.\n\n• The latest related SLB research was published earlier on October 23 and is attached for earnings and technical context. These call comparisons are since the previous close, not verified overnight opening-gap returns or evidence that the insight predicted those gains.\n\n• The near-expiry and about-one-month calls qualified; no about-one-year call is included. If SLB fell 100% to $0 and these bought, unexercised calls became worthless, premium losses would be $101 and $210 per contract respectively, plus fees.\n\nIf SLB fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $1.01 per share ($101.00 for one 100-share contract). In this case, SLB moved +7.34% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $1.01 to $3.80 per share: $380.00 ending value and $279.00 gain for one contract, before costs.",
+    "stock": {
+      "price": 53.185001373291016,
+      "previousClose": 49.55,
+      "movePct": 7.336026989487432,
+      "asOf": "2026-10-23T16:53:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+      "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 53.185001373291016,
+      "previousClose": 49.55,
+      "movePct": 7.336026989487432,
+      "asOf": "2026-10-23T16:53:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+      "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If SLB fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $1.01 per share ($101.00 for one 100-share contract). In this case, SLB moved +7.34% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $1.01 to $3.80 per share: $380.00 ending value and $279.00 gain for one contract, before costs.",
+    "recap": [
+      "SLB ranked first in the saved full-universe 24-hour comparison, rising 8.14% to $53.245 at 12:52 PM ET on October 23 versus the archived October 22 12:52 PM ET observation. This rolling comparison is separate from the previous-close basis used for the calls.",
+      "The attached SLB earnings insight reports Q3 revenue of $9.449 billion, GAAP diluted EPS of $0.49 and EPS excluding charges and credits of $0.64. It notes 6% year-over-year revenue growth, or 2% excluding the ChampionX acquisition effect, alongside a 7% decline in adjusted EPS.",
+      "The $49.50 call expiring October 23 moved from a $1.01 October 22 daily close to $3.80 at the October 23 12:53 PM ET aggregate: +276.24%. One standard 100-share contract increased from $101 to $380, a $279 change before costs.",
+      "The $50 call expiring November 20 moved from a $2.10 October 22 daily close to $4.36 at the October 23 12:57 PM ET aggregate: +107.62%. One standard 100-share contract increased from $210 to $436, a $226 change before costs.",
+      "Underlying stock minute-bar opens were approximately $53.19 at 12:53 PM ET and $53.13 at 12:57 PM ET, up 7.34% and 7.23% from the $49.55 previous close. Each is an approximate time match to its own option observation.",
+      "The October 23 call had previous/current snapshot volumes of 674/599 and open interest of 845; the November 20 call had volumes of 584/740 and open interest of 12,090. These figures do not identify buying direction.",
+      "The latest related SLB research was published earlier on October 23 and is attached for earnings and technical context. These call comparisons are since the previous close, not verified overnight opening-gap returns or evidence that the insight predicted those gains.",
+      "The near-expiry and about-one-month calls qualified; no about-one-year call is included. If SLB fell 100% to $0 and these bought, unexercised calls became worthless, premium losses would be $101 and $210 per contract respectively, plus fees."
+    ],
+    "moves": [
+      {
+        "id": "O:SLB261023C00049500",
+        "symbol": "SLB",
+        "strike": 49.5,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 1.01,
+        "sessionOpen": 1.01,
+        "sessionClose": 3.8,
+        "openChangePct": 0,
+        "sessionPct": 276.2376237623762,
+        "openDollarChange": 0,
+        "sessionDollarChange": 279,
+        "previousVolume": 674,
+        "volume": 599,
+        "openInterest": 845,
+        "aggregateAsOf": "2026-10-23T16:53:02.888Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 53.185001373291016,
+          "previousClose": 49.55,
+          "movePct": 7.336026989487432,
+          "asOf": "2026-10-23T16:53:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+          "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:SLB261120C00050000",
+        "symbol": "SLB",
+        "strike": 50,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 2.1,
+        "sessionOpen": 2.2,
+        "sessionClose": 4.36,
+        "openChangePct": 4.761904761904767,
+        "sessionPct": 107.61904761904763,
+        "openDollarChange": 10.000000000000009,
+        "sessionDollarChange": 226.00000000000003,
+        "previousVolume": 584,
+        "volume": 740,
+        "openInterest": 12090,
+        "aggregateAsOf": "2026-10-23T16:57:02.163Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 53.13249969482422,
+          "previousClose": 49.55,
+          "movePct": 7.230070019826895,
+          "asOf": "2026-10-23T16:57:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774620&period2=1792774680&interval=1m",
+          "note": "Stock ≈ $53.13 (+7.23%): Oct 23, 12:57 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809%2FSLB-2026-10-23-49.5-call.png?alt=media&token=53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809",
+        "width": 1200,
+        "height": 1200,
+        "filename": "SLB $49.5 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95%2FSLB-2026-11-20-50-call.png?alt=media&token=702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95",
+        "width": 1200,
+        "height": 1200,
+        "filename": "SLB $50 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261023_SLB",
+    "earningsUrl": "/news/why-slb-slb-stock-is-up-today-2026-10-23/"
+  },
+  {
+    "id": "options_results_CCI_2026-10-23",
+    "symbol": "CCI",
+    "companyName": "Crown Castle Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+117% since previous close · CCI $75 Call · $6.05 → $13.10",
+    "source": "www.StocksToBuyNow.ai",
+    "text": "+117% since previous close · CCI $75 Call · $6.05 → $13.10\n\nPrevious-session daily close → session aggregate close.\n\n• At the October 23, 11:31 AM ET option snapshot, CCI’s corresponding minute-bar open was approximately $87.44, up 10.92% from its $78.835 October 22 close. This is an approximate time match.\n\n• The attached CCI insight covered reported SpaceX tower-access discussions and Crown Castle’s recent earnings. It described potential leasing demand, while noting that discussions were not an announced signed agreement.\n\n• The November 20, 2026 $75 call moved from an October 22 daily close of $6.05 to an October 23 session aggregate close of $13.10 at 11:31 AM ET: +116.53% since the previous close.\n\n• For one standard 100-share contract, the starting premium value was $605 and the observed ending value was $1,310, a $705 increase before costs. These amounts are $6.05 and $13.10 per share.\n\n• If CCI fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $605 for one contract, plus fees. This does not describe exercised shares.\n\n• The selected call had 504 contracts of volume in the previous session, 54 in the saved current snapshot and open interest of 1,464. Open interest alone does not identify buying direction.\n\n• The latest related CCI insight was published earlier on October 23 and is attached for context. Its pre-market stock snapshot is separate from this later option observation; the measured return is since the previous close, not a verified overnight opening-gap return.\n\n• Only the about-one-month call is included. The near-expiry and about-one-year buckets did not provide a qualifying contract for this report.\n\nIf CCI fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $6.05 per share ($605.00 for one 100-share contract). In this case, CCI moved +10.92% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $6.05 to $13.10 per share: $1,310.00 ending value and $705.00 gain for one contract, before costs.",
+    "stock": {
+      "price": 87.44499969482422,
+      "previousClose": 78.835,
+      "movePct": 10.92154461194168,
+      "asOf": "2026-10-23T15:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+      "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 87.44499969482422,
+      "previousClose": 78.835,
+      "movePct": 10.92154461194168,
+      "asOf": "2026-10-23T15:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+      "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "quickTake": "If CCI fell 100% to $0 and this bought call became worthless, your maximum premium loss would be $6.05 per share ($605.00 for one 100-share contract). In this case, CCI moved +10.92% since the previous close using an approximate minute-bar reference near the option snapshot, and the call went from $6.05 to $13.10 per share: $1,310.00 ending value and $705.00 gain for one contract, before costs.",
+    "recap": [
+      "At the October 23, 11:31 AM ET option snapshot, CCI’s corresponding minute-bar open was approximately $87.44, up 10.92% from its $78.835 October 22 close. This is an approximate time match.",
+      "The attached CCI insight covered reported SpaceX tower-access discussions and Crown Castle’s recent earnings. It described potential leasing demand, while noting that discussions were not an announced signed agreement.",
+      "The November 20, 2026 $75 call moved from an October 22 daily close of $6.05 to an October 23 session aggregate close of $13.10 at 11:31 AM ET: +116.53% since the previous close.",
+      "For one standard 100-share contract, the starting premium value was $605 and the observed ending value was $1,310, a $705 increase before costs. These amounts are $6.05 and $13.10 per share.",
+      "If CCI fell 100% to $0 and the bought, unexercised call became worthless, the maximum premium loss would be $605 for one contract, plus fees. This does not describe exercised shares.",
+      "The selected call had 504 contracts of volume in the previous session, 54 in the saved current snapshot and open interest of 1,464. Open interest alone does not identify buying direction.",
+      "The latest related CCI insight was published earlier on October 23 and is attached for context. Its pre-market stock snapshot is separate from this later option observation; the measured return is since the previous close, not a verified overnight opening-gap return.",
+      "Only the about-one-month call is included. The near-expiry and about-one-year buckets did not provide a qualifying contract for this report."
+    ],
+    "moves": [
+      {
+        "id": "O:CCI261120C00075000",
+        "symbol": "CCI",
+        "strike": 75,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 6.05,
+        "sessionOpen": 16.63,
+        "sessionClose": 13.1,
+        "openChangePct": 174.87603305785123,
+        "sessionPct": 116.5289256198347,
+        "openDollarChange": 1057.9999999999998,
+        "sessionDollarChange": 705,
+        "previousVolume": 504,
+        "volume": 54,
+        "openInterest": 1464,
+        "aggregateAsOf": "2026-10-23T15:31:02.983Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 87.44499969482422,
+          "previousClose": 78.835,
+          "movePct": 10.92154461194168,
+          "asOf": "2026-10-23T15:31:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+          "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_CCI_2026-10-23%2F3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18%2FCCI-2026-11-20-75-call.png?alt=media&token=3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18",
+        "width": 1200,
+        "height": 1200,
+        "filename": "CCI $75 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261023_CCI",
+    "earningsUrl": "/news/why-crown-castle-cci-stock-is-up-premarket-2026-10-23/"
+  },
+  {
     "id": "options_results_ROP_2026-10-22",
     "symbol": "ROP",
     "companyName": "Roper Technologies",

@@ -14,7 +14,7 @@ import styles from '../../styles/OptionResults.module.css';
 export default function ResultDetails({result,research}:{result:OptionResult;research:InstrumentResearchProps|null}){
  const path=optionResultUrl(result),{image}=optionResultHighlight(result);
  const title=result.symbol+' Options Results · '+result.sessionDay;
- const description=`${result.companyName} call-price results for ${result.sessionDay}: dated premium changes, contract values, charts and related stock research.`;
+ const description=`${result.companyName} option-price results for ${result.sessionDay}: dated premium changes, contract values, charts and related stock research.`;
  return <ResearchPage title={title} path={path} description={description} socialImageUrl={image?.url} socialImageAlt={result.title} socialImageWidth={1200} socialImageHeight={1200} ogType="article">
   <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Results',path:'/results/'},{name:title,path}]))}}/></Head>
   <MarketFeedTabs active="results"/><Link className={styles.backLink} href="/results/">← All results</Link>
