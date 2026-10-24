@@ -22,3 +22,6 @@
 }
 
 @media(max-width:700px){.moverActions{display:flex;flex-wrap:wrap;align-items:center;gap:6px}}
+
+/* Keep gainers and decliners side by side on phones as well. */
+@media(max-width:700px){.moverGroups{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-height:none;overflow:visible}.moverGroup{min-width:0}.moverGroup h4{font-size:13px}.moverRow>a{flex-wrap:wrap;gap:4px;font-size:12px}.moverRow small{font-size:10px}.moverActions{display:flex;flex-wrap:wrap;gap:5px}.moverActions a,.moverActions button{font-size:10px;white-space:normal;max-width:100%}.moverGroup:first-child h4{color:#79dfb8}.moverGroup:last-child h4{color:#ff8d9c}}

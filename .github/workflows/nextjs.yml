@@ -34,6 +34,7 @@ jobs:
       - run: node scripts/mover-trades-check.cjs
       - run: node scripts/mover-context-check.cjs
       - run: node scripts/default-market-view-check.cjs
+      - run: node scripts/heatmap-default-view-check.cjs
       - run: node scripts/macro-check.cjs
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4

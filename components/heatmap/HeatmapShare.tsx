@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {QRCodeSVG} from 'qrcode.react';
 import {HeatStock,Period,periodLabel,periodScale,dateLabel,heatColor,percent,tile,TileSizing,HeatGrouping,sizeLabels,stockWeight,stockGroups,fixedGroupTiles} from '../../lib/market-heatmap';
 import styles from './Heatmap.module.css';
-export default function HeatmapShare({rows,period,asOf,sector,sizing,grouping,universe,viewUrl,direction,colorblind,fixed,groupNames}:{rows:HeatStock[];period:Period;asOf:string;sector:string;sizing:TileSizing;grouping:HeatGrouping;universe:HeatStock[];viewUrl:string;direction:string;colorblind:boolean;fixed:boolean;groupNames:string[]}){
+export default function HeatmapShare({rows,period,asOf,sector,sizing,grouping,universe,viewUrl,direction,colorblind,fixed,groupNames,sessionLabel}:{rows:HeatStock[];period:Period;asOf:string;sector:string;sizing:TileSizing;grouping:HeatGrouping;universe:HeatStock[];viewUrl:string;direction:string;colorblind:boolean;fixed:boolean;groupNames:string[];sessionLabel?:string}){
  const qr=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null);
  const [busy,setBusy]=useState(false),[error,setError]=useState(''),[image,setImage]=useState<{url:string;file:File}|null>(null);
  useEffect(()=>{if(image)dialog.current?.showModal();return()=>{if(image)URL.revokeObjectURL(image.url)}},[image]);
@@ -15,7 +15,7 @@ export default function HeatmapShare({rows,period,asOf,sector,sizing,grouping,un
    const text=(value:string,x:number,y:number,size:number,color='#f1f5ff',bold=false,maxWidth=1600)=>{ctx.font=`${bold?700:400} ${size}px Arial, sans-serif`;ctx.fillStyle=color;ctx.fillText(value,x,y,maxWidth)};
    text('THE MARKET AT A GLANCE',64,74,22,'#b8a6ef',true);
    text('Stock market heatmap',64,148,64,'#f1f5ff',true);
-   text(`${dateLabel(asOf)}  ·  ${periodLabel(period)}  ·  Closing prices`,64,200,26,'#a8b9d4');
+   text(`${dateLabel(asOf)}  ·  ${sessionLabel||periodLabel(period)}  ·  ${sessionLabel?"Saved session quotes":"Closing prices"}`,64,200,26,'#a8b9d4');
    text(`${sector==='all'?'S&P 500 largest holdings':sector}  ·  ${rows.length} stocks${direction==='up'?' · Advancing':direction==='down'?' · Declining':direction==='missing'?' · Unavailable prices':''}`,64,245,25,'#cbd6e8');
    const groups=stockGroups(rows,grouping);
    const weight=(r:HeatStock)=>stockWeight(r,sizing,universe);
@@ -49,7 +49,7 @@ export default function HeatmapShare({rows,period,asOf,sector,sizing,grouping,un
  }
  async function share(){if(!image)return;try{if(navigator.canShare?.({files:[image.file]}))await navigator.share({files:[image.file],title:'Stock market heatmap'});else download()}catch(e){if((e as Error).name!=='AbortError')setError('Sharing is unavailable here. Use Download PNG.')}}
  function download(){if(!image)return;const a=document.createElement('a');a.href=image.url;a.download=image.file.name;a.click()}
- return <><button onClick={prepare} disabled={busy||!rows.length}>{busy?'Creating image…':'↗ Share image'}</button><div hidden ref={qr}><QRCodeSVG value={viewUrl} size={320} level="M" includeMargin/></div>
+ return <><button onClick={prepare} disabled={busy||!rows.length}>{busy?'Creating image…':'↗ Share'}</button><div hidden ref={qr}><QRCodeSVG value={viewUrl} size={320} level="M" includeMargin/></div>
  {error&&!image&&<span role="alert">{error}</span>}
  <dialog className={styles.shareDialog} ref={dialog} onCancel={()=>setImage(null)}><div className={styles.shareHeader}><h2>Share heatmap</h2><button aria-label="Close image preview" onClick={()=>{dialog.current?.close();setImage(null)}}>×</button></div>{image&&<img src={image.url} alt="Navy stock market heatmap with website source and QR code"/>}<div className={styles.shareActions}><button onClick={share}>Share image</button><button onClick={download}>Download PNG</button></div>{error&&<p role="alert">{error}</p>}</dialog></>;
 }
