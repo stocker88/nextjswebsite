@@ -66,9 +66,15 @@ for(const recap of closingRecaps){
  const route='news/briefings/'+recap.slug,canonical='https://www.stockstobuynow.ai/'+route+'/';
  assert(html('news').includes('href="/'+route+'/"'),'Missing closing recap in Movers');
  assert(html(route).includes(canonical),'Missing closing recap canonical');
- assert(html(route).includes('AFTER THE CLOSE'),'Missing closing session label');
+ assert(html(route).includes('Checking your access'),'Anonymous recap must wait for sign-in');
+ const recapData=JSON.parse(html(route).match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps.article;
+ assert.equal(recapData.kind,'post_close','Missing closing session classification');
+ assert.equal(recapData.postId,recap.postId,'Closing recap identity changed');
  assert(html(route).includes(recap.postId),'Missing original app recap identity');
  assert(sitemap.includes(canonical),'Missing closing recap sitemap entry');
- for(const image of recap.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Missing closing recap image');
+ for(const image of recap.images)assert(recapData.images.some(item=>item.url===image.url),'Missing original closing recap image');
 }
 console.log(`Verified ${closingRecaps.length} closing recaps, original galleries and Movers archive links.`);
+
+for(const route of ['login','membership','account','continue'])assert(fs.existsSync(path.join(out,route,'index.html')),'Missing account/access route: '+route);
+console.log('Verified login, membership, account and desktop continuation exports.');
