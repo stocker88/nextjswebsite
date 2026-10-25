@@ -22,3 +22,39 @@
 }
 
 @media(max-width:700px){.moverActions{display:flex;flex-wrap:wrap;align-items:center;gap:6px}}
+
+/* Keep gainers and decliners side by side on phones as well. */
+@media(max-width:700px){.moverGroups{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-height:none;overflow:visible}.moverGroup{min-width:0}.moverGroup h4{font-size:13px}.moverRow>a{flex-wrap:wrap;gap:4px;font-size:12px}.moverRow small{font-size:10px}.moverActions{display:flex;flex-wrap:wrap;gap:5px}.moverActions a,.moverActions button{font-size:10px;white-space:normal;max-width:100%}.moverGroup:first-child h4{color:#79dfb8}.moverGroup:last-child h4{color:#ff8d9c}}
+
+/* Pair mobile ranks in one grid so matching gainers/decliners share row boundaries. */
+@media(max-width:700px){
+ .moverGroups{column-gap:14px;row-gap:0;align-items:stretch}
+ .moverGroup{display:contents}
+ .moverGroup h4{grid-row:1;margin:22px 0 8px!important}
+ .moverGroup:first-child h4,.moverGroup:first-child .moverRow,.moverGroup:first-child>p{grid-column:1}
+ .moverGroup:last-child h4,.moverGroup:last-child .moverRow,.moverGroup:last-child>p{grid-column:2}
+ .moverRow{grid-row:var(--mover-grid-row);min-width:0;display:flex;flex-direction:column;padding:12px 0;gap:9px}
+ .movers .moverRow>a{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;align-items:start;min-height:0;column-gap:5px;row-gap:4px;width:100%;font-size:13px}
+ .moverIdentity{display:contents}.moverSymbol{grid-row:1;grid-column:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .movers .moverRow strong{grid-row:1;grid-column:2;font-size:12px;line-height:1.5;white-space:nowrap;font-variant-numeric:tabular-nums}
+ .movers .moverRow small{grid-row:2;grid-column:1/-1;font-size:10px;line-height:1.5;min-height:30px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+ .moverActions{margin-top:auto;min-height:32px;align-content:flex-start;align-items:center;gap:5px;width:100%}
+ .moverActions a,.moverActions button{margin:0;white-space:nowrap;font-size:10px;min-height:30px}
+}
+
+/* Keep the market summary together while the movers occupy the full right column. */
+.dashboardGrid .marketColumn{display:contents}.dashboardGrid .marketColumn>:first-child{order:1}.dashboardGrid>.movers{order:2}.dashboardGrid .sessionPulse{order:3;margin-top:0}
+@media(max-width:999px){.dashboardGrid{display:flex;flex-direction:column;gap:20px}.dashboardGrid>.movers,.dashboardGrid .marketColumn>*{width:100%;box-sizing:border-box}.dashboardGrid>.movers{contain:none}}
+@media(min-width:1000px){
+ .dashboardGrid{grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);align-items:start;gap:22px}
+ .dashboardGrid .marketColumn{display:flex;flex-direction:column;min-width:0;gap:20px}
+ .dashboardGrid>.movers{contain:none;align-self:stretch;min-height:0;max-height:none}
+ .dashboardGrid>.movers .moverGroups{overflow:visible;flex:0 1 auto;padding-right:0;scrollbar-gutter:auto}
+ .dashboardGrid .sessionPulse{margin:0}
+}
+@media(min-width:1000px){
+ .dashboardGrid>.movers .moverGroups{flex:1;display:flex;flex-direction:column;gap:10px}
+ .dashboardGrid>.movers .moverGroup{display:flex;flex-direction:column;flex:1;min-height:0}
+ .dashboardGrid>.movers .moverGroup h4{flex-shrink:0}
+ .dashboardGrid>.movers .moverRow:not(.extraMover){flex:1}
+}

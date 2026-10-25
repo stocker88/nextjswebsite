@@ -1,3 +1,5 @@
+import {useSiteAccount} from '../SiteAccount';
+import ResearchCTA from '../ResearchCTA';
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';
@@ -49,12 +51,15 @@ const sendOutboundAndroid = (event) => {
 }
 
 const InstallButtons = ({...props}) => {
+  const {desktop,ready}=useSiteAccount();
 
       const springProps = useSpring({
         transform: 'scale(1)',
         config: { duration: 1000 }, // Adjust the duration as needed
       });
 
+        if(!ready)return <section {...props}/>;
+        if(desktop)return <ResearchCTA placement="install_buttons_with_qr"/>;
         if (isMobile){
         return (<section
                      {...props}

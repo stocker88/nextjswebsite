@@ -1,3 +1,4 @@
+import {DesktopActionText} from '../../components/DesktopAppLink';
 import MoverNewsList from '../../components/MoverNewsList';
 import NewsMentionsPromo from '../../components/NewsMentionsPromo';
 import AppDownloadButton from '../../components/formStocker';
@@ -69,7 +70,7 @@ export default function ResearchHub({items, page = 1, total = items.length}: {it
    <NewsMentionsPromo/>
    <div className="hottest-stocks-action">
      <AppDownloadButton popup from="stock_market_news_hottest_stocks" label="Hottest stocks now →"/>
-     <p>Explore in the app · iOS & Android</p>
+     <p><DesktopActionText desktopLabel="Explore the full research">{'Explore in the app · iOS & Android'}</DesktopActionText></p>
    </div>
    <style jsx>{`
      .hottest-stocks-action{text-align:center;margin:30px 0 12px}

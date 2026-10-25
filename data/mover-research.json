@@ -1,5 +1,134 @@
 [
   {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261022_BE",
+    "postId": "earnings_review_20261022_BE",
+    "slug": "bloom-energy-be-q3-2026-earnings-review-2026-10-22",
+    "title": "Bloom Energy (BE) Q3 2026 Earnings Review",
+    "symbol": "BE",
+    "companyName": "Bloom Energy",
+    "sessionDate": "2026-10-23",
+    "marketSession": "premarket",
+    "earningsCheck": {
+      "releasedAt": "2026-10-22T16:05:00-04:00",
+      "source": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-Third-Quarter-2026-Financial-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+      "issuerVerified": true,
+      "status": "released",
+      "period": "Q3 2026"
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-23T10:38:53.787411+00:00",
+    "updatedAt": "2026-10-23T10:54:24.156074+00:00",
+    "summary": "Bloom Energy (BE) reported record Q3 2026 revenue of $1.24 billion and raised its full-year outlook, while cash consumption and the stock reaction temper the headline strength.",
+    "catalyst": "Bloom Energy released Q3 results after the October 22 regular close, reporting record revenue and raising its 2026 revenue and non-GAAP EPS outlook. The release also reported negative quarterly operating cash flow and higher capital spending. These are separate verified facts; the observed pre-market decline does not establish any one cause.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Bloom Energy (BE) reported record Q3 2026 revenue of $1.24 billion and raised its full-year outlook, while cash consumption and the stock reaction temper the headline strength.",
+      "Revenue rose 138.1% year over year, with adjusted diluted EPS of $0.94 versus $0.691 consensus and revenue about 15.5% above the $1.07 billion estimate.",
+      "GAAP diluted EPS reached $0.78 and GAAP gross margin 33.8%, while non-GAAP gross margin increased to 34.5% from 30.4% a year earlier.",
+      "Full-year revenue guidance increased to $4.4–4.6 billion from $3.9–4.2 billion, and adjusted EPS guidance rose to $3.10–3.40 from $2.55–2.85.",
+      "Operating cash flow was negative $27.1 million and capital expenditure was $153.5 million, making working-capital conversion and expansion spending key watchpoints.",
+      "BE closed at $217.77 before the release on October 22, then traded at $212.45 in the completed pre-market bar ending at 6:50 AM Eastern on October 23, a 2.4% decline.",
+      "At the pre-release close, BE traded near 16.8 times trailing sales and below its 20- and 50-day averages, with RSI at 38.5.",
+      "Strong demand and a higher outlook support the growth case, but valuation, cash conversion and price volatility remain risks, with $210–215 and $234–241 as pre-release chart reference zones."
+    ],
+    "setup": "The October 22 regular-session close was below both moving averages, with recent lows around $210–215 and rebound highs near $234–241. The subsequent pre-market quote was within that support area; confirmation at the next regular close matters. A recovery through $234–241 would improve the chart, while sustained trading below $210 would leave the prior lows broken. These are conditional observations, not price targets or guarantees.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "title": "Financials",
+        "alt": "Bloom Energy Financials research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261022_BE%2F1%2F353821fa346965100cda25556e6c13c045defc02e59d2e1903da1b16f47cbe3f-380ce4fe-0cc1-4fdb-b4af-c19899bbf6a8%2FFinancials.jpg?alt=media&token=380ce4fe-0cc1-4fdb-b4af-c19899bbf6a8",
+        "width": 1200
+      },
+      {
+        "title": "Technicals",
+        "alt": "Bloom Energy Technicals research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261022_BE%2F2%2F9e54ec06edf2b98204b84dac862e96fd77aa9fba0cac8d33ecb2038b10904b11-b54109f8-9c79-4b49-bd99-7245d0db685f%2FTechnicals.jpg?alt=media&token=b54109f8-9c79-4b49-bd99-7245d0db685f",
+        "width": 1200
+      },
+      {
+        "title": "Earnings & Peers",
+        "alt": "Bloom Energy Earnings & Peers research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261022_BE%2F3%2F801fe9757a6767a4f730c97fdcbf5bf7342684ef9ab79f78e84bfcebdd0fd04c-c7b57779-4de5-44e4-b525-928510bf3f8e%2FEarnings-Peers.jpg?alt=media&token=c7b57779-4de5-44e4-b525-928510bf3f8e",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Bloom Q3 2026 results",
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-Third-Quarter-2026-Financial-Results-and-Raises-Full-Year-2026-Guidance/default.aspx"
+      },
+      {
+        "title": "Bloom Q2 2026 results",
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-Second-Quarter-2026-Financial-Results-and-Raises-Full-Year-2026-Guidance/default.aspx"
+      },
+      {
+        "title": "Bloom FY2025",
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-with-Record-Full-Year-Revenues/default.aspx"
+      },
+      {
+        "title": "Bloom FY2024",
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2025/Bloom-Energy-Reports-Fourth-Quarter-and-Full-Year-2024-Financial-Results-with-Record-Full-Year-Revenues/default.aspx"
+      },
+      {
+        "title": "Bloom FY2022",
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2023/Bloom-Energy-Reports-Fourth-Quarter-and-Full-Year-2022-Financial-Results/default.aspx"
+      },
+      {
+        "title": "Bloom release-date consensus: MarketBeat/Fiscal.ai",
+        "url": "https://www.marketbeat.com/stocks/NYSE/BE/earnings/"
+      },
+      {
+        "title": "Bloom daily prices",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/BE?range=5y&interval=1d"
+      },
+      {
+        "title": "Release wire timestamp, Oct 22 at 4:05 PM Eastern",
+        "url": "https://www.stockwatch.com/Quote/Detail?U%3ABE="
+      },
+      {
+        "title": "BE Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/BE?range=5d&interval=5m&includePrePost=true"
+      },
+      {
+        "title": "ABBN.SW Q3 2026 guidance",
+        "url": "https://new.abb.com/news/detail/139696/q3-2026-results"
+      },
+      {
+        "title": "ABBN.SW Q3 2026 revenueComparison",
+        "url": "https://library.e.abb.com/public/1d5e846baf0143feb7831df1b0e7cd51/9AKK108473A4206_en_A_ABB%20Pre%20Q3%202026%20Consensus.pdf"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "fiscalLabel": "FY2025",
+      "forwardYear": 2026,
+      "atr14": 19.629785122894198,
+      "priceDate": "2026-10-22",
+      "ttmPE": 133.60122961500673,
+      "forwardPE": null,
+      "close": 217.77000427246094,
+      "annualRevenueB": 2.023994,
+      "marketCapB": 64.35914100876121,
+      "industry": "DISTRIBUTED POWER / SOLID OXIDE FUEL CELLS",
+      "business": "Onsite electricity systems, installation, maintenance and electricity sales.",
+      "rsi14": 38.47693769164641
+    }
+  },
+  {
     "version": 1,
     "id": "kT9r4mfwi2fchnuD8zqZ",
     "postId": "kT9r4mfwi2fchnuD8zqZ",
@@ -620,6 +749,2054 @@
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "dateTaken": "23 March 2021 (upload date)",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_afterhours_STX",
+    "postId": "research_mover_20261022_afterhours_STX",
+    "slug": "why-seagate-technology-stx-stock-is-down-after-hours-2026-10-22",
+    "title": "Why Seagate Technology (STX) Stock Is Down After Hours",
+    "symbol": "STX",
+    "companyName": "Seagate Technology",
+    "sessionDate": "2026-10-22",
+    "marketSession": "afterhours",
+    "regularClose": 642.14,
+    "earningsCheck": {
+      "source": "https://www.seagate.com/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/",
+      "checkedAt": "2026-10-22T22:20:59.039901+00:00",
+      "status": "not_released",
+      "issuerVerified": true
+    },
+    "direction": "down",
+    "move": -2.869296415111966,
+    "quoteAsOf": "2026-10-22T22:40:37.000Z",
+    "quotePrice": 623.7151,
+    "publishedAt": "2026-10-22T22:42:30.833907+00:00",
+    "updatedAt": "2026-10-22T22:42:30.833907+00:00",
+    "summary": "Seagate Technology (STX) was down 2.87% in the October 22, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Seagate fell in October 22 after-hours trading ahead of its fiscal first-quarter 2027 report scheduled for October 27 after the close. The earnings timing is verified; no same-evening issuer earnings release is being asserted.",
+    "earningsPeriod": null,
+    "recap": [
+      "Seagate fell in October 22 after-hours trading ahead of its fiscal first-quarter 2027 report scheduled for October 27 after the close.",
+      "The latest reported quarter delivered $3.629 billion in revenue, with $5.58 GAAP EPS and $5.71 adjusted EPS.",
+      "Fiscal 2026 revenue reached $12.195 billion, up 34%, with $13.90 GAAP EPS and $15.58 adjusted EPS.",
+      "Fiscal-year free cash flow reached $3.1 billion, while operating cash flow totaled $3.7 billion.",
+      "July guidance for the upcoming quarter called for $4.0–$4.2 billion in revenue and $7.10–$7.50 adjusted EPS.",
+      "Data-center customers represented 80% of fiscal 2026 revenue, making cloud storage demand central to the business.",
+      "Western Digital released results this evening, providing relevant storage-industry context before Seagate reports its own numbers.",
+      "Cloud capital spending, customer concentration, storage pricing and HAMR execution remain risks; tonight’s move is not a Seagate earnings release."
+    ],
+    "setup": "The regular close tests the $629–642 floor after a sharp October reversal. Observed zones · support $629–642 · resistance $675–692. A closing reclaim of resistance would strengthen the setup; a close below support would weaken it. Confirm using regular-session volume and retests. These are observed zones, not guaranteed turning points. After-hours trades are excluded from the technical chart.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "alt": "Seagate Technology (STX) financials research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_STX%2F1%2Fdbf16af7b45bf49c12d05df81b01d780631e34380b16f7565ec6532c3017bb57-d6355cdc-eb7d-48da-ae69-817b98c469d6%2FFinancials.jpg?alt=media&token=d6355cdc-eb7d-48da-ae69-817b98c469d6",
+        "title": "Financials",
+        "height": 1200
+      },
+      {
+        "alt": "Seagate Technology (STX) technicals research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_STX%2F2%2Faa2fb1c2393d342864d8f1ea846cbf6d9e748c114cbe1938aaa9cf01548c2285-94c2a574-3625-45bb-89e1-40d1514c1aba%2FTechnicals.jpg?alt=media&token=94c2a574-3625-45bb-89e1-40d1514c1aba",
+        "title": "Technicals",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — www.seagate.com",
+        "url": "https://www.seagate.com/stories/articles/seagate-technology-to-report-fiscal-first-quarter-2027-financial-results-on-october-27-2026-pr/"
+      },
+      {
+        "title": "Financial data and estimates — investors.seagate.com",
+        "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000159/stx-20260703.htm"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/STX"
+      },
+      {
+        "title": "Financial data and estimates — investor.wdc.com",
+        "url": "https://investor.wdc.com/node/28921/pdf"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 50.45864358376286,
+      "fiscalLabel": "FY2026",
+      "business": "Sells hard drives and storage systems to cloud, enterprise and edge customers.",
+      "rsi14": 32.77094708175515,
+      "forwardPE": null,
+      "ttmPE": 46.1971233560027,
+      "priceDate": "2026-10-22",
+      "close": 642.1400146484375,
+      "forwardYear": 2026,
+      "annualRevenueB": 12.195,
+      "industry": "MASS-CAPACITY DATA STORAGE",
+      "marketCapB": 145.53751410850808
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fstx%2F427928fee1e0e505031d3d1863a24df1b6f6150db8ede2d22934c354baf612f6.jpg?alt=media&token=2165b375-fa6e-4bc9-8b7f-3c79f48cd9b3",
+      "width": 1920,
+      "height": 1186,
+      "alt": "Three older hard disk drives from Western Digital, Hitachi and Seagate",
+      "caption": "Archive illustration: Western Digital, Hitachi and Seagate hard drives photographed in October 2009. These older products do not depict current HAMR or data-center models.",
+      "credit": "uıɐɾ ʞ ʇɐɯɐs",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:WD2500JB-00FUA0,_HDS722525VLAT80_and_ST32000542AS.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dateTaken": "2009-10-18 20:05:21",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_afterhours_T",
+    "postId": "research_mover_20261022_afterhours_T",
+    "slug": "why-at-t-t-stock-is-down-after-hours-2026-10-22",
+    "title": "Why AT&T (T) Stock Is Down After Hours",
+    "symbol": "T",
+    "companyName": "AT&T",
+    "sessionDate": "2026-10-22",
+    "marketSession": "afterhours",
+    "regularClose": 22.765,
+    "earningsCheck": {
+      "checkedAt": "2026-10-22T22:20:59.039014+00:00",
+      "issuerVerified": true,
+      "source": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000370/t-3q2026exhibit991.htm",
+      "status": "not_scheduled"
+    },
+    "direction": "down",
+    "move": -4.551724137931035,
+    "quoteAsOf": "2026-10-22T22:54:26+00:00",
+    "quotePrice": 21.7288,
+    "publishedAt": "2026-10-22T22:23:14.278647+00:00",
+    "updatedAt": "2026-10-22T22:55:40.572053+00:00",
+    "summary": "AT&T (T) was down 4.55% in the October 22, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "AT&T fell in October 22 after-hours trading; its third-quarter results were released on October 21, rather than this evening. The earnings timing is verified; no same-evening issuer earnings release is being asserted.",
+    "earningsPeriod": null,
+    "recap": [
+      "AT&T fell in October 22 after-hours trading; its third-quarter results were released on October 21, rather than this evening.",
+      "Third-quarter revenue totaled $32.322 billion, up 5.3%, while adjusted EPS rose to $0.65 from $0.54.",
+      "GAAP EPS from continuing operations was $0.13, including Mexico-related impairment and employee separation charges.",
+      "Management increased its full-year adjusted EPS outlook to around $2.40 and maintained free cash flow guidance of at least $18 billion.",
+      "Quarterly free cash flow reached $5.0 billion, with $10.5 billion of operating cash flow and $5.6 billion of capital investment.",
+      "The company added 442,000 fiber, 327,000 fixed-wireless and 379,000 postpaid phone connections.",
+      "Total debt reached $159.6 billion and net debt was $149.8 billion following the EchoStar spectrum transaction.",
+      "Investors are weighing connectivity growth against debt, spending and legacy-network declines; the after-hours move alone does not establish its cause."
+    ],
+    "setup": "The rebound remains below the $23.3–23.85 area traded before the earnings gap. Observed zones · support $21.8–22.1 · resistance $23.3–23.85. A closing reclaim of resistance would strengthen the setup; a close below support would weaken it. Confirm using regular-session volume and retests. These are observed zones, not guaranteed turning points. After-hours trades are excluded from the technical chart.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_T%2F1%2F6d38a4fbd5134f2999445bd8067a02ed8e1f4aee64312e322ddb874395545914-def662ec-5443-493e-866d-d43330b6945a%2FFinancials.jpg?alt=media&token=def662ec-5443-493e-866d-d43330b6945a",
+        "title": "Financials",
+        "width": 1200,
+        "alt": "AT&T (T) financials research infographic"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_T%2F2%2F8d214610dbae3a3ace21dbb02ba497b3ac7d89759cc941955101dda54bc19b4d-85089005-ad7d-4c32-aa72-c00de2ea73de%2FTechnicals.jpg?alt=media&token=85089005-ad7d-4c32-aa72-c00de2ea73de",
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "AT&T (T) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000370/t-3q2026exhibit991.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000372/t-20260930.htm"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/T"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 0.7128386551024917,
+      "business": "Earns wireless and internet subscriptions, equipment sales and business service fees.",
+      "fiscalLabel": "FY2025",
+      "close": 22.739999771118164,
+      "industry": "WIRELESS, FIBER & CONNECTIVITY",
+      "forwardPE": null,
+      "rsi14": 40.585018419841404,
+      "forwardYear": 2026,
+      "priceDate": "2026-10-22",
+      "ttmPE": 12.225806328558152,
+      "annualRevenueB": 125.648,
+      "marketCapB": 153.1874043245636
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ft%2F9459bdc4e9a6ceb20e42aad6d6da9f296d1ae1202469201fa7bd94faf50b4699.jpg?alt=media&token=08ce302b-54ef-470a-988e-8e0cd04aaee5",
+      "width": 1920,
+      "height": 1440,
+      "alt": "The twin-spired AT&T Building in Nashville",
+      "caption": "Archive photograph of the building known as the AT&T Building in Nashville, May 2015.",
+      "credit": "Michael Rivera",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_building_from_4th_Ave.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2015-05-04 15:22:06",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_afterhours_VZ",
+    "postId": "research_mover_20261022_afterhours_VZ",
+    "slug": "why-verizon-communications-vz-stock-is-down-after-hours-2026-10-22",
+    "title": "Why Verizon Communications (VZ) Stock Is Down After Hours",
+    "symbol": "VZ",
+    "companyName": "Verizon Communications",
+    "sessionDate": "2026-10-22",
+    "marketSession": "afterhours",
+    "regularClose": 45.195,
+    "earningsCheck": {
+      "checkedAt": "2026-10-22T22:20:59.018005+00:00",
+      "issuerVerified": true,
+      "source": "https://www.verizon.com/about/news/verizon-q3-2026-earnings-report-date",
+      "status": "not_released"
+    },
+    "direction": "down",
+    "move": -4.857838256444302,
+    "quoteAsOf": "2026-10-22T22:53:00+00:00",
+    "quotePrice": 42.9995,
+    "publishedAt": "2026-10-22T22:23:39.757489+00:00",
+    "updatedAt": "2026-10-22T22:55:21.650643+00:00",
+    "summary": "Verizon Communications (VZ) was down 4.86% in the October 22, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Verizon fell in October 22 after-hours trading ahead of its third-quarter earnings release on October 26. The earnings timing is verified; no same-evening issuer earnings release is being asserted.",
+    "earningsPeriod": null,
+    "recap": [
+      "Verizon fell in October 22 after-hours trading ahead of its third-quarter earnings release on October 26.",
+      "The company plans to make its earnings materials available at 7:00 AM Eastern and hold its webcast at 8:30 AM Eastern.",
+      "Its latest reported quarter generated $34.3 billion of revenue, down 0.7%, with $0.92 GAAP EPS and $1.30 adjusted EPS.",
+      "July guidance raised full-year adjusted EPS to $4.99–$5.04 and projected mobility and broadband service revenue growth of 2.5%–3.0%.",
+      "First-half operating cash flow reached $18.4 billion, while free cash flow rose to $10.2 billion.",
+      "The company added 184,000 postpaid phone customers and 348,000 broadband connections in the second quarter.",
+      "Competition, customer churn, promotional spending, debt costs and fiber integration remain key earnings risks.",
+      "The after-hours decline is a market observation before the report; it is not a reaction to new Verizon quarterly results."
+    ],
+    "setup": "The regular-session rebound approaches the $45.5–46.6 October supply area. Observed zones · support $43–44 · resistance $45.5–46.6. A closing reclaim of resistance would strengthen the setup; a close below support would weaken it. Confirm using regular-session volume and retests. These are observed zones, not guaranteed turning points. After-hours trades are excluded from the technical chart.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_VZ%2F1%2Fd0622e1f3bd402abadf44c819c63701a1eaab827141aed28b10058d6af6f91de-a589cb28-b25c-4cfa-b894-4e2982fa087e%2FFinancials.jpg?alt=media&token=a589cb28-b25c-4cfa-b894-4e2982fa087e",
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Verizon Communications (VZ) financials research infographic"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_VZ%2F2%2Fa74a030b66e29c30ef01e79b9e169d37a2274b7fff3ca8bf8f61b2f467283fae-442ec712-a181-4f04-a1b6-9214c9c3dc51%2FTechnicals.jpg?alt=media&token=442ec712-a181-4f04-a1b6-9214c9c3dc51",
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Verizon Communications (VZ) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — www.verizon.com",
+        "url": "https://www.verizon.com/about/news/verizon-q3-2026-earnings-report-date"
+      },
+      {
+        "title": "Financial data and estimates — www.verizon.com",
+        "url": "https://www.verizon.com/about/news/verizon-delivers-record-2q26-results"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000046/vz-20260630.htm"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/VZ"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 1.2004658507477264,
+      "business": "Earns subscription revenue from wireless, broadband and enterprise connectivity.",
+      "fiscalLabel": "FY2025",
+      "close": 45.20000076293945,
+      "industry": "WIRELESS & FIBER CONNECTIVITY",
+      "forwardPE": null,
+      "rsi14": 47.88660771556719,
+      "forwardYear": 2026,
+      "priceDate": "2026-10-22",
+      "ttmPE": 11.770833532015484,
+      "annualRevenueB": 138.191,
+      "marketCapB": 187.7958423002419
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fvz%2F85d858a54bd8d8415e07e992caa962e937fe0718f97010eb619286c050e76578.jpg?alt=media&token=c1ab5f1b-2ed4-4339-ab92-2f5c6b631a56",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Exterior of the Verizon Building in New York",
+      "caption": "Archive photograph of the Verizon Building in New York, April 2022.",
+      "credit": "Kidfly182",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Verizon_Building_001.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2022-04-30 12:49:19",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261022_afterhours_WDC",
+    "postId": "research_mover_20261022_afterhours_WDC",
+    "slug": "why-western-digital-wdc-stock-is-down-after-hours-2026-10-22",
+    "title": "Why Western Digital (WDC) Stock Is Down After Hours: Q1 FY2027 Earnings",
+    "symbol": "WDC",
+    "companyName": "Western Digital",
+    "sessionDate": "2026-10-22",
+    "marketSession": "afterhours",
+    "regularClose": 354.19,
+    "earningsCheck": {
+      "issuerVerified": true,
+      "source": "https://investor.wdc.com/node/28921/pdf",
+      "releasedAt": "2026-10-22T16:02:00-04:00",
+      "result": {
+        "source": "https://investor.wdc.com/node/28921/pdf",
+        "revenueB": 4.381,
+        "guidance": {
+          "source": "https://investor.wdc.com/node/28921/pdf",
+          "summary": "Issued Q2 FY2027 revenue $5.0–5.2B; adjusted EPS $5.60–6.00; adjusted gross margin 60%–61%."
+        },
+        "epsAdjusted": 4.64,
+        "epsGAAP": 4.63,
+        "reported": "2026-10-22",
+        "epsComparison": null,
+        "reaction": {
+          "endPrice": 336.33,
+          "label": "October 22 regular close to timestamped after-hours trade",
+          "to": "2026-10-22T22:10:40.000Z",
+          "source": "https://query2.finance.yahoo.com/v8/finance/chart/WDC",
+          "startPrice": 354.19,
+          "from": "2026-10-22T16:00:01-04:00"
+        },
+        "revenueComparison": null,
+        "unavailableReason": "Matching dated consensus has not been independently verified; no beat/miss percentage asserted.",
+        "period": "Q1 FY2027"
+      },
+      "status": "released"
+    },
+    "direction": "down",
+    "move": -5.138484993929804,
+    "quoteAsOf": "2026-10-22T22:55:31+00:00",
+    "quotePrice": 335.99,
+    "publishedAt": "2026-10-22T22:23:28.237900+00:00",
+    "updatedAt": "2026-10-22T22:55:52.998191+00:00",
+    "summary": "Western Digital (WDC) was down 5.14% in the October 22, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Western Digital fell in October 22 after-hours trading after releasing fiscal first-quarter 2027 results that evening. The issuer has released the quarter; the observed market reaction does not identify a single cause.",
+    "earningsPeriod": "Q1 FY2027",
+    "recap": [
+      "Western Digital fell in October 22 after-hours trading after releasing fiscal first-quarter 2027 results that evening.",
+      "Revenue reached $4.381 billion, rising 55% from $2.818 billion a year earlier and 17% from the prior quarter.",
+      "GAAP diluted EPS was $4.63 and adjusted diluted EPS was $4.64, versus $3.07 and $1.78 a year earlier.",
+      "Adjusted gross margin reached 58.1% and adjusted operating margin reached 49.1%.",
+      "Operating cash flow totaled $1.60 billion, while free cash flow was $1.38 billion.",
+      "Second-quarter guidance calls for $5.0–$5.2 billion of revenue, 60%–61% adjusted gross margin and $5.60–$6.00 adjusted EPS.",
+      "The quarterly dividend increased 17% to $0.175 per share, payable December 17 to holders of record on December 4.",
+      "Strong reported growth and a lower share price can coexist; cloud demand, pricing, customer concentration and expectations remain key risks."
+    ],
+    "setup": "The October decline returned price toward the recent $332–348 trading floor. Observed zones · support $332–348 · resistance $367–382. A closing reclaim of resistance would strengthen the setup; a close below support would weaken it. Confirm using regular-session volume and retests. These are observed zones, not guaranteed turning points. After-hours trades are excluded from the technical chart.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_WDC%2F1%2F1bcfcc3d55825fdfc0354adbc0ac00f41612593c6fc78ad1c116d278c1c88837-5ad9104b-4370-4c45-8177-33811af5015d%2FFinancials.jpg?alt=media&token=5ad9104b-4370-4c45-8177-33811af5015d",
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Western Digital (WDC) financials research infographic"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261022_afterhours_WDC%2F2%2Fcc56fd69f61d95c5a67334748a22247d2a85703b4c1ffaabc261c68f3908e779-dbecba86-f79d-4952-97fe-504f7aa40670%2FTechnicals.jpg?alt=media&token=dbecba86-f79d-4952-97fe-504f7aa40670",
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Western Digital (WDC) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — investor.wdc.com",
+        "url": "https://investor.wdc.com/node/28921/pdf"
+      },
+      {
+        "title": "Financial data and estimates — www.businesswire.com",
+        "url": "https://www.businesswire.com/news/home/20261021044277/en/"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026057139/wdc-20260703.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/106040/000010604025000038/wdc-20250627.htm"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/WDC"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 25.074447259687584,
+      "business": "Sells high-capacity HDD storage to cloud, enterprise and device customers.",
+      "fiscalLabel": "FY2026",
+      "close": 354.19000244140625,
+      "industry": "HARD DISK DRIVES & DATA STORAGE",
+      "forwardPE": null,
+      "rsi14": 37.67628914585887,
+      "forwardYear": 2026,
+      "priceDate": "2026-10-22",
+      "ttmPE": 13.707043438134917,
+      "annualRevenueB": 12.919,
+      "marketCapB": 127.69999783558693
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fwdc%2F427928fee1e0e505031d3d1863a24df1b6f6150db8ede2d22934c354baf612f6.jpg?alt=media&token=46b47de4-5f77-433d-a8ab-e959755d20e0",
+      "width": 1920,
+      "height": 1186,
+      "alt": "Three older hard disk drives from Western Digital, Hitachi and Seagate",
+      "caption": "Archive illustration: Western Digital, Hitachi and Seagate hard drives photographed in October 2009. These are older products, not current data-center models.",
+      "credit": "uıɐɾ ʞ ʇɐɯɐs",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:WD2500JB-00FUA0,_HDS722525VLAT80_and_ST32000542AS.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dateTaken": "2009-10-18 20:05:21",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_AMT",
+    "postId": "research_mover_20261023_AMT",
+    "slug": "why-american-tower-amt-stock-is-up-premarket-2026-10-23",
+    "title": "Why American Tower (AMT) Stock Is Up In Pre-Market Trading",
+    "symbol": "AMT",
+    "companyName": "American Tower",
+    "sessionDate": "2026-10-23",
+    "marketSession": "premarket",
+    "regularClose": 181.57,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 11.279396376053331,
+    "quoteAsOf": "2026-10-23T13:25:47.000Z",
+    "quotePrice": 202.05,
+    "publishedAt": "2026-10-23T13:52:48.608838+00:00",
+    "updatedAt": "2026-10-23T13:52:48.608838+00:00",
+    "summary": "American Tower (AMT) was up 11.28% in the October 23, 2026 pre-market snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "American Tower’s rally coincides with reported SpaceX demand for U.S. cell sites; additional tower tenancy is a plausible sector benefit, not a verified American Tower award or a quantified earnings contribution.",
+    "earningsPeriod": null,
+    "recap": [
+      "American Tower rose 11.28% to $202.05 in pre-market trading on October 23 at 9:25 AM Eastern, versus its $181.57 October 22 close, as tower shares rallied on reported SpaceX network plans.",
+      "The reported search for access to at least 80,000 U.S. cell sites raises the possibility of an additional large wireless tenant for tower infrastructure.",
+      "For American Tower, this is potential industry demand rather than a verified new SpaceX contract or company earnings announcement.",
+      "American Tower reported 2025 revenue of $10.645 billion, up 5.1%, including $10.305 billion of property revenue.",
+      "Its Q2 2026 revenue increased 4.7% to $2.749 billion, while adjusted funds from operations per share rose 4.2% to $2.71.",
+      "The completed October 22 chart shows a $181.57 close above the 20-day and 50-day averages of $173.37 and $174.39, with RSI at 58.4.",
+      "The pre-market quote moved above the prior $184–$186 resistance zone, with a sustained retest offering stronger confirmation than an opening gap alone.",
+      "The opportunity depends on real leasing commitments and economics, while higher interest costs and a reversal of the news-driven gap remain risks."
+    ],
+    "setup": "The pre-market quote moved above the prior $184–$186 resistance zone, with a sustained retest offering stronger confirmation than an opening gap alone. The opportunity depends on real leasing commitments and economics, while higher interest costs and a reversal of the news-driven gap remain risks.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_AMT%2F1%2F914cda8155546588809b6d8db583b877367170417ddd5a1be26a452c072b098e-f7b4f1f7-0ff2-43ab-a736-264f78ec31d9%2FFinancials.jpg?alt=media&token=f7b4f1f7-0ff2-43ab-a736-264f78ec31d9",
+        "width": 1200,
+        "alt": "American Tower (AMT) financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_AMT%2F2%2Fe7df0560237d1b6f75fec492fd61809595e8c55461a998e3f9c29feec6bb9e41-2a161f37-d457-4c0c-a3f6-143d55462be3%2FTechnicals.jpg?alt=media&token=2a161f37-d457-4c0c-a3f6-143d55462be3",
+        "width": 1200,
+        "alt": "American Tower (AMT) technicals research infographic",
+        "title": "Technicals"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://americantower.gcs-web.com/node/28631",
+        "title": "Financial data and estimates — americantower.gcs-web.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1053507/000105350726000131/pressreleaseq22026.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/amt/financials/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/amt/statistics/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://www.investing.com/news/stock-market-news/spacex-seeks-access-to-80000-us-cell-sites-for-wireless-network-bloomberg-news-reports-4967805",
+        "title": "Financial data and estimates — www.investing.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "business": "Leases wireless infrastructure globally and operates U.S. data centers.",
+      "annualRevenueB": 10.645,
+      "marketCapB": 84.60436061279297,
+      "ttmPE": null,
+      "atr14": 4.718517007375177,
+      "forwardYear": 2026,
+      "forwardPE": null,
+      "close": 181.57000732421875,
+      "industry": "COMMUNICATION INFRASTRUCTURE / REIT",
+      "rsi14": 58.358648438579785,
+      "priceDate": "2026-10-22",
+      "fiscalLabel": "FY2025"
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Famt%2Fd4593c2ae5888cb8c6591663782106d89177a33a9f9d9d4a294de980e07c1955.jpg?alt=media&token=1dd42a51-7054-43fb-ab2e-a8cf07e4f2e4",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Wireless antennas on a cell tower",
+      "caption": "Archive cell-tower photograph taken September 27, 2016, illustrative of wireless infrastructure; not identified as this company’s property or a SpaceX project.",
+      "credit": "Corey Coyle",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cell_Tower_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dateTaken": "Taken on 27 September 2016",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_CBRE",
+    "postId": "research_mover_20261023_CBRE",
+    "slug": "why-cbre-group-cbre-stock-is-down-today-2026-10-23",
+    "title": "Why CBRE Group (CBRE) Stock Is Down Today: Q3 2026 Earnings",
+    "symbol": "CBRE",
+    "companyName": "CBRE Group",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -5.836635172203608,
+    "quoteAsOf": "2026-10-23T15:52:57.000Z",
+    "quotePrice": 123.58,
+    "publishedAt": "2026-10-23T16:08:22.500522+00:00",
+    "updatedAt": "2026-10-23T16:08:22.500522+00:00",
+    "summary": "CBRE Group (CBRE) was down 5.84% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "CBRE’s regular-session decline comes the day after its October 22 third-quarter results, which showed higher revenue and earnings. The October 20 agreement to buy Onnec adds infrastructure exposure but remains subject to approvals. These are verified company developments before the quote, not proof of the specific reason for selling. Like-for-like dated consensus estimates were not independently verified, so no numerical beat or miss is asserted; no new quantified full-year guidance is inferred from the results release.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "CBRE traded at $123.58, down 5.84% in the regular session on October 23, 2026 at 11:52 AM Eastern, compared with the previous regular close.",
+      "Third-quarter results were released on October 22, before this quote: revenue was $11.517 billion, GAAP diluted EPS was $1.52 and non-GAAP Core EPS was $2.05.",
+      "The business earns fees from leasing, property sales and financing, building operations, project management and real estate investments; recurring services and transaction-sensitive income have different economic exposures.",
+      "Revenue rose 12.7% and Core EPS rose 28.1% year on year. Quarterly revenue included $4.691 billion of pass-through costs, so gross revenue is not equivalent to retained fee income.",
+      "The October 20 Onnec agreement calls for an initial £460 million cash payment plus an earnout of up to £300 million; regulatory approvals remain required and closing is expected around year-end.",
+      "Acquisition integration, financing conditions, property transaction volumes and data-center spending are relevant risks. The verified releases do not establish which factor caused today’s selling.",
+      "The completed October 22 chart closed at $131.24. Today’s quote is below the recent $125–129 trading area, so reclaiming that area matters more than assuming price weakness marks a bottom.",
+      "JLL’s third-quarter results discussion is scheduled for October 28 at 9:00 AM Eastern, offering a future peer checkpoint. Watch fee growth, margins and cash conversion; the decline alone does not prove the broader sector’s outlook."
+    ],
+    "setup": "October 22 completed regular-session charts closed at $131.24. The October 23 quote is below the repeated $125–129 trading area from late September and early October. A reclaim and sustained hold would strengthen a stabilization case; $133–137 contains recent swing highs. Failure to reclaim the old floor leaves downside risk unresolved. No guaranteed support or price target is asserted, and a low RSI alone does not confirm a bottom.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "height": 1200,
+        "title": "Financials",
+        "alt": "CBRE Group (CBRE) financials research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CBRE%2F1%2F47d6715df8dc332e97e31a24746dcf442ae64b6074323a2e5bbafc0159719e87-81236ba0-298e-4e9e-8140-3794a3ad114f%2FFinancials.jpg?alt=media&token=81236ba0-298e-4e9e-8140-3794a3ad114f",
+        "width": 1200
+      },
+      {
+        "height": 1200,
+        "title": "Technicals",
+        "alt": "CBRE Group (CBRE) technicals research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CBRE%2F2%2F2c41ec0e23fdba790e4654d9cd0b6df2bc3cc48f1c6795e641c23ecc8e3c5cca-31ba6889-0997-490c-ad16-3e6e909845d9%2FTechnicals.jpg?alt=media&token=31ba6889-0997-490c-ad16-3e6e909845d9",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — ir.cbre.com",
+        "url": "https://ir.cbre.com/financial-reports/sec-filings/content/0001138118-26-000028/cbre-20261022x8kexx991.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000005/cbre-20251231.htm"
+      },
+      {
+        "title": "Financial data and estimates — ir.cbre.com",
+        "url": "https://ir.cbre.com/financial-reports/sec-filings/content/0001138118-26-000031/cbre-20260930.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001138118.json"
+      },
+      {
+        "title": "Financial data and estimates — www.cbre.com",
+        "url": "https://www.cbre.com/press-releases/cbre-expands-critical-infrastructure-capabilities-europe-asia-pacific-onnec-acquisition"
+      },
+      {
+        "title": "Financial data and estimates — ir.jll.com",
+        "url": "https://ir.jll.com/news-releases/press-release-details/2026/JLL-Announces-Details-of-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CBRE?range=5y&interval=1d&events=splits"
+      },
+      {
+        "title": "Financial data and estimates — ir.cbre.com",
+        "url": "https://ir.cbre.com/"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "ttmPE": 28.10278490217646,
+      "industry": "COMMERCIAL REAL ESTATE & INFRASTRUCTURE SERVICES",
+      "forwardYear": 2026,
+      "forwardPE": null,
+      "marketCapB": 37.822877958069306,
+      "annualRevenueB": 40.55,
+      "rsi14": 45.13943327561697,
+      "atr14": 4.42582813708019,
+      "priceDate": "2026-10-22",
+      "fiscalLabel": "FY2025",
+      "close": 131.24000549316406,
+      "business": "Earns leasing, transaction, building-services, project and investment fees."
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcbre%2F812279772a33220a66320a8f26c39863acf8c621c35856a49f7c805d4387a15a.jpg?alt=media&token=f0fb6dea-8fa2-41b5-9cf3-6df00746615c",
+      "width": 1920,
+      "height": 1671,
+      "alt": "Former CBRE headquarters building at Westwood Gateway, Los Angeles",
+      "caption": "Archive photograph of a former CBRE headquarters at Westwood Gateway in Los Angeles, June 16, 2012. It does not depict the current earnings event or the Dallas headquarters.",
+      "credit": "Coolcaesar at English Wikipedia",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CBRE_LA_headquarters.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "dateTaken": "2012-06-16",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_CCI",
+    "postId": "research_mover_20261023_CCI",
+    "slug": "why-crown-castle-cci-stock-is-up-premarket-2026-10-23",
+    "title": "Why Crown Castle (CCI) Stock Is Up In Pre-Market Trading",
+    "symbol": "CCI",
+    "companyName": "Crown Castle",
+    "sessionDate": "2026-10-23",
+    "marketSession": "premarket",
+    "regularClose": 78.83,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 15.679309907395655,
+    "quoteAsOf": "2026-10-23T13:27:10.000Z",
+    "quotePrice": 91.19,
+    "publishedAt": "2026-10-23T13:48:03.302902+00:00",
+    "updatedAt": "2026-10-23T13:48:03.302902+00:00",
+    "summary": "Crown Castle (CCI) was up 15.68% in the October 23, 2026 pre-market snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Reported SpaceX discussions are the immediate news context for Crown Castle’s pre-market rally; Crown Castle was named in the reporting, but no signed lease or quantified financial benefit has been verified.",
+    "earningsPeriod": null,
+    "recap": [
+      "Crown Castle rose 15.68% to $91.19 in pre-market trading on October 23 at 9:27 AM Eastern, versus its $78.83 October 22 close, following reports of SpaceX tower-access talks.",
+      "SpaceX is reportedly seeking access to at least 80,000 U.S. cell sites, with Crown Castle named as a party in discussions rather than an announced signed agreement.",
+      "A new nationwide wireless tenant could increase leasing demand across existing towers, but the timing, commercial terms and eventual revenue remain unknown.",
+      "Crown Castle released Q3 results on October 21, reporting continuing-operations revenue of $995 million and site-rental revenue of $966 million versus $1.012 billion a year earlier.",
+      "Management raised its 2026 site-rental revenue midpoint to $3.875 billion and its adjusted funds from operations outlook to $4.60 per share.",
+      "The completed October 22 technical chart shows a $78.83 close above the 20-day and 50-day averages of $73.83 and $74.27, with RSI at 59.7.",
+      "The pre-market gap cleared the prior $82–$83.50 resistance zone, making a sustained hold above that area more informative than the initial headline spike.",
+      "Talks can fail to become leases, so confirmed tenant commitments and the ability to hold the gap matter more than assuming the reported network plan is already revenue."
+    ],
+    "setup": "The pre-market gap cleared the prior $82–$83.50 resistance zone, making a sustained hold above that area more informative than the initial headline spike. Talks can fail to become leases, so confirmed tenant commitments and the ability to hold the gap matter more than assuming the reported network plan is already revenue.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "height": 1200,
+        "alt": "Crown Castle (CCI) financials research infographic",
+        "title": "Financials",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CCI%2F1%2F1f7eea72f2de5db0ad100c7d4f53d99cad3eba222b3e3b4f57d72e487e805400-5b4c2413-6f17-4bb5-9066-fb35684ec8e2%2FFinancials.jpg?alt=media&token=5b4c2413-6f17-4bb5-9066-fb35684ec8e2"
+      },
+      {
+        "height": 1200,
+        "alt": "Crown Castle (CCI) technicals research infographic",
+        "title": "Technicals",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CCI%2F2%2F95fd69d8c1e24634ec3c42e22d92b3195e55d365e8c7ffec29447dd711de42be-de09a0f4-a7bf-4dc9-8e72-8f86b27a18b2%2FTechnicals.jpg?alt=media&token=de09a0f4-a7bf-4dc9-8e72-8f86b27a18b2"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.crowncastle.com/investors/current10k.pdf",
+        "title": "Financial data and estimates — www.crowncastle.com"
+      },
+      {
+        "url": "https://investor.crowncastle.com/node/29361",
+        "title": "Financial data and estimates — investor.crowncastle.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/cci/statistics/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://www.investing.com/news/stock-market-news/spacex-seeks-access-to-80000-us-cell-sites-for-wireless-network-bloomberg-news-reports-4967805",
+        "title": "Financial data and estimates — www.investing.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/cci/financials/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "industry": "COMMUNICATION INFRASTRUCTURE / REIT",
+      "annualRevenueB": 4.264,
+      "priceDate": "2026-10-22",
+      "rsi14": 59.66822571475766,
+      "close": 78.83000183105469,
+      "forwardYear": 2026,
+      "forwardPE": null,
+      "atr14": 2.695194989350406,
+      "marketCapB": 33.53901257904053,
+      "fiscalLabel": "FY2025",
+      "ttmPE": null,
+      "business": "Leases space on approximately 40,000 U.S. wireless towers."
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcci%2Fd4593c2ae5888cb8c6591663782106d89177a33a9f9d9d4a294de980e07c1955.jpg?alt=media&token=ada700c5-d208-49a0-9f55-f4160d30388e",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Wireless antennas on a cell tower",
+      "caption": "Archive cell-tower photograph taken September 27, 2016, illustrative of wireless infrastructure; not identified as this company’s property or a SpaceX project.",
+      "credit": "Corey Coyle",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cell_Tower_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dateTaken": "Taken on 27 September 2016",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_CRWD",
+    "postId": "research_mover_20261023_CRWD",
+    "slug": "why-crowdstrike-crwd-stock-is-up-today-2026-10-23",
+    "title": "Why CrowdStrike (CRWD) Stock Is Up Today: Q2 FY2027 Earnings",
+    "symbol": "CRWD",
+    "companyName": "CrowdStrike",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 6.182226611750874,
+    "quoteAsOf": "2026-10-23T17:06:25.000Z",
+    "quotePrice": 252.64999,
+    "publishedAt": "2026-10-23T17:10:54.285477+00:00",
+    "updatedAt": "2026-10-23T17:10:54.285477+00:00",
+    "summary": "CrowdStrike (CRWD) was up 6.18% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The regular-session rally follows CrowdStrike’s October 21 announcement of an expanded NVIDIA collaboration. The issuer described current OpenShell integration work and planned Sentry integration, without disclosing booked revenue for the collaboration. It is relevant prior news, but the price move does not prove how much it contributed to today’s buying. The latest verified earnings are the August 26 release for the quarter ended July 31; no new October 23 earnings release or numerical consensus beat is asserted.",
+    "earningsPeriod": "Q2 FY2027",
+    "recap": [
+      "CrowdStrike traded at $253.16, up 6.40% in the regular session on October 23, 2026 at 12:51 PM Eastern, compared with the previous regular close.",
+      "An October 21 announcement expanded the NVIDIA collaboration: Falcon Guardian is being integrated with OpenShell, while integration with NVIDIA Sentry is planned. No booked contract revenue was disclosed.",
+      "The company primarily sells subscriptions to its Falcon cybersecurity platform, with additional professional-services revenue. Retention, customer expansion and adoption of more security modules drive its business.",
+      "The latest reported quarter ended July 31 and was released August 26: revenue was about $1.47 billion, GAAP diluted EPS was $0.01 and non-GAAP diluted EPS was $0.31 on the split-adjusted basis.",
+      "Ending annual recurring revenue was $5.84 billion, up 25% year on year; ARR is a recurring-contract metric and must not be treated as quarterly recognized revenue.",
+      "That quarter generated $530.3 million of operating cash flow and $377.4 million of free cash flow. Cash generation and non-GAAP earnings differ from GAAP operating profitability.",
+      "Competition, valuation, stock-based compensation, incident-related costs and execution of planned AI-security integrations remain risks; sector enthusiasm is not evidence of guaranteed sales or a proven cause for today’s rally.",
+      "Completed October 22 charts closed at $237.94; today’s quote is above the recent $243–248 supply area. A sustained hold and retest would strengthen the rebound, while losing that area would weaken it."
+    ],
+    "setup": "The completed October 22 session closed at $237.94, below the recent $243–248 supply band. The October 23 saved quote is above that band; a sustained closing hold and successful retest would strengthen the rebound. Losing $243 would weaken the initial recovery. The prior $221–229 demand zone comes from October 16–20 lows and closes. These are approximate observations, not guaranteed support, targets or probabilities. Today’s incomplete trading is excluded from the technical candles and indicators.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "height": 1200,
+        "alt": "CrowdStrike (CRWD) financials research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CRWD%2F1%2Fea71b226028157ef390a8796ade7dcfd67c78a6f7bff389491557e774b1fe844-d1d36497-597d-49b0-90e1-a4e4b4b1132d%2FFinancials.jpg?alt=media&token=d1d36497-597d-49b0-90e1-a4e4b4b1132d",
+        "title": "Financials"
+      },
+      {
+        "height": 1200,
+        "alt": "CrowdStrike (CRWD) technicals research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_CRWD%2F2%2F3e9bc35e1f7bac5262448cb417f51ccd6821d8e34853206fa17703d30b45854b-eb619d32-29ad-499d-a726-65f1d5bb3d73%2FTechnicals.jpg?alt=media&token=eb619d32-29ad-499d-a726-65f1d5bb3d73",
+        "title": "Technicals"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-nvidia-expand-ai-agent-security-software-silicon/",
+        "title": "Financial data and estimates — www.crowdstrike.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000029/crwd-20260826xex991.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001535527.json",
+        "title": "Issuer filing / earnings release — data.sec.gov"
+      },
+      {
+        "url": "https://ir.crowdstrike.com/static-files/f774ef12-cf94-48bf-ace2-c7f3dcf8ec97",
+        "title": "Financial data and estimates — ir.crowdstrike.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CRWD?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "rsi14": 45.84086402267403,
+      "close": 237.94000244140625,
+      "annualRevenueB": 4.812005,
+      "forwardYear": 2026,
+      "forwardPE": null,
+      "marketCapB": 243.63505880532094,
+      "atr14": 12.11567989871786,
+      "fiscalLabel": "FY2026",
+      "priceDate": "2026-10-22",
+      "ttmPE": null,
+      "business": "Sells Falcon security subscriptions, cloud modules and professional services.",
+      "industry": "CYBERSECURITY SOFTWARE & CLOUD SERVICES"
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcrwd%2F705beb4feef54416a1d6381fdf4730c4168bad392876af17e7f70f45e2bfe0aa.jpg?alt=media&token=454e5800-8577-40fd-842c-e64940f9f00f",
+      "width": 1920,
+      "height": 1319,
+      "alt": "Office building at 150 Mathilda Place in Sunnyvale associated with CrowdStrike",
+      "caption": "Archive photograph of CrowdStrike’s former headquarters and Silicon Valley office at 150 Mathilda Place in Sunnyvale, California, October 19, 2024. It does not depict the current announcement.",
+      "credit": "Coolcaesar",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:150_Mathilda_Place.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dateTaken": "2024-10-19 15:24:47",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_DDOG",
+    "postId": "research_mover_20261023_DDOG",
+    "slug": "why-datadog-ddog-stock-is-up-today-2026-10-23",
+    "title": "Why Datadog (DDOG) Stock Is Up Today: Q2 2026 Earnings",
+    "symbol": "DDOG",
+    "companyName": "Datadog",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 5.7284228903976775,
+    "quoteAsOf": "2026-10-23T17:51:55.000Z",
+    "quotePrice": 272.51501,
+    "publishedAt": "2026-10-23T18:08:40.719278+00:00",
+    "updatedAt": "2026-10-23T18:08:40.719278+00:00",
+    "summary": "Datadog (DDOG) was up 5.73% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The October 23 regular-session rally comes ahead of the issuer-confirmed November 4 Q3 earnings date. Recent reporting documents Bernstein’s October 19 upgrade from Market Perform to Outperform with a $350 analyst target, reflecting optimism about AI-related cloud-monitoring demand. This is dated analyst context rather than a new issuer contract or a proven explanation for today’s buying. The latest verified financial results were released August 6 for Q2 ended June 30; no new October 23 earnings, signed AI contract, numerical consensus surprise or certain price outcome is claimed.",
+    "earningsPeriod": "Q2 2026",
+    "recap": [
+      "Datadog traded at $272.52, up 5.73% in the regular session on October 23, 2026 at 1:51 PM Eastern, compared with the previous regular close.",
+      "An October 19 Bernstein upgrade to Outperform, with a $350 analyst target, is relevant recent context around AI demand. It is an analyst opinion, not a company forecast, and does not establish the cause of today’s move.",
+      "Datadog sells cloud monitoring and security subscriptions. Customers can expand usage and add products across infrastructure, applications, logs and security; stronger AI workloads can create opportunity without guaranteeing incremental sales.",
+      "The latest reported quarter ended June 30 and was released August 6: revenue was $1.121 billion, up 36% year on year, with GAAP diluted EPS of $0.12 and non-GAAP diluted EPS of $0.65. Revenue growth is not a consensus beat.",
+      "Quarterly operating cash flow was $316 million and free cash flow was $279 million. About 4,720 customers had at least $100,000 of annual recurring revenue, up 23% year on year; this customer threshold is not recognized quarterly revenue.",
+      "As of August 6, Q3 guidance was $1.135–$1.145 billion of revenue and $0.63–$0.65 of non-GAAP EPS. The company confirmed November 4 before the market open for results, with an 8:00 AM Eastern call; no new earnings release is asserted today.",
+      "Valuation, customer spending optimization, competition and stock-based compensation remain risks. The gap between roughly $5 million of GAAP operating income and $257 million on a non-GAAP basis shows why accounting definitions matter.",
+      "Completed October 22 charts closed at $257.75; today’s quote has returned to the recent $270–278 supply area. Sustained closes above that band would strengthen the rebound, while losing the $253–260 demand area would weaken it."
+    ],
+    "setup": "Completed October 22 charts closed at $257.75 after a sharp daily fall; October 23’s saved regular-session quote is $272.51501, back in the recent $270–278 supply band. A sustained close above that area and successful retest would strengthen the recovery. Losing the $253–260 prior demand zone would weaken it. The zones come from repeated October lows, closes and supply; they are approximate observations, not targets or guarantees. Incomplete October 23 bars are excluded from chart indicators.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_DDOG%2F1%2F31133353e20224047eee1b4ebb4fca1023fc24a5e228651a027ff7b4f0bb3f33-42ab08ec-d4cc-4742-bc2c-58de42ecd0d7%2FFinancials.jpg?alt=media&token=42ab08ec-d4cc-4742-bc2c-58de42ecd0d7",
+        "height": 1200,
+        "width": 1200,
+        "alt": "Datadog (DDOG) financials research infographic"
+      },
+      {
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_DDOG%2F2%2Ff7b45d26de2194049eb35242a02ac093009084dd272b21412a78fade48ee6e9f-848e4db7-d9d9-4e0a-a8c2-b72aac256037%2FTechnicals.jpg?alt=media&token=848e4db7-d9d9-4e0a-a8c2-b72aac256037",
+        "height": 1200,
+        "width": 1200,
+        "alt": "Datadog (DDOG) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026053829/ex-991x20260630x8k.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026008819/ddog-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026054458/ddog-20260630.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001561550.json"
+      },
+      {
+        "title": "Financial data and estimates — investors.datadoghq.com",
+        "url": "https://investors.datadoghq.com/news-releases/news-release-details/datadog-announces-date-third-quarter-fiscal-year-2026-earnings"
+      },
+      {
+        "title": "Financial data and estimates — www.benzinga.com",
+        "url": "https://www.benzinga.com/quote/ddog"
+      },
+      {
+        "title": "Financial data and estimates — stockstory.org",
+        "url": "https://stockstory.org/us/stocks/nasdaq/ddog/news/why-up-down/datadog-ddog-stock-is-up-what-you-need-to-know-2"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/DDOG?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "industry": "CLOUD OBSERVABILITY & SECURITY SOFTWARE",
+      "fiscalLabel": "FY2025",
+      "atr14": 14.16241804610105,
+      "close": 257.75,
+      "business": "Sells subscriptions for monitoring cloud infrastructure, applications, logs and security.",
+      "ttmPE": 515.4999999999999,
+      "marketCapB": 92.551587436,
+      "forwardYear": 2026,
+      "annualRevenueB": 3.427158,
+      "forwardPE": null,
+      "priceDate": "2026-10-22",
+      "rsi14": 48.070097894348685
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fddog%2F7463f7560d648938c5137627ca0552ccd6869e2d1557481437a80322cea1a1c6.jpg?alt=media&token=c457f69a-ca28-4229-8d7f-88e3003b980e",
+      "width": 1920,
+      "height": 1272,
+      "alt": "Datadog display at an AWS Toronto technology summit",
+      "caption": "Archive photograph of a Datadog booth at the AWS Toronto Summit on September 20, 2018; this event image does not depict the current trading session.",
+      "credit": "Raysonho @ Open Grid Scheduler / Grid Engine",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:DatadogAWSTorontoSummit.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dateTaken": "2018-09-20 10:36:37",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_FIX",
+    "postId": "research_mover_20261023_FIX",
+    "slug": "why-comfort-systems-usa-fix-stock-is-down-today-2026-10-23",
+    "title": "Why Comfort Systems USA (FIX) Stock Is Down Today: Q3 2026 Earnings",
+    "symbol": "FIX",
+    "companyName": "Comfort Systems USA",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -6.998369509993196,
+    "quoteAsOf": "2026-10-23T15:22:39.000Z",
+    "quotePrice": 1189.83496,
+    "publishedAt": "2026-10-23T15:44:04.818920+00:00",
+    "updatedAt": "2026-10-23T15:44:56.045868+00:00",
+    "summary": "Comfort Systems USA (FIX) was down 7.00% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The regular-session decline follows the October 22 release of third-quarter results and a planned CFO succession announcement. Revenue and GAAP earnings rose substantially; management described robust demand and expected organic growth through year-end and into 2027, without a quantified EPS forecast in the verified release. These events are context, not proof of the cause of the decline. Consensus definitions were not independently matched, so no numerical beat or miss is claimed.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Comfort Systems USA traded at $1,189.83, down 7.00% in the regular session on October 23, 2026 at 11:22 AM Eastern, versus the previous close.",
+      "Third-quarter results released October 22 showed revenue of $3.766 billion and GAAP diluted EPS of $13.91, versus $2.451 billion and $8.25 a year earlier.",
+      "The contractor installs and services mechanical, electrical, plumbing and modular building systems; project execution and skilled labor determine how orders become profit.",
+      "Backlog reached $17.81 billion at September 30, up from $14.06 billion in June; order cancellations, timing and labor capacity can still affect conversion.",
+      "Operating cash flow was approximately $1.01 billion in the quarter, while September cash of $2.158 billion exceeded reported debt of about $49.6 million.",
+      "CFO Bill George plans to retire after the annual filing for 2026, with chief accounting officer Julie Shaeff succeeding him; that transition is confirmed, its share-price impact is not.",
+      "October 22 completed charts show a $1,279.37 close below both key moving averages; the current quote has fallen through the prior $1,261 low, so old support requires reassessment.",
+      "Watch backlog conversion, project margins and the scheduled EMCOR October 29 results for peer context; the precise cause of this selloff is not established and a rebound needs price confirmation."
+    ],
+    "setup": "The October 22 completed daily chart closed at $1,279.37. The October 23 regular-session quote is below the prior $1,260.81 low. A sustained reclaim of $1,280 would be an initial stabilization condition; $1,390–1,450 is overhead supply from October 20–21. Continued trading below the broken floor leaves downside open; no unsupported lower target is assigned. Confirm with subsequent closes and volume.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "title": "Financials",
+        "alt": "Comfort Systems USA (FIX) financials research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_FIX%2F1%2Fa31075e5887fe160026880b94dfd7373ac2b8ae019d78daebbe77120a7e2c61d-735eb3c9-40af-4b1a-9d0a-f5d355b5c8bc%2FFinancials.jpg?alt=media&token=735eb3c9-40af-4b1a-9d0a-f5d355b5c8bc",
+        "height": 1200
+      },
+      {
+        "title": "Technicals",
+        "alt": "Comfort Systems USA (FIX) technicals research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_FIX%2F2%2Fb7cf144ad23f7622278aab007516aac2bbe7aec38d84b18cc41516e5927a89c0-adb76af7-c0bf-4672-a92b-77df21576ac7%2FTechnicals.jpg?alt=media&token=adb76af7-c0bf-4672-a92b-77df21576ac7",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926118156/fix-ex99d1.htm"
+      },
+      {
+        "title": "Financial data and estimates — investors.comfortsystemsusa.com",
+        "url": "https://investors.comfortsystemsusa.com/static-files/8706afb9-18da-40fb-8674-31fe1a5ee0ec"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926017530/fix-20251231x10k.htm"
+      },
+      {
+        "title": "Financial data and estimates — investors.comfortsystemsusa.com",
+        "url": "https://investors.comfortsystemsusa.com/node/13306"
+      },
+      {
+        "title": "Financial data and estimates — comfortsystemsusa.gcs-web.com",
+        "url": "https://comfortsystemsusa.gcs-web.com/news-releases/news-release-details/comfort-systems-announces-2027-leadership-transition"
+      },
+      {
+        "title": "Financial data and estimates — emcorgroup.com",
+        "url": "https://emcorgroup.com/investor-relations/press-releases/2026-news/emcor-group-inc-sets-third-quarter-2026-earnings-release-date-and-webcast"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/FIX?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "marketCapB": 44.75991582965039,
+      "atr14": 82.5443961541602,
+      "close": 1279.3699951171875,
+      "ttmPE": 27.63218132002565,
+      "annualRevenueB": 9.101641,
+      "fiscalLabel": "FY2025",
+      "forwardYear": 2026,
+      "industry": "MECHANICAL & ELECTRICAL CONTRACTING",
+      "forwardPE": null,
+      "priceDate": "2026-10-22",
+      "business": "Installs and services mechanical, electrical and plumbing building systems.",
+      "rsi14": 25.316368702513913
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ffix%2Fe8a50f4f64f7e67f90b60e65d8711671f97e08717a7d76d239e0264c632812da.jpg?alt=media&token=17e0bb64-e5f9-4b6b-a81e-85f0f28c9e23",
+      "width": 1471,
+      "height": 974,
+      "alt": "Rooftop packaged heating and cooling equipment",
+      "caption": "Illustrative archive photo of rooftop HVAC equipment, August 2009; not identified as a Comfort Systems USA installation or the current earnings event.",
+      "credit": "P199",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rooftop_Packaged_Units.JPG",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "dateTaken": "2009-08",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_GL",
+    "postId": "research_mover_20261023_GL",
+    "slug": "why-globe-life-gl-stock-is-down-today-2026-10-23",
+    "title": "Why Globe Life (GL) Stock Is Down Today: Q3 2026 Earnings",
+    "symbol": "GL",
+    "companyName": "Globe Life",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -6.775132118045246,
+    "quoteAsOf": "2026-10-23T16:24:00.000Z",
+    "quotePrice": 157,
+    "publishedAt": "2026-10-23T16:32:55.465228+00:00",
+    "updatedAt": "2026-10-23T16:32:55.465228+00:00",
+    "summary": "Globe Life (GL) was down 6.78% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The decline occurs after Globe Life’s October 21 third-quarter release and October 22 results call. The company reduced its 2026 earnings guidance range from July and described health-claims pressures. Those verified developments provide relevant context, but do not identify the exact cause of the October 23 move. No numerical consensus beat or miss is asserted because matching dated expectations were not independently verified.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Globe Life traded at $157.00, down 6.78% in the regular session on October 23, 2026 at 12:24 PM Eastern, compared with the previous regular close.",
+      "Third-quarter results released October 21 showed $1.596 billion total revenue, GAAP diluted EPS of $4.62 and non-GAAP net operating EPS of $4.84; the two earnings measures differ.",
+      "The insurer sells basic life and supplemental health protection to middle-income customers through agencies and direct channels. Premiums fund insurance obligations, while invested assets also generate income.",
+      "Premium revenue increased 7% year on year, but health claims were a pressure point. Management identified high-severity Evry claims and delayed Medicare processing as factors affecting quarterly results.",
+      "The 2026 earnings guidance range moved to $15.35–$15.65 from July’s $15.55–$15.95, a $0.25 reduction at the midpoint. Guidance remains an estimate, not a promised result.",
+      "Claims severity, policy lapses, reserve assumptions, investment credit exposure and legal or regulatory costs remain risks; favorable premium growth does not eliminate underwriting uncertainty.",
+      "October 22 completed charts closed at $168.41. The current quote is below the recent $161–164 trading area, so a sustained reclaim would matter more than assuming the old floor will hold.",
+      "Aflac’s calendar currently lists its third-quarter release for November 4, a future supplemental-insurance peer checkpoint. Watch claims normalization and earnings quality; the observed decline does not establish one proven cause."
+    ],
+    "setup": "The October 22 completed session closed at $168.41 after trading as low as $161.52. The October 23 saved quote is below the recent $161–164 area, which includes October7–9 lows and the October22 low. A sustained reclaim would improve stabilization evidence; $168–171 includes repeated October highs and closes. Failure to reclaim leaves downside unresolved. These are observations and conditional scenarios, not guaranteed support or price targets.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_GL%2F1%2Fe6553cb81bc5cd60fca3e694c40c1114c9e827d8d9692c385831ea7af71ca9f2-cb742767-21b9-429c-8d61-b31a72651837%2FFinancials.jpg?alt=media&token=cb742767-21b9-429c-8d61-b31a72651837",
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Globe Life (GL) financials research infographic",
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_GL%2F2%2F5e8dfb30d495bdddc163b0d84a5013584fa7bbdfb491ceeac54e853b4762d263-f1e0cbab-37ff-4f6b-8540-c0ec14f34b19%2FTechnicals.jpg?alt=media&token=f1e0cbab-37ff-4f6b-8540-c0ec14f34b19",
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Globe Life (GL) technicals research infographic",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — investors.globelifeinsurance.com",
+        "url": "https://investors.globelifeinsurance.com/news-releases/2026/october/globe-life-inc-reports-third-quarter-2026-results"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/320335/000032033526000224/q3fy2026earningsrelease.htm"
+      },
+      {
+        "title": "Financial data and estimates — investors.globelifeinsurance.com",
+        "url": "https://investors.globelifeinsurance.com/news-releases/2026/july/globe-life-inc-reports-second-quarter-2026-results"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/320335/000032033526000090/gl-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/320335/000032033526000216/gl-20260630.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320335.json"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/GL?range=5y&interval=1d&events=splits"
+      },
+      {
+        "title": "Financial data and estimates — investors.aflac.com",
+        "url": "https://investors.aflac.com/events-and-presentations/events-calendar/default.aspx"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "industry": "LIFE & SUPPLEMENTAL HEALTH INSURANCE",
+      "close": 168.41000366210938,
+      "forwardYear": 2026,
+      "fiscalLabel": "FY2025",
+      "rsi14": 49.95334504095119,
+      "annualRevenueB": 5.994318,
+      "marketCapB": 12.94221565070108,
+      "atr14": 3.286317737428257,
+      "business": "Collects protection premiums and earns investment income on insurance assets.",
+      "priceDate": "2026-10-22",
+      "forwardPE": null,
+      "ttmPE": 11.272423270556182
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fgl%2Fb5c3e1ebab4c811dac23dec8a64e1c4ddc693da1ec6cc018244f583418d2b666.jpg?alt=media&token=1106a5d2-b160-4251-bb81-1db89f700427",
+      "width": 1920,
+      "height": 1547,
+      "alt": "Globe Life Field exterior and name signage in Arlington",
+      "caption": "Archive view of Globe Life Field in Arlington, Texas, April 8, 2025. The ballpark carries the insurer’s naming-rights brand; it is not an insurance office or an image of the current earnings event.",
+      "credit": "BullDawg2021",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Globe_Life_Field_exterior_2025.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dateTaken": "2025-04-08 13:45:26",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_SBAC",
+    "postId": "research_mover_20261023_SBAC",
+    "slug": "why-sba-communications-sbac-stock-is-up-premarket-2026-10-23",
+    "title": "Why SBA Communications (SBAC) Stock Is Up In Pre-Market Trading",
+    "symbol": "SBAC",
+    "companyName": "SBA Communications",
+    "sessionDate": "2026-10-23",
+    "marketSession": "premarket",
+    "regularClose": 178.39,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 10.638881103200859,
+    "quoteAsOf": "2026-10-23T13:27:50.000Z",
+    "quotePrice": 197.3687,
+    "publishedAt": "2026-10-23T13:50:36.796110+00:00",
+    "updatedAt": "2026-10-23T13:50:36.796110+00:00",
+    "summary": "SBA Communications (SBAC) was up 10.64% in the October 23, 2026 pre-market snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "SBA Communications is participating in a tower-sector rally following reported SpaceX cell-site discussions; incremental tenant demand is an inference, and no SBA-specific award was verified.",
+    "earningsPeriod": null,
+    "recap": [
+      "SBA Communications rose 10.64% to $197.37 in pre-market trading on October 23 at 9:27 AM Eastern, versus its $178.39 October 22 close, joining the tower-sector rally on reported SpaceX plans.",
+      "SpaceX is reportedly exploring access to at least 80,000 U.S. cell sites, creating speculation about additional leasing demand for tower owners.",
+      "No new SBA Communications agreement was verified, so its move is best framed as potential sector exposure rather than a confirmed contract win.",
+      "SBA reported Q2 2026 site-leasing revenue of $663.9 million, up 5.1%, while site-development revenue declined 23.5% to $51.4 million.",
+      "Q2 adjusted funds from operations per share declined 3.8% to $3.05 as cash interest expense rose 9.5% to $122.1 million.",
+      "The October 22 close of $178.39 stood above the 20-day average of $172.84 but below the 50-day average of $179.14, with RSI at 51.6.",
+      "The pre-market quote cleared the prior $185–$188.50 resistance zone, and maintaining that breakout would strengthen the setup after the earlier $172–$175 support test.",
+      "Additional tenants could improve tower economics, but signed leases, financing costs and post-open price confirmation will determine whether this rally develops into a durable improvement."
+    ],
+    "setup": "The pre-market quote cleared the prior $185–$188.50 resistance zone, and maintaining that breakout would strengthen the setup after the earlier $172–$175 support test. Additional tenants could improve tower economics, but signed leases, financing costs and post-open price confirmation will determine whether this rally develops into a durable improvement.",
+    "technicalDate": "October 22, 2026",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_SBAC%2F1%2F5a480a821f7ae5fd243facd5260ad82f156521b100f6fba74c851b5bd059595c-72f1f48f-8f63-4092-9390-5dd0ad645c66%2FFinancials.jpg?alt=media&token=72f1f48f-8f63-4092-9390-5dd0ad645c66",
+        "alt": "SBA Communications (SBAC) financials research infographic",
+        "height": 1200,
+        "title": "Financials",
+        "width": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_SBAC%2F2%2F07a254589abffd4c2af4b4db7e2e69b83f5b6b47ae1fc14da76515f99f1a42ac-daf86265-0e51-444e-ae56-31373e076702%2FTechnicals.jpg?alt=media&token=daf86265-0e51-444e-ae56-31373e076702",
+        "alt": "SBA Communications (SBAC) technicals research infographic",
+        "height": 1200,
+        "title": "Technicals",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1034054/000103405426000002/sbac-20251231x10k.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://ir.sbasite.com/news-events/press-releases/news-details/2026/SBA-Communications-Corporation-Reports-Second-Quarter-2026-Results-Updates-Full-Year-2026-Outlook-and-Declares-Quarterly-Cash-Dividend/default.aspx",
+        "title": "Financial data and estimates — ir.sbasite.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/sbac/statistics/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://stockanalysis.com/stocks/sbac/financials/",
+        "title": "Financial data and estimates — stockanalysis.com"
+      },
+      {
+        "url": "https://www.investing.com/news/stock-market-news/spacex-seeks-access-to-80000-us-cell-sites-for-wireless-network-bloomberg-news-reports-4967805",
+        "title": "Financial data and estimates — www.investing.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 6.034386266658429,
+      "marketCapB": 18.871626862311764,
+      "annualRevenueB": 2.815139,
+      "fiscalLabel": "FY2025",
+      "rsi14": 51.56639260874112,
+      "ttmPE": 19.223060279056945,
+      "forwardYear": 2026,
+      "industry": "COMMUNICATION INFRASTRUCTURE / REIT",
+      "priceDate": "2026-10-22",
+      "forwardPE": null,
+      "business": "Owns and leases wireless towers and provides site-development services.",
+      "close": 178.38999938964844
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fsbac%2Fd4593c2ae5888cb8c6591663782106d89177a33a9f9d9d4a294de980e07c1955.jpg?alt=media&token=7193af2d-f676-4533-abbf-90bd87d75c73",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Wireless antennas on a cell tower",
+      "caption": "Archive cell-tower photograph taken September 27, 2016, illustrative of wireless infrastructure; not identified as this company’s property or a SpaceX project.",
+      "credit": "Corey Coyle",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cell_Tower_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dateTaken": "Taken on 27 September 2016",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_SLB",
+    "postId": "research_mover_20261023_SLB",
+    "slug": "why-slb-slb-stock-is-up-today-2026-10-23",
+    "title": "Why SLB (SLB) Stock Is Up Today: Q3 2026 Earnings",
+    "symbol": "SLB",
+    "companyName": "SLB",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 6.70030272452069,
+    "quoteAsOf": "2026-10-23T15:52:10.000Z",
+    "quotePrice": 52.87,
+    "publishedAt": "2026-10-23T15:59:57.587905+00:00",
+    "updatedAt": "2026-10-23T15:59:57.587905+00:00",
+    "summary": "SLB (SLB) was up 6.70% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The regular-session rally follows SLB’s October 23 third-quarter earnings release. Sequential activity improved, while acquisition effects and charges complicate comparisons. Management described stronger international prospects for 2027; that is an outlook, not a guaranteed result. The release is verified before the saved quote. Matching dated consensus definitions were not independently verified, so no numerical beat or miss is asserted.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "SLB traded at $52.91, up 6.78% in the regular session on October 23, 2026 at 11:22 AM Eastern, versus the previous regular close.",
+      "Third-quarter results released October 23 showed $9.449 billion revenue, GAAP diluted EPS of $0.49 and EPS excluding charges and credits of $0.64; those earnings measures are different.",
+      "The energy-services company earns from reservoir evaluation, drilling and well construction, production equipment, subsea systems and digital software; customer spending and project execution drive demand.",
+      "Revenue rose 5% sequentially and 6% year on year, but only 2% year on year excluding the ChampionX acquisition effect; adjusted EPS still declined 7% year on year.",
+      "Quarterly operating cash flow was $1.51 billion and free cash flow was $828 million; the two measures should not be treated as interchangeable earnings.",
+      "The agreed Kelvion acquisition remains subject to approvals and closing conditions, with closing expected in the first half of 2027; it is not a completed acquisition.",
+      "October 22 completed charts closed at $49.55; the current quote has moved above the prior $51–52 supply area, making a sustained hold and subsequent retest more useful than assuming a breakout is secure.",
+      "Halliburton’s October 20 results provide oilfield-services context, while SLB investors should watch international activity, integration and geopolitical disruptions; the observed rally cannot prove which factor buyers favored."
+    ],
+    "setup": "The completed October 22 regular session closed at $49.55. The October 23 quote is above the recent $51–52 supply band; a sustained close above $52 and successful retest would strengthen the setup. A reversal below $51 would weaken the initial rally, with $48–49 a prior trading base. These are conditional observations from completed candles, not guaranteed support or price targets.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "alt": "SLB (SLB) financials research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_SLB%2F1%2F0699d916b6b59c522d27c6c8fd21b2431da59359aa6c120be35a4b19dd765605-d24acffc-9550-41f7-b6d5-4ba0c20f7853%2FFinancials.jpg?alt=media&token=d24acffc-9550-41f7-b6d5-4ba0c20f7853",
+        "title": "Financials",
+        "height": 1200,
+        "width": 1200
+      },
+      {
+        "alt": "SLB (SLB) technicals research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_SLB%2F2%2Fea6545b06fb4077428c9c0d77f5ceaf55da0e725412582eb0ca55a4f50b5607b-6c1788f0-a909-4808-801e-6a1a7b922145%2FTechnicals.jpg?alt=media&token=6c1788f0-a909-4808-801e-6a1a7b922145",
+        "title": "Technicals",
+        "height": 1200,
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526429435/d151271dex99.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://investorcenter.slb.com/news-releases/news-release-details/slb-announces-third-quarter-2026-results",
+        "title": "Financial data and estimates — investorcenter.slb.com"
+      },
+      {
+        "url": "https://www.slb.com/newsroom/press-release/2026/pr-2026-0928-q3-earnings-call-announcement",
+        "title": "Financial data and estimates — www.slb.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/87347/000119312526021017/slb-20251231.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000087347.json",
+        "title": "Issuer filing / earnings release — data.sec.gov"
+      },
+      {
+        "url": "https://ir.halliburton.com/news-releases/news-release-details/halliburton-announces-third-quarter-2026-results",
+        "title": "Financial data and estimates — ir.halliburton.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/SLB?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "annualRevenueB": 35.708,
+      "close": 49.54999923706055,
+      "priceDate": "2026-10-22",
+      "atr14": 1.5049559848077478,
+      "business": "Sells drilling, reservoir, production, subsea and digital energy solutions.",
+      "forwardPE": null,
+      "rsi14": 45.99987816171395,
+      "fiscalLabel": "FY2025",
+      "industry": "ENERGY TECHNOLOGY & OILFIELD SERVICES",
+      "ttmPE": 24.053397687893465,
+      "forwardYear": 2026,
+      "marketCapB": 73.13579887390136
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fslb%2F61d1adcb33ed12b748e3239a8a84b2e0b9a7e98fa700e5f009b13ff96e076ccc.jpg?alt=media&token=a7c3c6e9-d8a7-413a-a3ab-f455b58f49c3",
+      "width": 1920,
+      "height": 1460,
+      "alt": "Historic Schlumberger Well Surveying Corporation building in Houston",
+      "caption": "Archive photograph of the historic Schlumberger Well Surveying Corporation building in Houston; not the current earnings event.",
+      "credit": "Jim Evans",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schlumberger_Well_Surveying_Corporation_Building_--_Houston.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2020-07-05",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_T",
+    "postId": "research_mover_20261023_T",
+    "slug": "why-at-t-t-stock-is-down-today-2026-10-23",
+    "title": "Why AT&T (T) Stock Is Down Today: Q3 2026 Earnings",
+    "symbol": "T",
+    "companyName": "AT&T",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -5.804749340369375,
+    "quoteAsOf": "2026-10-23T16:36:37.000Z",
+    "quotePrice": 21.42,
+    "publishedAt": "2026-10-23T16:47:40.130319+00:00",
+    "updatedAt": "2026-10-23T16:47:40.130319+00:00",
+    "summary": "AT&T (T) was down 5.80% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "AT&T’s October 23 regular-session decline occurs after its October 21 third-quarter release. Connectivity growth and cash generation coexist with debt, network spending and legacy-service pressures. The higher adjusted EPS outlook partly reflects lower depreciation under held-for-sale accounting for AT&T Mexico. These are verified company developments before the quote; they do not prove the particular reason for today’s selling. No new October 23 earnings release or numerical consensus surprise is asserted.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "AT&T traded at $21.42, down 5.80% in the regular session on October 23, 2026 at 12:36 PM Eastern, versus the previous regular close.",
+      "Third-quarter results were released on October 21: revenue was $32.322 billion, GAAP EPS from continuing operations was $0.13 and adjusted EPS was $0.65. These are different earnings measures.",
+      "AT&T earns wireless and internet subscriptions, equipment revenue and business-service fees. Fiber expansion and converged connectivity support growth while legacy-network revenue declines.",
+      "The full-year adjusted EPS outlook rose to around $2.40; lower depreciation tied to held-for-sale accounting for AT&T Mexico is a key reason, so the change is not purely operating growth.",
+      "Quarterly operating cash flow was $10.5 billion and free cash flow was $5.0 billion. Capital investment was $5.6 billion; that measure differs from capital expenditures used in the free-cash-flow reconciliation.",
+      "The quarter added 379,000 postpaid phone customers and 769,000 advanced-connectivity internet connections, including 442,000 fiber and 327,000 fixed-wireless additions.",
+      "Total debt was $159.6 billion and non-GAAP net debt was $149.8 billion after the EchoStar spectrum transaction. Spending, financing costs, competitive offers and execution remain important risks.",
+      "October 22 completed charts closed at $22.74; today’s quote is below the recent $21.8–22.1 trading area. A sustained reclaim would improve stabilization evidence, but the observed decline does not establish a single proven cause."
+    ],
+    "setup": "October 22 completed regular-session charts closed at $22.74 after the October 21 earnings gap. The October 23 saved quote is below the $21.8–22.1 area identified from October 21–22 lows and opening trade. A sustained reclaim would strengthen stabilization evidence; $23.3–23.85 contains October 15–20 overhead trading. Failure to reclaim the former floor leaves downside risk unresolved. Confirm with regular-session closes and volume. These are conditional observations, not guaranteed support or price targets.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_T%2F1%2F5b392c735e99adbf3d15f9b660df5ba601ab7c9c354b8c3f43c096930f0624fe-1a1d9326-92f0-4696-be87-218cf64b70c4%2FFinancials.jpg?alt=media&token=1a1d9326-92f0-4696-be87-218cf64b70c4",
+        "height": 1200,
+        "alt": "AT&T (T) financials research infographic",
+        "width": 1200
+      },
+      {
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_T%2F2%2Fad54800ba65aaf200421815420ce35df5b65ee3c937690955bdeb932221253f8-d725669b-a2bd-404b-8c1a-e88f71cbd3be%2FTechnicals.jpg?alt=media&token=d725669b-a2bd-404b-8c1a-e88f71cbd3be",
+        "height": 1200,
+        "alt": "AT&T (T) technicals research infographic",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000370/t-3q2026exhibit991.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000372/t-20260930.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.json"
+      },
+      {
+        "title": "Financial data and estimates — about.att.com",
+        "url": "https://about.att.com/story/2026/3q-earnings.html"
+      },
+      {
+        "title": "Financial data and estimates — investors.att.com",
+        "url": "https://investors.att.com/~/media/Files/A/ATT-IR-V2/financial-reports/quarterly-earnings/2026/3Q-2026/t-usq-transcript-2026-10-21.pdf"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/T?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "industry": "WIRELESS, FIBER & CONNECTIVITY",
+      "annualRevenueB": 125.648,
+      "forwardYear": 2026,
+      "ttmPE": 12.225806328558152,
+      "atr14": 0.7128386551024917,
+      "marketCapB": 153.1874043245636,
+      "forwardPE": null,
+      "fiscalLabel": "FY2025",
+      "business": "Earns wireless and internet subscriptions, equipment sales and business service fees.",
+      "close": 22.739999771118164,
+      "priceDate": "2026-10-22",
+      "rsi14": 40.585018419841404
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ft%2F9459bdc4e9a6ceb20e42aad6d6da9f296d1ae1202469201fa7bd94faf50b4699.jpg?alt=media&token=08ce302b-54ef-470a-988e-8e0cd04aaee5",
+      "width": 1920,
+      "height": 1440,
+      "alt": "The twin-spired AT&T Building in Nashville",
+      "caption": "Archive photograph of the building known as the AT&T Building in Nashville, May 2015.",
+      "credit": "Michael Rivera",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_building_from_4th_Ave.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2015-05-04 15:22:06",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_TMUS",
+    "postId": "research_mover_20261023_TMUS",
+    "slug": "why-t-mobile-us-tmus-stock-is-down-today-2026-10-23",
+    "title": "Why T-Mobile US (TMUS) Stock Is Down Today: Q2 2026 Earnings",
+    "symbol": "TMUS",
+    "companyName": "T-Mobile US",
+    "sessionDate": "2026-10-23",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -6.112412620442087,
+    "quoteAsOf": "2026-10-23T18:22:11.000Z",
+    "quotePrice": 149.0841,
+    "publishedAt": "2026-10-23T18:40:25.353501+00:00",
+    "updatedAt": "2026-10-23T18:40:25.353501+00:00",
+    "summary": "T-Mobile US (TMUS) was down 6.11% in the October 23, 2026 regular-session snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The regular-session decline follows October 22 reporting that SpaceX was negotiating access to at least 80,000 U.S. cell sites, including talks with Crown Castle. The reports describe potential infrastructure access, not a signed lease agreement or a completed nationwide network. Possible future pressure on carrier pricing and retention is an inference, not a quantified forecast of T-Mobile losses or proof of the sole cause of this move. T-Mobile’s latest verified financial release was July 23 for Q2 ended June 30; its October 28 earnings call is an upcoming event, not new October 23 earnings.",
+    "earningsPeriod": "Q2 2026",
+    "recap": [
+      "T-Mobile traded at $149.08, down 6.11% in the regular session on October 23, 2026 at 2:22 PM Eastern, versus the previous regular close.",
+      "Reported SpaceX talks to access at least 80,000 U.S. cell sites, including discussions with Crown Castle, raise questions about future carrier competition. These remain reported negotiations, with no completed lease agreement verified.",
+      "T-Mobile earns recurring revenue from postpaid, prepaid and wholesale wireless services, alongside equipment sales and broadband offerings. Customer retention, account growth and revenue per account are central to its economics.",
+      "Its latest reported quarter ended June 30 and was released July 23: total revenue was $22.791 billion, including about $19.0 billion of service revenue, and GAAP diluted EPS was $2.99. These are earlier results, not new earnings today.",
+      "Q2 postpaid net account additions were 277,000, down 13% year on year, while postpaid revenue per account rose 2% to $152.91. Net account additions differ from individual phone subscriber additions.",
+      "In July, it raised 2026 adjusted free cash flow guidance to $18.4–$18.8 billion from $18.1–$18.7 billion. Its next earnings call is confirmed for October 28 at 4:30 PM Eastern; that schedule is not evidence of released Q3 results.",
+      "New competition, promotional spending, customer churn, network investment and acquisition integration remain risks. June 30 total debt was $84.6 billion; the eventual effect of a potential new wireless entrant on pricing is uncertain.",
+      "Completed October 22 charts closed at $158.79; today’s quote revisits the prior $148–152 demand area. Holding that zone and reclaiming $156–160 would help stabilize the setup, while a sustained loss of $148 would weaken it."
+    ],
+    "setup": "The completed October 22 chart closed at $158.79, but the saved October 23 regular-session quote of $149.0841 returns to the prior $148–152 demand zone. A hold there followed by sustained closes back above $156–160 would strengthen stabilization. A sustained loss of $148 would weaken that case; no unsupported lower target is assigned. Zones derive from October 9–14 and October 16–22 prices, not a guaranteed bottom. The live session is excluded from technical indicators.",
+    "technicalDate": "2026-10-22",
+    "images": [
+      {
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_TMUS%2F1%2F46c07bac0f2db9aacf1ab7da2aee9759dcb7f5825406cb7feea27fe42e5367b2-7349a100-6214-46ef-bd32-ed25ce83ff1f%2FFinancials.jpg?alt=media&token=7349a100-6214-46ef-bd32-ed25ce83ff1f",
+        "title": "Financials",
+        "height": 1200,
+        "alt": "T-Mobile US (TMUS) financials research infographic"
+      },
+      {
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_TMUS%2F2%2F8a6692bc654f91f6ea0b58f21c781a7839de818489528a804092e2809d8f82be-6aa5823c-4f39-4bc8-9035-382558e52db7%2FTechnicals.jpg?alt=media&token=6aa5823c-4f39-4bc8-9035-382558e52db7",
+        "title": "Technicals",
+        "height": 1200,
+        "alt": "T-Mobile US (TMUS) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000100/tmus06302026ex991.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000010/tmus-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000128369926000101/tmus-20260630.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001283699.json"
+      },
+      {
+        "title": "Financial data and estimates — www.t-mobile.com",
+        "url": "https://www.t-mobile.com/news/business/t-mobile-to-host-q3-2026-earnings-call-on-october-28-2026"
+      },
+      {
+        "title": "Financial data and estimates — www.investing.com",
+        "url": "https://www.investing.com/news/stock-market-news/spacex-seeks-access-to-80000-us-cell-sites-for-wireless-network-bloomberg-news-reports-4967805"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/TMUS?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "industry": "WIRELESS TELECOMMUNICATIONS & BROADBAND",
+      "annualRevenueB": 88.309,
+      "marketCapB": 170.32951822649525,
+      "atr14": 5.345776188405454,
+      "rsi14": 45.459001763302375,
+      "close": 158.7899932861328,
+      "fiscalLabel": "FY2025",
+      "ttmPE": 16.6098319336959,
+      "business": "Sells postpaid, prepaid and wholesale wireless services, devices and broadband.",
+      "priceDate": "2026-10-22",
+      "forwardPE": null,
+      "forwardYear": 2026
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ftmus%2F937843bb59a5c72792a10473ba3d5b90c5c794ced0c293464453a6f9172337c8.jpg?alt=media&token=411f9bad-c09a-4f0d-988c-769f59d72096",
+      "width": 1920,
+      "height": 1434,
+      "alt": "T-Mobile retail storefront in Waterbury, Connecticut",
+      "caption": "Archive photograph of a T-Mobile retail store in Waterbury, Connecticut on January 21, 2015; offers shown are historical and this image does not depict the current trading session.",
+      "credit": "Mike Mozart",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T-Mobile_US_Retail_Store_in_Waterbury,_CT.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2015-01-21 15:56:56",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_afterhours_CRM",
+    "postId": "research_mover_20261023_afterhours_CRM",
+    "slug": "why-salesforce-crm-stock-is-down-after-hours-2026-10-23",
+    "title": "Why Salesforce (CRM) Stock Is Down After Hours",
+    "symbol": "CRM",
+    "companyName": "Salesforce",
+    "sessionDate": "2026-10-23",
+    "marketSession": "afterhours",
+    "regularClose": 248.53,
+    "earningsCheck": {
+      "checkedAt": "2026-10-23T20:26:50.639451+00:00",
+      "status": "not_scheduled",
+      "source": "https://investor.salesforce.com/news/",
+      "issuerVerified": true
+    },
+    "direction": "down",
+    "move": -0.3057980927855808,
+    "quoteAsOf": "2026-10-23T20:08:27.000Z",
+    "quotePrice": 247.77,
+    "publishedAt": "2026-10-23T20:27:57.141210+00:00",
+    "updatedAt": "2026-10-23T20:27:57.141210+00:00",
+    "summary": "Salesforce (CRM) was down 0.31% in the October 23, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "A specific issuer catalyst for the small October 23 after-hours decline has not been established. The October 20 definitive Braze acquisition agreement is relevant dated context: approximately $5.66 billion enterprise value and $47.50 cash per Class A share, with completion expected in fiscal 2028 subject to approvals and conditions. It is a signed agreement, not a completed acquisition, and anticipated product benefits are forward-looking. Salesforce stated no anticipated fiscal 2027 guidance change from that transaction. No earnings release has been verified for this evening; August 26 fiscal Q2 results are earlier financial context rather than a new after-hours catalyst.",
+    "earningsPeriod": null,
+    "recap": [
+      "Salesforce traded at $247.77, down 0.31% after hours on October 23, 2026 at 4:08 PM Eastern, versus the same-day regular close of $248.53. This is the extended-hours move, not the full-day return.",
+      "No earnings release has been verified for this evening. The latest verified results were released August 26 for fiscal Q2 2027, the quarter ended July 31, 2026; the fiscal-year label differs from the calendar year.",
+      "On October 20, Salesforce signed a definitive agreement to acquire Braze for approximately $5.66 billion in enterprise value, with $47.50 cash per Class A share. A specific cause of tonight’s small price decline has not been established.",
+      "The Braze transaction is expected to close in fiscal 2028, subject to shareholder and regulatory approvals and other conditions. Salesforce said it anticipated no change to fiscal 2027 guidance; expected integration benefits remain uncertain.",
+      "Salesforce primarily earns subscription and support revenue from customer relationship management, data and AI software. Fiscal Q2 revenue was $11.345 billion, including $10.820 billion of subscription and support revenue.",
+      "Fiscal Q2 GAAP diluted EPS was $4.29 and non-GAAP diluted EPS was $5.90. The quarter included $2.613 billion of net gains on strategic investments, so the earnings increase should not be read as purely operating growth.",
+      "At the August release, fiscal 2027 revenue guidance was raised to $46.1–$46.4 billion. Acquisition integration, AI monetization, enterprise spending, competition and investment-value volatility remain risks; guidance is not a guaranteed outcome.",
+      "The completed October 23 chart closed at $248.57. Holding the $241–244 recent trading area and clearing $250–253 would strengthen the recovery; sustained closes below $241 would weaken it. After-hours trades are excluded from those chart indicators."
+    ],
+    "setup": "The completed October 23 chart closed at $248.57 after October 22 close $250.29. Recent closes and highs around $241–244 on October 19–21 and the October 23 low $242.30 define a potential retest area. Holding it and closing above the October 16 and October 22 highs around $251.94–252.42 would strengthen recovery; the approximate upper zone is $250–253. Sustained closes below $241 would weaken that case. No lower target is invented. The separately timestamped after-hours quote uses the saved precise regular close $248.53, not Yahoo’s daily bar $248.57; the $0.04 difference is disclosed in source notes and does not change the return basis.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_CRM%2F1%2Ffae7027f599864a41592eed3c30eef30344c448aeac8681ce2d47f59381e0c00-a5b262b5-eedd-4ab0-a652-f2d47eecd5a4%2FFinancials.jpg?alt=media&token=a5b262b5-eedd-4ab0-a652-f2d47eecd5a4",
+        "width": 1200,
+        "title": "Financials",
+        "alt": "Salesforce (CRM) financials research infographic"
+      },
+      {
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_CRM%2F2%2Fba11d622a38e3b9a28e2775ac89a473bbdb3957a6df3c8a0412e2405edca4848-07fd4942-51b6-4d9b-8305-5152229fd932%2FTechnicals.jpg?alt=media&token=07fd4942-51b6-4d9b-8305-5152229fd932",
+        "width": 1200,
+        "title": "Technicals",
+        "alt": "Salesforce (CRM) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://investor.salesforce.com/news/news-details/2026/Salesforce-Signs-Definitive-Agreement-to-Acquire-Braze/default.aspx",
+        "title": "Financial data and estimates — investor.salesforce.com"
+      },
+      {
+        "url": "https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx",
+        "title": "Financial data and estimates — investor.salesforce.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.json",
+        "title": "Issuer filing / earnings release — data.sec.gov"
+      },
+      {
+        "url": "https://investor.salesforce.com/news/",
+        "title": "Financial data and estimates — investor.salesforce.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CRM?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "fiscalLabel": "FY2026",
+      "annualRevenueB": 41.525,
+      "marketCapB": 204.57311602783204,
+      "business": "Sells subscriptions and support for CRM, data, collaboration and AI software.",
+      "industry": "CUSTOMER RELATIONSHIP MANAGEMENT SOFTWARE",
+      "forwardYear": 2026,
+      "atr14": 8.785656434161035,
+      "priceDate": "2026-10-23",
+      "close": 248.57000732421875,
+      "rsi14": 60.72687832216238,
+      "forwardPE": null,
+      "ttmPE": 22.76282118353652
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcrm%2Fdfa5c0b789b936d221a7236183604da3f4728d3734286e8ab072d14b73f6dab6.jpg?alt=media&token=e02b1b58-4e48-409e-b636-2dd2bbd9618b",
+      "width": 1920,
+      "height": 2880,
+      "alt": "Salesforce Tower and neighboring Millennium Tower in San Francisco",
+      "caption": "Archive photograph of Salesforce Tower and the neighboring Millennium Tower in San Francisco on July 18, 2023; this image does not depict the current trading session.",
+      "credit": "The wub",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Salesforce_and_Millennium_towers,_San_Francisco_2023-07-18.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2023-07-18 16:19:04",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_afterhours_UBER",
+    "postId": "research_mover_20261023_afterhours_UBER",
+    "slug": "why-uber-technologies-uber-stock-is-up-after-hours-2026-10-23",
+    "title": "Why Uber Technologies (UBER) Stock Is Up After Hours",
+    "symbol": "UBER",
+    "companyName": "Uber Technologies",
+    "sessionDate": "2026-10-23",
+    "marketSession": "afterhours",
+    "regularClose": 66.665,
+    "earningsCheck": {
+      "source": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Date-of-Third-Quarter-2026-Results-Conference-Call/default.aspx",
+      "status": "not_scheduled",
+      "checkedAt": "2026-10-23T20:15:41.556826+00:00",
+      "issuerVerified": true
+    },
+    "direction": "up",
+    "move": 0.5475136878421827,
+    "quoteAsOf": "2026-10-23T20:10:29.000Z",
+    "quotePrice": 67.03,
+    "publishedAt": "2026-10-23T20:17:57.098190+00:00",
+    "updatedAt": "2026-10-23T20:17:57.098190+00:00",
+    "summary": "Uber Technologies (UBER) was up 0.55% in the October 23, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Uber showed a small after-hours increase following a regular-session decline, but a specific issuer catalyst for the extended-hours move has not been established. No same-evening earnings release was verified. The latest verified results were released August 5 for Q2 ended June 30; its October 5 announcement schedules the next results call for November 4 at 8:00 AM Eastern. These dated facts provide context without attributing the price move to new earnings, a signed agreement or inferred sector benefits.",
+    "earningsPeriod": null,
+    "recap": [
+      "Uber traded at $67.03, up 0.55% after hours on October 23, 2026 at 4:10 PM Eastern, versus the same-day regular close of $66.665. This is an extended-hours return, not the full-day change.",
+      "No earnings release has been verified for this evening. Its latest verified quarterly results were released August 5 for the quarter ended June 30; the next results call is scheduled for November 4 at 8:00 AM Eastern.",
+      "Uber operates Mobility, Delivery and Freight platforms. Gross Bookings measure transaction activity and differ from recognized revenue; growth in bookings does not translate dollar for dollar into revenue.",
+      "Q2 revenue was $14.191 billion and Gross Bookings reached $58.022 billion. Trips rose 18% to 3.867 billion, while monthly active platform consumers increased 16% to 208 million.",
+      "Q2 GAAP diluted EPS was $1.17, compared with non-GAAP EPS of $0.81. GAAP net income included a $1.6 billion pre-tax gain from revaluing equity investments, so the two earnings measures are not interchangeable.",
+      "Q2 operating cash flow was $2.862 billion and free cash flow was $2.792 billion. These earlier results provide financial context; they are not new October 23 earnings or evidence of a consensus beat.",
+      "A specific cause for the small after-hours advance has not been established. Driver classification, insurance costs, competition and autonomous-vehicle economics remain risks; future benefits from new technology are uncertain.",
+      "The completed October 23 chart closed at $66.67, down 3.47% in the regular session. Stabilizing near the $66.4–67.4 recent-low area and reclaiming $68.4–69.2 would improve the setup; sustained closes below $66.4 would weaken it."
+    ],
+    "setup": "The completed October 23 chart closed at $66.67 after a 3.47% regular-session decline. The separately saved $67.03 after-hours quote is 0.55% above the same-day regular close of $66.665. The newly tested $66.4–67.4 area derives from October 23 low $66.43 and October 21–22 lows around $67.33–67.36; it is not an established floor. Stabilization there followed by closes above $68.4–69.2 would help recovery, while sustained closes below $66.4 weaken that case. The upper zone comes from recent October trading, including October 20 low $68.40 and October 22 high $69.15. No unsupported lower target is assigned. After-hours trades are excluded from indicators.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "title": "Financials",
+        "alt": "Uber Technologies (UBER) financials research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_UBER%2F1%2Fb92e5eec9977d26f03b6f7d17064969fc81cef9982a9539f774e0517980f1ec4-87aa3497-a76f-49ff-9a67-2d655e26ddc7%2FFinancials.jpg?alt=media&token=87aa3497-a76f-49ff-9a67-2d655e26ddc7",
+        "height": 1200
+      },
+      {
+        "title": "Technicals",
+        "alt": "Uber Technologies (UBER) technicals research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_UBER%2F2%2F9de09bf755ed28468188adaa12b857ffe84bb7e7ae15aa2cc9ec7e5fe281742f-3c0a8882-16c1-4545-aa11-7e261d4f1d5b%2FTechnicals.jpg?alt=media&token=3c0a8882-16c1-4545-aa11-7e261d4f1d5b",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.json"
+      },
+      {
+        "title": "Financial data and estimates — investor.uber.com",
+        "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Date-of-Third-Quarter-2026-Results-Conference-Call/default.aspx"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/UBER?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardPE": null,
+      "atr14": 1.8654158173415,
+      "fiscalLabel": "FY2025",
+      "marketCapB": 136.17747952703073,
+      "priceDate": "2026-10-23",
+      "ttmPE": 14.62061363354064,
+      "rsi14": 38.50311430698309,
+      "forwardYear": 2026,
+      "annualRevenueB": 52.017,
+      "close": 66.66999816894531,
+      "industry": "MOBILITY, DELIVERY & FREIGHT PLATFORMS",
+      "business": "Connects riders, drivers, consumers, merchants and freight customers through its platforms."
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fuber%2F6634dc5edf3bd7aa6df52b6fb5d5e5b404c70fce1306a26d635e3ed22000b35f.jpg?alt=media&token=305af694-c507-40d4-92e3-9eb524d8ed21",
+      "width": 1920,
+      "height": 1027,
+      "alt": "Uber office buildings in Mission Bay, San Francisco",
+      "caption": "Archive photograph of Uber offices in Mission Bay, San Francisco, in July 2020; this image does not depict the current after-hours session.",
+      "credit": "HaeB",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uber_offices,_Mission_Bay_(July_2020)_-1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2020-07-17 12:05:13",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261023_afterhours_VRTX",
+    "postId": "research_mover_20261023_afterhours_VRTX",
+    "slug": "why-vertex-pharmaceuticals-vrtx-stock-is-up-after-hours-2026-10-23",
+    "title": "Why Vertex Pharmaceuticals (VRTX) Stock Is Up After Hours",
+    "symbol": "VRTX",
+    "companyName": "Vertex Pharmaceuticals",
+    "sessionDate": "2026-10-23",
+    "marketSession": "afterhours",
+    "regularClose": 523.93,
+    "earningsCheck": {
+      "status": "not_scheduled",
+      "checkedAt": "2026-10-23T20:47:09.997946+00:00",
+      "source": "https://news.vrtx.com/node/35391",
+      "issuerVerified": true
+    },
+    "direction": "up",
+    "move": 0.7768213310938687,
+    "quoteAsOf": "2026-10-23T20:34:52.000Z",
+    "quotePrice": 528,
+    "publishedAt": "2026-10-23T20:48:47.474388+00:00",
+    "updatedAt": "2026-10-23T20:48:47.474388+00:00",
+    "summary": "Vertex Pharmaceuticals (VRTX) was up 0.78% in the October 23, 2026 after-hours snapshot. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Vertex’s October 23 announcement describes publication and conference presentation of previously reported RAINIER interim results for its investigational kidney-disease treatment povetacicept. Its release distribution was timestamped at 1:42 PM Eastern, before the observed 4:34 PM after-hours quote. This is relevant clinical news, not proof of causation or a newly released earnings report. Potential accelerated approval remains subject to the FDA decision targeted for November 30; long-term outcomes and commercialization remain uncertain. The scheduled kidney-program investor event starts at 8:15 PM Eastern, after the quote, so the report does not claim that an already-completed event drove the move. Q3 earnings are scheduled for November 2 after market close.",
+    "earningsPeriod": null,
+    "recap": [
+      "Vertex Pharmaceuticals traded at $528.00, up 0.78% after hours on October 23, 2026 at 4:34 PM Eastern, versus the same-day regular close of $523.93. This extended-hours return is separate from its regular-session decline.",
+      "An October 23 announcement covers publication and presentation of previously reported Phase 3 RAINIER interim results for povetacicept in IgA nephropathy. It provides relevant company news, but does not establish the sole cause of the observed share move.",
+      "The trial’s Week 36 interim analysis showed a 49.8% proteinuria reduction versus placebo. The FDA target action date for potential accelerated approval is November 30; a pending application is not an approval or proof of long-term kidney benefit.",
+      "A kidney-program investor event is scheduled for October 23 at 8:15 PM Eastern, after this quote. No earnings release has been verified this evening; Q3 results are scheduled for November 2 after market close, with a 4:30 PM Eastern call.",
+      "Vertex sells medicines led by its cystic-fibrosis franchise and is expanding into other diseases. FY2025 total revenue was $12.001 billion, including $10.313 billion from TRIKAFTA/KAFTRIO and $837.8 million from ALYFTREK.",
+      "Its latest verified results were released August 3 for Q2 ended June 30: revenue was $3.334 billion, GAAP diluted EPS was $4.31 and non-GAAP diluted EPS was $4.73. These are earlier financial results, not new October 23 earnings.",
+      "Trial safety and durability, regulatory decisions, reimbursement, launch execution and reliance on cystic-fibrosis sales remain risks. A favorable interim biomarker result does not guarantee approval, commercial success or future stock gains.",
+      "The completed October 23 chart closed at $523.93, down 2.10% in the regular session. Holding the $521–525 recent trading area and reclaiming $533–538 would strengthen the setup; sustained closes below $521 would weaken it."
+    ],
+    "setup": "The completed October 23 chart closed at $523.93, down 2.10% from October 22 close $535.17. The saved $528 after-hours trade is independently 0.78% above the same-day $523.93 regular close. The $521–525 potential retest area derives from October 21 close $524.52, October 22 low $521.30 and October 23 low $522.92. Reclaiming $533–538, based on October 23 high $532.99 and October 22 high $537.81, would strengthen the recovery; sustained closes below $521 would weaken it. No unsupported lower target is assigned. After-hours trades are excluded from completed-session indicators.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "alt": "Vertex Pharmaceuticals (VRTX) financials research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_VRTX%2F1%2F0741cf2f149c016e465f3e940bee6032b933e4f10b910598361d53c62430915c-2852a410-3f88-4e17-ad70-9b197377e271%2FFinancials.jpg?alt=media&token=2852a410-3f88-4e17-ad70-9b197377e271",
+        "title": "Financials",
+        "width": 1200
+      },
+      {
+        "alt": "Vertex Pharmaceuticals (VRTX) technicals research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261023_afterhours_VRTX%2F2%2F3b7a62f73a48713e775a1772927644c47f2c04c78db53fb3f4d9a5424bd80993-aac972aa-f451-4d73-bde5-5b8f704ef4a5%2FTechnicals.jpg?alt=media&token=aac972aa-f451-4d73-bde5-5b8f704ef4a5",
+        "title": "Technicals",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — news.vrtx.com",
+        "url": "https://news.vrtx.com/news-releases/news-release-details/phase-3-rainier-results-supporting-best-class-potential"
+      },
+      {
+        "title": "Financial data and estimates — investors.vrtx.com",
+        "url": "https://investors.vrtx.com/events/event-details/investor-event-american-society-nephrology-kidney-week-2026"
+      },
+      {
+        "title": "Financial data and estimates — news.vrtx.com",
+        "url": "https://news.vrtx.com/node/35391"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000256/ex-991_q22026.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/vrtx-20251231.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — www.sec.gov",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000259/vrtx-20260630.htm"
+      },
+      {
+        "title": "Issuer filing / earnings release — data.sec.gov",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000875320.json"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/VRTX?range=5y&interval=1d&events=splits"
+      },
+      {
+        "title": "Financial data and estimates — www.stocktitan.net",
+        "url": "https://www.stocktitan.net/news/VRTX/phase-3-rainier-results-supporting-best-in-class-potential-of-i8qdc4svlmdr.html"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "After-hours move is measured versus the same-day regular close across the saved largest-100 S&P 500 universe. AI-assisted research with source and calculation checks. Price snapshots may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "business": "Sells medicines for cystic fibrosis and other serious diseases; invests in clinical programs.",
+      "close": 523.9299926757812,
+      "annualRevenueB": 12.0013,
+      "marketCapB": 132.79578005491675,
+      "forwardPE": null,
+      "industry": "BIOTECHNOLOGY / SPECIALTY MEDICINES",
+      "forwardYear": 2026,
+      "rsi14": 55.07285356464811,
+      "ttmPE": 30.514268647395532,
+      "atr14": 13.346358727934042,
+      "fiscalLabel": "FY2025",
+      "priceDate": "2026-10-23"
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fvrtx%2F4d85895438a98606f3bb42d8ddd668c46129d32e8f80a098d54b734764e590fc.jpg?alt=media&token=ea4097da-de27-47f9-a3af-c91ca8dc8aff",
+      "width": 1920,
+      "height": 2560,
+      "alt": "Vertex CEO Reshma Kewalramani at Boston University graduation in May 2026",
+      "caption": "Archive photograph of Vertex CEO Reshma Kewalramani at Boston University’s graduation on May 17, 2026; this image does not depict the current trial announcement or trading session.",
+      "credit": "Pacamah",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ReshmaKewalramaniBUGrad2026.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dateTaken": "2026-05-17 14:57:20",
       "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   },

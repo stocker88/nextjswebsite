@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript');
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,f);
+const {filterDisclosures,exportDisclosures,money,validSnapshot}=require('../lib/smart-money.ts');
+const snapshot=require('../data/smart-money.json');
+const now=Date.parse('2026-10-23T12:00:00Z');
+const row={id:'1',category:'politicians',symbol:'ABC',company:'Example, Inc.',investor:'Jane Doe',investorId:'person:1',role:'House',owner:'Spouse',action:'buy',rawAction:'Purchase',eventDate:'2026-08-10',filedDate:'2026-10-20',period:null,amount:'$15,001 - $50,000',amountMin:15001,amountMax:50000,value:null,shares:null,previousShares:null,changeShares:null,weight:null,securityType:'Stock',sourceUrl:'https://www.sec.gov/Archives/example'};
+const filters={category:'all',query:'',direction:'all',days:0,min:0,sort:'recent',investor:'',savedOnly:false,saved:[]};
+const rows=[row,{...row,id:'2',category:'insiders',investor:'Joe Roe',investorId:'person:2',action:'sell',amount:null,amountMin:null,value:0,filedDate:'2026-10-22'},{...row,id:'3',symbol:'XYZ',filedDate:'2026-08-01'}];
+const select=updates=>filterDisclosures(rows,{...filters,...updates},now);
+assert.deepEqual(select({query:'Jane Doe'}).map(r=>r.id),['1','3']);
+assert.deepEqual(select({days:30,direction:'positive'}).map(r=>r.id),['1']);
+assert.deepEqual(select({min:16000}),[]); // Range maximum is not a known trade value.
+assert.deepEqual(select({savedOnly:true,saved:['person:2']}).map(r=>r.id),['2']);
+assert.deepEqual(select({savedOnly:true,saved:['stock:XYZ']}).map(r=>r.id),['3']);
+assert.deepEqual(select({category:'insiders'}).map(r=>r.id),['2']);
+const csv=exportDisclosures([{...row,investor:'=HYPERLINK("https://example.com")'}]);
+assert.ok(csv.includes('"\'=HYPERLINK(""https://example.com"")"'));
+assert.ok(csv.includes('"Example, Inc."')); // Company commas remain safely quoted.
+assert.ok(csv.includes('"2026-08-10","2026-10-20"'));
+assert.equal(money(960),'$960');assert.equal(money(465.6),'$465.6');assert.equal(money(1500000),'$1.5M');assert.equal(money(null),'Not supplied');
+assert.equal(validSnapshot(snapshot),true);assert.equal(validSnapshot({...snapshot,items:[{}]}),false);
+assert.ok(!JSON.stringify(snapshot).match(/apikey|private_key|api_key/i));
+console.log('PASS disclosure filtering, range bounds, date semantics, watchlists, CSV formula escaping, stable currency formatting and public schema');

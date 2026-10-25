@@ -1,3 +1,4 @@
+import {DesktopActionText} from './DesktopAppLink';
 import StockResearchPromo from './StockResearchPromo';
 import {isEarningsFirst} from '../lib/research';
 import ResearchCompanyLogo from './ResearchCompanyLogo';
@@ -122,7 +123,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
       <NewsMentionsPromo/>
       <div className="section-action hottest-stocks-action">
         <AppDownloadButton popup from="home_hottest_stocks" label="Hottest stock now →"/>
-        <p>Explore in the app · iOS & Android</p>
+        <p><DesktopActionText desktopLabel="Explore the full research">{'Explore in the app · iOS & Android'}</DesktopActionText></p>
       </div>
       </>}
       {section !== "news" && <>

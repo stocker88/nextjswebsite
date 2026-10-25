@@ -1,4 +1,8 @@
+import {DESKTOP_ACCESS_PATH} from '../../lib/desktop-access';
 import SiteMenu from '../SiteMenu';
+import AccountMenu from '../AccountMenu';
+import {accountLoginUrl} from '../../lib/site-auth';
+import {useSiteAccount} from '../SiteAccount';
 import menuStyles from '../../styles/SiteMenu.module.css';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -31,6 +35,7 @@ export default function Header({
   socialNoticeVariant = 'standard',
 }) {
   const { pathname } = useRouter();
+  const {user:accountUser,desktop} = useSiteAccount();
   const isHomePage = pathname === '/';
   const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
@@ -73,14 +78,14 @@ export default function Header({
       if (y === 0) setIsOpen(false);
       // Match the continuous hero gradient, including the mobile status strip.
       // Keep the initial reveal blue; ease toward navy near the end of the hero.
-      const hero = document.getElementById('home');
+      const hero = document.getElementById(window.innerWidth >= 1024 ? 'desktop-product-intro' : 'home') || document.getElementById('home');
       const heroHeight = hero?.getBoundingClientRect().height || 1;
       const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 80;
       const progress = Math.min(1, y / heroHeight);
       const fade = Math.max(0, Math.min(1, (progress - .55) / .45));
       const darkness = fade * fade * (3 - 2 * fade);
       const colorAt = offset => {
-        if (darkHeader || !hero) return '#080d1b';
+        if (darkHeader || !hero) return '#080d14';
         const fraction = Math.min(1, (y + offset) / heroHeight);
         return '#' + [0, 163, 245].map((start, i) => {
           const heroChannel = start + ([21, 0, 128][i] - start) * fraction;
@@ -185,14 +190,15 @@ export default function Header({
 
           {/* Right side actions (Horizontal alignment on mobile) */}
           <div className={menuStyles.actions}>
-            {!hideAppDownload && <a
+            <AccountMenu />
+            {!hideAppDownload && !accountUser && <a
               className={menuStyles.download}
-              href={getAppStoreUrl()}
-              target="_blank"
+              href={desktop?accountLoginUrl(DESKTOP_ACCESS_PATH):getAppStoreUrl()}
+              target={desktop?undefined:"_blank"}
               rel="noopener noreferrer"
-              onClick={trackHeaderDownload}
+              onClick={desktop?closeMenu:trackHeaderDownload}
             >
-              Get the App
+              {desktop?'Sign Up':'Get the App'}
             </a>}
 
             <button

@@ -1,4 +1,6 @@
 export const siteNavigation = [
+  {label:'Hormuz Transit Index',href:'/hormuz-transit-index/',detail:'Vessel crossings, tanker activity and history',icon:'M3 17h18 M5 12l7 4 7-4 M12 3v9'},
+  {label:'Pentagon Pizza Index',href:'/pentagon-pizza-index/',detail:'Alternative activity and available history',icon:'M12 3L3 21h18z M12 10v1 M9 16v1 M15 16v1'},
   {label: 'Stock Market Heatmap', href: '/stock-market-heatmap/', detail: 'See the largest stocks and sector performance', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
   {label: 'Premarket Heatmap', href: '/premarket-stock-heatmap/', detail: 'Free saved stock moves before the opening bell', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
   {label: 'After-Hours Heatmap', href: '/after-hours-stock-heatmap/', detail: 'Free saved stock moves after the closing bell', icon: 'M3 3h18v18H3z M12 3v18 M3 12h9 M12 9h9 M17 9v12'},
@@ -7,7 +9,9 @@ export const siteNavigation = [
   {label: 'Stocks to Buy', href: '/stocks-to-buy/', detail: 'Explore stock ideas', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
   {label: 'Earnings Calendar', href: '/earnings-calendar/', detail: 'Plan the week ahead', icon: 'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
   {label: 'Stock Market Calendar', href: '/stock-market-calendar/', detail: 'Track economic events and key dates', icon: 'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
-  {label: 'Explore Industries', href: '/industries/', detail: 'Compare industry peers, valuations and P/E distributions', icon: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z'},
+  {label: 'Explore Industries', href: '/industries/', detail: 'Compare industry peers, valuations and P/S and P/E distributions', icon: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z'},
+  {label: 'Insider & Fund News', href: '/insider-news/', detail: 'Daily recaps and original filing evidence', icon: 'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h5'},
+  {label: 'Smart Money', href: '/smart-money/', detail: 'Politician trades, hedge fund holdings and insider activity', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
   {label: 'Options Tools', href: '/options-activity/', detail: 'Explore activity, calculate profit and build strategies', icon: 'M4 20V10 M10 20V4 M16 20V13 M22 20V7'},
   {label: 'Options Trading Results', href: '/results/', detail: 'Review verified call-price moves and related research', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
   {label: 'How It Works', href: '#how-it-works', detail: 'Get to know the app', icon: 'M9 6l10 6-10 6z M3 4v16'},

@@ -1,5 +1,5 @@
+import DesktopAppLink from './DesktopAppLink';
 import {useEffect, useState} from 'react';
-import Link from 'next/link';
 import SignalChart, {type Point} from './SignalChart';
 
 type Preview = {id:string; content:string; graph1:Point[]; graph3?:Point[]; graphType3?:string; recommendationTimeInt?:number; timestampInt?:number};
@@ -36,7 +36,7 @@ export default function HomeSignalPreview() {
     <div className="preview-grid" aria-busy={loading}>
       {loading ? Array.from({length:PREVIEW_LIMIT}, (_,i) => <div className="loading-card" key={i} aria-hidden="true" />) : items.map((item,index) => {
         const metric = item.graphType3 || 'Financial metric';
-        return <Link href="/stocks-to-buy" className="preview-card" data-motion-reveal="card" data-motion-delay={index%2} key={item.id}>
+        return <DesktopAppLink href="/stocks-to-buy" className="preview-card" data-motion-reveal="card" data-motion-delay={index%2} key={item.id}>
           <span className="badge">STOCK TO BUY</span>
           <h3>Price trend</h3>
           <SignalChart points={item.graph1} signalTimestamp={item.recommendationTimeInt ?? item.timestampInt} />
@@ -46,12 +46,12 @@ export default function HomeSignalPreview() {
           </>}
           <p className="summary">{item.content.split('\n').find(line => line.trim()) || 'Explore this stock setup.'}</p>
           <span className="card-link">Explore this setup →</span>
-        </Link>;
+        </DesktopAppLink>;
       })}
     </div>
     {loading && <p className="status" role="status">Loading signal previews…</p>}
     {!loading && !items.length && <p className="status">Signal previews are temporarily unavailable. Explore the signals page for more.</p>}
-    <div className="preview-action"><Link href="/stocks-to-buy" className="preview-cta">Explore stock signals →</Link></div>
+    <div className="preview-action"><DesktopAppLink href="/stocks-to-buy" className="preview-cta">Explore stock signals →</DesktopAppLink></div>
     <style jsx>{`
       .signal-preview{max-width:1000px;margin:0 auto;padding:48px 24px 64px;color:#e5edf8;}
       .preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}

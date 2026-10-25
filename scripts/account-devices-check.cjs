@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict'),fs=require('fs'),ts=require('typescript');
+const {webcrypto}=require('node:crypto');
+const source=ts.transpileModule(fs.readFileSync(require('path').join(__dirname,'../lib/account-devices.ts'),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const storage=new Map(),calls=[];let user={uid:'owner'};
+const auth={get currentUser(){return user},app:{}};
+const sdk={getFunctions:()=>({}),httpsCallable:(_fn,name)=>async data=>{calls.push({name,data});return {data:{devices:[],maxDevices:2,allowed:true}}}};
+const moduleValue={exports:{}};
+new Function('require','module','exports','localStorage','crypto','navigator',source)(id=>id==='./site-auth'?{getSiteAuth:async()=>auth}:id==='firebase/functions'?sdk:require(id),moduleValue,moduleValue.exports,{getItem:key=>storage.get(key),setItem:(key,value)=>storage.set(key,value)},webcrypto,{userAgent:'Mozilla Macintosh Chrome/130.0'});
+const api=moduleValue.exports;
+(async()=>{
+ const id=api.installationId();assert.match(id,/^[a-f0-9]{64}$/);assert.equal(api.installationId(),id);
+ assert.deepEqual(api.browserDescription('Macintosh Chrome/130.0 Safari/537.36'),{platform:'Web',deviceName:'Chrome on macOS'});
+ assert.equal(api.browserDescription('iPhone Version/18.0 Safari/604.1').deviceName,'Safari on iOS');
+ assert.equal(api.browserDescription('Windows Firefox/130.0').deviceName,'Firefox on Windows');
+ await api.registerWebsiteDevice();assert.equal(calls.at(-1).name,'registerAccountDevice');assert.equal(calls.at(-1).data.installationId,id);
+ await api.revokeAccountDevice('a'.repeat(64));assert.equal(calls.at(-1).name,'revokeAccountDevice');assert.equal(calls.at(-1).data.deviceKey,'a'.repeat(64));assert.equal(calls.at(-1).data.userId,undefined);
+ await api.checkWebsiteDevice();assert.equal(calls.at(-1).name,'checkAccountDevice');
+ user=null;await assert.rejects(api.listAccountDevices(),/sign in again/);
+ console.log('Website device checks passed: persistent identity, browser labels, authenticated calls and own-account-only payloads.');
+})().catch(error=>{console.error(error);process.exitCode=1});

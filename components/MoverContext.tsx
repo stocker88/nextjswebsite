@@ -1,6 +1,8 @@
 import {useEffect,useId,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 import saved from '../data/mover-context.json';
+import {useSiteAccount} from './SiteAccount';
+import {accountLoginUrl} from '../lib/site-auth';
 import trades from '../data/mover-trades.json';
 import {findMoverTrade,type MoverTrade} from '../lib/mover-trades';
 import {savedNews,loadHeadlines} from '../lib/market-news';
@@ -10,6 +12,7 @@ import type {HeatStock,Period} from '../lib/market-heatmap';
 import styles from '../styles/MoverContext.module.css';
 
 export default function MoverContext({stock,period,marketSession='intraday',compact=false}:{stock:HeatStock;period:Period;marketSession?:string;compact?:boolean}) {
+  const {user}=useSiteAccount();
   const [now,setNow]=useState<number|null>(null),[open,setOpen]=useState(false);
   const [headlines,setHeadlines]=useState(savedNews.items);
   const [position,setPosition]=useState<{left:number;top:number}|null>(null);
@@ -33,7 +36,7 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
     setPosition({left:Math.max(12,Math.min(rect.right-width,window.innerWidth-width-12)),top:Math.max(12,rect.bottom+height+12<window.innerHeight?rect.bottom+8:rect.top-height-8)});
     const dismiss=(e:PointerEvent)=>{if(!panel.current?.contains(e.target as Node)&&!trigger.current?.contains(e.target as Node))setOpen(false);};
     const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'){setOpen(false);trigger.current?.focus();}};
-    const close=(e:Event)=>{if(!panel.current?.contains(e.target as Node))setOpen(false);};
+    const close=(e:Event)=>{if(!(e.target instanceof Node)||!panel.current?.contains(e.target))setOpen(false);};
     document.addEventListener('pointerdown',dismiss);document.addEventListener('keydown',escape);window.addEventListener('scroll',close,true);window.addEventListener('resize',close);
     return()=>{document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',escape);window.removeEventListener('scroll',close,true);window.removeEventListener('resize',close);};
   },[open]);
@@ -45,7 +48,7 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
     <button ref={trigger} type="button" className={`${styles.trigger} ${compact?styles.compactTrigger:''}`} title={label} aria-label={`${label}: ${stock.symbol}`} aria-expanded={open} aria-controls={open?id:undefined} aria-haspopup="dialog" onClick={()=>{setPosition(null);setOpen(!open);}}><span aria-hidden="true">✦</span><span className={styles.fullLabel}>{label}</span>{compact&&<span className={styles.shortLabel} aria-hidden="true">{explanation?'Why':article.kind==='recap'?'Recap':'News'}</span>}</button>
     {open&&createPortal(<div ref={panel} id={id} className={styles.popover} role="dialog" aria-label={`${stock.symbol} recent article`} style={{left:position?.left||12,top:position?.top||12,visibility:position?'visible':'hidden'}}>
       <button className={styles.close} type="button" aria-label="Close article preview" onClick={()=>{setOpen(false);trigger.current?.focus();}}>×</button>
-      <a href={article.href} className={styles.article}>
+      <a href={user?article.href:accountLoginUrl(article.href.startsWith('/')?article.href:'/market-news/')} className={styles.article}>
         <span className={styles.eyebrow}>{stock.symbol} · {article.kind==='preview'?'Earnings preview':article.kind==='earnings'?'Earnings review':article.kind==='recap'?'Market recap':article.kind==='coverage'?'Feed coverage':article.kind==='headline'?'Market news':explanation?'Move context':'Recent research'}</span>
         <strong>{article.title}</strong>{article.source&&<span className={styles.source}>{article.source}</span>}<time dateTime={article.publishedAt}>{date} ET</time>
         {article.summary&&<p>{article.summary}</p>}<span className={styles.read}>{article.kind==='headline'?'Read news':'Read article'} <span aria-hidden="true">↗</span></span>

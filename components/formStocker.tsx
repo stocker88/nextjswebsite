@@ -1,3 +1,7 @@
+import {useSiteAccount} from './SiteAccount';
+import {DESKTOP_ACCESS_PATH,desktopActionLabel,rememberDesktopThread} from '../lib/desktop-access';
+import {accountLoginUrl} from '../lib/site-auth';
+import {isDesktopDevice} from '../lib/device-access';
 import AppDownloadModal from './AppDownloadModal';
 import { useEffect, useState } from 'react';
 import { trackAppStoreClick } from '../lib/analytics';
@@ -21,6 +25,7 @@ function NewsletterSignUp({
   secondary = false,
   popup = false,
 }: Props) {
+  const {user,desktop}=useSiteAccount();
   const [showPrompt,setShowPrompt]=useState(false);
   const [storeUrl, setStoreUrl] = useState(iosAppStoreUrl);
 
@@ -42,13 +47,13 @@ function NewsletterSignUp({
     <>
     <a
       className={`nav-cta app-download-cta${secondary ? ' app-download-cta--secondary' : ''}`}
-      href={storeUrl}
-      target="_blank"
+      href={desktop?(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH)):storeUrl}
+      target={desktop?undefined:"_blank"}
       rel="noopener noreferrer"
-      aria-haspopup={popup?"dialog":undefined}
-      onClick={e=>{if(popup){e.preventDefault();setShowPrompt(true)}else trackDownload()}}
+      aria-haspopup={popup&&!desktop?"dialog":undefined}
+      onClick={e=>{if(isDesktopDevice(navigator)){rememberDesktopThread();return;}if(popup){e.preventDefault();setShowPrompt(true)}else trackDownload()}}
     >
-      {label}
+      {desktop?desktopActionLabel(label,!!user):label}
     </a>
     {showPrompt&&<AppDownloadModal placement={from} onClose={()=>setShowPrompt(false)}/>}
     </>

@@ -1,8 +1,33 @@
 [
   {
+    "id": "ai_market_recap_2026-10-23_post_close",
+    "likes": 23,
+    "comments": 1,
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2Fe662263e23945660dec95fd81359cff3c355b36911e46b1af7e8a3b4eb720116%2Fmarket-performance.png?alt=media&token=e662263e23945660dec95fd81359cff3c355b36911e46b1af7e8a3b4eb720116",
+        "filename": "market-performance.png",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2Fe839c5808c809756faf66fb1cb7e2ca08b4f517ab47d86902dee1de5b9efecba%2Fearnings-and-events.png?alt=media&token=e839c5808c809756faf66fb1cb7e2ca08b4f517ab47d86902dee1de5b9efecba",
+        "filename": "earnings-and-events.png",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2F0ae5aeab4d9a52bd9f765a1acd5719cc9ff2f3b2a153b6b1245ed642328758f8%2Fmarket-movers.png?alt=media&token=0ae5aeab4d9a52bd9f765a1acd5719cc9ff2f3b2a153b6b1245ed642328758f8",
+        "filename": "market-movers.png",
+        "width": 1200,
+        "height": 1200
+      }
+    ]
+  },
+  {
     "id": "options_results_PANW_2026-10-23",
-    "likes": 0,
-    "comments": 0,
+    "likes": 38,
+    "comments": 1,
     "images": [
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2F5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de%2FPANW-2026-10-23-357.5-call.png?alt=media&token=5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de",
@@ -20,7 +45,7 @@
   },
   {
     "id": "research_mover_20261023_TMUS",
-    "likes": 2,
+    "likes": 30,
     "comments": 2,
     "images": [
       {
@@ -39,7 +64,7 @@
   },
   {
     "id": "research_mover_20261023_DDOG",
-    "likes": 8,
+    "likes": 33,
     "comments": 1,
     "images": [
       {
@@ -58,7 +83,7 @@
   },
   {
     "id": "research_mover_20261023_CRWD",
-    "likes": 7,
+    "likes": 34,
     "comments": 1,
     "images": [
       {
@@ -77,7 +102,7 @@
   },
   {
     "id": "options_results_SLB_2026-10-23",
-    "likes": 9,
+    "likes": 44,
     "comments": 1,
     "images": [
       {
@@ -96,7 +121,7 @@
   },
   {
     "id": "research_mover_20261023_SLB",
-    "likes": 4,
+    "likes": 37,
     "comments": 1,
     "images": [
       {
@@ -115,7 +140,7 @@
   },
   {
     "id": "research_mover_20261023_T",
-    "likes": 8,
+    "likes": 35,
     "comments": 1,
     "images": [
       {
@@ -134,7 +159,7 @@
   },
   {
     "id": "research_mover_20261023_GL",
-    "likes": 7,
+    "likes": 37,
     "comments": 1,
     "images": [
       {
@@ -153,7 +178,7 @@
   },
   {
     "id": "research_mover_20261023_CBRE",
-    "likes": 7,
+    "likes": 30,
     "comments": 1,
     "images": [
       {
@@ -172,7 +197,7 @@
   },
   {
     "id": "options_results_CCI_2026-10-23",
-    "likes": 6,
+    "likes": 25,
     "comments": 1,
     "images": [
       {
@@ -185,7 +210,7 @@
   },
   {
     "id": "research_mover_20261023_CCI",
-    "likes": 8,
+    "likes": 44,
     "comments": 1,
     "images": [
       {
@@ -204,7 +229,7 @@
   },
   {
     "id": "research_mover_20261023_FIX",
-    "likes": 11,
+    "likes": 39,
     "comments": 2,
     "images": [
       {
@@ -223,7 +248,7 @@
   },
   {
     "id": "research_mover_20261023_AMT",
-    "likes": 13,
+    "likes": 37,
     "comments": 3,
     "images": [
       {
@@ -242,7 +267,7 @@
   },
   {
     "id": "research_mover_20261023_SBAC",
-    "likes": 9,
+    "likes": 37,
     "comments": 1,
     "images": [
       {
@@ -261,7 +286,7 @@
   },
   {
     "id": "briefing_earnings_preview_XOM_2026_10_30",
-    "likes": 10,
+    "likes": 43,
     "comments": 1,
     "images": [
       {
@@ -286,7 +311,7 @@
   },
   {
     "id": "briefing_premarket_2026_10_23",
-    "likes": 13,
+    "likes": 45,
     "comments": 2,
     "images": [
       {
@@ -305,8 +330,8 @@
   },
   {
     "id": "earnings_review_20261022_BE",
-    "likes": 18,
-    "comments": 1,
+    "likes": 52,
+    "comments": 2,
     "images": [
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261022_BE%2F1%2F353821fa346965100cda25556e6c13c045defc02e59d2e1903da1b16f47cbe3f-380ce4fe-0cc1-4fdb-b4af-c19899bbf6a8%2FFinancials.jpg?alt=media&token=380ce4fe-0cc1-4fdb-b4af-c19899bbf6a8",
@@ -330,8 +355,8 @@
   },
   {
     "id": "options_results_ACN_2026-10-22",
-    "likes": 12,
-    "comments": 2,
+    "likes": 39,
+    "comments": 3,
     "images": [
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898%2FACN-2026-10-23-245-call.png?alt=media&token=21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898",
@@ -343,7 +368,7 @@
   },
   {
     "id": "briefing_earnings_preview_KO_2026_10_27",
-    "likes": 13,
+    "likes": 21,
     "comments": 1,
     "images": [
       {
@@ -368,7 +393,7 @@
   },
   {
     "id": "briefing_earnings_preview_INTC_2026_10_29",
-    "likes": 14,
+    "likes": 23,
     "comments": 0,
     "images": [
       {
@@ -393,7 +418,7 @@
   },
   {
     "id": "briefing_earnings_preview_MA_2026_10_29",
-    "likes": 6,
+    "likes": 18,
     "comments": 0,
     "images": [
       {
@@ -418,7 +443,7 @@
   },
   {
     "id": "briefing_earnings_preview_V_2026_10_27",
-    "likes": 8,
+    "likes": 14,
     "comments": 0,
     "images": [
       {
@@ -443,7 +468,7 @@
   },
   {
     "id": "briefing_earnings_preview_LLY_2026_10_29",
-    "likes": 7,
+    "likes": 13,
     "comments": 0,
     "images": [
       {
@@ -468,7 +493,7 @@
   },
   {
     "id": "research_mover_20261022_afterhours_STX",
-    "likes": 6,
+    "likes": 12,
     "comments": 0,
     "images": [
       {
@@ -487,7 +512,7 @@
   },
   {
     "id": "research_mover_20261022_afterhours_VZ",
-    "likes": 8,
+    "likes": 12,
     "comments": 1,
     "images": [
       {
@@ -506,7 +531,7 @@
   },
   {
     "id": "research_mover_20261022_afterhours_WDC",
-    "likes": 8,
+    "likes": 13,
     "comments": 0,
     "images": [
       {
@@ -525,7 +550,7 @@
   },
   {
     "id": "research_mover_20261022_afterhours_T",
-    "likes": 5,
+    "likes": 9,
     "comments": 1,
     "images": [
       {
@@ -544,7 +569,7 @@
   },
   {
     "id": "briefing_earnings_preview_AMZN_2026_10_29",
-    "likes": 3,
+    "likes": 8,
     "comments": 1,
     "images": [
       {
@@ -569,7 +594,7 @@
   },
   {
     "id": "options_results_ROP_2026-10-22",
-    "likes": 6,
+    "likes": 10,
     "comments": 2,
     "images": [
       {
@@ -607,7 +632,7 @@
   },
   {
     "id": "briefing_earnings_preview_GOOG_2026_10_28",
-    "likes": 5,
+    "likes": 6,
     "comments": 1,
     "images": [
       {

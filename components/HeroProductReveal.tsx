@@ -62,6 +62,7 @@ export default function HeroProductReveal() {
     const draw = () => {
       frame = 0;
       const rect = element.getBoundingClientRect();
+      element.dataset.scrollStarted=String(window.scrollY>8);
       if (heading) {
         // A tall viewport can include this heading before the visitor scrolls.
         // Keep it hidden at the top, even with reduced motion enabled.
@@ -101,7 +102,7 @@ export default function HeroProductReveal() {
     };
   }, []);
 
-  return <div ref={root} className={styles.reveal} id="product-reveal">
+  return <div ref={root} className={styles.reveal} id="product-reveal" tabIndex={-1}>
     <div className={styles.gradientTail} aria-hidden="true"><i /></div>
     <div data-preview-heading data-title-visible="false" className={styles.heading}>
       <span className={styles.eyebrow}>A CLEARER VIEW OF THE MARKET</span>
@@ -122,14 +123,15 @@ export default function HeroProductReveal() {
             <span className={styles.snapshot}>{sessionKind?'Free extended-hours snapshot':`Saved snapshot · ${date}`}</span>
           </div>
         </div>
-        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession} moversControls={sectionSelector('Top movers period')} pulseControls={sectionSelector('Market pulse period')}/></div>:<div className={styles.regularSnapshot}><div className={styles.mobileHeatControls}>{periodSelector('Regular-session period')}</div><div className={extendedStyles.grid}>
+        {sessionKind?<div style={{padding:'0 24px 24px'}}><div className={styles.mobileHeatControls}>{periodSelector('Extended-hours period')}</div><ExtendedHoursSnapshot embedded kind={sessionKind} session={(latest?.[sessionKind] || savedExtended[sessionKind]) as ExtendedSession} moversControls={sectionSelector('Top movers period')} pulseControls={sectionSelector('Market pulse period')}/></div>:<div className={styles.regularSnapshot}><div className={styles.mobileHeatControls}>{periodSelector('Regular-session period')}</div><div className={`${extendedStyles.grid} ${extendedStyles.dashboardGrid}`}><div className={extendedStyles.marketColumn}>
           <div className={styles.heatPanel}>
             <div className={styles.panelHeading}><span>S&P 500 by industry</span><span className={styles.tag}>{label}</span></div>
             <HeroOverviewHeatmap rows={stocks} period={period} asOf={latest?.overviewRows?.length ? latest.asOf : snapshot.asOf} />
             <a className={styles.panelLink} href="/stock-market-heatmap/">Explore the full heatmap <span aria-hidden="true">↗</span></a>
           </div>
+          <div className={extendedStyles.sessionPulse}><HeroMarketPulse compact latest={latest} period={period} label={label} periodControls={sectionSelector('Market pulse period')}/></div></div>
           <MarketMovers rows={latest?.moverRows ?? stocks} period={period} label={label} periodControls={sectionSelector('Top movers period')}/>
-        </div><div className={extendedStyles.sessionPulse}><HeroMarketPulse latest={latest} period={period} label={label} periodControls={sectionSelector('Market pulse period')}/></div></div>
+        </div></div>
         }
         <div className={styles.bottomBar}><span><i /> Perspective starts here.</span><span>Research <b>·</b> Compare <b>·</b> Understand</span></div>
       </div>

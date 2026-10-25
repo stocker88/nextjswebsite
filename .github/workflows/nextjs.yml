@@ -27,6 +27,7 @@ jobs:
       - run: corepack enable
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
+      - run: yarn test:content-access
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
       - run: node scripts/article-posts-check.cjs

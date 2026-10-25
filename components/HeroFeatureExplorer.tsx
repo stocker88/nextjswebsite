@@ -1,4 +1,6 @@
+import DesktopAppLink from './DesktopAppLink';
 import {overnightOptionsResult} from '../lib/featured-research';
+import {useSiteAccount} from './SiteAccount';
 import {useState} from 'react';
 import {researchUrl} from '../lib/research';
 import styles from '../styles/HeroProductReveal.module.css';
@@ -12,7 +14,10 @@ const features = [
   {group:'Signals',title:'Stocks to Buy',copy:'Explore stock ideas and the research behind them.',href:'/stocks-to-buy/',icon:'↗'},
   {group:'Signals',title:'Stock & options signals',copy:'Discover setups and review the original shared ideas.',href:app,icon:'ϟ'},
   {group:'Research',title:'Search for a Stock',copy:'Find company research by name or ticker.',href:'/stocks/',icon:'⌕'},
-  {group:'Research',title:'Peer comparison analysis',copy:'Compare companies, industry metrics and P/E distributions.',href:app,icon:'◎'},
+  {group:'Research',title:'Politician Trades',copy:'Explore disclosed House and Senate trades, reporting dates and research signals.',href:'/politician-trades/',icon:'≡'},
+  {group:'Research',title:'Hedge Fund Activity',copy:'Compare disclosed fund holdings, new positions and quarterly portfolio changes.',href:'/hedge-fund-activity/',icon:'▥'},
+  {group:'Research',title:'Insider Trades',copy:'Follow reported executive and director transactions and explore insider buying signals.',href:'/insider-trades/',icon:'◎'},
+  {group:'Research',title:'Peer comparison analysis',copy:'Compare companies, industry metrics and P/S and P/E distributions.',href:app,icon:'◎'},
   {group:'Research',title:'Financials & forecasts',copy:'Explore company fundamentals and forward-looking scenarios.',href:app,icon:'▥'},
   {group:'Research',title:'Technical analysis',copy:'Study price trends, performance and technical indicators.',href:app,icon:'⌁'},
   {group:'Research',title:'Research methodology',copy:'Understand the approach behind the analysis.',href:'/methodology/',icon:'◇'},
@@ -37,6 +42,7 @@ const iconPaths:Record<string,string> = {
 };
 const groups=['All features','Markets','Signals','Research','Options','News & calendar'];
 export default function HeroFeatureExplorer(){
+ const {desktop}=useSiteAccount();
  const [group,setGroup]=useState('All features');
  const shown=features.filter(f=>group==='All features'||f.group===group);
  return <div className={styles.explorer}>
@@ -48,6 +54,6 @@ export default function HeroFeatureExplorer(){
   </div>
   <div className={styles.explorerHeading}><div><span className={styles.eyebrow}>THE COMPLETE RESEARCH TOOLKIT</span><h3>Go from the headline to the whole picture.</h3></div><span>{features.length} ways to explore</span></div>
   <div className={styles.featureTabs} role="group" aria-label="Explore product features">{groups.map(g=><button key={g} type="button" aria-pressed={g===group} aria-controls="hero-feature-list" onClick={()=>setGroup(g)}>{g}</button>)}</div>
-  <div className={styles.featureGrid} id="hero-feature-list">{shown.map(f=><a data-depth-card key={f.title} href={f.href} target={f.href===app ? '_blank' : undefined} rel={f.href===app ? 'noopener noreferrer' : undefined} className={styles.featureCard}>{f.href===app&&<span className={styles.featureAppBadge}>In app</span>}<span className={styles.featureIcon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={iconPaths[f.icon]} /></svg></span><div><span className={styles.featureGroup}>{f.group}{f.href===app?' · IN THE APP':''}</span><h4>{f.title}</h4><p>{f.copy}</p></div><span className={styles.featureArrow} aria-hidden="true">↗</span></a>)}</div>
+  <div className={styles.featureGrid} id="hero-feature-list">{shown.map(f=>{const FeatureLink=f.href===app?DesktopAppLink:'a';return <FeatureLink data-depth-card key={f.title} href={f.href} target={f.href===app ? '_blank' : undefined} rel={f.href===app ? 'noopener noreferrer' : undefined} className={styles.featureCard}>{f.href===app&&<span className={styles.featureAppBadge}>{desktop?'Membership':'In app'}</span>}<span className={styles.featureIcon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={iconPaths[f.icon]} /></svg></span><div><span className={styles.featureGroup}>{f.group}{f.href===app&&!desktop?' · IN THE APP':''}</span><h4>{f.title}</h4><p>{f.copy}</p></div><span className={styles.featureArrow} aria-hidden="true">↗</span></FeatureLink>})}</div>
  </div>;
 }

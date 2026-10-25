@@ -1,6 +1,362 @@
 [
   {
     "version": 1,
+    "id": "ai_market_recap_2026-10-23_post_close",
+    "postId": "ai_market_recap_2026-10-23_post_close",
+    "kind": "post_close",
+    "slug": "closing-market-recap-2026-10-23",
+    "title": "Closing market recap : Oct 23, 2026, 5:00 PM ET",
+    "summary": "Stocks slipped as energy strength and mostly strong earnings could not fully offset growth and rate worries. The next big tech and healthcare reports may quickly reset expectations for profits and the economy.",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T21:00:38.000Z",
+    "updatedAt": "2026-10-23T21:00:38.000Z",
+    "symbols": [
+      "SPY"
+    ],
+    "sections": [
+      {
+        "heading": "Market overview",
+        "text": "The S&P 500 slipped about half a percent, and small caps also fell as most stocks ended lower. Strong recent profits met worries about growth and still‑high borrowing costs."
+      },
+      {
+        "heading": "Sector and industry performance",
+        "text": "Energy was the clear winner, with nearly all oil names rising as crude oil surged above $103. Consumer and communication services stocks were among the weakest groups."
+      },
+      {
+        "heading": "Sector and industry performance",
+        "text": "Technology stocks were roughly flat overall, holding up better than the broader market. That steadiness helped limit the S&P 500’s decline because big tech now makes up a large share of the index."
+      },
+      {
+        "heading": "Stock movers and news",
+        "text": "SLB jumped about 7% after reporting stronger‑than‑expected quarterly results, boosted by higher oil prices. Other energy names like APA and Devon gained as rising crude can quickly lift their cash flow."
+      },
+      {
+        "heading": "Stock movers and news",
+        "text": "Comfort Systems and Bloom Energy sank sharply even after reporting profits above forecasts, showing that outlooks matter more than simple beats. Deckers slid after profits topped expectations but sales came in light."
+      },
+      {
+        "heading": "Reported earnings",
+        "text": "Recent results from Meta, Tesla, Lam Research, Procter & Gamble, Netflix, American Express, and others all topped profit estimates, pointing to a generally solid earnings season so far."
+      },
+      {
+        "heading": "Upcoming earnings",
+        "text": "Next up, investors are watching reports from Amazon, Microsoft, Intel, T‑Mobile, MGM Resorts, and Eli Lilly, plus today’s consumer‑sentiment reading once released, for fresh clues on spending, tech demand, and the economy."
+      },
+      {
+        "heading": "What to watch next",
+        "text": "Stocks slipped as energy strength and mostly strong earnings could not fully offset growth and rate worries. The next big tech and healthcare reports may quickly reset expectations for profits and the economy."
+      }
+    ],
+    "events": [],
+    "rows": [],
+    "sources": [
+      {
+        "title": "Saved intraday snapshot",
+        "url": "https://www.stockstobuynow.ai/stock-market-heatmap/"
+      },
+      {
+        "title": "Netflix, Inc.",
+        "url": "https://www.stockstobuynow.ai/earnings-calendar/"
+      },
+      {
+        "title": "Housing starts & building permits",
+        "url": "https://www.census.gov/construction/soc/schedule.html"
+      },
+      {
+        "title": "Initial jobless claims",
+        "url": "https://oui.doleta.gov/unemploy/claims_arch.asp"
+      },
+      {
+        "title": "Consumer sentiment · final",
+        "url": "https://data.sca.isr.umich.edu/fetchdoc.php?docid=79628"
+      },
+      {
+        "title": "Q3 Earnings Season: Strong Base, Higher Revision Trends, and Promising 2027 Outlook",
+        "url": "https://www.zacks.com/commentary/3014105/q3-earnings-season-strong-base-higher-revision-trends-and-promising-2027-outlook?cid=CS-STOCKNEWSAPI-FT-earnings_preview-3014105"
+      },
+      {
+        "title": "Crude Oil Surges 4%; SLB Shares Jump Following Upbeat Q3 Earnings",
+        "url": "https://www.benzinga.com/markets/market-summary/26/10/62572636/crude-oil-surges-4-slb-shares-jump-following-upbeat-q3-earnings"
+      },
+      {
+        "title": "Oil Stocks Rally as Oil Price Tops $103: Devon Energy and Diamondback Energy Gain 5%, Occidental Petroleum Rises 3%",
+        "url": "https://247wallst.com/investing/2026/10/23/oil-stocks-rally-as-oil-price-tops-103-devon-energy-and-diamondback-energy-gain-5-occidental-petroleum-rises-3/"
+      },
+      {
+        "title": "Oil Prices Climb: 3 Energy Stocks Poised to Benefit From the Rally",
+        "url": "https://www.zacks.com/stock/news/3013010/oil-prices-climb-3-energy-stocks-poised-to-benefit-from-the-rally?cid=CS-STOCKNEWSAPI-FT-analyst_blog|industry_focus-3013010"
+      },
+      {
+        "title": "SLB N.V. (SLB) Q3 2026 Earnings Call Transcript",
+        "url": "https://seekingalpha.com/article/4956997-slb-n-v-slb-q3-2026-earnings-call-transcript"
+      },
+      {
+        "title": "What Comfort Systems USA (FIX) Said on Its Q3 Earnings Call",
+        "url": "https://www.marketbeat.com/instant-alerts/transcript-what-comfort-systems-usa-fix-said-on-its-q3-earnings-call-2026-10-23/"
+      },
+      {
+        "title": "Comfort Systems Q3 Earnings & Revenues Beat Estimates, Backlog Surges",
+        "url": "https://www.zacks.com/stock/news/3014213/comfort-systems-q3-earnings-revenues-beat-estimates-backlog-surges?cid=CS-STOCKNEWSAPI-FT-analyst_blog|earnings_article-3014213"
+      },
+      {
+        "title": "BE Q3 Earnings Beat Estimates on Strong Product Sales, View Up",
+        "url": "https://www.zacks.com/stock/news/3014130/be-q3-earnings-beat-estimates-on-strong-product-sales-view-up?cid=CS-STOCKNEWSAPI-FT-analyst_blog|earnings_article-3014130"
+      },
+      {
+        "title": "Deckers' Q2 Earnings Beat Estimates on Margins, Revenues Miss",
+        "url": "https://www.zacks.com/stock/news/3014035/deckers-q2-earnings-beat-estimates-on-margins-revenues-miss?cid=CS-STOCKNEWSAPI-FT-analyst_blog|earnings_article-3014035"
+      },
+      {
+        "title": "Meta's Q3 Was A Great Quarter And The Market Is Getting It Wrong Again",
+        "url": "https://seekingalpha.com/article/4957017-meta-q3-was-a-great-quarter-and-the-market-is-getting-it-wrong-again"
+      },
+      {
+        "title": "MGM Resorts to Report Q3 Earnings: What's in Store for the Stock?",
+        "url": "https://www.zacks.com/stock/news/3014143/mgm-resorts-to-report-q3-earnings-what-s-in-store-for-the-stock?cid=CS-STOCKNEWSAPI-FT-analyst_blog|earnings_preview-3014143"
+      },
+      {
+        "title": "Can Healthy Revenue Growth Boost T-Mobile's Q3 Earnings?",
+        "url": "https://www.zacks.com/stock/news/3014027/can-healthy-revenue-growth-boost-t-mobile-s-q3-earnings?cid=CS-STOCKNEWSAPI-FT-analyst_blog|earnings_preview-3014027"
+      },
+      {
+        "title": "Eli Lilly Stocks Slip 1.7% Ahead of Earnings After 48% Revenue Growth",
+        "url": "https://www.gurufocus.com/news/9139883/eli-lilly-stocks-slip-17-ahead-of-earnings-after-48-revenue-growth"
+      },
+      {
+        "title": "Amazon Stocks Edge Lower Ahead of Earnings After 37% AWS Revenue Growth",
+        "url": "https://www.gurufocus.com/news/9139864/amazon-stocks-edge-lower-ahead-of-earnings-after-37-aws-revenue-growth"
+      },
+      {
+        "title": "Hyperscalers Microsoft, Amazon Line Up With Earnings, Along With ServiceNow, Intel",
+        "url": "https://www.investors.com/research/earnings-preview/microsoft-stock-earnings-amazon-earnings-alphabet-earnings/"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "Dated closing market recap. The first image shows regular-session performance; the third shows after-hours changes versus the same-day regular close. Quotes reflect the saved report cutoff. Educational research; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2Fe662263e23945660dec95fd81359cff3c355b36911e46b1af7e8a3b4eb720116%2Fmarket-performance.png?alt=media&token=e662263e23945660dec95fd81359cff3c355b36911e46b1af7e8a3b4eb720116",
+        "filename": "market-performance.png",
+        "title": "1D heatmap, market pulse and movers",
+        "width": 1200,
+        "height": 1200,
+        "alt": "1D heatmap, market pulse and movers · 2026-10-23"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2Fe839c5808c809756faf66fb1cb7e2ca08b4f517ab47d86902dee1de5b9efecba%2Fearnings-and-events.png?alt=media&token=e839c5808c809756faf66fb1cb7e2ca08b4f517ab47d86902dee1de5b9efecba",
+        "filename": "earnings-and-events.png",
+        "title": "Recent and upcoming earnings and market events",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Recent and upcoming earnings and market events · 2026-10-23"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fv2%2F2026-10-23_post_close%2F0ae5aeab4d9a52bd9f765a1acd5719cc9ff2f3b2a153b6b1245ed642328758f8%2Fmarket-movers.png?alt=media&token=0ae5aeab4d9a52bd9f765a1acd5719cc9ff2f3b2a153b6b1245ed642328758f8",
+        "filename": "market-movers.png",
+        "title": "Market heatmap & movers",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Market heatmap & movers · 2026-10-23"
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_AMZN_2026_10_29",
+    "postId": "briefing_earnings_preview_AMZN_2026_10_29",
+    "kind": "earnings_preview",
+    "slug": "amazon-amzn-earnings-october-29-2026-preview",
+    "title": "Amazon (AMZN) Earnings October 29, 2026: AWS Growth, Guidance and Cash Flow",
+    "summary": "Amazon’s October 29 earnings call will put AWS demand, retail margins and cash spending in focus. Review estimates, prior results and recent enterprise-cloud peer reactions.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T21:23:53.817920+00:00",
+    "updatedAt": "2026-10-22T21:23:53.817920+00:00",
+    "symbols": [
+      "AMZN"
+    ],
+    "sections": [
+      {
+        "heading": "1) When is Amazon reporting Q3 earnings?",
+        "text": "Amazon’s October 15 announcement confirms its third-quarter results conference call for Thursday, October 29, at 5:00 PM Eastern. The saved earnings calendar classifies the event as after market close. The call time and reporting window serve different purposes: the calendar window is a broad session label, while the issuer supplies the specific webcast time."
+      },
+      {
+        "heading": "2) What are the current earnings expectations?",
+        "text": "The earnings-calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists $1.96 in estimated earnings per share and $202.1637 billion in estimated revenue. These vendor figures are separate from Amazon’s own sales and operating-income outlook. The feed does not define the EPS accounting basis, so the estimate should not be treated as directly comparable with investment-influenced GAAP earnings without reconciliation."
+      },
+      {
+        "heading": "3) What do the previous two quarters tell us?",
+        "text": "Amazon reported Q1 revenue of $181.519 billion and Q2 revenue of $200.606 billion. Against the respective dated revenue consensus of $177.28 billion and $197.03 billion, the surprises were about 2.4% and 1.8%. GAAP EPS was $2.78 and $5.75, but Anthropic-related investment gains complicate the operating comparison. The third graphic therefore labels the EPS surprise unverified instead of presenting an unreconciled beat."
+      },
+      {
+        "heading": "4) How should guidance and the stock reaction be read?",
+        "text": "The July release put Q3 sales at $197–202 billion and operating income at $22.5–26.5 billion. Prime Day’s move into Q2 makes reported growth less comparable with last year’s event timing. Management also discussed approximately $220 billion of 2026 cash capital spending on the July call, versus the prior approximately $200 billion estimate. The stock-reaction graphic measures release-day regular close to the next trading close; those observed moves do not identify a single cause."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Amazon sells products directly and earns fees from third-party sellers, fulfillment and shipping, subscriptions, advertising and AWS infrastructure services. Its North America and International segments include multiple retail-related revenue streams; AWS is a separate operating segment. Revenue size alone does not show profit contribution, so segment margins are useful alongside reported growth."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "The key questions are whether AWS demand remains strong, whether capacity investment converts to revenue, and whether retail delivery efficiency supports margins. Advertising growth can improve the business mix, while the timing of Prime Day affects the sales comparison. Operating cash flow and capital purchases need to be assessed together because infrastructure spending can absorb cash before related revenue is earned."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "IBM and SAP reported on October 21. IBM’s operating EPS of $2.95 and revenue of $17.103 billion exceeded the cited $2.86 and $16.82 billion estimates, while management raised its free-cash-flow growth outlook. SAP’s non-IFRS basic EPS of €1.89 and revenue of €10.270 billion exceeded its October 19 consensus medians of €1.80 and €10.119 billion. SAP pointed toward the upper end of its cloud revenue range and held its operating-profit outlook. These are enterprise-technology comparisons, not direct retail peers or a forecast of AWS results. The graphic uses each US-listed stock’s release-day close through the next trading close."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include weaker consumer spending, fulfillment and shipping costs, competition across retail and cloud, infrastructure cost inflation and regulatory proceedings. Investment revaluations can move GAAP earnings independently of operating execution. AWS growth, retail margins and capital spending may send different signals, making operating profit and cash generation important checks on the headline EPS number."
+      }
+    ],
+    "events": [
+      {
+        "marketCap": 2792758302000,
+        "epsActual": null,
+        "sector": "Consumer Cyclical",
+        "date": "2026-10-29",
+        "industry": "Specialty Retail",
+        "revenueActual": null,
+        "research": {
+          "forwardPs": 3.3690736126900176,
+          "ps": 3.599151922184406,
+          "forwardPe": 20.526517491924697,
+          "estimatePeriod": "2026-12-31",
+          "beat": {
+            "beats": 7,
+            "rate": 87.5,
+            "total": 8
+          },
+          "oneYear": 22.371427239240905,
+          "pe": 20.597619047619045,
+          "updatedAt": "2026-10-20T10:12:50.631Z",
+          "revenueBeat": {
+            "beats": 8,
+            "rate": 100,
+            "total": 8
+          },
+          "beatUpdatedAt": "2026-10-20T10:12:47.362Z"
+        },
+        "name": "Amazon.com, Inc.",
+        "exchange": "NASDAQ",
+        "price": 262.45,
+        "revenueEstimate": 202163700000,
+        "session": "amc",
+        "epsEstimate": 1.96,
+        "symbol": "AMZN",
+        "dateStatus": "issuer_confirmed",
+        "priceDate": "2026-10-19"
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "url": "https://press.aboutamazon.com/2026/10/amazon-com-to-webcast-third-quarter-2026-financial-results-conference-call",
+        "title": "Amazon confirms October 29 Q3 conference call"
+      },
+      {
+        "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/default.aspx",
+        "title": "Amazon Q1 2026 issuer results and Q2 outlook"
+      },
+      {
+        "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+        "title": "Amazon Q2 2026 issuer results and Q3 outlook"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+        "title": "Amazon June 2026 filing, July 22 common shares"
+      },
+      {
+        "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+        "title": "Amazon FY2025 results and segments"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231.htm",
+        "title": "Amazon FY2023 annual filing and 2021–2023 net sales"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-29-amazoncom-inc-stock/",
+        "title": "Amazon Q1 dated revenue consensus and issuer call remarks"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-30-amazoncom-inc-stock/",
+        "title": "Amazon Q2 dated revenue consensus and issuer capex remarks"
+      },
+      {
+        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+        "title": "IBM October 21 issuer earnings release"
+      },
+      {
+        "url": "https://www.benzinga.com/markets/earnings/26/10/62512362/ibm-stock-jumps-after-q3-results-top-expectations",
+        "title": "IBM dated adjusted EPS and revenue consensus"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/sap-quarterly-statement-q3-2026-302915956.html",
+        "title": "SAP October 21 issuer results"
+      },
+      {
+        "url": "https://www.sap.com/investors/en/financial-documents-and-events/consensus.html",
+        "title": "SAP October 19 Visible Alpha median consensus"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/AMZN?range=5y&interval=1d",
+        "title": "AMZN Q2 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/IBM?range=5y&interval=1d",
+        "title": "IBM Q3 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/SAP?range=5y&interval=1d",
+        "title": "SAP Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_AMZN_2026_10_29%2F1%2F9314fbdc494dd12d839f22b52a1b7a613f1ddb015b286158e31ffe873847a220-320bd802-8e1d-4d52-a671-e170597c89cf%2FFinancials.jpg?alt=media&token=320bd802-8e1d-4d52-a671-e170597c89cf",
+        "width": 1200,
+        "title": "Financials",
+        "alt": "Amazon.com, Inc. Financials research infographic",
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_AMZN_2026_10_29%2F2%2F41e354457d561f1612161adf0078933a7d22e8858aa0aee761fabefc6c909efa-120c4185-91b7-42f3-b45e-0f9edcd0b72b%2FTechnicals.jpg?alt=media&token=120c4185-91b7-42f3-b45e-0f9edcd0b72b",
+        "width": 1200,
+        "title": "Technicals",
+        "alt": "Amazon.com, Inc. Technicals research infographic",
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_AMZN_2026_10_29%2F3%2F4554827d204f2f1b2370c9931294132443a58e45863fed91d81b7d143adf9f7d-b8bc24bd-edb7-4f84-b27e-4a7e03e2797f%2FEarnings-Peers.jpg?alt=media&token=b8bc24bd-edb7-4f84-b27e-4a7e03e2797f",
+        "width": 1200,
+        "title": "Earnings & Peers",
+        "alt": "Amazon.com, Inc. Earnings & Peers research infographic",
+        "height": 1200
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Famzn%2F00da1e17b30ed908b976381a29946c4b7b20afa29be00f6ac33fcec8186ac35c.jpg?alt=media&token=a9fcb326-e7d6-40d7-9a85-48c747a2622e",
+      "width": 1920,
+      "height": 2560,
+      "alt": "The glass domes of Amazon Spheres in downtown Seattle",
+      "caption": "Archive photograph of the Amazon Spheres in Seattle, 2018; not an image of the upcoming earnings event.",
+      "credit": "Andy Li",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amazon_Spheres_2018.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dateTaken": "2018-05-02 13:23:13",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
     "id": "briefing_earnings_preview_GOOG_2026_10_28",
     "postId": "briefing_earnings_preview_GOOG_2026_10_28",
     "kind": "earnings_preview",
@@ -9,42 +365,42 @@
     "summary": "Alphabet reports Q3 results on October 28. Review dated estimates, Search and Cloud drivers, AI investment, previous earnings reactions and recent IBM and Meta results.",
     "sessionDate": "2026-10-22",
     "publishedAt": "2026-10-22T20:21:56.317585+00:00",
-    "updatedAt": "2026-10-22T20:45:06.888233+00:00",
+    "updatedAt": "2026-10-22T21:08:50.635413+00:00",
     "symbols": [
       "GOOG"
     ],
     "sections": [
       {
-        "heading": "When is Alphabet reporting Q3 earnings?",
-        "text": "Alphabet’s October 6 issuer announcement schedules the Q3 2026 earnings conference call for October 28 at 4:30 PM Eastern, with the release available before the call. GOOG and GOOGL represent different common share classes in the same issuer; this report uses GOOG prices."
+        "text": "Alphabet’s October 6 issuer announcement schedules the Q3 2026 earnings conference call for October 28 at 4:30 PM Eastern, with the release available before the call. GOOG and GOOGL represent different common share classes in the same issuer; this report uses GOOG prices.",
+        "heading": "1) When is Alphabet reporting Q3 earnings?"
       },
       {
-        "heading": "What are the dated earnings expectations?",
-        "text": "The saved earnings-calendar feed updated October 22, 2026 at 12:35 PM Eastern lists EPS of $3.03 and revenue of $127.9199 billion. These are vendor estimates rather than company guidance. Its EPS accounting definition is not supplied, so this preview does not treat the figure as comparable with investment-influenced GAAP EPS without reconciliation."
+        "text": "The saved earnings-calendar feed updated October 22, 2026 at 12:35 PM Eastern lists EPS of $3.03 and revenue of $127.9199 billion. These are vendor estimates rather than company guidance. Its EPS accounting definition is not supplied, so this preview does not treat the figure as comparable with investment-influenced GAAP EPS without reconciliation.",
+        "heading": "2) What are the dated earnings expectations?"
       },
       {
-        "heading": "How should investors read the previous results?",
-        "text": "The Q2 filing reports $119.796 billion of revenue and $9.11 GAAP diluted EPS. Other income included a $98.0 billion net gain, chiefly unrealized equity gains. The third graphic therefore shows verified revenue surprises while marking the company EPS surprise as unverified, rather than presenting an unreconciled earnings beat."
+        "text": "The Q2 filing reports $119.796 billion of revenue and $9.11 GAAP diluted EPS. Other income included a $98.0 billion net gain, chiefly unrealized equity gains. The third graphic therefore shows verified revenue surprises while marking the company EPS surprise as unverified, rather than presenting an unreconciled earnings beat.",
+        "heading": "3) How should investors read the previous results?"
       },
       {
-        "heading": "Guidance and the market can tell different stories",
-        "text": "The July conference remarks raised 2026 capital expenditure guidance to $195–205 billion. The price comparison uses the regular close on the release date through the next trading close; it is an observed window, not proof that a single earnings item caused the move. The charts use the completed October 22 session."
+        "text": "The July conference remarks raised 2026 capital expenditure guidance to $195–205 billion. The price comparison uses the regular close on the release date through the next trading close; it is an observed window, not proof that a single earnings item caused the move. The charts use the completed October 22 session.",
+        "heading": "4) Guidance and the market can tell different stories"
       },
       {
-        "heading": "How the business makes money",
-        "text": "Alphabet earns revenue through advertising on Search, YouTube and partner properties, cloud infrastructure and enterprise services, subscriptions, app distribution and devices. Its scale and mix make both advertiser demand and enterprise compute spending relevant, while investments outside Google have different economics."
+        "text": "Alphabet earns revenue through advertising on Search, YouTube and partner properties, cloud infrastructure and enterprise services, subscriptions, app distribution and devices. Its scale and mix make both advertiser demand and enterprise compute spending relevant, while investments outside Google have different economics.",
+        "heading": "5) How the business makes money"
       },
       {
-        "heading": "What to watch",
-        "text": "Research priorities are whether AI increases monetizable Search activity, whether Cloud demand converts to profitable revenue, and what management says about capital intensity. Server purchases, depreciation and outside capacity costs can affect margins and cash generation before the related revenue arrives."
+        "text": "Research priorities are whether AI increases monetizable Search activity, whether Cloud demand converts to profitable revenue, and what management says about capital intensity. Server purchases, depreciation and outside capacity costs can affect margins and cash generation before the related revenue arrives.",
+        "heading": "6) What to watch"
       },
       {
-        "heading": "Recently reported peers",
-        "text": "IBM’s October 21 release and Meta’s October 21 release offer different lenses on enterprise technology and advertising. Their revenue surprises, guidance and timestamped after-hours reactions are shown separately. Meta reported $3.83 GAAP EPS and $7.40 excluding a legal charge; its unreconciled EPS surprise is deliberately not asserted. Neither peer establishes Alphabet’s forthcoming outcome."
+        "text": "IBM’s October 21 release and Meta’s October 21 release offer different lenses on enterprise technology and advertising. Their revenue surprises, guidance and timestamped after-hours reactions are shown separately. Meta reported $3.83 GAAP EPS and $7.40 excluding a legal charge; its unreconciled EPS surprise is deliberately not asserted. Neither peer establishes Alphabet’s forthcoming outcome.",
+        "heading": "7) Recently reported peers"
       },
       {
-        "heading": "Risks into the report",
-        "text": "Risks include slower advertiser spending, competition in AI-assisted discovery, regulatory remedies, infrastructure costs and execution of capacity expansion. Equity-investment gains can move GAAP EPS independently of operating progress; vendor consensus must be compared on a matching basis."
+        "text": "Risks include slower advertiser spending, competition in AI-assisted discovery, regulatory remedies, infrastructure costs and execution of capacity expansion. Equity-investment gains can move GAAP EPS independently of operating progress; vendor consensus must be compared on a matching basis.",
+        "heading": "8) Risks into the report"
       }
     ],
     "events": [
@@ -193,6 +549,726 @@
   },
   {
     "version": 1,
+    "id": "briefing_earnings_preview_INTC_2026_10_29",
+    "postId": "briefing_earnings_preview_INTC_2026_10_29",
+    "kind": "earnings_preview",
+    "slug": "intel-intc-earnings-october-29-2026-preview",
+    "title": "Intel (INTC) Earnings October 29, 2026: CPU Demand, Foundry Spending and Guidance",
+    "summary": "Intel reports October 29 after the close. Review estimates, CPU demand, manufacturing execution, GAAP versus adjusted earnings, past surprises and recent semiconductor peer results.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T23:52:51.709602+00:00",
+    "updatedAt": "2026-10-22T23:52:51.709602+00:00",
+    "symbols": [
+      "INTC"
+    ],
+    "sections": [
+      {
+        "heading": "1) When will Intel report Q3 earnings?",
+        "text": "Intel’s October 6 announcement confirms results promptly after the market closes on Thursday, October 29, 2026. The earnings conference call begins at 2:00 PM Pacific, equivalent to 5:00 PM Eastern. Both the reporting date and after-close window are company-confirmed. The technical charts use the completed October 22 regular session and do not include the forthcoming earnings response."
+      },
+      {
+        "heading": "2) What are the dated earnings expectations?",
+        "text": "The earnings-calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists $0.4021 in estimated EPS and $16.50142 billion in estimated revenue. The feed does not define the EPS accounting basis. Intel’s own July guidance is a separate benchmark: $15.8–16.8 billion in Q3 revenue, $0.31 in GAAP diluted EPS and $0.38 in non-GAAP diluted EPS, with the EPS forecasts based on the revenue midpoint. Its corresponding gross-margin outlook was 41% GAAP and 42% non-GAAP."
+      },
+      {
+        "heading": "3) How did the last two reports compare with estimates?",
+        "text": "Intel reported Q1 revenue of $13.577 billion against dated rounded consensus of $12.39 billion, about a 9.6% surprise. Non-GAAP EPS of $0.29 exceeded the $0.01 estimate by $0.28; the resulting 2,800% percentage reflects a near-zero starting estimate rather than a comparable growth rate. Q2 revenue of $16.128 billion exceeded $14.43 billion by about 11.8%, and non-GAAP EPS of $0.42 doubled the $0.21 estimate. GAAP losses per share were $0.73 and $2.16, respectively. These consensus comparisons use adjusted earnings, rather than treating those GAAP losses as equivalent measures."
+      },
+      {
+        "heading": "4) Why do GAAP earnings and non-GAAP results differ?",
+        "text": "Intel’s reconciliations exclude specified acquisition, restructuring, investment and other items from non-GAAP measures. In Q2, a large non-operating fair-value change in escrowed shares tied to the US government agreement contributed to the difference between the GAAP loss and adjusted profit. Such accounting movements are distinct from chip sales and factory operating performance, while their economic context still matters. Investors should examine operating cash flow, capital spending and the reconciliation alongside EPS. The price-reaction graphic uses release-day regular close through the next trading close, capturing observed changes without assigning them to one earnings item."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Intel sells processors and related computing platforms for PCs, servers and other applications, and operates semiconductor development, manufacturing and packaging activities through Intel Foundry. In 2025, Intel Products revenue was $49.147 billion, Foundry revenue was $17.826 billion and all other revenue was $3.563 billion. Eliminations of $17.683 billion reduce these business-unit amounts to consolidated revenue of $52.853 billion. Foundry revenue includes internal transactions, so adding the unit figures without eliminations would overstate sales. Altera was deconsolidated in September 2025, affecting year-over-year comparisons."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "Key questions include whether processor supply is catching up with demand, whether data center momentum persists and how manufacturing yields and cycle times affect available output. The report can update product and foundry execution, advanced packaging, gross margins and the spending required to support future capacity. An updated Q4 outlook would provide a new forward benchmark. External foundry commitments should be distinguished from internal manufacturing activity and from unconfirmed customer speculation."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "Texas Instruments reported October 21 revenue of $6.055 billion and GAAP diluted EPS of $2.62 against dated rounded consensus of $5.94 billion and $2.40. Those imply surprises of about 1.9% and 9.2%. TI issued Q4 guidance for $5.80–6.30 billion in revenue and $2.45–2.79 in EPS. It described broad growth across industrial, automotive and data center demand. TI’s analog and embedded products differ from Intel’s processor and foundry mix, so the report offers cycle context rather than a forecast for Intel. The graphic measures the October 21 regular close through the October 22 regular close, a completed window after its after-close release."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include manufacturing delays, yield and cost problems, competitive pressure in processors, swings in customer demand, large capital requirements and uncertain external foundry adoption. Government-related agreements, minority interests, portfolio changes and non-cash revaluations complicate headline earnings. Revenue growth can coexist with weak free cash flow when investment is high. GAAP losses make a trailing P/E uninformative; adjusted profit alone does not establish the value of the manufacturing strategy."
+      }
+    ],
+    "events": [
+      {
+        "industry": "Semiconductors",
+        "name": "Intel Corp.",
+        "symbol": "INTC",
+        "research": {
+          "forwardPs": 8.184882701933697,
+          "updatedAt": "2026-10-12T13:30:04.423Z",
+          "beat": {
+            "total": 8,
+            "rate": 75,
+            "beats": 6
+          },
+          "forwardPe": 66.31208882110406,
+          "revenueBeat": {
+            "total": 8,
+            "rate": 100,
+            "beats": 8
+          },
+          "beatUpdatedAt": "2026-10-21T23:37:21.479Z",
+          "pe": null,
+          "oneYear": 179.72214800961797,
+          "estimatePeriod": "2026-12-27",
+          "ps": 9.07498972576799
+        },
+        "revenueEstimate": 16501420000,
+        "revenueActual": null,
+        "epsEstimate": 0.4021,
+        "epsActual": null,
+        "date": "2026-10-29",
+        "sector": "Technology",
+        "exchange": "NASDAQ",
+        "dateStatus": "issuer_confirmed",
+        "session": "amc",
+        "marketCap": 510629314388,
+        "price": 101.235
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "title": "Intel confirms October 29 after-close results and conference call",
+        "url": "https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results"
+      },
+      {
+        "title": "Intel Q1 issuer results and Q2 guidance",
+        "url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results"
+      },
+      {
+        "title": "Intel Q2 issuer results and Q3 guidance",
+        "url": "https://www.intc.com/news-events/press-releases/detail/1776/intel-reports-second-quarter-2026-financial-results"
+      },
+      {
+        "title": "Intel June quarterly filing and July shares outstanding",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000157/intc-20260627.htm"
+      },
+      {
+        "title": "Intel FY2025 annual filing and segment reconciliation",
+        "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm"
+      },
+      {
+        "title": "SEC issuer facts with 2021–2025 annual revenue",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000050863.json"
+      },
+      {
+        "title": "Newsquawk April 23 dated adjusted EPS and revenue consensus",
+        "url": "https://www.newsquawk.com/headlines/intel-intc-q1-2026-usd-adj-eps-0-29-exp-0-01-revenue-13-58bln-exp-12-39bln-q2-revenue-view-13-8-14-8bln-exp-13-04bln-q2-adj-eps-view-0-20-exp-0-09-23-04-2026"
+      },
+      {
+        "title": "MarketBeat July 23 dated adjusted EPS and revenue consensus",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-23-intel-co-stock/"
+      },
+      {
+        "title": "Texas Instruments October 21 issuer results and Q4 guidance",
+        "url": "https://investor.ti.com/news-releases/news-release-details/ti-reports-third-quarter-2026-financial-results-and-shareholder"
+      },
+      {
+        "title": "Texas Instruments October 21 dated consensus",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-21-texas-instruments-incorporated-stock/"
+      },
+      {
+        "title": "INTC Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/INTC?range=5y&interval=1d"
+      },
+      {
+        "title": "TXN Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/TXN?range=5y&interval=1d"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "width": 1200,
+        "alt": "Intel Corp. Financials research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_INTC_2026_10_29%2F1%2F63b94bf8c742e1fb4380d750fb188a47f05a18c679cc769e955493434fd4acb2-021064b1-ce73-4a27-b582-2bd7c6e5cdfe%2FFinancials.jpg?alt=media&token=021064b1-ce73-4a27-b582-2bd7c6e5cdfe",
+        "title": "Financials"
+      },
+      {
+        "width": 1200,
+        "alt": "Intel Corp. Technicals research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_INTC_2026_10_29%2F2%2Fcd42abe396bc65ced49f1c004f1d0b145d67691922e752c7406d131b5d634180-28b77c3b-6a5b-411b-805d-c1891b558573%2FTechnicals.jpg?alt=media&token=28b77c3b-6a5b-411b-805d-c1891b558573",
+        "title": "Technicals"
+      },
+      {
+        "width": 1200,
+        "alt": "Intel Corp. Earnings & Peers research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_INTC_2026_10_29%2F3%2Ff9e386b217c2fd3f251a8ba1587faef8a05cd696c4713bfcb0570e6482d11cb4-be6127a4-7cdd-4478-9122-a0a88e1135a2%2FEarnings-Peers.jpg?alt=media&token=be6127a4-7cdd-4478-9122-a0a88e1135a2",
+        "title": "Earnings & Peers"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fintc%2F4687d3d14aaf8ef9006078b660ea25baaa955e3b93edd571b863947a52a827d2.jpg?alt=media&token=5bcd6b07-5f09-4b01-902b-1911ba81ee77",
+      "width": 1920,
+      "height": 1283,
+      "alt": "Intel headquarters building in Santa Clara with an archive Gordon Moore memorial display",
+      "caption": "Archive photograph of Intel’s Santa Clara headquarters with a Gordon Moore memorial display, July 2023.",
+      "credit": "Coolcaesar",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Intel_Headquarters_in_2023.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2023-07-02 10:21:43",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_KO_2026_10_27",
+    "postId": "briefing_earnings_preview_KO_2026_10_27",
+    "kind": "earnings_preview",
+    "slug": "coca-cola-ko-earnings-october-27-2026-preview",
+    "title": "Coca-Cola (KO) Earnings October 27, 2026: Volume, Pricing, Margins and Guidance",
+    "summary": "Coca-Cola reports October 27 before the open. Review estimates, volume and pricing trends, raised guidance, prior earnings surprises and PepsiCo’s recent results.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-23T00:05:14.478198+00:00",
+    "updatedAt": "2026-10-23T00:05:14.478198+00:00",
+    "symbols": [
+      "KO"
+    ],
+    "sections": [
+      {
+        "heading": "1) When is Coca-Cola reporting Q3 earnings?",
+        "text": "Coca-Cola’s September 29 announcement confirms financial results before the New York Stock Exchange opens on Tuesday, October 27, 2026. Its investor conference call begins at 8:30 AM Eastern. Both the date and before-open release window are company-confirmed. The charts use the completed October 22 regular session and exclude the forthcoming report’s price response."
+      },
+      {
+        "heading": "2) What are the dated earnings expectations?",
+        "text": "The earnings-calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists estimated EPS of $0.881 and estimated revenue of $12.91993 billion. These are vendor forecasts, separate from reported results and Coca-Cola guidance. The feed does not define its EPS accounting basis. A valid surprise comparison needs to match the estimate to the eventual GAAP or comparable non-GAAP measure, since Coca-Cola publishes both."
+      },
+      {
+        "heading": "3) How did the latest two quarters compare with estimates?",
+        "text": "Q1 net revenue of $12.472 billion exceeded dated rounded consensus of $12.24 billion by about 1.9%, and comparable EPS of $0.86 exceeded $0.812 by about 5.9%. Q2 net revenue of $13.380 billion exceeded $13.17 billion by about 1.6%, while comparable EPS of $0.97 exceeded $0.932 by about 4.1%. GAAP EPS was $0.91 and $1.03, respectively. Surprise percentages use the stated unrounded EPS estimates even though image values display two decimals. Q1 contained six additional reporting days, affecting reported revenue and concentrate shipments; average-daily-sales unit case volume has a different calendar treatment."
+      },
+      {
+        "heading": "4) What changed in the full-year outlook?",
+        "text": "The July release moved organic revenue growth to approximately 5% from 4%–5%. Comparable currency-neutral EPS growth excluding acquisitions and divestitures increased to 7%–8% from 6%–7%, while comparable EPS growth increased to 9%–10% from 8%–9%. Free cash flow guidance rose to approximately $12.4 billion from $12.2 billion. These measures use different currency and portfolio definitions. The July Q3 considerations anticipated roughly a 1% currency tailwind to comparable revenue and a 3% tailwind to comparable EPS; actual exchange-rate effects can change. The company also flagged six fewer reporting days in Q4 than a year earlier."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Coca-Cola earns revenue from selling beverage concentrates, syrups and finished drinks across sparkling soft drinks, water, sports drinks, coffee, tea, juice and dairy-related beverages. Bottling partners manufacture, package and distribute much of the finished product. In 2025, concentrate operations represented 59% of net operating revenue and finished product operations represented 41%. Refranchising bottling operations can reduce consolidated sales while changing the margin mix, so revenue and unit case volume measure different aspects of the system."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "The report can show whether global unit case volume and price/mix remain balanced as consumer budgets and channel preferences change. Investors can compare organic revenue, concentrate shipments, regional demand and input costs with marketing spending and margins. Currency and bottling portfolio changes can alter the reported dollar figures without matching changes in beverage consumption. Updates to the full-year outlook and cash generation provide checks on whether the first-half momentum is persisting."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "PepsiCo reported October 8 net revenue of $25.274 billion and core diluted EPS of $2.34 against dated rounded consensus of $24.96 billion and $2.30, implying surprises of about 1.3% and 1.7%. It reduced full-year core constant-currency EPS growth to 1%–2% from the low end of its prior 4%–6% range, while guiding organic revenue growth to approximately 3%. Its snacks and beverages portfolio, geographic mix and accounting adjustments differ from Coca-Cola’s, so the report provides context rather than a forecast. The image measures the October 8 regular close through the October 9 regular close, capturing subsequent follow-through after the morning release."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include slower consumer demand, resistance to price increases, commodity and packaging inflation, currency fluctuations and execution of bottling portfolio changes. Marketing and innovation costs may precede revenue benefits. Comparable earnings exclude specified items, and organic growth removes selected currency and structural effects; neither should be confused with GAAP dollar growth. Strong volume or headline EPS does not guarantee margin expansion or a positive share-price reaction."
+      }
+    ],
+    "events": [
+      {
+        "revenueEstimate": 12919930000,
+        "research": {
+          "beatUpdatedAt": "2026-10-15T19:47:53.165Z",
+          "beat": {
+            "rate": 100,
+            "beats": 8,
+            "total": 8
+          },
+          "forwardPe": 26.798593240174302,
+          "pe": 26.61261261261262,
+          "oneYear": 37.09203402938901,
+          "revenueBeat": {
+            "rate": 62.5,
+            "beats": 5,
+            "total": 8
+          },
+          "forwardPs": 7.6566509244507035,
+          "estimatePeriod": "2026-12-31",
+          "ps": 7.606213699275868,
+          "updatedAt": "2026-10-12T13:30:23.374Z"
+        },
+        "symbol": "KO",
+        "exchange": "NYSE",
+        "date": "2026-10-27",
+        "price": 89.275,
+        "industry": "Beverages - Non-Alcoholic",
+        "epsEstimate": 0.881,
+        "dateStatus": "issuer_confirmed",
+        "epsActual": null,
+        "sector": "Consumer Defensive",
+        "marketCap": 384110056083,
+        "revenueActual": null,
+        "session": "bmo",
+        "name": "The Coca-Cola Company"
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1173/the-coca-cola-company-announces-timing-of-third-quarter-2026-earnings-release",
+        "title": "Coca-Cola confirms October 27 before-open results and 8:30 AM call"
+      },
+      {
+        "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1158/coca-cola-reports-first-quarter-2026-results-and-updates-full-year-guidance",
+        "title": "Coca-Cola Q1 issuer results and full-year guidance"
+      },
+      {
+        "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1168/coca-cola-reports-second-quarter-2026-results-and-raises-full-year-guidance",
+        "title": "Coca-Cola Q2 issuer results and raised guidance"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026050503/ko-20260703.htm",
+        "title": "Coca-Cola July quarterly filing and common shares"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm",
+        "title": "Coca-Cola FY2025 annual filing and geographic revenue"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/ko-20231231.htm",
+        "title": "Coca-Cola FY2023 annual filing with 2021–2023 revenue"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-28-the-coca-cola-company-stock/",
+        "title": "Coca-Cola Q1 dated comparable EPS and revenue consensus"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-28-the-coca-cola-company-stock/",
+        "title": "Coca-Cola Q2 dated comparable EPS and revenue consensus"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/77476/000007747626000050/q320268-kxexhibit991.htm",
+        "title": "PepsiCo October 8 issuer earnings release and updated outlook"
+      },
+      {
+        "url": "https://www.newsquawk.com/headlines/pepsico-inc-pep-q3-2026-usd-adj-eps-234-exp-230-revenue-253bln-exp-2496bln",
+        "title": "PepsiCo October 8 Newsquawk dated core EPS and revenue consensus"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/KO?range=5y&interval=1d",
+        "title": "KO Q2 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/PEP?range=5y&interval=1d",
+        "title": "PEP Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_KO_2026_10_27%2F1%2F718ad51c2e93869702f48cb7650684ebd85efff3e5b47dda07f40f0186358173-b00aa6ec-0485-4754-a4c8-6168233ddc01%2FFinancials.jpg?alt=media&token=b00aa6ec-0485-4754-a4c8-6168233ddc01",
+        "height": 1200,
+        "width": 1200,
+        "alt": "The Coca-Cola Company Financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_KO_2026_10_27%2F2%2F2970266a6676bfaf916dd14c5e2947c123ca894d86d630ec2fb8e6315ebc886e-8951e15d-393b-44b8-a276-8e310e4ddc77%2FTechnicals.jpg?alt=media&token=8951e15d-393b-44b8-a276-8e310e4ddc77",
+        "height": 1200,
+        "width": 1200,
+        "alt": "The Coca-Cola Company Technicals research infographic",
+        "title": "Technicals"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_KO_2026_10_27%2F3%2Fa782f99c626ec6dce10756c4be82644bb882e3a9203db88efa1594800b4121c4-deb2b65e-156a-4065-a106-6205ac159092%2FEarnings-Peers.jpg?alt=media&token=deb2b65e-156a-4065-a106-6205ac159092",
+        "height": 1200,
+        "width": 1200,
+        "alt": "The Coca-Cola Company Earnings & Peers research infographic",
+        "title": "Earnings & Peers"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fko%2F196629f267c3b0100c90da9a2d42e3d40cf027d2a3c1591f13c3120580f66ec2.jpg?alt=media&token=261e8b20-7858-4bfd-aefe-5db2f0422828",
+      "width": 1920,
+      "height": 3413,
+      "alt": "Exterior of Coca-Cola headquarters in Atlanta",
+      "caption": "Archive photograph of Coca-Cola’s headquarters in Atlanta, 2020.",
+      "credit": "JJonahJackalope",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coca-Cola_World_Headquarters.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "01/12/2020 (according to Exif data)",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_LLY_2026_10_29",
+    "postId": "briefing_earnings_preview_LLY_2026_10_29",
+    "kind": "earnings_preview",
+    "slug": "eli-lilly-lly-earnings-october-29-2026-preview",
+    "title": "Eli Lilly (LLY) Earnings October 29, 2026: Estimates, Drug Sales and Guidance",
+    "summary": "Lilly’s October 29 earnings call puts diabetes and obesity drug sales, pricing, acquired research charges and guidance in focus. Review estimates, prior results and a recent pharmaceutical peer.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T23:18:21.955962+00:00",
+    "updatedAt": "2026-10-22T23:18:21.955962+00:00",
+    "symbols": [
+      "LLY"
+    ],
+    "sections": [
+      {
+        "heading": "1) When will Eli Lilly report Q3 earnings?",
+        "text": "Lilly’s October 15 announcement confirms third-quarter results on Thursday, October 29, 2026 and a conference call at 10:00 AM Eastern. The earnings calendar classifies the release as before the market opens; the specific call time is confirmed by the company, while the calendar’s broad release window is a separate field."
+      },
+      {
+        "heading": "2) What are the dated earnings expectations?",
+        "text": "The calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists estimated EPS of $5.70 and estimated revenue of $22.5807 billion. These are vendor estimates rather than Lilly guidance or reported results. The feed does not define the EPS accounting basis. Acquired research and development charges can affect both Lilly’s GAAP and non-GAAP EPS, so an estimate needs a matching charge treatment before it can establish a beat or miss."
+      },
+      {
+        "heading": "3) What do the previous two quarters show?",
+        "text": "Lilly reported Q1 revenue of $19.799 billion and Q2 revenue of $22.974 billion. Compared with the respective dated, rounded revenue consensus of $17.82 billion and $20.82 billion, the revenue surprises were approximately 11.1% and 10.3%. Q1 GAAP and non-GAAP EPS were $8.26 and $8.55; Q2 figures were $7.94 and $8.38. Both accounting presentations included acquired research charges of $0.52 per share in Q1 and $3.03 in Q2. The third graphic omits an EPS surprise because matching consensus treatment of those charges was not independently verified."
+      },
+      {
+        "heading": "4) How should guidance and price reactions be interpreted?",
+        "text": "In August, Lilly raised its 2026 sales range to $85–87 billion from $82–85 billion. Its non-GAAP EPS range changed to $35.50–36.50 from $35.50–37.00, including the additional second-quarter acquired research charge. These are historical August figures, not a newly confirmed October outlook. Lilly has subsequently posted a third-quarter acquired research and milestone-charge update; its charge treatment must be reconciled with the historical August ranges before drawing an EPS comparison. This preview does not present those August EPS figures as an unchanged October forecast. The earnings graphic measures each release-day regular close through the next trading close, showing follow-through rather than the initial overnight or opening reaction."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Lilly develops and sells prescription medicines across diabetes, obesity, oncology, immunology and neuroscience. Mounjaro and Zepbound contributed $36.507 billion of combined 2025 revenue, while Verzenio contributed $5.723 billion. Product revenue reflects prescriptions, supply availability, rebates and negotiated net prices rather than list prices alone."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "The report can clarify whether Mounjaro and Zepbound volume growth continues to offset lower realized prices. Investors can assess manufacturing capacity, access and reimbursement, operating margins, cash generation and the latest acquired research charges. Progress in oral obesity medicines and the retatrutide pipeline may influence longer-term expectations, but trial results and regulatory milestones do not guarantee commercial outcomes."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "Johnson & Johnson reported October 13 revenue of $25.399 billion and adjusted EPS of $2.59 against dated rounded consensus of $25.38 billion and $2.53. Those imply a revenue surprise of about 0.1% and an adjusted EPS surprise of about 2.4%. It raised its full-year sales midpoint to $101.2 billion and adjusted EPS midpoint by $0.06 to $11.10. GAAP EPS of $0.09 included significant special charges, underscoring the need to match accounting bases. J&J has a different mix of medicines and medical technology, so its results do not establish Lilly’s obesity-drug demand. The chart shows release-day close to next trading close, not a causal attribution."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include pricing pressure, changes in insurance coverage, competing treatments, manufacturing execution, regulatory developments and clinical setbacks. Acquired research and milestone charges can cause large EPS changes even while medicine sales expand. Share-price expectations may already anticipate strong growth, and valuation based on historical earnings does not resolve uncertainty about future margins or demand."
+      }
+    ],
+    "events": [
+      {
+        "dateStatus": "issuer_confirmed",
+        "symbol": "LLY",
+        "name": "Eli Lilly and Company",
+        "session": "bmo",
+        "epsActual": null,
+        "revenueActual": null,
+        "date": "2026-10-29",
+        "exchange": "NYSE",
+        "epsEstimate": 5.7,
+        "price": 1174.42,
+        "research": {
+          "forwardPs": 12.541982999289996,
+          "forwardPe": 33.08637860331697,
+          "beatUpdatedAt": "2026-10-19T04:09:28.898Z",
+          "revenueBeat": {
+            "total": 7,
+            "beats": 6,
+            "rate": 85.71428571428571
+          },
+          "beat": {
+            "total": 8,
+            "beats": 7,
+            "rate": 87.5
+          },
+          "updatedAt": "2026-10-12T13:29:47.372Z",
+          "estimatePeriod": "2026-12-31",
+          "ps": 13.940322058775536,
+          "pe": 39.453663432586154,
+          "oneYear": 40.32079580204899
+        },
+        "sector": "Healthcare",
+        "revenueEstimate": 22580700000,
+        "marketCap": 1105999465220,
+        "industry": "Drug Manufacturers - General"
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "title": "date",
+        "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-confirms-date-and-conference-call-third-quarter-2026"
+      },
+      {
+        "title": "q1",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000043/q126lillysalesandearningsp.htm"
+      },
+      {
+        "title": "q2",
+        "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-second-quarter-2026-financial-results-raises-full"
+      },
+      {
+        "title": "quarter",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000081/lly-20260630.htm"
+      },
+      {
+        "title": "annual",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm"
+      },
+      {
+        "title": "charges",
+        "url": "https://investor.lilly.com/financial-information/quarterly-results"
+      },
+      {
+        "title": "mb1",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-30-eli-lilly-and-company-stock/"
+      },
+      {
+        "title": "mb2",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-8-5-eli-lilly-and-company-stock/"
+      },
+      {
+        "title": "jnj",
+        "url": "https://investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-reports-Q3-2026-results-raises-2026-guidance/default.aspx"
+      },
+      {
+        "title": "mbj",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-13-johnson-johnson-stock/"
+      },
+      {
+        "title": "LLY Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/LLY?range=5y&interval=1d"
+      },
+      {
+        "title": "JNJ Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/JNJ?range=5y&interval=1d"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_LLY_2026_10_29%2F1%2F97cb45d1e8fe5829b003996b0300b0168d6a807cfd6b2ee0f6ef0f189f57b314-187ae922-5828-4c6f-b14e-96418bdf31cb%2FFinancials.jpg?alt=media&token=187ae922-5828-4c6f-b14e-96418bdf31cb",
+        "height": 1200,
+        "title": "Financials",
+        "width": 1200,
+        "alt": "Eli Lilly and Company Financials research infographic"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_LLY_2026_10_29%2F2%2F874debe2b6bb03d35e57da2032daf3e628f0b3206d8b8fedc0981fe71317e7de-c5c6553f-a2fa-473c-a83b-98bbeb1959ac%2FTechnicals.jpg?alt=media&token=c5c6553f-a2fa-473c-a83b-98bbeb1959ac",
+        "height": 1200,
+        "title": "Technicals",
+        "width": 1200,
+        "alt": "Eli Lilly and Company Technicals research infographic"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_LLY_2026_10_29%2F3%2Fe35231203378b95763969b71537cbc03b0d373d9c511efa82ddf9a98c942f030-ae4b81d0-552c-4f4d-8ac9-9ac2b000e556%2FEarnings-Peers.jpg?alt=media&token=ae4b81d0-552c-4f4d-8ac9-9ac2b000e556",
+        "height": 1200,
+        "title": "Earnings & Peers",
+        "width": 1200,
+        "alt": "Eli Lilly and Company Earnings & Peers research infographic"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Flly%2Fca90168634c5157120f1c057a97509cbef07555ab982eda7c3cb046964c091fa.jpg?alt=media&token=1b641d92-fbcf-43fb-ad95-7c4eede3cf21",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Exterior of Eli Lilly corporate headquarters in Indianapolis",
+      "caption": "Archive photograph of Eli Lilly corporate headquarters in Indianapolis, February 2011.",
+      "credit": "Paul Sableman",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lilly_-_Building_44.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2011-02-16 13:55:03",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_MA_2026_10_29",
+    "postId": "briefing_earnings_preview_MA_2026_10_29",
+    "kind": "earnings_preview",
+    "slug": "mastercard-ma-earnings-october-29-2026-preview",
+    "title": "Mastercard (MA) Earnings October 29, 2026: Cross-Border Spending, Services and Guidance",
+    "summary": "Mastercard’s October 29 earnings call puts cross-border spending, services, incentives and guidance in focus. Review estimates, two recent quarters and consumer-finance peer context.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T23:42:03.647898+00:00",
+    "updatedAt": "2026-10-22T23:42:03.647898+00:00",
+    "symbols": [
+      "MA"
+    ],
+    "sections": [
+      {
+        "heading": "1) When is Mastercard reporting Q3 earnings?",
+        "text": "Mastercard’s issuer calendar confirms its Q3 2026 conference call for Thursday, October 29, 2026 at 9:00 AM Eastern. Its October 8 announcement schedules the financial results for that date. The saved earnings calendar classifies the release as before the market opens; the specific call time is issuer-confirmed, while the broad calendar window is a separate field."
+      },
+      {
+        "heading": "2) What are the dated earnings expectations?",
+        "text": "The earnings-calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists estimated EPS of $5.16 and estimated net revenue of $9.658988 billion. These are vendor forecasts rather than reported results or company guidance. The feed does not define its EPS accounting basis, so a beat or miss requires matching the eventual reported measure to the estimate. Mastercard publishes GAAP diluted EPS and a separate adjusted diluted EPS reconciliation."
+      },
+      {
+        "heading": "3) How did the last two quarters compare with estimates?",
+        "text": "Q1 net revenue of $8.398 billion exceeded dated rounded consensus of $8.26 billion by about 1.7%. Adjusted diluted EPS of $4.60 exceeded $4.41 by about 4.3%. Q2 net revenue of $9.277 billion exceeded $9.08 billion by about 2.2%, while adjusted EPS of $5.04 exceeded $4.77 by about 5.7%. GAAP diluted EPS was $4.35 in Q1 and $4.97 in Q2. Differences between GAAP and adjusted earnings include equity-investment effects and specified special items. The graphic uses each release-day regular close through the following trading close, measuring follow-through after these morning releases."
+      },
+      {
+        "heading": "4) What does the current guidance framework mean?",
+        "text": "On the April call, management maintained full-year 2026 net-revenue growth at the high end of the low-double-digit range on a currency-neutral basis excluding inorganic activity. On the July call, management kept that range but said it expected to be higher within it following stronger first-half performance. The July Q3 outlook also called for high-end low-double-digit net-revenue growth on the same basis, with about a half-percentage-point currency headwind. Management expected a 20%–21% non-GAAP tax rate for both Q3 and Q4. These statements use specific adjusted growth definitions and should not be compared directly with a nominal dollar EPS forecast."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Mastercard earns revenue from its payment network and from value-added services and solutions, including security, analytics, authentication and customer engagement. In 2025, these reported categories generated $19.476 billion and $13.315 billion of net revenue, respectively. Network rebates and incentives reduce revenue. Mastercard generally does not issue payment cards or extend cardholder credit; financial institutions provide those services, giving card lenders a different earnings and risk profile."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "The main questions are whether cross-border travel and e-commerce remain resilient, how switched transactions and purchase volume develop, and whether value-added services sustain growth. Rebates, incentives and new customer deals can change the relationship between activity growth and net revenue. Investors can compare expense growth, operating margins, capital returns and the updated full-year outlook. Stablecoin and agentic-payment initiatives may create opportunities, but announced partnerships alone do not establish a quantified revenue outcome."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "Synchrony reported October 20 GAAP diluted EPS of $2.68 against dated consensus of $2.42, approximately a 10.7% surprise. Net interest income plus other income less retailer share arrangements totaled $3.818 billion against rounded consensus of $3.81 billion, approximately a 0.2% surprise. Its updated outlook called for about $9.50 in full-year EPS and net charge-offs below 5.5%. Purchase volume rose 8%, while the charge-off rate was 4.79%. These provide consumer-credit context rather than a direct forecast of Mastercard results. Synchrony bears loan, funding and credit-loss risk; Mastercard’s network and services economics differ. The image shows release-day close to next trading close, not the initial opening reaction."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include slower consumer spending, disruption to cross-border travel, currency movements, competition, client incentives and regulation of payments economics. Litigation, cybersecurity incidents and network outages can affect costs and trust. Acquisitions, dispositions and specified accounting adjustments can complicate growth comparisons. Strong headline revenue does not guarantee expanding margins or a positive share-price response, particularly after an advance ahead of earnings."
+      }
+    ],
+    "events": [
+      {
+        "research": {
+          "ps": 14.820840947467435,
+          "revenueBeat": {
+            "total": 8,
+            "rate": 100,
+            "beats": 8
+          },
+          "oneYear": 2.9965034965034887,
+          "pe": 32.556836902800654,
+          "beatUpdatedAt": "2026-10-19T04:09:32.384Z",
+          "forwardPe": 29.651152596630006,
+          "beat": {
+            "total": 8,
+            "rate": 100,
+            "beats": 8
+          },
+          "estimatePeriod": "2026-12-31",
+          "forwardPs": 13.929353474313897,
+          "updatedAt": "2026-10-12T13:30:06.900Z"
+        },
+        "session": "bmo",
+        "revenueActual": null,
+        "epsEstimate": 5.16,
+        "price": 598.24,
+        "revenueEstimate": 9658988000,
+        "date": "2026-10-29",
+        "marketCap": 524678016640,
+        "epsActual": null,
+        "industry": "Financial - Credit Services",
+        "exchange": "NYSE",
+        "symbol": "MA",
+        "dateStatus": "issuer_confirmed",
+        "sector": "Financial Services",
+        "name": "Mastercard Incorporated"
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "url": "https://investor.mastercard.com/events-and-presentations/events/",
+        "title": "Mastercard issuer calendar confirms October 29 call"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000029/ma03312026-exx991xearnings.htm",
+        "title": "Mastercard Q1 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000081/ma06302026-exx991xearnings.htm",
+        "title": "Mastercard Q2 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+        "title": "Mastercard June quarterly filing and July common shares"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+        "title": "Mastercard FY2025 annual filing and net revenue categories"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139124000022/ma-20231231.htm",
+        "title": "Mastercard FY2023 filing with 2021–2023 net revenue"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-30-mastercard-incorporated-stock/",
+        "title": "Mastercard Q1 dated consensus and CFO guidance remarks"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-30-mastercard-incorporated-stock/",
+        "title": "Mastercard Q2 dated consensus and CFO guidance remarks"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1601712/000160171226000040/earningsrelease3q26.htm",
+        "title": "Synchrony October 20 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1601712/000160171226000040/a3q26earningspresentatio.htm",
+        "title": "Synchrony October 20 presentation and updated outlook"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-20-synchrony-financial-stock/",
+        "title": "Synchrony dated EPS and revenue consensus"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/MA?range=5y&interval=1d",
+        "title": "MA Q2 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/SYF?range=5y&interval=1d",
+        "title": "SYF Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "width": 1200,
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MA_2026_10_29%2F1%2Fb6441181a52f5eac3bfd8b80b000b3be97d9fd70818d8218e631e7e8a0d5ed83-19c77128-0896-4566-aab2-ed74024cf6c9%2FFinancials.jpg?alt=media&token=19c77128-0896-4566-aab2-ed74024cf6c9",
+        "alt": "Mastercard Incorporated Financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "width": 1200,
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MA_2026_10_29%2F2%2Fa1db15e14441d1ac86c8fbe4850bec110e2a8b64861ad3b8a9ccf1d52b088415-a89ceb00-47db-49fb-80c4-06320235ef4c%2FTechnicals.jpg?alt=media&token=a89ceb00-47db-49fb-80c4-06320235ef4c",
+        "alt": "Mastercard Incorporated Technicals research infographic",
+        "title": "Technicals"
+      },
+      {
+        "width": 1200,
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_MA_2026_10_29%2F3%2F1c6237e8d84431e41b446bc165de51f074248ed81a2818111e93a25cbf9e80f2-7d0f1cea-7c52-42ee-a5f1-6dc19231bedf%2FEarnings-Peers.jpg?alt=media&token=7d0f1cea-7c52-42ee-a5f1-6dc19231bedf",
+        "alt": "Mastercard Incorporated Earnings & Peers research infographic",
+        "title": "Earnings & Peers"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fma%2Fb14a3faa9323ea97fd38465a9ce48514bcd3e3401b4af3c83e60fc1bdfee4b37.jpg?alt=media&token=698ece5b-ec35-401c-84db-0c8124eb3d2d",
+      "width": 1920,
+      "height": 3413,
+      "alt": "Payment terminal displaying accepted card network logos at a self-checkout",
+      "caption": "Illustrative archive photograph of a payment terminal at a Carrefour self-checkout in Taiwan, August 2025.",
+      "credit": "Matt Zhuang",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CTBC_payment_terminal_at_self-checkout_of_Carrefour_Rende_Store.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2025-08-01 18:13:13",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
     "id": "briefing_earnings_preview_MSFT_2026_10_28",
     "postId": "briefing_earnings_preview_MSFT_2026_10_28",
     "kind": "earnings_preview",
@@ -201,38 +1277,38 @@
     "summary": "Microsoft reports fiscal Q1 2027 results after the close on October 28. Review the dated estimates, Azure and Copilot context, recently reported enterprise-technology peers and risks ahead of the announcement.",
     "sessionDate": "2026-10-22",
     "publishedAt": "2026-10-22T18:19:18.288084+00:00",
-    "updatedAt": "2026-10-22T20:46:32.116476+00:00",
+    "updatedAt": "2026-10-22T21:08:53.538472+00:00",
     "symbols": [
       "MSFT"
     ],
     "sections": [
       {
         "text": "Microsoft has confirmed that fiscal Q1 2027 results will be released after the US market closes on October 28, 2026. The earnings webcast begins at 2:30 p.m. Pacific, or 5:30 p.m. Eastern. This is the quarter ending September 2026. The release and webcast are separate events, so the first price reaction can occur before management speaks.",
-        "heading": "When is Microsoft’s next earnings report?"
+        "heading": "1) When is Microsoft’s next earnings report?"
       },
       {
         "text": "The saved earnings-calendar feed, updated October 22 at 16:35 UTC, lists an EPS estimate of $4.71 and revenue of $90.62 billion. These are vendor-supplied estimates, not company guidance or reported results. The feed does not identify an EPS accounting basis, so a like-for-like beat or miss requires checking the reported GAAP and adjusted definitions when the release arrives.",
-        "heading": "What are the earnings expectations?"
+        "heading": "2) What are the earnings expectations?"
       },
       {
         "text": "For the quarter ended June 30, Microsoft reported $90.0 billion in revenue, 18% above the prior year, with Azure and other cloud-services revenue growth of 43%. Microsoft Cloud revenue was $59.3 billion. These are historical Q4 fiscal 2026 figures, not predictions for the October report; the September quarter has a different seasonal and comparison base.",
-        "heading": "The latest completed quarter sets the context"
+        "heading": "3) The latest completed quarter sets the context"
       },
       {
         "text": "Microsoft earns revenue from business productivity subscriptions such as Microsoft 365, cloud infrastructure and services through Azure, enterprise software and support, and consumer products including Windows, gaming and search advertising. Recurring subscriptions and cloud consumption differ from hardware and transactional sales, so segment mix matters alongside the total revenue headline.",
-        "heading": "How the business makes money"
+        "heading": "4) How the business makes money"
       },
       {
         "text": "Research priorities for the report include Azure growth, whether new capacity translates into revenue, paid Copilot adoption and the balance between AI demand and infrastructure spending. Management’s July discussion described rapid data-center expansion. These are factors to assess, not evidence that the forthcoming numbers will beat expectations. Guidance and cash flow can change the interpretation of an earnings headline.",
-        "heading": "What to watch"
+        "heading": "5) What to watch"
       },
       {
         "text": "IBM released third-quarter results on October 21: revenue increased 5%, software revenue rose 8% and consulting revenue was flat on a reported basis. IBM’s mix of software, consulting and infrastructure is different from Microsoft’s. Its report adds context on enterprise technology budgets but cannot establish Azure demand or Microsoft’s earnings outcome; IBM’s reported growth rates should not be treated as Microsoft estimates.",
-        "heading": "Recently reported peers"
+        "heading": "6) Recently reported peers"
       },
       {
         "text": "The main research risks are weaker-than-expected cloud consumption, slower conversion of AI adoption into paid revenue, and infrastructure costs rising before the associated revenue arrives. Currency movements, segment mix and investment-related items can also complicate comparisons. In the prior quarter Microsoft reported different GAAP and adjusted EPS figures, so the accounting basis must be checked before drawing conclusions about valuation or a surprise.",
-        "heading": "Risks into the report"
+        "heading": "7) Risks into the report"
       }
     ],
     "events": [
@@ -398,5 +1474,696 @@
       "dateTaken": "2009-08-03",
       "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_V_2026_10_27",
+    "postId": "briefing_earnings_preview_V_2026_10_27",
+    "kind": "earnings_preview",
+    "slug": "visa-v-earnings-october-27-2026-preview",
+    "title": "Visa (V) Earnings October 27, 2026: Spending, Cross-Border Payments and FY2027 Outlook",
+    "summary": "Visa reports fiscal fourth-quarter and full-year results October 27 after the close. Review estimates, payment volumes, client incentives, past earnings surprises and recent consumer-finance context.",
+    "sessionDate": "2026-10-22",
+    "publishedAt": "2026-10-22T23:30:29.001773+00:00",
+    "updatedAt": "2026-10-22T23:30:29.001773+00:00",
+    "symbols": [
+      "V"
+    ],
+    "sections": [
+      {
+        "heading": "1) When will Visa report fiscal Q4 and full-year earnings?",
+        "text": "Visa’s October 8 announcement confirms results after the market closes on Tuesday, October 27, 2026. The company plans a conference call at 5:00 PM Eastern. This is Visa’s fiscal fourth quarter and full year ended September 30, rather than a calendar-year third-quarter report. The announcement confirms both the reporting date and the after-close release window."
+      },
+      {
+        "heading": "2) What are the dated earnings expectations?",
+        "text": "The earnings-calendar snapshot updated October 22, 2026 at 12:35 PM Eastern lists $3.44 in estimated earnings per share and $12.09002 billion in estimated revenue. These are vendor estimates, separate from company guidance. The calendar does not specify the EPS accounting basis, so readers should check that the eventual reported measure matches the estimate before assigning a beat or miss. Visa reports both GAAP and non-GAAP diluted Class A EPS."
+      },
+      {
+        "heading": "3) How did the latest two quarters compare with expectations?",
+        "text": "Fiscal Q2 net revenue of $11.230 billion exceeded dated rounded consensus of $10.75 billion by about 4.5%, while non-GAAP diluted EPS of $3.31 exceeded $3.10 by about 6.8%. Fiscal Q3 net revenue of $11.633 billion exceeded $11.40 billion by about 2.0%, and non-GAAP EPS of $3.32 exceeded $3.23 by about 2.8%. GAAP EPS was $3.14 in Q2 and $2.97 in Q3. The adjusted figures exclude specified litigation, equity-investment and acquisition-related items; the Q3 reconciliation also addresses severance and a tax benefit."
+      },
+      {
+        "heading": "4) What does the existing guidance imply?",
+        "text": "The July presentation put fiscal Q4 net-revenue growth at the high end of low double digits and diluted EPS growth at the low end of the mid-teens, both on a non-GAAP adjusted constant-dollar basis. Its full-year outlook called for net-revenue growth at the low end of the low teens and EPS growth at the low end of the mid-teens. These are growth descriptors, not dollar EPS estimates. The April presentation had called for full-year revenue growth from low double digits to the low teens and EPS growth in the low teens on the same adjusted constant-dollar basis. Fiscal 2027 guidance, if issued, will provide a new horizon rather than a simple extension of the fiscal 2026 ranges."
+      },
+      {
+        "heading": "5) How the business makes money",
+        "text": "Visa operates a payments network connecting financial institutions, merchants and consumers. It earns service, processing, international transaction and other revenue, including value-added services, with client incentives deducted to arrive at net revenue. It generally does not issue cards or extend credit to cardholders; those lending and interest-spread economics belong to issuers. Service revenue is generally recognized using prior-quarter payments volume, while other revenue categories reflect current-quarter activity."
+      },
+      {
+        "heading": "6) What to watch",
+        "text": "Key questions include the pace of consumer and commercial spending, cross-border travel and e-commerce, processed transactions and value-added services. Investors can compare revenue growth with client incentives and operating expenses to assess whether volume gains are translating into profit. The fiscal-year transition also makes management’s fiscal 2027 outlook, investment plans and capital returns important. Stablecoin and agentic-commerce initiatives may expand uses of the network, but announced products alone do not quantify future revenue."
+      },
+      {
+        "heading": "7) Recently reported peers",
+        "text": "Synchrony reported October 20 GAAP diluted EPS of $2.68 against dated consensus of $2.42, a surprise of about 10.7%. Net interest income plus other income less retailer share arrangements totaled $3.818 billion, compared with rounded revenue consensus of $3.81 billion, a surprise of about 0.2%. Its updated full-year outlook was approximately $9.50 in EPS and a net charge-off rate below 5.5%. Purchase volume grew 8%, while charge-offs fell to 4.79%. These observations provide consumer-credit context rather than a direct forecast for Visa. Synchrony carries loan and funding risk, unlike Visa’s network model. The graphic measures release-day regular close to next trading close for each company; for the premarket Synchrony release this is subsequent follow-through, not its initial opening reaction."
+      },
+      {
+        "heading": "8) Risks into the report",
+        "text": "Risks include weaker spending, slower cross-border travel, larger client incentives, litigation and regulation affecting payments economics, competition and operational or cybersecurity incidents. Currency movements can make nominal revenue growth differ from constant-dollar growth. Adjustments for acquisitions and special items must be matched when comparing guidance, consensus and results. A strong reported quarter can still disappoint a share price that already anticipates continued growth."
+      }
+    ],
+    "events": [
+      {
+        "sector": "Financial Services",
+        "exchange": "NYSE",
+        "marketCap": 730090160060,
+        "price": 391.04001,
+        "research": {
+          "estimatePeriod": "2027-09-30",
+          "beat": {
+            "rate": 100,
+            "beats": 8,
+            "total": 8
+          },
+          "updatedAt": "2026-10-12T13:29:54.573Z",
+          "revenueBeat": {
+            "rate": 100,
+            "beats": 8,
+            "total": 8
+          },
+          "forwardPe": 25.638569667799434,
+          "oneYear": 10.58037123102964,
+          "pe": 32.74851316907392,
+          "ps": 16.176347497752204,
+          "beatUpdatedAt": "2026-10-19T04:09:28.867Z",
+          "forwardPs": 14.160287683847834
+        },
+        "epsActual": null,
+        "session": "amc",
+        "symbol": "V",
+        "revenueActual": null,
+        "name": "Visa Inc.",
+        "industry": "Financial - Credit Services",
+        "date": "2026-10-27",
+        "revenueEstimate": 12090020000,
+        "dateStatus": "issuer_confirmed",
+        "epsEstimate": 3.44
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "url": "https://investor.visa.com/news/news-details/2026/Visa-to-Announce-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results-on-October-27-2026/default.aspx",
+        "title": "Visa confirms October 27 fiscal-year earnings release and call"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000077/q22026earningsrelease.htm",
+        "title": "Visa fiscal Q2 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+        "title": "Visa fiscal Q3 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm",
+        "title": "Visa June quarterly filing and as-converted share count"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/v-20250930.htm",
+        "title": "Visa FY2025 annual filing and geographic net revenue"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.htm",
+        "title": "Visa FY2023 annual filing with fiscal 2021–2023 revenue"
+      },
+      {
+        "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2026/q2/Visa-Inc-Second-Quarter-2026-Financial-Results-Presentation.pdf",
+        "title": "Visa April financial outlook presentation"
+      },
+      {
+        "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2026/q3/Visa-Inc-Third-Quarter-2026-Financial-Results-Presentation.pdf",
+        "title": "Visa July financial outlook presentation"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-4-28-visa-inc-stock/",
+        "title": "Visa Q2 dated consensus"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-28-visa-inc-stock/",
+        "title": "Visa Q3 dated consensus"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1601712/000160171226000040/earningsrelease3q26.htm",
+        "title": "Synchrony October 20 issuer earnings release"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1601712/000160171226000040/a3q26earningspresentatio.htm",
+        "title": "Synchrony October 20 earnings presentation and guidance"
+      },
+      {
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-20-synchrony-financial-stock/",
+        "title": "Synchrony dated earnings consensus"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/V?range=5y&interval=1d",
+        "title": "V FY2026 Q3 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/SYF?range=5y&interval=1d",
+        "title": "SYF Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "width": 1200,
+        "height": 1200,
+        "alt": "Visa Inc. Financials research infographic",
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_V_2026_10_27%2F1%2Fd478414d78bb7f2afd69ffd49aec8a07e6fb6701c6c1eecc116bb1b0d69c3358-720b3da1-f505-4e0b-8cd1-1dd37e7abd00%2FFinancials.jpg?alt=media&token=720b3da1-f505-4e0b-8cd1-1dd37e7abd00"
+      },
+      {
+        "width": 1200,
+        "height": 1200,
+        "alt": "Visa Inc. Technicals research infographic",
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_V_2026_10_27%2F2%2F207bfbd88c7a29d5184dd9980496113491713b933a6cf4ba25b0cacd75d42e8a-63cbc5bc-d783-4bf7-809d-8ed8406df20b%2FTechnicals.jpg?alt=media&token=63cbc5bc-d783-4bf7-809d-8ed8406df20b"
+      },
+      {
+        "width": 1200,
+        "height": 1200,
+        "alt": "Visa Inc. Earnings & Peers research infographic",
+        "title": "Earnings & Peers",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_V_2026_10_27%2F3%2F031776e99563cfeb8c7dd5e50a4f0cb2d76294bfe05a518405728c9c6b7bdc6f-229bf7c3-491a-46f1-a1ea-b43d4f274313%2FEarnings-Peers.jpg?alt=media&token=229bf7c3-491a-46f1-a1ea-b43d4f274313"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fv%2F2b8d84b059b77687a8e1baab634c62193588023a479fe44f6931e2c7c720cac0.jpg?alt=media&token=e57da9e8-1929-470d-95c8-279bd9013f3a",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Exterior of Visa headquarters in San Francisco",
+      "caption": "Archive photograph of Visa headquarters in San Francisco, August 2025.",
+      "credit": "Missvain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Visa_headquarters_-_August_2025_-_Sarah_Stierch.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dateTaken": "Taken on 31 August 2025",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "briefing_earnings_preview_XOM_2026_10_30",
+    "postId": "briefing_earnings_preview_XOM_2026_10_30",
+    "kind": "earnings_preview",
+    "slug": "exxonmobil-xom-earnings-october-30-2026-preview",
+    "title": "ExxonMobil (XOM) October 30, 2026 earnings preview: timing effects, margins and cash flow",
+    "summary": "ExxonMobil reports October 30 before the open. Review the latest two quarters, matching EPS and sales comparisons, Halliburton activity context, cash-flow catalysts and completed-session technicals.",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T11:58:01.778300+00:00",
+    "updatedAt": "2026-10-23T11:58:01.778300+00:00",
+    "symbols": [
+      "XOM"
+    ],
+    "sections": [
+      {
+        "text": "The issuer confirmed October 30, 2026 results at 5:30 AM Central, equivalent to 6:30 AM Eastern, and a conference call at 8:30 AM Central, or 9:30 AM Eastern. Third-quarter results were unreleased when this preview was prepared on October 23. The public MarketBeat calendar viewed October 23 displayed approximately $4.11 EPS and $105.49 billion revenue consensus. These are changing analyst estimates, not management guidance or reported results. The upcoming EPS definition must be checked against the eventual release before declaring a beat or miss; no proprietary app prediction is disclosed.",
+        "heading": "1) When will ExxonMobil report, and what estimates are available?"
+      },
+      {
+        "text": "ExxonMobil produces crude oil and natural gas, processes and markets fuels, and sells chemicals and specialty products. Upstream profitability responds to realized commodity prices and production volumes; downstream profitability also depends on refining margins, feedstock costs, maintenance and product demand. Integration can offset some exposures, but does not remove commodity or operating risk. The company became publicly traded ExxonMobil Holdings Corporation following its July 1 holding-company reorganization; the predecessor financial statements provide historical continuity.",
+        "heading": "2) How does the business make money?"
+      },
+      {
+        "text": "First-quarter sales and other operating revenue were $83.161 billion and GAAP diluted EPS was $1.00. Excluding the identified item, EPS was $1.16; excluding both that item and estimated timing effects produced a separate $2.09 measure. Compare the former with the May 1 dated $0.984 consensus, a computed 17.9% beat. Second-quarter sales and other operating revenue were $114.529 billion, with GAAP EPS of $3.48 and adjusted EPS of $3.52 versus the July 31 $3.56 consensus, a 1.1% miss. Sales comparisons use the same provider’s rounded $81.13 billion and $109.94 billion estimates; computed surprises are 2.5% and 4.2%. Total revenues and other income include additional amounts and must not be substituted for sales in these comparisons.",
+        "heading": "3) What did the latest two quarters establish?"
+      },
+      {
+        "text": "Monitor the bridge from realized prices and refining margins to operating cash flow, the treatment of timing effects, and evidence of project delivery. The second-quarter release described the fifth Guyana production vessel as on plan for a fourth-quarter startup; that plan is not a claim that startup has now occurred. The June quarterly filing retained a $27–29 billion investment range for 2026. Compare any new outlook with that same horizon and measure before labeling a change as raised or cut. Buybacks, dividends and investment compete for cash when commodity prices fall.",
+        "heading": "4) Which catalysts and guidance matter for the next quarter?"
+      },
+      {
+        "text": "Halliburton’s October 20 third-quarter report provides a recent oilfield-activity reference. Adjusted EPS of $0.60 exceeded the dated $0.585 consensus by 2.6%, while approximately $5.70 billion revenue exceeded the rounded $5.58 billion comparison by 2.2%. Its stock rose about 1.2% from the October 20 close to the October 21 close. This is observed post-release follow-through, not proof that the earnings surprise caused the gain. Halliburton is a service supplier, whereas ExxonMobil is an integrated producer and refiner; geography, customer budgets and margin drivers differ. No quantified full-year Halliburton outlook was verified in the release. Chevron is a closer integrated operating peer, but its upcoming report is not a newly reported comparison.",
+        "heading": "5) What can recent peers tell us?"
+      },
+      {
+        "text": "Using the October 22 completed close of $178.23 and approximately 4.112 billion June 30 common shares gives an indicative equity value near $733 billion. Trailing sales and operating revenue through June 30 were $361.060 billion; trailing GAAP diluted EPS was approximately $7.77, giving about 22.9 times trailing earnings. These are historical denominators and a mixed-date share-count calculation, not a live valuation or forward estimate. The October advance consolidated around $178, with recent lows near $174–176 and highs near $179–181. A sustained close beyond resistance with stronger volume would be a constructive observation; a close below $174 would weaken the recent structure. Neither condition is a prediction.",
+        "heading": "6) How do valuation and the chart frame the event?"
+      },
+      {
+        "text": "Commodity reversals can offset volume growth; stronger oil prices do not necessarily improve every refining or chemical margin. Shipping disruptions, asset outages, project delays, taxes, financial reserves and legal or environmental obligations can alter reported profitability. Identified items, estimated timing effects and working-capital movements can make headline EPS and cash flow diverge. Reconcile these measures before comparing quarters. Technical levels can be crossed by an earnings gap without a trade at the reference price.",
+        "heading": "7) What could undermine the thesis?"
+      },
+      {
+        "text": "The three reviewed images separate annual financial history, completed-session technicals and dated earnings comparisons. Historical stock reactions compare the release-day regular close with the next session close after a morning announcement, using the same daily price source. Review issuer materials when results arrive, refresh analyst expectations, and compare like-for-like accounting definitions. Explore the company financials, peer research and app earnings tools as research inputs. Estimates change, and a statistical or earnings advantage does not guarantee investment returns.",
+        "heading": "8) How should readers use the research?"
+      },
+      {
+        "text": "ExxonMobil produces crude oil and natural gas, processes and markets fuels, and sells chemicals and specialty products. Upstream profitability responds to realized commodity prices and production volumes; downstream profitability also depends on refining margins, feedstock costs, maintenance and product demand. Integration can offset some exposures, but does not remove commodity or operating risk. The company became publicly traded ExxonMobil Holdings Corporation following its July 1 holding-company reorganization; the predecessor financial statements provide historical continuity.",
+        "heading": "9) How the business makes money"
+      },
+      {
+        "text": "Monitor the bridge from realized prices and refining margins to operating cash flow, the treatment of timing effects, and evidence of project delivery. The second-quarter release described the fifth Guyana production vessel as on plan for a fourth-quarter startup; that plan is not a claim that startup has now occurred. The June quarterly filing retained a $27–29 billion investment range for 2026. Compare any new outlook with that same horizon and measure before labeling a change as raised or cut. Buybacks, dividends and investment compete for cash when commodity prices fall.",
+        "heading": "10) What to watch"
+      },
+      {
+        "text": "Halliburton’s October 20 third-quarter report provides a recent oilfield-activity reference. Adjusted EPS of $0.60 exceeded the dated $0.585 consensus by 2.6%, while approximately $5.70 billion revenue exceeded the rounded $5.58 billion comparison by 2.2%. Its stock rose about 1.2% from the October 20 close to the October 21 close. This is observed post-release follow-through, not proof that the earnings surprise caused the gain. Halliburton is a service supplier, whereas ExxonMobil is an integrated producer and refiner; geography, customer budgets and margin drivers differ. No quantified full-year Halliburton outlook was verified in the release. Chevron is a closer integrated operating peer, but its upcoming report is not a newly reported comparison.",
+        "heading": "11) Recently reported peers"
+      },
+      {
+        "text": "Commodity reversals can offset volume growth; stronger oil prices do not necessarily improve every refining or chemical margin. Shipping disruptions, asset outages, project delays, taxes, financial reserves and legal or environmental obligations can alter reported profitability. Identified items, estimated timing effects and working-capital movements can make headline EPS and cash flow diverge. Reconcile these measures before comparing quarters. Technical levels can be crossed by an earnings gap without a trade at the reference price.",
+        "heading": "12) Risks into the report"
+      }
+    ],
+    "events": [
+      {
+        "sector": "Energy",
+        "session": "bmo",
+        "symbol": "XOM",
+        "research": {
+          "beatUpdatedAt": "2026-10-19T04:09:31.694Z",
+          "forwardPs": 1.6728012465640598,
+          "estimatePeriod": "2026-12-31",
+          "beat": {
+            "total": 8,
+            "beats": 6,
+            "rate": 75
+          },
+          "ps": 1.9391931324433611,
+          "pe": 21.742599742599744,
+          "oneYear": 52.472924187725646,
+          "revenueBeat": {
+            "total": 8,
+            "beats": 3,
+            "rate": 37.5
+          },
+          "updatedAt": "2026-10-12T13:29:57.014Z",
+          "forwardPe": 13.693766718002756
+        },
+        "revenueActual": null,
+        "industry": "Oil & Gas Integrated",
+        "epsActual": null,
+        "date": "2026-10-30",
+        "name": "Exxonmobil Holdings Corporation",
+        "exchange": "NYSE",
+        "marketCap": 712847120000,
+        "dateStatus": "issuer_confirmed",
+        "epsEstimate": 4.1,
+        "price": 172,
+        "revenueEstimate": 105489600000
+      }
+    ],
+    "rows": [],
+    "sources": [
+      {
+        "title": "date",
+        "url": "https://investor.exxonmobil.com/company-information/press-releases/detail/1212/exxonmobil-to-release-third-quarter-2026-financial-results"
+      },
+      {
+        "title": "q1",
+        "url": "https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0000034088-26-000065/livef8k1q26991.htm"
+      },
+      {
+        "title": "q2",
+        "url": "https://investor.exxonmobil.com/company-information/press-releases/detail/1208/exxonmobil-announces-second-quarter-2026-results"
+      },
+      {
+        "title": "quarter",
+        "url": "https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0000034088-26-000093/xom-20260630.htm"
+      },
+      {
+        "title": "annual",
+        "url": "https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0000034088-26-000045/xom-20251231.htm"
+      },
+      {
+        "title": "annual23",
+        "url": "https://investor.exxonmobil.com/sec-filings/all-sec-filings/content/0000034088-24-000018/xom-20231231.htm"
+      },
+      {
+        "title": "mb1",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-5-1-exxon-mobil-co-stock/"
+      },
+      {
+        "title": "mb2",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-7-31-exxon-mobil-co-stock/"
+      },
+      {
+        "title": "mbnext",
+        "url": "https://www.marketbeat.com/stocks/NYSE/XOM/earnings/"
+      },
+      {
+        "title": "hal",
+        "url": "https://ir.halliburton.com/news-releases/news-release-details/halliburton-announces-third-quarter-2026-results"
+      },
+      {
+        "title": "mbhal",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-20-halliburton-stock/"
+      },
+      {
+        "title": "XOM Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/XOM?range=5y&interval=1d"
+      },
+      {
+        "title": "HAL Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/HAL?range=5y&interval=1d"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "images": [
+      {
+        "alt": "Exxonmobil Holdings Corporation Financials research infographic",
+        "height": 1200,
+        "width": 1200,
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_XOM_2026_10_30%2F1%2F44d3def36a92e00d7d5b5224aaad88c7cecd9126afe8a29291171fd54701a91b-a71f5244-b6a4-45c1-a2db-7aa49f6442d8%2FFinancials.jpg?alt=media&token=a71f5244-b6a4-45c1-a2db-7aa49f6442d8"
+      },
+      {
+        "alt": "Exxonmobil Holdings Corporation Technicals research infographic",
+        "height": 1200,
+        "width": 1200,
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_XOM_2026_10_30%2F2%2F78dbd28928d0a8a836191e2662eefb4ba7346485892d6a273efdf6a1ac71e70a-0ba721b0-c3be-4423-b236-5e21a74e2be6%2FTechnicals.jpg?alt=media&token=0ba721b0-c3be-4423-b236-5e21a74e2be6"
+      },
+      {
+        "alt": "Exxonmobil Holdings Corporation Earnings & Peers research infographic",
+        "height": 1200,
+        "width": 1200,
+        "title": "Earnings & Peers",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fbriefing_earnings_preview_XOM_2026_10_30%2F3%2F406e13110642977e02022de1eefef0354f4d3a1f34ee74a6d797eb98740c34c1-b3924649-a75d-4e5c-b7be-a2ef6a7b3a0c%2FEarnings-Peers.jpg?alt=media&token=b3924649-a75d-4e5c-b7be-a2ef6a7b3a0c"
+      }
+    ],
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fxom%2F94c2b373482c82a9bb0beb23bd82a5d186b58b67bd3b405124510f38e4160d17.jpg?alt=media&token=6bb299e8-d819-4b12-8ff4-82c13c346694",
+      "width": 1920,
+      "height": 1363,
+      "alt": "Exxon-branded fuel station in Hiawassee, Georgia",
+      "caption": "Archive photograph, February 21, 2023: an Exxon-branded filling station in Hiawassee, Georgia. Illustrative retail-fuels context, not the October 2026 earnings event.",
+      "credit": "Harrison Keely",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_ExxonMobil_gas_station_in_Hiawassee,_Georgia.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dateTaken": "2023-02-21 14:05:29",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "briefing_premarket_2026_10_23",
+    "postId": "briefing_premarket_2026_10_23",
+    "kind": "premarket",
+    "slug": "premarket-october-23-2026-tower-stocks-deckers-wireless-carriers",
+    "title": "October 23, 2026 premarket: tower stocks rise as Deckers and wireless carriers fall",
+    "summary": "Crown Castle, SBA and American Tower lead the saved premarket gainers; Deckers and wireless carriers fall. Review timestamped prices, fresh earnings context and the limits of a partial early snapshot.",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-23T11:34:37.400783+00:00",
+    "updatedAt": "2026-10-23T11:34:37.400783+00:00",
+    "symbols": [
+      "CCI",
+      "SBAC",
+      "AMT",
+      "LITE",
+      "CBOE",
+      "DECK",
+      "TMUS",
+      "T",
+      "WDC",
+      "VZ"
+    ],
+    "sections": [
+      {
+        "heading": "1) How to read the October 23 premarket snapshot",
+        "text": "The batch was collected on October 23, 2026 at 7:31 AM Eastern and covers 269 quoted stocks in the saved S&P 500 universe. Each percentage compares the saved premarket price with the previous completed regular close on October 22. Quotes were observed at different times, listed below, and do not represent executable opening prices. Coverage is partial: unquoted stocks must not be counted as unchanged. The accompanying heatmap shows the broader saved universe with missing observations unavailable. Premarket liquidity, spreads and order imbalances can materially change the ranking before 9:30 AM Eastern."
+      },
+      {
+        "heading": "2) Crown Castle: results context behind the tower-stock leader",
+        "text": "CCI was $86.00, up 9.10%, at 7:27:03 AM Eastern on October 23. Crown Castle released third-quarter results on October 21, rather than overnight on October 22. AFFO per share was $1.24, up 11% year over year. Its full-year outlook increased adjusted EBITDA by $25 million and AFFO by $5 million at the midpoints. Lease cancellations remain a risk. Those results provide dated business context; they do not establish the cause of this morning’s price jump."
+      },
+      {
+        "heading": "3) SBA Communications and American Tower: shared strength, separate reporting calendars",
+        "text": "SBAC was $189.98, up 6.50%, at 7:21:32 AM Eastern; AMT was $192.79, up 6.18%, at 7:21:12 AM Eastern on October 23. Both operate communications infrastructure, making Crown Castle a relevant operating peer. American Tower has scheduled its next earnings release and call for October 27; SBA lists its third-quarter results event for November 2 at 5:00 PM Eastern. Neither future event is a current earnings release. A verified company announcement establishing the immediate cause of either premarket move was not found. The parallel gains indicate a cluster in price action, without proving a shared reason."
+      },
+      {
+        "heading": "4) Lumentum and Cboe: gains ahead of scheduled earnings",
+        "text": "LITE was $778.08, up 3.39%, at 7:26:23 AM Eastern on October 23. Lumentum supplies optical and photonic products; its fiscal first-quarter 2027 results are scheduled for November 5 after the close. CBOE was $335.35, up 2.33%, at 7:27:38 AM Eastern. The exchange operator plans third-quarter results before the open on October 30, with a call at 8:30 AM Eastern. These calendars provide the next checkpoints, not explanations for the observed gains. A specific fresh catalyst for either move was not verified."
+      },
+      {
+        "heading": "5) Deckers: separate underlying demand from tariff refunds",
+        "text": "DECK was $78.8312, down 7.56%, at 7:29:58 AM Eastern on October 23. The October 22 fiscal second-quarter release reported revenue of $1.481 billion, up 3.5%, and diluted EPS of $2.31, including a $0.28 tariff-refund benefit. Direct-to-consumer comparable sales declined 6.4%. Its full-year sales outlook is $5.700–$5.725 billion; EPS guidance is $7.80–$7.95, including approximately $0.52 of tariff-refund benefits. For a consumer-brand business, the distinction between recurring demand and refund benefits matters. These figures are reported results and management guidance; no unverified analyst-consensus comparison is implied."
+      },
+      {
+        "heading": "6) Wireless carriers: observed selling across three competitors",
+        "text": "TMUS was $151.15, down 4.81%, at 7:25:13 AM Eastern; T was $21.65, down 4.79%, at 7:25:22 AM Eastern; VZ was $43.47, down 3.83%, at 7:25:10 AM Eastern on October 23. T-Mobile plans to release results at approximately 4:05 PM Eastern on October 28 and discuss them at 4:30 PM. Verizon has scheduled its third-quarter call for October 26 at 8:30 AM Eastern. AT&T already reported on October 21 and updated its outlook to adjusted EPS in the $2.40 range for 2026. The simultaneous declines are verified observations, but a common cause is not established by these issuer materials. Customer growth, pricing, investment needs and competition are relevant business risks to monitor."
+      },
+      {
+        "heading": "7) Western Digital: a negative quote after a strong reported quarter",
+        "text": "WDC was $339.87, down 4.04%, at 7:25:25 AM Eastern on October 23. Its October 22 fiscal first-quarter 2027 release reported revenue of $4.381 billion, GAAP diluted EPS of $4.63 and non-GAAP diluted EPS of $4.64. For fiscal second quarter, management issued revenue guidance of $5.0–$5.2 billion and non-GAAP EPS of $5.60–$6.00. The company also raised its quarterly dividend to $0.175. Results and guidance describe the storage business; they do not by themselves prove why investors sold the shares in this particular window. Avoid labeling the decline a revenue or EPS miss without a matching dated consensus."
+      },
+      {
+        "heading": "8) What to check at the regular open",
+        "text": "Recheck prices and trading volume after the October 23 open at 9:30 AM Eastern before interpreting early rankings as durable trends. Tower strength and wireless weakness deserve separate scrutiny; their opposite directions do not establish a transfer of value or a causal relationship. The second visual presents the saved week’s earnings and events calendar, which can be revised. The opening trade may differ materially from these timestamped observations. Use the company research and earnings tools to examine financial performance, valuation and upcoming disclosures; this briefing makes no promise about the next price move."
+      }
+    ],
+    "events": [],
+    "rows": [
+      {
+        "quoteAsOf": "2026-10-23T11:27:03.000Z",
+        "price": 86,
+        "name": "Crown Castle Inc.",
+        "move": 9.095522009387302,
+        "symbol": "CCI"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:21:32.000Z",
+        "price": 189.98,
+        "name": "SBA Communications Corporation",
+        "move": 6.497000952968213,
+        "symbol": "SBAC"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:21:12.000Z",
+        "price": 192.79,
+        "name": "American Tower Corporation",
+        "move": 6.179434928677652,
+        "symbol": "AMT"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:26:23.000Z",
+        "price": 778.08,
+        "name": "Lumentum Holdings Inc.",
+        "move": 3.393839530124665,
+        "symbol": "LITE"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:27:38.000Z",
+        "price": 335.35,
+        "name": "CBOE GLOBAL MARKETS INC",
+        "move": 2.328207005980709,
+        "symbol": "CBOE"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:29:58.000Z",
+        "price": 78.8312,
+        "name": "Deckers Outdoor Corporation",
+        "move": -7.56191369606004,
+        "symbol": "DECK"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:25:13.000Z",
+        "price": 151.15,
+        "name": "T-Mobile US, Inc.",
+        "move": -4.811386107437487,
+        "symbol": "TMUS"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:25:22.000Z",
+        "price": 21.65,
+        "name": "AT&T Inc.",
+        "move": -4.793315743183813,
+        "symbol": "T"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:25:25.000Z",
+        "price": 339.87,
+        "name": "Western Digital Corporation",
+        "move": -4.043027753465656,
+        "symbol": "WDC"
+      },
+      {
+        "quoteAsOf": "2026-10-23T11:25:10.000Z",
+        "price": 43.47,
+        "name": "Verizon Communications Inc.",
+        "move": -3.8274336283185884,
+        "symbol": "VZ"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Crown Castle third-quarter 2026 results, October 21",
+        "url": "https://investor.crowncastle.com/node/29361"
+      },
+      {
+        "title": "SBA Communications third-quarter results event",
+        "url": "https://ir.sbasite.com/news-events/events-presentations/event-details/2026/SBA-Communications-Third-Quarter-Results/default.aspx"
+      },
+      {
+        "title": "American Tower third-quarter 2026 earnings schedule",
+        "url": "https://americantower.gcs-web.com/news-releases/news-release-details/american-tower-plans-third-quarter-2026-earnings-release-and"
+      },
+      {
+        "title": "Lumentum fiscal first-quarter 2027 reporting date",
+        "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results/default.aspx"
+      },
+      {
+        "title": "Cboe third-quarter 2026 earnings schedule",
+        "url": "https://ir.cboe.com/news/news-details/2026/Cboe-Global-Markets-Announces-Date-of-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      {
+        "title": "Deckers fiscal second-quarter 2027 release, October 22",
+        "url": "https://ir.deckers.com/sec-filings/all-sec-filings/content/0000910521-26-000028/deckex991pressrelease-9302.htm"
+      },
+      {
+        "title": "T-Mobile third-quarter earnings schedule",
+        "url": "https://www.t-mobile.com/news/business/t-mobile-to-host-q3-2026-earnings-call-on-october-28-2026"
+      },
+      {
+        "title": "AT&T third-quarter results, October 21",
+        "url": "https://about.att.com/story/2026/3q-earnings.html"
+      },
+      {
+        "title": "Verizon issuer earnings schedule",
+        "url": "https://www.globenewswire.com/news-release/2026/09/28/3369995/0/en/verizon-to-report-third-quarter-earnings-october-26-2026.html"
+      },
+      {
+        "title": "Western Digital fiscal first-quarter 2027 results, October 22",
+        "url": "https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "AI-assisted research. Earnings dates and estimates may change. Estimates are not reported results. Educational information; investing involves risk.",
+    "collectedAt": "2026-10-23T11:31:02.985Z",
+    "coverage": 269,
+    "images": [
+      {
+        "filename": "market-performance.png",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Pre-market heatmap, market pulse and movers",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-briefing-images%2Fbriefing_premarket_2026_10_23%2Fc5d49f0170745e45166afbff52f448e8740bbac0ba44ab6e61e81045f6c9d2c3%2Fmarket-performance.png?alt=media&token=c5d49f0170745e45166afbff52f448e8740bbac0ba44ab6e61e81045f6c9d2c3",
+        "sha256": "c5d49f0170745e45166afbff52f448e8740bbac0ba44ab6e61e81045f6c9d2c3",
+        "title": "Pre-market heatmap, market pulse and movers"
+      },
+      {
+        "filename": "earnings-and-events.png",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Recent and upcoming earnings and market events",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-briefing-images%2Fbriefing_premarket_2026_10_23%2Fd68c4697cace2d23441995c1408f3d815ba0b5b521050ee1135165dc242a575d%2Fearnings-and-events.png?alt=media&token=d68c4697cace2d23441995c1408f3d815ba0b5b521050ee1135165dc242a575d",
+        "sha256": "d68c4697cace2d23441995c1408f3d815ba0b5b521050ee1135165dc242a575d",
+        "title": "Recent and upcoming earnings and market events"
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "status": "published",
+    "id": "ai_market_recap_2026-10-23_weekly",
+    "postId": "ai_market_recap_2026-10-23_weekly",
+    "kind": "weekly",
+    "slug": "weekly-market-recap-2026-10-23",
+    "title": "Weekly market recap · October 19–23, 2026",
+    "summary": "The main takeaway: this was a mixed week, with smaller companies holding up better than major technology shares. Next, watch whether earnings outlooks and the Fed’s message support that broader strength.",
+    "sessionDate": "2026-10-23",
+    "publishedAt": "2026-10-24T16:30:44.451Z",
+    "updatedAt": "2026-10-24T16:30:44.451Z",
+    "symbols": [
+      "SPY"
+    ],
+    "sections": [
+      {
+        "heading": "The week in markets",
+        "text": "Big U.S. stocks ended the week slightly lower: the S&P 500 fell 0.47%, while the Nasdaq-100 fund QQQ lost 0.76%. Weakness in some of the largest technology companies weighed on the main indexes."
+      },
+      {
+        "heading": "Where stocks showed strength",
+        "text": "The picture was stronger beneath the headline indexes. More stocks rose than fell, and the Russell 2000 index of smaller companies gained about 2%, showing that the week’s weakness was not shared across the market."
+      },
+      {
+        "heading": "Weekly stock movers",
+        "text": "Hasbro led the weekly gainers with an 18.91% rise, followed by Charles River Laboratories at 15.07%. The heatmap also shows strength in Roper Technologies and Allegion."
+      },
+      {
+        "heading": "Weekly stock movers",
+        "text": "Comfort Systems fell 19.33% and Howmet Aerospace lost 15.86%, among the week’s steepest declines. Construction-related companies were a weak spot, while several large technology stocks also finished lower."
+      },
+      {
+        "heading": "Earnings in focus",
+        "text": "Meta reported profits and sales above expectations, while Tesla’s profits beat estimates and sales were roughly in line. Better-than-expected results do not always lead to a rising share price; investors also weigh the outlook."
+      },
+      {
+        "heading": "Other market moves",
+        "text": "Gold fell about 4.1% over the week, while U.S. crude oil gained about 2%. These moves can affect mining and energy companies differently from the broader stock market."
+      },
+      {
+        "heading": "The week ahead",
+        "text": "Next week brings the Fed’s October 28 rate decision and a busy earnings calendar. Microsoft and Alphabet are expected to report on October 28, followed by Amazon on October 29; dates can change."
+      },
+      {
+        "heading": "What matters next",
+        "text": "The main takeaway: this was a mixed week, with smaller companies holding up better than major technology shares. Next, watch whether earnings outlooks and the Fed’s message support that broader strength."
+      }
+    ],
+    "events": [],
+    "rows": [],
+    "sources": [
+      {
+        "title": "Market prices and weekly heatmap",
+        "url": "https://www.stockstobuynow.ai/stock-market-heatmap/"
+      },
+      {
+        "title": "Earnings calendar",
+        "url": "https://www.stockstobuynow.ai/earnings-calendar/"
+      },
+      {
+        "title": "Federal Reserve meeting calendar",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      },
+      {
+        "title": "U.S. economic release calendar",
+        "url": "https://www.bea.gov/news/schedule"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fweekly%2F2026-10-23%2F7b4598f12cf20f1c26d55bba0c3c44e4620a66ebdcfd7c5d710487afc5bf9357%2Fmarket-performance.png?alt=media&token=7b4598f12cf20f1c26d55bba0c3c44e4620a66ebdcfd7c5d710487afc5bf9357",
+        "title": "Weekly heatmap, market pulse and movers",
+        "filename": "market-performance.png",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Weekly heatmap, market pulse and movers"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fweekly%2F2026-10-23%2Fe514507bc8fc1d7ca3b87d03f152550f6c9979015beed669cb0a8cbd59dcb511%2Fearnings-and-events.png?alt=media&token=e514507bc8fc1d7ca3b87d03f152550f6c9979015beed669cb0a8cbd59dcb511",
+        "title": "Next week’s earnings and market events",
+        "filename": "earnings-and-events.png",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Next week’s earnings and market events"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/market-recaps%2Fweekly%2F2026-10-23%2F9dc9292f25529842cba76f8626d29ac50b3c2dad9addef4405fa584c18813867%2Fmarket-movers.png?alt=media&token=9dc9292f25529842cba76f8626d29ac50b3c2dad9addef4405fa584c18813867",
+        "title": "Weekly heatmap & movers",
+        "filename": "market-movers.png",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Weekly heatmap & movers"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "disclosure": "Weekly returns compare adjusted closing prices from the final session before the week to the week’s final session. Educational research; investing involves risk."
   }
 ]

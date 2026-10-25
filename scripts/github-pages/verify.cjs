@@ -51,10 +51,12 @@ const optionReports=require(path.resolve(out,'../.github-pages-build/data/option
 for(const report of optionReports){
  const route='results/'+report.id.toLowerCase().replace(/_/g,'-');
  const canonical='https://www.stockstobuynow.ai/'+route+'/';
- assert(html('results').includes('href="/'+route+'/"'),'Missing result card link: '+report.id);
+ assert(!html('results').includes('data-app-post-id="'+report.id+'"'),'Anonymous Results archive must be gated');
  assert(html(route).includes(canonical),'Missing result canonical: '+report.id);
  assert(sitemap.includes(canonical),'Missing result sitemap entry: '+report.id);
- assert(html(route).includes('What happened'),'Full result recap missing: '+report.id);
+ assert(!html(route).includes('What happened'),'Anonymous result HTML must not contain the protected section: '+report.id);
+ const pageData=JSON.parse(html(route).match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ assert(!Object.hasOwn(pageData.props.pageProps.result,'recap')&&!Object.hasOwn(pageData.props.pageProps.result,'text'),'Protected report copy leaked into static props');
  for(const image of report.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Full result image missing: '+report.id);
 }
 console.log(`Verified ${optionReports.length} individual result pages and archive links.`);

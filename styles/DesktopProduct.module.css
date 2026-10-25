@@ -1,0 +1,76 @@
+.intro{display:none}.memberships{background:linear-gradient(145deg,#087dcc 0%,#174bb6 45%,#35138d 100%);color:#f6f7f8;padding:88px max(24px,calc((100% - 1130px)/2));scroll-margin-top:90px}.eyebrow{font-size:11px;letter-spacing:.18em;color:#c4e7ff;font-weight:600}.memberships header{margin-bottom:38px}.memberships h2{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-.055em;color:#fff;margin:18px 0}.memberships header p{color:#b1c0d9;font-size:17px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px}.plan{background:linear-gradient(145deg,#18243b,#15182f);border:1px solid #b1bff22b;border-radius:28px;box-shadow:0 30px 100px #0004;padding:36px;display:flex;flex-direction:column;align-items:stretch}.planTag{font-size:10px;letter-spacing:.16em;color:#b8a7f2}.plan h3{font-size:38px;color:#fff;letter-spacing:-.04em;margin:20px 0 10px;display:flex;align-items:center;gap:16px}.plan h3 span{font-size:9px;letter-spacing:.12em;border:1px solid #a99ac050;color:#d4c8eb;border-radius:6px;padding:6px 9px}.plan p{font-size:14px;line-height:1.7;color:#b1c0d9;margin:0 0 18px}.plan .planLead{font-size:21px;color:#e5e7eb;margin-bottom:8px}.plan ul{list-style:none;margin:10px 0 34px;padding:0;flex:1}.plan li{padding:13px 0;border-bottom:1px solid #ffffff0c;font-size:14px;color:#edf4ff}.plan li:before{content:'✓';color:#8cf0e9;margin-right:12px}.pro{background:radial-gradient(ellipse at top right,#a878ff0c,transparent 65%),linear-gradient(145deg,#18243b,#15182f);border-color:#b8a7f24d}.primary,.secondary{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:17px 22px;border-radius:30px;text-decoration:none!important;font-size:14px;font-weight:600}.primary{background:#fff;color:#1247a5!important}.secondary{background:#ffffff0a;border:1px solid #b3c3de44;color:#f4f5f6!important}.primary:hover{background:#fff}.secondary:hover{background:#ffffff14}.plan small{font-size:11px;line-height:1.6;color:#d3dcff;margin-top:14px}.disclosure{font-size:11px;color:#c4d8f4;margin:24px 0 0}.memberships a:focus-visible,.intro a:focus-visible{outline:2px solid #c9b6ed;outline-offset:5px}
+@media(min-width:1024px),(hover:hover) and (pointer:fine){.intro{display:block;background:linear-gradient(180deg,#00a3f5 0%,#1166d2 45%,#150080 100%);color:#f3f6fb;padding:155px max(32px,calc((100% - 1130px)/2)) 35px}.introHeading{display:flex;align-items:flex-end;justify-content:space-between;gap:60px}.introHeading h1{font-size:clamp(48px,5vw,72px);line-height:1.04;letter-spacing:-.055em;margin:20px 0;color:#fff}.introHeading h1 span{color:#c8edff}.introHeading p{max-width:580px;color:#e0efff;font-size:16px;line-height:1.7;margin-bottom:0}.introHeading>a{flex-shrink:0;margin-bottom:8px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:45px}.tools a{position:relative;background:#0e1a2e;border:1px solid #ffffff1f;border-radius:18px;padding:23px 23px 35px;text-decoration:none!important;transition:background .2s,border-color .2s,box-shadow .2s}.tools a:hover,.tools a:focus-visible{background:#223550;border-color:#ffffffb3;box-shadow:inset 0 0 0 1px #ffffff18}.number{font-size:11px;color:#c0dbff}.tools h2{font-size:19px;color:#eef2f7;margin:23px 0 10px;letter-spacing:-.02em}.tools p{font-size:12px;line-height:1.65;color:#d6e8ff;margin:0;max-width:170px}.arrow{position:absolute;bottom:17px;right:19px;color:#b4f5f5}.introFooter{display:flex;justify-content:space-between;margin-top:25px;font-size:12px;color:#c0dbff}.introFooter a{color:#e1dbff}}
+@media(max-width:650px){.memberships{padding:55px 20px}.plans{grid-template-columns:1fr}.plan{padding:27px}.memberships h2{font-size:40px}.primary,.secondary{font-size:13px}}
+
+.introBrand{display:flex;align-items:center;gap:14px}.introBrand img{display:block;width:48px;height:48px;border-radius:14px;border:1px solid #ffffff65;object-fit:cover;box-shadow:0 4px 16px #123b9230}
+
+@media(min-width:1024px),(hover:hover) and (pointer:fine){
+ .tools a{display:flex;align-items:flex-start;gap:14px;padding:26px 22px;min-height:190px}
+ .toolIcon{display:flex;align-items:center;justify-content:center;flex:0 0 38px;width:38px;height:38px;border:1px solid #a9bed32e;border-radius:11px;background:#ffffff04;color:#b7c6ee}
+ .toolIcon svg{width:23px;height:23px}
+ .toolCopy{min-width:0;padding-top:3px}
+ .toolCategory{display:block;font-size:9px;letter-spacing:.14em;color:#9eb0cb;padding-right:15px}
+ .tools h2{font-size:17px;font-weight:650;line-height:1.35;margin:13px 0 10px}
+ .tools p{max-width:none;color:#9eb0cb;font-size:12px;line-height:1.65}
+ .arrow{top:20px;right:18px;bottom:auto;color:#93aac7;font-size:20px;line-height:1}
+}
+@media(min-width:1024px) and (max-width:1199px), (max-width:1199px) and (hover:hover) and (pointer:fine){.tools{grid-template-columns:repeat(2,minmax(0,1fr))}.tools a{min-height:160px}}
+
+/* A soft spotlight follows the pointer without intercepting the card link. */
+@media(hover:hover) and (pointer:fine){
+ .tools a{isolation:isolate;overflow:hidden}
+ .tools a::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:radial-gradient(230px circle at var(--light-x,50%) var(--light-y,50%),#ffffff1f,transparent 75%);opacity:0;transition:opacity .18s ease}
+ .tools a[data-pointer-light=true]::before{opacity:1}
+ .tools a:hover{background:#0e1a2e}
+}
+@media(prefers-reduced-motion:reduce){.tools a::before{transition:none}}
+
+@media(max-width:1023px) and (hover:none), (max-width:1023px) and (pointer:coarse){
+ .intro{display:block;padding:36px 20px 26px;background:linear-gradient(180deg,#150080 0%,#12036e 55%,#10065c 100%);color:#f3f6fb}
+ .introHeading h1{font-size:32px;letter-spacing:-.04em;line-height:1.08;color:white;margin:20px 0 14px}
+ .introHeading h1 span{color:#c8edff}.introHeading p{color:#c1d5f1;font-size:13px;line-height:1.6;margin:0 0 18px;max-width:480px}
+ .introBrand img{width:36px;height:36px;border-radius:11px}.introBrand{gap:10px}.introBrand .eyebrow{font-size:9px}
+ .introHeading>.primary{display:inline-flex;font-size:12px;padding:12px 18px;min-height:44px}
+ .tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
+ .tools a{position:relative;display:block;min-width:0;padding:16px 13px;background:#0e1a2e;border:1px solid #ffffff1f;border-radius:15px;text-decoration:none!important}
+ .toolIcon{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;border:1px solid #a9bed32e;color:#b7c6ee;margin-bottom:12px;background:#ffffff04}.toolIcon svg{width:19px;height:19px}
+ .toolCategory{font-size:8px;letter-spacing:.1em;color:#9eb0cb}.tools h2{color:#eef2f7;font-size:14px;line-height:1.3;margin:7px 0}.tools p{color:#9eb0cb;font-size:11px;line-height:1.5;margin:0}
+ .arrow{position:absolute;top:15px;right:13px;color:#93aac7;font-size:19px;line-height:1}
+ .introFooter{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:10px;color:#bdccef}.introFooter a{color:#e1dbff;min-height:32px;display:inline-flex;align-items:center}
+ .intro [data-intro-item]{transition:opacity .65s ease,translate .65s cubic-bezier(.22,1,.36,1);}
+ .intro [data-intro-item][data-reveal=waiting]{opacity:0;translate:0 24px;pointer-events:none;}
+ .intro [data-intro-item][data-reveal=visible],.intro [data-intro-item]:focus-within{opacity:1;translate:0 0;pointer-events:auto;}
+}
+@media(prefers-reduced-motion:reduce){.intro [data-intro-item]{transition:none!important;opacity:1!important;translate:none!important;pointer-events:auto!important}}
+
+/* Continue the page gradient without restarting at each section. */
+.memberships{background:linear-gradient(180deg,#0c0647 0,transparent 240px),radial-gradient(ellipse at 12% 5%,#137eea33,transparent 55%),radial-gradient(ellipse at 95% 95%,#8253e83b,transparent 55%),#080f22}
+
+/* Keep the market preview below the first desktop screen. */
+.scrollCue{display:none}
+@media(min-width:1024px),(hover:hover) and (pointer:fine){
+ .intro{position:relative;box-sizing:border-box;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-bottom:85px}
+ .scrollCue{display:flex;position:fixed;left:50%;bottom:20px;z-index:20;align-items:center;justify-content:center;width:44px;height:44px;transform:translateX(-50%);color:#d7eaff99;text-decoration:none!important;transition:opacity .22s ease,visibility .22s ease,translate .22s ease}
+ .scrollCue:hover{color:#eaf5ff}
+ .intro[data-scroll-started=true] .scrollCue{opacity:0;visibility:hidden;translate:0 6px;pointer-events:none}
+}
+@media(prefers-reduced-motion:reduce){.scrollCue{transition:none}}
+
+.plans>a.plan{text-decoration:none!important}.plans>a.plan:hover{border-color:#d8e6ff99}
+
+.planPricing{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:12px;margin:12px 0 28px;align-items:stretch}.monthlyPrice,.annualPrice{display:flex;flex-direction:column;justify-content:center;padding:18px 16px;border:1px solid #ffffff29;border-radius:16px;background:#090d173b}.planPricing strong{display:block;color:#fff;font-size:34px;font-weight:600;letter-spacing:-1.2px;line-height:1.2}.planPricing strong span{font-size:12px;font-weight:400;letter-spacing:0;color:#e0e9ff;margin-left:3px}.monthlyPrice>span{font-size:11px;color:#ccd9f7;margin-top:8px}.annualPrice{background:linear-gradient(125deg,#b5a0ff12,#ffe49d08);border-color:#b8a7f266}.priceHeading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:12px}.priceHeading>span{font-size:8px;letter-spacing:1.2px;color:#fff0c4}.priceHeading b{font-size:9px;letter-spacing:.5px;border-radius:20px;padding:5px 8px;background:#ffe29b;color:#39275e}.annualPrice .usualPrice{font-size:10px;color:#e1dbef;margin-top:8px}.usualPrice s{text-decoration-thickness:1px}.annualPrice .billingTotal{font-size:9px;line-height:1.6;color:#c9d4ee;margin-top:5px}@media(max-width:400px){.planPricing{grid-template-columns:1fr}.monthlyPrice{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}.monthlyPrice>span{margin:0}.planPricing strong{font-size:32px}}
+
+/* The entire plan is a single link, with the same pointer spotlight as the tool cards. */
+.plans>a.plan{position:relative;isolation:isolate;overflow:hidden;cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.plans>a.plan>*{position:relative;z-index:1}
+.plans>a.plan::before{content:'';position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;background:radial-gradient(260px circle at var(--plan-light-x,50%) var(--plan-light-y,50%),#ffffff10 0%,#ffffff05 40%,transparent 76%);opacity:0;transition:opacity .2s ease}
+@media(hover:hover){.plans>a.plan[data-pointer-light=true]::before{opacity:1}.plans>a.plan:hover{transform:translateY(-3px);border-color:#e1edffb3;box-shadow:0 16px 45px #050a352e,inset 0 0 0 1px #ffffff12}}
+.plans>a.plan:focus-visible::before{opacity:.55}.plans>a.plan:active{transform:translateY(0) scale(.992);box-shadow:inset 0 2px 16px #070d3b30;border-color:#fff}
+@media(prefers-reduced-motion:reduce){.plans>a.plan,.plans>a.plan::before{transition:none}.plans>a.plan:hover,.plans>a.plan:active{transform:none}}
+
+/* A narrow computer window keeps the desktop entry point, with a compact layout. */
+@media(max-width:1023px) and (hover:hover) and (pointer:fine){
+ .intro{padding:105px 24px 75px}.introHeading{gap:26px}.introHeading h1{font-size:clamp(36px,5.6vw,58px)}.introHeading p{font-size:14px}.introHeading>.primary{font-size:12px;padding:15px 18px}.tools{margin-top:32px}.tools a{min-height:135px;padding:22px 18px}.tools h2{font-size:16px}.tools p{font-size:11px}.introFooter{font-size:11px;gap:18px}
+}
+@media(max-width:760px) and (hover:hover) and (pointer:fine){.introHeading{display:block}.introHeading>.primary{display:inline-flex;margin-top:22px}.introFooter{flex-wrap:wrap}.introBrand .eyebrow{font-size:9px}.tools a{display:block}.toolIcon{margin-bottom:12px}}
+@media(max-width:380px) and (hover:hover) and (pointer:fine){.tools{grid-template-columns:1fr}}

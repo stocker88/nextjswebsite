@@ -1,3 +1,4 @@
+import {DesktopActionText} from './DesktopAppLink';
 import {useState} from 'react';
 import AppDownloadButton from './formStocker';
 const inputs=[
@@ -17,7 +18,7 @@ export default function StockResearchPromo(){
   <div className="prediction-panel"><div className="panel-heading"><strong>What goes into each idea</strong><span>AI RESEARCH ↗</span></div>
    <div className="choices markets" role="group" aria-label="Stock research inputs">{inputs.map((input,index)=><button type="button" key={input.label} aria-pressed={selected===index} aria-controls="stock-research-detail" onClick={()=>setSelected(index)}><span className="choice-icon" aria-hidden="true">{input.icon}</span><strong style={{fontSize:13}}>{input.label}</strong></button>)}</div>
    <div className="detail" id="stock-research-detail" aria-live="polite"><h3>{inputs[selected].label}</h3><p>{inputs[selected].detail}</p></div>
-   <div className="download"><AppDownloadButton popup from="home_stock_research_promo" label="Explore best stocks to buy now →"/><small>Get the app · iOS & Android</small></div>
+   <div className="download"><AppDownloadButton popup from="home_stock_research_promo" label="Explore best stocks to buy now →"/><small><DesktopActionText desktopLabel="Membership access · Your account">{'Get the app · iOS & Android'}</DesktopActionText></small></div>
    <p className="forecast-note">Research ideas to evaluate, with risks to consider. Returns are not guaranteed.</p>
   </div>
   <style jsx>{`

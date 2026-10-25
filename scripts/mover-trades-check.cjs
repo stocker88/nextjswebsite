@@ -25,3 +25,5 @@ assert.equal(buildTrades([{...result,moves:[{symbol:'ACN',sessionDay:'2026-10-23
 for(const moves of [[],[{symbol:'OTHER',sessionDay:'2026-10-23',sessionPct:999}],[{symbol:'ACN',sessionDay:'2026-10-22',sessionPct:999}],[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:null}],[{symbol:'ACN',sessionDay:'2026-10-23',sessionPct:Infinity}]])assert.equal(buildTrades([{...result,moves}],[post],now).length,0);
 assert.equal(findMoverTrade([{...items[0],performancePct:NaN}],'ACN',now),undefined);
 console.log('PASS: highest reported contract return, signed rounding and invalid/mismatched performance exclusion.');
+
+assert.equal(buildTrades([{...result,appCollection:'optionsresults',source:'www.StocksToBuyNow.ai',publishedAt:now-1000}],[],now).length,1);

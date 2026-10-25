@@ -7,3 +7,9 @@ out/
 .cache/fear-greed/
 
 .cache/macro/
+
+# Isolated local device-settings preview
+.next-device-preview-firebase/
+
+# Isolated content-access verification preview
+.next-content-access/

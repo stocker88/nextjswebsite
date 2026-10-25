@@ -1,0 +1,8 @@
+import {useState} from 'react';
+import {providerEnabled,providerNames,type SiteProvider} from '../lib/site-sign-in';
+import s from '../styles/AccountLogin.module.css';
+export default function MoreSignInOptions({busy,onSelect}:{busy:boolean;onSelect:(provider:SiteProvider)=>void}){
+ const [open,setOpen]=useState(false);
+ const pending=(['facebook','twitter'] as const).filter(provider=>!providerEnabled(provider)).map(provider=>providerNames[provider]);
+ return <div className={s.more}><button type="button" className={s.moreToggle} aria-expanded={open} aria-controls="extra-sign-in-methods" onClick={()=>setOpen(!open)}>More sign-in options <span aria-hidden="true">{open?'−':'+'}</span></button>{open&&<div id="extra-sign-in-methods"><div className={s.socialIcons}>{(['twitter','facebook'] as const).map(provider=><button key={provider} type="button" aria-label={`Continue with ${providerNames[provider]}${providerEnabled(provider)?'':' — setup pending'}`} title={providerEnabled(provider)?providerNames[provider]:`${providerNames[provider]} — setup pending`} disabled={busy||!providerEnabled(provider)} onClick={()=>onSelect(provider)}>{provider==='twitter'?<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.9-9L1.7 2h6.4l4.5 6.6L18.9 2ZM17.8 20h1.7L7.2 4H5.4l12.4 16Z"/></svg>:<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V6.5c0-1.2.3-2 2-2h2V1.1A27 27 0 0 0 15.2 1C12.3 1 10 2.8 10 6.2V9H7v4h3v9h4Z"/></svg>}</button>)}</div>{pending.length>0&&<p className={s.setupNote}>{pending.join(' and ')} {pending.length===1?'is':'are'} being set up.</p>}</div>}</div>;
+}

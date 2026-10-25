@@ -1,3 +1,4 @@
+import {DesktopActionText} from '../../components/DesktopAppLink';
 import ResearchPage from '../../components/ResearchPage';
 import MarketFeedTabs from '../../components/MarketFeedTabs';
 import MarketNewsFeed from '../../components/MarketNewsFeed';
@@ -11,7 +12,7 @@ export default function MarketNews(){return <ResearchPage title="Latest Stock Ma
   <NewsMentionsPromo/>
   <div className="hottest-stocks-action">
     <AppDownloadButton popup from="market_news_hottest_stocks" label="Hottest stock now →"/>
-    <p>Explore in the app · iOS & Android</p>
+    <p><DesktopActionText desktopLabel="Explore the full research">{'Explore in the app · iOS & Android'}</DesktopActionText></p>
   </div>
   <style jsx>{`
     .hottest-stocks-action{text-align:center;margin:30px 0 12px}

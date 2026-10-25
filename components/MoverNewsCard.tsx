@@ -1,5 +1,5 @@
 import ArticlePostEngagement from './ArticlePostEngagement';
-import Link from 'next/link';
+import {AccountLink} from './SiteAccount';
 import {useState} from 'react';
 import {moverArticleUrl, type MoverArticle} from '../lib/mover-research';
 
@@ -8,7 +8,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
   const date=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(a.sessionDate+'T12:00:00Z'));
   const preview=a.recap[0].replace(/^[•\s]+/,'').match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim()||a.recap[0];
   return <article className={'mover-card'+(compact?' compact':'')} data-app-post-id={a.postId}>
-    <Link className="card-link" href={moverArticleUrl(a)}>
+    <AccountLink className="card-link" destination={moverArticleUrl(a)}>
       <div className="card-top"><span className="topic">${a.symbol} insights <span aria-hidden="true">↗</span></span><time dateTime={a.sessionDate}>{date}</time></div>
       <div className="company-row">
         <span className="company-logo" aria-hidden="true">{logoFailed?a.symbol.slice(0,2):<img src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'} alt="" width={44} height={44} loading="lazy" onError={()=>setLogoFailed(true)}/>}</span>
@@ -19,7 +19,7 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
       {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={i.url} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
       <div className="card-footer"><div className="footer-stats"><ArticlePostEngagement postId={a.postId}/><span>{a.earningsPeriod||'Stock research'}</span></div><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
-    </Link>
+    </AccountLink>
     <style jsx>{`
       .mover-card{height:100%;min-width:0;border:1px solid #2c3b52;border-radius:24px;background:linear-gradient(145deg,#111d2e,#0c1422);transition:border-color .2s,box-shadow .2s,transform .2s;overflow:hidden}
       .mover-card :global(.card-link){display:flex;flex-direction:column;height:100%;padding:26px;text-decoration:none;color:#f1f4fc;outline-offset:-4px;border-radius:24px}

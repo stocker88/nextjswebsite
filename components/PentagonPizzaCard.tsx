@@ -13,7 +13,7 @@ export default function PentagonPizzaCard(){
  const y=(value:number)=>170-value/ceiling*145;
  const path=points.map((p,i)=>`${i&&Date.parse(p.date)-Date.parse(points[i-1].date)<=86400000?'L':'M'}${x(p)},${y(p.value)}`).join(' ');
  return <section className={styles.card} aria-labelledby="pizza-title"><div className={styles.top}><div><span className={styles.eyebrow}>ALTERNATIVE INDICATOR</span><h2 id="pizza-title">Pentagon Pizza Index</h2></div><span className={styles.badge}>{loading?'Loading…':!data?.available?'No current reading':`${data.spikes} activity ${data.spikes===1?'spike':'spikes'}`}</span></div>
- <p>Public activity at pizza shops near the Pentagon. An unconventional geopolitical curiosity, separate from the Fear &amp; Greed score.</p>
+ <p>Public activity at pizza shops near the Pentagon.</p>
  {data&&<><div className={styles.rows}>{data.restaurants.map((r,i)=><div key={i}><span>{r.name}</span><strong className={r.spike?styles.spike:undefined}>{r.percentOfUsual===null?'Unavailable':`${Math.round(r.percentOfUsual)}% of usual`}</strong></div>)}</div><p className={styles.meta}>{data.available} of {data.total} locations reporting{data.timestamp?` · Observation updated ${new Date(data.timestamp).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET`:''}</p></>}
  {!loading&&!data&&<p role="status">Activity data is temporarily unavailable.</p>}
  <div className={styles.historyHead}><h3>Combined activity over time</h3><div className={styles.ranges} aria-label="Pizza history period">{[[30,'1M'],[90,'3M'],[365,'1Y']].map(([n,label])=><button key={n} aria-pressed={range===n} onClick={()=>setRange(Number(n))}>{label}</button>)}</div></div>

@@ -1,3 +1,4 @@
+import {DesktopActionText} from './DesktopAppLink';
 import {useState} from 'react';
 import AppDownloadButton from './formStocker';
 
@@ -27,7 +28,7 @@ export default function CalendarPredictionPromo({kind}:{kind:'market'|'earnings'
     {choices.map((choice,index)=><button key={choice} type="button" aria-pressed={selected===choice} aria-controls={kind+'-prediction-detail'} onClick={()=>setSelected(choice)}><span className="choice-icon" aria-hidden="true">{market?(index===0?'↗':'⌁'):['◷','▥','✦'][index]}</span><strong>{choice}</strong><small>{market?'Daily prediction':'Quarterly context'}</small></button>)}
    </div>
    <div className="detail" id={kind+'-prediction-detail'} aria-live="polite"><h3>{market?selected+' market prediction':'A clearer view before results'}</h3><p>{descriptions[selected]}</p></div>
-   <div className="download"><AppDownloadButton popup from={kind+'_calendar_prediction_'+selected.toLowerCase().replace(/[^a-z0-9]+/g,'_')} label={market?'Review market predictions →':'Explore earnings jump prediction →'}/><small>Get the app · iOS & Android</small></div>
+   <div className="download"><AppDownloadButton popup from={kind+'_calendar_prediction_'+selected.toLowerCase().replace(/[^a-z0-9]+/g,'_')} label={market?'Review market predictions →':'Explore earnings jump prediction →'}/><small><DesktopActionText desktopLabel="Membership access · Your account">{'Get the app · iOS & Android'}</DesktopActionText></small></div>
    <p className="forecast-note">{market?'Forecasts can change as new information arrives.':'An earnings beat does not guarantee a rising stock price.'} Predictions are not guarantees.</p>
   </div>
   <style jsx>{`

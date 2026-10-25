@@ -8,7 +8,7 @@ export type ChangeMetric = 'eps'|'revenue'|'netIncome';
 export type Metric = 'marketCap'|'pe'|'forwardPe'|'ps'|'oneYear'|'rsi'|'netMargin'|'debtToEquity';
 export type Observation = {value:number|null;from:string|null;to:string|null};
 export type ComparisonChange = {price:Observation;eps:Observation;revenue:Observation;netIncome:Observation};
-export type PeerCompany = {logo?:string|null;symbol:string;name:string;industry:string;marketCap:number|null;pe:number|null;forwardPe:number|null;ps:number|null;oneYear:number|null;rsi:number|null;netMargin:number|null;debtToEquity:number|null;priceDate:string|null;financialDate:string|null;updatedAt:string|null;changes:Record<Period,ComparisonChange>};
+export type PeerCompany = {valuationDate?:string|null;logo?:string|null;symbol:string;name:string;industry:string;marketCap:number|null;pe:number|null;forwardPe:number|null;ps:number|null;oneYear:number|null;rsi:number|null;netMargin:number|null;debtToEquity:number|null;priceDate:string|null;financialDate:string|null;updatedAt:string|null;changes:Record<Period,ComparisonChange>};
 export const finite = (value:unknown):value is number => typeof value==='number'&&Number.isFinite(value);
 export const quantile=(values:number[],q:number):number|null=>{if(!values.length)return null;const a=[...values].sort((a,b)=>a-b),i=(a.length-1)*q;return a[Math.floor(i)]+(a[Math.ceil(i)]-a[Math.floor(i)])*(i-Math.floor(i))};
 const empty=():Observation=>({value:null,from:null,to:null});
@@ -44,12 +44,16 @@ export function makePeerCompany(symbol:string,name:string,industry:string,cap:nu
  const num=(v:unknown)=>finite(v)?v:null;
  return {symbol,name,industry,marketCap:num(detail?.marketCap??cap),pe:detail?.pe&&detail.pe>0?num(detail.pe):null,forwardPe:detail?.forwardPe&&detail.forwardPe>0?num(detail.forwardPe):null,ps:num(detail?.ps),oneYear:num(detail?.technical?.oneYear),rsi:num(detail?.technical?.rsi14),netMargin:finite(financial?.netMargin)?financial!.netMargin!*100:null,debtToEquity:num(financial?.debtToEquity),priceDate:detail?.priceDate||null,financialDate:financial?.date||null,updatedAt:detail?.updatedAt||null,changes};
 }
-export function peHistogram(companies:PeerCompany[],all=false){
- const values=companies.map(c=>c.pe).filter((n):n is number=>finite(n)&&n>0).sort((a,b)=>a-b);
+export type ValuationMetric='ps'|'pe';
+export function valuationHistogram(companies:PeerCompany[],metric:ValuationMetric='ps',all=false){
+ const values=companies.map(c=>c[metric]).filter((n):n is number=>finite(n)&&n>0).sort((a,b)=>a-b);
  const q1=quantile(values,.25),q3=quantile(values,.75),fence=q3==null?Infinity:Math.max(q3+1.5*(q3-q1!),q3*1.25);
  const included=all||values.length<5?values:values.filter(v=>v<=fence);
  const low=Math.max(0,(included[0]??0)*.9),high=Math.max(low+1,(included.at(-1)??1)*1.05);
  const binFor=(pe:number|null)=>!finite(pe)||pe<=0||pe<low||pe>(included.at(-1)??high)?-1:Math.min(9,Math.max(0,Math.floor((pe-low)/(high-low)*10)));
- const bins=Array.from({length:10},(_,i)=>({low:low+(high-low)*i/10,high:low+(high-low)*(i+1)/10,companies:companies.filter(c=>binFor(c.pe)===i)}));
+ const bins=Array.from({length:10},(_,i)=>({low:low+(high-low)*i/10,high:low+(high-low)*(i+1)/10,companies:companies.filter(c=>binFor(c[metric])===i)}));
  return {values,low,high,bins,hidden:values.length-included.length,median:quantile(values,.5),q1,q3};
 }
+
+/** Existing P/E summaries keep their explicit metric. */
+export function peHistogram(companies:PeerCompany[],all=false){return valuationHistogram(companies,'pe',all)}

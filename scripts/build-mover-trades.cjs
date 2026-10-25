@@ -6,10 +6,10 @@ function buildTrades(results,research,now=Date.now()){
  // and scheduled-feed builder include only posts where isAIAdvisor=true.
  const posts=new Map(research.filter(p=>p.isAIAdvisor!==false).map(p=>[p.id,p]));
  return results.flatMap(result=>{
-  const post=posts.get(result.id),time=typeof post?.time==='number'?(post.time<1e12?post.time*1000:post.time):NaN;
+  const post=posts.get(result.id),library=result.appCollection==='optionsresults'&&result.source==='www.StocksToBuyNow.ai',time=typeof post?.time==='number'?(post.time<1e12?post.time*1000:post.time):(library?result.publishedAt:NaN);
   const session=Date.parse(result.sessionDay+'T12:00:00Z');
-  if(!post||!Number.isFinite(time)||time>now||time<now-WEEK||!Number.isFinite(session)||session<now-WEEK||session>now+86400000)return [];
-  if(!/^options_results_[A-Z0-9.-]+_\d{4}-\d{2}-\d{2}$/.test(result.id)||!post.symbols?.some(s=>symbol(s)===symbol(result.symbol)))return [];
+  if((!post&&!library)||!Number.isFinite(time)||time>now||time<now-WEEK||!Number.isFinite(session)||session<now-WEEK||session>now+86400000)return [];
+  if(!/^options_results_[A-Z0-9.-]+_\d{4}-\d{2}-\d{2}$/.test(result.id)||(post?!post.symbols?.some(s=>symbol(s)===symbol(result.symbol)):!library))return [];
   const moves=(result.moves||[]).filter(m=>symbol(m.symbol)===symbol(result.symbol)&&m.sessionDay===result.sessionDay&&Number.isFinite(m.sessionPct)&&m.sessionPct>=-100);
   if(!moves.length)return [];
   const performancePct=Math.max(...moves.map(m=>m.sessionPct));

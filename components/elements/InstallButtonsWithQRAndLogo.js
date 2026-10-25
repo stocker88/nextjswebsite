@@ -1,3 +1,5 @@
+import {useSiteAccount} from '../SiteAccount';
+import ResearchCTA from '../ResearchCTA';
 import React from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';
@@ -27,6 +29,9 @@ const sendOutboundAndroid = (event) => {
 }
 
 const InstallButtonsWithQRAndLogo = ({...props}) => {
+ const {desktop,ready}=useSiteAccount();
+ if(!ready)return <section {...props}/>;
+ if(desktop)return <ResearchCTA placement="install_buttons_with_qr_and_logo"/>;
 if(isMobile) {
         return (
         <section

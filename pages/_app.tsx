@@ -7,6 +7,7 @@ import '../styles/motion.css'
 import '../styles/interaction.css'
 import InteractionPolish from '../components/InteractionPolish';
 import { SessionProvider } from '../stockerSession';
+import {SiteAccountProvider} from '../components/SiteAccount';
 import { initializeAnalytics, trackPageView } from '../lib/analytics';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -29,7 +30,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div className="App">
       <SessionProvider>
         <InteractionPolish />
-        <Component {...pageProps} />
+        <SiteAccountProvider><Component {...pageProps} /></SiteAccountProvider>
       </SessionProvider>
     </div>
   );

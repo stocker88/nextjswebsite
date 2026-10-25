@@ -23,15 +23,16 @@ async function main(){
   if(sync.status!==0)throw new Error('Fear & Greed cache preparation failed');
  }
  require('../render-fear-greed-share.cjs').render(root);
+ require('../option-result-preview.cjs').writeResultPreviews(root);
  fs.rmSync(stage,{recursive:true,force:true}); fs.mkdirSync(stage);
  const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store','.cache']);
  for(const entry of fs.readdirSync(root)) {
-  if(ignored.has(entry)||entry.startsWith('.env')||entry.endsWith('.tsbuildinfo'))continue;
+  if(ignored.has(entry)||entry.startsWith('.next-')||entry==='.idea'||entry.startsWith('.env')||entry.endsWith('.tsbuildinfo'))continue;
   fs.cpSync(path.join(root,entry),path.join(stage,entry),{recursive:true});
  }
  fs.symlinkSync(path.join(root,'node_modules'),path.join(stage,'node_modules'),'dir');
  // Fetch once. Every generated page uses the same archive and timestamps.
- if(!process.argv.includes('--snapshot')){run(['scripts/sync-option-results.cjs']);run(['scripts/sync-research.js']);run(['scripts/sync-earnings.cjs']);run(['scripts/sync-stock-research.cjs']);run(['scripts/sync-market-news.cjs']);run(['scripts/sync-mover-research.cjs']);run(['scripts/sync-market-briefings.cjs']);run(['scripts/sync-market-overview.cjs']);}
+ if(!process.argv.includes('--snapshot')){run(['scripts/sync-smart-money.cjs']);run(['scripts/sync-insider-news.cjs']);run(['scripts/sync-option-results.cjs']);run(['scripts/sync-research.js']);run(['scripts/sync-earnings.cjs']);run(['scripts/sync-stock-research.cjs']);run(['scripts/sync-market-news.cjs']);run(['scripts/sync-mover-research.cjs']);run(['scripts/sync-market-briefings.cjs']);run(['scripts/sync-market-overview.cjs']);}
  write('lib/research-server.ts',`import data from '../data/research.json';\nimport type {ResearchPreview} from './research';\nexport async function fetchResearch():Promise<ResearchPreview[]>{return data as ResearchPreview[];}\n`);
  write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:2}};\n`);
  replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); const {researchPages} = await import('../../lib/research'); const pages = researchPages(items); return {paths:pages.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);

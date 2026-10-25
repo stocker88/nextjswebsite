@@ -1,4 +1,6 @@
 import {optionResults,optionResultUrl} from '../lib/option-results';
+import {insiderArticles} from '../lib/insider-news-server';
+import {insiderArticlePath,insiderPagePath,insiderPageSize} from '../lib/insider-news';
 import {indexableStockPages} from '../lib/indexable-stock-pages';
 import {briefings,briefingUrl} from '../lib/market-briefings';
 import {moverArticles,moverArticleUrl} from '../lib/mover-research';
@@ -34,8 +36,16 @@ export async function getServerSideProps({ res }: any) {
     "/after-hours-stock-heatmap/",
     "/stock-market-heatmap/",
     "/options-activity/",
+    "/smart-money/",
+    "/insider-news/",
+    "/politician-trades/",
+    "/hedge-fund-activity/",
+    "/insider-trades/",
+    "/smart-money-guide/",
     "/results/",
     "/fear-and-greed-index/",
+    "/hormuz-transit-index/",
+    "/pentagon-pizza-index/",
     "/options-profit-calculator/",
     "/options-strategies/",
     "/stock-market-calendar/",
@@ -45,6 +55,7 @@ export async function getServerSideProps({ res }: any) {
     "/how-to-predict-index-inclusions/",
     "/how-to-research-hedge-fund-buys/",
     "/how-to-research-market-direction/",
+    "/stock-market-predictions/",
     "/how-to-research-pre-earnings-moves/",
     "/how-to-research-earnings-predictions/",
     "/how-to-research-post-earnings-moves/",
@@ -61,6 +72,8 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  insiderArticles.filter(a=>!a.noActivity).forEach(a=>entries.push({path:insiderArticlePath(a),modified:a.updatedAt}));
+  for(let page=2;page<=Math.ceil(insiderArticles.length/insiderPageSize);page++)entries.push({path:insiderPagePath(page)});
   optionResults.forEach(result=>entries.push({path:optionResultUrl(result)}));
   entries.push({path:'/news/'});
   entries.push({path:'/catalysts/'});

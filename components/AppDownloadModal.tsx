@@ -1,14 +1,24 @@
-import {useEffect,useRef} from 'react';
+import {useSiteAccount} from './SiteAccount';
+import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
+import {accountLoginUrl} from '../lib/site-auth';
+import {isDesktopDevice} from '../lib/device-access';
+import {useRouter} from 'next/router';
+import {useEffect,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 import ReferralRecovery from './ReferralRecovery';
 import ResearchCTA from './ResearchCTA';
 export default function AppDownloadModal({placement,onClose,title="Get the app to explore",description="Continue your research with stock ideas, market outlooks, earnings predictions, financials and technical setups in StocksToBuyNow.ai."}:{placement:string;onClose:()=>void;title?:string;description?:string}){
+ const {user,ready}=useSiteAccount(),router=useRouter();
+ const [mobileReady,setMobileReady]=useState(false);
+ useEffect(()=>{if(isDesktopDevice(navigator)){if(!ready)return;rememberDesktopThread();void router.push(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));}else setMobileReady(true)},[ready,user?.uid,router]);
  const panel=useRef<HTMLDivElement>(null);
  useEffect(()=>{
+  if(!mobileReady)return;
   const previous=document.activeElement as HTMLElement|null,overflow=document.body.style.overflow;
   document.body.style.overflow='hidden';panel.current?.querySelector<HTMLButtonElement>('button')?.focus();
   return()=>{document.body.style.overflow=overflow;previous?.focus()};
- },[]);
+ },[mobileReady]);
+ if(!mobileReady)return null;
  return createPortal(<div className="download-overlay" onClick={e=>{if(e.target===e.currentTarget)onClose()}}>
   <div className="download-dialog" ref={panel} role="dialog" aria-modal="true" aria-label={title} onKeyDown={e=>{
    if(e.key==='Escape'){e.preventDefault();onClose()}

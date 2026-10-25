@@ -353,6 +353,7 @@ html {
 .founder-section {
 	padding: clamp(72px, 10vw, 132px) 20px;
 	background:
+		linear-gradient(180deg, #070b18, transparent 220px),
 		radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
 		#070b18;
 }
@@ -1192,12 +1193,19 @@ html {
 	}
 }
 
+.signal-preview-transition {
+	display: flow-root;
+	background: linear-gradient(180deg, #04001a 0%, #070b18 50%, #070b18 100%);
+}
+
 .signals-section {
 	padding: clamp(72px, 10vw, 124px) 20px;
 	background:
 		radial-gradient(circle at 20% 20%, rgba(22, 131, 255, 0.13), transparent 36%),
 		#070b18;
 }
+
+.signal-preview-transition > .signals-section { background: transparent; }
 
 .signals-shell {
 	width: min(1180px, 100%);

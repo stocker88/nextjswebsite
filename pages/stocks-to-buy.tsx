@@ -1,3 +1,9 @@
+import {useRouter} from 'next/router';
+import {useSiteAccount} from '../components/SiteAccount';
+import {accountLoginUrl} from '../lib/site-auth';
+import {isDesktopDevice} from '../lib/device-access';
+import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
+import {DesktopActionText} from '../components/DesktopAppLink';
 import {useEffect, useRef, useState} from 'react';
 import ResearchPage from '../components/ResearchPage';
 
@@ -31,7 +37,7 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
       </select>
     </label>
     {selectedMetric !== null ? <div className="metric-app-gate" aria-live="polite">
-      <button type="button" className="metric-app-button" onClick={onGetApp}>Get the app to view {selectedMetric} →</button>
+      <button type="button" className="metric-app-button" onClick={onGetApp}><DesktopActionText desktopLabel={'Review '+selectedMetric+' →'}>{'Get the app to view '+selectedMetric+' →'}</DesktopActionText></button>
       <button type="button" onClick={()=>setSelectedMetric(null)}>Back to {title} preview</button>
     </div> : <Chart points={item.graph3} bars={bars} title={title} projectionMode="financial" projectionDirection={title.toLowerCase().includes('short interest') ? 'down' : 'up'}/>}
     <style jsx>{`
@@ -47,11 +53,12 @@ function SignalCard({item, onGetApp}:{item:Signal; onGetApp:()=>void}) {
       select:focus-visible, .metric-app-gate :global(a:focus-visible), button:focus-visible {outline:2px solid #bfa0ff;outline-offset:3px;}
     `}</style>
     <p className="signal-description">{formatSignalText(item.content)}</p>
-    <button type="button" className="research-cta" onClick={onGetApp}>View in the app →</button>
+    <button type="button" className="research-cta" onClick={onGetApp}><DesktopActionText desktopLabel="View Signal Now →">{'View in the app →'}</DesktopActionText></button>
   </article>;
 }
 const SIGNAL_PREVIEW_LIMIT = 21;
 export default function StocksToBuy({items: initialItems}:{items:Signal[]}) {
+  const {user}=useSiteAccount(),router=useRouter();
   const [items, setItems] = useState(initialItems);
   useEffect(() => {
     let disposed = false;
@@ -73,13 +80,13 @@ export default function StocksToBuy({items: initialItems}:{items:Signal[]}) {
 
   const [showAppLink, setShowAppLink] = useState(false);
   const downloadDialog = useRef<HTMLDialogElement>(null);
-  const openDownloads = () => downloadDialog.current?.showModal();
+  const openDownloads = (postId?:string) => {if(isDesktopDevice(navigator)){rememberDesktopThread(postId?'/insight_details_page?postId='+encodeURIComponent(postId):undefined);void router.push(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));return;}downloadDialog.current?.showModal();};
   return <ResearchPage title="Stocks to buy now: latest signals" path="/stocks-to-buy">
     <div className="hero"><span className="eyebrow">STOCK BUY SIGNALS</span><h1>Stocks to buy now</h1><p>Recent stock setups and market signals. Open each insight in the app for the full analysis.</p></div>
     <section className="public-copy"><h2>How to evaluate a stock-to-buy setup</h2><p>Look for a clear business thesis, incoming business catalysts, and supportive short term technical setup,  a valuation supported by earnings or cash flow, a defined time horizon and a reason the thesis could fail. A green chart or selected historical winner alone is not evidence of an attractive investment.</p><p>Read the summary analysis on this beta web version. The full analysis is available in the app.</p><p><a href="/stocks">Research companies by ticker</a> · <a href="/methodology">Understand the methodology and limitations</a></p></section>
-    <div className="research-board">{items.slice(0, SIGNAL_PREVIEW_LIMIT).map(item=><SignalCard item={item} key={item.id} onGetApp={openDownloads}/>)}</div>
+    <div className="research-board">{items.slice(0, SIGNAL_PREVIEW_LIMIT).map(item=><SignalCard item={item} key={item.id} onGetApp={()=>openDownloads(item.id)}/>)}</div>
     {items.length > 0 && <div className="more-signals" aria-live="polite">
-      {showAppLink ? <button type="button" className="research-cta" onClick={openDownloads}>View more signals in the app →</button> : <button type="button" className="research-cta" onClick={()=>setShowAppLink(true)}>More ↓</button>}
+      {showAppLink ? <button type="button" className="research-cta" onClick={()=>openDownloads()}><DesktopActionText>{'View more signals in the app →'}</DesktopActionText></button> : <button type="button" className="research-cta" onClick={()=>setShowAppLink(true)}>More ↓</button>}
     </div>}
     <dialog ref={downloadDialog} className="download-dialog" aria-labelledby="download-title" onClick={event=>{if(event.target === event.currentTarget) downloadDialog.current?.close();}}>
       <button type="button" className="close-download" aria-label="Close download options" onClick={()=>downloadDialog.current?.close()}>×</button>

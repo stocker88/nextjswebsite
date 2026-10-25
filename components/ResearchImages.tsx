@@ -1,9 +1,16 @@
+import {useRouter} from 'next/router';
+import {useSiteAccount} from './SiteAccount';
+import {accountLoginUrl} from '../lib/site-auth';
+import {isDesktopDevice} from '../lib/device-access';
+import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
+import {DesktopActionText} from './DesktopAppLink';
 import ResearchCTA from './ResearchCTA';
 import {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import type {ResearchImage} from '../lib/research';
 
 export default function ResearchImages({images = [], compact = false, thumbnailSize = 56, appOnly = true}: {images?: ResearchImage[]; compact?: boolean; thumbnailSize?: number; appOnly?: boolean}) {
+  const {desktop,user}=useSiteAccount(),router=useRouter();
   const [failed, setFailed] = useState<Record<string, boolean>>({});
   const [active, setActive] = useState<number | null>(null);
   const [closing, setClosing] = useState(false);
@@ -39,6 +46,11 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     return !stem || /^\d+$/.test(stem) || /^image_picker[_-]/i.test(stem) ? '' : stem.charAt(0).toUpperCase()+stem.slice(1).toLowerCase();
   };
   const open = (index:number, button:HTMLButtonElement) => {
+    if(appOnly&&isDesktopDevice(navigator)){
+      rememberDesktopThread();
+      void router.push(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));
+      return;
+    }
     restore.current=button;
     const r=button.getBoundingClientRect();
     const width=Math.min(innerWidth-24,1100),height=innerHeight*.9;
@@ -48,7 +60,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
   return <>
     <div className={'pictures '+(items.length>1?'multiple':'')+(items.length===3?' triple':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
-        <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={(appOnly?'Get the app to view ':'Expand ')+(title(i)||'image '+(index+1))}>
+        <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={(appOnly?(desktop?'Review the full research picture ':'Get the app to view '):'Expand ')+(title(i)||'image '+(index+1))}>
           <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
           {failed[i.url] && <span className="image-error">Image unavailable</span>}
           {!failed[i.url] && <span className="expand" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></span>}
@@ -71,7 +83,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
               if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}
             }
           }}>
-          {appOnly?<div className="image-app-prompt"><button className="prompt-close" onClick={close} aria-label="Close app prompt">✕</button><h2>Get the app to view</h2><p>View full research pictures, financials and technical setups in StocksToBuyNow.ai.</p><ResearchCTA placement="research_picture" variant="stock"/></div>:<>
+          {appOnly?<div className="image-app-prompt"><button className="prompt-close" onClick={close} aria-label="Close app prompt">✕</button><h2><DesktopActionText desktopLabel="Review the full research">{'Get the app to view'}</DesktopActionText></h2><p>View full research pictures, financials and technical setups in StocksToBuyNow.ai.</p><ResearchCTA placement="research_picture" variant="stock"/></div>:<>
           <div className="lightbox-tools">
             <span>{title(items[active])}</span>
             {items.length>1&&<><button aria-label="Previous image" onClick={()=>change(-1)}>‹</button><span>{active+1} / {items.length}</span><button aria-label="Next image" onClick={()=>change(1)}>›</button></>}

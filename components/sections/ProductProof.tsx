@@ -1,3 +1,4 @@
+import DesktopAppLink from '../DesktopAppLink';
 import { attributionLink, captureAcquisition } from '../../lib/acquisition';
 import Image from 'next/image';
 import type { MouseEvent } from 'react';
@@ -37,15 +38,15 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
             Review active signals, expert insights, earnings opportunities and
             the market updates that may affect your portfolio.
           </p>
-          <a
+          <DesktopAppLink
             href={iosAppStoreUrl}
             className="proof-link"
             target="_blank"
             rel="noopener noreferrer"
             onClick={openAppStore}
           >
-            Explore the app →
-          </a>
+            {'Explore the app →'}
+          </DesktopAppLink>
         </div>
 
         <div className="phone-frame routine-phone" data-motion-depth="22">
@@ -114,7 +115,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
           performance does not guarantee future results.
         </p>
 
-        <a
+        <DesktopAppLink
           href={iosAppStoreUrl}
           className="proof-link prediction-cta"
           data-placement="past_signals_paper_trading"
@@ -123,7 +124,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
           onClick={openAppStore}
         >
           Try Risk-Free Paper Trading →
-        </a>
+        </DesktopAppLink>
       </section>}
 
       {founderOnly && <section className="proof-section founder-trades-section">
@@ -215,7 +216,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
           line-height: 1.65;
         }
 
-        .proof-link {
+        :global(.proof-link) {
           display: inline-flex;
           margin-top: 26px;
           padding: 13px 19px;
@@ -336,7 +337,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
           text-align: center;
         }
 
-        .prediction-cta {
+        :global(.prediction-cta) {
           display: flex;
           width: fit-content;
           min-width: 180px;

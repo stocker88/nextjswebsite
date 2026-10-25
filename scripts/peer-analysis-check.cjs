@@ -35,3 +35,14 @@ assert.equal(semis.industry.peCount,semis.companies.filter(c=>c.pe>0).length);
 assert.equal(loadStockResearch('NVDA').peerAnalysis.length,semis.companies.length);
 assert.equal(api.industrySlug('Aerospace & Defense'),'aerospace-and-defense');
 console.log('Industry research: full cohorts, unique routes, valid P/E coverage and directory/detail parity passed.');
+
+// Sales and earnings must produce independent distributions and matching ranges.
+const valuationPeers=[1,2,2,3,4,100,null,0,-1,Infinity].map((ps,i)=>({symbol:String(i),ps,pe:10+i}));
+const sales=api.valuationHistogram(valuationPeers),earnings=api.valuationHistogram(valuationPeers,'pe');
+assert.equal(sales.median,2.5);assert.equal(sales.values.length,6);assert.equal(sales.hidden,1);
+assert.equal(earnings.median,14.5);assert.equal(earnings.values.length,10);
+assert.equal(sales.bins.reduce((n,b)=>n+b.companies.length,0),5);
+for(const b of sales.bins)for(const c of b.companies)assert(c.ps>=b.low&&c.ps<=b.high);
+assert.equal(api.valuationHistogram(valuationPeers,'ps',true).bins.reduce((n,b)=>n+b.companies.length,0),6);
+assert.equal(api.valuationHistogram([{symbol:'missing',pe:20,ps:null}]).median,null);
+console.log('P/S default: independent P/E data, positive finite values, outlier ranges and missing sales passed.');

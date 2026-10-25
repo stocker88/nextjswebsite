@@ -12,6 +12,7 @@ jobs:
           cache: yarn
       - run: corepack enable
       - run: yarn install --frozen-lockfile
+      - run: yarn test:content-access
       - run: yarn test:seo
       - run: node scripts/macro-check.cjs
       - run: yarn build:pages

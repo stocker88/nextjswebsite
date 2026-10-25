@@ -1,9 +1,14 @@
+import SignInGate from './ContentAccess';
+import {signInContentKind} from '../lib/content-access';
+import ShareControl from './ShareControl';
 import Head from 'next/head';
 import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
 export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg", socialImageAlt = "Founder’s personal trade chart", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
+  const signInKind=signInContentKind(path);
+  const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(path);
   return <>
     <Head>
       <title>{`${title} | Stocks To Buy Now AI`}</title>
@@ -27,8 +32,10 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="twitter:image:alt" content={socialImageAlt} />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
-    <main>
-      <ResearchSections path={path} />
+    <main className={stockDirectory ? "stock-directory" : undefined}>
+      {!noindex && <ShareControl title={title} path={path}/>}
+      {stockDirectory ? children : <ResearchSections path={path} />}
+      {!stockDirectory && (signInKind?<SignInGate destination={path} kind={signInKind}>{children}</SignInGate>:children)}
       <nav className="research-resources" aria-label="Research resources">
         {[
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
@@ -44,9 +51,13 @@ export default function ResearchPage({title, path, children, description = title
           </Link>;
         })}
       </nav>
-      {children}
     </main>
     <style jsx>{`
+      .stock-directory .research-resources {display:flex;flex-wrap:wrap;gap:6px 20px;margin:28px 0 0;padding-top:18px;border-top:1px solid #ffffff12;}
+      .stock-directory .research-resources :global(a),.stock-directory .research-resources :global(a[aria-current="page"]) {padding:4px 0;min-height:28px;border:0;background:none;border-radius:0;color:#8fa0b8;font-size:11px;font-weight:400;}
+      .stock-directory .research-resources svg {display:none;}
+      .stock-directory .research-resources :global(a:hover) {color:white;text-decoration:underline;}
+      main.stock-directory {padding-top:110px;}
       .research-resources {display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px;}
       .research-resources :global(a) {display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:10px 15px;border:1px solid #2b3750;border-radius:12px;background:#10192a;color:#b9c9e1;font-size:13px;font-weight:600;line-height:1.4;text-decoration:none;transition:background .15s,border-color .15s,color .15s;}
       .research-resources svg {flex-shrink:0;color:#94b6e7;}

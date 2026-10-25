@@ -11,7 +11,7 @@ export default function HormuzTransitCard(){
  function path(key:'total'|'tankers'|'average7'){return points.map((p,i)=>p[key]===null?'':`${i&&points[i-1][key]!==null&&Date.parse(p.date)-Date.parse(points[i-1].date)===86400000?'L':'M'}${x(p)},${y(p[key] as number)}`).join(' ')}
  const current=selected??data?.latest;
  return <section className={styles.card} aria-labelledby="hormuz-title"><div className={styles.top}><div><span className={styles.eyebrow}>MARITIME ACTIVITY</span><h2 id="hormuz-title">Hormuz Transit Index</h2></div><span className={styles.badge}>Daily vessel crossings</span></div>
- <p>Shipping activity through the Strait of Hormuz. Separate from the Fear &amp; Greed score.</p>
+ <p>Shipping activity through the Strait of Hormuz.</p>
  {current&&<><div className={styles.rows}><div><span>Total crossings</span><strong>{current.total}</strong></div><div><span>Tanker crossings</span><strong>{current.tankers}</strong></div><div><span>7-day average · all vessels</span><strong>{current.average7?.toFixed(1)??'Unavailable'}</strong></div><div><span>{selected?'Selected date':'Latest observation'}</span><strong>{current.date}</strong></div></div>{selected&&<button onClick={()=>setSelected(null)}>Show latest</button>}</>}
  <div className={styles.historyHead}><h3>Transit history</h3><div className={styles.ranges} aria-label="Hormuz history period">{[[30,'1M'],[90,'3M'],[365,'1Y']].map(([n,label])=><button key={n} aria-pressed={range===n} onClick={()=>{setRange(Number(n));setSelected(null)}}>{label}</button>)}</div></div>
  <p className={styles.meta}><span style={{color:'#62d4c2'}}>● Total crossings</span> · <span style={{color:'#bfa6ff'}}>● Tankers</span> · <span style={{color:'#efba79'}}>● 7-day average</span></p>

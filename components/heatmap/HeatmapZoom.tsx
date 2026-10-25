@@ -53,7 +53,6 @@ export default function HeatmapZoom({children,width,height,enabled,resetKey,onGe
   if(!pointers.current.size){setDragging(false);down.current=null}
  }
  return <>
- {enabled&&<div className={styles.zoomTools} aria-label="Map zoom controls"><button aria-label="Zoom out" disabled={transform.scale<=1} onClick={()=>zoom(transform.scale/1.4)}>−</button><span>{Math.round(transform.scale*100)}%</span><button aria-label="Zoom in" disabled={transform.scale>=5} onClick={()=>zoom(transform.scale*1.4)}>+</button><button onClick={reset} disabled={transform.scale===1}>Reset zoom</button><small>Pinch to zoom · drag to pan · Ctrl/⌘ + scroll</small></div>}
  <div ref={viewport} data-zoom-active={enabled&&(transform.scale>1||dragging)} className={styles.zoomViewport} style={enabled?{height,touchAction:'none',cursor:dragging?'grabbing':transform.scale>1?'grab':undefined}:undefined} tabIndex={enabled?0:undefined} role="group" aria-label="Zoomable heatmap" onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={pointerUp} onClickCapture={e=>{if(Date.now()<suppressUntil.current){e.preventDefault();e.stopPropagation()}}} onKeyDown={e=>{
   if(!enabled||e.target!==e.currentTarget)return;
   if(['+','=','-','0','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){

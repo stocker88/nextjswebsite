@@ -1,3 +1,8 @@
+import HomeMarketTiming from '../components/HomeMarketTiming';
+import DesktopProductIntro from '../components/DesktopProductIntro';
+import MembershipPlans from '../components/MembershipPlans';
+import HomeAlternativeIndicators from '../components/HomeAlternativeIndicators';
+import HomeSmartMoney from '../components/HomeSmartMoney';
 import HeroProductReveal from '../components/HeroProductReveal';
 import ReviewEntrance from '../components/ReviewEntrance';
 import ScrollShowcase from '../components/ScrollShowcase';
@@ -9,7 +14,7 @@ import CalendarPredictionPromo from '../components/CalendarPredictionPromo';
 import EarningsSnapshot from '../components/earnings/EarningsSnapshot';
 import MarketCalendar from '../components/market/MarketCalendar';
 import HomeSignalPreview from "../components/HomeSignalPreview";
-import HomeHeatmap from "../components/HomeHeatmap";
+import HomeSmartMoneySignals from "../components/HomeSmartMoneySignals";
 import HomeOptionsPreview from "../components/HomeOptionsPreview";
 import OptionsSignalsPromo from "../components/OptionsSignalsPromo";
 import HomeResearch from "../components/HomeResearch";
@@ -129,8 +134,11 @@ import SignUpModal from '../SignUpModal';
 */}
 
 
-      <Hero className="illustration-section-01" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
+      <Hero className="illustration-section-01 mobile-download-hero" style={{ background: "linear-gradient(hsl(200, 100%, 48%), hsl(250, 100%, 25%))" }}/>
+      <DesktopProductIntro />
       <HeroProductReveal />
+      <MembershipPlans />
+      <style jsx global>{`@media(min-width:1024px),(hover:hover) and (pointer:fine){.mobile-download-hero,.download-section{display:none!important}}`}</style>
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 
@@ -155,7 +163,7 @@ import SignUpModal from '../SignUpModal';
             </div>
 
             <div className="review-sources__grid">
-              <a className="review-source-card" href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer">
+              <a data-public-store-link="true" className="review-source-card" href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer">
                 <PlatformIcon platform="google" />
                 <div className="review-source-card__content">
                   <span className="review-source-card__eyebrow">Google Play</span>
@@ -165,7 +173,7 @@ import SignUpModal from '../SignUpModal';
                 </div>
               </a>
 
-              <a className="review-source-card" href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer">
+              <a data-public-store-link="true" className="review-source-card" href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer">
                 <PlatformIcon platform="apple" />
                 <div className="review-source-card__content">
                   <span className="review-source-card__eyebrow">Apple App Store</span>
@@ -185,7 +193,8 @@ import SignUpModal from '../SignUpModal';
           </div>
 
         <ScrollShowcase />
-        <HomeHeatmap />
+        <HomeSmartMoney/>
+        <div className="signal-preview-transition"><HomeSmartMoneySignals/>
 
 
   <section id="how-it-works" className="signals-section" style={{ scrollMarginTop: '90px' }}>
@@ -194,6 +203,7 @@ import SignUpModal from '../SignUpModal';
             <Swipe/>
           </div>
         </section>
+        </div>
         <HomeSignalPreview />
         <EarningsSnapshot home>
           <EarningsLearningGuides/>
@@ -205,6 +215,8 @@ import SignUpModal from '../SignUpModal';
         <HomeOptionsPreview/>
         <OptionsLearningGuides home/>
         <OptionsSignalsPromo home from="home_options"/>
+        <HomeAlternativeIndicators/>
+        <HomeMarketTiming/>
         <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
 

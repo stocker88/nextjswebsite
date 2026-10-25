@@ -1,3 +1,6 @@
+import {DesktopActionText} from './DesktopAppLink';
+import HedgingAhead from './HedgingAhead';
+import {hedgingAhead} from '../lib/hedging-events';
 import StockSearchMetadata from './StockSearchMetadata';
 import StockCatalystLinks from './StockCatalystLinks';
 import MoverNewsList from './MoverNewsList';
@@ -12,7 +15,7 @@ import styles from '../styles/StockResearch.module.css';
 const pct=(v:number|null|undefined)=>v==null?'N/A':percent(v*100);
 function GetApp(){
  const [open,setOpen]=useState(false);
- return <><button type="button" className={styles.getApp} aria-haspopup="dialog" onClick={()=>setOpen(true)}>Get App</button>{open&&<AppDownloadModal placement="stock_research_metric" title="Explore more in the app" onClose={()=>setOpen(false)}/>}</>;
+ return <><button type="button" className={styles.getApp} aria-haspopup="dialog" onClick={()=>setOpen(true)}><DesktopActionText>{'Get App'}</DesktopActionText></button>{open&&<AppDownloadModal placement="stock_research_metric" title="Explore more in the app" onClose={()=>setOpen(false)}/>}</>;
 }
 const val=(value:string)=>value==='N/A'?<GetApp/>:value;
 function Metric({label,value,hint}:{label:string;value:string;hint?:string}){return <div className={styles.metric}><span>{label}</span><strong>{val(value)}</strong>{hint&&<small>{hint}</small>}</div>}
@@ -43,7 +46,7 @@ export default function StockResearchHub({symbol,name,bundle,earningsDate,showMo
 <details className={styles.method}><summary>How to read these financial metrics</summary><p>Figures use the app’s saved statements for the displayed period, not a trailing-year total. Margins divide profit by revenue; quick ratio uses current assets less inventory divided by current liabilities. Compare dates and currencies before comparing companies.</p></details></section>
  <section id="catalysts" className={styles.panel}><header><span className={styles.eyebrow}>03 / WHAT COMES NEXT</span><h2>{name} event catalysts</h2><p>Company earnings and scheduled market events that may change expectations.</p></header>
  {earningsDate&&<div className={styles.catalyst}><span className={styles.date}>{earningsDate}</span><div><h3>{symbol} earnings</h3><p>Watch reported results, management’s outlook and the share-price reaction.</p><a href="#earnings">See earnings expectations ↑</a></div></div>}
- {bundle.events.map(e=><article key={e.id} className={styles.catalyst}><span className={styles.date}>{e.date}<small>{e.timeLabel}</small></span><div><h3>{e.title}</h3><p>{e.watch}</p><a href={e.sourceUrl} rel="noopener noreferrer" target="_blank">Release schedule ↗</a><small className={styles.note}>{e.status}</small></div></article>)}
+ {bundle.events.map(e=><article key={e.id} className={styles.catalyst}><span className={styles.date}>{e.date}<small>{e.timeLabel}</small></span><div><h3>{e.title}</h3><p>{e.watch}</p><a href={e.sourceUrl} rel="noopener noreferrer" target="_blank">Release schedule ↗</a><small className={styles.note}>{e.status}</small>{hedgingAhead(e,bundle.today)&&<HedgingAhead/>}</div></article>)}
  {!bundle.events.length&&<p className={styles.note}>No upcoming events are listed in the saved calendar window.</p>}<p className={styles.note}>Dates use U.S. Eastern time and can change. Calendar events provide context; they do not determine the direction of a stock move.</p></section>
  <section id="peers" className={styles.panel}><header><span className={styles.eyebrow}>04 / SIDE BY SIDE</span><h2>Compare {symbol} with its peers</h2><p>{d?.industry||'Industry'} · Compare valuation, financial strength and price performance.</p></header>
  <div className={styles.metrics}><Metric label="Companies with valuation data" value={String(peers.filter(p=>p.detail).length)}/><Metric label="Peer median positive P/E" value={multiple(middle)}/><Metric label={`${symbol} P/E`} value={multiple(d?.pe)}/></div>

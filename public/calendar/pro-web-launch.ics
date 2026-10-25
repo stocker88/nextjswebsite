@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Stocks To Buy Now AI//Pro Web Launch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pro-web-launch-20261201@stockstobuynow.ai
+DTSTAMP:20261025T104818Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Stocks To Buy Now AI - Pro web launch and live video demo
+DESCRIPTION:The live Pro web version launches December 1\, 2026 with a live
+  video demo.\nAll-day launch reminder. Demo time and viewing link will be 
+ announced at https://www.stockstobuynow.ai/membership/.\nPro is available 
+ in the app now. Sign in with the same account you use on the website.
+URL:https://www.stockstobuynow.ai/membership/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

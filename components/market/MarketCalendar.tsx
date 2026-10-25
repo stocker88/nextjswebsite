@@ -1,3 +1,5 @@
+import HedgingAhead, {MarketPredictionPrompt} from '../HedgingAhead';
+import {hedgingAhead} from '../../lib/hedging-events';
 import {monthRange,marketToday,defaultCalendarWeek} from '../../lib/calendar-period';
 import CalendarPeriodControls from '../CalendarPeriodControls';
 import {marketEventIcon} from '../../lib/market-event-icons';
@@ -10,6 +12,7 @@ type MarketEvent = typeof schedule.events[number];
 export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
   const [from,setFrom] = useState(''), [category,setCategory] = useState('all');
   const [monthly,setMonthly]=useState(false),[selectedDate,setSelectedDate]=useState('');
+  const [marketPrompt,setMarketPrompt]=useState(false);
   const [selectedEvent,setSelectedEvent]=useState<MarketEvent|null>(null);
   const eventDialog=useRef<HTMLDialogElement>(null);
   useEffect(()=>{if(selectedEvent)eventDialog.current?.showModal();},[selectedEvent]);
@@ -81,11 +84,12 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
         <span className="time">{e.timeLabel}</span><h3><span className="event-icon" aria-hidden="true">{marketEventIcon(e.category,e.title)}</span>{e.title}</h3><p>{e.summary}</p>
         <details><summary>What to watch</summary><p>{e.watch}</p></details>
         <a href={e.sourceUrl} target="_blank" rel="noopener noreferrer">{e.status} · {e.sourceName} ↗</a>
-      </div></article>)}</section>)}</div>
+      </div>{hedgingAhead(e)&&<HedgingAhead compact onActivate={()=>setMarketPrompt(true)}/>}</article>)}</section>)}</div>
     </>}
     <dialog ref={eventDialog} className="event-dialog" onClose={()=>setSelectedEvent(null)} onClick={e=>{if(e.target===e.currentTarget)eventDialog.current?.close();}}>
-      {selectedEvent&&<div className="event-dialog-body"><button className="close-event" aria-label="Close event details" onClick={()=>eventDialog.current?.close()}>×</button><span className="time">{shortDate(selectedEvent.date)} · {selectedEvent.timeLabel} · Eastern time</span><h3>{marketEventIcon(selectedEvent.category,selectedEvent.title)} {selectedEvent.title}</h3><p>{selectedEvent.summary}</p><h4>What to watch</h4><p>{selectedEvent.watch}</p><a href={selectedEvent.sourceUrl} target="_blank" rel="noopener noreferrer">{selectedEvent.status} · {selectedEvent.sourceName} ↗</a></div>}
+      {selectedEvent&&<div className="event-dialog-body"><button className="close-event" aria-label="Close event details" onClick={()=>eventDialog.current?.close()}>×</button><span className="time">{shortDate(selectedEvent.date)} · {selectedEvent.timeLabel} · Eastern time</span><h3>{marketEventIcon(selectedEvent.category,selectedEvent.title)} {selectedEvent.title}</h3><p>{selectedEvent.summary}</p><h4>What to watch</h4><p>{selectedEvent.watch}</p><a href={selectedEvent.sourceUrl} target="_blank" rel="noopener noreferrer">{selectedEvent.status} · {selectedEvent.sourceName} ↗</a>{hedgingAhead(selectedEvent)&&<HedgingAhead onActivate={()=>{eventDialog.current?.close();setMarketPrompt(true);}}/>}</div>}
     </dialog>
+    {marketPrompt&&<MarketPredictionPrompt onClose={()=>setMarketPrompt(false)}/>}
     {error&&<p role="alert">{error}</p>}
     <p className="meta">Selected events, not a complete live calendar. Dates can change; consult the linked official sources. Scheduled index reviews do not guarantee a stock’s inclusion.</p>
     <style jsx>{`

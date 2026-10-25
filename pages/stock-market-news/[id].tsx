@@ -1,4 +1,5 @@
-import {resolveResearchArticle} from '../../lib/featured-research';
+import DesktopAppLink, {DesktopActionText} from '../../components/DesktopAppLink';
+import {overnightOptionsResult, resolveResearchArticle} from '../../lib/featured-research';
 import {isEarningsFirst} from '../../lib/research';
 import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
@@ -141,18 +142,29 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
             </p>
           )}
 
+        {item.id !== overnightOptionsResult.id && (
         <div className="research-card">
-          <h2>Read the full research in the app</h2>
+          <h2><DesktopActionText>{'Read the full research in the app'}</DesktopActionText></h2>
           <p>A subscription is required to access the full thread.</p>
-          <a
+          <DesktopAppLink
             className="research-cta"
             href={`/insight_details_page?postId=${encodeURIComponent(item.id)}&utm_source=research&utm_medium=organic&utm_campaign=research_hub`}
           >
-            Open in the app →
-          </a>
+            {'Open in the app →'}
+          </DesktopAppLink>
         </div>
+        )}
         <ResearchImages appOnly images={item.images} />
-            <AttachedThreads item={item} />
+        <AttachedThreads item={item} />
+        {item.id === overnightOptionsResult.id && (
+          <section className="research-card" aria-labelledby="more-options-results">
+            <h2 id="more-options-results">Explore more options results</h2>
+            <p>Browse more call and put results, with the prices and research behind each move.</p>
+            <Link className="research-cta" href="/results/">
+              View options results →
+            </Link>
+          </section>
+        )}
       </article>
     </ResearchPage>
   );

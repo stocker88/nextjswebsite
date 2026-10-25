@@ -1,5 +1,5 @@
 import ArticlePostEngagement from './ArticlePostEngagement';
-import Link from 'next/link';
+import {AccountLink} from './SiteAccount';
 import {useState} from 'react';
 import {briefingUrl, type Briefing} from '../lib/market-briefings';
 import AppDownloadModal from './AppDownloadModal';
@@ -20,7 +20,7 @@ export default function CatalystNewsCard({article:a}:{article:Briefing}) {
       <div className="prediction"><span className="pro">Pro</span><button type="button" onClick={()=>setAppOpen(true)} aria-label={'Explore earnings prediction in the app'+(symbol?' for '+symbol:'')}>Earnings<br/>Prediction <span aria-hidden="true">↗</span></button></div>
     </div>
     {event&&<p className="report-date"><span>{event.dateStatus==='issuer_confirmed'?'Report date':'Expected report'}</span> <time dateTime={event.date}>{new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(event.date+'T12:00:00Z'))}</time>{event.session==='bmo'?' · Before the open':event.session==='amc'?' · After the close':''}</p>}
-    <h2><Link className="article-link" href={briefingUrl(a)}>{a.title}</Link></h2>
+    <h2><AccountLink className="article-link" destination={briefingUrl(a)}>{a.title}</AccountLink></h2>
     <p className="preview">{preview}</p>
     {!!a.images?.length&&<div className="image-pair" aria-label="Research images from the original app post">{a.images.slice(0,2).map(i=><figure key={i.url}><div className="image-frame"><img src={i.url} alt={i.alt||i.title+' research preview'} width={i.width} height={i.height} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
     <div className="card-footer"><div className="footer-stats"><ArticlePostEngagement postId={a.postId}/><span>{a.kind==='earnings_weekly'?'Week ahead':'Earnings & research'}</span></div><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>

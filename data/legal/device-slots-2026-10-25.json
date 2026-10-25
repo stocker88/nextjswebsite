@@ -1,0 +1,46 @@
+{
+  "version": "device-slots-2026-10-25",
+  "title": "Extra device slots — monthly add-on terms",
+  "sections": [
+    {
+      "id": "separate",
+      "title": "A separate monthly add-on",
+      "text": "Your account includes two device slots. This optional add-on provides the selected number of extra slots on the same account. It is billed monthly and renews automatically until cancelled separately. It does not include Pro membership or any Pro content."
+    },
+    {
+      "id": "pricing",
+      "title": "Prices and billing",
+      "text": "Website prices in USD are $30/month for 2 extra slots, $45 for 3, $60 for 4, $75 for 5, $90 for 6, $105 for 7, $120 for 8, $135 for 9, and $150 for 10. Your selected store or Stripe checkout shows the exact recurring price, currency, taxes, billing interval and next payment before you confirm. App Store and Google Play prices may differ from website prices and are shown in their local currency. No annual plan is offered for this add-on."
+    },
+    {
+      "id": "pro",
+      "title": "Pro membership remains separate",
+      "text": "An active Pro membership is required for Pro features on every device. If Pro ends, Pro access ends on all devices. This device add-on continues billing until you cancel it separately, even if you no longer have Pro. Cancelling this add-on does not cancel Pro."
+    },
+    {
+      "id": "devices",
+      "title": "What counts as a device",
+      "text": "Each app installation or browser profile on a phone, PC, or Mac uses a slot. Tabs in the same browser profile and website origin share one slot. Different browsers, browser profiles, reinstalls or cleared browser storage may count as new devices. Devices are for the same account; extra slots do not create separate memberships."
+    },
+    {
+      "id": "swaps",
+      "title": "Weekly replacement limit",
+      "text": "After your approved device slots have been filled, you may replace an approved device with a different device at most once every seven days. The first replacement starts this cooldown. Signing out, removing all devices, or resetting sessions does not clear the approved-device history or the cooldown. Already approved devices may sign back in without consuming another replacement. Additional paid slots can be filled without waiting for a replacement."
+    },
+    {
+      "id": "cancel",
+      "title": "Cancellation and reduced capacity",
+      "text": "You may cancel automatic renewal through the provider that bills this add-on. Cancellation normally takes effect at the end of the paid period. If your allowance expires or decreases and more devices are connected than the new limit, all devices will be signed out. You must sign in again one device at a time within your remaining allowance and weekly replacement rules. If the number connected is already within the new limit, those devices remain signed in."
+    },
+    {
+      "id": "refunds",
+      "title": "Refunds and payment recovery",
+      "text": "There are no automatic refunds for unused time. Mandatory consumer rights remain protected. Apple and Google handle purchases, cancellation and refund requests made through their stores. Stripe website renewal payment recovery may allow up to 48 hours from the original invoice deadline; repeated attempts never restart that clock. Your exact allowance is verified with the billing provider."
+    },
+    {
+      "id": "privacy",
+      "title": "Account and consent records",
+      "text": "The add-on is linked to your authenticated account ID across app and website sign-in methods. The billing provider stores payment details. We store the selected product, account and transaction references, device admission/revocation history, and the version, fingerprint and acceptance time of these terms. These records support billing, access control, support and dispute handling. See our Privacy Policy and EULA for further information."
+    }
+  ]
+}

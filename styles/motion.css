@@ -72,3 +72,6 @@
 }
 @media(prefers-reduced-motion:reduce){[data-home-motion] [data-motion-reveal]{scale:none;rotate:none;clip-path:none}}
 @media print{[data-home-motion] [data-motion-reveal]{scale:none!important;rotate:none!important;clip-path:none!important}}
+
+/* Fade decorative light before the hero edge so the next section joins cleanly. */
+.mobile-download-hero .hero-atmosphere{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 45%,transparent 95%);mask-image:linear-gradient(to bottom,#000 0%,#000 45%,transparent 95%)}

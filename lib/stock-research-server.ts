@@ -39,19 +39,24 @@ function todayET(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New
 function loadPeerCompanies(cohort:any[],today:string,snapshot:Snapshot|null=null){
  const saved=read('data/stock-research-snapshots.json')||{};
  const nested=Object.values(saved).flatMap((s:any)=>s.peers||[]);
+ const valuations=read('data/stock-valuations.json')?.stocks||{};
  return cohort.map((p:any)=>{
   const cached=saved[p.symbol]||snapshot?.peers.find(peer=>peer.symbol===p.symbol)||nested.find((peer:any)=>peer.symbol===p.symbol);
   const cachedDetail=cached?.detail,publicDetail=read('public/earnings-data/'+p.symbol+'.json');
   const latest=cachedDetail&&(!publicDetail||cachedDetail.updatedAt>=publicDetail.updatedAt)?cachedDetail:publicDetail;
   const historyDetail=latest?{...latest,prices:latest.prices?.length?latest.prices:(cachedDetail?.prices?.length?cachedDetail.prices:publicDetail?.prices||[]),history:latest.history?.length?latest.history:(cachedDetail?.history?.length?cachedDetail.history:publicDetail?.history||[])}:null;
   const company=makePeerCompany(p.symbol,p.name,p.industry||snapshot?.detail?.industry||'Related companies',p.marketCap??null,historyDetail,cached?.financials||[],today);
-  return {...company,logo:fs.existsSync(path.join(process.cwd(),'public/assets/logo',p.symbol+'.webp'))?'/assets/logo/'+encodeURIComponent(p.symbol)+'.webp':null};
+  const valuation=valuations[p.symbol];
+  // Keep the market-cap and ratio provenance; do not relabel old prices as new.
+  const newer=valuation&&Date.parse(valuation.valuationAsOf)>=Date.parse(latest?.sourceUpdatedAt?.ratios||latest?.updatedAt||'1970-01-01');
+  const metrics=newer?{marketCap:valuation.marketCap,pe:valuation.pe,ps:valuation.ps,valuationDate:valuation.valuationAsOf.slice(0,10)}:{};
+  return {...company,...metrics,logo:fs.existsSync(path.join(process.cwd(),'public/assets/logo',p.symbol+'.webp'))?'/assets/logo/'+encodeURIComponent(p.symbol)+'.webp':null};
  });
 }
 let industryCache:{key:string;rows:IndustrySummary[]}|null=null;
 export function loadIndustryDirectory():IndustrySummary[]{
  const stamp=(file:string)=>{try{return fs.statSync(path.join(process.cwd(),file)).mtimeMs}catch{return 0}};
- const key=[stamp('data/app-stock-catalog.json'),stamp('data/stock-research-snapshots.json'),stamp('public/earnings-data'),Math.floor(Date.now()/300000)].join(':');
+ const key=[stamp('data/app-stock-catalog.json'),stamp('data/stock-research-snapshots.json'),stamp('data/stock-valuations.json'),stamp('public/earnings-data'),Math.floor(Date.now()/300000)].join(':');
  if(industryCache?.key===key)return industryCache.rows;
  const companies=loadPeerCompanies(industryCatalog(),todayET());
  const groups=new Map<string,typeof companies>();

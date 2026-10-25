@@ -1,20 +1,32 @@
+import {heatmapDefaultView} from '../../lib/heatmap-default-view';
+import {SessionKind,sessionRows,sessionMoverRows,validSession,sessionInfo,sessionTime} from '../../lib/extended-hours';
 import {scheduleMarketRefresh} from '../../lib/scheduled-market-refresh';
 
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {HeatSnapshot,HeatStock,Period,PERIOD_OPTIONS,periodLabel,periodScale,tile,heatColor,percent,dateLabel,validSnapshot,heatmapEndpoint,TileSizing,HeatGrouping,sizeLabels,stockWeight,stockGroups,fixedGroupTiles,readWatchlist,returnColor} from '../../lib/market-heatmap';
 import HeatmapShare from './HeatmapShare';
-import HeatmapZoom from './HeatmapZoom';
-import useHeatmapAssembly from './useHeatmapAssembly';
-import {heatmapPieceMotion} from '../../lib/heatmap-motion';
+import HeroOverviewHeatmap from '../HeroOverviewHeatmap';
 import {Movers,SectorLeaderboard,IndustryPeers} from './HeatmapInsights';
 import styles from './Heatmap.module.css';
 const compact=(v:number)=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(v);
 const money=(v:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(v);
-export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
- const [data,setData]=useState(initial),[period,setPeriod]=useState<Period>('day'),[sector,setSector]=useState('all'),[query,setQuery]=useState(''),[limit,setLimit]=useState(100),[view,setView]=useState('map'),[mobileLayout,setMobileLayout]=useState('compact'),[selected,setSelected]=useState<HeatStock|null>(null),[width,setWidth]=useState(1200),[viewportHeight,setViewportHeight]=useState(900),[refreshing,setRefreshing]=useState(false);
- const [sizing,setSizing]=useState<TileSizing>('weight'),[grouping,setGrouping]=useState<HeatGrouping>('sector'),[industry,setIndustry]=useState('all'),[direction,setDirection]=useState('all'),[expanded,setExpanded]=useState(false),[copied,setCopied]=useState(false),[linkFallback,setLinkFallback]=useState('');
+export default function StockHeatmap({initial,initialSession=null}:{initial:HeatSnapshot;initialSession?:SessionKind|null}){
+ const [saved,setData]=useState(initial),[period,setPeriod]=useState<Period>('day'),[sector,setSector]=useState('all'),[query,setQuery]=useState(''),[limit,setLimit]=useState(100),[view,setView]=useState('map'),[mobileLayout,setMobileLayout]=useState('compact'),[selected,setSelected]=useState<HeatStock|null>(null),[width,setWidth]=useState(1200),[viewportHeight,setViewportHeight]=useState(900),[refreshing,setRefreshing]=useState(false);
+ const [sizing,setSizing]=useState<TileSizing>('weight'),[grouping,setGrouping]=useState<HeatGrouping>('industry'),[industry,setIndustry]=useState('all'),[direction,setDirection]=useState('all'),[expanded,setExpanded]=useState(false),[copied,setCopied]=useState(false),[linkFallback,setLinkFallback]=useState('');
  const [colorblind,setColorblind]=useState(false),[fixed,setFixed]=useState(false),[watchlist,setWatchlist]=useState<string[]>([]),[watchOnly,setWatchOnly]=useState(false),[sharedSymbols,setSharedSymbols]=useState<string[]|null>(null),[preferencesReady,setPreferencesReady]=useState(false),[storageMessage,setStorageMessage]=useState(''),[highlighted,setHighlighted]=useState('');
 
+ const [sessionKind,setSessionKind]=useState<SessionKind|null>(initialSession);
+ const manualView=useRef(false);
+ const [focusNotice,setFocusNotice]=useState('');
+ const activeSession=sessionKind&&validSession(saved[sessionKind],sessionKind)?saved[sessionKind]!:null;
+ const data:HeatSnapshot=sessionKind?{...saved,asOf:activeSession?.asOf||saved.asOf,rows:activeSession?sessionRows(activeSession,sessionKind):[],moverRows:activeSession?sessionMoverRows(activeSession,sessionKind):[]}:saved;
+ function resetFilters(){setSector('all');setIndustry('all');setQuery('');setDirection('all');setWatchOnly(false);setFocusNotice('')}
+ function focusGroup(name:string,kind:'sector'|'industry'){
+  if((kind==='sector'?sector:industry)===name){resetFilters();return;}
+  const matching=data.rows.filter(r=>r[kind]===name);
+  if(matching.length<5){resetFilters();setFocusNotice(`${name}: ${matching.length} ${matching.length===1?'stock':'stocks'} in this snapshot. Keeping the wider market visible.`);return;}
+  setQuery('');setDirection('all');setWatchOnly(false);setIndustry(kind==='industry'?name:'all');setSector(kind==='sector'?name:'all');setFocusNotice('');
+ }
  const [preview,setPreview]=useState<{symbol:string;x:number;y:number;pinned:boolean}|null>(null);
  const previewHoverTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
  function cancelPreviewHover(){if(previewHoverTimer.current!==null){clearTimeout(previewHoverTimer.current);previewHoverTimer.current=null}}
@@ -24,6 +36,7 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
  useEffect(()=>{const el=mapRef.current;if(!el)return;const observer=new ResizeObserver(([entry])=>{if(entry.contentRect.width>0)setWidth(entry.contentRect.width)});observer.observe(el);return()=>observer.disconnect()},[view]);
  useEffect(()=>{
   const q=new URLSearchParams(window.location.search);
+  manualView.current=!!initialSession||q.has('period')||q.has('session');
   try{setWatchlist(readWatchlist(localStorage.getItem('stbn-heatmap-watchlist')));setColorblind(localStorage.getItem('stbn-heatmap-colors')==='accessible')}catch{/* Session-only preferences remain usable. */}
   if(q.has('colors'))setColorblind(q.get('colors')==='accessible');
   if(q.get('fixed')==='1')setFixed(true);
@@ -33,7 +46,8 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   }
   setPreferencesReady(true);
 
-  if(PERIOD_OPTIONS.some(p=>p.value===q.get('period')))setPeriod(q.get('period') as Period);
+  if(PERIOD_OPTIONS.some(p=>p.value===q.get('period'))){setPeriod(q.get('period') as Period);setSessionKind(null)}
+  if(q.get('session')==='preMarket'||q.get('session')==='afterHours')setSessionKind(q.get('session') as SessionKind);
   if(['weight','marketCap','equal'].includes(q.get('size')||''))setSizing(q.get('size') as TileSizing);
   if(['sector','industry'].includes(q.get('group')||''))setGrouping(q.get('group') as HeatGrouping);
   if(['column','compact'].includes(q.get('layout')||''))setMobileLayout(q.get('layout')!);
@@ -54,6 +68,14 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   if(!preferencesReady)return;
   try{localStorage.setItem('stbn-heatmap-watchlist',JSON.stringify(watchlist));localStorage.setItem('stbn-heatmap-colors',colorblind?'accessible':'standard');setStorageMessage('')}catch{setStorageMessage('Browser storage is unavailable. Your stars and colors will last for this visit only.')}
  },[watchlist,colorblind,preferencesReady]);
+ useEffect(()=>{
+  if(!preferencesReady||initialSession||manualView.current)return;
+  let timer:ReturnType<typeof setTimeout>;
+  // Clock-only check; network refresh remains on the market collection schedule.
+  const update=()=>{clearTimeout(timer);if(manualView.current||document.visibilityState==='hidden')return;const next=heatmapDefaultView(Date.now(),saved);setSessionKind(next==='day'?null:next);setPeriod('day');timer=setTimeout(update,60000-Date.now()%60000)};
+  update();window.addEventListener('focus',update);document.addEventListener('visibilitychange',update);
+  return()=>{clearTimeout(timer);window.removeEventListener('focus',update);document.removeEventListener('visibilitychange',update)};
+ },[saved,preferencesReady,initialSession]);
  const toggleStar=(symbol:string)=>setWatchlist(old=>old.includes(symbol)?old.filter(s=>s!==symbol):[...old,symbol].slice(0,100));
  useEffect(()=>{
   if(!expanded)return;
@@ -80,7 +102,7 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
   document.addEventListener('pointerdown',dismiss);document.addEventListener('keydown',key);window.addEventListener('scroll',scroll,true);window.addEventListener('resize',resize);
   return()=>{document.removeEventListener('pointerdown',dismiss);document.removeEventListener('keydown',key);window.removeEventListener('scroll',scroll,true);window.removeEventListener('resize',resize)};
  },[]);
- useEffect(()=>{setPreview(null);setCopied(false);setLinkFallback('')},[period,sector,query,limit,view,mobileLayout,sizing,grouping,industry,direction,colorblind,fixed,watchOnly,sharedSymbols]);
+ useEffect(()=>{setPreview(null);setCopied(false);setLinkFallback('')},[sessionKind,period,sector,query,limit,view,mobileLayout,sizing,grouping,industry,direction,colorblind,fixed,watchOnly,sharedSymbols]);
  const refresh=async()=>{setRefreshing(true);try{const r=await fetch(heatmapEndpoint,{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();if(!validSnapshot(d))throw Error();setData(d);}catch{/* Keep the dated snapshot until the next automatic check. */}finally{setRefreshing(false)}};
  useEffect(()=>{void refresh();return scheduleMarketRefresh(refresh)},[]);
  const sectors=useMemo(()=>Array.from(new Set(data.rows.map(r=>r.sector))).sort(),[data]);
@@ -91,7 +113,6 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
  const mobile=width<680,column=mobile&&mobileLayout==='column',dense=mobile&&!column,chartHeight=Math.min(expanded?Math.max(180,viewportHeight-300):760,Math.round(width*.65));
  const groupNames=stockGroups(baseRows,grouping).map(g=>g.name);
  const groups=fixed?fixedGroupTiles(grouped,groupNames,width,chartHeight):tile(grouped,g=>g.rows.reduce((s,r)=>s+weight(r),0),width,chartHeight);
- useHeatmapAssembly(mapRef,JSON.stringify([width,chartHeight,column,view,expanded,groups.map(g=>[g.item.name,g.x,g.y,g.width,g.height,g.item.rows.map(r=>[r.symbol,weight(r)])])]),column,column);
  const up=baseRows.filter(r=>(r.changes[period]??0)>0).length,down=baseRows.filter(r=>(r.changes[period]??0)<0).length,missing=baseRows.filter(r=>r.changes[period]===null).length;
  const pick=(r:HeatStock)=>{setPreview(null);setSelected(r);setTimeout(()=>detailRef.current?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'}),0)};
  const showPreview=(r:HeatStock,el:HTMLElement,pinned=false)=>{
@@ -117,9 +138,10 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
  const currentSelected=selected?data.rows.find(r=>r.symbol===selected.symbol)||selected:null;
  const previewStock=preview?data.rows.find(r=>r.symbol===preview.symbol):null;
  function viewUrl(){
-  const url=new URL('https://www.stockstobuynow.ai/stock-market-heatmap/');
+  const url=new URL('https://www.stockstobuynow.ai'+(sessionKind?sessionInfo[sessionKind].path:'/stock-market-heatmap/'));
+  if(sessionKind)url.searchParams.set('session',sessionKind);
   const values={period,sector,industry,q:query,limit:String(limit),view,layout:mobileLayout,size:sizing,group:grouping,moves:direction,colors:colorblind?'accessible':'standard',fixed:fixed?'1':'0',watch:watchOnly?'1':'0',symbols:watchOnly?(sharedSymbols??watchlist).join(','):''};
-  const defaults:Record<string,string>={period:'day',sector:'all',industry:'all',q:'',limit:'100',view:'map',layout:'compact',size:'weight',group:'sector',moves:'all',colors:'standard',fixed:'0',watch:'0',symbols:''};
+  const defaults:Record<string,string>={period:'day',sector:'all',industry:'all',q:'',limit:'100',view:'map',layout:'compact',size:'weight',group:'industry',moves:'all',colors:'standard',fixed:'0',watch:'0',symbols:''};
   Object.entries(values).forEach(([key,value])=>{if(value!==defaults[key]||key==='colors'||(key==='symbols'&&watchOnly))url.searchParams.set(key,value)});return url.toString();
  }
  function highlightStock(r:HeatStock){
@@ -128,12 +150,14 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
  }
  async function copyView(){const url=viewUrl();try{await navigator.clipboard.writeText(url);setCopied(true)}catch{setLinkFallback(url)}}
  return <div ref={panelRef} tabIndex={expanded?-1:undefined} role={expanded?'dialog':undefined} aria-modal={expanded?true:undefined} aria-label={expanded?'Expanded stock market heatmap':undefined} className={expanded?styles.expanded:undefined}>
- <div className={styles.snapshot} hidden={expanded}><div><span className={styles.eyebrow}>LATEST SAVED SESSION</span><strong>{dateLabel(data.asOf)}</strong><span>Daily close data · refreshed after the market closes</span></div></div>
- {data.rows.length<data.coverage.total&&<p className={styles.note} role="status">{refreshing?'Loading full coverage…':`Showing ${data.rows.length} loaded stocks. Coverage updates automatically.`}</p>}
- <div className={styles.controls}><label className={styles.search}><span className={styles.srOnly}>Find a company or ticker</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search company or ticker"/></label><label><span className={styles.srOnly}>Sector</span><select value={sector} onChange={e=>setSector(e.target.value)}><option value="all">All sectors</option>{sectors.map(s=><option key={s}>{s}</option>)}</select></label><label><span className={styles.srOnly}>Number of stocks</span><select value={limit} onChange={e=>setLimit(+e.target.value)}><option value={50}>Largest 50</option><option value={100}>Largest 100</option></select></label></div>
- {rows.length>0&&<Movers rows={rows} period={period} colorblind={colorblind} onPick={highlightStock}/>}
- <div className={styles.mapHeading}><div><h2>{industry!=='all'?industry+' stock heatmap':sector==='all'?'Stock market heatmap by '+grouping:sector+' stock heatmap'}</h2><p>{rows.length} stocks shown · {data.weightSource?`${rows.reduce((sum,r)=>sum+(r.weight||0),0).toFixed(1)}% of SPY holdings`:'saved prices'} · {sizeLabels[sizing].toLowerCase()}</p></div><div className={styles.segment}><button aria-pressed={view==='map'} onClick={()=>setView('map')}>Heatmap</button><button aria-pressed={view==='table'} onClick={()=>setView('table')}>Table</button></div></div>
- <div className={styles.summary}><div className={styles.shareControls}><div className={styles.mapShare}><HeatmapShare rows={rows} period={period} asOf={data.asOf} sector={sector} sizing={sizing} grouping={grouping} universe={data.rows} viewUrl={viewUrl()} direction={direction} colorblind={colorblind} fixed={fixed} groupNames={groupNames}/><div className={styles.periodButtons} role="group" aria-label="Performance period"><a href="/premarket-stock-heatmap/">Pre-Market</a><a href="/after-hours-stock-heatmap/">After-Hours</a>{PERIOD_OPTIONS.map(p=><button type="button" key={p.value} aria-pressed={period===p.value} aria-label={p.label} onClick={()=>setPeriod(p.value)}>{{day:'1D',week:'1W',month:'1M',quarter:'3M',halfyear:'6M',ytd:'YTD',year:'1Y',threeYears:'3Y',fiveYears:'5Y'}[p.value]}</button>)}</div></div><div className={styles.mobileViews} role="group" aria-label="Mobile heatmap layout"><button aria-pressed={mobileLayout==='column'} onClick={()=>{setMobileLayout('column');setGrouping('industry');setView('map')}}>Industry view</button><button aria-pressed={mobileLayout==='compact'} onClick={()=>{setMobileLayout('compact');setView('map')}}>Compact view</button></div></div><button className={styles.moveFilter} aria-pressed={direction==='up'} onClick={()=>setDirection(direction==='up'?'all':'up')}><i className={styles.green} style={colorblind?{background:'#83bfff'}:undefined}/>{up} advancing</button><button className={styles.moveFilter} aria-pressed={direction==='down'} onClick={()=>setDirection(direction==='down'?'all':'down')}><i className={styles.red} style={colorblind?{background:'#ffc184'}:undefined}/>{down} declining</button><button className={styles.moveFilter} aria-pressed={direction==='missing'} onClick={()=>setDirection(direction==='missing'?'all':'missing')}><i className={styles.gray}/>{missing} unavailable</button>{direction!=='all'&&<button className={styles.textButton} onClick={()=>setDirection('all')}>Show all</button>}<div className={styles.scale} aria-label={`Color scale from minus ${periodScale[period]} percent to plus ${periodScale[period]} percent`}><span>−{periodScale[period]}%</span>{[-1,-.5,0,.5,1].map(v=><i key={v} style={{background:heatColor(v*periodScale[period],periodScale[period],colorblind)}}/>)}<span>+{periodScale[period]}%</span></div></div>
+ <p className={styles.sessionCaption}>{sessionKind?`${sessionInfo[sessionKind].label} · ${activeSession?sessionTime(activeSession.quotedAt):'Snapshot unavailable'}`:`Daily close · ${data.asOf?dateLabel(data.asOf):'Loading snapshot…'}`} · Saved snapshot</p>
+ <div className={styles.controls}><label className={styles.search}><span className={styles.srOnly}>Find a company or ticker</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search company or ticker"/></label><label><span className={styles.srOnly}>Sector</span><select value={sector} onChange={e=>e.target.value==='all'?resetFilters():focusGroup(e.target.value,'sector')}><option value="all">All sectors</option>{sectors.map(s=><option key={s}>{s}</option>)}</select></label><label><span className={styles.srOnly}>Number of stocks</span><select value={limit} onChange={e=>setLimit(+e.target.value)}><option value={50}>Largest 50</option><option value={100}>Largest 100</option></select></label></div>
+ <div className={styles.mapHeading}><div className={styles.segment}><button aria-pressed={view==='map'} onClick={()=>setView('map')}>Heatmap</button><button aria-pressed={view==='table'} onClick={()=>setView('table')}>Table</button></div><div className={styles.mapShare}><HeatmapShare renderSize={width} rows={rows} period={period} asOf={data.asOf} sector={sector} sizing={sizing} grouping={grouping} universe={data.rows} viewUrl={viewUrl()} direction={direction} colorblind={colorblind} fixed={fixed} groupNames={groupNames} sessionLabel={sessionKind?sessionInfo[sessionKind].label:undefined}/></div></div>
+ <div className={styles.periodButtons} role="group" aria-label="Performance period">
+ {(['preMarket','afterHours'] as SessionKind[]).map(kind=><button key={kind} aria-pressed={sessionKind===kind} onClick={()=>{manualView.current=true;setSessionKind(kind);setPeriod('day');resetFilters()}}>{sessionInfo[kind].label}</button>)}
+ {PERIOD_OPTIONS.filter(p=>['day','week','month','year'].includes(p.value)||(!sessionKind&&p.value===period)).map(p=><button key={p.value} aria-pressed={!sessionKind&&period===p.value} onClick={()=>{manualView.current=true;setSessionKind(null);setPeriod(p.value)}}>{{day:'1D',week:'1W',month:'1M',year:'1Y'}[p.value]||p.label}</button>)}
+ </div>
+ <details className={styles.advanced}><summary>View settings</summary>
  <div className={styles.exploreControls}>
  <label>Size by <select aria-label="Tile size" value={sizing} onChange={e=>setSizing(e.target.value as TileSizing)}>{Object.entries(sizeLabels).map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>
  <label>Group by <select aria-label="Group stocks by" value={grouping} onChange={e=>{setGrouping(e.target.value as HeatGrouping);setIndustry('all');if(e.target.value==='sector')setMobileLayout('compact')}}><option value="sector">Sector</option><option value="industry">Industry</option></select></label>
@@ -142,17 +166,19 @@ export default function StockHeatmap({initial}:{initial:HeatSnapshot}){
  <details className={styles.mapSettings}><summary>Display options</summary><div><label><input type="checkbox" checked={fixed} onChange={e=>setFixed(e.target.checked)}/> Fixed group positions</label><label><input type="checkbox" checked={colorblind} onChange={e=>setColorblind(e.target.checked)}/> Colorblind colors</label><small>{fixed?'Groups use equal space; sizing applies within each group.':'Groups are sized by their stocks.'}</small></div></details>
  <button className={styles.toolButton} onClick={copyView}>{copied?'Link copied ✓':'Copy view link'}</button>
  <button ref={expandRef} className={`${styles.toolButton} ${styles.desktopFullscreen}`} onClick={()=>{setPreview(null);setExpanded(v=>!v)}}>{expanded?'↙ Exit full screen':'⛶ Full screen'}</button>
- </div>
+ </div></details>
+ {(sector!=='all'||industry!=='all'||query||direction!=='all'||watchOnly)&&<div className={styles.filterReset}><span>{industry!=='all'?industry:sector!=='all'?sector:query||'Filtered view'} · {rows.length} stocks</span><button onClick={resetFilters}>All stocks ×</button></div>}
+ {focusNotice&&<p role="status" className={styles.note}>{focusNotice}</p>}
  {watchOnly&&<div className={styles.watchNotice}>{sharedSymbols?'Shared list; your own saved stars are unchanged.':'Stars are saved in this browser. Only stocks in our loaded coverage appear here.'}<button className={styles.textButton} onClick={()=>{setWatchOnly(false);setSharedSymbols(null)}}>All stocks</button>{sharedSymbols&&<button className={styles.textButton} onClick={()=>{setWatchlist(old=>Array.from(new Set([...old,...sharedSymbols])).slice(0,100));setSharedSymbols(null)}}>Save this list</button>}</div>}
  {storageMessage&&<p className={styles.watchNotice} role="status">{storageMessage}</p>}
  {linkFallback&&<label className={styles.linkFallback}>Copy this view link<input readOnly value={linkFallback} onFocus={e=>e.currentTarget.select()}/></label>}
  <span className={styles.srOnly} role="status">{copied?'View link copied. ':''}{rows.length} stocks shown{direction==='up'?', advancing only':direction==='down'?', declining only':direction==='missing'?', unavailable prices only':''}.</span>
- {!rows.length&&<p className={styles.empty}>No stocks match these filters. {watchOnly?'Star stocks from their preview or table to build your watchlist, or adjust your filters.':'Try another ticker, sector or movement filter.'}</p>}
- <div ref={mapRef} className={styles.map} style={view!=='map'?{display:'none'}:undefined} aria-label="Interactive stock market heatmap"><HeatmapZoom width={width} height={chartHeight} enabled={!column} resetKey={[sector,industry,query,limit,view,mobileLayout,sizing,grouping,direction,fixed,highlighted,rows.map(r=>r.symbol).join(',')].join('|')} onGesture={()=>setPreview(null)}>
- {groups.map(g=>{const gap=dense?2:4,headerHeight=dense?(g.height>32?Math.min(16,g.height*.18):0):28,w=column?Math.max(1,width-2):Math.max(1,g.width-gap-2),h=column?260:Math.max(1,g.height-gap-headerHeight-2);const cells=tile(g.item.rows,weight,w,h);return <section key={g.item.name} data-assembly-group className={styles.sector} style={column?{position:'relative',width:'100%',height:292,marginBottom:6}:{left:g.x,top:g.y,width:Math.max(1,g.width-gap),height:Math.max(1,g.height-gap)}}><button className={styles.sectorTitle} style={{height:headerHeight,padding:dense?'0 3px':undefined,fontSize:dense?8:undefined,display:headerHeight?'flex':'none'}} onClick={()=>grouping==='sector'?setSector(sector===g.item.name?'all':g.item.name):setIndustry(industry===g.item.name?'all':g.item.name)} title={`Focus on ${g.item.name}`}>{g.item.name}{!dense&&<span>{g.item.rows.length} ↗</span>}</button><div className={styles.cells} style={{height:h}}>{cells.map(({item:r,x,y,width:cw,height:ch})=>{const small=cw<(dense?18:46)||ch<(dense?12:34);return <button key={r.symbol} aria-label={`${r.name} (${r.symbol}), ${percent(r.changes[period])}, price date ${r.asOf}`} className={styles.stock} data-heat-stock={r.symbol} data-highlighted={highlighted===r.symbol} onPointerEnter={e=>{if(e.pointerType==='mouse')hoverPreview(r,e.currentTarget)}} onPointerMove={e=>{if(e.pointerType==='mouse')hoverPreview(r,e.currentTarget)}} onPointerLeave={cancelPreviewHover} onFocus={e=>{if(e.currentTarget.matches(':focus-visible'))showPreview(r,e.currentTarget)}} onClick={e=>showPreview(r,e.currentTarget,true)} style={{...heatmapPieceMotion(r.symbol,column?x+cw/2:g.x+x+cw/2,column?y+ch/2:g.y+headerHeight+y+ch/2,width,column?h:chartHeight,mobile),left:x,top:y,width:cw,height:ch,background:heatColor(r.changes[period],periodScale[period],colorblind),fontSize:dense?Math.min(18,Math.max(5,Math.min(cw/Math.max(3.5,r.symbol.length*.75),ch/3))):Math.min(32,Math.max(10,Math.min(cw/4.8,ch/3.6))),gap:dense?1:undefined}}>{!small&&<><b>{r.symbol}{watchlist.includes(r.symbol)&&<span className={styles.tileStar} aria-label="Saved stock"> ★</span>}</b>{(!dense||(cw>28&&ch>22))&&<span>{r.changes[period]===null?'—':percent(r.changes[period])}</span>}{!dense&&cw>130&&ch>120&&<small>{r.name}</small>}</>}</button>})}</div></section>})}</HeatmapZoom></div>
- {view==='table'&&<div className={styles.table}><table><caption className={styles.srOnly}>Saved stock performance and market capitalization</caption><thead><tr><th><span className={styles.srOnly}>Watchlist</span></th><th>Stock</th><th>Sector</th><th>Change</th><th>Market cap</th><th>Price date</th></tr></thead><tbody>{rows.map(r=><tr key={r.symbol}><td><button className={styles.starButton} aria-label={`${watchlist.includes(r.symbol)?'Remove':'Save'} ${r.symbol} ${watchlist.includes(r.symbol)?'from':'to'} watchlist`} aria-pressed={watchlist.includes(r.symbol)} onClick={()=>toggleStar(r.symbol)}>{watchlist.includes(r.symbol)?'★':'☆'}</button></td><td><button onClick={()=>pick(r)}>{r.symbol}</button><small>{r.name}</small></td><td>{r.sector}</td><td style={{color:returnColor(r.changes[period],colorblind)}}>{percent(r.changes[period])}</td><td>{r.marketCap>0?'$'+compact(r.marketCap):'—'}</td><td>{dateLabel(r.asOf)}</td></tr>)}</tbody></table></div>}
- <SectorLeaderboard rows={rows} period={period} colorblind={colorblind} onSector={s=>{setSector(s);setIndustry('all')}}/>
- <p className={styles.note}>{!['day','week','month'].includes(period)&&'Longer ranges use saved weekly or monthly closes, so the starting date may precede the exact lookback date. '}{fixed&&'Fixed positions give each group equal space; the sizing selector applies within groups. '}Gray tiles have missing or older data; they do not mean a 0% return. {data.coverage.current} of {data.coverage.total} covered stocks have prices dated {dateLabel(data.asOf)}. Select a tile for its dates and details.</p>
+ {!rows.length&&<p className={styles.empty}>{sessionKind&&!activeSession?'No saved snapshot is available for this session. Switch to 1D or another session.':'No stocks match these filters.'} {watchOnly?'Star stocks from their preview or table to build your watchlist, or adjust your filters.':'Try another ticker, sector or movement filter.'}</p>}
+ <div ref={mapRef} style={view!=='map'?{display:'none'}:undefined} aria-label="Interactive stock market heatmap"><HeroOverviewHeatmap maxHeight={Math.max(180,viewportHeight-120)} rows={rows} period={period} asOf={data.asOf} actions={false} details={false} sizing={sizing} grouping={grouping} universe={data.rows} colorblind={colorblind} fixed={fixed} groupNames={groupNames}/></div>
+ <div className={styles.table} hidden={view!=='table'}><table><caption className={styles.srOnly}>Saved stock performance and market capitalization</caption><thead><tr><th><span className={styles.srOnly}>Watchlist</span></th><th>Stock</th><th>Sector</th><th>Change</th><th>Market cap</th><th>Price date</th></tr></thead><tbody>{rows.map(r=><tr key={r.symbol}><td><button className={styles.starButton} aria-label={`${watchlist.includes(r.symbol)?'Remove':'Save'} ${r.symbol} ${watchlist.includes(r.symbol)?'from':'to'} watchlist`} aria-pressed={watchlist.includes(r.symbol)} onClick={()=>toggleStar(r.symbol)}>{watchlist.includes(r.symbol)?'★':'☆'}</button></td><td><button onClick={()=>pick(r)}>{r.symbol}</button><small>{r.name}</small></td><td>{r.sector}</td><td style={{color:returnColor(r.changes[period],colorblind)}}>{percent(r.changes[period])}</td><td>{r.marketCap>0?'$'+compact(r.marketCap):'—'}</td><td>{dateLabel(r.asOf)}</td></tr>)}</tbody></table></div>
+ {rows.length>0&&<Movers shareUrl={viewUrl()} rows={data.moverRows?.length&&sector==='all'&&industry==='all'&&!query&&!watchOnly?data.moverRows:rows} period={period} colorblind={colorblind} onPick={pick} label={sessionKind?sessionInfo[sessionKind].label:undefined} marketSession={sessionKind==='preMarket'?'premarket':sessionKind==='afterHours'?'afterhours':'intraday'}/>}
+ <SectorLeaderboard shareUrl={viewUrl()} rows={data.rows} period={period} colorblind={colorblind} onSector={s=>focusGroup(s,'industry')}/>
+ <p className={styles.note}>{sessionKind?`Saved ${sessionInfo[sessionKind].label.toLowerCase()} quotes versus the ${sessionInfo[sessionKind].basis}. Gray tiles indicate unavailable session quotes.`:<>{!['day','week','month'].includes(period)&&'Longer ranges use saved weekly or monthly closes, so the starting date may precede the exact lookback date. '}{fixed&&'Fixed positions give each group equal space; the sizing selector applies within groups. '}Gray tiles have missing or older data; they do not mean a 0% return. {data.coverage.current} of {data.coverage.total} covered stocks have prices dated {dateLabel(data.asOf)}. Select a tile to open its stock page.</>}</p>
  {preview&&previewStock&&<aside ref={previewRef} className={styles.stockPreview} aria-label={`${previewStock.symbol} preview`} style={{left:preview.x,top:preview.y}} onPointerEnter={cancelPreviewHover} onPointerLeave={()=>{if(!preview.pinned)setPreview(null)}}>
  <div><strong>{previewStock.symbol}</strong><button aria-label="Close stock preview" onClick={()=>setPreview(null)}>×</button></div><p>{previewStock.name}</p>
  <dl><div><dt>Adjusted close</dt><dd>{previewStock.price>0?money(previewStock.price):'Unavailable'}</dd></div><div><dt>{periodLabel(period)} return</dt><dd>{percent(previewStock.changes[period])}</dd></div><div><dt>Index weight</dt><dd>{previewStock.weight?previewStock.weight.toFixed(2)+'%':'Unavailable'}</dd></div><div><dt>Price date</dt><dd>{dateLabel(previewStock.asOf)}</dd></div></dl>

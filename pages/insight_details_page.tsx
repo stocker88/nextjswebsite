@@ -1,4 +1,9 @@
+import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import { attributionLink, captureAcquisition } from '../lib/acquisition';
+import {useSiteAccount} from '../components/SiteAccount';
+import {accountLoginUrl} from '../lib/site-auth';
+import {isDesktopDevice} from '../lib/device-access';
+import {useRouter} from 'next/router';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { trackAppStoreClick } from '../lib/analytics';
@@ -13,6 +18,7 @@ const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
 
 export default function InsightDetailsPage() {
+  const {user,desktop,ready}=useSiteAccount(),router=useRouter();
   const [storeUrl, setStoreUrl] = useState(APP_STORE_URL);
   const [appUrl, setAppUrl] = useState('');
   const [isSocialBrowser, setIsSocialBrowser] = useState(false);
@@ -133,7 +139,10 @@ export default function InsightDetailsPage() {
     ).catch(console.error);
   }, []);
 
+  useEffect(()=>{if(ready&&desktop){rememberDesktopThread(window.location.href);void router.replace(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH))}},[ready,desktop,user?.uid,router]);
+
   const openApp = () => {
+    if(isDesktopDevice(navigator)){rememberDesktopThread(window.location.href);void router.push(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));return;}
     if (!appUrl) return;
 
     // Normal browsers must launch from the user's top-level click. Some social
@@ -200,6 +209,8 @@ export default function InsightDetailsPage() {
     });
   };
 
+  if(desktop)return <main style={{minHeight:'100vh',background:'#080f22',color:'#f4f6ff',padding:100}} role="status">Continuing to your research…</main>;
+
   return (
     <>
       <Head>
@@ -258,7 +269,7 @@ export default function InsightDetailsPage() {
             type="button"
             onClick={openApp}
           >
-            Open this insight in the app →
+            {desktop&&!user?'Sign In to view this insight →':'Open this insight in the app →'}
           </button>
 
           <p className="installed">

@@ -1,0 +1,964 @@
+[
+  {
+    "id": "options_results_CRWD_2026-10-23",
+    "symbol": "CRWD",
+    "companyName": "CrowdStrike Holdings, Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+129% since previous close · CRWD $237.5 Call · $9.23 → $21.15",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 256.5899963378906,
+      "previousClose": 237.94,
+      "movePct": 7.838108908922692,
+      "asOf": "2026-10-23T19:45:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?period1=1792784700&period2=1792784760&interval=1m",
+      "note": "Stock ≈ $256.59 (+7.84%): Oct 23, 3:45 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 256.5899963378906,
+      "previousClose": 237.94,
+      "movePct": 7.838108908922692,
+      "asOf": "2026-10-23T19:45:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?period1=1792784700&period2=1792784760&interval=1m",
+      "note": "Stock ≈ $256.59 (+7.84%): Oct 23, 3:45 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "optionType": "call",
+        "id": "O:CRWD261030C00237500",
+        "symbol": "CRWD",
+        "strike": 237.5,
+        "expiry": "2026-10-30",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 9.23,
+        "sessionOpen": 10.9,
+        "sessionClose": 21.15,
+        "openChangePct": 18.0931744312026,
+        "sessionPct": 129.1440953412784,
+        "openDollarChange": 167,
+        "sessionDollarChange": 1191.9999999999998,
+        "previousVolume": 155,
+        "volume": 406,
+        "openInterest": 205,
+        "aggregateAsOf": "2026-10-23T19:45:02.494Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 256.5899963378906,
+          "previousClose": 237.94,
+          "movePct": 7.838108908922692,
+          "asOf": "2026-10-23T19:45:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?period1=1792784700&period2=1792784760&interval=1m",
+          "note": "Stock ≈ $256.59 (+7.84%): Oct 23, 3:45 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "optionType": "call",
+        "id": "O:CRWD261120C00230000",
+        "symbol": "CRWD",
+        "strike": 230,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 20.15,
+        "sessionOpen": 20.92,
+        "sessionClose": 33.78,
+        "openChangePct": 3.8213399503722156,
+        "sessionPct": 67.64267990074444,
+        "openDollarChange": 77.00000000000031,
+        "sessionDollarChange": 1363.0000000000002,
+        "previousVolume": 24,
+        "volume": 63,
+        "openInterest": 1567,
+        "aggregateAsOf": "2026-10-23T19:53:02.678Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 257.13861083984375,
+          "previousClose": 237.94,
+          "movePct": 8.068677330353768,
+          "asOf": "2026-10-23T19:53:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/CRWD?period1=1792785180&period2=1792785240&interval=1m",
+          "note": "Stock ≈ $257.14 (+8.07%): Oct 23, 3:53 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_CRWD_2026-10-23%2Fc0e572dd83cd76eb9d050ce241fe7da80c3a7c90845cc417548688297f89e604%2FCRWD-2026-10-30-237.5-call.png?alt=media&token=c0e572dd83cd76eb9d050ce241fe7da80c3a7c90845cc417548688297f89e604",
+        "width": 1200,
+        "height": 1200,
+        "filename": "CRWD $237.5 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_CRWD_2026-10-23%2F85742d8f6a0550469535f7d8906f017179779985c027af2996b7497fe6602578%2FCRWD-2026-11-20-230-call.png?alt=media&token=85742d8f6a0550469535f7d8906f017179779985c027af2996b7497fe6602578",
+        "width": 1200,
+        "height": 1200,
+        "filename": "CRWD $230 call.png"
+      }
+    ],
+    "earningsPostId": "",
+    "earningsUrl": "",
+    "publishedAt": 1792844922133,
+    "appCollection": "optionsresults",
+    "previewSummary": "CrowdStrike Holdings, Inc. (CRWD) rose 8.25% to $257.57 in the Oct 23, 4:00 PM ET closing stock snapshot, versus $237.94 at the prior session close. It ranked 2 among Friday’s full-universe 1D gainers."
+  },
+  {
+    "id": "options_results_TMUS_2026-10-23",
+    "symbol": "TMUS",
+    "companyName": "T-Mobile US, Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+227% since previous close · TMUS $152.5 Put · $2.30 → $7.52",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 147.75999450683594,
+      "previousClose": 158.79,
+      "movePct": -6.946284711357176,
+      "asOf": "2026-10-23T19:39:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TMUS?period1=1792784340&period2=1792784400&interval=1m",
+      "note": "Stock ≈ $147.76 (-6.95%): Oct 23, 3:39 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 147.75999450683594,
+      "previousClose": 158.79,
+      "movePct": -6.946284711357176,
+      "asOf": "2026-10-23T19:39:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/TMUS?period1=1792784340&period2=1792784400&interval=1m",
+      "note": "Stock ≈ $147.76 (-6.95%): Oct 23, 3:39 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "optionType": "put",
+        "id": "O:TMUS261030P00152500",
+        "symbol": "TMUS",
+        "strike": 152.5,
+        "expiry": "2026-10-30",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 2.3,
+        "sessionOpen": 4.6,
+        "sessionClose": 7.52,
+        "openChangePct": 100,
+        "sessionPct": 226.95652173913047,
+        "openDollarChange": 229.99999999999997,
+        "sessionDollarChange": 522,
+        "previousVolume": 71,
+        "volume": 32,
+        "openInterest": 80,
+        "aggregateAsOf": "2026-10-23T19:39:02.969Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 147.75999450683594,
+          "previousClose": 158.79,
+          "movePct": -6.946284711357176,
+          "asOf": "2026-10-23T19:39:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/TMUS?period1=1792784340&period2=1792784400&interval=1m",
+          "note": "Stock ≈ $147.76 (-6.95%): Oct 23, 3:39 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "optionType": "put",
+        "id": "O:TMUS261120P00140000",
+        "symbol": "TMUS",
+        "strike": 140,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 1.24,
+        "sessionOpen": 2.2,
+        "sessionClose": 3.75,
+        "openChangePct": 77.4193548387097,
+        "sessionPct": 202.4193548387097,
+        "openDollarChange": 96.00000000000001,
+        "sessionDollarChange": 250.99999999999997,
+        "previousVolume": 1518,
+        "volume": 63,
+        "openInterest": 2323,
+        "aggregateAsOf": "2026-10-23T19:36:02.283Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 147.47000122070312,
+          "previousClose": 158.79,
+          "movePct": -7.1289116312720395,
+          "asOf": "2026-10-23T19:36:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/TMUS?period1=1792784160&period2=1792784220&interval=1m",
+          "note": "Stock ≈ $147.47 (-7.13%): Oct 23, 3:36 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_TMUS_2026-10-23%2F3a3347e3dfce5193eb86ce5290a2637c4baf46de682f0d75b21141124d1686a4%2FTMUS-2026-10-30-152.5-put.png?alt=media&token=3a3347e3dfce5193eb86ce5290a2637c4baf46de682f0d75b21141124d1686a4",
+        "width": 1200,
+        "height": 1200,
+        "filename": "TMUS $152.5 put.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_TMUS_2026-10-23%2Fdb2a8729da9c638520f0772dc56d318443ad8ab0c2d6a791eb587d88b4379cc7%2FTMUS-2026-11-20-140-put.png?alt=media&token=db2a8729da9c638520f0772dc56d318443ad8ab0c2d6a791eb587d88b4379cc7",
+        "width": 1200,
+        "height": 1200,
+        "filename": "TMUS $140 put.png"
+      }
+    ],
+    "earningsPostId": "",
+    "earningsUrl": "",
+    "publishedAt": 1792844810483,
+    "appCollection": "optionsresults",
+    "previewSummary": "T-Mobile US, Inc. (TMUS) fell 7.67% to $146.61 in the Oct 23, 4:00 PM ET closing stock snapshot, versus $158.79 at the prior session close. It ranked 5 among Friday’s full-universe 1D decliners."
+  },
+  {
+    "id": "options_results_T_2026-10-23",
+    "symbol": "T",
+    "companyName": "AT&T Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+174% since previous close · T $22 Put · $0.46 → $1.26",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 21.06999969482422,
+      "previousClose": 22.74,
+      "movePct": -7.343888765064999,
+      "asOf": "2026-10-23T19:32:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/T?period1=1792783920&period2=1792783980&interval=1m",
+      "note": "Stock ≈ $21.07 (-7.34%): Oct 23, 3:32 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 21.06999969482422,
+      "previousClose": 22.74,
+      "movePct": -7.343888765064999,
+      "asOf": "2026-10-23T19:32:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/T?period1=1792783920&period2=1792783980&interval=1m",
+      "note": "Stock ≈ $21.07 (-7.34%): Oct 23, 3:32 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "optionType": "put",
+        "id": "O:T261127P00022000",
+        "symbol": "T",
+        "strike": 22,
+        "expiry": "2026-11-27",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 0.46,
+        "sessionOpen": 0.75,
+        "sessionClose": 1.26,
+        "openChangePct": 63.043478260869556,
+        "sessionPct": 173.91304347826085,
+        "openDollarChange": 28.999999999999996,
+        "sessionDollarChange": 80,
+        "previousVolume": 33,
+        "volume": 70,
+        "openInterest": 446,
+        "aggregateAsOf": "2026-10-23T19:32:02.195Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 21.06999969482422,
+          "previousClose": 22.74,
+          "movePct": -7.343888765064999,
+          "asOf": "2026-10-23T19:32:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/T?period1=1792783920&period2=1792783980&interval=1m",
+          "note": "Stock ≈ $21.07 (-7.34%): Oct 23, 3:32 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_T_2026-10-23%2Ffbd77832b06423b7fa6f181258b6be06c70a91453ded9dc3b0426a7cd024991a%2FT-2026-11-27-22-put.png?alt=media&token=fbd77832b06423b7fa6f181258b6be06c70a91453ded9dc3b0426a7cd024991a",
+        "width": 1200,
+        "height": 1200,
+        "filename": "T $22 put.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261023_T",
+    "earningsUrl": "/news/why-at-t-t-stock-is-down-today-2026-10-23/",
+    "publishedAt": 1792844494148,
+    "appCollection": "optionsresults",
+    "previewSummary": "AT&T Inc. (T) fell 7.94% to $20.94 in the Oct 23, 3:59 PM ET closing stock snapshot, versus $22.74 at the prior session close. It ranked 4 among Friday’s full-universe 1D decliners."
+  },
+  {
+    "id": "options_results_FIX_2026-10-23",
+    "symbol": "FIX",
+    "companyName": "Comfort Systems USA, Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+37% since previous close · FIX $1300 Put · $124.65 → $170.42",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 1158.9100341796875,
+      "previousClose": 1279.37,
+      "movePct": -9.415569055106221,
+      "asOf": "2026-10-23T19:59:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?period1=1792785540&period2=1792785600&interval=1m",
+      "note": "Stock ≈ $1158.91 (-9.42%): Oct 23, 3:59 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 1158.9100341796875,
+      "previousClose": 1279.37,
+      "movePct": -9.415569055106221,
+      "asOf": "2026-10-23T19:59:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?period1=1792785540&period2=1792785600&interval=1m",
+      "note": "Stock ≈ $1158.91 (-9.42%): Oct 23, 3:59 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "optionType": "put",
+        "id": "O:FIX261120P01300000",
+        "symbol": "FIX",
+        "strike": 1300,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 124.65,
+        "sessionOpen": 170.25,
+        "sessionClose": 170.42,
+        "openChangePct": 36.58243080625751,
+        "sessionPct": 36.71881267549135,
+        "openDollarChange": 4559.999999999999,
+        "sessionDollarChange": 4576.999999999998,
+        "previousVolume": 34,
+        "volume": 25,
+        "openInterest": 108,
+        "aggregateAsOf": "2026-10-23T19:59:02.517Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 1158.9100341796875,
+          "previousClose": 1279.37,
+          "movePct": -9.415569055106221,
+          "asOf": "2026-10-23T19:59:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/FIX?period1=1792785540&period2=1792785600&interval=1m",
+          "note": "Stock ≈ $1158.91 (-9.42%): Oct 23, 3:59 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_FIX_2026-10-23%2Fde3e6b1825ae38137329cbf9cd2fa2caba59d3f7f7ea4d0626fd09a63c3258be%2FFIX-2026-11-20-1300-put.png?alt=media&token=de3e6b1825ae38137329cbf9cd2fa2caba59d3f7f7ea4d0626fd09a63c3258be",
+        "width": 1200,
+        "height": 1200,
+        "filename": "FIX $1300 put.png"
+      }
+    ],
+    "earningsPostId": "",
+    "earningsUrl": "",
+    "publishedAt": 1792844415342,
+    "appCollection": "optionsresults",
+    "previewSummary": "Comfort Systems USA, Inc. (FIX) fell 9.33% to $1,159.99 in the Oct 23, 3:59 PM ET closing stock snapshot, versus $1,279.37 at the prior session close. It ranked 2 among Friday’s full-universe 1D decliners."
+  },
+  {
+    "id": "options_results_BE_2026-10-23",
+    "symbol": "BE",
+    "companyName": "Bloom Energy Corporation",
+    "sessionDay": "2026-10-23",
+    "title": "+35% since previous close · BE $225 Put · $26.75 → $36.21",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 192.8800048828125,
+      "previousClose": 217.77,
+      "movePct": -11.429487586530518,
+      "asOf": "2026-10-23T19:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+      "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 192.8800048828125,
+      "previousClose": 217.77,
+      "movePct": -11.429487586530518,
+      "asOf": "2026-10-23T19:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+      "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "optionType": "put",
+        "id": "O:BE261113P00225000",
+        "symbol": "BE",
+        "strike": 225,
+        "expiry": "2026-11-13",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 26.75,
+        "sessionOpen": 37.95,
+        "sessionClose": 36.21,
+        "openChangePct": 41.869158878504685,
+        "sessionPct": 35.36448598130841,
+        "openDollarChange": 1120.0000000000002,
+        "sessionDollarChange": 946.0000000000001,
+        "previousVolume": 98,
+        "volume": 34,
+        "openInterest": 307,
+        "aggregateAsOf": "2026-10-23T19:31:02.512Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 192.8800048828125,
+          "previousClose": 217.77,
+          "movePct": -11.429487586530518,
+          "asOf": "2026-10-23T19:31:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1792783860&period2=1792783920&interval=1m",
+          "note": "Stock ≈ $192.88 (-11.43%): Oct 23, 3:31 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_BE_2026-10-23%2Ff0e6bbc6920c48dd19d3561a0202eb8e535b74dca6b162087e660110a6af3031%2FBE-2026-11-13-225-put.png?alt=media&token=f0e6bbc6920c48dd19d3561a0202eb8e535b74dca6b162087e660110a6af3031",
+        "width": 1200,
+        "height": 1200,
+        "filename": "BE $225 put.png"
+      }
+    ],
+    "earningsPostId": "earnings_review_20261022_BE",
+    "earningsUrl": "/stock-market-news/bloom-energy-be-q3-2026-earnings-review--earnings_review_20261022_BE",
+    "publishedAt": 1792844293971,
+    "appCollection": "optionsresults",
+    "previewSummary": "Bloom Energy fell 11.33% to $193.0902 in Friday’s October 23 closing stock snapshot, versus the October 22 close of $217.77. It ranked first among the 503-stock universe’s 1D decliners."
+  },
+  {
+    "id": "options_results_PANW_2026-10-23",
+    "symbol": "PANW",
+    "companyName": "Palo Alto Networks, Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+336% since previous close · PANW $357.5 Call · $5.20 → $22.66",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 379.5799865722656,
+      "previousClose": 354.92,
+      "movePct": 6.948040846462744,
+      "asOf": "2026-10-23T18:57:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+      "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 379.5799865722656,
+      "previousClose": 354.92,
+      "movePct": 6.948040846462744,
+      "asOf": "2026-10-23T18:57:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+      "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "id": "O:PANW261023C00357500",
+        "symbol": "PANW",
+        "strike": 357.5,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 5.2,
+        "sessionOpen": 1.51,
+        "sessionClose": 22.66,
+        "openChangePct": -70.96153846153847,
+        "sessionPct": 335.7692307692307,
+        "openDollarChange": -369.00000000000006,
+        "sessionDollarChange": 1746,
+        "previousVolume": 137,
+        "volume": 98,
+        "openInterest": 301,
+        "aggregateAsOf": "2026-10-23T18:57:02.550Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 379.5799865722656,
+          "previousClose": 354.92,
+          "movePct": 6.948040846462744,
+          "asOf": "2026-10-23T18:57:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792781820&period2=1792781880&interval=1m",
+          "note": "Stock ≈ $379.58 (+6.95%): Oct 23, 2:57 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:PANW261120C00350000",
+        "symbol": "PANW",
+        "strike": 350,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 28.15,
+        "sessionOpen": 27,
+        "sessionClose": 44.7,
+        "openChangePct": -4.085257548845467,
+        "sessionPct": 58.79218472468919,
+        "openDollarChange": -114.99999999999986,
+        "sessionDollarChange": 1655.0000000000005,
+        "previousVolume": 76,
+        "volume": 984,
+        "openInterest": 836,
+        "aggregateAsOf": "2026-10-23T18:42:02.720Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 380.17498779296875,
+          "previousClose": 354.92,
+          "movePct": 7.115684603000316,
+          "asOf": "2026-10-23T18:42:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1792780920&period2=1792780980&interval=1m",
+          "note": "Stock ≈ $380.17 (+7.12%): Oct 23, 2:42 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2F5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de%2FPANW-2026-10-23-357.5-call.png?alt=media&token=5a348cac6eeaf2d1c9f5511f8a059611648f357bb4aa1443a7839f978d0688de",
+        "width": 1200,
+        "height": 1200,
+        "filename": "PANW $357.5 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_PANW_2026-10-23%2Fc25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0%2FPANW-2026-11-20-350-call.png?alt=media&token=c25e87f9d3e4dad2ea03f67bb62a1fa0fece51c07f4944197f869d39937683c0",
+        "width": 1200,
+        "height": 1200,
+        "filename": "PANW $350 call.png"
+      }
+    ],
+    "earningsPostId": "",
+    "earningsUrl": "",
+    "publishedAt": 1792782669308,
+    "appCollection": "optionsresults",
+    "previewSummary": "PANW rose 7.03% to $379.8857 in the saved October 23, 2:51 PM ET stock snapshot versus the $354.92 October 22 close, ranking third among the measured positive movers. The option observations below have their own saved timestamps."
+  },
+  {
+    "id": "options_results_SLB_2026-10-23",
+    "symbol": "SLB",
+    "companyName": "Slb N.V.",
+    "sessionDay": "2026-10-23",
+    "title": "+276% since previous close · SLB $49.5 Call · $1.01 → $3.80",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 53.185001373291016,
+      "previousClose": 49.55,
+      "movePct": 7.336026989487432,
+      "asOf": "2026-10-23T16:53:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+      "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 53.185001373291016,
+      "previousClose": 49.55,
+      "movePct": 7.336026989487432,
+      "asOf": "2026-10-23T16:53:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+      "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "id": "O:SLB261023C00049500",
+        "symbol": "SLB",
+        "strike": 49.5,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 1.01,
+        "sessionOpen": 1.01,
+        "sessionClose": 3.8,
+        "openChangePct": 0,
+        "sessionPct": 276.2376237623762,
+        "openDollarChange": 0,
+        "sessionDollarChange": 279,
+        "previousVolume": 674,
+        "volume": 599,
+        "openInterest": 845,
+        "aggregateAsOf": "2026-10-23T16:53:02.888Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 53.185001373291016,
+          "previousClose": 49.55,
+          "movePct": 7.336026989487432,
+          "asOf": "2026-10-23T16:53:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774380&period2=1792774440&interval=1m",
+          "note": "Stock ≈ $53.19 (+7.34%): Oct 23, 12:53 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:SLB261120C00050000",
+        "symbol": "SLB",
+        "strike": 50,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 2.1,
+        "sessionOpen": 2.2,
+        "sessionClose": 4.36,
+        "openChangePct": 4.761904761904767,
+        "sessionPct": 107.61904761904763,
+        "openDollarChange": 10.000000000000009,
+        "sessionDollarChange": 226.00000000000003,
+        "previousVolume": 584,
+        "volume": 740,
+        "openInterest": 12090,
+        "aggregateAsOf": "2026-10-23T16:57:02.163Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 53.13249969482422,
+          "previousClose": 49.55,
+          "movePct": 7.230070019826895,
+          "asOf": "2026-10-23T16:57:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1792774620&period2=1792774680&interval=1m",
+          "note": "Stock ≈ $53.13 (+7.23%): Oct 23, 12:57 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809%2FSLB-2026-10-23-49.5-call.png?alt=media&token=53e6462801715fbb73d8251a88f4dce9f3835e22050fd6037a3af3e44b2d8809",
+        "width": 1200,
+        "height": 1200,
+        "filename": "SLB $49.5 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_SLB_2026-10-23%2F702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95%2FSLB-2026-11-20-50-call.png?alt=media&token=702eef8163043f1287beabb423a06589931863fd6d2e2c430f91c5e157669d95",
+        "width": 1200,
+        "height": 1200,
+        "filename": "SLB $50 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261023_SLB",
+    "earningsUrl": "/news/why-slb-slb-stock-is-up-today-2026-10-23/",
+    "publishedAt": 1792774887527,
+    "appCollection": "optionsresults",
+    "previewSummary": "SLB ranked first in the saved full-universe 24-hour comparison, rising 8.14% to $53.245 at 12:52 PM ET on October 23 versus the archived October 22 12:52 PM ET observation. This rolling comparison is separate from the previous-close basis used for the calls."
+  },
+  {
+    "id": "options_results_CCI_2026-10-23",
+    "symbol": "CCI",
+    "companyName": "Crown Castle Inc.",
+    "sessionDay": "2026-10-23",
+    "title": "+117% since previous close · CCI $75 Call · $6.05 → $13.10",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 87.44499969482422,
+      "previousClose": 78.835,
+      "movePct": 10.92154461194168,
+      "asOf": "2026-10-23T15:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+      "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 87.44499969482422,
+      "previousClose": 78.835,
+      "movePct": 10.92154461194168,
+      "asOf": "2026-10-23T15:31:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+      "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "id": "O:CCI261120C00075000",
+        "symbol": "CCI",
+        "strike": 75,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-22",
+        "sessionDay": "2026-10-23",
+        "previousClose": 6.05,
+        "sessionOpen": 16.63,
+        "sessionClose": 13.1,
+        "openChangePct": 174.87603305785123,
+        "sessionPct": 116.5289256198347,
+        "openDollarChange": 1057.9999999999998,
+        "sessionDollarChange": 705,
+        "previousVolume": 504,
+        "volume": 54,
+        "openInterest": 1464,
+        "aggregateAsOf": "2026-10-23T15:31:02.983Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 87.44499969482422,
+          "previousClose": 78.835,
+          "movePct": 10.92154461194168,
+          "asOf": "2026-10-23T15:31:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/CCI?period1=1792769460&period2=1792769520&interval=1m",
+          "note": "Stock ≈ $87.44 (+10.92%): Oct 23, 11:31 AM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_CCI_2026-10-23%2F3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18%2FCCI-2026-11-20-75-call.png?alt=media&token=3ca2d8fb0dd673b77416c631f1b55ac5760b86e35eafabcf3dbbb4ca69a9be18",
+        "width": 1200,
+        "height": 1200,
+        "filename": "CCI $75 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261023_CCI",
+    "earningsUrl": "/news/why-crown-castle-cci-stock-is-up-premarket-2026-10-23/",
+    "publishedAt": 1792771192381,
+    "appCollection": "optionsresults",
+    "previewSummary": "At the October 23, 11:31 AM ET option snapshot, CCI’s corresponding minute-bar open was approximately $87.44, up 10.92% from its $78.835 October 22 close. This is an approximate time match."
+  },
+  {
+    "id": "options_results_ROP_2026-10-22",
+    "symbol": "ROP",
+    "companyName": "Roper Technologies",
+    "sessionDay": "2026-10-22",
+    "title": "+414% since previous close · ROP $430 Call · $3.50 → $18.00",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 433.5849914550781,
+      "previousClose": 397.56,
+      "movePct": 9.061523155015117,
+      "asOf": "2026-10-22T17:24:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+      "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 433.5849914550781,
+      "previousClose": 397.56,
+      "movePct": 9.061523155015117,
+      "asOf": "2026-10-22T17:24:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+      "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "id": "O:ROP261120C00420000",
+        "symbol": "ROP",
+        "strike": 420,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 6,
+        "sessionOpen": 12.7,
+        "sessionClose": 25.8,
+        "openChangePct": 111.66666666666667,
+        "sessionPct": 330,
+        "openDollarChange": 669.9999999999999,
+        "sessionDollarChange": 1980,
+        "previousVolume": 7,
+        "volume": 113,
+        "openInterest": 93,
+        "aggregateAsOf": "2026-10-22T19:42:02.731Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 436.8900146484375,
+          "previousClose": 397.56,
+          "movePct": 9.892850047398504,
+          "asOf": "2026-10-22T19:42:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792698120&period2=1792698180&interval=1m",
+          "note": "Stock ≈ $436.89 (+9.89%): Oct 22, 3:42 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      },
+      {
+        "id": "O:ROP261120C00430000",
+        "symbol": "ROP",
+        "strike": 430,
+        "expiry": "2026-11-20",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 3.5,
+        "sessionOpen": 10,
+        "sessionClose": 18,
+        "openChangePct": 185.71428571428572,
+        "sessionPct": 414.28571428571433,
+        "openDollarChange": 650,
+        "sessionDollarChange": 1450,
+        "previousVolume": 1,
+        "volume": 27,
+        "openInterest": 30,
+        "aggregateAsOf": "2026-10-22T17:24:02.545Z",
+        "lowActivity": true,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 433.5849914550781,
+          "previousClose": 397.56,
+          "movePct": 9.061523155015117,
+          "asOf": "2026-10-22T17:24:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ROP?period1=1792689840&period2=1792689900&interval=1m",
+          "note": "Stock ≈ $433.58 (+9.06%): Oct 22, 1:24 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fa302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1%2FROP-2026-11-20-420-call.png?alt=media&token=a302ac316d36736087cfbdb7da4aa37a54c3ba2c74d27800c9e66e40b7e977e1",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $420 call.png"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ROP_2026-10-22%2Fb703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b%2FROP-2026-11-20-430-call.png?alt=media&token=b703fed32c2b71045f65987f5d8eb38ec92fec96f87f345929b030d88a07a03b",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ROP $430 call.png"
+      }
+    ],
+    "earningsPostId": "research_mover_20261022_ROP",
+    "earningsUrl": "/news/why-roper-technologies-rop-stock-is-up-today-2026-10-22/",
+    "publishedAt": 1792701572587,
+    "appCollection": "optionsresults",
+    "previewSummary": "For the $430 call’s 1:24 PM ET option aggregate on October 22, ROP’s corresponding minute-bar open was approximately $433.58, up 9.06% from the $397.56 previous close; this is an approximate time match."
+  },
+  {
+    "id": "options_results_ACN_2026-10-22",
+    "symbol": "ACN",
+    "companyName": "Accenture plc",
+    "sessionDay": "2026-10-22",
+    "title": "+380% since previous close · ACN $245 Call · $2.28 → $10.94",
+    "source": "www.StocksToBuyNow.ai",
+    "stock": {
+      "price": 256.3299865722656,
+      "previousClose": 240.26,
+      "movePct": 6.688581774854585,
+      "asOf": "2026-10-22T19:47:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+      "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "graphStock": {
+      "price": 256.3299865722656,
+      "previousClose": 240.26,
+      "movePct": 6.688581774854585,
+      "asOf": "2026-10-22T19:47:00.000Z",
+      "basis": "previous_session_close",
+      "approximate": true,
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+      "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
+    },
+    "moves": [
+      {
+        "id": "O:ACN261023C00245000",
+        "symbol": "ACN",
+        "strike": 245,
+        "expiry": "2026-10-23",
+        "multiplier": 100,
+        "previousSession": "2026-10-21",
+        "sessionDay": "2026-10-22",
+        "previousClose": 2.28,
+        "sessionOpen": 2.2,
+        "sessionClose": 10.94,
+        "openChangePct": -3.50877192982455,
+        "sessionPct": 379.8245614035088,
+        "openDollarChange": -7.999999999999963,
+        "sessionDollarChange": 866,
+        "previousVolume": 262,
+        "volume": 2460,
+        "openInterest": 1548,
+        "aggregateAsOf": "2026-10-22T19:47:02.735Z",
+        "lowActivity": false,
+        "priceBasis": "Daily qualifying-trade aggregates; previous session close to session aggregate close",
+        "quoteSpread": null,
+        "stockReference": {
+          "price": 256.3299865722656,
+          "previousClose": 240.26,
+          "movePct": 6.688581774854585,
+          "asOf": "2026-10-22T19:47:00.000Z",
+          "basis": "previous_session_close",
+          "approximate": true,
+          "source": "https://query1.finance.yahoo.com/v8/finance/chart/ACN?period1=1792698420&period2=1792698480&interval=1m",
+          "note": "Stock ≈ $256.33 (+6.69%): Oct 22, 3:47 PM ET minute-bar open near option aggregate; approximate time match."
+        }
+      }
+    ],
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/option-results%2Fv1%2Foptions_results_ACN_2026-10-22%2F21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898%2FACN-2026-10-23-245-call.png?alt=media&token=21a7d5c59f55c3fc0192a3510642eab9398c2bc18e81a9c7d3c69587052c3898",
+        "width": 1200,
+        "height": 1200,
+        "filename": "ACN $245 call.png"
+      }
+    ],
+    "earningsPostId": "FyilnV3vuKCJ0CB6tC0g",
+    "earningsUrl": "/stock-market-news/accenture-acn-jumped-22-after-a-strong-earnings-beat-as-results-came-in-ahead-of-wall--FyilnV3vuKCJ0CB6tC0g",
+    "publishedAt": 1792735062564,
+    "appCollection": "optionsresults",
+    "previewSummary": "ACN’s October 22 3:47 PM ET minute-bar open was approximately $256.33, up 6.69% from the $240.26 previous close, used as an approximate stock reference near the call’s 3:47:02 PM ET aggregate timestamp."
+  }
+]
