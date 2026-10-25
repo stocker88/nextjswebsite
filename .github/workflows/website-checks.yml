@@ -13,6 +13,9 @@ jobs:
       - run: corepack enable
       - run: yarn install --frozen-lockfile
       - run: yarn test:content-access
+      - run: yarn test:membership
+      - run: node scripts/account-devices-check.cjs
+      - run: node scripts/account-linking-check.cjs
       - run: yarn test:seo
       - run: node scripts/macro-check.cjs
       - run: yarn build:pages

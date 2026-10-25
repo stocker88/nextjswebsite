@@ -27,3 +27,6 @@ let calls=0;global.fetch=async()=>{calls++;await Promise.resolve();return {ok:tr
  try{const retained=await loadHeadlines();assert.equal(retained.items[0].id,item.id);await loadHeadlines();assert.equal(calls,2);}finally{Date.now=realNow;}
  console.log('PASS: exact headline tickers, coverage/trade precedence, newest recent story, no inferred move cause and one coalesced feed request.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
+for(const period of ['week','month','quarter','halfyear','ytd','year','threeYears','fiveYears'])assert.equal(findMoverHeadline([item],'CAT',now,{},period),undefined);
+for(const period of ['day','premarket','afterhours'])assert(findMoverHeadline([item],'CAT',now,{},period));

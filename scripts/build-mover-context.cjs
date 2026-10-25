@@ -42,9 +42,11 @@ function build(root=path.join(__dirname,'..')) {
   console.log('Saved',items.length,'recent stock article links for movers'); return items;
 }
 function writeContext(root,items) {
+  const signalFile=path.join(root,'data/mover-signals.json');
+  const publicItems=fs.existsSync(signalFile)?[...items,...JSON.parse(fs.readFileSync(signalFile,'utf8'))]:items;
   fs.writeFileSync(path.join(root,'data/mover-context.json'),JSON.stringify(items,null,2)+'\n');
   // Native clients receive the same compact, dated coverage and exact thread IDs.
-  fs.writeFileSync(path.join(root,'public/mover-context.json'),JSON.stringify({version:1,updatedAt:new Date().toISOString(),items}));
+  fs.writeFileSync(path.join(root,'public/mover-context.json'),JSON.stringify({version:1,updatedAt:new Date().toISOString(),items:publicItems}));
 }
 if (require.main===module) build();
 module.exports={build,buildContext,writeContext};

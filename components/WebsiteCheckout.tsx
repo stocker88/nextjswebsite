@@ -9,8 +9,7 @@ export default function WebsiteCheckout({onClose}:{onClose:()=>void}){
  return <dialog ref={dialog} className={s.checkoutDialog} aria-labelledby="checkout-title" onCancel={event=>{event.preventDefault();if(!busy)onClose()}}>
   <button className={s.close} onClick={onClose} disabled={busy} aria-label="Close plan selection">×</button>
   <span className={s.eyebrow}>YOUR MEMBERSHIP · YOUR PERSPECTIVE</span><h2 id="checkout-title">Go deeper with Pro.</h2>
-
-
+  <fieldset className={s.planChoices} disabled={busy}><legend>Billing period</legend>
    <label className={plan==='monthly'?s.selected:''}><input type="radio" name="billing-plan" checked={plan==='monthly'} onChange={()=>setPlan('monthly')}/><span><b>Monthly</b><strong>$30 <small>/month</small></strong><em>$30 billed every month</em></span></label>
    <label className={plan==='annual'?s.selected:''}><input type="radio" name="billing-plan" checked={plan==='annual'} onChange={()=>setPlan('annual')}/><span><b>Annual <i>Save 33%</i></b><strong>$20 <small>/month</small></strong><em>$240 billed every year</em></span></label>
   </fieldset>

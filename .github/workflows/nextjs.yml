@@ -28,6 +28,9 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
       - run: yarn test:content-access
+      - run: yarn test:membership
+      - run: node scripts/account-devices-check.cjs
+      - run: node scripts/account-linking-check.cjs
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
       - run: node scripts/article-posts-check.cjs
@@ -35,6 +38,7 @@ jobs:
       - run: node scripts/mover-trades-check.cjs
       - run: node scripts/mover-context-check.cjs
       - run: node scripts/default-market-view-check.cjs
+      - run: node scripts/heatmap-default-view-check.cjs
       - run: node scripts/macro-check.cjs
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4

@@ -1,5 +1,5 @@
 import snapshot from '../data/market-news.json';
-export type Headline={id:string;title:string;source:string;sourceUrl:string;symbol:string;publishedAt:string;imageUrl?:string|null};
+export type Headline={id:string;title:string;source:string;sourceUrl:string;symbol:string;symbols?:string[];publishedAt:string;imageUrl?:string|null};
 export type NewsSnapshot={updatedAt:string|null;items:Headline[]};
 export const savedNews=snapshot as NewsSnapshot;
 export const newsEndpoint='https://us-central1-stocker-fcda2.cloudfunctions.net/generalNews';
