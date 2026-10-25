@@ -45,6 +45,14 @@ for(const period of ['day','week'])assert.equal(pick([older],'CCI',period),undef
 assert.equal(pick([older,{...current,kind:'recap'}],'CCI','month').kind,'recap');
 assert.equal(pick([{...older,isAIAdvisor:false}],'CCI','month'),undefined);
 assert.equal(pick([{...older,sourceCollection:'comments'}],'CCI','month'),undefined);
-assert.equal(pick([sig('early','2026-07-23T16:39:59Z'),sig('late','2026-09-23T16:40:01Z')],'CCI','month'),undefined);
+assert.equal(pick([sig('early','2026-07-23T16:39:59Z'),sig('late','2026-09-23T16:40:01Z')],'CCI','month').postId,'late');
 assert.deepEqual(signalWindow('month',Date.parse('2024-03-31T12:00:00Z')).map(t=>new Date(t).toISOString()),['2023-12-31T12:00:00.000Z','2024-02-29T12:00:00.000Z']);
 console.log('PASS: oldest Signals, provenance, date bounds, leap years, positive-only and existing-research precedence.');
+
+const latest=sig('latest','2026-10-22T16:40:00Z');
+assert.equal(pick([newer,older,latest],'CCI','year').postId,'latest');
+assert.equal(pick([newer,older,latest,annual],'CCI','year').postId,'annual');
+for(const publishedAt of ['invalid','2026-10-24T16:40:00Z'])assert.equal(pick([{...latest,publishedAt}],'CCI','year'),undefined);
+assert.equal(pick([{...latest,symbol:'SNDK'}],'SNDK','year').postId,'latest');
+assert.equal(pick([{...latest,symbol:'SNDK'}],'SND','year'),undefined);
+console.log('PASS: latest eligible exact-symbol fallback when no historical window match exists.');

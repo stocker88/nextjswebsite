@@ -22,8 +22,10 @@ export function findMoverContext(items: MoverContextArticle[], symbol: string, n
   if(matches.length)return matches[0];
   const window=signalWindow(period,now);
   if(!window||change===null||!Number.isFinite(change)||change<=0)return undefined;
-  return items.filter(a=>a.kind==='signal'&&a.isAIAdvisor===true&&a.sourceCollection==='posts'&&contextSymbol(a.symbol)===contextSymbol(symbol)&&a.href.startsWith('/')&&!a.href.startsWith('//')&&Date.parse(a.publishedAt)>=window[0]&&Date.parse(a.publishedAt)<=window[1])
+  const signals=items.filter(a=>a.kind==='signal'&&a.isAIAdvisor===true&&a.sourceCollection==='posts'&&contextSymbol(a.symbol)===contextSymbol(symbol)&&a.href.startsWith('/')&&!a.href.startsWith('//')&&Number.isFinite(Date.parse(a.publishedAt))&&Date.parse(a.publishedAt)<=now);
+  const historical=signals.filter(a=>Date.parse(a.publishedAt)>=window[0]&&Date.parse(a.publishedAt)<=window[1])
     .sort((a,b)=>Date.parse(a.publishedAt)-Date.parse(b.publishedAt)||compareId(a.postId||a.href,b.postId||b.href))[0];
+  return historical||signals.sort((a,b)=>Date.parse(b.publishedAt)-Date.parse(a.publishedAt)||compareId(a.postId||a.href,b.postId||b.href))[0];
 }
 
 export function allowsMoverHeadlines(period:string) {
