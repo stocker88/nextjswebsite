@@ -1,6 +1,7 @@
 import {getSiteAuth} from './site-auth';
 
 export type MembershipSubscription = {
+  tier?:'pro'|'ultra'|'ultra_addon';
   provider:'apple'|'google'|'stripe'|'revenuecat';
   productId:string|null;
   planName:string;
@@ -13,6 +14,11 @@ export type MembershipSubscription = {
 export type MembershipStatus = {
   status:'active'|'inactive'|'unknown';
   isActive:boolean;
+  billingVerified?:boolean;
+  hasPro?:boolean;
+  hasUltra?:boolean;
+  hasUltraAddon?:boolean;
+  ultraAccessUntil?:string|null;
   hasStripeBilling?:boolean;
   needsPaymentUpdate?:boolean;
   subscriptions:MembershipSubscription[];

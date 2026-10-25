@@ -28,7 +28,7 @@ export async function completeWebsiteCheckout(sessionId:string):Promise<WebsiteC
  return billingCall<WebsiteCheckoutResult>('completeWebsiteCheckout',{sessionId});
 }
 export type BillingCard={brand:string;last4:string;expMonth:number;expYear:number};
-export type StripeBillingSubscription={kind?:'pro'|'device_slots';extraDevices?:number;id:string;status:string;billingPeriod:string;unitAmount:number|null;currency:string|null;interval:string|null;intervalCount:number;currentPeriodEnd:number|null;cancelAtPeriodEnd:boolean;card:BillingCard|null;nextInvoice?:{amountDue:number;currency:string}|null;canCancel:boolean;scheduledPlan?:{billingPeriod:string;effectiveAt:number;unitAmount:number;currency:string}|null;priceId?:string|null;canSwitch?:boolean;canRestore?:boolean};
+export type StripeBillingSubscription={kind?:'pro'|'ultra'|'ultra_addon'|'device_slots';extraDevices?:number;id:string;status:string;billingPeriod:string;unitAmount:number|null;currency:string|null;interval:string|null;intervalCount:number;currentPeriodEnd:number|null;cancelAtPeriodEnd:boolean;card:BillingCard|null;nextInvoice?:{amountDue:number;currency:string}|null;canCancel:boolean;scheduledPlan?:{billingPeriod:string;effectiveAt:number;unitAmount:number;currency:string}|null;priceId?:string|null;canSwitch?:boolean;canRestore?:boolean};
 export type StripeBillingDetails={defaultCard:BillingCard|null;subscriptions:StripeBillingSubscription[];checkedAt:number};
 export type CancellationSession={url:string;offerExpiresAt:number|null;serverTime:number};
 export function fetchWebsiteBillingDetails(){return billingCall<StripeBillingDetails>('getWebsiteBillingDetails')}

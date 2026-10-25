@@ -25,7 +25,7 @@ function SubscriptionCard({subscription,onRefresh}:{subscription:MembershipSubsc
  return <article className={s.subscription}>
   <div className={s.planHeading}><h2>{subscription.planName}</h2><span className={s.badge}>{subscription.status==='trialing'?'Trial active':subscription.status==='grace_period'?'Payment needs attention':'Active'}</span></div>
   <dl>
-   <div><dt>Membership</dt><dd>Pro · Full access</dd></div>
+   <div><dt>Membership</dt><dd>{subscription.tier==='ultra'?'Ultra · Pro included':subscription.tier==='ultra_addon'?'Ultra add-on · Pro required':'Pro · Full access'}</dd></div>
    <div><dt>Billing through</dt><dd>{providerNames[subscription.provider]||'App membership'}</dd></div>
    {subscription.billingPeriod&&<div><dt>Plan</dt><dd>{subscription.billingPeriod}</dd></div>}
    <div><dt>{subscription.expiresAt?(subscription.status==='trialing'?'Trial ends':subscription.status==='grace_period'?'Payment grace ends':subscription.willRenew===true?'Renews on':'Access until'):'Access'}</dt><dd>{subscription.expiresAt?(subscription.status==='grace_period'?deadlineLabel(subscription.expiresAt):dateLabel(subscription.expiresAt)):'No expiry date'}</dd></div>
@@ -43,9 +43,9 @@ export function MembershipView({membership,loading,error,onRetry,onExplorePro,pa
  if(membership.status==='inactive'&&membership.needsPaymentUpdate)return <section className={s.statusPanel}><span className={s.eyebrow}>PAYMENT NEEDS ATTENTION</span><h1>Let’s restore your Pro access.</h1><p>Your existing Stripe membership needs a payment update. Use Manage Stripe billing below to update your card and settle payment, rather than purchasing a second subscription.</p><button className={s.secondary} onClick={onRetry}>I’ve updated payment — check again</button></section>;
  if(membership.status==='inactive')return <><div className={s.freeNotice}><span className={s.eyebrow}>YOUR CURRENT PLAN · FREE</span><p>Explore the market for free, or choose Pro to go deeper.</p><button onClick={onRetry}>Already subscribed? Check again ↻</button></div><MembershipPlans onExplorePro={onExplorePro}/></>;
  return <section className={s.active}>
-  <header><span className={s.eyebrow}>YOUR MEMBERSHIP</span><h1>Your perspective.<br/>With Pro.</h1><p>Your membership is recognized on this account, including subscriptions purchased in the app.</p></header>
+  <header><span className={s.eyebrow}>YOUR MEMBERSHIP</span><h1>Your perspective.<br/>With {membership.hasUltra?'Ultra':'Pro'}.</h1><p>Your membership is recognized on this account, including subscriptions purchased in the app.</p></header>
   <div className={s.subscriptionGrid}>{membership.subscriptions.map((subscription,index)=><SubscriptionCard key={[subscription.provider,subscription.productId,index].join(':')} subscription={subscription} onRefresh={onRetry}/>)}</div>
-  <div className={s.actions}><Link className={s.primary} href="/stock-market-heatmap/">Explore the market ↗</Link><button className={s.secondary} onClick={onRetry}>Refresh membership</button></div>
+  <div className={s.actions}><Link className={s.primary} href="/stock-market-heatmap/">Explore the market ↗</Link>{!membership.hasUltra&&<Link className={s.secondary} href="/ultra/">Join Ultra →</Link>}<button className={s.secondary} onClick={onRetry}>Refresh membership</button></div>
   <p className={s.note}>Use the same sign-in account on the website and in the app to access your membership.</p>
  </section>;
 }

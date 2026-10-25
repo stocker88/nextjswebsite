@@ -17,7 +17,7 @@ let html=renderToStaticMarkup(React.createElement(access.default,{destination:'/
 assert(html.includes('Sign in to explore Results'));assert(html.includes('/login/?next=%2Fresults%2F'));assert(!html.includes('Protected reader content'));
 account={ready:false,user:null,error:false};html=renderToStaticMarkup(React.createElement(access.default,{destination:'/news/example/'},child));assert(html.includes('Checking your access'));assert(!html.includes('Protected reader content'));
 account={ready:true,user:{uid:'signed-in'},error:false};html=renderToStaticMarkup(React.createElement(access.default,{destination:'/news/example/'},child));assert(html.includes('Protected reader content'));
-html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',onRetry:()=>{}}));assert(html.includes('Go deeper with Ultra'));assert(html.includes('View membership'));assert(!html.includes('/login/'));
+html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',onRetry:()=>{}}));assert(html.includes('Go deeper with Ultra'));assert(html.includes('Join Ultra')&&html.includes('/ultra/'));assert(!html.includes('/login/'));
 const {resultPreview}=require('./option-result-preview.cjs');
 const original=require('../data/option-results.json');
 for(const report of original){const preview=resultPreview({...report,privateSecret:'must-not-leak'});for(const field of ['recap','quickTake','text','privateSecret'])assert.equal(Object.hasOwn(preview,field),false);assert.equal(preview.id,report.id);assert.deepEqual(preview.images,report.images);assert.deepEqual(preview.moves,report.moves);assert(preview.previewSummary.length<=280)}

@@ -1,0 +1,41 @@
+{
+  "version": "ultra-2026-10-26",
+  "effectiveDate": "26 October 2026",
+  "title": "Ultra website membership purchase terms",
+  "sections": [
+    {
+      "id": "membership",
+      "title": "Ultra membership",
+      "paragraphs": [
+        "Inclusive Ultra includes Pro research tools together with full options-results analysis, contract breakdowns and payoff charts. For existing App Store Pro members buying on the website, Ultra is a separate add-on and does not include or replace the Apple Pro subscription. Research and educational tools do not guarantee investment results. Options can lose their entire premium.",
+        "Inclusive website Ultra costs US$90 billed monthly, or US$900 billed annually (equivalent to US$75 per month). Existing App Store Pro members can instead buy a separate Ultra add-on for US$60 billed monthly or US$600 billed annually (equivalent to US$50 per month), in addition to their Apple Pro bill. Annual billing is one payment of US$900 for inclusive Ultra or US$600 for the add-on, not twelve monthly payments. Stripe shows the final currency, any conversion and applicable taxes before confirmation.",
+        "Website purchases are linked to the authenticated account ID. Use the same account in the app and on the website. Existing App Store and Google Play subscriptions are managed by the store that sold them; a website purchase does not cancel a store subscription."
+      ]
+    },
+    {
+      "id": "upgrades",
+      "title": "Upgrading existing memberships",
+      "paragraphs": [
+        "Eligible Stripe Pro members can replace their existing Stripe Pro subscription with inclusive Ultra. Stripe shows any credit for unused paid time, the amount due now and the next recurring charge before confirmation. Ultra access begins after payment is verified.",
+        "Existing App Store Pro members can purchase a separate Stripe Ultra add-on on the website. Apple continues billing Pro, and Stripe bills the Ultra add-on. Both Pro and the add-on must remain active for Ultra access. When Pro ends, the add-on alone does not grant Pro or Ultra access and does not automatically cancel. Cancelling one subscription does not cancel the other. Manage Apple Pro through Apple and the Stripe add-on through Membership. Members may instead use the app’s existing Apple upgrade path and local store prices; do not buy both Ultra options."
+      ]
+    },
+    {
+      "id": "renewal",
+      "title": "Renewal, cancellation and refunds",
+      "paragraphs": [
+        "Ultra renews automatically for the chosen period unless renewal is cancelled before its renewal date. You can manage cards, invoices and cancellation from Membership. Cancellation stops future renewal and keeps access through the paid period.",
+        "No automatic refunds are provided for unused time. Mandatory consumer rights remain protected. Contact support@stockstobuynow.ai about incorrect or duplicate charges.",
+        "Failed Stripe renewal payments follow the maximum 48-hour recovery period from the original payment deadline. Retries do not restart that period. An unpaid first purchase or upgrade does not unlock Ultra."
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Billing privacy and purchase records",
+      "paragraphs": [
+        "Stripe securely stores billing names, addresses, card and transaction details. Firebase does not store full card numbers or security codes. We retain the account ID, accepted terms version and fingerprint, selected price, server-recorded acceptance time and checkout or upgrade references for billing support and dispute evidence.",
+        "The existing privacy policy and website purchase terms continue to apply."
+      ]
+    }
+  ]
+}
