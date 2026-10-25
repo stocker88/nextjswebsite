@@ -74,3 +74,5 @@ for(const route of ['unavailable','payment_update','restore_pro','support']){htm
 console.log('Ultra UI checks passed: monthly/annual prices, correct annual savings, Apple legacy/inclusive paths, Stripe replacement, consent, verified active state and outage guards.');
 
 html=ultraHtml({offer:{...ultraBase.offer,route:'apple_addon'}});assert.match(html,/Apple Pro \+ Stripe Ultra add-on/);assert.match(html,/in addition to your existing Apple Pro bill/);assert.match(html,/\$600 billed once each year/);assert.match(html,/disabled=""[^>]*>Add Ultra — keep Apple Pro/);assert.doesNotMatch(html,/All of Pro, plus|Continue upgrade in the app/);
+
+html=ultraHtml({offer:{...ultraBase.offer,route:'active',membership:{billingVerified:true,hasUltra:true,hasPro:true}}});assert.match(html,/Get the app →/);assert.match(html,/sign in with this same account/);assert.match(html,/Add to my calendar/);assert.match(html,/December 1, 2026/);
