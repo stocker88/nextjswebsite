@@ -137,8 +137,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
      </article>)}
      {lockedSignalPreviews.map((signal,index)=><article className={`${s.signalCard} ${s.lockedSignalCard}`} key={signal.symbol} style={{animationDelay:`${Math.min(index+2,8)*70}ms`}} aria-label="Additional member result: price and company are locked, financial trend is visible">
       <div className={s.lockedPriceWrap} aria-hidden="true">
-       <div className={s.signalIdentity}><img src={signal.logo} width="42" height="42" alt=""/><div><b>{signal.symbol}</b><span>{signal.name}</span></div><strong>{signal.returnLabel}</strong></div>
-       <PriceChart symbol={`LOCKED-${signal.symbol}`} points={signal.price} signalDate={signal.signalDate} signalLabel="" blurred/>
+       <div className={`${s.signalIdentity} ${s.lockedIdentity}`}><span className={s.lockedLogo}/><div><b>{signal.symbol}</b><span>{signal.name}</span></div><strong>{signal.returnLabel}</strong></div>
+       <div className={s.lockedPriceBlank}/>
       </div>
       <div className={s.lockLabel}><span>🔒</span><strong>Company and price signal locked</strong></div>
       <FinancialChart title={signal.financial.title} unit={signal.financial.unit} points={signal.financial.points} compact/>
