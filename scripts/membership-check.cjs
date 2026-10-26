@@ -18,15 +18,18 @@ function load(relative){
  new Function('require','module','exports',source)(local,module,module.exports);return module.exports;
 }
 const {MembershipView}=load('components/MembershipStatusPage.tsx');
+const {canOfferMembership}=load('lib/membership-status.ts');
 const draw=(membership,props={})=>renderToStaticMarkup(React.createElement(MembershipView,{membership,loading:false,error:false,onRetry:()=>{},onExplorePro:()=>{},...props}));
 const base={status:'active',isActive:true,checkedAt:'2026-10-25T00:00:00Z',subscriptions:[{provider:'apple',productId:'annual',planName:'Pro · Annual',billingPeriod:'Annual',status:'active',expiresAt:'2027-01-01T00:00:00Z',willRenew:false,managementUrl:'https://apps.apple.com/account/subscriptions'}]};
 let html=draw(base);assert.match(html,/Pro · Annual/);assert.match(html,/Apple App Store/);assert.match(html,/Renewal is off/);assert.match(html,/Manage subscription/);assert.doesNotMatch(html,/Your current plan · Free|Explore Pro|\$30/);
+assert.equal(canOfferMembership(base),false);assert.equal(canOfferMembership({...base,hasUltra:true}),false);assert.equal(canOfferMembership({...base,status:'inactive',isActive:false,subscriptions:[]}),true);assert.equal(canOfferMembership({...base,status:'inactive',isActive:false,needsPaymentUpdate:true,subscriptions:[]}),false);assert.equal(canOfferMembership(null),false);
 html=draw({...base,subscriptions:[{...base.subscriptions[0],provider:'stripe',willRenew:true,managementUrl:null}]});assert.match(html,/Stripe/);assert.match(html,/Renews on/);assert.match(html,/Manage subscription/);
 html=draw({...base,subscriptions:[{...base.subscriptions[0],status:'trialing'}]});assert.match(html,/Trial active/);assert.match(html,/Trial ends/);
 html=draw({...base,subscriptions:[{...base.subscriptions[0],managementUrl:'javascript:alert(1)'}]});assert.doesNotMatch(html,/javascript:|Manage subscription/);
 html=draw({...base,status:'unknown',isActive:false,subscriptions:[]});assert.match(html,/Check membership again/);assert.doesNotMatch(html,/Explore Pro|\$30/);
-html=draw(null,{loading:true});assert.match(html,/aria-busy="true"/);assert.doesNotMatch(html,/Explore Pro|\$30/);
-html=draw({...base,status:'inactive',isActive:false,subscriptions:[]});assert.match(html,/YOUR CURRENT PLAN · FREE/);assert.match(html,/Explore Pro/);assert.match(html,/\$30/);assert.match(html,/\$20/);
+html=draw(null,{loading:true});assert.equal(html,'');assert.doesNotMatch(html,/Checking|Explore Pro|\$30/);
+html=draw(base,{loading:true});assert.match(html,/Your perspective/);assert.doesNotMatch(html,/Explore Pro|\$30/);
+html=draw({...base,status:'inactive',isActive:false,subscriptions:[]},{onExploreFree:()=>{}});assert.doesNotMatch(html,/YOUR CURRENT PLAN · FREE|Already subscribed/);assert.match(html,/Explore Pro/);assert.match(html,/Start your free trial in the app/);assert.match(html,/Receive live alerts straight to your phone/);assert.match(html,/\$30/);assert.match(html,/\$20/);
 console.log('Membership UI checks passed: active, cancellation, trial, Stripe, unsafe links, loading, unknown and Free/Pro states.');
 const {StripeBillingView,RetentionOfferView}=load('components/StripeMembershipManager.tsx');
 const billing={defaultCard:null,checkedAt:0,subscriptions:[{id:'sub_example',status:'active',billingPeriod:'Monthly',unitAmount:3000,currency:'usd',interval:'month',intervalCount:1,currentPeriodEnd:1795521600,cancelAtPeriodEnd:false,card:{brand:'visa',last4:'4242',expMonth:10,expYear:2030},nextInvoice:{amountDue:2400,currency:'usd'},canCancel:true}]};
@@ -68,7 +71,7 @@ html=ultraHtml({});assert.match(html,/Replace your Stripe Pro with Ultra/);asser
 html=ultraHtml({accepted:true});assert.doesNotMatch(html,/disabled=""[^>]*>Review my Ultra upgrade/);
 for(const route of ['apple_upgrade','google_upgrade']){html=ultraHtml({offer:{...ultraBase.offer,route}});assert.match(html,/Continue upgrade in the app/);assert.doesNotMatch(html,/Review my Ultra upgrade|Join Ultra →|\$600 billed/);assert.match(html,route==='apple_addon'?/2× add-on/:/3× Ultra/);}
 html=ultraHtml({offer:{...ultraBase.offer,route:'active',membership:{billingVerified:true,hasUltra:true}}});assert.match(html,/Ultra is yours/);assert.match(html,/Explore full results/);assert.doesNotMatch(html,/Join Ultra|type="checkbox"/);
-html=ultraHtml({checking:true,offer:null});assert.match(html,/Checking your current membership/);assert.doesNotMatch(html,/Join Ultra →|Sign up or sign in/);
+html=ultraHtml({checking:true,offer:null});assert.equal(html,'');assert.doesNotMatch(html,/Checking|Choose Ultra|Join Ultra →|Sign up or sign in|\$90|\$75/);
 html=ultraHtml({error:'Provider unavailable',offer:null});assert.match(html,/Check membership again/);assert.doesNotMatch(html,/Join Ultra →|Review my Ultra upgrade/);
 for(const route of ['unavailable','payment_update','restore_pro','support']){html=ultraHtml({offer:{...ultraBase.offer,route}});assert.match(html,/Manage current membership/);assert.doesNotMatch(html,/Join Ultra →|Review my Ultra upgrade/);}
 console.log('Ultra UI checks passed: monthly/annual prices, correct annual savings, Apple legacy/inclusive paths, Stripe replacement, consent, verified active state and outage guards.');

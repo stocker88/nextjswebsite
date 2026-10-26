@@ -9,7 +9,7 @@ import InstallButtonsWithQR from '../elements/InstallButtonsWithQR';
 import Image from 'next/image';
 import { openInbox } from 'react'
 import Container from '../container'
-import NewsletterSignUp from '../formStocker'
+import CompactSignUp from '../CompactSignUp'
 
 
 const propTypes = {
@@ -104,7 +104,7 @@ const Hero = ({
  </center>
  </Container>
 <div className="hero-cta-group" data-motion-intro={className?.includes('mobile-download-hero') ? undefined : 'later'}>
-  <NewsletterSignUp from='Hero'/>
+  <CompactSignUp placement="hero"/>
 </div>
 <div className="hero-content-space" style={{paddingTop: 'max(25px,2.2vw)'}}></div>
 <Container>

@@ -138,7 +138,12 @@
 /* Reach deep navy around the heatmap, then gradually return toward blue. */
 .reveal{background:linear-gradient(180deg,#150080 0%,#0d0644 12%,#04001a 26%,#04001a 36%,#070229 58%,#090339 80%,#0c0647 100%)}
 .gradientTail{display:none}
-@media(max-width:1023px) and (hover:none), (max-width:1023px) and (pointer:coarse){.reveal{background:linear-gradient(180deg,#10065c 0%,#0a0338 12%,#04001a 26%,#04001a 36%,#070229 58%,#090339 80%,#0c0647 100%)}}
+@media(max-width:1023px) and (hover:none), (max-width:1023px) and (pointer:coarse){
+ .reveal{background:linear-gradient(180deg,#10065c 0%,#0a0338 12%,#04001a 26%,#04001a 36%,#070229 58%,#090339 80%,#0c0647 100%)}
+ /* The signed-in intro ends at #150080; begin from that exact color so the
+    next section continues smoothly instead of creating a horizontal seam. */
+ :global(html[data-site-account="signed-in"]) .reveal{background:linear-gradient(180deg,#150080 0%,#0d0644 12%,#04001a 26%,#04001a 36%,#070229 58%,#090339 80%,#0c0647 100%)}
+}
 
 @media(min-width:1024px),(hover:hover) and (pointer:fine){
  .scene{opacity:1;translate:0 0;transition:opacity .65s ease,translate .65s cubic-bezier(.22,1,.36,1)}

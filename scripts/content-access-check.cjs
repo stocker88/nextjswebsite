@@ -37,6 +37,7 @@ assert.equal(routes.accountDestination('/market-news/story/?id=story_123'),'/mar
 assert.equal(routes.accountDestination('/insider-news/example/'),'/insider-news/example/');
 account={ready:true,user:{uid:'signed-in'},error:false};
 html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',onRetry:()=>{}}));assert(html.includes('Go deeper with Ultra'));assert(html.includes('Join Ultra')&&html.includes('/ultra/'));assert(!html.includes('/login/'));
+html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',checking:true,onRetry:()=>{}}));assert.equal(html,'');assert(!html.includes('Checking your access'));
 const {resultPreview}=require('./option-result-preview.cjs');
 const original=require('../data/option-results.json');
 for(const report of original){const preview=resultPreview({...report,privateSecret:'must-not-leak'});for(const field of ['recap','quickTake','text','privateSecret'])assert.equal(Object.hasOwn(preview,field),false);assert.equal(preview.id,report.id);assert.deepEqual(preview.images,report.images);assert.deepEqual(preview.moves,report.moves);assert(preview.previewSummary.length<=280)}

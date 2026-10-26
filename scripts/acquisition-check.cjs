@@ -3,7 +3,7 @@ const root=require('path').resolve(__dirname,'..');
 const ts=require(root+'/node_modules/typescript');
 const source=ts.transpileModule(fs.readFileSync(root+'/lib/acquisition.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
 const calls=[],storage=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)}};
-const clientExports={};const location={origin:'https://www.stockstobuynow.ai',pathname:'/',search:'?utm_source=sharedFromAppUser&utm_campaign=postShares'};
+const clientExports={};const location={origin:'https://www.stockstobuynow.ai',pathname:'/',search:'?utm_source=sharedFromAppUser&utm_campaign=postShares&utm_content=creator-42&utm_term=options'};
 const context={process:{env:{}},exports:clientExports,window:{},location,crypto:require('crypto').webcrypto,URL,URLSearchParams,Uint8Array,localStorage:storage(),sessionStorage:storage(),document:{referrer:'https://l.instagram.com/'},fetch:async(url,options)=>{calls.push(JSON.parse(options.body));return {ok:true}}};
 vm.runInNewContext(source,context);
 clientExports.captureAcquisition();location.search='';clientExports.captureAcquisition({},'google');
@@ -12,6 +12,7 @@ assert.equal(calls[1].visitorId,calls[0].visitorId);assert.equal(calls[1].visito
 const raw='https://play.google.com/store/apps/details?id=com.newcompany.stocker&referrer=utm_source%3Dexisting';
 const play=new URL(clientExports.attributionLink(raw));const referrer=new URLSearchParams(play.searchParams.get('referrer'));
 assert.equal(referrer.get('utm_source'),'existing');assert.equal(referrer.get('web_visit'),calls[0].visitorId);
+assert.equal(referrer.get('utm_content'),'creator-42');assert.equal(referrer.get('utm_term'),'options');
 assert.equal(clientExports.attributionLink('https://apps.apple.com/app/id1565527320'),'https://apps.apple.com/app/id1565527320');
 assert.equal(clientExports.attributionLink('https://evil.test/insight_details_page'),'https://evil.test/insight_details_page');
 const app=new URL(clientExports.attributionLink('com.newcompany.stocker:///insight_details_page?postId=123'));

@@ -8,21 +8,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { trackAppStoreClick } from '../../lib/analytics';
 import { usesLegacySafariChrome } from '../../lib/safari-chrome';
 import SocialBrowserNotice, { detectSocialBrowser } from '../SocialBrowserNotice';
-
-const iosAppStoreUrl =
-  'https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320';
-
-const androidPlayStoreUrl =
-  'https://play.google.com/store/apps/details?id=com.newcompany.stocker';
-
-const getAppStoreUrl = () => {
-  if (typeof window === 'undefined') return iosAppStoreUrl;
-  const isAndroid = /Android/i.test(navigator.userAgent);
-  return isAndroid ? androidPlayStoreUrl : iosAppStoreUrl;
-};
+import CompactSignUp from '../CompactSignUp';
 
 
 
@@ -35,7 +23,7 @@ export default function Header({
   socialNoticeVariant = 'standard',
 }) {
   const { pathname } = useRouter();
-  const {user:accountUser,desktop} = useSiteAccount();
+  const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
   const isHomePage = pathname === '/';
   const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +66,7 @@ export default function Header({
       if (y === 0) setIsOpen(false);
       // Match the continuous hero gradient, including the mobile status strip.
       // Keep the initial reveal blue; ease toward navy near the end of the hero.
-      const hero = document.getElementById(window.innerWidth >= 1024 ? 'desktop-product-intro' : 'home') || document.getElementById('home');
+      const hero = document.getElementById(window.innerWidth >= 1024 ? 'desktop-product-intro' : 'home') || document.getElementById('desktop-product-intro') || document.getElementById('home');
       const heroHeight = hero?.getBoundingClientRect().height || 1;
       const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 80;
       const progress = Math.min(1, y / heroHeight);
@@ -123,16 +111,6 @@ export default function Header({
 
   const closeMenu = () => setIsOpen(false);
 
-  const trackHeaderDownload = () => {
-    const linkUrl = getAppStoreUrl();
-    trackAppStoreClick({
-      store: /Android/i.test(navigator.userAgent) ? 'google' : 'apple',
-      placement: 'header',
-      linkUrl,
-    });
-    closeMenu();
-  };
-
   const browserTheme = (
     <Head>
       <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -172,7 +150,7 @@ export default function Header({
   return (
     <>
       {browserTheme}
-      <header className={`site-header ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor}}>
+      <header className={`site-header ${isHomePage ? 'is-home' : ''} ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor, '--header-surface-color': isOpen ? '#0b1323' : chromeColor}}>
         <span className="site-header-edge" aria-hidden="true" />
         <nav className={menuStyles.nav} aria-label="Main navigation">
           <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
@@ -190,16 +168,15 @@ export default function Header({
 
           {/* Right side actions (Horizontal alignment on mobile) */}
           <div className={menuStyles.actions}>
-            <AccountMenu />
-            {!hideAppDownload && !accountUser && <a
+            <div className={menuStyles.accountSlot}>
+              {!accountReady&&<div className={menuStyles.cachedAccount} aria-hidden="true"><span className={menuStyles.cachedAvatar}/><span className={menuStyles.cachedName}/></div>}
+              <AccountMenu />
+            </div>
+            {!hideAppDownload && accountReady && !accountUser && (desktop?<a
               className={menuStyles.download}
-              href={desktop?accountLoginUrl(DESKTOP_ACCESS_PATH):getAppStoreUrl()}
-              target={desktop?undefined:"_blank"}
-              rel="noopener noreferrer"
-              onClick={desktop?closeMenu:trackHeaderDownload}
-            >
-              {desktop?'Sign Up':'Get the App'}
-            </a>}
+              href={accountLoginUrl(DESKTOP_ACCESS_PATH)}
+              onClick={closeMenu}
+            >Sign Up</a>:<CompactSignUp placement="header" onComplete={closeMenu}/>)}
 
             <button
               className={menuStyles.toggle}

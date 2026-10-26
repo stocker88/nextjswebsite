@@ -13,7 +13,7 @@ import {completeWebsiteCheckout} from '../lib/website-billing';
 import StripeMembershipManager from './StripeMembershipManager';
 import {useSiteAccount} from './SiteAccount';
 import {accountLoginUrl} from '../lib/site-auth';
-import {fetchMembershipStatus,billingManagementUrl,type MembershipStatus,type MembershipSubscription} from '../lib/membership-status';
+import {canOfferMembership,lastKnownMembershipStatus,refreshMembershipStatus,billingManagementUrl,type MembershipStatus,type MembershipSubscription} from '../lib/membership-status';
 import s from '../styles/Membership.module.css';
 
 const providerNames={apple:'Apple App Store',google:'Google Play',stripe:'Stripe',revenuecat:'App membership'};
@@ -36,12 +36,12 @@ function SubscriptionCard({subscription,onRefresh}:{subscription:MembershipSubsc
   {manageOpen&&<StripeMembershipManager onClose={()=>setManageOpen(false)} onRefresh={onRefresh}/>}
  </article>;
 }
-export function MembershipView({membership,loading,error,onRetry,onExplorePro,paymentPending=false,onBackToMembership}:{paymentPending?:boolean;onBackToMembership?:()=>void;membership:MembershipStatus|null;loading:boolean;error:boolean;onRetry:()=>void;onExplorePro:()=>void}){
- if(loading)return <section className={s.statusPanel} aria-live="polite" aria-busy="true"><span className={s.eyebrow}>YOUR MEMBERSHIP</span><h1>Checking your membership…</h1><p>Looking up your app and website subscriptions.</p></section>;
+export function MembershipView({membership,loading,error,onRetry,onExplorePro,onExploreFree,paymentPending=false,onBackToMembership,onboarding=false}:{paymentPending?:boolean;onBackToMembership?:()=>void;membership:MembershipStatus|null;loading:boolean;error:boolean;onRetry:()=>void;onExplorePro:()=>void;onExploreFree?:()=>void;onboarding?:boolean}){
+ if(loading&&membership?.status!=='active')return null;
  if(paymentPending)return <section className={s.statusPanel} role="status"><span className={s.eyebrow}>YOUR PAYMENT</span><h1>We’re confirming your payment.</h1><p>Your Pro access will appear once Stripe confirms payment. Please check again before starting another checkout.</p><div className={s.actions}><button className={s.primary} onClick={onRetry}>Check payment again</button><button className={s.secondary} onClick={onBackToMembership}>Back to membership</button></div></section>;
  if(error||!membership||membership.status==='unknown')return <section className={s.statusPanel} role="status"><span className={s.eyebrow}>YOUR MEMBERSHIP</span><h1>Let’s check again.</h1><p>We couldn’t verify your membership right now. Please retry before choosing another plan.</p><button className={s.primary} onClick={onRetry}>Check membership again</button><p className={s.note}>Need help? <a href="mailto:support@stockstobuynow.ai">Contact support</a>.</p></section>;
  if(membership.status==='inactive'&&membership.needsPaymentUpdate)return <section className={s.statusPanel}><span className={s.eyebrow}>PAYMENT NEEDS ATTENTION</span><h1>Let’s restore your Pro access.</h1><p>Your existing Stripe membership needs a payment update. Use Manage Stripe billing below to update your card and settle payment, rather than purchasing a second subscription.</p><button className={s.secondary} onClick={onRetry}>I’ve updated payment — check again</button></section>;
- if(membership.status==='inactive')return <><div className={s.freeNotice}><span className={s.eyebrow}>YOUR CURRENT PLAN · FREE</span><p>Explore the market for free, or choose Pro to go deeper.</p><button onClick={onRetry}>Already subscribed? Check again ↻</button></div><MembershipPlans onExplorePro={onExplorePro}/></>;
+ if(membership.status==='inactive')return <MembershipPlans verifiedInactive onboarding={onboarding} onExplorePro={onExplorePro} onExploreFree={onExploreFree}/>;
  return <section className={s.active}>
   <header><span className={s.eyebrow}>YOUR MEMBERSHIP</span><h1>Your perspective.<br/>With {membership.hasUltra?'Ultra':'Pro'}.</h1><p>Your membership is recognized on this account, including subscriptions purchased in the app.</p></header>
   <div className={s.subscriptionGrid}>{membership.subscriptions.map((subscription,index)=><SubscriptionCard key={[subscription.provider,subscription.productId,index].join(':')} subscription={subscription} onRefresh={onRetry}/>)}</div>
@@ -50,23 +50,28 @@ export function MembershipView({membership,loading,error,onRetry,onExplorePro,pa
  </section>;
 }
 export default function MembershipStatusPage(){
- const {user,ready,error:authError}=useSiteAccount();
+ const {user,ready,error:authError,desktop}=useSiteAccount();
  const router=useRouter();
  const [version,setVersion]=useState(0),[checkout,setCheckout]=useState(false),[manageBilling,setManageBilling]=useState(false),[appDownload,setAppDownload]=useState(false),[welcomeUid,setWelcomeUid]=useState<string|null>(null);
- const [state,setState]=useState<{uid:string;loading:boolean;error:boolean;value:MembershipStatus|null;pending?:boolean}>({uid:'',loading:false,error:false,value:null});
  const uid=user?.uid;
+ const onboarding=router.isReady&&router.query.from==='onboarding';
+ const [state,setState]=useState<{uid:string;loading:boolean;error:boolean;value:MembershipStatus|null;pending?:boolean}>(()=>{
+  const value=uid?lastKnownMembershipStatus(uid):null;
+  return {uid:uid||'',loading:false,error:false,value};
+ });
  useEffect(()=>{setManageBilling(false);setCheckout(false);setAppDownload(false);setWelcomeUid(null)},[uid]);
  const refresh=useCallback(()=>setVersion(value=>value+1),[]);
  useEffect(()=>{
   if(!ready||!uid)return;
   let current=true;
-  setState({uid,loading:true,error:false,value:null});
+  const cached=lastKnownMembershipStatus(uid);
+  setState(previous=>({uid,loading:true,error:false,value:previous.uid===uid&&previous.value?previous.value:cached}));
   const sessionId=new URLSearchParams(window.location.search).get('session_id');
-  const request=sessionId?completeWebsiteCheckout(sessionId):fetchMembershipStatus(uid);
+  const request=sessionId?completeWebsiteCheckout(sessionId):refreshMembershipStatus(uid);
   request.then(value=>{if(!current)return;const confirmed='checkoutConfirmed' in value&&value.checkoutConfirmed===true;
    if(sessionId&&confirmed){setWelcomeUid(uid);window.history.replaceState(window.history.state,'','/membership/')}
    setState({uid,loading:false,error:false,value,pending:!!sessionId&&!confirmed&&value.status==='inactive'});})
-   .catch(()=>{if(current)setState({uid,loading:false,error:true,value:null})});
+   .catch(()=>{if(current)setState(previous=>previous.uid===uid&&previous.value?.status==='active'?{...previous,loading:false,error:false}:{uid,loading:false,error:true,value:previous.uid===uid?previous.value:null})});
   return()=>{current=false};
  },[ready,uid,version]);
  useEffect(()=>{
@@ -75,14 +80,20 @@ export default function MembershipStatusPage(){
   return()=>window.removeEventListener('focus',refresh);
  },[uid,refresh]);
  const own=uid&&state.uid===uid;
+ useEffect(()=>{
+  if(!router.isReady||router.query.checkout!=='pro'||!uid||!own||state.loading||state.error||state.pending||!canOfferMembership(state.value))return;
+  setCheckout(true);
+  const query={...router.query};delete query.checkout;
+  void router.replace({pathname:router.pathname,query},undefined,{shallow:true,scroll:false});
+ },[router.isReady,router.query.checkout,uid,own,state.loading,state.error,state.pending,state.value]);
  useEffect(()=>{if(uid&&own&&!state.loading&&!state.error&&!state.pending&&state.value?.status==='active'&&state.value.isActive&&desktopPaymentPending(uid))void router.replace(DESKTOP_ACCESS_PATH)},[uid,own,state,router]);
  return <><Head><title>My membership | Stocks To Buy Now AI</title><meta name="robots" content="noindex,follow"/></Head>
   <div className={s.page}><Header homeHref="/" navBasePath="/" forceDark hideAppDownload/>
    <main className={s.main}><Link className={s.back} href="/">← Back to home</Link>
     {user&&welcomeUid===uid&&own&&state.value?.status==='active'&&!state.loading&&<MembershipAppAccess purchased pro onGetApp={()=>setAppDownload(true)}/>}
-    {!ready?<section className={s.statusPanel} role="status"><h1>Checking your account…</h1></section>:authError?<section className={s.statusPanel}><h1>Let’s reconnect your account.</h1><p>Your account couldn’t be loaded. Sign in again to check your membership.</p><Link className={s.primary} href={accountLoginUrl('/membership/')}>Sign in</Link></section>:!user?<><div className={s.signInNotice}><div><strong>Already a member?</strong><p>Sign in with the same account you use in the app to see your membership.</p></div><Link className={s.secondary} href={accountLoginUrl('/membership/')}>Sign in →</Link></div><MembershipPlans/></>:<MembershipView membership={own?state.value:null} loading={!own||state.loading} error={own&&state.error} onRetry={refresh} onExplorePro={()=>setCheckout(true)} paymentPending={!!(own&&state.pending)} onBackToMembership={()=>{window.history.replaceState(window.history.state,'','/membership/');refresh()}}/>}
+    {!ready?null:authError?<section className={s.statusPanel}><h1>Let’s reconnect your account.</h1><p>Your account couldn’t be loaded. Sign in again to check your membership.</p><Link className={s.primary} href={accountLoginUrl('/membership/')}>Sign in</Link></section>:!user?<><div className={s.signInNotice}><div><strong>Already a member?</strong><p>Sign in with the same account you use in the app to see your membership.</p></div><Link className={s.secondary} href={accountLoginUrl('/membership/')}>Sign in →</Link></div><MembershipPlans/></>:<MembershipView onboarding={onboarding} membership={own?state.value:null} loading={!own||state.loading} error={own&&state.error} onRetry={refresh} onExplorePro={()=>setCheckout(true)} onExploreFree={desktop?undefined:()=>setAppDownload(true)} paymentPending={!!(own&&state.pending)} onBackToMembership={()=>{window.history.replaceState(window.history.state,'','/membership/');refresh()}}/>}
     {user&&own&&state.value?.status==='inactive'&&state.value.hasStripeBilling&&<div className={s.actions}><button className={s.secondary} onClick={()=>setManageBilling(true)}>Manage Stripe billing, cards & invoices</button></div>}
-    {welcomeUid===uid&&user?<div className={s.appDownloadFooter}><p>Ready to use Pro? Sign in to the app with this same account.</p><button className={s.primary} onClick={()=>setAppDownload(true)}><DesktopActionText>{'Get the App ↗'}</DesktopActionText></button></div>:<MembershipAppAccess pro={!!(user&&own&&state.value?.status==='active')} onGetApp={()=>setAppDownload(true)}/>}
+    {ready&&user&&own&&!state.loading&&state.value?.status==='active'&&(welcomeUid===uid?<div className={s.appDownloadFooter}><p>Ready to use Pro? Sign in to the app with this same account.</p><button className={s.primary} onClick={()=>setAppDownload(true)}><DesktopActionText>{'Get the App ↗'}</DesktopActionText></button></div>:<MembershipAppAccess pro onGetApp={()=>setAppDownload(true)}/>)}
    </main>
   </div>{manageBilling&&user&&<StripeMembershipManager onClose={()=>setManageBilling(false)} onRefresh={refresh}/>} {checkout&&<WebsiteCheckout onClose={()=>setCheckout(false)}/>} {appDownload&&<AppDownloadModal placement="membership_app_access" title={own&&state.value?.status==='active'?"Get the app. Your Pro account is ready.":"Get the app for iPhone or Android."} description="Download the app, then sign in with the same account you used on this website. If you have an active Pro membership, it will be recognized." onClose={()=>setAppDownload(false)}/>}
  </>;

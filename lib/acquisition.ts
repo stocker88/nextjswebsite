@@ -4,7 +4,16 @@ const SESSION = 'stocker.acquisition.session.v1';
 const ARRIVAL = 'stocker.acquisition.arrival.v1';
 const APPLE_PROVIDER = process.env.NEXT_PUBLIC_APPLE_PROVIDER_TOKEN || '';
 type Identity = {visitorId:string; visitorToken:string};
-type Campaign = {source?:string; medium?:string; campaign?:string;referrerUid?:string;goal?:string};
+type Campaign = {
+  source?:string;
+  medium?:string;
+  campaign?:string;
+  term?:string;
+  content?:string;
+  adGroup?:string;
+  referrerUid?:string;
+  goal?:string;
+};
 let memory: Identity | null = null;
 let sessionMemory = '';
 let previousKey = '';
@@ -38,8 +47,17 @@ function arrival(campaign:Campaign={}) {
     if(originalReferrer===null)originalReferrer=document.referrer;
   }
   const incoming:Campaign={};
-  for(const key of ['source','medium','campaign','referrerUid'] as const){
-    const value=campaign[key]||(key==='referrerUid'?campaign.goal||params.get('goal'):'')||params.get(key)||params.get(`utm_${key}`);
+  const fields = [
+    ['source','utm_source'],
+    ['medium','utm_medium'],
+    ['campaign','utm_campaign'],
+    ['term','utm_term'],
+    ['content','utm_content'],
+    ['adGroup','utm_adgroup'],
+    ['referrerUid','referrerUid'],
+  ] as const;
+  for(const [key,queryKey] of fields){
+    const value=campaign[key]||(key==='referrerUid'?campaign.goal||params.get('goal'):'')||params.get(queryKey)||params.get(key);
     if(value)incoming[key]=value.slice(0,160);
   }
   // A new campaign must not inherit the previous campaign's medium or invite.
@@ -85,8 +103,8 @@ export function attributionLink(raw:string):string {
     }
     if(!isPlay&&!isApp&&!isInsight)return raw;
     const id=identity();const target=isPlay?new URLSearchParams(url.searchParams.get('referrer')||''):url.searchParams;
-    for(const key of ['source','medium','campaign'] as const){
-      if(savedCampaign[key]&&!target.has(`utm_${key}`))target.set(`utm_${key}`,savedCampaign[key]!);
+    for(const [key,param] of [['source','utm_source'],['medium','utm_medium'],['campaign','utm_campaign'],['term','utm_term'],['content','utm_content'],['adGroup','utm_adgroup']] as const){
+      if(savedCampaign[key]&&!target.has(param))target.set(param,savedCampaign[key]!);
     }
     if(savedCampaign.referrerUid&&!target.has('referrerUid'))target.set('referrerUid',savedCampaign.referrerUid);
     target.set('web_visit',id.visitorId);target.set('web_token',id.visitorToken);

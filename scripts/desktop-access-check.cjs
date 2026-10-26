@@ -38,7 +38,7 @@ account={...account,user:{uid:'buyer'}};link=DesktopAppLink(props);assert.equal(
 account={...account,desktop:false};link=DesktopAppLink(props);assert.equal(link.props.href,props.href);assert.equal(link.props.target,'_blank');assert.equal(link.props.children,props.children);link.props.onClick({});assert.equal(calls,1);
 assert.equal(DesktopActionText({children:'Get App',desktopLabel:'Review research'}).props.children,'Get App');
 const DownloadOptions=load('components/AppDownloadOptions.tsx',{'../lib/analytics':{trackAppStoreClick:()=>{}}}).default;
-const qr=renderToStaticMarkup(React.createElement(DownloadOptions,{placement:'test',showQR:true,threadId:'report_123'}));assert.match(qr,/data-desktop-download-ready="true"/);assert.match(qr,/iPhone · App Store/);assert.match(qr,/Android · Google Play/);assert.match(qr,/selected thread/);assert.equal((qr.match(/<svg/g)||[]).length,3);
+const qr=renderToStaticMarkup(React.createElement(DownloadOptions,{placement:'test',showQR:true,threadId:'report_123'}));assert.match(qr,/data-desktop-download-ready="true"/);assert.match(qr,/data-store-icon="apple"/);assert.match(qr,/data-store-icon="google"/);assert.match(qr,/iPhone · App Store/);assert.match(qr,/Android · Google Play/);assert.match(qr,/selected thread/);assert.equal((qr.match(/<svg/g)||[]).length,5);
 let effects=[],states=[],index=0;const navigations=[];const router={replace:path=>navigations.push(path)};
 const page=load('components/DesktopAccessPage.tsx',{
  react:{...React,useState:initial=>[states[index++]??initial,()=>{}],useEffect:fn=>effects.push(fn)},
@@ -52,10 +52,10 @@ const page=load('components/DesktopAccessPage.tsx',{
 }).default;
 function draw(user,state,ready=true){account={desktop:true,user,ready,error:false};states=[0,null,state];index=0;effects=[];return renderToStaticMarkup(page());}
 let html=draw(null,null);assert.doesNotMatch(html,/<svg|Get the iPhone app/);assert.match(html,/Sign up to continue/);effects[1]();assert.equal(navigations.pop(),'/login/?next=%2Fcontinue%2F');
-for(const [state,ready] of [[null,true],[{uid:'other-account',value:active('stripe'),error:false},true],[null,false]]){html=draw({uid:'buyer'},state,ready);assert.doesNotMatch(html,/<svg|Get the iPhone app/);assert.match(html,/Checking your membership/);}
+for(const [state,ready] of [[null,true],[{uid:'other-account',value:active('stripe'),error:false},true],[null,false]]){html=draw({uid:'buyer'},state,ready);assert.doesNotMatch(html,/<svg|Get the iPhone app|Checking/);}
 html=draw({uid:'buyer'},{uid:'buyer',value:null,error:true});assert.match(html,/couldn’t be verified/);assert.doesNotMatch(html,/<svg|Choose your membership/);
 html=draw({uid:'buyer'},{uid:'buyer',value:inactive,error:false});assert.doesNotMatch(html,/<svg|Get the iPhone app/);effects[2]();assert.equal(navigations.pop(),'/membership/?continue=app');assert.equal(access.desktopPaymentPending('buyer'),true);
-for(const provider of ['stripe','apple','google']){html=draw({uid:'buyer'},{uid:'buyer',value:active(provider),error:false});assert.match(html,/Your membership is ready/);assert.match(html,/same account/);assert.match(html,/Scan with your phone/);assert.equal((html.match(/<svg/g)||[]).length,2);effects[2]();assert.equal(access.desktopPaymentPending('buyer'),false);}
+for(const provider of ['stripe','apple','google']){html=draw({uid:'buyer'},{uid:'buyer',value:active(provider),error:false});assert.match(html,/Your membership is ready/);assert.match(html,/same account/);assert.match(html,/Scan with your phone/);assert.match(html,/data-store-icon="apple"/);assert.match(html,/data-store-icon="google"/);assert.equal((html.match(/<svg/g)||[]).length,4);effects[2]();assert.equal(access.desktopPaymentPending('buyer'),false);}
 console.log('PASS: desktop login/payment/verified QR flow; Apple, Google, Stripe; outages and account changes; mobile destinations; thread and post-payment continuation.');
 
 // Restricted pictures skip the download prompt and enter the same membership flow.

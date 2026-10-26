@@ -12,12 +12,12 @@ export default function AccountMenu(){
  useEffect(()=>{
   let active=true;
   setOpen(false);setError('');setProfile(null);
-  if(user)Promise.all([getSiteAuth(),import('firebase/firestore')]).then(async([auth,db])=>{
-   const doc=await db.getDoc(db.doc(db.getFirestore(auth.app),'users',user.uid));
-   const data=doc.data();
+  const load=()=>{if(user)void Promise.all([getSiteAuth(),import('firebase/firestore')]).then(async([auth,db])=>{
+   const doc=await db.getDoc(db.doc(db.getFirestore(auth.app),'users',user.uid)),data=doc.data();
    if(active&&data)setProfile({uid:user.uid,name:typeof data.userName==='string'?data.userName:'',photo:typeof data.photoUrl==='string'?data.photoUrl:typeof data.authorPhotoUrl==='string'?data.authorPhotoUrl:''});
-  }).catch(()=>{/* Provider identity remains available if the app profile cannot be read. */});
-  return()=>{active=false};
+  }).catch(()=>{/* Provider identity remains available if the app profile cannot be read. */})};
+  load();window.addEventListener('site-profile-updated',load);
+  return()=>{active=false;window.removeEventListener('site-profile-updated',load)};
  },[user?.uid]);
  useEffect(()=>{
   if(!open)return;

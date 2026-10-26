@@ -97,8 +97,6 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
 
 const Home = ({ news, topWidgetRef, bodyWidgetRef }: Props) => {
 
-
-
 {/*
   const [showModal, setShowModal] = useState(false);
 
@@ -138,7 +136,7 @@ import SignUpModal from '../SignUpModal';
       <DesktopProductIntro />
       <HeroProductReveal />
       <MembershipPlans />
-      <style jsx global>{`@media(min-width:1024px),(hover:hover) and (pointer:fine){.mobile-download-hero,.download-section{display:none!important}}`}</style>
+      <style jsx global>{`html[data-site-account="signed-in"] .mobile-download-hero{display:none!important}@media(min-width:1024px),(hover:hover) and (pointer:fine){.mobile-download-hero,.download-section{display:none!important}}`}</style>
 
         <div style={{ background: "linear-gradient(hsl(250, 100%, 5%), hsl(250, 100%, 5%), hsl(250, 100%, 5%))" }}>
 

@@ -29,6 +29,14 @@ html {
     visibility: hidden;
     pointer-events: none;
 }
+/* Returning members have a synchronous, cached account hint on <html>.
+   Reveal their homepage navigation on the first paint while signed-out and
+   unknown visitors retain the clean, navigation-free acquisition hero. */
+html[data-site-account="signed-in"] .site-header:not(.is-scrolled) > nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 @media (prefers-reduced-motion: reduce) {
     .site-header > nav { transition: none; }
 }
@@ -98,7 +106,12 @@ html {
 }
 .site-header.is-scrolled { border-bottom-color: transparent; }
 .site-header.is-scrolled::before {
-    background: linear-gradient(180deg, var(--header-top-color, #00a3f5), var(--header-bottom-color, #0095eb));
+    background-color: var(--header-surface-color, var(--header-edge-color, #00a3f5));
+    -webkit-backdrop-filter: blur(20px) saturate(135%);
+    backdrop-filter: blur(20px) saturate(135%);
+}
+html[data-site-account="signed-in"] .site-header:not(.is-scrolled)::before {
+    background-color: var(--header-surface-color, var(--header-edge-color, #00a3f5));
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     backdrop-filter: blur(20px) saturate(135%);
 }

@@ -7,3 +7,7 @@
 /* Separate the disclosure section from the preceding homepage story. */
 .homeSection{margin-top:110px}
 @media(max-width:700px){.homeSection{margin-top:76px}}
+
+/* Membership cue for the gated Signals workspace. */
+.main .viewTabs button{position:relative;display:inline-flex;align-items:center;gap:7px}
+.proBadge{position:absolute;right:2px;top:-7px;display:inline-flex;align-items:center;justify-content:center;min-width:30px;padding:3px 6px;border:1px solid #8a6caf;border-radius:999px;background:#34254c;color:#d9bdff;font-size:8px;font-weight:800;line-height:1;letter-spacing:.1em;box-shadow:0 4px 12px #0005}

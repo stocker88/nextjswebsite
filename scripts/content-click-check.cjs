@@ -18,11 +18,12 @@ async function run({desktop=false,user=null,ready=true,persistedUser=null}={}){
    const page={opener:{},location:{replace:value=>opened.push(value)}};return page;
  }};
  const state={user,ready,error:false};
- const react={...React,useEffect:fn=>effects.push(fn),useState:initial=>[initial&&typeof initial==='object'&&'ready' in initial?state:initial,()=>{}]};
+ const react={...React,useCallback:fn=>fn,useEffect:fn=>effects.push(fn),useState:initial=>[initial&&typeof initial==='object'&&'ready' in initial?state:initial,()=>{}]};
  const {SiteAccountProvider}=load('components/SiteAccount.tsx',{
   react,'react/jsx-runtime':require('react/jsx-runtime'),'next/router':{useRouter:()=>({push:value=>pushed.push(value)})},
   '../lib/content-access':content,'../lib/site-auth':{...routes,getSiteAuth:async()=>({authStateReady:async()=>{},currentUser:persistedUser})},
-  '../lib/desktop-access':{},'../lib/device-access':{isDesktopDevice:()=>desktop,isAppDestination:()=>false},
+  '../lib/site-account-hint':{},'../lib/membership-status':{preloadMembershipStatus:()=>Promise.resolve(null)},'./ProfileOnboarding':()=>null,
+  '../lib/desktop-access':load('lib/desktop-access.ts'),'../lib/device-access':{isDesktopDevice:()=>desktop,isAppDestination:()=>false},
   './AccountDevices':{},'./DeviceCapacityNotice':{},'../lib/account-devices':{},'../styles/AccountLogin.module.css':{}
  },{Element,HTMLAnchorElement:Anchor,window,navigator:{},location:{origin,href:origin+'/stock-market-heatmap/'}});
  SiteAccountProvider({children:null});effects.at(-1)();
@@ -41,6 +42,7 @@ async function run({desktop=false,user=null,ready=true,persistedUser=null}={}){
   }
   const membership=await run({desktop});await membership.click('/membership/',{dataset:{accountRequired:'true'}});assert.deepEqual(membership.pushed,[routes.accountLoginUrl('/membership/')]);
   const signed=await run({desktop,user:{uid:'reader'}});assert.equal(await signed.click('/news/example/'),false);assert.deepEqual(signed.pushed,[]);
+  const checkout=await run({desktop,user:{uid:'reader'}});assert.equal(await checkout.click('/membership/',{dataset:{localAccountAction:'true'}}),false);assert.deepEqual(checkout.pushed,[]);
  }
  const early=await run({ready:false,persistedUser:{uid:'reader'}});await early.click('/news/example/');assert.deepEqual(early.pushed,['/news/example/']);
  const blank=await run();await blank.click('/news/example/',{target:'_blank'});assert.deepEqual(blank.opened,[routes.accountLoginUrl('/news/example/')]);assert.deepEqual(blank.pushed,[]);
