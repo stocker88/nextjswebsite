@@ -1,5 +1,3 @@
-import {useSiteAccount} from './SiteAccount';
-import {accountLoginUrl} from '../lib/site-auth';
 import {useEffect, useRef, useState} from 'react';
 import {siteNavigation} from '../lib/site-navigation';
 import styles from '../styles/SiteMenu.module.css';
@@ -12,7 +10,6 @@ const groups = [
   {name:'Company', intro:'Meet Stocks To Buy Now AI.', description:'The purpose, principles and people behind the product.', links:[{label:'About us',href:'/company/',detail:'Why we are building Stocks To Buy Now AI'},{label:'Culture',href:'/company/culture/',detail:'The principles we build by'},{label:'Careers',href:'/company/careers/',detail:'Explore future opportunities'},find('#about-aness'),{label:'Contact us',href:'mailto:support@stockstobuynow.ai',detail:'Get in touch with the team'}]},
 ];
 export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean;onClose:()=>void;navBasePath?:string}) {
-  const {user}=useSiteAccount();
   const [active,setActive]=useState<string|null>(null);
   const root=useRef<HTMLDivElement>(null);
   useEffect(()=>{if(!isOpen)setActive(null);},[isOpen]);
@@ -51,7 +48,7 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
       </button>
       <div id={`menu-${group.name.toLowerCase()}`} hidden={active!==group.name} className={styles.panel}>
         <div className={styles.intro}><span>EXPLORE / {group.name.toUpperCase()}</span><h2>{group.intro}</h2><p>{group.description}</p><span className={styles.arrow} aria-hidden="true">↗</span></div>
-        <div className={styles.links}>{group.links.map(item=><a key={item.href} href={item.href==='/results/'&&!user?accountLoginUrl('/results/'):item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href} onClick={close}><span>{item.label}<span aria-hidden="true">↗</span></span><small>{item.detail}</small></a>)}</div>
+        <div className={styles.links}>{group.links.map(item=><a key={item.href} href={item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href} onClick={close}><span>{item.label}<span aria-hidden="true">↗</span></span><small>{item.detail}</small></a>)}</div>
       </div>
     </div>)}
     <a className={styles.mobileContact} href="mailto:support@stockstobuynow.ai">Contact the team ↗</a>

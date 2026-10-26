@@ -12,11 +12,14 @@ export function getSiteAuth():Promise<Auth>{
 // Only continue to destinations owned by this flow; never redirect to external input.
 export function accountDestination(value:unknown):string{
  if(typeof value!=='string')return '/stock-market-heatmap/';
+ // Recent headline routes have one bounded ID; preserve it after sign-in.
+ const story=value.match(/^\/market-news\/story\/?\?id=([A-Za-z0-9_.%-]{1,240})$/);
+ if(story&&!story[1].includes('..'))return '/market-news/story/?id='+story[1];
  if(['/ultra','/continue','/results','/account','/membership','/market-news','/stock-market-heatmap'].includes(value))value+='/';
- if(/^\/(?:results|stock-market-news|market-news|posts|research|catalysts|stock-movers|news\/briefings|news)\/[a-z0-9][a-z0-9._-]*$/i.test(value)&&!value.includes('..'))value+='/';
+ if(/^\/(?:results|stock-market-news|market-news|posts|research|catalysts|stock-movers|insider-news|news\/briefings|news)\/[a-z0-9][a-z0-9._-]*$/i.test(value)&&!value.includes('..'))value+='/';
  if(value==='/ultra/'||value==='/continue/'||value==='/results/'||value==='/account/'||value==='/membership/'||value==='/market-news/'||value==='/stock-market-heatmap/')return value;
  // Preserve article/result destinations without allowing arbitrary redirect URLs.
- if(/^\/(?:results|stock-market-news|market-news|posts|research|catalysts|stock-movers|news\/briefings|news)\/[a-z0-9][a-z0-9._-]*\/$/i.test(value)&&!value.includes('..'))return value;
+ if(/^\/(?:results|stock-market-news|market-news|posts|research|catalysts|stock-movers|insider-news|news\/briefings|news)\/[a-z0-9][a-z0-9._-]*\/$/i.test(value)&&!value.includes('..'))return value;
  return '/stock-market-heatmap/';
 }
 export function accountLoginUrl(destination:string):string{

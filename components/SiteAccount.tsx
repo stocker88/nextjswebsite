@@ -1,5 +1,5 @@
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
-import {signInContentKind} from '../lib/content-access';
+import {contentClickDestination} from '../lib/content-access';
 import AccountDevices from './AccountDevices';
 import DeviceCapacityNotice from './DeviceCapacityNotice';
 import {accountDevicesEnabled,registerWebsiteDevice,checkWebsiteDevice,signOutWebsiteDevice,type DeviceNotice} from '../lib/account-devices';
@@ -59,6 +59,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
  },[state.user,deviceState]);
  useEffect(()=>{
   const gate=(event:MouseEvent)=>{
+   if(event.type==='auxclick'&&event.button!==1)return;
    const link=event.target instanceof Element?event.target.closest('a[href]'):null;
    if(!(link instanceof HTMLAnchorElement))return;
    if(isDesktopDevice(navigator)&&isAppDestination(link.href,location.origin)){
@@ -67,19 +68,31 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
     void router.push(state.user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));return;
    }
    if(state.user)return;
-   const target=new URL(link.href,location.origin);
-   const owned=target.origin===location.origin&&(!!signInContentKind(target.pathname)||target.pathname.startsWith('/results/'));
-   if(!owned)return;
+   if(link.hasAttribute('download'))return;
+   const destination=contentClickDestination(link.href,location.origin,location.href,link.dataset.accountRequired==='true');
+   if(!destination)return;
    event.preventDefault();event.stopImmediatePropagation();
-   void router.push(accountLoginUrl(owned?target.pathname:location.pathname));
+   // Wait for persisted sign-in before deciding; an early tap must not send an
+   // already signed-in reader back to login. Only clicks enter this path.
+   const resolveUser=state.ready?Promise.resolve(state.user):getSiteAuth().then(async auth=>{
+    await auth.authStateReady();return auth.currentUser;
+   }).catch(()=>null);
+   const separateTab=event.button===1||event.metaKey||event.ctrlKey||link.target==='_blank';
+   const opened=separateTab?window.open('about:blank','_blank'):null;
+   if(opened)opened.opener=null;
+   void resolveUser.then(user=>{
+    const next=user?destination:accountLoginUrl(destination);
+    if(opened)opened.location.replace(next);else void router.push(next);
+   });
   };
   window.addEventListener('click',gate,true);window.addEventListener('auxclick',gate,true);
   return()=>{window.removeEventListener('click',gate,true);window.removeEventListener('auxclick',gate,true)};
- },[state.user,router]);
+ },[state.user,state.ready,router]);
  return <AccountContext.Provider value={{...state,desktop}}>{state.user&&(deviceState==='limit'||deviceState==='error')?<main className={deviceStyle.page}><section className={deviceStyle.card}><span className={deviceStyle.eyebrow}>ACCOUNT SECURITY</span><h1>{deviceState==='limit'?'Manage your devices':'Unable to verify this device'}</h1>{deviceState==='limit'?<><p>Your account has reached its device allowance. Sign out one below or add more slots to continue here.</p><AccountDevices/></>:deviceState==='error'?<p>Please check your connection and try again.</p>:null}<div className={deviceStyle.providers}><button onClick={()=>setRetry(value=>value+1)}>Try this device again</button>{supportSkip&&<button onClick={()=>{setSupportSkip(false);void registerWebsiteDevice(true).then(()=>setRetry(value=>value+1)).catch(()=>setDeviceState('error'))}}>Add this device · Support Skip</button>}<button onClick={()=>void signOutWebsiteDevice()}>Sign out</button></div></section></main>:children}{capacityNotice&&(!state.user||capacityNotice.uid===state.user.uid)&&<DeviceCapacityNotice notice={capacityNotice} onDismiss={()=>setCapacityNotice(null)}/>}</AccountContext.Provider>;
 }
 export const useSiteAccount=()=>useContext(AccountContext);
 export function AccountLink({destination,children,...props}:Omit<AnchorHTMLAttributes<HTMLAnchorElement>,'href'>&{destination:string;children:ReactNode}){
- const {user}=useSiteAccount();
- return <a {...props} href={user?destination:accountLoginUrl(destination)}>{children}</a>;
+ // Real hrefs stay crawlable and can be copied/opened directly. The provider
+ // prompts for login on actual clicks, on desktop and mobile alike.
+ return <a {...props} data-account-required="true" href={destination}>{children}</a>;
 }

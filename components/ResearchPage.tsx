@@ -1,5 +1,3 @@
-import SignInGate from './ContentAccess';
-import {signInContentKind} from '../lib/content-access';
 import ShareControl from './ShareControl';
 import Head from 'next/head';
 import Header from './layout/Header';
@@ -7,7 +5,6 @@ import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
 export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg", socialImageAlt = "Founder’s personal trade chart", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
-  const signInKind=signInContentKind(path);
   const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(path);
   return <>
     <Head>
@@ -35,7 +32,7 @@ export default function ResearchPage({title, path, children, description = title
     <main className={stockDirectory ? "stock-directory" : undefined}>
       {!noindex && <ShareControl title={title} path={path}/>}
       {stockDirectory ? children : <ResearchSections path={path} />}
-      {!stockDirectory && (signInKind?<SignInGate destination={path} kind={signInKind}>{children}</SignInGate>:children)}
+      {!stockDirectory && children}
       <nav className="research-resources" aria-label="Research resources">
         {[
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},

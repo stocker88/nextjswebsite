@@ -7,7 +7,8 @@ assert.equal(routes.accountLoginUrl('/membership/'),'/login/?next=%2Fmembership%
 let account={user:null,ready:true,error:false};
 const react=require('react');
 const {AccountLink}=load('components/SiteAccount.tsx',name=>name==='react'?{...react,useContext:()=>account}:name==='../lib/site-auth'?routes:name==='../lib/desktop-access'?load('lib/desktop-access.ts'):name==='../lib/content-access'?load('lib/content-access.ts'):name==='../lib/device-access'?load('lib/device-access.ts'):name==='next/router'?{useRouter:()=>({})}:name.endsWith('.css')?{}:name==='./AccountDevices'||name==='./DeviceCapacityNotice'?()=>null:name==='../lib/account-devices'?{}:require(name));
-assert.equal(AccountLink({destination:'/membership/',children:'Pro'}).props.href,'/login/?next=%2Fmembership%2F');
+assert.equal(AccountLink({destination:'/membership/',children:'Pro'}).props.href,'/membership/');
+assert.equal(AccountLink({destination:'/membership/',children:'Pro'}).props['data-account-required'],'true');
 account={user:{uid:'test-account'},ready:true,error:false};
 assert.equal(AccountLink({destination:'/membership/',children:'Pro'}).props.href,'/membership/');
 assert.equal(AccountLink({destination:'/stock-market-heatmap/',children:'Market'}).props.href,'/stock-market-heatmap/');
@@ -16,7 +17,7 @@ console.log('Account links: signed-out gating, signed-in destinations and redire
 for(const path of ['/results/options-results-slb-2026-10-23/','/stock-market-news/example--post-id/','/catalysts/earnings-preview/'])assert.equal(routes.accountDestination(path),path);
 for(const path of ['/results/../','/results/%2e%2e/','/results/example/?next=https://evil.test','/results/example/#fragment'])assert.equal(routes.accountDestination(path),'/stock-market-heatmap/');
 account={user:null,ready:true,error:false};
-assert.equal(AccountLink({destination:'/results/options-results-slb-2026-10-23/',children:'Read'}).props.href,'/login/?next=%2Fresults%2Foptions-results-slb-2026-10-23%2F');
+assert.equal(AccountLink({destination:'/results/options-results-slb-2026-10-23/',children:'Read'}).props.href,'/results/options-results-slb-2026-10-23/');
 
 const device=load('lib/device-access.ts');
 for(const nav of [{userAgent:'Mozilla Macintosh Chrome',platform:'MacIntel',maxTouchPoints:0},{userAgent:'Mozilla Windows NT 10.0',platform:'Win32',maxTouchPoints:10}])assert.equal(device.isDesktopDevice(nav),true);

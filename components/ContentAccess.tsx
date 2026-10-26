@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import type {ReactNode} from 'react';
 import {useSiteAccount} from './SiteAccount';
 import {accountLoginUrl} from '../lib/site-auth';
 import s from '../styles/ContentAccess.module.css';
@@ -15,8 +14,4 @@ export function ContentAccessPanel({destination,kind='article',checking=false,er
    {!checking&&<div className={s.actions}>{error?<button onClick={onRetry}>Try again</button>:ultra?<><Link href="/ultra/">Join Ultra</Link><button className={s.secondary} onClick={onRetry}>Refresh access</button></>:<Link href={accountLoginUrl(destination)}>Sign in or create an account <span aria-hidden="true">→</span></Link>}</div>}
   </div>
  </section>;
-}
-export default function SignInGate({destination,kind='article',children}:{destination:string;kind?:'article'|'results';children:ReactNode}){
- const {user,ready,error}=useSiteAccount();
- return ready&&user?<>{children}</>:<ContentAccessPanel destination={destination} kind={kind} checking={!ready} error={error} onRetry={()=>window.location.reload()}/>;
 }
