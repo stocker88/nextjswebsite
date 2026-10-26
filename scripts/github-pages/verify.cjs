@@ -51,7 +51,9 @@ const optionReports=require(path.resolve(out,'../.github-pages-build/data/option
 for(const report of optionReports){
  const route='results/'+report.id.toLowerCase().replace(/_/g,'-');
  const canonical='https://www.stockstobuynow.ai/'+route+'/';
- assert(!html('results').includes('data-app-post-id="'+report.id+'"'),'Anonymous Results archive must be gated');
+ assert(html('results').includes('data-app-post-id="'+report.id+'"'),'Direct Results archive must render public previews');
+ assert(html('results').includes('href="/'+route+'/"'),'Result preview links must remain crawlable');
+ assert(html('results').includes('data-account-required="true"'),'Result clicks must use the account prompt');
  assert(html(route).includes(canonical),'Missing result canonical: '+report.id);
  assert(sitemap.includes(canonical),'Missing result sitemap entry: '+report.id);
  assert(!html(route).includes('What happened'),'Anonymous result HTML must not contain the protected section: '+report.id);
@@ -66,7 +68,9 @@ for(const recap of closingRecaps){
  const route='news/briefings/'+recap.slug,canonical='https://www.stockstobuynow.ai/'+route+'/';
  assert(html('news').includes('href="/'+route+'/"'),'Missing closing recap in Movers');
  assert(html(route).includes(canonical),'Missing closing recap canonical');
- assert(html(route).includes('Checking your access'),'Anonymous recap must wait for sign-in');
+ assert(!html(route).includes('Checking your access'),'Direct recap URLs must render without a login gate');
+ assert(html(route).includes('<article'),'Direct recap must render its article body');
+ assert(html(route).includes(recap.sections[0].heading),'Recap section headings must be server-rendered');
  const recapData=JSON.parse(html(route).match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps.article;
  assert.equal(recapData.kind,'post_close','Missing closing session classification');
  assert.equal(recapData.postId,recap.postId,'Closing recap identity changed');
