@@ -82,6 +82,9 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
    if(event.type==='auxclick'&&event.button!==1)return;
    const link=event.target instanceof Element?event.target.closest('a[href]'):null;
    if(!(link instanceof HTMLAnchorElement))return;
+   // Curated educational previews may opt into a direct public reading path.
+   // This does not change the normal article/login behavior anywhere else.
+   if(link.dataset.publicContent==='true')return;
    // Some crawlable links also trigger an in-page action (for example opening
    // the Stripe plan dialog). Let React handle those instead of preloading and
    // navigating back to the same route.

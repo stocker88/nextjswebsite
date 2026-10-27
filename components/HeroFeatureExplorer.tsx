@@ -48,8 +48,8 @@ export default function HeroFeatureExplorer(){
  return <div className={styles.explorer}>
   <div data-depth-card className={styles.results}>
    <div><span className={styles.eyebrow}>SELECTED RESULTS WE’VE SHARED</span><h3>Options moves worth revisiting.</h3><p>Explore the ideas, then build your own perspective.</p></div>
-   <div className={styles.resultValue}><strong>30×–100×</strong><span>Overnight options examples</span></div>
-   <a href={researchUrl(overnightOptionsResult.id, overnightOptionsResult.title)} className={styles.resultLink}>Revisit the shared SNOW 30× example <span aria-hidden="true">↗</span></a>
+   <div className={styles.resultValue}><strong>30×–100×</strong><span>Overnight options examples</span>{overnightOptionsResult.images?.[0]?.url&&<a data-public-content="true" className={styles.resultPreview} href={researchUrl(overnightOptionsResult.id,overnightOptionsResult.title)} aria-label="Expand the shared SNOW result and read the complete story"><img src={overnightOptionsResult.images[0].url} alt="Preview of the shared SNOW options result" loading="lazy"/><span><b>+2,798.06%</b><em>Expand result ↗</em></span></a>}</div>
+   <a data-public-content="true" href={researchUrl(overnightOptionsResult.id,overnightOptionsResult.title)} className={styles.resultLink}>Revisit the shared SNOW 30× example <span aria-hidden="true">↗</span></a>
    <small>Selected historical results, not typical returns or a guarantee of future performance. Options can lose their entire premium.</small>
   </div>
   <div className={styles.explorerHeading}><div><span className={styles.eyebrow}>THE COMPLETE RESEARCH TOOLKIT</span><h3>Go from the headline to the whole picture.</h3></div><span>{features.length} ways to explore</span></div>

@@ -3,6 +3,7 @@ import {overnightOptionsResult, resolveResearchArticle} from '../../lib/featured
 import {isEarningsFirst} from '../../lib/research';
 import AttachedThreads from '../../components/AttachedThreads';
 import ResearchImages from "../../components/ResearchImages";
+import SnowSignalStory from "../../components/SnowSignalStory";
 import ResearchCompanyLogo from '../../components/ResearchCompanyLogo';
 import Head from "next/head";
 import Link from "next/link";
@@ -154,7 +155,9 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
           </DesktopAppLink>
         </div>
         )}
-        <ResearchImages appOnly images={item.images} />
+        {item.id === overnightOptionsResult.id
+          ? <SnowSignalStory />
+          : <ResearchImages appOnly images={item.images} />}
         <AttachedThreads item={item} />
         {item.id === overnightOptionsResult.id && (
           <section className="research-card" aria-labelledby="more-options-results">
