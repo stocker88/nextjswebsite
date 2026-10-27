@@ -4,7 +4,7 @@ const crypto = require('node:crypto');
 
 const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:stockstobuynow.ai';
 const sitemapUrl = process.env.GSC_SITEMAP_URL || 'https://www.stockstobuynow.ai/news-sitemap.xml';
-const credentialsJson = process.env.GSC_SERVICE_ACCOUNT_JSON;
+const credentialsJson = process.env.GSC_SERVICE_ACCOUNT_JSON || process.env.GSC_OAUTH_JSON;
 
 function base64Url(value) {
   return Buffer.from(value).toString('base64url');
@@ -12,7 +12,7 @@ function base64Url(value) {
 
 async function main() {
   if (!credentialsJson) {
-    console.log('Search Console submission skipped: GSC_SERVICE_ACCOUNT_JSON is not configured.');
+    console.log('Search Console submission skipped: no Google credential is configured.');
     return;
   }
 
@@ -33,30 +33,40 @@ async function main() {
     throw new Error('GSC_SERVICE_ACCOUNT_JSON is not valid JSON.');
   }
 
-  if (!credentials.client_email || !credentials.private_key) {
-    throw new Error('The Search Console service-account JSON is missing client_email or private_key.');
-  }
-
-  const now = Math.floor(Date.now() / 1000);
   const tokenUri = credentials.token_uri || 'https://oauth2.googleapis.com/token';
-  const header = base64Url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }));
-  const claim = base64Url(JSON.stringify({
-    iss: credentials.client_email,
-    scope: 'https://www.googleapis.com/auth/webmasters',
-    aud: tokenUri,
-    iat: now,
-    exp: now + 3600,
-  }));
-  const unsignedJwt = `${header}.${claim}`;
-  const signature = crypto.sign('RSA-SHA256', Buffer.from(unsignedJwt), credentials.private_key).toString('base64url');
+  let tokenRequest;
+
+  if (credentials.client_email && credentials.private_key) {
+    const now = Math.floor(Date.now() / 1000);
+    const header = base64Url(JSON.stringify({ alg: 'RS256', typ: 'JWT' }));
+    const claim = base64Url(JSON.stringify({
+      iss: credentials.client_email,
+      scope: 'https://www.googleapis.com/auth/webmasters',
+      aud: tokenUri,
+      iat: now,
+      exp: now + 3600,
+    }));
+    const unsignedJwt = `${header}.${claim}`;
+    const signature = crypto.sign('RSA-SHA256', Buffer.from(unsignedJwt), credentials.private_key).toString('base64url');
+    tokenRequest = {
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: `${unsignedJwt}.${signature}`,
+    };
+  } else if (credentials.client_id && credentials.client_secret && credentials.refresh_token) {
+    tokenRequest = {
+      grant_type: 'refresh_token',
+      client_id: credentials.client_id,
+      client_secret: credentials.client_secret,
+      refresh_token: credentials.refresh_token,
+    };
+  } else {
+    throw new Error('The Google credential must be a service-account key or authorized-user OAuth JSON.');
+  }
 
   const tokenResponse = await fetch(tokenUri, {
     method: 'POST',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: `${unsignedJwt}.${signature}`,
-    }),
+    body: new URLSearchParams(tokenRequest),
   });
   const tokenPayload = await tokenResponse.json();
   if (!tokenResponse.ok || !tokenPayload.access_token) {
@@ -71,9 +81,10 @@ async function main() {
 
   if (!submitResponse.ok) {
     const details = await submitResponse.text();
+    const principal = credentials.client_email || 'the authorized Google account';
     throw new Error(
       `Search Console rejected the sitemap (${submitResponse.status}). ` +
-      `Add ${credentials.client_email} as a user of ${siteUrl}. ${details}`,
+      `Confirm ${principal} can access ${siteUrl}. ${details}`,
     );
   }
 
