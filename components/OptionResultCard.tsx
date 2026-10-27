@@ -2,7 +2,8 @@ import ShareControl from './ShareControl';
 import {AccountLink,useSiteAccount} from './SiteAccount';
 import {useEffect,useState} from 'react';
 import {ContentAccessPanel} from './ContentAccess';
-import {fetchResultMemberContent,type ResultMemberContent} from '../lib/member-content';
+import {clearResultMemberContent,fetchResultMemberContent,lastKnownResultMemberContent,type ResultMemberContent} from '../lib/member-content';
+import {lastKnownMembershipStatus} from '../lib/membership-status';
 import OptionResultPayoff from './OptionResultPayoff';
 import ResearchImages from './ResearchImages';
 import {optionResultUrl,type OptionResultPreviewData} from '../lib/option-results';
@@ -20,24 +21,41 @@ export default function OptionResultCard({result,compact=false}:{result:OptionRe
  </article>;
 }
 
+type UltraResultState={uid:string;id:string;data?:ResultMemberContent;denied?:boolean;error?:boolean};
+function cachedUltraResultState(uid:string,id:string):UltraResultState|null{
+ const membership=lastKnownMembershipStatus(uid);
+ const knownNonUltra=membership?.status==='inactive'||membership?.status==='active'&&membership.isActive&&membership.hasUltra===false;
+ if(knownNonUltra)return {uid,id,denied:true};
+ const data=lastKnownResultMemberContent(uid,id);
+ if(data)return {uid,id,data};
+ return null;
+}
+
 function UltraResultBody({preview}:{preview:OptionResultPreviewData}){
  const {user,ready}=useSiteAccount();
  const [attempt,setAttempt]=useState(0);
- const [state,setState]=useState<{uid:string;id:string;data?:ResultMemberContent;denied?:boolean;error?:boolean}|null>(null);
+ const [state,setState]=useState<UltraResultState|null>(()=>user?cachedUltraResultState(user.uid,preview.id):null);
  useEffect(()=>{
-  if(!user)return;
+  if(!user){setState(null);return}
   let active=true,timer:ReturnType<typeof setTimeout>|undefined;
-  const uid=user.uid;
-  setState(null);
+  const uid=user.uid,cached=cachedUltraResultState(uid,preview.id);
+  setState(previous=>previous?.uid===uid&&previous.id===preview.id&&previous.data?previous:cached);
   fetchResultMemberContent(uid,preview.id).then(data=>{
    if(!active)return;
-   if(data.accessUntil&&Date.parse(data.accessUntil)<=Date.now()){setState({uid,id:preview.id,denied:true});return;}
+   if(data.accessUntil&&Date.parse(data.accessUntil)<=Date.now()){clearResultMemberContent(uid,preview.id);setState({uid,id:preview.id,denied:true});return;}
    setState({uid,id:preview.id,data});
    if(data.accessUntil){const delay=Date.parse(data.accessUntil)-Date.now();if(delay>0)timer=setTimeout(()=>{if(active){setState(null);setAttempt(n=>n+1)}},Math.min(delay,2147483647));}
-  }).catch(error=>{if(active)setState({uid,id:preview.id,denied:error?.code==='functions/permission-denied',error:error?.code!=='functions/permission-denied'})});
+  }).catch(error=>{if(active){
+   if(error?.code==='functions/permission-denied'){clearResultMemberContent(uid,preview.id);setState({uid,id:preview.id,denied:true});return}
+   setState(previous=>previous?.uid===uid&&previous.id===preview.id&&previous.data?previous:{uid,id:preview.id,error:true});
+  }});
   return()=>{active=false;if(timer)clearTimeout(timer)};
  },[user?.uid,preview.id,attempt]);
- const current=user&&state?.uid===user.uid&&state.id===preview.id?state:null;
+ const ownState=user&&state?.uid===user.uid&&state.id===preview.id?state:null;
+ // Auth can resolve between renders. Read the account-bound cache directly so
+ // the result or upgrade card is present on that very first signed-in render,
+ // before the effect performs its silent revalidation.
+ const current=ownState||(user?cachedUltraResultState(user.uid,preview.id):null);
  const path=optionResultUrl(preview),retry=()=>setAttempt(n=>n+1);
  if(!ready)return <ContentAccessPanel destination={path} kind="ultra" checking/>;
  if(!user)return <ContentAccessPanel destination={path} kind="ultra"/>;
