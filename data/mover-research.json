@@ -126,6 +126,660 @@
       "industry": "DISTRIBUTED POWER / SOLID OXIDE FUEL CELLS",
       "business": "Onsite electricity systems, installation, maintenance and electricity sales.",
       "rsi14": 38.47693769164641
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fbe%2Fd5f80174884a7d6e3b8f21ba2a2bfdced7fc2e1af43836577c76dd02813e18fe.jpg?alt=media&token=d042454b-cc8a-49cb-844f-949658f47871",
+      "width": 1024,
+      "height": 683,
+      "alt": "A row of Bloom Energy fuel-cell power systems.",
+      "caption": "Archive photo of Bloom Energy Servers, February 2010. Photo: Bloom Energy, CC BY 2.0.",
+      "credit": "Bloom Energy",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bloom_Energy_Servers.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2010-02-24 09:25",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261026_CDNS",
+    "postId": "earnings_review_20261026_CDNS",
+    "slug": "cadence-cdns-q3-2026-earnings-review-2026-10-26",
+    "title": "Cadence (CDNS) Q3 2026 Earnings Review",
+    "symbol": "CDNS",
+    "companyName": "Cadence",
+    "sessionDate": "2026-10-26",
+    "marketSession": "afterhours",
+    "earningsCheck": {
+      "status": "released",
+      "period": "Q3 2026",
+      "releasedAt": "2026-10-26T16:02:00-04:00",
+      "issuerVerified": true,
+      "source": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr-ir/2026/cadence-reports-third-quarter-2026-financial-results.html"
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-26T22:16:46.102933+00:00",
+    "updatedAt": "2026-10-26T22:16:46.102933+00:00",
+    "summary": "Cadence raised its 2026 outlook as AI-related chip design demand lifted sales, giving investors stronger revenue visibility despite pressure on profit margins.",
+    "catalyst": "Cadence raised its full-year revenue and adjusted earnings forecasts as demand for chip-design tools grew, with recurring revenue up 18% and contracted future business reaching $8.2 billion.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Cadence raised its 2026 outlook as AI-related chip design demand lifted sales, giving investors stronger revenue visibility despite pressure on profit margins.",
+      "Q3 revenue increased 22% to $1.63 billion, beating the $1.61 billion consensus reported by Newsquawk.",
+      "Adjusted profit per share reached $2.11 versus the $2.05 estimate, while accounting profit per share stayed flat at $1.05.",
+      "Recurring revenue grew 18%, and contracted future business reached $8.2 billion, supporting visibility into coming sales.",
+      "The company raised its 2026 revenue forecast to $6.39–$6.42 billion and adjusted profit forecast to $8.37–$8.43 per share.",
+      "Adjusted operating margin fell to 44.1% from 47.6%, showing that stronger sales did not translate into equally strong profit growth.",
+      "Shares traded 2.4% above the October 26 close after the report, with $329–$336 the next chart area to watch for selling pressure.",
+      "At roughly 38 times the new adjusted profit forecast at the regular close, investors should watch whether margin recovery and contract delivery justify the valuation."
+    ],
+    "setup": "The stock rebounded above its 50-day average but remains below its 20-day average; watch $329–336 resistance and $305–310 support, alongside operating-margin pressure and export restrictions.",
+    "technicalDate": "2026-10-26",
+    "images": [
+      {
+        "height": 1200,
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CDNS%2F1%2Fba98060113a8d3f9407eac018a172a2b1a3ae4863f096aacdc2beede8522b803-a094b255-212e-42ac-bd4e-65675fe80fa4%2FFinancials.jpg?alt=media&token=a094b255-212e-42ac-bd4e-65675fe80fa4",
+        "alt": "Cadence Financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "height": 1200,
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CDNS%2F2%2F98d4b7a621c54d2137425512055e82ca4dee695e5b04beb4c0b058f413d12270-89972dc2-9663-468d-9e56-f7141a9d32de%2FTechnicals.jpg?alt=media&token=89972dc2-9663-468d-9e56-f7141a9d32de",
+        "alt": "Cadence Technicals research infographic",
+        "title": "Technicals"
+      },
+      {
+        "height": 1200,
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CDNS%2F3%2Fd636260e6d6618a460826db4be5d4fd382bc0de0b768070c45bb401c8984aa4d-82d3f3f8-9de9-4f8a-9bff-e2af3c5fde2b%2FEarnings-Peers.jpg?alt=media&token=82d3f3f8-9de9-4f8a-9bff-e2af3c5fde2b",
+        "alt": "Cadence Earnings & Peers research infographic",
+        "title": "Earnings & Peers"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr-ir/2026/cadence-reports-third-quarter-2026-financial-results.html",
+        "title": "CDNS Q3 2026 guidance"
+      },
+      {
+        "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr-ir/2026/cadence-reports-second-quarter-2026-financial-results.html",
+        "title": "CDNS Q2 2026 guidance"
+      },
+      {
+        "url": "https://www.newsquawk.com/headlines/cadence-design-systems-inc-cdns-q3-2026-usd-adj-eps-211-exp-205-revenue-163bln-exp-161bln",
+        "title": "CDNS Q3 2026 revenueComparison"
+      },
+      {
+        "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr-ir/2026/cadence-reports-fourth-quarter-and-fiscal-year-2025-financial.html",
+        "title": "Cadence FY2025 results"
+      },
+      {
+        "url": "https://investor.cadence.com/news/news-details/2024/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2023-Financial-Results/default.aspx",
+        "title": "Cadence FY2023 results"
+      },
+      {
+        "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr-ir/2023/cadence-reports-fourth-quarter-and-fiscal-year-2022-financial.html",
+        "title": "Cadence FY2022 results"
+      },
+      {
+        "url": "https://www.stocktitan.net/news/CDNS/cadence-reports-third-quarter-2026-financial-h0q5a27erq44.html",
+        "title": "Q3 release timestamp, Business Wire syndication"
+      },
+      {
+        "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+        "title": "IBM Q3 2026 guidance"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CDNS?range=5y&interval=1d",
+        "title": "CDNS Q2 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CDNS?range=5d&interval=5m&includePrePost=true",
+        "title": "CDNS Q3 2026 reaction"
+      },
+      {
+        "url": "https://www.benzinga.com/markets/earnings/26/10/62512362/ibm-stock-jumps-after-q3-results-top-expectations",
+        "title": "IBM Q3 2026 revenueComparison"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/IBM?range=1mo&interval=1d",
+        "title": "IBM Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "close": 322.1700134277344,
+      "marketCapB": 88.19339683581542,
+      "industry": "CHIP & ELECTRONIC SYSTEM DESIGN SOFTWARE",
+      "atr14": 12.066928559025135,
+      "ttmPE": 64.04970445879411,
+      "business": "Sells software, verification hardware and reusable chip designs.",
+      "fiscalLabel": "FY2025",
+      "priceDate": "2026-10-26",
+      "forwardYear": 2026,
+      "annualRevenueB": 5.296759,
+      "rsi14": 48.06220462587217,
+      "forwardPE": 66.15400686401117
+    }
+  },
+  {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261026_CLS",
+    "postId": "earnings_review_20261026_CLS",
+    "slug": "celestica-cls-q3-2026-earnings-review-2026-10-26",
+    "title": "Celestica (CLS) Q3 2026 Earnings Review",
+    "symbol": "CLS",
+    "companyName": "Celestica",
+    "sessionDate": "2026-10-26",
+    "marketSession": "afterhours",
+    "earningsCheck": {
+      "issuerVerified": true,
+      "source": "https://corporate.celestica.com/node/17881",
+      "period": "Q3 2026",
+      "status": "released",
+      "releasedAt": "2026-10-26T16:17:00-04:00"
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-27T00:20:33.036657+00:00",
+    "updatedAt": "2026-10-27T00:20:33.036657+00:00",
+    "summary": "Celestica shares rose about 16.8% after close as the company projected $40 billion of 2027 revenue, turning strong AI demand into a much larger growth outlook.",
+    "catalyst": "Celestica shares rose about 16.8% after close as the company projected $40 billion of 2027 revenue, turning strong AI demand into a much larger growth outlook.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Celestica shares rose about 16.8% after close as the company projected $40 billion of 2027 revenue, turning strong AI demand into a much larger growth outlook.",
+      "Third-quarter revenue rose 83% to $5.83 billion, led by networking and cloud hardware demand.",
+      "Adjusted profit per share reached $3.30, above management’s $3.08 guidance ceiling, while accounting profit was $3.26 per share.",
+      "The 2026 outlook rose to $21 billion in sales and $11.55 in adjusted profit per share, supporting higher expected earnings.",
+      "The pre-results close valued shares at 21 times 2026 adjusted earnings guidance, while holding above the former $260–$273 trading range would strengthen the rebound.",
+      "The 2026 free-cash-flow forecast fell to $460 million from $600 million as inventory and other operating investments absorbed cash.",
+      "Planned 2027 capital spending of $1.5–$2 billion makes customer delivery schedules and factory execution key risks.",
+      "The October 27 investor day is the next test of how the company plans to fund and deliver its ambitious expansion."
+    ],
+    "setup": "The regular session closed near October lows, then results drove an after-close rebound; watch whether the next regular session holds above the $260–273 former trading area.",
+    "technicalDate": "2026-10-26",
+    "images": [
+      {
+        "width": 1200,
+        "alt": "Celestica Financials research infographic",
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CLS%2F1%2Fc2857c30373f3327515906e52acbb6dbc7c4bb1140d1ec7bb1b6c1df6b2cbd5c-3a50228a-11c8-40f8-91d9-8b7cfde7a253%2FFinancials.jpg?alt=media&token=3a50228a-11c8-40f8-91d9-8b7cfde7a253",
+        "height": 1200
+      },
+      {
+        "width": 1200,
+        "alt": "Celestica Technicals research infographic",
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CLS%2F2%2Ff172db094b83c473c1cd8e956683d9bc7f3ecf3fae4c3bcfc40ce68f917fab7b-58b2d2e5-06ca-48d3-a750-ae06cae0f065%2FTechnicals.jpg?alt=media&token=58b2d2e5-06ca-48d3-a750-ae06cae0f065",
+        "height": 1200
+      },
+      {
+        "width": 1200,
+        "alt": "Celestica Earnings & Peers research infographic",
+        "title": "Earnings & Peers",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_CLS%2F3%2F9fc213a8eb1a0bc16c957bdc4a427341644195af9c2bdefe2f2cdbf70a97f3f2-1fffa6aa-3f0c-4092-b00a-77c74da7ac64%2FEarnings-Peers.jpg?alt=media&token=1fffa6aa-3f0c-4092-b00a-77c74da7ac64",
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "q3",
+        "url": "https://corporate.celestica.com/node/17881"
+      },
+      {
+        "title": "fy25",
+        "url": "https://celestica.gcs-web.com/node/17171/html"
+      },
+      {
+        "title": "q2",
+        "url": "https://celestica.gcs-web.com/news-releases/news-release-details/celestica-announces-second-quarter-2026-financial-results"
+      },
+      {
+        "title": "jabil",
+        "url": "https://investors.jabil.com/news/news-details/2026/Jabil-Posts-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
+      },
+      {
+        "title": "fy22",
+        "url": "https://corporate.celestica.com/news-releases/news-release-details/celestica-announces-fourth-quarter-2022-financial-results"
+      },
+      {
+        "title": "call",
+        "url": "https://celestica.gcs-web.com/news-releases/news-release-details/celestica-hold-q3-2026-financial-results-and-2026-investor-and"
+      },
+      {
+        "title": "wire",
+        "url": "https://www.globenewswire.com/news-release/2026/10/26/3388573/0/en/celestica-announces-third-quarter-2026-financial-results-and-will-hold-2026-investor-and-analyst-day.html"
+      },
+      {
+        "title": "CLS Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CLS?range=5d&interval=5m&includePrePost=true"
+      },
+      {
+        "title": "Verified research source",
+        "url": "https://stockanalysis.com/stocks/cls/history/"
+      },
+      {
+        "title": "CLS Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/CLS?range=5y&interval=1d"
+      },
+      {
+        "title": "JBL Q4 FY2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/JBL?range=5y&interval=1d"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "close": 246.65,
+      "ttmPE": 23.268867924528298,
+      "industry": "DATA CENTER HARDWARE & ELECTRONICS MANUFACTURING",
+      "annualRevenueB": 12.3909,
+      "rsi14": 25.95170660046159,
+      "forwardPE": 21.354978354978353,
+      "priceDate": "2026-10-26",
+      "atr14": 21.62590638750131,
+      "fiscalLabel": "FY2025",
+      "forwardYear": 2026,
+      "marketCapB": 31.102565,
+      "business": "Designs and builds networking, computing and industrial equipment for customers."
+    }
+  },
+  {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261026_NUE",
+    "postId": "earnings_review_20261026_NUE",
+    "slug": "nucor-nue-q3-2026-earnings-review-2026-10-26",
+    "title": "Nucor (NUE) Q3 2026 Earnings Review",
+    "symbol": "NUE",
+    "companyName": "Nucor",
+    "sessionDate": "2026-10-26",
+    "marketSession": "afterhours",
+    "earningsCheck": {
+      "source": "https://investors.nucor.com/news/news-details/2026/Nucor-Reports-Results-for-the-Third-Quarter-of-2026/default.aspx",
+      "status": "released",
+      "period": "Q3 2026",
+      "releasedAt": "2026-10-26T16:30:00-04:00",
+      "issuerVerified": true
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-26T22:39:34.591075+00:00",
+    "updatedAt": "2026-10-26T22:39:34.591075+00:00",
+    "summary": "Nucor’s third-quarter sales rose 32% to $11.25 billion as stronger steel pricing and demand lifted profits.",
+    "catalyst": "Nucor reported a 32% rise in third-quarter sales to $11.25 billion as higher steel prices and shipments lifted earnings; its outlook for roughly steady or modestly higher fourth-quarter profit suggests pricing may offset seasonal demand weakness.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Nucor’s third-quarter sales rose 32% to $11.25 billion as stronger steel pricing and demand lifted profits.",
+      "Profit per share more than doubled from a year earlier to $5.80, just below the $5.84 analyst estimate.",
+      "Steel mills earned more as selling prices rose, even without the previous quarter’s $130 million raw-material refund.",
+      "Management expects fourth-quarter profit to stay roughly steady or rise modestly as pricing offsets seasonal volume weakness.",
+      "Cash left after capital spending reached $2.66 billion in the first nine months, supporting dividends and share repurchases.",
+      "The West Virginia mill’s first steel production and Berkeley’s new coating line mark progress toward added capacity.",
+      "At the October 26 close of $257.35, shares traded near 16.4 times trailing profit, with chart support around $250–254.",
+      "Watch the October 27 earnings call for demand and new-mill updates, as weaker steel prices or higher costs could squeeze profits."
+    ],
+    "setup": "The October 26 close of $257.35 sits above the 20-day and 50-day averages, with support around $250–254 and resistance near $263–266; weaker demand, steel prices or new-mill execution could undermine the recovery.",
+    "technicalDate": "2026-10-26",
+    "images": [
+      {
+        "height": 1200,
+        "title": "Financials",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_NUE%2F1%2Fae94e9ce62f3dc5a7f7b04ff0c50d012fa98facb9998070bea40b6d69ac0cf60-0db6a584-0d60-43b5-b7f2-b86e385b640b%2FFinancials.jpg?alt=media&token=0db6a584-0d60-43b5-b7f2-b86e385b640b",
+        "alt": "Nucor Financials research infographic"
+      },
+      {
+        "height": 1200,
+        "title": "Technicals",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_NUE%2F2%2Fb48ac5d32482998ed02841b18545bceaddc466accefbd2fbb3693c550b2bb1c4-63b05e98-789b-4491-98b2-06a761673a87%2FTechnicals.jpg?alt=media&token=63b05e98-789b-4491-98b2-06a761673a87",
+        "alt": "Nucor Technicals research infographic"
+      },
+      {
+        "height": 1200,
+        "title": "Earnings & Peers",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_NUE%2F3%2Fbfbc6c852c0c1d81d92ad36d0f7ca3f09e6063939aa5b9dfa7fd6e219cc4c09d-a27c120b-a0a8-4ec8-930b-248da412b50a%2FEarnings-Peers.jpg?alt=media&token=a27c120b-a0a8-4ec8-930b-248da412b50a",
+        "alt": "Nucor Earnings & Peers research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "title": "q3",
+        "url": "https://investors.nucor.com/news/news-details/2026/Nucor-Reports-Results-for-the-Third-Quarter-of-2026/default.aspx"
+      },
+      {
+        "title": "fy25",
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000073309/be17d710-e544-4c28-8adf-b2c567b91d95.html"
+      },
+      {
+        "title": "stld",
+        "url": "https://ir.steeldynamics.com/steel-dynamics-reports-third-quarter-2026-results/"
+      },
+      {
+        "title": "fy23",
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000073309/ab15a82d-442f-4463-8118-af90e29dcf71.html"
+      },
+      {
+        "title": "wire",
+        "url": "https://www.prnewswire.com/news-releases/nucor-reports-results-for-the-third-quarter-of-2026-302919790.html"
+      },
+      {
+        "title": "q2",
+        "url": "https://investors.nucor.com/news/news-details/2026/Nucor-Reports-Results-for-the-Second-Quarter-of-2026/default.aspx"
+      },
+      {
+        "title": "fy21",
+        "url": "https://investors.nucor.com/news/news-details/2022/Nucor-Reports-Record-Quarterly-and-Annual-Earnings-for-the-Fourth-Quarter-and-Year-Ended-2021-01-27-2022/default.aspx"
+      },
+      {
+        "title": "consensus",
+        "url": "https://www.investing.com/equities/nucor-earnings"
+      },
+      {
+        "title": "peerConsensus",
+        "url": "https://www.investing.com/equities/steel-dynamics-earnings"
+      },
+      {
+        "title": "Nucor consensus by release date, MarketBeat / Fiscal.ai",
+        "url": "https://www.marketbeat.com/stocks/NYSE/NUE/earnings/"
+      },
+      {
+        "title": "NUE Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/NUE?range=5y&interval=1d"
+      },
+      {
+        "title": "STLD Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/STLD?range=5y&interval=1d"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardPE": null,
+      "business": "Makes steel and building products; recycles and supplies raw materials.",
+      "priceDate": "2026-10-26",
+      "rsi14": 54.31531879069239,
+      "fiscalLabel": "FY2025",
+      "atr14": 7.9528242592999945,
+      "industry": "STEEL & FABRICATED STEEL PRODUCTS",
+      "marketCapB": 58.26404138183594,
+      "close": 257.3500061035156,
+      "annualRevenueB": 32.494,
+      "forwardYear": 2026,
+      "ttmPE": 16.391720133981888
+    }
+  },
+  {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261026_PSA",
+    "postId": "earnings_review_20261026_PSA",
+    "slug": "public-storage-psa-q3-2026-earnings-review-2026-10-26",
+    "title": "Public Storage (PSA) Q3 2026 Earnings Review",
+    "symbol": "PSA",
+    "companyName": "Public Storage",
+    "sessionDate": "2026-10-26",
+    "marketSession": "afterhours",
+    "earningsCheck": {
+      "issuerVerified": true,
+      "period": "Q3 2026",
+      "source": "https://www.businesswire.com/news/home/20261026455248/en/",
+      "releasedAt": "2026-10-26T16:05:00-04:00",
+      "status": "released"
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-26T23:36:17.121712+00:00",
+    "updatedAt": "2026-10-26T23:36:17.121712+00:00",
+    "summary": "Public Storage raised its 2026 earnings outlook as storage demand improved, while completed acquisitions enlarged the business and increased integration costs.",
+    "catalyst": "Public Storage raised its 2026 earnings outlook as storage demand improved, while completed acquisitions enlarged the business and increased integration costs.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Public Storage raised its 2026 earnings outlook as storage demand improved, while completed acquisitions enlarged the business and increased integration costs.",
+      "Core FFO, a property earnings measure that excludes depreciation and selected costs, rose 0.7% to $4.34 per share.",
+      "Revenue grew 11.6% to $1.37 billion, but revenue at comparable properties rose just 0.5%, showing how much expansion depends on acquisitions.",
+      "Accounting profit fell 35.5% to $1.69 per share as transaction costs, depreciation and interest expense increased.",
+      "Management raised full-year Core FFO guidance to $16.90–$17.10 per share, putting the October 26 closing price near 18 times the midpoint.",
+      "Shares traded about 0.7% above the October 26 close after results, with the recent $309–$311 area a hurdle for the rebound.",
+      "The completed National Storage Affiliates and Canadian acquisitions added over 1,100 stores, making integration returns and borrowing costs central risks.",
+      "The October 27 results call is the next chance to assess whether stronger occupancy can translate into sustained growth at existing stores."
+    ],
+    "setup": "Price rebounded during October and faces resistance near $309–$311; integration costs and interest expense temper the higher property earnings outlook.",
+    "technicalDate": "2026-10-26",
+    "images": [
+      {
+        "alt": "Public Storage Financials research infographic",
+        "title": "Financials",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_PSA%2F1%2F0722e01383f6d82c85fd0f336b63580b44c4c80a4982580eba5075e4efdd181d-f3460c20-7e78-4d16-8428-a4d9be6b6fea%2FFinancials.jpg?alt=media&token=f3460c20-7e78-4d16-8428-a4d9be6b6fea",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "alt": "Public Storage Technicals research infographic",
+        "title": "Technicals",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_PSA%2F2%2Fe9318fb08fa169c9ea0eff3fa2104518c3fb054338e5c819faa14e7d5aa97595-d2990c36-2e3d-4f5c-aa85-459c06b941f3%2FTechnicals.jpg?alt=media&token=d2990c36-2e3d-4f5c-aa85-459c06b941f3",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "alt": "Public Storage Earnings & Peers research infographic",
+        "title": "Earnings & Peers",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_PSA%2F3%2F620481d4e0b9752e5ec36aae6ecb234a2c73136112e0792ccc508608d6d6823f-7a236bd8-33a0-4328-b890-7f8596a57f93%2FEarnings-Peers.jpg?alt=media&token=7a236bd8-33a0-4328-b890-7f8596a57f93",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.stocktitan.net/news/PSA/public-storage-reports-third-quarter-2026-results-and-raises-y0rj5ai9xmni.html",
+        "title": "Verified research source"
+      },
+      {
+        "url": "https://www.businesswire.com/news/home/20261026455248/en/",
+        "title": "issuer"
+      },
+      {
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001393311/0e1a1254-5a5a-46a7-ad3c-7ab194355418.html",
+        "title": "fy25"
+      },
+      {
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001393311/4c2994e1-b2b6-42c6-9f0a-adc5868b8daa.html",
+        "title": "q2"
+      },
+      {
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001393311/5673bc31-ec6c-4c71-a2e5-57056b40ee34.html",
+        "title": "fy22"
+      },
+      {
+        "url": "https://welltower.investorroom.com/2026-10-26-Welltower-Reports-Third-Quarter-2026-Results",
+        "title": "WELL Q3 2026 guidance"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/PSA?range=5d&interval=5m&includePrePost=true",
+        "title": "PSA Q3 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/PSA?range=5y&interval=1d",
+        "title": "PSA Q2 2026 reaction"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/WELL?range=5d&interval=5m&includePrePost=true",
+        "title": "WELL Q3 2026 reaction"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardPE": null,
+      "industry": "SELF-STORAGE REAL ESTATE",
+      "forwardYear": 2026,
+      "rsi14": 61.760579927218366,
+      "close": 306.9700012207031,
+      "marketCapB": 56.531288454803466,
+      "fiscalLabel": "FY2025",
+      "business": "Rents storage space and provides tenant insurance and property management.",
+      "atr14": 5.93631888605762,
+      "ttmPE": 32.278654176730086,
+      "priceDate": "2026-10-26",
+      "annualRevenueB": 4.824113
+    }
+  },
+  {
+    "kind": "earnings_review",
+    "version": 1,
+    "id": "earnings_review_20261026_WELL",
+    "postId": "earnings_review_20261026_WELL",
+    "slug": "welltower-well-q3-2026-earnings-review-2026-10-26",
+    "title": "Welltower (WELL) Q3 2026 Earnings Review",
+    "symbol": "WELL",
+    "companyName": "Welltower",
+    "sessionDate": "2026-10-26",
+    "marketSession": "afterhours",
+    "earningsCheck": {
+      "issuerVerified": true,
+      "status": "released",
+      "source": "https://welltower.investorroom.com/2026-10-26-Welltower-Reports-Third-Quarter-2026-Results",
+      "period": "Q3 2026",
+      "releasedAt": "2026-10-26T16:05:00-04:00"
+    },
+    "direction": "flat",
+    "move": null,
+    "quoteAsOf": null,
+    "quotePrice": null,
+    "publishedAt": "2026-10-26T21:57:43.963576+00:00",
+    "updatedAt": "2026-10-26T21:57:43.963576+00:00",
+    "summary": "Welltower raised its 2026 property earnings outlook after strong senior housing results, showing that higher occupancy is translating into faster profit growth.",
+    "catalyst": "Welltower raised its 2026 normalized property earnings outlook as higher occupancy and resident revenue drove strong growth at its senior housing properties.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Welltower raised its 2026 property earnings outlook after strong senior housing results, showing that higher occupancy is translating into faster profit growth.",
+      "Q3 revenue rose 38.4% from a year earlier to $3.72 billion, with acquisitions contributing to the expansion.",
+      "Normalized funds from operations, a property earnings measure that adds back depreciation and adjusts other items, rose 24.6% to $1.67 per share.",
+      "At comparable senior housing properties, occupancy improved by 3.2 percentage points and property operating income rose 21%.",
+      "Management raised its 2026 normalized property earnings forecast to $6.47–$6.53 per share from $6.36–$6.44.",
+      "The October 26 closing price of $240.61 equals about 37 times the midpoint of that forecast, leaving investors sensitive to any slowdown.",
+      "Shares traded 0.8% below that close after the release, while $233–$235 remains a nearby chart area to watch for buying support.",
+      "The October 27 call before open is the next chance to assess acquisition returns and whether higher financing costs could limit future growth."
+    ],
+    "setup": "The October 26 close was above the 20-day and 50-day averages, with $233–235 a nearby support area and $240–242 a resistance area; acquisition execution and financing costs remain key risks.",
+    "technicalDate": "2026-10-26",
+    "images": [
+      {
+        "title": "Financials",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_WELL%2F1%2Fac67d3839fd55226b0e85f125fed7bfd23fe6eb136fc193e1db257422b0887e1-680f9238-1e6a-449c-a9c8-9d6bd1bcad4a%2FFinancials.jpg?alt=media&token=680f9238-1e6a-449c-a9c8-9d6bd1bcad4a",
+        "alt": "Welltower Financials research infographic",
+        "width": 1200
+      },
+      {
+        "title": "Technicals",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_WELL%2F2%2Fddac22462c961b4ca111ddad7c6184b520fa141467158c246bf2be5af7f99f56-3f23e2c6-4fd7-4677-aaa9-8bc886412ba3%2FTechnicals.jpg?alt=media&token=3f23e2c6-4fd7-4677-aaa9-8bc886412ba3",
+        "alt": "Welltower Technicals research infographic",
+        "width": 1200
+      },
+      {
+        "title": "Earnings & Peers",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fearnings_review_20261026_WELL%2F3%2Fce54f26317871599ccef39922a5ac5d277a4a1a60884417ba6f32293d3248444-d63ab108-e0eb-497e-ae1d-35a73e4b9d9f%2FEarnings-Peers.jpg?alt=media&token=d63ab108-e0eb-497e-ae1d-35a73e4b9d9f",
+        "alt": "Welltower Earnings & Peers research infographic",
+        "width": 1200
+      }
+    ],
+    "sources": [
+      {
+        "title": "WELL Q3 2026 guidance",
+        "url": "https://welltower.investorroom.com/2026-10-26-Welltower-Reports-Third-Quarter-2026-Results"
+      },
+      {
+        "title": "WELL Q2 2026 guidance",
+        "url": "https://welltower.investorroom.com/2026-07-27-Welltower-Reports-Second-Quarter-2026-Results"
+      },
+      {
+        "title": "Verified research source",
+        "url": "https://www.prnewswire.com/news-releases/welltower-reports-third-quarter-2026-results-302919789.html"
+      },
+      {
+        "title": "WELL Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/WELL?range=5d&interval=5m&includePrePost=true"
+      },
+      {
+        "title": "Welltower FY2025 results",
+        "url": "https://welltower.investorroom.com/2026-02-10-Welltower-Reports-Fourth-Quarter-2025-Results"
+      },
+      {
+        "title": "Welltower FY2023 results",
+        "url": "https://welltower.investorroom.com/2024-02-13-Welltower-Reports-Fourth-Quarter-2023-Results"
+      },
+      {
+        "title": "Welltower FY2022 results",
+        "url": "https://welltower.investorroom.com/2023-02-15-Welltower-Reports-Fourth-Quarter-2022-Results"
+      },
+      {
+        "title": "ELS Q3 2026 guidance",
+        "url": "https://www.prnewswire.com/news-releases/els-reports-third-quarter-results-302914591.html"
+      },
+      {
+        "title": "WELL Q2 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/WELL?range=5y&interval=1d"
+      },
+      {
+        "title": "ELS Q3 2026 reaction",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/ELS?range=1mo&interval=1d"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted earnings research with verified issuer results. Charts use the stated completed session. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardYear": 2026,
+      "annualRevenueB": 10.838034,
+      "marketCapB": 176.165018046875,
+      "priceDate": "2026-10-26",
+      "fiscalLabel": "FY2025",
+      "forwardPE": null,
+      "close": 240.61000061035156,
+      "ttmPE": 105.06986926216226,
+      "business": "Owns properties that earn resident fees, rent and loan interest.",
+      "atr14": 4.886734355147012,
+      "rsi14": 62.32382622028408,
+      "industry": "SENIOR HOUSING & HEALTHCARE REAL ESTATE"
     }
   },
   {
@@ -2797,6 +3451,833 @@
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "dateTaken": "2026-05-17 14:57:20",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_BE",
+    "postId": "research_mover_20261026_BE",
+    "slug": "why-bloom-energy-be-stock-is-up-today-2026-10-26",
+    "title": "Why Bloom Energy (BE) Stock Is Up Today: Q3 2026 Earnings",
+    "symbol": "BE",
+    "companyName": "Bloom Energy",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 7.58406621831349,
+    "quoteAsOf": "2026-10-26T16:52:21.000Z",
+    "quotePrice": 207.96,
+    "publishedAt": "2026-10-26T17:15:17.000994+00:00",
+    "updatedAt": "2026-10-26T17:15:17.000994+00:00",
+    "summary": "Bloom Energy (BE) was up 7.58% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Bloom rebounded on October 26 as Barclays raised its price target to $316 from $308, keeping Equal Weight. The move follows Friday’s post-results selloff. The October22 report showed strong sales growth and a higher annual outlook, while cash outflows and manufacturing investment remain the central investment debate. The analyst target is an opinion, not a promised future price; those earnings were released October22, not today.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Bloom Energy rebounded 7.58% to $207.96 during trading on October 26, 2026, alongside a Barclays price-target increase. Investors are weighing rapid power-system growth against the cash needed to fund it.",
+      "Barclays raised its target to $316 from $308 while keeping an Equal Weight rating. The rebound follows Friday’s 11.24% decline, showing that views on the company remain divided.",
+      "Results released after close on October 22 showed third-quarter revenue of $1.24 billion, up 138% from a year earlier. Fuel-cell systems supply electricity at customer sites, including power-hungry data centers.",
+      "GAAP earnings per share, meaning profit per share, were $0.78; adjusted profit was $0.94 per share. The higher sales also lifted the company’s gross profit margin to 33.8%.",
+      "Management raised its 2026 revenue outlook to $4.4–4.6 billion. Meeting that outlook requires Bloom to manufacture, deliver and commission systems without costly delays.",
+      "Cash is the main test: operating cash flow was negative $27.1 million in the quarter, and equipment investment pushed free cash flow to negative $180.6 million. Recorded sales must turn into customer payments.",
+      "The completed October 23 chart closed at $193.30 after touching $189. Monday’s rebound has moved above Friday’s range, but the recent $215–230 area remains overhead.",
+      "Watch whether customer collections catch up with growth and whether the stock can reclaim $215–230. A close below Friday’s $189 low would weaken the recovery."
+    ],
+    "setup": "The completed October 23 chart has RSI 33.1 and ATR $20.28. Friday’s $189 low and $193.30 close define nearby support around $189–195. Monday’s rebound is above Friday’s $206 high, but recovering the October20–22 trading area near $215–230 would be stronger confirmation. A close below $189 would weaken the setup.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_BE%2F1%2F84227c6f454d2aadfea7a767b7b7873a9fa131ffe43199a2f8443698b5510c91-5db71323-c788-459c-9f95-2a45745adcae%2FFinancials.jpg?alt=media&token=5db71323-c788-459c-9f95-2a45745adcae",
+        "height": 1200,
+        "width": 1200,
+        "alt": "Bloom Energy (BE) financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_BE%2F2%2F263d861a285d5f9b9ab1c0f3c8714d7d4ecc1cfb9ba18c463e6182d021251500-0ce05df5-c351-4846-8b2d-bd3b66fc962c%2FTechnicals.jpg?alt=media&token=0ce05df5-c351-4846-8b2d-bd3b66fc962c",
+        "height": 1200,
+        "width": 1200,
+        "alt": "Bloom Energy (BE) technicals research infographic",
+        "title": "Technicals"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-Third-Quarter-2026-Financial-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+        "title": "Financial data and estimates — investor.bloomenergy.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001664703/9febe537-be7f-4c1e-8bbb-6fdc54134040.pdf",
+        "title": "Financial data and estimates — d18rn0p25nwr6d.cloudfront.net"
+      },
+      {
+        "url": "https://www.bloomenergy.com/news/bloom-energy-reports-fourth-quarter-and-full-year-2025-financial-results-with-record-full-year-revenues/",
+        "title": "Financial data and estimates — www.bloomenergy.com"
+      },
+      {
+        "url": "https://investor.bloomenergy.com/press-releases/press-release-details/2026/Bloom-Energy-Reports-Record-First-Quarter-2026-Results-and-Raises-Full-Year-2026-Guidance/default.aspx",
+        "title": "Financial data and estimates — investor.bloomenergy.com"
+      },
+      {
+        "url": "https://www.tikr.com/blog/bloom-energy-soars-7-on-barclays-price-target-hike-after-post-earnings-rout",
+        "title": "Financial data and estimates — www.tikr.com"
+      },
+      {
+        "url": "https://www.marketscreener.com/news/barclays-adjusts-price-target-on-bloom-energy-to-316-from-308-ce785cdcd88ef225",
+        "title": "Financial data and estimates — www.marketscreener.com"
+      },
+      {
+        "url": "https://www.benzinga.com/trading-ideas/movers/26/10/62587503/whats-going-on-with-bloom-energy-stock-on-monday",
+        "title": "Financial data and estimates — www.benzinga.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/BE?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "priceDate": "2026-10-23",
+      "rsi14": 33.050829105691335,
+      "annualRevenueB": 2.023994,
+      "business": "Sells fuel-cell systems that generate electricity at customer sites, plus installation and service.",
+      "close": 193.3000030517578,
+      "atr14": 20.282657919291825,
+      "forwardPE": null,
+      "industry": "ON-SITE POWER & FUEL CELLS",
+      "ttmPE": 118.58895892745879,
+      "fiscalLabel": "FY2025",
+      "forwardYear": 2026,
+      "marketCapB": 57.12734494800801
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fbe%2Fd5f80174884a7d6e3b8f21ba2a2bfdced7fc2e1af43836577c76dd02813e18fe.jpg?alt=media&token=d042454b-cc8a-49cb-844f-949658f47871",
+      "width": 1024,
+      "height": 683,
+      "alt": "A row of Bloom Energy fuel-cell power systems.",
+      "caption": "Archive photo of Bloom Energy Servers, February 2010. Photo: Bloom Energy, CC BY 2.0.",
+      "credit": "Bloom Energy",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bloom_Energy_Servers.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2010-02-24 09:25",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_COHR",
+    "postId": "research_mover_20261026_COHR",
+    "slug": "why-coherent-corp-cohr-stock-is-up-today-2026-10-26",
+    "title": "Why Coherent Corp. (COHR) Stock Is Up Today",
+    "symbol": "COHR",
+    "companyName": "Coherent Corp.",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 7.224425438386928,
+    "quoteAsOf": "2026-10-26T17:52:47.000Z",
+    "quotePrice": 224.41,
+    "publishedAt": "2026-10-26T17:57:32.254436+00:00",
+    "updatedAt": "2026-10-26T17:57:32.254436+00:00",
+    "summary": "Coherent Corp. (COHR) was up 7.22% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "StoneX analyst Cody Acree initiated Coherent at Buy with a $425 target on October 26. His argument focuses on expansion of indium-phosphide manufacturing capacity for optical connections in AI data centers. More output could support revenue growth and lower unit costs, but the production ramp still needs execution. The rating and target are analyst opinion. The November 4 report is the next scheduled opportunity to assess capacity and margins against management’s prior outlook.",
+    "earningsPeriod": null,
+    "recap": [
+      "Coherent rose 7.25% to $224.46 during trading on October 26, 2026, after StoneX began coverage with a Buy rating and a $425 price target.",
+      "The analyst’s case centers on expanding production of indium phosphide, a material used in lasers for AI data-center connections. More usable capacity could turn strong demand into additional sales.",
+      "StoneX cited plans to double that capacity in the September quarter and more than double it again by the end of 2027. These are expansion targets; November results will help show what has been delivered.",
+      "The exposure is already substantial: Datacenter and Communications generated about 74% of Coherent’s $7.12 billion fiscal 2026 revenue. Industrial applications make up the rest.",
+      "The June quarter, reported August 12, produced $2.05 billion in revenue and $1.19 of GAAP earnings per share, meaning profit per share. Adjusted profit per share was $1.74.",
+      "The key risk is manufacturing execution. Expanding output while controlling costs matters because higher sales will create less value if production problems squeeze margins.",
+      "The October 23 chart closed at $209.29, below both major moving averages. Monday’s rebound has reached the lower edge of the $224–237 recovery area, while $203–210 remains the recent floor.",
+      "Watch the November 4 results, due after close, for capacity progress and margins. The August outlook called for $2.2–$2.4 billion of September-quarter revenue; delivering that growth would help test the analyst’s case."
+    ],
+    "setup": "October 23 completed chart: close $209.29, 20-day average $279.18 and 50-day average $287.90. Recent lows and closes define $203–210; October 20–22 trading defines $224–237 overhead. Monday’s $224.46 rebound reaches the lower edge of that recovery area. A sustained reclaim would help repair the decline; a close below $203 would weaken the chart.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "title": "Financials",
+        "height": 1200,
+        "alt": "Coherent Corp. (COHR) financials research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_COHR%2F1%2Fef05817df961a356fbe1298b55cd37f5e0b6dc0885e7c0bcd536cb99c2280989-ef0e0d66-aa92-46ca-8200-94c592259ef3%2FFinancials.jpg?alt=media&token=ef0e0d66-aa92-46ca-8200-94c592259ef3"
+      },
+      {
+        "title": "Technicals",
+        "height": 1200,
+        "alt": "Coherent Corp. (COHR) technicals research infographic",
+        "width": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_COHR%2F2%2F4be073903132347d136f36f9e99fcbc87241f285a6705539cd45cfea84fbdb85-88bc2ea3-21c9-441e-a228-f0339af0bf09%2FTechnicals.jpg?alt=media&token=88bc2ea3-21c9-441e-a228-f0339af0bf09"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Financial data and estimates — ir.coherent.com",
+        "url": "https://ir.coherent.com/static-files/4df8d35b-3abc-4a04-a319-588b204e9bcd"
+      },
+      {
+        "title": "Financial data and estimates — www.coherent.com",
+        "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/annual-filings/2024/coherent-annual-report-2024.pdf"
+      },
+      {
+        "title": "Financial data and estimates — www.coherent.com",
+        "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf"
+      },
+      {
+        "title": "Financial data and estimates — ir.coherent.com",
+        "url": "https://ir.coherent.com/news-releases/news-release-details/coherent-corp-announces-timing-fy2027-first-quarter-earnings"
+      },
+      {
+        "title": "Financial data and estimates — stockanalysis.com",
+        "url": "https://stockanalysis.com/stocks/cohr/statistics/"
+      },
+      {
+        "title": "Financial data and estimates — www.tradingview.com",
+        "url": "https://www.tradingview.com/news/seekingalpha:ef0e29610094b:0-lumentum-coherent-in-focus-as-stonex-starts-with-buy-ratings/"
+      },
+      {
+        "title": "Financial data and estimates — www.gurufocus.com",
+        "url": "https://www.gurufocus.com/news/9142365/lumentum-and-coherent-stocks-jump-3-as-stonex-unveils-bold-price-targets"
+      },
+      {
+        "title": "Financial data and estimates — www.benzinga.com",
+        "url": "https://www.benzinga.com/quote/COHR/price-targets"
+      },
+      {
+        "title": "Financial data and estimates — query2.finance.yahoo.com",
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/COHR?range=5y&interval=1d&events=splits"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 21.105284362575286,
+      "close": 209.2899932861328,
+      "forwardPE": null,
+      "rsi14": 30.30819850546166,
+      "annualRevenueB": 7.118181,
+      "business": "Sells optical components, lasers and materials for datacenters, communications and industry.",
+      "priceDate": "2026-10-23",
+      "forwardYear": 2026,
+      "ttmPE": 50.798542059740974,
+      "fiscalLabel": "FY2026",
+      "industry": "PHOTONICS & OPTICAL CONNECTIVITY",
+      "marketCapB": 41.21547837783814
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fcohr%2F1b1bba8661f901d38c1e008762dbc861f6df424cc4c50efedd8362b6b8919920.jpg?alt=media&token=f83ce04e-b155-44d6-bb07-7e3e75bfebd9",
+      "width": 1920,
+      "height": 1278,
+      "alt": "Optical research equipment in a nanophotonics laboratory",
+      "caption": "A laser demonstration in an FDA optical research laboratory, 2011. Illustrative photonics-sector photo.",
+      "credit": "The U.S. Food and Drug Administration",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Optical_Therapeutics_and_Medical_Nanophotonics_Laboratory_(5426178304).jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "dateTaken": "2011-02-04 12:57",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_DG",
+    "postId": "research_mover_20261026_DG",
+    "slug": "why-dollar-general-corporation-dg-stock-is-down-today-2026-10-26",
+    "title": "Why Dollar General Corporation (DG) Stock Is Down Today",
+    "symbol": "DG",
+    "companyName": "Dollar General Corporation",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -4.838345014695911,
+    "quoteAsOf": "2026-10-26T18:23:02.000Z",
+    "quotePrice": 126.27,
+    "publishedAt": "2026-10-26T18:38:51.021144+00:00",
+    "updatedAt": "2026-10-26T18:38:51.021144+00:00",
+    "summary": "Dollar General Corporation (DG) was down 4.84% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "The FTC and 20 states filed a federal pricing lawsuit on October 26, alleging repeated checkout overcharges despite management knowledge. The complaint seeks an injunction, monetary relief and state penalties. The case remains pending. Potential compliance costs and customer-trust damage are investment risks, rather than a quantified loss forecast. The filing adds a new risk to the sales and profit recovery shown in the July quarter.",
+    "earningsPeriod": null,
+    "recap": [
+      "Dollar General fell 4.84% to $126.27 during trading on October 26, 2026, as the FTC and 20 states sued over alleged overcharging at checkout.",
+      "The complaint says shoppers repeatedly paid more than shelf or advertised prices. The case is pending; the allegations have not been decided by a court.",
+      "For investors, the risk extends beyond possible penalties. Better pricing controls and customer refunds could add costs, while damaged trust could hurt repeat shopping.",
+      "This challenges a business built on affordable everyday goods: consumables accounted for about 82% of fiscal 2025 sales. Reliable prices are central to that promise.",
+      "The underlying business had improved before this news. In the July quarter, sales at stores open at least a year rose 3.5%, including a 2% increase in customer visits.",
+      "July-quarter GAAP earnings per share, meaning profit per share, were $2.48. About $0.25 came from tariff refunds after related reinvestment, so that benefit should not be treated as recurring growth.",
+      "Monday’s price is below the October 23 close of $132.69 and near the earlier $124–128 trading area. A recovery through $132–134 would help repair the chart; a close below $124 would weaken it.",
+      "Watch Dollar General’s response and any court orders or settlement terms for the cost of fixing pricing controls. The next business update will also show whether stronger customer traffic can continue."
+    ],
+    "setup": "The October 23 chart closed at $132.69 after reversing from $139.08. Monday’s $126.27 price returns toward the October 9–14 area around $124–128. Reclaiming $132–134 would help repair the decline; a close below $124 would weaken the advance. These are approximate areas from prior trading.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_DG%2F1%2Fc2fc0496f6733005064832ab2a78054d0652e19089e6d1e02057431639556bae-168770d4-813d-4307-8dca-b2eefd0ffda5%2FFinancials.jpg?alt=media&token=168770d4-813d-4307-8dca-b2eefd0ffda5",
+        "alt": "Dollar General Corporation (DG) financials research infographic",
+        "title": "Financials",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_DG%2F2%2F796a78d3facaaec8ee9a2c65bdda7deefeece66cd93901237dbb4c7935910d16-94cc553b-8cc0-4e86-9b46-53935bc46d31%2FTechnicals.jpg?alt=media&token=94cc553b-8cc0-4e86-9b46-53935bc46d31",
+        "alt": "Dollar General Corporation (DG) technicals research infographic",
+        "title": "Technicals",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-state-partners-sue-dollar-general-charging-consumers-more-advertised-many-products",
+        "title": "Financial data and estimates — www.ftc.gov"
+      },
+      {
+        "url": "https://search.ftc.gov/legal-library/browse/cases-proceedings/2623006-dollar-general-shelf-pricing",
+        "title": "Financial data and estimates — search.ftc.gov"
+      },
+      {
+        "url": "https://search.ftc.gov/system/files/ftc_gov/pdf/DollarGeneral-Complaint.pdf",
+        "title": "Financial data and estimates — search.ftc.gov"
+      },
+      {
+        "url": "https://www.investing.com/news/stock-market-news/us-20-states-sue-dollar-general-for-alleged-overcharges-4973374",
+        "title": "Financial data and estimates — www.investing.com"
+      },
+      {
+        "url": "https://investor.dollargeneral.com/news-detail/dollar-general-corporation-reports-second-quarter-2026-results/71b3816e-10a9-4028-845a-d161637e745b",
+        "title": "Financial data and estimates — investor.dollargeneral.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/29534/000110465926101932/dg-20260731x10q.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/29534/000110465926032325/dg-20260130x10k.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/29534/000155837023004574/dg-20230203x10k.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/DG?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "business": "Sells food, household essentials and other everyday goods through small neighborhood stores.",
+      "priceDate": "2026-10-23",
+      "forwardYear": 2026,
+      "rsi14": 56.6808773909005,
+      "industry": "DISCOUNT RETAIL",
+      "ttmPE": 17.23246784953328,
+      "annualRevenueB": 42.724369,
+      "close": 132.69000244140625,
+      "fiscalLabel": "FY2025",
+      "forwardPE": null,
+      "atr14": 4.321266275470356,
+      "marketCapB": 29.27367026861572
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fdg%2F6c57cb3aecfccf2a0ba7d751361f69f6439a49ab52d485fee415464aacba89e5.jpg?alt=media&token=f624e2a4-20c4-4652-906f-c2e3965cbc97",
+      "width": 1920,
+      "height": 1440,
+      "alt": "Dollar General storefront and entrance in Barstow, California.",
+      "caption": "Archive photo: Dollar General store in Barstow, California, photographed September 27, 2023.",
+      "credit": "YosemiteYamper",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dollar_General,_Barstow.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2023-09-27 12:37:07",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_FICO",
+    "postId": "research_mover_20261026_FICO",
+    "slug": "why-fair-isaac-corporation-fico-stock-is-down-today-2026-10-26",
+    "title": "Why Fair Isaac Corporation (FICO) Stock Is Down Today",
+    "symbol": "FICO",
+    "companyName": "Fair Isaac Corporation",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -12.92146545485765,
+    "quoteAsOf": "2026-10-26T16:23:49.000Z",
+    "quotePrice": 709.96,
+    "publishedAt": "2026-10-26T16:42:24.902652+00:00",
+    "updatedAt": "2026-10-26T16:42:24.902652+00:00",
+    "summary": "Fair Isaac Corporation (FICO) was down 12.92% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "FICO’s October 23 announcement keeps the Preferred Program wholesale mortgage-score price at $10. On October 26, Wells Fargo downgraded the shares to Equal Weight and cut its target to $735 from $800 after reconsidering expected 2027 price increases. Flat pricing puts more weight on loan volumes and adoption to sustain revenue and profit growth. This is a pricing announcement and analyst reassessment, ahead of the November 4 results.",
+    "earningsPeriod": null,
+    "recap": [
+      "Fair Isaac fell 12.92% to $709.96 during trading on October 26, 2026, as a mortgage-score pricing freeze prompted analysts to lower their expectations for future profit growth.",
+      "FICO said on October 23 that participating lenders will continue paying a $10 wholesale mortgage-score price through its Preferred Program. Keeping that price flat limits one source of revenue growth.",
+      "Wells Fargo downgraded the stock to Equal Weight from Overweight and cut its price target to $735 from $800. Its earlier outlook had depended on higher mortgage pricing in 2027.",
+      "FICO sells credit scores and software that lenders use to assess borrowers. With less help from price increases, loan volumes and customer adoption become more important to sales growth.",
+      "The June quarter showed why pricing matters: revenue from scores rose 41%, with business-to-business growth driven mainly by higher mortgage-score prices. Software revenue grew 2%.",
+      "Those July results included $674 million of revenue and $10.45 of GAAP earnings per share, meaning profit per share. They describe the prior quarter; the pricing announcement changes the debate over future growth.",
+      "Monday’s price is testing the $700–720 area around mid-October lows. The completed October 23 chart ended at $815.31, so Friday’s $805–830 range is now an area where selling could return.",
+      "Watch the November 4 results, due after close, for management’s outlook on mortgage pricing, loan volumes and Preferred Program adoption. A sustained break below $700 would weaken the chart further."
+    ],
+    "setup": "Monday’s decline is testing $700–720 near the mid-October lows. A close below $700 would break that recent floor. Recovery through $805–830 would reclaim Friday’s trading range. The completed October 23 chart has RSI 51.5 and does not include Monday’s selloff.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "width": 1200,
+        "title": "Financials",
+        "alt": "Fair Isaac Corporation (FICO) financials research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_FICO%2F1%2Fa0b31ff2f9725219c16d9f808fe32f285782f02823917e16fd441c9a17f4acfb-2559e1c7-2274-4b73-96bb-327298dd3306%2FFinancials.jpg?alt=media&token=2559e1c7-2274-4b73-96bb-327298dd3306"
+      },
+      {
+        "width": 1200,
+        "title": "Technicals",
+        "alt": "Fair Isaac Corporation (FICO) technicals research infographic",
+        "height": 1200,
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_FICO%2F2%2F24e6842b42baf4a5ce919f966b05cab71821c7ea28377d9f0d454f73b1150282-1e5c47da-52aa-4304-83fb-c414826d5c1d%2FTechnicals.jpg?alt=media&token=1e5c47da-52aa-4304-83fb-c414826d5c1d"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://investors.fico.com/news-releases/news-release-details/fico-holds-mortgage-score-pricing-10-lenders-enrolled-preferred",
+        "title": "Financial data and estimates — investors.fico.com"
+      },
+      {
+        "url": "https://www.tipranks.com/news/the-fly/fico-downgraded-to-equal-weight-from-overweight-at-wells-fargo-thefly-news",
+        "title": "Financial data and estimates — www.tipranks.com"
+      },
+      {
+        "url": "https://www.streetinsider.com/Analyst%2BComments/Fair%2BIsaac%2B(FICO)%2BPT%2BLowered%2Bto%2B$986%2Bat%2BMizuho/27230831.html",
+        "title": "Financial data and estimates — www.streetinsider.com"
+      },
+      {
+        "url": "https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-1045-share-third-quarter-fiscal-2026/",
+        "title": "Financial data and estimates — investors.fico.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/814547/000081454726000030/fico-20260630.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://investors.fico.com/static-files/4dd43bd8-b07f-472c-9e53-5cb224ec9acd",
+        "title": "Financial data and estimates — investors.fico.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/814547/000081454722000016/fico-20220930.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-642-share-fourth-quarter-fiscal-2025",
+        "title": "Financial data and estimates — investors.fico.com"
+      },
+      {
+        "url": "https://fico.gcs-web.com/news-releases/news-release-details/fair-isaac-corporation-announces-date-reporting-fourth-14",
+        "title": "Financial data and estimates — fico.gcs-web.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/FICO?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "ttmPE": 23.604805951320028,
+      "industry": "CREDIT SCORES & ANALYTICS SOFTWARE",
+      "annualRevenueB": 1.990869,
+      "forwardPE": null,
+      "rsi14": 51.51090299382461,
+      "fiscalLabel": "FY2025",
+      "atr14": 42.9299458071876,
+      "close": 815.3099975585938,
+      "marketCapB": 17.608767739121397,
+      "priceDate": "2026-10-23",
+      "forwardYear": 2026,
+      "business": "Sells credit scores and software that help lenders assess risk and make decisions."
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ffico%2F1e7fc2203b59fbf84cb31ec6205c20421721362750aaece2a1f4fb491acd6b15.jpg?alt=media&token=8b33ca1a-bd16-40ce-8069-90699304525a",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Property paperwork, a gavel and house keys illustrate mortgage lending.",
+      "caption": "Illustrative archive photo of property paperwork and house keys, September 2022. Photo: advokatsmart.no (https://www.advokatsmart.no), CC BY 2.0.",
+      "credit": "advokatsmart.no",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Property_Contract_Law_and_Mortgages.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dateTaken": "2022-09-13",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_FIX",
+    "postId": "research_mover_20261026_FIX",
+    "slug": "why-comfort-systems-usa-fix-stock-is-up-today-2026-10-26",
+    "title": "Why Comfort Systems USA (FIX) Stock Is Up Today: Q3 2026 Earnings",
+    "symbol": "FIX",
+    "companyName": "Comfort Systems USA",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 7.969953310476741,
+    "quoteAsOf": "2026-10-26T14:52:40.000Z",
+    "quotePrice": 1253.38,
+    "publishedAt": "2026-10-26T15:20:06.186171+00:00",
+    "updatedAt": "2026-10-26T15:20:06.186171+00:00",
+    "summary": "Comfort Systems USA (FIX) was up 7.97% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Comfort Systems rebounded while fresh analyst notes defended the durability of its margins. On October 26, UBS maintained Buy but reduced its target to $1,900, arguing that equipment mix, acquisition accounting and early-stage projects explain current pressure. DA Davidson maintained Buy, cut its target to $1,850 and lifted its 2027 profit-per-share estimate by 16%. Those are analyst judgments: the investment question is whether the large backlog becomes profitable revenue as projects mature.",
+    "earningsPeriod": "Q3 2026",
+    "recap": [
+      "Comfort Systems USA rebounded 7.97% to $1,253.38 during trading on October 26, 2026, as analysts argued that recent margin pressure could ease. The gain follows Friday’s 9.26% decline.",
+      "UBS kept its Buy rating while cutting its price target to $1,900 from $2,225. It sees equipment mix, acquisition costs and early-stage projects weighing on margins rather than a lasting business problem.",
+      "DA Davidson also kept Buy and raised its 2027 earnings estimate by 16%, despite lowering its price target to $1,850. Its case depends on profit margins improving as projects mature.",
+      "Third-quarter results released October 22 showed $3.77 billion of revenue and $13.91 of GAAP earnings per share, meaning profit per share. Strong sales alone will not settle the debate over future profitability.",
+      "Backlog, or contracted work awaiting completion, reached $17.81 billion in September, up from $14.06 billion in June. That supports future revenue, provided the company can staff and complete the projects profitably.",
+      "The contractor installs heating, cooling, electrical and plumbing systems. Labor shortages, cost overruns and project delays can reduce the profit earned from its growing order book.",
+      "The October 23 chart closed at $1,160.86 with RSI at 21, a sign of heavy selling. Monday’s rebound is approaching the former $1,260–1,280 support area, where selling could return.",
+      "Watch whether the stock can hold above $1,280 and whether future results confirm stronger project margins. EMCOR’s October 29 results are the next scheduled peer check on construction demand."
+    ],
+    "setup": "The October 23 completed chart had RSI 21.1 and unusually heavy volume. Monday’s rebound is testing former support at $1,260–1,280. A sustained recovery above $1,280 would improve the setup; failure there leaves the $1,110–1,165 Friday low-to-close area in focus. A close below $1,110 would extend the decline. These levels describe conditional scenarios.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "alt": "Comfort Systems USA (FIX) financials research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_FIX%2F1%2Fdc91b9c0eedc54d93df310f6c3833046f7113bdd2029bcc7d79a76453d9268c4-3a442330-8387-4b1d-b935-6153d9b49e62%2FFinancials.jpg?alt=media&token=3a442330-8387-4b1d-b935-6153d9b49e62",
+        "title": "Financials",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "alt": "Comfort Systems USA (FIX) technicals research infographic",
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_FIX%2F2%2F1eaadee259dd557349667f1689255f8d5d08725a98c64f933916e118a167dfb1-c8d02016-bade-45f4-9217-859c23201f23%2FTechnicals.jpg?alt=media&token=c8d02016-bade-45f4-9217-859c23201f23",
+        "title": "Technicals",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926118156/fix-ex99d1.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://investors.comfortsystemsusa.com/static-files/8706afb9-18da-40fb-8674-31fe1a5ee0ec",
+        "title": "Financial data and estimates — investors.comfortsystemsusa.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1035983/000110465926017530/fix-20251231x10k.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://investors.comfortsystemsusa.com/node/13306",
+        "title": "Financial data and estimates — investors.comfortsystemsusa.com"
+      },
+      {
+        "url": "https://comfortsystemsusa.gcs-web.com/news-releases/news-release-details/comfort-systems-announces-2027-leadership-transition",
+        "title": "Financial data and estimates — comfortsystemsusa.gcs-web.com"
+      },
+      {
+        "url": "https://emcorgroup.com/investor-relations/press-releases/2026-news/emcor-group-inc-sets-third-quarter-2026-earnings-release-date-and-webcast",
+        "title": "Financial data and estimates — emcorgroup.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/FIX?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      },
+      {
+        "url": "https://www.investing.com/news/analyst-ratings/ubs-cuts-comfort-systems-usa-stock-price-target-on-margin-concerns-93CH-4971905",
+        "title": "Financial data and estimates — www.investing.com"
+      },
+      {
+        "url": "https://www.investing.com/news/analyst-ratings/da-davidson-cuts-comfort-systems-usa-stock-price-target-on-margin-softness-93CH-4973160",
+        "title": "Financial data and estimates — www.investing.com"
+      }
+    ],
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "atr14": 88.66693998355053,
+      "rsi14": 21.05174833612074,
+      "annualRevenueB": 9.101641,
+      "business": "Installs and services mechanical, electrical and plumbing building systems.",
+      "forwardYear": 2026,
+      "priceDate": "2026-10-23",
+      "ttmPE": 25.07256987800351,
+      "close": 1160.8599853515625,
+      "forwardPE": null,
+      "marketCapB": 40.61373600495117,
+      "fiscalLabel": "FY2025",
+      "industry": "MECHANICAL & ELECTRICAL CONTRACTING"
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Ffix%2Fe8a50f4f64f7e67f90b60e65d8711671f97e08717a7d76d239e0264c632812da.jpg?alt=media&token=17e0bb64-e5f9-4b6b-a81e-85f0f28c9e23",
+      "width": 1471,
+      "height": 974,
+      "alt": "Rooftop packaged heating and cooling equipment",
+      "caption": "Illustrative archive photo of rooftop HVAC equipment, August 2009; not identified as a Comfort Systems USA installation or the current earnings event.",
+      "credit": "P199",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rooftop_Packaged_Units.JPG",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "dateTaken": "2009-08",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_LITE",
+    "postId": "research_mover_20261026_LITE",
+    "slug": "why-lumentum-lite-stock-is-up-today-2026-10-26",
+    "title": "Why Lumentum (LITE) Stock Is Up Today",
+    "symbol": "LITE",
+    "companyName": "Lumentum",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "up",
+    "move": 8.755967573429269,
+    "quoteAsOf": "2026-10-26T15:22:19.000Z",
+    "quotePrice": 822.38,
+    "publishedAt": "2026-10-26T15:43:15.244430+00:00",
+    "updatedAt": "2026-10-26T15:43:15.244430+00:00",
+    "summary": "Lumentum (LITE) was up 8.76% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "StoneX began Lumentum coverage at Buy with a $1,200 target on October 26, citing optical and photonic demand tied to AI infrastructure. It also initiated Coherent at Buy. The endorsement highlights the opportunity for Lumentum to turn demand for faster data-center connections into sales and profit. The next concrete test is the November 5 earnings report, against management’s previously issued September-quarter revenue outlook of $1.225–1.275 billion. Analyst targets express opinion; manufacturing capacity, customer orders and dilution determine how much growth reaches each shareholder.",
+    "earningsPeriod": null,
+    "recap": [
+      "Lumentum rose 8.76% to $822.38 during trading on October 26, 2026, after StoneX began coverage with a Buy rating. The new endorsement puts AI networking demand back in focus after the recent selloff.",
+      "StoneX set a $1,200 price target and also started competitor Coherent at Buy. This is an analyst view that optical networking can benefit from AI spending, rather than a new customer contract.",
+      "Lumentum makes lasers and optical modules that move data using light. Faster AI systems need more connections, creating an opportunity to sell more components and higher-speed products.",
+      "Its fiscal fourth quarter, reported August 11, produced $1.01 billion of revenue and $3.23 of adjusted earnings per share, meaning profit per share. Revenue more than doubled from a year earlier.",
+      "For the September quarter, management forecast revenue of $1.225–1.275 billion and adjusted profit per share of $4.05–4.35. The next report will show whether that rapid sales growth translated into the expected profits.",
+      "Adjusted profit differs sharply from the GAAP accounting result: fiscal 2026 included a $7.8 billion non-cash charge from settling convertible debt with shares. Investors should track dilution as well as operating growth.",
+      "The October 23 chart closed at $756.17, below its 20-day and 50-day moving averages. Monday’s rally is moving toward the earlier $825–880 trading area, where the recovery faces its next test.",
+      "November 5 after close is the confirmed date for fiscal first-quarter 2027 results. Watch optical product shipments, manufacturing capacity and the next outlook; a close below $735 would weaken the rebound."
+    ],
+    "setup": "The completed October 23 close of $756.17 was below the 20-day average of $953.76 and 50-day average of $925.24. The October 22–23 lows place support around $735–755. Monday’s rebound approaches the $825–880 area traded on October 16–21. Holding above $825 and then recovering $880 would strengthen the rebound; a close below $735 would weaken it. Confirm with subsequent closes and trading volume.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_LITE%2F1%2Fef7df973b772de9560f12f9327ee4756ccbdddf4b6a225b9eb24269206610c4d-2323df72-fb45-4c80-8da1-bc1240300886%2FFinancials.jpg?alt=media&token=2323df72-fb45-4c80-8da1-bc1240300886",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Lumentum (LITE) financials research infographic",
+        "title": "Financials"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_LITE%2F2%2Fe8ee744edcbab5b49bb4985c8dbdd251a09c67a17d9bbe093bc055c8c4646fe4-0f3d2275-c7a4-42e6-8464-6b38cb8225ef%2FTechnicals.jpg?alt=media&token=0f3d2275-c7a4-42e6-8464-6b38cb8225ef",
+        "width": 1200,
+        "height": 1200,
+        "alt": "Lumentum (LITE) technicals research infographic",
+        "title": "Technicals"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.streetinsider.com/Investing/Lumentum%2Bshares%2Brise%2Bon%2BStoneX%2Bbuy%2Brating/27232088.html",
+        "title": "Financial data and estimates — www.streetinsider.com"
+      },
+      {
+        "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Results/default.aspx",
+        "title": "Financial data and estimates — investor.lumentum.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1633978/000130817926000422/lite-ars.pdf",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.businesswire.com/news/home/20261005042169/en/Lumentum-Announces-Reporting-Date-for-Fiscal-First-Quarter-2027-Financial-Results",
+        "title": "Financial data and estimates — www.businesswire.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/LITE?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardYear": 2026,
+      "close": 756.1699829101562,
+      "ttmPE": null,
+      "forwardPE": null,
+      "annualRevenueB": 3.014,
+      "industry": "OPTICAL NETWORKING & PHOTONICS",
+      "priceDate": "2026-10-23",
+      "business": "Makes lasers and optical modules that connect data centers and networks.",
+      "fiscalLabel": "FY2026",
+      "rsi14": 34.53038511526178,
+      "atr14": 68.79457484974765,
+      "marketCapB": 70.67109535486567
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Flite%2F7b145da5313f35ea97f082dfce213335b55289f6d45aae79a5ed45f5dcd41f98.jpg?alt=media&token=c6286b00-71da-4bca-be2d-b963d3286399",
+      "width": 1920,
+      "height": 1920,
+      "alt": "Cisco optical transceiver modules illustrating fiber-optic networking equipment",
+      "caption": "Illustrative archive photo of Cisco optical transceiver modules, April 2026; these are not identified as Lumentum products.",
+      "credit": "ITEagle Europe - Sebastiaan Broekhoven",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cisco_SFP-10G-SR_10GBASE-SR_SFP%2B_optical_transceiver_modules_(lot)_-_overview.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dateTaken": "2026-04-04",
+      "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
+    }
+  },
+  {
+    "version": 1,
+    "id": "research_mover_20261026_NFLX",
+    "postId": "research_mover_20261026_NFLX",
+    "slug": "why-netflix-inc-nflx-stock-is-down-today-2026-10-26",
+    "title": "Why Netflix, Inc. (NFLX) Stock Is Down Today",
+    "symbol": "NFLX",
+    "companyName": "Netflix, Inc.",
+    "sessionDate": "2026-10-26",
+    "marketSession": "intraday",
+    "regularClose": null,
+    "earningsCheck": null,
+    "direction": "down",
+    "move": -4.160971905846611,
+    "quoteAsOf": "2026-10-26T17:36:23.000Z",
+    "quotePrice": 63.11,
+    "publishedAt": "2026-10-26T17:48:22.034512+00:00",
+    "updatedAt": "2026-10-26T17:48:22.034512+00:00",
+    "summary": "Netflix, Inc. (NFLX) was down 4.16% in the October 26, 2026 regular-session trading. Read the latest catalyst, earnings context, financials and technical research.",
+    "catalyst": "Huatai Financial lowered Netflix from Buy to Hold on October 25, ahead of Monday’s further decline. Netflix’s October 20 results had reduced its annual advertising outlook from roughly $3 billion to $2.7 billion as new ad capabilities rolled out more slowly. The investment question is whether subscriptions and better ad execution can sustain growth as the business expands. The downgrade is analyst opinion, while the advertising revision is management guidance from last week.",
+    "earningsPeriod": null,
+    "recap": [
+      "Netflix fell 4.16% to $63.11 during trading on October 26, 2026, following a weekend Huatai downgrade as its reduced advertising outlook weighed on the growth story.",
+      "Huatai Financial cut Netflix from Buy to Hold on October 25. That adds to the reassessment of the stock after the October 20 earnings report.",
+      "Netflix lowered its 2026 advertising forecast to about $2.7 billion from $3 billion because new ad features are taking longer to roll out. The roughly 10% cut weakens an important source of future growth.",
+      "The subscription business is still growing. September-quarter revenue rose 12% to $12.87 billion, while GAAP earnings per share, meaning profit per share, reached $0.87.",
+      "Netflix expects $13.44 billion of fourth-quarter revenue and a 26% operating margin. Planned job cuts reduce that margin by about 1.2 percentage points through restructuring costs.",
+      "Cash deserves attention alongside profit: the 2026 free-cash-flow forecast fell to about $12 billion from $12.5 billion, mainly because of a planned property transaction.",
+      "The completed October 23 chart closed at $65.85 below its 20-day and 50-day averages. Monday’s price has since fallen below the $64.10 low reached after earnings.",
+      "Watch whether delayed ad features launch and the holiday content slate supports viewing and subscriptions. A recovery above the recent $67.10–67.80 rebound area would improve the chart; continued trading below $64.10 keeps pressure on the shares."
+    ],
+    "setup": "October 23 completed chart: close $65.85, 20-day average $69.15 and 50-day average $74.27. October 26 trading has broken below the October 21 low near $64.10. A recovery through $67.10–67.80 would reclaim recent rebound highs. These levels are conditional reference points; competition and ad-product execution remain risks.",
+    "technicalDate": "2026-10-23",
+    "images": [
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_NFLX%2F1%2Fb9ba5c83be138a585739d8ccfe9745ec8cdad465ea2ee3f7e5901b87faa6faaf-f8696630-6f91-4b1f-a81f-1b6269374d0d%2FFinancials.jpg?alt=media&token=f8696630-6f91-4b1f-a81f-1b6269374d0d",
+        "height": 1200,
+        "width": 1200,
+        "title": "Financials",
+        "alt": "Netflix, Inc. (NFLX) financials research infographic"
+      },
+      {
+        "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/post-banners%2Fresearch_mover_20261026_NFLX%2F2%2Fb6c3d744cb5b23b8eac9ce8cdc9f387655b9a73ba8102a4b65a2c448bfa68843-22abb1ec-d227-4f06-853e-30642b8c5d06%2FTechnicals.jpg?alt=media&token=22abb1ec-d227-4f06-853e-30642b8c5d06",
+        "height": 1200,
+        "width": 1200,
+        "title": "Technicals",
+        "alt": "Netflix, Inc. (NFLX) technicals research infographic"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf",
+        "title": "Financial data and estimates — ir.netflix.net"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2025/ar/99482238-46b2-4d0d-b292-40e6781bdf03.pdf",
+        "title": "Financial data and estimates — s22.q4cdn.com"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528024000030/nflx-20231231.htm",
+        "title": "Issuer filing / earnings release — www.sec.gov"
+      },
+      {
+        "url": "https://www.streetinsider.com/Downgrades/Huatai+Financial+Downgrades+Netflix+(NFLX)+to+Hold+(3)/27229424.html",
+        "title": "Financial data and estimates — www.streetinsider.com"
+      },
+      {
+        "url": "https://www.investing.com/news/stock-market-news/why-is-netflix-stock-sliding-today-93CH-4903596",
+        "title": "Financial data and estimates — www.investing.com"
+      },
+      {
+        "url": "https://query2.finance.yahoo.com/v8/finance/chart/NFLX?range=5y&interval=1d&events=splits",
+        "title": "Financial data and estimates — query2.finance.yahoo.com"
+      }
+    ],
+    "author": {
+      "url": "https://www.stockstobuynow.ai/editorial-policy/",
+      "name": "Stocks To Buy Now AI Research"
+    },
+    "aiAssisted": true,
+    "disclosure": "AI-assisted research with source and calculation checks. Prices may be delayed. Technical charts use the stated completed session, which can precede the quoted intraday move. Educational information; investing involves risk.",
+    "stockContext": {
+      "forwardYear": 2026,
+      "business": "Earns subscription and advertising revenue from films, series and live programming.",
+      "marketCapB": 270.4015544467939,
+      "priceDate": "2026-10-23",
+      "industry": "STREAMING ENTERTAINMENT",
+      "close": 65.8499984741211,
+      "forwardPE": null,
+      "rsi14": 37.12018753285766,
+      "ttmPE": 19.031791466508988,
+      "fiscalLabel": "FY2025",
+      "atr14": 2.1194026412459643,
+      "annualRevenueB": 45.183036
+    },
+    "leadImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/stocker-fcda2.appspot.com/o/website-editorial%2Fnflx%2Fd7b9cac6396580b28dcca5fab8c4604d4133aac6940eb848a2fe8e526f7450c5.jpg?alt=media&token=7c79dc6c-572e-406b-bb5a-0b2991b7ab8f",
+      "width": 1920,
+      "height": 1442,
+      "alt": "Netflix sign outside its Los Gatos offices in an archive photo",
+      "caption": "Archive photo of Netflix offices in Los Gatos, California, photographed in July 2008.",
+      "credit": "Coolcaesar at English Wikipedia",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Netflix_headquarters.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "dateTaken": "Taken on 6 July 2008",
       "changes": "Wikimedia-supplied thumbnail; displayed with a responsive crop."
     }
   },

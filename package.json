@@ -20,6 +20,7 @@
     "test:featured-research": "node scripts/featured-research-check.cjs",
     "sync:market-overview": "node scripts/sync-market-overview.cjs",
     "sync:mover-research": "node scripts/sync-mover-research.cjs",
+    "render:mover-social": "node scripts/mover-social-preview.cjs",
     "sync:market-briefings": "node scripts/sync-market-briefings.cjs",
     "test:smart-money": "node scripts/smart-money-check.cjs",
     "sync:smart-money": "node scripts/sync-smart-money.cjs",

@@ -16,15 +16,16 @@ import {catalog} from '../../lib/catalog';
 import {loadStockResearch,loadStockEarnings} from '../../lib/stock-research-server';
 import {recentStockNews} from '../../lib/stocks';
 import {fetchResearch} from '../../lib/research-server';
+import {moverSocialImagePath} from '../../lib/mover-social-preview';
 import styles from '../../styles/MoverStory.module.css';
 
-export default function MoverStory({article:a,research}:{article:MoverArticle;research:InstrumentResearchProps|null}){
+export default function MoverStory({article:a,research,socialImage}:{article:MoverArticle;research:InstrumentResearchProps|null;socialImage:{url:string;width:number;height:number;alt:string}}){
  const path=moverArticleUrl(a);
  const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
  const date=(value:string)=>new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/New_York'}).format(new Date(value));
  const time=(value:string)=>new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}).format(new Date(value));
  const session=date(a.sessionDate+'T12:00:00Z');
- return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={a.leadImage?.url||a.images[0].url} socialImageAlt={a.leadImage?.alt||a.images[0].alt} socialImageWidth={a.leadImage?.width||1200} socialImageHeight={a.leadImage?.height||1200} ogType="article" hideAppDownload>
+ return <ResearchPage title={a.title} path={path} description={a.summary} socialImageUrl={socialImage.url} socialImageAlt={socialImage.alt} socialImageWidth={socialImage.width} socialImageHeight={socialImage.height} ogType="article" hideAppDownload>
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(moverArticleSchema(a))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Stock Movers News',path:'/news/'},{name:a.title,path}]))}}/><meta property="article:published_time" content={a.publishedAt}/><meta property="article:modified_time" content={a.updatedAt}/></Head>
  <article className={styles.story} data-app-post-id={a.postId}>
  <Link className={styles.back} href="/news/">← Stock movers news</Link>
@@ -33,7 +34,7 @@ export default function MoverStory({article:a,research}:{article:MoverArticle;re
  <div className={styles.identity}><StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/><span><strong>{a.companyName}</strong><small>{a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
  <h1>{a.title}</h1>
  <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)} · {time(a.publishedAt)} ET</time></span></p>
- <ArticlePostEngagement postId={a.postId}/>
+ <ArticlePostEngagement postId={a.postId} interactive/>
  <div className={styles.quote}>
  {a.move!==null&&a.quotePrice!==null&&a.quoteAsOf!==null?<>
  <div><span className={styles.label}>Price snapshot</span><strong>{money(a.quotePrice)}</strong></div>
@@ -60,7 +61,11 @@ export default function MoverStory({article:a,research}:{article:MoverArticle;re
 export function getStaticPaths(){return {paths:moverArticles.map(a=>({params:{slug:a.slug}})),fallback:false};}
 export async function getStaticProps({params}:{params:{slug:string}}){
  const article=moverArticles.find(a=>a.slug===params.slug);if(!article)return {notFound:true};
+ const expectedImage=moverSocialImagePath(article);
+ const generated=require('node:fs').existsSync(require('node:path').join(process.cwd(),'public',expectedImage));
+ const fallback=article.leadImage||article.images[0];
+ const socialImage=generated?{url:`https://www.stockstobuynow.ai${expectedImage}`,width:1200,height:630,alt:`${article.symbol} ${article.marketSession} price chart`}:{url:fallback.url,width:fallback.width,height:fallback.height,alt:fallback.alt};
  const item=catalog.find(i=>i.symbol===article.symbol);
  const research=item?{item,news:recentStockNews(await fetchResearch(),item.symbol),bundle:item.type==='EQUITY'?loadStockResearch(item.symbol):null,calendar:item.type==='EQUITY'?loadStockEarnings(item.symbol):null}:null;
- return {props:{article,research}};
+ return {props:{article,research,socialImage}};
 }

@@ -1,0 +1,348 @@
+{
+  "version": 2,
+  "generatedAt": "2026-10-27T10:53:48.227Z",
+  "items": {
+    "bloom-energy-be-q3-2026-earnings-review-2026-10-22": {
+      "image": "/assets/social/movers/bloom-energy-be-q3-2026-earnings-review-2026-10-22-mvkurn30-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 64,
+      "move": -9.801625936507552,
+      "last": 196.4250030517578,
+      "baseline": 217.77000427246094
+    },
+    "cadence-cdns-q3-2026-earnings-review-2026-10-26": {
+      "image": "/assets/social/movers/cadence-cdns-q3-2026-earnings-review-2026-10-26-mvptgq3a-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 43,
+      "move": 2.349686891006586,
+      "last": 329.74,
+      "baseline": 322.1700134277344
+    },
+    "celestica-cls-q3-2026-earnings-review-2026-10-26": {
+      "image": "/assets/social/movers/celestica-cls-q3-2026-earnings-review-2026-10-26-mvpxvwr0-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 48,
+      "move": 16.784917899858097,
+      "last": 288.05,
+      "baseline": 246.65
+    },
+    "nucor-nue-q3-2026-earnings-review-2026-10-26": {
+      "image": "/assets/social/movers/nucor-nue-q3-2026-earnings-review-2026-10-26-mvpua20v-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 20,
+      "move": -1.884595293759106,
+      "last": 252.5,
+      "baseline": 257.3500061035156
+    },
+    "public-storage-psa-q3-2026-earnings-review-2026-10-26": {
+      "image": "/assets/social/movers/public-storage-psa-q3-2026-earnings-review-2026-10-26-mvpwazfl-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 13,
+      "move": 0.6645596544237353,
+      "last": 309.01,
+      "baseline": 306.9700012207031
+    },
+    "welltower-well-q3-2026-earnings-review-2026-10-26": {
+      "image": "/assets/social/movers/welltower-well-q3-2026-earnings-review-2026-10-26-mvpss8t7-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 13,
+      "move": -0.5444497764134915,
+      "last": 239.3,
+      "baseline": 240.61000061035156
+    },
+    "why-lennar-len-stock-is-up-today-2026-10-22": {
+      "image": "/assets/social/movers/why-lennar-len-stock-is-up-today-2026-10-22-mvjsctp1-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 7.297297297297289,
+      "last": 84.1305,
+      "baseline": 77.69999694824219
+    },
+    "why-allegion-alle-stock-is-up-today-2026-10-22": {
+      "image": "/assets/social/movers/why-allegion-alle-stock-is-up-today-2026-10-22-mvk08d4z-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 9.597484276729551,
+      "last": 176.52,
+      "baseline": 159
+    },
+    "why-blackstone-bx-stock-is-up-today-2026-10-22": {
+      "image": "/assets/social/movers/why-blackstone-bx-stock-is-up-today-2026-10-22-mvk08f3l-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 6.543761978643792,
+      "last": 118.28,
+      "baseline": 109.56999969482422
+    },
+    "why-coherent-cohr-stock-is-down-today-2026-10-22": {
+      "image": "/assets/social/movers/why-coherent-cohr-stock-is-down-today-2026-10-22-mvk08gw5-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -12.585778638487778,
+      "last": 208.5,
+      "baseline": 237.52999877929688
+    },
+    "why-lam-research-lrcx-stock-is-down-today-2026-10-22": {
+      "image": "/assets/social/movers/why-lam-research-lrcx-stock-is-down-today-2026-10-22-mvk08io0-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -10.962002990682873,
+      "last": 231,
+      "baseline": 260.80999755859375
+    },
+    "why-roper-technologies-rop-stock-is-up-today-2026-10-22": {
+      "image": "/assets/social/movers/why-roper-technologies-rop-stock-is-up-today-2026-10-22-mvk08kew-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 8.516752188348931,
+      "last": 436.23,
+      "baseline": 397.55999755859375
+    },
+    "why-seagate-technology-stx-stock-is-down-after-hours-2026-10-22": {
+      "image": "/assets/social/movers/why-seagate-technology-stx-stock-is-down-after-hours-2026-10-22-mvk4mfch-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 46,
+      "move": -2.869296415111966,
+      "last": 614,
+      "baseline": 642.14
+    },
+    "why-at-t-t-stock-is-down-after-hours-2026-10-22": {
+      "image": "/assets/social/movers/why-at-t-t-stock-is-down-after-hours-2026-10-22-mvk53cpo-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 44,
+      "move": -4.551724137931035,
+      "last": 21.99,
+      "baseline": 22.765
+    },
+    "why-verizon-communications-vz-stock-is-down-after-hours-2026-10-22": {
+      "image": "/assets/social/movers/why-verizon-communications-vz-stock-is-down-after-hours-2026-10-22-mvk52y42-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 45,
+      "move": -4.857838256444302,
+      "last": 43.51,
+      "baseline": 45.195
+    },
+    "why-western-digital-wdc-stock-is-down-after-hours-2026-10-22": {
+      "image": "/assets/social/movers/why-western-digital-wdc-stock-is-down-after-hours-2026-10-22-mvk53mau-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 48,
+      "move": -5.138484993929804,
+      "last": 331.01,
+      "baseline": 354.19
+    },
+    "why-american-tower-amt-stock-is-up-premarket-2026-10-23": {
+      "image": "/assets/social/movers/why-american-tower-amt-stock-is-up-premarket-2026-10-23-mvl152ow-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 35,
+      "move": 11.279396376053331,
+      "last": 196.53500366210938,
+      "baseline": 181.57
+    },
+    "why-cbre-group-cbre-stock-is-down-today-2026-10-23": {
+      "image": "/assets/social/movers/why-cbre-group-cbre-stock-is-down-today-2026-10-23-mvl5zeuc-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -5.836635172203608,
+      "last": 123.3,
+      "baseline": 131.24000549316406
+    },
+    "why-crown-castle-cci-stock-is-up-premarket-2026-10-23": {
+      "image": "/assets/social/movers/why-crown-castle-cci-stock-is-up-premarket-2026-10-23-mvl0yyjq-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 42,
+      "move": 15.679309907395655,
+      "last": 89.80979919433594,
+      "baseline": 78.83
+    },
+    "why-crowdstrike-crwd-stock-is-up-today-2026-10-23": {
+      "image": "/assets/social/movers/why-crowdstrike-crwd-stock-is-up-today-2026-10-23-mvl87tql-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 6.182226611750874,
+      "last": 257.8428,
+      "baseline": 237.94000244140625
+    },
+    "why-datadog-ddog-stock-is-up-today-2026-10-23": {
+      "image": "/assets/social/movers/why-datadog-ddog-stock-is-up-today-2026-10-23-mvlaa4gf-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 5.7284228903976775,
+      "last": 269.65,
+      "baseline": 257.75
+    },
+    "why-comfort-systems-usa-fix-stock-is-down-today-2026-10-23": {
+      "image": "/assets/social/movers/why-comfort-systems-usa-fix-stock-is-down-today-2026-10-23-mvl559m5-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -6.998369509993196,
+      "last": 1163,
+      "baseline": 1279.3699951171875
+    },
+    "why-globe-life-gl-stock-is-down-today-2026-10-23": {
+      "image": "/assets/social/movers/why-globe-life-gl-stock-is-down-today-2026-10-23-mvl6uze1-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -6.775132118045246,
+      "last": 154.79,
+      "baseline": 168.41000366210938
+    },
+    "why-sba-communications-sbac-stock-is-up-premarket-2026-10-23": {
+      "image": "/assets/social/movers/why-sba-communications-sbac-stock-is-up-premarket-2026-10-23-mvl128zg-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 10,
+      "move": 10.638881103200859,
+      "last": 191.74000549316406,
+      "baseline": 178.39
+    },
+    "why-slb-slb-stock-is-up-today-2026-10-23": {
+      "image": "/assets/social/movers/why-slb-slb-stock-is-up-today-2026-10-23-mvl5ol8z-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 6.70030272452069,
+      "last": 53.06,
+      "baseline": 49.54999923706055
+    },
+    "why-at-t-t-stock-is-down-today-2026-10-23": {
+      "image": "/assets/social/movers/why-at-t-t-stock-is-down-today-2026-10-23-mvl7dy02-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -5.804749340369375,
+      "last": 20.9595,
+      "baseline": 22.739999771118164
+    },
+    "why-t-mobile-us-tmus-stock-is-down-today-2026-10-23": {
+      "image": "/assets/social/movers/why-t-mobile-us-tmus-stock-is-down-today-2026-10-23-mvlbey2x-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -6.112412620442087,
+      "last": 146.75,
+      "baseline": 158.7899932861328
+    },
+    "why-salesforce-crm-stock-is-down-after-hours-2026-10-23": {
+      "image": "/assets/social/movers/why-salesforce-crm-stock-is-down-after-hours-2026-10-23-mvlf98b9-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 13,
+      "move": -0.3057980927855808,
+      "last": 248.69,
+      "baseline": 248.53
+    },
+    "why-uber-technologies-uber-stock-is-up-after-hours-2026-10-23": {
+      "image": "/assets/social/movers/why-uber-technologies-uber-stock-is-up-after-hours-2026-10-23-mvlewdbe-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 39,
+      "move": 0.5475136878421827,
+      "last": 66.99,
+      "baseline": 66.665
+    },
+    "why-vertex-pharmaceuticals-vrtx-stock-is-up-after-hours-2026-10-23": {
+      "image": "/assets/social/movers/why-vertex-pharmaceuticals-vrtx-stock-is-up-after-hours-2026-10-23-mvlg012q-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 3,
+      "move": 0.7768213310938687,
+      "last": 523.93,
+      "baseline": 523.93
+    },
+    "why-bloom-energy-be-stock-is-up-today-2026-10-26": {
+      "image": "/assets/social/movers/why-bloom-energy-be-stock-is-up-today-2026-10-26-mvpip0g8-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 7.58406621831349,
+      "last": 204.91,
+      "baseline": 193.3000030517578
+    },
+    "why-coherent-corp-cohr-stock-is-up-today-2026-10-26": {
+      "image": "/assets/social/movers/why-coherent-corp-cohr-stock-is-up-today-2026-10-26-mvpk7cny-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 7.224425438386928,
+      "last": 221.92,
+      "baseline": 209.2899932861328
+    },
+    "why-dollar-general-corporation-dg-stock-is-down-today-2026-10-26": {
+      "image": "/assets/social/movers/why-dollar-general-corporation-dg-stock-is-down-today-2026-10-26-mvplohal-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -4.838345014695911,
+      "last": 128.42,
+      "baseline": 132.69000244140625
+    },
+    "why-fair-isaac-corporation-fico-stock-is-down-today-2026-10-26": {
+      "image": "/assets/social/movers/why-fair-isaac-corporation-fico-stock-is-down-today-2026-10-26-mvphiqrq-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -12.92146545485765,
+      "last": 700,
+      "baseline": 815.3099975585938
+    },
+    "why-comfort-systems-usa-fix-stock-is-up-today-2026-10-26": {
+      "image": "/assets/social/movers/why-comfort-systems-usa-fix-stock-is-up-today-2026-10-26-mvpekw16-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 7.969953310476741,
+      "last": 1251.9254,
+      "baseline": 1160.8599853515625
+    },
+    "why-lumentum-lite-stock-is-up-today-2026-10-26": {
+      "image": "/assets/social/movers/why-lumentum-lite-stock-is-up-today-2026-10-26-mvpfenu4-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 8.755967573429269,
+      "last": 821,
+      "baseline": 756.1699829101562
+    },
+    "why-netflix-inc-nflx-stock-is-down-today-2026-10-26": {
+      "image": "/assets/social/movers/why-netflix-inc-nflx-stock-is-down-today-2026-10-26-mvpjvk42-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": -4.160971905846611,
+      "last": 63.8205,
+      "baseline": 65.8499984741211
+    },
+    "why-nasdaq-ndaq-stock-is-up-today-2026-10-22": {
+      "image": "/assets/social/movers/why-nasdaq-ndaq-stock-is-up-today-2026-10-22-mvjscu7f-v2.png",
+      "width": 1200,
+      "height": 630,
+      "points": 79,
+      "move": 6.560445276737403,
+      "last": 103.3,
+      "baseline": 96.12000274658203
+    }
+  }
+}
