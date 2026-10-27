@@ -87,3 +87,19 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+  submit-search-console:
+    name: Submit Google News sitemap
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      GSC_SITE_URL: sc-domain:stockstobuynow.ai
+      GSC_SITEMAP_URL: https://www.stockstobuynow.ai/news-sitemap.xml
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit the deployed sitemap
+        if: env.GSC_SERVICE_ACCOUNT_JSON != ''
+        run: node scripts/submit-google-news-sitemap.cjs
+      - name: Explain one-time setup when credentials are absent
+        if: env.GSC_SERVICE_ACCOUNT_JSON == ''
+        run: echo "Search Console submission is ready but needs the GSC_SERVICE_ACCOUNT_JSON repository secret."
