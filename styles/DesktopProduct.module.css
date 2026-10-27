@@ -75,3 +75,4 @@
 }
 @media(max-width:760px) and (hover:hover) and (pointer:fine){.introHeading{display:block}.introHeading>.primary{display:inline-flex;margin-top:22px}.introFooter{flex-wrap:wrap}.introBrand .eyebrow{font-size:9px}.tools a{display:block}.toolIcon{margin-bottom:12px}}
 @media(max-width:380px) and (hover:hover) and (pointer:fine){.tools{grid-template-columns:1fr}}
+.membershipTrust{padding-block:8px}
