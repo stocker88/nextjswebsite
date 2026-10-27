@@ -26,6 +26,17 @@ export default function TrustpilotWidget({
     let timeoutId: NodeJS.Timeout;
     let isCancelled = false;
 
+    // Pages other than the home page may not have loaded Trustpilot yet.
+    // Ask for the official widget first; the visual fallback remains available
+    // when the script is blocked or slow.
+    if (typeof document !== 'undefined' && !(window as any).Trustpilot && !document.querySelector('script[data-stbn-trustpilot]')) {
+      const script = document.createElement('script');
+      script.src = 'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js';
+      script.async = true;
+      script.dataset.stbnTrustpilot = 'true';
+      document.head.appendChild(script);
+    }
+
     // Trigger fallback mode after 1.2s if widget fails to load
     const fallbackTimer = setTimeout(() => {
       if (!isCancelled) {

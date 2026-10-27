@@ -17,6 +17,7 @@ assert.deepEqual(Array.from(moduleExports.onboardingQuestions,q=>[q.key,q.title,
 for(const expected of ["where('userName','==',name)",'That username is already taken.','profile_pictures/','quickOnboarding','onboardingNotifications','initial_cash_balance:10000'])assert.ok(source.includes(expected),`Missing onboarding invariant: ${expected}`);
 const gate=fs.readFileSync('components/ProfileOnboarding.tsx','utf8');
 for(const expected of ['Choose a profile picture to continue.','Your first signals are ready.','Unlock every price signal','All financial trends are visible.','Price through','Continue to your free trial →',"router.replace('/membership/?from=onboarding')",'ProfileOnboardingGate','siteProfileExists(user.uid)','sessionStorage.setItem(cacheKey','onProfileReady?.(user.uid,exists)','onProfileReady?.(user.uid,true)'])assert.ok(gate.includes(expected),`Missing profile gate invariant: ${expected}`);
+for(const expected of ['Independent Trustpilot reviews','TrustpilotWidget','53aa8912dec7e10d38f59f36'])assert.ok(gate.includes(expected),`Missing onboarding trust invariant: ${expected}`);
 assert.ok(gate.includes('lockedPriceBlank')&&gate.includes('lockedLogo'),'Locked previews must use the dark price-free treatment and green logo placeholder.');
 assert.ok(!gate.includes('symbol={`LOCKED-${signal.symbol}`}'),'Locked previews must not render a stock-price chart.');
 const preview=fs.readFileSync('lib/onboarding-signal-preview.ts','utf8');

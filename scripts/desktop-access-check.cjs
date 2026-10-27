@@ -39,6 +39,8 @@ account={...account,desktop:false};link=DesktopAppLink(props);assert.equal(link.
 assert.equal(DesktopActionText({children:'Get App',desktopLabel:'Review research'}).props.children,'Get App');
 const DownloadOptions=load('components/AppDownloadOptions.tsx',{'../lib/analytics':{trackAppStoreClick:()=>{}}}).default;
 const qr=renderToStaticMarkup(React.createElement(DownloadOptions,{placement:'test',showQR:true,threadId:'report_123'}));assert.match(qr,/data-desktop-download-ready="true"/);assert.match(qr,/data-store-icon="apple"/);assert.match(qr,/data-store-icon="google"/);assert.match(qr,/iPhone · App Store/);assert.match(qr,/Android · Google Play/);assert.match(qr,/selected thread/);assert.equal((qr.match(/<svg/g)||[]).length,5);
+assert.equal((qr.match(/data-store-review-card=/g)||[]).length,2);
+for(const expected of ['iPhone &amp; iPad reviews','Android reviews','★★★★★','Get the iPhone app','Get the Android app'])assert.match(qr,new RegExp(expected));
 let effects=[],states=[],index=0;const navigations=[];const router={replace:path=>navigations.push(path)};
 const page=load('components/DesktopAccessPage.tsx',{
  react:{...React,useState:initial=>[states[index++]??initial,()=>{}],useEffect:fn=>effects.push(fn)},

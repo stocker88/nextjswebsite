@@ -5,6 +5,7 @@ import {useRouter} from 'next/router';
 import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
 import {completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
+import TrustpilotWidget from './TrustpilotWidget';
 import s from '../styles/ProfileOnboarding.module.css';
 
 const emptyAnswers:OnboardingAnswers={experience:'',interest:'',horizon:''};
@@ -146,6 +147,9 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
      <div className={s.moreSignals}><span>🔒</span><div><strong>Unlock every price signal</strong><small>All financial trends are visible. Start your trial to reveal each company and its performance.</small></div></div>
     </div>
     <p className={s.resultsNote}>Historical examples are educational and are not guarantees or recommendations.</p>
+    <section className={s.onboardingTrust} aria-label="Independent Trustpilot reviews">
+     <TrustpilotWidget templateId="53aa8912dec7e10d38f59f36" businessUnitId="670a2355c53c6130a02f3e50" height="124px"/>
+    </section>
     <button className={s.primary} type="button" disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Continue to your free trial →'}</button>
    </div>}
    {error&&<p className={s.error} role="alert">{error}</p>}
