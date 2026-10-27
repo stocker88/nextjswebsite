@@ -4,14 +4,32 @@ const path=require('node:path');
 const out=path.resolve(process.argv[2]||'out');
 const html=route=>fs.readFileSync(path.join(out,route,'index.html'),'utf8');
 const sitemap=fs.readFileSync(path.join(out,'sitemap.xml'),'utf8');
+const newsSitemap=fs.readFileSync(path.join(out,'news-sitemap.xml'),'utf8');
 const urls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&'));
+const newsUrls=[...newsSitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&'));
 assert(urls.length>100,'Sitemap missing content');
 assert.equal(new Set(urls).size,urls.length,'Duplicate canonical URLs');
+assert(newsSitemap.includes('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"'),'Google News namespace missing');
+assert(newsSitemap.includes('<news:name>Stocks To Buy Now AI</news:name>'),'Google News publication name missing');
+assert.equal(new Set(newsUrls).size,newsUrls.length,'Duplicate Google News URLs');
+assert(newsUrls.length<=1000,'Google News sitemap exceeds 1,000 URLs');
 for(const url of urls){
  const parsed=new URL(url);assert.equal(parsed.host,'www.stockstobuynow.ai');assert.equal(parsed.search,'');
  const route=decodeURIComponent(parsed.pathname).replace(/^\//,'');
  assert(fs.existsSync(path.join(out,route,'index.html')),`Sitemap target missing: ${url}`);
 }
+for(const url of newsUrls){
+ const parsed=new URL(url);assert.equal(parsed.host,'www.stockstobuynow.ai');
+ const route=decodeURIComponent(parsed.pathname).replace(/^\//,'');
+ assert(fs.existsSync(path.join(out,route,'index.html')),`Google News target missing: ${url}`);
+}
+for(const match of newsSitemap.matchAll(/<news:publication_date>(.*?)<\/news:publication_date>/g)){
+ const published=Date.parse(match[1]);assert(Number.isFinite(published),'Invalid Google News publication date');
+ assert(published>=Date.now()-48*60*60*1000-5*60*1000,'Google News sitemap contains an article older than two days');
+ assert(published<=Date.now()+5*60*1000,'Google News sitemap contains a future article');
+}
+assert(fs.readFileSync(path.join(out,'robots.txt'),'utf8').includes('https://www.stockstobuynow.ai/news-sitemap.xml'),'robots.txt does not advertise the Google News sitemap');
+console.log(`Google News sitemap verified with ${newsUrls.length} fresh public articles.`);
 assert(html('stocks').includes('NVDA'),'Stock directory is not pre-rendered');
 assert(html('stocks/page/2').replace(/<!--.*?-->/g,'').includes('Page 2'),'Directory pagination missing');
 // The newest forty posts need not contain education after fresh reports publish.

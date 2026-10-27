@@ -18,6 +18,7 @@ import { useState, useEffect } from 'react';
 import NewsletterSignUp from '../../components/formStocker'
 import Image from 'next/image';
 import Script from 'next/script'
+import {NEWS_PUBLISHER, SITE} from '../../lib/seo'
 
 import {
   FacebookShareButton,
@@ -90,29 +91,27 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <meta name="twitter:description" content={post.seoExcerpt}/>
                 <meta name="twitter:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url}/>
                 <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
                 <link rel="canonical" href={"https://www.stockstobuynow.ai/posts/"+post.slug} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
                   "@context": "https://schema.org",
-                  "@type": "Article",
+                  "@type": "NewsArticle",
                   "headline": post.title,
                   "description": post.seoExcerpt,
                   "datePublished": post.date,
                   "dateModified": post.date,
-                  "mainEntityOfPage": `https://www.stockstobuynow.ai/posts/${post.slug}`,
-                  "image": `https://www.stockstobuynow.ai${post.ogImage.url}`,
+                  "mainEntityOfPage": `${SITE}/posts/${post.slug}`,
+                  "image": `${SITE}${post.ogImage.url}`,
                   "author": {
                     "@type": "Organization",
-                    "name": "Stocks To Buy Now AI",
-                    "url": "https://www.stockstobuynow.ai/"
+                    "name": post.author.name,
+                    "url": `${SITE}/authors/aness-hussein-ali`
                   },
-                  "publisher": {
-                    "@type": "Organization",
-                    "name": "Stocks To Buy Now AI",
-                    "logo": {
-                      "@type": "ImageObject",
-                      "url": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png"
-                    }
-                  }
+                  "publisher": NEWS_PUBLISHER,
+                  "articleBody": post.content,
+                  "articleSection": "Investing Education",
+                  "inLanguage": "en-US",
+                  "isAccessibleForFree": true
                 }) }} />
               </Head>
               <SiteHeader homeHref="/" navBasePath="/" />

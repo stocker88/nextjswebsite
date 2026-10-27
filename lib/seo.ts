@@ -1,4 +1,18 @@
 export const SITE = "https://www.stockstobuynow.ai";
+export const NEWS_PUBLISHER = {
+  "@type": "Organization",
+  name: "Stocks To Buy Now AI",
+  url: SITE + "/",
+  logo: {
+    "@type": "ImageObject",
+    url: SITE + "/assets/images/stockerRobotIcon.png",
+  },
+} as const;
+
+export function absoluteUrl(value: string) {
+  if (/^https?:\/\//i.test(value)) return value;
+  return SITE + (value.startsWith("/") ? value : "/" + value);
+}
 export function jsonLd(value: unknown) {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }

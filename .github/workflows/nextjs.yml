@@ -2,6 +2,8 @@ name: Deploy current website to GitHub Pages
 on:
   push:
     branches: [main]
+  repository_dispatch:
+    types: [article_published]
   workflow_dispatch:
   schedule:
     - cron: '17,47 * * * *'

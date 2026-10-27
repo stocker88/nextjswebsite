@@ -7,7 +7,7 @@ import SnowSignalStory from "../../components/SnowSignalStory";
 import ResearchCompanyLogo from '../../components/ResearchCompanyLogo';
 import Head from "next/head";
 import Link from "next/link";
-import { publicArticles } from "../../lib/public-articles";
+import { publicArticles, publicResearchArticleSchema } from "../../lib/public-articles";
 import { stocks } from "../../lib/stocks";
 import { SITE, jsonLd, isoDate, displayDate, breadcrumbs } from "../../lib/seo";
 import ResearchPage from "../../components/ResearchPage";
@@ -42,25 +42,12 @@ export default function ResearchArticle({ item }: { item: ResearchPreview }) {
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: jsonLd({
-                "@context": "https://schema.org",
-                "@type": "Article",
-                headline: item.title,
-                description: article.summary,
-                datePublished: article.publishedAt,
-                dateModified: article.updatedAt,
-                author: { "@type": "Person", ...article.author },
-                publisher: {
-                  "@type": "Organization",
-                  name: "Stocks To Buy Now AI",
-                  url: SITE,
-                },
-                mainEntityOfPage: SITE + researchUrl(item.id, item.title),
-                isAccessibleForFree: true,
-              }),
+              __html: jsonLd(publicResearchArticleSchema(article, item)),
             }}
           />
         )}
+        {article && <meta property="article:published_time" content={article.publishedAt} />}
+        {article && <meta property="article:modified_time" content={article.updatedAt} />}
       </Head>
       <article>
         <span className="insight-bubble">

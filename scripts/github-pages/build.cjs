@@ -72,6 +72,8 @@ async function main(){
  process.chdir(stage);
  await require(path.join(stage,'pages/sitemap.xml.tsx')).getServerSideProps({res:{setHeader(){},end(xml){write('public/sitemap.xml',xml);}}});
  fs.unlinkSync(path.join(stage,'pages/sitemap.xml.tsx'));
+ await require(path.join(stage,'pages/news-sitemap.xml.tsx')).getServerSideProps({res:{statusCode:200,setHeader(){},end(xml){write('public/news-sitemap.xml',xml);}}});
+ fs.unlinkSync(path.join(stage,'pages/news-sitemap.xml.tsx'));
  run([path.join(root,'node_modules/next/dist/bin/next'),'build']);
  // Pages cannot send HTTP 301s. Preserve old URLs with canonical HTML redirects.
  const {researchUrl,researchPages}=require(path.join(stage,'lib/research.ts'));
