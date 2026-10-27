@@ -1,3 +1,4 @@
+import {SessionPerformanceCard,EarningsResultsCard} from './ResearchResultCards';
 import ArticlePostEngagement from './ArticlePostEngagement';
 import {AccountLink} from './SiteAccount';
 import {useState} from 'react';
@@ -13,9 +14,11 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       <div className="company-row">
         <span className="company-logo" aria-hidden="true">{logoFailed?a.symbol.slice(0,2):<img src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'} alt="" width={44} height={44} loading="lazy" onError={()=>setLogoFailed(true)}/>}</span>
         <span className="company-name">{a.companyName}<span>{a.earningsPeriod?'Earnings & research':'Market mover'}</span></span>
-        {a.move!==null&&<span className={'performance '+(a.move>0?'positive':'negative')} aria-label={'Session price change '+a.move.toFixed(2)+' percent'}>{a.move>0?'+':''}{a.move.toFixed(2)}%<small>Session snapshot</small></span>}
+
       </div>
+      <SessionPerformanceCard article={a}/>
       <h2>{a.title}</h2>
+      <EarningsResultsCard article={a}/>
       <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
       {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={i.url} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
       <div className="card-footer"><div className="footer-stats"><ArticlePostEngagement postId={a.postId}/><span>{a.earningsPeriod||'Stock research'}</span></div><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
