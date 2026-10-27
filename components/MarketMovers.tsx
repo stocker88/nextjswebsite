@@ -9,7 +9,7 @@ export default function MarketMovers({rows,period,label,periodControls,marketSes
  const {gainers,losers}=biggestMovers(rows,period);
  return <section className={styles.movers} aria-label={`Top movers · ${label||'snapshot'}`}>
   {periodControls}<h3>Biggest movers{label?` · ${label}`:''}</h3>
-  <p>Top <span className={styles.desktopCount}>7</span><span className={styles.mobileCount}>10</span> gainers and decliners across {rows.length} S&amp;P 500 stocks in this snapshot.</p>
+  <p>Top <span className={styles.desktopCount}>7</span><span className={styles.mobileCount}>10</span> gainers and decliners across {rows.length} tracked stocks in this snapshot.</p>
   <ShareControl path={`${marketSession==='premarket'?'/premarket-stock-heatmap/':marketSession==='afterhours'?'/after-hours-stock-heatmap/':'/stock-market-heatmap/'}?period=${period}${marketSession==='premarket'?'&session=preMarket':marketSession==='afterhours'?'&session=afterHours':''}`} title="Stock movers" subtitle={`${label||period} · ${marketSession}`} rows={[...gainers,...losers].map(r=>({label:r.symbol,value:percent(r.changes[period]),detail:`${r.name} · ${r.asOf}`}))}/>
   <div className={styles.moverGroups} role="region" aria-label="Gainers and decliners" tabIndex={0}>
   {([['Gainers',gainers],['Decliners',losers]] as const).map(([title,items])=><div key={title} className={styles.moverGroup}>
