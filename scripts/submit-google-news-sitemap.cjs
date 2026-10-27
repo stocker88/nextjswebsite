@@ -74,9 +74,13 @@ async function main() {
   }
 
   const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`;
+  const submitHeaders = { authorization: `Bearer ${tokenPayload.access_token}` };
+  if (credentials.quota_project_id) {
+    submitHeaders['x-goog-user-project'] = credentials.quota_project_id;
+  }
   const submitResponse = await fetch(endpoint, {
     method: 'PUT',
-    headers: { authorization: `Bearer ${tokenPayload.access_token}` },
+    headers: submitHeaders,
   });
 
   if (!submitResponse.ok) {
