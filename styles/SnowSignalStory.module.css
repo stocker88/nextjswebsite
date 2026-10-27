@@ -19,3 +19,27 @@
 @keyframes snow-line{to{stroke-dashoffset:0}}@keyframes snow-projection{from{opacity:0}to{opacity:1}}@keyframes snow-bar{to{scale:1 1}}
 @media(max-width:760px){.dataSource{width:max-content;margin:0}.signalViews{grid-template-columns:1fr}.signalView{padding:14px}.miniChart{height:156px}.financeChart{height:132px}.signalBadge{left:51%}}
 @media(prefers-reduced-motion:reduce){.actualPath{stroke-dashoffset:0}.forecastPath{opacity:1}.bars i{scale:1}.replay[data-visible=true] .actualPath,.replay[data-visible=true] .forecastPath,.replay[data-visible=true] .bars i{animation:none}}
+
+/* Frozen app signal and its observed follow-up. All original points are retained. */
+.savedSignalHeading{display:flex;align-items:center;gap:10px;margin:8px 0 24px}.savedSignalHeading>img{border-radius:50%;object-fit:contain}.savedSignalHeading>div{display:grid;gap:3px}.savedSignalHeading strong{font-size:21px;letter-spacing:-.02em}.savedSignalHeading span{color:#96a9c2;font-size:12px}.savedSignalHeading>b{margin-left:auto;border-radius:999px;padding:7px 11px;background:#173d31;color:#8bdf8a;font-size:10px;letter-spacing:.06em}
+.signalView>h4{color:#b9c3d2;font-size:12px;font-weight:500;text-transform:none;letter-spacing:.02em;margin:18px 0 10px}
+.replayPlot{position:relative;height:240px;background:#101e2b;border-radius:14px;isolation:isolate;overflow:hidden;touch-action:pan-y}
+.replayPlot>svg{display:block;width:100%;height:100%;outline:none}.replayPlot:has(svg:focus-visible){outline:2px solid #c9a4ff;outline-offset:3px}
+.chartScale{position:absolute;top:8px;left:10px;right:10px;text-align:center;color:#91a7bf;font-size:10px;pointer-events:none}
+.replayAxisStart,.replayAxisEnd{position:absolute;bottom:9px;color:#8fa5bd;font-size:10px;pointer-events:none}.replayAxisStart{left:6%}.replayAxisEnd{right:5%}.savedProjectionZone~*{--projection-color:#c9a4ff}
+.savedSignalBadge{position:absolute;transform:translate(-90%,calc(-100% - 13px));padding:7px 10px;border:1px solid #1bb27b8f;border-radius:9px;background:#073c30;color:#caffec;font-size:10px;font-weight:600;white-space:nowrap;pointer-events:none;box-shadow:0 4px 12px #0003}
+.replayTooltip{position:absolute;top:26px;z-index:3;transform:translateX(-50%);display:grid;gap:5px;max-width:74%;padding:9px 12px;background:#091522f2;border:1px solid #7e93b36b;border-radius:9px;color:#b7c7dc;font-size:10px;text-align:center;pointer-events:none}.replayTooltip strong{color:#f2f6ff;font-size:13px}
+.replay .historyReveal,.replay .projectionReveal{clip-path:inset(0 0 0 0)}.cachedBar{transform:scaleY(1)}
+@media(prefers-reduced-motion:no-preference){
+ .replay[data-visible=false] .historyReveal,.replay[data-visible=false] .projectionReveal{clip-path:inset(0 100% 0 0)}
+ .replay[data-visible=false] .cachedBar{transform:scaleY(0)}
+ .replay[data-visible=false] .savedSignalDot,.replay[data-visible=false] .savedSignalBadge,.replay[data-visible=false] .savedProjectionZone{opacity:0}
+ .replay[data-visible=true] .historyReveal{animation:cached-history 1600ms linear both}
+ .replay[data-visible=true] .projectionReveal{animation:cached-history 1000ms ease-in-out 1600ms both}
+ .replay[data-visible=true] .cachedBar{animation:cached-bar 800ms ease-out var(--bar-delay,0ms) both}
+ .replay[data-visible=true] .savedSignalDot,.replay[data-visible=true] .savedSignalBadge,.replay[data-visible=true] .savedProjectionZone{animation:snow-projection 400ms ease 1500ms both}
+}
+@keyframes cached-history{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes cached-bar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media(max-width:760px){.replayPlot{height:210px}.savedSignalBadge{font-size:9px;padding:6px 8px}.signalView>header{margin-bottom:14px}.savedSignalHeading{margin-bottom:18px}.replay>header{align-items:start}.dataSource{white-space:normal}}
+@media print{.replay .historyReveal,.replay .projectionReveal{clip-path:none!important;animation:none!important}.replay .cachedBar{transform:none!important;animation:none!important}.replay .savedSignalDot,.replay .savedSignalBadge,.replay .savedProjectionZone{opacity:1!important;animation:none!important}}
