@@ -1,6 +1,6 @@
 import {catalog} from './catalog';
 import {loadStockResearch,loadStockEarnings} from './stock-research-server';
-import {recentStockNews} from './stocks';
+import {recentStockNews} from './stock-related-research';
 import {fetchResearch} from './research-server';
 import type {InstrumentResearchProps} from '../components/InstrumentResearch';
 export async function loadInstrumentResearch(symbol:string):Promise<InstrumentResearchProps|null>{

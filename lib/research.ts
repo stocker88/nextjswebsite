@@ -1,6 +1,6 @@
 export type ResearchImage = {url: string; filename?: string; width?: number; height?: number};
 export type AttachedThread = {id: string; title: string; time: number | null; symbols: string[]; likes?: number; comments?: number; shares?: number; quickTake?: string; images?: ResearchImage[]};
-export type ResearchPreview = {id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; quickTake?: string; images?: ResearchImage[]; educationPreview?: string; attachedTitle?: string; attachedThreads?: AttachedThread[]};
+export type ResearchPreview = {href?:string;category?:string;id: string; title: string; time: number | null; symbols: string[]; likes: number; comments: number; shares: number; quickTake?: string; images?: ResearchImage[]; educationPreview?: string; attachedTitle?: string; attachedThreads?: AttachedThread[]};
 export function researchSlug(title: string) {
   const words = title.split(/\r?\n/)[0].normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '').toLowerCase()

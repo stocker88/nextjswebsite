@@ -1,3 +1,4 @@
+import RelatedStockResearch from '../../../components/RelatedStockResearch';
 import StockPeerPerformance from '../../../components/heatmap/StockPeerPerformance';
 import StockEarnings from '../../../components/earnings/StockEarnings';
 import Head from "next/head";
@@ -8,7 +9,8 @@ import StockAppCTA from '../../../components/StockAppCTA';
 import {loadStockResearch,loadStockEarnings} from '../../../lib/stock-research-server';
 import type {ResearchBundle} from '../../../lib/stock-research';
 import type {Calendar} from '../../../lib/earnings';
-import { stocks, findStock, recentStockNews } from "../../../lib/stocks";
+import { stocks, findStock } from "../../../lib/stocks";
+import {recentStockNews} from "../../../lib/stock-related-research";
 import { fetchResearch } from "../../../lib/research-server";
 import { researchUrl, ResearchPreview } from "../../../lib/research";
 import { breadcrumbs, jsonLd, displayDate } from "../../../lib/seo";
@@ -70,23 +72,6 @@ export default function Stock({
             <li key={d}>{d}</li>
           ))}
         </ul>
-        {items.length >= 5 && <><h2>Recent {stock.name} research headlines</h2>
-        <p>
-          Archive entries carry their original dates; they are not necessarily
-          today's news. Headlines alone do not confirm the cause of a
-          stock-price move.
-        </p>
-        {(
-          <ul>
-            {items.map((i) => (
-              <li key={i.id}>
-                <Link href={researchUrl(i.id, i.title)}>{i.title}</Link>
-                <br />
-                <small>{displayDate(i.time)}</small>
-              </li>
-            ))}
-          </ul>
-        )}</>}
         <h2>Price and valuation</h2>
         <p>
           This page does not currently provide a verified live quote. Confirm
@@ -103,6 +88,7 @@ export default function Stock({
         </p>
       </div>
       <StockPeerPerformance symbol={stock.ticker}/>
+      <RelatedStockResearch items={items}/>
       <StockAppCTA symbol={stock.ticker}/>
     </ResearchPage>
   );

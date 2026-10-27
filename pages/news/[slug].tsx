@@ -15,7 +15,7 @@ import {stockPageHref} from '../../lib/stock-page';
 import {jsonLd,breadcrumbs} from '../../lib/seo';
 import {catalog} from '../../lib/catalog';
 import {loadStockResearch,loadStockEarnings} from '../../lib/stock-research-server';
-import {recentStockNews} from '../../lib/stocks';
+import {recentStockNews} from '../../lib/stock-related-research';
 import {fetchResearch} from '../../lib/research-server';
 import {moverSocialImagePath} from '../../lib/mover-social-preview';
 import styles from '../../styles/MoverStory.module.css';
