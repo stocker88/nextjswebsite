@@ -31,7 +31,7 @@ export default function MoverStory({article:a,research,socialImage}:{article:Mov
  <article className={styles.story} data-app-post-id={a.postId}>
  <Link className={styles.back} href="/news/">← Stock movers news</Link>
  <header className={styles.hero}>
- <div className={styles.topline}><span className={styles.tag}>{a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
+ <div className={styles.topline}><span className={styles.tag}>{a.kind==='manual_news'?'Company news':a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
  <div className={styles.identity}><StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/><span><strong>{a.companyName}</strong><small>{a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
  <SessionPerformanceCard article={a}/>
  <h1>{a.title}</h1>
@@ -41,9 +41,10 @@ export default function MoverStory({article:a,research,socialImage}:{article:Mov
  <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">Financials & technicals</a><a href="#company-research">Explore {a.symbol} ↓</a></nav>
  </header>
  <EditorialPhoto photo={a.leadImage} priority/>
- <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.kind==='earnings_review'?'What the company reported':a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
+ <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.kind==='manual_news'?'The announcement':a.kind==='earnings_review'?'What the company reported':a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
+ {a.kind==='manual_news'&&a.sections?.map((section,i)=><section className={styles.textSection} key={i}><h2>{section.heading}</h2>{section.text.split('\n\n').map((p,j)=><p key={j}>{p}</p>)}</section>)}
  <section id="recap" className={styles.recap}><span className={styles.kicker}>AT A GLANCE</span><h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p></section>
- <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>{a.kind==='earnings_review'?'Financials, technicals and earnings':'Financials and technicals'}</h2><p className={styles.note}>Charts through {/^\d{4}-\d{2}-\d{2}$/.test(a.technicalDate)?date(a.technicalDate+'T12:00:00Z'):a.technicalDate}. {a.kind!=='earnings_review'&&'The session move above may reflect later news.'}</p>
+ <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>{a.kind==='earnings_review'?'Financials, technicals and earnings':'Financials and technicals'}</h2><p className={styles.note}>Charts through {/^\d{4}-\d{2}-\d{2}$/.test(a.technicalDate)?date(a.technicalDate+'T12:00:00Z'):a.technicalDate}. {a.kind!=='earnings_review'&&a.kind!=='manual_news'&&'The session move above may reflect later news.'}</p>
  <ResearchImages appOnly={false} images={a.images.map(image=>({url:image.url,filename:image.title+'.png',width:image.width,height:image.height}))}/>
 </section>
  <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>Technical setup and risks</h2><p>{a.setup}</p></section>

@@ -75,6 +75,7 @@ async function renderMoverPreviews(root=path.join(__dirname,'..'),articles){
  fs.mkdirSync(output,{recursive:true});
  const manifest={version:LAYOUT_VERSION,generatedAt:new Date().toISOString(),items:{}};
  for(const article of items){
+  if(article.kind==='manual_news'){manifest.items[article.id]={status:'reviewed-company-image',url:article.images[0]?.url};continue;}
   try{
    const series=await loadSeries(article),image=previewPath(article);
    const font=path.join(root,'public/assets/packages/language_picker/assets/fonts/Roboto/Roboto-Regular.ttf');
