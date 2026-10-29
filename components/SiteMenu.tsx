@@ -52,12 +52,6 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
         <div className={styles.links}>{group.links.map(item=><a key={item.href} href={item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href} onClick={close}><span>{item.label}<span aria-hidden="true">↗</span></span><small>{item.detail}</small></a>)}</div>
       </div>
     </div>)}
-    <div className={styles.group}>
-      <button type="button" className={`${styles.trigger} ${styles.searchTrigger}`} aria-label="Search stocks" aria-expanded={active==='search'} aria-controls="menu-stock-search" onClick={()=>{setActive(active==='search'?null:'search');requestAnimationFrame(()=>document.getElementById('nav-stock-query')?.focus());}}>
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="m16 16 5 5" stroke="currentColor" strokeWidth="1.8"/></svg><span className={styles.searchLabel}>Search stocks</span>
-      </button>
-      <div id="menu-stock-search" hidden={active!=='search'} className={`${styles.panel} ${styles.searchPanel}`}><StockQuickSearch inputId="nav-stock-query" searchResultsPage/></div>
-    </div>
     <a className={styles.mobileContact} href="mailto:support@stockstobuynow.ai">Contact the team ↗</a>
   </div>;
 }
