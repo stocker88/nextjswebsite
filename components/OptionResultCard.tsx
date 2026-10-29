@@ -15,7 +15,6 @@ export default function OptionResultCard({result,compact=false}:{result:OptionRe
   <div className={styles.top}><span className={styles.tag}>${result.symbol} · OPTIONS PERFORMANCE</span><time dateTime={result.sessionDay}>{date(result.sessionDay)}</time></div>
   <div className={styles.company}><img src={`/assets/logo/${result.symbol}.webp`} alt="" width={48} height={48}/><div><strong>{result.companyName}</strong><span>Earnings &amp; option results</span></div></div>
   <h2>{result.title}</h2>{compact&&<ShareControl title={result.title} path={optionResultUrl(result)}/>}
-  {!compact&&<ResearchImages images={result.images} appOnly={false}/>}
   <UltraResultBody preview={result}/>
 
  </article>;
@@ -56,13 +55,16 @@ function UltraResultBody({preview}:{preview:OptionResultPreviewData}){
  // the result or upgrade card is present on that very first signed-in render,
  // before the effect performs its silent revalidation.
  const current=ownState||(user?cachedUltraResultState(user.uid,preview.id):null);
+ const membership=user?lastKnownMembershipStatus(user.uid):null;
+ const required=membership&&(membership.status==='inactive'||membership.status==='active'&&membership.hasPro===false)?'pro':'ultra';
  const path=optionResultUrl(preview),retry=()=>setAttempt(n=>n+1);
  if(!ready)return <ContentAccessPanel destination={path} kind="ultra" checking/>;
  if(!user)return <ContentAccessPanel destination={path} kind="ultra"/>;
  if(!current)return <ContentAccessPanel destination={path} kind="ultra" checking/>;
- if(!current.data)return <ContentAccessPanel destination={path} kind="ultra" error={current.error} onRetry={retry}/>;
+ if(!current.data)return <ContentAccessPanel destination={path} kind={required} error={current.error} onRetry={retry}/>;
  const result={...preview,...current.data},compact=false;
  return <div data-ultra-results={preview.id}>
+  <ResearchImages images={result.images} appOnly={false}/>
   <p className={styles.intro}>{date(result.moves[0].previousSession)} close → price on {date(result.sessionDay)}, before costs.{result.moves.some(m=>m.priceSelection)&&' This comparison uses the higher of two recorded prices for the same contract that day.'}</p>
   {result.stock&&<p className={styles.intro}><strong>{result.symbol} stock: {result.stock.movePct>=0?'+':''}{result.stock.movePct.toFixed(2)}%</strong> {result.stock.basis==='past_24_hours'?'over 24 hours':'since the previous close'} · {money(result.stock.price)} on {new Date(result.stock.asOf).toLocaleDateString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric'})}.</p>}
   {!compact&&<>

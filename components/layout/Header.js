@@ -1,5 +1,6 @@
 import {DESKTOP_ACCESS_PATH} from '../../lib/desktop-access';
 import SiteMenu from '../SiteMenu';
+import LatestResearchBand from '../LatestResearchBand';
 import AccountMenu from '../AccountMenu';
 import {accountLoginUrl} from '../../lib/site-auth';
 import {useSiteAccount} from '../SiteAccount';
@@ -191,6 +192,7 @@ export default function Header({
             </button>
           </div>
         </nav>
+        <LatestResearchBand />
       </header>
     </>
   );

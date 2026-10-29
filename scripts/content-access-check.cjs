@@ -36,7 +36,7 @@ assert.equal(contentClickDestination('/membership/',origin,undefined,true),'/mem
 assert.equal(routes.accountDestination('/market-news/story/?id=story_123'),'/market-news/story/?id=story_123');
 assert.equal(routes.accountDestination('/insider-news/example/'),'/insider-news/example/');
 account={ready:true,user:{uid:'signed-in'},error:false};
-html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',onRetry:()=>{}}));assert(html.includes('Go deeper with Ultra'));assert(html.includes('Join Ultra')&&html.includes('/ultra/'));assert(!html.includes('/login/'));
+html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',onRetry:()=>{}}));assert(html.includes('Get Ultra'));assert(html.includes('Get Ultra')&&html.includes('/ultra/'));assert(!html.includes('/login/'));
 html=renderToStaticMarkup(React.createElement(access.ContentAccessPanel,{destination:'/results/report/',kind:'ultra',checking:true,onRetry:()=>{}}));assert.equal(html,'');assert(!html.includes('Checking your access'));
 const {resultPreview}=require('./option-result-preview.cjs');
 const original=require('../data/option-results.json');
@@ -49,11 +49,11 @@ const {default:ResultCard}=load('components/OptionResultCard.tsx',name=>name==='
 const preview=resultLib.optionResults[0],data={recap:['Verified member-only analysis'],quickTake:'Verified member-only take',accessUntil:null};
 function renderCard(user,state,cache=null,membership=null){account={user,ready:true,error:false};stored=state;cachedResult=cache;cachedMembership=membership;hook=0;return renderToStaticMarkup(React.createElement(ResultCard,{result:preview}))}
 for(const state of [null,{uid:'reader',id:preview.id,denied:true},{uid:'reader',id:preview.id,error:true},{uid:'another-account',id:preview.id,data}]){
- const html=renderCard({uid:'reader'},state);assert(!html.includes('Verified member-only analysis'));assert(!html.includes('Full payoff tool'));assert(html.includes('<figure>'));
+ const html=renderCard({uid:'reader'},state);assert(!html.includes('Verified member-only analysis'));assert(!html.includes('Full payoff tool'));assert(!html.includes('<figure>'));
 }
 html=renderCard(null,{uid:'reader',id:preview.id,data});assert(html.includes('Sign in'));assert(!html.includes('Verified member-only analysis'));
 html=renderCard({uid:'reader'},{uid:'reader',id:preview.id,data});assert(html.includes('Verified member-only analysis'));assert(html.includes('What happened'));assert(html.includes('Full payoff tool'));
 html=renderCard({uid:'reader'},null,data,{status:'active',isActive:true,hasUltra:true});assert(html.includes('Verified member-only analysis'));assert(html.includes('Full payoff tool'));
-html=renderCard({uid:'reader'},null,null,{status:'active',isActive:true,hasUltra:false});assert(html.includes('Go deeper with Ultra'));assert(!html.includes('Full payoff tool'));
-html=renderCard({uid:'reader'},null,data,{status:'inactive',isActive:false,hasUltra:false});assert(html.includes('Go deeper with Ultra'));assert(!html.includes('Verified member-only analysis'));
+html=renderCard({uid:'reader'},null,null,{status:'active',isActive:true,hasPro:true,hasUltra:false});assert(html.includes('Get Ultra'));assert(!html.includes('Full payoff tool'));
+html=renderCard({uid:'reader'},null,data,{status:'inactive',isActive:false,hasPro:false,hasUltra:false});assert(html.includes('Get Pro'));assert(!html.includes('Verified member-only analysis'));
 console.log('PASS: signed-out, checking, non-Ultra, outage and account-switch states cannot render full analysis; verified and cached Ultra render immediately.');

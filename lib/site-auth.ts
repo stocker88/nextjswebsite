@@ -12,6 +12,13 @@ export function getSiteAuth():Promise<Auth>{
 // Only continue to destinations owned by this flow; never redirect to external input.
 export function accountDestination(value:unknown):string{
  if(typeof value!=='string')return '/stock-market-heatmap/';
+ if(value.startsWith('/read/?')) {
+  try {const url=new URL(value,'https://www.stockstobuynow.ai'),next=url.searchParams.get('next');
+   if(url.searchParams.size===1&&next&&!next.startsWith('/read')&&accountDestination(next)===next&&/^\/(?:results|stock-market-news|news|catalysts)\//.test(next))return '/read/?next='+encodeURIComponent(next);
+  }catch{/* Only recognized local content destinations can continue after sign-in. */}
+  return '/stock-market-heatmap/';
+ }
+
  // Smart Money pages are account-gated in the browser, while their static HTML
  // remains available to search engines. Preserve only the supported Signals
  // deep link after sign-in; discard every other query string.

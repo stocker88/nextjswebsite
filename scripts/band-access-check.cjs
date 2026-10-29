@@ -1,0 +1,8 @@
+const ts=require('typescript'),fs=require('node:fs'),assert=require('node:assert/strict');
+const m={exports:{}};new Function('exports',ts.transpileModule(fs.readFileSync('lib/band-access.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(m.exports);
+const {bandAccess}=m.exports,free={status:'inactive',isActive:false,billingVerified:true,hasPro:false,hasUltra:false},pro={...free,status:'active',isActive:true,hasPro:true},ultra={...pro,hasUltra:true};
+for(const option of [false,true]){assert.equal(bandAccess(false,ultra,option),'signin');assert.equal(bandAccess(true,free,option),'pro');assert.equal(bandAccess(true,null,option),'checking');assert.equal(bandAccess(true,{...ultra,billingVerified:false},option),'checking');}
+assert.equal(bandAccess(true,pro),'allowed');assert.equal(bandAccess(true,pro,true),'ultra');assert.equal(bandAccess(true,ultra,true),'allowed');assert.equal(bandAccess(true,{...ultra,ultraAccessUntil:'2020-01-01T00:00:00Z'},true),'ultra');
+const a={exports:{}};new Function('exports',ts.transpileModule(fs.readFileSync('lib/site-auth.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(a.exports);
+const dest='/results/options-results-crwd-2026-10-23/',guard=m.exports.bandReadUrl(dest);assert.equal(a.exports.accountDestination(guard),guard);assert.ok(a.exports.accountLoginUrl(guard).includes('next='));assert.equal(a.exports.accountDestination('/read/?next=https%3A%2F%2Fevil.test'),'/stock-market-heatmap/');assert.equal(a.exports.accountDestination('/read/?next=%2Fread%2F'),'/stock-market-heatmap/');
+console.log('Signed-out/free/Pro/Ultra options access, expiry and safe sign-in continuation passed');

@@ -1,0 +1,23 @@
+const ts=require('typescript'),fs=require('node:fs'),assert=require('node:assert/strict');
+const m={exports:{}};new Function('exports','require',ts.transpileModule(fs.readFileSync('lib/latest-research.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(m.exports,name=>{if(name==='./option-results')return {optionResults:JSON.parse(fs.readFileSync('data/option-result-previews.json','utf8')),optionResultUrl:r=>'/results/'+r.id.toLowerCase().replace(/_/g,'-')+'/'};throw Error(name)});
+const {companySymbol,sessionLabel}=m.exports;
+const item={id:'earnings_review_20261028_VRT',symbols:['signals','vrt'],title:'Vertiv earnings'};
+assert.equal(companySymbol(item),'VRT');
+assert.equal(companySymbol({...item,id:'briefing_premarket_2026_10_28',symbols:['market','spy']}),'');
+assert.equal(companySymbol({...item,symbols:['VRT','SOFI']}),'');
+assert.equal(sessionLabel(item),null);
+const snapshot={symbol:'VRT',move:16.02,sessionDate:'2026-10-28',quoteAsOf:'2026-10-28T11:53:38Z',marketSession:'premarket'};
+assert.deepEqual(sessionLabel({...item,researchSessionSnapshot:snapshot}),{move:16.02,change:'+16.02%',label:'Oct 28'});
+assert.equal(sessionLabel({...item,researchSessionSnapshot:{...snapshot,sessionDate:'2026-02-31'}}),null);
+assert.equal(sessionLabel({...item,researchSessionSnapshot:{...snapshot,quoteAsOf:'bad'}}),null);
+assert.equal(sessionLabel({...item,researchSessionSnapshot:{...snapshot,move:0}}).change,'0.00%');
+console.log('Company identity, multi-company fallbacks and dated session labels passed');
+const {isMarketResearch,researchCardTone}=m.exports;
+const market={...item,id:'briefing_premarket_2026_10_28',symbols:['market','spy'],researchSessionSnapshot:{...snapshot,symbol:'SPY',move:-.42}};
+assert.equal(isMarketResearch(market),true);assert.equal(researchCardTone(market),'market');assert.equal(companySymbol(market),'');assert.equal(sessionLabel(market).label,'SPY · Oct 28');
+assert.equal(researchCardTone({...item,researchSessionSnapshot:{...snapshot,move:-8}}),'loss');
+assert.equal(researchCardTone({...item,researchSessionSnapshot:snapshot}),'gain');
+assert.equal(researchCardTone(item),'flat');
+console.log('Performance colors and blue market benchmark cards passed');
+
+assert.equal(m.exports.ribbonHeadline('Xylem fell during trading on October 27'),'Xylem fell on October 27');assert.equal(m.exports.ribbonHeadline('Pre-market report: what matters'),'Market report: what matters');const combined=m.exports.withOptionResults(Array.from({length:30},(_,i)=>({...item,id:'news'+i,time:Date.parse('2026-10-28T12:00:00Z')/1000})),Date.parse('2026-10-28T14:00:00Z'));assert.ok(combined.some(m.exports.isOptionsResearch));assert.equal(new Set(combined.map(x=>x.id)).size,combined.length);console.log('Gold options inclusion, deduplication and compact headline wording passed');

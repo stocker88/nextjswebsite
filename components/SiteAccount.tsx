@@ -1,3 +1,4 @@
+import {bandReadUrl} from '../lib/band-access';
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import {contentClickDestination} from '../lib/content-access';
 import AccountDevices from './AccountDevices';
@@ -93,6 +94,17 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
     if(link.closest('[data-desktop-download-ready="true"],[data-public-store-link="true"]'))return;
     rememberDesktopThread(link.href);event.preventDefault();event.stopImmediatePropagation();
     void router.push(state.user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));return;
+   }
+   if(link.dataset.bandAccess){
+    const destination=contentClickDestination(link.href,location.origin,location.href,true);
+    if(destination){
+     event.preventDefault();event.stopImmediatePropagation();
+     const resolve=state.ready?Promise.resolve(state.user):getSiteAuth().then(async auth=>{await auth.authStateReady();return auth.currentUser}).catch(()=>null);
+     const separate=event.button===1||event.metaKey||event.ctrlKey||link.target==='_blank',opened=separate?window.open('about:blank','_blank'):null;
+     if(opened)opened.opener=null;
+     void resolve.then(user=>{const guard=bandReadUrl(destination),next=user?guard:accountLoginUrl(guard);if(opened)opened.location.replace(next);else void router.push(next)});
+     return;
+    }
    }
    if(state.user){
     let destination:URL|null=null;

@@ -52,6 +52,7 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
         <div className={styles.links}>{group.links.map(item=><a key={item.href} href={item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href} onClick={close}><span>{item.label}<span aria-hidden="true">↗</span></span><small>{item.detail}</small></a>)}</div>
       </div>
     </div>)}
+
     <a className={styles.mobileContact} href="mailto:support@stockstobuynow.ai">Contact the team ↗</a>
   </div>;
 }
