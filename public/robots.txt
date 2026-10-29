@@ -8,3 +8,4 @@ Disallow: /api/
 
 Sitemap: https://www.stockstobuynow.ai/sitemap.xml
 Sitemap: https://www.stockstobuynow.ai/news-sitemap.xml
+Sitemap: https://www.stockstobuynow.ai/video-sitemap.xml

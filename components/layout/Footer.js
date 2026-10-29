@@ -38,13 +38,17 @@ const Footer = ({
         <div className="footer-link-block">
           <span>Company</span>
           <Link href="/company/">About us</Link>
+          <Link href="/authors/aness-hussein-ali/">Meet the founder</Link>
+          <Link href="/reviews/">Public reviews</Link>
           <Link href="/company/culture/">Culture</Link>
           <Link href="/company/careers/">Careers</Link>
           <Link href="/posts/privacypolicy">Privacy Policy</Link>
         </div>
 
         <div className="footer-link-block">
-          <span>Support</span>
+          <span>Learn &amp; Support</span>
+          <Link href="/learn/">Free video courses</Link>
+          <Link href="/editorial-policy/">Editorial standards</Link>
           <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a>
         </div>
       </div>

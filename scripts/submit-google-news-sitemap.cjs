@@ -22,8 +22,9 @@ async function main() {
   }
 
   const sitemap = await sitemapResponse.text();
-  if (!sitemap.includes('<urlset') || !sitemap.includes('xmlns:news=')) {
-    throw new Error(`The live file is not a Google News sitemap: ${sitemapUrl}`);
+  const requiredNamespace = sitemapUrl.endsWith('/news-sitemap.xml') ? 'xmlns:news=' : sitemapUrl.endsWith('/video-sitemap.xml') ? 'xmlns:video=' : 'http://www.sitemaps.org/schemas/sitemap/0.9';
+  if (!sitemap.includes('<urlset') || !sitemap.includes(requiredNamespace)) {
+    throw new Error(`The live file is not the expected XML sitemap: ${sitemapUrl}`);
   }
 
   let credentials;

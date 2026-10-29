@@ -97,8 +97,8 @@ html[data-site-account="signed-in"] .site-header:not(.is-scrolled) > nav {
     pointer-events: none;
     transition: background-color .3s ease;
 }
-/* Desktop navigation sits flush with the top; retain the inset on mobile. */
-@media (min-width: 1000px) {
+/* Keep the top inset on touch/mobile screens, not narrow desktop windows. */
+@media (min-width: 1000px), (hover: hover) and (pointer: fine) {
     .site-header { --header-edge-space: 0px; padding-top: 0; }
     .site-header-edge { display: none; }
     .site-header::before { top: 0; }
@@ -106,12 +106,12 @@ html[data-site-account="signed-in"] .site-header:not(.is-scrolled) > nav {
 }
 .site-header.is-scrolled { border-bottom-color: transparent; }
 .site-header.is-scrolled::before {
-    background-color: var(--header-surface-color, var(--header-edge-color, #00a3f5));
+    background: var(--header-surface-color, linear-gradient(180deg, var(--header-top-color, #00a3f5b3), var(--header-bottom-color, #0095ebb3)));
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     backdrop-filter: blur(20px) saturate(135%);
 }
 html[data-site-account="signed-in"] .site-header:not(.is-scrolled)::before {
-    background-color: var(--header-surface-color, var(--header-edge-color, #00a3f5));
+    background: var(--header-surface-color, linear-gradient(180deg, var(--header-top-color, #00a3f5b3), var(--header-bottom-color, #0095ebb3)));
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     backdrop-filter: blur(20px) saturate(135%);
 }

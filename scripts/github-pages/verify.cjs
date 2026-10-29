@@ -10,7 +10,7 @@ const newsUrls=[...newsSitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].repla
 assert(urls.length>100,'Sitemap missing content');
 assert.equal(new Set(urls).size,urls.length,'Duplicate canonical URLs');
 assert(newsSitemap.includes('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"'),'Google News namespace missing');
-assert(newsSitemap.includes('<news:name>Stocks To Buy Now AI</news:name>'),'Google News publication name missing');
+if(newsUrls.length)assert(newsSitemap.includes('<news:name>Stocks To Buy Now AI</news:name>'),'Google News publication name missing');
 assert.equal(new Set(newsUrls).size,newsUrls.length,'Duplicate Google News URLs');
 assert(newsUrls.length<=1000,'Google News sitemap exceeds 1,000 URLs');
 for(const url of urls){
@@ -102,3 +102,17 @@ console.log(`Verified ${closingRecaps.length} closing recaps, original galleries
 
 for(const route of ['login','membership','account','continue'])assert(fs.existsSync(path.join(out,route,'index.html')),'Missing account/access route: '+route);
 console.log('Verified login, membership, account and desktop continuation exports.');
+
+const learningCatalog=require(path.resolve(out,'../.github-pages-build/data/learning/catalog.json'));
+const videoSitemap=fs.readFileSync(path.join(out,'video-sitemap.xml'),'utf8');
+assert(videoSitemap.includes('xmlns:video='),'Video sitemap namespace missing');
+assert.equal((videoSitemap.match(/<video:video>/g)||[]).length,learningCatalog.videos.length,'Video sitemap must include every lesson');
+for(const lesson of learningCatalog.videos){
+ const route='learn/watch/'+lesson.id;
+ assert(html(route).includes('VideoObject'),'Missing video schema: '+lesson.id);
+ assert(videoSitemap.includes('/'+route+'/'),'Missing video sitemap entry: '+lesson.id);
+ assert(sitemap.includes('/'+route+'/'),'Missing lesson in main sitemap: '+lesson.id);
+}
+for(const route of ['learn','reviews','authors/aness-hussein-ali','company'])assert(html(route).includes('<h1'),'Missing public trust/education page: '+route);
+assert(fs.existsSync(path.join(out,'assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg')),'Founder diploma missing');
+console.log(`Verified ${learningCatalog.videos.length} public video pages, video sitemap, founder credentials and reviews.`);

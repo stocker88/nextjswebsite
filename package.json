@@ -29,7 +29,8 @@
     "sync:insider-news": "node scripts/sync-insider-news.cjs",
     "test:content-access": "node scripts/content-access-check.cjs && node scripts/member-content-cache-check.cjs && node scripts/content-click-check.cjs && node scripts/site-auth-check.cjs && node scripts/profile-onboarding-check.cjs && node scripts/desktop-access-check.cjs",
     "test:profile-onboarding": "node scripts/profile-onboarding-check.cjs",
-    "test:desktop-access": "node scripts/desktop-access-check.cjs"
+    "test:desktop-access": "node scripts/desktop-access-check.cjs",
+    "sync:learning": "python3 scripts/sync-learning.py"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

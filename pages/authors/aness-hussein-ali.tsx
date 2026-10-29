@@ -1,55 +1,17 @@
-import Head from "next/head";
-import ResearchPage from "../../components/ResearchPage";
-import { jsonLd, SITE } from "../../lib/seo";
-export default function Author() {
-  return (
-    <ResearchPage
-      title="Aness Hussein Ali, founder of Stocks To Buy Now AI"
-      path="/authors/aness-hussein-ali"
-    >
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: jsonLd({
-              "@context": "https://schema.org",
-              "@type": "ProfilePage",
-              mainEntity: {
-                "@type": "Person",
-                name: "Aness Hussein Ali",
-                url: SITE + "/authors/aness-hussein-ali",
-                sameAs: [
-                  "https://anesshusseinali.com/",
-                  "https://www.linkedin.com/in/anesshusseinali/",
-                ],
-              },
-            }),
-          }}
-        />
-      </Head>
-      <div className="public-copy">
-        <h1>Aness Hussein Ali</h1>
-        <p>
-          Founder of Stocks To Buy Now AI, an app for stock research, market
-          insights and investor education.
-        </p>
-        <p>
-          His personal trade examples on this website illustrate selected
-          historical outcomes. They do not represent a complete audited track
-          record or guarantee future returns.
-        </p>
-        <p>
-          <a href="https://anesshusseinali.com/">Personal website</a> ·{" "}
-          <a href="https://www.linkedin.com/in/anesshusseinali/">
-            LinkedIn profile
-          </a>
-        </p>
-        <p>
-          Authorship and review are credited separately on public articles; this
-          profile does not imply that Aness personally authored or reviewed
-          every automated preview.
-        </p>
-      </div>
-    </ResearchPage>
-  );
+import Link from 'next/link';
+import PublicEducationPage from '../../components/PublicEducationPage';
+import {SITE} from '../../lib/seo';
+import s from '../../styles/PublicEducation.module.css';
+
+const linkedin='https://www.linkedin.com/in/anesshusseinali/';
+const education='https://www.linkedin.com/in/anesshusseinali/overlay/Education/113042438/treasury/?profileId=ACoAAArkpWIB_UmPdyZAB4jFSeaAcUmPcQ9aN5k';
+const diploma='/assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg';
+export default function Author(){
+  return <PublicEducationPage title="Aness Hussein Ali — founder, education & experience" description="Meet Aness Hussein Ali, founder of Stocks To Buy Now AI. Explore his Berkeley Haas Master of Financial Engineering, Goldman Sachs experience, public diploma and free courses." path="/authors/aness-hussein-ali/" schema={{'@context':'https://schema.org','@type':'ProfilePage',url:SITE+'/authors/aness-hussein-ali/',mainEntity:{'@type':'Person','@id':SITE+'/authors/aness-hussein-ali/#person',name:'Aness Hussein Ali',url:SITE+'/authors/aness-hussein-ali/',image:SITE+'/assets/images/aness.jpg',jobTitle:'Founder of Stocks To Buy Now AI',sameAs:[linkedin,'https://anesshusseinali.com/'],alumniOf:{'@type':'CollegeOrUniversity',name:'University of California, Berkeley — Haas School of Business',url:'https://mfe.haas.berkeley.edu/'},hasCredential:{'@type':'EducationalOccupationalCredential',name:'Master of Financial Engineering',credentialCategory:'Master’s degree',educationalLevel:'Graduate',recognizedBy:{'@type':'CollegeOrUniversity',name:'University of California, Berkeley'},url:SITE+diploma}}}}>
+    <nav className={s.breadcrumb} aria-label="Breadcrumb"><Link href="/company/">Company</Link><span aria-hidden="true">/</span><span>Meet the founder</span></nav>
+    <section className={`${s.hero} ${s.profileHero}`}><div><p className={s.eyebrow}>The person behind the platform</p><h1>Aness<br/><span className={s.accent}>Hussein Ali.</span></h1><p className={s.lead}>Founder of Stocks To Buy Now AI. Financial engineer, market researcher and educator, bringing institutional experience to a more accessible investing community.</p><div className={s.topics}><span>Berkeley Haas MFE · 2014</span><span>Goldman Sachs experience</span><span>Investor education</span></div><div className={s.actions}><a className={s.button} href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a><Link className={s.secondary} href="/learn/">Explore my courses →</Link></div></div><img src="/assets/images/aness.jpg" alt="Aness Hussein Ali, founder of Stocks To Buy Now AI" width="520" height="520"/></section>
+    <section className={s.section}><div className={s.sectionHead}><div><p className={s.eyebrow}>Education, with the source</p><h2>Financial engineering.<br/>Berkeley foundations.</h2></div></div><div className={s.proofGrid}><article className={s.credential}><span className={s.tag}>University of California, Berkeley</span><h3>Master of Financial Engineering</h3><p>Walter A. Haas School of Business<br/>Awarded May 16, 2014</p><p style={{marginTop:20}}>Aness’s graduate training brings together finance, quantitative methods and technology—the disciplines behind his approach to researching markets and explaining risk.</p><div className={s.sourceLinks}><a href="https://mfe.haas.berkeley.edu/" target="_blank" rel="noopener noreferrer">Official Berkeley MFE program ↗</a><a href="https://mfe.haas.berkeley.edu/academics/curriculum" target="_blank" rel="noopener noreferrer">Explore the curriculum ↗</a></div><details className={s.details}><summary>About the program’s ranking</summary><p style={{marginTop:16}}>Berkeley Haas lists its MFE as the #1 program in the 2026 TFE Times ranking, for the fifth consecutive year. This is a ranking of the academic program.</p><div className={s.sourceLinks}><a href="https://mfe.haas.berkeley.edu/" target="_blank" rel="noopener noreferrer">Source: Berkeley MFE, “By the Numbers” ↗</a></div></details></article><article className={s.credential}><a href={diploma} target="_blank" rel="noopener noreferrer" aria-label="View Aness Hussein Ali’s full Berkeley MFE diploma"><img className={s.diploma} src={diploma} alt="University of California diploma awarding Aness Hussein Ali the Master of Financial Engineering at Berkeley on May 16, 2014" width="791" height="610" loading="lazy"/></a><p className={s.notice}>Diploma supplied by Aness Hussein Ali. View the original image or the education document shared on his LinkedIn profile.</p><div className={s.sourceLinks}><a href={diploma} target="_blank" rel="noopener noreferrer">View diploma ↗</a><a href={education} target="_blank" rel="noopener noreferrer">LinkedIn education document ↗</a></div></article></div></section>
+    <section className={`${s.section} ${s.proofGrid}`}><article className={s.panel}><p className={s.eyebrow}>Professional experience</p><h2>From institutional markets<br/>to investor education.</h2><p>Aness’s professional background includes experience at Goldman Sachs and work across trading, asset management and risk. He brings this perspective to Stocks To Buy Now AI’s research tools and educational content.</p><p>His LinkedIn profile and personal website provide more detail on his career and background.</p><div className={s.sourceLinks}><a href={linkedin} target="_blank" rel="noopener noreferrer">Professional history on LinkedIn ↗</a><a href="https://anesshusseinali.com/" target="_blank" rel="noopener noreferrer">Personal website ↗</a></div></article><article className={s.panel}><p className={s.eyebrow}>See the teaching for yourself</p><h2>Learn before you decide.</h2><p>Explore free courses on stocks, options and trading setups. Start with allocation and time horizons, then move into option pricing, the Greeks and market catalysts.</p><div className={s.actions}><Link href="/learn/" className={s.button}>Browse the course library →</Link></div><p>No account or paid membership is needed to watch.</p></article></section>
+    <section className={`${s.section} ${s.panel}`}><h2>How we present our work</h2><p>Public articles distinguish authorship, automated content and editorial review. This founder profile does not imply that Aness personally authored or reviewed every automated preview.</p><p>Selected trade examples illustrate historical outcomes; they are not a complete audited performance record or a guarantee of future results. Customer reviews describe individual experiences.</p><div className={s.sourceLinks}><Link href="/editorial-policy/">Editorial standards →</Link><Link href="/methodology/">Research methodology →</Link><Link href="/reviews/">Public reviews →</Link></div></section>
+  </PublicEducationPage>;
 }

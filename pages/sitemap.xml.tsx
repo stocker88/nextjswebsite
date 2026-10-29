@@ -1,3 +1,4 @@
+import {learningPaths} from '../lib/learning';
 import {optionResults,optionResultUrl} from '../lib/option-results';
 import {insiderArticles} from '../lib/insider-news-server';
 import {insiderArticlePath,insiderPagePath,insiderPageSize} from '../lib/insider-news';
@@ -72,6 +73,7 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
   insiderArticles.filter(a=>!a.noActivity).forEach(a=>entries.push({path:insiderArticlePath(a),modified:a.updatedAt}));
   for(let page=2;page<=Math.ceil(insiderArticles.length/insiderPageSize);page++)entries.push({path:insiderPagePath(page)});
   optionResults.forEach(result=>entries.push({path:optionResultUrl(result)}));

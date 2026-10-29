@@ -1,0 +1,367 @@
+{
+  "updatedAt": "2026-10-29T21:35:12.348260+00:00",
+  "channelId": "UCQU92dBvlCZMsnFHdDI9tSQ",
+  "courses": [
+    {
+      "slug": "options-for-beginners",
+      "playlistId": "PLiBfVBTk2-F8r-7NsUrJ9Zjle_WIANUye",
+      "videoIds": [
+        "Fpin1GiI8i0",
+        "FqOgFSywys4",
+        "5u9FUYvtPho",
+        "hA2N_NYDYIs",
+        "HeibUpVZ3ow",
+        "-crsRHPZbEc",
+        "zvuWFsbGtZI",
+        "8C8DdjRJm2A",
+        "32gGXWlfQss",
+        "y2QQbpz2zME",
+        "MM1vZyTEq1Q",
+        "5zht2eMQdyc",
+        "i5rgRL6gvLQ"
+      ]
+    },
+    {
+      "slug": "stocks-for-beginners",
+      "playlistId": "PLiBfVBTk2-F8CJxMMXysCo1YIgBk3ROqq",
+      "videoIds": [
+        "1hj0bqmZAN0",
+        "ogau5L50_Qw",
+        "TdNULuMQvTQ",
+        "pJX_8LRTkns",
+        "sMW3pq4czQU"
+      ]
+    },
+    {
+      "slug": "setups-and-signals",
+      "playlistId": "PLiBfVBTk2-F-Kui99Cekf7KqGMFVhmneH",
+      "videoIds": [
+        "6eiwyYZQ_YY",
+        "3GOyG287T1Y",
+        "y2JQLCrxr48",
+        "gDDHdh5x9fw",
+        "iUwdwWgAbQQ",
+        "ri9FAHIHCUQ",
+        "cIZBALbm9wE",
+        "XuWZzMgfBsw",
+        "R4H24rQLnzs",
+        "h6LA0VRRzXw",
+        "ZUXcZ9Fm3LI",
+        "Q08MpbQYfcQ",
+        "FX0ELQ13jp8"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "Fpin1GiI8i0",
+      "title": "What is a Call Option? - Free Stock Options Trading Course for Beginners",
+      "description": "What is a Call Option?\n\nA call option pays out when the stock price exceeds the strike price on Maturity Date.\n• Payout: The option pays the difference between the stock price and the strike price, minus the premium paid.\n\nExample:\n• Strike Price = $100\n• Stock Price at Expiration = $128\n• Payout = $128 - $100 - Premium Paid\n\n• Payout when stock price is higher than strike price: \nIf the stock price is below the strike price, the call option expires worthless.\n\n• The premium (the cost of the option when you buy it) is the maximum loss.\n\n• Implied volatility (explained in the Option Q&A in the App - video to come) is crucial in options pricing. Higher volatility increases premiums, making options more expensive.\n\n• Volatility vs. Stock Movement: \nIf the stock price goes up but volatility drops, the value of a call option might decrease.\nThis is because lower volatility limits the potential for larger price moves, reducing the upside.\n\n• Tip: Sometimes it’s better to wait a few hours after market open when volatility is lower, as this can lead to cheaper premiums and more potential upside for calls.\n\nLike, Comment and Subscribe if you like this format (and can get used to the 🇫🇷 accent).\n\nI can add with 3 videos a day if this format works for you...\n\nwww.StocksToBuyNow.ai for more",
+      "publishedAt": "2024-11-23T15:40:11-08:00",
+      "durationSeconds": 198,
+      "thumbnail": "https://i.ytimg.com/vi/Fpin1GiI8i0/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "FqOgFSywys4",
+      "title": "What is a Put Option? - Stock Options for Beginners",
+      "description": "A put option pays out when the stock price falls below the strike price at expiration.\n\n• Payout: The option pays the difference between the strike price and the stock price, minus the premium paid (which is the cost of the option when you buy it).\n\nExample:\n• Strike Price = $100\n• Stock Price at Expiration = $80\n• Payout = ($100 - $80) - Premium Paid\n\n• Payout when stock price is lower than the strike price: If the stock price is above the strike price, the put option expires worthless.\n\n• The premium (the cost of the option when you buy it) is the maximum loss.\n\n• Implied volatility (explained in the Option Q&A) is crucial in options pricing. \nHigher volatility increases premiums, making options more expensive.\n\n• Volatility vs. Stock Movement: If the stock price goes up but volatility drops, the value of a call option might decrease. This is because lower volatility limits the potential for larger price moves, reducing the upside.\n\n• Tip: Sometimes it’s better to wait a few hours after market open when volatility is lower, as this can lead to cheaper premiums and more potential upside for calls.\n\nLike, Comment and Subscribe if you like this format (and can get used to the 🇫🇷 accent).\n\nI can add with 3 videos a day if this format works for you...\n\nwww.StocksToBuyNow.ai for more",
+      "publishedAt": "2024-11-23T15:53:35-08:00",
+      "durationSeconds": 249,
+      "thumbnail": "https://i.ytimg.com/vi/FqOgFSywys4/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "5u9FUYvtPho",
+      "title": "Put-Call Parity - Stock Options for Beginners",
+      "description": "Put-call parity is a formula that links the price of a Call and the price of a Put with the same strike price and expiration. \n\nIt states: Call Price - Put Price = Stock Price - Present Value of Strike Price. \n\nThis relationship ensures arbitrage-free pricing and highlights how puts prices and calls prices are interconnected with stock price.\n\nLike, Comment and Subscribe if you like this format (and can get used to the 🇫🇷 accent).\n\nI can add with 3 videos a day if this format works for you...\n\nwww.StocksToBuyNow.ai for more",
+      "publishedAt": "2024-11-23T16:05:07-08:00",
+      "durationSeconds": 140,
+      "thumbnail": "https://i.ytimg.com/vi/5u9FUYvtPho/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "hA2N_NYDYIs",
+      "title": "Options vs Leverage - Stock Options for Beginners",
+      "description": "Are Options and Leverage the Same?\n\nIn this video, we break down the differences between options and leverage in trading:\n\n• Options: These financial instruments give you the right to buy or sell a stock at a specific price, and your maximum loss is capped at the premium you pay.\n\n• Leverage: A tool that amplifies your exposure to an asset, increasing both potential gains and losses beyond your initial investment.\n\nWhile options provide leverage due to their lower upfront cost compared to the underlying asset, the degree of leverage depends on factors such as:\n• The strike price relative to the stock price\n• The time to maturity of the option\n• Market volatility\n\nWe’ll clarify the nuances of how options provide leverage and whether they should be considered the same.\n\nLike, Comment, and Subscribe for more trading insights!\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-24T19:14:51-08:00",
+      "durationSeconds": 326,
+      "thumbnail": "https://i.ytimg.com/vi/hA2N_NYDYIs/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "HeibUpVZ3ow",
+      "title": "The Trillion Dollar Formula - Options Implied Volatility - Free Stock Options Trading Masterclass",
+      "description": "Discover the Trillion-Dollar Formula for Stock Options!\n\nIn this video, we explore how the trillion-dollar formula, derived from advanced financial mathematics, can help calculate precise stock option exposures.\n\nStock options are powerful tools whose prices fluctuate based on three critical factors:\n• Stock Price: As the stock price moves closer to or further from the strike price, the option’s value adjusts dynamically.\n• Strike Price: The strike price determines whether the option is in-the-money or out-of-the-money, influencing its intrinsic and extrinsic value.\n• Volatility: Higher volatility increases the potential for profitable price swings, making options more valuable.\n\nComing up in the next video: \nWe’ll explore the effects of time to maturity, interest rates, and dividends:\n• Time to Maturity: Options lose value as they approach expiration, a phenomenon called time decay.\n• Interest Rates: Higher rates can influence the cost of holding options, especially for long-term contracts.\n• Dividends: Anticipated dividends can impact call and put prices differently, depending on payout timing and size.\n\nWhether you’re a beginner or an experienced trader, this guide will simplify complex concepts and help you slowly unlock the potential of options trading.\n\nLike Comment and Subscribe for more.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-24T19:08:37-08:00",
+      "durationSeconds": 470,
+      "thumbnail": "https://i.ytimg.com/vi/HeibUpVZ3ow/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "-crsRHPZbEc",
+      "title": "Options Time Decay, Interest Rates, and Dividends - Stock Options for Beginners",
+      "description": "We explore the effects of time to maturity/expiration, interest rates, and dividends:\n\n• Time to Maturity/Expiration: Options lose value as they approach expiration - a phenomenon known as time decay.\n\n• Interest Rates: Higher rates can impact the cost of holding options, especially for long-term contracts.\n\n• Dividends: Anticipated dividends affect call and put prices differently, influencing their value.\n\nWhether you’re a beginner or an experienced trader, this guide will simplify these complex concepts and help you unlock the potential of options trading.\n\nIn upcoming videos, we’ll dive into how to approximate these sensitivities and calculate how much value your options may lose if the stock price doesn’t move.\n\nPS: Forgive any poor syntax - I’m heading to bed soon and was a bit tired. My writing is much better than my speaking! 😅\n\nLike, Comment, and Subscribe for more!\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-25T21:22:37-08:00",
+      "durationSeconds": 262,
+      "thumbnail": "https://i.ytimg.com/vi/-crsRHPZbEc/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "zvuWFsbGtZI",
+      "title": "Delta of a Call - Stock Options for Beginners",
+      "description": "Delta: A Key Metric for Options Trading\n\nDelta measures the sensitivity of an option’s price to changes in the price of the underlying asset. It’s expressed as a number between -1 and 1 (or sometimes as a percentage, -100% to 100%). Here’s what it tells you:\n\n• For Call Options: Delta is positive, ranging from 0 to 1. A delta of 0.50 means the option price is expected to increase by $0.50 for every $1 increase in the underlying asset’s price.\n\n• For Put Options: Delta is negative, ranging from 0 to -1. A delta of -0.30 means the option price is expected to decrease by $0.30 for every $1 increase in the underlying asset.\n\nWhy Delta Matters:\n\n1. Directional Sensitivity: Delta shows how much an option’s value will change based on the stock’s price movement.\n\n2. Probability Indicator: For at-the-money options, delta approximates the probability of the option finishing in the money at expiration.\n\n3. Hedging Tool: Traders use delta to hedge positions. For example, owning a call with a delta of 0.50 means holding that option is equivalent to holding 50 shares of the stock.\n\nExamples:\n\n• A deep in-the-money call may have a delta close to 1, reflecting a strong likelihood of it being profitable at expiration.\n\n• A deep out-of-the-money put may have a delta near -0.01, indicating minimal sensitivity to stock price changes.\n\nGot questions, remarks, or suggestions? Leave them in the comments below.\n\nLike & Subscribe for more videos like this.\n\n 👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T19:56:48-08:00",
+      "durationSeconds": 260,
+      "thumbnail": "https://i.ytimg.com/vi/zvuWFsbGtZI/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "8C8DdjRJm2A",
+      "title": "Gamma of a Call - Stock Options Trading Course for Beginners",
+      "description": "Gamma: Understanding the Acceleration of Delta\n\nGamma measures how much an option’s Delta changes in response to price movements of the underlying asset. It reflects the rate of change of Delta and is crucial for managing option positions, especially for hedging.\n\n• Positive Gamma: Both long calls and long puts have positive Gamma. This means Delta increases as the stock price rises and decreases as the stock price falls.\n\n• Negative Gamma: Short positions in options (calls or puts) have negative Gamma, leading to Delta changes that work against the position as the stock price moves.\n\nWhy Gamma Matters\n\n1. Delta Stability: Gamma determines how stable Delta is. Higher Gamma means Delta changes quickly with price movements, making it critical for active traders.\n\n2. Risk Management: Understanding Gamma helps traders anticipate large swings in Delta and adjust their positions accordingly.\n\n3. Volatility Impact: Gamma is higher for at-the-money options nearing expiration, reflecting increased sensitivity to price changes.\n\nExamples\n\n• High Gamma: An at-the-money call nearing expiration has high Gamma, meaning its Delta can shift rapidly as the stock price moves.\n\n• Low Gamma: A deep in-the-money or far out-of-the-money option has low Gamma, indicating a relatively stable Delta.\n\nGot questions, remarks, or suggestions? Leave them in the comments below.\n\nLike & Subscribe for more educational content on options trading.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T20:01:45-08:00",
+      "durationSeconds": 113,
+      "thumbnail": "https://i.ytimg.com/vi/8C8DdjRJm2A/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "32gGXWlfQss",
+      "title": "Delta and Gamma of Put Options - Stock Options Trading Course for Beginners",
+      "description": "Delta and Gamma for Put Options: Exploring Similarities and Differences\n\nWhen analyzing put options, Delta and Gamma are essential metrics that provide insights into how the option price behaves as the underlying stock price changes. While they are interrelated, each serves a unique purpose.\n\nDelta for Put Options\n\nDelta measures how much the price of a put option changes with a $1 change in the underlying stock price. For puts, Delta is always negative, as the value of a put increases when the stock price decreases.\n\nFor example:\n• A Delta of -0.40 means the option price decreases by $0.40 for every $1 increase in the stock price.\n\nDelta also indicates the probability of a put finishing in the money.\n\nAt-the-money puts typically have a Delta close to -0.50, while deep in-the-money puts approach -1, and out-of-the-money puts near 0.\n\nGamma for Put Options\n\nGamma measures how much Delta changes as the stock price moves. It reflects the acceleration of price sensitivity, showing how quickly the Delta of a put adjusts to fluctuations in the underlying asset.\n\nFor example:\n\n• A Gamma of 0.05 means Delta will shift by 0.05 for every $1 move in the stock price.\n\nUnlike Delta, Gamma is always positive, as it describes the rate of change in sensitivity, regardless of whether the stock price rises or falls.\n\nHow Delta and Gamma Are Similar\n\nBoth Delta and Gamma gauge an option’s sensitivity to stock price changes. \n\nThey are highest for at-the-money puts and decrease for deep in-the-money or out-of-the-money options.\n\nTogether, they provide a detailed view of how a put option reacts to the stock price and how its sensitivity evolves over time.\n\nKey Differences Between Delta and Gamma\n\nWhile Delta tells you the immediate price change of a put option for a $1 move in the stock, Gamma focuses on how Delta itself changes with the stock price.\n\nDelta provides a straightforward directional insight, whereas Gamma explains the speed of that directional change.\n\nFor instance, Delta may predict the price drop in a put as the stock price rises, while Gamma shows how this sensitivity lessens as the stock price moves further away from the strike price.\n\nPractical Example\n\nIf a stock price increases by $1:\n\n• A put with Delta = -0.50 and Gamma = 0.10 will see Delta shift from -0.50 to -0.40. This means the initial drop in the option price slows down as Delta adjusts due to Gamma.\n\nUnderstanding both Delta and Gamma helps traders anticipate price changes more accurately and manage risks in a volatile market.\n\nGot questions or suggestions? Share them in the comments!\n\nLike & Subscribe for more tips.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T20:05:31-08:00",
+      "durationSeconds": 222,
+      "thumbnail": "https://i.ytimg.com/vi/32gGXWlfQss/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "y2QQbpz2zME",
+      "title": "How to Copy Trade Options - Stock Options Trading Course for Beginners",
+      "description": "The prices of calls and puts are influenced by several factors, including the strike price, maturity (expiration), and the underlying asset’s price. Here’s a breakdown of how prices for calls and puts differ based on these factors:\n\n1. Strike Price\n\n• Calls: The price of a call option tends to rise as the strike price moves closer to the current price of the underlying asset, and further if it becomes “in the money” (when the underlying asset’s price is above the strike price). Calls gain more value as the stock price increases.\n\n• Puts: Conversely, the price of a put option tends to rise as the strike price moves further above the current price of the underlying asset, becoming “in the money” when the stock price falls below the strike price. Puts gain more value as the stock price decreases.\n\n2. Maturity (Expiration Date)\n\n• Longer Maturity: Options with longer expiration dates typically have higher premiums because they give more time for the underlying asset’s price to move in a favorable direction. This holds true for both calls and puts.\n\n• Shorter Maturity: Options with shorter expiration dates have lower premiums because there’s less time for the asset’s price to move. This makes them riskier and decreases their time value.\n\n3. Volatility and Time Value\n\n• Implied Volatility: Both calls and puts become more expensive as volatility increases. Higher volatility means there’s a greater chance the underlying stock will make a large price move, benefiting both calls and puts.\n\n• Time Decay: As an option nears its expiration, its time value decreases (known as time decay). Shorter maturity options decay faster, especially if they are out of the money.\n\n4. Comparing Calls vs Puts\n\n• Calls: Typically more expensive when the underlying stock is trending upwards or when volatility is high, because they give the right to profit from price increases.\n\n• Puts: Tend to be more expensive in a bearish market or when the underlying stock’s price is falling, as they allow the holder to profit from declines in stock prices.\n\nGot questions, remarks, or suggestions? Leave them in the comments below.\n\nLike & Subscribe for more videos like this.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T20:13:19-08:00",
+      "durationSeconds": 257,
+      "thumbnail": "https://i.ytimg.com/vi/y2QQbpz2zME/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "MM1vZyTEq1Q",
+      "title": "How to Get the Best Execution Price for Stocks & Options - Trading Course for Beginners",
+      "description": "Understanding the Order Book: Bid, Ask, and the Difference Between Limit and Market Orders\n\nIn this video, we’ll take a closer look at the order book, an essential tool for traders, and explain key concepts such as bid, ask, and the difference between limit and market orders.\n\n• Order Book: The order book is a real-time list of buy and sell orders for a specific stock or asset. It shows the prices and quantities at which traders are willing to buy and sell. The order book provides insights into market sentiment and liquidity.\n\n• Bid Price: This is the highest price a buyer is willing to pay for an asset. The bid represents the demand side of the market.\n\n• Ask Price: The ask is the lowest price a seller is willing to accept for an asset. It represents the supply side of the market.\n\n• Bid-Ask Spread: The difference between the bid and ask prices is called the bid-ask spread. A narrower spread typically indicates higher liquidity and a more efficient market, while a wider spread may suggest lower liquidity.\n\n• Market Order: A market order is an instruction to buy or sell an asset immediately at the best available price. Market orders ensure that the trade will be executed right away, but the price at which the trade is executed can vary depending on the order book’s liquidity.\n\n• Limit Order: A limit order is an order to buy or sell an asset at a specific price or better. With a limit order, you can control the price at which you are willing to trade, but there’s no guarantee that the order will be executed unless the market reaches your specified price.\n\nIn this video, we’ll guide you through how to read the order book, understand the bid and ask prices, and use limit and market orders effectively to enhance your trading strategies.\n\nGot questions, remarks, or suggestions? Leave them in the comments below.\n\nLike & Subscribe for more videos like this.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T20:26:28-08:00",
+      "durationSeconds": 311,
+      "thumbnail": "https://i.ytimg.com/vi/MM1vZyTEq1Q/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "5zht2eMQdyc",
+      "title": "How Pricey is your Option? Stock Option Breakeven Point - Stock Options for Beginners",
+      "description": "Are you getting a deal? Or is your option expensive?\n\nHow Pricey is your Option?\n\nA Quick Guide on How to Calculate the Call Option Breakeven Point and Required Stock Jump for Profit\n\nIn this video, we’ll walk you through how to calculate the breakeven point for a call option, and we’ll also show you how to figure out the required percentage stock jump needed for you to break even on your investment.\n\n1. Breakeven Formula:\n\nTo find the breakeven point for a call option, use this formula:\n\nBreakeven Point = Strike Price + Premium\n• Strike Price: The price at which you have the right to buy the stock.\n• Premium: The price you paid for the option.\n\nFor example:\n\n• If you buy a call option with a strike price of $50 and a premium of $5, your breakeven point would be:\n\nBreakeven Point = $50 (Strike) + $5 (Premium) = $55\n\nThis means that for you to break even, the stock price needs to rise to $55.\n\n2. Calculating the Yield (Stock Jump) to Breakeven:\n\nNow, let’s calculate the percentage the stock needs to jump for you to break even.\n\nThe formula to calculate the required percentage stock jump to reach breakeven is:\n\nBreakeven % Yield = ((Strike + Premium) / Current Stock Price) - 1\n\nThis gives you the percentage increase required for the stock price to hit your breakeven point.\n\nFor example:\n• Assume the current stock price is $52.\n• The strike price is $50, and the premium is $5.\n\nFirst, calculate the breakeven point:\nBreakeven Point = $50 (Strike) + $5 (Premium) = $55\n\nThen, plug it into the formula:\n\nBreakeven % Yield = (($55) / $52) - 1 = 0.0577 or 5.77%\n\nThis means the stock needs to rise by 5.77% for you to break even.\n\n3. Implied Volatility & Breakeven % Upside:\n\nWondering if that option is a steal or overpriced? Our app’s got you covered with a powerful feature—Implied Volatility (IV) signal and Breakeven % Upside analysis! 📊\n\n1. Implied Volatility tells you how much the market thinks a stock will move.\nThe higher the IV, the pricier the option, because there’s a bigger chance it’ll end up profitable.\n\nOur app compares the option’s IV between similar stocks and does it with its historical volatility as well, helping you instantly see if you’re getting a good deal or paying too much.\n\n2. Check out how much the stock needs to rise if held until maturity just to breakeven! 📈 This is determined by analyzing the Strike Price and the Premium (the cost of your option).\n\nDifferent stocks have different prices, so a $5 option on one stock might be a bargain (if the stock price is high), while on another, it could be a rip-off (if the stock price is low).\n\nBreakeven % Upside = (Strike + Premium) / Current Stock Price\n\nOur app compares the option’s Breakeven % upside between stocks, helping you instantly see if you’re getting a good deal or paying too much.\n\nTake advantage of this great feature to make smarter, more informed trades. \n\nGo in the “METRICS” tab and sort the stocks by “Implied Vol” rather than “Valuation”!💡\n\nGot questions, remarks, or suggestions? Leave them in the comments below.\n\nLike & Subscribe for more videos like this.\n\n👉 www.StocksToBuyNow.ai 🚀",
+      "publishedAt": "2024-11-30T20:43:05-08:00",
+      "durationSeconds": 283,
+      "thumbnail": "https://i.ytimg.com/vi/5zht2eMQdyc/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "i5rgRL6gvLQ",
+      "title": "$10 to $2,000 with stock options | Free Trading Course | Stock to Buy Opportunities",
+      "description": "A call option is a financial instrument that gives you the right, but not the obligation, to buy a stock at a set price, the strike price, before a specific expiration date.\n\nWhen you buy a call, you can define your maximum risk (stop loss) upfront: the premium you paid ($10 for example).\n\nYou can estimate potential profits under different scenarios. \n\nIn the app, we share option trade ideas and provide a simulation tool that estimates how much you could gain or lose as the stock moves. It helps you compare scenarios and understand the potential reward alongside the risk.\n\nWe’ve done what’s shown in this video many times over the past couple of years. Each trade has its own risks, and past results don’t guarantee future performance.\n\nFeel free to join the group here https://www.StocksToBuyNow.ai\nFeel free to connect on LinkedIn https://www.linkedin.com/in/anesshusseinali/",
+      "publishedAt": "2026-10-11T04:20:20-07:00",
+      "durationSeconds": 47,
+      "thumbnail": "https://i.ytimg.com/vi/i5rgRL6gvLQ/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "1hj0bqmZAN0",
+      "title": "1. Make Your Money Work - The Art of Investing For Everyone - Aness Hussein Ali Stocks To Buy Now AI",
+      "description": "Warren Buffett said it himself: “Today people who hold cash feel comfortable. They shouldn’t. They’ve opted for a terrible long-term asset, one that pays nothing and is certain to depreciate in value.” - Warren Buffett\n\nInvesting isn’t just for the rich — it’s a skill anyone can learn.\n\nKnowing how to secure your financial freedom is one of the most important things you’ll ever need in life.\n\nYou don’t have to be a genius to do it.\n\nYou just need to know a few basics, form a plan, and be ready to stick to it. \n\nIn this video, Aness Hussein Ali, a former Goldman Sachs trader who managed billions across global markets, breaks down the art of investing in a simple, relatable way. \n\nWhether you’re just getting started or leveling up your strategy, this is your guide to building wealth with confidence.\n\n✅ Learn how to think like a pro\n✅ Understand what makes a stock worth buying\n✅ Build a strategy that fits you\n\nThis is investing for everyone: practical, powerful, and community-driven.\n\nLet’s grow smarter together.\n\nGet the App Now: www.StocksToBuyNow.ai \n\n#stocks #stockmarket #investing",
+      "publishedAt": "2025-05-18T09:51:58-07:00",
+      "durationSeconds": 337,
+      "thumbnail": "https://i.ytimg.com/vi/1hj0bqmZAN0/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "ogau5L50_Qw",
+      "title": "2. Portfolio Allocation Size - The Art of Investing For Everyone - Aness Hussein Ali Stocks To Buy",
+      "description": "“Diversifying well is the most important thing you need to do in order to invest well.” - Ray Dalio\n\nIn this video we cover The Art of Portfolio Allocation: How To Build Your\nEffective Team.\n\n💡 Understanding Asset Classes & Risk\n\nEvery investment you make belongs to an asset class — a category of investment that behaves in a certain way.\n\nHere are the main ones:\n\n• Bonds (Fixed Income) – Lower risk, steady income. Less growth, but more stability.\n• Cash & Savings – Lowest risk, but loses value over time due to inflation.\n• Real Estate – Tangible and often stable, but less liquid and can be expensive to access.\n• Stocks (Equities) – Medium risk, higher potential return. Great for long-term growth but volatile in the short term.\n• Stock Options, Crypto & Alternatives – High Risk — can be profitable, but risky.\n\nWhy Diversification Matters\n\nDiversification means not putting all your eggs in one basket. Different assets respond differently to economic events. When stocks fall, bonds might rise. When inflation rises, gold might protect your wealth.\n\nThe goal is to:\n • Reduce risk\n • Smooth out performance\n • Protect your portfolio in uncertain times\n\nThink of it like building a team: you want fast players, strong defenders, and a goalkeeper — not 11 strikers.\n\nWhether you’re just getting started or leveling up your strategy, this is your guide to building wealth with confidence.\n\n✅ Learn how to think like a pro\n✅ Understand what makes a stock worth buying\n✅ Build a strategy that fits you\n\nThis is investing for everyone: practical, powerful, and community-driven.\n\nLet’s grow smarter together.\n\nGet the App Now: www.StocksToBuyNow.ai \n\n#stocks #stockmarket #investing #raydalio #stockinvesting",
+      "publishedAt": "2025-05-18T11:23:03-07:00",
+      "durationSeconds": 364,
+      "thumbnail": "https://i.ytimg.com/vi/ogau5L50_Qw/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "TdNULuMQvTQ",
+      "title": "3. Strategy Investment Horizon - The Art of Investing For Everyone - Aness Hussein Ali Stocks To Buy",
+      "description": "“Know what you own, and know why you own it.” - Peter Lynch\n\n🎯 Strategy & Investment Horizon\n\nMatch the signal to your time frame — not just the stock.\n• Short-Term Trading? Use short-term signals — momentum, news, earnings moves.\n• Long-Term Investing? Follow long-term signals — macro trends, innovation cycles, valuation growth.\n\n👉 The key is: don’t pick the stock — pick the signal that fits your strategy.\n\n⏱️ No Signal? \n\nStick to Time-Proven Categories\n\n🛡️ Best for Short-Term Stability (Defensive Picks)\n\nThese tend to hold value better during uncertainty:\n • Consumer Staples (e.g., food, household products)\n • Utilities (electricity, water)\n • Healthcare\n • Dividend Stocks / Value Stocks\n\nThey’re less volatile, often cash-generating, and good to park money when no clear trade setup is in play.\n\n🚀 Best for Long-Term Growth (High Risk, High Reward)\n\nThese can be volatile short-term but compound big over time:\n • Technology\n • Biotech & Innovation\n • AI, Cloud, and Green Energy\n • Small-Cap Growth Stocks\n • Emerging Markets / Crypto (with caution)\n\nThey’re best approached with a longer time horizon, where volatility smooths out and fundamentals can shine.\n\n🧠 Final Reminder:\n\nShort-term signals = short-term play\nLong-term conviction = long-term stay\n\nIf there’s no strong signal today, don’t force it — lean on quality, defense, or cash until the next opportunity arises.\n\n\nWhether you’re just getting started or leveling up your strategy, this is your guide to building wealth with confidence.\n\n✅ Learn how to think like a pro\n✅ Understand what makes a stock worth buying\n✅ Build a strategy that fits you\n\nThis is investing for everyone: practical, powerful, and community-driven.\n\nLet’s grow smarter together.\n\nGet the App Now: www.StocksToBuyNow.ai \n\n#trading #tradingsignals #tradingstrategy #momentumstocks #growthstocks #valuestocks #stocktrading #stockinvesting",
+      "publishedAt": "2025-05-18T12:55:30-07:00",
+      "durationSeconds": 184,
+      "thumbnail": "https://i.ytimg.com/vi/TdNULuMQvTQ/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "pJX_8LRTkns",
+      "title": "4. Sectors Investment Styles - The Art of Investing for Everyone - Aness Hussein Ali Stocks to Buy",
+      "description": "\"The stock market is a no-called-strike game. You don’t have to swing at everything - you can wait for your pitch.\" - Warren Buffett\n\nPick the investment styles / strategies / sectors that best fit your portfolio needs\n\n🌍 Earth Stability, Foundation, Value\n\nInvestment Style: Value Investing\n• Focus on undervalued, income-generating assets\n• Built on strong fundamentals and long-term durability\n• Slow-moving but resilient in downturns\n\nSectors:\n• Consumer Staples\n• Utilities\n• Real Estate\n• Industrial Conglomerates\n\nThink Warren Buffett — patient, grounded, focused on buying solid businesses at a discount.\n\n\n🌊 Water — Adaptable, Defensive, Steady\n\nInvestment Style: Defensive / Income-Oriented\n• Dividend stocks, bond-focused portfolios, or low-volatility strategies\n• Capital preservation and steady flow of returns\n• Adjusts to conditions like water flowing around obstacles\n\nSectors:\n• Healthcare\n• Insurance\n• Telecom\n• Blue-chip stocks\n\nBest for navigating uncertain markets or when no strong signals are present.\n\n🔥 Fire — Volatile, Explosive, High-Risk High-Reward\n\nInvestment Style: Growth & Momentum\n• Seeks rapid upside, even with high volatility\n• Fueled by hype, earnings surprises, innovation, and speed\n• Short-term trades or long-term conviction in disruptive sectors\n\nSectors:\n• Technology\n• Biotech\n• Crypto\n\nThink Cathie Wood or VC-style investing — driven by vision, but not for the faint of heart.\n\n🌬️ Air — Visionary, Fast-Moving, Sentiment-Driven\n\nInvestment Style: Thematic & Speculative\n• Often driven by ideas, trends, or macro narratives\n• Highly responsive to news, regulation, and social sentiment\n• Requires nimbleness and forward-looking thinking\n\nSectors:\n• Media & Social Platforms\n• Green Energy\n• AI / Cloud Software\n• Communication Services\n\nOften traded on “what could be,” not what is — perfect for future-focused portfolios.\n\nWhether you’re just getting started or leveling up your strategy, this is your guide to building wealth with confidence.\n\n✅ Learn how to think like a pro\n✅ Understand what makes a stock worth buying\n✅ Build a strategy that fits you\n\nThis is investing for everyone: practical, powerful, and community-driven.\n\nLet’s grow smarter together.\n\nGet the App Now: www.StocksToBuyNow.ai \n\n#stocks  #investingforbeginners  #investing #stockmarket #growthstocks #stockinvesting #warrenbuffett #stockinvesting",
+      "publishedAt": "2025-05-18T13:28:44-07:00",
+      "durationSeconds": 298,
+      "thumbnail": "https://i.ytimg.com/vi/pJX_8LRTkns/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "sMW3pq4czQU",
+      "title": "Stock Trading Signals |  Best Stocks to Buy Now AI Signals | Free Trading Investing Beginners Course",
+      "description": "Learn how to find the best long-term investments by analyzing revenues, net income, P/E ratio, short interest, and more. \n\nWe’ll show you how to compare a stock against its peers and competitors, so you can assess if it truly stands out.\n\nThe best stock to buy now? \n\nWhen a short-term signal (momentum, breakout, news) aligns with a strong long-term valuation, especially on a company that consistently outperforms its competition!\n\nThis video breaks down how to value companies for long-term investing and spot the best stock alternatives. \n\nWhether it’s a hyped name or a hidden gem — use these tips to make smarter decisions and build real wealth! 💸📊\n\nJoin us now on www.StocksToBuyNow.ai",
+      "publishedAt": "2025-07-29T18:54:44-07:00",
+      "durationSeconds": 2628,
+      "thumbnail": "https://i.ytimg.com/vi/sMW3pq4czQU/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "6eiwyYZQ_YY",
+      "title": "1) Introduction to Trading Risks Exposures | Aness Hussein Ali | Stocks to Buy Now: AI Signals",
+      "description": "[The Art of Investing For Everyone] https://www.youtube.com/watch?v=1hj0bqmZAN0\n\nWhat is Trading Risk?\n\nTrading risk is the unknown - the part of the market you can’t predict or model. \n\nWhile we measure drift (average direction), standard deviation, and volatility to describe price movement, true risk lies in the unexpected. \n\nA martingale process reminds us: past outcomes offer no edge - it’s the unseen shocks that move markets.\n\nIn practice, you’re always limited by your knowledge. \n\nA martingale process models randomness, but with more data and features, you can reduce risk and make smarter, probability-based decisions...\n\nWhether you’re just getting started or leveling up your strategy, this is your guide to building wealth with confidence.\n\n✅ Learn how to think like a pro\n✅ Understand what makes a stock worth buying\n✅ Build a strategy that fits you\n\nThis is investing for everyone: practical, powerful, and community-driven.\n\nLet’s grow smarter together.\n\nGet the App Now: www.StocksToBuyNow.ai \n\n#stocks #stockmarket #investing #trading #tradingrisks #tradingsignals #tradingstrategies",
+      "publishedAt": "2025-06-21T11:41:46-07:00",
+      "durationSeconds": 194,
+      "thumbnail": "https://i.ytimg.com/vi/6eiwyYZQ_YY/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "3GOyG287T1Y",
+      "title": "2) Allocation Risk | Aness Hussein Ali | Stock Trading Course | Stocks to Buy Now: AI Signals",
+      "description": "The real risk in trading hits when you’re most confident - smiling, laughing, winning and relaxed. And then reality snaps back...\n\nUnderstanding Allocation Risk in Trading & Investing\n\nAllocation risk is one of the most overlooked dangers in trading. Even a great idea can lead to big losses if you size it wrong. Here’s what you need to know:\n\n📉 Never allocate more than 1% of your portfolio to a non–S&P 500 stock, unless you’re highly experienced.\n\n📊 For S&P 500 stocks, avoid allocating more than 10% or 3x the index weight — whichever is lower.\n\n⚠️ Options are high risk — keep exposure under 1% per position, especially if you’re new.\n\nFor your first year of trading or investing, these limits help protect you from emotional decisions and large drawdowns. As you gain experience and confidence, you can adjust based on your strategy and risk tolerance.\n\n🟢 In the app, every signal includes a recommended allocation, so you know exactly how much to invest per trade — helping you grow smarter, not just faster.\n\nLet’s grow smarter together.\n\nwww.StocksToBuyNow.ai \n\n#tradingcourse #stocktradingtips #stockmarketforbeginners",
+      "publishedAt": "2025-06-21T11:53:14-07:00",
+      "durationSeconds": 254,
+      "thumbnail": "https://i.ytimg.com/vi/3GOyG287T1Y/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "y2JQLCrxr48",
+      "title": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now",
+      "description": "What Is Market Risk & How to Stay Ahead\n\nMarket risk is the risk that impacts all investments - regardless of how great your stock pick is. \n\nIt’s the broad, systemic risk tied to the economy, interest rates, inflation, and global events. \n\nYou can’t avoid it completely, but you can understand it and manage exposure better.\n\nOne of the most important tools to measure market risk at the stock level is beta.\n• Beta measures a stock’s sensitivity to the overall market (usually the S&P 500).\n• A beta of 1 means the stock moves with the market.\n• A beta above 1 means the stock is more volatile than the market.\n• A beta below 1 means it’s less volatile — more defensive.\n\nIn the app, every stock includes its beta so you can gauge risk before entering a position.\n\nBut market risk is about more than just beta — it’s also driven by key macro events:\n📅 CPI (Consumer Price Index): Measures inflation at the consumer level.\n🏭 PPI (Producer Price Index): Measures inflation at the producer level.\n🏦 FOMC (Federal Open Market Committee): Determines interest rates and monetary policy.\n💼 Jobs reports, GDP releases, earnings seasons, and geopolitical news also play a huge role.\n\nAll these events can shake the market — even great stocks fall if the entire market panics.\n\nThat’s why the app includes a live event calendar so you know what’s coming and when to expect volatility.\n\nWe also give you access to our exclusive Market Calendar Yield feature — a tool that shows how the market has historically performed during specific weeks, months, and even days of the year.\n\nThis lets you:\n• See if a certain time of year is historically bullish or bearish\n• Spot seasonal trends and patterns\n• Prepare for dips or rallies based on history, not emotions\n\nWith these tools — beta, event tracking, and historical yield patterns — you’ll be better equipped to navigate market risk.\n\nUse them to stay informed, manage position sizes, and protect your capital during volatile times.\n\nYour edge is knowledge, and we’re giving you everything you need!\n\nwww.StocksToBuyNow.ai\n\n#sp500 #dowjones #market #stockmarket #cpi #ppi #fomc #jeromepowell #federalreserve #economics",
+      "publishedAt": "2025-06-21T12:30:10-07:00",
+      "durationSeconds": 782,
+      "thumbnail": "https://i.ytimg.com/vi/y2JQLCrxr48/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "gDDHdh5x9fw",
+      "title": "4) Investment Style Risk | Aness Hussein Ali | Stock Trading Course | Stocks to Buy Now: AI Signals",
+      "description": "Investment style risk is the exposure you have to value and growth strategies.\n\nWhat Are Growth and Value Stocks?\n\nGrowth stocks are companies expected to grow revenue and earnings faster than the market. They typically reinvest profits instead of paying dividends — think tech companies, innovation leaders, or firms expanding rapidly.\n\nValue stocks are seen as undervalued compared to their fundamentals (like earnings or book value). These are often mature, stable companies — many pay consistent dividends and trade at lower price-to-earnings (P/E) ratios.\n\n🧠 In the App:\n📈 You can compare growth vs. value performance side-by-side against the market.\n🔍 Explore all stocks grouped by style — value or growth.\n📊 Sort value stocks by dividend yield to find high-income picks.\n🚀 Sort growth stocks by performance driver to discover the top trending names.\n\nThis helps you invest smarter and understand your exposures based on your preferences and the style your current portfolio is exposed to.\n\nLet’s grow smarter together.\n\nwww.StocksToBuyNow.ai \n\n#valuestocks #growthstyles #valueinvesting #growthinvesting #trading #stockinvesting #stocks #stockmarket #investmentstyle",
+      "publishedAt": "2025-06-21T12:37:12-07:00",
+      "durationSeconds": 198,
+      "thumbnail": "https://i.ytimg.com/vi/gDDHdh5x9fw/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "iUwdwWgAbQQ",
+      "title": "5) Industry Exposures | Aness Hussein Ali | Stocks to Buy Now: AI Signals | Free Trading Course",
+      "description": "📊 Explore & Compare Industry Performance 💸\n\nYou can dive deep into industry-level performance to see which sectors are leading or lagging the market. \n\nWhether you’re tracking tech, real estate, energy, finance, or healthcare — it’s all in one place.\n\nGo beyond the surface by comparing constituent stocks within each industry using key metrics like:\n• Performance driver (what stocks could outperform next)\n• Dividend yield\n• Revenue growth\n• Financial strength\n• Short interest and more\n\nWant to know how a stock moves with its industry? The app lets you visualize correlations between any stock and its broader sector - so you know if it’s outperforming, underperforming, or moving in sync.\n\nEach stock also shows industry exposure, helping you understand how much of its movement is tied to sector trends.\n\nThis gives you an edge in spotting momentum shifts, hidden leaders, or defensive plays — all from a macro-to-micro view.\n\nLet’s grow smarter together.\n\nwww.StocksToBuyNow.ai \n\n#technology #techstocks #nvidia #tesla #xlk #qqq #nasdaq #googl #aapl #msft #dividendstocks #dividendyield #realestate",
+      "publishedAt": "2025-06-21T13:31:23-07:00",
+      "durationSeconds": 331,
+      "thumbnail": "https://i.ytimg.com/vi/iUwdwWgAbQQ/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "ri9FAHIHCUQ",
+      "title": "6) Earnings: Pre Earnings Strategy Exposures | Aness Hussein Ali | Stocks to Buy Now: AI Signals",
+      "description": "What Are Earnings & How to Trade Them\n\nEarnings are a company’s official report card: they reveal how much money a company made (or lost) over the past quarter. \n\nInvestors look at EPS (earnings per share), revenue, and guidance to assess growth, strength, and future potential.\n\nHere are 4 proven strategies to profit from earnings:\n\n1️⃣ Pre-Earnings Run-Up\n\nSome stocks rise into earnings as anticipation builds. You can buy before the report and sell just before the announcement to capture the hype, avoiding the risk of surprises.\n\n2️⃣ Earnings Jump\n\nWhen a company beats expectations, the stock can gap up at the open. Traders can enter right after confirmation and ride momentum if volume and sentiment support it.\n\n3️⃣ Post-Earnings Drift\n\nEven after a big move, strong earnings often lead to continued upward drift over the next few weeks. Use this for swing trades after the dust settles.\n\n4️⃣ Earnings vs. Competitors\n\nWatch how a stock performs relative to its peers. If Microsoft beats and Google misses, the market often rewards the outperformer and punishes the laggard — that’s a chance to trade the spread.\n\nIn the app, you can track earnings dates, analyst expectations, and compare results across companies — so you’re ready for every phase of the earnings cycle.\n\n\n📊 Pre Earnings Strategy Starts with Smart Data\n\nIn the app, you can use tools like retail ownership and earnings date sorting to spot stocks with high hype or growing attention ahead of earnings.\n\n\n🧠 This helps you identify potential pre-earnings movers, so you’re positioned before the crowd — not chasing after.\n\nPlan smarter. Trade earlier. Profit better.\n\nwww.StocksToBuyNow.ai\n\n#earnings #tradingstrategies #tradingcourse #stocktrading #warrenbuffett #earningsseason #stockinvesting",
+      "publishedAt": "2025-06-21T15:11:42-07:00",
+      "durationSeconds": 212,
+      "thumbnail": "https://i.ytimg.com/vi/ri9FAHIHCUQ/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "cIZBALbm9wE",
+      "title": "7) Earnings Jump AI Prediction Strategy | Aness Hussein Ali | Stocks to Buy Now: AI Signals",
+      "description": "How to profit from Earnings?\n\nWhen a company reports earnings, investors look at three key components:\n\n1. Income Statement\n\nShows revenue, expenses, and profit (net income) over a specific period. This is where EPS (earnings per share) comes from — a major market mover.\n\n2. Balance Sheet\n\nA snapshot of what the company owns (assets) and owes (liabilities). It shows financial health, debt levels, and cash reserves.\n\n3. Earnings Guidance\n\nArguably the most important for stock movement. \n\nThis is management’s forecast for future revenue and profit. Even if a company beats earnings, weak guidance can make the stock drop — and vice versa.\n\n\n How Stocks React on Earnings Day:\n• Beat + Strong Guidance → stock often jumps\n• Beat + Weak Guidance → mixed or negative reaction\n• Miss + Strong Guidance → recovery potential\n• Miss + Weak Guidance → likely drop\n\nAI Earnings Prediction will help you target earnings winners with a 70 to 80% accuracy! Make sure you understand what are the risks involved and how to mitigate them before going all in!\n\nJoin the group chat on www.StocksToBuyNow.ai\n\n#tradingsignals #aitrading #aitrader #aisignals #stocktrading #stocktrader #financialanalysis #financialprediction #financialpredictions",
+      "publishedAt": "2025-06-21T15:18:27-07:00",
+      "durationSeconds": 286,
+      "thumbnail": "https://i.ytimg.com/vi/cIZBALbm9wE/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "XuWZzMgfBsw",
+      "title": "8) Post Earnings Intraday Trading Strategy | Aness Hussein Ali | Stocks to Buy Now: AI Signals",
+      "description": "How to Profit from Short-Term Trading Post Earnings\n\nIn this video, we break down how to spot and trade short-term price moves like a pro.\n\nYou’ll learn how to:\n• Use ownership trends (retail vs. institutional) to spot early momentum\n• Analyze earnings results to predict breakout or breakdown potential\n• Read market momentum to time your entry and exit for max impact\n\nWhether you’re day trading or swing trading, this strategy-packed guide will help you trade with confidence. \n\nAll the signals are in the app, join our group chat if you have any question, we're here to help!\n\nLet’s go!\n\nwww.StocksToBuyNow.ai\n\n#stockprediction #earnings #tradingstrategies #tradingmomentum #intradaytrading #intradaytradingstrategies #intradaytradingstrategy #stocktrader #tradingsignal",
+      "publishedAt": "2025-06-21T15:36:32-07:00",
+      "durationSeconds": 370,
+      "thumbnail": "https://i.ytimg.com/vi/XuWZzMgfBsw/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "R4H24rQLnzs",
+      "title": "9) Competitors Earnings Trading Strategy | Aness Hussein Ali | Free Trading Course for Beginners",
+      "description": "How to Profit from Earnings Deviations Between Competitors\n\nYou don’t always have to trade a stock’s earnings directly. \n\nIn fact, some of the smartest traders profit by watching how competitors react,and trading the difference.\n\nWhat Are Earnings Deviations?\n\nWhen two rival companies report earnings around the same time, the gap in performance often creates a trading opportunity.\n\nHow to Do It in the App:\n\nIn the app, you can:\n• Compare earnings results side by side\n• Use the competitor view to check correlations\n• Track how one stock reacts vs its peers\n• Identify gaps in performance and build smarter trades based on relationships\n\nThis lets you build safer, lower-risk strategies — using the power of relative strength instead of gambling on a single report.\n\nPro tip: Stocks highly correlated over time often snap back to trend after temporary divergence — that’s your edge.\n\n#amzn #googl #aapl #nvda #amd #avgo #competitoranalysis #competitionanalysis #stockmarket  #stocktrading  #earnings #tradingstrategy #tradingforbeginners #learntrading  #tradingtips #tradingcourse #robinhood #coinbase #hood #coin",
+      "publishedAt": "2025-06-21T15:53:20-07:00",
+      "durationSeconds": 337,
+      "thumbnail": "https://i.ytimg.com/vi/R4H24rQLnzs/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "h6LA0VRRzXw",
+      "title": "10) CEO | Insider Trading | Management Risk | Aness Hussein Ali | Stocks to Buy Now : AI Signals",
+      "description": "Insider Trading vs. CEO Quality — Two Very Different Signals\n\nWhen it comes to trading, not all signals are created equal. Some are short-term bursts of hype, while others build powerful long-term returns. Here’s how to use both:\n\n⸻\n\nInsider Trading = Short-Term Hype\n\nWhen executives or large shareholders buy their own stock, it can create short-term buzz.\n• Why it matters: It shows confidence, and retail traders often follow.\n• How to profit: Get in early after the insider buy is reported, ride the short-term momentum, and take profits quickly.\n•  Caution: These moves often fade fast — it’s hype, not fundamentals.\n\n⸻\n\nGreat CEO & Management = Long-Term Edge\n\nStrong leadership doesn’t always create immediate price movement — but over time, it compounds.\n• Why it matters: Good CEOs drive consistent execution, smart capital allocation, and innovation.\n• How to profit: Look for companies with visionary leadership, long-term growth strategy, and low turnover. Hold through volatility.\n• Note: No instant pop, but often leads to multi-year outperformance.\n\n⸻\n\n In the app, you can:\n• Receive insider trading activity alerts for short-term trade ideas\n• See CEO & management profiles, tenure, and impact on stock performance\n• Know what’s hype and what’s substance — and trade accordingly.\n\nUse both signals — just know when to ride the wave, and when to plant the seed.\n\n#insidertrading #insiders #insidertrade #insiderstrade #tradingstrategy #optionstrading #stocktrader #stockinvesting #stockinvestor #stocktradingtips",
+      "publishedAt": "2025-06-21T16:20:46-07:00",
+      "durationSeconds": 420,
+      "thumbnail": "https://i.ytimg.com/vi/h6LA0VRRzXw/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "ZUXcZ9Fm3LI",
+      "title": "11) Politician Trades | Nancy Pelosi & Trump | Aness Hussein Ali | Stocks to Buy Now : AI Signals",
+      "description": "How to Trade Like a Politician — Timing Matters\n\nNot all trading signals are equal — and when it comes to politician trading, knowing the difference between hype and substance is key.\n\n⸻\n\nNancy Pelosi & Politician Trades = Short-Term Momentum\n\nNancy Pelosi’s stock trades are closely watched — when disclosures hit, certain names can spike short-term due to media and social buzz.\n• Why it matters: Large trades by political figures often move markets briefly.\n• How to profit: Catch the news early, ride the wave, and exit before the hype fades.\n• These are not long-term signals — they’re driven by visibility, not always fundamentals.\n\n⸻\n\nTrump-Linked Stocks = Policy-Driven Cycles\n\nTrump-related stocks tend to move based on policy expectations — tariffs, military, infrastructure, education, or AI.\n• Why it matters: When Trump hints at deals, regulation, or favoritism, specific sectors surge.\n• How to profit: Trade the macro/policy angle — defense, oil, tech, or education — based on what he’s likely to push.\n• Longer cycles than hype trades, but still trend-based — not always tied to earnings.\n\n⸻\n\n📲 In the app, you can:\n• Receive politician trade alerts\n• See which stocks are linked to policy themes and parties\n• Filter stocks by democrats vs republicans etc.\n\nUse Pelosi-style trades for short-term setups. Use Trump-linked themes to ride policy waves. Know the difference, and time it right!\n\nwww.StocksToBuyNow.ai , for you!\n\n#trading #politiciantrade #insidertrading #nancypelosi #pelosi #trumptrading #tradingsignals #stocktradingsignal #stocktrader #stocktrading #tradingcourse #learntrading",
+      "publishedAt": "2025-06-21T16:21:55-07:00",
+      "durationSeconds": 370,
+      "thumbnail": "https://i.ytimg.com/vi/ZUXcZ9Fm3LI/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "Q08MpbQYfcQ",
+      "title": "12) Hedge Fund Trading Signals Opportunities | Warren Buffett | Bill Ackman | Cathie Wood",
+      "description": "How to Profit from Hedge Fund Trades | Buffett, Cathie Wood, Bill Ackman Strategies Explained\n\nWant to trade like the pros? \n\nIn this video, we break down how to profit from hedge fund trades by following market legends like Warren Buffett (Berkshire Hathaway), Cathie Wood (Ark Invest), and Bill Ackman (Pershing Square).\n\nMany investors chase hedge fund filings, but very few understand how to use them the right way. \n\nWe’ll show you how to separate short-term hype from long-term strategy, and how to build smarter trades based on 13F filings, media headlines, and institutional ownership trends.\n\nWhat You’ll Learn in This Video:\n• What hedge fund trades actually mean for retail investors\n• How to use Berkshire Hathaway’s positions to find value plays\n• Why Cathie Wood’s high-conviction trades create retail momentum\n• How Bill Ackman’s bold bets can shake entire sectors\n• The difference between delayed filings and real-time execution\n• Why hedge fund buying = short-term trading signal, not always a long-term hold\n• How to spot entry points after big fund disclosures\n• How to avoid FOMO when following smart money\n• Tools and data we use in the app to track hedge fund ownership\n\nReceive live alerts and signals on your phone join our group chat now \nwww.StocksToBuyNow.ai\n\n#stocktrading #stocksignals #tradingsignals #hedgefunds #warrenbuffett #billackman #cathiewood #hedgefundtrading",
+      "publishedAt": "2025-06-22T04:20:32-07:00",
+      "durationSeconds": 355,
+      "thumbnail": "https://i.ytimg.com/vi/Q08MpbQYfcQ/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    },
+    {
+      "id": "FX0ELQ13jp8",
+      "title": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers",
+      "description": "Corporate Actions: Trading Opportunity\n\nCorporate actions often create short-term hype — and in the app, you receive signals to spot and trade these opportunities before the crowd. Here’s how each corporate event can affect a stock:\n\n⸻\n\nDividend Announcement\n\nWhen a company declares a dividend, it signals financial strength.\n• Effect: Short-term price bump (especially with high yield), followed by a dip on the ex-div date.\n• Opportunity: Profit by entering before the announcement or selling into yield-chasing demand.\n\n⸻\n\nStock Split\n\nThe company increases share count, lowering the price per share.\n• Effect: Often bullish, as it improves affordability and attracts retail traders.\n• Opportunity: Ride momentum leading up to the split date — especially for popular tech names.\n\n⸻\n\nMerger & Acquisition\n\nOne company buys another or two combine.\n• Effect: The target stock usually surges, while the buyer may drop slightly.\n• Opportunity: Trade the target on the initial spike or find sympathy plays in the same sector.\n\n⸻\n\nShare Buyback\n\nThe company repurchases its own shares, reducing supply.\n• Effect: Often boosts stock price and earnings per share.\n• Opportunity: Bullish signal — can be used to confirm long entries or add to a position.\n\n⸻\n\nPrivate Placement\n\nShares are sold to a select group, usually at a discount.\n• Effect: Can dilute existing shareholders, leading to short-term drops.\n• Opportunity: Wait for dip buying or enter when placement terms are favorable.\n\n⸻\n\nIn the app, you’ll get alerts when these events occur — with breakdowns, impact scores, and how to trade them. \n\nSmart traders grab opportunities and learn how to profit from them. \n\nJoin the group chat in the app and discuss with a pro community.\n\nwww.StocksToBuyNow.ai , for you!\n\n#dividends #stocksplit #corporateaction #stockbuyback #merges #dividend #tradingstrategies #stocktrading #stockmarket #stock #stockinvestingcourse",
+      "publishedAt": "2025-06-21T17:00:31-07:00",
+      "durationSeconds": 516,
+      "thumbnail": "https://i.ytimg.com/vi/FX0ELQ13jp8/hqdefault.jpg",
+      "transcript": [],
+      "captionsAutomatic": true
+    }
+  ]
+}

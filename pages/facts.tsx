@@ -46,10 +46,10 @@ export default function FactsPage() {
           <p className="lead">
             A clear, regularly maintained overview of what the app does, where it is available and how to evaluate it responsibly.
           </p>
-          <div className="rating" aria-label="Five stars based on more than twenty thousand reviews">
-            <span className="stars">★★★★★</span>
-            <strong>5 stars based on 20,000+ reviews</strong>
-            <small>Combined across the Apple App Store, Google Play and Trustpilot</small>
+          <div className="rating">
+            <strong>Read customer reviews at the source</strong>
+            <small>Explore Apple App Store, Google Play and Trustpilot feedback.</small>
+            <a href="/reviews/">View public review sources →</a>
           </div>
         </section>
 
@@ -106,7 +106,7 @@ export default function FactsPage() {
           <p>
             Investing involves risk, including possible loss of principal. Signals, examples and historical results do not guarantee future performance. Users should independently evaluate each idea and consider their objectives, experience and risk tolerance.
           </p>
-          <small>Last updated: August 31, 2026</small>
+          <small>Last updated: October 30, 2026</small>
         </section>
       </main>
 

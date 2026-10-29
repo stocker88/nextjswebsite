@@ -1,6 +1,5 @@
 import {DESKTOP_ACCESS_PATH} from '../../lib/desktop-access';
 import SiteMenu from '../SiteMenu';
-import LatestResearchBand from '../LatestResearchBand';
 import AccountMenu from '../AccountMenu';
 import {accountLoginUrl} from '../../lib/site-auth';
 import {useSiteAccount} from '../SiteAccount';
@@ -67,14 +66,18 @@ export default function Header({
       if (y === 0) setIsOpen(false);
       // Match the continuous hero gradient, including the mobile status strip.
       // Keep the initial reveal blue; ease toward navy near the end of the hero.
-      const hero = document.getElementById(window.innerWidth >= 1024 ? 'desktop-product-intro' : 'home') || document.getElementById('desktop-product-intro') || document.getElementById('home');
-      const heroHeight = hero?.getBoundingClientRect().height || 1;
+      // Desktop visitors can use narrow windows too. Measure the visible hero,
+      // rather than choosing a hidden mobile hero from the viewport width.
+      const hero = ['home', 'desktop-product-intro']
+        .map(id => document.getElementById(id))
+        .find(element => element && element.getBoundingClientRect().height > 0);
+      const heroHeight = hero?.getBoundingClientRect().height || window.innerHeight;
       const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 80;
       const progress = Math.min(1, y / heroHeight);
       const fade = Math.max(0, Math.min(1, (progress - .55) / .45));
       const darkness = fade * fade * (3 - 2 * fade);
       const colorAt = offset => {
-        if (darkHeader || !hero) return '#080d14';
+        if (darkHeader) return '#080d14';
         const fraction = Math.min(1, (y + offset) / heroHeight);
         return '#' + [0, 163, 245].map((start, i) => {
           const heroChannel = start + ([21, 0, 128][i] - start) * fraction;
@@ -95,10 +98,16 @@ export default function Header({
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
     update();
+    const heroResize = new ResizeObserver(schedule);
+    ['home', 'desktop-product-intro'].forEach(id => {
+      const element = document.getElementById(id);
+      if (element) heroResize.observe(element);
+    });
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('resize', schedule);
     return () => {
       cancelAnimationFrame(frame);
+      heroResize.disconnect();
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('resize', schedule);
       if (ownsLegacyCanvas) {
@@ -151,7 +160,7 @@ export default function Header({
   return (
     <>
       {browserTheme}
-      <header className={`site-header ${isHomePage ? 'is-home' : ''} ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor, '--header-surface-color': isOpen ? '#0b1323' : chromeColor}}>
+      <header className={`site-header ${isHomePage ? 'is-home' : ''} ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor, '--header-surface-color': isOpen ? '#0b1323' : undefined}}>
         <span className="site-header-edge" aria-hidden="true" />
         <nav className={menuStyles.nav} aria-label="Main navigation">
           <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
@@ -192,7 +201,6 @@ export default function Header({
             </button>
           </div>
         </nav>
-        <LatestResearchBand />
       </header>
     </>
   );

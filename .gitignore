@@ -13,3 +13,6 @@ out/
 
 # Isolated content-access verification preview
 .next-content-access/
+
+# Isolated public courses and founder preview
+.next-education-check/

@@ -43,9 +43,9 @@ const Testimonial = () => {
           <p className="founder-description">
             Aness combines institutional-market experience with statistics,
             economics and technology to make sophisticated investing research
-            clearer and more practical. His background includes financial
-            engineering at UC Berkeley Haas, advanced studies in statistics and
-            finance, and experience across trading, asset management and risk.
+            clearer and more practical. He earned his Master of Financial
+            Engineering at UC Berkeley Haas in 2014. His experience includes
+            Goldman Sachs and work across trading, asset management and risk.
           </p>
 
           <div className="founder-metrics" aria-label="Professional highlights">
@@ -81,6 +81,10 @@ const Testimonial = () => {
             >
               Visit personal website
             </a>
+          </div>
+          <div className="founder-actions">
+            <a className="founder-secondary-link" href="/authors/aness-hussein-ali/">View education, diploma &amp; experience ↗</a>
+            <a className="founder-secondary-link" href="/learn/">Explore free courses ↗</a>
           </div>
         </div>
       </div>

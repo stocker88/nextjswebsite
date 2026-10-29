@@ -10,8 +10,8 @@ const YoutubeSection = () => {
           <p>Learn for Free</p>
           <h2 id="playlist-title">Learn for Free</h2>
           <span>
-            Explore the complete video playlist for practical walkthroughs,
-            market insights and investing education.
+            Explore three free courses on stocks, options and trading setups.
+            Watch at your own pace, with no account or subscription needed.
           </span>
         </div>
 
@@ -27,6 +27,7 @@ const YoutubeSection = () => {
           />
         </div>
 
+        <a className="playlist-link" href="/learn/">Browse all courses and lessons <span aria-hidden="true">→</span></a>
         <a
           className="playlist-link"
           href={`https://www.youtube.com/playlist?list=${playlistId}`}
