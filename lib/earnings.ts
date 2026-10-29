@@ -27,15 +27,11 @@ export const shortDate=(d:string)=>new Date(d+'T12:00:00Z').toLocaleDateString('
 export const weekStart=(d:string)=>day(d,-((new Date(d+'T12:00:00Z').getUTCDay()+6)%7));
 export const sessionName=(s:string)=>s==='bmo'?'Before open':s==='amc'?'After close':'Time unconfirmed';
 const cache=new Map<string,Detail>();
-const STATIC_DETAIL_MAX_AGE=26*3600000;
 export async function getDetail(symbol:string):Promise<Detail>{
  if(cache.has(symbol))return cache.get(symbol)!;
- let fallback:Detail|null=null;
- // Same-origin snapshots make popular research quick even inside social browsers.
- for(const url of ['/earnings-data/'+encodeURIComponent(symbol)+'.json',endpoint+'?symbol='+encodeURIComponent(symbol)]){
-  try{const r=await fetch(url,{signal:AbortSignal.timeout(25000)});if(!r.ok)continue;const d=await r.json();if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){if(url.startsWith('/')&&Date.now()-Date.parse(d.updatedAt)>STATIC_DETAIL_MAX_AGE){fallback=d;continue;}cache.set(symbol,d);return d;}}catch{}
- }
- if(fallback)return {...fallback,stale:true};
+ // Company research is generated centrally and deployed as a same-origin file.
+ // Browsers and crawlers must never fan out into an expensive Cloud Function.
+ try{const r=await fetch('/earnings-data/'+encodeURIComponent(symbol)+'.json',{signal:AbortSignal.timeout(25000)});if(r.ok){const d=await r.json();if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){cache.set(symbol,d);return d;}}}catch{}
  throw new Error('Could not load this company’s research. Please try again.');
 }
 export function filterEvents(items:Event[],filters:{from:string;to:string;query:string;session:string;cap:string;sector:string;sort:string}){

@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
 const root = path.resolve(__dirname, '../..');
+process.env.EARNINGS_CACHE_DIR = path.join(root, '.cache/earnings');
 const stage = path.join(root, '.github-pages-build');
 const ts = require('typescript');
 function write(file, text) { const dest = path.join(stage, file); fs.mkdirSync(path.dirname(dest), {recursive:true}); fs.writeFileSync(dest,text); }

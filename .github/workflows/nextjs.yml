@@ -72,7 +72,19 @@ jobs:
         with:
           path: .cache/macro
           key: macro-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Restore company research snapshots
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/earnings
+          key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: earnings-v1-
       - run: yarn build:pages
+      - name: Preserve company research snapshots
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/earnings
+          key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: node scripts/github-pages/verify.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
