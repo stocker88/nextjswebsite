@@ -23,3 +23,12 @@ assert.match(html,/<path d="M60 50[^\"]* L212 112" fill="none" stroke="#c7b5e8"/
 assert.match(html,/<circle cx="60" cy="28" r="3.5"/);
 assert.match(html,/\$21.54/);
 console.log('Call/put axes, put expiry curve, recorded values and breakeven verified.');
+
+for(const [before,after,strike,premium] of [[16.06,18.24,18.5,.05],[251.65,220.47,210,.14],[321.89,281.24,270,.1],[20,20,20,.2]]){
+ const axis=axisModule.resultStockAxis(before,after,strike,premium);
+ assert.ok(axis.minimum<strike&&axis.maximum>strike,'strike and bend are visible');
+ assert.equal(axis.comparisonFraction(axis.fraction(before)),0);
+ if(before!==after)assert.equal(axis.comparisonFraction(axis.fraction(after)),1);
+ for(const f of [-1,0,.5,1,2])assert.ok(axis.comparisonFraction(f)>=0&&axis.comparisonFraction(f)<=1);
+}
+console.log('Out-of-the-money calls/puts extend beyond strike; recorded prices remain bounded.');

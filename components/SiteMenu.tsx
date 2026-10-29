@@ -1,5 +1,4 @@
 import {useEffect, useRef, useState} from 'react';
-import StockQuickSearch from './StockQuickSearch';
 import {siteNavigation} from '../lib/site-navigation';
 import styles from '../styles/SiteMenu.module.css';
 

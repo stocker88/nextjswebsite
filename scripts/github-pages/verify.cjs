@@ -77,7 +77,9 @@ for(const report of optionReports){
  assert(!html(route).includes('What happened'),'Anonymous result HTML must not contain the protected section: '+report.id);
  const pageData=JSON.parse(html(route).match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]);
  assert(!Object.hasOwn(pageData.props.pageProps.result,'recap')&&!Object.hasOwn(pageData.props.pageProps.result,'text'),'Protected report copy leaked into static props');
- for(const image of report.images)assert(html(route).includes(image.url.replace(/&/g,'&amp;')),'Full result image missing: '+report.id);
+ const highlightIndex=report.moves.reduce((best,move,index)=>move.sessionPct>report.moves[best].sessionPct?index:best,0);
+ const highlight=report.images[highlightIndex]||report.images[0];
+ if(highlight)assert(html(route).includes(highlight.url.replace(/&/g,'&amp;')),'Result preview image missing: '+report.id);
 }
 console.log(`Verified ${optionReports.length} individual result pages and archive links.`);
 

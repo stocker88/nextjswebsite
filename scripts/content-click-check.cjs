@@ -3,7 +3,7 @@ function load(file,modules={},globals={}){
  const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText;
  const module={exports:{}};new Function('require','module','exports',...Object.keys(globals),source)(name=>name in modules?modules[name]:require(name),module,module.exports,...Object.values(globals));return module.exports;
 }
-const content=load('lib/content-access.ts'),routes=load('lib/site-auth.ts');
+const content=load('lib/content-access.ts'),routes=load('lib/site-auth.ts'),bandAccess=load('lib/band-access.ts');
 const origin='https://www.stockstobuynow.ai';
 class Element{}
 class Anchor extends Element{
@@ -22,6 +22,7 @@ async function run({desktop=false,user=null,ready=true,persistedUser=null}={}){
  const {SiteAccountProvider}=load('components/SiteAccount.tsx',{
   react,'react/jsx-runtime':require('react/jsx-runtime'),'next/router':{useRouter:()=>({push:value=>pushed.push(value)})},
   '../lib/content-access':content,'../lib/site-auth':{...routes,getSiteAuth:async()=>({authStateReady:async()=>{},currentUser:persistedUser})},
+  '../lib/band-access':bandAccess,
   '../lib/site-account-hint':{},'../lib/membership-status':{preloadMembershipStatus:()=>Promise.resolve(null)},'./ProfileOnboarding':()=>null,
   '../lib/desktop-access':load('lib/desktop-access.ts'),'../lib/device-access':{isDesktopDevice:()=>desktop,isAppDestination:()=>false},
   './AccountDevices':{},'./DeviceCapacityNotice':{},'../lib/account-devices':{},'../styles/AccountLogin.module.css':{}
