@@ -14,14 +14,25 @@ export type UsernameAvailability='idle'|'checking'|'available'|'taken'|'error';
 
 export const normalizeUsername=(value:string)=>value.trim().toLowerCase().replace(/\s+/g,'_');
 
-export function usernameValidationMessage(value:string){
+export function usernameValidationCode(value:string){
  const name=normalizeUsername(value);
- if(!name)return 'Choose a username.';
- if(/[@.\uFF20\uFF0E\u3002\uFF61]/.test(name))return 'Use a username, not an email address or website.';
- if(!/^[a-z0-9_]+$/.test(name))return 'Use only letters, numbers and underscores.';
- if((name.match(/[0-9]/g)||[]).length>5)return 'Your username can contain at most 5 digits in total.';
- if(name.length>15)return 'Use 15 characters or fewer.';
+ if(!name)return 'username_empty';
+ if(/[@.\uFF20\uFF0E\u3002\uFF61]/.test(name))return 'username_email_or_url';
+ if(!/^[a-z0-9_]+$/.test(name))return 'username_characters';
+ if((name.match(/[0-9]/g)||[]).length>5)return 'username_too_many_digits';
+ if(name.length>15)return 'username_too_long';
  return '';
+}
+
+export function usernameValidationMessage(value:string){
+ const reason=usernameValidationCode(value);
+ return reason?{
+  username_empty:'Choose a username.',
+  username_email_or_url:'Use a username, not an email address or website.',
+  username_characters:'Use only letters, numbers and underscores (a–z, 0–9, _).',
+  username_too_many_digits:'Your username can contain at most 5 digits in total.',
+  username_too_long:'Use 15 characters or fewer.',
+ }[reason]:'';
 }
 
 async function firestore(){
@@ -42,6 +53,25 @@ export async function isUsernameAvailable(value:string,uid:string){
  const {sdk,db}=await firestore();
  const result=await sdk.getDocs(sdk.query(sdk.collection(db,'users'),sdk.where('userName','==',name),sdk.limit(2)));
  return result.docs.every(item=>item.id===uid);
+}
+
+export function usernameCandidates(value:string){
+ let digits=0;
+ const base=normalizeUsername(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').split(/[@＠]/)[0]
+  .replace(/[^a-z0-9_]+/g,'_').replace(/[0-9]/g,digit=>++digits<=5?digit:'').replace(/^_+|_+$/g,'').slice(0,15)||'member';
+ const candidates=usernameValidationMessage(value)?[base]:[];
+ // Letter suffixes also work when the original name already has five digits.
+ for(const suffix of ['_hi','_now','_go','_me','_ai','_new','_one','_plus'])candidates.push(base.slice(0,15-suffix.length)+suffix);
+ return Array.from(new Set(candidates)).filter(name=>name!==normalizeUsername(value)&&!usernameValidationMessage(name)).slice(0,9);
+}
+
+export async function availableUsernameSuggestions(value:string,uid:string){
+ const candidates=usernameCandidates(value);
+ const {sdk,db}=await firestore();
+ // One bounded batch query, not repeated calls for every proposed name.
+ const result=await sdk.getDocs(sdk.query(sdk.collection(db,'users'),sdk.where('userName','in',candidates)));
+ const taken=new Set(result.docs.filter(item=>item.id!==uid).map(item=>item.data().userName));
+ return candidates.filter(name=>!taken.has(name)).slice(0,2);
 }
 
 function localeParts(){
@@ -67,10 +97,10 @@ function profileDocument(user:User,userName:string,photoUrl:string,answers:Onboa
 
 export async function completeProfileOnboarding(user:User,input:{userName:string;photoFile:File|null;answers:OnboardingAnswers;heardFrom?:string}){
  const userName=normalizeUsername(input.userName),validation=usernameValidationMessage(userName);
- if(validation)throw new Error(validation);
+ if(validation)throw Object.assign(new Error(validation),{code:usernameValidationCode(userName)});
  const auth=await getSiteAuth();
  if(auth.currentUser?.uid!==user.uid)throw new Error('Your account changed. Please sign in again.');
- if(!await isUsernameAvailable(userName,user.uid))throw new Error('That username is already taken.');
+ if(!await isUsernameAvailable(userName,user.uid))throw Object.assign(new Error('That username is already taken.'),{code:'username_taken'});
  const {sdk,db}=await firestore();
  const userRef=sdk.doc(db,'users',user.uid);
  const currentProfile=await sdk.getDoc(userRef),currentData=currentProfile.data();
@@ -86,7 +116,7 @@ export async function completeProfileOnboarding(user:User,input:{userName:string
  }
 
  try{
-  if(!await isUsernameAvailable(userName,user.uid))throw new Error('That username is already taken.');
+  if(!await isUsernameAvailable(userName,user.uid))throw Object.assign(new Error('That username is already taken.'),{code:'username_taken'});
   let created=false;
   await sdk.runTransaction(db,async transaction=>{
    const existing=await transaction.get(userRef);

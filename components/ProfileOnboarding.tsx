@@ -1,15 +1,16 @@
 import type {ChangeEvent,ReactNode} from 'react';
 import type {User} from 'firebase/auth';
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {useRouter} from 'next/router';
 import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
-import {completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
+import {availableUsernameSuggestions,completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationCode,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
 import TrustpilotWidget from './TrustpilotWidget';
 import {trackSignupProgress,signupErrorCode} from '../lib/signup-progress';
 import {linkWebsiteAcquisition,sourceOptions} from '../lib/acquisition';
 import s from '../styles/ProfileOnboarding.module.css';
 import OnboardingQuestion from './OnboardingQuestion';
+import UsernameSuggestions from './UsernameSuggestions';
 
 const emptyAnswers:OnboardingAnswers={experience:'',interest:'',horizon:''};
 
@@ -70,6 +71,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const [photoFile,setPhotoFile]=useState<File|null>(null),[answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
  const [availability,setAvailability]=useState<UsernameAvailability>('idle'),[error,setError]=useState(''),[saving,setSaving]=useState(false);
  const [needsSource,setNeedsSource]=useState(false),[heardFrom,setHeardFrom]=useState('');
+ const [usernameCorrection,setUsernameCorrection]=useState('');
+ const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
  useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
  const chooseSource=(value:string)=>{setHeardFrom(value);if(value)void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})};
  const photoPreview=useMemo(()=>photoFile?URL.createObjectURL(photoFile):user.photoURL||'',[photoFile,user.photoURL]);
@@ -100,19 +103,32 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   setPhotoFile(file);
  };
  const continueProfile=async()=>{
+  const requestKey=latestUsername.current;
   trackSignupProgress('profile','attempt');
   setError('');
-  if(validation){trackSignupProgress('profile','error','username_invalid');setError(validation);return}
+  if(validation){
+   trackSignupProgress('profile','error',usernameValidationCode(userName));
+   setError(validation);
+   if(!userName.trim())return;
+   setAvailability('checking');
+   try{
+    const [corrected]=await availableUsernameSuggestions(userName,user.uid);
+    if(latestUsername.current!==requestKey)return;
+    if(corrected){setUserName(corrected);setUsernameCorrection(`Updated your username to ${corrected}. You can edit it, or press Continue to use it.`);setError('');setAvailability('available')}
+    else {setAvailability('idle');setError(`${validation} Try adding a short word to your username.`)}
+   }catch{if(latestUsername.current===requestKey){setAvailability('error');setError(`${validation} We couldn’t verify a corrected name. Please try again.`)}}
+   return;
+  }
   setAvailability('checking');
-  try{const available=await isUsernameAvailable(userName,user.uid);setAvailability(available?'available':'taken');if(!available){trackSignupProgress('profile','error','username_taken');setError('That username is already taken.');return}trackSignupProgress('profile','success');setStep(1)}
-  catch(cause){trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
+  try{const available=await isUsernameAvailable(userName,user.uid);if(latestUsername.current!==requestKey)return;setAvailability(available?'available':'taken');if(!available){trackSignupProgress('profile','error','username_taken');setError('That username is already taken.');return}trackSignupProgress('profile','success');setStep(1)}
+  catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
  };
  const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
   try{await completeProfileOnboarding(user,{userName,photoFile,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
-  catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false)}
+  catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false);if(signupErrorCode(cause)==='username_taken'){setAvailability('taken');setStep(0)}}
  };
  const questionCount=onboardingQuestions.length;
  const question=step>=1&&step<=questionCount?onboardingQuestions[step-1]:null;
@@ -130,8 +146,10 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
      <span>{photoPreview?'Change profile picture':'Add profile picture'} (optional)</span>
      <input type="file" accept="image/jpeg,image/png,image/webp" onChange={choosePhoto}/>
     </label>
-    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onChange={event=>{setUserName(normalizeUsername(event.target.value));setError('')}} placeholder="your_username"/></label>
+    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onChange={event=>{setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
     <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
+    {usernameCorrection&&<p className={s.fieldSuccess} role="status">{usernameCorrection}</p>}
+    <UsernameSuggestions value={userName} uid={user.uid} enabled={!!validation||availability==='taken'} onSelect={name=>{setUserName(name);setUsernameCorrection('');setAvailability('checking');setError('')}}/>
     {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
     <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>Continue →</button>
    </div>}

@@ -14,6 +14,7 @@ function load(relative){
   if(name==='next/router')return {useRouter:()=>({})};
   if(name.endsWith('/profile-onboarding'))return profile;
   if(name==='./OnboardingQuestion')return question;
+  if(name==='./UsernameSuggestions')return suggestions;
   if(name==='./TrustpilotWidget')return {default:()=>null};
   if(name.endsWith('/onboarding-signal-preview'))return {onboardingSignalPreviews:[],lockedSignalPreviews:[]};
   if(name.endsWith('/acquisition'))return {sourceOptions:[]};
@@ -25,6 +26,7 @@ function load(relative){
 }
 const profile=load('lib/profile-onboarding.ts');
 const question=load('components/OnboardingQuestion.tsx');
+const suggestions=load('components/UsernameSuggestions.tsx');
 const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx');
 const output=process.env.ONBOARDING_CAPTURE_DIR;
 const css=fs.readFileSync(path.join(root,'styles/ProfileOnboarding.module.css'),'utf8');
