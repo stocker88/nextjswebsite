@@ -10,10 +10,10 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
   const preview=a.recap[0].replace(/^[•\s]+/,'').match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim()||a.recap[0];
   return <article className={'mover-card'+(compact?' compact':'')} data-app-post-id={a.postId}>
     <AccountLink className="card-link" destination={moverArticleUrl(a)}>
-      <div className="card-top"><span className="topic">${a.symbol} insights <span aria-hidden="true">↗</span></span><time dateTime={a.sessionDate}>{date}</time></div>
+      <div className="card-top"><span className="topic">{a.kind==='sector_news'?a.symbols?.map(s=>'$'+s).join(' · '):'$'+a.symbol+' insights'} <span aria-hidden="true">↗</span></span><time dateTime={a.sessionDate}>{date}</time></div>
       <div className="company-row">
         <span className="company-logo" aria-hidden="true">{logoFailed?a.symbol.slice(0,2):<img src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'} alt="" width={44} height={44} loading="lazy" onError={()=>setLogoFailed(true)}/>}</span>
-        <span className="company-name">{a.companyName}<span>{a.earningsPeriod?'Earnings & research':'Market mover'}</span></span>
+        <span className="company-name">{a.companyName}<span>{a.kind==='sector_news'?'Sector news':a.earningsPeriod?'Earnings & research':'Market mover'}</span></span>
 
       </div>
       <SessionPerformanceCard article={a}/>

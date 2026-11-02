@@ -22,6 +22,7 @@ import styles from '../../styles/MoverStory.module.css';
 
 export default function MoverStory({article:a,research,socialImage}:{article:MoverArticle;research:InstrumentResearchProps|null;socialImage:{url:string;width:number;height:number;alt:string}}){
  const path=moverArticleUrl(a);
+ const sector=a.kind==='sector_news';
  const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
  const date=(value:string)=>new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/New_York'}).format(new Date(value));
  const time=(value:string)=>new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}).format(new Date(value));
@@ -31,27 +32,27 @@ export default function MoverStory({article:a,research,socialImage}:{article:Mov
  <article className={styles.story} data-app-post-id={a.postId}>
  <Link className={styles.back} href="/news/">← Stock movers news</Link>
  <header className={styles.hero}>
- <div className={styles.topline}><span className={styles.tag}>{a.kind==='manual_news'?'Company news':a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
- <div className={styles.identity}><StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/><span><strong>{a.companyName}</strong><small>{a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
+ <div className={styles.topline}><span className={styles.tag}>{sector?'Sector news':a.kind==='manual_news'?'Company news':a.earningsPeriod?'Earnings results':'Market movers'}</span><time dateTime={a.sessionDate}>{session}</time></div>
+ <div className={styles.identity}>{!sector&&<StockLogo symbol={a.symbol} src={'/assets/logo/'+encodeURIComponent(a.symbol)+'.webp'}/>}<span><strong>{a.companyName}</strong><small>{sector?a.symbols?.join(' · '):a.symbol} · {research?.item.industry||a.stockContext.industry}</small></span></div>
  <SessionPerformanceCard article={a}/>
  <h1>{a.title}</h1>
  <EarningsResultsCard article={a}/>
- <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)} · {time(a.publishedAt)} ET</time></span></p>
+ <p className={styles.byline}>By {a.author.name}<span>Published <time dateTime={a.publishedAt}>{date(a.publishedAt)}{!sector&&' · '+time(a.publishedAt)+' ET'}</time></span></p>
  <ArticlePostEngagement postId={a.postId} interactive/>
- <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">Financials & technicals</a><a href="#company-research">Explore {a.symbol} ↓</a></nav>
+ <nav className={styles.jumps} aria-label="In this research"><a href="#recap">The recap</a><a href="#reports">{sector?'Company financials':'Financials & technicals'}</a><a href="#company-research">Explore {sector?'the companies':a.symbol} ↓</a></nav>
  </header>
  <EditorialPhoto photo={a.leadImage} priority/>
- <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{a.kind==='manual_news'?'The announcement':a.kind==='earnings_review'?'What the company reported':a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
- {a.kind==='manual_news'&&a.sections?.map((section,i)=><section className={styles.textSection} key={i}><h2>{section.heading}</h2>{section.text.split('\n\n').map((p,j)=><p key={j}>{p}</p>)}</section>)}
+ <section className={styles.textSection}><span className={styles.kicker}>THE CATALYST</span><h2>{sector?'What happened':a.kind==='manual_news'?'The announcement':a.kind==='earnings_review'?'What the company reported':a.earningsPeriod?'Earnings and the stock move':'What is behind the stock move?'}</h2><p>{a.catalyst}</p></section>
+ {(a.kind==='manual_news'||sector)&&a.sections?.map((section,i)=><section className={styles.textSection} key={i}><h2>{section.heading}</h2>{section.text.split('\n\n').map((p,j)=><p key={j}>{p}</p>)}</section>)}
  <section id="recap" className={styles.recap}><span className={styles.kicker}>AT A GLANCE</span><h2>{a.earningsPeriod?a.earningsPeriod+' earnings recap':'Latest company research'}</h2><p>{a.recap[0]}</p><ul>{a.recap.slice(1,7).map((point,i)=><li key={i}>{point}</li>)}</ul><p>{a.recap[7]}</p></section>
- <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>{a.kind==='earnings_review'?'Financials, technicals and earnings':'Financials and technicals'}</h2><p className={styles.note}>Charts through {/^\d{4}-\d{2}-\d{2}$/.test(a.technicalDate)?date(a.technicalDate+'T12:00:00Z'):a.technicalDate}. {a.kind!=='earnings_review'&&a.kind!=='manual_news'&&'The session move above may reflect later news.'}</p>
+ <section id="reports" className={styles.reports}><span className={styles.kicker}>THE VISUAL RESEARCH</span><h2>{sector?'Three companies to watch':a.kind==='earnings_review'?'Financials, technicals and earnings':'Financials and technicals'}</h2><p className={styles.note}>Charts through {/^\d{4}-\d{2}-\d{2}$/.test(a.technicalDate)?date(a.technicalDate+'T12:00:00Z'):a.technicalDate}. {!sector&&a.kind!=='earnings_review'&&a.kind!=='manual_news'&&'The session move above may reflect later news.'}</p>
  <ResearchImages appOnly={false} images={a.images.map(image=>({url:image.url,filename:image.title+'.png',width:image.width,height:image.height}))}/>
 </section>
- <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>Technical setup and risks</h2><p>{a.setup}</p></section>
+ <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>{sector?'Investor risks and next steps':'Technical setup and risks'}</h2><p>{a.setup}</p></section>
  <p className={styles.disclosure}>{a.disclosure}</p>
  </article>
- <StockResults symbol={a.symbol}/>
- <div id="company-research">{research?<CompanyResearchSection research={research}/>:<StockAppCTA symbol={a.symbol}/>}</div>
+ {!sector&&<StockResults symbol={a.symbol}/>}
+ <div id="company-research">{sector?<p>{a.symbols?.map(symbol=><Link key={symbol} href={stockPageHref(symbol)} style={{marginRight:20}}>{symbol} research →</Link>)}</p>:research?<CompanyResearchSection research={research}/>:<StockAppCTA symbol={a.symbol}/>}</div>
  </ResearchPage>;
 }
 export function getStaticPaths(){return {paths:moverArticles.map(a=>({params:{slug:a.slug}})),fallback:false};}
