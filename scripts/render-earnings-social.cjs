@@ -2,7 +2,7 @@
 // Runs after earnings sync in both server and static builds; no browser or account needed.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const ts=require('typescript'),React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
-const {QRCodeSVG}=require('qrcode.react'),{createCanvas,loadImage}=require('@napi-rs/canvas');
+const {QRCodeSVG}=require('qrcode.react'),{createCanvas,loadImage,GlobalFonts}=require('@napi-rs/canvas');
 const root=path.resolve(__dirname,'..'),cache=new Map();
 function loadTs(file){
  file=path.resolve(file);if(cache.has(file))return cache.get(file);
@@ -12,6 +12,22 @@ function loadTs(file){
  return module.exports;
 }
 async function main(){
+ // Linux canvas does not reliably resolve CSS generic fallbacks. Register the
+ // Arial-compatible system family explicitly to match browser exports.
+ if(process.platform==='linux'){
+  let registered=false;
+  for(const dir of ['/usr/share/fonts/truetype/liberation2','/usr/share/fonts/truetype/liberation']){
+   const regular=path.join(dir,'LiberationSans-Regular.ttf');
+   if(!fs.existsSync(regular))continue;
+   for(const weight of ['Regular','Bold','Italic','BoldItalic']){
+    const file=path.join(dir,`LiberationSans-${weight}.ttf`);
+    if(fs.existsSync(file))GlobalFonts.registerFromPath(file,'Arial');
+   }
+   registered=true;break;
+  }
+  if(!registered)GlobalFonts.registerFromPath(path.join(root,'public/web/packages/language_picker/assets/fonts/Roboto/Roboto-Regular.ttf'),'Arial');
+ }
+
  const data=JSON.parse(fs.readFileSync(path.join(root,'data/earnings-calendar.json'),'utf8'));
  const {day,shortDate}=loadTs(path.join(root,'lib/earnings.ts'));
  const {defaultCalendarWeek,marketToday}=loadTs(path.join(root,'lib/calendar-period.ts'));
