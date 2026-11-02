@@ -7,7 +7,9 @@ import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../
 import {completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
 import TrustpilotWidget from './TrustpilotWidget';
 import {trackSignupProgress,signupErrorCode} from '../lib/signup-progress';
+import {linkWebsiteAcquisition,sourceOptions} from '../lib/acquisition';
 import s from '../styles/ProfileOnboarding.module.css';
+import OnboardingQuestion from './OnboardingQuestion';
 
 const emptyAnswers:OnboardingAnswers={experience:'',interest:'',horizon:''};
 
@@ -67,6 +69,9 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const [step,setStep]=useState(0),[userName,setUserName]=useState(()=>normalizeUsername(user.displayName||''));
  const [photoFile,setPhotoFile]=useState<File|null>(null),[answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
  const [availability,setAvailability]=useState<UsernameAvailability>('idle'),[error,setError]=useState(''),[saving,setSaving]=useState(false);
+ const [needsSource,setNeedsSource]=useState(false),[heardFrom,setHeardFrom]=useState('');
+ useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
+ const chooseSource=(value:string)=>{setHeardFrom(value);if(value)void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})};
  const photoPreview=useMemo(()=>photoFile?URL.createObjectURL(photoFile):user.photoURL||'',[photoFile,user.photoURL]);
  useEffect(()=>{
   const name=['profile','question_1','question_2','question_3','results'][step];
@@ -98,7 +103,6 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   trackSignupProgress('profile','attempt');
   setError('');
   if(validation){trackSignupProgress('profile','error','username_invalid');setError(validation);return}
-  if(!photoFile&&!user.photoURL){trackSignupProgress('profile','error','photo_required');setError('Choose a profile picture to continue.');return}
   setAvailability('checking');
   try{const available=await isUsernameAvailable(userName,user.uid);setAvailability(available?'available':'taken');if(!available){trackSignupProgress('profile','error','username_taken');setError('That username is already taken.');return}trackSignupProgress('profile','success');setStep(1)}
   catch(cause){trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
@@ -107,35 +111,33 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const finish=async()=>{
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
-  try{await completeProfileOnboarding(user,{userName,photoFile,answers});trackSignupProgress('complete','success');await onComplete()}
+  try{await completeProfileOnboarding(user,{userName,photoFile,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
   catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false)}
  };
- const question=step>=1&&step<=3?onboardingQuestions[step-1]:null;
+ const questionCount=onboardingQuestions.length;
+ const question=step>=1&&step<=questionCount?onboardingQuestions[step-1]:null;
  const choice=recommendation(answers);
  const initials=(normalizeUsername(userName)||'A').slice(0,2).toUpperCase();
 
  return <main className={s.page}>
   <div className={s.glow} aria-hidden="true"/>
   <section className={s.card} aria-labelledby="profile-onboarding-title">
-   <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>STOCKS TO BUY NOW AI</span></div><span>Step {Math.min(step+1,5)} of 5</span></header>
-   <div className={s.progress} aria-hidden="true"><i style={{width:`${Math.min((step+1)/5*100,100)}%`}}/></div>
+   <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>STOCKS TO BUY NOW AI</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your preview'}</span></header>
    {step===0&&<div className={s.content}>
-    <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Make this space yours.</h1><p className={s.lead}>Choose a profile picture and a unique username before you continue.</p>
+    <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Make this space yours.</h1><p className={s.lead}>Choose a unique username. A profile picture is optional. Then just {questionCount} quick questions before your preview.</p>
     <label className={s.photoPicker}>
      <span className={s.avatar}>{photoPreview?<img src={photoPreview} alt="Selected profile"/>:<b>{initials}</b>}</span>
-     <span>{photoPreview?'Change profile picture':'Choose profile picture'}</span>
+     <span>{photoPreview?'Change profile picture':'Add profile picture'} (optional)</span>
      <input type="file" accept="image/jpeg,image/png,image/webp" onChange={choosePhoto}/>
     </label>
     <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onChange={event=>{setUserName(normalizeUsername(event.target.value));setError('')}} placeholder="your_username"/></label>
     <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
+    {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
     <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>Continue →</button>
    </div>}
-   {question&&<div className={s.content}>
-    <button className={s.back} type="button" onClick={()=>setStep(step-1)}>← Back</button><p className={s.eyebrow}>QUICK QUESTION {step} OF 3</p><h1 id="profile-onboarding-title">{question.title}</h1><p className={s.lead}>{question.subtitle}</p>
-    <div className={s.choices}>{question.options.map(option=><button key={option} type="button" className={answers[question.key]===option?s.selected:''} onClick={()=>selectAnswer(question.key,option)}>{option}<span>→</span></button>)}</div>
-   </div>}
-   {step===4&&<div className={`${s.content} ${s.resultsContent}`}>
-    <button className={s.back} type="button" onClick={()=>setStep(3)}>← Back</button><p className={s.eyebrow}>YOUR RESULTS</p><h1 id="profile-onboarding-title">Your first signals are ready.</h1><p className={s.lead}>{choice.title} {choice.text}</p>
+   {question&&<OnboardingQuestion current={step} questions={onboardingQuestions} answer={answers[question.key]} onBack={()=>setStep(step-1)} onSelect={value=>selectAnswer(question.key,value)}/>}
+   {step===questionCount+1&&<div className={`${s.content} ${s.resultsContent}`}>
+    <button className={s.back} type="button" onClick={()=>setStep(questionCount)}>← Back</button><p className={s.eyebrow}>ALL {questionCount} QUESTIONS COMPLETE · YOUR RESULTS</p><h1 id="profile-onboarding-title">Your first signals are ready.</h1><p className={s.lead}>{choice.title} {choice.text}</p>
     <div className={s.summary}><span>{answers.experience}</span><span>{answers.interest}</span><span>{answers.horizon}</span></div>
     <div className={s.signalHeading}><div><strong>AI past predictions</strong><span>Real signals previously sent to members</span></div><span>PREVIEW</span></div>
     <div className={s.signalList}>

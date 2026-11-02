@@ -65,10 +65,9 @@ function profileDocument(user:User,userName:string,photoUrl:string,answers:Onboa
  };
 }
 
-export async function completeProfileOnboarding(user:User,input:{userName:string;photoFile:File|null;answers:OnboardingAnswers}){
+export async function completeProfileOnboarding(user:User,input:{userName:string;photoFile:File|null;answers:OnboardingAnswers;heardFrom?:string}){
  const userName=normalizeUsername(input.userName),validation=usernameValidationMessage(userName);
  if(validation)throw new Error(validation);
- if(!input.photoFile&&!user.photoURL)throw new Error('Choose a profile picture to continue.');
  const auth=await getSiteAuth();
  if(auth.currentUser?.uid!==user.uid)throw new Error('Your account changed. Please sign in again.');
  if(!await isUsernameAvailable(userName,user.uid))throw new Error('That username is already taken.');
@@ -95,6 +94,7 @@ export async function completeProfileOnboarding(user:User,input:{userName:string
    if(existing.exists()&&typeof existingData?.userName==='string'&&existingData.userName.trim())return;
    const completedAt=sdk.serverTimestamp();
    const profile=profileDocument(user,userName,photoUrl,input.answers,completedAt);
+   if(input.heardFrom)profile.heardFrom=input.heardFrom;
    transaction.set(userRef,existing.exists()?{...profile,...existingData,userName,photoUrl,quickOnboarding:profile.quickOnboarding,profileSetupVersion:1,profileSetupCompletedAt:completedAt}:profile);
    transaction.set(sdk.doc(db,'onboardingNotifications',user.uid),{numberAutoMessagesSent:0,id:user.uid,userName});
    created=true;

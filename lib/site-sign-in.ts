@@ -1,3 +1,4 @@
+import {trackAuthentication} from './analytics';
 import type {AuthCredential,User} from 'firebase/auth';
 import {getSiteAuth} from './site-auth';
 export type SiteProvider='google'|'apple'|'facebook'|'twitter';
@@ -19,7 +20,7 @@ async function providerFor(provider:SiteProvider){
 export async function signInSite(provider:SiteProvider){
  if(!providerEnabled(provider))throw new Error('This sign-in method is being configured. Please use Google or Apple.');
  const auth=await getSiteAuth(),{sdk,method}=await providerFor(provider);
- try{return await sdk.signInWithPopup(auth,method)}catch(error){
+ try{const result=await sdk.signInWithPopup(auth,method);trackAuthentication(provider,sdk.getAdditionalUserInfo(result)?.isNewUser===true);return result}catch(error){
   if((error as {code?:string}).code==='auth/account-exists-with-different-credential'){
    const cause=error as Parameters<typeof sdk.GoogleAuthProvider.credentialFromError>[0];
    const credential=provider==='google'?sdk.GoogleAuthProvider.credentialFromError(cause):provider==='facebook'?sdk.FacebookAuthProvider.credentialFromError(cause):provider==='twitter'?sdk.TwitterAuthProvider.credentialFromError(cause):sdk.OAuthProvider.credentialFromError(cause);

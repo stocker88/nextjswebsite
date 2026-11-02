@@ -20,10 +20,11 @@ function chunks(items,size){const result=[];for(let index=0;index<items.length;i
  catch(error){console.warn('Keeping last company snapshots:',error.message);manifest=null;}
  if(manifest){
   const cachedManifest=read(path.join(cacheDir,'manifest.json'),{});
-  if(cachedManifest.version!==manifest.version){
+  const missing=manifest.symbols.filter(validSymbol).filter(symbol=>!fs.existsSync(path.join(cacheDir,symbol+'.json')));
+  if(cachedManifest.version!==manifest.version||missing.length){
    // Seed a new Actions cache from the repository's last successful files.
    for(const symbol of manifest.symbols.filter(validSymbol)){const source=path.join(publicDir,symbol+'.json'),target=path.join(cacheDir,symbol+'.json');if(!fs.existsSync(target)&&fs.existsSync(source))fs.copyFileSync(source,target);}
-   for(const batch of chunks(manifest.symbols.filter(validSymbol),25)){
+   for(const batch of chunks(cachedManifest.version!==manifest.version?manifest.symbols.filter(validSymbol):missing,25)){
     try{const payload=await json(snapshotEndpoint+'?symbols='+encodeURIComponent(batch.join(',')));for(const [symbol,detail] of Object.entries(payload.items||{})){if(validSymbol(symbol)&&detail?.symbol===symbol&&Array.isArray(detail.history)&&Array.isArray(detail.prices))fs.writeFileSync(path.join(cacheDir,symbol+'.json'),JSON.stringify(detail));}}
     catch(error){console.warn('Company snapshot batch unavailable:',batch.join(','),error.message);}
    }

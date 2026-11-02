@@ -20,6 +20,10 @@ let previousKey = '';
 let originalReferrer: string | null = null;
 let savedCampaign: Campaign = {};
 const random = (bytes:number) => Array.from(crypto.getRandomValues(new Uint8Array(bytes))).map(n=>n.toString(16).padStart(2,'0')).join('');
+async function saveVisit(data:unknown){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
+  try{const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:controller.signal});if(!response.ok)throw new Error('Visit capture unavailable');return response;}finally{clearTimeout(timer)}
+}
 function identity():Identity {
   if(memory)return memory;
   try { const stored=JSON.parse(localStorage.getItem(IDENTITY)||'null');
@@ -84,6 +88,10 @@ export async function createAcquisitionRecoveryCode():Promise<string> {
   if(typeof result.recoveryCode!=='string')throw new Error('Please try again.');
   return result.recoveryCode;
 }
+export async function installedAppHandoff():Promise<string>{
+  await saveVisit(payload());
+  return attributionLink('com.newcompany.stocker:///');
+}
 export function attributionLink(raw:string):string {
   if(typeof window==='undefined')return raw;
   try{
@@ -118,12 +126,49 @@ export function installAcquisitionCapture():()=>void {
     const target=event.target instanceof Element?event.target.closest('a'):null;
     if(!(target instanceof HTMLAnchorElement))return;
     const url=new URL(target.href,location.origin);
-    if(url.hostname==='apps.apple.com')captureAcquisition({},'apple');
-    if(url.hostname==='play.google.com')captureAcquisition({},'google');
     if (['com.newcompany.stocker:','ai.stockstobuynow:'].includes(url.protocol)||['play.google.com','apps.apple.com'].includes(url.hostname)) target.href=attributionLink(target.href);
   };
   // Capture phase updates the destination before React handlers or navigation.
   document.addEventListener('click',click,true);
   document.addEventListener('auxclick',click,true);
   return ()=>{document.removeEventListener('click',click,true);document.removeEventListener('auxclick',click,true);};
+}
+
+// Campaign labels only: never expose the handoff credentials to GA.
+export function acquisitionCampaign() {
+  if(typeof window==='undefined')return {};
+  arrival();
+  return {utm_source:savedCampaign.source||'',utm_medium:savedCampaign.medium||'',utm_campaign:savedCampaign.campaign||'',utm_content:savedCampaign.content||'',utm_term:savedCampaign.term||''};
+}
+export type AcquisitionStatus={saved:boolean;sourceKnown:boolean;needsSourceQuestion:boolean;status:string};
+const linked=new Map<string,Promise<AcquisitionStatus|undefined>>();
+export const sourceOptions=[['instagram','Instagram'],['facebook','Facebook'],['tikTok','TikTok'],['twitter','X / Twitter'],['google','Google search'],['linkedIn','LinkedIn'],['whatsapp','WhatsApp'],['friend','A friend'],['appStore','App Store / Google Play'],['other','Other'],['notSure','Not sure']] as const;
+export async function linkWebsiteAcquisition(uid:string,reportedSource?:string):Promise<AcquisitionStatus|undefined> {
+  const {getSiteAuth}=await import('./site-auth');
+  const auth=await getSiteAuth();
+  if(auth.currentUser?.uid!==uid)return;
+  // Never reuse another signed-in person's visitor credentials on a shared
+  // browser. A new account starts a new visit, not the previous person's source.
+  try{const owner=localStorage.getItem(IDENTITY+'.owner');if(owner&&owner!==uid){
+    localStorage.removeItem(IDENTITY);localStorage.removeItem(IDENTITY+'.owner');
+    sessionStorage.removeItem(ARRIVAL);sessionStorage.removeItem(SESSION);
+    memory=null;sessionMemory='';originalReferrer='';savedCampaign={};previousKey='';
+  }}catch{/* Memory-only capture still works when storage is unavailable. */}
+  const data=payload(),key=JSON.stringify([uid,data.visitorId,data.sessionId,savedCampaign,reportedSource||'']);
+  if(linked.has(key))return linked.get(key);
+  const operation=(async()=>{
+  const cacheKey='stocker.acquisition.linked:'+key;
+  try{const saved=JSON.parse(sessionStorage.getItem(cacheKey)||'null');if(saved?.saved)return saved as AcquisitionStatus;}catch{}
+  // Await the visit write before trying to authenticate its handoff token.
+  await saveVisit(data);
+  const {getFunctions,httpsCallable}=await import('firebase/functions');
+  if(auth.currentUser?.uid!==uid)return;
+  const result=await httpsCallable(getFunctions(auth.app,'us-central1'),'recordAccountAcquisition',{timeout:15000})({visitorId:data.visitorId,visitorToken:data.visitorToken,platform:'web',...(reportedSource?{reportedSource}:{})});
+  if(auth.currentUser?.uid!==uid)return;
+  const status=result.data as AcquisitionStatus;
+  if(status.saved){try{localStorage.setItem(IDENTITY+'.owner',uid);sessionStorage.setItem(cacheKey,JSON.stringify(status));}catch{}}
+  return status;
+  })();
+  linked.set(key,operation);
+  try{return await operation;}catch(error){linked.delete(key);throw error;}
 }

@@ -1,9 +1,9 @@
 import {RefObject,useEffect} from 'react';
 import {heatmapAssemblyProgress} from '../../lib/heatmap-motion';
 
-export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,layoutKey:string,mobile:boolean,perItem=false){
+export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,layoutKey:string,mobile:boolean,perItem=false,enabled=true){
  useEffect(()=>{
-  const map=ref.current;if(!map)return;
+  const map=ref.current;if(!map||!enabled)return;
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const groups=Array.from(map.querySelectorAll<HTMLElement>('[data-assembly-group]'));
   let frame=0,observer:IntersectionObserver|undefined,active=false;
@@ -43,5 +43,5 @@ export default function useHeatmapAssembly(ref:RefObject<HTMLDivElement|null>,la
    delete map.dataset.assembly;
    groups.forEach(group=>{group.style.removeProperty('--assembly-progress');delete group.dataset.assemblySettled});
   };
- },[ref,layoutKey,mobile,perItem]);
+ },[ref,layoutKey,mobile,perItem,enabled]);
 }

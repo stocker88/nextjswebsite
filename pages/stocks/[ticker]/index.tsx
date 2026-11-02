@@ -1,3 +1,4 @@
+import StockSmartMoney from '../../../components/StockSmartMoney';
 import RelatedStockResearch from '../../../components/RelatedStockResearch';
 import StockPeerPerformance from '../../../components/heatmap/StockPeerPerformance';
 import StockEarnings from '../../../components/earnings/StockEarnings';
@@ -60,6 +61,7 @@ export default function Stock({
       </div>
 <div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
       <StockResearchHub symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/>
+      <StockSmartMoney symbol={stock.ticker}/>
       <div className="public-copy">
         <h2>What can move {stock.ticker}?</h2>
         <p>

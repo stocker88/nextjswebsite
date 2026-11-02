@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),ts=require('typescript');
-function load(file,requireFn=require){const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX}}).outputText;const exports={};vm.runInNewContext(source,{exports,require:requireFn,Promise,URL});return exports;}
+function load(file,requireFn=require){const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX}}).outputText;const exports={};vm.runInNewContext(source,{exports,require:name=>name==='../lib/acquisition'?{linkWebsiteAcquisition:async()=>({saved:true})}:requireFn(name),Promise,URL});return exports;}
 const routes=load('lib/site-auth.ts');
 assert.equal(routes.accountDestination('/membership/'),'/membership/');
 for(const value of ['https://example.com','//example.com','javascript:alert(1)','/login/',undefined,['/membership/'],'/membership/?next=https://example.com'])assert.equal(routes.accountDestination(value),'/stock-market-heatmap/');

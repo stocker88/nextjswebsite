@@ -19,3 +19,35 @@ assert.equal(combinedBeatRate(pair(0,0)),0);
 for(const e of [pair(100,null),pair(100,75,0),pair(NaN,75),pair(101,75),{}])assert.equal(combinedBeatRate(e),null);
 assert.equal(beatRingColor(0),'#ef6b73');assert.equal(beatRingColor(50),'#f2c94c');assert.equal(beatRingColor(100),'#42d39a');assert.equal(beatRingColor(75),'#9ace73');assert.equal(beatRingColor(null),'#778397');
 console.log('Combined EPS/revenue rings: average, missing history and color scale passed.');
+
+const periods={exports:{}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(path.join(root,'lib/calendar-period.ts'),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,{exports:periods.exports,module:periods,require:()=>m.exports,Date,Intl});
+const windowFor=periods.exports.earningsSessionWindow;
+for(const weekend of ['2026-10-31','2026-11-01']){
+ const past=windowFor(weekend),incoming=windowFor(weekend,true);
+ assert.equal(past.from,'2026-10-30');assert.equal(past.to,'2026-10-30');
+ for(const session of ['bmo','amc']){assert.ok(past.matches({date:'2026-10-30',session}));assert.ok(incoming.matches({date:'2026-11-02',session}));}
+ assert.equal(past.matches({date:'2026-10-29',session:'amc'}),false);
+}
+assert.ok(windowFor('2026-11-02').matches({date:'2026-10-30',session:'amc'}));
+assert.ok(windowFor('2026-11-02').matches({date:'2026-11-02',session:'bmo'}));
+assert.equal(windowFor('2026-11-02').matches({date:'2026-10-30',session:'bmo'}),false);
+assert.ok(windowFor('2026-10-30',true).matches({date:'2026-11-02',session:'bmo'}));
+console.log('Earnings session windows passed, including weekend and DST boundary.');
+
+(async()=>{
+ const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+ const detail={symbol:'APP',history:[],prices:[]};
+ for(const first of ['missing','invalid','network','valid']){
+  const calls=[],module={exports:{}};
+  vm.runInNewContext(compiled,{exports:module.exports,module,Intl,Date,Map,Set,Array,URL,AbortSignal,fetch:async(url)=>{
+   calls.push(url);
+   if(calls.length===1){if(first==='network')throw new Error('offline');return {ok:first!=='missing',json:async()=>first==='valid'?detail:{symbol:'OTHER',history:[],prices:[]}};}
+   assert.ok(url.endsWith('symbol=APP&cached=1'));return {ok:true,json:async()=>detail};
+  }});
+  assert.equal((await module.exports.getDetail('APP')).symbol,'APP');
+  assert.equal(calls.length,first==='valid'?1:2);
+  await module.exports.getDetail('APP');assert.equal(calls.length,first==='valid'?1:2);
+ }
+ console.log('Research static loading, cached-only fallback and memory cache passed.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from 'react';
 import {QRCodeSVG} from 'qrcode.react';
 import styles from '../styles/ShareControl.module.css';
 export type ShareRow={label:string;value:string;detail?:string};
-export default function ShareControl({title,path,subtitle,rows}:{title:string;path?:string;subtitle?:string;rows?:ShareRow[]}) {
+export default function ShareControl({title,path,subtitle,rows,className}:{title:string;path?:string;subtitle?:string;rows?:ShareRow[];className?:string}) {
  const [url,setUrl]=useState(''),[message,setMessage]=useState(''),[busy,setBusy]=useState(false),[preview,setPreview]=useState<{url:string;file:File}|null>(null);
  const qr=useRef<HTMLDivElement>(null),dialog=useRef<HTMLDialogElement>(null);
  useEffect(()=>{const target=new URL(path||window.location.pathname+window.location.search+window.location.hash,'https://www.stockstobuynow.ai');setUrl(target.href)},[path]);
@@ -26,7 +26,7 @@ export default function ShareControl({title,path,subtitle,rows}:{title:string;pa
  }
  function save(){if(!preview)return;const a=document.createElement('a');a.href=preview.url;a.download=preview.file.name;a.click()}
  async function shareImage(){if(!preview)return;try{if(navigator.canShare?.({files:[preview.file]}))await navigator.share({title,files:[preview.file]});else save()}catch(e){if((e as Error).name!=='AbortError')setMessage('Use Save PNG to download this image.')}}
- return <div className={styles.control}><ShareAction disabled={!url} onClick={link} aria-label={`Share ${title}`}>Share</ShareAction>{rows&&<ShareAction kind="save" disabled={!url||busy||!rows.length} onClick={prepare}>{busy?'Creating…':'Save Image'}</ShareAction>}{message&&<span role="status">{message}</span>}{message==='Copy the link below to share.'&&<input aria-label="Share link" readOnly value={url} onFocus={e=>e.target.select()}/>}
+ return <div className={[styles.control,className].filter(Boolean).join(" ")}><ShareAction disabled={!url} onClick={link} aria-label={`Share ${title}`}>Share</ShareAction>{rows&&<ShareAction kind="save" disabled={!url||busy||!rows.length} onClick={prepare}>{busy?'Creating…':'Save Image'}</ShareAction>}{message&&<span role="status">{message}</span>}{message==='Copy the link below to share.'&&<input aria-label="Share link" readOnly value={url} onFocus={e=>e.target.select()}/>}
  <div hidden ref={qr}><QRCodeSVG value={url||'https://www.stockstobuynow.ai'} size={240} includeMargin level="M"/></div>
  <dialog ref={dialog} className={styles.dialog} onCancel={()=>setPreview(null)}><header><strong>Share {title}</strong><button aria-label="Close share preview" onClick={()=>{dialog.current?.close();setPreview(null)}}>×</button></header>{preview&&<img src={preview.url} alt={`${title} snapshot with source QR code`}/>}<footer><button onClick={shareImage}>Share image</button><button onClick={save}>Save PNG</button><button onClick={link}>Share link</button></footer>{message&&<p role="status">{message}</p>}</dialog></div>;
 }

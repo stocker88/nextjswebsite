@@ -1,8 +1,9 @@
+import EarningsInsightLinks from './EarningsInsightLinks';
 import {useEffect,useState} from 'react';
 import AppDownloadModal from '../AppDownloadModal';
 import {Event,combinedBeatRate,beatRingColor,day,weekStart,shortDate,sessionName} from '../../lib/earnings';
 
-export default function RangeOverview({events,from,to,showBeat,showRevenue=true,onSelect}:{events:Event[];from:string;to:string;showBeat:boolean;showRevenue?:boolean;onSelect:(symbol:string)=>void}) {
+export default function RangeOverview({events,from,to,showBeat,showRevenue=true,showInsights=false,onSelect}:{events:Event[];from:string;to:string;showBeat:boolean;showRevenue?:boolean;showInsights?:boolean;onSelect:(symbol:string)=>void}) {
  const [selected,setSelected]=useState(''),[all,setAll]=useState(false),[showApp,setShowApp]=useState(false);
  useEffect(()=>{setSelected('');setAll(false)},[from,to]);
  const start=weekStart(from),end=day(weekStart(to),6);
@@ -15,13 +16,13 @@ export default function RangeOverview({events,from,to,showBeat,showRevenue=true,
    {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=><div className="erm-weekday" key={d}>{d}</div>)}
    {dates.map(date=>{const outside=date<from||date>to;const rows=events.filter(e=>e.date===date);return outside?<div key={date} className="erm-outside" aria-hidden="true"/>:<div key={date} className={'erm-day'+(selected===date?' is-selected':'')}>
     <button className="erm-day-heading" aria-label={`${shortDate(date)}: ${rows.length} reports. Show companies`} aria-expanded={selected===date} onClick={()=>{setSelected(selected===date?'':date);setAll(false)}}><span className="erm-date">{shortDate(date)}</span><small>{rows.length} reports</small></button>
-    <span className="erm-picks">{rows.slice(0,3).map(e=><span className={'erm-pick '+e.session} key={e.symbol}><span className="erm-company"><img style={showBeat&&showRevenue?{boxShadow:`0 0 0 1px #0d1626, 0 0 0 3px ${beatRingColor(combinedBeatRate(e))}`} : undefined} src={'/assets/logo/'+encodeURIComponent(e.symbol)+'.webp'} alt="" width={20} height={20} loading="lazy" onError={e=>{e.currentTarget.style.display='none'}}/><b>{e.symbol}</b></span>{rates(e)}</span>)}</span>
+    <span className="erm-picks">{rows.slice(0,3).map(e=><span className={'erm-pick '+e.session} key={e.symbol}><span className="erm-company"><img style={showBeat&&showRevenue?{boxShadow:`0 0 0 1px #0d1626, 0 0 0 3px ${beatRingColor(combinedBeatRate(e))}`} : undefined} src={'/assets/logo/'+encodeURIComponent(e.symbol)+'.webp'} alt="" width={20} height={20} loading="lazy" onError={e=>{e.currentTarget.style.display='none'}}/><b>{e.symbol}</b></span>{rates(e)}{showInsights&&<EarningsInsightLinks event={e}/>}</span>)}</span>
     {rows.length>3&&<button className="erm-count" onClick={()=>{setSelected(date);setAll(false)}}>+{rows.length-3} more</button>}
    </div>})}
   </div>
   <p className="erm-legend"><span>● Before open</span><span>● After close</span><span>Tap a date for all companies</span></p>
   {selected&&<section className="erm-expanded" aria-label={shortDate(selected)+' reports'}><header><h3>{shortDate(selected)} · {reports.length} reports</h3><button onClick={()=>setSelected('')} aria-label="Close day reports">×</button></header>
-   {!reports.length?<p>No reports match the current filters.</p>:<div className="erm-companies">{reports.slice(0,all?reports.length:9).map(e=><div key={e.symbol}><button onClick={()=>onSelect(e.symbol)}><strong>{e.symbol}</strong><span>{e.name}</span><small>{sessionName(e.session)}</small></button><div className="erm-pick">{rates(e)}</div></div>)}</div>}
+   {!reports.length?<p>No reports match the current filters.</p>:<div className="erm-companies">{reports.slice(0,all?reports.length:9).map(e=><div key={e.symbol}><button onClick={()=>onSelect(e.symbol)}><strong>{e.symbol}</strong><span>{e.name}</span><small>{sessionName(e.session)}</small></button><div className="erm-pick">{rates(e)}</div>{showInsights&&<EarningsInsightLinks event={e}/>}</div>)}</div>}
    {reports.length>9&&<button className="ews-unknown-toggle" onClick={()=>setAll(v=>!v)}>{all?'Show fewer':`Show all ${reports.length} companies`}</button>}
   </section>}
   <style jsx>{`
