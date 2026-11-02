@@ -1,8 +1,9 @@
 import {combinedBeatRate,beatRingColor,Event,day,shortDate} from './earnings';
 export const snapshotShareUrl='https://www.stockstobuynow.ai/earnings-calendar/';
 function loadImage(src:string):Promise<HTMLImageElement|null>{return new Promise(resolve=>{const img=new Image();const timer=setTimeout(()=>{img.src='';resolve(null)},6000);img.onload=()=>{clearTimeout(timer);resolve(img)};img.onerror=()=>{clearTimeout(timer);resolve(null)};img.src=src;});}
-export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement,end:string=day(week,6),showBeat=true,showRevenue=true):Promise<Blob>{
- const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1200;
+export async function createEarningsImage(events:Event[],dates:string[],week:string,qr:SVGSVGElement|null,end:string=day(week,6),showBeat=true,showRevenue=true,runtime?:{canvas:HTMLCanvasElement;loadImage:typeof loadImage;qrSource:string;qrModules:number}):Promise<Blob>{
+ const canvas=runtime?.canvas??document.createElement('canvas');
+ const getImage=runtime?.loadImage??loadImage;canvas.width=1200;canvas.height=1200;
  const c=canvas.getContext('2d');if(!c)throw new Error('Image export is unavailable in this browser.');
  const badge=(item:Event)=>[showBeat?((showRevenue?'E ':'')+(item.research?.beat.total?Math.round(item.research.beat.rate!)+'%':'N/A')):'',showRevenue?'R '+(item.research?.revenueBeat?.total?Math.round(item.research.revenueBeat.rate!)+'%':'N/A'):''].filter(Boolean);
  const isRange=Date.parse(end)-Date.parse(week)>6*86400000;
@@ -14,12 +15,13 @@ export async function createEarningsImage(events:Event[],dates:string[],week:str
  const groups=(date:string,session:string)=>events.filter(e=>e.date===date&&e.session===session);
  const shown=isRange?imageDates.flatMap(date=>events.filter(e=>e.date===date).slice(0,3)):columns.flatMap(date=>sessions.flatMap(session=>groups(date,session).slice(0,9)));
  const symbols=Array.from(new Set([...shown,...weekend.slice(0,8)].map(e=>e.symbol)));
- const assets=await Promise.all(symbols.map(async symbol=>[symbol,await loadImage('/assets/logo/'+encodeURIComponent(symbol)+'.webp')] as const));
- const logos=new Map(assets);const icon=await loadImage('/assets/images/stockerRobotIcon.png');
- const modules=Number(qr.getAttribute('viewBox')?.split(' ')[2])||41;
+ const assets=await Promise.all(symbols.map(async symbol=>[symbol,await getImage('/assets/logo/'+encodeURIComponent(symbol)+'.webp')] as const));
+ const logos=new Map(assets);const icon=await getImage('/assets/images/stockerRobotIcon.png');
+ const modules=runtime?.qrModules??(Number(qr?.getAttribute('viewBox')?.split(' ')[2])||41);
  const qrSize=modules*Math.max(1,Math.floor(172/modules));
- const qrCopy=qr.cloneNode(true) as SVGSVGElement;qrCopy.setAttribute('width',String(qrSize));qrCopy.setAttribute('height',String(qrSize));
- const qrImage=await loadImage('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(qrCopy)));
+ let qrSource=runtime?.qrSource;
+ if(!qrSource){if(!qr)throw new Error('QR code unavailable.');const qrCopy=qr.cloneNode(true) as SVGSVGElement;qrCopy.setAttribute('width',String(qrSize));qrCopy.setAttribute('height',String(qrSize));qrSource=new XMLSerializer().serializeToString(qrCopy);}
+ const qrImage=await getImage('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(qrSource));
  if(!qrImage)throw new Error('Could not generate the QR code. Please try again.');
  const box=(x:number,y:number,w:number,h:number,fill:string,stroke?:string)=>{c.fillStyle=fill;c.beginPath();const radius=12;c.moveTo(x+radius,y);c.arcTo(x+w,y,x+w,y+h,radius);c.arcTo(x+w,y+h,x,y+h,radius);c.arcTo(x,y+h,x,y,radius);c.arcTo(x,y,x+w,y,radius);c.closePath();c.fill();if(stroke){c.strokeStyle=stroke;c.lineWidth=1;c.stroke();}};
  const text=(value:string,x:number,y:number,size:number,color='#ecf1ff',weight=400,align:CanvasTextAlign='left')=>{c.font=`${weight} ${size}px Arial, sans-serif`;c.fillStyle=color;c.textAlign=align;c.textBaseline='top';c.fillText(value,x,y);};
