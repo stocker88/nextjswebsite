@@ -1,4 +1,5 @@
 import {linkWebsiteAcquisition} from '../lib/acquisition';
+import {activateSignupTracking} from '../lib/signup-progress';
 import {bandReadUrl} from '../lib/band-access';
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import {contentClickDestination} from '../lib/content-access';
@@ -36,6 +37,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   Promise.all([getSiteAuth(),import('firebase/auth')]).then(([auth,sdk])=>{
    if(!active)return;
    stop=sdk.onAuthStateChanged(auth,user=>{
+    activateSignupTracking(user?.uid||null);
     rememberSiteAccount(user);
     // Auth is ready independently of the background device admission check.
     setSupportSkip(false);setDeviceState('checking');setState({user,ready:true,error:false});

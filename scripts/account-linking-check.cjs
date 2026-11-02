@@ -11,7 +11,7 @@ const sdk={GoogleAuthProvider:Provider,FacebookAuthProvider:Provider,TwitterAuth
  linkWithPopup:async(target)=>{assert.equal(target.uid,'existing-member');linked++;return {user:target}}};
 const moduleExports={};
 const code=ts.transpileModule(fs.readFileSync('lib/site-sign-in.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
-vm.runInNewContext(code,{exports:moduleExports,require:name=>name==='./analytics'?{trackAuthentication:()=>{}}:name==='./site-auth'?{getSiteAuth:async()=>auth}:name==='firebase/auth'?sdk:require(name),Promise,Error,Date:TestDate,process:{env:{NEXT_PUBLIC_FACEBOOK_SIGN_IN:'true',NEXT_PUBLIC_X_SIGN_IN:'true'}}});
+vm.runInNewContext(code,{exports:moduleExports,require:name=>name==='./signup-progress'?{beginSignupAuthentication:()=>null,finishSignupAuthentication:()=>{},failSignupAuthentication:()=>{}}:name==='./analytics'?{trackAuthentication:()=>{}}:name==='./site-auth'?{getSiteAuth:async()=>auth}:name==='firebase/auth'?sdk:require(name),Promise,Error,Date:TestDate,process:{env:{NEXT_PUBLIC_FACEBOOK_SIGN_IN:'true',NEXT_PUBLIC_X_SIGN_IN:'true'}}});
 (async()=>{
  const m=moduleExports;
  popupError={code:'auth/account-exists-with-different-credential',credential:{providerId:'twitter.com',secret:'test-only'},customData:{email:'member@example.com'}};

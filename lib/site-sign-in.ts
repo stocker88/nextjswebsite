@@ -1,6 +1,7 @@
 import {trackAuthentication} from './analytics';
 import type {AuthCredential,User} from 'firebase/auth';
 import {getSiteAuth} from './site-auth';
+import {beginSignupAuthentication,finishSignupAuthentication,failSignupAuthentication} from './signup-progress';
 export type SiteProvider='google'|'apple'|'facebook'|'twitter';
 export const providerNames:Record<SiteProvider,string>={google:'Google',apple:'Apple',facebook:'Facebook',twitter:'X'};
 export const providerIds:Record<SiteProvider,string>={google:'google.com',apple:'apple.com',facebook:'facebook.com',twitter:'twitter.com'};
@@ -19,8 +20,11 @@ async function providerFor(provider:SiteProvider){
 }
 export async function signInSite(provider:SiteProvider){
  if(!providerEnabled(provider))throw new Error('This sign-in method is being configured. Please use Google or Apple.');
- const auth=await getSiteAuth(),{sdk,method}=await providerFor(provider);
- try{const result=await sdk.signInWithPopup(auth,method);trackAuthentication(provider,sdk.getAdditionalUserInfo(result)?.isNewUser===true);return result}catch(error){
+ const attempt=beginSignupAuthentication(provider);
+ let sdk:typeof import('firebase/auth');
+ try{const auth=await getSiteAuth(),loaded=await providerFor(provider);sdk=loaded.sdk;const result=await sdk.signInWithPopup(auth,loaded.method);const isNew=sdk.getAdditionalUserInfo(result)?.isNewUser===true;finishSignupAuthentication(attempt,result.user.uid,isNew);trackAuthentication(provider,isNew);return result}catch(error){
+  failSignupAuthentication(attempt,error);
+  sdk=await import('firebase/auth');
   if((error as {code?:string}).code==='auth/account-exists-with-different-credential'){
    const cause=error as Parameters<typeof sdk.GoogleAuthProvider.credentialFromError>[0];
    const credential=provider==='google'?sdk.GoogleAuthProvider.credentialFromError(cause):provider==='facebook'?sdk.FacebookAuthProvider.credentialFromError(cause):provider==='twitter'?sdk.TwitterAuthProvider.credentialFromError(cause):sdk.OAuthProvider.credentialFromError(cause);

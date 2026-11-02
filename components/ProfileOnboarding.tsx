@@ -6,7 +6,7 @@ import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
 import {availableUsernameSuggestions,completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationCode,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
 import TrustpilotWidget from './TrustpilotWidget';
-import {trackSignupProgress,signupErrorCode} from '../lib/signup-progress';
+import {trackSignupProgress,signupErrorCode,observeSignupStep} from '../lib/signup-progress';
 import {linkWebsiteAcquisition,sourceOptions} from '../lib/acquisition';
 import s from '../styles/ProfileOnboarding.module.css';
 import OnboardingQuestion from './OnboardingQuestion';
@@ -74,14 +74,11 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const [usernameCorrection,setUsernameCorrection]=useState('');
  const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
  useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
- const chooseSource=(value:string)=>{setHeardFrom(value);if(value)void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})};
+ const chooseSource=(value:string)=>{setHeardFrom(value);if(value){trackSignupProgress('source','success');void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})}};
  const photoPreview=useMemo(()=>photoFile?URL.createObjectURL(photoFile):user.photoURL||'',[photoFile,user.photoURL]);
  useEffect(()=>{
   const name=['profile','question_1','question_2','question_3','results'][step];
-  trackSignupProgress(name);
-  const hidden=()=>{if(document.visibilityState==='hidden')trackSignupProgress(name,'hidden')};
-  document.addEventListener('visibilitychange',hidden);
-  return()=>document.removeEventListener('visibilitychange',hidden);
+  return observeSignupStep(name);
  },[step,user.uid]);
  useEffect(()=>()=>{if(photoFile&&photoPreview)URL.revokeObjectURL(photoPreview)},[photoFile,photoPreview]);
  useEffect(()=>{
@@ -98,8 +95,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   const file=event.target.files?.[0]||null;
   setError('');
   if(!file)return;
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setError('Choose a JPG, PNG or WebP image.');event.target.value='';return}
-  if(file.size>5*1024*1024){setError('Choose an image smaller than 5 MB.');event.target.value='';return}
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){trackSignupProgress('profile','error','photo_type');setError('Choose a JPG, PNG or WebP image.');event.target.value='';return}
+  if(file.size>5*1024*1024){trackSignupProgress('profile','error','photo_size');setError('Choose an image smaller than 5 MB.');event.target.value='';return}
   setPhotoFile(file);
  };
  const continueProfile=async()=>{
@@ -123,7 +120,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   try{const available=await isUsernameAvailable(userName,user.uid);if(latestUsername.current!==requestKey)return;setAvailability(available?'available':'taken');if(!available){trackSignupProgress('profile','error','username_taken');setError('That username is already taken.');return}trackSignupProgress('profile','success');setStep(1)}
   catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
  };
- const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
+ const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
@@ -193,7 +190,8 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  const cacheKey=`stbn.profileReady.v1:${user.uid}`;
  const [cached]=useState(()=>{try{return typeof window!=='undefined'&&sessionStorage.getItem(cacheKey)==='1'}catch{return false}});
  const [status,setStatus]=useState<'checking'|'required'|'complete'|'error'>(cached?'complete':'checking'),[attempt,setAttempt]=useState(0);
- useEffect(()=>{if(status==='error')trackSignupProgress('profile_check','error')},[status]);
+ useEffect(()=>{trackSignupProgress('profile_check',status==='checking'?'attempt':status==='error'?'error':'success')},[status]);
+ useEffect(()=>{if(status==='checking')return observeSignupStep('profile_check')},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
  if(status==='complete')return <>{children}</>;
  if(status==='required')return <ProfileOnboarding user={user} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);try{await router.replace('/membership/?from=onboarding')}catch{window.location.assign('/membership/?from=onboarding')}setStatus('complete')}}/>;
