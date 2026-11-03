@@ -12,3 +12,9 @@ export function formatOptionPerformance(value:number):string{
  const rounded=Math.sign(value)*Math.round(Math.abs(value));
  return `${rounded>0?'+':''}${rounded}%`;
 }
+
+export function moverSessionDay(asOf:string):string|undefined{
+ if(/^\d{4}-\d{2}-\d{2}$/.test(asOf))return asOf;
+ if(!Number.isFinite(Date.parse(asOf)))return undefined;
+ return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(asOf));
+}

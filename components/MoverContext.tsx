@@ -1,3 +1,4 @@
+import {moverSessionDay} from '../lib/mover-trades';
 import DesktopAppLink from './DesktopAppLink';
 import {AccountLink} from './SiteAccount';
 import {useEffect,useId,useRef,useState} from 'react';
@@ -21,7 +22,7 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
   const trigger=useRef<HTMLButtonElement>(null),panel=useRef<HTMLDivElement>(null),id=useId();
   useEffect(()=>{setNow(Date.now());const timer=setInterval(()=>setNow(Date.now()),60000);return()=>clearInterval(timer);},[]);
   const researchArticle=now===null?undefined:findMoverContext(coverage,stock.symbol,now,period,stock.asOf,stock.changes[period],marketSession);
-  const trade=now===null?undefined:findMoverTrade(trades as MoverTrade[],stock.symbol,now,{optionType:stock.changes[period]!>=0?'call':'put',sessionDate:period==='day'&&Number.isFinite(Date.parse(stock.asOf))?new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(stock.asOf)):undefined});
+  const trade=now===null?undefined:findMoverTrade(trades as MoverTrade[],stock.symbol,now,{optionType:stock.changes[period]!>=0?'call':'put',sessionDate:period==='day'?moverSessionDay(stock.asOf):undefined});
   const headlinesAllowed=allowsMoverHeadlines(period);
   const blocked=Boolean(researchArticle||trade);
   useEffect(()=>{

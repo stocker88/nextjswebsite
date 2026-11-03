@@ -36,3 +36,5 @@ assert.equal(findMoverTrade(linked,'BE',today,{sessionDate:'2026-11-04'}),undefi
 assert.equal(findMoverTrade(linked.filter(x=>x.optionType==='call'),'BE',today,{optionType:'put'}),undefined);
 assert.ok(fs.readFileSync(require('path').join(__dirname,'github-pages/build.cjs'),'utf8').includes("run(['scripts/build-mover-trades.cjs'])"));
 console.log('PASS: library results, same-session direction matching and build refresh');
+
+const {moverSessionDay}=require('../lib/mover-trades.ts');assert.equal(moverSessionDay('2026-11-03'),'2026-11-03');assert.equal(moverSessionDay('2026-11-04T00:30:00Z'),'2026-11-03');assert.equal(moverSessionDay('invalid'),undefined);

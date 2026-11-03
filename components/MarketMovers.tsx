@@ -1,3 +1,4 @@
+import {moverSessionDay} from '../lib/mover-trades';
 import ShareControl from './ShareControl';
 import type {ReactNode,CSSProperties} from 'react';
 import {stockPageHref} from '../lib/stock-page';
@@ -15,7 +16,7 @@ export default function MarketMovers({rows,period,label,periodControls,marketSes
   {([['Gainers',gainers],['Decliners',losers]] as const).map(([title,items])=><div key={title} className={styles.moverGroup}>
    <h4>{title}</h4>{items.length?items.map((row,index)=><div key={row.symbol} className={styles.moverRow} data-mover-symbol={row.symbol} style={{'--mover-grid-row':index+2} as CSSProperties}>
     <a href={stockPageHref(row.symbol)}><span className={styles.moverIdentity}><span className={styles.moverSymbol}>{row.symbol}</span><small>{row.name}</small></span><strong className={row.changes[period]!>=0?styles.positive:styles.negative}>{percent(row.changes[period])}</strong></a>
-    <div className={styles.moverActions}><MoverContext stock={row} period={period} marketSession={marketSession} compact/><MoverTrade symbol={row.symbol} optionType={row.changes[period]!>=0?'call':'put'} sessionDate={period==='day'&&Number.isFinite(Date.parse(row.asOf))?new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(row.asOf)):undefined} compact/></div>
+    <div className={styles.moverActions}><MoverContext stock={row} period={period} marketSession={marketSession} compact/><MoverTrade symbol={row.symbol} optionType={row.changes[period]!>=0?'call':'put'} sessionDate={period==='day'?moverSessionDay(row.asOf):undefined} compact/></div>
    </div>):<p>No {title.toLowerCase()} with an available quote.</p>}
   </div>)}
   </div>
