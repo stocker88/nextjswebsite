@@ -12,7 +12,9 @@ export default function StockSmartMoney({symbol}:{symbol:string}) {
   const [verified,setVerified]=useState<{uid:string;status:MembershipStatus}|null>(null);
   const [checkFailed,setCheckFailed]=useState(false);
   const [retry,setRetry]=useState(0);
-  const access=ready?bandAccess(!!uid,verified?.uid===uid?verified.status:null):'checking';
+  // A signed-out uid and optional verified?.uid are both undefined; that is not a verified account.
+  const membership=uid&&verified&&verified.uid===uid?verified.status:null;
+  const access=ready?bandAccess(!!uid,membership):'checking';
   const allowed=access==='allowed';
   useEffect(()=>{
     setVerified(null);setCheckFailed(false);

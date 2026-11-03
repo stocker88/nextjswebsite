@@ -28,3 +28,4 @@ assert.match(hub,/router\.replace\(accountLoginUrl\(destination\)\)/);
 assert.match(membership,/router\.query\.checkout!=='pro'/);
 assert.match(membership,/canOfferMembership\(state\.value\)/);
 console.log('PASS disclosure filtering, range bounds, date semantics, watchlists, CSV formula escaping, stable currency formatting and public schema');
+require('./website-entry-regression-check.cjs');
