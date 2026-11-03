@@ -18,11 +18,27 @@ async function providerFor(provider:SiteProvider){
  if(provider==='facebook')method.addScope('email');
  return {sdk,method};
 }
-export async function signInSite(provider:SiteProvider){
+type PreparedSignIn={auth:Awaited<ReturnType<typeof getSiteAuth>>;sdk:typeof import('firebase/auth');methods:Record<SiteProvider,Awaited<ReturnType<typeof providerFor>>['method']>};
+let prepared:PreparedSignIn|undefined,preparing:Promise<PreparedSignIn>|undefined;
+export function prepareSiteSignIn(){
+ if(prepared)return Promise.resolve(prepared);
+ if(!preparing)preparing=Promise.all([getSiteAuth(),Promise.all((['google','apple','facebook','twitter'] as const).map(async provider=>[provider,await providerFor(provider)] as const))]).then(([auth,providers])=>{
+  prepared={auth,sdk:providers[0][1].sdk,methods:Object.fromEntries(providers.map(([provider,value])=>[provider,value.method])) as PreparedSignIn['methods']};return prepared;
+ }).catch(error=>{preparing=undefined;throw error});
+ return preparing;
+}
+let activeSignIn:Promise<import('firebase/auth').UserCredential>|undefined;
+// One popup across all signup buttons. A second click must not cancel the first.
+export function signInSite(provider:SiteProvider){
+ if(activeSignIn)return activeSignIn;
+ activeSignIn=performSiteSignIn(provider).finally(()=>{activeSignIn=undefined});
+ return activeSignIn;
+}
+async function performSiteSignIn(provider:SiteProvider){
  if(!providerEnabled(provider))throw new Error('This sign-in method is being configured. Please use Google or Apple.');
  const attempt=beginSignupAuthentication(provider);
  let sdk:typeof import('firebase/auth');
- try{const auth=await getSiteAuth(),loaded=await providerFor(provider);sdk=loaded.sdk;const result=await sdk.signInWithPopup(auth,loaded.method);const isNew=sdk.getAdditionalUserInfo(result)?.isNewUser===true;finishSignupAuthentication(attempt,result.user.uid,isNew);trackAuthentication(provider,isNew);return result}catch(error){
+ try{const ready=prepared||await prepareSiteSignIn();sdk=ready.sdk;const result=await sdk.signInWithPopup(ready.auth,ready.methods[provider]);const isNew=sdk.getAdditionalUserInfo(result)?.isNewUser===true;finishSignupAuthentication(attempt,result.user.uid,isNew);trackAuthentication(provider,isNew);return result}catch(error){
   failSignupAuthentication(attempt,error);
   sdk=await import('firebase/auth');
   if((error as {code?:string}).code==='auth/account-exists-with-different-credential'){
@@ -61,10 +77,14 @@ export function siteSignInError(error:unknown):string{
  if(code==='auth/account-exists-with-different-credential')return 'This email already has an account. Sign in using your existing method, then confirm linking the new method.';
  if(code==='auth/credential-already-in-use'||code==='auth/email-already-in-use')return 'This sign-in belongs to another account. No accounts or memberships were merged. Use that account or contact support.';
  if(code==='auth/provider-already-linked')return 'This method is already linked to your account.';
- if(code==='auth/popup-blocked')return 'Allow pop-ups for this website and try again.';
+ if(code==='auth/popup-blocked')return 'Your browser blocked the sign-in window. Allow pop-ups for stockstobuynow.ai, then tap Continue again. On mobile, open this page in Safari or Chrome.';
+ if(code==='auth/popup-closed-by-user')return 'The sign-in window closed before sign-in finished. Tap Continue to try again. If you opened this page inside another app, open it in Safari or Chrome.';
+ if(code==='auth/cancelled-popup-request')return 'Another sign-in window is already open. Finish there, or close it and try again.';
+ if(code==='auth/web-storage-unsupported')return 'Your browser cannot save the sign-in session. Open this page in Safari or Chrome with site storage enabled.';
+ if(code==='auth/too-many-requests')return 'There have been too many sign-in attempts. Please wait a few minutes before trying again.';
  if(code==='auth/unauthorized-domain'||code==='auth/operation-not-allowed')return 'This sign-in method is not configured yet. Please use another method.';
  if(code==='auth/requires-recent-login')return 'Sign in again with your existing method, then return here to link.';
  if(code==='auth/multi-factor-auth-required')return 'This account requires two-factor verification. Please continue in the app.';
  if(code==='auth/network-request-failed')return 'Unable to connect. Check your connection and try again.';
- return error instanceof Error&&!code?error.message:'Sign-in could not be completed. Please try again.';
+ return 'Sign-in could not be completed. Reload this page and try again, or choose another sign-in method.';
 }

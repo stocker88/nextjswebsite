@@ -82,5 +82,12 @@ export function observeSignupStep(step:string){
 }
 export function signupErrorCode(error:unknown){
  const code=(error as {code?:unknown})?.code;
- return typeof code==='string'?code.replace(/^functions\//,''):'unknown';
+ if(typeof code==='string')return code.replace(/^functions\//,'');
+ // Classify runtime failures without storing messages, URLs, emails or tokens.
+ const name=(error as {name?:unknown})?.name;
+ if(name==='ChunkLoadError')return 'client/chunk-load-failed';
+ if(name==='TypeError')return 'client/type-error';
+ if(name==='SecurityError')return 'client/security-error';
+ if(name==='AbortError')return 'client/aborted';
+ return 'unknown';
 }
