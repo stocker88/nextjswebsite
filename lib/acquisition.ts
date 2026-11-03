@@ -1,3 +1,4 @@
+import {browserIdentity} from './browser-identity';
 const ENDPOINT = 'https://us-central1-stocker-fcda2.cloudfunctions.net/recordWebsiteVisit';
 const IDENTITY = 'stocker.acquisition.v1';
 const SESSION = 'stocker.acquisition.session.v1';
@@ -80,7 +81,7 @@ function arrival(campaign:Campaign={}) {
 }
 function payload(campaign:Campaign={},store?:'apple'|'google') {
   arrival(campaign);
-  return {...identity(),sessionId:session(),path:location.pathname,referrer:originalReferrer,...savedCampaign,store};
+  return {...identity(),browserId:browserIdentity(),sessionId:session(),path:location.pathname,referrer:originalReferrer,...savedCampaign,store};
 }
 export function captureAcquisition(campaign:Campaign={}, store?:'apple'|'google') {
   if(typeof window==='undefined')return;

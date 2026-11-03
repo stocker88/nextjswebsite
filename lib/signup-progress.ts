@@ -1,3 +1,4 @@
+import {browserIdentity} from './browser-identity';
 import {getSiteAuth} from './site-auth';
 import {recordSignupAttempt} from './acquisition';
 import {SignupProgressQueue,type SignupEvent} from './signup-progress-queue';
@@ -7,7 +8,7 @@ const queues=new Map<string,SignupProgressQueue>();
 function id(){return Array.from(crypto.getRandomValues(new Uint8Array(16)),v=>v.toString(16).padStart(2,'0')).join('')}
 function event(step:string,action:string,errorCode:string,extra:Extras={}):SignupEvent{
  if(!session){try{session=sessionStorage.getItem('stbn.signup.session.v2')||''}catch{}if(!/^[a-f0-9]{32}$/.test(session)){session=id();try{sessionStorage.setItem('stbn.signup.session.v2',session)}catch{}}}
- return {eventId:id(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',...extra};
+ return {eventId:id(),browserId:browserIdentity(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',...extra};
 }
 function queue(uid:string){
  if(!queues.has(uid)){

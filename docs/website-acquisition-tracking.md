@@ -49,3 +49,11 @@ Read-only daily audit: `node scripts/account-origins-report.js YYYY-MM-DD`
 in the backend functions directory (Dubai day). Its denominator is Firebase
 Auth account creation, including incomplete profiles. Add `--accounts` only
 when individual UID/username details are needed; the default output is aggregate.
+
+## Same-browser signup measurement
+
+`stbn_browser_v1` is a first-party, host-only cookie containing a random 128-bit ID and a fixed 180-day expiry. Local storage mirrors it for storage-restricted contexts. It contains no email, name, Firebase UID or authentication/handoff token. It persists across account switches while attribution credentials remain isolated per account. It is sent only to our acquisition and signup endpoints, not GA or ad platforms. Both anonymous attempts and authenticated signup events carry `browserId`; the authenticated progress summary preserves `firstBrowserId`.
+
+Count distinct browser IDs, distinct Firebase UIDs and distinct attempt IDs separately. A shared browser can represent multiple people; one person can use several browsers. Missing IDs remain unknown. Clearing site data, private sessions and browser restrictions can reset identification. No fingerprinting or IP merging is used by this identifier. It cannot recover historical missing events or automatically recognize a native app installation. Cookie expiry limits browser persistence, not server telemetry retention. There is no site-wide consent switch in the current acquisition client; any future consent controls must gate this alongside the existing acquisition capture.
+
+Rollout for browser IDs: deploy `recordWebsiteVisit` and `recordSignupProgress`, then the website. Existing clients and events without browserId remain accepted.
