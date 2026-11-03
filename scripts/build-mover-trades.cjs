@@ -12,8 +12,11 @@ function buildTrades(results,research,now=Date.now()){
   if(!/^options_results_[A-Z0-9.-]+_\d{4}-\d{2}-\d{2}$/.test(result.id)||(post?!post.symbols?.some(s=>symbol(s)===symbol(result.symbol)):!library))return [];
   const moves=(result.moves||[]).filter(m=>symbol(m.symbol)===symbol(result.symbol)&&m.sessionDay===result.sessionDay&&Number.isFinite(m.sessionPct)&&m.sessionPct>=-100);
   if(!moves.length)return [];
-  const performancePct=Math.max(...moves.map(m=>m.sessionPct));
-  return [{symbol:result.symbol,postId:result.id,isAIAdvisor:true,performancePct,contractCount:moves.length,title:result.title,sessionDate:result.sessionDay,publishedAt:new Date(time).toISOString(),href:'/results/'+result.id.toLowerCase().replace(/_/g,'-')+'/'}];
+  return ['call','put'].flatMap(optionType=>{
+  const sideMoves=moves.filter(m=>(m.optionType||'call')===optionType);if(!sideMoves.length)return [];
+  const performancePct=Math.max(...sideMoves.map(m=>m.sessionPct));
+  return [{symbol:result.symbol,optionType,postId:result.id,isAIAdvisor:true,performancePct,contractCount:sideMoves.length,title:result.title,sessionDate:result.sessionDay,publishedAt:new Date(time).toISOString(),href:'/results/'+result.id.toLowerCase().replace(/_/g,'-')+'/'}];
+  });
  }).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
 }
 function build(root=path.join(__dirname,'..')){

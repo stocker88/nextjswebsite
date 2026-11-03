@@ -27,3 +27,12 @@ assert.equal(findMoverTrade([{...items[0],performancePct:NaN}],'ACN',now),undefi
 console.log('PASS: highest reported contract return, signed rounding and invalid/mismatched performance exclusion.');
 
 assert.equal(buildTrades([{...result,appCollection:'optionsresults',source:'www.StocksToBuyNow.ai',publishedAt:now-1000}],[],now).length,1);
+const today=Date.parse('2026-11-03T20:00:00Z');
+const fresh={...result,id:'options_results_BE_2026-11-03',symbol:'BE',sessionDay:'2026-11-03',appCollection:'optionsresults',source:'www.StocksToBuyNow.ai',publishedAt:today-1000,moves:[{symbol:'BE',sessionDay:'2026-11-03',optionType:'call',sessionPct:287},{symbol:'BE',sessionDay:'2026-11-03',optionType:'put',sessionPct:10}]};
+const linked=buildTrades([fresh],[],today);
+assert.equal(findMoverTrade(linked,'BE',today,{optionType:'call',sessionDate:'2026-11-03'}).performancePct,287);
+assert.equal(findMoverTrade(linked,'BE',today,{optionType:'put',sessionDate:'2026-11-03'}).performancePct,10);
+assert.equal(findMoverTrade(linked,'BE',today,{sessionDate:'2026-11-04'}),undefined);
+assert.equal(findMoverTrade(linked.filter(x=>x.optionType==='call'),'BE',today,{optionType:'put'}),undefined);
+assert.ok(fs.readFileSync(require('path').join(__dirname,'github-pages/build.cjs'),'utf8').includes("run(['scripts/build-mover-trades.cjs'])"));
+console.log('PASS: library results, same-session direction matching and build refresh');
