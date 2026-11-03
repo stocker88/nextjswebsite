@@ -6,7 +6,7 @@ const accountFirstPaint=`(function(){try{var h=JSON.parse(localStorage.getItem($
 export default function Document() {
   return (
     <Html lang="en" >
-      <Head><script dangerouslySetInnerHTML={{__html:accountFirstPaint}} /></Head>
+      <Head><script dangerouslySetInnerHTML={{__html:accountFirstPaint}} /><script dangerouslySetInnerHTML={{__html:`(function(){try{var h=JSON.parse(localStorage.getItem(${JSON.stringify(SITE_ACCOUNT_HINT_KEY)})||'null'),r=document.documentElement;if(r.dataset.siteAccount==='signed-in'&&h&&typeof h.photo==='string'&&h.photo.toLowerCase().startsWith('https://')){r.style.setProperty('--site-account-photo','url('+JSON.stringify(h.photo)+')');r.style.setProperty('--site-account-initials-opacity','0');}}catch(e){}})();`}} /></Head>
          <body style={{ background: "#121212" }}>
         <Main />
         <NextScript />

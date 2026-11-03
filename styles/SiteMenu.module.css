@@ -8,3 +8,4 @@
 @media(prefers-reduced-motion:reduce){.panel{animation:none}.trigger svg,.download,.links a,.brand,.accountSlot{transition:none}.download:hover{transform:none}}
 
 .searchTrigger{min-width:44px;min-height:44px}.searchTrigger[aria-expanded=true] svg{transform:none}.searchLabel{display:none}.searchPanel{display:block;overflow:visible;max-width:520px;left:auto;width:min(520px,100%);padding:24px}.searchPanel :global(.sqs-results){position:static;width:auto;max-width:none;margin-top:12px;box-shadow:none}.searchPanel :global(input){font-size:16px}@media(max-width:999px){.searchLabel{display:inline}.searchPanel{width:100%;max-width:none;padding:0 0 24px}.searchTrigger{justify-content:flex-start;gap:14px}}
+.cachedAvatar{background-image:var(--site-account-photo,none);background-size:cover;background-position:center}.cachedAvatar::after{opacity:var(--site-account-initials-opacity,1)}

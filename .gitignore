@@ -16,3 +16,6 @@ out/
 
 # Isolated public courses and founder preview
 .next-education-check/
+
+# Isolated options intelligence preview
+.next-options-intelligence/

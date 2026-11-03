@@ -1,8 +1,8 @@
 import {OptionSnapshot,OptionTrade,validExpiry} from './options';
 // Only this server talks to the private snapshot service. No browser request calls Massive.
 export function optionsConfigured(env=process.env){return !!env.OPTIONS_BACKEND_URL&&!!env.OPTIONS_BACKEND_TOKEN&&(env.OPTIONS_DISPLAY_LICENSE_CONFIRMED==='true'||(env.NODE_ENV!=='production'&&env.OPTIONS_PRIVATE_PREVIEW==='true'));}
-async function backend(symbol:string,method='GET'){
- const url=new URL(process.env.OPTIONS_BACKEND_URL!);if(url.protocol!=='https:')throw new Error('Invalid backend URL');if(method==='GET')url.searchParams.set('symbol',symbol);
+async function backend(symbol:string,method='GET',view?:string){
+ const url=new URL(process.env.OPTIONS_BACKEND_URL!);if(url.protocol!=='https:')throw new Error('Invalid backend URL');if(method==='GET')url.searchParams.set('symbol',symbol);if(view)url.searchParams.set('view',view);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
  try{const r=await fetch(url.toString(),{method,redirect:'error',headers:{Authorization:`Bearer ${process.env.OPTIONS_BACKEND_TOKEN}`,'Content-Type':'application/json'},...(method==='POST'?{body:JSON.stringify({symbol})}:{}),signal:controller.signal});const data=await r.json();if(!r.ok)throw new Error(data.error||'Saved data unavailable');return data}finally{clearTimeout(timer)}
 }
@@ -19,3 +19,8 @@ export async function chain(symbol:string,expiry?:string):Promise<OptionSnapshot
 }
 export async function queueSymbol(symbol:string){if(!optionsConfigured())return {message:'New coverage requests are not available here yet.'};return backend(symbol,'POST');}
 export async function trades(_symbol:string,_contractId:string):Promise<{trades:OptionTrade[];partial:boolean;message:string}>{return {trades:[],partial:false,message:'Individual trade records are not included in this daily snapshot. View the research links for more context.'};}
+
+export async function intelligence(){
+ if(!optionsConfigured())return {version:1,status:'unavailable',candidates:[],tickers:[],coverage:[],flowAvailable:false};
+ return backend('SPY','GET','intelligence');
+}

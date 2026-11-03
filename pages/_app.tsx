@@ -8,11 +8,11 @@ import '../styles/interaction.css'
 import InteractionPolish from '../components/InteractionPolish';
 import { SessionProvider } from '../stockerSession';
 import {SiteAccountProvider} from '../components/SiteAccount';
-import { initializeAnalytics, trackPageView } from '../lib/analytics';
+import { initializeAnalytics, trackPageView, installAppDownloadTracking } from '../lib/analytics';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  useEffect(() => installAcquisitionCapture(), []);
+  useEffect(() => {const stopCapture=installAcquisitionCapture();const stopDownloads=installAppDownloadTracking();return()=>{stopCapture();stopDownloads();};}, []);
 
   useEffect(() => {
     initializeAnalytics();

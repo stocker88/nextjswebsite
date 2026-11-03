@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),ts=require('typescript');
+const values=new Map(),styles=new Map(),root={dataset:{},setAttribute(k,v){if(k==='data-site-account')this.dataset.siteAccount=v},style:{setProperty:(k,v)=>styles.set(k,v),removeProperty:k=>styles.delete(k)}};
+const localStorage={getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v),removeItem:k=>values.delete(k)};
+const exportsObject={};
+const context={exports:exportsObject,window:{},localStorage,document:{documentElement:root},Date};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/site-account-hint.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,context);
+const {rememberSiteAccount:remember,readSiteProfile:read,SITE_ACCOUNT_HINT_KEY,SITE_ACCOUNT_HINT_TTL}=exportsObject;
+remember({uid:'a',displayName:'username',photoURL:'https://example.com/avatar.jpg'},Date.now(),true);
+remember({uid:'a',displayName:'Provider Name',photoURL:null});
+assert.equal(read('a').name,'username');assert.equal(read('a').photo,'https://example.com/avatar.jpg');assert.equal(read('b'),null);
+// Execute the real server-rendered bootstrap scripts, not a copied implementation.
+const jsx=require('react/jsx-runtime');const documentExports={};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('pages/_document.tsx','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX}}).outputText,{exports:documentExports,require:n=>n==='next/document'?{Html:'html',Head:'head',Main:'main',NextScript:'next'}:n==='react/jsx-runtime'?jsx:{SITE_ACCOUNT_HINT_KEY,SITE_ACCOUNT_HINT_TTL}});
+const tree=documentExports.default();
+for(const script of tree.props.children[0].props.children)vm.runInNewContext(script.props.dangerouslySetInnerHTML.__html,context);
+assert.equal(styles.get('--site-account-photo'),'url("https://example.com/avatar.jpg")');
+remember({uid:'b',displayName:'Different account'});assert.equal(read('a'),null);assert.equal(read('b').photo,'');
+remember({uid:'b',displayName:'Updated',photoURL:'javascript:alert(1)'},Date.now(),true);assert.equal(read('b').photo,'');
+remember(null);assert.equal(read('b'),null);assert.equal(root.dataset.siteAccount,'signed-out');assert.equal(styles.has('--site-account-photo'),false);
+values.set(SITE_ACCOUNT_HINT_KEY,'broken json');assert.equal(read('b'),null);
+localStorage.getItem=()=>{throw Error('Storage blocked')};assert.equal(read('b'),null);remember({uid:'b',displayName:'Still works'});
+console.log('Profile cache: first paint, provider preservation, account isolation, logout, invalid photo and blocked storage passed.');

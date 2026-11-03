@@ -22,8 +22,8 @@ export function accountDestination(value:unknown):string{
  // Smart Money pages are account-gated in the browser, while their static HTML
  // remains available to search engines. Preserve only the supported Signals
  // deep link after sign-in; discard every other query string.
- const smartMoney=value.match(/^\/(smart-money|politician-trades|insider-trades|hedge-fund-activity)\/?(?:\?view=(signals))?$/);
- if(smartMoney)return `/${smartMoney[1]}/${smartMoney[2]?'?view=signals':''}`;
+ const smartMoney=value.match(/^\/(smart-money|politician-trades|insider-trades|hedge-fund-activity)\/?(?:\?view=(signals|tracker))?$/);
+ if(smartMoney)return `/${smartMoney[1]}/${smartMoney[2]?'?view='+smartMoney[2]:''}`;
  // Recent headline routes have one bounded ID; preserve it after sign-in.
  const story=value.match(/^\/market-news\/story\/?\?id=([A-Za-z0-9_.%-]{1,240})$/);
  if(story&&!story[1].includes('..'))return '/market-news/story/?id='+story[1];

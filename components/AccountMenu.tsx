@@ -2,6 +2,7 @@ import {signOutWebsiteDevice} from '../lib/account-devices';
 import {useEffect,useRef,useState} from 'react';
 import {useSiteAccount} from './SiteAccount';
 import {getSiteAuth} from '../lib/site-auth';
+import {readSiteProfile,rememberSiteAccount} from '../lib/site-account-hint';
 import s from '../styles/AccountMenu.module.css';
 
 export default function AccountMenu(){
@@ -11,10 +12,14 @@ export default function AccountMenu(){
  const root=useRef<HTMLDivElement>(null),trigger=useRef<HTMLButtonElement>(null);
  useEffect(()=>{
   let active=true;
-  setOpen(false);setError('');setProfile(null);
+  setOpen(false);setError('');setBrokenPhoto('');setProfile(user?readSiteProfile(user.uid):null);
   const load=()=>{if(user)void Promise.all([getSiteAuth(),import('firebase/firestore')]).then(async([auth,db])=>{
    const doc=await db.getDoc(db.doc(db.getFirestore(auth.app),'users',user.uid)),data=doc.data();
-   if(active&&data)setProfile({uid:user.uid,name:typeof data.userName==='string'?data.userName:'',photo:typeof data.photoUrl==='string'?data.photoUrl:typeof data.authorPhotoUrl==='string'?data.authorPhotoUrl:''});
+   if(active&&data&&auth.currentUser?.uid===user.uid){
+    const next={uid:user.uid,name:typeof data.userName==='string'?data.userName:'',photo:typeof data.photoUrl==='string'?data.photoUrl:typeof data.authorPhotoUrl==='string'?data.authorPhotoUrl:''};
+    rememberSiteAccount({uid:user.uid,displayName:next.name||user.displayName,photoURL:next.photo,email:user.email},Date.now(),true);
+    setProfile(next);
+   }
   }).catch(()=>{/* Provider identity remains available if the app profile cannot be read. */})};
   load();window.addEventListener('site-profile-updated',load);
   return()=>{active=false;window.removeEventListener('site-profile-updated',load)};
@@ -27,7 +32,7 @@ export default function AccountMenu(){
   return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape)};
  },[open]);
  if(!user)return null;
- const current=profile?.uid===user.uid?profile:null;
+ const current=profile?.uid===user.uid?profile:readSiteProfile(user.uid);
  const name=current?.name||user.displayName||'My account';
  const photo=current?.photo||user.photoURL||'';
  const initials=name.split(/\s+/).slice(0,2).map(part=>part[0]).join('').toUpperCase();

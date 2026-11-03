@@ -1,4 +1,4 @@
-import { captureAcquisition } from './acquisition';
+import { captureAcquisition, acquisitionCampaign } from './acquisition';
 import ReactGA from 'react-ga4';
 
 export const GA_MEASUREMENT_ID = 'G-JPXMZYD5DY';
@@ -51,6 +51,10 @@ export function trackAppStoreClick({
   placement,
   linkUrl,
 }: AppStoreClick) {
+  // Explicit CTA handlers and the global anchor listener share this guard.
+  const key=store;
+  if(lastStoreClick?.key===key&&Date.now()-lastStoreClick.at<500)return;
+  lastStoreClick={key,at:Date.now()};
   captureAcquisition({}, store);
   initializeAnalytics();
   ReactGA.event('app_store_click', {
@@ -59,9 +63,41 @@ export function trackAppStoreClick({
     link_url: safeAnalyticsUrl(linkUrl),
     landing_page: typeof window !== 'undefined' ? window.location.pathname : '',
     landing_referrer: typeof document !== 'undefined' ? safeAnalyticsUrl(document.referrer) : '',
-    utm_source: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_source') || '' : '',
-    utm_medium: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_medium') || '' : '',
-    utm_campaign: typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('utm_campaign') || '' : '',
+    ...acquisitionCampaign(),
     site_version: SITE_VERSION,
   });
+}
+
+let lastStoreClick:{key:string;at:number}|null=null;
+export function trackAuthentication(method:string,isNewUser:boolean) {
+  try {
+    initializeAnalytics();
+    ReactGA.event(isNewUser?'sign_up':'login',{method,...acquisitionCampaign(),site_version:SITE_VERSION});
+  } catch { /* Measurement must never turn a successful sign-in into an error. */ }
+}
+export function appDownloadStore(raw:string):'apple'|'google'|null {
+  try {
+    const url=new URL(raw);
+    if(url.searchParams.has('action'))return null;
+    if(url.hostname==='apps.apple.com'&&/\/id1565527320\/?$/.test(url.pathname))return 'apple';
+    if(url.hostname==='play.google.com'&&url.pathname==='/store/apps/details'&&url.searchParams.get('id')==='com.newcompany.stocker'&&!url.searchParams.has('showAllReviews'))return 'google';
+  }catch{}
+  return null;
+}
+export function installAppDownloadTracking() {
+  const click=(event:Event)=>{
+    if(event.type==='auxclick'&&(event as MouseEvent).button!==1)return;
+    const anchor=event.target instanceof Element?event.target.closest('a'):null;
+    if(!(anchor instanceof HTMLAnchorElement))return;
+    // Wait for React/desktop routing to decide whether this really leaves for a store.
+    queueMicrotask(()=>{
+      if(event.defaultPrevented)return;
+      const store=appDownloadStore(anchor.href);
+      if(!store)return;
+      try {trackAppStoreClick({store,placement:anchor.dataset.analyticsPlacement||'site_link',linkUrl:anchor.href});}catch{}
+    });
+  };
+  document.addEventListener('click',click,true);
+  document.addEventListener('auxclick',click,true);
+  return()=>{document.removeEventListener('click',click,true);document.removeEventListener('auxclick',click,true);};
 }

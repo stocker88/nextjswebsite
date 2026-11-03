@@ -30,6 +30,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
       - run: yarn test:content-access
+      - run: yarn test:profile-onboarding
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs

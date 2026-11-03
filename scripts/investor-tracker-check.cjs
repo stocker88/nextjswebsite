@@ -1,0 +1,28 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript'),React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
+for(const ext of ['.ts','.tsx'])require.extensions[ext]=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,f);
+const {portfolioHoldings,trackerRows,safeFiling,trackerDate}=require('../lib/investor-tracker.ts');
+const {accountDestination}=require('../lib/site-auth.ts');
+assert.equal(accountDestination('/smart-money/?view=tracker'),'/smart-money/?view=tracker');
+assert.equal(accountDestination('/smart-money/?view=signals'),'/smart-money/?view=signals');
+assert.notEqual(accountDestination('//evil.example/'), '//evil.example/');
+assert.equal(safeFiling('javascript:alert(1)'),undefined);
+assert.equal(safeFiling('https://www.sec.gov/Archives/example'),'https://www.sec.gov/Archives/example');
+assert.equal(trackerDate('broken'),'Date unavailable');
+const dirty=[{symbol:'AAA',value:10},{symbol:'AAA',value:20},{symbol:'BBB',value:70},{symbol:'BAD',value:NaN},{symbol:'UNKNOWN',value:null},{symbol:'ZERO',value:0}];
+assert.deepEqual(portfolioHoldings(dirty),[{symbol:'BBB',value:70},{symbol:'AAA',value:30}]);
+const old=[{symbol:'OLD',value:30}],latest=[{symbol:'NEW',value:100}];
+assert.deepEqual(trackerRows({history:[{period:'2026-06-30',rows:latest},{period:'2026-03-31',rows:old}],rows:latest},'2026-03-31'),old);
+assert.deepEqual(trackerRows({history:[],rows:[{filedDate:'2026-10-01'},{filedDate:'2026-09-01'}]},'2026-10'),[{filedDate:'2026-10-01'}]);
+const Picture=require('../components/InvestorPortfolioPicture.tsx').default;
+const rows=Array.from({length:12},(_,i)=>({id:String(i),symbol:'TEST'+i,value:1000000*(12-i)}));
+const data={id:'test',name:'Example Investor · Example Fund',kind:'funds',updatedAt:'2026-11-04T00:00:00Z',performance:{points:[{date:'2026-08-01',value:100},{date:'2026-11-03',value:105}]}};
+const svg=renderToStaticMarkup(React.createElement(Picture,{data,rows,period:'2026-06-30'}));
+assert.match(svg,/Other holdings/);assert.match(svg,/TOP 10 HOLDINGS/);assert.match(svg,/not actual investor returns/);assert.match(svg,/Reported 13F holdings/);assert.ok(!svg.includes('NaN'));
+const political=renderToStaticMarkup(React.createElement(Picture,{data:{...data,kind:'politicians',name:'Example Official'},rows:[{id:'1',symbol:'AAA',amount:'$1,001–$15,000',rawAction:'Purchase'}],period:''}));
+assert.match(political,/not a complete holdings portfolio/);assert.ok(!political.includes('TOP 10 HOLDINGS'));assert.ok(!political.includes('stroke-dasharray'));
+const escaped=renderToStaticMarkup(React.createElement(Picture,{data:{...data,name:'<script>alert(1)</script>'},rows:[],period:''}));assert.ok(!escaped.includes('<script>'));
+const component=fs.readFileSync('components/InvestorTracker.tsx','utf8'),hub=fs.readFileSync('components/SmartMoneyHub.tsx','utf8');
+assert.match(component,/sequence!==requestId.current/);assert.match(component,/functions\/permission-denied/);assert.match(component,/canvas.toBlob/);assert.match(component,/navigator.canShare/);assert.match(component,/URL.revokeObjectURL/);assert.match(hub,/InvestorTracker key={user.uid}/);
+assert.ok(!/localStorage|sessionStorage/.test(component));
+if(process.argv.includes('--render')){const {Resvg}=require('@resvg/resvg-js');fs.writeFileSync('/tmp/investor-tracker-preview.png',new Resvg(svg,{fitTo:{mode:'width',value:1440}}).render().asPng());fs.writeFileSync('/tmp/investor-tracker-politician.png',new Resvg(political,{fitTo:{mode:'width',value:1440}}).render().asPng());}
+console.log('PASS tracker grouping, historical selection, missing values, share artwork, politician labeling, login destination, safe links and account isolation guards.');

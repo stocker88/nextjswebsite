@@ -12,7 +12,8 @@ export function beatRingColor(rate:number|null):string {
  return '#'+a.map((c,i)=>Math.round(c+(b[i]-c)*t).toString(16).padStart(2,'0')).join('');
 }
 export type Summary={pe:number|null;ps:number|null;forwardPe:number|null;forwardPs:number|null;estimatePeriod:string|null;beat:Beat;revenueBeat?:Beat;oneYear:number|null;updatedAt:string};
-export type Event={symbol:string;name:string;date:string;session:string;marketCap:number|null;price:number|null;sector:string;industry:string;exchange:string;epsEstimate:number|null;epsActual:number|null;revenueEstimate:number|null;revenueActual:number|null;research?:Summary};
+export type EarningsInsight={postId:string;title:string;kind:string;publishedAt:string;href?:string};
+export type Event={insights?:EarningsInsight[];symbol:string;name:string;date:string;session:string;marketCap:number|null;price:number|null;sector:string;industry:string;exchange:string;epsEstimate:number|null;epsActual:number|null;revenueEstimate:number|null;revenueActual:number|null;research?:Summary};
 export type Calendar={updatedAt:string;today:string;from:string;to:string;items:Event[];detailSymbols?:string[]};
 export type Point={date:string;close:number;volume:number|null};
 export type Report={date:string;actual:number|null;estimate:number|null;surprise:number|null;outcome:string;revenueActual:number|null;revenueEstimate:number|null;windowChange:number|null;fiveSessionChange:number|null};
@@ -29,9 +30,22 @@ export const sessionName=(s:string)=>s==='bmo'?'Before open':s==='amc'?'After cl
 const cache=new Map<string,Detail>();
 export async function getDetail(symbol:string):Promise<Detail>{
  if(cache.has(symbol))return cache.get(symbol)!;
- // Company research is generated centrally and deployed as a same-origin file.
- // Browsers and crawlers must never fan out into an expensive Cloud Function.
- try{const r=await fetch('/earnings-data/'+encodeURIComponent(symbol)+'.json',{signal:AbortSignal.timeout(25000)});if(r.ok){const d=await r.json();if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){cache.set(symbol,d);return d;}}}catch{}
+ // Prefer published files; a newer saved snapshot may not be in the manifest yet.
+ // cached=1 is read-only and never triggers provider requests or research generation.
+ const urls=[
+  '/earnings-data/'+encodeURIComponent(symbol)+'.json',
+  'https://us-central1-stocker-fcda2.cloudfunctions.net/earningsCalendar?symbol='+encodeURIComponent(symbol)+'&cached=1',
+ ];
+ for(const url of urls){
+  try{
+   const r=await fetch(url,{signal:AbortSignal.timeout(25000)});
+   if(!r.ok)continue;
+   const d=await r.json();
+   if(d.symbol===symbol&&Array.isArray(d.history)&&Array.isArray(d.prices)){
+    cache.set(symbol,d);return d;
+   }
+  }catch{}
+ }
  throw new Error('Could not load this company’s research. Please try again.');
 }
 export function filterEvents(items:Event[],filters:{from:string;to:string;query:string;session:string;cap:string;sector:string;sort:string}){

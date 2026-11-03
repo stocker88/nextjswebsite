@@ -20,6 +20,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
 import Home from '../views/Home';
+import {legacyMembershipDestination} from '../lib/legacy-membership-link';
 //import './App.css';
 // import { initializeApp } from "firebase/app";
 import { useRouter } from 'next/router';
@@ -118,6 +119,16 @@ useEffect(() => {
 }, []);
 
     const router = useRouter(); // Initialize the SPA route monitor
+
+  useEffect(() => {
+    const redirectLegacyMembership = () => {
+      const destination = legacyMembershipDestination(window.location.hash, window.location.search);
+      if (destination) void router.replace(destination);
+    };
+    redirectLegacyMembership();
+    window.addEventListener('hashchange', redirectLegacyMembership);
+    return () => window.removeEventListener('hashchange', redirectLegacyMembership);
+  }, [router]);
 
   // Set up isolated reference containers for your page layout zones
   const topWidgetRef = useRef<HTMLDivElement>(null);

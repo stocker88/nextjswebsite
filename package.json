@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run sync:insider-news && npm run sync:smart-money && npm run sync:stock-valuations && npm run sync:market-briefings && npm run sync:mover-research && npm run sync:fear-greed && npm run sync:research && npm run sync:earnings && npm run sync:stock-research && npm run generate:sitemap && npm run sync:market-overview",
+    "prebuild": "npm run sync:insider-news && npm run sync:smart-money && npm run sync:stock-valuations && npm run sync:market-briefings && npm run sync:mover-research && npm run sync:fear-greed && npm run sync:research && npm run sync:earnings && npm run sync:stock-research && npm run generate:sitemap && npm run sync:market-overview && npm run render:earnings-social",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
@@ -28,9 +28,10 @@
     "sync:stock-valuations": "node scripts/sync-stock-valuations.cjs",
     "sync:insider-news": "node scripts/sync-insider-news.cjs",
     "test:content-access": "node scripts/content-access-check.cjs && node scripts/member-content-cache-check.cjs && node scripts/content-click-check.cjs && node scripts/site-auth-check.cjs && node scripts/profile-onboarding-check.cjs && node scripts/desktop-access-check.cjs",
-    "test:profile-onboarding": "node scripts/profile-onboarding-check.cjs",
+    "test:profile-onboarding": "node scripts/profile-onboarding-check.cjs && node scripts/username-suggestions-check.cjs",
     "test:desktop-access": "node scripts/desktop-access-check.cjs",
-    "sync:learning": "python3 scripts/sync-learning.py"
+    "sync:learning": "python3 scripts/sync-learning.py",
+    "render:earnings-social": "node scripts/render-earnings-social.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -61,6 +62,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "0.1.80",
     "@resvg/resvg-js": "2.6.2",
     "@types/node": "^18.0.3",
     "@types/react": "19.3.0",

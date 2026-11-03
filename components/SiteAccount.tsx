@@ -1,3 +1,4 @@
+import {linkWebsiteAcquisition} from '../lib/acquisition';
 import {bandReadUrl} from '../lib/band-access';
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import {contentClickDestination} from '../lib/content-access';
@@ -49,6 +50,25 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   return()=>{active=false;stop?.()};
  },[]);
  const profileReady=!!state.user&&profileReadyUid===state.user.uid;
+ // Only a confirmed device block clears identity; background checks and
+ // temporary connection errors must not replace the cached profile.
+ useEffect(()=>{if(deviceState==='limit')rememberSiteAccount(null)},[deviceState]);
+ useEffect(()=>{
+  const uid=state.user?.uid;if(!uid)return;
+  let cancelled=false;
+  let lastAttempt=0,attempts=0,timer:ReturnType<typeof setTimeout>|undefined;
+  const link=async()=>{
+   if(cancelled||Date.now()-lastAttempt<5000)return;
+   lastAttempt=Date.now();attempts++;
+   try{await linkWebsiteAcquisition(uid)}catch{
+    // Two bounded retries, then only a focus/online event. No permanent poll.
+    if(!cancelled&&attempts<3)timer=setTimeout(()=>void link(),attempts*10000);
+   }
+  };
+  void link();
+  const focus=()=>{if(!cancelled)void link()};window.addEventListener('focus',focus);window.addEventListener('online',focus);
+  return()=>{cancelled=true;clearTimeout(timer);window.removeEventListener('focus',focus);window.removeEventListener('online',focus)};
+ },[state.user?.uid]);
  const handleProfileReady=useCallback((uid:string,ready:boolean)=>setProfileReadyUid(current=>ready?uid:current===uid?null:current),[]);
  useEffect(()=>{
   const user=state.user;
