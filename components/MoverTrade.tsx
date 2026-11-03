@@ -6,12 +6,12 @@ import type {OptionResultPreviewData} from '../lib/option-results';
 import OptionResultPayoff from './OptionResultPayoff';
 import {AccountLink} from './SiteAccount';
 import styles from '../styles/MoverContext.module.css';
-export default function MoverTrade({symbol,compact=false}:{symbol:string;compact?:boolean}){
+export default function MoverTrade({symbol,compact=false,optionType,sessionDate}:{symbol:string;compact?:boolean;optionType?:'call'|'put';sessionDate?:string}){
  const [now,setNow]=useState<number|null>(null),[open,setOpen]=useState(false),[result,setResult]=useState<OptionResultPreviewData|null>(null);
  const [position,setPosition]=useState<{left:number;top:number}|null>(null),[failed,setFailed]=useState(false);
  const trigger=useRef<HTMLButtonElement>(null),panel=useRef<HTMLDivElement>(null),id=useId();
  useEffect(()=>{setNow(Date.now());const timer=window.setInterval(()=>setNow(Date.now()),60000);return()=>window.clearInterval(timer);},[]);
- const trade=now===null?undefined:findMoverTrade(saved as Trade[],symbol,now);
+ const trade=now===null?undefined:findMoverTrade(saved as Trade[],symbol,now,{optionType,sessionDate});
  useEffect(()=>{setOpen(false);setResult(null);setFailed(false);},[trade?.postId]);
  useEffect(()=>{
   if(!open||!trade)return;

@@ -6,7 +6,7 @@ import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
 import {availableUsernameSuggestions,resolveSignupUsername,completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationCode,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
 import TrustpilotWidget from './TrustpilotWidget';
-import {trackSignupProgress,signupErrorCode} from '../lib/signup-progress';
+import {trackSignupProgress,signupErrorCode,observeSignupStep} from '../lib/signup-progress';
 import {linkWebsiteAcquisition,sourceOptions} from '../lib/acquisition';
 import s from '../styles/ProfileOnboarding.module.css';
 import OnboardingQuestion from './OnboardingQuestion';
@@ -74,14 +74,11 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const [usernameCorrection,setUsernameCorrection]=useState('');
  const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
  useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
- const chooseSource=(value:string)=>{setHeardFrom(value);if(value)void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})};
+ const chooseSource=(value:string)=>{setHeardFrom(value);if(value){trackSignupProgress('source','success');void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})}};
  const photoPreview=useMemo(()=>photoFile?URL.createObjectURL(photoFile):user.photoURL||'',[photoFile,user.photoURL]);
  useEffect(()=>{
   const name=['profile','question_1','question_2','question_3','results'][step];
-  trackSignupProgress(name);
-  const hidden=()=>{if(document.visibilityState==='hidden')trackSignupProgress(name,'hidden')};
-  document.addEventListener('visibilitychange',hidden);
-  return()=>document.removeEventListener('visibilitychange',hidden);
+  return observeSignupStep(name);
  },[step,user.uid]);
  useEffect(()=>()=>{if(photoFile&&photoPreview)URL.revokeObjectURL(photoPreview)},[photoFile,photoPreview]);
  useEffect(()=>{
@@ -98,8 +95,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   const file=event.target.files?.[0]||null;
   setError('');
   if(!file)return;
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){setError('Choose a JPG, PNG or WebP image.');event.target.value='';return}
-  if(file.size>5*1024*1024){setError('Choose an image smaller than 5 MB.');event.target.value='';return}
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){trackSignupProgress('profile','error','photo_type');setError('Choose a JPG, PNG or WebP image.');event.target.value='';return}
+  if(file.size>5*1024*1024){trackSignupProgress('profile','error','photo_size');setError('Choose an image smaller than 5 MB.');event.target.value='';return}
   setPhotoFile(file);
  };
  const continueProfile=async()=>{
@@ -123,7 +120,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   try{const resolved=await resolveSignupUsername(userName,user.uid);if(latestUsername.current!==requestKey)return;setUserName(resolved);setAvailability('available');setUsernameCorrection(resolved!==userName?`Your username is ${resolved}. You can change it later in your profile.`:'');trackSignupProgress('profile','success');setStep(1)}
   catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
  };
- const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
+ const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
@@ -147,7 +144,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
      <input type="file" accept="image/jpeg,image/png,image/webp" onChange={choosePhoto}/>
     </label>
     <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onChange={event=>{setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
-    <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'Continue will choose a similar available username.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
+    <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
     {usernameCorrection&&<p className={s.fieldSuccess} role="status">{usernameCorrection}</p>}
     <UsernameSuggestions value={userName} uid={user.uid} enabled={!!validation||availability==='taken'} onSelect={name=>{setUserName(name);setUsernameCorrection('');setAvailability('checking');setError('')}}/>
     {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
@@ -193,7 +190,8 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  const cacheKey=`stbn.profileReady.v1:${user.uid}`;
  const [cached]=useState(()=>{try{return typeof window!=='undefined'&&sessionStorage.getItem(cacheKey)==='1'}catch{return false}});
  const [status,setStatus]=useState<'checking'|'required'|'complete'|'error'>(cached?'complete':'checking'),[attempt,setAttempt]=useState(0);
- useEffect(()=>{if(status==='error')trackSignupProgress('profile_check','error')},[status]);
+ useEffect(()=>{trackSignupProgress('profile_check',status==='checking'?'attempt':status==='error'?'error':'success')},[status]);
+ useEffect(()=>{if(status==='checking')return observeSignupStep('profile_check')},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
  if(status==='complete')return <>{children}</>;
  if(status==='required')return <ProfileOnboarding user={user} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);try{await router.replace('/membership/?from=onboarding')}catch{window.location.assign('/membership/?from=onboarding')}setStatus('complete')}}/>;

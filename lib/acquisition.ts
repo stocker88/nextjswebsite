@@ -20,6 +20,16 @@ let previousKey = '';
 let originalReferrer: string | null = null;
 let savedCampaign: Campaign = {};
 const random = (bytes:number) => Array.from(crypto.getRandomValues(new Uint8Array(bytes))).map(n=>n.toString(16).padStart(2,'0')).join('');
+// Anonymous sign-in attempts use the existing token-protected visit endpoint.
+export function recordSignupAttempt(signupEvent:unknown){
+ try{
+  const data={...payload(),signupEvent};
+  const send=(retry=0)=>void fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true})
+   .then(response=>{if(response.status>=500||response.status===429)throw Error('Retry');})
+   .catch(()=>{if(retry<2)setTimeout(()=>send(retry+1),[1000,5000][retry])});
+  send();
+ }catch{/* Never block opening the sign-in popup. */}
+}
 async function saveVisit(data:unknown){
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
   try{const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:controller.signal});if(!response.ok)throw new Error('Visit capture unavailable');return response;}finally{clearTimeout(timer)}

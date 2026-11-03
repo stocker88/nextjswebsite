@@ -22,7 +22,7 @@ async function run({desktop=false,user=null,ready=true,persistedUser=null}={}){
  const {SiteAccountProvider}=load('components/SiteAccount.tsx',{
   react,'react/jsx-runtime':require('react/jsx-runtime'),'next/router':{useRouter:()=>({push:value=>pushed.push(value)})},
   '../lib/content-access':content,'../lib/site-auth':{...routes,getSiteAuth:async()=>({authStateReady:async()=>{},currentUser:persistedUser})},
-  '../lib/band-access':bandAccess,'../lib/acquisition':{linkWebsiteAcquisition:()=>Promise.resolve()},
+  '../lib/signup-progress':{activateSignupTracking:()=>{}},'../lib/band-access':bandAccess,'../lib/acquisition':{linkWebsiteAcquisition:async()=>({saved:true})},
   '../lib/site-account-hint':{},'../lib/membership-status':{preloadMembershipStatus:()=>Promise.resolve(null)},'./ProfileOnboarding':()=>null,
   '../lib/desktop-access':load('lib/desktop-access.ts'),'../lib/device-access':{isDesktopDevice:()=>desktop,isAppDestination:()=>false},
   './AccountDevices':{},'./DeviceCapacityNotice':{},'../lib/account-devices':{},'../styles/AccountLogin.module.css':{}

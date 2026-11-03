@@ -18,5 +18,6 @@ jobs:
       - run: node scripts/account-linking-check.cjs
       - run: yarn test:seo
       - run: node scripts/macro-check.cjs
+      - run: node scripts/options-check.cjs
       - run: yarn build:pages
       - run: node scripts/github-pages/verify.cjs

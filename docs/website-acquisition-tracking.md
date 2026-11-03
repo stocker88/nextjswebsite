@@ -49,4 +49,3 @@ Read-only daily audit: `node scripts/account-origins-report.js YYYY-MM-DD`
 in the backend functions directory (Dubai day). Its denominator is Firebase
 Auth account creation, including incomplete profiles. Add `--accounts` only
 when individual UID/username details are needed; the default output is aggregate.
-

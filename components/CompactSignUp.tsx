@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import {useRouter} from 'next/router';
 import {DESKTOP_ACCESS_PATH} from '../lib/desktop-access';
 import {accountLoginUrl} from '../lib/site-auth';
-import {signInSite,type SiteProvider} from '../lib/site-sign-in';
+import {signInSite,prepareSiteSignIn,type SiteProvider} from '../lib/site-sign-in';
 
 type Props={placement?:'header'|'hero';onComplete?:()=>void};
 
 export default function CompactSignUp({placement='hero',onComplete}:Props){
  const router=useRouter();
+ useEffect(()=>{void prepareSiteSignIn().catch(()=>{})},[]);
  const [busy,setBusy]=useState<SiteProvider|null>(null);
  const begin=async(provider:SiteProvider)=>{
   if(busy)return;

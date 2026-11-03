@@ -7,10 +7,16 @@
           "TFLR7J57P2.com.newcompany.stocker"
         ],
         "components": [
-          {
-            "/": "/*",
-            "comment": "Open StocksToBuyNow links"
-          }
+          { "/": "/insight_details_page", "comment": "Explicit shared app post" },
+          { "/": "/insight_details_page/", "comment": "Explicit shared app post" },
+          { "/": "/stock_page", "comment": "Explicit shared app stock" },
+          { "/": "/stock_page/", "comment": "Explicit shared app stock" },
+          { "/": "/s", "comment": "Explicit short app share link" },
+          { "/": "/s/", "comment": "Explicit short app share link" },
+          { "/": "/invite_code_path", "comment": "App invitation" },
+          { "/": "/invite_code_path/", "comment": "App invitation" },
+          { "/": "/userIdPassed", "comment": "Explicit website-to-app account handoff" },
+          { "/": "/userIdPassed/", "comment": "Explicit website-to-app account handoff" }
         ]
       }
     ]

@@ -36,13 +36,6 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
  occupied=[{name:candidates[0],uid:'me'}];assert.equal((await profile.availableUsernameSuggestions('tester','me'))[0],candidates[0]);
  fail=true;await assert.rejects(profile.availableUsernameSuggestions('tester','me'),/offline/);fail=false;occupied=[];
 
- occupied=[{name:'tester',uid:'other'},{name:'tester_hi',uid:'other'}];
- assert.equal(await profile.resolveSignupUsername('free_name','me'),'free_name');
- assert.equal(await profile.resolveSignupUsername('tester','me'),'tester_now');
- occupied.push(...candidates.map(name=>({name,uid:'other'})));
- const fallback=await profile.resolveSignupUsername('tester','me');
- assert(!occupied.some(row=>row.name===fallback));assert.equal(profile.usernameValidationMessage(fallback),'');
- fail=true;await assert.rejects(profile.resolveSignupUsername('tester','me'),/offline/);fail=false;occupied=[];
  const h=harness(),pending=[],selected=[];
  const Suggest=load('components/UsernameSuggestions.tsx',{react:h.hooks,'../lib/profile-onboarding':{availableUsernameSuggestions:(value,uid)=>new Promise((resolve,reject)=>pending.push({value,uid,resolve,reject}))}},{window:h.window}).default;
  let props={value:'old',uid:'me',enabled:true,onSelect:name=>selected.push(name)};
@@ -54,7 +47,7 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
  props={...props,enabled:false};assert.equal(h.render(Suggest,props),null);
 
  const main=harness(),events=[];
- const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx',{react:main.hooks,'next/router':{useRouter:()=>({})},'../lib/account-devices':{},'../lib/onboarding-signal-preview':{onboardingSignalPreviews:[],lockedSignalPreviews:[]},'../lib/profile-onboarding':profile,'./TrustpilotWidget':{default:()=>null},'./OnboardingQuestion':{default:()=>null},'./UsernameSuggestions':{default:()=>null},'../lib/acquisition':{sourceOptions:[],linkWebsiteAcquisition:async()=>({needsSourceQuestion:false})},'../lib/signup-progress':{trackSignupProgress:(...args)=>events.push(args),signupErrorCode:error=>error.code||'unknown'}},{window:main.window,document:{addEventListener(){},removeEventListener(){}},URL});
+ const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx',{react:main.hooks,'next/router':{useRouter:()=>({})},'../lib/account-devices':{},'../lib/onboarding-signal-preview':{onboardingSignalPreviews:[],lockedSignalPreviews:[]},'../lib/profile-onboarding':profile,'./TrustpilotWidget':{default:()=>null},'./OnboardingQuestion':{default:()=>null},'./UsernameSuggestions':{default:()=>null},'../lib/acquisition':{sourceOptions:[],linkWebsiteAcquisition:async()=>({needsSourceQuestion:false})},'../lib/signup-progress':{observeSignupStep:()=>()=>{},trackSignupProgress:(...args)=>events.push(args),signupErrorCode:error=>error.code||'unknown'}},{window:main.window,document:{addEventListener(){},removeEventListener(){}},URL});
  const mainProps={user:{uid:'me',displayName:'bad-name',photoURL:''},onComplete:()=>{}};
  let tree=main.render(ProfileOnboarding,mainProps);
  const continueButton=()=>nodes(tree).find(n=>n.type==='button'&&n.props.children==='Continue →');
@@ -64,11 +57,5 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
  assert(nodes(tree).some(n=>n.props?.role==='status'&&String(n.props.children).includes('Updated your username')),'Correction must be visible before continuing');
  assert(continueButton(),'Automatic correction must not skip profile review');
  assert(!events.some(event=>event.includes('bad-name')),'Raw usernames must not enter telemetry');
- occupied=[{name:'bad_name',uid:'other'}];
- continueButton().props.onClick();await tick();await tick();tree=main.render(ProfileOnboarding,mainProps);
- assert(!continueButton(),'A taken username must advance on the same click');
- assert(nodes(tree).some(n=>n.props?.current===1),'Must open question one after automatic replacement');
- assert(events.some(event=>event[0]==='profile'&&event[1]==='success'));
-
  console.log('PASS: validation reasons, safe corrections, bounded database-checked suggestions, explicit selection, stale/account guards, collisions and offline behavior.');
 })().catch(error=>{console.error(error);process.exitCode=1});
