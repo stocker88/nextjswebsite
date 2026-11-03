@@ -1,4 +1,4 @@
-export type SignupEvent={eventId:string;step:string;action:string;errorCode:string;platform:'web';clientAt:number;sessionId:string;build:'web-funnel-v2';provider?:string;attemptId?:string;durationMs?:number;isNewUser?:boolean};
+export type SignupEvent={browserId?:string;eventId:string;step:string;action:string;errorCode:string;platform:'web';clientAt:number;sessionId:string;build:'web-funnel-v2';provider?:string;attemptId?:string;durationMs?:number;isNewUser?:boolean};
 // Account-scoped, bounded, at-least-once delivery. Server IDs deduplicate retries.
 export class SignupProgressQueue {
  private events:SignupEvent[];private busy=false;

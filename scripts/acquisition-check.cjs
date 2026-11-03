@@ -6,7 +6,7 @@ const calls=[],storage=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,s
 const clientExports={};const location={origin:'https://www.stockstobuynow.ai',pathname:'/',search:'?utm_source=sharedFromAppUser&utm_campaign=postShares&utm_content=creator-42&utm_term=options'};
 const auth={currentUser:{uid:'alice'},app:{}};const accountCalls=[];
 let failNext=false;
-const modules={'./site-auth':{getSiteAuth:async()=>auth},'firebase/functions':{getFunctions:()=>({}),httpsCallable:()=>async data=>{accountCalls.push(data);if(failNext){failNext=false;throw Error('offline')}return {data:{saved:true,sourceKnown:true,needsSourceQuestion:false,status:'recorded'}}}}};
+const modules={'./browser-identity':{browserIdentity:()=> 'd'.repeat(32)},'./site-auth':{getSiteAuth:async()=>auth},'firebase/functions':{getFunctions:()=>({}),httpsCallable:()=>async data=>{accountCalls.push(data);if(failNext){failNext=false;throw Error('offline')}return {data:{saved:true,sourceKnown:true,needsSourceQuestion:false,status:'recorded'}}}}};
 const context={process:{env:{}},exports:clientExports,require:name=>modules[name],window:{},location,crypto:require('crypto').webcrypto,URL,URLSearchParams,Uint8Array,AbortController,setTimeout,clearTimeout,localStorage:storage(),sessionStorage:storage(),document:{referrer:'https://l.instagram.com/'},fetch:async(url,options)=>{calls.push(JSON.parse(options.body));return {ok:true}}};
 vm.runInNewContext(source,context);
 clientExports.captureAcquisition();location.search='';clientExports.captureAcquisition({},'google');
