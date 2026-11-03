@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {useRouter} from 'next/router';
 import InvestorPortfolioPicture from './InvestorPortfolioPicture';
 import {embedPortfolioImages} from '../lib/portfolio-image-assets';
-import {portfolioDataCsv,portfolioDataFilename} from '../lib/portfolio-data-export';
+import {portfolioDataCsv,portfolioDataFilename,portfolioDataText} from '../lib/portfolio-data-export';
 import {TrackerProfile,TrackerDetail,trackerRequest,trackerRows,trackerMoney,trackerDate,safeFiling} from '../lib/investor-tracker';
 import styles from '../styles/InvestorTracker.module.css';
 
@@ -22,6 +22,7 @@ function Performance({data}:{data:TrackerDetail}){
 export default function InvestorTracker({uid}:{uid:string}){
  const router=useRouter(),[profiles,setProfiles]=useState<TrackerProfile[]>([]),[category,setCategory]=useState('all'),[query,setQuery]=useState(''),[data,setData]=useState<TrackerDetail|null>(null),[period,setPeriod]=useState(''),[limit,setLimit]=useState(20),[loading,setLoading]=useState(false),[error,setError]=useState(''),[followBusy,setFollowBusy]=useState(false),[preview,setPreview]=useState(false),[image,setImage]=useState<{url:string;file:File}|null>(null),[imageError,setImageError]=useState('');
  const requestId=useRef(0),mounted=useRef(true),dialog=useRef<HTMLDialogElement>(null),art=useRef<HTMLDivElement>(null),detail=useRef<HTMLElement>(null);
+ const [copyStatus,setCopyStatus]=useState<'idle'|'copied'|'manual'>('idle');
  async function loadList(){setError('');try{const r=await trackerRequest<{profiles:TrackerProfile[]}>('list');if(mounted.current)setProfiles(r.profiles)}catch{if(mounted.current)setError('Investor profiles could not load. Please retry.')}}
  useEffect(()=>{mounted.current=true;void loadList();return()=>{mounted.current=false;requestId.current++}},[]);
  async function open(profile:TrackerProfile,share=false){
@@ -31,12 +32,24 @@ export default function InvestorTracker({uid}:{uid:string}){
   finally{if(mounted.current&&sequence===requestId.current)setLoading(false)}
  }
  const rows=data?trackerRows(data,period):[],history=data?.history||[],periods=history.length?history.map(h=>h.period):Array.from(new Set(data?.rows.map(r=>r.filedDate?.slice(0,7)).filter((p):p is string=>!!p)||[]));
+ const copyText=data?portfolioDataText(data,rows,period||history[0]?.period||''):'';
+ useEffect(()=>{setCopyStatus('idle')},[copyText]);
+ async function copyData(){
+  if(!rows.length)return;
+  try{await navigator.clipboard.writeText(copyText);if(mounted.current)setCopyStatus('copied')}
+  catch{if(mounted.current)setCopyStatus('manual')}
+ }
+ const copyFeedback=<>{copyStatus==='copied'&&<p role="status">Portfolio data copied.</p>}{copyStatus==='manual'&&<label>Clipboard access is unavailable. Select and copy the formatted text below.<textarea readOnly value={copyText} rows={8} style={{display:'block',width:'100%',marginTop:8}} onFocus={e=>e.currentTarget.select()} aria-label="Formatted portfolio data"/></label>}</>;
  async function follow(){if(!data)return;const selected=data;setFollowBusy(true);setError('');try{const result=await trackerRequest<{following:boolean}>(selected.following?'unfollow':'follow',selected.id);if(mounted.current)setData(current=>current?.id===selected.id?{...current,following:result.following}:current)}catch{if(mounted.current)setError('Could not update filing alerts. Please try again.')}finally{if(mounted.current)setFollowBusy(false)}}
  useEffect(()=>{
-  if(!preview)return;const trigger=document.activeElement as HTMLElement|null;dialog.current?.showModal();setImageError('');let active=true,url='';
-  async function generate(){try{const svg=art.current?.querySelector('svg');if(!svg)throw Error();const source=new XMLSerializer().serializeToString(await embedPortfolioImages(svg)),img=new Image();await new Promise<void>((resolve,reject)=>{img.onload=()=>resolve();img.onerror=reject;img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(source)});const canvas=document.createElement('canvas');canvas.width=1440;canvas.height=1640;const context=canvas.getContext('2d');if(!context)throw Error();context.drawImage(img,0,0,1440,1640);const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error()),'image/png'));if(!active)return;url=URL.createObjectURL(blob);setImage({url,file:new File([blob],`investor-tracker-${data?.id}-${period||history[0]?.period||'disclosures'}.png`,{type:'image/png'})});}catch{if(active)setImageError('Image export is unavailable in this browser. Please try another browser.')}}
-  void generate();return()=>{active=false;if(url)URL.revokeObjectURL(url);setImage(null);dialog.current?.close();trigger?.focus()};
+  if(!preview)return;const trigger=document.activeElement as HTMLElement|null;dialog.current?.showModal();
+  return()=>{dialog.current?.close();trigger?.focus()};
  },[preview]);
+ useEffect(()=>{
+  setImage(null);setImageError('');if(!data||!rows.length)return;let active=true,url='';
+  async function generate(){try{const svg=art.current?.querySelector('svg');if(!svg)throw Error();const source=new XMLSerializer().serializeToString(await embedPortfolioImages(svg)),img=new Image();await new Promise<void>((resolve,reject)=>{img.onload=()=>resolve();img.onerror=reject;img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(source)});const canvas=document.createElement('canvas');canvas.width=1440;canvas.height=1640;const context=canvas.getContext('2d');if(!context)throw Error();context.drawImage(img,0,0,1440,1640);const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error()),'image/png'));if(!active)return;url=URL.createObjectURL(blob);setImage({url,file:new File([blob],`investor-tracker-${data?.id}-${period||history[0]?.period||'disclosures'}.png`,{type:'image/png'})});}catch{if(active)setImageError('Image export is unavailable in this browser. Please try another browser.')}}
+  void generate();return()=>{active=false;if(url)URL.revokeObjectURL(url)};
+ },[data,period]);
  function exportData(){
   if(!data||!rows.length)return;
   const selectedPeriod=period||history[0]?.period||'';
@@ -52,14 +65,20 @@ export default function InvestorTracker({uid}:{uid:string}){
   <div className={styles.profiles}>{profiles.filter(p=>(category==='all'||p.kind===category)&&p.name.toLowerCase().includes(query.toLowerCase())).map(p=><article key={p.id}><button className={styles.profile} onClick={()=>open(p)} disabled={loading}><Avatar profile={p}/><span><strong>{p.name}</strong><small>{p.kind==='funds'?'Holdings · History · Model performance':'Reported transactions · Stock model'}</small></span><span aria-hidden="true">→</span></button><button className={styles.share} aria-label={`Preview and share ${p.name}`} onClick={()=>open(p,true)} disabled={loading}>↥<span>Share</span></button></article>)}</div>
   {profiles.length>0&&!profiles.some(p=>(category==='all'||p.kind===category)&&p.name.toLowerCase().includes(query.toLowerCase()))&&<p>No investors match this search.</p>}
   {loading&&<p role="status">Loading saved filings…</p>}
-  {data&&<section className={styles.detail} ref={detail}><header><h2>{data.name}</h2><div className={styles.actions}><button onClick={()=>setPreview(true)} disabled={!rows.length}>Preview / Share / Save image ↥</button><button onClick={exportData} disabled={!rows.length}>Export data (CSV) ↓</button><button onClick={follow} disabled={followBusy}>{data.following?'Following · Turn off alerts':'Follow new disclosures'}</button></div><p>Alerts use your app notification settings and follow published disclosures, not live trades.</p>{data.stale&&<p>Showing saved filings while the source refreshes.</p>}</header>
+  {data&&<section className={styles.detail} ref={detail}><header><h2>{data.name}</h2>{data.stale&&<p>Showing saved filings while the source refreshes.</p>}</header>
    <Performance data={data}/>
    <div className={styles.controls}><h3>{history.length?'Portfolio history':'Reported transactions'}</h3>{periods.length>0&&<label>{history.length?'Quarter ending':'Filed in'}<select value={period||(history.length?periods[0]:'')} onChange={e=>{setPeriod(e.target.value);setLimit(20)}}>{!history.length&&<option value="">All available disclosures</option>}{periods.map(p=><option key={p} value={p}>{p}</option>)}</select></label>}</div><p>{data.disclosure}</p>
-   {rows.length>0&&<div className={styles.picture}><InvestorPortfolioPicture portrait={portraitSource(data)} data={data} rows={rows} period={period||history[0]?.period||''}/></div>}
+   <div className={styles.pictureTools}>
+    <div className={styles.actions} role="group" aria-label="Portfolio picture actions"><button onClick={share} disabled={!image}>Share image ↥</button>{image?<a href={image.url} download={image.file.name}>Save image ↓</a>:<button disabled>Save image ↓</button>}<button onClick={copyData} disabled={!rows.length}>{copyStatus==='copied'?'Copied ✓':'Copy data'}</button><button onClick={()=>setPreview(true)} disabled={!rows.length}>Preview image</button><button onClick={exportData} disabled={!rows.length}>Download CSV ↓</button><button onClick={follow} disabled={followBusy}>{data.following?'Following · Turn off alerts':'Follow new disclosures'}</button></div>
+    {!preview&&copyFeedback}
+    <p>Alerts use your app notification settings and follow published disclosures, not live trades.</p>
+    {rows.length>0&&!image&&!imageError&&<p role="status">Preparing PNG…</p>}{imageError&&<p role="alert">{imageError}</p>}
+   </div>
+   {rows.length>0&&<div className={styles.picture} ref={art}><InvestorPortfolioPicture portrait={portraitSource(data)} data={data} rows={rows} period={period||history[0]?.period||''}/></div>}
    <div className={styles.positions}>{rows.slice(0,limit).map((r,i)=><article key={r.id||i}><strong>{r.symbol}</strong><b>{history.length?(typeof r.value==='number'?trackerMoney(r.value):'Value unavailable'):r.amount||'Range unavailable'}</b><p>{r.company||r.securityType}</p><p>{history.length?`${typeof r.shares==='number'?r.shares.toLocaleString()+' shares':'Shares unavailable'}${typeof r.weight==='number'?' · '+r.weight.toFixed(1)+'%':''}`:`${r.rawAction||'Transaction'} · ${r.owner||'Owner unavailable'}`}</p><small>Filed {trackerDate(r.filedDate)}{r.eventDate?' · Trade '+trackerDate(r.eventDate):''}</small>{safeFiling(r.sourceUrl)&&<a href={safeFiling(r.sourceUrl)} target="_blank" rel="noopener noreferrer">Original filing ↗</a>}</article>)}</div>
    {!rows.length&&<p>No disclosures available for this period.</p>}{rows.length>limit&&<button onClick={()=>setLimit(v=>v+30)}>Show more · {rows.length-limit} remaining</button>}<p>Updated {trackerDate(data.updatedAt)} · Coverage is limited to available filings.</p>
   </section>}
   <details className={styles.credits}><summary>Portrait credits</summary><p>Photos cropped to circles. Source pages include credits and licenses. Bill Ackman: Senate Democrats, CC BY 2.0. David Tepper: Appaloosa Management, CC BY-SA 3.0.</p>{Object.entries(portraits).map(([id,path])=><a key={id} target="_blank" rel="noopener noreferrer" href={'https://commons.wikimedia.org/wiki/File:'+path.split('/').pop()}>{profiles.find(p=>p.id===id)?.name||id} ↗</a>)}</details>
-  {preview&&data&&<dialog ref={dialog} className={styles.dialog} aria-labelledby="tracker-image-title" onCancel={e=>{e.preventDefault();setPreview(false)}} onClick={e=>{if(e.target===e.currentTarget)setPreview(false)}}><header><h2 id="tracker-image-title">Portfolio picture</h2><button aria-label="Close preview" onClick={()=>setPreview(false)}>×</button></header><div ref={art}><InvestorPortfolioPicture portrait={portraitSource(data)} data={data} rows={rows} period={period||history[0]?.period||''}/></div>{imageError&&<p role="alert">{imageError}</p>}<footer><button onClick={exportData} disabled={!rows.length}>Export data (CSV) ↓</button><button onClick={share} disabled={!image}>Share image ↥</button>{image?<a href={image.url} download={image.file.name}>Save image ↓</a>:<span role="status">Preparing PNG…</span>}</footer></dialog>}
+  {preview&&data&&<dialog ref={dialog} className={styles.dialog} aria-labelledby="tracker-image-title" onCancel={e=>{e.preventDefault();setPreview(false)}} onClick={e=>{if(e.target===e.currentTarget)setPreview(false)}}><header><h2 id="tracker-image-title">Portfolio picture</h2><button aria-label="Close preview" onClick={()=>setPreview(false)}>×</button></header><div className={styles.actions} role="group" aria-label="Share or save portfolio picture"><button onClick={share} disabled={!image}>Share image ↥</button>{image?<a href={image.url} download={image.file.name}>Save image ↓</a>:<button disabled>Save image ↓</button>}<button onClick={copyData} disabled={!rows.length}>{copyStatus==='copied'?'Copied ✓':'Copy data'}</button></div>{copyFeedback}{!image&&!imageError&&<p role="status">Preparing PNG…</p>}{imageError&&<p role="alert">{imageError}</p>}<div><InvestorPortfolioPicture portrait={portraitSource(data)} data={data} rows={rows} period={period||history[0]?.period||''}/></div><footer><button onClick={exportData} disabled={!rows.length}>Download CSV ↓</button></footer></dialog>}
  </section>;
 }
