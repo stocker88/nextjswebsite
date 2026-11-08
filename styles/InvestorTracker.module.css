@@ -2,6 +2,7 @@
 @media(max-width:700px){.profiles,.positions{grid-template-columns:1fr}.profiles article{padding:12px}.profile strong{font-size:16px}.controls label{margin-left:0;width:100%}.tracker{padding:30px 0}.panel{padding:18px}.dialog{padding:12px}.avatar{width:44px;height:44px}.profiles .profile{gap:10px}}
 
 .pictureTools{max-width:680px;margin:24px auto 0}
+.profiles a.profile{color:#e1d6ff;text-decoration:none;font:inherit}
 .pictureTools .actions{margin:0 0 12px;gap:10px}
 .pictureTools>p{font-size:13px;margin:10px 0}
 .tracker .actions a,.tracker .actions button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 16px;border-radius:12px;border:1px solid #6b6084;background:#25233b;color:#ede3ff;font-size:14px;font-weight:600;line-height:1.4;text-align:center;text-decoration:none}

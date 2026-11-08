@@ -88,6 +88,7 @@ jobs:
           path: .cache/earnings
           key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: node scripts/github-pages/verify.cjs
+      - run: node scripts/public-investor-pages-check.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
