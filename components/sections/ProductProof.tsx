@@ -112,7 +112,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
 
         <p className="proof-disclaimer">
           Historical examples are shown for educational purposes only. Past
-          performance does not guarantee future results.
+          performance does not guarantee future results. Macro Driven Financial Headlines and Market Prediction Recaps manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).
         </p>
 
         <DesktopAppLink
@@ -164,7 +164,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         </div>
 
         <p className="proof-disclaimer">
-          These are professional investors past performance. Past performance does not guarantee future performance.
+          These are professional investors past performance. Past performance does not guarantee future performance. Macro Driven Financial Headlines and Market Prediction Recaps manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).
         </p>
       </section>}
 
