@@ -41,5 +41,5 @@ export default function MembershipPlans({onExplorePro,onExploreFree,verifiedInac
  <section className={styles.membershipTrust} aria-label="Independent Trustpilot reviews">
   <TrustpilotWidget templateId="53aa8912dec7e10d38f59f36" businessUnitId="670a2355c53c6130a02f3e50" height="124px"/>
  </section>
- <p className={styles.disclosure}>Research and educational tools. Investing involves risk; membership does not guarantee returns.</p>
+ <p className={styles.disclosure}>Research and educational tools. Investing involves risk; membership does not guarantee returns. Macro Driven Financial Headlines and macro recap predictions manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).</p>
  </section>}
