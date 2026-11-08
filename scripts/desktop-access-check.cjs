@@ -65,6 +65,7 @@ const {isDesktopDevice}=load('lib/device-access.ts');
 let nav={userAgent:'Mozilla Macintosh Chrome',platform:'MacIntel',maxTouchPoints:0};
 let imageUpdates=[];
 const Images=load('components/ResearchImages.tsx',{
+ '../lib/generated-image':load('lib/generated-image.ts'),
  react:{...React,useState:initial=>[initial,value=>imageUpdates.push(value)],useRef:initial=>({current:initial}),useEffect:()=>{}},
  'next/router':{useRouter:()=>({push:path=>navigations.push(path)})},'./SiteAccount':{useSiteAccount:()=>account},
  '../lib/site-auth':routes,'../lib/device-access':{isDesktopDevice},'../lib/desktop-access':access,
