@@ -12,7 +12,8 @@ function health(code:string){if(observedScreens>0&&!healthErrors.has(code)){heal
 function id(){return Array.from(crypto.getRandomValues(new Uint8Array(16)),v=>v.toString(16).padStart(2,'0')).join('')}
 function event(step:string,action:string,errorCode:string,extra:Extras={}):SignupEvent{
  if(!session){try{session=sessionStorage.getItem('stbn.signup.session.v2')||''}catch{}if(!/^[a-f0-9]{32}$/.test(session)){session=id();try{sessionStorage.setItem('stbn.signup.session.v2',session)}catch{}}}
- return {eventId:id(),browserId:browserIdentity(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',experience:'username-only-v1',deviceClass:/iPad|Tablet/i.test(navigator.userAgent)?'tablet':/Android|iPhone|Mobile/i.test(navigator.userAgent)?'mobile':'desktop',...extra};
+ const ua=typeof navigator==='undefined'?'':navigator.userAgent;
+ return {eventId:id(),browserId:browserIdentity(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',experience:'username-only-v1',deviceClass:!ua?'unknown':/iPad|Tablet/i.test(ua)?'tablet':/Android|iPhone|Mobile/i.test(ua)?'mobile':'desktop',...extra};
 }
 function queue(uid:string){
  if(!queues.has(uid)){
