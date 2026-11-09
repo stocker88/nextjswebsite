@@ -77,7 +77,7 @@ export function finishSignupAuthentication(attempt:SignupEvent|null,uid:string,i
   enqueue(uid,event('auth','success','',{provider:attempt.provider,attemptId:attempt.attemptId,isNewUser}));
   clearTimeout(handoff);
   enqueue(uid,event('profile_transition','attempt',''));
-  handoff=setTimeout(()=>{if(owner===uid)enqueue(uid,event('profile_transition','error','client/timeout'))},10000);
+  handoff=setTimeout(()=>{if(owner===uid&&!document.hidden)enqueue(uid,event('profile_transition','error','client/timeout'))},10000);
   void getSiteAuth().then(auth=>{if(auth.currentUser?.uid===uid){owner=uid;void flush()}}).catch(()=>{});
  }catch{}
 }

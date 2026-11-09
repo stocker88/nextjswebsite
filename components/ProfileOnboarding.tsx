@@ -174,7 +174,7 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  const [status,setStatus]=useState<'checking'|'required'|'complete'|'error'>(cached?'complete':'checking'),[attempt,setAttempt]=useState(0);
  useEffect(()=>{trackSignupProgress('profile_check',status==='checking'?'attempt':status==='error'?'error':'success')},[status]);
  useEffect(()=>{if(status==='checking')return observeSignupStep('profile_check')},[status,user.uid]);
- useEffect(()=>{if(status!=='checking')return;const timeout=setTimeout(()=>trackSignupProgress('profile_check','error','client/timeout'),10000);return()=>clearTimeout(timeout)},[status,user.uid]);
+ useEffect(()=>{if(status!=='checking')return;const timeout=setTimeout(()=>{if(!document.hidden)trackSignupProgress('profile_check','error','client/timeout')},10000);return()=>clearTimeout(timeout)},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
  if(status==='complete')return <>{children}</>;
  if(status==='required')return <ProfileOnboarding user={user} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);try{await router.replace('/membership/?from=onboarding')}catch{window.location.assign('/membership/?from=onboarding')}setStatus('complete')}}/>;
