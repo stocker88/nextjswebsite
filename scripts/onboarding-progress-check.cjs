@@ -9,14 +9,14 @@ function load(relative){
  const exports={};
  const code=ts.transpileModule(fs.readFileSync(path.join(root,relative),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX}}).outputText;
  const scopedRequire=name=>{
-  if(name==='react')return {...React,useState:value=>React.useState(hook++===0?step:value)};
+  if(name==='react')return {...React,useState:value=>{const index=hook++;return React.useState(index===0?step:index===3?{experience:'Beginner',interest:'Stocks',horizon:'Short-term'}:value)}};
   if(name.endsWith('.module.css'))return {default:styles};
   if(name==='next/router')return {useRouter:()=>({})};
   if(name.endsWith('/profile-onboarding'))return profile;
   if(name==='./OnboardingQuestion')return question;
   if(name==='./UsernameSuggestions')return suggestions;
   if(name==='./TrustpilotWidget')return {default:()=>null};
-  if(name.endsWith('/onboarding-signal-preview'))return {onboardingSignalPreviews:[],lockedSignalPreviews:[]};
+  if(name.endsWith('/onboarding-signal-preview'))return load('lib/onboarding-signal-preview.ts');
   if(name.endsWith('/acquisition'))return {sourceOptions:[]};
   if(/site-auth|site-account-hint|account-devices|signup-progress/.test(name))return {};
   return require(name);
@@ -41,7 +41,17 @@ for(step=0;step<=profile.onboardingQuestions.length+1;step++){
   const remaining=profile.onboardingQuestions.length-step;
   assert(html.includes(remaining===0?'Last question — your results are next.':`${remaining} more ${remaining===1?'question':'questions'} after this`));
  }else if(step===0){assert(html.includes('Then just 3 quick questions before your results.'));assert(html.includes('A profile picture is optional.'));}
- else {assert(html.includes('ALL 3 QUESTIONS COMPLETE'));}
+ else {
+  assert(html.includes('ALL 3 QUESTIONS COMPLETE'));
+  const previews=load('lib/onboarding-signal-preview.ts');
+  assert.equal((html.match(/Receive new signals now/g)||[]).length,1+previews.onboardingSignalPreviews.length+previews.lockedSignalPreviews.length,'Signal action must appear above previews and below every financial chart');
+  for(const card of html.match(/<article class="signalCard lockedSignalCard"[\s\S]*?<\/article>/g)||[]){
+   assert(card.indexOf('Receive new signals now')>card.indexOf('compactFinancial'),'Locked revenue charts must precede their signal action');
+  }
+  for(const card of html.match(/<article class="signalCard"[\s\S]*?<\/article>/g)||[]){
+   assert(card.indexOf('Receive new signals now')>card.indexOf('financialPanel'),'Keep the price and financial charts together before the Pro action');
+  }
+ }
  if(output){
   fs.mkdirSync(output,{recursive:true});
   fs.writeFileSync(path.join(output,`web-question-${step}.html`),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Onboarding preview</title><style>html,body{margin:0}*{box-sizing:border-box}${css}</style>${html}</html>`);

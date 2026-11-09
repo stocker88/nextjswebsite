@@ -122,6 +122,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  };
  const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
+  if(saving)return;
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
   try{await completeProfileOnboarding(user,{userName,photoFile,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
@@ -131,6 +132,10 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const question=step>=1&&step<=questionCount?onboardingQuestions[step-1]:null;
  const choice=recommendation(answers);
  const initials=(normalizeUsername(userName)||'A').slice(0,2).toUpperCase();
+ const proAction=<div className={s.proAction}>
+  <button className={s.primary} type="button" disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Receive new signals now →'}</button>
+  {error&&<p className={s.fieldError} role="alert">{error}</p>}
+ </div>;
 
  return <main className={s.page}>
   <div className={s.glow} aria-hidden="true"/>
@@ -154,6 +159,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
    {step===questionCount+1&&<div className={`${s.content} ${s.resultsContent}`}>
     <button className={s.back} type="button" onClick={()=>setStep(questionCount)}>← Back</button><p className={s.eyebrow}>ALL {questionCount} QUESTIONS COMPLETE · YOUR RESULTS</p><h1 id="profile-onboarding-title">Your first signals are ready.</h1><p className={s.lead}>{choice.title} {choice.text}</p>
     <div className={s.summary}><span>{answers.experience}</span><span>{answers.interest}</span><span>{answers.horizon}</span></div>
+    {proAction}
     <div className={s.signalHeading}><div><strong>AI past predictions</strong><span>Real signals previously sent to members</span></div><span>PREVIEW</span></div>
     <div className={s.signalList}>
      {onboardingSignalPreviews.map((signal,index)=><article className={s.signalCard} key={signal.symbol} style={{animationDelay:`${index*120}ms`}}>
@@ -162,6 +168,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
       <PriceChart symbol={signal.symbol} points={signal.price} signalDate={signal.signalDate} signalLabel={signal.signalLabel}/>
       <div className={s.signalMeta}><span>AI BUY SIGNAL</span><span>Price through {labelDate(signal.price[signal.price.length-1][0])}</span></div>
       <FinancialChart title={signal.financial.title} unit={signal.financial.unit} points={signal.financial.points}/>
+      {proAction}
      </article>)}
      {lockedSignalPreviews.map((signal,index)=><article className={`${s.signalCard} ${s.lockedSignalCard}`} key={signal.symbol} style={{animationDelay:`${Math.min(index+2,8)*70}ms`}} aria-label="Additional member result: price and company are locked, financial trend is visible">
       <div className={s.lockedPriceWrap} aria-hidden="true">
@@ -170,6 +177,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
       </div>
       <div className={s.lockLabel}><span>🔒</span><strong>Company and price signal locked</strong></div>
       <FinancialChart title={signal.financial.title} unit={signal.financial.unit} points={signal.financial.points} compact/>
+      {proAction}
      </article>)}
      <div className={s.moreSignals}><span>🔒</span><div><strong>Unlock every price signal</strong><small>All financial trends are visible. Start your trial to reveal each company and its performance.</small></div></div>
     </div>
