@@ -1,6 +1,6 @@
-import type {ChangeEvent,ReactNode} from 'react';
+import type {ReactNode} from 'react';
 import type {User} from 'firebase/auth';
-import {useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import {useRouter} from 'next/router';
 import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
@@ -68,19 +68,19 @@ function FinancialChart({title,unit,points,compact=false}:{title:string;unit:'re
 
 export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>void|Promise<void>}){
  const [step,setStep]=useState(0),[userName,setUserName]=useState(()=>normalizeUsername(user.displayName||''));
- const [photoFile,setPhotoFile]=useState<File|null>(null),[answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
+ const [answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
  const [availability,setAvailability]=useState<UsernameAvailability>('idle'),[error,setError]=useState(''),[saving,setSaving]=useState(false);
  const [needsSource,setNeedsSource]=useState(false),[heardFrom,setHeardFrom]=useState('');
  const [usernameCorrection,setUsernameCorrection]=useState('');
  const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
+ const interactions=useRef(new Set<string>());
+ const trackInteraction=(name:string)=>{if(!interactions.current.has(name)){interactions.current.add(name);trackSignupProgress(name)}};
  useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
  const chooseSource=(value:string)=>{setHeardFrom(value);if(value){trackSignupProgress('source','success');void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})}};
- const photoPreview=useMemo(()=>photoFile?URL.createObjectURL(photoFile):user.photoURL||'',[photoFile,user.photoURL]);
  useEffect(()=>{
   const name=['profile','question_1','question_2','question_3','results'][step];
   return observeSignupStep(name);
  },[step,user.uid]);
- useEffect(()=>()=>{if(photoFile&&photoPreview)URL.revokeObjectURL(photoPreview)},[photoFile,photoPreview]);
  useEffect(()=>{
   const validation=usernameValidationMessage(userName);
   if(validation){setAvailability('idle');return}
@@ -91,33 +91,13 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  },[userName,user.uid]);
 
  const validation=usernameValidationMessage(userName);
- const choosePhoto=(event:ChangeEvent<HTMLInputElement>)=>{
-  const file=event.target.files?.[0]||null;
-  setError('');
-  if(!file)return;
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){trackSignupProgress('profile','error','photo_type');setError('Choose a JPG, PNG or WebP image.');event.target.value='';return}
-  if(file.size>5*1024*1024){trackSignupProgress('profile','error','photo_size');setError('Choose an image smaller than 5 MB.');event.target.value='';return}
-  setPhotoFile(file);
- };
  const continueProfile=async()=>{
+  if(availability==='checking')return;
   const requestKey=latestUsername.current;
   trackSignupProgress('profile','attempt');
   setError('');
-  if(validation){
-   trackSignupProgress('profile','error',usernameValidationCode(userName));
-   setError(validation);
-   if(!userName.trim())return;
-   setAvailability('checking');
-   try{
-    const [corrected]=await availableUsernameSuggestions(userName,user.uid);
-    if(latestUsername.current!==requestKey)return;
-    if(corrected){setUserName(corrected);setUsernameCorrection(`Updated your username to ${corrected}. You can edit it, or press Continue to use it.`);setError('');setAvailability('available')}
-    else {setAvailability('idle');setError(`${validation} Try adding a short word to your username.`)}
-   }catch{if(latestUsername.current===requestKey){setAvailability('error');setError(`${validation} We couldn’t verify a corrected name. Please try again.`)}}
-   return;
-  }
   setAvailability('checking');
-  try{const resolved=await resolveSignupUsername(userName,user.uid);if(latestUsername.current!==requestKey)return;setUserName(resolved);setAvailability('available');setUsernameCorrection(resolved!==userName?`Your username is ${resolved}. You can change it later in your profile.`:'');trackSignupProgress('profile','success');setStep(1)}
+  try{const resolved=await resolveSignupUsername(userName,user.uid);if(latestUsername.current!==requestKey)return;if(resolved!==userName)trackSignupProgress('username_corrected','success');setUserName(resolved);setAvailability('available');setUsernameCorrection(resolved!==userName?`Your username is ${resolved}. You can change it later in your profile.`:'');trackSignupProgress('profile','success');setStep(1)}
   catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
  };
  const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
@@ -125,13 +105,12 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   if(saving)return;
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
-  try{await completeProfileOnboarding(user,{userName,photoFile,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
+  try{await completeProfileOnboarding(user,{userName,photoFile:null,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
   catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false);if(signupErrorCode(cause)==='username_taken'){setAvailability('taken');setStep(0)}}
  };
  const questionCount=onboardingQuestions.length;
  const question=step>=1&&step<=questionCount?onboardingQuestions[step-1]:null;
  const choice=recommendation(answers);
- const initials=(normalizeUsername(userName)||'A').slice(0,2).toUpperCase();
  const proAction=<div className={s.proAction}>
   <button className={s.primary} type="button" disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Receive new signals now →'}</button>
   {error&&<p className={s.fieldError} role="alert">{error}</p>}
@@ -142,18 +121,13 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
   <section className={s.card} aria-labelledby="profile-onboarding-title">
    <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>STOCKS TO BUY NOW AI</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your results'}</span></header>
    {step===0&&<div className={s.content}>
-    <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Make this space yours.</h1><p className={s.lead}>Choose a unique username. A profile picture is optional. Then just {questionCount} quick questions before your results.</p>
-    <label className={s.photoPicker}>
-     <span className={s.avatar}>{photoPreview?<img src={photoPreview} alt="Selected profile"/>:<b>{initials}</b>}</span>
-     <span>{photoPreview?'Change profile picture':'Add profile picture'} (optional)</span>
-     <input type="file" accept="image/jpeg,image/png,image/webp" onChange={choosePhoto}/>
-    </label>
-    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onChange={event=>{setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
+    <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Choose your username.</h1><p className={s.lead}>You can edit your username and add a photo later. Then just {questionCount} quick questions before your results.</p>
+    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onFocus={()=>trackInteraction('username_focus')} onChange={event=>{trackInteraction('username_edit');setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
     <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
     {usernameCorrection&&<p className={s.fieldSuccess} role="status">{usernameCorrection}</p>}
     <UsernameSuggestions value={userName} uid={user.uid} enabled={!!validation||availability==='taken'} onSelect={name=>{setUserName(name);setUsernameCorrection('');setAvailability('checking');setError('')}}/>
     {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
-    <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>Continue →</button>
+    <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>{availability==='checking'?'Checking username…':'Continue →'}</button>
    </div>}
    {question&&<OnboardingQuestion current={step} questions={onboardingQuestions} answer={answers[question.key]} onBack={()=>setStep(step-1)} onSelect={value=>selectAnswer(question.key,value)}/>}
    {step===questionCount+1&&<div className={`${s.content} ${s.resultsContent}`}>
@@ -200,9 +174,10 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  const [status,setStatus]=useState<'checking'|'required'|'complete'|'error'>(cached?'complete':'checking'),[attempt,setAttempt]=useState(0);
  useEffect(()=>{trackSignupProgress('profile_check',status==='checking'?'attempt':status==='error'?'error':'success')},[status]);
  useEffect(()=>{if(status==='checking')return observeSignupStep('profile_check')},[status,user.uid]);
+ useEffect(()=>{if(status!=='checking')return;const timeout=setTimeout(()=>trackSignupProgress('profile_check','error','client/timeout'),10000);return()=>clearTimeout(timeout)},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
  if(status==='complete')return <>{children}</>;
  if(status==='required')return <ProfileOnboarding user={user} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);try{await router.replace('/membership/?from=onboarding')}catch{window.location.assign('/membership/?from=onboarding')}setStatus('complete')}}/>;
  if(status==='error')return <main className={s.page}><section className={s.errorCard}><img src="/assets/images/stockerRobotIcon.png" width="54" height="54" alt=""/><h1>Let’s reconnect your profile.</h1><p>We couldn’t verify whether your profile is ready. Nothing has been changed.</p><button className={s.primary} onClick={()=>setAttempt(value=>value+1)}>Try again</button><button className={s.secondary} onClick={()=>void signOutWebsiteDevice()}>Use another account</button></section></main>;
- return <div className={s.silentGate} aria-hidden="true"/>;
+ return <div className={s.silentGate} role="status" aria-live="polite">Loading your profile…</div>;
 }

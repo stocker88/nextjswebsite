@@ -40,7 +40,7 @@ for(step=0;step<=profile.onboardingQuestions.length+1;step++){
   assert(html.includes(`Question ${step} of ${profile.onboardingQuestions.length}`));
   const remaining=profile.onboardingQuestions.length-step;
   assert(html.includes(remaining===0?'Last question — your results are next.':`${remaining} more ${remaining===1?'question':'questions'} after this`));
- }else if(step===0){assert(html.includes('Then just 3 quick questions before your results.'));assert(html.includes('A profile picture is optional.'));}
+ }else if(step===0){assert(html.includes('Then just 3 quick questions before your results.'));assert(html.includes('Choose your username.'));assert(!html.includes('type="file"'));}
  else {
   assert(html.includes('ALL 3 QUESTIONS COMPLETE'));
   const previews=load('lib/onboarding-signal-preview.ts');
@@ -57,11 +57,11 @@ for(step=0;step<=profile.onboardingQuestions.length+1;step++){
   fs.writeFileSync(path.join(output,`web-question-${step}.html`),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Onboarding preview</title><style>html,body{margin:0}*{box-sizing:border-box}${css}</style>${html}</html>`);
  }
 }
-// No provider photo still renders a usable profile form and initials fallback.
+// No provider photo still renders a usable username-only form.
 step=0;hook=0;
 const noPhoto=renderToStaticMarkup(React.createElement(ProfileOnboarding,{user:{uid:'local-preview-only',displayName:'preview',photoURL:null},onComplete:()=>{}}));
-assert(noPhoto.includes('Add profile picture')&&noPhoto.includes('(optional)'));
-assert(noPhoto.includes('<b>PR</b>')&&noPhoto.includes('Continue →'));
+assert(!noPhoto.includes('Add profile picture')&&!noPhoto.includes('type="file"'));
+assert(noPhoto.includes('Choose your username.')&&noPhoto.includes('Continue →'));
 // A changed total remains accurate without UI edits.
 const four=renderToStaticMarkup(React.createElement(question.QuestionProgress,{current:3,total:4}));
 assert(four.includes('Question 3 of 4')&&four.includes('1 more question after this'));
