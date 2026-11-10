@@ -31,11 +31,9 @@ export default function Header({
   const [chromeColor, setChromeColor] = useState(darkHeader ? '#080d1b' : '#00a3f5');
   const [bannerColors, setBannerColors] = useState({ top: darkHeader ? '#080d1b' : '#00a3f5', bottom: darkHeader ? '#080d1b' : '#00a3f5' });
   const [socialBrowserName, setSocialBrowserName] = useState(null);
-  const [isIPhone, setIsIPhone] = useState(false);
 
   useEffect(() => {
     const detect = () => {
-      setIsIPhone(/iPhone/i.test(navigator.userAgent));
       let attribution = '';
       try { attribution = sessionStorage.getItem('socialBrowserAttribution') || ''; } catch { /* Storage may be unavailable in embedded browsers. */ }
       setSocialBrowserName(
@@ -135,8 +133,9 @@ export default function Header({
   // Render the normal header during SSR and browser detection so its sticky
   // footprint is present from the first paint and cannot push the hero down.
 
-  const hideHomeSocialNotice = isHomePage && isIPhone &&
-    ['Instagram', 'Facebook', 'X'].includes(socialBrowserName);
+  // Embedded browsers can omit their app/device identity. On the homepage,
+  // show this notice only when TikTok was positively identified.
+  const hideHomeSocialNotice = isHomePage && socialBrowserName !== 'TikTok';
   const shouldShowSocialNotice = !hideHomeSocialNotice && Boolean(socialBrowserName) &&
     (socialNoticeMode === 'all' || socialBrowserName === 'TikTok');
 
