@@ -36,6 +36,12 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
  occupied=[{name:candidates[0],uid:'me'}];assert.equal((await profile.availableUsernameSuggestions('tester','me'))[0],candidates[0]);
  fail=true;await assert.rejects(profile.availableUsernameSuggestions('tester','me'),/offline/);fail=false;occupied=[];
 
+ for(const input of ['a'.repeat(60),'abc123456789','👋','person@example.com']){
+  const resolved=await profile.resolveSignupUsername(input,'me');assert.equal(profile.usernameValidationCode(resolved),'');assert(resolved.length<=15);
+ }
+ const longBase='abcdefghijklmno';occupied=[{name:longBase,uid:'other'}];
+ const renamed=await profile.resolveSignupUsername(longBase+'pqrst','me');assert.notEqual(renamed,longBase);assert(renamed.length<=15);
+ occupied=[{name:'tester',uid:'other'}];
  const h=harness(),pending=[],selected=[];
  const Suggest=load('components/UsernameSuggestions.tsx',{react:h.hooks,'../lib/profile-onboarding':{availableUsernameSuggestions:(value,uid)=>new Promise((resolve,reject)=>pending.push({value,uid,resolve,reject}))}},{window:h.window}).default;
  let props={value:'old',uid:'me',enabled:true,onSelect:name=>selected.push(name)};
@@ -48,9 +54,11 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
 
  const main=harness(),events=[];
  const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx',{react:main.hooks,'next/router':{useRouter:()=>({})},'../lib/account-devices':{},'../lib/onboarding-signal-preview':{onboardingSignalPreviews:[],lockedSignalPreviews:[]},'../lib/profile-onboarding':profile,'./TrustpilotWidget':{default:()=>null},'./OnboardingQuestion':{default:()=>null},'./UsernameSuggestions':{default:()=>null},'../lib/acquisition':{sourceOptions:[],linkWebsiteAcquisition:async()=>({needsSourceQuestion:false})},'../lib/signup-progress':{observeSignupStep:()=>()=>{},trackSignupProgress:(...args)=>events.push(args),signupErrorCode:error=>error.code||'unknown'}},{window:main.window,document:{addEventListener(){},removeEventListener(){}},URL});
- const mainProps={user:{uid:'me',displayName:'bad-name',photoURL:''},onComplete:()=>{}};
+ const mainProps={user:{uid:'me',displayName:'tester',photoURL:''},onComplete:()=>{}};
  let tree=main.render(ProfileOnboarding,mainProps);
+ tree=main.render(ProfileOnboarding,mainProps); // Background availability is checking.
  const continueButton=()=>nodes(tree).find(n=>n.type==='button'&&n.props.children==='Continue →');
+ assert.equal(continueButton().props.disabled,false,'Background checks must not disable Continue');
  continueButton().props.onClick();await tick();await tick();tree=main.render(ProfileOnboarding,mainProps);
  assert(events.some(event=>event[0]==='username_corrected'&&event[1]==='success'),'Automatic correction must be recorded');
  assert(events.some(event=>event[0]==='profile'&&event[1]==='success'),'Corrected name continues successfully on the same tap');
