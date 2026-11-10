@@ -119,13 +119,13 @@ const Hero = ({
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1.35,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom hero-review-links" data-reveal-delay="150">
-       Read investor reviews on{' '}
+       Ranked #1 Investing App on{' '}
        <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Trustpilot</a>
        <div>{desktop?<DesktopAppLink href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320">{'Explore the app →'}</DesktopAppLink>:<>
-         Get the app on{' '}
-         <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Apple</a>
+         20,000+ reviews on{' '}
+         <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Apple Store</a>
          {' '}and{' '}
-         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Google</a>
+         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Google Play</a>
        </>}</div>
     </div>
 <div className="hero-bottom-space" style={{ height: 'clamp(40px, 7vw, 88px)' }} />
