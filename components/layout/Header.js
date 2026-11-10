@@ -24,7 +24,8 @@ export default function Header({
 }) {
   const { pathname } = useRouter();
   const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
-  const isHomePage = pathname === '/';
+  // /s renders the same homepage for social/referral links.
+  const isHomePage = pathname === '/' || pathname === '/s';
   const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
