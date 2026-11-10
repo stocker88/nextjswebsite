@@ -32,5 +32,5 @@ const plans=fs.readFileSync('components/MembershipPlans.tsx','utf8');
 for(const expected of ["onboarding?'Free trial':'Free'",'Start your free trial in the app'])assert.ok(plans.includes(expected),`Missing signup trial invariant: ${expected}`);
 const provider=fs.readFileSync('components/SiteAccount.tsx','utf8');
 for(const expected of ['profileReadyUid===state.user.uid','if(!user||!profileReady)return','onProfileReady={handleProfileReady}','<ProfileOnboardingGate'])assert.ok(provider.includes(expected),`Missing profile-first device gate invariant: ${expected}`);
-assert.ok(provider.indexOf('if(!user||!profileReady)return')<provider.indexOf('registerWebsiteDevice().then'), 'Device registration must wait for profile verification.');
+assert.ok(provider.indexOf('if(!user||!profileReady)return')<provider.indexOf('confirmation.then(()=>registerWebsiteDevice())'), 'Device registration must wait for profile verification.');
 console.log('Profile onboarding checks passed: app-matched questions, username policy, database availability, optional photo, complete profile document and mandatory route gate.');

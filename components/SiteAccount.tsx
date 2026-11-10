@@ -5,9 +5,9 @@ import {activateSignupTracking} from '../lib/signup-progress';
 import {bandReadUrl} from '../lib/band-access';
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import {contentClickDestination} from '../lib/content-access';
-import AccountDevices from './AccountDevices';
+import DeviceRecovery from './DeviceRecovery';
 import DeviceCapacityNotice from './DeviceCapacityNotice';
-import {accountDevicesEnabled,registerWebsiteDevice,checkWebsiteDevice,signOutWebsiteDevice,type DeviceNotice} from '../lib/account-devices';
+import {accountDevicesEnabled,registerWebsiteDevice,checkWebsiteDevice,signOutWebsiteDevice,completeDeviceCheckout,type DeviceNotice} from '../lib/account-devices';
 import deviceStyle from '../styles/AccountLogin.module.css';
 import {createContext,useCallback,useContext,useEffect,useState,type AnchorHTMLAttributes,type ReactNode} from 'react';
 import {useRouter} from 'next/router';
@@ -23,6 +23,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
  const [desktop,setDesktop]=useState(false);
  useEffect(()=>{const value=isDesktopDevice(navigator);setDesktop(value);document.documentElement.dataset.desktopDevice=String(value);return()=>{delete document.documentElement.dataset.desktopDevice}},[]);
  const [deviceState,setDeviceState]=useState<'checking'|'allowed'|'limit'|'error'>('checking');
+ const [removedUntil,setRemovedUntil]=useState<string|undefined>();
  const [supportSkip,setSupportSkip]=useState(false);
  const [retry,setRetry]=useState(0);
  const [profileReadyUid,setProfileReadyUid]=useState<string|null>(null);
@@ -42,7 +43,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
     activateSignupTracking(user?.uid||null);
     rememberSiteAccount(user);
     // Auth is ready independently of the background device admission check.
-    setSupportSkip(false);setDeviceState('checking');setState({user,ready:true,error:false});
+    setRemovedUntil(undefined);setSupportSkip(false);setDeviceState('checking');setState({user,ready:true,error:false});
     setProfileReadyUid(current=>current===user?.uid?current:null);
     setCapacityNotice(old=>user&&old?.uid!==user.uid?null:old);
     if(!user)return;
@@ -78,11 +79,14 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   let active=true;
   const uid=user.uid;
   setSupportSkip(false);setDeviceState('checking');
-  registerWebsiteDevice().then(result=>{if(active){presentDeviceNotice(result.deviceNotice,uid);setDeviceState('allowed')}}).catch(async cause=>{
+  const checkout=new URLSearchParams(location.search);
+  const confirmation=checkout.get('devices_checkout')==='success'&&checkout.get('session_id')?completeDeviceCheckout(checkout.get('session_id')!):Promise.resolve();
+  confirmation.then(()=>registerWebsiteDevice()).then(result=>{if(active){presentDeviceNotice(result.deviceNotice,uid);setDeviceState('allowed')}}).catch(async cause=>{
    if(!active)return;
    const auth=await getSiteAuth().catch(()=>null);
    if(!auth||auth.currentUser?.uid!==uid)return;
    const sdk=await import('firebase/auth');
+   if(cause?.details?.reason==='device-removed-cooldown'){setRemovedUntil(cause.details.nextEligibleAt);setDeviceState('limit');return}
    if(cause?.details?.reason==='device-revoked'){await sdk.signOut(auth);return}
    if(cause?.details?.reason==='device-capacity'){presentDeviceNotice(cause.details.deviceNotice,uid);await sdk.signOut(auth);return}
    setSupportSkip(cause?.details?.canSupportSkip===true);
@@ -94,7 +98,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   if(!accountDevicesEnabled||!state.user||!profileReady||deviceState!=='allowed')return;
   let active=true,busy=false;
   const uid=state.user.uid;
-  const check=async()=>{if(busy||document.hidden)return;busy=true;try{const result=await checkWebsiteDevice();const auth=await getSiteAuth();if(active&&auth.currentUser?.uid===uid){presentDeviceNotice(result.deviceNotice,uid);if(!result.allowed){const sdk=await import('firebase/auth');await sdk.signOut(auth)}}}catch{/* A connection failure is not proof of remote sign-out. */}finally{busy=false}};
+  const check=async()=>{if(busy||document.hidden)return;busy=true;try{const result=await checkWebsiteDevice();const auth=await getSiteAuth();if(active&&auth.currentUser?.uid===uid){presentDeviceNotice(result.deviceNotice,uid);if(!result.allowed&&result.removal){setRemovedUntil(result.removal.nextEligibleAt);setDeviceState('limit');return}if(!result.allowed){const sdk=await import('firebase/auth');await sdk.signOut(auth)}}}catch{/* A connection failure is not proof of remote sign-out. */}finally{busy=false}};
   const timer=window.setInterval(()=>void check(),60000);
   const focus=()=>void check();window.addEventListener('focus',focus);document.addEventListener('visibilitychange',focus);
   return()=>{active=false;window.clearInterval(timer);window.removeEventListener('focus',focus);document.removeEventListener('visibilitychange',focus)};
@@ -170,7 +174,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   window.addEventListener('click',gate,true);window.addEventListener('auxclick',gate,true);
   return()=>{window.removeEventListener('click',gate,true);window.removeEventListener('auxclick',gate,true)};
  },[state.user,state.ready,router]);
- const deviceContent=state.user&&(deviceState==='limit'||deviceState==='error')?<main className={deviceStyle.page}><section className={deviceStyle.card}><span className={deviceStyle.eyebrow}>ACCOUNT SECURITY</span><h1>{deviceState==='limit'?'Manage your devices':'Unable to verify this device'}</h1>{deviceState==='limit'?<><p>Your account has reached its device allowance. Sign out one below or add more slots to continue here.</p><AccountDevices/></>:deviceState==='error'?<p>Please check your connection and try again.</p>:null}<div className={deviceStyle.providers}><button onClick={()=>setRetry(value=>value+1)}>Try this device again</button>{supportSkip&&<button onClick={()=>{setSupportSkip(false);void registerWebsiteDevice(true).then(()=>setRetry(value=>value+1)).catch(()=>setDeviceState('error'))}}>Add this device · Support Skip</button>}<button onClick={()=>void signOutWebsiteDevice()}>Sign out</button></div></section></main>:children;
+ const deviceContent=state.user&&deviceState==='limit'?<DeviceRecovery removedUntil={removedUntil} onChanged={()=>setRetry(value=>value+1)}/>:state.user&&deviceState==='error'?<main className={deviceStyle.page}><section className={deviceStyle.card}><h1>Unable to verify this device</h1><p>Please check your connection and try again.</p><button onClick={()=>setRetry(value=>value+1)}>Try this device again</button><button onClick={()=>void signOutWebsiteDevice()}>Back to sign in</button></section></main>:children;
  const content=state.user&&desktop?<ProfileOnboardingGate key={state.user.uid} user={state.user} onProfileReady={handleProfileReady}>{deviceContent}</ProfileOnboardingGate>:children;
  return <AccountContext.Provider value={{...state,desktop}}><MobileAppBoundary>{content}</MobileAppBoundary>{desktop&&capacityNotice&&(!state.user||capacityNotice.uid===state.user.uid)&&<DeviceCapacityNotice notice={capacityNotice} onDismiss={()=>setCapacityNotice(null)}/>}</AccountContext.Provider>;
 }

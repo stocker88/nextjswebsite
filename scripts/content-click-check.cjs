@@ -27,7 +27,7 @@ async function run({desktop=false,user=null,ready=true,persistedUser=null}={}){
   '../lib/signup-progress':{activateSignupTracking:()=>{}},'../lib/band-access':bandAccess,'../lib/acquisition':{linkWebsiteAcquisition:async()=>({saved:true})},
   '../lib/site-account-hint':{},'../lib/membership-status':{preloadMembershipStatus:()=>Promise.resolve(null)},'./ProfileOnboarding':()=>null,
   '../lib/desktop-access':load('lib/desktop-access.ts'),'../lib/device-access':{isDesktopDevice:()=>desktop,isAppDestination:()=>false},
-  './AccountDevices':{},'./DeviceCapacityNotice':{},'../lib/account-devices':{},'../styles/AccountLogin.module.css':{}
+  './DeviceRecovery':{},'./DeviceCapacityNotice':{},'../lib/account-devices':{},'../styles/AccountLogin.module.css':{}
  },{Element,HTMLAnchorElement:Anchor,window,navigator:{},location:{origin,href:origin+'/stock-market-heatmap/'}});
  SiteAccountProvider({children:null});effects.at(-1)();
  async function click(href,props={},eventProps={}){
