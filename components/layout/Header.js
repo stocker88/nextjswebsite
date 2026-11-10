@@ -63,7 +63,7 @@ export default function Header({
       frame = 0;
       const y = Math.max(0, window.scrollY);
       // Ignore tiny automatic offsets from embedded browser toolbars.
-      setIsScrolled(y > 48);
+      setIsScrolled(y > (window.innerWidth <= 999 ? 48 : 0));
       if (y === 0) setIsOpen(false);
       // Match the continuous hero gradient, including the mobile status strip.
       // Keep the initial reveal blue; ease toward navy near the end of the hero.
