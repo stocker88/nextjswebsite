@@ -1,3 +1,5 @@
+import {mobileStoreUrl,isMobileAccountPath} from '../lib/mobile-app';
+import MobileAppBoundary from './MobileAppBoundary';
 import {linkWebsiteAcquisition} from '../lib/acquisition';
 import {activateSignupTracking} from '../lib/signup-progress';
 import {bandReadUrl} from '../lib/band-access';
@@ -102,6 +104,12 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
    if(event.type==='auxclick'&&event.button!==1)return;
    const link=event.target instanceof Element?event.target.closest('a[href]'):null;
    if(!(link instanceof HTMLAnchorElement))return;
+   if(!isDesktopDevice(navigator)){
+    const target=new URL(link.href,location.href);
+    if(target.origin===location.origin&&(isMobileAccountPath(target.pathname)||link.dataset.accountRequired==='true'||link.dataset.bandAccess)){
+     event.preventDefault();event.stopImmediatePropagation();window.location.assign(mobileStoreUrl(navigator.userAgent));return;
+    }
+   }
    // Curated educational previews may opt into a direct public reading path.
    // This does not change the normal article/login behavior anywhere else.
    if(link.dataset.publicContent==='true')return;
@@ -163,8 +171,8 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
   return()=>{window.removeEventListener('click',gate,true);window.removeEventListener('auxclick',gate,true)};
  },[state.user,state.ready,router]);
  const deviceContent=state.user&&(deviceState==='limit'||deviceState==='error')?<main className={deviceStyle.page}><section className={deviceStyle.card}><span className={deviceStyle.eyebrow}>ACCOUNT SECURITY</span><h1>{deviceState==='limit'?'Manage your devices':'Unable to verify this device'}</h1>{deviceState==='limit'?<><p>Your account has reached its device allowance. Sign out one below or add more slots to continue here.</p><AccountDevices/></>:deviceState==='error'?<p>Please check your connection and try again.</p>:null}<div className={deviceStyle.providers}><button onClick={()=>setRetry(value=>value+1)}>Try this device again</button>{supportSkip&&<button onClick={()=>{setSupportSkip(false);void registerWebsiteDevice(true).then(()=>setRetry(value=>value+1)).catch(()=>setDeviceState('error'))}}>Add this device · Support Skip</button>}<button onClick={()=>void signOutWebsiteDevice()}>Sign out</button></div></section></main>:children;
- const content=state.user?<ProfileOnboardingGate key={state.user.uid} user={state.user} onProfileReady={handleProfileReady}>{deviceContent}</ProfileOnboardingGate>:children;
- return <AccountContext.Provider value={{...state,desktop}}>{content}{capacityNotice&&(!state.user||capacityNotice.uid===state.user.uid)&&<DeviceCapacityNotice notice={capacityNotice} onDismiss={()=>setCapacityNotice(null)}/>}</AccountContext.Provider>;
+ const content=state.user&&desktop?<ProfileOnboardingGate key={state.user.uid} user={state.user} onProfileReady={handleProfileReady}>{deviceContent}</ProfileOnboardingGate>:children;
+ return <AccountContext.Provider value={{...state,desktop}}><MobileAppBoundary>{content}</MobileAppBoundary>{desktop&&capacityNotice&&(!state.user||capacityNotice.uid===state.user.uid)&&<DeviceCapacityNotice notice={capacityNotice} onDismiss={()=>setCapacityNotice(null)}/>}</AccountContext.Provider>;
 }
 export const useSiteAccount=()=>useContext(AccountContext);
 export function AccountLink({destination,children,...props}:Omit<AnchorHTMLAttributes<HTMLAnchorElement>,'href'>&{destination:string;children:ReactNode}){

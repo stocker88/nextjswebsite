@@ -37,7 +37,7 @@ let link=DesktopAppLink(props);assert.equal(link.props.href,'/login/?next=%2Fcon
 account={...account,user:{uid:'buyer'}};link=DesktopAppLink(props);assert.equal(link.props.href,'/continue/');assert.equal(link.props.children,'Access your research →');
 account={...account,desktop:false};link=DesktopAppLink(props);assert.equal(link.props.href,props.href);assert.equal(link.props.target,'_blank');assert.equal(link.props.children,props.children);link.props.onClick({});assert.equal(calls,1);
 assert.equal(DesktopActionText({children:'Get App',desktopLabel:'Review research'}).props.children,'Get App');
-const DownloadOptions=load('components/AppDownloadOptions.tsx',{'../lib/analytics':{trackAppStoreClick:()=>{}}}).default;
+const DownloadOptions=load('components/AppDownloadOptions.tsx',{'../lib/device-access':load('lib/device-access.ts'),'./MobileStoreLink':()=>null,'../lib/analytics':{trackAppStoreClick:()=>{}}}).default;
 const qr=renderToStaticMarkup(React.createElement(DownloadOptions,{placement:'test',showQR:true,threadId:'report_123'}));assert.match(qr,/data-desktop-download-ready="true"/);assert.match(qr,/data-store-icon="apple"/);assert.match(qr,/data-store-icon="google"/);assert.match(qr,/iPhone · App Store/);assert.match(qr,/Android · Google Play/);assert.match(qr,/selected thread/);assert.equal((qr.match(/<svg/g)||[]).length,5);
 assert.equal((qr.match(/data-store-review-card=/g)||[]).length,2);
 for(const expected of ['iPhone &amp; iPad reviews','Android reviews','★★★★★','Get the iPhone app','Get the Android app'])assert.match(qr,new RegExp(expected));

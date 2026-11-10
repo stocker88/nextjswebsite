@@ -12,10 +12,10 @@ function movePlanLight(event:PointerEvent<HTMLAnchorElement>){
 }
 function clearPlanLight(event:PointerEvent<HTMLAnchorElement>){delete event.currentTarget.dataset.pointerLight;}
 export default function MembershipPlans({onExplorePro,onExploreFree,verifiedInactive=false,onboarding=false}:{onExplorePro?:()=>void;onExploreFree?:()=>void;verifiedInactive?:boolean;onboarding?:boolean}={}){
- const {user,ready}=useSiteAccount(),uid=user?.uid;
+ const {user,ready,desktop}=useSiteAccount(),uid=user?.uid;
  const [visible,setVisible]=useState(()=>ready&&(!user||verifiedInactive));
  useEffect(()=>{
-  if(!ready){setVisible(false);return}
+  if(!ready||desktop===false){setVisible(false);return}
   if(!uid){setVisible(true);return}
   if(verifiedInactive){setVisible(true);return}
   // Never expose purchase cards while a signed-in account is being refreshed.
@@ -30,8 +30,8 @@ export default function MembershipPlans({onExplorePro,onExploreFree,verifiedInac
    if(current)setVisible(false);
   });
   return()=>{current=false};
- },[ready,uid,verifiedInactive]);
- if(!visible)return null;
+ },[ready,uid,verifiedInactive,desktop]);
+ if(!visible||desktop===false)return null;
  return <section className={styles.memberships} id="memberships" aria-labelledby="membership-title">
  <header><span className={styles.eyebrow}>MEMBERSHIP</span><h2 id="membership-title">More perspective.<br/>Your choice.</h2><p>{onboarding?'Start your free trial in the app, or go deeper with Pro.':'Start exploring for free. Go deeper with Pro.'}</p></header>
  <div className={styles.plans}>

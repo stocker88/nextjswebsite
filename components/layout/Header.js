@@ -182,7 +182,7 @@ export default function Header({
               {!accountReady&&<div className={menuStyles.cachedAccount} aria-hidden="true"><span className={menuStyles.cachedAvatar}/><span className={menuStyles.cachedName}/></div>}
               <AccountMenu />
             </div>
-            {!hideAppDownload && accountReady && !accountUser && (desktop?<a
+            {!hideAppDownload && (!desktop || (accountReady && !accountUser)) && (desktop?<a
               className={menuStyles.download}
               href={accountLoginUrl(DESKTOP_ACCESS_PATH)}
               onClick={closeMenu}
