@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "postId": "ENhM7KswuLg5H0ts2WQ9",
+    "summary": "U.S. consumer prices rose 0.4% in October, down from 0.6% in September. Both headline and core inflation exceeded forecasts.",
+    "reviewer": "Aness Hussein Ali",
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "publishedAt": "2026-11-10T14:04:49.000Z",
+    "updatedAt": "2026-11-10T14:10:48.232Z",
+    "paragraphs": [
+      "• Headline CPI rose 0.4% month over month, compared with 0.6% in September and 0.3% expected.",
+      "• Core CPI, excluding food and energy, rose 0.3%, compared with 0.2% expected.",
+      "• Year-over-year inflation was unavailable because October 2025 data was not collected during the government shutdown.",
+      "• Shelter prices increased 0.3%, accounting for over 30% of the monthly headline increase.",
+      "• Food prices rose 0.5%; groceries increased 0.4% and dining out increased 0.5%.",
+      "• Energy prices increased 0.7%, following a 5.2% rise in September.",
+      "• Gasoline prices rose 1.0% and electricity increased 0.9%, while natural gas fell 0.8%.",
+      "• Used vehicle prices declined 1.2%, while recreation increased 0.8% and vehicle insurance rose 0.7%."
+    ],
+    "sources": [
+      {
+        "title": "U.S. Bureau of Labor Statistics — October 2026 CPI",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+      },
+      {
+        "title": "Associated Press — October CPI consensus estimates",
+        "url": "https://apnews.com/article/fcd3c7766d3cdb36057f6dab19ff3a8e"
+      }
+    ],
+    "aiAssisted": true,
+    "disclosure": "Educational market information, not personalized investment advice."
+  }
+]
