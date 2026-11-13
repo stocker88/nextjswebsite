@@ -77,3 +77,6 @@
 @media(max-width:380px) and (hover:hover) and (pointer:fine){.tools{grid-template-columns:1fr}}
 .membershipTrust{padding:24px 16px}
 @media(min-width:900px){.membershipTrust{width:100%;padding:32px 28px}}
+
+.introTrust{display:none}
+@media(min-width:1024px),(hover:hover) and (pointer:fine){.introTrust{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin-top:18px;color:#e0efff;font-size:12px;line-height:1.5}.introTrust img{object-fit:contain}.introTrust a{color:inherit;text-decoration:underline;text-underline-offset:3px}.trustDivider{opacity:.65}.introTrust+.tools{margin-top:24px}}
