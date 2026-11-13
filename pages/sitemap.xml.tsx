@@ -17,6 +17,7 @@ import terms from "../data/glossary.json";
 import { publicArticles } from "../lib/public-articles";
 import { getAllPosts } from "../lib/api";
 import { SITE, isoDate } from "../lib/seo";
+import {publicInvestors,investorPath} from '../lib/public-investors';
 const escapeXml = (value: string) =>
   value
     .replace(/&/g, "&amp;")
@@ -74,6 +75,7 @@ export async function getServerSideProps({ res }: any) {
     "/glossary",
   ].map((path) => ({ path }));
   entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
+  entries.push({path:'/smart-money/investors/'},...publicInvestors.map(p=>({path:investorPath(p.id)})));
   insiderArticles.filter(a=>!a.noActivity).forEach(a=>entries.push({path:insiderArticlePath(a),modified:a.updatedAt}));
   for(let page=2;page<=Math.ceil(insiderArticles.length/insiderPageSize);page++)entries.push({path:insiderPagePath(page)});
   optionResults.forEach(result=>entries.push({path:optionResultUrl(result)}));

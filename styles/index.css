@@ -37,6 +37,14 @@ html[data-site-account="signed-in"] .site-header:not(.is-scrolled) > nav {
     visibility: visible;
     pointer-events: auto;
 }
+/* Keep the mobile homepage clear until the visitor scrolls, including returning members. */
+@media (max-width: 999px) {
+    html[data-site-account="signed-in"] .site-header.is-home:not(.is-scrolled) > nav {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
 @media (prefers-reduced-motion: reduce) {
     .site-header > nav { transition: none; }
 }
@@ -3378,4 +3386,13 @@ html:has([data-home-motion]) body {
 html[data-legacy-safari-chrome="true"]:has([data-home-motion]),
 html[data-legacy-safari-chrome="true"]:has([data-home-motion]) body {
     background: var(--legacy-safari-color) !important;
+}
+
+/* Hide the whole mobile home header until scrolling, including its backdrop. */
+@media (max-width: 999px) {
+    .site-header.is-home:not(.is-scrolled) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }

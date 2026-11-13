@@ -94,7 +94,7 @@ const Hero = ({
               </h1>
               <div className="hero-content-space" style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
-             Your market. A clearer perspective. Receive stocks to buy before they go up.
+             Your professional macro investment team. Data-driven insights. Receive stocks to buy before they go up.
             </h2>
           </div>
 
@@ -112,20 +112,20 @@ const Hero = ({
 
           <Image
            className="hero-rating" src='/assets/images/usersRating.webp'
-           alt="AI Financial Advisor & Virtual Investing App sends you hot stocks to watch and buy now: find the next Nvidia, Tesla, Roblox before they skyrocket"
+           alt="Customer review illustration"
            priority={true}
           width={150}
           height={50*3/4}
            />
 
     <div style={{ color: 'lightGrey', fontSize: "min(14px,max(13px,1.3vw))", lineHeight: 1.35,maxWidth: "350px",textShadow: '5px 5px 5px rgba(0, 0, 0, 0)' }} className="reveal-from-bottom hero-review-links" data-reveal-delay="150">
-       Read investor reviews on{' '}
+       Read customer reviews on{' '}
        <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline', textUnderlineOffset: '3px'}}>Trustpilot</a>
        <div>{desktop?<DesktopAppLink href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320">{'Explore the app →'}</DesktopAppLink>:<>
-         Get the app on{' '}
-         <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Apple</a>
+         Reviews on{' '}
+         <a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Apple Store</a>
          {' '}and{' '}
-         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Google</a>
+         <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Google Play</a>
        </>}</div>
     </div>
 <div className="hero-bottom-space" style={{ height: 'clamp(40px, 7vw, 88px)' }} />

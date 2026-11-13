@@ -112,7 +112,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
 
         <p className="proof-disclaimer">
           Historical examples are shown for educational purposes only. Past
-          performance does not guarantee future results.
+          performance does not guarantee future results. The founder’s approach combines institutional market experience, macroeconomic research and data science. See the founder profile for professional background; former employers do not endorse this platform.
         </p>
 
         <DesktopAppLink
@@ -164,7 +164,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         </div>
 
         <p className="proof-disclaimer">
-          These are professional investors past performance. Past performance does not guarantee future performance.
+          These are professional investors past performance. Past performance does not guarantee future performance. The founder’s approach combines institutional market experience, macroeconomic research and data science. See the founder profile for professional background; former employers do not endorse this platform.
         </p>
       </section>}
 

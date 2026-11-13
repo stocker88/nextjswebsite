@@ -1,3 +1,4 @@
+import MobileStoreLink from './MobileStoreLink';
 import {useSiteAccount} from './SiteAccount';
 import {DESKTOP_ACCESS_PATH,desktopActionLabel,rememberDesktopThread} from '../lib/desktop-access';
 import {accountLoginUrl} from '../lib/site-auth';
@@ -43,6 +44,7 @@ function NewsletterSignUp({
     });
   };
 
+  if(!desktop)return <MobileStoreLink placement={from}/>;
   return (
     <>
     <a

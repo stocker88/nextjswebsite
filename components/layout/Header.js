@@ -24,7 +24,8 @@ export default function Header({
 }) {
   const { pathname } = useRouter();
   const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
-  const isHomePage = pathname === '/';
+  // /s renders the same homepage for social/referral links.
+  const isHomePage = pathname === '/' || pathname === '/s';
   const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,8 @@ export default function Header({
     const update = () => {
       frame = 0;
       const y = Math.max(0, window.scrollY);
-      setIsScrolled(y > 0);
+      // Ignore tiny automatic offsets from embedded browser toolbars.
+      setIsScrolled(y > (window.innerWidth <= 999 ? 48 : 0));
       if (y === 0) setIsOpen(false);
       // Match the continuous hero gradient, including the mobile status strip.
       // Keep the initial reveal blue; ease toward navy near the end of the hero.
@@ -133,7 +135,10 @@ export default function Header({
   // Render the normal header during SSR and browser detection so its sticky
   // footprint is present from the first paint and cannot push the hero down.
 
-  const shouldShowSocialNotice = Boolean(socialBrowserName) &&
+  // Embedded browsers can omit their app/device identity. On the homepage,
+  // show this notice only when TikTok was positively identified.
+  const hideHomeSocialNotice = isHomePage && socialBrowserName !== 'TikTok';
+  const shouldShowSocialNotice = !hideHomeSocialNotice && Boolean(socialBrowserName) &&
     (socialNoticeMode === 'all' || socialBrowserName === 'TikTok');
 
   if (shouldShowSocialNotice) {
@@ -182,7 +187,7 @@ export default function Header({
               {!accountReady&&<div className={menuStyles.cachedAccount} aria-hidden="true"><span className={menuStyles.cachedAvatar}/><span className={menuStyles.cachedName}/></div>}
               <AccountMenu />
             </div>
-            {!hideAppDownload && accountReady && !accountUser && (desktop?<a
+            {!hideAppDownload && (!desktop || (accountReady && !accountUser)) && (desktop?<a
               className={menuStyles.download}
               href={accountLoginUrl(DESKTOP_ACCESS_PATH)}
               onClick={closeMenu}

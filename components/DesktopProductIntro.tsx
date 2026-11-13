@@ -1,4 +1,5 @@
-import {AccountLink} from './SiteAccount';
+import {AccountLink,useSiteAccount} from './SiteAccount';
+import MobileStoreLink from './MobileStoreLink';
 import {useEffect, useRef, type PointerEvent} from 'react';
 import styles from '../styles/DesktopProduct.module.css';
 const tools = [
@@ -19,6 +20,7 @@ function clearCardLight(event: PointerEvent<HTMLAnchorElement>) {
  delete event.currentTarget.dataset.pointerLight;
 }
 export default function DesktopProductIntro(){
+ const {desktop}=useSiteAccount();
  const section = useRef<HTMLElement>(null);
  useEffect(() => {
   const root=section.current;
@@ -54,8 +56,8 @@ export default function DesktopProductIntro(){
   return()=>{observer?.disconnect();mobile.removeEventListener('change',configure);reduced.removeEventListener('change',configure);items.forEach(item=>delete item.dataset.reveal);};
  }, []);
  return <section ref={section} id="desktop-product-intro" data-scroll-started="false" className={styles.intro} aria-labelledby="desktop-product-title">
- <div className={styles.introHeading}><div><div data-intro-item className={styles.introBrand}><img src="/assets/images/stockerRobotIcon.png" alt="" width={48} height={48}/><span className={styles.eyebrow}>STOCKS TO BUY NOW AI</span></div><h1 data-intro-item id="desktop-product-title">Your market.<br/><span>A clearer perspective.</span></h1><p data-intro-item>Explore the market, research a company and compare your next idea. Start with the tools below.</p></div><AccountLink data-intro-item className={styles.primary} destination="/stock-market-heatmap/">Explore the market <span aria-hidden="true">↗</span></AccountLink></div>
+ <div className={styles.introHeading}><div><div data-intro-item className={styles.introBrand}><img src="/assets/images/stockerRobotIcon.png" alt="" width={48} height={48}/><span className={styles.eyebrow}>STOCKS TO BUY NOW AI</span></div><h1 data-intro-item id="desktop-product-title">Your market.<br/><span>A clearer perspective.</span></h1><p data-intro-item>Macro research and company analysis, supported by data science and human investment judgment. Explore the tools below; this is not an automated trading bot.</p></div><AccountLink data-intro-item className={styles.primary} destination="/stock-market-heatmap/">Explore the market <span aria-hidden="true">↗</span></AccountLink></div>
  <div className={styles.tools}>{tools.map(t=><a data-intro-item href={t.href} key={t.label} onPointerMove={moveCardLight} onPointerLeave={clearCardLight} onPointerCancel={clearCardLight}><span className={styles.toolIcon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon}/></svg></span><div className={styles.toolCopy}><span className={styles.toolCategory}>{t.category}</span><h2>{t.label}</h2><p>{t.description}</p></div><span className={styles.arrow} aria-hidden="true">↗</span></a>)}</div>
- <div data-intro-item className={styles.introFooter}><span>Research. Compare. Build your perspective.</span><a href="/membership/">Explore membership →</a></div>
+ <div data-intro-item className={styles.introFooter}><span>Research. Compare. Build your perspective.</span><>{desktop?<a href="/membership/">Explore membership →</a>:<MobileStoreLink placement="product_intro"/>}</></div>
  <a className={styles.scrollCue} href="#product-reveal" aria-label="Scroll to the market overview"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
  </section>}

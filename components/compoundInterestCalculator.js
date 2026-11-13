@@ -39,18 +39,19 @@ const CompoundInterestCalculator = () => {
   useChartEntrance(chartRef);
   const [principal, setPrincipal] = useState(100);
   const [dailyContrib, setDailyContrib] = useState(30);
-  const [monthlyReturn, setMonthlyReturn] = useState(20);
+  const [annualReturn, setAnnualReturn] = useState(7);
   const [investmentYears, setInvestmentYears] = useState(4);
 
   const data = useMemo(() => {
-    const annualInterestRate = (monthlyReturn * 1.04) / 100 * 12;
-    const annualContribution = dailyContrib * 32 * 12;
+    const dailyRate = Math.pow(1 + annualReturn / 100, 1 / 365) - 1;
+    const annualContribution = dailyContrib * 365;
     let balance = principal;
     const points = [{ year: 0, totalWithInterest: principal, onlyAmountSaved: principal }];
 
     for (let year = 1; year <= investmentYears; year += 1) {
-      balance += annualContribution;
-      balance += balance * annualInterestRate;
+      for (let day = 0; day < 365; day += 1) {
+        balance = balance * (1 + dailyRate) + dailyContrib;
+      }
       points.push({
         year,
         totalWithInterest: balance,
@@ -59,12 +60,12 @@ const CompoundInterestCalculator = () => {
     }
 
     return points;
-  }, [principal, dailyContrib, monthlyReturn, investmentYears]);
+  }, [principal, dailyContrib, annualReturn, investmentYears]);
 
   const finalPoint = data[data.length - 1];
   const projectedTotal = finalPoint?.totalWithInterest || 0;
   const amountSaved = finalPoint?.onlyAmountSaved || 0;
-  const projectedGrowth = Math.max(0, projectedTotal - amountSaved);
+  const projectedGrowth = projectedTotal - amountSaved;
 
   const controls = [
     {
@@ -89,13 +90,13 @@ const CompoundInterestCalculator = () => {
     },
     {
       id: 'return',
-      label: 'Option monthly return',
+      label: 'Assumed annual return',
       suffix: '%',
-      value: monthlyReturn,
-      min: 0,
-      max: 100,
+      value: annualReturn,
+      min: -50,
+      max: 20,
       step: 0.1,
-      setValue: setMonthlyReturn,
+      setValue: setAnnualReturn,
     },
     {
       id: 'years',
@@ -116,7 +117,7 @@ const CompoundInterestCalculator = () => {
         <header className="compound-heading">
           <p>Interactive calculator</p>
           <h2 id="compound-title">See the power of compounding</h2>
-          <span>Adjust the assumptions to explore how regular contributions and returns may affect long-term growth.</span>
+          <span>Hypothetical illustration, not a forecast or expected return from this service. The 7% annual default is an assumption. Returns vary and losses are possible. This model compounds daily with end-of-day deposits, uses 365 days per year and excludes fees, taxes and inflation.</span>
         </header>
 
         <div className="compound-card">
@@ -139,7 +140,7 @@ const CompoundInterestCalculator = () => {
                       max={control.max}
                       step={control.step}
                       value={control.value}
-                      onChange={(event) => control.setValue(Number(event.target.value) || 0)}
+                      onChange={(event) => control.setValue(Math.min(control.max, Math.max(control.min, Number(event.target.value) || 0)))}
                     />
                     {control.suffix && <span>{control.suffix}</span>}
                   </div>

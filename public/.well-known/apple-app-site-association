@@ -7,12 +7,12 @@
           "TFLR7J57P2.com.newcompany.stocker"
         ],
         "components": [
-          { "/": "/insight_details_page", "comment": "Explicit shared app post" },
-          { "/": "/insight_details_page/", "comment": "Explicit shared app post" },
+          { "/": "/insight_details_page", "exclude": true, "comment": "Browser landing page; app launch requires the button" },
+          { "/": "/insight_details_page/", "exclude": true, "comment": "Browser landing page; app launch requires the button" },
           { "/": "/stock_page", "comment": "Explicit shared app stock" },
           { "/": "/stock_page/", "comment": "Explicit shared app stock" },
-          { "/": "/s", "comment": "Explicit short app share link" },
-          { "/": "/s/", "comment": "Explicit short app share link" },
+          { "/": "/s", "exclude": true, "comment": "Shared links stay in the browser, including Instagram handoff" },
+          { "/": "/s/", "exclude": true, "comment": "Shared links stay in the browser, including Instagram handoff" },
           { "/": "/invite_code_path", "comment": "App invitation" },
           { "/": "/invite_code_path/", "comment": "App invitation" },
           { "/": "/userIdPassed", "comment": "Explicit website-to-app account handoff" },

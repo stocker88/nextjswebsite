@@ -1,13 +1,15 @@
 import Link from 'next/link';
+import MobileStoreLink from './MobileStoreLink';
 import {useSiteAccount} from './SiteAccount';
 import {accountLoginUrl} from '../lib/site-auth';
 import s from '../styles/ContentAccess.module.css';
 
 export function ContentAccessPanel({destination,kind='article',checking=false,error=false,onRetry}:{destination:string;kind?:'article'|'results'|'ultra'|'pro';checking?:boolean;error?:boolean;onRetry?:()=>void}){
- const {user}=useSiteAccount();
+ const {user,desktop}=useSiteAccount();
  const pro=kind==='pro'&&!!user;
  const ultra=kind==='ultra'&&!!user,resultReader=kind==='ultra'&&!user;
  if(checking)return null;
+ if(desktop===false)return <section className={s.panel} aria-label="Get the app"><div className={s.copy}><h2>Continue in the app</h2><div className={s.actions}><MobileStoreLink placement="content_access"/></div></div></section>;
  return <section className={`${s.panel} ${kind==='ultra'?s.ultra:''}`} aria-label={ultra?'Ultra membership access':pro?'Pro membership access':'Sign in to continue'}>
   <span className={s.icon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v11H5zM12 14v3"/></svg></span>
   <div className={s.copy}><span className={s.eyebrow}>{ultra?'ULTRA MEMBERSHIP':pro?'PRO MEMBERSHIP':'YOUR ACCOUNT · YOUR RESEARCH'}</span>

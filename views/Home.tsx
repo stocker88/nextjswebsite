@@ -218,8 +218,12 @@ import SignUpModal from '../SignUpModal';
         <HomeResearch items={news} section="news" />
         <div style={{textAlign: "center", padding: "24px"}}><Link href="/stocks-to-buy-now">Explore stocks to buy now research →</Link></div>
 
-        <ProductProof founderOnly />
-        <ProductProof section="signals" />
+        <section style={{maxWidth:1000,margin:'auto',padding:'48px 24px'}}>
+          <h2>Transparency into past setups</h2>
+          <p>Explore historical examples with their dates, context and limitations. These are selected educational case studies, not typical returns or an independently audited track record.</p>
+          <Link href="/stock-market-predictions/">Explore a historical case study →</Link>
+          <p><Link href="/methodology/">How we distinguish examples from performance evidence →</Link></p>
+        </section>
 
         <div id="about-aness" style={{ scrollMarginTop: '90px' }}>
           <Testimonial/>

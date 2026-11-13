@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [{
+      "appIDs": ["454FPB744R.com.newcompany.stocker", "TFLR7J57P2.com.newcompany.stocker"],
+      "components": [
+        { "/": "/insight_details_page", "exclude": true },
+        { "/": "/insight_details_page/", "exclude": true },
+        { "/": "/s", "exclude": true },
+        { "/": "/s/", "exclude": true },
+        { "/": "/stock_page" },
+        { "/": "/stock_page/" },
+        { "/": "/invite_code_path" },
+        { "/": "/invite_code_path/" },
+        { "/": "/userIdPassed" },
+        { "/": "/userIdPassed/" }
+      ]
+    }]
+  }
+}

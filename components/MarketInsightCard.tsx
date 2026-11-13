@@ -1,3 +1,4 @@
+import {generatedImagePreview} from '../lib/generated-image';
 import Link from 'next/link';
 import {useState} from 'react';
 import {briefingUrl,type Briefing} from '../lib/market-briefings';
@@ -11,8 +12,8 @@ export default function MarketInsightCard({article:a}:{article:Briefing}){
   <Link className="card-link" href={briefingUrl(a)}>
    <div className="card-top"><span className="topic">Market insights <span aria-hidden="true">↗</span></span><time dateTime={a.sessionDate}>{date}</time></div>
    <h2>{a.title}</h2><p className="preview">{a.summary}</p>
-   {a.leadImage&&!coverFailed&&<figure className="cover"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy" onError={()=>setCoverFailed(true)}/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} · {a.leadImage.license}</figcaption></figure>}
-   {!!images.length&&<div className="image-pair" aria-label="Images from the original market insight post">{images.map(i=><figure key={i.url}><img src={i.url} alt={i.alt} width={i.width||1200} height={i.height||1200} loading="lazy" decoding="async"/><figcaption>{i.title}</figcaption></figure>)}</div>}
+   {a.leadImage&&!coverFailed&&<figure className="cover"><img src={generatedImagePreview(a.leadImage.url)} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy" onError={()=>setCoverFailed(true)}/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} · {a.leadImage.license}</figcaption></figure>}
+   {!!images.length&&<div className="image-pair" aria-label="Images from the original market insight post">{images.map(i=><figure key={i.url}><img src={generatedImagePreview(i.url)} alt={i.alt} width={i.width||1200} height={i.height||1200} loading="lazy" decoding="async"/><figcaption>{i.title}</figcaption></figure>)}</div>}
    <div className="card-footer"><ArticlePostEngagement postId={a.postId}/><span className="read-link">Read market insights <span aria-hidden="true">→</span></span></div>
   </Link>
   <style jsx>{`

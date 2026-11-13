@@ -4,7 +4,7 @@ import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/founder-trade-chart-social.jpg", socialImageAlt = "Founder’s personal trade chart", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
+export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now AI research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
   const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(path);
   return <>
     <Head>
