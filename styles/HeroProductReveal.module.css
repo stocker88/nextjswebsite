@@ -171,3 +171,7 @@
  .compactPulse .panelLink{padding-top:12px;padding-bottom:14px;font-size:10px}
 }
 @media(min-width:1000px) and (max-width:1199px){.regularSnapshot .compactPulse .pulseGrid,.compactPulse .pulseGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.compactPulse .pulseCard{min-height:85px}}
+.results{position:relative}
+.results .resultLink::after{content:"";position:absolute;inset:0;border-radius:20px;cursor:pointer}
+.results:focus-within{outline:2px solid #b9b3ff;outline-offset:4px}
+.results .resultPreview{position:relative;z-index:1}

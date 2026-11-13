@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "postId": "ENhM7KswuLg5H0ts2WQ9",
+    "summary": "U.S. consumer prices rose 0.4% in October, down from 0.6% in September. Both headline and core inflation exceeded forecasts.",
+    "reviewer": "Aness Hussein Ali",
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "publishedAt": "2026-11-10T14:04:49.000Z",
+    "updatedAt": "2026-11-10T14:10:48.232Z",
+    "paragraphs": [
+      "• Headline CPI rose 0.4% month over month, compared with 0.6% in September and 0.3% expected.",
+      "• Core CPI, excluding food and energy, rose 0.3%, compared with 0.2% expected.",
+      "• Year-over-year inflation was unavailable because October 2025 data was not collected during the government shutdown.",
+      "• Shelter prices increased 0.3%, accounting for over 30% of the monthly headline increase.",
+      "• Food prices rose 0.5%; groceries increased 0.4% and dining out increased 0.5%.",
+      "• Energy prices increased 0.7%, following a 5.2% rise in September.",
+      "• Gasoline prices rose 1.0% and electricity increased 0.9%, while natural gas fell 0.8%.",
+      "• Used vehicle prices declined 1.2%, while recreation increased 0.8% and vehicle insurance rose 0.7%."
+    ],
+    "sources": [
+      {
+        "title": "U.S. Bureau of Labor Statistics — October 2026 CPI",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+      },
+      {
+        "title": "Associated Press — October CPI consensus estimates",
+        "url": "https://apnews.com/article/fcd3c7766d3cdb36057f6dab19ff3a8e"
+      }
+    ],
+    "aiAssisted": true,
+    "disclosure": "Educational market information, not personalized investment advice."
+  },
+  {
+    "postId": "manual_news_anthropic_ipo_20261110",
+    "summary": "Claude’s maker plans to offer 825 million shares and has applied to list on Nasdaq as ANT. The final price and first trading day remain open.",
+    "reviewer": "Codex (AI fact and source review)",
+    "author": {
+      "name": "Stocks To Buy Now AI Research",
+      "url": "https://www.stockstobuynow.ai/editorial-policy/"
+    },
+    "publishedAt": "2026-11-10T22:15:50.106238+00:00",
+    "updatedAt": "2026-11-10T22:16:50.292545+00:00",
+    "paragraphs": [
+      "On November 10, Anthropic began its roadshow, a series of investor meetings ahead of its proposed initial public offering (IPO). It has applied to trade on Nasdaq under ANT.",
+      "Anthropic sells access to Claude through subscriptions and usage-based services. Businesses and developers pay to use its AI models in tools for coding, research and other work.",
+      "At $70–$78 per share, the 825 million shares on offer would sell for $57.8–$64.4 billion before fees. Anthropic plans to issue about 801.4 million new shares. Existing shareholders would receive the proceeds from the remaining 23.6 million.",
+      "At the $74 midpoint, the filing’s roughly 13.09 billion shares outstanding across all classes after the IPO and concurrent private placement imply about $968 billion in equity value. That calculation excludes the underwriters’ option to buy extra shares and potential future dilution.",
+      "A separate $26 billion private placement would close alongside the IPO. At $74, Anthropic estimates it would receive $84.6 billion after fees and expenses from the two transactions combined.",
+      "Anthropic reported $33.2 billion in revenue and $18.8 billion in compute and infrastructure expense for the first nine months of 2026. It generated $6.6 billion in operating cash flow, while future spending on chips and data centers will test how much cash it can retain as it grows.",
+      "The final IPO price applies to shares allocated in the offering. Once ANT opens on Nasdaq, buy and sell orders determine the trading price, which can be above or below the IPO price.",
+      "The registration statement was still pending effectiveness when Anthropic announced the roadshow. November 19 has been reported as a possible debut. Watch for the final pricing announcement and a confirmed first trading day."
+    ],
+    "sources": [
+      {
+        "title": "Anthropic’s November 10 roadshow announcement",
+        "url": "https://www.anthropic.com/news/roadshow-launch"
+      },
+      {
+        "title": "Anthropic Form S-1/A filed November 10",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm"
+      },
+      {
+        "title": "TechCrunch on the reported listing timing",
+        "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/"
+      }
+    ],
+    "aiAssisted": true,
+    "disclosure": "Educational market information. Offering terms are preliminary and may change."
+  }
+]

@@ -73,6 +73,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  const [needsSource,setNeedsSource]=useState(false),[heardFrom,setHeardFrom]=useState('');
  const [usernameCorrection,setUsernameCorrection]=useState('');
  const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
+ const submittingUsername=useRef(false);
+ const [resolvingUsername,setResolvingUsername]=useState(false);
  const interactions=useRef(new Set<string>());
  const trackInteraction=(name:string)=>{if(!interactions.current.has(name)){interactions.current.add(name);trackSignupProgress(name)}};
  useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
@@ -92,13 +94,15 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
 
  const validation=usernameValidationMessage(userName);
  const continueProfile=async()=>{
-  if(availability==='checking')return;
+  if(submittingUsername.current)return;
+  submittingUsername.current=true;setResolvingUsername(true);
   const requestKey=latestUsername.current;
   trackSignupProgress('profile','attempt');
   setError('');
   setAvailability('checking');
   try{const resolved=await resolveSignupUsername(userName,user.uid);if(latestUsername.current!==requestKey)return;if(resolved!==userName)trackSignupProgress('username_corrected','success');setUserName(resolved);setAvailability('available');setUsernameCorrection(resolved!==userName?`Your username is ${resolved}. You can change it later in your profile.`:'');trackSignupProgress('profile','success');setStep(1)}
-  catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
+  catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t connect. Please try Continue again.')}
+  finally{submittingUsername.current=false;setResolvingUsername(false)}
  };
  const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
@@ -122,12 +126,12 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
    <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>STOCKS TO BUY NOW AI</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your results'}</span></header>
    {step===0&&<div className={s.content}>
     <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Choose your username.</h1><p className={s.lead}>You can edit your username and add a photo later. Then just {questionCount} quick questions before your results.</p>
-    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onFocus={()=>trackInteraction('username_focus')} onChange={event=>{trackInteraction('username_edit');setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
-    <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
+    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" disabled={resolvingUsername} value={userName} onFocus={()=>trackInteraction('username_focus')} onChange={event=>{trackInteraction('username_edit');setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
+    <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||availability==='taken'?'We’ll adjust this name automatically when you continue.':availability==='available'?'Username available.':'Continue and we’ll find an available name for you.'}</p>
     {usernameCorrection&&<p className={s.fieldSuccess} role="status">{usernameCorrection}</p>}
     <UsernameSuggestions value={userName} uid={user.uid} enabled={!!validation||availability==='taken'} onSelect={name=>{setUserName(name);setUsernameCorrection('');setAvailability('checking');setError('')}}/>
     {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
-    <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>{availability==='checking'?'Checking username…':'Continue →'}</button>
+    <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={resolvingUsername}>{resolvingUsername?'Choosing your username…':'Continue →'}</button>
    </div>}
    {question&&<OnboardingQuestion current={step} questions={onboardingQuestions} answer={answers[question.key]} onBack={()=>setStep(step-1)} onSelect={value=>selectAnswer(question.key,value)}/>}
    {step===questionCount+1&&<div className={`${s.content} ${s.resultsContent}`}>
