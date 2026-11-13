@@ -188,6 +188,7 @@ import SignUpModal from '../SignUpModal';
         </ReviewEntrance>
           <div className="review-followup" data-motion-reveal>
             <TrustpilotWidget templateId="53aa8912dec7e10d38f59f36" businessUnitId="670a2355c53c6130a02f3e50" height="140px" isTopStrip={false}/>
+            <a href="/authors/aness-hussein-ali/" style={{ display: 'flex', width: '100%', boxSizing: 'border-box', justifyContent: 'center', alignItems: 'center', gap: 10, marginTop: 12, color: '#bca5f5', fontSize: 17, fontWeight: 600, textDecoration: 'none', padding: '16px 20px', border: '1px solid rgba(188,165,245,.35)', borderRadius: 16 }}>Meet our Founder</a>
           </div>
 
         <ScrollShowcase />

@@ -94,8 +94,11 @@ const Hero = ({
               </h1>
               <div className="hero-content-space" style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
-             Your professional macro investment team. Data-driven insights. Receive stocks to buy before they go up.
+             Your professional macro investment team.
             </h2>
+            <p className="hero-research-description" style={{ color: 'rgba(255,255,255,.85)', fontSize: '15px', fontWeight: 400, lineHeight: 1.45, maxWidth: '540px', margin: '10px auto 0' }}>
+              Data-driven insights into the macro picture, company fundamentals, insider activity, unusual options volume and technical timing.
+            </p>
           </div>
 
         </div>
@@ -128,6 +131,7 @@ const Hero = ({
          <a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer" style={{color:'inherit',textDecoration:'underline',textUnderlineOffset:'3px'}}>Google Play</a>
        </>}</div>
     </div>
+    <a href="/authors/aness-hussein-ali/" className="hero-founder-link" style={{display:'flex',width:'100%',maxWidth:350,boxSizing:'border-box',justifyContent:'center',alignItems:'center',gap:6,marginTop:4,padding:0,color:'lightGrey',fontSize:'min(14px,max(13px,1.3vw))',lineHeight:1.35,fontWeight:400,textDecoration:'underline',textUnderlineOffset:'3px'}}>Meet our Founder</a>
 <div className="hero-bottom-space" style={{ height: 'clamp(40px, 7vw, 88px)' }} />
 
 
@@ -154,16 +158,20 @@ const Hero = ({
         .mobile-download-hero .hero-content-space{padding-top:30px!important}
         .mobile-download-hero .hero-bottom-space{height:48px!important}
       }
+      @media(min-width:401px) and (max-width:600px){
+        .mobile-download-hero .hero-top-space{padding-top:32px!important}
+      }
       @media(max-width:400px){
         .mobile-download-hero .hero-top-space{padding-top:38px!important}
         .mobile-download-hero .hero-robot{width:104px!important;height:104px!important;border-radius:18px!important;opacity:1!important}
         .mobile-download-hero .hero-content .container-xs>br{display:none}
         .mobile-download-hero h1{font-size:clamp(27px,6.8vw,36px)!important;line-height:1.16!important;margin:22px auto 0!important;max-width:470px!important}
         .mobile-download-hero h2{font-size:15px!important;line-height:1.4!important;max-width:330px!important;margin:0 auto!important}
+        .mobile-download-hero .hero-research-description{font-size:13px!important;max-width:330px!important;margin-top:8px!important}
         .mobile-download-hero .hero-content-space{padding-top:21px!important}
         .mobile-download-hero .hero-cta-group .app-download-cta{min-height:44px;min-width:170px;font-size:14px}
         .mobile-download-hero .hero-rating{width:125px!important;height:auto!important;margin:0 auto 5px}
-        .mobile-download-hero .hero-review-links{font-size:11px!important;line-height:1.45!important}
+        .mobile-download-hero .hero-review-links,.mobile-download-hero .hero-founder-link{font-size:11px!important;line-height:1.45!important}
         .mobile-download-hero .hero-bottom-space{height:30px!important}
       }
     `}</style>
