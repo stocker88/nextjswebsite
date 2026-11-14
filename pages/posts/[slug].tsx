@@ -183,7 +183,9 @@ export async function getStaticProps({ params }: Params) {
     'coverImage',
   ])
 
-  const content = post.content
+  const content = post.slug === 'privacypolicy'
+    ? await markdownToHtml(post.content || '')
+    : post.content
 
   return {
     props: {
