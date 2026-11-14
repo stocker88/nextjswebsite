@@ -1,0 +1,6 @@
+import Head from 'next/head'
+import SiteHeader from './layout/Header'
+import styles from '../styles/LegalPage.module.css'
+export default function LegalPage({title,description,children,preview=false}:{title:string;description:string;children:React.ReactNode;preview?:boolean}) {
+ return <div className={styles.page}><Head><title>{title} | Stocks To Buy Now AI</title><meta name="description" content={description}/><meta name="robots" content={preview?'noindex,nofollow':'index,follow'}/>{!preview&&<link rel="canonical" href="https://www.stockstobuynow.ai/posts/privacypolicy/"/>}</Head><SiteHeader homeHref="/" navBasePath="/"/><main className={styles.main}><header><span className={styles.eyebrow}>{preview?'LOCAL PREVIEW · NOT PUBLISHED':'STOCKS TO BUY NOW AI · LEGAL'}</span><h1>{title}</h1><p>{description}</p><div className={styles.meta}>Updated November 14, 2026 · Stocks To Buy Now Team</div></header><aside className={styles.contact}>Need help? <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a></aside><article className={styles.content}>{children}</article><footer>© {new Date().getFullYear()} Stocks To Buy Now AI · <a href="/">Back to website</a></footer></main></div>
+}

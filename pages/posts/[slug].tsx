@@ -1,3 +1,4 @@
+import LegalPage from '../../components/LegalPage'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
@@ -71,6 +72,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  if (post?.slug === 'privacypolicy') return <LegalPage title={post.title} description={post.seoExcerpt}><div dangerouslySetInnerHTML={{__html:post.content}} /></LegalPage>
   return (
     <Layout preview={preview}>
         {router.isFallback ? (

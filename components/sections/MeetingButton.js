@@ -1,5 +1,4 @@
 import React from 'react';
-import ReferralRecovery from '../ReferralRecovery';
 import NewsletterSignUp from '../formStocker';
 
 const MeetingButton = () => {
@@ -8,7 +7,6 @@ const MeetingButton = () => {
       <p>Available on iOS and Android</p>
       <h2 id="download-title">Put smarter market insights in your pocket.</h2>
       <NewsletterSignUp from="FinalFooter" />
-      <ReferralRecovery />
     </section>
   );
 };
