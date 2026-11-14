@@ -6,3 +6,5 @@
 @media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 
 .profileLinks{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 28px}.profileLinks .button,.profileLinks .secondary,.profileHero .actions .secondary{font-size:17px;line-height:1.45}.profileLinks a{max-width:100%;}
+
+.letterPreviews{display:flex;gap:16px;align-items:flex-start;margin-top:16px}.letterPreviews a{display:block;width:calc((100% - 16px)/2);max-width:170px}.letterPreviews img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
