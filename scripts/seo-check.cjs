@@ -27,3 +27,12 @@ for(const preview of [fixture,{...fixture,quickTake:'First line of research.'},{
  assert.equal(result.educationPreview,preview.educationPreview||'');
 }
 console.log('Related research excerpts: optional summaries remain serializable for static export.');
+
+const {catalog}=require('../lib/catalog.ts');
+const {predictionStocks,predictionPath,stockPredictionHref}=require('../lib/stock-predictions.ts');
+const equities=catalog.filter(item=>item.type==='EQUITY');
+assert.equal(predictionStocks.length,equities.length);
+assert.equal(new Set(predictionStocks.map(predictionPath)).size,predictionStocks.length,'Prediction URL collision');
+for(const item of catalog)assert.equal(Boolean(stockPredictionHref(item.symbol)),item.type==='EQUITY','Prediction coverage: '+item.symbol);
+for(const [ticker,slug] of [['NVDA','nvidia'],['SNDK','sandisk'],['GOOGL','google']])assert.equal(stockPredictionHref(ticker),'/prediction/'+slug+'-stock-price-prediction');
+console.log(`Verified unique prediction URLs for all ${equities.length} equities.`);

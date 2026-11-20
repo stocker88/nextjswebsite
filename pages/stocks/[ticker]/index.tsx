@@ -1,3 +1,4 @@
+import {stockPageHref} from '../../../lib/stock-page';
 import {predictionPath, predictionName} from '../../../lib/stock-predictions';
 import StockSmartMoney from '../../../components/StockSmartMoney';
 import RelatedStockResearch from '../../../components/RelatedStockResearch';
@@ -29,8 +30,10 @@ export default function Stock({
   calendar: Calendar | null;
   predictionPage?: boolean;
 }) {
-  const path = `/stocks/${stock.slug}`;
-  const canonicalPath = predictionPage ? predictionPath(stock) : path;
+  const path = stockPageHref(stock.ticker).replace(/\/$/,'');
+  const curated = stocks.some(item=>item.ticker===stock.ticker);
+  const earningsPath = curated ? `${path}/earnings` : '#earnings';
+  const canonicalPath = predictionPage ? predictionPath(stock) + "/" : path;
   const outlookYear = Number(bundle.today.slice(0,4)) + 1;
   const researchDate = new Date(`${bundle.today}T12:00:00Z`);
   const upcomingMonths = Array.from({length: 3}, (_, offset) => {
@@ -45,6 +48,7 @@ export default function Stock({
       description={predictionPage ? `${predictionName(stock)} (${stock.ticker}) stock price prediction research: tomorrow, weekly and monthly outlooks, plus 2026–2030 scenarios, earnings, technicals and risks.` : `Explore ${stock.name} (${stock.ticker}) earnings, financials, technicals, insider activity and related research. Review the stock outlook and valuation drivers.`}
     >
       <Head>
+        {predictionPage&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:`${predictionName(stock)} stock price prediction`,url:`https://www.stockstobuynow.ai${canonicalPath}`,about:{'@type':'Corporation',name:stock.name,tickerSymbol:stock.ticker},isAccessibleForFree:true,inLanguage:'en-US'})}}/>}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -65,9 +69,9 @@ export default function Stock({
         </h1>
         <p>{stock.overview}</p>
         <p>
-          <Link href={`${path}/earnings`}>Earnings research</Link> ·{" "}
+          <Link href={earningsPath}>Earnings research</Link> ·{" "}
           <Link href={predictionPage ? path : predictionPath(stock)}>{predictionPage ? "Company research overview" : "Stock price prediction & scenarios"}</Link> ·{" "}
-          <a href={stock.investorUrl}>Company investor relations</a>
+          {stock.investorUrl&&<a href={stock.investorUrl}>Company investor relations</a>}
         </p>
       </div>
 <div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
@@ -100,7 +104,7 @@ export default function Stock({
           <h3 id="monthly-outlook">{stock.name} stock prediction for next month and the coming months</h3>
           <p>For {upcomingMonths[0]}, {upcomingMonths[1]} and {upcomingMonths[2]}, review the earnings calendar, changes in company guidance and the trend in valuation and price. These are research windows, not separate monthly price targets. Reassess the outlook when new results or disclosures change the assumptions.</p>
           <p>Compare insider purchases and sales with their disclosure dates and any verified trading-plan status. Unusual options volume can help identify activity worth investigating, but volume alone does not establish a bullish or bearish forecast.</p>
-          <p><a href="#insider-research">Review available insider and fund activity</a>{' · '}<Link href={`${path}/earnings`}>Explore earnings research</Link></p>
+          <p><a href="#insider-research">Review available insider and fund activity</a>{' · '}<Link href={earningsPath}>Explore earnings research</Link></p>
           <h3 id="annual-outlook">{stock.name} stock price prediction for next year: {outlookYear}</h3>
           <p>A longer-term outlook depends on how the business develops and what investors are willing to pay for its earnings or cash flow. Review revenue growth, margins, debt, dilution and capital investment, then test a range of valuation assumptions. A strong business can still underperform if its share price already assumes stronger results.</p>
           <h3>What to watch for {stock.ticker}</h3>
@@ -119,7 +123,7 @@ export default function Stock({
           <ul><li>Bull case: operating results exceed the stated assumptions and investors sustain a higher valuation.</li><li>Base case: revenue, profitability and cash flow broadly follow the assumptions being tested.</li><li>Bear case: business performance weakens, financing needs rise or the market pays a lower multiple.</li></ul>
           <h3>Is a 12-month target the same as a {outlookYear} prediction?</h3>
           <p>No. A rolling 12-month target runs from its publication date; a calendar-year forecast may refer to year-end. Check the analyst or model source, date, currency, earnings definition and horizon. Company guidance describes operating expectations, not a promised share price.</p>
-          <p><Link href={`${path}/forecast`}>Explore the {stock.ticker} valuation scenario framework →</Link>{' · '}<a href={stock.investorUrl}>Check company disclosures →</a></p>
+          <p><Link href={curated ? `${path}/forecast` : path}>Explore {stock.ticker} valuation and company research →</Link>{stock.investorUrl&&<>{' · '}<a href={stock.investorUrl}>Check company disclosures →</a></>}</p>
         </section> : <section><h2>{stock.name} stock price prediction research</h2><p>Review short-term catalysts and longer-term business assumptions for tomorrow, next week, the coming months and 2026–2030.</p><Link href={predictionPath(stock)}>Explore {predictionName(stock)} stock price prediction research →</Link></section>}
         <h2>Price and valuation</h2>
         <p>

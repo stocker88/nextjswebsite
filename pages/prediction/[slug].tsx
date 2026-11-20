@@ -1,14 +1,14 @@
-import Stock, {getStaticProps as loadStockPage} from '../stocks/[ticker]/index';
-import {stocks} from '../../lib/stocks';
-import {predictionSlug} from '../../lib/stock-predictions';
+import Stock from '../stocks/[ticker]/index';
+import {predictionStocks, predictionSlug} from '../../lib/stock-predictions';
+import {loadStockResearch,loadStockEarnings} from '../../lib/stock-research-server';
+import {recentStockNews} from '../../lib/stock-related-research';
+import {fetchResearch} from '../../lib/research-server';
 export default Stock;
 export function getStaticPaths() {
-  return {paths: stocks.map(stock => ({params: {slug: predictionSlug(stock)}})), fallback: false};
+  return {paths: predictionStocks.map(stock => ({params: {slug: predictionSlug(stock)}})), fallback: false};
 }
 export async function getStaticProps({params}: {params: {slug: string}}) {
-  const stock = stocks.find(stock => predictionSlug(stock) === params.slug);
+  const stock = predictionStocks.find(stock => predictionSlug(stock) === params.slug);
   if (!stock) return {notFound: true};
-  const result = await loadStockPage({params: {ticker: stock.slug}});
-  if (!result.props) return {notFound: true};
-  return {...result, props: {...result.props, predictionPage: true}};
+  return {props:{stock,predictionPage:true,bundle:loadStockResearch(stock.ticker),calendar:loadStockEarnings(stock.ticker),items:recentStockNews(await fetchResearch(),stock.ticker)},revalidate:60};
 }

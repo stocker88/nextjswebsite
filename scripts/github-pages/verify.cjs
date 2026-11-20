@@ -116,3 +116,21 @@ for(const lesson of learningCatalog.videos){
 for(const route of ['learn','reviews','authors/aness-hussein-ali','company'])assert(html(route).includes('<h1'),'Missing public trust/education page: '+route);
 assert(fs.existsSync(path.join(out,'assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg')),'Founder diploma missing');
 console.log(`Verified ${learningCatalog.videos.length} public video pages, video sitemap, founder credentials and reviews.`);
+
+// Every prediction page is static, indexable, self-canonical and linked from its company page.
+const predictions=urls.filter(url=>new URL(url).pathname.startsWith('/prediction/'));
+const appCatalog=require(path.resolve(out,'../.github-pages-build/data/app-stock-catalog.json'));
+const allListings=[...appCatalog,...profiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
+assert.equal(predictions.length,allListings.filter(item=>item.type==='EQUITY').length,'Incomplete prediction sitemap');
+for(const url of predictions){
+ const route=new URL(url).pathname;
+ const page=html(route),head=page.split('</head>')[0];
+ assert(head.includes('rel="canonical" href="'+url+'"'),'Prediction canonical missing: '+url);
+ assert(!/noindex/i.test(head),'Prediction blocked from indexing: '+url);
+ const data=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+ const company=curated.find(item=>item.ticker===data.stock.ticker);
+ const companyRoute=company?'stocks/'+company.slug:'instruments/'+encodeURIComponent(data.stock.ticker);
+ assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);
+ assert(page.includes('2027')&&page.includes('2030'),'Prediction horizons missing: '+url);
+}
+console.log(`Verified ${predictions.length} indexable prediction pages, canonical URLs and inbound company links.`);
