@@ -90,7 +90,7 @@ export async function getServerSideProps({ res }: any) {
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
-  predictionStocks.forEach(stock=>entries.push({path:predictionPath(stock)}));
+  predictionStocks.forEach(stock=>entries.push({path:predictionPath(stock)+"/"}));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),
