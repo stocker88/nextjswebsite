@@ -94,7 +94,7 @@ const Hero = ({
               </h1>
               <div className="hero-content-space" style={{paddingTop: 'max(25px,2.2vw)'}}></div>
           <h2  style={{ color: 'white',fontWeight: 600, fontSize: "min(19px,max(17px,3vw))", lineHeight: 1.3, maxWidth: "650px" }} >
-             Your professional macro investment team.
+             Real-Time Stock Market Alerts
             </h2>
             <p className="hero-research-description" style={{ color: 'rgba(255,255,255,.85)', fontSize: '15px', fontWeight: 400, lineHeight: 1.45, maxWidth: '540px', margin: '10px auto 0' }}>
               Data-driven insights into the macro picture, company fundamentals, insider activity, unusual options volume and technical timing.
