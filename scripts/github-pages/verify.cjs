@@ -134,3 +134,11 @@ for(const url of predictions){
  assert(page.includes('2027')&&page.includes('2030'),'Prediction horizons missing: '+url);
 }
 console.log(`Verified ${predictions.length} indexable prediction pages, canonical URLs and inbound company links.`);
+
+const ipo=JSON.parse(fs.readFileSync(path.join(out,'data/ipo-calendar.json'),'utf8'));
+assert.equal(ipo.version,1);assert(Array.isArray(ipo.items));
+assert(html('ipo-calendar').includes('Upcoming IPO calendar'));
+assert(html('ipo-calendar').includes('https://www.stockstobuynow.ai/ipo-calendar/'));
+assert(sitemap.includes('/ipo-calendar/'));
+assert(html('stock-market-calendar').includes('/ipo-calendar/'));
+console.log('Verified IPO calendar, shared app snapshot, sitemap and calendar navigation.');

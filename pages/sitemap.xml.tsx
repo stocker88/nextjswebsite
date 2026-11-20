@@ -52,6 +52,7 @@ export async function getServerSideProps({ res }: any) {
     "/options-profit-calculator/",
     "/options-strategies/",
     "/stock-market-calendar/",
+    "/ipo-calendar/",
     "/earnings-calendar/this-week/",
     "/earnings-calendar/next-week/",
     "/stock-market-news",

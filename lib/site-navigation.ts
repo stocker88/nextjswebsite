@@ -8,6 +8,7 @@ export const siteNavigation = [
   {label: 'Stock Market News', href: '/stock-market-news/', detail: 'Follow the latest research', icon: 'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h5'},
   {label: 'Stocks to Buy', href: '/stocks-to-buy/', detail: 'Explore stock ideas', icon: 'M3 17l6-6 4 3 8-10 M15 4h6v6'},
   {label: 'Earnings Calendar', href: '/earnings-calendar/', detail: 'Plan the week ahead', icon: 'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
+  {label:'IPO Calendar',href:'/ipo-calendar/',detail:'Upcoming offerings, expected dates and new filings',icon:'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4'},
   {label: 'Stock Market Calendar', href: '/stock-market-calendar/', detail: 'Track economic events and key dates', icon: 'M4 5h16v16H4z M4 9h16 M8 3v4 M16 3v4 M8 13h2 M14 13h2 M8 17h2'},
   {label: 'Explore Industries', href: '/industries/', detail: 'Compare industry peers, valuations and P/S and P/E distributions', icon: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z'},
   {label: 'Insider & Fund News', href: '/insider-news/', detail: 'Daily recaps and original filing evidence', icon: 'M4 4h16v16H4z M8 8h8 M8 12h8 M8 16h5'},

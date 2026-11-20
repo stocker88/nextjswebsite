@@ -44,6 +44,21 @@ jobs:
       - run: node scripts/default-market-view-check.cjs
       - run: node scripts/heatmap-default-view-check.cjs
       - run: node scripts/macro-check.cjs
+      - run: node scripts/ipo-calendar-check.cjs
+      - name: Restore IPO weekly snapshot
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/ipo
+          key: ipo-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ipo-v1-
+      - name: Refresh IPO calendar when weekly update is due
+        run: node scripts/sync-ipo-calendar.cjs
+      - name: Save IPO snapshot and retry state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/ipo
+          key: ipo-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4
         with:
