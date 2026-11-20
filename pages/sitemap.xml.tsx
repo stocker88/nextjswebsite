@@ -12,6 +12,7 @@ import earningsCalendar from '../data/earnings-calendar.json';
 import {researchUrl} from '../lib/research';
 import {catalog} from '../lib/catalog';
 import { fetchResearch } from "../lib/research-server";
+import {predictionPath} from '../lib/stock-predictions';
 import { stocks } from "../lib/stocks";
 import terms from "../data/glossary.json";
 import { publicArticles } from "../lib/public-articles";
@@ -88,7 +89,7 @@ export async function getServerSideProps({ res }: any) {
   loadIndustryDirectory().forEach(i=>entries.push({path:'/industries/'+i.slug+'/'}));
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
-  stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
+  stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }, {path: predictionPath(s)}));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),

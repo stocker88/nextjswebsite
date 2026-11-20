@@ -87,8 +87,10 @@ async function main(){
  const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
  function redirect(from,to){
   const dest=path.join(stage,'out',from,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});
-  fs.writeFileSync(dest,`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://www.stockstobuynow.ai${escape(to)}"><meta http-equiv="refresh" content="0;url=${escape(to)}"><title>Page moved</title></head><body><a href="${escape(to)}">Continue to Stock Market News</a></body></html>`);
+  fs.writeFileSync(dest,`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://www.stockstobuynow.ai${escape(to)}"><meta http-equiv="refresh" content="0;url=${escape(to)}"><title>Page moved</title></head><body><a href="${escape(to)}">Continue to research</a></body></html>`);
  }
+ // Retired syndicated headline: send visitors to the permanent company outlook.
+ redirect('market-news/eb88a1adcea99d1c24ed-prediction-this-will-be-sandisk-s-stock-price-by-the-end-of-2027','/prediction/sandisk-stock-price-prediction/');
  redirect('stocks-to-buy-now','/stock-market-news/');
  for(const item of articles){const target=researchUrl(item.id,item.title)+'/';redirect('stocks-to-buy-now/'+item.id,target);redirect('stock-market-news/'+item.id,target);}
  for(const stock of require(path.join(stage,'data/stocks.json')))redirect('web-app/financial/'+stock.ticker,'/stocks/'+stock.slug+'/');
