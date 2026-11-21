@@ -70,7 +70,7 @@ export default function Stock({
         <p>{stock.overview}</p>
         <p>
           <Link href={earningsPath}>Earnings research</Link> ·{" "}
-          <Link href={predictionPage ? path : predictionPath(stock)}>{predictionPage ? "Company research overview" : "Stock price prediction & scenarios"}</Link> ·{" "}
+          <Link href={predictionPage ? path : predictionPath(stock)}>{predictionPage ? "Company research overview" : "Stock price prediction & scenarios"}</Link> · <Link href="/prediction/">Search predictions</Link> ·{" "}
           {stock.investorUrl&&<a href={stock.investorUrl}>Company investor relations</a>}
         </p>
       </div>

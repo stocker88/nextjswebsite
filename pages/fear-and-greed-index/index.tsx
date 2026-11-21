@@ -11,8 +11,8 @@ import saved from '../../data/fear-greed.json';
 import {CNN_URL,indicators,rating,color,historyMaximum,FearGreedSnapshot} from '../../lib/fear-greed';
 import {SITE,breadcrumbs,jsonLd} from '../../lib/seo';
 import styles from '../../styles/FearGreed.module.css';
-const pageTitle='Fear and Greed Index: Latest Reading & Historical Chart';
-const pageDescription='Explore CNN’s Fear and Greed Index with the latest available score, historical chart and seven stock market sentiment indicators. Understand fear and greed.';
+const pageTitle='CNN Fear and Greed Index: Chart & Market Alerts';
+const pageDescription='Explore CNN’s Fear and Greed Index with the latest available score, historical chart and seven stock market sentiment indicators. Sign up to receive real-time market alerts.';
 const indicatorGuides=[
  ['The S&P 500 is compared with its 125-day moving average. This puts the current index level in the context of its recent trend.', 'A move further above the average suggests stronger momentum; a move below it suggests weakening momentum. Watch whether a change persists across several observations.'],
  ['New 52-week highs and lows show whether strength extends beyond a few large companies.', 'More new highs suggest broader strength; more new lows suggest weakness. Compare this with the headline index: a rising index can mask deterioration among smaller constituents.'],
@@ -26,7 +26,7 @@ const date=(s:string)=>new Date(s).toLocaleString('en-US',{timeZone:'America/New
 function View(){
  const [store,setStore]=useState(mobileStoreUrl(''));
  useEffect(()=>setStore(mobileStoreUrl(navigator.userAgent)),[]);
- return <><AccountLink className={`${styles.view} ${styles.alertDesktop}`} destination="/continue/">Receive live alerts →</AccountLink><a className={`${styles.view} ${styles.alertMobile}`} href={store}>Receive live alerts →</a></>;
+ return <><AccountLink className={`${styles.view} ${styles.alertDesktop}`} destination="/continue/">Receive real-time alerts →</AccountLink><a className={`${styles.view} ${styles.alertMobile}`} href={store}>Receive real-time alerts →</a></>;
 }
 export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|null}){
  const [range,setRange]=useState(90);

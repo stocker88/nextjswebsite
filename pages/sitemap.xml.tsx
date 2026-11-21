@@ -34,6 +34,7 @@ export async function getServerSideProps({ res }: any) {
   const entries: { path: string; modified?: string | null }[] = [
     "/",
     "/stocks-to-buy",
+    "/prediction/",
     "/earnings-calendar/",
     "/premarket-stock-heatmap/",
     "/after-hours-stock-heatmap/",
