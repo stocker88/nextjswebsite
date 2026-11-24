@@ -57,7 +57,7 @@ export default function StockPeerAnalysis({symbol='',companies=[],industries=[],
  }
  function resetComparison(){setHidden([]);setSelected(symbol||companies[0]?.symbol||'');}
  return <section id="peer-analysis" className={styles.section}>
-  <header><span className={styles.eyebrow}>{industry?'INDUSTRY ANALYSIS':'05 / PEER ANALYSIS'}</span><h2>{industry?`${industry} comparison & valuation`:`Explore ${symbol} alongside its peers`}</h2><p>{industry||current?.industry||'Related companies'} · {companies.length} companies · Cached market data</p></header>
+  <header><span className={styles.eyebrow}>{industry?'INDUSTRY ANALYSIS':'02 / PEER ANALYSIS'}</span><h2>{industry?`${industry} comparison & valuation`:`Explore ${symbol} alongside its peers`}</h2><p>{industry||current?.industry||'Related companies'} · {companies.length} companies · Cached market data</p></header>
   <div className={styles.card}>
    <h3>Comparison</h3>
    <div className={styles.tabs} role="group" aria-label="Peer analysis mode">{(['change','metrics'] as const).map(m=><button key={m} type="button" aria-pressed={mode===m} onClick={()=>{setMode(m);resetComparison()}}>{m==='change'?'Change':'Metrics'}</button>)}</div>
