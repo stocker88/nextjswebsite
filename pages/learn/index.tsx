@@ -14,11 +14,12 @@ export default function Learn({courseList, videoList}: {courseList: Course[]; vi
   return <PublicEducationPage title="Free stock & options courses with Aness Hussein Ali" description="Explore free courses on stocks, options and trading setups. Watch lessons by Aness Hussein Ali, founder of Stocks To Buy Now Research and Berkeley Haas MFE graduate." path="/learn/" schema={{'@context':'https://schema.org','@type':'CollectionPage',name:'Stocks To Buy Now Research course library',url:SITE+'/learn/',mainEntity:{'@type':'ItemList',itemListElement:courseList.map((c,i)=>({'@type':'ListItem',position:i+1,url:SITE+coursePath(c.slug),name:c.shortTitle}))}}}>
     <section className={s.hero}>
       <p className={s.eyebrow}>The learning library · Free to explore</p>
-      <h1>Understand the market.<br/><span className={s.accent}>Build your own judgment.</span></h1><p><Link href="/guides/">Explore written investing guides</Link> · <Link href="/broker-comparison/">Compare brokers</Link></p>
+      <h1>Understand the market.<br/><span className={s.accent}>Build your own judgment.</span></h1>
       <p className={s.lead}>Learn the foundations, understand the risks, and connect the dots behind a setup. Practical video lessons with Aness Hussein Ali.</p>
       <div className={s.heroStats}><div><strong>{courseList.length} courses</strong>A clear place to start</div><div><strong>{videoList.length} lessons</strong>Watch at your own pace</div><div><strong>Open to everyone</strong>No account or subscription needed</div></div>
       <div className={s.actions}><a href="#courses" className={s.button}>Explore the courses <span aria-hidden="true">↓</span></a><Link href="/authors/aness-hussein-ali/" className={s.secondary}>Meet your instructor ↗</Link></div>
     </section>
+    <section className={s.section}><h2>Prefer a written guide?</h2><p className={s.lead}>Learn how to start investing, buy your first stock and evaluate market activity.</p><div className={s.actions}><Link href="/guides/" className={s.secondary}>Explore investing and trading guides</Link><Link href="/broker-comparison/" className={s.secondary}>Compare brokers</Link></div></section>
     <section id="courses" className={s.section}>
       <div className={s.sectionHead}><div><p className={s.eyebrow}>Choose your starting point</p><h2>A foundation for every next step.</h2></div></div>
       <div className={s.grid}>{courseList.map(c=><article className={s.card} key={c.slug}>
