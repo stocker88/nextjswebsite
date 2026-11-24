@@ -1,4 +1,5 @@
 import ShareControl from './ShareControl';
+import TrackRecordDownload from './TrackRecordDownload';
 import Head from 'next/head';
 import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
@@ -30,7 +31,7 @@ export default function ResearchPage({title, path, children, description = title
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
     <main className={stockDirectory ? "stock-directory" : undefined}>
-      {!noindex && <ShareControl title={title} path={path}/>}
+      {!noindex && (path.replace(/\/$/,'')==='/methodology' ? <div className="research-share-actions"><ShareControl title={title} path={path}/><TrackRecordDownload /></div> : <ShareControl title={title} path={path}/>)}
       {stockDirectory ? children : !hideResearchNavigation && <ResearchSections path={path} />}
       {!stockDirectory && children}
       <nav className="research-resources" aria-label="Research resources">
@@ -50,6 +51,7 @@ export default function ResearchPage({title, path, children, description = title
       </nav>
     </main>
     <style jsx>{`
+      .research-share-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
       .stock-directory .research-resources {display:flex;flex-wrap:wrap;gap:6px 20px;margin:28px 0 0;padding-top:18px;border-top:1px solid #ffffff12;}
       .stock-directory .research-resources :global(a),.stock-directory .research-resources :global(a[aria-current="page"]) {padding:4px 0;min-height:28px;border:0;background:none;border-radius:0;color:#8fa0b8;font-size:11px;font-weight:400;}
       .stock-directory .research-resources svg {display:none;}

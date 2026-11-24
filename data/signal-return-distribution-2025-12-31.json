@@ -1,0 +1,94 @@
+{
+  "asOf": "2025-12-31",
+  "count": 205,
+  "min": -52.812498807907104,
+  "max": 305.940604187307,
+  "binWidthPct": 25,
+  "bins": [
+    {
+      "low": -75,
+      "high": -50,
+      "count": 1
+    },
+    {
+      "low": -50,
+      "high": -25,
+      "count": 18
+    },
+    {
+      "low": -25,
+      "high": 0,
+      "count": 60
+    },
+    {
+      "low": 0,
+      "high": 25,
+      "count": 73
+    },
+    {
+      "low": 25,
+      "high": 50,
+      "count": 35
+    },
+    {
+      "low": 50,
+      "high": 75,
+      "count": 8
+    },
+    {
+      "low": 75,
+      "high": 100,
+      "count": 4
+    },
+    {
+      "low": 100,
+      "high": 125,
+      "count": 1
+    },
+    {
+      "low": 125,
+      "high": 150,
+      "count": 1
+    },
+    {
+      "low": 150,
+      "high": 175,
+      "count": 2
+    },
+    {
+      "low": 175,
+      "high": 200,
+      "count": 1
+    },
+    {
+      "low": 200,
+      "high": 225,
+      "count": 0
+    },
+    {
+      "low": 225,
+      "high": 250,
+      "count": 0
+    },
+    {
+      "low": 250,
+      "high": 275,
+      "count": 0
+    },
+    {
+      "low": 275,
+      "high": 300,
+      "count": 0
+    },
+    {
+      "low": 300,
+      "high": 325,
+      "count": 1
+    }
+  ],
+  "annualized": {
+    "pairedCount": 200,
+    "signalPct": 57.944185766395016,
+    "spyPct": 21.967808188586236
+  }
+}

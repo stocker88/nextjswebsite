@@ -1,0 +1,64 @@
+{
+  "version": "target-date-v1.1",
+  "cutoff": "2025-12-31",
+  "generatedAt": "2026-11-24T17:34:40.004131+00:00",
+  "sourceSHA256": "512a907fedb653f3723b291ced97455393cadabf16233d7db6e89cac5a64e479",
+  "priceSource": "Yahoo Finance daily adjusted OHLC",
+  "notes": [
+    "Stock signals published through the cutoff; completed target-date exits only.",
+    "Next eligible exchange open after the later publication/recommendation timestamp; saved target-date close, or next session if closed.",
+    "Prices are split/dividend-adjusted model prices, not broker fills.",
+    "All monthly returns are full holding-period returns grouped by exit month, not portfolio returns.",
+    "SPY uses identical entry and exit dates; European signals have no US benchmark.",
+    "CSV percent columns use percentage points: 12.5 means 12.5%.",
+    "Net scenarios subtract 0.10 or 0.20 percentage points of entry notional as assumed round-trip friction.",
+    "Currently saved target dates are used; historical revisions are not reconstructed.",
+    "Pending/Hold signal details are excluded from public downloads."
+  ],
+  "allocation": {
+    "defaultWeightPct": 1,
+    "knownWeights": 109,
+    "imputedWeights": 96,
+    "mapping": {
+      "1": 7,
+      "2": 5,
+      "3": 3,
+      "4": 2,
+      "5": 1
+    },
+    "method": "sum(weight × return) / sum(weight)",
+    "defaultBasis": "User-specified 1% fallback when the suggested allocation was not saved",
+    "note": "Retrospective reconstruction from currently saved risk ratings, not a verified archive of original publication weights."
+  },
+  "portfolio": {
+    "startDate": "2024-02-01",
+    "asOf": "2025-12-31",
+    "monthlyContribution": 1000,
+    "totalContributed": 23000,
+    "endingValue": 25265.4070785636,
+    "profit": 2265.4070785635995,
+    "gainOnContributionsPct": 9.84959599375479,
+    "spyEndingValue": 27629.55713207578,
+    "spyProfit": 4629.557132075781,
+    "spyGainOnContributionsPct": 20.12850926989469,
+    "timeWeightedReturnPct": 21.50540948349193,
+    "spyTimeWeightedReturnPct": 44.07466635200479,
+    "lockedCash": 21526.505319812968,
+    "availableCash": 7.958078640513122e-13,
+    "openPositions": 38,
+    "maxDrawdownPct": -10.18813065249079,
+    "signals": 239,
+    "excludedNonUS": 4,
+    "assumptions": [
+      "Retrospective model: each month’s full $1,000 is split across eligible entries using normalized suggested weights; the final signal set is not known in advance.",
+      "Saved risk mapping 7%, 5%, 3%, 2%, 1%; missing risk uses 1%.",
+      "Both accounts receive $1,000 on the first US trading session each month. SPY buys at that open; signals use their next eligible open.",
+      "US listings only; four European listings excluded. Fractional shares, no additional leverage.",
+      "All signal sale proceeds are locked as non-interest-bearing cash and never reinvested. Unused contribution cash earns no interest.",
+      "Target-date close exits; pending/Hold positions marked to December 31, 2025.",
+      "One short signal reserves cash equal to notional; proceeds cannot fund purchases. Borrowing availability, fees and broker margin rules not modeled.",
+      "Adjusted prices; no fees, slippage, taxes or subscription costs. Current saved target dates and ratings are used.",
+      "Monthly returns and drawdown remove the effect of contributions. Gain on contributions is profit divided by total deposits, not an annualized rate."
+    ]
+  }
+}

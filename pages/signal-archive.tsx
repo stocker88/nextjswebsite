@@ -12,7 +12,7 @@ export default function SignalArchive() {
  useEffect(()=>{void load();},[]);
  return <ResearchPage title="Signal timestamp proofs" path="/signal-archive"><main className="archive">
   <p><a href="/methodology/">← Track record and methodology</a></p><h1>Signal timestamp proofs</h1>
-  <p>Public fingerprints let readers check a revealed record without exposing active member research. Originals and corrections are kept as separate entries.</p>
+  <p>Public fingerprints let readers check a revealed record without exposing active member research.</p>
   <p><strong>Pending</strong> means a calendar has accepted the commitment but Bitcoin confirmation has not yet been verified. <strong>Verified</strong> means the proof was checked against Bitcoin data through a public block explorer. You can independently check the downloaded proof with your own Bitcoin node.</p>
   <p>Historical imports retain their recorded signal dates, but their proofs begin when archived—not at the earlier publication date. These proofs establish existence by a verified time, not trade execution, completeness or investment performance.</p>
   <p><a href="https://opentimestamps.org/">OpenTimestamps verification tools ↗</a> · <a href={endpoint}>Public proof index (JSON)</a></p>
