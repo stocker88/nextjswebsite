@@ -11,7 +11,7 @@ export default function PublicEducationPage({title, description, path, image = '
   const picture = image.startsWith('https://') ? image : SITE + image;
   return <div className={styles.page}>
     <Head>
-      <title>{`${title} | Stocks To Buy Now Research`}</title>
+      <title>{title.toLowerCase().includes('stocks to buy now research') ? title : `${title} | Stocks to Buy Now Research`}</title>
       <meta name="description" content={description}/>
       <link rel="canonical" href={SITE + path}/>
       <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1,max-snippet:-1"/>
