@@ -163,5 +163,20 @@
       "New openings",
       "Food and labor costs"
     ]
+  },
+  {
+    "slug": "sndk",
+    "ticker": "SNDK",
+    "name": "Sandisk",
+    "investorUrl": "https://investor.sandisk.com/",
+    "earningsUrl": "https://investor.sandisk.com/news-events/news-releases",
+    "overview": "Sandisk develops NAND flash memory and storage products for datacenter, edge and consumer markets.",
+    "drivers": [
+      "NAND pricing and supply-demand balance",
+      "Datacenter and enterprise storage demand",
+      "Gross margin and manufacturing cost per bit",
+      "Inventory, capital investment and free cash flow",
+      "Technology transitions and manufacturing partnerships"
+    ]
   }
 ]

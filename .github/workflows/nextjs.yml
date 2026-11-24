@@ -34,6 +34,7 @@ jobs:
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs
+      - run: node scripts/prediction-periods-check.cjs
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
       - run: node scripts/options-check.cjs
@@ -44,6 +45,21 @@ jobs:
       - run: node scripts/default-market-view-check.cjs
       - run: node scripts/heatmap-default-view-check.cjs
       - run: node scripts/macro-check.cjs
+      - run: node scripts/ipo-calendar-check.cjs
+      - name: Restore IPO weekly snapshot
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/ipo
+          key: ipo-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ipo-v1-
+      - name: Refresh IPO calendar when weekly update is due
+        run: node scripts/sync-ipo-calendar.cjs
+      - name: Save IPO snapshot and retry state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/ipo
+          key: ipo-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Restore sentiment cache
         uses: actions/cache/restore@v4
         with:
@@ -88,6 +104,7 @@ jobs:
           path: .cache/earnings
           key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: node scripts/github-pages/verify.cjs
+      - run: node scripts/public-investor-pages-check.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

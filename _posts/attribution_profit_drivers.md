@@ -5,7 +5,7 @@ seoExcerpt: 'Read about the Attribution Methodology used at Goldman Sachs Asset 
 coverImage: '/assets/blog/attribution/performance_attribution.jpg'
 date: '2024-01-24T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/attribution/performance_attribution.jpg'

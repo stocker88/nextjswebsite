@@ -1,18 +1,2 @@
-import { useState } from 'react';
-import { createAcquisitionRecoveryCode,installedAppHandoff } from '../lib/acquisition';
-
-export default function ReferralRecovery() {
-  const [code,setCode]=useState(''),[busy,setBusy]=useState(false),[message,setMessage]=useState('');
-  const generate=async()=>{setBusy(true);setMessage('');try{setCode(await createAcquisitionRecoveryCode());}catch(_){setMessage('Could not create a code. Please try again.');}finally{setBusy(false);}};
-  const openApp=async()=>{setBusy(true);setMessage('');try{window.location.href=await installedAppHandoff();}catch{setMessage('Could not connect this visit. Please try again.');}finally{setBusy(false)}};
-  return <section style={{margin:'20px auto',maxWidth:420,color:'#c5cde1',fontSize:14,textAlign:'left'}}>
-    <p style={{fontSize:14,lineHeight:1.6}}>After installing on this phone, return here and open the app to connect your visit. If you already signed up here, use the same sign-in account in the app.</p>
-    <button type="button" onClick={()=>void openApp()} disabled={busy} style={{color:'#d0b6ff',padding:'10px 14px',border:'1px solid #78629f',borderRadius:12,background:'#191b31'}}>I’ve installed it — open the app ↗</button>
-    <details style={{marginTop:16}}>
-    <summary style={{cursor:'pointer'}}>Keep your referral when installing (optional)</summary>
-    <p style={{fontSize:14,lineHeight:1.6,fontWeight:400,textTransform:'none',letterSpacing:0,color:'#c5cde1'}}>Save a code before installing. Enter it at signup to connect this website visit to your account. It expires in 7 days.</p>
-    {!code?<button type="button" onClick={generate} disabled={busy} style={{color:'#d0b6ff',padding:'10px 14px',border:'1px solid #78629f',borderRadius:12,background:'#191b31'}}>{busy?'Creating…':'Create referral code'}</button>:<><code style={{display:'block',fontSize:18,letterSpacing:1,marginBottom:8}}>{code}</code><button type="button" onClick={async()=>{try{await navigator.clipboard.writeText(code);setMessage('Copied. Keep this code until signup.');}catch(_){setMessage('Select and copy the code above.');}}}>Copy code</button></>}
-    </details>
-    <p role="status" style={{fontSize:14,fontWeight:400,textTransform:'none',letterSpacing:0}}>{message}</p>
-  </section>;
-}
+// Referral attribution continues automatically; no manual recovery-code UI.
+export default function ReferralRecovery(_props: any) { return null; }

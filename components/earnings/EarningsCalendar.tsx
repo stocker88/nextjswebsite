@@ -1,3 +1,4 @@
+import ResearchPillarGuide from '../ResearchPillarGuide';
 import socialPreviews from '../../data/earnings-social.json';
 import EarningsInsightLinks from './EarningsInsightLinks';
 import DesktopAppLink from '../DesktopAppLink';
@@ -55,5 +56,5 @@ export default function EarningsCalendar({snapshot,mode='calendar',company}:{sna
  <EarningsLearningGuides/>
  <CalendarPredictionPromo kind="earnings"/>
  <footer className="ec-footer"><a href="/">StocksToBuyNow.ai</a><p>Source: <a href="https://www.stockstobuynow.ai/">www.StocksToBuyNow.ai</a>. Educational research, not personalized investment advice.</p><p>Calendar snapshots refresh every six hours. Prices and trailing ratios refresh at most daily; market caps and profiles every 14 days, analyst estimates weekly. Other company research refreshes on request. Dates and estimates may change.</p></footer>
- </main><EarningsStyles/><style jsx global>{`.ec-periods{flex-wrap:wrap;gap:5px}.ec-window-label{font-size:12px;color:#a9bad0;margin:10px 0}.ec-more-filters summary{cursor:pointer;color:#cbb8f2;font-size:13px;padding:10px 0}.ec-toolbar{flex-wrap:wrap}@media(max-width:700px){.ec-control-top{gap:9px}.ec-periods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.ec-periods button{white-space:nowrap;padding:9px 4px;font-size:11px;border-radius:8px}.ec-controls{padding:10px}.ec-toolbar{gap:7px}.ec-toolbar button{font-size:11px}.ec-search{border-radius:22px}.ec-hero{margin-bottom:12px}.ec-overview{margin-bottom:12px}.ec-hero .ec-intro{display:none}}`}</style></>;
+ {!company&&<ResearchPillarGuide kind="earnings"/>}</main><EarningsStyles/><style jsx global>{`.ec-periods{flex-wrap:wrap;gap:5px}.ec-window-label{font-size:12px;color:#a9bad0;margin:10px 0}.ec-more-filters summary{cursor:pointer;color:#cbb8f2;font-size:13px;padding:10px 0}.ec-toolbar{flex-wrap:wrap}@media(max-width:700px){.ec-control-top{gap:9px}.ec-periods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.ec-periods button{white-space:nowrap;padding:9px 4px;font-size:11px;border-radius:8px}.ec-controls{padding:10px}.ec-toolbar{gap:7px}.ec-toolbar button{font-size:11px}.ec-search{border-radius:22px}.ec-hero{margin-bottom:12px}.ec-overview{margin-bottom:12px}.ec-hero .ec-intro{display:none}}`}</style></>;
 }

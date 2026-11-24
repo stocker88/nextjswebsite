@@ -1,3 +1,4 @@
+import {generatedImagePreview} from '../lib/generated-image';
 import {useRouter} from 'next/router';
 import {useSiteAccount} from './SiteAccount';
 import {accountLoginUrl} from '../lib/site-auth';
@@ -61,7 +62,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     <div className={'pictures '+(items.length>1?'multiple':'')+(items.length===3?' triple':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
         <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={(appOnly?(desktop?'Review the full research picture ':'Get the app to view '):'Expand ')+(title(i)||'image '+(index+1))}>
-          <img src={i.url} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
+          <img src={generatedImagePreview(i.url)} width={i.width || undefined} height={i.height || undefined} alt={title(i)||'Research illustration'} loading="lazy" onError={()=>setFailed(previous=>({...previous,[i.url]:true}))}/>
           {failed[i.url] && <span className="image-error">Image unavailable</span>}
           {!failed[i.url] && <span className="expand" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></span>}
         </button>

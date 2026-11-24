@@ -17,7 +17,7 @@ const auth=load('lib/site-sign-in.ts',{'./analytics':{trackAuthentication(){}},'
  assert.match(auth.siteSignInError({code:'auth/popup-blocked'}),/Allow pop-ups/);
  assert.match(auth.siteSignInError({code:'auth/web-storage-unsupported'}),/storage/);
  assert.ok(!auth.siteSignInError(Error('private@example.com token=secret')).includes('secret'));
- const progress=load('lib/signup-progress.ts',{'./site-auth':{},'./acquisition':{},'./signup-progress-queue':{}});
+ const progress=load('lib/signup-progress.ts',{'./site-auth':{},'./acquisition':{},'./signup-progress-queue':{},'./browser-identity':{browserIdentity:()=> 'd'.repeat(32)}});
  for(const [name,code] of [['TypeError','client/type-error'],['ChunkLoadError','client/chunk-load-failed'],['SecurityError','client/security-error'],['AbortError','client/aborted']])assert.equal(progress.signupErrorCode({name,message:'secret'}),code);
  console.log('PASS: synchronous prepared popup, one active attempt, retry recovery, safe error guidance and diagnostic categories.');
 })().catch(e=>{console.error(e);process.exitCode=1});

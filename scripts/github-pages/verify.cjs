@@ -10,7 +10,7 @@ const newsUrls=[...newsSitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].repla
 assert(urls.length>100,'Sitemap missing content');
 assert.equal(new Set(urls).size,urls.length,'Duplicate canonical URLs');
 assert(newsSitemap.includes('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"'),'Google News namespace missing');
-if(newsUrls.length)assert(newsSitemap.includes('<news:name>Stocks To Buy Now AI</news:name>'),'Google News publication name missing');
+if(newsUrls.length)assert(newsSitemap.includes('<news:name>Stocks To Buy Now Research</news:name>'),'Google News publication name missing');
 assert.equal(new Set(newsUrls).size,newsUrls.length,'Duplicate Google News URLs');
 assert(newsUrls.length<=1000,'Google News sitemap exceeds 1,000 URLs');
 for(const url of urls){
@@ -116,3 +116,60 @@ for(const lesson of learningCatalog.videos){
 for(const route of ['learn','reviews','authors/aness-hussein-ali','company'])assert(html(route).includes('<h1'),'Missing public trust/education page: '+route);
 assert(fs.existsSync(path.join(out,'assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg')),'Founder diploma missing');
 console.log(`Verified ${learningCatalog.videos.length} public video pages, video sitemap, founder credentials and reviews.`);
+
+// Every prediction page is static, indexable, self-canonical and linked from its company page.
+const predictions=urls.filter(url=>/^\/prediction\/[^/]+\/$/.test(new URL(url).pathname));
+assert(urls.includes('https://www.stockstobuynow.ai/prediction/'),'Prediction search hub missing from sitemap');
+assert(html('prediction').includes('https://www.stockstobuynow.ai/prediction/'),'Prediction hub canonical missing');
+const appCatalog=require(path.resolve(out,'../.github-pages-build/data/app-stock-catalog.json'));
+const allListings=[...appCatalog,...profiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
+const predictionDirectory=JSON.parse(html('prediction').match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+assert.equal(predictions.length,predictionDirectory.allStocks.length,'Incomplete prediction sitemap');
+for(const url of predictions){
+ const route=new URL(url).pathname;
+ const page=html(route),head=page.split('</head>')[0];
+ assert(head.includes('rel="canonical" href="'+url+'"'),'Prediction canonical missing: '+url);
+ assert(!/noindex/i.test(head),'Prediction blocked from indexing: '+url);
+ const data=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+ const company=curated.find(item=>item.ticker===data.stock.ticker);
+ const companyRoute=company?'stocks/'+company.slug:'instruments/'+encodeURIComponent(data.stock.ticker);
+ if(fs.existsSync(path.join(out,companyRoute,'index.html')))assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);else assert(html('prediction').includes('href="'+route+'"'),'Cached-only company missing from prediction directory: '+route);
+ assert(page.includes('2027')&&page.includes('2030'),'Prediction horizons missing: '+url);
+}
+console.log(`Verified ${predictions.length} indexable prediction pages, canonical URLs and inbound company links.`);
+
+const ipo=JSON.parse(fs.readFileSync(path.join(out,'data/ipo-calendar.json'),'utf8'));
+assert.equal(ipo.version,1);assert(Array.isArray(ipo.items));
+assert(html('ipo-calendar').includes('Upcoming IPO calendar'));
+assert(html('ipo-calendar').includes('https://www.stockstobuynow.ai/ipo-calendar/'));
+assert(sitemap.includes('/ipo-calendar/'));
+assert(html('stock-market-calendar').includes('/ipo-calendar/'));
+console.log('Verified IPO calendar, shared app snapshot, sitemap and calendar navigation.');
+
+// Every investing guide and broker comparison must ship as crawlable HTML.
+const guideRoutes=require('../../data/investing-guides.json').map(g=>'guides/'+g.slug);
+for(const route of ['broker-comparison',...guideRoutes]){
+ const page=html(route),canonical='https://www.stockstobuynow.ai/'+route+'/';
+ assert(page.includes('href="'+canonical+'"'),'Missing canonical: '+route);
+ assert(sitemap.includes('<loc>'+canonical+'</loc>'),'Missing sitemap URL: '+route);
+ assert(page.includes('Stocks To Buy Now Research'),'Missing brand: '+route);
+ assert(page.includes('FAQPage'),'Missing visible FAQ schema: '+route);
+ assert(!/<meta[^>]*name="robots"[^>]*content="[^"]*noindex/.test(page),'Unexpected noindex: '+route);
+ const scripts=[...page.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)];
+ scripts.forEach(match=>JSON.parse(match[1]));
+}
+for(const [old,dest] of [['stocks-to-buy-now-canada','investing-across-countries'],['stocks-to-buy-now-ai-review','stocks-to-buy-now-research-review']]){
+ const page=html('guides/'+old);
+ assert(page.includes('url=/guides/'+dest+'/'),'Missing guide redirect: '+old);
+ assert(page.includes('noindex'),'Redirect alias must not be indexed: '+old);
+ assert(!sitemap.includes('/guides/'+old+'/'),'Old guide URL remains in sitemap: '+old);
+}
+console.log('Verified broker comparison, investing guides, FAQ schema, canonicals and legacy redirects.');
+
+// Horizon pages have their own canonical and crawlable navigation from the parent.
+const periodUrls=urls.filter(url=>/^\/prediction\/[^/]+\/[^/]+\/$/.test(new URL(url).pathname));
+const predictionYear=new Date().getUTCFullYear();
+const activePeriodCount=4+[2026,2027,2028,2029,2030].filter(y=>y>=predictionYear).length;
+assert.equal(periodUrls.length,predictionDirectory.cachedStocks.length*activePeriodCount,'Cached prediction period pages missing');
+for(const url of periodUrls){const route=new URL(url).pathname,page=html(route),head=page.split('</head>')[0];assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing');assert(!/noindex/i.test(head),'Active period blocked');assert(page.includes('FAQPage'),'Period FAQ missing');const parent=route.split('/').slice(0,3).join('/')+'/';assert(html(parent).includes('href="'+route+'"'),'Parent period selector missing');}
+console.log(`Verified ${periodUrls.length} period pages, FAQ markup, canonicals and parent navigation.`);

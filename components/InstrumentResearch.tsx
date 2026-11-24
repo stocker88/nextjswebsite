@@ -1,3 +1,4 @@
+import {stockPredictionHref} from '../lib/stock-predictions';
 import RelatedStockResearch from './RelatedStockResearch';
 import Link from 'next/link';
 import StockPeerPerformance from './heatmap/StockPeerPerformance';
@@ -12,12 +13,14 @@ import {displayDate} from '../lib/seo';
 
 export type InstrumentResearchProps={item:typeof catalog[number];news:ResearchPreview[];bundle:ResearchBundle|null;calendar:Calendar|null;embedded?:boolean};
 export default function InstrumentResearch({item,news,bundle,calendar,embedded=false}:InstrumentResearchProps){
+ const predictionHref=stockPredictionHref(item.symbol);
  const heading=<>{item.name} (<span data-stock-symbol={item.symbol}>{item.symbol}</span>)</>;
  return <>
  <div className="public-copy profile">
  {!embedded&&<Link href="/stocks">← Search stocks</Link>}
  {embedded?<><p className="research-kicker">EXPLORE THE COMPANY</p><h2>{heading}</h2><p>Explore earnings, price action, financials and industry comparisons.</p></>:<h1>{heading}</h1>}
  <dl>{[["Symbol",item.symbol],["Sector",item.sector],["Industry",item.industry],["Instrument type",item.type]].filter(([,value])=>value).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+ {predictionHref&&<p><Link href={predictionHref}>{item.name} stock price prediction & outlook →</Link></p>}
  <p>Profile information from our saved company catalog. This is not a live quote or confirmation of current listing status.</p></div>
  {bundle&&<><div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={item.symbol} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div><StockResearchHub symbol={item.symbol} name={item.name} bundle={bundle} showMoverNews={!embedded} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></>}
  <RelatedStockResearch items={news}/>

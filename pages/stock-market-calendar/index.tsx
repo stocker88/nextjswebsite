@@ -7,6 +7,7 @@ export default function StockMarketCalendarPage(){return <>
  <Head><title>Stock Market Calendar | Economic Events, 13F & Index Announcements</title><meta name="description" content="Plan your week or month with economic releases, Federal Reserve events, 13F filings, index announcements and trading dates."/><link rel="canonical" href="https://www.stockstobuynow.ai/stock-market-calendar/"/></Head>
  <Header forceDark navBasePath="/"/>
  <main><div className="intro"><a href="/">Home</a><span> / Stock market calendar</span><h1>Stock market calendar</h1><p>Keep important market dates in view. Explore the week ahead or switch to a monthly overview.</p></div>
+ <p className="intro"><a href="/ipo-calendar/">Upcoming IPO calendar →</a></p>
  <MarketCalendar fullPage/>
  <MarketLearningGuides/>
         <CalendarPredictionPromo kind="market"/>

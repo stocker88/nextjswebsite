@@ -5,7 +5,7 @@ seoExcerpt: '1) Competition Analysis 2) Similarities and Disparities 3) Earnings
 coverImage: '/assets/blog/teslarace/teslarace.jpg'
 date: '2024-01-01T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/teslarace/teslarace.jpg'

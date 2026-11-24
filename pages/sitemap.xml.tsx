@@ -1,3 +1,6 @@
+import {cachedPredictionStocks,predictionCatalog,cachedPredictionDetail} from '../lib/prediction-cache-server';
+import {periods,periodPath,horizonEnd} from '../lib/prediction-periods';
+import investingGuides from '../data/investing-guides.json';
 import {learningPaths} from '../lib/learning';
 import {optionResults,optionResultUrl} from '../lib/option-results';
 import {insiderArticles} from '../lib/insider-news-server';
@@ -12,11 +15,13 @@ import earningsCalendar from '../data/earnings-calendar.json';
 import {researchUrl} from '../lib/research';
 import {catalog} from '../lib/catalog';
 import { fetchResearch } from "../lib/research-server";
+import {predictionPath, predictionStocks} from '../lib/stock-predictions';
 import { stocks } from "../lib/stocks";
 import terms from "../data/glossary.json";
 import { publicArticles } from "../lib/public-articles";
 import { getAllPosts } from "../lib/api";
 import { SITE, isoDate } from "../lib/seo";
+import {publicInvestors,investorPath} from '../lib/public-investors';
 const escapeXml = (value: string) =>
   value
     .replace(/&/g, "&amp;")
@@ -32,6 +37,7 @@ export async function getServerSideProps({ res }: any) {
   const entries: { path: string; modified?: string | null }[] = [
     "/",
     "/stocks-to-buy",
+    "/prediction/",
     "/earnings-calendar/",
     "/premarket-stock-heatmap/",
     "/after-hours-stock-heatmap/",
@@ -50,6 +56,7 @@ export async function getServerSideProps({ res }: any) {
     "/options-profit-calculator/",
     "/options-strategies/",
     "/stock-market-calendar/",
+    "/ipo-calendar/",
     "/earnings-calendar/this-week/",
     "/earnings-calendar/next-week/",
     "/stock-market-news",
@@ -73,7 +80,9 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  entries.push({path:'/broker-comparison/'},{path:'/guides/'},...investingGuides.map(g=>({path:'/guides/'+g.slug+'/'})));
   entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
+  entries.push({path:'/smart-money/investors/'},...publicInvestors.map(p=>({path:investorPath(p.id)})));
   insiderArticles.filter(a=>!a.noActivity).forEach(a=>entries.push({path:insiderArticlePath(a),modified:a.updatedAt}));
   for(let page=2;page<=Math.ceil(insiderArticles.length/insiderPageSize);page++)entries.push({path:insiderPagePath(page)});
   optionResults.forEach(result=>entries.push({path:optionResultUrl(result)}));
@@ -87,6 +96,9 @@ export async function getServerSideProps({ res }: any) {
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
+  predictionCatalog().forEach(stock=>entries.push({path:predictionPath(stock)+"/",modified:cachedPredictionDetail(stock.ticker)?.updatedAt}));
+  const predictionToday=new Date().toISOString().slice(0,10);
+  cachedPredictionStocks().forEach(stock=>periods.filter(p=>horizonEnd(p.id,predictionToday)>=predictionToday).forEach(p=>entries.push({path:periodPath(stock,p.id),modified:cachedPredictionDetail(stock.ticker)?.updatedAt})));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),

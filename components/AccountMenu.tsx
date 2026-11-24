@@ -6,7 +6,7 @@ import {readSiteProfile,rememberSiteAccount} from '../lib/site-account-hint';
 import s from '../styles/AccountMenu.module.css';
 
 export default function AccountMenu(){
- const {user}=useSiteAccount();
+ const {user,desktop}=useSiteAccount();
  const [profile,setProfile]=useState<{uid:string;name:string;photo:string}|null>(null);
  const [open,setOpen]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState(''),[brokenPhoto,setBrokenPhoto]=useState('');
  const root=useRef<HTMLDivElement>(null),trigger=useRef<HTMLButtonElement>(null);
@@ -31,7 +31,7 @@ export default function AccountMenu(){
   document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);
   return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape)};
  },[open]);
- if(!user)return null;
+ if(!user||!desktop)return null;
  const current=profile?.uid===user.uid?profile:readSiteProfile(user.uid);
  const name=current?.name||user.displayName||'My account';
  const photo=current?.photo||user.photoURL||'';

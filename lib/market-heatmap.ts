@@ -10,7 +10,7 @@ export const percent=(v:number|null)=>v===null?'Unavailable':`${v>0?'+':''}${v.t
 export const dateLabel=(date:string)=>!date?'Unavailable':new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
 export function heatColor(value:number|null,maximum=4,colorblind=false){
  if(value===null)return '#303d50';
- const t=Math.min(Math.abs(value)/maximum,1),base=[40,52,64],end=colorblind?(value>=0?[35,117,191]:[193,104,25]):(value>=0?[17,137,98]:[193,48,69]);
+ const t=Math.min(Math.abs(value)/maximum,1),base=[40,52,64],end=colorblind?(value>=0?[35,117,191]:[193,104,25]):(value>=0?[0,184,92]:[242,52,69]);
  return `rgb(${base.map((v,i)=>Math.round(v+(end[i]-v)*t)).join(',')})`;
 }
 export type Tile<T>={item:T;x:number;y:number;width:number;height:number};

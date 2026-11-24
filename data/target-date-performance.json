@@ -1,0 +1,148 @@
+{
+  "version": "target-date-v1.1",
+  "asOf": "2025-10-15",
+  "excludedAfterCutoff": 113,
+  "generatedAt": "2026-11-24T16:08:47.775016+00:00",
+  "source": "stocksToBuyAnalyst",
+  "sourceSHA256": "feb330a639ea849907445f54deeb40939eec967b6744a7eeb0a30877640a1e7f",
+  "priceSource": "Yahoo Finance daily adjusted OHLC",
+  "summary": {
+    "totalRecords": 220,
+    "statuses": {
+      "completed": 184,
+      "hold_no_target": 3,
+      "target_pending": 33
+    },
+    "completed": 184,
+    "winners": 114,
+    "losers": 70,
+    "flat": 0,
+    "winRatePct": 61.95652173913044,
+    "meanReturnPct": 12.957528168325611,
+    "averageGainPct": 30.81830482613633,
+    "averageLossPct": -16.13002238868042,
+    "medianReturnPct": 5.831391981533973,
+    "estimatedNetReturn10bpsPct": 12.857528168325612,
+    "estimatedNetReturn20bpsPct": 12.75752816832561,
+    "bestReturnPct": 305.940604187307,
+    "worstReturnPct": -52.812498807907104,
+    "meanHoldingDays": 96.3804347826087,
+    "annualizedCount": 183,
+    "annualizedExcluded": 1,
+    "meanAnnualizedReturnPct": 52346547581773.61,
+    "meanSimpleAnnualizedReturnPct": 78.85717817463626,
+    "simpleAnnualizedCount": 183,
+    "medianAnnualizedReturnPct": 37.98602958277416,
+    "benchmarkPairs": 180,
+    "meanBenchmarkPct": 5.503754249236466,
+    "meanPairedReturnPct": 13.180646556848291,
+    "meanExcessPct": 7.676892307611826,
+    "months": [
+      {
+        "month": "2024-02",
+        "completed": 2,
+        "meanReturnPct": 29.939993016070687
+      },
+      {
+        "month": "2024-03",
+        "completed": 1,
+        "meanReturnPct": -11.517178091256419
+      },
+      {
+        "month": "2024-04",
+        "completed": 5,
+        "meanReturnPct": -8.883568289109489
+      },
+      {
+        "month": "2024-05",
+        "completed": 8,
+        "meanReturnPct": -0.27830060700805986
+      },
+      {
+        "month": "2024-06",
+        "completed": 15,
+        "meanReturnPct": 6.256199515760206
+      },
+      {
+        "month": "2024-07",
+        "completed": 14,
+        "meanReturnPct": 12.076174277230022
+      },
+      {
+        "month": "2024-08",
+        "completed": 3,
+        "meanReturnPct": 15.858097315818673
+      },
+      {
+        "month": "2024-09",
+        "completed": 3,
+        "meanReturnPct": 13.891235678058877
+      },
+      {
+        "month": "2024-10",
+        "completed": 7,
+        "meanReturnPct": 9.357560873840374
+      },
+      {
+        "month": "2024-11",
+        "completed": 3,
+        "meanReturnPct": -22.33793426957391
+      },
+      {
+        "month": "2024-12",
+        "completed": 4,
+        "meanReturnPct": 21.59098761894792
+      },
+      {
+        "month": "2025-01",
+        "completed": 14,
+        "meanReturnPct": 40.23311643818421
+      },
+      {
+        "month": "2025-02",
+        "completed": 18,
+        "meanReturnPct": 7.151761403586901
+      },
+      {
+        "month": "2025-03",
+        "completed": 7,
+        "meanReturnPct": -5.452206871280999
+      },
+      {
+        "month": "2025-04",
+        "completed": 8,
+        "meanReturnPct": -6.269874125230951
+      },
+      {
+        "month": "2025-05",
+        "completed": 11,
+        "meanReturnPct": 1.9533824970109592
+      },
+      {
+        "month": "2025-06",
+        "completed": 14,
+        "meanReturnPct": 9.962164313863811
+      },
+      {
+        "month": "2025-07",
+        "completed": 8,
+        "meanReturnPct": 28.93008573141304
+      },
+      {
+        "month": "2025-08",
+        "completed": 14,
+        "meanReturnPct": 15.644204537621459
+      },
+      {
+        "month": "2025-09",
+        "completed": 23,
+        "meanReturnPct": 33.789503835956175
+      },
+      {
+        "month": "2025-10",
+        "completed": 2,
+        "meanReturnPct": -23.395211907554206
+      }
+    ]
+  }
+}

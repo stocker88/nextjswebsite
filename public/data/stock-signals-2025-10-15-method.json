@@ -1,0 +1,17 @@
+{
+  "version": "target-date-v1.1",
+  "cutoff": "2025-10-15",
+  "generatedAt": "2026-11-24T16:08:47.775016+00:00",
+  "sourceSHA256": "feb330a639ea849907445f54deeb40939eec967b6744a7eeb0a30877640a1e7f",
+  "priceSource": "Yahoo Finance daily adjusted OHLC",
+  "notes": [
+    "Percent columns use percentage points: 12.5 means 12.5%.",
+    "Entry prices and exits are split/dividend-adjusted, not broker fills.",
+    "Next session open after the later saved publication/recommendation timestamp.",
+    "Exit at close on saved target date, or next session when closed.",
+    "Missing results are blank, not zero.",
+    "Full snapshot includes four non-US completed signals without SPY comparisons, 33 pending and 3 Hold records.",
+    "Round-trip cost scenarios subtract 0.10 or 0.20 percentage points of entry notional.",
+    "Snapshot uses currently saved target dates, not historical target revisions."
+  ]
+}

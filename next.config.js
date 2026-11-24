@@ -4,5 +4,5 @@ module.exports = {
   output: 'standalone',
   poweredByHeader: false,
   compress: true,
-  async redirects() {return [{source:'/stocks-to-buy-now/:path*',destination:'/stock-market-news/:path*',permanent:true}, ...stocks.map(stock=>({source:`/web-app/financial/${stock.ticker}`,destination:`/stocks/${stock.slug}`,permanent:true}))];},
+  async redirects() {return [{source:'/guides/stocks-to-buy-now-canada',destination:'/guides/investing-across-countries/',permanent:true},{source:'/guides/stocks-to-buy-now-ai-review',destination:'/guides/stocks-to-buy-now-research-review/',permanent:true},{source:'/stocks-to-buy-now/:path*',destination:'/stock-market-news/:path*',permanent:true}, ...stocks.map(stock=>({source:`/web-app/financial/${stock.ticker}`,destination:`/stocks/${stock.slug}`,permanent:true}))];},
 }

@@ -1,11 +1,11 @@
 ---
 title: 'How does AI Stock Prediction Work? When Financial Expertise Meets Big Data'
-excerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to StocksToBuyNow ai scientific approach...'
-seoExcerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to StocksToBuyNow ai scientific approach...'
+excerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to Stocks To Buy Now Research scientific approach...'
+seoExcerpt: 'Have you wondered how the AI Model takes decisions? A 5 step guide to Stocks To Buy Now Research scientific approach...'
 coverImage: '/assets/blog/ai-advisor/aitrader.jpg'
 date: '2024-01-12T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/ai-advisor/ai-advisor.jpg'

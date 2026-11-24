@@ -1,3 +1,6 @@
+import {useEffect,useState} from 'react';
+import {isDesktopDevice} from '../lib/device-access';
+import MobileStoreLink from './MobileStoreLink';
 import {QRCodeSVG} from 'qrcode.react';
 import {trackAppStoreClick} from '../lib/analytics';
 export const APP_DOWNLOADS=[
@@ -10,6 +13,9 @@ function StoreIcon({store}:{store:'apple'|'google'}){
 }
 // Desktop callers render this only after the server has confirmed membership.
 export default function AppDownloadOptions({placement,showQR=false,threadId}:{placement:string;showQR?:boolean;threadId?:string|null}){
+ const [mobile,setMobile]=useState(false);
+ useEffect(()=>setMobile(!isDesktopDevice(navigator)),[]);
+ if(mobile)return <MobileStoreLink placement={placement}/>;
  return <div data-desktop-download-ready="true" className="verified-downloads">
   <div className="store-links">{APP_DOWNLOADS.map(store=><a data-store-review-card={store.store} key={store.store} href={store.url} target="_blank" rel="noopener noreferrer" onClick={()=>trackAppStoreClick({store:store.store,placement,linkUrl:store.url})}><span className="store-icon"><StoreIcon store={store.store}/></span><span className="store-copy"><small>{store.storeLabel}</small><strong>{store.reviewLabel}</strong><span className="store-stars" aria-label="Five stars">★★★★★</span><span className="store-action">{store.label} <span aria-hidden="true">↗</span></span></span></a>)}</div>
   {showQR&&<div className="download-qr"><p>Scan with your phone to get the app</p><div className="qr-options">{APP_DOWNLOADS.map(store=><figure key={store.store}><QRCodeSVG value={store.url} size={148} level="M" includeMargin/><figcaption>{store.store==='apple'?'iPhone · App Store':'Android · Google Play'}</figcaption></figure>)}</div>

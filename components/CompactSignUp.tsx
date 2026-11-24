@@ -1,4 +1,6 @@
 import {useEffect,useState} from 'react';
+import {useSiteAccount} from './SiteAccount';
+import MobileStoreLink from './MobileStoreLink';
 import {useRouter} from 'next/router';
 import {DESKTOP_ACCESS_PATH} from '../lib/desktop-access';
 import {accountLoginUrl} from '../lib/site-auth';
@@ -6,7 +8,11 @@ import {signInSite,prepareSiteSignIn,type SiteProvider} from '../lib/site-sign-i
 
 type Props={placement?:'header'|'hero';onComplete?:()=>void};
 
-export default function CompactSignUp({placement='hero',onComplete}:Props){
+export default function CompactSignUp(props:Props){
+ const {desktop}=useSiteAccount();
+ return desktop?<DesktopCompactSignUp {...props}/>:<MobileStoreLink placement={props.placement||'hero'} onClick={props.onComplete}/>;
+}
+function DesktopCompactSignUp({placement='hero',onComplete}:Props){
  const router=useRouter();
  useEffect(()=>{void prepareSiteSignIn().catch(()=>{})},[]);
  const [busy,setBusy]=useState<SiteProvider|null>(null);

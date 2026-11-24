@@ -5,7 +5,7 @@ seoExcerpt: '1) Understanding Budgeting and Its Importance 2) Tips for Effective
 coverImage: '/assets/blog/personal-finance/investing-budgeting.jpg'
 date: '2023-11-25T05:35:07.322Z'
 author:
-  name: StocksToBuyNow AI
+  name: Stocks To Buy Now Research
   picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
   url: '/assets/blog/personal-finance/investing-budgeting.jpg'

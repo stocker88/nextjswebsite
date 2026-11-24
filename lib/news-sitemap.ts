@@ -37,7 +37,7 @@ export function newsSitemapXml(entries: NewsSitemapEntry[], now = Date.now()) {
     const loc = escapeNewsXml(SITE + entry.path);
     const title = escapeNewsXml(entry.title);
     const date = escapeNewsXml(new Date(entry.publishedAt).toISOString());
-    return `<url><loc>${loc}</loc><news:news><news:publication><news:name>Stocks To Buy Now AI</news:name><news:language>en</news:language></news:publication><news:publication_date>${date}</news:publication_date><news:title>${title}</news:title></news:news></url>`;
+    return `<url><loc>${loc}</loc><news:news><news:publication><news:name>Stocks To Buy Now Research</news:name><news:language>en</news:language></news:publication><news:publication_date>${date}</news:publication_date><news:title>${title}</news:title></news:news></url>`;
   }).join('');
   return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">${urls}</urlset>`;
 }

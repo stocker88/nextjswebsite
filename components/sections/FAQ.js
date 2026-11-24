@@ -115,7 +115,7 @@ function FAQ() {
              <br/>Palantir Stock : +680% in 2 years,
              <br/>SoundHound AI Options: +3,280% in 1 month,
              <br/>
-             <br/>Stocks To Buy Now ai was funded by 3 former GOLDMAN SACHS & BANK OF AMERICA investors and META / GOOGLE engineers with over 15 years of trading and engineering experience.
+             <br/>Stocks To Buy Now Research was funded by 3 former GOLDMAN SACHS & BANK OF AMERICA investors and META / GOOGLE engineers with over 15 years of trading and engineering experience.
              <br/>
              <br/>Resumes/CVs and recommendations/LinkedIn endorsements from current Goldman Sachs employees are available on LinkedIn.
           </div>

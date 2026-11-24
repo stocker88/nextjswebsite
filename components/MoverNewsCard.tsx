@@ -1,3 +1,4 @@
+import {generatedImagePreview} from '../lib/generated-image';
 import {SessionPerformanceCard,EarningsResultsCard} from './ResearchResultCards';
 import ArticlePostEngagement from './ArticlePostEngagement';
 import {AccountLink} from './SiteAccount';
@@ -19,8 +20,8 @@ export default function MoverNewsCard({article:a, compact=false}:{article:MoverA
       <SessionPerformanceCard article={a}/>
       <h2>{a.title}</h2>
       <EarningsResultsCard article={a}/>
-      <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={a.leadImage.url} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
-      {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={i.url} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
+      <p className="preview">{preview}</p>{!compact&&a.leadImage&&<figure className="lead-thumb"><img src={generatedImagePreview(a.leadImage.url)} alt={a.leadImage.alt} width={a.leadImage.width} height={a.leadImage.height} loading="lazy"/><figcaption>{a.leadImage.caption} Photo: {a.leadImage.credit} / Wikimedia Commons · {a.leadImage.license}</figcaption></figure>}
+      {!compact&&<div className="image-pair">{a.images.map(i=><figure key={i.title}><div className="image-frame"><img src={generatedImagePreview(i.url)} alt={i.alt||a.symbol+' '+i.title+' research preview'} width={1200} height={1200} loading="lazy" decoding="async"/></div><figcaption>{i.title}</figcaption></figure>)}</div>}
       <div className="card-footer"><div className="footer-stats"><ArticlePostEngagement postId={a.postId}/><span>{a.earningsPeriod||'Stock research'}</span></div><span className="read-link">Read research <span aria-hidden="true">→</span></span></div>
     </AccountLink>
     <style jsx>{`

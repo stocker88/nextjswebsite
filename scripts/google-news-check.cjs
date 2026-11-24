@@ -24,7 +24,7 @@ assert.deepEqual(current.map(entry => entry.path), ['/news/new/', '/news/duplica
 assert.equal(current[1].title, 'Newer duplicate');
 const xml = newsSitemapXml(sample, now);
 assert.match(xml, /xmlns:news="http:\/\/www\.google\.com\/schemas\/sitemap-news\/0\.9"/);
-assert.match(xml, /<news:name>Stocks To Buy Now AI<\/news:name>/);
+assert.match(xml, /<news:name>Stocks To Buy Now Research<\/news:name>/);
 assert.match(xml, /<news:language>en<\/news:language>/);
 assert.match(xml, /New &amp; useful &lt;story&gt;/);
 assert.doesNotMatch(xml, /Too old|Future|Bad path/);

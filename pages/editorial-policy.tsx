@@ -37,7 +37,7 @@ export default function Policy() {
         </p>
         <h2>About the publisher</h2>
         <p>
-          Stocks To Buy Now AI is an investing research app founded by Aness
+          Stocks To Buy Now Research is an investing research app founded by Aness
           Hussein Ali.{" "}
           <Link href="/authors/aness-hussein-ali">
             Read the founder profile

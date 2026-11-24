@@ -136,7 +136,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
         ))}
       </div>
       <p className="section-action"><Link className="research-cta" href="/stocks">Search the app’s full stock catalog →</Link></p>
-      <header data-motion-reveal className="editorial-heading subsection-heading"><span>Research essentials</span><h2>Stock research questions</h2></header>
+      <header data-motion-reveal className="editorial-heading subsection-heading"><span>Frequently asked questions</span><h2>Stock research FAQ</h2></header>
       {faq.map((f) => (
         <details key={f.q}>
           <summary>{f.q}</summary>

@@ -1,51 +1,61 @@
 import ResearchPage from "../components/ResearchPage";
+import report from "../data/target-date-performance.json";
+const s = report.summary;
+const pct = (n: number) => `${n > 0 ? '+' : ''}${n.toFixed(2)}%`;
+const cutoff = new Date(`${report.asOf}T12:00:00Z`).toLocaleDateString('en-US', {month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
 export default function Methodology() {
-  return (
-    <ResearchPage
-      title="Stock research methodology and limitations"
-      path="/methodology"
-    >
-      <div className="public-copy">
-        <h1>How to read our stock research</h1>
-        <p>
-          Stocks To Buy Now AI brings together company research, market context
-          and app-based analytical tools. Public previews and historical
-          examples are not a complete trading strategy or a promise of
-          performance.
-        </p>
-        <h2>Business fundamentals</h2>
-        <p>
-          Review revenue, profitability, cash flow, debt and valuation using
-          company filings. Compare consistent reporting periods and distinguish
-          reported figures from estimates and non-GAAP adjustments.
-        </p>
-        <h2>Market and technical context</h2>
-        <p>
-          Price action, earnings expectations, macroeconomic events and
-          sentiment can help frame a scenario. A correlation between a headline
-          and a move does not prove causation.
-        </p>
-        <h2>Signals and scenarios</h2>
-        <p>
-          Signals are inputs to research. Assess the time horizon, evidence,
-          position size and invalidation conditions before acting. This page
-          does not disclose a validated proprietary scoring formula or imply
-          that any model has been independently audited.
-        </p>
-
-        <h2>AI assistance</h2>
-        <p>
-          AI-generated text can contain errors. Verify material claims against
-          the cited primary documents. Articles that use AI assistance should
-          identify that assistance and their reviewer.
-        </p>
-        <h2>Risk</h2>
-        <p>
-          Investments can lose value. Forecasts depend on assumptions and can
-          change. Public educational content does not assess your financial
-          circumstances.
-        </p>
-      </div>
-    </ResearchPage>
-  );
+ return <ResearchPage title="Stock signals scorecard and research methodology" path="/methodology" hideResearchNavigation>
+  <div className="methodology">
+   <header className="page-hero"><p className="eyebrow">Track record · Stocks to Buy Now Research</p>
+   <h1>Stock Signals Scorecard &amp; SPY Comparison</h1>
+   <p>Historical stock signals evaluated through <strong>{cutoff}</strong>, inclusive. Returns run from the first eligible session open after publication to the close on the saved Target Sell Date.</p>
+   </header><nav aria-label="Methodology sections"><a href="#scorecard">Scorecard</a><a href="#monthly">Monthly cohorts</a><a href="#ledger">Download ledger</a><a href="#credentials">Credentials</a><a href="#methodology">Methodology</a><a href="#faq">FAQ</a></nav>
+   <section id="scorecard" aria-label="Stock signals scorecard"><div className="score-grid">
+    <div className="primary-stat"><span>Average gross signal return</span><strong>{pct(s.meanReturnPct)}</strong><small>Equal weight per completed signal</small></div>
+    <div className="primary-stat"><span>Median signal return</span><strong>{pct(s.medianReturnPct)}</strong><small>The middle completed-signal outcome</small></div>
+    <div className="loss-stat"><span>Worst completed-signal loss</span><strong>{pct(s.worstReturnPct)}</strong><small>Entry-to-exit loss, not peak-to-trough drawdown</small></div>
+    <div><span>Estimated net average</span><strong>{pct(s.estimatedNetReturn20bpsPct)}–{pct(s.estimatedNetReturn10bpsPct)}</strong><small>After 0.20%–0.10% assumed round-trip friction</small></div>
+    <div><span>Average holding period</span><strong>{s.meanHoldingDays.toFixed(1)} days</strong><small>Calendar days from model entry to exit</small></div>
+   </div><p className="scope">{s.completed} completed signals in the overall averages. The US comparison covers {s.benchmarkPairs}; the other {s.completed-s.benchmarkPairs} are European listings, measured in their listing currencies.</p>
+   <div className="benchmark"><h2>Same-window US comparison</h2><div><span>US signals<strong>{pct(s.meanPairedReturnPct)}</strong></span><span>SPY<strong>{pct(s.meanBenchmarkPct)}</strong></span><span>Average difference<strong>+{s.meanExcessPct.toFixed(2)} pp</strong></span></div><p>Arithmetic averages across the same {s.benchmarkPairs} entry/exit windows. Not a compounded portfolio return.</p></div></section>
+   <section id="monthly"><p className="section-kicker">01 / Historical outcomes</p><h2>Monthly Cohort Table</h2><p>Full holding-period returns grouped by exit month, not monthly portfolio returns. October 2025 includes exits only through October 15.</p><div className="table-wrap"><table><caption>Monthly breakdown by target-date exit</caption><thead><tr><th scope="col">Exit month</th><th scope="col">Signals</th><th scope="col">Average gross return</th></tr></thead><tbody>{s.months.map(r=><tr key={r.month}><th scope="row">{new Date(`${r.month}-01T12:00:00Z`).toLocaleDateString("en-US",{month:"short",year:"numeric",timeZone:"UTC"})}</th><td>{r.completed}</td><td className={r.meanReturnPct < 0 ? "negative" : "positive"}>{pct(r.meanReturnPct)}</td></tr>)}</tbody></table></div></section>
+   <section id="ledger" className="ledger-panel"><p className="section-kicker">02 / Check the numbers</p><h2>Downloadable Ledger</h2><p>Public, static CSV snapshots with signal IDs, publication and entry timestamps, next-open prices, saved target dates, exit prices, gross returns and matched SPY returns. Percent columns use percentage points: 12.5 means 12.5%.</p><div className="downloads"><a download href="/data/stock-signals-us-2025-10-15.csv">Download US comparison · 180 signals</a><a download href="/data/stock-signals-2025-10-15-method.json">Download calculation metadata</a></div><p className="scope">The full snapshot includes {s.completed} completed signals, {s.statuses.target_pending} pending target dates and {s.statuses.hold_no_target} Hold records. Pending results are blank, not zero. The four European signals have no US benchmark value. Downloads cannot change the source records.</p></section>
+   <section id="credentials"><p className="section-kicker">03 / Behind the research</p><h2>Founder credentials &amp; research scope</h2><p>Aness Hussein Ali’s published credentials include a Berkeley Haas Master of Financial Engineering, awarded May 16, 2014, and employment documents for Goldman Sachs and Bank of America / Merrill Lynch International.</p><ul className="credential-links"><li><a href="/assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg">Berkeley MFE diploma</a></li><li><a href="/goldman-sachs-employment-letter.pdf">Goldman Sachs employment letter</a></li><li><a href="/bank-of-america-employment-letter.pdf">Bank of America / Merrill Lynch employment letter</a></li><li><a href="/authors/aness-hussein-ali/">Full founder profile and professional history</a></li></ul></section>
+   <section id="methodology"><p className="section-kicker">04 / Calculation framework</p><h2>Methodology &amp; Limitations</h2><ul className="method-list">
+    <li><strong>Universe and timing.</strong> Method {report.version} uses all saved stock signals published by {cutoff}. Entries use the first exchange-session open at or after the later saved publication/recommendation timestamp. Intraday and after-hours signals enter the next session. Exits use the saved Target Sell Date, rolling forward if markets are closed. Later targets remain pending; zero means Hold. Currently saved targets are used, not earlier target revisions.</li>
+    <li><strong>Prices and comparison.</strong> Yahoo Finance daily split/dividend-adjusted prices; adjusted open equals open × adjusted close ÷ close. Gross return is direction × (exit ÷ entry − 1). SPY uses identical dates for US signals. Each signal receives equal weight, including overlapping holdings and repeat tickers. These are historical model returns, not brokerage fills or portfolio growth; options are excluded.</li>
+    <li><strong>Risk and friction.</strong> Median and worst completed loss complement the average.</li>
+    <li><strong>Annualization and review.</strong> The average simple annualized rate is {pct(s.meanSimpleAnnualizedReturnPct)}: return × 365 ÷ calendar holding days, averaged over {s.simpleAnnualizedCount} signals. This is a non-compounded mathematical rate, not a forecast. One same-day signal is excluded only from annualization. Median compounded annualization is {pct(s.medianAnnualizedReturnPct)} using (1 + return)^(365 ÷ days) − 1; short-duration outliers make the compounded mean unsuitable as a headline. The dated CSVs support independent recalculation. Past performance does not guarantee future results.</li>
+   </ul></section>
+   <section id="faq" className="faq-section" aria-labelledby="faq-title">
+    <div className="faq-intro"><p className="section-kicker">05 / Common questions</p><h2 id="faq-title">A little more <br/>clarity.</h2><p>How the research works, <br/>and what the numbers mean.</p><a href="mailto:support@stockstobuynow.ai">Ask us a question ↗</a></div>
+    <div className="faq-list">
+     <details open><summary>Is this an AI trading bot?<span aria-hidden="true">+</span></summary><div className="faq-answer"><p>No. Stocks to Buy Now Research provides research and educational tools, with macro and portfolio research led by Aness Hussein Ali. AI may assist with analysis and content, but the platform does not autonomously place trades or manage your brokerage account.</p></div></details>
+     <details><summary>Are signal publication records independently verifiable?<span aria-hidden="true">+</span></summary><div className="faq-answer"><p>Yes. Every signal is written to an immutable, append-only log and anchored daily to the Bitcoin blockchain via OpenTimestamps, generating cryptographic proofs for independent timestamp verification.</p><a href="/signal-archive/">Explore timestamp proofs →</a></div></details>
+     <details><summary>Can I check the calculations myself?<span aria-hidden="true">+</span></summary><div className="faq-answer"><p>Yes. Download the US comparison ledger to inspect the entry and exit dates, prices, gross returns and matched SPY returns. The calculation metadata explains the price source and assumptions.</p><a href="#ledger">Go to the downloadable ledger →</a></div></details>
+    </div>
+   </section>
+   <p className="corrections">Corrections: email <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a> with the signal ID and supporting evidence. <a href="/editorial-policy/">Editorial standards</a> · <a href="/reviews/">Customer reviews</a>.</p>
+  </div>
+  <style jsx>{`
+   .methodology{max-width:980px;margin:0 auto 48px;line-height:1.7;color:#c2ccdc;font-size:15px}
+   .page-hero{padding:38px 0 26px;border-bottom:1px solid #263247}.eyebrow,.section-kicker{color:#bda8f5;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+   .page-hero h1{max-width:780px;color:#f5f7fc;font-size:clamp(30px,4.4vw,48px);line-height:1.12;letter-spacing:-.045em;margin:18px 0 22px;font-weight:650}
+   .page-hero>p:last-child{max-width:700px;color:#a5b3c8;line-height:1.8;margin:0}.page-hero strong{color:#dde5f3;font-weight:550}
+   .methodology h2{color:#f0f4fc;font-size:25px;letter-spacing:-.025em;margin:8px 0 12px;line-height:1.25}.methodology section{margin-top:48px;scroll-margin-top:110px}
+   .methodology a{color:#c7b5ff;text-decoration:none}.methodology a:hover{color:white}.methodology a:focus-visible,.methodology summary:focus-visible{outline:2px solid #bca1ff;outline-offset:5px}
+   .methodology nav{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0}.methodology nav a{border:1px solid #273147;border-radius:8px;color:#aab8cf;font-size:12px;padding:7px 13px}.methodology nav a:hover{background:#191e33;border-color:#77639f;color:#e6dcff}
+   #scorecard{margin-top:14px}.score-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}.score-grid>div{grid-column:span 2;padding:22px;border:1px solid #263349;border-radius:16px;background:#0e1728;display:flex;flex-direction:column}
+   .score-grid>div.primary-stat{grid-column:span 3;background:linear-gradient(125deg,#19213a,#101a2c);border-color:#3d3e61;padding:26px}.score-grid span{color:#bfc9da;font-size:12px;font-weight:550}.score-grid strong{display:block;font-size:clamp(22px,2.8vw,29px);font-weight:550;line-height:1.2;letter-spacing:-.04em;margin:15px 0;color:#f2f5fb;font-variant-numeric:tabular-nums}.score-grid .primary-stat strong{font-size:46px;color:#9be0cd}.score-grid .loss-stat strong{color:#efa3af}.score-grid small{color:#899bb5;font-size:11px;line-height:1.5;margin-top:auto}
+   .scope{font-size:12px;line-height:1.7;color:#8c9db6;margin-top:16px}.benchmark{margin-top:28px;padding:26px;border:1px solid #2d4c50;border-radius:16px;background:linear-gradient(110deg,#10262b,#101b2b)}.benchmark h2{font-size:18px;margin:0 0 24px}.benchmark>div{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.benchmark>div>span{color:#a8bec8;font-size:12px}.benchmark>div>span+span{border-left:1px solid #2b424b;padding-left:24px}.benchmark strong{display:block;font-size:32px;font-weight:550;letter-spacing:-.03em;color:#9be0cd;margin-top:6px;font-variant-numeric:tabular-nums}.benchmark p{font-size:11px;margin:22px 0 0;color:#91a7b6}
+   .table-wrap{overflow:auto;max-height:510px;border:1px solid #293449;border-radius:14px;margin-top:22px}.table-wrap table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}.table-wrap caption{text-align:left;font-size:11px;color:#8d9cb4;padding:14px 18px;background:#0f1829}.table-wrap th,.table-wrap td{padding:11px 18px;border-bottom:1px solid #202b3f;text-align:right}.table-wrap th:first-child{text-align:left;font-weight:500}.table-wrap thead{position:sticky;top:0;background:#192235;color:#a7b6cd;font-size:11px;z-index:1}.table-wrap tbody tr:nth-child(even){background:#0e1625}.table-wrap tbody tr:hover{background:#182137}.positive{color:#8ed8bc}.negative{color:#e8a0ab}
+   .ledger-panel{background:#141b2d;border:1px solid #343752;border-radius:20px;padding:28px}.downloads{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.downloads a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;background:#bca5f4;color:#151025!important;border:1px solid #bca5f4;border-radius:10px;font-size:12px;font-weight:650}.downloads a+a{background:transparent;color:#cbbce8!important;border-color:#57506e}.downloads a:hover{filter:brightness(1.12)}
+   .credential-links{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}.credential-links li{margin:0}.credential-links a{height:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border:1px solid #293449;border-radius:12px;background:#0e1727;font-size:12px}.credential-links a:after{content:'↗';font-size:17px;color:#8b81a6}
+   .method-list{padding:0;list-style:none;counter-reset:methods;display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}.method-list li{font-size:12px;color:#93a3bb;line-height:1.8;border-top:1px solid #30394c;padding:18px 0;margin:0}.method-list strong{display:block;color:#dce3f0;font-size:14px;margin-bottom:10px}
+   .faq-section{display:grid;grid-template-columns:260px minmax(0,1fr);gap:44px;padding:40px 0;border-top:1px solid #30394c}.faq-intro h2{font-size:36px;letter-spacing:-.04em;line-height:1.15;margin:16px 0}.faq-intro>p:not(.section-kicker){color:#92a3bc;font-size:13px}.faq-intro>a{font-size:12px;display:inline-block;margin-top:16px}.faq-list{border-top:1px solid #2c384d}.faq-list details{border-bottom:1px solid #2c384d}.faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-weight:550;font-size:14px;line-height:1.5;color:#e6ebf5}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary span{display:flex;align-items:center;justify-content:center;border:1px solid #41405d;border-radius:50%;height:26px;width:26px;flex-shrink:0;font-size:19px;font-weight:400;color:#baa7e7}.faq-list details[open] summary span{transform:rotate(45deg);background:#27223b}.faq-answer{padding:0 42px 22px 0;color:#9eacc3;font-size:13px;line-height:1.85}.faq-answer p{margin:0 0 12px}.faq-answer a{font-size:12px}
+   .corrections{border-top:1px solid #293449;padding:22px 0;margin:0;font-size:11px;color:#8192aa}
+   @media(max-width:650px){.methodology{padding:0 10px;font-size:14px}.page-hero{padding-top:26px}.page-hero h1{font-size:34px}.methodology section{margin-top:34px}.score-grid{gap:10px}.score-grid>div{grid-column:span 3;padding:16px}.score-grid>div.primary-stat{padding:18px}.score-grid>div:last-child{grid-column:span 6}.score-grid .primary-stat strong{font-size:34px}.score-grid strong{font-size:23px}.benchmark{padding:20px}.benchmark>div{gap:10px}.benchmark>div>span+span{padding-left:12px}.benchmark strong{font-size:24px}.ledger-panel{padding:22px}.downloads{flex-direction:column}.credential-links,.method-list{grid-template-columns:1fr}.faq-section{grid-template-columns:1fr;gap:24px;padding-top:28px}.faq-intro h2{font-size:30px}.faq-intro h2 br,.faq-intro p br{display:none}.faq-list summary{font-size:14px;padding:20px 0}.faq-answer{padding-right:12px}.table-wrap th,.table-wrap td{padding:11px 12px}.methodology nav{gap:6px}.methodology nav a{font-size:11px;padding:7px 10px}}
+   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+  `}</style>
+ </ResearchPage>;
 }

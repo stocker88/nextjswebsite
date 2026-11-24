@@ -1,3 +1,4 @@
+import ResearchPillarGuide from '../../components/ResearchPillarGuide';
 import StrategyComparison from '../../components/options/StrategyComparison';
 import SavedSetups from '../../components/options/SavedSetups';
 import {Setup,readSetup,MOVES} from '../../lib/options-workspace';
@@ -24,7 +25,7 @@ export default function OptionsCalculator(){
  function update(i:number,patch:Partial<Leg>){setLegs(v=>v.map((l,j)=>i===j?{...l,...patch}:l));setEdited(true)}
  const setup:Setup={version:1,name:setupName||(edited?'Custom position':strategy.name),symbol,expiry,asOf,reference,fee,legs};
  const num=(s:string)=>s===''?NaN:Number(s),value=(n:number)=>Number.isFinite(n)?n:'';
- return <Layout title="Options Profit Calculator" description="Calculate options profit and loss at expiration. Build multi-leg strategies, compare breakevens, and explore maximum profit and risk with an interactive payoff chart." path="/options-profit-calculator/">
+ return <Layout title="Options Profit Calculator: Calls, Puts & Break-Even" description="Calculate options profit and loss at expiration. Build multi-leg strategies, compare breakevens, and explore maximum profit and risk with an interactive payoff chart." path="/options-profit-calculator/">
  <div className={styles.hero}><div><p className={styles.eyebrow}>Plan the trade</p><h1>Options profit calculator.<br/><em>See every side of the trade.</em></h1><p>Build a position, adjust the premiums and explore its payoff at expiration. Start with a strategy or create your own combination.</p></div><div className={styles.heroBadge}><b>01 → 08</b>legs per position<br/>One shared expiration</div></div>
  <OptionsToolNav active="/options-profit-calculator/"/>
  <section className={styles.panel} aria-label="Position builder"><div className={styles.topline}><h2>{setup.name}</h2><span>USD · Standard 100-share options</span></div>
@@ -42,5 +43,5 @@ export default function OptionsCalculator(){
  {comparison&&<StrategyComparison key={compareVersion} setup={comparison} onUse={s=>{applySetup(s);setComparison(null)}}/>}
  <SavedSetups setup={setup} valid={!problem} onLoad={s=>{applySetup(s);setComparison(null)}}/>
  <details className={styles.details}><summary>How the calculation works</summary><p>At expiration, a call is worth max(stock price − strike, 0), and a put is worth max(strike − stock price, 0). Each standard option contract represents 100 shares. Buy legs add intrinsic value; sell legs subtract it. The calculator deducts the net entry cost and the entry fees you specify. Shares use the entered per-share cost and share quantity.</p><p>Maximum profit, maximum loss and breakevens are calculated across all non-negative stock prices, including beyond the plotted range. The reference stock price controls chart ranges and percentage scenarios; it does not change the option payoff. All option legs are modeled at one shared expiration.</p><p>This is an expiration payoff model, not a forecast or a live quote. It excludes pre-expiration time value, implied volatility, dividends, financing, taxes, exit fees, slippage and margin requirements. Short American-style options may be assigned early; a spread’s theoretical expiration loss does not capture every execution or assignment risk. Adjusted contracts and different-expiry strategies are not supported.</p></details>
- </Layout>
+ <ResearchPillarGuide kind="calculator"/></Layout>
 }

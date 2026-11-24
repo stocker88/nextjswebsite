@@ -5,10 +5,15 @@ import {SignupProgressQueue,type SignupEvent} from './signup-progress-queue';
 type Extras=Partial<Pick<SignupEvent,'provider'|'attemptId'|'durationMs'|'isNewUser'>>;
 let owner:string|null=null,session='',listeners=false,retries=0,timer:ReturnType<typeof setTimeout>|undefined;
 const queues=new Map<string,SignupProgressQueue>();
+let handoff:ReturnType<typeof setTimeout>|undefined;
+let observedScreens=0;
+const healthErrors=new Set<string>();
+function health(code:string){if(observedScreens>0&&!healthErrors.has(code)){healthErrors.add(code);trackSignupProgress('client_health','error',code)}}
 function id(){return Array.from(crypto.getRandomValues(new Uint8Array(16)),v=>v.toString(16).padStart(2,'0')).join('')}
 function event(step:string,action:string,errorCode:string,extra:Extras={}):SignupEvent{
  if(!session){try{session=sessionStorage.getItem('stbn.signup.session.v2')||''}catch{}if(!/^[a-f0-9]{32}$/.test(session)){session=id();try{sessionStorage.setItem('stbn.signup.session.v2',session)}catch{}}}
- return {eventId:id(),browserId:browserIdentity(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',...extra};
+ const ua=typeof navigator==='undefined'?'':navigator.userAgent;
+ return {eventId:id(),browserId:browserIdentity(),step,action,errorCode,platform:'web',clientAt:Date.now(),sessionId:session,build:'web-funnel-v2',experience:'username-only-v1',deviceClass:!ua?'unknown':/iPad|Tablet/i.test(ua)?'tablet':/Android|iPhone|Mobile/i.test(ua)?'mobile':'desktop',...extra};
 }
 function queue(uid:string){
  if(!queues.has(uid)){
@@ -42,8 +47,13 @@ async function flush(){
 }
 function enqueue(uid:string,data:SignupEvent){queue(uid).add(data);void flush()}
 export function activateSignupTracking(uid:string|null){
+ if(owner!==uid){clearTimeout(handoff);handoff=undefined;healthErrors.clear()}
  owner=uid;retries=0;clearTimeout(timer);timer=undefined;
- if(!listeners){listeners=true;const resume=()=>{retries=0;void flush()};window.addEventListener('online',resume);window.addEventListener('focus',resume)}
+ if(!listeners){listeners=true;const resume=()=>{retries=0;void flush()};window.addEventListener('online',resume);window.addEventListener('focus',resume);
+  window.addEventListener('offline',()=>health('client/offline'));
+  window.addEventListener('error',()=>health('client/runtime-error'));
+  window.addEventListener('unhandledrejection',()=>health('client/unhandled-rejection'));
+ }
  if(!uid)return;
  // A restored authenticated session is NOT a new sign-in or account creation.
  const key='stbn.signup.authSession.v2:'+uid;
@@ -51,6 +61,9 @@ export function activateSignupTracking(uid:string|null){
  trackSignupProgress('auth_session','success');
 }
 export function trackSignupProgress(step:string,action='view',errorCode='',extra:Extras={}){
+ if((step==='profile'&&action==='view')||(step==='profile_check'&&action==='success')){
+  if(handoff){clearTimeout(handoff);handoff=undefined;trackSignupProgress('profile_transition','success')}
+ }
  try{if(owner)enqueue(owner,event(step,action,errorCode,extra))}catch{/* Telemetry cannot break any UI handler. */}
 }
 export function beginSignupAuthentication(provider:string):SignupEvent|null{
@@ -62,6 +75,9 @@ export function finishSignupAuthentication(attempt:SignupEvent|null,uid:string,i
   // Bind the click only to the account returned by this sign-in.
   enqueue(uid,attempt);
   enqueue(uid,event('auth','success','',{provider:attempt.provider,attemptId:attempt.attemptId,isNewUser}));
+  clearTimeout(handoff);
+  enqueue(uid,event('profile_transition','attempt',''));
+  handoff=setTimeout(()=>{if(owner===uid&&!document.hidden)enqueue(uid,event('profile_transition','error','client/timeout'))},10000);
   void getSiteAuth().then(auth=>{if(auth.currentUser?.uid===uid){owner=uid;void flush()}}).catch(()=>{});
  }catch{}
 }
@@ -71,6 +87,8 @@ export function failSignupAuthentication(attempt:SignupEvent|null,error:unknown)
 // Visible-time segments, not time in background tabs. No polling heartbeat.
 // A hard crash may lose the final segment; missing duration is not zero time.
 export function observeSignupStep(step:string){
+ observedScreens++;
+ if(step==='profile'&&handoff){clearTimeout(handoff);handoff=undefined;trackSignupProgress('profile_transition','success')}
  const uid=owner;
  const emit=(action:string,extra:Extras={})=>{try{if(uid)enqueue(uid,event(step,action,'',extra))}catch{}};
  let started:number|null=null,disposed=false;
@@ -79,7 +97,7 @@ export function observeSignupStep(step:string){
  const visible=()=>{if(document.hidden)end('hidden');else begin()};
  const hide=()=>end('exit');
  begin();document.addEventListener('visibilitychange',visible);window.addEventListener('pagehide',hide);window.addEventListener('pageshow',begin);
- return()=>{end('exit');disposed=true;document.removeEventListener('visibilitychange',visible);window.removeEventListener('pagehide',hide);window.removeEventListener('pageshow',begin)};
+ return()=>{if(disposed)return;end('exit');disposed=true;observedScreens--;document.removeEventListener('visibilitychange',visible);window.removeEventListener('pagehide',hide);window.removeEventListener('pageshow',begin)};
 }
 export function signupErrorCode(error:unknown){
  const code=(error as {code?:unknown})?.code;

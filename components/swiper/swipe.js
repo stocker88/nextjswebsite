@@ -15,7 +15,7 @@ export default function Swipe() {
             height={478}
             src={src}
             sizes="(max-width: 720px) 92vw, 543px"
-            alt={`StocksToBuyNow AI trading signal example ${index + 1}`}
+            alt={`Stocks To Buy Now Research trading signal example ${index + 1}`}
           />
         </div>
       ))}

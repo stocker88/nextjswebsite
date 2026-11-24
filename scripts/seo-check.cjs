@@ -12,3 +12,27 @@ console.log('SEO regression checks passed');
 
 const config = require("../next.config");
 config.redirects().then(rules => assert(rules.some(r => r.source === "/stocks-to-buy-now/:path*" && r.destination === "/stock-market-news/:path*" && r.permanent)));
+
+// Related previews are used by static stock, catalyst and results pages.
+const ts=require('typescript');
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText,f);
+const {recentStockNews}=require('../lib/stock-related-research.ts');
+const {isSerializableProps}=require('next/dist/lib/is-serializable-props');
+const fixture={id:'excerpt-fixture',title:'Research headline',time:1,symbols:['NVDA'],likes:0,comments:0,shares:0};
+for(const preview of [fixture,{...fixture,quickTake:'First line of research.'},{...fixture,educationPreview:'Public education preview.'}]){
+ const items=recentStockNews([preview],'NVDA',new Date('2030-01-01'));
+ assert(isSerializableProps('/stocks/nvda','getStaticProps',{items}));
+ const result=items.find(item=>item.id===fixture.id);
+ assert.equal(result.quickTake,preview.quickTake||'');
+ assert.equal(result.educationPreview,preview.educationPreview||'');
+}
+console.log('Related research excerpts: optional summaries remain serializable for static export.');
+
+const {catalog}=require('../lib/catalog.ts');
+const {predictionStocks,predictionPath,stockPredictionHref}=require('../lib/stock-predictions.ts');
+const equities=catalog.filter(item=>item.type==='EQUITY');
+assert.equal(predictionStocks.length,equities.length);
+assert.equal(new Set(predictionStocks.map(predictionPath)).size,predictionStocks.length,'Prediction URL collision');
+for(const item of catalog)assert.equal(Boolean(stockPredictionHref(item.symbol)),item.type==='EQUITY','Prediction coverage: '+item.symbol);
+for(const [ticker,slug] of [['NVDA','nvidia'],['SNDK','sandisk'],['GOOGL','google']])assert.equal(stockPredictionHref(ticker),'/prediction/'+slug+'-stock-price-prediction');
+console.log(`Verified unique prediction URLs for all ${equities.length} equities.`);

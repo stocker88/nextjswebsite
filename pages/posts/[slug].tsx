@@ -1,3 +1,4 @@
+import LegalPage from '../../components/LegalPage'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
@@ -71,6 +72,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  if (post?.slug === 'privacypolicy') return <LegalPage title={post.title} description={post.seoExcerpt}><div dangerouslySetInnerHTML={{__html:post.content}} /></LegalPage>
   return (
     <Layout preview={preview}>
         {router.isFallback ? (
@@ -78,7 +80,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         ) : (
           <>
               <Head>
-                <title>{title} | Stocks To Buy Now AI</title>
+                <title>{title} | Stocks To Buy Now Research</title>
                 <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
@@ -116,8 +118,8 @@ export default function Post({ post, morePosts, preview }: Props) {
               </Head>
               <SiteHeader homeHref="/" navBasePath="/" />
 
-              <section className="article-promo" aria-label="StocksToBuyNow AI app">
-                <span>STOCKSTOBUYNOW AI</span>
+              <section className="article-promo" aria-label="Stocks To Buy Now Research app">
+                <span>Stocks To Buy Now Research</span>
                 <h2>Smarter stock research, wherever you invest</h2>
                 <p>Discover AI-powered signals, analysis and investing insights in the app.</p>
                 <NewsletterSignUp from={post.slug}/>
@@ -181,7 +183,9 @@ export async function getStaticProps({ params }: Params) {
     'coverImage',
   ])
 
-  const content = post.content
+  const content = post.slug === 'privacypolicy'
+    ? await markdownToHtml(post.content || '')
+    : post.content
 
   return {
     props: {

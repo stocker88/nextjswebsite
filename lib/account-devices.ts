@@ -26,9 +26,9 @@ export function browserDescription(ua:string){
 }
 export type DeviceNotice={id:string;kind:'warning'|'blocked';message:string;deadlineAt:number;limit:number;connected:number};
 export function registerWebsiteDevice(supportSkip=false){return call<{allowed:boolean;deviceNotice?:DeviceNotice|null}>('registerAccountDevice',{...browserDescription(navigator.userAgent),...(supportSkip?{supportSkip:true}:{})})}
-export function checkWebsiteDevice(){return call<{allowed:boolean;deviceNotice?:DeviceNotice|null}>('checkAccountDevice')}
+export function checkWebsiteDevice(){return call<{allowed:boolean;removal?:{nextEligibleAt:string;message:string}|null;deviceNotice?:DeviceNotice|null}>('checkAccountDevice')}
 export type DeviceSubscription={provider:string;productId:string;extraDevices:number;expiresAt:number;willRenew:boolean};
-export type DeviceList={isSupportAccount?:boolean;devices:AccountDevice[];maxDevices:number;extraDevices:number;deviceSubscriptions:DeviceSubscription[];offersAvailable:boolean;nextReplacementAt:string|null;canSupportSkip:boolean;deviceNotice?:DeviceNotice|null};
+export type DeviceList={unlimitedDevices?:boolean;isSupportAccount?:boolean;devices:AccountDevice[];maxDevices:number;extraDevices:number;deviceSubscriptions:DeviceSubscription[];offersAvailable:boolean;nextReplacementAt:string|null;canSupportSkip:boolean;deviceNotice?:DeviceNotice|null};
 export function listAccountDevices(){return call<DeviceList>('listAccountDevices')}
 export function revokeAccountDevice(deviceKey:string){return call<{revoked:boolean}>('revokeAccountDevice',{deviceKey})}
 export async function signOutWebsiteDevice(){
@@ -44,5 +44,5 @@ export async function startDeviceCheckout(extraDevices:number){
 export async function openDeviceBilling(){
  const result=await call<{url:string}>('createDeviceBillingPortal',{origin:location.origin});const url=new URL(result.url);if(url.protocol!=='https:'||url.hostname!=='billing.stripe.com')throw Error('Invalid billing address.');location.assign(url.href);
 }
-export function refreshDeviceAllowance(){return call('getDeviceAllowance')}
+export function refreshDeviceAllowance(){return call<Omit<DeviceList,'devices'|'canSupportSkip'|'nextReplacementAt'>>('getDeviceAllowance')}
 export function completeDeviceCheckout(sessionId:string){return call<{checkoutConfirmed:boolean}>('completeDeviceCheckout',{sessionId})}

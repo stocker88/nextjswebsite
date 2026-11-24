@@ -24,7 +24,8 @@ const hub=fs.readFileSync('components/SmartMoneyHub.tsx','utf8'),membership=fs.r
 assert.match(hub,/Signals · Pro membership required/);
 assert.match(hub,/router\.push\('\/membership\/\?checkout=pro'\)/);
 assert.match(hub,/view==='Signals'&&signalsUnlocked/);
-assert.match(hub,/router\.replace\(accountLoginUrl\(destination\)\)/);
+assert.match(hub,/router\.replace\(accountLoginUrl\(signalsDestination\)\)/);
+assert.ok(!hub.includes('if(!accountReady||user)return;'),'public filings must not redirect anonymous readers');
 assert.match(membership,/router\.query\.checkout!=='pro'/);
 assert.match(membership,/canOfferMembership\(state\.value\)/);
 console.log('PASS disclosure filtering, range bounds, date semantics, watchlists, CSV formula escaping, stable currency formatting and public schema');

@@ -24,6 +24,12 @@ async function main(){
  clock=9000;document.hidden=false;document.fire('visibilitychange');await tick();clock=9500;stop();await tick();
  assert.equal(events.filter(e=>e.durationMs!==undefined).reduce((sum,e)=>sum+e.durationMs,0),1700);
  assert.equal(events.filter(e=>e.step==='profile'&&e.action==='view').length,2);
+ assert.equal(events.find(e=>e.step==='profile').experience,'username-only-v1');
+ const healthStop=exports.observeSignupStep('profile');await tick();
+ window.fire('offline');window.fire('offline');await tick();
+ assert.equal(events.filter(e=>e.errorCode==='client/offline').length,1);
+ healthStop();await tick();window.fire('error');await tick();
+ assert.equal(events.filter(e=>e.errorCode==='client/runtime-error').length,0);
  const attempt=exports.beginSignupAuthentication('apple');assert.equal(attempt.browserId,'d'.repeat(32));assert.equal(anonymous[0].action,'attempt');
  exports.finishSignupAuthentication(attempt,'alice',true);await tick();
  assert.equal(events.find(e=>e.step==='auth'&&e.action==='success').isNewUser,true);

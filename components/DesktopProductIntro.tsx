@@ -1,4 +1,5 @@
-import {AccountLink} from './SiteAccount';
+import {AccountLink,useSiteAccount} from './SiteAccount';
+import MobileStoreLink from './MobileStoreLink';
 import {useEffect, useRef, type PointerEvent} from 'react';
 import styles from '../styles/DesktopProduct.module.css';
 const tools = [
@@ -19,6 +20,7 @@ function clearCardLight(event: PointerEvent<HTMLAnchorElement>) {
  delete event.currentTarget.dataset.pointerLight;
 }
 export default function DesktopProductIntro(){
+ const {desktop,user,ready,error}=useSiteAccount();
  const section = useRef<HTMLElement>(null);
  useEffect(() => {
   const root=section.current;
@@ -54,8 +56,9 @@ export default function DesktopProductIntro(){
   return()=>{observer?.disconnect();mobile.removeEventListener('change',configure);reduced.removeEventListener('change',configure);items.forEach(item=>delete item.dataset.reveal);};
  }, []);
  return <section ref={section} id="desktop-product-intro" data-scroll-started="false" className={styles.intro} aria-labelledby="desktop-product-title">
- <div className={styles.introHeading}><div><div data-intro-item className={styles.introBrand}><img src="/assets/images/stockerRobotIcon.png" alt="" width={48} height={48}/><span className={styles.eyebrow}>STOCKS TO BUY NOW AI</span></div><h1 data-intro-item id="desktop-product-title">Your market.<br/><span>A clearer perspective.</span></h1><p data-intro-item>Explore the market, research a company and compare your next idea. Start with the tools below.</p></div><AccountLink data-intro-item className={styles.primary} destination="/stock-market-heatmap/">Explore the market <span aria-hidden="true">↗</span></AccountLink></div>
+ <div className={styles.introHeading}><div><div data-intro-item className={styles.introBrand}><img src="/assets/images/stockerRobotIcon.png" alt="" width={48} height={48}/><span className={styles.eyebrow}>Stocks To Buy Now Research</span></div><h1 data-intro-item id="desktop-product-title">Real-Time<br/><span>Stock Market Alerts</span></h1><p data-intro-item>Data-driven insights into the macro picture, company fundamentals, insider activity, unusual options volume and technical timing.</p></div><AccountLink data-intro-item className={styles.primary} destination="/stock-market-heatmap/">Explore the market <span aria-hidden="true">↗</span></AccountLink></div>
+ {desktop&&ready&&!error&&!user&&<div className={styles.introTrust}><img src="/assets/images/usersRating.webp" width={120} height={30} alt="Customer review illustration"/><div>Read customer reviews on <a href="https://www.trustpilot.com/review/stockstobuynow.ai" target="_blank" rel="noopener noreferrer">Trustpilot</a><span className={styles.trustDivider}> · </span><a href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320" target="_blank" rel="noopener noreferrer">Apple Store</a><span className={styles.trustDivider}> · </span><a href="https://play.google.com/store/apps/details?id=com.newcompany.stocker" target="_blank" rel="noopener noreferrer">Google Play</a></div><a href="/authors/aness-hussein-ali/">Meet our Founder</a></div>}
  <div className={styles.tools}>{tools.map(t=><a data-intro-item href={t.href} key={t.label} onPointerMove={moveCardLight} onPointerLeave={clearCardLight} onPointerCancel={clearCardLight}><span className={styles.toolIcon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon}/></svg></span><div className={styles.toolCopy}><span className={styles.toolCategory}>{t.category}</span><h2>{t.label}</h2><p>{t.description}</p></div><span className={styles.arrow} aria-hidden="true">↗</span></a>)}</div>
- <div data-intro-item className={styles.introFooter}><span>Research. Compare. Build your perspective.</span><a href="/membership/">Explore membership →</a></div>
+ <div data-intro-item className={styles.introFooter}><span>Research. Compare. Build your perspective.</span><>{desktop?<a href="/membership/">Explore membership →</a>:<MobileStoreLink placement="product_intro"/>}</></div>
  <a className={styles.scrollCue} href="#product-reveal" aria-label="Scroll to the market overview"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
  </section>}
