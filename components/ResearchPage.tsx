@@ -4,11 +4,11 @@ import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now AI research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
+export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now Research research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
   const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(path);
   return <>
     <Head>
-      <title>{`${title} | Stocks To Buy Now AI`}</title>
+      <title>{`${title} | Stocks To Buy Now Research`}</title>
       <meta name="description" content={description} />
       <link key="canonical" rel="canonical" href={`https://www.stockstobuynow.ai${path}`} />
       <meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large"} />
@@ -16,7 +16,7 @@ export default function ResearchPage({title, path, children, description = title
       <meta property="og:url" content={`https://www.stockstobuynow.ai${path}`} />
       <meta property="og:type" content={ogType} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content="Stocks To Buy Now AI" />
+      <meta property="og:site_name" content="Stocks To Buy Now Research" />
       <meta property="og:image" content={socialImageUrl} />
       <meta property="og:image:type" content={socialImageUrl.includes(".png")?"image/png":"image/jpeg"} />
       <meta property="og:image:width" content={String(socialImageWidth)} />

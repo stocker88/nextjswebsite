@@ -87,7 +87,7 @@ if(isMobile) {
                            src={'/assets/images/qrcode.webp'}
                           width={160}
                           height={160}
-                          alt='StocksToBuyNow ai app'
+                          alt='Stocks To Buy Now Research app'
                           style={{
                               boxShadow: '0px 0px 10px 0px rgba(255, 255, 255, 0.5)' // Adjust values as needed
                             }}
@@ -97,7 +97,7 @@ if(isMobile) {
                                  <div style={{paddingTop: 10}}></div>
                                                                          <Image
                                                                           src='/assets/images/appledownloadlogo.webp'
-                                                                          alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
+                                                                          alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now apple store logo"
                                                                          width={131}
                                                                          height={38.863}
                                                                           />
@@ -107,7 +107,7 @@ if(isMobile) {
 
                                                                             <Image
                                                                            src='/assets/images/googledownloadlogo.webp'
-                                                                           alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                                                                           alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now play store logo"
                                                                           width={130}
                                                                           height={38.566}
                                                                            />

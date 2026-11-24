@@ -80,7 +80,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         ) : (
           <>
               <Head>
-                <title>{title} | Stocks To Buy Now AI</title>
+                <title>{title} | Stocks To Buy Now Research</title>
                 <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
                 <meta name="description" content={post.seoExcerpt}/>
                 <meta property="og:image" content={'https://www.stockstobuynow.ai'+post.ogImage.url} />
@@ -118,8 +118,8 @@ export default function Post({ post, morePosts, preview }: Props) {
               </Head>
               <SiteHeader homeHref="/" navBasePath="/" />
 
-              <section className="article-promo" aria-label="StocksToBuyNow AI app">
-                <span>STOCKSTOBUYNOW AI</span>
+              <section className="article-promo" aria-label="Stocks To Buy Now Research app">
+                <span>Stocks To Buy Now Research</span>
                 <h2>Smarter stock research, wherever you invest</h2>
                 <p>Discover AI-powered signals, analysis and investing insights in the app.</p>
                 <NewsletterSignUp from={post.slug}/>

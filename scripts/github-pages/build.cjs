@@ -91,6 +91,8 @@ async function main(){
  }
  // Retired syndicated headline: send visitors to the permanent company outlook.
  redirect('market-news/eb88a1adcea99d1c24ed-prediction-this-will-be-sandisk-s-stock-price-by-the-end-of-2027','/prediction/sandisk-stock-price-prediction/');
+ redirect('guides/stocks-to-buy-now-canada','/guides/investing-across-countries/');
+ redirect('guides/stocks-to-buy-now-ai-review','/guides/stocks-to-buy-now-research-review/');
  redirect('stocks-to-buy-now','/stock-market-news/');
  for(const item of articles){const target=researchUrl(item.id,item.title)+'/';redirect('stocks-to-buy-now/'+item.id,target);redirect('stock-market-news/'+item.id,target);}
  for(const stock of require(path.join(stage,'data/stocks.json')))redirect('web-app/financial/'+stock.ticker,'/stocks/'+stock.slug+'/');

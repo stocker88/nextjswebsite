@@ -71,7 +71,7 @@ const InstallButtons = ({...props}) => {
                        <div style={{ width: '151px'}}>
                     <Image
                      src='/assets/images/appledownloadlogo.webp'
-                     alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
+                     alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now apple store logo"
                     width={151 }
                     height={45}
                     layout="responsive"
@@ -85,7 +85,7 @@ const InstallButtons = ({...props}) => {
                     <div style={{ width: '151px'}}>
                        <Image
                       src='/assets/images/googledownloadlogo.webp'
-                      alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                      alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now play store logo"
                      width={151 }
                     height={45}
                     layout="responsive"
@@ -118,7 +118,7 @@ const InstallButtons = ({...props}) => {
                       <div style={{ width: '140px'}}>
                               <Image
                                src='/assets/images/appledownloadlogo.webp'
-                               alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now apple store logo"
+                               alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now apple store logo"
                               width={131}
                               height={38.863}
                               layout="responsive"
@@ -129,7 +129,7 @@ const InstallButtons = ({...props}) => {
                             <div style={{ width: '140px'}}>
                                  <Image
                                 src='/assets/images/googledownloadlogo.webp'
-                                alt="StocksToBuyNow ai financial advisor virtual trading app hot stocks to buy now play store logo"
+                                alt="Stocks To Buy Now Research financial advisor virtual trading app hot stocks to buy now play store logo"
                                width={130}
                                height={38.566}
                                layout="responsive"

@@ -5,7 +5,7 @@ seoExcerpt: 'If you invest $1,000 a month it takes 4 years to reach $100,000. Bu
 coverImage: '/assets/blog/millionnairescience/millionnairescience.jpg'
 date: '2023-12-02T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/millionnairescience/millionnairescience.jpg'

@@ -15,7 +15,7 @@ export default function ShareControl({title,path,subtitle,rows,className}:{title
    const ctx=canvas.getContext('2d');if(!ctx)throw Error();
    const bg=ctx.createLinearGradient(0,0,1200,canvas.height);bg.addColorStop(0,'#172540');bg.addColorStop(1,'#080f20');ctx.fillStyle=bg;ctx.fillRect(0,0,1200,canvas.height);
    const text=(s:string,x:number,y:number,size:number,color='#edf2ff',max=1080)=>{ctx.font=`${size>=30?'600':'400'} ${size}px Arial`;ctx.fillStyle=color;ctx.fillText(s,x,y,max)};
-   text('STOCKS TO BUY NOW AI',60,70,24,'#c9afff');text(title,60,145,48);text(subtitle||'Saved market snapshot',60,200,24,'#afbed6');
+   text('Stocks To Buy Now Research',60,70,24,'#c9afff');text(title,60,145,48);text(subtitle||'Saved market snapshot',60,200,24,'#afbed6');
    list.forEach((row,i)=>{const y=280+i*108;text(row.label,60,y,30,'#edf2ff',650);text(row.value,750,y,30,row.value.startsWith('-')?'#ff95a5':row.value.startsWith('+')?'#7ae0bc':'#edf2ff',390);text(row.detail||'',60,y+36,21,'#afbed6');ctx.fillStyle='#ffffff16';ctx.fillRect(60,y+58,1080,1)});
    const bottom=canvas.height-200;text('StocksToBuyNow.ai',60,bottom+65,36);text('Scan to explore the source and current view.',60,bottom+110,22,'#afbed6');text('Saved data • Historical performance does not guarantee returns.',60,bottom+160,18,'#afbed6',840);
    const svg=qr.current?.querySelector('svg');if(!svg)throw Error();const qrUrl=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml'}));

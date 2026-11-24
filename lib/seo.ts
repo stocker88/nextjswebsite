@@ -1,7 +1,7 @@
 export const SITE = "https://www.stockstobuynow.ai";
 export const NEWS_PUBLISHER = {
   "@type": "Organization",
-  name: "Stocks To Buy Now AI",
+  name: "Stocks To Buy Now Research",
   url: SITE + "/",
   logo: {
     "@type": "ImageObject",

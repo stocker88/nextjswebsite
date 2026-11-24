@@ -1,7 +1,7 @@
 ---
 title: 'Privacy Policy & Terms of Use'
-excerpt: 'How Stocks To Buy Now AI handles your data, account, subscriptions and refund requests.'
-seoExcerpt: 'How Stocks To Buy Now AI handles your data, account, subscriptions and refund requests.'
+excerpt: 'How Stocks To Buy Now Research handles your data, account, subscriptions and refund requests.'
+seoExcerpt: 'How Stocks To Buy Now Research handles your data, account, subscriptions and refund requests.'
 coverImage: '/assets/blog/preview/cover.jpg'
 date: '2026-11-14T00:00:00.000Z'
 author:
@@ -13,9 +13,9 @@ ogImage:
 
 ## About this policy
 
-This policy covers the Stocks To Buy Now AI website and mobile app, including accounts, research tools, community features and subscriptions. For privacy, account or billing questions, contact [support@stockstobuynow.ai](mailto:support@stockstobuynow.ai).
+This policy covers the Stocks To Buy Now Research website and mobile app, including accounts, research tools, community features and subscriptions. For privacy, account or billing questions, contact [support@stockstobuynow.ai](mailto:support@stockstobuynow.ai).
 
-Stocks To Buy Now AI provides investment research and education, including human analysis, data-driven tools and AI-assisted features. It is not an automated trading service. Investment outcomes are not guaranteed; options can lose their entire premium.
+Stocks To Buy Now Research provides investment research and education, including human analysis, data-driven tools and AI-assisted features. It is not an automated trading service. Investment outcomes are not guaranteed; options can lose their entire premium.
 
 ## Information we handle
 

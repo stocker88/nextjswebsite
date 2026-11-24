@@ -5,7 +5,7 @@ seoExcerpt: 'Quality Momentum: is Apple a buy? We analyze Apple financial perfor
 coverImage: '/assets/blog/apple-stock/apple-stock.jpg'
 date: '2023-12-20T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/apple-stock/apple-stock.jpg'

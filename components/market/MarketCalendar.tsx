@@ -39,7 +39,7 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
         ctx.fillStyle=color;ctx.font=`${bold?'700':'400'} ${size}px Arial`;ctx.fillText(value,x,y);
       };
       const fit=(value:string,max:number)=>{while(ctx.measureText(value).width>max && value.length>1)value=value.slice(0,-2)+'…';return value;};
-      text('STOCKS TO BUY NOW AI',48,62,24,'#b494ff',true);
+      text('Stocks To Buy Now Research',48,62,24,'#b494ff',true);
       text('Stock market calendar',48,134,48,'#ecf1ff',true);
       text(`${shortDate(from)} – ${shortDate(to)}, ${to.slice(0,4)}`,48,190,30);
       text('U.S. Eastern time · Selected market events',48,234,22,'#9eb0cc');
@@ -57,7 +57,7 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
       text('www.StocksToBuyNow.ai/stock-market-calendar/',48,canvas.height-30,24,'#ecf1ff',true);
       const blob=await new Promise<Blob>((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Could not export image')),'image/png'));
       const file=new File([blob],`market-calendar-${from}.png`,{type:'image/png'});
-      if(navigator.canShare?.({files:[file]})) await navigator.share({files:[file],title:'Stock market calendar · Stocks To Buy Now AI'});
+      if(navigator.canShare?.({files:[file]})) await navigator.share({files:[file],title:'Stock market calendar · Stocks To Buy Now Research'});
       else {const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
     } catch(e) {if((e as Error).name!=='AbortError')setError('Could not share the image. Please try again.');}
     finally {setBusy(false);}

@@ -18,7 +18,7 @@ const YoutubeSection = () => {
         <div className="playlist-frame">
           <iframe
             src={`https://www.youtube-nocookie.com/embed/videoseries?list=${playlistId}`}
-            title="Stocks To Buy Now AI YouTube playlist"
+            title="Stocks To Buy Now Research YouTube playlist"
             loading="lazy"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

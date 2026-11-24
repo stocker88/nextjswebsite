@@ -26,7 +26,7 @@ export default function ScrollShowcase(){
     };setup();reduced.addEventListener('change',setup);
     return()=>{observer?.disconnect();cancelAnimationFrame(frame);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);reduced.removeEventListener('change',setup);};
   },[]);
-  return <section ref={root} className={styles.journey} aria-label="Explore the Stocks To Buy Now AI experience">
+  return <section ref={root} className={styles.journey} aria-label="Explore the Stocks To Buy Now Research experience">
     <div className={styles.stage}>
       <div className={styles.orbit} aria-hidden="true"/>
       <div className={styles.copy}>{chapters.map((chapter,index)=><article className={styles.chapter} data-chapter-copy={index} key={chapter.eyebrow}>
@@ -34,7 +34,7 @@ export default function ScrollShowcase(){
       </article>)}</div>
       <div className={styles.visual} aria-label="Preview of the app’s daily investing routine">
         <div className={styles.backCard}><span>RESEARCH</span><strong>See the bigger picture.</strong><div className={styles.chart} aria-hidden="true"><svg ref={chartRef} viewBox="0 0 240 100"><ChartReveal width={240} height={100}><path d="M0 85 25 70 45 78 65 49 90 60 110 30 135 43 150 20 180 38 200 15 240 5"/></ChartReveal></svg></div><small>Context before decisions.</small></div>
-        <div className={styles.phone}><Image src="/assets/images/daily-investing-routine.png" width={864} height={1821} sizes="(max-width: 700px) 190px, 320px" alt="The Stocks To Buy Now AI app: signals, insights, earnings and market updates"/></div>
+        <div className={styles.phone}><Image src="/assets/images/daily-investing-routine.png" width={864} height={1821} sizes="(max-width: 700px) 190px, 320px" alt="The Stocks To Buy Now Research app: signals, insights, earnings and market updates"/></div>
         <div className={styles.frontCard}><span className={styles.spark} aria-hidden="true">✦</span><div><small>YOUR DAILY ROUTINE</small><strong>Research. Learn. Repeat.</strong></div></div>
         <span className={styles.caption}>APP PREVIEW · ILLUSTRATIVE RESEARCH VISUAL</span>
       </div>

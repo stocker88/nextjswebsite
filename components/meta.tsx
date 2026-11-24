@@ -35,7 +35,7 @@ const Meta = () => {
       {pathname !== "/" && <meta key="theme-color" name="theme-color" content="hsl(200, 100%, 48%)" />}
       <meta
         name="description"
-        content="Discover AI-powered stock signals, market analysis and practical investing tools from Stocks To Buy Now AI."
+        content="Discover AI-powered stock signals, market analysis and practical investing tools from Stocks To Buy Now Research."
       />
     </Head>
   )

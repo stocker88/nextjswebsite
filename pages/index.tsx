@@ -219,7 +219,7 @@ useEffect(() => {
               {
                 "@type": "Organization",
                 "@id": "https://www.stockstobuynow.ai/#organization",
-                "name": "Stocks To Buy Now AI",
+                "name": "Stocks To Buy Now Research",
                 "url": "https://www.stockstobuynow.ai/",
                 "logo": {
                   "@type": "ImageObject",
@@ -241,7 +241,7 @@ useEffect(() => {
                 "@type": "WebSite",
                 "@id": "https://www.stockstobuynow.ai/#website",
                 "url": "https://www.stockstobuynow.ai/",
-                "name": "Stocks To Buy Now AI",
+                "name": "Stocks To Buy Now Research",
                 "publisher": {
                   "@id": "https://www.stockstobuynow.ai/#organization"
                 }
@@ -249,7 +249,7 @@ useEffect(() => {
               {
                 "@type": "SoftwareApplication",
                 "@id": "https://www.stockstobuynow.ai/#app",
-                "name": "Stocks To Buy Now AI",
+                "name": "Stocks To Buy Now Research",
                 "url": "https://www.stockstobuynow.ai/",
                 "image": "https://www.stockstobuynow.ai/assets/images/stockerRobotIcon.png",
                 "operatingSystem": "iOS, Android",
@@ -292,12 +292,12 @@ useEffect(() => {
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Stocks To Buy Now AI — macro research, company fundamentals and data science" />
+          <meta property="og:image:alt" content="Stocks To Buy Now Research — macro research, company fundamentals and data science" />
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:title" content="Stocks to Buy Now | Trading Signals | Stock Market News Today | Free Trading Course"/>
           <meta name="twitter:description" content="Human-led macro and portfolio research by Aness Hussein Ali, supported by data science and AI-assisted tools. Explore founder credentials and methodology. Not an automated trading bot."/>
           <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/research-platform-social.png" />
-          <meta name="twitter:image:alt" content="Stocks To Buy Now AI — macro research, company fundamentals and data science" />
+          <meta name="twitter:image:alt" content="Stocks To Buy Now Research — macro research, company fundamentals and data science" />
 
 
         </Head>

@@ -22,14 +22,14 @@ const Testimonial = () => {
           <Image
             className="founder-portrait"
             src="/assets/images/aness.jpg"
-            alt="Aness Hussein Ali, founder of Stocks To Buy Now AI"
+            alt="Aness Hussein Ali, founder of Stocks To Buy Now Research"
             width={520}
             height={520}
             sizes="(max-width: 900px) 82vw, 420px"
           />
           <div className="founder-portrait-caption">
             <span className="founder-status" />
-            Founder of Stocks To Buy Now AI
+            Founder of Stocks To Buy Now Research
           </div>
         </div>
 

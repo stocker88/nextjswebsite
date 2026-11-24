@@ -214,11 +214,11 @@ export default function InsightDetailsPage() {
   return (
     <>
       <Head>
-        <title>Shared insight | StocksToBuyNow AI</title>
+        <title>Shared insight | Stocks To Buy Now Research</title>
 
         <meta
           name="description"
-          content="An investor shared a StocksToBuyNow AI insight with you."
+          content="An investor shared a Stocks To Buy Now Research insight with you."
         />
 
         <meta
@@ -247,7 +247,7 @@ export default function InsightDetailsPage() {
         <section className="card heroCard">
           <img
             src="/assets/images/stockerRobotIcon.png"
-            alt="StocksToBuyNow AI"
+            alt="Stocks To Buy Now Research"
             className="appIcon"
           />
 
@@ -287,7 +287,7 @@ export default function InsightDetailsPage() {
 
         <div className="bottomArea">
         <section className="storeSection" aria-labelledby="store-heading">
-          <span className="label">CONTINUE WITH STOCKSTOBUYNOW AI</span>
+          <span className="label">CONTINUE WITH Stocks To Buy Now Research</span>
           <h2 id="store-heading">See the complete insight in the app</h2>
           <p>View signals, analysis and the latest investing insights in one place.</p>
 

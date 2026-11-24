@@ -1,0 +1,736 @@
+[
+  {
+    "slug": "how-to-start-investing",
+    "title": "How to start investing: a beginner’s plan",
+    "description": "Learn how to set investing goals, choose an account, understand diversification and build a repeatable research routine.",
+    "answer": "Start with your goal, the date you need the money and the losses you could withstand. Compare investments and account costs before choosing individual stocks.",
+    "sections": [
+      {
+        "title": "1. Give the money a purpose",
+        "body": "Separate money for near-term bills and emergencies from money you can leave invested. Write down your target date and what a fall in value would mean for that goal. A plan for next year’s expenses can look very different from a retirement plan."
+      },
+      {
+        "title": "2. Compare the whole portfolio",
+        "body": "Cash, bonds and stocks serve different purposes. Spreading investments across assets and businesses can reduce concentration, but cannot eliminate losses. Look inside funds: owning several funds with the same largest holdings may provide less diversification than you expect."
+      },
+      {
+        "title": "3. Choose an account and a review routine",
+        "body": "Compare an account’s eligibility, fees, withdrawal rules and available investments with your circumstances. Decide how often to contribute and review your allocation. A regular review should ask whether your goals changed, rather than automatically reacting to each market headline."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much money do I need to start investing?",
+        "answer": "There is no universal starting amount. Broker minimums, share prices and fractional-share availability vary. Keep enough money for essential expenses and compare fees with the amount invested."
+      },
+      {
+        "question": "Should I start with individual stocks or funds?",
+        "answer": "Individual stocks concentrate your exposure in particular businesses. A diversified fund can spread that exposure, although its holdings, fees and risks still need review."
+      },
+      {
+        "question": "Where can I learn before investing?",
+        "answer": "Our learning library offers stock and options video lessons. Start with investment basics and risk before using advanced strategies; use Investor.gov alongside the courses."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Free courses",
+        "href": "/learn/"
+      },
+      {
+        "label": "Stock research",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Investing glossary",
+        "href": "/glossary/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "how-to-start-investing-in-stocks",
+    "title": "How to start investing in stocks",
+    "description": "A beginner’s stock research checklist: business model, financial statements, valuation, portfolio fit and earnings dates.",
+    "answer": "Understand what the company does, how it makes money, what could go wrong and what you are paying for its earnings or cash flow. Then decide whether one stock fits your wider portfolio.",
+    "sections": [
+      {
+        "title": "Read the business before the chart",
+        "body": "Explain the company’s main products, customers and competitors in your own words. Read its latest annual and quarterly reports. Check whether sales rely heavily on one customer, region or product and whether growth is turning into cash."
+      },
+      {
+        "title": "Compare growth with the price",
+        "body": "Compare revenue, margins, cash flow and debt across several periods and with relevant peers. A growing company can still be expensive. When profits are negative, a price-to-earnings ratio may not be meaningful; avoid comparing ratios without checking their definitions."
+      },
+      {
+        "title": "Write a research note you can revisit",
+        "body": "Record the reason to own the stock, the evidence behind it, the main risks and what would change your view. Check the next earnings date and existing portfolio concentration before placing an order. Keep the original note so later reviews do not rewrite your expectations."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is a familiar company automatically a good investment?",
+        "answer": "No. Familiar products do not establish financial strength or an attractive valuation. Research the business and the price separately."
+      },
+      {
+        "question": "What should a beginner check before earnings?",
+        "answer": "Review the expected release date, comparable estimates, previous results and management guidance. A beat in reported earnings does not guarantee a rising share price."
+      },
+      {
+        "question": "Can I research a stock on Stocks To Buy Now Research?",
+        "answer": "Use company pages, the earnings calendar and related research to assemble evidence. Coverage varies by company; check the date and source shown with each dataset."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Browse company pages",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Earnings calendar",
+        "href": "/earnings-calendar/"
+      },
+      {
+        "label": "Compare industries",
+        "href": "/industries/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "how-to-buy-stocks",
+    "title": "How to buy stocks: accounts, orders and costs",
+    "description": "Understand the steps to buy a stock, compare market and limit orders, and check fees before confirming your purchase.",
+    "answer": "To buy listed stocks, use an eligible brokerage account, fund it, verify the company and ticker, choose the quantity and order type, and review the order before submitting.",
+    "sections": [
+      {
+        "title": "Choose the account and verify the instrument",
+        "body": "Check the broker’s registration, account charges, market access and funding requirements. Confirm the company name, ticker, exchange and currency. Similar tickers or different share classes can refer to different investments."
+      },
+      {
+        "title": "Understand market and limit orders",
+        "body": "A market order seeks execution at the available market price; its execution price is not guaranteed. A buy limit order sets the maximum price you will pay but may not execute. Check the bid and ask, session and order duration, especially around earnings or in less liquid stocks."
+      },
+      {
+        "title": "Review the confirmation and ongoing position",
+        "body": "Check the number of shares, currency conversion, commissions and total cost. After submitting, check whether the order filled, partially filled or remains open. Keep the confirmation and review the position in the context of the rest of your portfolio."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I buy stocks inside this research website?",
+        "answer": "This website provides learning and research. Place and manage stock orders through your brokerage account."
+      },
+      {
+        "question": "Can I buy less than one share?",
+        "answer": "Some brokers offer fractional shares for eligible securities. Availability, minimum purchases and order handling depend on the broker."
+      },
+      {
+        "question": "Does a limit order guarantee I will buy the stock?",
+        "answer": "No. It controls the maximum purchase price, but there may be no execution or only a partial fill."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Compare brokers",
+        "href": "/broker-comparison/"
+      },
+      {
+        "label": "Research a company",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Learn investing basics",
+        "href": "/learn/"
+      },
+      {
+        "label": "Compare stock ideas",
+        "href": "/stocks-to-buy/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: order types",
+        "href": "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders"
+      }
+    ]
+  },
+  {
+    "slug": "how-to-start-trading",
+    "title": "How to start trading: learn, practise and manage risk",
+    "description": "Build a beginner trading process with a written setup, position sizing, an event checklist and a trading journal.",
+    "answer": "Start by learning order types and risk, practising a written strategy and keeping a journal. Decide how much you can lose before choosing a trade size; an alert alone is not a trading plan.",
+    "sections": [
+      {
+        "title": "Define a setup before taking a trade",
+        "body": "Write down the conditions for entry, your intended holding period and the evidence that would invalidate the setup. Separate an earnings-event trade from a longer-term investment. Use the market calendar to identify scheduled announcements that could change prices quickly."
+      },
+      {
+        "title": "Practise execution and position sizing",
+        "body": "Paper trading can help you learn a platform, but simulated fills may differ from actual execution. In an illustrative stock trade with a $100 risk budget and a $2 distance to an intended exit, 50 shares imply $100 of planned risk before costs. Gaps and slippage can make the real loss larger."
+      },
+      {
+        "title": "Keep a journal and review the process",
+        "body": "Record your thesis, entry, planned exit, actual fill, fees and outcome. Review whether you followed your rules as well as whether you made money. Several successful trades do not establish that a strategy will keep working. Avoid adding leverage before you understand its downside."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is trading the same as investing?",
+        "answer": "Trading usually focuses on shorter-term price changes and execution. Investing commonly focuses on business performance over a longer horizon. Both involve losses and require a clear plan."
+      },
+      {
+        "question": "Do I need options to start trading?",
+        "answer": "No. Options add expiration, volatility and contract-specific risks. Learn those mechanics separately before considering them."
+      },
+      {
+        "question": "Can alerts guarantee profitable trades?",
+        "answer": "No. Alerts help draw attention to information. You still need to check timing, price, liquidity and whether the trade fits your risk limits."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Watch free lessons",
+        "href": "/learn/"
+      },
+      {
+        "label": "Market events",
+        "href": "/stock-market-calendar/"
+      },
+      {
+        "label": "Options risk calculator",
+        "href": "/options-profit-calculator/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-under-10",
+    "title": "Stocks to buy now under $10: a research checklist",
+    "description": "Research stocks priced below $10 without confusing a low share price with low valuation. Check liquidity, dilution, debt and financial runway.",
+    "answer": "A stock below $10 is a price category, not a quality rating. Look for evidence of a sustainable business, adequate funding and reasonable valuation before adding a low-priced share to a watchlist.",
+    "sections": [
+      {
+        "title": "Check why the share price is low",
+        "body": "A low price can reflect a large share count, business difficulties or a market decline. Market capitalization is share price multiplied by shares outstanding. A $5 stock with many shares can represent a larger company than a $100 stock with fewer shares."
+      },
+      {
+        "title": "Investigate dilution and funding needs",
+        "body": "Read cash flow, debt maturities and recent financing disclosures. Compare cash resources with operating losses and planned spending. New shares, convertible debt and stock compensation can change your ownership percentage even when revenue grows."
+      },
+      {
+        "title": "Verify the quote and trading conditions",
+        "body": "Check a current broker quote before applying the $10 filter. Review trading volume, bid-ask spread and exchange. Our company research is a starting point, not an exhaustive live list of every stock under $10. Record the quote date with your watchlist so an old price is not mistaken for today’s price."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are stocks under $10 cheaper investments?",
+        "answer": "Only in price per share. Valuation also depends on share count, earnings, cash flow, assets and debt."
+      },
+      {
+        "question": "Is every stock under $10 a penny stock?",
+        "answer": "No. The phrase under $10 is a simple screening threshold and does not determine a security’s regulatory classification or risk."
+      },
+      {
+        "question": "What if my budget is only $10?",
+        "answer": "Check whether your broker supports fractional shares. A small budget does not require restricting your research to low-priced stocks."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Browse stocks",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Compare industries",
+        "href": "/industries/"
+      },
+      {
+        "label": "Upcoming earnings",
+        "href": "/earnings-calendar/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-under-50",
+    "title": "Stocks to buy now under $50: compare value and risk",
+    "description": "Build a stock watchlist below $50 with a clear budget, valuation comparisons and portfolio concentration checks.",
+    "answer": "Use the $50 threshold to narrow a watchlist, then compare the underlying businesses. Price per share does not tell you whether a stock is undervalued or suitable for your budget.",
+    "sections": [
+      {
+        "title": "Turn a share-price budget into a portfolio budget",
+        "body": "For a hypothetical $500 allocation, ten shares at $50 and twenty shares at $25 use the same starting capital before costs. Neither choice is automatically safer. Decide how much of your overall portfolio one company should represent before focusing on the number of shares."
+      },
+      {
+        "title": "Compare like-for-like businesses",
+        "body": "Group candidates by industry, then compare growth, profitability, debt and valuation using the same reporting periods. A profitable mature business and a loss-making growth company require different assumptions. Check whether apparent low valuation reflects a temporary issue or a weakening business."
+      },
+      {
+        "title": "Maintain a dated shortlist",
+        "body": "Verify the current quote at your broker and record your research date. Recheck after earnings, stock splits or major announcements. Use our company pages for supporting information; this guide does not claim a complete or live under-$50 screen."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is a $40 stock better value than a $60 stock?",
+        "answer": "Not necessarily. The cheaper share may represent a more expensive business relative to earnings or cash flow."
+      },
+      {
+        "question": "Should I buy more shares because the price is lower?",
+        "answer": "Share count alone does not determine your economic exposure. Compare the dollars at risk and the position’s weight in your portfolio."
+      },
+      {
+        "question": "Can a stock split make a company cheaper?",
+        "answer": "A split changes share count and price per share proportionally. It does not by itself change the underlying value of the company."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Company research",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Industry comparisons",
+        "href": "/industries/"
+      },
+      {
+        "label": "Stock ideas",
+        "href": "/stocks-to-buy/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-for-long-term",
+    "title": "Stocks to buy now for the long term: research quality and value",
+    "description": "Evaluate long-term stock ideas through competitive strength, cash flow, balance sheets, valuation and portfolio concentration.",
+    "answer": "Long-term stock research asks whether a business can sustain and grow cash generation, and whether the price leaves room for disappointing outcomes. A long holding period does not make every stock safe.",
+    "sections": [
+      {
+        "title": "Look for durable economics",
+        "body": "Study customer retention, competitive alternatives, margins and the capital required to grow. Ask whether the company can reinvest profitably or return cash without weakening its balance sheet. Compare several years rather than extrapolating one strong quarter."
+      },
+      {
+        "title": "Stress-test the valuation",
+        "body": "Write a base case and a weaker case for sales, margins and cash flow. Consider what happens if growth slows or financing becomes more expensive. A high-quality company can still produce a poor investment outcome when purchased at an excessive valuation."
+      },
+      {
+        "title": "Set reasons to review, not just a target price",
+        "body": "Schedule reviews around financial reports and changes to the original thesis. Track debt, dilution and whether promised milestones occurred. Revisit portfolio concentration when one holding becomes dominant. Holding for years should be a conscious choice, not a substitute for reviewing evidence."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which stock is best for the long term?",
+        "answer": "There is no universal best stock. The answer depends on valuation, diversification, your financial goals and the losses you can tolerate."
+      },
+      {
+        "question": "Are dividends enough to judge a long-term stock?",
+        "answer": "No. Compare the payout with cash flow, debt obligations and reinvestment needs. A dividend can change."
+      },
+      {
+        "question": "Do analyst targets predict a stock’s value in five years?",
+        "answer": "Check the forecast horizon and assumptions. A shorter-term target is not a five-year valuation or a guaranteed future price."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Company outlooks",
+        "href": "/prediction/"
+      },
+      {
+        "label": "Industry research",
+        "href": "/industries/"
+      },
+      {
+        "label": "Hedge fund disclosures",
+        "href": "/hedge-fund-activity/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-for-short-term",
+    "title": "Stocks to buy now for the short term: catalysts and risk",
+    "description": "Research short-term stock setups using earnings dates, market events, liquidity and clear exit assumptions.",
+    "answer": "For short-term stock ideas, start with a specific catalyst and a defined time window. Check liquidity, event timing and downside exposure before interpreting momentum or unusual activity.",
+    "sections": [
+      {
+        "title": "Identify what could change expectations",
+        "body": "Earnings, guidance, product announcements and economic releases can affect a stock. Separate a confirmed event date from speculation. Ask what the market already appears to expect and which new evidence would actually change that expectation."
+      },
+      {
+        "title": "Match the data to the trading session",
+        "body": "Premarket, regular-session and after-hours prices are different observations. Use the same reference price when comparing moves, and check bid-ask spreads before acting on a large percentage change. A historical chart cannot establish the price available for your next order."
+      },
+      {
+        "title": "Plan for a move in either direction",
+        "body": "Decide the intended holding period, position size and conditions for exiting before entry. A stop order may execute at a worse price in a fast market. After the event, compare the outcome with your written thesis rather than extending the holding period simply to avoid realizing a loss."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does unusual options volume mean a stock will rise?",
+        "answer": "No. Activity can reflect hedges, spreads or position closing. Contract direction alone does not identify the trader’s complete exposure."
+      },
+      {
+        "question": "Can a stock fall after good earnings?",
+        "answer": "Yes. Guidance, margins and expectations already reflected in the price can matter as much as the headline result."
+      },
+      {
+        "question": "Where can I monitor upcoming catalysts?",
+        "answer": "Use our earnings and market calendars alongside company announcements. Verify release dates because schedules can change."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Earnings calendar",
+        "href": "/earnings-calendar/"
+      },
+      {
+        "label": "Unusual options activity",
+        "href": "/options-activity/"
+      },
+      {
+        "label": "Premarket heatmap",
+        "href": "/premarket-stock-heatmap/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-reddit",
+    "title": "Stocks to buy now on Reddit: how to check an idea",
+    "description": "Evaluate Reddit stock ideas by tracing claims to filings, checking dates and separating community sentiment from evidence.",
+    "answer": "Treat a Reddit stock discussion as an idea to investigate. Verify the ticker, date, financial claims and original sources before considering any investment.",
+    "sections": [
+      {
+        "title": "Find the original evidence",
+        "body": "Follow links to company releases and filings. Check whether a screenshot omits the date, share class, reporting period or important context. A repost can circulate long after the underlying information changed."
+      },
+      {
+        "title": "Separate a thesis from popularity",
+        "body": "Upvotes and confident comments do not establish financial accuracy. Write down the claim, the supporting evidence and the strongest opposing case. Ask what information would prove the thesis wrong and whether the poster discloses a position or incentive."
+      },
+      {
+        "title": "Build your own comparison",
+        "body": "Compare the company with industry peers, upcoming events and financial history. Do not infer that a widely discussed stock suits your portfolio. Stocks To Buy Now Research provides research tools; this page is not affiliated with Reddit and does not claim community endorsement."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are the most discussed Reddit stocks the best buys?",
+        "answer": "Discussion frequency measures attention, not valuation or investment suitability."
+      },
+      {
+        "question": "Can I verify a claimed insider purchase?",
+        "answer": "Check the original disclosure and transaction type. Awards, option exercises and open-market purchases describe different events."
+      },
+      {
+        "question": "Does this page rank Reddit recommendations?",
+        "answer": "No. It explains how to verify community ideas and links to research tools. It does not invent rankings, comments or endorsements."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Search a company",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Insider trades",
+        "href": "/insider-trades/"
+      },
+      {
+        "label": "Research methodology",
+        "href": "/methodology/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  },
+  {
+    "slug": "investing-across-countries",
+    "title": "Investing across countries: markets, currencies and broker access",
+    "description": "A practical checklist for investors in the U.S., Canada, UK, Europe, Australia and beyond: compare broker eligibility, listings, currencies and account costs.",
+    "answer": "Start with where you live and pay tax, then check which broker entity can serve you and which exchanges your account can access. A U.S. stock listing does not require a U.S. brokerage account, but access depends on the provider and your account.",
+    "sections": [
+      {
+        "title": "Your residence and your investment market are different",
+        "body": "A Canadian resident researching a U.S. company needs to check both account eligibility in Canada and access to the company’s exchange. The same distinction applies to investors in the U.S., UK, France, Germany, Australia and other countries. Start with our broker comparison, then confirm your country in the provider’s application."
+      },
+      {
+        "title": "Compare the listing and the currency",
+        "body": "Check the exact ticker, exchange and share class. Compare the currency of your savings, your account cash and the stock quote. Include currency conversion and transfer charges in the total cost; the quote currency alone does not describe all of a company’s economic exposure."
+      },
+      {
+        "title": "Use the right local account information",
+        "body": "Check the legal entity serving your account, its regulator and its account terms. Tax residence, citizenship and account type can change eligibility. For country-specific tax questions, consult your local tax authority or a qualified adviser; an international broker’s marketing page is not a personal tax assessment."
+      },
+      {
+        "title": "Research the company using the same disciplined process",
+        "body": "Once access is clear, review the business, financial statements, valuation and upcoming earnings. Our coverage varies by company and dataset. Use the stock directory to confirm that research is available instead of assuming we cover every local exchange."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I research U.S. stocks from Canada or another country?",
+        "answer": "Yes. You can read research on covered companies here. Buying the shares requires a broker that accepts your residency and gives your account access to the relevant market."
+      },
+      {
+        "question": "Is one broker available in every country?",
+        "answer": "Do not assume so. Providers use country eligibility lists, local entities and account restrictions. Our comparison links to official eligibility information so you can check your circumstances."
+      },
+      {
+        "question": "Are stock prices always in my local currency?",
+        "answer": "No. Verify the listing and quote currency before comparing prices or placing an order. Conversion costs and exchange-rate changes can affect your return."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Compare international brokers",
+        "href": "/broker-comparison/"
+      },
+      {
+        "label": "Browse covered stocks",
+        "href": "/stocks/"
+      },
+      {
+        "label": "Learning library",
+        "href": "/learn/"
+      },
+      {
+        "label": "Company outlooks",
+        "href": "/prediction/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Interactive Brokers: supported countries",
+        "href": "https://portal.interactivebrokers.com/en/accounts/open-account-country-list.php"
+      },
+      {
+        "label": "Saxo: residence and account requirements",
+        "href": "https://www.help.saxo/hc/en-us/articles/360001268286-How-do-I-open-an-account"
+      }
+    ]
+  },
+  {
+    "slug": "stocks-to-buy-now-research-review",
+    "title": "Stocks To Buy Now Research review: features, learning and limitations",
+    "description": "A first-party overview of Stocks To Buy Now Research: courses, stock research, market tools, disclosures and what to check before subscribing.",
+    "answer": "Stocks To Buy Now Research brings together company research, learning resources and market tools. This is our own product overview, not an independent review or a promise of investment performance.",
+    "sections": [
+      {
+        "title": "What you can explore",
+        "body": "Browse the public course library, company research, earnings calendar, market heatmaps and research guides. The linked pages let you inspect the format and available coverage before deciding whether the product fits your workflow."
+      },
+      {
+        "title": "What to check before subscribing",
+        "body": "Review the current membership page for included features, pricing and billing terms. Public website access and in-app access may differ. Check the date and coverage of any dataset that matters to you; a paid subscription does not guarantee every company or observation is available."
+      },
+      {
+        "title": "How to evaluate reviews and results",
+        "body": "Use the reviews page to follow available review sources and read both positive and critical feedback in context. Compare the product with your actual needs: education, research organization or monitoring. Selected trade examples are not a complete portfolio return or a promise of future performance."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this an independent Stocks To Buy Now Research review?",
+        "answer": "No. It is a first-party overview published by Stocks To Buy Now Research. Use the linked review sources for outside perspectives."
+      },
+      {
+        "question": "Does the app guarantee profits?",
+        "answer": "No. Research, alerts and historical results do not guarantee returns or prevent losses."
+      },
+      {
+        "question": "Where can I check features and pricing?",
+        "answer": "Open the current membership page and review the terms shown before subscribing. This guide does not quote a price that may become outdated."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Read review sources",
+        "href": "/reviews/"
+      },
+      {
+        "label": "Current membership details",
+        "href": "/membership/"
+      },
+      {
+        "label": "Explore free courses",
+        "href": "/learn/"
+      },
+      {
+        "label": "Editorial standards",
+        "href": "/editorial-policy/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Current membership details",
+        "href": "https://www.stockstobuynow.ai/membership/"
+      },
+      {
+        "label": "Review sources",
+        "href": "https://www.stockstobuynow.ai/reviews/"
+      }
+    ]
+  },
+  {
+    "slug": "stock-market-alerts",
+    "title": "Stock market alerts: earnings, activity and research updates",
+    "description": "Learn how to use stock market alerts, earnings calendars and activity trackers without confusing a notification with a live execution feed.",
+    "answer": "Use market alerts to decide what deserves attention, then open the underlying research. Check the event time, source date and current market price before acting.",
+    "sections": [
+      {
+        "title": "Choose the information you want to follow",
+        "body": "Earnings announcements, economic releases, company updates and unusual activity answer different questions. Start with your watchlist and review the alerts available in your account. Avoid treating every notification as a reason to trade."
+      },
+      {
+        "title": "Distinguish notifications from real-time data",
+        "body": "A notification arriving now can refer to an older filing or a delayed observation. Check trade dates, filing dates and quote timestamps separately. Delivery also depends on device settings and connectivity; a push alert is not a guaranteed execution opportunity."
+      },
+      {
+        "title": "Connect the alert to a research process",
+        "body": "After an alert, read the company context, upcoming events and relevant risks. Compare new evidence with your original thesis. Use a broker quote for an order decision rather than relying on a notification’s displayed price."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I receive alerts in the app?",
+        "answer": "Review available notification and membership options in your account, and enable device notifications for the app. Access and delivery can depend on settings and the feature."
+      },
+      {
+        "question": "Are insider and politician alerts live trades?",
+        "answer": "They describe available disclosures, which can be published after the underlying transaction. They are not live brokerage feeds."
+      },
+      {
+        "question": "Where should I start before using alerts?",
+        "answer": "Use the learning library to understand stock research and risk, then follow a manageable set of companies and events."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Explore the app and plans",
+        "href": "/membership/"
+      },
+      {
+        "label": "Earnings dates",
+        "href": "/earnings-calendar/"
+      },
+      {
+        "label": "Market news",
+        "href": "/stock-market-news/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Membership and feature information",
+        "href": "https://www.stockstobuynow.ai/membership/"
+      },
+      {
+        "label": "Research methodology",
+        "href": "https://www.stockstobuynow.ai/methodology/"
+      }
+    ]
+  },
+  {
+    "slug": "track-insiders-politicians-hedge-funds",
+    "title": "Track insider trades, politicians and hedge fund holdings",
+    "description": "Understand what insider trades, politician disclosures and hedge fund portfolios reveal, including reporting delays and incomplete holdings.",
+    "answer": "Use separate trackers for company insiders, politician transactions and institutional holdings. Each reports a different type of evidence; none provides a complete live view of every investor’s portfolio.",
+    "sections": [
+      {
+        "title": "Company insiders: read the transaction",
+        "body": "Check the person’s role, transaction type, price, size and filing footnotes. Separate an open-market purchase from compensation or option exercise. Unknown trading-plan status means the available evidence does not establish whether the trade was planned."
+      },
+      {
+        "title": "Politicians: compare trade and disclosure dates",
+        "body": "A recently published report can describe an older transaction. Check the reported owner and amount range; a range is not an exact trade value. Purchases and sales alone do not reconstruct a complete current portfolio."
+      },
+      {
+        "title": "Hedge funds: compare filing snapshots",
+        "body": "Institutional holdings describe a reporting period, not today’s brokerage account. Compare shares across consistent periods and check amendments or corporate actions. The disclosed holdings may exclude exposures needed to understand the manager’s full strategy."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I copy hedge fund trades in real time?",
+        "answer": "These disclosures do not provide real-time trade execution. Positions may have changed by the time a filing becomes available."
+      },
+      {
+        "question": "What is a holdings breakdown?",
+        "answer": "It describes positions and weights within the covered disclosure. It should not be interpreted as the manager’s complete assets or current live exposure."
+      },
+      {
+        "question": "Does insider buying guarantee a stock will rise?",
+        "answer": "No. It can identify a company worth researching, but business conditions, valuation and other risks still matter."
+      }
+    ],
+    "tools": [
+      {
+        "label": "Insider trades tracker",
+        "href": "/insider-trades/"
+      },
+      {
+        "label": "Politician trades tracker",
+        "href": "/politician-trades/"
+      },
+      {
+        "label": "Hedge fund holdings",
+        "href": "/hedge-fund-activity/"
+      },
+      {
+        "label": "Investor directory",
+        "href": "/smart-money/investors/"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Investor.gov: investing fundamentals",
+        "href": "https://www.investor.gov/introduction-investing"
+      }
+    ]
+  }
+]

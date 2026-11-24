@@ -5,7 +5,7 @@ seoExcerpt: 'In his first term, Donald Trump earned a surprising reputation amon
 coverImage: '/assets/blog/trump/powell.jpg'
 date: '2025-04-25T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/trump/powell.jpg'

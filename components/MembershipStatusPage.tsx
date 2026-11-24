@@ -87,7 +87,7 @@ export default function MembershipStatusPage(){
   void router.replace({pathname:router.pathname,query},undefined,{shallow:true,scroll:false});
  },[router.isReady,router.query.checkout,uid,own,state.loading,state.error,state.pending,state.value]);
  useEffect(()=>{if(uid&&own&&!state.loading&&!state.error&&!state.pending&&state.value?.status==='active'&&state.value.isActive&&desktopPaymentPending(uid))void router.replace(DESKTOP_ACCESS_PATH)},[uid,own,state,router]);
- return <><Head><title>My membership | Stocks To Buy Now AI</title><meta name="robots" content="noindex,follow"/></Head>
+ return <><Head><title>My membership | Stocks To Buy Now Research</title><meta name="robots" content="noindex,follow"/></Head>
   <div className={s.page}><Header homeHref="/" navBasePath="/" forceDark hideAppDownload/>
    <main className={s.main}><Link className={s.back} href="/">← Back to home</Link>
     {user&&welcomeUid===uid&&own&&state.value?.status==='active'&&!state.loading&&<MembershipAppAccess purchased pro onGetApp={()=>setAppDownload(true)}/>}

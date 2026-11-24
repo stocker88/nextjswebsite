@@ -119,7 +119,7 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
  return <main className={s.page}>
   <div className={s.glow} aria-hidden="true"/>
   <section className={s.card} aria-labelledby="profile-onboarding-title">
-   <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>STOCKS TO BUY NOW AI</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your results'}</span></header>
+   <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>Stocks To Buy Now Research</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your results'}</span></header>
    {step===0&&<div className={s.content}>
     <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Choose your username.</h1><p className={s.lead}>You can edit your username and add a photo later. Then just {questionCount} quick questions before your results.</p>
     <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onFocus={()=>trackInteraction('username_focus')} onChange={event=>{trackInteraction('username_edit');setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>

@@ -1,3 +1,4 @@
+import investingGuides from '../data/investing-guides.json';
 import {learningPaths} from '../lib/learning';
 import {optionResults,optionResultUrl} from '../lib/option-results';
 import {insiderArticles} from '../lib/insider-news-server';
@@ -77,6 +78,7 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
+  entries.push({path:'/broker-comparison/'},{path:'/guides/'},...investingGuides.map(g=>({path:'/guides/'+g.slug+'/'})));
   entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
   entries.push({path:'/smart-money/investors/'},...publicInvestors.map(p=>({path:investorPath(p.id)})));
   insiderArticles.filter(a=>!a.noActivity).forEach(a=>entries.push({path:insiderArticlePath(a),modified:a.updatedAt}));

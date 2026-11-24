@@ -5,7 +5,7 @@ seoExcerpt: 'AI, Dividends, Value, Momentum, Quality, ETF, Hedge Funds, Technolo
 coverImage: '/assets/blog/investing/investment-styles.jpg'
 date: '2023-12-30T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/investing/investment-styles.jpg'

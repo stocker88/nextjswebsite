@@ -52,7 +52,7 @@ export default function ProductProof({ founderOnly = false, section = 'all' }: {
         <div className="phone-frame routine-phone" data-motion-depth="22">
           <Image
             src="/assets/images/daily-investing-routine.png"
-            alt="Five-minute daily Stocks To Buy Now AI workflow"
+            alt="Five-minute daily Stocks To Buy Now Research workflow"
             width={864}
             height={1821}
             sizes="(max-width: 760px) 88vw, 420px"

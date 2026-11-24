@@ -5,7 +5,7 @@ seoExcerpt: '1. AI Industry Prospects 2. Financial performance 3. Competitive la
 coverImage: '/assets/blog/nvidia/is nvidia a buy.jpg'
 date: '2023-12-06T05:35:07.322Z'
 author:
-    name: StocksToBuyNow AI
+    name: Stocks To Buy Now Research
     picture: '/assets/blog/authors/stockstobuynow.png'
 ogImage:
     url: '/assets/blog/nvidia/is nvidia a buy.jpg'
@@ -51,7 +51,7 @@ Netflix, Spotify, and StocksToBuyNow, all leverage AI for better recommendations
 
 \- Spotify for music.
 
-\- StocksToBuyNow AI for stocks.
+\- Stocks To Buy Now Research for stocks.
 
 &nbsp;
 

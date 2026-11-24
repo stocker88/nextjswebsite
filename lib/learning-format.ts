@@ -5,5 +5,5 @@ export const duration = (seconds: number) => seconds >= 3600
   : `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
 export const lessonSummary = (lesson: {description: string; title: string}) => {
   const text = lesson.description.replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
-  return text ? text.slice(0, 180) + (text.length > 180 ? '…' : '') : `Watch ${lesson.title} with Aness Hussein Ali in the free Stocks To Buy Now AI course library.`;
+  return text ? text.slice(0, 180) + (text.length > 180 ? '…' : '') : `Watch ${lesson.title} with Aness Hussein Ali in the free Stocks To Buy Now Research course library.`;
 };

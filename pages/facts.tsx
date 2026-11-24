@@ -11,7 +11,7 @@ const factsSchema = {
   '@id': 'https://www.stockstobuynow.ai/facts#page',
   url: 'https://www.stockstobuynow.ai/facts',
   name: 'Stocks To Buy Now: Product Facts',
-  description: 'Official product facts, features, platforms and disclosures for Stocks To Buy Now AI.',
+  description: 'Official product facts, features, platforms and disclosures for Stocks To Buy Now Research.',
   isPartOf: { '@id': 'https://www.stockstobuynow.ai/#website' },
   about: { '@id': 'https://www.stockstobuynow.ai/#app' },
 };
@@ -42,7 +42,7 @@ export default function FactsPage() {
       <main className="factsPage">
         <section className="hero">
           <span className="eyebrow">OFFICIAL PRODUCT INFORMATION</span>
-          <h1>Stocks To Buy Now AI product facts</h1>
+          <h1>Stocks To Buy Now Research product facts</h1>
           <p className="lead">
             A clear, regularly maintained overview of what the app does, where it is available and how to evaluate it responsibly.
           </p>

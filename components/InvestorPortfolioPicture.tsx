@@ -14,7 +14,7 @@ export default function InvestorPortfolioPicture({data,rows,period,portrait}:{da
  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 820" width="720" height="820" role="img" aria-label={`${data.name}: ${fund?'reported holdings':'reported transactions'}`} style={{width:'100%',height:'auto',fontFamily:'Arial, sans-serif'}}>
   <defs><linearGradient id="portfolio-bg" x2="1" y2="1"><stop stopColor="#17243a"/><stop offset="1" stopColor="#0b1020"/></linearGradient></defs>
   <rect width="720" height="820" fill="url(#portfolio-bg)"/>
-  <g fill="#e9eef8"><text x="28" y="40" fill="#b59af7" fontSize="13" letterSpacing="2">STOCKS TO BUY NOW AI / INVESTOR TRACKER</text>
+  <g fill="#e9eef8"><text x="28" y="40" fill="#b59af7" fontSize="13" letterSpacing="2">Stocks To Buy Now Research / INVESTOR TRACKER</text>
   <svg x="28" y="56" width="84" height="84" viewBox="0 0 84 84"><defs><clipPath id="investor-portrait-clip"><circle cx="42" cy="42" r="40"/></clipPath></defs><circle cx="42" cy="42" r="41" fill="#344159" stroke="#b59af7"/><text x="42" y="50" textAnchor="middle" fontSize="24">{name[0].split(' ').map(n=>n[0]).slice(0,2).join('')}</text>{portrait&&<image href={portrait} width="84" height="84" preserveAspectRatio="xMidYMin slice" clipPath="url(#investor-portrait-clip)"/>}</svg>
   <text x="128" y="82" fontSize="26" fontWeight="700">{name[0]}</text>{name[1]&&<text x="128" y="114" fontSize="22" fontWeight="700">{name[1]}</text>}
 <text x="128" y="145" fontSize="15" fill="#a6b6ce">{fund?`Reported holdings · ${trackerDate(period||rows[0]?.period)}`:`Reported transactions · ${period||'Available archive'}`}</text>

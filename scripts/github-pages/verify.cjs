@@ -10,7 +10,7 @@ const newsUrls=[...newsSitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].repla
 assert(urls.length>100,'Sitemap missing content');
 assert.equal(new Set(urls).size,urls.length,'Duplicate canonical URLs');
 assert(newsSitemap.includes('xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"'),'Google News namespace missing');
-if(newsUrls.length)assert(newsSitemap.includes('<news:name>Stocks To Buy Now AI</news:name>'),'Google News publication name missing');
+if(newsUrls.length)assert(newsSitemap.includes('<news:name>Stocks To Buy Now Research</news:name>'),'Google News publication name missing');
 assert.equal(new Set(newsUrls).size,newsUrls.length,'Duplicate Google News URLs');
 assert(newsUrls.length<=1000,'Google News sitemap exceeds 1,000 URLs');
 for(const url of urls){
@@ -142,3 +142,23 @@ assert(html('ipo-calendar').includes('https://www.stockstobuynow.ai/ipo-calendar
 assert(sitemap.includes('/ipo-calendar/'));
 assert(html('stock-market-calendar').includes('/ipo-calendar/'));
 console.log('Verified IPO calendar, shared app snapshot, sitemap and calendar navigation.');
+
+// Every investing guide and broker comparison must ship as crawlable HTML.
+const guideRoutes=require('../../data/investing-guides.json').map(g=>'guides/'+g.slug);
+for(const route of ['broker-comparison',...guideRoutes]){
+ const page=html(route),canonical='https://www.stockstobuynow.ai/'+route+'/';
+ assert(page.includes('href="'+canonical+'"'),'Missing canonical: '+route);
+ assert(sitemap.includes('<loc>'+canonical+'</loc>'),'Missing sitemap URL: '+route);
+ assert(page.includes('Stocks To Buy Now Research'),'Missing brand: '+route);
+ assert(page.includes('FAQPage'),'Missing visible FAQ schema: '+route);
+ assert(!/<meta[^>]*name="robots"[^>]*content="[^"]*noindex/.test(page),'Unexpected noindex: '+route);
+ const scripts=[...page.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)];
+ scripts.forEach(match=>JSON.parse(match[1]));
+}
+for(const [old,dest] of [['stocks-to-buy-now-canada','investing-across-countries'],['stocks-to-buy-now-ai-review','stocks-to-buy-now-research-review']]){
+ const page=html('guides/'+old);
+ assert(page.includes('url=/guides/'+dest+'/'),'Missing guide redirect: '+old);
+ assert(page.includes('noindex'),'Redirect alias must not be indexed: '+old);
+ assert(!sitemap.includes('/guides/'+old+'/'),'Old guide URL remains in sitemap: '+old);
+}
+console.log('Verified broker comparison, investing guides, FAQ schema, canonicals and legacy redirects.');

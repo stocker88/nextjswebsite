@@ -75,7 +75,7 @@ const Hero = ({
 
             <Image
                   className="hero-robot" src='/assets/images/stockerRobotIcon.png'
-                  alt="StocksToBuyNow AI App"
+                  alt="Stocks To Buy Now Research App"
                   priority={true}
                   width={156}
                   height={156}

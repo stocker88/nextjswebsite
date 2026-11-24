@@ -171,12 +171,12 @@ export default function Header({
           <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
             <Image
               src="/assets/images/stockerRobotIcon.png"
-              alt="Stocks To Buy Now AI"
+              alt="Stocks To Buy Now Research"
               width={38}
               height={38}
               priority
             />
-            <span>Stocks To Buy Now AI</span>
+            <span>Stocks To Buy Now Research</span>
           </a>
 
           <SiteMenu isOpen={isOpen} onClose={closeMenu} navBasePath={navBasePath} />

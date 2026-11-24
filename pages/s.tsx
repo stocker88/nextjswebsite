@@ -167,7 +167,7 @@ export default function ShortLinkPage({ allPosts }: Props) {
 
             <Image
               src="/assets/images/stockerRobotIcon.png"
-              alt="Stocks To Buy Now AI"
+              alt="Stocks To Buy Now Research"
               width={76}
               height={76}
             />
