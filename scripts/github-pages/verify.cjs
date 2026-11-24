@@ -123,7 +123,8 @@ assert(urls.includes('https://www.stockstobuynow.ai/prediction/'),'Prediction se
 assert(html('prediction').includes('https://www.stockstobuynow.ai/prediction/'),'Prediction hub canonical missing');
 const appCatalog=require(path.resolve(out,'../.github-pages-build/data/app-stock-catalog.json'));
 const allListings=[...appCatalog,...profiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
-assert.equal(predictions.length,allListings.filter(item=>item.type==='EQUITY').length,'Incomplete prediction sitemap');
+const predictionDirectory=JSON.parse(html('prediction').match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+assert.equal(predictions.length,predictionDirectory.allStocks.length,'Incomplete prediction sitemap');
 for(const url of predictions){
  const route=new URL(url).pathname;
  const page=html(route),head=page.split('</head>')[0];
@@ -132,7 +133,7 @@ for(const url of predictions){
  const data=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
  const company=curated.find(item=>item.ticker===data.stock.ticker);
  const companyRoute=company?'stocks/'+company.slug:'instruments/'+encodeURIComponent(data.stock.ticker);
- assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);
+ if(fs.existsSync(path.join(out,companyRoute,'index.html')))assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);else assert(html('prediction').includes('href="'+route+'"'),'Cached-only company missing from prediction directory: '+route);
  assert(page.includes('2027')&&page.includes('2030'),'Prediction horizons missing: '+url);
 }
 console.log(`Verified ${predictions.length} indexable prediction pages, canonical URLs and inbound company links.`);
@@ -167,6 +168,8 @@ console.log('Verified broker comparison, investing guides, FAQ schema, canonical
 
 // Horizon pages have their own canonical and crawlable navigation from the parent.
 const periodUrls=urls.filter(url=>/^\/prediction\/[^/]+\/[^/]+\/$/.test(new URL(url).pathname));
-assert(periodUrls.length>=16,'Prediction period pages missing');
+const predictionYear=new Date().getUTCFullYear();
+const activePeriodCount=4+[2026,2027,2028,2029,2030].filter(y=>y>=predictionYear).length;
+assert.equal(periodUrls.length,predictionDirectory.cachedStocks.length*activePeriodCount,'Cached prediction period pages missing');
 for(const url of periodUrls){const route=new URL(url).pathname,page=html(route),head=page.split('</head>')[0];assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing');assert(!/noindex/i.test(head),'Active period blocked');assert(page.includes('FAQPage'),'Period FAQ missing');const parent=route.split('/').slice(0,3).join('/')+'/';assert(html(parent).includes('href="'+route+'"'),'Parent period selector missing');}
 console.log(`Verified ${periodUrls.length} period pages, FAQ markup, canonicals and parent navigation.`);

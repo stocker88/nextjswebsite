@@ -5,7 +5,7 @@ export const periods=[{id:'today',label:'Today'},{id:'tomorrow',label:'Next sess
 export const scenarioStocks=predictionStocks.filter(s=>scenarioSymbols.includes(s.ticker));
 export const periodPath=(stock:typeof predictionStocks[number],period:string)=>predictionPath(stock)+'/'+period+'/';
 export const readableDate=(s:string)=>new Date(s.slice(0,10)+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
-export const roundedPrice=(n:number)=>'$'+(Math.round(n/(n>=100?5:1))*(n>=100?5:1)).toLocaleString('en-US');
+export const roundedPrice=(n:number)=>'$'+(Math.round(n/(n>=100?5:n>=10?1:0.01))*(n>=100?5:n>=10?1:0.01)).toLocaleString('en-US',{maximumFractionDigits:n<10?2:0});
 function marketHoliday(day:string){
  const y=Number(day.slice(0,4)),iso=(d:Date)=>d.toISOString().slice(0,10);
  const observed=(year:number,month:number,date:number)=>{const d=new Date(Date.UTC(year,month,date));if(d.getUTCDay()===6)d.setUTCDate(d.getUTCDate()-1);if(d.getUTCDay()===0)d.setUTCDate(d.getUTCDate()+1);return iso(d);};
@@ -53,6 +53,17 @@ export function projection(detail:Detail|null,period:string,today:string,growth?
  const labels=target?['Downside illustration','Upside scenario','Stretch scenario']:scenarios.map(s=>s.name);
  const value=(fraction:number,index:number)=>long?growthPrice(price,years*fraction,growthRates[index],valuationRates[index]):price*Math.exp((index-1)*sigma!*Math.sqrt(days*5/7*fraction));
  return {end,long,years,price,date,sigma,target,stretch,defaultGrowth,growthRates,valuationRates,labels,values:[0,1,2].map(i=>value(1,i)),points:Array.from({length:25},(_,i)=>({date:new Date(Date.parse(date)+days*86400000*i/24).toISOString().slice(0,10),low:value(i/24,0),central:value(i/24,1),high:value(i/24,2)}))};
+}
+export function historyForPeriod(detail:Detail|null,period:string,asOf:string){
+ const cutoff=new Date(asOf+'T12:00:00Z');
+ if(/^20\d\d$/.test(period))cutoff.setUTCFullYear(cutoff.getUTCFullYear()-3);
+ else if(period==='next-month')cutoff.setUTCFullYear(cutoff.getUTCFullYear()-1);
+ else cutoff.setUTCMonth(cutoff.getUTCMonth()-(period==='next-week'?6:3));
+ const start=cutoff.toISOString().slice(0,10);
+ return (detail?.prices||[]).filter(p=>p.date>=start&&p.date<=asOf&&Number.isFinite(p.close)&&p.close>0).sort((a,b)=>a.date.localeCompare(b.date));
+}
+export function predictionContext(stock:typeof predictionStocks[number],detail:Detail|null){
+ return companyContext[stock.ticker]||{focus:`${detail?.industry||detail?.sector||stock.name} fundamentals and the expectations reflected in the stock price`,up:'Sustained revenue growth, stronger margins and cash generation can support higher earnings per share.',down:'Weaker demand, margin pressure, dilution or a lower valuation multiple can offset growth.',check:`For ${stock.ticker}, review ${stock.drivers.slice(0,3).join(', ').toLowerCase()}. Compare recent earnings with expectations and test the effect of valuation changes.`,source:stock.investorUrl||`https://www.nasdaq.com/market-activity/stocks/${stock.ticker.toLowerCase()}/earnings`};
 }
 export const companyContext:Record<string,{focus:string;up:string;down:string;check:string;source:string}>={
  NVDA:{focus:'AI infrastructure demand and the price investors pay for future earnings',up:'Stronger accelerator demand, software adoption and sustained margins can support earnings per share.',down:'Customer capital-spending cuts, competing chips, export restrictions or a lower earnings multiple can offset growth.',check:'Compare data-center revenue, gross margins, customer concentration and cash flow with the assumptions below.',source:'https://investor.nvidia.com/'},

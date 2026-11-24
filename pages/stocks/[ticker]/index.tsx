@@ -1,3 +1,5 @@
+import {catalog} from '../../../lib/catalog';
+import {projection,roundedPrice,readableDate} from '../../../lib/prediction-periods';
 import PredictionPeriodSelector from '../../../components/PredictionPeriodSelector';
 import {stockPageHref} from '../../../lib/stock-page';
 import {predictionPath, predictionName} from '../../../lib/stock-predictions';
@@ -24,14 +26,20 @@ export default function Stock({
   bundle,
   calendar,
   predictionPage = false,
+  predictionPeriodsAvailable = false,
 }: {
   stock: (typeof stocks)[number];
   items: ResearchPreview[];
   bundle: ResearchBundle;
   calendar: Calendar | null;
   predictionPage?: boolean;
+  predictionPeriodsAvailable?: boolean;
 }) {
   const path = stockPageHref(stock.ticker).replace(/\/$/,'');
+  const cachedOnly=predictionPage&&!catalog.some(s=>s.symbol===stock.ticker);
+  const companyPath=cachedOnly?predictionPath(stock)+'/#stock-analysis':path;
+  const longScenario=predictionPage&&predictionPeriodsAvailable?projection(bundle.snapshot?.detail||null,'2030',bundle.today):null;
+  const predictionTitle=longScenario?`${predictionName(stock)} Stock Price Prediction: Could It Reach ${roundedPrice(longScenario.values[1])} by 2030?`:`${predictionName(stock)} Stock Price Prediction: 2026–2030 Outlook`;
   const curated = stocks.some(item=>item.ticker===stock.ticker);
   const earningsPath = curated ? `${path}/earnings` : '#earnings';
   const canonicalPath = predictionPage ? predictionPath(stock) + "/" : path;
@@ -43,13 +51,13 @@ export default function Stock({
   });
   return (
     <ResearchPage
-      title={predictionPage ? `${predictionName(stock)} Stock Price Prediction: 2026–2030 Outlook` : `${stock.name} (${stock.ticker}) Stock Research & Earnings`}
+      title={predictionPage ? predictionTitle : `${stock.name} (${stock.ticker}) Stock Research & Earnings`}
       path={canonicalPath}
       hideAppDownload
-      description={predictionPage ? `${predictionName(stock)} (${stock.ticker}) stock price prediction research: tomorrow, weekly and monthly outlooks, plus 2026–2030 scenarios, earnings, technicals and risks.` : `Explore ${stock.name} (${stock.ticker}) earnings, financials, technicals, insider activity and related research. Review the stock outlook and valuation drivers.`}
+      description={predictionPage ? longScenario ? `${predictionName(stock)} (${stock.ticker}) stock price prediction: could it reach ${roundedPrice(longScenario.values[1])} by 2030? Explore growth and valuation assumptions, downside cases, dated price history and earnings.` : `${predictionName(stock)} (${stock.ticker}) stock price prediction research: tomorrow, weekly and monthly outlooks, plus 2026–2030 scenarios, earnings, technicals and risks.` : `Explore ${stock.name} (${stock.ticker}) earnings, financials, technicals, insider activity and related research. Review the stock outlook and valuation drivers.`}
     >
       <Head>
-        {predictionPage&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:`${predictionName(stock)} stock price prediction`,url:`https://www.stockstobuynow.ai${canonicalPath}`,about:{'@type':'Corporation',name:stock.name,tickerSymbol:stock.ticker},isAccessibleForFree:true,inLanguage:'en-US'})}}/>}
+        {predictionPage&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:predictionTitle,url:`https://www.stockstobuynow.ai${canonicalPath}`,about:{'@type':'Corporation',name:stock.name,tickerSymbol:stock.ticker},isAccessibleForFree:true,inLanguage:'en-US'})}}/>}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,7 +65,7 @@ export default function Stock({
               breadcrumbs([
                 { name: "Home", path: "/" },
                 { name: "Stocks", path: "/stocks" },
-                { name: stock.ticker, path },
+                { name: stock.ticker, path: companyPath },
                 ...(predictionPage ? [{name: 'Stock price prediction', path: canonicalPath}] : []),
               ]),
             ),
@@ -71,11 +79,12 @@ export default function Stock({
         <p>{stock.overview}</p>
         <p>
           <Link href={earningsPath}>Earnings research</Link> ·{" "}
-          <Link href={predictionPage ? path : predictionPath(stock)}>{predictionPage ? "Company research overview" : "Stock price prediction & scenarios"}</Link> · <Link href="/prediction/">Search predictions</Link> ·{" "}
+          <Link href={predictionPage ? companyPath : predictionPath(stock)}>{predictionPage ? "Company research overview" : "Stock price prediction & scenarios"}</Link> · <Link href="/prediction/">Search predictions</Link> ·{" "}
           {stock.investorUrl&&<a href={stock.investorUrl}>Company investor relations</a>}
         </p>
       </div>
-{predictionPage&&<PredictionPeriodSelector stock={stock}/>}
+{predictionPage&&predictionPeriodsAvailable&&<PredictionPeriodSelector stock={stock}/>}
+{longScenario&&<div className="public-copy"><h2>Could {stock.ticker} reach {roundedPrice(longScenario.values[1])} by 2030?</h2><p>Explore the conditional scenario, the growth and valuation assumptions it requires, and the downside case. Price used: ${longScenario.price.toFixed(2)} on {readableDate(longScenario.date)}.</p><Link href={predictionPath(stock)+"/2030/"}>Explore the 2030 price scenario →</Link></div>}
 <div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
       <div id="stock-analysis"><StockResearchHub symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
       <div id="insider-research"><StockSmartMoney symbol={stock.ticker}/></div>
@@ -125,7 +134,7 @@ export default function Stock({
           <ul><li>Bull case: operating results exceed the stated assumptions and investors sustain a higher valuation.</li><li>Base case: revenue, profitability and cash flow broadly follow the assumptions being tested.</li><li>Bear case: business performance weakens, financing needs rise or the market pays a lower multiple.</li></ul>
           <h3>Is a 12-month target the same as a {outlookYear} prediction?</h3>
           <p>No. A rolling 12-month target runs from its publication date; a calendar-year forecast may refer to year-end. Check the analyst or model source, date, currency, earnings definition and horizon. Company guidance describes operating expectations, not a promised share price.</p>
-          <p><Link href={curated ? `${path}/forecast` : path}>Explore {stock.ticker} valuation and company research →</Link>{stock.investorUrl&&<>{' · '}<a href={stock.investorUrl}>Check company disclosures →</a></>}</p>
+          <p><Link href={curated ? `${path}/forecast` : companyPath}>Explore {stock.ticker} valuation and company research →</Link>{stock.investorUrl&&<>{' · '}<a href={stock.investorUrl}>Check company disclosures →</a></>}</p>
         </section> : <section><h2>{stock.name} stock price prediction research</h2><p>Review short-term catalysts and longer-term business assumptions for tomorrow, next week, the coming months and 2026–2030.</p><Link href={predictionPath(stock)}>Explore {predictionName(stock)} stock price prediction research →</Link></section>}
         <h2>Price and valuation</h2>
         <p>

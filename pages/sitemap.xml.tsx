@@ -1,4 +1,5 @@
-import {scenarioStocks,periods,periodPath,horizonEnd} from '../lib/prediction-periods';
+import {cachedPredictionStocks,predictionCatalog,cachedPredictionDetail} from '../lib/prediction-cache-server';
+import {periods,periodPath,horizonEnd} from '../lib/prediction-periods';
 import investingGuides from '../data/investing-guides.json';
 import {learningPaths} from '../lib/learning';
 import {optionResults,optionResultUrl} from '../lib/option-results';
@@ -95,9 +96,9 @@ export async function getServerSideProps({ res }: any) {
   earningsCalendar.detailSymbols.forEach(s=>entries.push({path:`/earnings-calendar/${s.toLowerCase()}/`,modified:earningsCalendar.updatedAt}));
   savedNews.items.forEach(n=>entries.push({path:'/market-news/'+newsSlug(n)+'/',modified:n.publishedAt}));
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
-  predictionStocks.forEach(stock=>entries.push({path:predictionPath(stock)+"/"}));
+  predictionCatalog().forEach(stock=>entries.push({path:predictionPath(stock)+"/",modified:cachedPredictionDetail(stock.ticker)?.updatedAt}));
   const predictionToday=new Date().toISOString().slice(0,10);
-  scenarioStocks.forEach(stock=>periods.filter(p=>horizonEnd(p.id,predictionToday)>=predictionToday).forEach(p=>entries.push({path:periodPath(stock,p.id)})));
+  cachedPredictionStocks().forEach(stock=>periods.filter(p=>horizonEnd(p.id,predictionToday)>=predictionToday).forEach(p=>entries.push({path:periodPath(stock,p.id),modified:cachedPredictionDetail(stock.ticker)?.updatedAt})));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),

@@ -23,3 +23,16 @@ console.log('Prediction periods: 36 unique routes; model math, stale/future date
 
 for(const [symbol,target] of Object.entries(p.upside2030)){const m=p.projection({...detail,symbol},'2030','2026-11-24');assert(Math.abs(m.values[1]-target)<1e-6);assert(m.values[0]<detail.price,'Upside goal must not become a floor');assert(m.values[2]>target);assert.equal(m.labels[1],'Upside scenario');assert.equal(p.projection({...detail,symbol},'2030','2026-11-24',0,0).values[1],100);}
 console.log('2030 upside goals: reverse-calculated growth, independent downside, stretch and slider overrides passed.');
+
+const cache=require('../lib/prediction-cache-server.ts');
+const eligible=cache.cachedPredictionStocks();assert(eligible.length>=4);
+const allUrls=eligible.flatMap(s=>p.periods.map(h=>p.periodPath(s,h.id)));
+assert.equal(new Set(allUrls).size,eligible.length*9);
+for(const stock of eligible){assert(cache.cachedPredictionDetail(stock.ticker));assert(p.predictionContext(stock,cache.cachedPredictionDetail(stock.ticker)).check);}
+const daily={...detail,prices:Array.from({length:1500},(_,i)=>({date:new Date(Date.UTC(2022,9,17+i)).toISOString().slice(0,10),close:i+1,volume:null}))};
+const longHistory=p.historyForPeriod(daily,'2030','2026-11-24'),monthHistory=p.historyForPeriod(daily,'next-month','2026-11-24');
+assert(longHistory.length>1000);assert(longHistory.every(p=>p.date>='2023-11-24'&&p.date<='2026-11-24'));
+assert(monthHistory.length>=365&&monthHistory.length<=366);assert(monthHistory[0].date==='2025-11-24');
+assert.equal(p.historyForPeriod(detail,'2030','2026-11-24').length,detail.prices.length);
+assert.equal(p.roundedPrice(.23),'$0.23');
+console.log(`Cache coverage: ${eligible.length} companies / ${allUrls.length} routes; 3-year and 1-year history, limited-history fallback and low-price precision passed.`);
