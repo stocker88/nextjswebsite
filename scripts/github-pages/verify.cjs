@@ -164,3 +164,9 @@ for(const [old,dest] of [['stocks-to-buy-now-canada','investing-across-countries
  assert(!sitemap.includes('/guides/'+old+'/'),'Old guide URL remains in sitemap: '+old);
 }
 console.log('Verified broker comparison, investing guides, FAQ schema, canonicals and legacy redirects.');
+
+// Horizon pages have their own canonical and crawlable navigation from the parent.
+const periodUrls=urls.filter(url=>/^\/prediction\/[^/]+\/[^/]+\/$/.test(new URL(url).pathname));
+assert(periodUrls.length>=16,'Prediction period pages missing');
+for(const url of periodUrls){const route=new URL(url).pathname,page=html(route),head=page.split('</head>')[0];assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing');assert(!/noindex/i.test(head),'Active period blocked');assert(page.includes('FAQPage'),'Period FAQ missing');const parent=route.split('/').slice(0,3).join('/')+'/';assert(html(parent).includes('href="'+route+'"'),'Parent period selector missing');}
+console.log(`Verified ${periodUrls.length} period pages, FAQ markup, canonicals and parent navigation.`);

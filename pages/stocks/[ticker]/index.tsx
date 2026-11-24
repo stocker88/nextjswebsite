@@ -1,3 +1,4 @@
+import PredictionPeriodSelector from '../../../components/PredictionPeriodSelector';
 import {stockPageHref} from '../../../lib/stock-page';
 import {predictionPath, predictionName} from '../../../lib/stock-predictions';
 import StockSmartMoney from '../../../components/StockSmartMoney';
@@ -74,6 +75,7 @@ export default function Stock({
           {stock.investorUrl&&<a href={stock.investorUrl}>Company investor relations</a>}
         </p>
       </div>
+{predictionPage&&<PredictionPeriodSelector stock={stock}/>}
 <div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
       <div id="stock-analysis"><StockResearchHub symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
       <div id="insider-research"><StockSmartMoney symbol={stock.ticker}/></div>
