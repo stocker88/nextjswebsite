@@ -55,10 +55,15 @@ export async function isUsernameAvailable(value:string,uid:string){
  return result.docs.every(item=>item.id===uid);
 }
 
-export function usernameCandidates(value:string){
+export function signupUsernameBase(value:string){
  let digits=0;
  const base=normalizeUsername(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'').split(/[@＠]/)[0]
   .replace(/[^a-z0-9_]+/g,'_').replace(/[0-9]/g,digit=>++digits<=5?digit:'').replace(/^_+|_+$/g,'').slice(0,15)||'member';
+ return base;
+}
+
+export function usernameCandidates(value:string){
+ const base=signupUsernameBase(value);
  const candidates=usernameValidationMessage(value)?[base]:[];
  // Letter suffixes also work when the original name already has five digits.
  for(const suffix of ['_hi','_now','_go','_me','_ai','_new','_one','_plus'])candidates.push(base.slice(0,15-suffix.length)+suffix);
@@ -76,7 +81,7 @@ export async function availableUsernameSuggestions(value:string,uid:string){
 
 /** Preserve the requested name when available; otherwise pick a checked variant. */
 export async function resolveSignupUsername(value:string,uid:string){
- const name=normalizeUsername(value);
+ const name=signupUsernameBase(value);
  if(await isUsernameAvailable(name,uid))return name;
  for(let attempt=0;attempt<4;attempt++){
   const suffix=Array.from({length:6},()=>String.fromCharCode(97+Math.floor(Math.random()*26))).join('');
@@ -109,8 +114,7 @@ function profileDocument(user:User,userName:string,photoUrl:string,answers:Onboa
 }
 
 export async function completeProfileOnboarding(user:User,input:{userName:string;photoFile:File|null;answers:OnboardingAnswers;heardFrom?:string}){
- let userName=normalizeUsername(input.userName);const validation=usernameValidationMessage(userName);
- if(validation)throw Object.assign(new Error(validation),{code:usernameValidationCode(userName)});
+ let userName=signupUsernameBase(input.userName);
  const auth=await getSiteAuth();
  if(auth.currentUser?.uid!==user.uid)throw new Error('Your account changed. Please sign in again.');
  userName=await resolveSignupUsername(userName,user.uid);
