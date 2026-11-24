@@ -19,7 +19,7 @@ function cachedDetails(){
 export function cachedPredictionDetail(symbol:string){return cachedDetails().get(symbol)||null;}
 export function predictionCatalog():Stock[]{
  const existing=new Set(predictionStocks.map(s=>s.ticker));
- return [...predictionStocks,...Array.from(cachedDetails().values()).filter(d=>!existing.has(d.symbol)).map(d=>({ticker:d.symbol,slug:d.symbol.toLowerCase(),name:d.name,investorUrl:'',earningsUrl:'',overview:`Explore ${d.name} (${d.symbol}) price history, earnings and conditional scenarios${d.industry?' in '+d.industry:''}.`,drivers:['Revenue growth and demand','Operating margins and cash generation','Investment spending and financing needs','Competition and industry conditions','Valuation and share dilution']}))];
+ return [...predictionStocks,...Array.from(cachedDetails().values()).filter(d=>!existing.has(d.symbol)).map(d=>({ticker:d.symbol,slug:'cached-'+d.symbol.toLowerCase(),name:d.name,investorUrl:'',earningsUrl:'',overview:`Explore ${d.name} (${d.symbol}) price history, earnings and conditional scenarios${d.industry?' in '+d.industry:''}.`,drivers:['Revenue growth and demand','Operating margins and cash generation','Investment spending and financing needs','Competition and industry conditions','Valuation and share dilution']}))];
 }
 export function cachedPredictionStocks(){return predictionCatalog().filter(s=>cachedDetails().has(s.ticker));}
 export function predictionToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}

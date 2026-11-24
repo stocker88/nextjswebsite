@@ -36,3 +36,8 @@ assert(monthHistory.length>=365&&monthHistory.length<=366);assert(monthHistory[0
 assert.equal(p.historyForPeriod(detail,'2030','2026-11-24').length,detail.prices.length);
 assert.equal(p.roundedPrice(.23),'$0.23');
 console.log(`Cache coverage: ${eligible.length} companies / ${allUrls.length} routes; 3-year and 1-year history, limited-history fallback and low-price precision passed.`);
+
+const {predictionSlug}=require('../lib/stock-predictions.ts');
+const newCached=eligible.find(s=>s.slug.startsWith('cached-'));
+if(newCached)assert.equal(predictionSlug(newCached),predictionSlug({...newCached,name:'A renamed company'}));
+console.log('Cache-only URLs remain stable across company-name changes.');

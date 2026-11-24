@@ -26,6 +26,8 @@ export const predictionSlug = (stock: Stock) => {
  // Keep the original twelve published URLs stable; other listings include the exact ticker.
  if(curated.has(stock.ticker))return (stock.ticker==='GOOGL'?'google':clean(stock.name))+'-stock-price-prediction';
  const symbol=stock.ticker.toLowerCase().replace(/[^a-z0-9-]/g,c=>'-'+c.charCodeAt(0).toString(16)+'-');
+ // Cache-only companies use a permanent ticker URL even if provider display names change.
+ if(stock.slug==='cached-'+stock.ticker.toLowerCase())return symbol+'-stock-price-prediction';
  return clean(stock.name)+'-'+symbol+'-stock-price-prediction';
 };
 export const predictionPath = (stock: Stock) => '/prediction/' + predictionSlug(stock);
