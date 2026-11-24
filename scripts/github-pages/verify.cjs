@@ -118,7 +118,9 @@ assert(fs.existsSync(path.join(out,'assets/credentials/aness-hussein-ali-berkele
 console.log(`Verified ${learningCatalog.videos.length} public video pages, video sitemap, founder credentials and reviews.`);
 
 // Every prediction page is static, indexable, self-canonical and linked from its company page.
-const predictions=urls.filter(url=>new URL(url).pathname.startsWith('/prediction/'));
+const predictions=urls.filter(url=>/^\/prediction\/[^/]+\/$/.test(new URL(url).pathname));
+assert(urls.includes('https://www.stockstobuynow.ai/prediction/'),'Prediction search hub missing from sitemap');
+assert(html('prediction').includes('https://www.stockstobuynow.ai/prediction/'),'Prediction hub canonical missing');
 const appCatalog=require(path.resolve(out,'../.github-pages-build/data/app-stock-catalog.json'));
 const allListings=[...appCatalog,...profiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
 assert.equal(predictions.length,allListings.filter(item=>item.type==='EQUITY').length,'Incomplete prediction sitemap');
