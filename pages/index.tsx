@@ -277,13 +277,13 @@ useEffect(() => {
             ]
           }) }} />
           <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-          <title>Stocks to Buy Now Research | Receive Real-Time Stock Market Alerts</title>
+          <title>Stocks to Buy Now Research | Real-Time Stock Trading Alerts | Stock Market News Today | Free Trading Course</title>
           <meta name="apple-itunes-app" content="app-id=1565527320"/>
           <meta name="p:domain_verify" content="f6f3f81b81f1d1573c7eaba7cc136a8b"/>
           <meta name="description" content="Human-led macro and portfolio research by Aness Hussein Ali, supported by data science and AI-assisted tools. Explore founder credentials and methodology. Not an automated trading bot."/>
           <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
           <link rel="canonical" href="https://www.stockstobuynow.ai/" />
-          <meta property="og:title" content="Stocks to Buy Now Research | Receive Real-Time Stock Market Alerts" />
+          <meta property="og:title" content="Stocks to Buy Now Research | Real-Time Stock Trading Alerts | Stock Market News Today | Free Trading Course" />
           <meta property="og:description" content="Human-led macro and portfolio research by Aness Hussein Ali, supported by data science and AI-assisted tools. Explore founder credentials and methodology. Not an automated trading bot." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.stockstobuynow.ai/" />
@@ -294,7 +294,7 @@ useEffect(() => {
           <meta property="og:image:height" content="630" />
           <meta property="og:image:alt" content="Stocks to Buy Now Research — macro research, company fundamentals and data science" />
           <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content="Stocks to Buy Now Research | Receive Real-Time Stock Market Alerts"/>
+          <meta name="twitter:title" content="Stocks to Buy Now Research | Real-Time Stock Trading Alerts | Stock Market News Today | Free Trading Course"/>
           <meta name="twitter:description" content="Human-led macro and portfolio research by Aness Hussein Ali, supported by data science and AI-assisted tools. Explore founder credentials and methodology. Not an automated trading bot."/>
           <meta name="twitter:image" content="https://www.stockstobuynow.ai/assets/images/research-platform-social.png" />
           <meta name="twitter:image:alt" content="Stocks to Buy Now Research — macro research, company fundamentals and data science" />
