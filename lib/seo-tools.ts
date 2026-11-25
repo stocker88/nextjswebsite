@@ -1,5 +1,5 @@
 export type HistoryPoint=[string,number];
-export type ToolAsset={symbol:string;name:string;kind:'stock'|'crypto'|'forex';slug:string;currency:string;industry:string;points:HistoryPoint[]};
+export type ToolAsset={source?:string;symbol:string;name:string;kind:'stock'|'crypto'|'forex';slug:string;currency:string;industry:string;points:HistoryPoint[]};
 export function cleanPoints(rows:HistoryPoint[],today=new Date().toISOString().slice(0,10)):HistoryPoint[]{return Array.from(new Map(rows.filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p[0])&&Number.isFinite(Date.parse(p[0]))&&p[0]<=today&&Number.isFinite(p[1])&&p[1]>0)).entries()).sort((a,b)=>a[0].localeCompare(b[0]));}
 export function historyStats(points:HistoryPoint[]){if(points.length<2)return null;const first=points[0],last=points[points.length-1];let peak=first[1],drawdown=0;for(const [,v] of points){peak=Math.max(peak,v);drawdown=Math.min(drawdown,v/peak-1);}const mean=(n:number)=>points.length<n?null:points.slice(-n).reduce((s,p)=>s+p[1],0)/n;return {start:first[0],end:last[0],last:last[1],change:(last[1]/first[1]-1)*100,drawdown:drawdown*100,sma20:mean(20),sma50:mean(50),low:Math.min(...points.map(p=>p[1])),high:Math.max(...points.map(p=>p[1]))};}
 export function align(a:HistoryPoint[],b:HistoryPoint[]){const other=new Map(b);return a.filter(p=>other.has(p[0])).map(p=>({date:p[0],a:p[1],b:other.get(p[0])!}));}

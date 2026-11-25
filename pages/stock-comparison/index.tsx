@@ -1,4 +1,4 @@
-import ToolDirectory from '../../components/ToolDirectory';
-import {toolPairs} from '../../lib/seo-tools-server';
-export default ToolDirectory;
-export function getStaticProps(){return {props:{title:'Stock Comparison: Performance, Drawdown & Correlation',description:'Compare stocks over matching dates with rebased price charts, historical returns, drawdowns and return correlation.',path:'/stock-comparison/',items:toolPairs().map(p=>({name:p.a.symbol+' vs '+p.b.symbol,path:'/stock-comparison/'+p.slug+'/',detail:p.a.name+' / '+p.b.name}))}};}
+import StockComparisonPage from '../../components/StockComparisonPage';
+import {comparisonChoices,comparisonData} from '../../lib/comparison-data-server';
+export default StockComparisonPage;
+export function getStaticProps(){const left=comparisonData('NVDA')!,right=comparisonData('AMD')!;return {props:{a:left.asset,b:right.asset,slug:'',left,right,choices:comparisonChoices()}};}

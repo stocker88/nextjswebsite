@@ -1,5 +1,6 @@
 import StockComparisonPage from '../../components/StockComparisonPage';
 import {toolPairs} from '../../lib/seo-tools-server';
+import {comparisonChoices,comparisonData} from '../../lib/comparison-data-server';
 export default StockComparisonPage;
 export function getStaticPaths(){return {paths:toolPairs().map(p=>({params:{slug:p.slug}})),fallback:false};}
-export function getStaticProps({params}:any){const pair=toolPairs().find(p=>p.slug===params.slug);return pair?{props:pair}:{notFound:true};}
+export function getStaticProps({params}:any){const pair=toolPairs().find(p=>p.slug===params.slug);return pair?{props:{...pair,choices:comparisonChoices(),left:comparisonData(pair.a.symbol),right:comparisonData(pair.b.symbol)}}:{notFound:true};}

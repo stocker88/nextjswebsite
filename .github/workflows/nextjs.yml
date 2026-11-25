@@ -36,6 +36,7 @@ jobs:
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs
       - run: node scripts/seo-tools-check.cjs
+      - run: node scripts/comparison-coverage-check.cjs
       - run: node scripts/prediction-periods-check.cjs
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
@@ -92,6 +93,20 @@ jobs:
         with:
           path: .cache/macro
           key: macro-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Restore daily crypto history
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/crypto
+          key: crypto-history-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: crypto-history-v1-
+      - name: Refresh additional crypto history when due
+        run: node scripts/sync-crypto-history.cjs
+      - name: Save daily crypto history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/crypto
+          key: crypto-history-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Restore company research snapshots
         uses: actions/cache/restore@v4
         with:
