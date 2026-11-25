@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-11-25T19:17:27.718Z",
+  "stockAnalysis": 1257,
+  "crypto": 134,
+  "forex": 19,
+  "comparisons": 940,
+  "hubs": 5,
+  "calculators": 3,
+  "guides": 4,
+  "total": 2362,
+  "indexable": 2218,
+  "excludedStale": 144,
+  "examples": [
+    {
+      "path": "/forex-prediction/eurusd/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-analysis/nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/amd-vs-nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/mu-vs-nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/mu-vs-sndk/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/nvda-vs-nxpi/",
+      "modified": "2026-11-24"
+    }
+  ],
+  "validation": {
+    "staticExport": "passed",
+    "mathAndURLChecks": "passed",
+    "typecheck": "passed",
+    "browserInteractions": "FX growth and position risk inputs verified"
+  },
+  "deployment": {
+    "website": "preview only; hosting decision pending",
+    "cacheExport": "https://us-central1-stocker-fcda2.cloudfunctions.net/seoMarketHistory"
+  },
+  "costEstimate": {
+    "newAIRequests": 0,
+    "newMarketDataProviderCalls": 0,
+    "buildsPerMonthAssumption": 1440,
+    "cacheDocumentsPerColdLoad": 7,
+    "maxCacheReadsAtOneColdLoadPerBuild": 10080,
+    "approximateExportGBPerMonthUncompressed": 5.2,
+    "estimatedExtraCacheServiceUSDPerMonth": "0\u20132 (estimate; existing account free quotas and traffic affect charges)",
+    "proposedHostingUSDPerMonth": 5,
+    "hostingNotPurchased": true
+  },
+  "size": {
+    "fullExportBytes": 1626814250,
+    "githubPagesPublishedLimitBytes": 1000000000
+  },
+  "sources": [
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+    "https://developers.cloudflare.com/workers/platform/pricing/",
+    "https://cloud.google.com/firestore/pricing"
+  ],
+  "cryptoLimitation": "Existing crypto history refresh is failing with provider rate-limit errors. Most crypto histories end October 14, 2026. Older pages remain noindex and projections are paused."
+}

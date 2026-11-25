@@ -21,7 +21,7 @@ export default function InstrumentResearch({item,news,bundle,calendar,embedded=f
  {embedded?<><p className="research-kicker">EXPLORE THE COMPANY</p><h2>{heading}</h2><p>Explore earnings, price action, financials and industry comparisons.</p></>:<h1>{heading}</h1>}
  <dl>{[["Symbol",item.symbol],["Sector",item.sector],["Industry",item.industry],["Instrument type",item.type]].filter(([,value])=>value).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
  {predictionHref&&<p><Link href={predictionHref}>{item.name} stock price prediction & outlook →</Link></p>}
- <p>Profile information from our saved company catalog. This is not a live quote or confirmation of current listing status.</p></div>
+ <p><Link href="/stock-analysis/">Stock analysis and position sizing</Link> · <Link href="/stock-comparison/">Compare stock performance</Link> · <Link href="/crypto-prediction/">Crypto scenarios</Link> · <Link href="/forex-prediction/">Forex scenarios</Link></p><p>Profile information from our saved company catalog. This is not a live quote or confirmation of current listing status.</p></div>
  {bundle&&<><div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={item.symbol} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div><StockResearchHub symbol={item.symbol} name={item.name} bundle={bundle} showMoverNews={!embedded} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></>}
  <RelatedStockResearch items={news}/>
  {item.type==='EQUITY'&&<StockPeerPerformance symbol={item.symbol} industry={item.industry}/>}

@@ -1,0 +1,16 @@
+import fs from 'fs';
+import path from 'path';
+import {catalog} from './catalog';
+import {assetPath,cleanPoints,compare,ToolAsset,HistoryPoint} from './seo-tools';
+let assets:ToolAsset[]|null=null;
+const cryptoNames:Record<string,string>={BTC:'Bitcoin',ETH:'Ethereum',SOL:'Solana',XRP:'XRP',DOGE:'Dogecoin',ADA:'Cardano',BNB:'BNB',AVAX:'Avalanche',LINK:'Chainlink',LTC:'Litecoin',BCH:'Bitcoin Cash',DOT:'Polkadot',SHIB:'Shiba Inu',TRX:'TRON',USDT:'Tether',USDC:'USD Coin'};
+export function toolAssets(){if(assets)return assets;const data=JSON.parse(fs.readFileSync(path.join(process.cwd(),'data/seo-market-history.json'),'utf8'));const known=new Map(catalog.map(a=>[a.symbol,a]));const today=new Date().toISOString().slice(0,10);assets=Object.entries(data.assets as Record<string,HistoryPoint[]>).flatMap(([symbol,rows])=>{const meta=known.get(symbol),kind=symbol.endsWith('-USD')?'crypto':symbol.endsWith('=X')?'forex':meta?.type==='EQUITY'?'stock':null;if(!kind)return [];const points=cleanPoints(rows,today);if(points.length<40)return [];const token=symbol.replace('-USD',''),pair=symbol.replace('=X',''),fx=pair.length===3?'USD'+pair:pair;
+ const name=kind==='forex'?fx.slice(0,3)+' / '+fx.slice(3):kind==='crypto'?(cryptoNames[token]||meta?.name?.replace(/ USD$/,'')||token):meta!.name;
+ const currency=kind==='forex'?fx.slice(3):kind==='crypto'?'USD':symbol.includes('.')?'Local quote currency':'USD';
+ return [{symbol,name,kind,slug:(kind==='forex'?fx:symbol).toLowerCase().replace(/[^a-z0-9-]/g,'-'),currency,industry:meta?.industry||'',points} as ToolAsset];}).sort((a,b)=>a.symbol.localeCompare(b.symbol));return assets;}
+let pairsCache:{slug:string;a:ToolAsset;b:ToolAsset}[]|null=null;
+export function toolPairs(){if(pairsCache)return pairsCache;const all=toolAssets().filter(a=>a.kind==='stock'&&a.currency==='USD'&&a.industry);const map=new Map<string,{slug:string;a:ToolAsset;b:ToolAsset}>();function add(a:ToolAsset|undefined,b:ToolAsset|undefined){if(!a||!b||a.symbol===b.symbol||a.currency!==b.currency||!compare(a.points,b.points))return;const sorted=[a,b].sort((x,y)=>x.symbol.localeCompare(y.symbol)),slug=sorted[0].slug+'-vs-'+sorted[1].slug;map.set(slug,{slug,a:sorted[0],b:sorted[1]});}
+ for(const [a,b] of [['NVDA','AMD'],['MU','SNDK'],['TSLA','RIVN'],['AAPL','MSFT'],['GOOGL','META']])add(all.find(x=>x.symbol===a),all.find(x=>x.symbol===b));
+ const groups=new Map<string,ToolAsset[]>();for(const a of all){const group=groups.get(a.industry)||[];group.push(a);groups.set(a.industry,group);}for(const group of Array.from(groups.values()))for(let i=0;i<group.length-1;i++)add(group[i],group[i+1]);pairsCache=Array.from(map.values()).sort((a,b)=>a.slug.localeCompare(b.slug));return pairsCache;}
+const recent=(date:string)=>Date.now()-Date.parse(date+'T23:59:59Z')<=14*86400000;
+export function toolEntries(){return [...toolAssets().filter(a=>recent(a.points.at(-1)![0])).map(a=>({path:assetPath(a),modified:a.points.at(-1)![0]})),...toolPairs().filter(p=>recent(compare(p.a.points,p.b.points)!.rows.at(-1)!.date)).map(p=>({path:'/stock-comparison/'+p.slug+'/',modified:compare(p.a.points,p.b.points)!.rows.at(-1)!.date}))];}

@@ -34,6 +34,7 @@ jobs:
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs
+      - run: node scripts/seo-tools-check.cjs
       - run: node scripts/prediction-periods-check.cjs
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
