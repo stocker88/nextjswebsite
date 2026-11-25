@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "stockstobuynow-research",
+  "account_id": "4e00a3eed53a095fe547ea7a997ebc51",
+  "compatibility_date": "2026-11-25",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
