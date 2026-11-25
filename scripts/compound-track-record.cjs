@@ -1,0 +1,33 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.join(__dirname, '..');
+const compound = (returnPct, days) => days > 0 ? (Math.pow(1 + returnPct / 100, 365 / days) - 1) * 100 : null;
+assert.ok(Math.abs(compound(10, 365) - 10) < 1e-10);
+assert.ok(Math.abs(compound(10, 182.5) - 21) < 1e-10);
+assert.equal(compound(10, 0), null);
+assert.equal(compound(-100, 30), -100);
+const lines = fs.readFileSync(path.join(root, 'public/data/stock-signals-us-2025-12-31.csv'), 'utf8').trim().split(/\r?\n/);
+const parse = line => (line.match(/(?:"(?:[^"]|"")*"|[^,]+)(?:,|$)/g) || []).map(v => v.replace(/,$/, '').replace(/^"|"$/g, '').replace(/""/g, '"'));
+const headers = parse(lines.shift());
+const rows = lines.map(line => Object.fromEntries(parse(line).map((v, i) => [headers[i], v])));
+// Annualize the aggregate, not each trade. Zero-day records stay in both means.
+const eligible = rows;
+const weightSum = eligible.reduce((sum, r) => sum + Number(r.weightPct), 0);
+const average = key => eligible.reduce((sum, r) => {
+ const value = Number(r[key]);
+ assert.ok(Number.isFinite(value) && Number(r.weightPct) > 0);
+ return sum + value * Number(r.weightPct);
+}, 0) / weightSum;
+const file = path.join(root, 'data/signal-return-distribution-2025-12-31.json');
+const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+assert.equal(rows.length, 201);
+const weightedHoldingDays = average('holdingDays');
+const weightedReturnPct = average('returnPct'), weightedSpyReturnPct = average('benchmarkPct');
+const summary = require('../data/target-date-performance-2025-12-31.json').summary;
+assert.ok(Math.abs(weightedReturnPct-summary.meanPairedReturnPct)<1e-8);
+assert.ok(Math.abs(weightedSpyReturnPct-summary.meanBenchmarkPct)<1e-8);
+assert.ok(weightedHoldingDays>0);
+data.compoundedAnnualized = {pairedCount: rows.length, weightedHoldingDays, weightedReturnPct, weightedSpyReturnPct, signalPct: compound(weightedReturnPct, weightedHoldingDays), spyPct: compound(weightedSpyReturnPct, weightedHoldingDays), formula: '((1 + weightedReturnPct / 100) ** (365 / weightedHoldingDays) - 1) * 100', aggregation: 'Compound the allocation-weighted gross return over the allocation-weighted mean calendar holding period. Same 201 windows and weights for signals and SPY; includes zero-day holdings in both averages. No cap. Aggregate annualized illustration, not portfolio CAGR.'};
+fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+console.log(data.compoundedAnnualized);

@@ -40,6 +40,7 @@ export default function ResearchPage({title, path, children, description = title
           {href:'/glossary',label:'Investing glossary',icon:'M12 5v15 M12 5C8 2 4 3 2 4v15c3-2 7-2 10 1 3-3 7-3 10-1V4c-2-1-6-2-10 1'},
           {href:'/editorial-policy',label:'Editorial standards',icon:'M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3 M8 12l3 3 5-6'},
           {href:'/methodology',label:'Research methodology',icon:'M4 6h16 M4 12h16 M4 18h16 M8 3v6 M16 9v6 M10 15v6'},
+          {href:'/learn',label:'Free educational courses',icon:'M2 9l10-5 10 5-10 5-10-5 M6 11v6c4 3 8 3 12 0v-6 M22 9v7'},
         ].map(resource => {
           const current = path.split('?')[0];
           const active = current === resource.href || current.startsWith(resource.href + '/') || (resource.href === '/stocks' && current.startsWith('/instruments/'));

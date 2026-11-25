@@ -90,5 +90,15 @@
     "pairedCount": 200,
     "signalPct": 57.944185766395016,
     "spyPct": 21.967808188586236
+  },
+  "compoundedAnnualized": {
+    "pairedCount": 201,
+    "weightedHoldingDays": 98.56057494866529,
+    "weightedReturnPct": 14.284151103434352,
+    "weightedSpyReturnPct": 5.792359854533379,
+    "signalPct": 63.960768454671936,
+    "spyPct": 23.186121451120023,
+    "formula": "((1 + weightedReturnPct / 100) ** (365 / weightedHoldingDays) - 1) * 100",
+    "aggregation": "Compound the allocation-weighted gross return over the allocation-weighted mean calendar holding period. Same 201 windows and weights for signals and SPY; includes zero-day holdings in both averages. No cap. Aggregate annualized illustration, not portfolio CAGR."
   }
 }
