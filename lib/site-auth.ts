@@ -11,6 +11,7 @@ export function getSiteAuth():Promise<Auth>{
 }
 // Only continue to destinations owned by this flow; never redirect to external input.
 export function accountDestination(value:unknown):string{
+ if(value==='/methodology/#paper-trading-download')return value;
  if(typeof value!=='string')return '/stock-market-heatmap/';
  if(value.startsWith('/read/?')) {
   try {const url=new URL(value,'https://www.stockstobuynow.ai'),next=url.searchParams.get('next');

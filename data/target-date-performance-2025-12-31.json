@@ -7,7 +7,7 @@
   "allocation": {
     "defaultWeightPct": 1,
     "knownWeights": 109,
-    "imputedWeights": 96,
+    "imputedWeights": 6,
     "mapping": {
       "1": 7,
       "2": 5,
