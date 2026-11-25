@@ -1,4 +1,5 @@
 import fs from 'fs';
+import {toolAssets} from './seo-tools-server';
 import path from 'path';
 import {predictionStocks} from './stock-predictions';
 import type {Detail} from './earnings';
@@ -14,6 +15,12 @@ function cachedDetails(){
  Object.values(snapshots).forEach((s:any)=>accept(s.detail));
  let files:string[]=[];try{files=fs.readdirSync(path.join(process.cwd(),'public/earnings-data'));}catch{}
  files.filter(f=>f.endsWith('.json')).forEach(f=>accept(read('public/earnings-data/'+f)));
+ // History-only coverage retains missing financial fields rather than inventing estimates.
+ for(const asset of toolAssets().filter(a=>a.kind==='stock'&&a.currency==='USD')){
+  const last=asset.points.at(-1)!;const old=result.get(asset.symbol);
+  if(old){if(last[0]>(old.priceDate||''))result.set(asset.symbol,{...old,price:last[1],priceDate:last[0],prices:asset.points.map(([date,close])=>({date,close,volume:null}))});continue;}
+  result.set(asset.symbol,{symbol:asset.symbol,name:asset.name,currency:asset.currency,price:last[1],priceDate:last[0],marketCap:null,sector:'',industry:asset.industry,history:[],prices:asset.points.map(([date,close])=>({date,close,volume:null})),pe:null,ps:null,forwardPe:null,forwardPs:null,estimatePeriod:null,beat:{beats:0,total:0,rate:null},oneYear:null,updatedAt:last[0],technical:{sma50:null,sma200:null,rsi14:null,support:null,resistance:null,low52:null,high52:null,relativeVolume:null,oneYear:null},peers:[],unavailable:['Financial results are not available for this company yet.']});
+ }
  saved=result;return result;
 }
 export function cachedPredictionDetail(symbol:string){return cachedDetails().get(symbol)||null;}

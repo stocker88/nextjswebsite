@@ -23,3 +23,6 @@ out/
 # Cloudflare local state (never commit credentials)
 .wrangler/
 .dev.vars*
+
+.cache/crypto/
+public/comparison-data/

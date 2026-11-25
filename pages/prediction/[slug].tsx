@@ -12,6 +12,6 @@ export async function getStaticProps({params}: {params: {slug: string}}) {
   const stock = predictionCatalog().find(stock => predictionSlug(stock) === params.slug);
   if (!stock) return {notFound: true};
   const bundle=loadStockResearch(stock.ticker),detail=cachedPredictionDetail(stock.ticker);
-  if(bundle.snapshot&&detail)bundle.snapshot={...bundle.snapshot,detail};
+  if(detail)bundle.snapshot=bundle.snapshot?{...bundle.snapshot,detail}:{symbol:stock.ticker,updatedAt:detail.updatedAt,detail,financials:[],shortInterest:null,technicals:{},peers:[]};
   return {props:{stock,predictionPage:true,predictionPeriodsAvailable:!!detail,bundle,calendar:loadStockEarnings(stock.ticker),items:recentStockNews(await fetchResearch(),stock.ticker)},revalidate:60};
 }

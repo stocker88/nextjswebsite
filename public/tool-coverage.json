@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-11-25T19:17:27.718Z",
+  "generatedAt": "2026-11-25T20:47:19.956Z",
   "stockAnalysis": 1257,
-  "crypto": 134,
+  "crypto": 160,
   "forex": 19,
   "comparisons": 940,
   "hubs": 5,
   "calculators": 3,
   "guides": 4,
-  "total": 2362,
-  "indexable": 2218,
+  "total": 2388,
+  "predictionCoverage": {
+    "companies": 1142,
+    "periodPages": 10278
+  },
+  "indexable": 2244,
   "excludedStale": 144,
   "examples": [
     {

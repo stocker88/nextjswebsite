@@ -101,7 +101,7 @@ export async function getServerSideProps({ res }: any) {
   stocks.forEach((s) => entries.push({ path: `/stocks/${s.slug}` }));
   predictionCatalog().forEach(stock=>entries.push({path:predictionPath(stock)+"/",modified:cachedPredictionDetail(stock.ticker)?.updatedAt}));
   const predictionToday=new Date().toISOString().slice(0,10);
-  cachedPredictionStocks().forEach(stock=>periods.filter(p=>horizonEnd(p.id,predictionToday)>=predictionToday).forEach(p=>entries.push({path:periodPath(stock,p.id),modified:cachedPredictionDetail(stock.ticker)?.updatedAt})));
+  cachedPredictionStocks().filter(stock=>{const date=cachedPredictionDetail(stock.ticker)?.priceDate;return date&&Date.parse(predictionToday)-Date.parse(date)<=7*86400000;}).forEach(stock=>periods.filter(p=>horizonEnd(p.id,predictionToday)>=predictionToday).forEach(p=>entries.push({path:periodPath(stock,p.id),modified:cachedPredictionDetail(stock.ticker)?.updatedAt})));
   terms.forEach((t) => entries.push({ path: `/glossary/${t.slug}` }));
   getAllPosts(["slug", "date"]).forEach((p) =>
     entries.push({ path: `/posts/${p.slug}` }),
