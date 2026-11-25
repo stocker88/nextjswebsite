@@ -19,3 +19,7 @@ out/
 
 # Isolated options intelligence preview
 .next-options-intelligence/
+
+# Cloudflare local state (never commit credentials)
+.wrangler/
+.dev.vars*

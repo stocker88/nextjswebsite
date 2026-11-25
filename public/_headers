@@ -1,0 +1,9 @@
+# Keep the staging hostname out of search results; production remains indexable.
+https://:worker.:account.workers.dev/*
+  X-Robots-Tag: noindex
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  X-Content-Type-Options: nosniff

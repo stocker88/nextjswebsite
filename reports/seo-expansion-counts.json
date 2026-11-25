@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-11-25T19:17:27.718Z",
+  "stockAnalysis": 1257,
+  "crypto": 134,
+  "forex": 19,
+  "comparisons": 940,
+  "hubs": 5,
+  "calculators": 3,
+  "guides": 4,
+  "total": 2362,
+  "indexable": 2218,
+  "excludedStale": 144,
+  "examples": [
+    {
+      "path": "/forex-prediction/eurusd/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-analysis/nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/amd-vs-nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/mu-vs-nvda/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/mu-vs-sndk/",
+      "modified": "2026-11-24"
+    },
+    {
+      "path": "/stock-comparison/nvda-vs-nxpi/",
+      "modified": "2026-11-24"
+    }
+  ]
+}
