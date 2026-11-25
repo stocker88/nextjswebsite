@@ -39,7 +39,7 @@ export default function Methodology({appView=false}:{appView?:boolean}={}) {
      <span className="bin-label">{bin.low}% to &lt;{bin.high}%</span>
      <span className="bin-track" aria-hidden="true"><span className={bin.high <= 0 ? 'bin-fill bin-negative' : 'bin-fill'} style={{width:`${100 * bin.count / Math.max(...monthlyBins.map(b => b.count))}%`}} /></span>
      <span className="bin-count">{bin.count} <small>({(100 * bin.count / monthlyReturns.length).toFixed(1)}%)</small></span>
-    </li>)}</ol><p className="scope">Uses the Weighted gross return column in the <a href="#monthly">Monthly Cohort Table below</a>. Each value averages full holding-period signal returns by exit month, not portfolio performance during that month. 25-percentage-point ranges, inclusive at the lower bound; months count equally.</p>
+    </li>)}</ol><p className="scope">Uses the Weighted gross return column in the <a href="#monthly">Monthly Cohort Table below</a>. Each value averages full holding-period signal returns by exit month. 25-percentage-point ranges, inclusive at the lower bound; months count equally.</p>
    </figure>
    {!appView && <figure className="distribution" aria-labelledby="distribution-title">
     <figcaption><h2 id="distribution-title">Signal return distribution</h2><p>All {distribution.count} completed signals · each signal counted once · gross, non-annualized returns.</p></figcaption>
