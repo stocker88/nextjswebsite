@@ -82,7 +82,7 @@ export async function getServerSideProps({ res }: any) {
     "/authors/aness-hussein-ali",
     "/glossary",
   ].map((path) => ({ path }));
-  entries.push(...toolEntries(),...['/tools/','/stock-analysis/','/stock-comparison/','/crypto-prediction/','/forex-prediction/','/tools/position-size-calculator/','/tools/forex-pip-value-calculator/','/tools/futures-tick-value-calculator/'].map(path=>({path})),...workflows.map(g=>({path:'/trading-guides/'+g.slug+'/'})));
+  entries.push(...toolEntries(),...['/trading-tools/','/stock-analysis/','/stock-comparison/','/crypto-prediction/','/forex-prediction/','/tools/position-size-calculator/','/tools/forex-pip-value-calculator/','/tools/futures-tick-value-calculator/'].map(path=>({path})),...workflows.map(g=>({path:'/trading-guides/'+g.slug+'/'})));
   entries.push({path:'/broker-comparison/'},{path:'/guides/'},...investingGuides.map(g=>({path:'/guides/'+g.slug+'/'})));
   entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
   entries.push({path:'/smart-money/investors/'},...publicInvestors.map(p=>({path:investorPath(p.id)})));

@@ -96,6 +96,7 @@ async function main(){
  redirect('guides/stocks-to-buy-now-canada','/guides/investing-across-countries/');
  redirect('guides/stocks-to-buy-now-ai-review','/guides/stocks-to-buy-now-research-review/');
  redirect('stocks-to-buy-now','/stock-market-news/');
+ redirect('tools','/trading-tools/');
  for(const item of articles){const target=researchUrl(item.id,item.title)+'/';redirect('stocks-to-buy-now/'+item.id,target);redirect('stock-market-news/'+item.id,target);}
  for(const stock of require(path.join(stage,'data/stocks.json')))redirect('web-app/financial/'+stock.ticker,'/stocks/'+stock.slug+'/');
  write('out/.nojekyll','');

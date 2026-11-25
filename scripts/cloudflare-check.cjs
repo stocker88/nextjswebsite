@@ -22,7 +22,7 @@ function walk(dir) {
 }
 walk(out);
 assert.ok(files <= 100000, `Paid static asset file limit exceeded: ${files}`);
-for (const p of ['index.html','404.html','robots.txt','sitemap.xml','tools/index.html'])
+for (const p of ['index.html','404.html','robots.txt','sitemap.xml','trading-tools/index.html'])
   assert.ok(fs.existsSync(path.join(out, p)), `Missing required asset: ${p}`);
 const headers = fs.readFileSync(path.join(out, '_headers'), 'utf8');
 assert.match(headers, /https:\/\/:worker\.:account\.workers\.dev\/\*\s+X-Robots-Tag: noindex/);

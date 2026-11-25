@@ -1,4 +1,5 @@
 import fs from 'fs';
+import {loadStockResearch} from './stock-research-server';
 import path from 'path';
 import {toolAssets} from './seo-tools-server';
 import {recentStockNews} from './stock-related-research';
@@ -23,5 +24,18 @@ export function comparisonData(symbol:string):ComparisonData|null{
  const f=[...(saved.financials||[])].sort((a:any,b:any)=>b.date.localeCompare(a.date))[0];
  if(f){if(!report)add('Reported revenue',f.revenue,f.date,f.currency||'Currency unreported');add('Net income',f.netIncome,f.date,f.currency||'Currency unreported');add('Cash',f.cash,f.date,f.currency||'Currency unreported');add('Debt',f.debt,f.date,f.currency||'Currency unreported');}
  const news=recentStockNews(Array.isArray(sources.news)?sources.news:[],symbol).slice(0,5).map(n=>({title:n.title,href:n.href||researchUrl(n.id,n.title),date:n.time?new Date(n.time<1e12?n.time*1000:n.time).toISOString().slice(0,10):null}));
- return {asset,metrics,news};
+ const graphs:NonNullable<ComparisonData['graphs']>=[];
+ const series=(key:string,label:string,rows:any[],field:string,currency:string|null)=>{
+  const points=Array.from(new Map(rows.filter(r=>typeof r[field]==='number'&&Number.isFinite(r[field])&&/^\d{4}-\d{2}-\d{2}$/.test(r.date)).map(r=>[r.date,r[field]])).entries()).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))) as [string,number][];
+  if(points.length)graphs.push({key,label,currency,points});
+ };
+ const financials=saved.financials||[];
+ const currencies=Array.from(new Set(financials.map((f:any)=>f.currency).filter(Boolean)));
+ const financialCurrency=currencies.length===1?String(currencies[0]):null;
+ if(financials.filter((f:any)=>typeof f.revenue==='number').length>(detail.history||[]).filter((h:any)=>typeof h.revenueActual==='number').length)series('revenue','Revenue',financials,'revenue',financialCurrency);
+ else series('revenue','Revenue',detail.history||[],'revenueActual',detail.currency||null);
+ series('eps','Earnings per share',detail.history||[],'actual',detail.currency||null);
+ series('netIncome','Net income',financials,'netIncome',financialCurrency);
+ const peers=loadStockResearch(symbol).peerAnalysis;
+ return {asset,metrics,news,graphs,peers};
 }
