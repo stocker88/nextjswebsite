@@ -125,12 +125,14 @@ const appCatalog=require(path.resolve(out,'../.github-pages-build/data/app-stock
 const allListings=[...appCatalog,...profiles.filter(row=>!appCatalog.some(item=>item.symbol===row.symbol))];
 const predictionDirectory=JSON.parse(html('prediction').match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
 assert.equal(predictions.length,predictionDirectory.allStocks.length,'Incomplete prediction sitemap');
+const predictionParents=new Map();
 for(const url of predictions){
  const route=new URL(url).pathname;
  const page=html(route),head=page.split('</head>')[0];
  assert(head.includes('rel="canonical" href="'+url+'"'),'Prediction canonical missing: '+url);
  assert(!/noindex/i.test(head),'Prediction blocked from indexing: '+url);
  const data=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+ predictionParents.set(data.stock.ticker,url);
  const company=curated.find(item=>item.ticker===data.stock.ticker);
  const companyRoute=company?'stocks/'+company.slug:'instruments/'+encodeURIComponent(data.stock.ticker);
  if(fs.existsSync(path.join(out,companyRoute,'index.html')))assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);else assert(html('prediction').includes('href="'+route+'"'),'Cached-only company missing from prediction directory: '+route);
@@ -168,8 +170,27 @@ console.log('Verified broker comparison, investing guides, FAQ schema, canonical
 
 // Horizon pages have their own canonical and crawlable navigation from the parent.
 const periodUrls=urls.filter(url=>/^\/prediction\/[^/]+\/[^/]+\/$/.test(new URL(url).pathname));
-const predictionYear=new Date().getUTCFullYear();
-const activePeriodCount=4+[2026,2027,2028,2029,2030].filter(y=>y>=predictionYear).length;
-assert.equal(periodUrls.length,predictionDirectory.cachedStocks.length*activePeriodCount,'Cached prediction period pages missing');
-for(const url of periodUrls){const route=new URL(url).pathname,page=html(route),head=page.split('</head>')[0];assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing');assert(!/noindex/i.test(head),'Active period blocked');assert(page.includes('FAQPage'),'Period FAQ missing');const parent=route.split('/').slice(0,3).join('/')+'/';assert(html(parent).includes('href="'+route+'"'),'Parent period selector missing');}
-console.log(`Verified ${periodUrls.length} period pages, FAQ markup, canonicals and parent navigation.`);
+const periodSet=new Set(periodUrls);
+const periodIds=['today','tomorrow','next-week','next-month','2026','2027','2028','2029','2030'];
+let expectedIndexed=0,excludedPeriods=0,exportedPeriods=0;
+for(const stock of predictionDirectory.cachedStocks){
+ const parent=predictionParents.get(stock.ticker);assert(parent,'Prediction parent missing: '+stock.ticker);
+ const parentPage=html(new URL(parent).pathname);
+ for(const period of periodIds){
+  const url=parent+period+'/',route=new URL(url).pathname,page=html(route),head=page.split('</head>')[0];
+  const props=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
+  assert.equal(props.stock.ticker,stock.ticker,'Wrong stock in prediction export');
+  const date=props.detail?.priceDate;
+  const fresh=!!date&&Number.isFinite(Date.parse(date))&&Date.parse(props.today)-Date.parse(date)<=7*86400000;
+  const expired=/^20\d\d$/.test(period)&&period<props.today.slice(0,4);
+  const indexable=fresh&&!expired;
+  assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing: '+route);
+  assert.equal(/noindex/i.test(head),!indexable,'Incorrect freshness indexing: '+route);
+  assert.equal(periodSet.has(url),indexable,'Incorrect period sitemap inclusion: '+route);
+  assert(page.includes('FAQPage'),'Period FAQ missing: '+route);
+  assert(parentPage.includes('href="'+route+'"'),'Parent period selector missing: '+route);
+  exportedPeriods++;if(indexable)expectedIndexed++;else excludedPeriods++;
+ }
+}
+assert.equal(periodUrls.length,expectedIndexed,'Unexpected prediction period sitemap URLs');
+console.log(`Verified ${exportedPeriods} period exports: ${expectedIndexed} indexable and ${excludedPeriods} stale/expired exclusions, with FAQ, canonicals and parent navigation.`);
