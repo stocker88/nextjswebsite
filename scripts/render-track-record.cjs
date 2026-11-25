@@ -24,7 +24,7 @@ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" vi
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#142039"/><stop offset="1" stop-color="#080f1d"/></linearGradient></defs>
 <rect width="1080" height="1350" fill="url(#bg)"/><g font-family="Arial, sans-serif">
 ${text('STOCKS TO BUY NOW RESEARCH',64,76,22,'#c4aff5',700)}
-${text('Track Record',64,163,72,'#ffffff',700)}
+${text('Track Record (Stocks Only)',64,163,60,'#ffffff',700)}
 ${text(new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'Europe/Paris'}),64,211,28,'#aabbcf')}
 <rect x="64" y="250" width="952" height="182" rx="22" fill="#1c2c44"/>
 ${text('US SIGNALS · COMPOUNDED ANNUALIZED',88,290,20,'#aabbcf',600)}
