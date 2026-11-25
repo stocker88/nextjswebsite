@@ -41,7 +41,7 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
     return()=>{desktop.removeEventListener('change',resize);document.removeEventListener('keydown',trap);};
   },[isOpen,onClose]);
   const close=()=>{setActive(null);onClose();};
-  return <div ref={root} id="site-navigation-links" className={`${styles.menu} ${isOpen?styles.mobileOpen:''}`} onMouseLeave={()=>{if(window.matchMedia('(min-width: 1000px) and (hover: hover)').matches)setActive(null);}} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setActive(null);}}>
+  return <div data-nosnippet="" ref={root} id="site-navigation-links" className={`${styles.menu} ${isOpen?styles.mobileOpen:''}`} onMouseLeave={()=>{if(window.matchMedia('(min-width: 1000px) and (hover: hover)').matches)setActive(null);}} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setActive(null);}}>
     {groups.map(group=><div key={group.name} className={styles.group} onMouseEnter={()=>{if(window.matchMedia('(min-width: 1000px) and (hover: hover)').matches)setActive(group.name);}}>
       <button type="button" className={styles.trigger} aria-expanded={active===group.name} aria-controls={`menu-${group.name.toLowerCase()}`} onClick={()=>setActive(active===group.name?null:group.name)} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();setActive(group.name);requestAnimationFrame(()=>document.getElementById(`menu-${group.name.toLowerCase()}`)?.querySelector<HTMLAnchorElement>('a')?.focus());}}}>
         {group.name}<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>
