@@ -1,6 +1,13 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript'),React=require('react');
 const {renderToStaticMarkup}=require('react-dom/server');
-function load(file,modules={}){const module={exports:{}};const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true,target:ts.ScriptTarget.ES2020}}).outputText;new Function('require','module','exports',code)(name=>name in modules?modules[name]:require(name),module,module.exports);return module.exports;}
+const nodePath=require('node:path');
+function load(file,modules={}){const module={exports:{}};const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true,target:ts.ScriptTarget.ES2020}}).outputText;new Function('require','module','exports',code)(name=>{
+ if(name in modules)return modules[name];
+ if(!name.startsWith('.'))return require(name);
+ const target=nodePath.resolve(nodePath.dirname(file),name);
+ for(const extension of ['.tsx','.ts'])if(fs.existsSync(target+extension))return load(target+extension,modules);
+ return require(target);
+},module,module.exports);return module.exports;}
 const app=load('lib/mobile-app.ts'),device=load('lib/device-access.ts');
 for(const [userAgent,platform,touch,url] of [['iPhone Mobile','iPhone',5,app.APPLE_STORE_URL],['iPad','iPad',5,app.APPLE_STORE_URL],['Macintosh Safari','MacIntel',5,app.APPLE_STORE_URL],['Android Mobile','Linux',5,app.GOOGLE_STORE_URL]]){
  assert.equal(device.isDesktopDevice({userAgent,platform,maxTouchPoints:touch}),false);assert.equal(app.mobileStoreUrl(userAgent),url);
