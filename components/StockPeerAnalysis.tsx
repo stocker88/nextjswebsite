@@ -16,7 +16,7 @@ const metricLabel=(key:Metric)=>metrics.find(([k])=>k===key)![1];
 const metricFormat=(key:Metric,value:number|null)=>key==='marketCap'?money(value):['pe','forwardPe','ps','debtToEquity'].includes(key)?multiple(value):['oneYear','netMargin'].includes(key)?percent(value):decimal(value);
 const href=(symbol:string)=>{const stock=stocks.find(s=>s.ticker===symbol);return stock?`/stocks/${stock.slug}/`:`/instruments/${encodeURIComponent(symbol)}/`};
 const domain=(values:number[],nonnegative=false)=>{const low=Math.min(...values),high=Math.max(...values),pad=Math.max((high-low)*.12,Math.abs(low)*.02,.5);return [nonnegative?Math.max(0,low-pad):low-pad,high+pad]};
-export default function StockPeerAnalysis({symbol='',companies=[],industries=[],industry,sectionLabel}:{symbol?:string;companies?:PeerCompany[];industries?:IndustrySummary[];industry?:string;sectionLabel?:string}){
+export default function StockPeerAnalysis({symbol='',companies=[],industries=[],industry,sectionLabel,competitorTitle=false}:{symbol?:string;companies?:PeerCompany[];industries?:IndustrySummary[];industry?:string;sectionLabel?:string;competitorTitle?:boolean}){
  const id=useId();
  const [companyLimit,setCompanyLimit]=useState(8);
  const [mode,setMode]=useState<'change'|'metrics'>('metrics'),[period,setPeriod]=useState<Period>('1Y'),[changeMetric,setChangeMetric]=useState<ChangeMetric>('eps');
@@ -57,7 +57,7 @@ export default function StockPeerAnalysis({symbol='',companies=[],industries=[],
  }
  function resetComparison(){setHidden([]);setSelected(symbol||companies[0]?.symbol||'');}
  return <section id="peer-analysis" className={styles.section}>
-  <header><span className={styles.eyebrow}>{sectionLabel||(industry?'INDUSTRY ANALYSIS':'02 / PEER ANALYSIS')}</span><h2>{industry?`${industry} comparison & valuation`:`Explore ${symbol} alongside its peers`}</h2><p>{industry||current?.industry||'Related companies'} · {companies.length} companies · Cached market data</p></header>
+  <header><span className={styles.eyebrow}>{sectionLabel||(industry?'INDUSTRY ANALYSIS':'02 / PEER ANALYSIS')}</span><h2>{industry?`${industry} comparison & valuation`:competitorTitle?`Explore ${symbol} Competitors`:`Explore ${symbol} alongside its peers`}</h2><p>{industry||current?.industry||'Related companies'} · {companies.length} companies · Cached market data</p></header>
   <div className={styles.card}>
    <h3>Comparison</h3>
    <div className={styles.tabs} role="group" aria-label="Peer analysis mode">{(['change','metrics'] as const).map(m=><button key={m} type="button" aria-pressed={mode===m} onClick={()=>{setMode(m);resetComparison()}}>{m==='change'?'Change':'Metrics'}</button>)}</div>
