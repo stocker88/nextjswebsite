@@ -20,9 +20,10 @@ export const predictionStocks:Stock[] = [
   drivers:sectorDrivers[item.sector]||defaultDrivers,
  }))
 ];
-export const predictionName = (stock: Stock) => stock.ticker === 'GOOGL' ? 'Google (Alphabet)' : stock.name;
+type PredictionIdentity=Pick<Stock,'ticker'|'slug'|'name'>;
+export const predictionName = (stock: PredictionIdentity) => stock.ticker === 'GOOGL' ? 'Google (Alphabet)' : stock.name;
 const clean=(value:string)=>value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-export const predictionSlug = (stock: Stock) => {
+export const predictionSlug = (stock: PredictionIdentity) => {
  // Keep the original twelve published URLs stable; other listings include the exact ticker.
  if(curated.has(stock.ticker))return (stock.ticker==='GOOGL'?'google':clean(stock.name))+'-stock-price-prediction';
  const symbol=stock.ticker.toLowerCase().replace(/[^a-z0-9-]/g,c=>'-'+c.charCodeAt(0).toString(16)+'-');
@@ -30,6 +31,6 @@ export const predictionSlug = (stock: Stock) => {
  if(stock.slug==='cached-'+stock.ticker.toLowerCase())return symbol+'-stock-price-prediction';
  return clean(stock.name)+'-'+symbol+'-stock-price-prediction';
 };
-export const predictionPath = (stock: Stock) => '/prediction/' + predictionSlug(stock);
+export const predictionPath = (stock: PredictionIdentity) => '/prediction/' + predictionSlug(stock);
 const bySymbol=new Map(predictionStocks.map(stock=>[stock.ticker,stock]));
 export function stockPredictionHref(symbol:string){const stock=bySymbol.get(symbol);return stock?predictionPath(stock):null;}

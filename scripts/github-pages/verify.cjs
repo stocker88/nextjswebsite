@@ -173,7 +173,7 @@ const periodUrls=urls.filter(url=>/^\/prediction\/[^/]+\/[^/]+\/$/.test(new URL(
 const periodSet=new Set(periodUrls);
 const periodIds=['today','tomorrow','next-week','next-month','2026','2027','2028','2029','2030'];
 let expectedIndexed=0,excludedPeriods=0,exportedPeriods=0;
-for(const stock of predictionDirectory.cachedStocks){
+for(const stock of predictionDirectory.allStocks.filter(stock=>predictionDirectory.cachedSymbols.includes(stock.ticker))){
  const parent=predictionParents.get(stock.ticker);assert(parent,'Prediction parent missing: '+stock.ticker);
  const parentPage=html(new URL(parent).pathname);
  for(const period of periodIds){
@@ -181,7 +181,7 @@ for(const stock of predictionDirectory.cachedStocks){
   const props=JSON.parse(page.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).props.pageProps;
   assert.equal(props.stock.ticker,stock.ticker,'Wrong stock in prediction export');
   const date=props.detail?.priceDate;
-  const fresh=!!date&&Number.isFinite(Date.parse(date))&&Date.parse(props.today)-Date.parse(date)<=7*86400000;
+  const fresh=!!date&&Number.isFinite(Date.parse(date))&&Date.parse(date)<=Date.parse(props.today)&&Date.parse(props.today)-Date.parse(date)<=7*86400000;
   const expired=/^20\d\d$/.test(period)&&period<props.today.slice(0,4);
   const indexable=fresh&&!expired;
   assert(head.includes('rel="canonical" href="'+url+'"'),'Period canonical missing: '+route);

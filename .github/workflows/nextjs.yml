@@ -38,6 +38,7 @@ jobs:
       - run: node scripts/seo-tools-check.cjs
       - run: node scripts/comparison-coverage-check.cjs
       - run: node scripts/prediction-periods-check.cjs
+      - run: node scripts/prediction-export-check.cjs
       - run: yarn test:seo
       - run: node scripts/option-result-pages-check.cjs
       - run: node scripts/options-check.cjs
@@ -113,6 +114,20 @@ jobs:
           path: .cache/earnings
           key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: earnings-v1-
+      - name: Restore IWV research and refresh dates
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/iwv
+          key: iwv-research-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: iwv-research-v1-
+      - name: Refresh a bounded batch of IWV company research
+        run: node scripts/sync-iwv-research.cjs
+      - name: Preserve IWV research and retry dates
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/iwv
+          key: iwv-research-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: yarn build:pages
       - name: Preserve company research snapshots
         if: always()
@@ -126,6 +141,9 @@ jobs:
         if: vars.WEBSITE_HOST != 'cloudflare'
         with:
           path: out
+      - name: Reuse embedded prediction data to reduce asset count
+        if: vars.WEBSITE_HOST == 'cloudflare'
+        run: node scripts/compact-prediction-export.cjs
       - name: Check Cloudflare asset limits and SEO routing
         if: vars.WEBSITE_HOST == 'cloudflare'
         run: node scripts/cloudflare-check.cjs

@@ -7,7 +7,9 @@ const config = JSON.parse(fs.readFileSync(path.join(root, 'wrangler.jsonc'), 'ut
 assert.equal(config.assets.directory, './out');
 assert.equal(config.assets.not_found_handling, '404-page');
 assert.equal(config.assets.html_handling, 'auto-trailing-slash');
-assert.ok(!config.main, 'Static assets must not invoke paid Worker compute');
+assert.equal(config.main, 'worker/prediction-data.mjs');
+assert.equal(config.assets.binding, 'ASSETS');
+assert.ok(!config.assets.run_worker_first, 'Existing assets must bypass Worker compute');
 let files = 0, bytes = 0;
 function walk(dir) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {

@@ -11,7 +11,7 @@ export function comparisonChoices(){return toolAssets().filter(a=>a.kind==='stoc
 export function comparisonData(symbol:string):ComparisonData|null{
  const asset=toolAssets().find(a=>a.symbol===symbol&&a.kind==='stock'&&a.currency==='USD');if(!asset)return null;
  if(!sources){const snapshots=read('data/stock-research-snapshots.json');const peers:any={};for(const s of Object.values(snapshots) as any[])for(const p of s.peers||[])peers[p.symbol]=p;sources={snapshots,peers,valuations:read('data/stock-valuations.json').stocks||{},news:read('data/research.json')};}
- const saved=sources.snapshots[symbol]||sources.peers[symbol]||{},file=read('public/earnings-data/'+symbol+'.json');
+ const saved=sources.snapshots[symbol]||sources.peers[symbol]||read('public/company-financials/'+symbol+'.json')||{},file=read('public/earnings-data/'+symbol+'.json');
  const detail=file.updatedAt>(saved.detail?.updatedAt||'')?file:saved.detail||file;
  const metrics:ComparisonData['metrics']=[];
  const add=(label:string,n:any,date:string|null,currency?:string,multiple=false)=>{if(typeof n!=='number'||!Number.isFinite(n))return;metrics.push({label,value:(currency?currency+' ':'')+new Intl.NumberFormat('en-US',{notation:multiple?'standard':'compact',maximumFractionDigits:2}).format(n)+(multiple?'×':''),date:date||null});};
