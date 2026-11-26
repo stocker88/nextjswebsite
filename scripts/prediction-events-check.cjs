@@ -32,3 +32,16 @@ assert(withEvent.find(p=>p.date==='2026-12-08').close<100);
 assert(withEvent.find(p=>p.date==='2026-12-12').close>100);
 assert(spacedEvents(calendar,long[0].date,long[1].date,12).length<=13);
 console.log('Seasonal/event paths: bounded marker density, estimated dates, dip/rebound, positive values and preserved endpoints passed.');
+const {historicalShape}=require('../lib/prediction-events.ts');
+function sampleHistory(scale=1){let close=100;const data=[];for(let t=Date.UTC(2022,0,1);t<=Date.UTC(2025,11,31);t+=86400000){const d=new Date(t);if([0,6].includes(d.getUTCDay()))continue;const seasonal=d.getUTCMonth()===8?-.004:d.getUTCMonth()===11?.004:0;close*=Math.exp(scale*(seasonal+.006*Math.sin(data.length*1.7)));data.push({date:d.toISOString().slice(0,10),close});}return data;}
+const history=sampleHistory(),profile=historicalShape(history);
+assert(profile.effects[8]<0);assert(profile.effects[11]>0);assert(Math.abs(profile.effects.reduce((a,b)=>a+b,0))<1e-10);
+assert(historicalShape(sampleHistory(2)).dailyVol>profile.dailyVol);
+assert.equal(historicalShape(history.slice(0,20)).dailyVol,0);
+const simulated=seasonalEventPath(long,calendar,true,history,'MU');
+assert.deepEqual(simulated,seasonalEventPath(long,calendar,true,history,'MU'));
+assert.notDeepEqual(simulated,seasonalEventPath(long,calendar,true,history,'NVDA'));
+assert.deepEqual(simulated[0],long[0]);assert.deepEqual(simulated.at(-1),long.at(-1));
+assert(simulated.every(p=>p.close>0&&Number.isFinite(p.close)));
+assert.deepEqual(historicalShape([...history].reverse()),profile);
+console.log('Historical shape: observed monthly direction, neutral annual seasonal drift, volatility scaling, sparse history, deterministic seed and fixed endpoints passed.');

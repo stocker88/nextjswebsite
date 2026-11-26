@@ -33,16 +33,48 @@ export function spacedEvents(events:PredictionEvent[],start:string,end:string,ma
  return [...events].sort((a,b)=>a.date.localeCompare(b.date)).filter(e=>{const t=Date.parse(e.date);if(t-previous<gap)return false;previous=t;return true;});
 }
 
-// User-directed sensitivity shape, not an empirical seasonality model.
-export function seasonalEventPath(points:Point[],events:PredictionEvent[],enabled=true):Point[]{
+export function historicalShape(history:Point[]){
+ const prices=Array.from(new Map(history.filter(p=>p.close>0&&Number.isFinite(p.close)&&Number.isFinite(Date.parse(p.date))).map(p=>[p.date,p])).values()).sort((a,b)=>a.date.localeCompare(b.date));
+ const returns:number[]=[],monthly:Array<{month:number;value:number}>=[];
+ const groups=new Map<string,Point[]>();
+ for(let i=0;i<prices.length;i++){
+  const p=prices[i],key=p.date.slice(0,7);groups.set(key,[...(groups.get(key)||[]),p]);
+  if(i){const gap=(Date.parse(p.date)-Date.parse(prices[i-1].date))/day,r=Math.log(p.close/prices[i-1].close);if(gap>0&&gap<=4&&Math.abs(r)<.35)returns.push(r);}
+ }
+ const entries=Array.from(groups.entries());
+ for(let i=1;i<entries.length;i++){
+  const [key,rows]=entries[i],previous=entries[i-1][1].at(-1)!,last=rows.at(-1)!;
+  const monthEnd=new Date(Date.UTC(Number(key.slice(0,4)),Number(key.slice(5)),0));
+  const gap=(Date.parse(rows[0].date)-Date.parse(previous.date))/day;
+  if(rows.length>=15&&gap<=5&&(monthEnd.getTime()-Date.parse(last.date))/day<=3){const value=Math.log(last.close/previous.close);if(Math.abs(value)<.7)monthly.push({month:Number(key.slice(5))-1,value});}
+ }
+ const mean=returns.reduce((a,b)=>a+b,0)/(returns.length||1);
+ const sigma=returns.length>=40?Math.sqrt(returns.reduce((a,b)=>a+(b-mean)**2,0)/(returns.length-1)):0;
+ const avg=monthly.reduce((a,b)=>a+b.value,0)/(monthly.length||1);
+ const counts=Array.from({length:12},(_,m)=>monthly.filter(r=>r.month===m).length);
+ const effects=counts.map((n,m)=>n>=2?Math.max(-.08,Math.min(.08,(monthly.filter(r=>r.month===m).reduce((a,b)=>a+b.value,0)/n-avg)*n/(n+5))):0);
+ const center=effects.reduce((a,b)=>a+b,0)/12;
+ return {effects:effects.map(v=>v-center),counts,months:monthly.length,observations:returns.length,dailyVol:Math.min(.08,sigma),from:prices[0]?.date,to:prices.at(-1)?.date};
+}
+
+// History-informed sensitivity simulation. Monthly effects are shrunk toward zero;
+// a seeded mean-reverting path adds irregular movement without inventing beta.
+export function seasonalEventPath(points:Point[],events:PredictionEvent[],enabled=true,history:Point[]=[],seed='stock'):Point[]{
  if(!enabled||points.length<2)return points;
+ const profile=historicalShape(history);
  const start=Date.parse(points[0].date),end=Date.parse(points.at(-1)!.date),span=(end-start)/day;
  if(span<=0)return points;
  const releases=events.map(e=>({time:Date.parse(e.date),amplitude:e.kind==='earnings'?.06:/CPI|PPI|PCE/i.test(e.title)?.04:.02})).filter(e=>e.time-4*day>=start&&e.time+4*day<=end);
  const knots=new Set(points.map(p=>Date.parse(p.date)));
  for(let t=start;t<end;t+=7*day)knots.add(t);
  for(const e of releases)for(const n of [-4,-2,0,2,4])knots.add(e.time+n*day);
- const season=(t:number)=>{const d=new Date(t),month=d.getUTCMonth(),fraction=(d.getUTCDate()-1)/new Date(Date.UTC(d.getUTCFullYear(),month+1,0)).getUTCDate();const levels=[.04,-.035,0,.01,0,-.01,.01,0,-.06,-.01,.02,.05];return levels[month]*(1-fraction)+levels[(month+1)%12]*fraction;};
+ const levels=[0];for(const effect of profile.effects)levels.push(levels.at(-1)!+effect);
+ const season=(t:number)=>{const d=new Date(t),month=d.getUTCMonth(),fraction=(d.getUTCDate()-1)/new Date(Date.UTC(d.getUTCFullYear(),month+1,0)).getUTCDate();return levels[month]+profile.effects[month]*fraction;};
+ let state=2166136261;for(const c of seed+points[0].date)state=Math.imul(state^c.charCodeAt(0),16777619);
+ const random=()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return (state+.5)/4294967296;};
+ const noise=[0];for(let t=start+7*day;t<end+7*day;t+=7*day){const z=Math.sqrt(-2*Math.log(random()))*Math.cos(2*Math.PI*random());noise.push(.90*noise.at(-1)!+z*profile.dailyVol*Math.sqrt(5));}
+ const at=(t:number)=>{const x=(t-start)/(7*day),i=Math.floor(x);return noise[i]+((noise[i+1]??noise[i])-noise[i])*(x-i);};
+ const finalNoise=at(end);
  let index=1;
  return Array.from(knots).sort((a,b)=>a-b).map(t=>{
   while(index<points.length-1&&Date.parse(points[index].date)<t)index++;
@@ -51,6 +83,6 @@ export function seasonalEventPath(points:Point[],events:PredictionEvent[],enable
   const seasonal=(season(t)-season(start)*(1-u)-season(end)*u)*Math.min(1,span/180);
   let swing=0;
   for(const event of releases){const offset=(t-event.time)/day;const wave=offset<-4||offset>4?0:offset<=-2?-(offset+4)/2:offset<=2?offset/2:(4-offset)/2;const candidate=wave*event.amplitude;if(Math.abs(candidate)>Math.abs(swing))swing=candidate;}
-  return {date:new Date(t).toISOString().slice(0,10),close:t===start?points[0].close:t===end?points.at(-1)!.close:base*Math.exp(seasonal+swing)};
+  return {date:new Date(t).toISOString().slice(0,10),close:t===start?points[0].close:t===end?points.at(-1)!.close:base*Math.exp(seasonal+Math.max(-.5,Math.min(.5,at(t)-u*finalNoise))+swing)};
  });
 }
