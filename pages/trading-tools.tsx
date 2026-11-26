@@ -1,8 +1,8 @@
 import {siteNavigation} from '../lib/site-navigation';
-import ToolDirectory from '../components/ToolDirectory';
+import TradingToolsHub from '../components/TradingToolsHub';
 import {workflows} from '../lib/trading-workflows';
 import {toolAssets,toolPairs} from '../lib/seo-tools-server';
-export default ToolDirectory;
+export default TradingToolsHub;
 // Reuse menu labels and destinations so the directory stays consistent.
 const featuredPaths = [
  '/stock-market-heatmap/', '/premarket-stock-heatmap/', '/after-hours-stock-heatmap/',

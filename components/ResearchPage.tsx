@@ -30,7 +30,7 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="twitter:image:alt" content={socialImageAlt} />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
-    <main className={stockDirectory ? "stock-directory" : undefined}>
+    <main className={stockDirectory ? "stock-directory" : path === "/trading-tools/" ? "trading-tools" : undefined}>
       {!noindex && (path.replace(/\/$/,'')==='/methodology' ? <div className="research-share-actions"><ShareControl title={title} path={path}/><TrackRecordDownload /></div> : <ShareControl title={title} path={path}/>)}
       {stockDirectory ? children : !hideResearchNavigation && <ResearchSections path={path} />}
       {!stockDirectory && children}
@@ -58,6 +58,7 @@ export default function ResearchPage({title, path, children, description = title
       .stock-directory .research-resources svg {display:none;}
       .stock-directory .research-resources :global(a:hover) {color:white;text-decoration:underline;}
       main.stock-directory {padding-top:110px;}
+      main.trading-tools {padding-top:40px;}
       .research-resources {display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px;}
       .research-resources :global(a) {display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:10px 15px;border:1px solid #2b3750;border-radius:12px;background:#10192a;color:#b9c9e1;font-size:13px;font-weight:600;line-height:1.4;text-decoration:none;transition:background .15s,border-color .15s,color .15s;}
       .research-resources svg {flex-shrink:0;color:#94b6e7;}
