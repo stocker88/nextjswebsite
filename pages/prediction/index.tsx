@@ -1,13 +1,15 @@
 import {predictionCatalog,cachedPredictionStocks} from '../../lib/prediction-cache-server';
 import {useState} from 'react';
+import fs from 'fs';
+import path from 'path';
 import Link from 'next/link';
 import StockLogo from '../../components/StockLogo';
 import ResearchPage from '../../components/ResearchPage';
 import {predictionStocks,predictionPath,predictionName} from '../../lib/stock-predictions';
 import {catalog,searchCatalog} from '../../lib/catalog';
 const SIZE=48;
-export function getStaticProps(){return {props:{allStocks:predictionCatalog(),cachedStocks:cachedPredictionStocks()}};}
-export default function Predictions({allStocks,cachedStocks}:{allStocks:typeof predictionStocks;cachedStocks:typeof predictionStocks}){
+export function getStaticProps(){return {props:{allStocks:predictionCatalog(),cachedStocks:cachedPredictionStocks(),logos:Object.fromEntries(predictionCatalog().map(s=>[s.ticker,fs.existsSync(path.join(process.cwd(),'public/assets/logo',s.ticker+'.webp'))?'/assets/logo/'+encodeURIComponent(s.ticker)+'.webp':null]))}};}
+export default function Predictions({allStocks,cachedStocks,logos}:{allStocks:typeof predictionStocks;cachedStocks:typeof predictionStocks;logos:Record<string,string|null>}){
  const [query,setQuery]=useState(''),[page,setPage]=useState(1);
  const matches=new Set(searchCatalog(query).filter(i=>i.type==='EQUITY').map(i=>i.symbol));
  const q=query.trim().toLowerCase();
@@ -17,7 +19,7 @@ export default function Predictions({allStocks,cachedStocks}:{allStocks:typeof p
  <header className="directory-heading"><span>STOCK PRICE PREDICTION RESEARCH</span><h1>Find a stock. Explore its outlook.</h1><p>Search {allStocks.length.toLocaleString('en-US')} companies for price outlooks, financials and related research—from tomorrow and next week to longer-term scenarios.</p></header>
  <form onSubmit={e=>e.preventDefault()}><label htmlFor="prediction-query">Company name, symbol or sector</label><div className="search-row"><input id="prediction-query" type="search" value={query} onChange={e=>{setQuery(e.target.value);setPage(1)}} placeholder="NVDA, Nvidia, Google, semiconductors…"/>{query&&<button type="button" onClick={()=>{setQuery('');setPage(1)}}>Clear</button>}</div></form>
  <p className="result-count" role="status">{all.length} results · Page {page} of {Math.max(1,Math.ceil(all.length/SIZE))}</p>
- <div className="stock-grid directory-grid">{items.map(stock=>{const profile=catalog.find(i=>i.symbol===stock.ticker);return <Link className="directory-card" key={stock.ticker} href={predictionPath(stock)+'/'}><div className="stock-heading"><StockLogo symbol={stock.ticker} src={null}/><h2>{stock.ticker}</h2></div><p className="company-name">{predictionName(stock)}</p><small>{profile?.sector||'Company research'}</small><small>Price prediction &amp; outlook</small><span className="card-arrow" aria-hidden="true">↗</span></Link>})}</div>
+ <div className="stock-grid directory-grid">{items.map(stock=>{const profile=catalog.find(i=>i.symbol===stock.ticker);return <Link className="directory-card" key={stock.ticker} href={predictionPath(stock)+'/'}><div className="stock-heading"><StockLogo symbol={stock.ticker} src={logos[stock.ticker]||null}/><h2>{stock.ticker}</h2></div><p className="company-name">{predictionName(stock)}</p><small>{profile?.sector||'Company research'}</small><small>Price prediction &amp; outlook</small><span className="card-arrow" aria-hidden="true">↗</span></Link>})}</div>
  {!all.length&&<p>No matches. Try another company name or ticker.</p>}
  <nav className="pagination" aria-label="Prediction search pages">{page>1&&<button onClick={()=>setPage(page-1)}>← Previous</button>}<span> {page} / {Math.max(1,Math.ceil(all.length/SIZE))} </span>{page*SIZE<all.length&&<button onClick={()=>setPage(page+1)}>Next →</button>}</nav>
  <p className="catalog-note">Research coverage varies by company. Outlooks and scenarios are not guaranteed future prices. Listings may include historical symbols.</p>
