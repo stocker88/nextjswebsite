@@ -17,3 +17,18 @@ for(const point of overlapping){const base=100+(Date.parse(point.date)-Date.pars
 assert.equal(new Set(overlapping.map(p=>p.date)).size,overlapping.length);
 assert.deepEqual(macroStressPath([], [event]),[]);
 console.log('Macro stress: 4% inflation / 2% other macro relative dip, recovery, preserved endpoints, disabled mode, earnings exclusion and noncompounding overlap passed.');
+const {seasonalEventPath,illustrativeEventCalendar,spacedEvents}=require('../lib/prediction-events.ts');
+const calendar=illustrativeEventCalendar([event],'2026-12-01','2030-12-31','MU');
+assert(calendar.some(e=>e.date.startsWith('2030')&&e.title.includes('not a confirmed date')));
+assert.equal(calendar.filter(e=>e.date===event.date&&e.title==='CPI').length,1);
+const long=[{date:'2026-12-01',close:100},{date:'2030-12-31',close:400}];
+const shaped=seasonalEventPath(long,calendar);
+assert.deepEqual(shaped[0],long[0]);assert.deepEqual(shaped.at(-1),long.at(-1));
+assert(shaped.every(p=>Number.isFinite(p.close)&&p.close>0));
+assert.deepEqual(seasonalEventPath(long,calendar,false),long);
+const flat=[{date:'2026-12-01',close:100},{date:'2026-12-21',close:100}];
+const withEvent=seasonalEventPath(flat,[event]),withoutEvent=seasonalEventPath(flat,[]);
+assert(withEvent.find(p=>p.date==='2026-12-08').close<100);
+assert(withEvent.find(p=>p.date==='2026-12-12').close>100);
+assert(spacedEvents(calendar,long[0].date,long[1].date,12).length<=13);
+console.log('Seasonal/event paths: bounded marker density, estimated dates, dip/rebound, positive values and preserved endpoints passed.');

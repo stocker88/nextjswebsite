@@ -11,7 +11,7 @@ export async function getStaticProps({params}:{params:{slug:string;period:string
  const stock=cachedPredictionStocks().find(s=>predictionSlug(s)===params.slug);
  if(!stock||!periods.some(p=>p.id===params.period))return {notFound:true};
  const today=predictionToday(),cached=cachedPredictionDetail(stock.ticker);
- const detail=cached?{...cached,prices:historyForPeriod(cached,params.period,cached.priceDate||today)}:null;
+ const detail=cached?{...cached,prices:historyForPeriod(cached,'2030',cached.priceDate||today)}:null;
  const bundle=loadStockResearch(stock.ticker);
  // Price history lives once in detail; peer tables need metrics, not duplicate chart arrays.
  if(bundle.snapshot)bundle.snapshot={...bundle.snapshot,detail:null,peers:bundle.snapshot.peers.map(peer=>({...peer,detail:peer.detail?{...peer.detail,prices:[]}:null}))};
