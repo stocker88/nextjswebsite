@@ -30,4 +30,4 @@ export function predictionCatalog():Stock[]{
 }
 export function cachedPredictionStocks(){return predictionCatalog().filter(s=>cachedDetails().has(s.ticker));}
 export function predictionToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
-export function predictionEvents(today:string):Catalyst[]{const end=new Date(Date.parse(today)+14*86400000).toISOString().slice(0,10);return (read('data/market-calendar.json')?.events||[]).filter((e:Catalyst)=>e.date>=today&&e.date<=end).sort((a:Catalyst,b:Catalyst)=>a.date.localeCompare(b.date)).slice(0,8);}
+export function predictionEvents(today:string):Catalyst[]{return (read('data/market-calendar.json')?.events||[]).filter((e:Catalyst)=>e.date>=today).sort((a:Catalyst,b:Catalyst)=>a.date.localeCompare(b.date));}

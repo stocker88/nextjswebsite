@@ -1,8 +1,9 @@
+import type {PredictionEvent} from '../../lib/prediction-events';
 import {useRef,useState} from 'react';
 import useChartEntrance from '../useChartEntrance';
 import ChartReveal from '../ChartReveal';
 import {Detail,decimal,percent,shortDate} from '../../lib/earnings';
-export type PriceProjection={points:{date:string;close:number}[];label:string;color:string};
+export type PriceProjection={points:{date:string;close:number}[];label:string;color:string;events?:PredictionEvent[]};
 export default function PriceChart({data,projection,initialPeriod=252}:{data:Detail;projection?:PriceProjection;initialPeriod?:number}){
  const [showReports,setShowReports]=useState(false);const [period,setPeriod]=useState(initialPeriod);const [hover,setHover]=useState<number|null>(null);
  const chartRef=useRef<SVGSVGElement>(null);
@@ -16,6 +17,8 @@ export default function PriceChart({data,projection,initialPeriod=252}:{data:Det
  });
  const series=(n:number)=>p.map((_,i)=>{const end=all.length-p.length+i;return end+1>=n?all.slice(end-n+1,end+1).reduce((a,b)=>a+b.close,0)/n:null;});
  const future=(projection?.points||[]).filter(point=>point.date>p.at(-1)!.date);const timeline=[...p,...future];
+ const scheduled=(projection?.events||[]).filter(e=>e.date>p.at(-1)!.date&&e.date<=timeline.at(-1)!.date);
+ const eventX=(date:string)=>52+(Date.parse(date)-Date.parse(p[0].date))/Math.max(1,Date.parse(timeline.at(-1)!.date)-Date.parse(p[0].date))*600;
  const sma50=series(50),sma200=series(200);const vals=[...p.map(x=>x.close),...sma50,...sma200,...future.map(point=>point.close)].filter(v=>v!==null) as number[];const lo=Math.min(...vals)*.98,hi=Math.max(...vals)*1.02,span=hi-lo||1;const x=(i:number)=>projection?52+(Date.parse(timeline[Math.min(i,timeline.length-1)].date)-Date.parse(p[0].date))/Math.max(1,Date.parse(timeline.at(-1)!.date)-Date.parse(p[0].date))*600:52+i/Math.max(p.length-1,1)*600;const y=(v:number)=>225-(v-lo)/span*195;
  const line=(v:(number|null)[])=>v.map((n,i)=>n===null?'':`${i===0||v[i-1]===null?'M':'L'}${x(i).toFixed(1)},${y(n).toFixed(1)}`).join(' ');
  const index=hover===null?p.length-1:Math.min(hover,timeline.length-1);const chosen=timeline[index];const ret=(p.at(-1)!.close/p[0].close-1)*100;
@@ -26,10 +29,12 @@ export default function PriceChart({data,projection,initialPeriod=252}:{data:Det
  <ChartReveal width={700} height={265}><path d={line(p.map(v=>v.close))+` L${x(p.length-1)},225 L52,225 Z`} fill="#648bff" opacity=".09"/>
  <path d={line(sma200)} fill="none" stroke="#bc96ff" strokeWidth="1.5" strokeDasharray="4 3"/><path d={line(sma50)} fill="none" stroke="#efbe72" strokeWidth="1.5"/><path d={line(p.map(v=>v.close))} fill="none" stroke="#6b9fff" strokeWidth="2.6"/></ChartReveal>
  {projection&&future.length>0&&<g><line x1={x(p.length-1)} x2={x(p.length-1)} y1="30" y2="225" stroke="#8294b1" strokeDasharray="3 4"/><path d={[p.at(-1)!,...future].map((point,i)=>`${i?'L':'M'}${x(p.length-1+i)},${y(point.close)}`).join(' ')} fill="none" stroke={projection.color} strokeWidth="2.6" strokeDasharray="6 4"/><text x={x(p.length-1)+5} y="22" fill="#aebdd1" fontSize="10">Scenario starts</text></g>}
+ {scheduled.map((event,i)=><g key={event.id} aria-label={`${event.title} · ${event.date}`}><title>{event.title} · {event.date}</title><line x1={eventX(event.date)} x2={eventX(event.date)} y1="30" y2="225" stroke={event.kind==='earnings'?'#82d8c0':'#efbe72'} opacity=".65" strokeDasharray="3 4"/><text x={eventX(event.date)} y={39+(i%3)*12} textAnchor="middle" fill={event.kind==='earnings'?'#82d8c0':'#efbe72'} fontSize="9">{event.kind==='earnings'?'E':'M'}</text></g>)}
  {showReports&&visibleReports.map(r=><g key={r.date} aria-label={`Earnings reported ${r.date}`}><title>Earnings reported {r.date}</title><line x1={x(Math.round(r.index))} x2={x(Math.round(r.index))} y1="30" y2="225" stroke="#82d8c0" strokeWidth="1.2" strokeDasharray="4 4"/><text x={x(Math.round(r.index))} y="22" textAnchor="middle" fill="#82d8c0" fontSize="10">E</text></g>)}
  {[0,Math.floor((timeline.length-1)/2),timeline.length-1].map((i,n)=><text key={n} x={x(i)} y="250" textAnchor={n===0?'start':n===2?'end':'middle'} fill="#93a5c4" fontSize="12">{shortDate(timeline[i].date)}{projection?" "+timeline[i].date.slice(2,4):""}</text>)}
  {hover!==null&&<g><line x1={x(index)} x2={x(index)} y1="25" y2="225" stroke="#93a5c4" strokeDasharray="3 3"/><circle cx={x(index)} cy={y(chosen.close)} r="4" fill="#fff"/></g>}
- </svg><div className="ec-chart-legend"><span><i style={{background:'#6b9fff'}}/>Price</span><span><i style={{background:'#efbe72'}}/>50-day average</span><span><i style={{background:'#bc96ff'}}/>200-day average</span><>{projection&&<span><i style={{background:projection.color}}/>{projection.label} (illustration)</span>}</><span className={ret>=0?'ec-positive':'ec-negative'}>{percent(ret)} in view</span></div><style jsx>{`
+ </svg>{scheduled.length>0&&<div className="ec-scheduled-events"><p>E = expected earnings · M = major economic release. Dates may change. Markers stop where the available calendar ends.</p><details><summary>View {scheduled.length} scheduled chart events</summary><ul>{scheduled.map(event=><li key={event.id}><strong>{shortDate(event.date)} {event.date.slice(0,4)}</strong> · {event.title}{event.sourceUrl&&<> · <a href={event.sourceUrl} target="_blank" rel="noopener noreferrer">Source</a></>}</li>)}</ul></details></div>}<div className="ec-chart-legend"><span><i style={{background:'#6b9fff'}}/>Price</span><span><i style={{background:'#efbe72'}}/>50-day average</span><span><i style={{background:'#bc96ff'}}/>200-day average</span><>{projection&&<span><i style={{background:projection.color}}/>{projection.label} (illustration)</span>}</><span className={ret>=0?'ec-positive':'ec-negative'}>{percent(ret)} in view</span></div><style jsx>{`
+ .ec-scheduled-events{font-size:12px;color:#aabbd1;line-height:1.7}.ec-scheduled-events summary{cursor:pointer;color:#cbb5f7}.ec-scheduled-events ul{padding-left:20px}.ec-scheduled-events a{color:#a9c9ef}
  .ec-report-control{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0 0}
  .ec-report-control button{border:1px solid #48516c;border-radius:7px;background:#131e31;color:#c6d2e9;padding:7px 10px;font-size:12px;cursor:pointer}
  .ec-report-control button[aria-pressed=true]{border-color:#82d8c0;color:#82d8c0;background:#15312d}
