@@ -37,6 +37,8 @@ jobs:
       - run: node scripts/account-linking-check.cjs
       - run: node scripts/seo-tools-check.cjs
       - run: node scripts/comparison-coverage-check.cjs
+      - run: node scripts/crypto-prediction-check.cjs
+      - run: node scripts/prediction-events-check.cjs
       - run: node scripts/prediction-periods-check.cjs
       - run: node scripts/prediction-export-check.cjs
       - run: yarn test:seo

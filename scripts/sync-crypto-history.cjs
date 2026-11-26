@@ -9,9 +9,20 @@ function cleanCandles(rows,now=Date.now()){
 }
 async function main(){
  const tracked=read(file),saved=read(cache);const data=(saved.attemptedAt||'')>(tracked.attemptedAt||'')?saved:tracked;
- const names=read(path.join(root,'data/crypto-expansion.json')),targetsHash=crypto.createHash('sha256').update(JSON.stringify(names)).digest('hex');
+ const names=read(path.join(root,'data/crypto-expansion.json'));
+ // Discover active USD markets weekly; retain the prior list during API failures.
+ if(!data.discoveredAt||Date.now()-Date.parse(data.discoveredAt)>7*86400000){
+  try{const [pr,cr]=await Promise.all([fetch('https://api.exchange.coinbase.com/products',{signal:AbortSignal.timeout(15000)}),fetch('https://api.exchange.coinbase.com/currencies',{signal:AbortSignal.timeout(15000)})]);
+   if(pr.ok&&cr.ok){const products=await pr.json(),currencies=await cr.json();const labels=new Map(currencies.map(c=>[c.id,c.name]));
+    const discovered=products.filter(p=>p.quote_currency==='USD'&&p.status==='online'&&!p.trading_disabled&&/^[A-Z0-9-]+$/.test(p.base_currency));
+    if(discovered.length){data.discovered=Object.fromEntries(discovered.map(p=>[p.base_currency,labels.get(p.base_currency)||p.base_currency]));data.discoveredAt=new Date().toISOString();}
+   }
+  }catch(e){console.warn('Retaining discovered crypto markets:',e.message);}
+ }
+ Object.assign(names,data.discovered||{});
+ const targetsHash=crypto.createHash('sha256').update(JSON.stringify(names)).digest('hex');
  if(data.targetsHash===targetsHash&&Date.now()-Date.parse(data.attemptedAt||'')<86400000){fs.writeFileSync(file,JSON.stringify(data));console.log('Crypto daily cache reused');return;}
- data.attemptedAt=new Date().toISOString();data.source='Coinbase Exchange';data.assets||={};
+ data.attemptedAt=new Date().toISOString();data.source='Coinbase Exchange';console.log('Crypto refresh targets:',Object.keys(names).length);data.assets||={};
  data.targetsHash=targetsHash;let added=0;
  for(const [ticker,name] of Object.entries(names)){
   const symbol=ticker+'-USD';try{const response=await fetch('https://api.exchange.coinbase.com/products/'+symbol+'/candles?granularity=86400',{signal:AbortSignal.timeout(15000),headers:{'User-Agent':'StocksToBuyNowResearch/1.0'}});if(response.status===429){console.warn('Crypto rate limit; retaining previous histories');break;}if(!response.ok)continue;

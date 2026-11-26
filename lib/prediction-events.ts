@@ -6,7 +6,7 @@ const day=86400000;
 export function macroStressPath(points:Point[],events:PredictionEvent[],enabled=true):Point[]{
  if(!enabled||points.length<2)return points;
  const start=Date.parse(points[0].date),end=Date.parse(points.at(-1)!.date);
- const releases=events.filter(e=>e.kind==='macro').map(e=>({time:Date.parse(e.date),amplitude:/\b(CPI|PCE|PPI)\b|inflation/i.test(e.title)?.04:.02})).filter(e=>e.time-3*day>start&&e.time+2*day<end);
+ const releases=events.filter(e=>e.kind==='macro').map(e=>({time:Date.parse(e.date),amplitude:/\b(CPI|PCE|PPI)\b|inflation/i.test(e.title)?.04:.02})).filter(e=>e.time-3*day>=start&&e.time+2*day<=end);
  const dates=Array.from(new Set(releases.map(e=>e.time)));
  if(!dates.length)return points;
  const knots=Array.from(new Set([...points.map(p=>Date.parse(p.date)),...dates.flatMap(t=>[-3,-1,0,2].map(n=>t+n*day))])).sort((a,b)=>a-b);

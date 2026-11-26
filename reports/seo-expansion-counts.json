@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-26T03:16:57.571Z",
+  "generatedAt": "2026-11-26T22:54:49.285Z",
   "stockAnalysis": 1257,
-  "crypto": 161,
+  "crypto": 468,
   "forex": 19,
   "comparisons": 940,
   "hubs": 5,
   "calculators": 3,
   "guides": 4,
-  "total": 2389,
+  "total": 2696,
   "predictionCoverage": {
     "companies": 2791,
     "periodPages": 25119
   },
-  "indexable": 2265,
-  "excludedStale": 124,
+  "indexable": 2612,
+  "excludedStale": 84,
   "examples": [
     {
       "path": "/crypto-prediction/btc-usd/",
-      "modified": "2026-11-24"
+      "modified": "2026-11-25"
     },
     {
       "path": "/forex-prediction/eurusd/",
