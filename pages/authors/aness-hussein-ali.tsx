@@ -5,7 +5,7 @@ import s from '../../styles/PublicEducation.module.css';
 
 const linkedin='https://www.linkedin.com/in/anesshusseinali/';
 const education='https://www.linkedin.com/in/anesshusseinali/overlay/Education/113042438/treasury/?profileId=ACoAAArkpWIB_UmPdyZAB4jFSeaAcUmPcQ9aN5k';
-const diploma='/assets/credentials/aness-hussein-ali-berkeley-mfe-2014.jpeg';
+const diploma='/assets/credentials/aness-hussein-ali-berkeley-diploma-photo.jpg';
 export default function Author(){
   return <PublicEducationPage title="Aness Hussein Ali — founder, education & experience" description="Meet Aness Hussein Ali, founder of Stocks To Buy Now Research. Explore his Berkeley Haas Master of Financial Engineering, Goldman Sachs experience, public diploma and free courses." path="/authors/aness-hussein-ali/" schema={{'@context':'https://schema.org','@type':'ProfilePage',url:SITE+'/authors/aness-hussein-ali/',mainEntity:{'@type':'Person','@id':SITE+'/authors/aness-hussein-ali/#person',name:'Aness Hussein Ali',url:SITE+'/authors/aness-hussein-ali/',image:SITE+'/assets/images/aness.jpg',jobTitle:'Founder of Stocks To Buy Now Research',sameAs:[linkedin,'https://anesshusseinali.com/'],alumniOf:{'@type':'CollegeOrUniversity',name:'University of California, Berkeley — Haas School of Business',url:'https://mfe.haas.berkeley.edu/'},hasCredential:{'@type':'EducationalOccupationalCredential',name:'Master of Financial Engineering',credentialCategory:'Master’s degree',educationalLevel:'Graduate',recognizedBy:{'@type':'CollegeOrUniversity',name:'University of California, Berkeley'},url:SITE+diploma}}}}>
     <nav className={s.breadcrumb} aria-label="Breadcrumb"><Link href="/company/">Company</Link><span aria-hidden="true">/</span><span>Meet the founder</span></nav>
