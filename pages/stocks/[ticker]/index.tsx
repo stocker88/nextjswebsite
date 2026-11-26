@@ -86,7 +86,7 @@ export default function Stock({
 {predictionPage&&predictionPeriodsAvailable&&<PredictionPeriodSelector stock={stock}/>}
 {longScenario&&<div className="public-copy"><h2>Could {stock.ticker} reach {roundedPrice(longScenario.values[1])} by 2030?</h2><p>Explore the conditional scenario, the growth and valuation assumptions it requires, and the downside case. Price used: ${longScenario.price.toFixed(2)} on {readableDate(longScenario.date)}.</p><Link href={predictionPath(stock)+"/2030/"}>Explore the 2030 price scenario →</Link></div>}
 <div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
-      <div id="stock-analysis"><StockResearchHub symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
+      <div id="stock-analysis"><StockResearchHub financialsFirst={predictionPage} symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
       <div id="insider-research"><StockSmartMoney symbol={stock.ticker}/></div>
       <div className="public-copy">
         <h2>What can move {stock.ticker}?</h2>

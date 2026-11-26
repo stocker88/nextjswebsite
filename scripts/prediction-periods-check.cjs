@@ -41,3 +41,13 @@ const {predictionSlug}=require('../lib/stock-predictions.ts');
 const newCached=eligible.find(s=>s.slug.startsWith('cached-'));
 if(newCached)assert.equal(predictionSlug(newCached),predictionSlug({...newCached,name:'A renamed company'}));
 console.log('Cache-only URLs remain stable across company-name changes.');
+
+// A selected scenario's controls change only that scenario, including the green default.
+for(const index of [0,1,2]){
+ const adjusted=p.projection(detail,'2030','2026-11-24',12,-2,index);
+ assert(Math.abs(adjusted.values[index]-p.growthPrice(100,adjusted.years,12,-2))<1e-8);
+ for(const other of [0,1,2].filter(i=>i!==index))assert.equal(adjusted.values[other],long.values[other]);
+ const eps=100/10*Math.pow(1.12,adjusted.years),multiple=10*Math.pow(.98,adjusted.years);
+ assert(Math.abs(eps*multiple-adjusted.values[index])<1e-8);
+}
+console.log('All scenario controls preserve other cases; projected EPS × P/E reconciles to price.');

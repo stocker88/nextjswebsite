@@ -38,7 +38,7 @@ export function volatility(detail:Detail|null,asOf:string):number|null{
 }
 export const upside2030:Record<string,number>={NVDA:400,MU:2000,SNDK:250,TSLA:1000};
 export function requiredGrowth(price:number,target:number,years:number,valuation=-3){return (Math.pow(target/price,1/years)/(1+valuation/100)-1)*100;}
-export function projection(detail:Detail|null,period:string,today:string,growth?:number,valuation=-3){
+export function projection(detail:Detail|null,period:string,today:string,growth?:number,valuation=-3,scenarioIndex=1){
  const price=detail?.price,date=detail?.priceDate;
  if(!price||!Number.isFinite(price)||price<=0||!date||!Number.isFinite(Date.parse(date))||date>today||Date.parse(today)-Date.parse(date)>7*86400000)return null;
  const end=horizonEnd(period,today),days=(Date.parse(end)-Date.parse(date))/86400000;
@@ -48,8 +48,9 @@ export function projection(detail:Detail|null,period:string,today:string,growth?
  const target=period==='2030'?upside2030[detail!.symbol]||null:null;
  const stretch=target?Math.ceil(target*1.25/50)*50:null;
  const defaultGrowth=target?requiredGrowth(price,target,years,-3):10;
- const growthRates=[-5,growth??defaultGrowth,stretch?requiredGrowth(price,stretch,years,0):20];
- const valuationRates=[-5,valuation,0];
+ const growthRates=[-5,defaultGrowth,stretch?requiredGrowth(price,stretch,years,0):20];
+ const valuationRates=[-5,-3,0];
+ if(growth!==undefined)growthRates[scenarioIndex]=growth;valuationRates[scenarioIndex]=valuation;
  const labels=target?['Downside illustration','Upside scenario','Stretch scenario']:scenarios.map(s=>s.name);
  const value=(fraction:number,index:number)=>long?growthPrice(price,years*fraction,growthRates[index],valuationRates[index]):price*Math.exp((index-1)*sigma!*Math.sqrt(days*5/7*fraction));
  return {end,long,years,price,date,sigma,target,stretch,defaultGrowth,growthRates,valuationRates,labels,values:[0,1,2].map(i=>value(1,i)),points:Array.from({length:25},(_,i)=>({date:new Date(Date.parse(date)+days*86400000*i/24).toISOString().slice(0,10),low:value(i/24,0),central:value(i/24,1),high:value(i/24,2)}))};
