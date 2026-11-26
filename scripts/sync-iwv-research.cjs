@@ -32,9 +32,9 @@ async function main(){
  }).filter(v=>(!v.detail||now-v.last>refreshAge)&&now-(state[v.symbol]?.snapshotAttempt||0)>86400000).sort((a,b)=>Number(!!a.detail)-Number(!!b.detail)||a.last-b.last).slice(0,limit);
  let completed=0,failed=0,bytes=0,nextStart=0;
  const queue=[...work];
- // Up to eight concurrent HTTP requests, no more than 24 company starts/minute.
+ // Up to six concurrent HTTP requests, no more than 24 company starts/minute.
  // Each backend request shares cached source data and the existing provider limiter.
- await Promise.all(Array.from({length:Math.min(8,queue.length)},async()=>{
+ await Promise.all(Array.from({length:Math.min(6,queue.length)},async()=>{
   while(queue.length&&Date.now()<deadline){
    const {symbol}=queue.shift();const start=Math.max(Date.now(),nextStart);nextStart=start+interval;await wait(Math.max(0,start-Date.now()));
    state[symbol]={...state[symbol],snapshotAttempt:Date.now()};
