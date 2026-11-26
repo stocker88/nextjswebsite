@@ -15,4 +15,5 @@ export function toolPairs(){if(pairsCache)return pairsCache;const all=toolAssets
 const recent=(date:string)=>Date.now()-Date.parse(date+'T23:59:59Z')<=14*86400000;
 export function toolEntries(){return [...toolAssets().filter(a=>recent(a.points.at(-1)![0])).map(a=>({path:assetPath(a),modified:a.points.at(-1)![0]})),...toolPairs().filter(p=>recent(compare(p.a.points,p.b.points)!.rows.at(-1)!.date)).map(p=>({path:'/stock-comparison/'+p.slug+'/',modified:compare(p.a.points,p.b.points)!.rows.at(-1)!.date}))];}
 
-export function cryptoLogo(symbol:string):string|null{const url='/assets/assets/crypto_logo/'+symbol.replace('-USD','').toLowerCase()+'.webp';return fs.existsSync(path.join(process.cwd(),'public',url))?url:null;}
+let cryptoLogos:Record<string,{path:string}>|null=null;
+export function cryptoLogo(symbol:string):string|null{if(!cryptoLogos){try{cryptoLogos=JSON.parse(fs.readFileSync(path.join(process.cwd(),'data/crypto-logo-manifest.json'),'utf8'));}catch{cryptoLogos={};}}const added=cryptoLogos?.[symbol.replace('-USD','')]?.path;if(added&&fs.existsSync(path.join(process.cwd(),'public',added)))return added;const url='/assets/assets/crypto_logo/'+symbol.replace('-USD','').toLowerCase()+'.webp';return fs.existsSync(path.join(process.cwd(),'public',url))?url:null;}
