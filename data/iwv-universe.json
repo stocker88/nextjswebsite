@@ -15287,12 +15287,6 @@
       "exchange": "NASDAQ"
     },
     {
-      "symbol": "AKE",
-      "name": "AKERO THERAPEUTICS CVR",
-      "sector": "Health Care",
-      "exchange": "NASDAQ"
-    },
-    {
       "symbol": "CATX",
       "name": "PERSPECTIVE THERAPEUTICS",
       "sector": "Health Care",
@@ -15383,12 +15377,6 @@
       "exchange": "NYSE"
     },
     {
-      "symbol": "GTXI",
-      "name": "GTXI INC - CVR",
-      "sector": "Health Care",
-      "exchange": "NASDAQ"
-    },
-    {
       "symbol": "THRD",
       "name": "THIRD HARMONIC BIO INC",
       "sector": "Health Care",
@@ -15467,6 +15455,16 @@
       "ticker": "2200964D",
       "name": "OMNIAB INC $15.00 VESTING Prvt",
       "reason": "No supported listed common-stock symbol"
+    },
+    {
+      "ticker": "AKE",
+      "name": "AKERO THERAPEUTICS CVR",
+      "reason": "Contingent value right, not a common stock"
+    },
+    {
+      "ticker": "GTXI",
+      "name": "GTXI INC - CVR",
+      "reason": "Contingent value right, not a common stock"
     }
   ]
 }
