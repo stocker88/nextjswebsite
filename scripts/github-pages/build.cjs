@@ -100,7 +100,9 @@ async function main(){
  for(const item of articles){const target=researchUrl(item.id,item.title)+'/';redirect('stocks-to-buy-now/'+item.id,target);redirect('stock-market-news/'+item.id,target);}
  for(const stock of require(path.join(stage,'data/stocks.json')))redirect('web-app/financial/'+stock.ticker,'/stocks/'+stock.slug+'/');
  write('out/.nojekyll','');
- const out=path.join(root,'out');fs.rmSync(out,{recursive:true,force:true});fs.cpSync(path.join(stage,'out'),out,{recursive:true});
+ // Keep one export instead of three multi-gigabyte copies on the CI runner.
+ fs.rmSync(path.join(stage,'.next'),{recursive:true,force:true});
+ const out=path.join(root,'out');fs.rmSync(out,{recursive:true,force:true});fs.renameSync(path.join(stage,'out'),out);
  console.log('GitHub Pages artifact ready in out/');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});
