@@ -7,6 +7,7 @@ function parse(text,now=Date.now()){
  const start=rows.findIndex(r=>r[0]==='Ticker'&&r.includes('Asset Class'));if(start<0)throw Error('Missing holdings header');const head=rows[start],stocks=new Map(),excluded=[];
  for(const row of rows.slice(start+1)){const d=Object.fromEntries(head.map((h,i)=>[h,row[i]||'']));if(d['Asset Class']!=='Equity')continue;
   const symbol=d.Ticker.trim().replace(/[ .]/g,'-');
+  if(/\bCVR\s*$|CONTINGENT VALUE RIGHT/i.test(d.Name)){excluded.push({ticker:d.Ticker,name:d.Name,reason:'Contingent value right, not a common stock'});continue;}
   if(!/^[A-Z]{1,6}(?:-[A-Z])?$/.test(symbol)||/UNLISTED|Non-Nms/i.test(d.Exchange)||!d.Name){excluded.push({ticker:d.Ticker,name:d.Name,reason:'No supported listed common-stock symbol'});continue;}
   if(stocks.has(symbol))throw Error('Duplicate equity ticker '+symbol);
   stocks.set(symbol,{symbol,name:d.Name,sector:d.Sector,exchange:d.Exchange});

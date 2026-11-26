@@ -1,0 +1,29 @@
+{
+  "source": "https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/latest-holdings.csv",
+  "label": "IWV holdings \u2014 Russell 3000 proxy",
+  "asOf": "2026-11-24",
+  "updatedAt": "2026-11-26T03:13:56.087Z",
+  "universe": 2565,
+  "available": 2563,
+  "missing": [
+    "TXCP",
+    "MSGR"
+  ],
+  "attempted": 0,
+  "queued": 0,
+  "completed": 0,
+  "failed": 0,
+  "responseBytes": 0,
+  "fullSnapshots": 2563,
+  "companiesWithAnnualFinancials": 2562,
+  "annualFinancialRows": 12631,
+  "exceptions": {
+    "MSGR": "26 historical trading days; minimum is 31",
+    "TXCP": "Provider price history unavailable",
+    "BXDC": "Price charts available; annual financial statements unavailable"
+  },
+  "excludedNonStockRights": [
+    "AKE",
+    "GTXI"
+  ]
+}

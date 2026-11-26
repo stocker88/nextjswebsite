@@ -31,7 +31,7 @@ function chunks(items,size){const result=[];for(let index=0;index<items.length;i
    fs.writeFileSync(path.join(cacheDir,'manifest.json'),JSON.stringify(manifest));
   }
   const published=[];
-  for(const symbol of manifest.symbols.filter(validSymbol)){const source=path.join(cacheDir,symbol+'.json');if(!fs.existsSync(source))continue;fs.copyFileSync(source,path.join(publicDir,symbol+'.json'));published.push(symbol);}
+  for(const symbol of manifest.symbols.filter(validSymbol)){const source=path.join(cacheDir,symbol+'.json');if(!fs.existsSync(source))continue;const target=path.join(publicDir,symbol+'.json');const incoming=read(source),current=read(target);if(!current||Date.parse(incoming?.updatedAt||0)>=Date.parse(current.updatedAt||0))fs.copyFileSync(source,target);published.push(symbol);}
   data.detailSymbols=published.sort();
  }else data.detailSymbols=(previous.detailSymbols||[]).filter(symbol=>validSymbol(symbol)&&fs.existsSync(path.join(publicDir,symbol+'.json'))).sort();
  fs.writeFileSync(calendarFile,JSON.stringify(data));fs.writeFileSync(path.join(root,'public/earnings-calendar.json'),JSON.stringify(data));

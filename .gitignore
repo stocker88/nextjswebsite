@@ -26,3 +26,8 @@ out/
 
 .cache/crypto/
 public/comparison-data/
+
+.cache/iwv/
+.next-logo-preview/
+
+.next-iwv-preview/

@@ -9,7 +9,9 @@ function read(file:string):any{try{const full=path.join(process.cwd(),file),mtim
 export function loadStockResearch(symbol:string):ResearchBundle{
  const saved=read('data/stock-research-snapshots.json')||{};
  const detail:Detail|null=read('public/earnings-data/'+symbol+'.json');
- const snapshot:Snapshot|null=saved[symbol]||(detail?{symbol,detail,updatedAt:detail.updatedAt,financials:[],technicals:{},shortInterest:null,peers:detail.peers.map(p=>({...p,detail:read('public/earnings-data/'+p.symbol+'.json'),financials:[]}))}:null);
+ const expanded=read('public/company-financials/'+symbol+'.json');
+ const expandedSnapshot=expanded&&detail?{...expanded,detail,peers:(expanded.peers||[]).map((p:any)=>({...p,detail:read('public/earnings-data/'+p.symbol+'.json'),financials:read('public/company-financials/'+p.symbol+'.json')?.financials||[]}))}:null;
+ const snapshot:Snapshot|null=saved[symbol]||expandedSnapshot||(detail?{symbol,detail,updatedAt:detail.updatedAt,financials:[],technicals:{},shortInterest:null,peers:detail.peers.map(p=>({...p,detail:read('public/earnings-data/'+p.symbol+'.json'),financials:[]}))}:null);
  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
  const end=new Date(Date.parse(today+'T12:00Z')+14*86400000).toISOString().slice(0,10);
  const calendar=read('data/market-calendar.json');
@@ -41,7 +43,7 @@ function loadPeerCompanies(cohort:any[],today:string,snapshot:Snapshot|null=null
  const nested=Object.values(saved).flatMap((s:any)=>s.peers||[]);
  const valuations=read('data/stock-valuations.json')?.stocks||{};
  return cohort.map((p:any)=>{
-  const cached=saved[p.symbol]||snapshot?.peers.find(peer=>peer.symbol===p.symbol)||nested.find((peer:any)=>peer.symbol===p.symbol);
+  const cached=saved[p.symbol]||read('public/company-financials/'+p.symbol+'.json')||snapshot?.peers.find(peer=>peer.symbol===p.symbol)||nested.find((peer:any)=>peer.symbol===p.symbol);
   const cachedDetail=cached?.detail,publicDetail=read('public/earnings-data/'+p.symbol+'.json');
   const latest=cachedDetail&&(!publicDetail||cachedDetail.updatedAt>=publicDetail.updatedAt)?cachedDetail:publicDetail;
   const historyDetail=latest?{...latest,prices:latest.prices?.length?latest.prices:(cachedDetail?.prices?.length?cachedDetail.prices:publicDetail?.prices||[]),history:latest.history?.length?latest.history:(cachedDetail?.history?.length?cachedDetail.history:publicDetail?.history||[])}:null;
