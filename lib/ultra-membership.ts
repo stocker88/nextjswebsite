@@ -2,7 +2,7 @@ import {getSiteAuth} from './site-auth';
 import {stripeRedirect,completeWebsiteCheckout} from './website-billing';
 import type {MembershipStatus} from './membership-status';
 export type UltraPeriod='monthly'|'annual';
-export type UltraRoute='checkout'|'stripe_switch'|'apple_addon'|'apple_upgrade'|'google_upgrade'|'active'|'unavailable'|'support'|'payment_update'|'restore_pro';
+export type UltraRoute='onboarding_required'|'checkout'|'stripe_switch'|'apple_addon'|'apple_upgrade'|'google_upgrade'|'active'|'unavailable'|'support'|'payment_update'|'restore_pro';
 export type UltraOffer={route:UltraRoute;offersAvailable:boolean;plans:{id:UltraPeriod;amount:number;currency:string;interval:string}[];policy:{version:string;url:string};membership:MembershipStatus};
 async function call<T>(name:string,data:Record<string,string|boolean>={}):Promise<T>{
  const auth=await getSiteAuth(),uid=auth.currentUser?.uid;if(!uid)throw Error('Please sign in.');

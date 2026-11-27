@@ -26,7 +26,7 @@ assert.equal(canOfferMembership(base),false);assert.equal(canOfferMembership({..
 html=draw({...base,subscriptions:[{...base.subscriptions[0],provider:'stripe',willRenew:true,managementUrl:null}]});assert.match(html,/Stripe/);assert.match(html,/Renews on/);assert.match(html,/Manage subscription/);
 html=draw({...base,subscriptions:[{...base.subscriptions[0],status:'trialing'}]});assert.match(html,/Trial active/);assert.match(html,/Trial ends/);
 html=draw({...base,subscriptions:[{...base.subscriptions[0],managementUrl:'javascript:alert(1)'}]});assert.doesNotMatch(html,/javascript:|Manage subscription/);
-html=draw({...base,status:'unknown',isActive:false,subscriptions:[]});assert.match(html,/Check membership again/);assert.doesNotMatch(html,/Explore Pro|\$30/);
+html=draw({...base,status:'unknown',isActive:false,subscriptions:[]});assert.match(html,/check again/);assert.doesNotMatch(html,/Explore Pro|\$30/);
 html=draw(null,{loading:true});assert.equal(html,'');assert.doesNotMatch(html,/Checking|Explore Pro|\$30/);
 html=draw(base,{loading:true});assert.match(html,/Your perspective/);assert.doesNotMatch(html,/Explore Pro|\$30/);
 html=draw({...base,status:'inactive',isActive:false,subscriptions:[]},{onExploreFree:()=>{}});assert.doesNotMatch(html,/YOUR CURRENT PLAN · FREE|Already subscribed/);assert.match(html,/Explore Pro/);assert.match(html,/Start your free trial in the app/);assert.match(html,/Receive live alerts straight to your phone/);assert.match(html,/Independent Trustpilot reviews/);assert.match(html,/\$30/);assert.match(html,/\$20/);
@@ -64,15 +64,17 @@ const {PlanSwitchConfirmationView}=load('components/StripeMembershipManager.tsx'
 html=renderToStaticMarkup(React.createElement(PlanSwitchConfirmationView,{preview:{subscriptionId:'sub_test',priceId:'price_test',periodEnd:1824464899,unitAmount:3000,currency:'usd',billingPeriod:'Monthly'},busy:false,onConfirm:()=>{},onBack:()=>{}}));assert.match(html,/No payment is taken now/);assert.match(html,/\$30.00/);assert.match(html,/2027/);assert.match(html,/Confirm monthly billing at renewal/);
 
 const {UltraMembershipView}=load('components/UltraMembershipPage.tsx');
-const ultraBase={signedIn:true,checking:false,offer:{route:'stripe_switch',offersAvailable:true,membership:{status:'active',billingVerified:true,hasPro:true,hasUltra:false}},error:'',busy:false,period:'annual',accepted:false,showApp:false,onPeriod:()=>{},onAccepted:()=>{},onBuy:()=>{},onRetry:()=>{},onApp:()=>{}};
+const ultraBase={signedIn:true,checking:false,offer:{route:'stripe_switch',offersAvailable:true,membership:{status:'active',billingVerified:true,hasPro:true,hasUltra:false,ultraPurchaseEligible:true}},error:'',busy:false,period:'annual',accepted:false,showApp:false,onPeriod:()=>{},onAccepted:()=>{},onBuy:()=>{},onRetry:()=>{},onApp:()=>{}};
 const ultraHtml=props=>renderToStaticMarkup(React.createElement(UltraMembershipView,{...ultraBase,...props}));
-html=ultraHtml({signedIn:false,offer:null});assert.match(html,/Sign up or sign in to join Ultra/);assert.match(html,/next=%2Fultra%2F/);assert.match(html,/\$90/);assert.match(html,/\$75/);assert.match(html,/\$900 billed once each year/);assert.match(html,/Save \$180\/year/);assert.doesNotMatch(html,/20%|6-month|6 months/);
+html=ultraHtml({signedIn:false,offer:null});assert.match(html,/Sign in to check your progress/);assert.match(html,/next=%2Fultra%2F/);assert.doesNotMatch(html,/\$[0-9]|Choose Ultra|billing period/);
+for(const eligible of [false,undefined]){html=ultraHtml({offer:{...ultraBase.offer,membership:{...ultraBase.offer.membership,ultraPurchaseEligible:eligible}}});assert.match(html,/Complete Level 1/);assert.doesNotMatch(html,/\$[0-9]|billing period|Join Ultra|Review my Ultra upgrade/);}
+
 html=ultraHtml({});assert.match(html,/Replace your Stripe Pro with Ultra/);assert.match(html,/amount due now/);assert.match(html,/disabled=""[^>]*>Review my Ultra upgrade/);assert.match(html,/ultra-2026-10-26/);
 html=ultraHtml({accepted:true});assert.doesNotMatch(html,/disabled=""[^>]*>Review my Ultra upgrade/);
 for(const route of ['apple_upgrade','google_upgrade']){html=ultraHtml({offer:{...ultraBase.offer,route}});assert.match(html,/Continue upgrade in the app/);assert.doesNotMatch(html,/Review my Ultra upgrade|Join Ultra →|\$600 billed/);assert.match(html,route==='apple_addon'?/2× add-on/:/3× Ultra/);}
 html=ultraHtml({offer:{...ultraBase.offer,route:'active',membership:{billingVerified:true,hasUltra:true}}});assert.match(html,/Ultra is yours/);assert.match(html,/Explore full results/);assert.doesNotMatch(html,/Join Ultra|type="checkbox"/);
 html=ultraHtml({checking:true,offer:null});assert.equal(html,'');assert.doesNotMatch(html,/Checking|Choose Ultra|Join Ultra →|Sign up or sign in|\$90|\$75/);
-html=ultraHtml({error:'Provider unavailable',offer:null});assert.match(html,/Check membership again/);assert.doesNotMatch(html,/Join Ultra →|Review my Ultra upgrade/);
+html=ultraHtml({error:'Provider unavailable',offer:null});assert.match(html,/check again/);assert.doesNotMatch(html,/Join Ultra →|Review my Ultra upgrade/);
 for(const route of ['unavailable','payment_update','restore_pro','support']){html=ultraHtml({offer:{...ultraBase.offer,route}});assert.match(html,/Manage current membership/);assert.doesNotMatch(html,/Join Ultra →|Review my Ultra upgrade/);}
 console.log('Ultra UI checks passed: monthly/annual prices, correct annual savings, Apple legacy/inclusive paths, Stripe replacement, consent, verified active state and outage guards.');
 

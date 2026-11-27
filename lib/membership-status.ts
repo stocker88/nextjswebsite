@@ -17,6 +17,7 @@ export type MembershipStatus = {
   billingVerified?:boolean;
   hasPro?:boolean;
   hasUltra?:boolean;
+  ultraPurchaseEligible?:boolean;
   hasUltraAddon?:boolean;
   ultraAccessUntil?:string|null;
   hasStripeBilling?:boolean;
