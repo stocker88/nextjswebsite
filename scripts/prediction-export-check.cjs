@@ -1,3 +1,5 @@
+const {gzipSync,gunzipSync}=require('node:zlib');
+const packedResponse=value=>new Response(gzipSync(JSON.stringify(value)));
 const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {compact}=require('./compact-prediction-export.cjs');
 (async()=>{
@@ -11,13 +13,14 @@ const {compact}=require('./compact-prediction-export.cjs');
  for(const locale of ['es','de','fr','ja','ko']){const dd=path.join(dir,'_next/data/build-1',locale,'prediction/test-stock-price-prediction');const hd=path.join(dir,locale,'prediction/test-stock-price-prediction/2030');fs.mkdirSync(dd,{recursive:true});fs.mkdirSync(hd,{recursive:true});fs.writeFileSync(path.join(dd,'2030.json'),JSON.stringify(props));fs.writeFileSync(path.join(hd,'index.html'),html);}
  assert.equal(compact(dir).count,6);assert(!fs.existsSync(path.join(dataDir,'2030.json')));
  const packed=require('./pack-localized-predictions.cjs').pack(dir);assert.equal(packed.pages,5);assert.equal(packed.packs,5);
- for(const locale of ['es','de','fr','ja','ko']){const saved=JSON.parse(fs.readFileSync(path.join(dir,'__localized',locale,'test-stock-price-prediction.json'),'utf8'));assert.equal(saved['2030'],html);assert(!fs.existsSync(path.join(dir,locale,'prediction/test-stock-price-prediction/2030/index.html')));}
+ for(const locale of ['es','de','fr','ja','ko']){const saved=JSON.parse(gunzipSync(fs.readFileSync(path.join(dir,'__localized',locale,'test-stock-price-prediction.json.gz'))).toString());assert.equal(saved['2030'],html);assert(!fs.existsSync(path.join(dir,locale,'prediction/test-stock-price-prediction/2030/index.html')));}
  const env={ASSETS:{fetch:async req=>new URL(req.url).pathname==='/prediction/test-stock-price-prediction/2030/'?new Response(html):new Response('missing',{status:404})}};
  const route='https://example.com/_next/data/build-1/prediction/test-stock-price-prediction/2030.json';
- for(const locale of ['es','de','fr','ja','ko']){const expected='/'+locale+'/prediction/test-stock-price-prediction/2030/';const localizedEnv={ASSETS:{fetch:async req=>{assert.equal(new URL(req.url).pathname,'/__localized/'+locale+'/test-stock-price-prediction.json');return Response.json({'2030':html})}}};const localized=await worker.fetch(new Request(route.replace('/prediction/','/'+locale+'/prediction/')),localizedEnv);assert.equal(localized.status,200);assert.deepEqual(await localized.json(),props);}
- const htmlEnv={ASSETS:{fetch:async req=>new URL(req.url).pathname==='/__localized/fr/test-stock-price-prediction.json'?Response.json({'2030':html}):new Response(null,{status:404})}};
+ for(const locale of ['es','de','fr','ja','ko']){const expected='/'+locale+'/prediction/test-stock-price-prediction/2030/';const localizedEnv={ASSETS:{fetch:async req=>{assert.equal(new URL(req.url).pathname,'/__localized/'+locale+'/test-stock-price-prediction.json.gz');return packedResponse({'2030':html,overview:html})}}};const localized=await worker.fetch(new Request(route.replace('/prediction/','/'+locale+'/prediction/')),localizedEnv);assert.equal(localized.status,200);assert.deepEqual(await localized.json(),props);}
+ const htmlEnv={ASSETS:{fetch:async req=>new URL(req.url).pathname==='/__localized/fr/test-stock-price-prediction.json.gz'?packedResponse({'2030':html,overview:html}):new Response(null,{status:404})}};
  const htmlUrl='https://example.com/fr/prediction/test-stock-price-prediction/2030/';
  assert.equal(await(await worker.fetch(new Request(htmlUrl),htmlEnv)).text(),html);
+ assert.equal(await(await worker.fetch(new Request(htmlUrl.replace('/2030/','/')),htmlEnv)).text(),html);
  assert.equal((await worker.fetch(new Request(htmlUrl.slice(0,-1)),htmlEnv)).status,308);
  assert.equal((await worker.fetch(new Request(htmlUrl.replace('/2030/','/2028/')),htmlEnv)).status,404);
  assert.equal(await(await worker.fetch(new Request(htmlUrl,{method:'HEAD'}),htmlEnv)).text(),'');

@@ -1,15 +1,15 @@
 // Each public URL serves its saved pre-rendered HTML, including translated SEO.
 async function pageResponse(request,env){
  const url=new URL(request.url);
- const match=url.pathname.match(/^\/(es|de|fr|ja|ko)\/prediction\/([a-z0-9-]+)\/(today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030)\/?$/);
+ const match=url.pathname.match(/^\/(es|de|fr|ja|ko)\/prediction\/([a-z0-9-]+)(?:\/(today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030))?\/?$/);
  if(!match)return env.ASSETS.fetch(request);
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});
  if(!url.pathname.endsWith('/')){url.pathname+='/';return Response.redirect(url.toString(),308);}
- const [,locale,stock,period]=match;
- const packUrl=new URL('/__localized/'+locale+'/'+stock+'.json',url.origin);
+ const [,locale,stock,period='overview']=match;
+ const packUrl=new URL('/__localized/'+locale+'/'+stock+'.json.gz',url.origin);
  const pack=await env.ASSETS.fetch(new Request(packUrl));
  if(pack.status!==200)return new Response(null,{status:404});
- const pages=await pack.json(),html=pages[period];
+ const pages=await new Response(pack.body.pipeThrough(new DecompressionStream('gzip'))).json(),html=pages[period];
  if(typeof html!=='string')return new Response(null,{status:404});
  return new Response(request.method==='HEAD'?null:html,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'public, max-age=0, must-revalidate','X-Content-Type-Options':'nosniff'}});
 }

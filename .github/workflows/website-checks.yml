@@ -22,6 +22,8 @@ jobs:
       - run: yarn test:seo
       - run: node scripts/macro-check.cjs
       - run: node scripts/options-check.cjs
+      - name: Prepare compressed export storage
+        run: bash scripts/github-pages/prepare-build-volume.sh
       - run: yarn build:pages
       - run: node scripts/github-pages/verify.cjs
       - run: node scripts/localization/export-check.cjs

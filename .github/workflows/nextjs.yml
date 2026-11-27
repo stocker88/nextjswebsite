@@ -133,6 +133,8 @@ jobs:
         with:
           path: .cache/iwv
           key: iwv-research-v1-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Prepare compressed export storage
+        run: bash scripts/github-pages/prepare-build-volume.sh
       - run: yarn build:pages
       - name: Preserve company research snapshots
         if: always()

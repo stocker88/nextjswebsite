@@ -13,6 +13,6 @@
   },
   "main": "worker/prediction-data.mjs",
   "limits": {
-    "cpu_ms": 50
+    "cpu_ms": 200
   }
 }

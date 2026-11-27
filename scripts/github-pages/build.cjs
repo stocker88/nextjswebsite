@@ -4,7 +4,8 @@ const path = require('node:path');
 const {spawnSync} = require('node:child_process');
 const root = path.resolve(__dirname, '../..');
 process.env.EARNINGS_CACHE_DIR = path.join(root, '.cache/earnings');
-const stage = path.join(root, '.github-pages-build');
+const volume=process.env.WEBSITE_EXPORT_VOLUME;
+const stage = volume ? path.join(volume,'stage') : path.join(root, '.github-pages-build');
 const ts = require('typescript');
 function write(file, text) { const dest = path.join(stage, file); fs.mkdirSync(path.dirname(dest), {recursive:true}); fs.writeFileSync(dest,text); }
 function replace(file, from, to) {
@@ -26,6 +27,7 @@ async function main(){
  require('../render-fear-greed-share.cjs').render(root);
  require('../option-result-preview.cjs').writeResultPreviews(root);
  fs.rmSync(stage,{recursive:true,force:true}); fs.mkdirSync(stage);
+ if(volume){const link=path.join(root,'.github-pages-build');fs.rmSync(link,{recursive:true,force:true});fs.symlinkSync(stage,link,'dir');}
  const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store','.cache']);
  for(const entry of fs.readdirSync(root)) {
   if(ignored.has(entry)||entry.startsWith('.next-')||entry==='.idea'||entry.startsWith('.env')||entry.endsWith('.tsbuildinfo'))continue;
@@ -110,7 +112,8 @@ async function main(){
  write('out/.nojekyll','');
  // Keep one export instead of three multi-gigabyte copies on the CI runner.
  fs.rmSync(path.join(stage,'.next'),{recursive:true,force:true});
- const out=path.join(root,'out');fs.rmSync(out,{recursive:true,force:true});fs.renameSync(path.join(stage,'out'),out);
+ const out=path.join(volume||root,'out');fs.rmSync(out,{recursive:true,force:true});fs.renameSync(path.join(stage,'out'),out);
+ if(volume){const link=path.join(root,'out');fs.rmSync(link,{recursive:true,force:true});fs.symlinkSync(out,link,'dir');}
  console.log('GitHub Pages artifact ready in out/');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});
