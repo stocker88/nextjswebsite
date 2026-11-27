@@ -31,7 +31,8 @@
     "test:profile-onboarding": "node scripts/profile-onboarding-check.cjs && node scripts/username-suggestions-check.cjs && node scripts/signup-funnel-check.cjs && node scripts/signin-reliability-check.cjs",
     "test:desktop-access": "node scripts/desktop-access-check.cjs",
     "sync:learning": "python3 scripts/sync-learning.py",
-    "render:earnings-social": "node scripts/render-earnings-social.cjs"
+    "render:earnings-social": "node scripts/render-earnings-social.cjs",
+    "test:localization": "node scripts/localization/check.cjs && node scripts/localization/multilingual-check.cjs && node scripts/localization/copy-check.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

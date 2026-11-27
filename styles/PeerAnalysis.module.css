@@ -19,3 +19,6 @@
 @media(max-width:700px){.compactCompanies li{grid-template-columns:minmax(0,1fr) 36px}.compactCompanies .valuationFacts{padding-left:0;gap:5px 10px}.valuationFacts{padding-left:0}.valuationFacts>span{min-height:28px}}
 
 .selectionIdentity{display:flex;align-items:center;gap:14px;min-width:0}.selectionIdentity>div{min-width:0;overflow-wrap:anywhere}
+
+.section,.card{box-sizing:border-box;max-width:100%}.axes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.section>*{min-width:0;max-width:100%}.tabs button{min-width:0;white-space:normal}.selection>div{min-width:0}.section select{min-width:0}
+@media(max-width:700px){.section{padding:16px 12px}.card{padding:12px 8px;margin-top:12px}.axes{grid-template-columns:minmax(0,1fr);gap:10px}.selection{flex-wrap:wrap;padding:12px;gap:12px}.selectionActions{flex-direction:row;flex-wrap:wrap;flex-shrink:1}.section header{margin-bottom:16px}.stats{gap:10px}.stats strong{overflow-wrap:anywhere}.tabs{gap:6px}.tabs button{padding:10px 8px;font-size:12px}}

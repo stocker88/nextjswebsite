@@ -1,3 +1,4 @@
+import SpanishContent from '../../components/localization/SpanishContent';
 import {predictionCatalog,cachedPredictionStocks,cachedPredictionDetail} from '../../lib/prediction-cache-server';
 import {useState} from 'react';
 import iwvUniverse from '../../data/iwv-universe.json';
@@ -22,7 +23,7 @@ export default function Predictions({allStocks,cachedSymbols,logos,coverage}:{al
  const q=query.trim().toLowerCase();
  const all=allStocks.filter(s=>!q||matches.has(s.ticker)||`${s.ticker} ${predictionName(s)} ${s.sector}`.toLowerCase().includes(q));
  const items=all.slice((page-1)*SIZE,page*SIZE);
- return <ResearchPage title="Stock Price Predictions: Search Companies & Outlooks" description="Search stock price prediction research by company, ticker or sector. Explore near-term outlooks, longer-term scenarios, earnings and valuation drivers." path="/prediction/">
+ return <SpanishContent><ResearchPage title="Stock Price Predictions: Search Companies & Outlooks" description="Search stock price prediction research by company, ticker or sector. Explore near-term outlooks, longer-term scenarios, earnings and valuation drivers." path="/prediction/">
  <header className="directory-heading"><span>STOCK PRICE PREDICTION RESEARCH</span><h1>Find a stock. Explore its outlook.</h1><p>Search {allStocks.length.toLocaleString('en-US')} companies for price outlooks, financials and related research—from tomorrow and next week to longer-term scenarios.</p></header>
  <form onSubmit={e=>e.preventDefault()}><label htmlFor="prediction-query">Company name, symbol or sector</label><div className="search-row"><input id="prediction-query" type="search" value={query} onChange={e=>{setQuery(e.target.value);setPage(1)}} placeholder="NVDA, Nvidia, Google, semiconductors…"/>{query&&<button type="button" onClick={()=>{setQuery('');setPage(1)}}>Clear</button>}</div></form>
  <p className="result-count" role="status">{all.length} results · Page {page} of {Math.max(1,Math.ceil(all.length/SIZE))}</p>
@@ -43,5 +44,5 @@ export default function Predictions({allStocks,cachedSymbols,logos,coverage}:{al
  @media(max-width:900px){.directory-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
  @media(max-width:600px){.directory-heading{margin-bottom:20px}.directory-heading p{font-size:12px}.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.directory-grid :global(.directory-card){padding:16px 12px;border-radius:12px}.stock-heading{gap:8px}.stock-heading h2{font-size:14px!important}.stock-heading :global(.stock-logo),.stock-heading :global(.stock-logo img){width:28px;height:28px}.stock-heading :global(.stock-logo){flex-basis:28px}.company-name{font-size:12px}.directory-grid small{font-size:10px}.card-arrow{right:9px;top:11px;font-size:14px}.search-row button{padding:12px 15px}}
  `}</style>
- </ResearchPage>;
+ </ResearchPage></SpanishContent>;
 }

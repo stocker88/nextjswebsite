@@ -15,6 +15,7 @@ jobs:
       - run: yarn test:content-access
       - run: node scripts/academy-check.cjs
       - run: node scripts/academy-lessons-check.cjs
+      - run: yarn test:localization
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs
@@ -23,3 +24,4 @@ jobs:
       - run: node scripts/options-check.cjs
       - run: yarn build:pages
       - run: node scripts/github-pages/verify.cjs
+      - run: node scripts/localization/export-check.cjs

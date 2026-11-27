@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import Head from 'next/head';
 import MarketResearchNextSteps from './MarketResearchNextSteps';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ const content={
 };
 export default function AlternativeIndicatorPage({kind}:{kind:'hormuz'|'pizza'}){
  const c=content[kind];
- return <ResearchPage title={c.title} description={c.description} path={c.path} socialImageUrl={`${SITE}/assets/images/${kind}-index-social.png`} socialImageAlt={kind==='hormuz'?'Hormuz Transit Index: vessel crossings and history':'Pentagon Pizza Index: activity and market context'}>
+ return <SpanishContent><ResearchPage title={c.title} description={c.description} path={c.path} socialImageUrl={`${SITE}/assets/images/${kind}-index-social.png`} socialImageAlt={kind==='hormuz'?'Hormuz Transit Index: vessel crossings and history':'Pentagon Pizza Index: activity and market context'}>
  <Head><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:kind==='hormuz'?'Hormuz Transit Index':'Pentagon Pizza Index',path:c.path}]))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'FAQPage',mainEntity:c.questions.map(([name,text])=>({'@type':'Question',name,acceptedAnswer:{'@type':'Answer',text}}))})}}/></Head>
  <header className={s.hero}><span className={s.eyebrow}>{c.label}</span><h1>{c.heading}</h1><p>{c.intro}</p><nav className={s.trackerTabs} aria-label="Alternative indicators">
   <Link href="/hormuz-transit-index/" className={s.trackerTab} aria-current={kind==='hormuz'?'page':undefined}>Strait of Hormuz<span>Transit tracker</span></Link>
@@ -38,5 +39,5 @@ export default function AlternativeIndicatorPage({kind}:{kind:'hormuz'|'pizza'})
  <MarketResearchNextSteps/>
  <section className={s.explainer}><span className={s.eyebrow}>READ THE DATA</span><h2>{kind==='hormuz'?'From shipping trends to stock research':'What the pizza index can tell you'}</h2>{c.questions.map(([q,a])=><article key={q}><h3>{q}</h3><p>{a}</p></article>)}</section>
  <aside className={s.related}><h2>Build the rest of your investment view</h2><p>Pair alternative indicators with company fundamentals, market performance and upcoming events.</p><nav className={s.links}><Link href="/stocks-to-buy/">Stocks to buy: research ideas →</Link><Link href="/stock-market-heatmap/">Explore the stock market →</Link><Link href="/stock-market-calendar/">Market calendar →</Link></nav></aside>
- </ResearchPage>
+ </ResearchPage></SpanishContent>
 }

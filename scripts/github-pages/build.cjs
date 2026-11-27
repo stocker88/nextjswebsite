@@ -39,7 +39,7 @@ async function main(){
  run(['scripts/build-mover-trades.cjs']);
  run(['scripts/render-earnings-social.cjs']);
  write('lib/research-server.ts',`import data from '../data/research.json';\nimport type {ResearchPreview} from './research';\nexport async function fetchResearch():Promise<ResearchPreview[]>{return data as ResearchPreview[];}\n`);
- write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:2}};\n`);
+ write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:${Math.max(2,Math.min(12,Number(process.env.WEBSITE_BUILD_CPUS)||4))}}};\n`);
  replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); const {researchPages} = await import('../../lib/research'); const pages = researchPages(items); return {paths:pages.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);
  replace('pages/stock-market-news/page/[page].tsx',"export function getStaticPaths() {return {paths:[],fallback:'blocking'};}","export async function getStaticPaths() {const all=await fetchResearch();return {paths:Array.from({length:Math.max(0,Math.ceil(all.length/40)-1)},(_,i)=>({params:{page:String(i+2)}})),fallback:false};}");
  replace('pages/instruments/[symbol].tsx',"return {paths:[],fallback:'blocking'};","return {paths:catalog.map(item=>({params:{symbol:item.symbol}})),fallback:false};");
@@ -75,7 +75,15 @@ async function main(){
  replace('pages/sitemap.xml.tsx','`/stocks?page=${page}`','`/stocks/page/${page}`');
  require.extensions['.ts']=require.extensions['.tsx']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText,filename);
  process.chdir(stage);
- await require(path.join(stage,'pages/sitemap.xml.tsx')).getServerSideProps({res:{setHeader(){},end(xml){write('public/sitemap.xml',xml);}}});
+ const sitemapGenerator=require(path.join(stage,'pages/sitemap.xml.tsx')).getServerSideProps;
+ let sitemapIndex='';
+ await sitemapGenerator({res:{setHeader(){},end(xml){sitemapIndex=xml;write('public/sitemap.xml',xml);}}});
+ for(const match of sitemapIndex.matchAll(/<loc>(.*?)<\/loc>/g)){
+  const route=new URL(match[1]).pathname;
+  if(!/^\/sitemaps\/(en|es|de|fr|ja|ko)-[1-9][0-9]*\.xml$/.test(route))throw new Error('Unexpected sitemap part: '+route);
+  await sitemapGenerator({sitemapPart:path.basename(route),res:{setHeader(){},end(xml){write('public'+route,xml);}}});
+ }
+ fs.rmSync(path.join(stage,'pages/sitemaps'),{recursive:true});
  fs.unlinkSync(path.join(stage,'pages/sitemap.xml.tsx'));
  await require(path.join(stage,'pages/news-sitemap.xml.tsx')).getServerSideProps({res:{statusCode:200,setHeader(){},end(xml){write('public/news-sitemap.xml',xml);}}});
  fs.unlinkSync(path.join(stage,'pages/news-sitemap.xml.tsx'));

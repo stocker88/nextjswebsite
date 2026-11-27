@@ -1,3 +1,4 @@
+import {useSiteLanguage} from '../lib/localization/use-site-language';
 import {useEffect, useRef, useState} from 'react';
 import {siteNavigation} from '../lib/site-navigation';
 import styles from '../styles/SiteMenu.module.css';
@@ -10,6 +11,7 @@ const groups = [
   {name:'Company', intro:'Meet Stocks To Buy Now Research.', description:'The purpose, principles and people behind the product.', links:[{label:'About us',href:'/company/',detail:'Why we are building Stocks To Buy Now Research'},{label:'Culture',href:'/company/culture/',detail:'The principles we build by'},{label:'Careers',href:'/company/careers/',detail:'Explore future opportunities'},{label:'Meet the founder',href:'/authors/aness-hussein-ali/',detail:'Aness Hussein Ali — education and experience'},{label:'Public reviews',href:'/reviews/',detail:'Read customer feedback at the source'},{label:'Contact us',href:'mailto:support@stockstobuynow.ai',detail:'Get in touch with the team'}]},
 ];
 export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean;onClose:()=>void;navBasePath?:string}) {
+  const {t,href}=useSiteLanguage();
   const [active,setActive]=useState<string|null>(null);
   const root=useRef<HTMLDivElement>(null);
   useEffect(()=>{if(!isOpen)setActive(null);},[isOpen]);
@@ -30,7 +32,7 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
     const nav=root.current?.closest('nav');
     const trap=(event:KeyboardEvent)=>{
       if(event.key!=='Tab'||!nav)return;
-      const items=Array.from(nav.querySelectorAll<HTMLElement>('a[href],button,input')).filter(item=>item.getClientRects().length>0);
+      const items=Array.from(nav.querySelectorAll<HTMLElement>('a[href],button,input,select')).filter(item=>item.getClientRects().length>0);
       const first=items[0],last=items[items.length-1];
       if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
       else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
@@ -44,14 +46,14 @@ export default function SiteMenu({isOpen,onClose,navBasePath=''}:{isOpen:boolean
   return <div data-nosnippet="" ref={root} id="site-navigation-links" className={`${styles.menu} ${isOpen?styles.mobileOpen:''}`} onMouseLeave={()=>{if(window.matchMedia('(min-width: 1000px) and (hover: hover)').matches)setActive(null);}} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setActive(null);}}>
     {groups.map(group=><div key={group.name} className={styles.group} onMouseEnter={()=>{if(window.matchMedia('(min-width: 1000px) and (hover: hover)').matches)setActive(group.name);}}>
       <button type="button" className={styles.trigger} aria-expanded={active===group.name} aria-controls={`menu-${group.name.toLowerCase()}`} onClick={()=>setActive(active===group.name?null:group.name)} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();setActive(group.name);requestAnimationFrame(()=>document.getElementById(`menu-${group.name.toLowerCase()}`)?.querySelector<HTMLAnchorElement>('a')?.focus());}}}>
-        {group.name}<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>
+        {t(group.name)}<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5"/></svg>
       </button>
       <div id={`menu-${group.name.toLowerCase()}`} hidden={active!==group.name} className={styles.panel}>
-        <div className={styles.intro}><span>EXPLORE / {group.name.toUpperCase()}</span><h2>{group.intro}</h2><p>{group.description}</p><span className={styles.arrow} aria-hidden="true">↗</span></div>
-        <div className={styles.links}>{group.links.map(item=><a key={item.href} href={item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href} onClick={close}><span>{item.label}<span aria-hidden="true">↗</span></span><small>{item.detail}</small></a>)}</div>
+        <div className={styles.intro}><span>{t('Explore').toUpperCase()} / {t(group.name).toUpperCase()}</span><h2>{t(group.intro)}</h2><p>{t(group.description)}</p><span className={styles.arrow} aria-hidden="true">↗</span></div>
+        <div className={styles.links}>{group.links.map(item=><a key={item.href} href={href(item.href.startsWith('#')?`${navBasePath||'/'}${item.href}`:item.href)} onClick={close}><span>{t(item.label)}<span aria-hidden="true">↗</span></span><small>{t(item.detail)}</small></a>)}</div>
       </div>
     </div>)}
 
-    <a className={styles.mobileContact} href="mailto:support@stockstobuynow.ai">Contact the team ↗</a>
+    <a className={styles.mobileContact} href="mailto:support@stockstobuynow.ai">{t('Contact the team')} ↗</a>
   </div>;
 }

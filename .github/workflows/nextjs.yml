@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 180
     env:
       NEXT_PUBLIC_APPLE_PROVIDER_TOKEN: ${{ vars.APPLE_PROVIDER_TOKEN }}
     steps:
@@ -34,6 +34,7 @@ jobs:
       - run: node scripts/academy-check.cjs
       - run: node scripts/academy-lessons-check.cjs
       - run: yarn test:profile-onboarding
+      - run: yarn test:localization
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs
@@ -140,6 +141,7 @@ jobs:
           path: .cache/earnings
           key: earnings-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - run: node scripts/github-pages/verify.cjs
+      - run: node scripts/localization/export-check.cjs
       - run: node scripts/public-investor-pages-check.cjs
       - uses: actions/upload-pages-artifact@v3
         if: vars.WEBSITE_HOST != 'cloudflare'
@@ -147,7 +149,7 @@ jobs:
           path: out
       - name: Reuse embedded prediction data to reduce asset count
         if: vars.WEBSITE_HOST == 'cloudflare'
-        run: node scripts/compact-prediction-export.cjs
+        run: node scripts/compact-prediction-export.cjs && node scripts/pack-localized-predictions.cjs
       - name: Check Cloudflare asset limits and SEO routing
         if: vars.WEBSITE_HOST == 'cloudflare'
         run: node scripts/cloudflare-check.cjs

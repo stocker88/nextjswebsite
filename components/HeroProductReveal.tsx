@@ -113,7 +113,7 @@ export default function HeroProductReveal() {
       <div className={styles.halo} aria-hidden="true" />
       <div className={styles.dashboard}>
         <div className={styles.topbar}>
-          <div className={styles.brand}><img src="/assets/images/stockerRobotIcon.png" width="30" height="30" alt="" /><span>Stocks to Buy Now<span className={styles.brandAI}> AI</span></span></div>
+          <div className={styles.brand}><img src="/assets/images/stockerRobotIcon.png" width="30" height="30" alt="" /><span>Stocks to Buy Now<span className={styles.brandAI}> Research</span></span></div>
           <span className={styles.previewLabel}><i /> PRODUCT PREVIEW</span>
         </div>
         <div className={styles.toolbar}>

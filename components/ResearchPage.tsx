@@ -1,3 +1,5 @@
+import {useSiteLanguage} from '../lib/localization/use-site-language';
+import {englishPath} from '../lib/localization/routes';
 import ShareControl from './ShareControl';
 import TrackRecordDownload from './TrackRecordDownload';
 import Head from 'next/head';
@@ -5,8 +7,10 @@ import Header from './layout/Header';
 import ResearchSections from './ResearchSections';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
-export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, hideResearchNavigation = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now Research research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;hideResearchNavigation?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
-  const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(path);
+export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, hideResearchNavigation = false, predictionLayout = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now Research research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;hideResearchNavigation?:boolean;predictionLayout?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
+  const {t,href}=useSiteLanguage();
+  const basePath=englishPath(path);
+  const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(basePath);
   return <>
     <Head>
       <title>{`${title} | Stocks To Buy Now Research`}</title>
@@ -30,11 +34,12 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="twitter:image:alt" content={socialImageAlt} />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
-    <main className={stockDirectory ? "stock-directory" : path === "/trading-tools/" ? "trading-tools" : path.startsWith("/crypto-prediction") ? "crypto-research" : undefined}>
-      {!noindex && (path.replace(/\/$/,'')==='/methodology' ? <div className="research-share-actions"><ShareControl title={title} path={path}/><TrackRecordDownload /></div> : <ShareControl title={title} path={path}/>)}
-      {stockDirectory ? children : !hideResearchNavigation && <ResearchSections path={path} />}
+    <main className={predictionLayout ? "prediction-layout" : stockDirectory ? "stock-directory" : basePath === "/trading-tools/" ? "trading-tools" : basePath.startsWith("/crypto-prediction") ? "crypto-research" : undefined}>
+      {!noindex && !predictionLayout && (path.replace(/\/$/,'')==='/methodology' ? <div className="research-share-actions"><ShareControl title={title} path={path}/><TrackRecordDownload /></div> : <ShareControl title={title} path={path}/>)}
+      {stockDirectory ? children : !hideResearchNavigation && <div className={predictionLayout?"prediction-nav-top":undefined}><ResearchSections path={path} /></div>}
       {!stockDirectory && children}
-      <nav className="research-resources" aria-label="Research resources">
+      {predictionLayout&&!hideResearchNavigation&&<div className="prediction-nav-bottom"><ResearchSections path={path}/></div>}
+      <nav className="research-resources" aria-label={t('Research resources')}>
         {[
           {href:'/stocks',label:'Browse stocks',icon:'M3 17l6-6 4 4 8-10 M15 5h6v6'},
           {href:'/glossary',label:'Investing glossary',icon:'M12 5v15 M12 5C8 2 4 3 2 4v15c3-2 7-2 10 1 3-3 7-3 10-1V4c-2-1-6-2-10 1'},
@@ -44,14 +49,18 @@ export default function ResearchPage({title, path, children, description = title
         ].map(resource => {
           const current = path.split('?')[0];
           const active = current === resource.href || current.startsWith(resource.href + '/') || (resource.href === '/stocks' && current.startsWith('/instruments/'));
-          return <Link key={resource.href} href={resource.href} aria-current={active ? 'page' : undefined}>
+          return <Link key={resource.href} href={href(resource.href)} aria-current={active ? 'page' : undefined}>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={resource.icon}/></svg>
-            <span>{resource.label}</span>
+            <span>{t(resource.label)}</span>
           </Link>;
         })}
       </nav>
     </main>
     <style jsx>{`
+      .prediction-nav-bottom{display:none}
+      main.prediction-layout{min-width:0;max-width:100%;box-sizing:border-box}
+      main.prediction-layout > :global(*){min-width:0;max-width:100%;box-sizing:border-box}
+      @media(max-width:700px){main.prediction-layout{padding:24px 12px 28px}.prediction-nav-top{display:none}.prediction-nav-bottom{display:block;margin:24px 0}main.prediction-layout :global(.public-copy){font-size:14px;line-height:1.55;overflow-wrap:anywhere}main.prediction-layout :global(.public-copy h1){font-size:28px;margin:8px 0 12px}main.prediction-layout :global(.public-copy p){margin:8px 0 14px}main.prediction-layout :global(p),main.prediction-layout :global(a){overflow-wrap:anywhere}}
       .research-share-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
       .stock-directory .research-resources {display:flex;flex-wrap:wrap;gap:6px 20px;margin:28px 0 0;padding-top:18px;border-top:1px solid #ffffff12;}
       .stock-directory .research-resources :global(a),.stock-directory .research-resources :global(a[aria-current="page"]) {padding:4px 0;min-height:28px;border:0;background:none;border-radius:0;color:#8fa0b8;font-size:11px;font-weight:400;}

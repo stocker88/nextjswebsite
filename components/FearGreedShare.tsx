@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import ShareAction from './ShareAction';
 import ShareControl from './ShareControl';
 import {useEffect,useRef,useState} from 'react';
@@ -14,6 +15,6 @@ export default function FearGreedShare(){
  }catch{setError('The image could not be loaded. Please try again.')}finally{setBusy(false)}}
  function download(){if(!image)return;const a=document.createElement('a');a.href=image.url;a.download=image.file.name;a.click()}
  async function share(){if(!image)return;try{if(navigator.canShare?.({files:[image.file]}))await navigator.share({files:[image.file],title:'Fear & Greed Index'});else download()}catch(e){if((e as Error).name!=='AbortError')setError('Sharing is unavailable here. Use Download PNG.')}}
- return <><ShareControl title="Fear & Greed Index" path="/fear-and-greed-index/"/><ShareAction kind="save" onClick={prepare} disabled={busy}>{busy?'Preparing image…':'Save Image'}</ShareAction>{error&&!image&&<p role="alert">{error}</p>}
- <dialog ref={dialog} className={styles.shareDialog} onCancel={()=>setImage(null)}><div className={styles.shareHeader}><h2>Share Fear &amp; Greed</h2><button aria-label="Close image preview" onClick={()=>{dialog.current?.close();setImage(null)}}>×</button></div>{image&&<img src={image.url} alt="Fear and Greed sentiment recap with website branding and QR code"/>}<div className={styles.shareActions}><button onClick={share}>Share image</button><button onClick={download}>Download PNG</button></div>{error&&<p role="alert">{error}</p>}</dialog></>;
+ return <SpanishContent><><ShareControl title="Fear & Greed Index" path="/fear-and-greed-index/"/><ShareAction kind="save" onClick={prepare} disabled={busy}>{busy?'Preparing image…':'Save Image'}</ShareAction>{error&&!image&&<p role="alert">{error}</p>}
+ <dialog ref={dialog} className={styles.shareDialog} onCancel={()=>setImage(null)}><div className={styles.shareHeader}><h2>Share Fear &amp; Greed</h2><button aria-label="Close image preview" onClick={()=>{dialog.current?.close();setImage(null)}}>×</button></div>{image&&<img src={image.url} alt="Fear and Greed sentiment recap with website branding and QR code"/>}<div className={styles.shareActions}><button onClick={share}>Share image</button><button onClick={download}>Download PNG</button></div>{error&&<p role="alert">{error}</p>}</dialog></></SpanishContent>;
 }

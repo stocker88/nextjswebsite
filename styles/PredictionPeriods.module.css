@@ -3,3 +3,29 @@
 .alternatives{margin-top:26px;border-top:1px solid #334158;padding-top:12px}.scenarioButton{display:flex;flex-direction:column;gap:12px;text-align:left;padding:20px;border:1px solid #3c4960;border-radius:12px;background:#152238;color:#eaf0fa;cursor:pointer}.scenarioButton strong{font-size:26px}.scenarioButton[aria-pressed=true]{border-color:#8ddccb;box-shadow:0 0 0 1px #8ddccb}.scenarioButton:focus-visible{outline:3px solid #c4a7ff;outline-offset:4px}.scenarioButton small{line-height:1.5;color:#adbed3}
 
 .pageSelector{display:grid;gap:10px;color:#d7c8f6;font-size:15px}.pageSelector select{width:100%;min-height:46px;padding:12px;border:1px solid #ac8de1;border-radius:10px;background:#211c35;color:#f1e9ff;font-size:16px}.pageSelector small{color:#aebbd0;font-size:13px;line-height:1.5}
+
+.chartHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.chartHeading h2{margin:0}.chartPanel{min-width:0}.chartPanel :global(.prediction-chart-shell){padding:0!important;margin:16px 0 0;max-width:100%;min-width:0;background:none}.chartPanel :global(.ec-chart){min-width:0;max-width:100%;box-sizing:border-box}
+@media(max-width:700px){
+ .chartPanel{padding:12px 0;border:1px solid #30405a;border-radius:16px;margin:16px -6px;max-width:none!important;width:calc(100% + 12px);box-sizing:border-box}
+ .chartPanel>h2,.chartPanel>p,.chartHeading,.chartPanel>.controls,.chartPanel>.alternatives{margin-left:12px;margin-right:12px}
+ .chartHeading{gap:8px}.chartHeading h2{font-size:20px;flex:1;min-width:0}.chartHeading>div{margin:0}
+ .chartPanel :global(.prediction-chart-shell){margin-top:12px}
+ .chartPanel :global(.ec-chart){padding:10px 6px;border:0;border-radius:14px;margin:0}
+ .controls{gap:12px;margin:12px 0}.controls label{gap:6px;font-size:13px;line-height:1.5}.controls input{min-width:0}
+ .panel{overflow-wrap:anywhere}.alternatives{margin-top:14px;padding-top:8px}.scenarioButton{padding:10px;min-width:0;font-size:12px}
+ .pageSelector{gap:6px;font-size:13px}.pageSelector select{min-height:42px;padding:8px}.pageSelector small{font-size:11px}
+}
+
+@media(max-width:700px){
+ .chartPanel{display:flex;flex-direction:column}
+ .chartPanel>*{order:4;min-width:0}
+ .chartPanel>.chartHeading{order:0}
+ .chartPanel>:global(.prediction-chart-shell){order:1}
+ .chartPanel>.controls{order:2}
+ .chartPanel>.alternatives{order:3}
+}
+
+.chartPanel :global(.ec-prediction-controls) .controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 16px;margin:0;padding:4px 8px}
+.chartPanel :global(.ec-prediction-controls) .controls label{font-size:12px;line-height:1.4;gap:3px;margin:0}
+.chartPanel :global(.ec-prediction-controls) .controls input{width:100%;min-width:0;margin:0;height:24px}
+@media(max-width:360px){.chartPanel :global(.ec-prediction-controls) .controls{gap:8px}.chartPanel :global(.ec-prediction-controls) .controls label{font-size:11px}}

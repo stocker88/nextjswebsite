@@ -1,3 +1,4 @@
+import SpanishContent from '../../components/localization/SpanishContent';
 import {useEffect,useRef,useState} from 'react';
 import {mobileStoreUrl} from '../../lib/mobile-app';
 import {AccountLink} from '../../components/SiteAccount';
@@ -26,7 +27,7 @@ const date=(s:string)=>new Date(s).toLocaleString('en-US',{timeZone:'America/New
 function View(){
  const [store,setStore]=useState(mobileStoreUrl(''));
  useEffect(()=>setStore(mobileStoreUrl(navigator.userAgent)),[]);
- return <><AccountLink className={`${styles.view} ${styles.alertDesktop}`} destination="/continue/">Receive real-time alerts →</AccountLink><a className={`${styles.view} ${styles.alertMobile}`} href={store}>Receive real-time alerts →</a></>;
+ return <SpanishContent><><AccountLink className={`${styles.view} ${styles.alertDesktop}`} destination="/continue/">Receive real-time alerts →</AccountLink><a className={`${styles.view} ${styles.alertMobile}`} href={store}>Receive real-time alerts →</a></></SpanishContent>;
 }
 export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|null}){
  const [range,setRange]=useState(90);
@@ -45,7 +46,7 @@ export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|nul
  useChartEntrance(historyRef,JSON.stringify([range,points]));
  useChartEntrance(gaugeRef,String(value));
  const angle=value===null?null:Math.PI*(1-value/100);
- return <><Head><title>{pageTitle}</title><meta name="description" content={pageDescription}/><link rel="canonical" href={SITE+'/fear-and-greed-index/'}/><meta property="og:title" content={pageTitle}/><meta property="og:description" content={pageDescription}/><meta property="og:url" content={SITE+'/fear-and-greed-index/'}/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content={pageTitle}/><meta name="twitter:description" content={pageDescription}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Fear and Greed Index',path:'/fear-and-greed-index/'}]))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:pageTitle,description:pageDescription,url:SITE+'/fear-and-greed-index/',inLanguage:'en',about:{'@type':'Thing',name:'CNN Fear and Greed Index',sameAs:CNN_URL},publisher:{'@type':'Organization',name:'Stocks To Buy Now Research',url:SITE+'/'},citation:CNN_URL})}}/></Head>
+ return <SpanishContent><><Head><title>{pageTitle}</title><meta name="description" content={pageDescription}/><link rel="canonical" href={SITE+'/fear-and-greed-index/'}/><meta property="og:title" content={pageTitle}/><meta property="og:description" content={pageDescription}/><meta property="og:url" content={SITE+'/fear-and-greed-index/'}/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content={pageTitle}/><meta name="twitter:description" content={pageDescription}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(breadcrumbs([{name:'Home',path:'/'},{name:'Fear and Greed Index',path:'/fear-and-greed-index/'}]))}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:pageTitle,description:pageDescription,url:SITE+'/fear-and-greed-index/',inLanguage:'en',about:{'@type':'Thing',name:'CNN Fear and Greed Index',sameAs:CNN_URL},publisher:{'@type':'Organization',name:'Stocks To Buy Now Research',url:SITE+'/'},citation:CNN_URL})}}/></Head>
  <Header forceDark navBasePath="/"/><main className={styles.page}><div className={styles.container}>
  <a className={styles.back} href="/">Home / Market sentiment</a>
  <header className={styles.hero}><span className={styles.eyebrow}>THE MOOD OF THE MARKET</span><h1>Fear and Greed Index<br/><em>Stock market sentiment.</em></h1><p>Explore CNN’s Fear and Greed Index: the latest available reading, a historical chart and the seven indicators behind investor sentiment. The index runs from 0 (extreme fear) to 100 (extreme greed).</p><nav aria-label="Related tools"><a href="/stock-market-heatmap/">Market heatmap →</a><a href="/stock-market-calendar/">Market calendar →</a><a href="/options-activity/">Options activity →</a></nav></header>
@@ -79,6 +80,6 @@ export default function FearGreedPage({snapshot}:{snapshot:FearGreedSnapshot|nul
  </div></section>
  <section className={styles.sources} aria-labelledby="index-sources"><h2 id="index-sources">Sources and update information</h2><p>Index methodology: <a href={CNN_URL} target="_blank" rel="noopener noreferrer">CNN Fear &amp; Greed Index</a>. {snapshot?.source==='finica'?<>The saved snapshot is supplied through <a href="https://finica.io/api/fear-greed" target="_blank" rel="noopener noreferrer">Finica</a>. </>:null}Historical observations are retained between updates; unavailable values are not filled with estimates.</p><p>Published by <a href="/company/">Stocks To Buy Now Research</a> · <a href="/methodology/">Research methodology and limitations</a> · <a href="/editorial-policy/">Editorial standards</a></p></section>
  <footer className={styles.footer}><p><a href="https://www.stockstobuynow.ai/">www.StocksToBuyNow.ai</a></p></footer>
- </div></main></>;
+ </div></main></></SpanishContent>;
 }
 export function getStaticProps(){return {props:{snapshot:saved as FearGreedSnapshot|null}};}

@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import Link from 'next/link';
 
 export default function ResearchSections({path}: {path: string}) {
@@ -8,7 +9,7 @@ export default function ResearchSections({path}: {path: string}) {
     {href: '/earnings-calendar/', label: 'EARNINGS CALENDAR', title: 'Upcoming Earnings →', active: current.startsWith('/earnings-calendar')},
     {href: '/stocks-to-buy', label: 'STOCK IDEAS', title: 'View Stocks to Buy Ideas →', active: current.startsWith('/stocks-to-buy')},
   ];
-  return <>
+  return <SpanishContent><>
     <nav className="research-navigation" aria-label="Research sections">
       {sections.map(section => <Link key={section.href} href={section.href} aria-current={section.active ? 'page' : undefined}>
         <span>{section.label}</span><strong>{section.title}</strong>
@@ -25,5 +26,5 @@ export default function ResearchSections({path}: {path: string}) {
       @media(max-width:600px) {.research-navigation {gap:8px;grid-template-columns:repeat(2,minmax(0,1fr));} .research-navigation :global(a) {padding:12px 10px;}}
       @media(max-width:600px) {.research-navigation span {font-size:8px;letter-spacing:.05em;} .research-navigation strong {font-size:12px;} }
     `}</style>
-  </>;
+  </></SpanishContent>;
 }

@@ -12,6 +12,7 @@ const {bandAccess}=load('lib/band-access.ts',require);
 function render(account,verified=null){
  let hook=0;
  const {default:Component}=load('components/StockSmartMoney.tsx',id=>{
+  if(id==='./localization/SpanishContent')return {__esModule:true,default:({children})=>React.createElement(React.Fragment,null,children)};
   if(id==='react')return {...React,useState:initial=>[hook++===0?verified:initial,()=>{}],useEffect:()=>{}};
   if(id==='./SiteAccount')return {useSiteAccount:()=>account};
   if(id==='../lib/band-access')return {bandAccess};

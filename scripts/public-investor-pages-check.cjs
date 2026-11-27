@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript');
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,f);
 const {publicInvestors,investorPath}=require('../lib/public-investors.ts');
-const sitemap=fs.readFileSync('out/sitemap.xml','utf8');
+const sitemap=require('./read-export-sitemap.cjs')('out');
 assert.equal(publicInvestors.length,10);
 for(const p of publicInvestors){
  const route=investorPath(p.id),html=fs.readFileSync('out'+route+'index.html','utf8');

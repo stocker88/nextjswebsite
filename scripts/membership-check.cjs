@@ -6,6 +6,8 @@ function load(relative){
  const source=ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText;
  const module={exports:{}};cache.set(filename,module);
  function local(id){
+  if(id==='next/router')return {useRouter:()=>({asPath:'/',pathname:'/'})};
+  if(id.startsWith('.')&&id.endsWith('.json'))return require(path.resolve(path.dirname(filename),id));
   if(id.endsWith('.css'))return new Proxy({__esModule:true,default:{}},{get:(_,name)=>name==='default'?new Proxy({},{get:(_,key)=>String(key)}):undefined});
   if(id==='next/head')return {__esModule:true,default:({children})=>React.createElement(React.Fragment,null,children)};
   if(id==='next/link')return {__esModule:true,default:({href,children,...rest})=>React.createElement('a',{href,...rest},children)};

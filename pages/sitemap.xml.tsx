@@ -1,3 +1,4 @@
+import {spanishRoutes,hasSpanish,englishPath,routePath,languages,languageOf,languagePath,availableLanguages,hasTranslation} from '../lib/localization/routes';
 import {toolEntries} from '../lib/seo-tools-server';
 import {workflows} from '../lib/trading-workflows';
 import {cachedPredictionStocks,predictionCatalog,cachedPredictionDetail} from '../lib/prediction-cache-server';
@@ -34,7 +35,7 @@ const escapeXml = (value: string) =>
 export default function Sitemap() {
   return null;
 }
-export async function getServerSideProps({ res }: any) {
+export async function getServerSideProps({ res, sitemapPart }: any) {
   const items = await fetchResearch();
   const entries: { path: string; modified?: string | null }[] = [
     "/",
@@ -117,18 +118,34 @@ export async function getServerSideProps({ res }: any) {
   for (let page = 2; page <= Math.ceil(items.length / 40); page++)
     entries.push({ path: `/stock-market-news/page/${page}` });
   for(let page=2;page<=Math.ceil(catalog.length/48);page++) entries.push({path:`/stocks?page=${page}`});
+ const originalEntries=[...entries];
+ for(const language of languages.filter(l=>l!=='en'))entries.push(...originalEntries.filter(e=>hasTranslation(e.path,language)).map(e=>({...e,path:languagePath(e.path,language)})));
+ entries.push(...spanishRoutes.map(path=>({path:'/es'+path})));
  const unique = Array.from(new Map(entries.map((e) => [e.path, e])).values());
   res.setHeader("Content-Type", "application/xml; charset=utf-8");
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=60, stale-while-revalidate=300",
   );
+  const chunkSize=10000;
+  if(!sitemapPart){
+    const groups=languages.flatMap(language=>{
+      const count=unique.filter(e=>languageOf(e.path)===language).length;
+      return Array.from({length:Math.ceil(count/chunkSize)},(_,i)=>`${language}-${i+1}`);
+    });
+    res.end('<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+groups.map(part=>`<sitemap><loc>${SITE}/sitemaps/${part}.xml</loc></sitemap>`).join('')+'</sitemapindex>');
+    return {props:{}};
+  }
+  const match=/^(en|es|de|fr|ja|ko)-([1-9][0-9]*)$/.exec(sitemapPart.replace(/\.xml$/, ''));
+  if(!match)return {notFound:true};
+  const selected=unique.filter(e=>languageOf(e.path)===match[1]).slice((Number(match[2])-1)*chunkSize,Number(match[2])*chunkSize);
+  if(!selected.length)return {notFound:true};
   res.end(
-    '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
-      unique
+    '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' +
+      selected
         .map(
           (e) =>
-            `<url><loc>${escapeXml(SITE + e.path)}</loc>${e.modified ? `<lastmod>${escapeXml(e.modified)}</lastmod>` : ""}</url>`,
+            `<url><loc>${escapeXml(SITE + e.path)}</loc>${availableLanguages(e.path).length>1?[...availableLanguages(e.path),'x-default'].map(lang=>`<xhtml:link rel="alternate" hreflang="${lang}" href="${escapeXml(SITE+languagePath(routePath(englishPath(e.path)),lang==='x-default'?'en':lang as typeof languages[number]))}"/>`).join(''):''}${e.modified ? `<lastmod>${escapeXml(e.modified)}</lastmod>` : ""}</url>`,
         )
         .join("") +
       "</urlset>",

@@ -1,11 +1,12 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useState} from 'react';
 import AppDownloadModal from './AppDownloadModal';
 export function MarketPredictionPrompt({onClose}:{onClose:()=>void}) {
- return <AppDownloadModal placement="macro_catalyst_hedging_ahead" title="Get the app for market predictions" description="Explore macro scenarios, market outlooks and the guide to trading major events. Build your plan before the next release." onClose={onClose}/>;
+ return <LocalizedContent><AppDownloadModal placement="macro_catalyst_hedging_ahead" title="Get the app for market predictions" description="Explore macro scenarios, market outlooks and the guide to trading major events. Build your plan before the next release." onClose={onClose}/></LocalizedContent>;
 }
 export default function HedgingAhead({compact=false,onActivate}:{compact?:boolean;onActivate?:()=>void}) {
  const [open,setOpen]=useState(false);
- return <><button type="button" className={'hedging-ahead'+(compact?' compact':'')} aria-haspopup="dialog" onClick={()=>onActivate?onActivate():setOpen(true)}>
+ return <LocalizedContent><><button type="button" className={'hedging-ahead'+(compact?' compact':'')} aria-haspopup="dialog" onClick={()=>onActivate?onActivate():setOpen(true)}>
   <span className="shield" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3 4 6v5c0 5 4 8 8 10 4-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></svg></span>
   <span className="copy"><span className="flag">Hedging Ahead</span>{!compact&&<><span className="heading">Plan for the next market move</span><span className="detail">Macro scenarios · Event preparation</span></>}</span>
   {!compact&&<span className="action"><span className="pro">Pro</span>Market prediction <span aria-hidden="true">↗</span></span>}
@@ -16,5 +17,5 @@ export default function HedgingAhead({compact=false,onActivate}:{compact?:boolea
   .hedging-ahead:hover{border-color:#bc9af4;box-shadow:0 8px 24px #0003;transform:translateY(-1px)}.hedging-ahead:focus-visible{outline:2px solid #d2b5ff;outline-offset:3px}.compact{width:auto;max-width:100%;gap:6px;padding:8px;margin-top:10px;border-radius:10px}.compact .shield{width:18px;height:20px;border:0;background:none}.compact .shield svg{width:17px}.compact .flag{font-size:9px;letter-spacing:.02em}
   @media(max-width:500px){.hedging-ahead:not(.compact){flex-wrap:wrap;padding:14px;gap:10px}.heading{font-size:14px}.action{width:100%;padding-top:10px;border-top:1px solid #ad8de32e}.action .pro{display:inline;margin-right:8px}}
   @media(prefers-reduced-motion:reduce){.hedging-ahead{transition:none}.hedging-ahead:hover{transform:none}}
- `}</style></>;
+ `}</style></></LocalizedContent>;
 }

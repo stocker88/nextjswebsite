@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import {DesktopActionText} from './DesktopAppLink';
 import {useEffect,useId,useState} from 'react';
 import Link from 'next/link';
@@ -56,7 +57,7 @@ export default function StockPeerAnalysis({symbol='',companies=[],industries=[],
   setSelected(last);
  }
  function resetComparison(){setHidden([]);setSelected(symbol||companies[0]?.symbol||'');}
- return <section id="peer-analysis" className={styles.section}>
+ return <SpanishContent><section id="peer-analysis" className={styles.section}>
   <header><span className={styles.eyebrow}>{sectionLabel||(industry?'INDUSTRY ANALYSIS':'02 / PEER ANALYSIS')}</span><h2>{industry?`${industry} comparison & valuation`:competitorTitle?`Explore ${symbol} Competitors`:`Explore ${symbol} alongside its peers`}</h2><p>{industry||current?.industry||'Related companies'} · {companies.length} companies · Cached market data</p></header>
   <div className={styles.card}>
    <h3>Comparison</h3>
@@ -99,5 +100,5 @@ export default function StockPeerAnalysis({symbol='',companies=[],industries=[],
   {industries.length>0&&<IndustryExplorer industries={industries} current={industry||current?.industry}/>}
   <details className={styles.method}><summary>How this comparison works</summary><p>Uses the saved companies from the same industry and listing market{symbol?`, including ${symbol}`:''}, ordered by cached market cap. Company snapshots can have different dates; the web cache may cover fewer metrics and periods than the app.</p><p>Periods end at each company’s dated price snapshot. Change compares the latest saved observation with one at or before the selected period’s start. A daily price change uses consecutive saved sessions. Financial data updates quarterly, so short periods may show no change. Missing history and zero starting values are excluded; a negative starting value uses its absolute value as the denominator.</p><p>Metrics use saved ratios and percentages. Market caps use the listing market’s reporting currency; underlying financial statements may use different currencies. Circle sizes have a minimum for touch visibility, and an outlined circle indicates a missing market cap. These comparisons describe data, not recommendations or price predictions.</p></details>
   {app&&<AppDownloadModal placement="stock_peer_analysis" title="Explore the full peer analysis in the app" onClose={()=>setApp(false)}/>}
- </section>;
+ </section></SpanishContent>;
 }

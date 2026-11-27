@@ -1,3 +1,4 @@
+import LanguageAlternates from '../components/localization/LanguageAlternates';
 import { captureAcquisition, installAcquisitionCapture } from '../lib/acquisition';
 import { AppProps } from 'next/app'
 import { useEffect } from 'react';
@@ -30,7 +31,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div className="App">
       <SessionProvider>
         <InteractionPolish />
-        <SiteAccountProvider><Component {...pageProps} /></SiteAccountProvider>
+        <SiteAccountProvider><LanguageAlternates /><Component {...pageProps} /></SiteAccountProvider>
       </SessionProvider>
     </div>
   );

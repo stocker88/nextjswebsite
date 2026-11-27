@@ -1,3 +1,5 @@
+import LanguageSelector from '../localization/LanguageSelector';
+import {useSiteLanguage} from '../../lib/localization/use-site-language';
 import {DESKTOP_ACCESS_PATH} from '../../lib/desktop-access';
 import SiteMenu from '../SiteMenu';
 import AccountMenu from '../AccountMenu';
@@ -23,6 +25,7 @@ export default function Header({
   socialNoticeVariant = 'standard',
 }) {
   const { pathname } = useRouter();
+  const {t,href:localizedHref}=useSiteLanguage();
   const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
   // /s renders the same homepage for social/referral links.
   const isHomePage = pathname === '/' || pathname === '/s';
@@ -168,7 +171,7 @@ export default function Header({
       <header className={`site-header ${isHomePage ? 'is-home' : ''} ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor, '--header-surface-color': isOpen ? '#0b1323' : undefined}}>
         <span className="site-header-edge" aria-hidden="true" />
         <nav className={menuStyles.nav} aria-label="Main navigation">
-          <a className={menuStyles.brand} href={homeHref} onClick={closeMenu}>
+          <a className={menuStyles.brand} href={localizedHref(homeHref)} onClick={closeMenu}>
             <Image
               src="/assets/images/stockerRobotIcon.png"
               alt="Stocks To Buy Now Research"
@@ -183,6 +186,7 @@ export default function Header({
 
           {/* Right side actions (Horizontal alignment on mobile) */}
           <div className={menuStyles.actions}>
+            <LanguageSelector />
             <div className={menuStyles.accountSlot}>
               {!accountReady&&<div className={menuStyles.cachedAccount} aria-hidden="true"><span className={menuStyles.cachedAvatar}/><span className={menuStyles.cachedName}/></div>}
               <AccountMenu />
@@ -191,17 +195,17 @@ export default function Header({
               className={menuStyles.download}
               href={accountLoginUrl(pathname==='/learn/get-certified'?'/learn/get-certified/':DESKTOP_ACCESS_PATH)}
               onClick={closeMenu}
-            >Sign Up</a>:<CompactSignUp placement="header" onComplete={closeMenu}/>)}
+            >{t('Sign Up')}</a>:<CompactSignUp placement="header" onComplete={closeMenu}/>)}
 
             <button
               className={menuStyles.toggle}
               type="button"
-              aria-label="Toggle navigation"
+              aria-label={t('Toggle navigation')}
               aria-expanded={isOpen}
               aria-controls="site-navigation-links"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <b>{isOpen ? 'Close' : 'Explore'}</b>
+              <b>{t(isOpen ? 'Close' : 'Explore')}</b>
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d={isOpen ? 'm5 5 10 10 M15 5 5 15' : 'M3 6h14 M3 14h14'} /></svg>
             </button>
           </div>

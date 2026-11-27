@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import {useEffect, useState} from 'react';
 import {Disclosure, actionLabel, money, count, displayDate, positive, negative, validSnapshot} from '../lib/smart-money';
 import {useSiteAccount} from './SiteAccount';
@@ -43,7 +44,7 @@ export default function StockSmartMoney({symbol}:{symbol:string}) {
     return()=>{active=false;clearTimeout(timer);controller.abort();};
   },[symbol,allowed,uid]);
   const rows=items.filter(r=>category==='all'||r.category===category).sort((a,b)=>b.filedDate.localeCompare(a.filedDate)||a.id.localeCompare(b.id));
-  return <section className={styles.section} aria-label={`${symbol} Smart Money activity`}>
+  return <SpanishContent><section className={styles.section} aria-label={`${symbol} Smart Money activity`}>
     <h2>Smart Money activity</h2>
     <p>Recent insider and politician transactions, and disclosed fund positions for {symbol}.</p>
     <div className={styles.filters} role="group" aria-label="Activity category">{categories.map(([id,label])=><button key={id} aria-pressed={category===id} onClick={()=>{setCategory(id);setLimit(8)}}>{label}</button>)}</div>
@@ -67,5 +68,5 @@ export default function StockSmartMoney({symbol}:{symbol:string}) {
     {rows.length>limit&&<button className={styles.more} onClick={()=>setLimit(n=>n+12)}>Show more ({rows.length-limit})</button>}
     <p className={styles.note}>Disclosures can lag activity. Fund entries are quarter-end 13F positions and changes, not individual trades. Coverage is limited to available filings.</p>
     </>}
-  </section>;
+  </section></SpanishContent>;
 }

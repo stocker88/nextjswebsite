@@ -1,3 +1,4 @@
+import SpanishContent from './localization/SpanishContent';
 import {useSiteAccount} from './SiteAccount';
 import {DESKTOP_ACCESS_PATH,rememberDesktopThread} from '../lib/desktop-access';
 import {accountLoginUrl} from '../lib/site-auth';

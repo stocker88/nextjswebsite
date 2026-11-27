@@ -1,3 +1,4 @@
+import {useSiteLanguage} from '../../lib/localization/use-site-language';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -20,6 +21,7 @@ const Footer = ({
   ...props
 }) => {
 
+  const {t,href}=useSiteLanguage();
   const classes = classNames(
   );
 
@@ -32,34 +34,34 @@ const Footer = ({
       <div className="professional-footer-inner">
         <div className="footer-brand-block">
           <strong>Stocks To Buy Now Research</strong>
-          <span>Market insights, signals and investor education.</span>
+          <span>{t("Market insights, signals and investor education.")}</span>
         </div>
 
         <div className="footer-link-block">
-          <span>Company</span>
-          <Link href="/company/">About us</Link>
-          <Link href="/authors/aness-hussein-ali/">Meet the founder</Link>
-          <Link href="/reviews/">Public reviews</Link>
-          <Link href="/company/culture/">Culture</Link>
-          <Link href="/company/careers/">Careers</Link>
-          <Link href="/posts/privacypolicy">Privacy Policy</Link>
+          <span>{t("Company")}</span>
+          <Link href={href("/company/")}>{t("About us")}</Link>
+          <Link href={href("/authors/aness-hussein-ali/")}>{t("Meet the founder")}</Link>
+          <Link href={href("/reviews/")}>{t("Public reviews")}</Link>
+          <Link href={href("/company/culture/")}>{t("Culture")}</Link>
+          <Link href={href("/company/careers/")}>{t("Careers")}</Link>
+          <Link href={href("/posts/privacypolicy")}>{t("Privacy Policy")}</Link>
         </div>
 
         <div className="footer-link-block">
-          <span>Learn &amp; Support</span>
-          <Link href="/learn/">Free video courses</Link>
-          <Link href="/learn/get-certified/">Get certified</Link>
-          <Link href="/editorial-policy/">Editorial standards</Link>
+          <span>{t('Learn & Support')}</span>
+          <Link href={href("/learn/")}>{t("Free video courses")}</Link>
+          <Link href={href("/learn/get-certified/")}>{t("Get certified")}</Link>
+          <Link href={href("/editorial-policy/")}>{t("Editorial standards")}</Link>
           <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a>
         </div>
       </div>
       <div className="footer-disclosure" style={{padding:'24px 0',fontSize:14,lineHeight:1.7}}>
-        <p>Founded by <Link href="/authors/aness-hussein-ali/">Aness Hussein Ali</Link>. Stocks To Buy Now Research provides investment research tools and educational content. Investing involves loss of capital; options can lose their entire premium. </p>
-        <p>Education and examination history do not establish current professional registration or regulatory approval of this platform. <Link href="/methodology/">Read our methodology and limitations</Link>.</p>
+        <p>{t('Founded by')} <Link href={href("/authors/aness-hussein-ali/")}>Aness Hussein Ali</Link>. {t('Stocks To Buy Now Research provides investment research tools and educational content. Investing involves loss of capital; options can lose their entire premium.')} </p>
+        <p>{t('Education and examination history do not establish current professional registration or regulatory approval of this platform.')} <Link href={href("/methodology/")}>{t("Read our methodology and limitations")}</Link>.</p>
       </div>
       <div className="footer-bottom-line">
         <span>© {new Date().getFullYear()} Stocks To Buy Now Research</span>
-        <span>Made by the Stocks To Buy Now Research team, for you.</span>
+        <span>{t("Made by the Stocks To Buy Now Research team, for you.")}</span>
       </div>
       </Container>
     </footer>

@@ -3,7 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const out=path.resolve(process.argv[2]||'out');
 const html=route=>fs.readFileSync(path.join(out,route,'index.html'),'utf8');
-const sitemap=fs.readFileSync(path.join(out,'sitemap.xml'),'utf8');
+const sitemap=require('../read-export-sitemap.cjs')(out);
 const newsSitemap=fs.readFileSync(path.join(out,'news-sitemap.xml'),'utf8');
 const urls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&'));
 const newsUrls=[...newsSitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1].replace(/&amp;/g,'&'));

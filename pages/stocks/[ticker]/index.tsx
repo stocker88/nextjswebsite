@@ -1,5 +1,6 @@
+import {predictionSeo} from '../../../lib/prediction-seo';
 import {catalog} from '../../../lib/catalog';
-import {projection,roundedPrice,readableDate} from '../../../lib/prediction-periods';
+import {projection} from '../../../lib/prediction-periods';
 import PredictionPeriodSelector from '../../../components/PredictionPeriodSelector';
 import {stockPageHref} from '../../../lib/stock-page';
 import {predictionPath, predictionName} from '../../../lib/stock-predictions';
@@ -39,7 +40,7 @@ export default function Stock({
   const cachedOnly=predictionPage&&!catalog.some(s=>s.symbol===stock.ticker);
   const companyPath=cachedOnly?predictionPath(stock)+'/#stock-analysis':path;
   const longScenario=predictionPage&&predictionPeriodsAvailable?projection(bundle.snapshot?.detail||null,'2030',bundle.today):null;
-  const predictionTitle=longScenario?`${predictionName(stock)} Stock Price Prediction: Could It Reach ${roundedPrice(longScenario.values[1])} by 2030?`:`${predictionName(stock)} Stock Price Prediction: 2026–2030 Outlook`;
+  const {title:predictionTitle,description:predictionDescription}=predictionSeo(predictionName(stock),stock.ticker);
   const curated = stocks.some(item=>item.ticker===stock.ticker);
   const earningsPath = curated ? `${path}/earnings` : '#earnings';
   const canonicalPath = predictionPage ? predictionPath(stock) + "/" : path;
@@ -54,7 +55,7 @@ export default function Stock({
       title={predictionPage ? predictionTitle : `${stock.name} (${stock.ticker}) Stock Research & Earnings`}
       path={canonicalPath}
       hideAppDownload
-      description={predictionPage ? longScenario ? `${predictionName(stock)} (${stock.ticker}) stock price prediction: could it reach ${roundedPrice(longScenario.values[1])} by 2030? Explore growth and valuation assumptions, downside cases, dated price history and earnings.` : `${predictionName(stock)} (${stock.ticker}) stock price prediction research: tomorrow, weekly and monthly outlooks, plus 2026–2030 scenarios, earnings, technicals and risks.` : `Explore ${stock.name} (${stock.ticker}) earnings, financials, technicals, insider activity and related research. Review the stock outlook and valuation drivers.`}
+      description={predictionPage ? predictionDescription : `Explore ${stock.name} (${stock.ticker}) earnings, financials, technicals, insider activity and related research. Review the stock outlook and valuation drivers.`}
     >
       <Head>
         {predictionPage&&<script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebPage',name:predictionTitle,url:`https://www.stockstobuynow.ai${canonicalPath}`,about:{'@type':'Corporation',name:stock.name,tickerSymbol:stock.ticker},isAccessibleForFree:true,inLanguage:'en-US'})}}/>}
@@ -84,10 +85,10 @@ export default function Stock({
         </p>
       </div>
 {predictionPage&&predictionPeriodsAvailable&&<PredictionPeriodSelector stock={stock}/>}
-{longScenario&&<div className="public-copy"><h2>Could {stock.ticker} reach {roundedPrice(longScenario.values[1])} by 2030?</h2><p>Explore the conditional scenario, the growth and valuation assumptions it requires, and the downside case. Price used: ${longScenario.price.toFixed(2)} on {readableDate(longScenario.date)}.</p><Link href={predictionPath(stock)+"/2030/"}>Explore the 2030 price scenario →</Link></div>}
-<div id="earnings" style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
-      <div id="stock-analysis"><StockResearchHub financialsFirst={predictionPage} symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
-      <div id="insider-research"><StockSmartMoney symbol={stock.ticker}/></div>
+{longScenario&&<div className="public-copy"><h2>Explore {stock.ticker} stock price predictions for 2030</h2><p>Explore the interactive chart, compare growth and valuation assumptions, and review alternative scenarios alongside company research.</p><Link href={predictionPath(stock)+"/2030/"}>Explore the 2030 price chart and forecast →</Link></div>}
+<div id="earnings" data-nosnippet={predictionPage?"":undefined} style={{scrollMarginTop:120}}><StockEarnings symbol={stock.ticker} initialCalendar={calendar} detail={bundle.snapshot?.detail}/></div>
+      <div id="stock-analysis" data-nosnippet={predictionPage?"":undefined}><StockResearchHub financialsFirst={predictionPage} symbol={stock.ticker} name={stock.name} bundle={bundle} earningsDate={calendar?.items.filter(e=>e.date>=bundle.today).sort((a,b)=>a.date.localeCompare(b.date))[0]?.date}/></div>
+      <div id="insider-research" data-nosnippet={predictionPage?"":undefined}><StockSmartMoney symbol={stock.ticker}/></div>
       <div className="public-copy">
         <h2>What can move {stock.ticker}?</h2>
         <p>
