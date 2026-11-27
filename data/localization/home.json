@@ -1,0 +1,4265 @@
+{
+  "MARKETS": {
+    "es": "MERCADOS",
+    "fr": "MARCHÉS",
+    "de": "MÄRKTE",
+    "ja": "市場",
+    "ko": "시장"
+  },
+  "RESEARCH": {
+    "es": "ANÁLISIS",
+    "fr": "RECHERCHE",
+    "de": "ANALYSEN",
+    "ja": "リサーチ",
+    "ko": "리서치"
+  },
+  "Wish someone told you about Nvidia when it was": {
+    "es": "¿Ojalá alguien te hubiera hablado de Nvidia cuando cotizaba a",
+    "fr": "Vous auriez aimé découvrir Nvidia à",
+    "de": "Hätten Sie Nvidia gern schon bei",
+    "ja": "Nvidiaをもっと早く知りたかったですか？",
+    "ko": "엔비디아를 더 일찍 알았더라면 어땠을까요?"
+  },
+  "$5 instead of $100": {
+    "es": "5 $ en lugar de 100 $",
+    "fr": "5 $ plutôt qu’à 100 $",
+    "de": "5 $ statt 100 $ entdeckt",
+    "ja": "100ドルではなく5ドルの時に",
+    "ko": "100달러가 아닌 5달러일 때"
+  },
+  "Real-Time Stock Market Alerts": {
+    "es": "Alertas bursátiles en tiempo real",
+    "fr": "Alertes boursières en temps réel",
+    "de": "Börsenmeldungen in Echtzeit",
+    "ja": "リアルタイム株式市場アラート",
+    "ko": "실시간 주식시장 알림"
+  },
+  "Real-Time": {
+    "es": "En tiempo real",
+    "fr": "En temps réel",
+    "de": "In Echtzeit",
+    "ja": "リアルタイム",
+    "ko": "실시간"
+  },
+  "Stock Market Alerts": {
+    "es": "Alertas bursátiles",
+    "fr": "Alertes boursières",
+    "de": "Börsenmeldungen",
+    "ja": "株式市場アラート",
+    "ko": "주식시장 알림"
+  },
+  "Data-driven insights into the macro picture, company fundamentals, insider activity, unusual options volume and technical timing.": {
+    "es": "Análisis basados en datos sobre el contexto macroeconómico, los fundamentos empresariales, la actividad de directivos, el volumen inusual de opciones y el momento técnico.",
+    "fr": "Des analyses fondées sur les données : contexte macroéconomique, fondamentaux des entreprises, opérations d’initiés, volumes inhabituels d’options et timing technique.",
+    "de": "Datenbasierte Einblicke in Makroökonomie, Unternehmensfundamentaldaten, Insideraktivität, ungewöhnliche Optionsvolumina und technisches Timing.",
+    "ja": "マクロ環境、企業のファンダメンタルズ、インサイダー取引、通常と異なるオプション出来高、テクニカル面のタイミングをデータで分析します。",
+    "ko": "거시경제, 기업 펀더멘털, 내부자 거래, 이례적인 옵션 거래량과 기술적 타이밍을 데이터로 분석합니다."
+  },
+  "Read customer reviews on": {
+    "es": "Lee las opiniones de clientes en",
+    "fr": "Lisez les avis clients sur",
+    "de": "Lesen Sie Kundenbewertungen auf",
+    "ja": "利用者のレビューを見る：",
+    "ko": "고객 리뷰 보기:"
+  },
+  "Reviews on": {
+    "es": "Opiniones en",
+    "fr": "Avis sur",
+    "de": "Bewertungen auf",
+    "ja": "レビュー掲載先",
+    "ko": "리뷰 플랫폼"
+  },
+  "Meet our Founder": {
+    "es": "Conoce a nuestro fundador",
+    "fr": "Découvrez notre fondateur",
+    "de": "Unseren Gründer kennenlernen",
+    "ja": "創業者について",
+    "ko": "창업자 알아보기"
+  },
+  "Heatmaps, movers and the wider market.": {
+    "es": "Mapas de calor, mayores movimientos y visión general del mercado.",
+    "fr": "Cartes thermiques, variations et vue d’ensemble du marché.",
+    "de": "Heatmaps, Kursbewegungen und der Gesamtmarkt.",
+    "ja": "ヒートマップ、値動き、市場全体の動向。",
+    "ko": "히트맵, 주요 등락 종목과 전체 시장."
+  },
+  "Explore the businesses behind the tickers.": {
+    "es": "Conoce las empresas detrás de los símbolos bursátiles.",
+    "fr": "Découvrez les entreprises derrière les symboles boursiers.",
+    "de": "Die Unternehmen hinter den Börsenkürzeln entdecken.",
+    "ja": "ティッカーの背後にある企業を調べる。",
+    "ko": "종목코드 뒤에 있는 기업을 알아보세요."
+  },
+  "OPTIONS": {
+    "es": "OPCIONES",
+    "fr": "OPTIONS",
+    "de": "OPTIONEN",
+    "ja": "オプション",
+    "ko": "옵션"
+  },
+  "Options workspace": {
+    "es": "Herramientas de opciones",
+    "fr": "Espace options",
+    "de": "Options-Arbeitsbereich",
+    "ja": "オプション分析ツール",
+    "ko": "옵션 분석 공간"
+  },
+  "Compare strategies and model your payoff.": {
+    "es": "Compara estrategias y simula sus resultados.",
+    "fr": "Comparez les stratégies et simulez leurs résultats.",
+    "de": "Strategien vergleichen und Auszahlungen modellieren.",
+    "ja": "戦略を比較し、損益をシミュレーション。",
+    "ko": "전략을 비교하고 손익을 모델링하세요."
+  },
+  "INSIDERS": {
+    "es": "DIRECTIVOS",
+    "fr": "INITIÉS",
+    "de": "INSIDER",
+    "ja": "インサイダー",
+    "ko": "내부자"
+  },
+  "Follow disclosed insider and fund activity.": {
+    "es": "Sigue la actividad publicada de directivos y fondos.",
+    "fr": "Suivez les opérations déclarées des initiés et des fonds.",
+    "de": "Veröffentlichte Insider- und Fondsaktivitäten verfolgen.",
+    "ja": "開示されたインサイダーやファンドの動向を確認。",
+    "ko": "공시된 내부자와 펀드의 활동을 확인하세요."
+  },
+  "Research. Compare. Build your perspective.": {
+    "es": "Analiza. Compara. Forma tu criterio.",
+    "fr": "Analysez. Comparez. Construisez votre point de vue.",
+    "de": "Analysieren. Vergleichen. Eine eigene Perspektive entwickeln.",
+    "ja": "調べる。比較する。自分の視点を築く。",
+    "ko": "분석하고 비교하며 나만의 관점을 만드세요."
+  },
+  "A CLEARER VIEW OF THE MARKET": {
+    "es": "UNA VISIÓN MÁS CLARA DEL MERCADO",
+    "fr": "UNE VISION PLUS CLAIRE DU MARCHÉ",
+    "de": "EIN KLARERER BLICK AUF DEN MARKT",
+    "ja": "市場をより明確に捉える",
+    "ko": "더 선명하게 보는 시장"
+  },
+  "Every move.": {
+    "es": "Cada movimiento.",
+    "fr": "Chaque mouvement.",
+    "de": "Jede Bewegung.",
+    "ja": "一つひとつの値動き。",
+    "ko": "모든 움직임."
+  },
+  "From the big picture to the details that matter.": {
+    "es": "Del panorama general a los detalles que importan.",
+    "fr": "De la vue d’ensemble aux détails essentiels.",
+    "de": "Vom Gesamtbild zu den entscheidenden Details.",
+    "ja": "全体像から重要な細部まで。",
+    "ko": "큰 흐름부터 중요한 세부 사항까지."
+  },
+  "PRODUCT PREVIEW": {
+    "es": "VISTA PREVIA DEL PRODUCTO",
+    "fr": "APERÇU DU PRODUIT",
+    "de": "PRODUKTVORSCHAU",
+    "ja": "製品プレビュー",
+    "ko": "제품 미리보기"
+  },
+  "THE BIG PICTURE": {
+    "es": "EL PANORAMA GENERAL",
+    "fr": "LA VUE D’ENSEMBLE",
+    "de": "DAS GESAMTBILD",
+    "ja": "全体像",
+    "ko": "큰 그림"
+  },
+  "Pre-Market": {
+    "es": "Antes de la apertura",
+    "fr": "Avant ouverture",
+    "de": "Vorbörslich",
+    "ja": "プレマーケット",
+    "ko": "프리마켓"
+  },
+  "After-Hours": {
+    "es": "Después del cierre",
+    "fr": "Après clôture",
+    "de": "Nachbörslich",
+    "ja": "アフターマーケット",
+    "ko": "애프터마켓"
+  },
+  "S&P 500 by industry": {
+    "es": "S&P 500 por industria",
+    "fr": "S&P 500 par secteur",
+    "de": "S&P 500 nach Branche",
+    "ja": "業種別S&P 500",
+    "ko": "업종별 S&P 500"
+  },
+  "Save Heatmap": {
+    "es": "Guardar mapa de calor",
+    "fr": "Enregistrer la carte",
+    "de": "Heatmap speichern",
+    "ja": "ヒートマップを保存",
+    "ko": "히트맵 저장"
+  },
+  "Share heatmap": {
+    "es": "Compartir mapa de calor",
+    "fr": "Partager la carte",
+    "de": "Heatmap teilen",
+    "ja": "ヒートマップを共有",
+    "ko": "히트맵 공유"
+  },
+  "S&P 500 holdings · Sized by index weight": {
+    "es": "Componentes del S&P 500 · Tamaño según peso en el índice",
+    "fr": "Composants du S&P 500 · Taille selon le poids dans l’indice",
+    "de": "S&P-500-Werte · Größe nach Indexgewicht",
+    "ja": "S&P 500構成銘柄 · 指数内の比率でサイズ表示",
+    "ko": "S&P 500 구성 종목 · 지수 비중에 따른 크기"
+  },
+  "Tap a stock to open its company page. Gray means unavailable data.": {
+    "es": "Toca una acción para abrir su página. El gris indica datos no disponibles.",
+    "fr": "Touchez une action pour ouvrir sa page. Le gris indique des données indisponibles.",
+    "de": "Eine Aktie antippen, um ihre Unternehmensseite zu öffnen. Grau bedeutet fehlende Daten.",
+    "ja": "銘柄をタップすると企業ページが開きます。灰色はデータなしを示します。",
+    "ko": "종목을 누르면 기업 페이지가 열립니다. 회색은 데이터가 없음을 나타냅니다."
+  },
+  "Explore the full heatmap": {
+    "es": "Ver el mapa de calor completo",
+    "fr": "Explorer la carte complète",
+    "de": "Vollständige Heatmap ansehen",
+    "ja": "ヒートマップ全体を見る",
+    "ko": "전체 히트맵 보기"
+  },
+  "Market pulse": {
+    "es": "Pulso del mercado",
+    "fr": "Pouls du marché",
+    "de": "Marktüberblick",
+    "ja": "市場の動向",
+    "ko": "시장 동향"
+  },
+  "Price moves · Treasury changes in bp": {
+    "es": "Variaciones de precio · Cambios en bonos del Tesoro en pb",
+    "fr": "Variations des cours · Taux du Trésor en points de base",
+    "de": "Kursbewegungen · Veränderungen der US-Staatsanleihen in Basispunkten",
+    "ja": "価格変動 · 米国債利回りの変化はbp表示",
+    "ko": "가격 변동 · 미 국채 금리 변동은 bp 단위"
+  },
+  "Unavailable": {
+    "es": "No disponible",
+    "fr": "Indisponible",
+    "de": "Nicht verfügbar",
+    "ja": "データなし",
+    "ko": "이용 불가"
+  },
+  "Explore Market pulse in the app ↗": {
+    "es": "Explora el pulso del mercado en la app ↗",
+    "fr": "Explorez le pouls du marché dans l’app ↗",
+    "de": "Marktüberblick in der App ansehen ↗",
+    "ja": "アプリで市場動向を見る ↗",
+    "ko": "앱에서 시장 동향 보기 ↗"
+  },
+  "Biggest movers": {
+    "es": "Mayores movimientos",
+    "fr": "Plus fortes variations",
+    "de": "Größte Kursbewegungen",
+    "ja": "値動き上位銘柄",
+    "ko": "주요 등락 종목"
+  },
+  "Top 10 gainers and decliners across": {
+    "es": "Las 10 mayores subidas y bajadas entre",
+    "fr": "Les 10 plus fortes hausses et baisses parmi",
+    "de": "Die 10 größten Gewinner und Verlierer unter",
+    "ja": "上昇・下落率上位10銘柄。対象：",
+    "ko": "상승·하락 상위 10개 종목. 대상:"
+  },
+  "tracked stocks in this snapshot.": {
+    "es": "acciones seguidas en esta captura.",
+    "fr": "actions suivies dans cet aperçu.",
+    "de": "erfassten Aktien in dieser Momentaufnahme.",
+    "ja": "このスナップショットで追跡する銘柄。",
+    "ko": "이 스냅샷에서 추적하는 종목."
+  },
+  "Stock movers": {
+    "es": "Movimientos de acciones",
+    "fr": "Variations des actions",
+    "de": "Aktienbewegungen",
+    "ja": "株価の動き",
+    "ko": "종목 등락"
+  },
+  "Gainers": {
+    "es": "Subidas",
+    "fr": "Hausses",
+    "de": "Gewinner",
+    "ja": "上昇",
+    "ko": "상승"
+  },
+  "Decliners": {
+    "es": "Bajadas",
+    "fr": "Baisses",
+    "de": "Verlierer",
+    "ja": "下落",
+    "ko": "하락"
+  },
+  "Perspective starts here.": {
+    "es": "Tu perspectiva empieza aquí.",
+    "fr": "Votre perspective commence ici.",
+    "de": "Perspektive beginnt hier.",
+    "ja": "ここから視点を広げる。",
+    "ko": "새로운 관점은 여기서 시작됩니다."
+  },
+  "Understand": {
+    "es": "Comprende",
+    "fr": "Comprendre",
+    "de": "Verstehen",
+    "ja": "理解する",
+    "ko": "이해하기"
+  },
+  "Product preview · Saved market data · Treasury: Federal Reserve via FRED": {
+    "es": "Vista previa · Datos de mercado guardados · Bonos del Tesoro: Reserva Federal vía FRED",
+    "fr": "Aperçu du produit · Données de marché enregistrées · Trésor : Réserve fédérale via FRED",
+    "de": "Produktvorschau · Gespeicherte Marktdaten · US-Staatsanleihen: Federal Reserve über FRED",
+    "ja": "製品プレビュー · 保存済み市場データ · 米国債：FRED経由の連邦準備制度データ",
+    "ko": "제품 미리보기 · 저장된 시장 데이터 · 미 국채: FRED를 통한 연준 데이터"
+  },
+  "RESEARCH YOU CAN EXAMINE": {
+    "es": "ANÁLISIS QUE PUEDES EXAMINAR",
+    "fr": "UNE RECHERCHE À EXAMINER",
+    "de": "NACHVOLLZIEHBARE ANALYSEN",
+    "ja": "検証できるリサーチ",
+    "ko": "직접 살펴볼 수 있는 리서치"
+  },
+  "Transparency into past setups.": {
+    "es": "Transparencia sobre oportunidades pasadas.",
+    "fr": "Transparence sur les configurations passées.",
+    "de": "Transparenz zu früheren Handelsideen.",
+    "ja": "過去の取引アイデアを透明に。",
+    "ko": "과거 매매 아이디어를 투명하게."
+  },
+  "Review the context, dates and limitations of historical research setups.": {
+    "es": "Consulta el contexto, las fechas y las limitaciones de ideas de análisis anteriores.",
+    "fr": "Examinez le contexte, les dates et les limites des idées de recherche passées.",
+    "de": "Kontext, Daten und Grenzen historischer Handelsideen prüfen.",
+    "ja": "過去のリサーチ事例の背景、日付、限界を確認できます。",
+    "ko": "과거 리서치 아이디어의 맥락, 날짜와 한계를 확인하세요."
+  },
+  "Read our methodology and limitations ↗": {
+    "es": "Consulta nuestra metodología y limitaciones ↗",
+    "fr": "Lire notre méthodologie et ses limites ↗",
+    "de": "Methodik und Grenzen nachlesen ↗",
+    "ja": "手法と限界を読む ↗",
+    "ko": "방법론과 한계 읽기 ↗"
+  },
+  "Stocks investments and options used for direct exposures and hedging. Protect your capital with puts.": {
+    "es": "Inversión en acciones y opciones para exposición directa y cobertura. Protege tu capital con opciones put.",
+    "fr": "Actions et options pour une exposition directe et la couverture. Protégez votre capital avec des puts.",
+    "de": "Aktien und Optionen für direkte Marktpositionen und Absicherung. Kapital mit Puts absichern.",
+    "ja": "株式とオプションで直接投資やヘッジを行い、プットで資本を守る。",
+    "ko": "주식과 옵션으로 직접 투자와 헤지를 구성하고 풋으로 자본을 보호하세요."
+  },
+  "THE COMPLETE RESEARCH TOOLKIT": {
+    "es": "TODAS LAS HERRAMIENTAS DE ANÁLISIS",
+    "fr": "TOUS LES OUTILS DE RECHERCHE",
+    "de": "DAS KOMPLETTE ANALYSEWERKZEUG",
+    "ja": "充実したリサーチツール",
+    "ko": "종합 리서치 도구"
+  },
+  "Go from the headline to the whole picture.": {
+    "es": "Del titular al panorama completo.",
+    "fr": "Du titre à la vue d’ensemble.",
+    "de": "Von der Schlagzeile zum Gesamtbild.",
+    "ja": "見出しから全体像へ。",
+    "ko": "헤드라인에서 전체 그림까지."
+  },
+  "ways to explore": {
+    "es": "formas de explorar",
+    "fr": "façons d’explorer",
+    "de": "Möglichkeiten zum Entdecken",
+    "ja": "通りの探索方法",
+    "ko": "가지 탐색 방법"
+  },
+  "All features": {
+    "es": "Todas las funciones",
+    "fr": "Toutes les fonctionnalités",
+    "de": "Alle Funktionen",
+    "ja": "すべての機能",
+    "ko": "모든 기능"
+  },
+  "Signals": {
+    "es": "Señales",
+    "fr": "Signaux",
+    "de": "Signale",
+    "ja": "シグナル",
+    "ko": "시그널"
+  },
+  "News & calendar": {
+    "es": "Noticias y calendario",
+    "fr": "Actualités et calendrier",
+    "de": "Nachrichten und Kalender",
+    "ja": "ニュースとカレンダー",
+    "ko": "뉴스 및 캘린더"
+  },
+  "See the largest stocks and sector performance.": {
+    "es": "Consulta las mayores acciones y el rendimiento sectorial.",
+    "fr": "Consultez les grandes capitalisations et les performances sectorielles.",
+    "de": "Große Aktien und Branchenentwicklung ansehen.",
+    "ja": "主要銘柄とセクターの動きを確認。",
+    "ko": "대형주와 섹터 성과를 확인하세요."
+  },
+  "Premarket heatmap": {
+    "es": "Mapa de calor preapertura",
+    "fr": "Carte avant ouverture",
+    "de": "Vorbörsliche Heatmap",
+    "ja": "プレマーケット・ヒートマップ",
+    "ko": "프리마켓 히트맵"
+  },
+  "Explore a free snapshot of stock moves before the opening bell.": {
+    "es": "Consulta gratis una captura de movimientos antes de la apertura.",
+    "fr": "Consultez gratuitement un aperçu des variations avant ouverture.",
+    "de": "Kostenlose Momentaufnahme der Kursbewegungen vor Börsenöffnung.",
+    "ja": "寄り付き前の株価変動スナップショットを無料で確認。",
+    "ko": "장 시작 전 주가 움직임의 무료 스냅샷을 확인하세요."
+  },
+  "After-hours heatmap": {
+    "es": "Mapa de calor tras el cierre",
+    "fr": "Carte après clôture",
+    "de": "Nachbörsliche Heatmap",
+    "ja": "アフターマーケット・ヒートマップ",
+    "ko": "애프터마켓 히트맵"
+  },
+  "See saved stock moves after the regular session closes.": {
+    "es": "Consulta movimientos guardados tras el cierre de la sesión regular.",
+    "fr": "Consultez les variations enregistrées après la séance régulière.",
+    "de": "Gespeicherte Kursbewegungen nach dem regulären Handel ansehen.",
+    "ja": "通常取引終了後の保存済み株価変動を確認。",
+    "ko": "정규장 종료 후 저장된 주가 움직임을 확인하세요."
+  },
+  "Explore market sentiment and its seven indicators.": {
+    "es": "Explora el sentimiento del mercado y sus siete indicadores.",
+    "fr": "Explorez le sentiment du marché et ses sept indicateurs.",
+    "de": "Marktstimmung und ihre sieben Indikatoren erkunden.",
+    "ja": "市場心理と7つの指標を確認。",
+    "ko": "시장 심리와 7가지 지표를 살펴보세요."
+  },
+  "In app": {
+    "es": "En la app",
+    "fr": "Dans l’app",
+    "de": "In der App",
+    "ja": "アプリ内",
+    "ko": "앱에서"
+  },
+  "· IN THE APP": {
+    "es": "· EN LA APP",
+    "fr": "· DANS L’APP",
+    "de": "· IN DER APP",
+    "ja": "· アプリ内",
+    "ko": "· 앱에서"
+  },
+  "Follow indices, gold, oil and Treasury yields.": {
+    "es": "Sigue índices, oro, petróleo y rendimientos del Tesoro.",
+    "fr": "Suivez les indices, l’or, le pétrole et les taux du Trésor.",
+    "de": "Indizes, Gold, Öl und US-Staatsanleihenrenditen verfolgen.",
+    "ja": "指数、金、原油、米国債利回りを追跡。",
+    "ko": "지수, 금, 원유와 미 국채 금리를 확인하세요."
+  },
+  "Explore stock ideas and the research behind them.": {
+    "es": "Explora ideas de inversión y los análisis que las respaldan.",
+    "fr": "Explorez les idées d’investissement et les analyses associées.",
+    "de": "Aktienideen und die zugrunde liegenden Analysen erkunden.",
+    "ja": "株式投資のアイデアとその根拠を調べる。",
+    "ko": "주식 아이디어와 그 근거를 살펴보세요."
+  },
+  "Stock & options signals": {
+    "es": "Señales de acciones y opciones",
+    "fr": "Signaux actions et options",
+    "de": "Aktien- und Optionssignale",
+    "ja": "株式・オプションシグナル",
+    "ko": "주식 및 옵션 시그널"
+  },
+  "Discover setups and review the original shared ideas.": {
+    "es": "Descubre oportunidades y revisa las ideas originales compartidas.",
+    "fr": "Découvrez les configurations et les idées originales partagées.",
+    "de": "Handelsansätze entdecken und ursprünglich geteilte Ideen prüfen.",
+    "ja": "取引アイデアと共有時点の内容を確認。",
+    "ko": "매매 아이디어와 처음 공유된 내용을 확인하세요."
+  },
+  "Find company research by name or ticker.": {
+    "es": "Busca análisis por empresa o símbolo bursátil.",
+    "fr": "Trouvez une analyse par nom ou symbole boursier.",
+    "de": "Unternehmensanalysen nach Name oder Kürzel finden.",
+    "ja": "企業名やティッカーでリサーチを検索。",
+    "ko": "기업명이나 종목코드로 리서치를 찾으세요."
+  },
+  "Politician Trades": {
+    "es": "Operaciones de políticos",
+    "fr": "Transactions des élus",
+    "de": "Politikertransaktionen",
+    "ja": "政治家の取引",
+    "ko": "정치인 거래"
+  },
+  "Hedge Fund Activity": {
+    "es": "Actividad de hedge funds",
+    "fr": "Activité des hedge funds",
+    "de": "Hedgefonds-Aktivität",
+    "ja": "ヘッジファンドの動向",
+    "ko": "헤지펀드 활동"
+  },
+  "Insider Trades": {
+    "es": "Operaciones de directivos",
+    "fr": "Transactions d’initiés",
+    "de": "Insidertransaktionen",
+    "ja": "インサイダー取引",
+    "ko": "내부자 거래"
+  },
+  "Explore disclosed House and Senate trades, reporting dates and research signals.": {
+    "es": "Explora operaciones publicadas del Congreso de EE. UU., fechas de declaración y señales de análisis.",
+    "fr": "Explorez les transactions déclarées au Congrès américain, leurs dates et les signaux de recherche.",
+    "de": "Offengelegte Transaktionen im US-Kongress, Meldedaten und Analysesignale prüfen.",
+    "ja": "米下院・上院議員の開示取引、報告日、リサーチシグナルを確認。",
+    "ko": "미 하원·상원의 공시 거래, 보고 날짜와 리서치 시그널을 확인하세요."
+  },
+  "Compare disclosed fund holdings, new positions and quarterly portfolio changes.": {
+    "es": "Compara posiciones publicadas de fondos, nuevas inversiones y cambios trimestrales.",
+    "fr": "Comparez les positions déclarées, les nouveaux investissements et les changements trimestriels.",
+    "de": "Offengelegte Fondsbestände, neue Positionen und Quartalsveränderungen vergleichen.",
+    "ja": "開示されたファンド保有銘柄、新規ポジション、四半期の変化を比較。",
+    "ko": "공시된 펀드 보유 종목, 신규 포지션과 분기별 변화를 비교하세요."
+  },
+  "Follow reported executive and director transactions and explore insider buying signals.": {
+    "es": "Sigue operaciones declaradas de ejecutivos y consejeros y señales de compras de directivos.",
+    "fr": "Suivez les transactions déclarées des dirigeants et administrateurs et les signaux d’achat d’initiés.",
+    "de": "Gemeldete Vorstands- und Führungskräftetransaktionen sowie Insiderkaufsignale verfolgen.",
+    "ja": "役員・取締役の報告済み取引とインサイダー買いシグナルを確認。",
+    "ko": "임원과 이사의 신고 거래 및 내부자 매수 시그널을 확인하세요."
+  },
+  "Peer comparison analysis": {
+    "es": "Análisis de competidores",
+    "fr": "Analyse comparative des pairs",
+    "de": "Wettbewerbervergleich",
+    "ja": "同業他社比較",
+    "ko": "동종 기업 비교"
+  },
+  "Compare companies, industry metrics and P/S and P/E distributions.": {
+    "es": "Compara empresas, métricas sectoriales y distribuciones de precio/ventas y PER.",
+    "fr": "Comparez entreprises, indicateurs sectoriels et distributions des ratios cours/ventes et cours/bénéfices.",
+    "de": "Unternehmen, Branchenkennzahlen sowie KUV- und KGV-Verteilungen vergleichen.",
+    "ja": "企業、業界指標、PSR・PERの分布を比較。",
+    "ko": "기업, 업종 지표와 PSR·PER 분포를 비교하세요."
+  },
+  "Financials & forecasts": {
+    "es": "Finanzas y proyecciones",
+    "fr": "Finances et prévisions",
+    "de": "Finanzdaten und Prognosen",
+    "ja": "財務と予測",
+    "ko": "재무 및 전망"
+  },
+  "Explore company fundamentals and forward-looking scenarios.": {
+    "es": "Explora fundamentos empresariales y escenarios futuros.",
+    "fr": "Explorez les fondamentaux et les scénarios prospectifs.",
+    "de": "Unternehmensfundamentaldaten und Zukunftsszenarien erkunden.",
+    "ja": "企業のファンダメンタルズと将来シナリオを確認。",
+    "ko": "기업 펀더멘털과 미래 시나리오를 살펴보세요."
+  },
+  "Technical analysis": {
+    "es": "Análisis técnico",
+    "fr": "Analyse technique",
+    "de": "Technische Analyse",
+    "ja": "テクニカル分析",
+    "ko": "기술적 분석"
+  },
+  "Study price trends, performance and technical indicators.": {
+    "es": "Estudia tendencias de precios, rendimiento e indicadores técnicos.",
+    "fr": "Étudiez tendances, performances et indicateurs techniques.",
+    "de": "Kurstrends, Wertentwicklung und technische Indikatoren untersuchen.",
+    "ja": "価格トレンド、パフォーマンス、テクニカル指標を分析。",
+    "ko": "가격 추세, 성과와 기술적 지표를 분석하세요."
+  },
+  "Understand the approach behind the analysis.": {
+    "es": "Comprende el enfoque del análisis.",
+    "fr": "Comprenez la démarche de l’analyse.",
+    "de": "Den Ansatz hinter der Analyse verstehen.",
+    "ja": "分析の考え方を理解する。",
+    "ko": "분석의 접근 방식을 이해하세요."
+  },
+  "Options activity": {
+    "es": "Actividad de opciones",
+    "fr": "Activité des options",
+    "de": "Optionsaktivität",
+    "ja": "オプション動向",
+    "ko": "옵션 동향"
+  },
+  "Explore volume, open interest, calls and puts.": {
+    "es": "Explora volumen, interés abierto, calls y puts.",
+    "fr": "Explorez volumes, positions ouvertes, calls et puts.",
+    "de": "Volumen, offene Positionen, Calls und Puts untersuchen.",
+    "ja": "出来高、建玉、コール、プットを確認。",
+    "ko": "거래량, 미결제약정, 콜과 풋을 살펴보세요."
+  },
+  "Model a payoff, breakeven and the premium at risk.": {
+    "es": "Simula resultados, punto de equilibrio y prima en riesgo.",
+    "fr": "Simulez le résultat, le seuil de rentabilité et la prime risquée.",
+    "de": "Auszahlung, Gewinnschwelle und gefährdete Prämie modellieren.",
+    "ja": "損益、損益分岐点、リスクにさらされるプレミアムを試算。",
+    "ko": "손익, 손익분기점과 위험에 노출된 프리미엄을 계산하세요."
+  },
+  "Options strategies": {
+    "es": "Estrategias de opciones",
+    "fr": "Stratégies d’options",
+    "de": "Optionsstrategien",
+    "ja": "オプション戦略",
+    "ko": "옵션 전략"
+  },
+  "Build and compare different ways to express a view.": {
+    "es": "Construye y compara distintas formas de expresar tu perspectiva.",
+    "fr": "Construisez et comparez différentes façons d’exprimer votre scénario.",
+    "de": "Verschiedene Umsetzungen einer Marktmeinung entwickeln und vergleichen.",
+    "ja": "相場観を表すさまざまな戦略を構築・比較。",
+    "ko": "시장 전망을 반영하는 다양한 전략을 만들고 비교하세요."
+  },
+  "Follow the latest news, research and company developments.": {
+    "es": "Sigue noticias, análisis y novedades empresariales.",
+    "fr": "Suivez l’actualité, les analyses et les évolutions des entreprises.",
+    "de": "Aktuelle Nachrichten, Analysen und Unternehmensentwicklungen verfolgen.",
+    "ja": "最新ニュース、リサーチ、企業動向を追跡。",
+    "ko": "최신 뉴스, 리서치와 기업 동향을 확인하세요."
+  },
+  "Plan the week ahead around company earnings.": {
+    "es": "Planifica la semana según los resultados empresariales.",
+    "fr": "Planifiez la semaine autour des résultats des entreprises.",
+    "de": "Die Woche anhand von Unternehmensberichten planen.",
+    "ja": "企業決算を踏まえて週間計画を立てる。",
+    "ko": "기업 실적 발표에 맞춰 한 주를 계획하세요."
+  },
+  "Track economic events, central banks and key dates.": {
+    "es": "Sigue eventos económicos, bancos centrales y fechas clave.",
+    "fr": "Suivez les événements économiques, les banques centrales et les dates clés.",
+    "de": "Wirtschaftsereignisse, Zentralbanken und wichtige Termine verfolgen.",
+    "ja": "経済イベント、中央銀行、重要日程を追跡。",
+    "ko": "경제 이벤트, 중앙은행과 주요 일정을 확인하세요."
+  },
+  "Trusted across platforms": {
+    "es": "Confianza en distintas plataformas",
+    "fr": "La confiance sur plusieurs plateformes",
+    "de": "Vertrauen auf verschiedenen Plattformen",
+    "ja": "各プラットフォームの評価",
+    "ko": "여러 플랫폼에서의 신뢰"
+  },
+  "See what investors are saying": {
+    "es": "Descubre qué dicen los inversores",
+    "fr": "Découvrez les avis des investisseurs",
+    "de": "Erfahren Sie, was Anleger sagen",
+    "ja": "投資家の声を見る",
+    "ko": "투자자들의 의견을 확인하세요"
+  },
+  "Explore independent ratings and reviews on Google Play and the Apple App Store.": {
+    "es": "Consulta valoraciones y opiniones independientes en Google Play y Apple App Store.",
+    "fr": "Consultez les notes et avis indépendants sur Google Play et l’App Store d’Apple.",
+    "de": "Unabhängige Bewertungen auf Google Play und im Apple App Store ansehen.",
+    "ja": "Google PlayとApple App Storeで独立した評価やレビューを確認。",
+    "ko": "Google Play와 Apple App Store에서 독립적인 평점과 리뷰를 확인하세요."
+  },
+  "Read app reviews": {
+    "es": "Leer opiniones de la app",
+    "fr": "Lire les avis sur l’app",
+    "de": "App-Bewertungen lesen",
+    "ja": "アプリのレビューを読む",
+    "ko": "앱 리뷰 읽기"
+  },
+  "01 / THE BIG PICTURE": {
+    "es": "01 / EL PANORAMA GENERAL",
+    "fr": "01 / LA VUE D’ENSEMBLE",
+    "de": "01 / DAS GESAMTBILD",
+    "ja": "01 / 全体像",
+    "ko": "01 / 큰 그림"
+  },
+  "Start with the market. Explore the heatmap, follow the calendar and put the day’s moves in context.": {
+    "es": "Empieza por el mercado. Explora el mapa de calor, sigue el calendario y contextualiza los movimientos del día.",
+    "fr": "Commencez par le marché. Explorez la carte, suivez le calendrier et replacez les mouvements du jour dans leur contexte.",
+    "de": "Beginnen Sie beim Markt. Erkunden Sie die Heatmap, verfolgen Sie den Kalender und ordnen Sie Tagesbewegungen ein.",
+    "ja": "まずは市場全体から。ヒートマップとカレンダーを確認し、その日の動きを背景とともに理解します。",
+    "ko": "시장 전체부터 살펴보세요. 히트맵과 캘린더를 확인하고 하루의 움직임을 맥락 속에서 이해하세요."
+  },
+  "02 / LOOK CLOSER": {
+    "es": "02 / MIRA MÁS DE CERCA",
+    "fr": "02 / REGARDEZ DE PLUS PRÈS",
+    "de": "02 / GENAUER HINSEHEN",
+    "ja": "02 / 詳しく見る",
+    "ko": "02 / 더 자세히"
+  },
+  "Bring stock ideas and company fundamentals together. Explore the business behind the ticker.": {
+    "es": "Conecta ideas de inversión con fundamentos empresariales. Conoce el negocio detrás del símbolo bursátil.",
+    "fr": "Reliez les idées d’investissement aux fondamentaux. Découvrez l’entreprise derrière le symbole boursier.",
+    "de": "Aktienideen und Fundamentaldaten verbinden. Das Unternehmen hinter dem Kürzel verstehen.",
+    "ja": "投資アイデアと企業の基礎情報を結び付け、ティッカーの背後にある事業を調べます。",
+    "ko": "투자 아이디어와 기업 펀더멘털을 연결하고 종목코드 뒤의 사업을 살펴보세요."
+  },
+  "Explore stock research": {
+    "es": "Explorar análisis de acciones",
+    "fr": "Explorer les analyses d’actions",
+    "de": "Aktienanalysen entdecken",
+    "ja": "株式リサーチを見る",
+    "ko": "주식 리서치 살펴보기"
+  },
+  "03 / MAKE IT A ROUTINE": {
+    "es": "03 / CREA UN HÁBITO",
+    "fr": "03 / CRÉEZ UNE HABITUDE",
+    "de": "03 / ZUR ROUTINE MACHEN",
+    "ja": "03 / 習慣にする",
+    "ko": "03 / 습관 만들기"
+  },
+  "Make room for research, learning and a daily investing routine. All in one place.": {
+    "es": "Dedica tiempo al análisis, el aprendizaje y tu rutina diaria de inversión. Todo en un lugar.",
+    "fr": "Faites place à la recherche, à l’apprentissage et à une routine d’investissement. Tout au même endroit.",
+    "de": "Raum für Analyse, Lernen und eine tägliche Anlageroutine schaffen. Alles an einem Ort.",
+    "ja": "リサーチ、学習、日々の投資習慣を一か所で。",
+    "ko": "리서치, 학습과 매일의 투자 습관을 한곳에서 시작하세요."
+  },
+  "Discover the app": {
+    "es": "Descubrir la app",
+    "fr": "Découvrir l’app",
+    "de": "Die App entdecken",
+    "ja": "アプリを知る",
+    "ko": "앱 알아보기"
+  },
+  "See the bigger picture.": {
+    "es": "Mira el panorama completo.",
+    "fr": "Voyez la vue d’ensemble.",
+    "de": "Das Gesamtbild erkennen.",
+    "ja": "より大きな視点で。",
+    "ko": "더 큰 그림을 보세요."
+  },
+  "Context before decisions.": {
+    "es": "Contexto antes de decidir.",
+    "fr": "Le contexte avant la décision.",
+    "de": "Kontext vor Entscheidungen.",
+    "ja": "判断の前に背景を。",
+    "ko": "판단 전에 맥락부터."
+  },
+  "YOUR DAILY ROUTINE": {
+    "es": "TU RUTINA DIARIA",
+    "fr": "VOTRE ROUTINE QUOTIDIENNE",
+    "de": "IHRE TÄGLICHE ROUTINE",
+    "ja": "日々の習慣",
+    "ko": "매일의 습관"
+  },
+  "Research. Learn. Repeat.": {
+    "es": "Analiza. Aprende. Repite.",
+    "fr": "Analysez. Apprenez. Recommencez.",
+    "de": "Analysieren. Lernen. Wiederholen.",
+    "ja": "調べる。学ぶ。繰り返す。",
+    "ko": "분석하고 배우고 반복하세요."
+  },
+  "APP PREVIEW · ILLUSTRATIVE RESEARCH VISUAL": {
+    "es": "VISTA PREVIA · VISUALIZACIÓN ILUSTRATIVA DEL ANÁLISIS",
+    "fr": "APERÇU DE L’APP · VISUEL ILLUSTRATIF DE RECHERCHE",
+    "de": "APP-VORSCHAU · ILLUSTRATIVE ANALYSEDARSTELLUNG",
+    "ja": "アプリプレビュー · リサーチのイメージ図",
+    "ko": "앱 미리보기 · 리서치 예시 이미지"
+  },
+  "SCROLL TO EXPLORE": {
+    "es": "DESPLÁZATE PARA EXPLORAR",
+    "fr": "FAITES DÉFILER POUR EXPLORER",
+    "de": "ZUM ENTDECKEN SCROLLEN",
+    "ja": "スクロールして見る",
+    "ko": "스크롤하여 살펴보기"
+  },
+  "POLITICIANS · HEDGE FUNDS · INSIDERS": {
+    "es": "POLÍTICOS · HEDGE FUNDS · DIRECTIVOS",
+    "fr": "ÉLUS · HEDGE FUNDS · INITIÉS",
+    "de": "POLITIKER · HEDGEFONDS · INSIDER",
+    "ja": "政治家 · ヘッジファンド · インサイダー",
+    "ko": "정치인 · 헤지펀드 · 내부자"
+  },
+  "Follow the moves.": {
+    "es": "Sigue los movimientos.",
+    "fr": "Suivez les mouvements.",
+    "de": "Bewegungen verfolgen.",
+    "ja": "動きを追う。",
+    "ko": "움직임을 확인하세요."
+  },
+  "Find the context.": {
+    "es": "Encuentra el contexto.",
+    "fr": "Trouvez le contexte.",
+    "de": "Den Kontext finden.",
+    "ja": "背景を知る。",
+    "ko": "맥락을 찾으세요."
+  },
+  "A new perspective on your next idea. Explore disclosed trades, institutional holdings and the evidence behind research signals.": {
+    "es": "Una nueva perspectiva para tu próxima idea. Explora operaciones publicadas, posiciones institucionales y las pruebas detrás de las señales.",
+    "fr": "Une autre perspective pour votre prochaine idée. Explorez les transactions déclarées, les positions institutionnelles et les éléments derrière les signaux.",
+    "de": "Eine neue Perspektive für Ihre nächste Idee. Offengelegte Transaktionen, institutionelle Bestände und Belege hinter Analysesignalen prüfen.",
+    "ja": "次のアイデアに新たな視点を。開示取引、機関投資家の保有状況、シグナルの根拠を調べます。",
+    "ko": "다음 아이디어를 새로운 관점으로 보세요. 공시 거래, 기관 보유 현황과 시그널의 근거를 확인하세요."
+  },
+  "Open the Smart Money hub ↗": {
+    "es": "Abrir el centro Smart Money ↗",
+    "fr": "Ouvrir l’espace Smart Money ↗",
+    "de": "Smart-Money-Bereich öffnen ↗",
+    "ja": "Smart Moneyハブを開く ↗",
+    "ko": "스마트 머니 허브 열기 ↗"
+  },
+  "/ DISCLOSURE RESEARCH": {
+    "es": "/ ANÁLISIS DE DECLARACIONES",
+    "fr": "/ ANALYSE DES DÉCLARATIONS",
+    "de": "/ OFFENLEGUNGSANALYSE",
+    "ja": "/ 開示情報リサーチ",
+    "ko": "/ 공시 리서치"
+  },
+  "Explore trade signals →": {
+    "es": "Explorar señales de operaciones →",
+    "fr": "Explorer les signaux de trading →",
+    "de": "Handelssignale ansehen →",
+    "ja": "取引シグナルを見る →",
+    "ko": "매매 시그널 살펴보기 →"
+  },
+  "How to use it ↗": {
+    "es": "Cómo usarlo ↗",
+    "fr": "Comment l’utiliser ↗",
+    "de": "So funktioniert es ↗",
+    "ja": "使い方 ↗",
+    "ko": "사용 방법 ↗"
+  },
+  "Reported activity can be delayed. A disclosure is a starting point for research.": {
+    "es": "La actividad declarada puede publicarse con retraso. Una declaración es un punto de partida para investigar.",
+    "fr": "Les déclarations peuvent être tardives. Elles constituent un point de départ pour l’analyse.",
+    "de": "Gemeldete Aktivitäten können verzögert sein. Eine Offenlegung ist ein Ausgangspunkt für die Analyse.",
+    "ja": "取引の報告には遅れが生じることがあります。開示情報はリサーチの出発点です。",
+    "ko": "거래 보고는 지연될 수 있습니다. 공시는 리서치의 출발점입니다."
+  },
+  "CONNECT THE DISCLOSURES": {
+    "es": "CONECTA LAS DECLARACIONES",
+    "fr": "RELIEZ LES DÉCLARATIONS",
+    "de": "OFFENLEGUNGEN VERKNÜPFEN",
+    "ja": "開示情報を結び付ける",
+    "ko": "공시를 연결하세요"
+  },
+  "The activity is the beginning.": {
+    "es": "La actividad es el comienzo.",
+    "fr": "L’activité est le point de départ.",
+    "de": "Die Aktivität ist der Anfang.",
+    "ja": "取引動向は出発点。",
+    "ko": "거래 활동은 시작입니다."
+  },
+  "The context is your edge.": {
+    "es": "El contexto es tu ventaja.",
+    "fr": "Le contexte est votre atout.",
+    "de": "Der Kontext ist Ihr Vorteil.",
+    "ja": "背景の理解が強みに。",
+    "ko": "맥락이 강점이 됩니다."
+  },
+  "See the pattern. Check the evidence. Take the next step.": {
+    "es": "Identifica el patrón. Comprueba las pruebas. Da el siguiente paso.",
+    "fr": "Repérez le schéma. Vérifiez les éléments. Passez à l’étape suivante.",
+    "de": "Muster erkennen. Belege prüfen. Den nächsten Schritt machen.",
+    "ja": "パターンを見つけ、根拠を確認し、次の一歩へ。",
+    "ko": "패턴을 찾고 근거를 확인한 뒤 다음 단계로 나아가세요."
+  },
+  "INSIDER BUYING CLUSTER": {
+    "es": "COMPRAS AGRUPADAS DE DIRECTIVOS",
+    "fr": "ACHATS GROUPÉS D’INITIÉS",
+    "de": "GEBÜNDELTE INSIDERKÄUFE",
+    "ja": "インサイダーの集中買い",
+    "ko": "내부자 집중 매수"
+  },
+  "IN-APP ALERTS": {
+    "es": "ALERTAS EN LA APP",
+    "fr": "ALERTES DANS L’APP",
+    "de": "APP-BENACHRICHTIGUNGEN",
+    "ja": "アプリ内アラート",
+    "ko": "앱 내 알림"
+  },
+  "ONE STOCK": {
+    "es": "UNA ACCIÓN",
+    "fr": "UNE ACTION",
+    "de": "EINE AKTIE",
+    "ja": "1銘柄",
+    "ko": "한 종목"
+  },
+  "EARNINGS · ONE WEEK AWAY": {
+    "es": "RESULTADOS · EN UNA SEMANA",
+    "fr": "RÉSULTATS · DANS UNE SEMAINE",
+    "de": "QUARTALSZAHLEN · IN EINER WOCHE",
+    "ja": "決算 · 1週間後",
+    "ko": "실적 발표 · 1주 후"
+  },
+  "insiders": {
+    "es": "directivos",
+    "fr": "initiés",
+    "de": "Insider",
+    "ja": "インサイダー",
+    "ko": "내부자"
+  },
+  "buying.": {
+    "es": "comprando.",
+    "fr": "à l’achat.",
+    "de": "kaufen.",
+    "ja": "が買い。",
+    "ko": "매수."
+  },
+  "Earnings next week.": {
+    "es": "Resultados la próxima semana.",
+    "fr": "Résultats la semaine prochaine.",
+    "de": "Quartalszahlen nächste Woche.",
+    "ja": "来週の決算。",
+    "ko": "다음 주 실적 발표."
+  },
+  "One stock. Multiple buyers. A cluster of purchases one week before earnings gives you a reason to look closer.": {
+    "es": "Una acción. Varios compradores. Un grupo de compras una semana antes de resultados merece atención.",
+    "fr": "Une action. Plusieurs acheteurs. Des achats groupés une semaine avant les résultats méritent un examen approfondi.",
+    "de": "Eine Aktie. Mehrere Käufer. Gebündelte Käufe eine Woche vor den Zahlen geben Anlass zum genaueren Hinsehen.",
+    "ja": "1銘柄を複数の買い手が購入。決算1週間前の集中買いは、詳しく調べるきっかけになります。",
+    "ko": "한 종목에 여러 매수자. 실적 발표 일주일 전의 집중 매수는 자세히 살펴볼 계기가 됩니다."
+  },
+  "Review the buyers, original filings, financials and technicals.": {
+    "es": "Revisa compradores, documentos originales, finanzas e indicadores técnicos.",
+    "fr": "Examinez les acheteurs, les documents originaux, les finances et les indicateurs techniques.",
+    "de": "Käufer, Originalmeldungen, Finanzdaten und technische Faktoren prüfen.",
+    "ja": "買い手、原本の開示書類、財務、テクニカルを確認。",
+    "ko": "매수자, 원본 공시, 재무와 기술적 지표를 확인하세요."
+  },
+  "Explore in the app": {
+    "es": "Explorar en la app",
+    "fr": "Explorer dans l’app",
+    "de": "In der App ansehen",
+    "ja": "アプリで見る",
+    "ko": "앱에서 살펴보기"
+  },
+  "POLITICIAN BUYING OVERLAP": {
+    "es": "COMPRAS COINCIDENTES DE POLÍTICOS",
+    "fr": "ACHATS CONCORDANTS D’ÉLUS",
+    "de": "ÜBERSCHNEIDENDE POLITIKERKÄUFE",
+    "ja": "政治家の重複買い",
+    "ko": "정치인 중복 매수"
+  },
+  "POLICY · EVENT CONTEXT": {
+    "es": "POLÍTICA · CONTEXTO DEL EVENTO",
+    "fr": "POLITIQUE · CONTEXTE DE L’ÉVÉNEMENT",
+    "de": "POLITIK · EREIGNISKONTEXT",
+    "ja": "政策 · イベントの背景",
+    "ko": "정책 · 이벤트 맥락"
+  },
+  "politicians": {
+    "es": "políticos",
+    "fr": "élus",
+    "de": "Politiker",
+    "ja": "政治家",
+    "ko": "정치인"
+  },
+  "A meeting ahead.": {
+    "es": "Una reunión próxima.",
+    "fr": "Une réunion à venir.",
+    "de": "Ein bevorstehendes Treffen.",
+    "ja": "会合を控えて。",
+    "ko": "다가오는 회의."
+  },
+  "Politicians disclose purchases in the same stock ahead of Trump’s next meeting.": {
+    "es": "Políticos declaran compras de la misma acción antes de la próxima reunión de Trump.",
+    "fr": "Des élus déclarent des achats de la même action avant la prochaine réunion de Trump.",
+    "de": "Politiker melden Käufe derselben Aktie vor Trumps nächstem Treffen.",
+    "ja": "トランプ氏の次回会合を前に、政治家が同じ銘柄の購入を開示。",
+    "ko": "트럼프의 다음 회의를 앞두고 정치인들이 같은 종목의 매수를 공시합니다."
+  },
+  "Built for better decisions": {
+    "es": "Diseñado para decidir mejor",
+    "fr": "Conçu pour mieux décider",
+    "de": "Für fundiertere Entscheidungen",
+    "ja": "より良い判断のために",
+    "ko": "더 나은 판단을 위해"
+  },
+  "Get the best stocks before the crowd": {
+    "es": "Descubre las mejores acciones antes que los demás",
+    "fr": "Repérez les meilleures actions avant les autres",
+    "de": "Interessante Aktien vor der Masse entdecken",
+    "ja": "注目銘柄をいち早く見つける",
+    "ko": "남들보다 먼저 유망 종목을 찾으세요"
+  },
+  "Clear, actionable insights designed to help members identify opportunities, understand risk and make more informed investment decisions.": {
+    "es": "Análisis claros y prácticos para identificar oportunidades, comprender riesgos y tomar decisiones de inversión mejor informadas.",
+    "fr": "Des analyses claires et concrètes pour identifier des opportunités, comprendre les risques et prendre des décisions mieux éclairées.",
+    "de": "Klare, umsetzbare Einblicke, um Chancen zu erkennen, Risiken zu verstehen und fundiertere Anlageentscheidungen zu treffen.",
+    "ja": "機会を見極め、リスクを理解し、より情報に基づいた投資判断を支える明確で実用的な分析。",
+    "ko": "기회를 찾고 위험을 이해하며 더 충분한 정보에 기반한 투자 판단을 돕는 명확하고 실용적인 분석."
+  },
+  "Inside the app": {
+    "es": "Dentro de la app",
+    "fr": "Dans l’app",
+    "de": "In der App",
+    "ja": "アプリの中へ",
+    "ko": "앱에서"
+  },
+  "Explore stock signals": {
+    "es": "Explorar señales de acciones",
+    "fr": "Explorer les signaux d’actions",
+    "de": "Aktiensignale ansehen",
+    "ja": "株式シグナルを見る",
+    "ko": "주식 시그널 살펴보기"
+  },
+  "A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.": {
+    "es": "Vista previa de ideas recientes, tendencias de precios y métricas empresariales. Abre la página de señales para ver más.",
+    "fr": "Un aperçu des idées récentes, des tendances de cours et des indicateurs d’entreprise. Ouvrez la page des signaux pour en savoir plus.",
+    "de": "Vorschau aktueller Handelsideen mit Kurstrends und Unternehmenskennzahlen. Auf der Signalseite mehr entdecken.",
+    "ja": "最近の取引アイデア、価格トレンド、企業指標のプレビュー。詳しくはシグナルページへ。",
+    "ko": "최근 매매 아이디어, 가격 추세와 기업 지표를 미리 살펴보세요. 시그널 페이지에서 더 확인할 수 있습니다."
+  },
+  "Loading signal previews…": {
+    "es": "Cargando señales…",
+    "fr": "Chargement des signaux…",
+    "de": "Signalvorschau wird geladen…",
+    "ja": "シグナルを読み込み中…",
+    "ko": "시그널 불러오는 중…"
+  },
+  "Explore stock signals →": {
+    "es": "Explorar señales de acciones →",
+    "fr": "Explorer les signaux d’actions →",
+    "de": "Aktiensignale ansehen →",
+    "ja": "株式シグナルを見る →",
+    "ko": "주식 시그널 살펴보기 →"
+  },
+  "Earnings snapshot": {
+    "es": "Resumen de resultados",
+    "fr": "Aperçu des résultats",
+    "de": "Ergebnisübersicht",
+    "ja": "決算概要",
+    "ko": "실적 요약"
+  },
+  "Loading earnings…": {
+    "es": "Cargando resultados…",
+    "fr": "Chargement des résultats…",
+    "de": "Ergebnisse werden geladen…",
+    "ja": "決算情報を読み込み中…",
+    "ko": "실적 불러오는 중…"
+  },
+  "THE METHODOLOGY": {
+    "es": "LA METODOLOGÍA",
+    "fr": "LA MÉTHODOLOGIE",
+    "de": "DIE METHODIK",
+    "ja": "分析手法",
+    "ko": "방법론"
+  },
+  "What moves a stock before earnings?": {
+    "es": "¿Qué mueve una acción antes de resultados?",
+    "fr": "Qu’est-ce qui fait bouger une action avant les résultats ?",
+    "de": "Was bewegt eine Aktie vor den Quartalszahlen?",
+    "ja": "決算前の株価を動かす要因は？",
+    "ko": "실적 발표 전 주가를 움직이는 요인은?"
+  },
+  "Explore rising attention, price momentum and options volatility before the announcement. Separate the anticipation trade from holding through results.": {
+    "es": "Explora la atención creciente, el impulso del precio y la volatilidad de opciones antes del anuncio. Distingue operar la anticipación de mantener durante resultados.",
+    "fr": "Explorez l’attention croissante, la dynamique des cours et la volatilité des options avant l’annonce. Distinguez l’anticipation du maintien pendant les résultats.",
+    "de": "Aufmerksamkeit, Kursdynamik und Optionsvolatilität vor der Meldung untersuchen. Antizipationshandel vom Halten über die Veröffentlichung trennen.",
+    "ja": "発表前の注目度、価格モメンタム、オプションの変動性を確認。期待を狙う取引と決算をまたぐ保有を区別します。",
+    "ko": "발표 전 관심도, 가격 모멘텀과 옵션 변동성을 살펴보세요. 기대감을 거래하는 것과 실적 발표까지 보유하는 것을 구분하세요."
+  },
+  "Read the pre-earnings guide": {
+    "es": "Leer la guía previa a resultados",
+    "fr": "Lire le guide avant résultats",
+    "de": "Leitfaden vor den Zahlen lesen",
+    "ja": "決算前ガイドを読む",
+    "ko": "실적 발표 전 가이드 읽기"
+  },
+  "Could this company beat earnings expectations?": {
+    "es": "¿Podría esta empresa superar las expectativas de resultados?",
+    "fr": "Cette entreprise pourrait-elle dépasser les attentes ?",
+    "de": "Könnte dieses Unternehmen die Gewinnerwartungen übertreffen?",
+    "ja": "この企業は決算予想を上回るか？",
+    "ko": "이 기업은 실적 기대치를 웃돌 수 있을까요?"
+  },
+  "Connect peer results, industry data, product releases and company guidance to this quarter’s expectations. Understand what a beat can tell you about the stock.": {
+    "es": "Relaciona resultados de competidores, datos sectoriales, lanzamientos y previsiones empresariales con las expectativas trimestrales. Entiende qué implica superar estimaciones.",
+    "fr": "Reliez résultats des pairs, données sectorielles, lancements et prévisions de l’entreprise aux attentes du trimestre. Comprenez ce qu’un dépassement indique sur l’action.",
+    "de": "Wettbewerberergebnisse, Branchendaten, Produkteinführungen und Unternehmensprognosen mit Quartalserwartungen verbinden. Verstehen, was ein Übertreffen aussagt.",
+    "ja": "同業の決算、業界データ、新製品、会社見通しを四半期予想と結び付け、予想超過の意味を考えます。",
+    "ko": "동종 기업 실적, 업종 데이터, 제품 출시와 회사 가이던스를 분기 기대치에 연결하고 예상 상회의 의미를 이해하세요."
+  },
+  "Read the earnings prediction guide": {
+    "es": "Leer la guía de previsiones de resultados",
+    "fr": "Lire le guide des prévisions de résultats",
+    "de": "Leitfaden zu Ergebnisprognosen lesen",
+    "ja": "決算予測ガイドを読む",
+    "ko": "실적 예측 가이드 읽기"
+  },
+  "What matters after earnings are released?": {
+    "es": "¿Qué importa después de publicar resultados?",
+    "fr": "Qu’est-ce qui compte après la publication des résultats ?",
+    "de": "Was zählt nach der Ergebnisveröffentlichung?",
+    "ja": "決算発表後に重要なことは？",
+    "ko": "실적 발표 후 중요한 것은?"
+  },
+  "Read beyond the headline beat. Compare guidance, margins and the market reaction to assess whether the investment story has changed.": {
+    "es": "Ve más allá del titular. Compara previsiones, márgenes y reacción del mercado para evaluar si cambió la tesis de inversión.",
+    "fr": "Allez au-delà du titre. Comparez prévisions, marges et réaction du marché pour évaluer l’évolution de la thèse d’investissement.",
+    "de": "Über die Schlagzeile hinausblicken. Prognosen, Margen und Marktreaktion vergleichen, um Änderungen der Anlagethese zu beurteilen.",
+    "ja": "見出しだけでなく、見通し、利益率、市場反応を比較し、投資の前提が変わったか判断します。",
+    "ko": "헤드라인을 넘어 가이던스, 마진과 시장 반응을 비교해 투자 근거가 달라졌는지 판단하세요."
+  },
+  "Read the post-earnings guide": {
+    "es": "Leer la guía posterior a resultados",
+    "fr": "Lire le guide après résultats",
+    "de": "Leitfaden nach den Zahlen lesen",
+    "ja": "決算後ガイドを読む",
+    "ko": "실적 발표 후 가이드 읽기"
+  },
+  "AI EARNINGS INTELLIGENCE": {
+    "es": "ANÁLISIS DE RESULTADOS CON IA",
+    "fr": "ANALYSE DES RÉSULTATS PAR IA",
+    "de": "KI-GESTÜTZTE ERGEBNISANALYSE",
+    "ja": "AI決算分析",
+    "ko": "AI 실적 분석"
+  },
+  "Before the earnings release.": {
+    "es": "Antes de publicar resultados.",
+    "fr": "Avant la publication des résultats.",
+    "de": "Vor der Ergebnisveröffentlichung.",
+    "ja": "決算発表の前に。",
+    "ko": "실적 발표 전에."
+  },
+  "Explore the beat potential.": {
+    "es": "Explora el potencial de superar expectativas.",
+    "fr": "Explorez le potentiel de dépassement des attentes.",
+    "de": "Das Potenzial zum Übertreffen der Erwartungen prüfen.",
+    "ja": "予想を上回る可能性を探る。",
+    "ko": "예상 상회 가능성을 살펴보세요."
+  },
+  "Will a company beat earnings expectations this quarter? We use market conditions, industry reporting, product releases and recent company news to inform our earnings predictions.": {
+    "es": "¿Superará la empresa las expectativas este trimestre? Usamos condiciones de mercado, informes sectoriales, lanzamientos y noticias recientes para orientar nuestras previsiones.",
+    "fr": "L’entreprise dépassera-t-elle les attentes ce trimestre ? Nos prévisions s’appuient sur les conditions de marché, les rapports sectoriels, les lancements et l’actualité récente.",
+    "de": "Wird ein Unternehmen die Erwartungen dieses Quartal übertreffen? Marktbedingungen, Branchenberichte, Produkteinführungen und aktuelle Unternehmensnachrichten fließen in unsere Prognosen ein.",
+    "ja": "今四半期の決算は予想を上回るでしょうか。市場環境、業界報告、新製品、直近の企業ニュースを予測に活用します。",
+    "ko": "이번 분기 실적이 기대치를 넘을까요? 시장 상황, 업종 보고서, 제품 출시와 최신 기업 뉴스를 실적 예측에 활용합니다."
+  },
+  "Quarterly outlook": {
+    "es": "Perspectiva trimestral",
+    "fr": "Perspectives trimestrielles",
+    "de": "Quartalsausblick",
+    "ja": "四半期見通し",
+    "ko": "분기 전망"
+  },
+  "Company catalysts": {
+    "es": "Catalizadores empresariales",
+    "fr": "Catalyseurs d’entreprise",
+    "de": "Unternehmenskatalysatoren",
+    "ja": "企業の材料",
+    "ko": "기업 촉매 요인"
+  },
+  "Earnings expectations": {
+    "es": "Expectativas de resultados",
+    "fr": "Attentes de résultats",
+    "de": "Gewinnerwartungen",
+    "ja": "決算予想",
+    "ko": "실적 기대치"
+  },
+  "Explore the research inputs": {
+    "es": "Explora las bases del análisis",
+    "fr": "Explorer les données de l’analyse",
+    "de": "Analysegrundlagen erkunden",
+    "ja": "分析の材料を見る",
+    "ko": "리서치 근거 살펴보기"
+  },
+  "AI RESEARCH ↗": {
+    "es": "ANÁLISIS CON IA ↗",
+    "fr": "RECHERCHE IA ↗",
+    "de": "KI-ANALYSE ↗",
+    "ja": "AIリサーチ ↗",
+    "ko": "AI 리서치 ↗"
+  },
+  "Market conditions": {
+    "es": "Condiciones de mercado",
+    "fr": "Conditions de marché",
+    "de": "Marktbedingungen",
+    "ja": "市場環境",
+    "ko": "시장 상황"
+  },
+  "Quarterly context": {
+    "es": "Contexto trimestral",
+    "fr": "Contexte trimestriel",
+    "de": "Quartalskontext",
+    "ja": "四半期の背景",
+    "ko": "분기 맥락"
+  },
+  "Industry reports": {
+    "es": "Informes sectoriales",
+    "fr": "Rapports sectoriels",
+    "de": "Branchenberichte",
+    "ja": "業界レポート",
+    "ko": "업종 보고서"
+  },
+  "Company news": {
+    "es": "Noticias de empresas",
+    "fr": "Actualités d’entreprise",
+    "de": "Unternehmensnachrichten",
+    "ja": "企業ニュース",
+    "ko": "기업 뉴스"
+  },
+  "A clearer view before results": {
+    "es": "Una visión más clara antes de resultados",
+    "fr": "Une vision plus claire avant les résultats",
+    "de": "Klarheit vor den Ergebnissen",
+    "ja": "決算前に視野を広げる",
+    "ko": "실적 발표 전에 더 선명한 시각"
+  },
+  "Put this quarter’s earnings expectations in context with the economic backdrop and market conditions.": {
+    "es": "Contextualiza las expectativas trimestrales con el entorno económico y las condiciones del mercado.",
+    "fr": "Replacez les attentes trimestrielles dans le contexte économique et les conditions de marché.",
+    "de": "Quartalserwartungen in den Wirtschafts- und Marktkontext einordnen.",
+    "ja": "経済や市場環境を踏まえて今四半期の決算予想を捉えます。",
+    "ko": "경제 배경과 시장 상황 속에서 이번 분기 실적 기대치를 살펴보세요."
+  },
+  "Get the app · iOS & Android": {
+    "es": "Descarga la app · iOS y Android",
+    "fr": "Télécharger l’app · iOS et Android",
+    "de": "App herunterladen · iOS und Android",
+    "ja": "アプリを入手 · iOS・Android",
+    "ko": "앱 다운로드 · iOS 및 Android"
+  },
+  "An earnings beat does not guarantee a rising stock price.": {
+    "es": "Superar expectativas no garantiza que suba la acción.",
+    "fr": "Un résultat supérieur aux attentes ne garantit pas une hausse du cours.",
+    "de": "Ein Übertreffen der Erwartungen garantiert keinen Kursanstieg.",
+    "ja": "決算が予想を上回っても株価上昇は保証されません。",
+    "ko": "예상치를 웃도는 실적이 주가 상승을 보장하지는 않습니다."
+  },
+  "Predictions are not guarantees.": {
+    "es": "Las previsiones no son garantías.",
+    "fr": "Les prévisions ne sont pas des garanties.",
+    "de": "Prognosen sind keine Garantien.",
+    "ja": "予測は保証ではありません。",
+    "ko": "예측은 보장이 아닙니다."
+  },
+  "PLAN YOUR WEEK": {
+    "es": "PLANIFICA TU SEMANA",
+    "fr": "PLANIFIEZ VOTRE SEMAINE",
+    "de": "PLANEN SIE IHRE WOCHE",
+    "ja": "週間計画を立てる",
+    "ko": "한 주 계획하기"
+  },
+  "Market Events Calendar": {
+    "es": "Calendario de eventos de mercado",
+    "fr": "Calendrier des événements de marché",
+    "de": "Marktereigniskalender",
+    "ja": "市場イベントカレンダー",
+    "ko": "시장 이벤트 캘린더"
+  },
+  "Economic releases, Fed decisions, 13F filings and index reviews.": {
+    "es": "Datos económicos, decisiones de la Fed, informes 13F y revisiones de índices.",
+    "fr": "Publications économiques, décisions de la Fed, déclarations 13F et révisions d’indices.",
+    "de": "Wirtschaftsdaten, Fed-Entscheidungen, 13F-Meldungen und Indexüberprüfungen.",
+    "ja": "経済指標、FRB決定、13F報告、指数見直し。",
+    "ko": "경제지표 발표, 연준 결정, 13F 공시와 지수 정기 심사."
+  },
+  "Full stock market calendar ↗": {
+    "es": "Calendario bursátil completo ↗",
+    "fr": "Calendrier boursier complet ↗",
+    "de": "Vollständiger Börsenkalender ↗",
+    "ja": "市場カレンダー全体 ↗",
+    "ko": "전체 시장 캘린더 ↗"
+  },
+  "↗ Share calendar image": {
+    "es": "↗ Compartir imagen del calendario",
+    "fr": "↗ Partager l’image du calendrier",
+    "de": "↗ Kalenderbild teilen",
+    "ja": "↗ カレンダー画像を共有",
+    "ko": "↗ 캘린더 이미지 공유"
+  },
+  "Loading your week…": {
+    "es": "Cargando tu semana…",
+    "fr": "Chargement de votre semaine…",
+    "de": "Ihre Woche wird geladen…",
+    "ja": "今週の予定を読み込み中…",
+    "ko": "이번 주 일정 불러오는 중…"
+  },
+  "Selected events, not a complete live calendar. Dates can change; consult the linked official sources. Scheduled index reviews do not guarantee a stock’s inclusion.": {
+    "es": "Eventos seleccionados, no un calendario completo en directo. Las fechas pueden cambiar; consulta las fuentes oficiales enlazadas. Las revisiones de índices no garantizan la inclusión de una acción.",
+    "fr": "Événements sélectionnés, pas un calendrier exhaustif en direct. Les dates peuvent changer ; consultez les sources officielles liées. Une révision d’indice ne garantit pas l’inclusion d’une action.",
+    "de": "Ausgewählte Ereignisse, kein vollständiger Live-Kalender. Termine können sich ändern; verlinkte offizielle Quellen prüfen. Indexüberprüfungen garantieren keine Aufnahme einer Aktie.",
+    "ja": "掲載は選定イベントであり、網羅的なライブカレンダーではありません。日程は変更され得るため、リンク先の公式情報をご確認ください。指数見直しは銘柄採用を保証しません。",
+    "ko": "선별된 이벤트이며 전체 실시간 캘린더가 아닙니다. 날짜는 바뀔 수 있으니 연결된 공식 출처를 확인하세요. 지수 심사 일정이 종목 편입을 보장하지는 않습니다."
+  },
+  "Who could join the index next?": {
+    "es": "¿Quién podría entrar en el índice?",
+    "fr": "Qui pourrait rejoindre l’indice ?",
+    "de": "Wer könnte als Nächstes in den Index kommen?",
+    "ja": "次に指数へ採用される銘柄は？",
+    "ko": "다음 지수 편입 후보는?"
+  },
+  "Understand how Russell, S&P 500 and Nasdaq-100 candidates are assessed and how to separate a watchlist from a confirmed addition.": {
+    "es": "Comprende cómo se evalúan candidatos al Russell, S&P 500 y Nasdaq-100 y distingue una lista de seguimiento de una incorporación confirmada.",
+    "fr": "Comprenez l’évaluation des candidats au Russell, S&P 500 et Nasdaq-100 et distinguez une liste de suivi d’une inclusion confirmée.",
+    "de": "Verstehen Sie die Bewertung von Russell-, S&P-500- und Nasdaq-100-Kandidaten und unterscheiden Sie Beobachtungslisten von bestätigten Aufnahmen.",
+    "ja": "Russell、S&P 500、Nasdaq-100の候補評価を理解し、監視候補と確定した採用を区別します。",
+    "ko": "Russell, S&P 500, Nasdaq-100 후보 평가 방식을 이해하고 관찰 목록과 확정 편입을 구분하세요."
+  },
+  "Read the index inclusion guide": {
+    "es": "Leer la guía de inclusión en índices",
+    "fr": "Lire le guide d’inclusion dans un indice",
+    "de": "Leitfaden zur Indexaufnahme lesen",
+    "ja": "指数採用ガイドを読む",
+    "ko": "지수 편입 가이드 읽기"
+  },
+  "What could hedge funds buy next?": {
+    "es": "¿Qué podrían comprar los hedge funds?",
+    "fr": "Que pourraient acheter les hedge funds ?",
+    "de": "Was könnten Hedgefonds als Nächstes kaufen?",
+    "ja": "ヘッジファンドの次の買い候補は？",
+    "ko": "헤지펀드의 다음 매수 후보는?"
+  },
+  "Read the clues before the next 13F: disclosed positions, accumulation patterns, manager announcements and company catalysts.": {
+    "es": "Busca pistas antes del próximo 13F: posiciones publicadas, patrones de acumulación, anuncios de gestores y catalizadores empresariales.",
+    "fr": "Repérez les indices avant le prochain 13F : positions déclarées, accumulation, annonces des gérants et catalyseurs d’entreprise.",
+    "de": "Hinweise vor der nächsten 13F-Meldung prüfen: Positionen, Akkumulationsmuster, Managerankündigungen und Unternehmenskatalysatoren.",
+    "ja": "次の13F報告前に、開示済み保有、買い集めの傾向、運用者の発表、企業材料を確認。",
+    "ko": "다음 13F 전에 공시된 보유 종목, 매집 패턴, 운용사 발표와 기업 촉매 요인을 살펴보세요."
+  },
+  "Read the 13F research guide": {
+    "es": "Leer la guía de análisis 13F",
+    "fr": "Lire le guide de recherche 13F",
+    "de": "13F-Analyseleitfaden lesen",
+    "ja": "13F分析ガイドを読む",
+    "ko": "13F 리서치 가이드 읽기"
+  },
+  "How to research the next market move": {
+    "es": "Cómo analizar el próximo movimiento del mercado",
+    "fr": "Comment analyser le prochain mouvement du marché",
+    "de": "Die nächste Marktbewegung analysieren",
+    "ja": "次の市場の動きを調べる方法",
+    "ko": "다음 시장 움직임을 분석하는 방법"
+  },
+  "Build scenarios for inflation, jobs and Fed decisions, then plan positioning and hedges before the release.": {
+    "es": "Crea escenarios de inflación, empleo y decisiones de la Fed; planifica posiciones y coberturas antes de su publicación.",
+    "fr": "Construisez des scénarios sur l’inflation, l’emploi et la Fed, puis préparez positions et couvertures avant la publication.",
+    "de": "Szenarien zu Inflation, Beschäftigung und Fed-Entscheidungen entwickeln, dann Positionen und Absicherungen vor der Veröffentlichung planen.",
+    "ja": "インフレ、雇用、FRBのシナリオを立て、発表前にポジションとヘッジを計画。",
+    "ko": "인플레이션, 고용과 연준 결정 시나리오를 세우고 발표 전에 포지션과 헤지를 계획하세요."
+  },
+  "Read the market direction guide": {
+    "es": "Leer la guía de dirección del mercado",
+    "fr": "Lire le guide sur la direction du marché",
+    "de": "Leitfaden zur Marktrichtung lesen",
+    "ja": "市場方向性ガイドを読む",
+    "ko": "시장 방향 가이드 읽기"
+  },
+  "DAILY MARKET OUTLOOK": {
+    "es": "PERSPECTIVA DIARIA DEL MERCADO",
+    "fr": "PERSPECTIVES QUOTIDIENNES",
+    "de": "TÄGLICHER MARKTAUSBLICK",
+    "ja": "日々の市場見通し",
+    "ko": "일일 시장 전망"
+  },
+  "The next market move.": {
+    "es": "El próximo movimiento del mercado.",
+    "fr": "Le prochain mouvement du marché.",
+    "de": "Die nächste Marktbewegung.",
+    "ja": "次の市場の動き。",
+    "ko": "다음 시장 움직임."
+  },
+  "See the research behind it.": {
+    "es": "Consulta el análisis que lo respalda.",
+    "fr": "Découvrez l’analyse qui l’étaye.",
+    "de": "Die Analyse dahinter verstehen.",
+    "ja": "その背景の分析を見る。",
+    "ko": "그 근거가 되는 분석을 확인하세요."
+  },
+  "Review our daily S&P 500 and QQQ predictions. We combine market events, statistical analysis, news research and Wall Street research to estimate how the market could move.": {
+    "es": "Consulta nuestras previsiones diarias del S&P 500 y QQQ. Combinamos eventos, análisis estadístico, noticias e investigación de Wall Street para estimar posibles movimientos.",
+    "fr": "Consultez nos prévisions quotidiennes du S&P 500 et de QQQ. Nous combinons événements, statistiques, actualités et analyses de Wall Street pour estimer les mouvements possibles.",
+    "de": "Tägliche S&P-500- und QQQ-Prognosen ansehen. Wir verbinden Marktereignisse, Statistik, Nachrichten- und Wall-Street-Analysen, um mögliche Bewegungen einzuschätzen.",
+    "ja": "S&P 500とQQQの日々の予測を確認。市場イベント、統計、ニュース、ウォール街のリサーチを組み合わせて動きを推定します。",
+    "ko": "매일 S&P 500과 QQQ 전망을 확인하세요. 시장 이벤트, 통계, 뉴스와 월가 리서치를 결합해 가능한 움직임을 추정합니다."
+  },
+  "Explore potential holdings ahead of 13F filings using recent public data, news and previously disclosed position changes. Assess possible index additions using eligibility rules, company rankings and corporate developments. These are research candidates until filings or index announcements confirm them.": {
+    "es": "Analiza posibles posiciones antes de los informes 13F con datos públicos recientes, noticias y cambios declarados. Evalúa posibles incorporaciones a índices según requisitos, clasificaciones y novedades empresariales. Son candidatos de análisis hasta que los informes o anuncios los confirmen.",
+    "fr": "Étudiez les positions potentielles avant les déclarations 13F grâce aux données publiques, aux nouvelles et aux changements déclarés. Évaluez les candidats aux indices selon les critères, classements et évolutions des entreprises. Ils restent des pistes de recherche jusqu’à confirmation officielle.",
+    "de": "Mögliche Bestände vor 13F-Meldungen anhand öffentlicher Daten, Nachrichten und gemeldeter Änderungen prüfen. Mögliche Indexaufnahmen anhand von Regeln, Ranglisten und Unternehmensentwicklungen bewerten. Bis zur Bestätigung bleiben es Analysekandidaten.",
+    "ja": "公開データ、ニュース、開示済みの保有変化から13F前の候補を調べます。指数採用基準、企業順位、事業動向で採用候補を評価します。正式な報告や発表まではリサーチ上の候補です。",
+    "ko": "최신 공개 데이터, 뉴스와 공시된 포지션 변화로 13F 이전의 보유 후보를 살펴보세요. 편입 기준, 기업 순위와 사업 동향으로 지수 후보를 평가합니다. 공시나 지수 발표가 확인해 주기 전까지는 리서치 후보입니다."
+  },
+  "Statistical analysis": {
+    "es": "Análisis estadístico",
+    "fr": "Analyse statistique",
+    "de": "Statistische Analyse",
+    "ja": "統計分析",
+    "ko": "통계 분석"
+  },
+  "Event catalysts": {
+    "es": "Catalizadores de eventos",
+    "fr": "Catalyseurs événementiels",
+    "de": "Ereigniskatalysatoren",
+    "ja": "イベント材料",
+    "ko": "이벤트 촉매 요인"
+  },
+  "Wall Street research": {
+    "es": "Análisis de Wall Street",
+    "fr": "Analyses de Wall Street",
+    "de": "Wall-Street-Analysen",
+    "ja": "ウォール街のリサーチ",
+    "ko": "월가 리서치"
+  },
+  "Choose your market": {
+    "es": "Elige tu mercado",
+    "fr": "Choisissez votre marché",
+    "de": "Markt auswählen",
+    "ja": "市場を選択",
+    "ko": "시장 선택"
+  },
+  "Daily prediction": {
+    "es": "Previsión diaria",
+    "fr": "Prévision quotidienne",
+    "de": "Tägliche Prognose",
+    "ja": "日次予測",
+    "ko": "일일 예측"
+  },
+  "Explore the daily outlook for the broader U.S. market, with the events and research behind the forecast.": {
+    "es": "Explora la perspectiva diaria del mercado estadounidense y los eventos y análisis que la respaldan.",
+    "fr": "Explorez les perspectives quotidiennes du marché américain, avec les événements et analyses associés.",
+    "de": "Täglichen Ausblick für den US-Gesamtmarkt samt Ereignissen und Analysen erkunden.",
+    "ja": "米国市場全体の日々の見通しと、その根拠となるイベントや分析を確認。",
+    "ko": "미국 전체 시장의 일일 전망과 예측의 근거인 이벤트 및 분석을 확인하세요."
+  },
+  "Forecasts can change as new information arrives.": {
+    "es": "Las previsiones pueden cambiar con nueva información.",
+    "fr": "Les prévisions peuvent évoluer avec de nouvelles informations.",
+    "de": "Prognosen können sich mit neuen Informationen ändern.",
+    "ja": "新しい情報により予測は変わることがあります。",
+    "ko": "새로운 정보에 따라 전망은 바뀔 수 있습니다."
+  },
+  "EXPLORE YOUR NEXT SETUP": {
+    "es": "EXPLORA TU PRÓXIMA ESTRATEGIA",
+    "fr": "EXPLOREZ VOTRE PROCHAINE STRATÉGIE",
+    "de": "DEN NÄCHSTEN HANDELSANSATZ ENTDECKEN",
+    "ja": "次の取引アイデアを探す",
+    "ko": "다음 매매 아이디어 찾기"
+  },
+  "From market moves": {
+    "es": "De los movimientos del mercado",
+    "fr": "Des mouvements du marché",
+    "de": "Von Marktbewegungen",
+    "ja": "市場の動きから",
+    "ko": "시장 움직임에서"
+  },
+  "to options possibilities.": {
+    "es": "a las posibilidades de las opciones.",
+    "fr": "aux possibilités des options.",
+    "de": "zu Optionsmöglichkeiten.",
+    "ja": "オプションの可能性へ。",
+    "ko": "옵션의 가능성으로."
+  },
+  "Explore positioning, model a payoff and compare ways to express your view.": {
+    "es": "Explora posiciones, simula resultados y compara cómo expresar tu perspectiva.",
+    "fr": "Explorez le positionnement, simulez le résultat et comparez les façons d’exprimer votre scénario.",
+    "de": "Positionierung untersuchen, Auszahlungen modellieren und Umsetzungen Ihrer Marktmeinung vergleichen.",
+    "ja": "ポジショニングを調べ、損益を試算し、相場観を表す方法を比較。",
+    "ko": "포지셔닝을 살펴보고 손익을 계산하며 전망을 반영할 방법을 비교하세요."
+  },
+  "Activity explorer": {
+    "es": "Explorador de actividad",
+    "fr": "Explorateur d’activité",
+    "de": "Aktivitätsübersicht",
+    "ja": "取引動向を見る",
+    "ko": "거래 동향 탐색"
+  },
+  "Profit calculator": {
+    "es": "Calculadora de beneficios",
+    "fr": "Calculateur de gains",
+    "de": "Gewinnrechner",
+    "ja": "損益計算ツール",
+    "ko": "손익 계산기"
+  },
+  "Prebuilt strategies": {
+    "es": "Estrategias predefinidas",
+    "fr": "Stratégies prédéfinies",
+    "de": "Vorgefertigte Strategien",
+    "ja": "既定の戦略",
+    "ko": "기본 전략"
+  },
+  "Where are positions concentrated?": {
+    "es": "¿Dónde se concentran las posiciones?",
+    "fr": "Où les positions se concentrent-elles ?",
+    "de": "Wo konzentrieren sich Positionen?",
+    "ja": "ポジションはどこに集中している？",
+    "ko": "포지션은 어디에 집중되어 있나요?"
+  },
+  "Call and put open interest across available expirations.": {
+    "es": "Interés abierto de calls y puts en los vencimientos disponibles.",
+    "fr": "Positions ouvertes de calls et puts sur les échéances disponibles.",
+    "de": "Offene Call- und Put-Positionen über verfügbare Laufzeiten.",
+    "ja": "利用可能な満期全体のコール・プット建玉。",
+    "ko": "제공되는 만기별 콜·풋 미결제약정."
+  },
+  "Call open interest": {
+    "es": "Interés abierto de calls",
+    "fr": "Positions ouvertes de calls",
+    "de": "Offene Call-Positionen",
+    "ja": "コール建玉",
+    "ko": "콜 미결제약정"
+  },
+  "Put open interest": {
+    "es": "Interés abierto de puts",
+    "fr": "Positions ouvertes de puts",
+    "de": "Offene Put-Positionen",
+    "ja": "プット建玉",
+    "ko": "풋 미결제약정"
+  },
+  "Loading options snapshot…": {
+    "es": "Cargando datos de opciones…",
+    "fr": "Chargement de l’aperçu des options…",
+    "de": "Optionsübersicht wird geladen…",
+    "ja": "オプション概要を読み込み中…",
+    "ko": "옵션 요약 불러오는 중…"
+  },
+  "Totals cover available contracts.": {
+    "es": "Los totales incluyen los contratos disponibles.",
+    "fr": "Les totaux couvrent les contrats disponibles.",
+    "de": "Summen umfassen verfügbare Kontrakte.",
+    "ja": "合計は利用可能な契約が対象です。",
+    "ko": "합계는 제공되는 계약을 대상으로 합니다."
+  },
+  "● Calls": {
+    "es": "● Calls",
+    "fr": "● Calls",
+    "de": "● Calls",
+    "ja": "● コール",
+    "ko": "● 콜"
+  },
+  "● Puts": {
+    "es": "● Puts",
+    "fr": "● Puts",
+    "de": "● Puts",
+    "ja": "● プット",
+    "ko": "● 풋"
+  },
+  "Loading concentration chart…": {
+    "es": "Cargando gráfico de concentración…",
+    "fr": "Chargement du graphique de concentration…",
+    "de": "Konzentrationsdiagramm wird geladen…",
+    "ja": "集中度チャートを読み込み中…",
+    "ko": "집중도 차트 불러오는 중…"
+  },
+  "Largest open-interest strikes. Call/put totals do not establish market direction.": {
+    "es": "Precios de ejercicio con mayor interés abierto. Los totales de calls y puts no determinan la dirección del mercado.",
+    "fr": "Prix d’exercice aux positions ouvertes les plus élevées. Les totaux calls/puts n’établissent pas la direction du marché.",
+    "de": "Basispreise mit den größten offenen Positionen. Call-/Put-Summen bestimmen keine Marktrichtung.",
+    "ja": "建玉の多い権利行使価格。コール・プット合計だけで市場の方向は判断できません。",
+    "ko": "미결제약정이 가장 많은 행사가. 콜·풋 합계만으로 시장 방향을 판단할 수 없습니다."
+  },
+  "options activity →": {
+    "es": "actividad de opciones →",
+    "fr": "activité des options →",
+    "de": "Optionsaktivität →",
+    "ja": "オプション動向 →",
+    "ko": "옵션 동향 →"
+  },
+  "What is the options activity telling you?": {
+    "es": "¿Qué indica la actividad de opciones?",
+    "fr": "Que révèle l’activité des options ?",
+    "de": "Was verrät die Optionsaktivität?",
+    "ja": "オプション動向から何が分かる？",
+    "ko": "옵션 동향은 무엇을 알려주나요?"
+  },
+  "Read unusual volume, open interest and call/put positioning together. Learn which clues deserve attention—and what the numbers cannot reveal.": {
+    "es": "Interpreta juntos volumen inusual, interés abierto y posiciones call/put. Aprende qué pistas importan y qué no revelan los datos.",
+    "fr": "Analysez ensemble volumes inhabituels, positions ouvertes et positionnement calls/puts. Identifiez les indices utiles et les limites des chiffres.",
+    "de": "Ungewöhnliches Volumen, offene Positionen und Call-/Put-Positionierung gemeinsam betrachten. Aussagekräftige Hinweise und Grenzen der Zahlen verstehen.",
+    "ja": "異常出来高、建玉、コール・プットの偏りを合わせて読み、注目すべき手掛かりと数値の限界を理解します。",
+    "ko": "이례적 거래량, 미결제약정과 콜·풋 포지셔닝을 함께 읽고 중요한 단서와 숫자가 알려주지 못하는 것을 이해하세요."
+  },
+  "Read the options activity guide": {
+    "es": "Leer la guía de actividad de opciones",
+    "fr": "Lire le guide de l’activité des options",
+    "de": "Leitfaden zur Optionsaktivität lesen",
+    "ja": "オプション動向ガイドを読む",
+    "ko": "옵션 동향 가이드 읽기"
+  },
+  "Which contracts deserve a closer look?": {
+    "es": "¿Qué contratos merecen atención?",
+    "fr": "Quels contrats méritent un examen approfondi ?",
+    "de": "Welche Kontrakte verdienen einen genaueren Blick?",
+    "ja": "詳しく調べるべき契約は？",
+    "ko": "어떤 계약을 자세히 살펴봐야 할까요?"
+  },
+  "Compare strikes and expirations through volume, open interest and available volatility. Build a shortlist with liquidity and timing in mind.": {
+    "es": "Compara precios de ejercicio y vencimientos según volumen, interés abierto y volatilidad disponible. Preselecciona considerando liquidez y plazos.",
+    "fr": "Comparez prix d’exercice et échéances selon les volumes, positions ouvertes et volatilités disponibles. Sélectionnez en tenant compte de la liquidité et du timing.",
+    "de": "Basispreise und Laufzeiten nach Volumen, offenen Positionen und verfügbarer Volatilität vergleichen. Liquidität und Timing bei der Vorauswahl berücksichtigen.",
+    "ja": "出来高、建玉、利用可能な変動性で権利行使価格と満期を比較し、流動性と時期を踏まえて候補を選びます。",
+    "ko": "거래량, 미결제약정과 제공되는 변동성으로 행사가와 만기를 비교하고 유동성과 타이밍을 고려해 후보를 고르세요."
+  },
+  "Read the contract selection guide": {
+    "es": "Leer la guía de selección de contratos",
+    "fr": "Lire le guide de sélection des contrats",
+    "de": "Leitfaden zur Kontraktauswahl lesen",
+    "ja": "契約選択ガイドを読む",
+    "ko": "계약 선택 가이드 읽기"
+  },
+  "Turn an options idea into a strategy.": {
+    "es": "Convierte una idea de opciones en estrategia.",
+    "fr": "Transformez une idée d’options en stratégie.",
+    "de": "Eine Optionsidee zur Strategie entwickeln.",
+    "ja": "オプションのアイデアを戦略に。",
+    "ko": "옵션 아이디어를 전략으로 만드세요."
+  },
+  "Explore calls, puts and spreads. Map the premium at risk, breakeven and expiration payoff before choosing your setup.": {
+    "es": "Explora calls, puts y spreads. Calcula prima en riesgo, punto de equilibrio y resultado al vencimiento antes de elegir.",
+    "fr": "Explorez calls, puts et spreads. Évaluez prime risquée, seuil de rentabilité et résultat à l’échéance avant de choisir.",
+    "de": "Calls, Puts und Spreads untersuchen. Gefährdete Prämie, Gewinnschwelle und Auszahlung bei Verfall vorab ermitteln.",
+    "ja": "コール、プット、スプレッドを調べ、選択前にプレミアムのリスク、損益分岐点、満期損益を把握します。",
+    "ko": "콜, 풋과 스프레드를 살펴보고 전략 선택 전에 프리미엄 위험, 손익분기점과 만기 손익을 계산하세요."
+  },
+  "Read the strategy planning guide": {
+    "es": "Leer la guía de planificación de estrategias",
+    "fr": "Lire le guide de planification des stratégies",
+    "de": "Leitfaden zur Strategieplanung lesen",
+    "ja": "戦略計画ガイドを読む",
+    "ko": "전략 계획 가이드 읽기"
+  },
+  "OPTIONS SIGNALS · IN THE APP": {
+    "es": "SEÑALES DE OPCIONES · EN LA APP",
+    "fr": "SIGNAUX D’OPTIONS · DANS L’APP",
+    "de": "OPTIONSSIGNALE · IN DER APP",
+    "ja": "オプションシグナル · アプリ内",
+    "ko": "옵션 시그널 · 앱에서"
+  },
+  "Follow the activity.": {
+    "es": "Sigue la actividad.",
+    "fr": "Suivez l’activité.",
+    "de": "Aktivität verfolgen.",
+    "ja": "取引動向を追う。",
+    "ko": "거래 활동을 확인하세요."
+  },
+  "Find your next options idea.": {
+    "es": "Encuentra tu próxima idea de opciones.",
+    "fr": "Trouvez votre prochaine idée d’options.",
+    "de": "Die nächste Optionsidee finden.",
+    "ja": "次のオプションアイデアを探す。",
+    "ko": "다음 옵션 아이디어를 찾으세요."
+  },
+  "Unusual volume. Call and put positioning. Liquidity and strategy selection. Bring the clues together as you explore options opportunities and research-backed signals in the app.": {
+    "es": "Volumen inusual. Posiciones call y put. Liquidez y selección de estrategias. Conecta las pistas al explorar oportunidades y señales respaldadas por análisis en la app.",
+    "fr": "Volumes inhabituels. Positionnement calls et puts. Liquidité et stratégies. Reliez les indices pour explorer opportunités et signaux étayés dans l’app.",
+    "de": "Ungewöhnliches Volumen. Call- und Put-Positionierung. Liquidität und Strategieauswahl. Hinweise verbinden und researchgestützte Optionsideen in der App erkunden.",
+    "ja": "異常出来高、コール・プットの偏り、流動性、戦略選択。手掛かりを結び付け、アプリで分析に基づくオプションのアイデアを探します。",
+    "ko": "이례적 거래량, 콜·풋 포지셔닝, 유동성과 전략 선택. 단서를 연결해 앱에서 분석에 기반한 옵션 기회와 시그널을 살펴보세요."
+  },
+  "Curious about “smart money”? Look for activity worth investigating, then connect it with company catalysts and a strategy that fits your outlook.": {
+    "es": "¿Te interesa el «smart money»? Busca actividad que merezca análisis y relaciónala con catalizadores empresariales y una estrategia acorde con tu perspectiva.",
+    "fr": "Le « smart money » vous intrigue ? Repérez les activités à étudier, puis reliez-les aux catalyseurs d’entreprise et à une stratégie adaptée à votre scénario.",
+    "de": "Neugierig auf „Smart Money“? Auffällige Aktivitäten mit Unternehmenskatalysatoren und einer passenden Strategie verbinden.",
+    "ja": "「スマートマネー」が気になりますか。注目すべき取引を見つけ、企業材料や自分の見通しに合う戦略と結び付けましょう。",
+    "ko": "스마트 머니가 궁금하신가요? 조사할 만한 거래를 찾고 기업 촉매 요인과 전망에 맞는 전략에 연결하세요."
+  },
+  "Options research": {
+    "es": "Análisis de opciones",
+    "fr": "Recherche sur les options",
+    "de": "Optionsanalysen",
+    "ja": "オプションリサーチ",
+    "ko": "옵션 리서치"
+  },
+  "Trade setups": {
+    "es": "Ideas de operaciones",
+    "fr": "Configurations de trading",
+    "de": "Handelsansätze",
+    "ja": "取引アイデア",
+    "ko": "매매 아이디어"
+  },
+  "Risk & reward": {
+    "es": "Riesgo y beneficio",
+    "fr": "Risque et rendement",
+    "de": "Risiko und Ertrag",
+    "ja": "リスクとリターン",
+    "ko": "위험과 보상"
+  },
+  "Explore the signal behind the activity": {
+    "es": "Explora la señal detrás de la actividad",
+    "fr": "Explorez le signal derrière l’activité",
+    "de": "Das Signal hinter der Aktivität erkunden",
+    "ja": "取引動向の背後のシグナルを探る",
+    "ko": "거래 활동 뒤의 시그널 살펴보기"
+  },
+  "OPTIONS RESEARCH ↗": {
+    "es": "ANÁLISIS DE OPCIONES ↗",
+    "fr": "RECHERCHE OPTIONS ↗",
+    "de": "OPTIONSANALYSE ↗",
+    "ja": "オプションリサーチ ↗",
+    "ko": "옵션 리서치 ↗"
+  },
+  "Unusual volume": {
+    "es": "Volumen inusual",
+    "fr": "Volume inhabituel",
+    "de": "Ungewöhnliches Volumen",
+    "ja": "異常出来高",
+    "ko": "이례적 거래량"
+  },
+  "Activity worth a closer look": {
+    "es": "Actividad que merece atención",
+    "fr": "Une activité à examiner",
+    "de": "Aktivität zum genaueren Prüfen",
+    "ja": "詳しく調べたい取引",
+    "ko": "자세히 살펴볼 거래"
+  },
+  "Calls & puts": {
+    "es": "Calls y puts",
+    "fr": "Calls et puts",
+    "de": "Calls und Puts",
+    "ja": "コールとプット",
+    "ko": "콜과 풋"
+  },
+  "Follow the positioning": {
+    "es": "Sigue las posiciones",
+    "fr": "Suivre le positionnement",
+    "de": "Positionierung verfolgen",
+    "ja": "ポジション動向を追う",
+    "ko": "포지셔닝 확인"
+  },
+  "Liquidity": {
+    "es": "Liquidez",
+    "fr": "Liquidité",
+    "de": "Liquidität",
+    "ja": "流動性",
+    "ko": "유동성"
+  },
+  "Check the contract": {
+    "es": "Revisa el contrato",
+    "fr": "Vérifier le contrat",
+    "de": "Kontrakt prüfen",
+    "ja": "契約を確認",
+    "ko": "계약 확인"
+  },
+  "Strategy ideas": {
+    "es": "Ideas de estrategias",
+    "fr": "Idées de stratégies",
+    "de": "Strategieideen",
+    "ja": "戦略のアイデア",
+    "ko": "전략 아이디어"
+  },
+  "Understand the trade-off": {
+    "es": "Comprende las compensaciones",
+    "fr": "Comprendre le compromis",
+    "de": "Abwägungen verstehen",
+    "ja": "トレードオフを理解する",
+    "ko": "상충 관계 이해"
+  },
+  "Spot activity that stands out.": {
+    "es": "Detecta actividad destacada.",
+    "fr": "Repérez l’activité qui se démarque.",
+    "de": "Auffällige Aktivität erkennen.",
+    "ja": "目立つ取引動向を見つける。",
+    "ko": "눈에 띄는 거래를 찾으세요."
+  },
+  "Explore elevated contract volume alongside open interest, price action and upcoming catalysts. Investigate the setup behind the activity before choosing a trade.": {
+    "es": "Analiza volúmenes elevados junto con interés abierto, precios y próximos catalizadores. Investiga la idea detrás de la actividad antes de operar.",
+    "fr": "Analysez les volumes élevés avec les positions ouvertes, les cours et les catalyseurs à venir. Étudiez le contexte avant de choisir une opération.",
+    "de": "Erhöhtes Kontraktvolumen zusammen mit offenen Positionen, Kursverlauf und kommenden Katalysatoren prüfen. Den Hintergrund vor einer Handelsentscheidung untersuchen.",
+    "ja": "出来高の増加を建玉、値動き、今後の材料とともに確認。取引を選ぶ前に背景を調べましょう。",
+    "ko": "계약 거래량 증가를 미결제약정, 가격 움직임과 향후 촉매 요인과 함께 확인하고 거래 전에 배경을 조사하세요."
+  },
+  "Options activity does not identify hedge funds or confirm what “smart money” is buying. Signals are research ideas; options can lose their entire premium.": {
+    "es": "La actividad de opciones no identifica hedge funds ni confirma qué compra el «smart money». Las señales son ideas de análisis; las opciones pueden perder toda su prima.",
+    "fr": "L’activité des options n’identifie pas les hedge funds ni ne confirme les achats du « smart money ». Les signaux sont des pistes de recherche ; une option peut perdre toute sa prime.",
+    "de": "Optionsaktivität identifiziert keine Hedgefonds und bestätigt keine „Smart-Money“-Käufe. Signale sind Analyseideen; Optionen können die gesamte Prämie verlieren.",
+    "ja": "オプション動向からヘッジファンドや「スマートマネー」の買いを特定することはできません。シグナルはリサーチのアイデアであり、オプションはプレミアム全額を失う可能性があります。",
+    "ko": "옵션 동향만으로 헤지펀드나 스마트 머니의 매수를 확인할 수 없습니다. 시그널은 리서치 아이디어이며 옵션은 프리미엄 전액을 잃을 수 있습니다."
+  },
+  "BEYOND THE HEADLINES": {
+    "es": "MÁS ALLÁ DE LOS TITULARES",
+    "fr": "AU-DELÀ DES TITRES",
+    "de": "HINTER DEN SCHLAGZEILEN",
+    "ja": "見出しの先へ",
+    "ko": "헤드라인 너머"
+  },
+  "Unusual signals. Useful context.": {
+    "es": "Señales inusuales. Contexto útil.",
+    "fr": "Signaux inhabituels. Contexte utile.",
+    "de": "Ungewöhnliche Signale. Hilfreicher Kontext.",
+    "ja": "意外なシグナル、役立つ背景。",
+    "ko": "특이한 신호, 유용한 맥락."
+  },
+  "Explore shipping flows and the context behind unusual market activity.": {
+    "es": "Explora flujos marítimos y el contexto de actividad inusual del mercado.",
+    "fr": "Explorez les flux maritimes et le contexte des activités inhabituelles du marché.",
+    "de": "Schiffsverkehr und den Kontext ungewöhnlicher Marktaktivitäten erkunden.",
+    "ja": "海運の流れと通常と異なる市場活動の背景を探る。",
+    "ko": "해운 흐름과 이례적 시장 활동의 배경을 살펴보세요."
+  },
+  "MARITIME ACTIVITY": {
+    "es": "ACTIVIDAD MARÍTIMA",
+    "fr": "ACTIVITÉ MARITIME",
+    "de": "SEEVERKEHR",
+    "ja": "海上活動",
+    "ko": "해상 활동"
+  },
+  "Daily vessel traffic through the Strait of Hormuz.": {
+    "es": "Tráfico diario de buques por el estrecho de Ormuz.",
+    "fr": "Trafic maritime quotidien dans le détroit d’Ormuz.",
+    "de": "Täglicher Schiffsverkehr durch die Straße von Hormus.",
+    "ja": "ホルムズ海峡を通過する日々の船舶交通。",
+    "ko": "호르무즈 해협의 일일 선박 통행."
+  },
+  "Explore available history and methodology": {
+    "es": "Consulta el historial disponible y la metodología",
+    "fr": "Explorer l’historique disponible et la méthodologie",
+    "de": "Verfügbare Historie und Methodik erkunden",
+    "ja": "履歴と手法を見る",
+    "ko": "제공되는 이력과 방법론 보기"
+  },
+  "Explore transit history →": {
+    "es": "Explorar historial de tránsito →",
+    "fr": "Explorer l’historique des passages →",
+    "de": "Durchfahrthistorie ansehen →",
+    "ja": "通過履歴を見る →",
+    "ko": "통행 이력 살펴보기 →"
+  },
+  "Human-led macro and portfolio research.": {
+    "es": "Análisis macroeconómico y de carteras dirigido por personas.",
+    "fr": "Recherche macroéconomique et de portefeuille menée par des experts humains.",
+    "de": "Menschlich geführte Makro- und Portfolioanalysen.",
+    "ja": "人が主導するマクロ・ポートフォリオ分析。",
+    "ko": "사람이 주도하는 거시경제 및 포트폴리오 리서치."
+  },
+  "Led by Aness Hussein Ali, the research approach combines macroeconomic analysis, company fundamentals, portfolio judgment and data science. Aness reports previous experience at Goldman Sachs and Bank of America;": {
+    "es": "Dirigido por Aness Hussein Ali, el enfoque combina análisis macroeconómico, fundamentos empresariales, criterio de cartera y ciencia de datos. Aness declara experiencia previa en Goldman Sachs y Bank of America;",
+    "fr": "Dirigée par Aness Hussein Ali, l’approche combine macroéconomie, fondamentaux, jugement de portefeuille et science des données. Aness indique une expérience chez Goldman Sachs et Bank of America ;",
+    "de": "Unter Leitung von Aness Hussein Ali verbindet der Ansatz Makroanalyse, Fundamentaldaten, Portfoliobeurteilung und Datenwissenschaft. Aness berichtet von Erfahrung bei Goldman Sachs und Bank of America;",
+    "ja": "Aness Hussein Aliが率い、マクロ分析、企業の基礎情報、ポートフォリオ判断、データサイエンスを組み合わせます。AnessはGoldman SachsとBank of Americaでの勤務経験を公表しています。",
+    "ko": "Aness Hussein Ali가 거시경제, 기업 펀더멘털, 포트폴리오 판단과 데이터 과학을 결합합니다. Aness는 Goldman Sachs와 Bank of America 근무 경력을 공개하고 있습니다."
+  },
+  "explore his background and professional profile": {
+    "es": "consulta su trayectoria y perfil profesional",
+    "fr": "consultez son parcours et son profil professionnel",
+    "de": "seinen Hintergrund und sein berufliches Profil ansehen",
+    "ja": "経歴と職歴プロフィールを見る",
+    "ko": "경력과 전문 프로필 보기"
+  },
+  "This is a research platform, not an automated trading bot. Human research and AI-assisted summaries are distinct: AI can support data processing and drafting, while users should check each article’s author, reviewer and sources. Former employers do not endorse this service.": {
+    "es": "Es una plataforma de análisis, no un robot de trading automático. El análisis humano y los resúmenes con IA son distintos: la IA ayuda a procesar datos y redactar, pero conviene comprobar autor, revisor y fuentes. Los antiguos empleadores no avalan el servicio.",
+    "fr": "C’est une plateforme de recherche, pas un robot de trading automatique. Recherche humaine et résumés assistés par IA sont distincts : l’IA aide au traitement et à la rédaction, mais vérifiez auteur, relecteur et sources. Les anciens employeurs ne cautionnent pas ce service.",
+    "de": "Dies ist eine Analyseplattform, kein automatischer Handelsbot. Menschliche Analyse und KI-Zusammenfassungen sind getrennt: KI unterstützt Verarbeitung und Entwürfe; Nutzer sollten Autor, Prüfer und Quellen prüfen. Frühere Arbeitgeber unterstützen diesen Dienst nicht.",
+    "ja": "自動売買ボットではなくリサーチ基盤です。人による分析とAI補助の要約は別物です。AIは処理や下書きを支援しますが、各記事の著者、レビュー担当、出典を確認してください。過去の勤務先は本サービスを推奨していません。",
+    "ko": "자동매매 봇이 아닌 리서치 플랫폼입니다. 사람의 분석과 AI 보조 요약은 구분됩니다. AI는 데이터 처리와 초안을 돕지만 각 글의 작성자, 검토자와 출처를 확인해야 합니다. 이전 고용주가 이 서비스를 보증하는 것은 아닙니다."
+  },
+  "Explore earnings dates, company financials and market scenarios. Separate observed results from forecasts, and understand the assumptions behind each example.": {
+    "es": "Explora fechas de resultados, finanzas y escenarios de mercado. Distingue resultados observados de previsiones y comprende los supuestos de cada ejemplo.",
+    "fr": "Explorez dates de résultats, finances et scénarios de marché. Distinguez observations et prévisions et comprenez les hypothèses de chaque exemple.",
+    "de": "Ergebnistermine, Finanzdaten und Marktszenarien erkunden. Beobachtete Ergebnisse von Prognosen trennen und Annahmen verstehen.",
+    "ja": "決算日程、財務、市場シナリオを確認し、実績と予測を区別して各例の前提を理解します。",
+    "ko": "실적 일정, 기업 재무와 시장 시나리오를 확인하고 실제 결과와 전망을 구분하며 각 예시의 가정을 이해하세요."
+  },
+  "Selected community screenshots are not a complete or independently audited performance record. They do not establish typical returns, execution prices or realized profits.": {
+    "es": "Las capturas seleccionadas de la comunidad no son un historial completo ni auditado de forma independiente. No establecen rendimientos típicos, precios de ejecución ni beneficios realizados.",
+    "fr": "Les captures sélectionnées de la communauté ne constituent pas un historique complet ou audité indépendamment. Elles n’établissent ni rendement habituel, ni prix d’exécution, ni gain réalisé.",
+    "de": "Ausgewählte Community-Screenshots sind kein vollständiger oder unabhängig geprüfter Leistungsnachweis. Sie belegen keine typischen Renditen, Ausführungskurse oder realisierten Gewinne.",
+    "ja": "選ばれたコミュニティの画像は、完全または独立監査済みの運用実績ではありません。一般的な収益、約定価格、実現利益を示すものではありません。",
+    "ko": "선별된 커뮤니티 스크린샷은 완전하거나 독립적으로 감사된 성과 기록이 아닙니다. 일반적 수익, 체결가나 실현이익을 입증하지 않습니다."
+  },
+  "How to evaluate the research →": {
+    "es": "Cómo evaluar los análisis →",
+    "fr": "Comment évaluer la recherche →",
+    "de": "Analysen richtig bewerten →",
+    "ja": "リサーチの評価方法 →",
+    "ko": "리서치 평가 방법 →"
+  },
+  "Market updates · Past week": {
+    "es": "Actualidad del mercado · Última semana",
+    "fr": "Actualités du marché · Semaine passée",
+    "de": "Marktupdates · Letzte Woche",
+    "ja": "市場アップデート · 過去1週間",
+    "ko": "시장 업데이트 · 지난주"
+  },
+  "Stock market news today": {
+    "es": "Noticias bursátiles de hoy",
+    "fr": "Actualités boursières du jour",
+    "de": "Börsennachrichten heute",
+    "ja": "今日の株式市場ニュース",
+    "ko": "오늘의 주식시장 뉴스"
+  },
+  "All app research previews published in the past week. These are not live quotes or a ranked list of buys.": {
+    "es": "Todas las vistas previas de análisis publicadas en la app la última semana. No son cotizaciones en directo ni una clasificación de compras.",
+    "fr": "Tous les aperçus de recherche publiés dans l’app la semaine passée. Ce ne sont ni des cours en direct ni un classement d’achats.",
+    "de": "Alle Analysevorschauen der App aus der letzten Woche. Keine Live-Kurse oder Rangliste von Kaufempfehlungen.",
+    "ja": "過去1週間に公開されたアプリのリサーチプレビューです。ライブ株価や購入推奨ランキングではありません。",
+    "ko": "지난주 앱에 게시된 모든 리서치 미리보기입니다. 실시간 시세나 매수 순위 목록이 아닙니다."
+  },
+  "Published (UTC)": {
+    "es": "Publicado (UTC)",
+    "fr": "Publié (UTC)",
+    "de": "Veröffentlicht (UTC)",
+    "ja": "公開日時（UTC）",
+    "ko": "게시일 (UTC)"
+  },
+  "Research headline": {
+    "es": "Titular del análisis",
+    "fr": "Titre de l’analyse",
+    "de": "Analysetitel",
+    "ja": "リサーチ見出し",
+    "ko": "리서치 제목"
+  },
+  "Market insight": {
+    "es": "Análisis de mercado",
+    "fr": "Analyse de marché",
+    "de": "Markteinblick",
+    "ja": "市場分析",
+    "ko": "시장 분석"
+  },
+  "Read preview": {
+    "es": "Leer vista previa",
+    "fr": "Lire l’aperçu",
+    "de": "Vorschau lesen",
+    "ja": "プレビューを読む",
+    "ko": "미리보기 읽기"
+  },
+  "Attached thread": {
+    "es": "Conversación adjunta",
+    "fr": "Discussion jointe",
+    "de": "Angehängter Thread",
+    "ja": "関連スレッド",
+    "ko": "첨부 스레드"
+  },
+  "STOCK IDEAS · RESEARCH IN THE APP": {
+    "es": "IDEAS DE ACCIONES · ANÁLISIS EN LA APP",
+    "fr": "IDÉES D’ACTIONS · RECHERCHE DANS L’APP",
+    "de": "AKTIENIDEEN · ANALYSEN IN DER APP",
+    "ja": "株式アイデア · アプリ内リサーチ",
+    "ko": "주식 아이디어 · 앱 리서치"
+  },
+  "More than a ticker.": {
+    "es": "Más que un símbolo bursátil.",
+    "fr": "Plus qu’un symbole boursier.",
+    "de": "Mehr als ein Börsenkürzel.",
+    "ja": "ティッカー以上の理解を。",
+    "ko": "종목코드 그 이상."
+  },
+  "A complete investment picture.": {
+    "es": "Una visión completa de inversión.",
+    "fr": "Une vision complète de l’investissement.",
+    "de": "Ein vollständiges Anlagebild.",
+    "ja": "投資の全体像を。",
+    "ko": "투자의 전체 그림."
+  },
+  "We track fundamentals, technicals, earnings catalysts and the market environment to identify our best stocks to buy now and send you research-backed ideas through the app.": {
+    "es": "Seguimos fundamentos, indicadores técnicos, catalizadores de resultados y entorno de mercado para identificar nuestras mejores acciones y enviarte ideas respaldadas por análisis mediante la app.",
+    "fr": "Nous suivons fondamentaux, indicateurs techniques, catalyseurs de résultats et environnement de marché pour identifier nos meilleures idées d’actions et vous les envoyer via l’app.",
+    "de": "Wir verfolgen Fundamentaldaten, Technik, Ergebniskatalysatoren und Marktumfeld, um unsere besten Aktienideen zu identifizieren und per App zu teilen.",
+    "ja": "ファンダメンタルズ、テクニカル、決算材料、市場環境を追跡し、注目銘柄を見つけて分析に基づくアイデアをアプリでお届けします。",
+    "ko": "펀더멘털, 기술적 지표, 실적 촉매와 시장 환경을 추적해 유망 종목을 찾고 분석에 기반한 아이디어를 앱으로 전달합니다."
+  },
+  "Timely catalysts": {
+    "es": "Catalizadores oportunos",
+    "fr": "Catalyseurs du moment",
+    "de": "Aktuelle Katalysatoren",
+    "ja": "タイムリーな材料",
+    "ko": "시의적절한 촉매 요인"
+  },
+  "Stock idea alerts": {
+    "es": "Alertas de ideas de acciones",
+    "fr": "Alertes d’idées d’actions",
+    "de": "Aktienideen-Benachrichtigungen",
+    "ja": "株式アイデアアラート",
+    "ko": "주식 아이디어 알림"
+  },
+  "What goes into each idea": {
+    "es": "Qué sustenta cada idea",
+    "fr": "Ce qui fonde chaque idée",
+    "de": "Was hinter jeder Idee steckt",
+    "ja": "各アイデアの根拠",
+    "ko": "각 아이디어의 근거"
+  },
+  "Fundamentals": {
+    "es": "Fundamentos",
+    "fr": "Fondamentaux",
+    "de": "Fundamentaldaten",
+    "ja": "ファンダメンタルズ",
+    "ko": "펀더멘털"
+  },
+  "Earnings catalysts": {
+    "es": "Catalizadores de resultados",
+    "fr": "Catalyseurs de résultats",
+    "de": "Ergebniskatalysatoren",
+    "ja": "決算材料",
+    "ko": "실적 촉매 요인"
+  },
+  "Market environment": {
+    "es": "Entorno de mercado",
+    "fr": "Environnement de marché",
+    "de": "Marktumfeld",
+    "ja": "市場環境",
+    "ko": "시장 환경"
+  },
+  "Understand the business through revenue, profitability, valuation and financial strength.": {
+    "es": "Comprende el negocio mediante ingresos, rentabilidad, valoración y solidez financiera.",
+    "fr": "Comprenez l’entreprise à travers chiffre d’affaires, rentabilité, valorisation et solidité financière.",
+    "de": "Das Geschäft anhand von Umsatz, Rentabilität, Bewertung und Finanzstärke verstehen.",
+    "ja": "売上、収益性、評価、財務健全性から事業を理解。",
+    "ko": "매출, 수익성, 밸류에이션과 재무 건전성으로 사업을 이해하세요."
+  },
+  "Research ideas to evaluate, with risks to consider. Returns are not guaranteed.": {
+    "es": "Ideas de análisis para evaluar, con riesgos que considerar. Los rendimientos no están garantizados.",
+    "fr": "Des idées à évaluer et des risques à considérer. Les rendements ne sont pas garantis.",
+    "de": "Analyseideen zum Prüfen, mit zu berücksichtigenden Risiken. Renditen sind nicht garantiert.",
+    "ja": "リスクを踏まえて検討するリサーチアイデアです。収益は保証されません。",
+    "ko": "위험을 고려해 평가할 리서치 아이디어입니다. 수익은 보장되지 않습니다."
+  },
+  "FROM AROUND THE MARKET": {
+    "es": "DESDE TODO EL MERCADO",
+    "fr": "L’ACTUALITÉ DES MARCHÉS",
+    "de": "AUS DEM MARKTGESCHEHEN",
+    "ja": "市場各所から",
+    "ko": "시장 곳곳에서"
+  },
+  "Latest stock news": {
+    "es": "Últimas noticias de acciones",
+    "fr": "Dernières actualités boursières",
+    "de": "Aktuelle Aktiennachrichten",
+    "ja": "最新の株式ニュース",
+    "ko": "최신 주식 뉴스"
+  },
+  "Headlines from external publishers": {
+    "es": "Titulares de medios externos",
+    "fr": "Titres de médias externes",
+    "de": "Schlagzeilen externer Medien",
+    "ja": "外部メディアの見出し",
+    "ko": "외부 매체의 헤드라인"
+  },
+  "All news →": {
+    "es": "Todas las noticias →",
+    "fr": "Toutes les actualités →",
+    "de": "Alle Nachrichten →",
+    "ja": "すべてのニュース →",
+    "ko": "전체 뉴스 →"
+  },
+  "All market news →": {
+    "es": "Todas las noticias de mercado →",
+    "fr": "Toute l’actualité des marchés →",
+    "de": "Alle Marktnachrichten →",
+    "ja": "すべての市場ニュース →",
+    "ko": "전체 시장 뉴스 →"
+  },
+  "NEWS ATTENTION · EXPLORE IN THE APP": {
+    "es": "ATENCIÓN MEDIÁTICA · EXPLORA EN LA APP",
+    "fr": "ATTENTION MÉDIATIQUE · DANS L’APP",
+    "de": "MEDIENAUFMERKSAMKEIT · IN DER APP",
+    "ja": "ニュースの注目度 · アプリで見る",
+    "ko": "뉴스 관심도 · 앱에서 확인"
+  },
+  "Headlines move fast.": {
+    "es": "Los titulares cambian rápido.",
+    "fr": "Les titres défilent vite.",
+    "de": "Schlagzeilen ändern sich schnell.",
+    "ja": "ニュースは刻々と変わる。",
+    "ko": "헤드라인은 빠르게 바뀝니다."
+  },
+  "See who’s in focus.": {
+    "es": "Descubre quién está en el foco.",
+    "fr": "Découvrez qui retient l’attention.",
+    "de": "Sehen, wer im Fokus steht.",
+    "ja": "注目の企業を確認。",
+    "ko": "어떤 기업이 주목받는지 확인하세요."
+  },
+  "Curious which stocks are mentioned most in the news? Choose your perspective, then continue your research with AI in the app.": {
+    "es": "¿Quieres saber qué acciones aparecen más en las noticias? Elige tu perspectiva y continúa el análisis con IA en la app.",
+    "fr": "Quelles actions sont les plus citées ? Choisissez votre angle, puis poursuivez l’analyse avec l’IA dans l’app.",
+    "de": "Welche Aktien werden am häufigsten erwähnt? Perspektive auswählen und die Analyse mit KI in der App fortsetzen.",
+    "ja": "ニュースでよく取り上げられる銘柄は？視点を選び、アプリでAIを活用して調べましょう。",
+    "ko": "뉴스에 가장 많이 언급되는 종목이 궁금한가요? 관점을 선택하고 앱에서 AI와 함께 분석을 이어가세요."
+  },
+  "News mentions": {
+    "es": "Menciones en noticias",
+    "fr": "Mentions dans l’actualité",
+    "de": "Nachrichtenerwähnungen",
+    "ja": "ニュース言及数",
+    "ko": "뉴스 언급"
+  },
+  "Financial snapshots": {
+    "es": "Resúmenes financieros",
+    "fr": "Aperçus financiers",
+    "de": "Finanzübersichten",
+    "ja": "財務概要",
+    "ko": "재무 요약"
+  },
+  "Technical setups": {
+    "es": "Patrones técnicos",
+    "fr": "Configurations techniques",
+    "de": "Technische Setups",
+    "ja": "テクニカルパターン",
+    "ko": "기술적 패턴"
+  },
+  "Choose a time window": {
+    "es": "Elige un período",
+    "fr": "Choisissez une période",
+    "de": "Zeitraum auswählen",
+    "ja": "期間を選択",
+    "ko": "기간 선택"
+  },
+  "APP ANALYTICS ↗": {
+    "es": "ANÁLISIS EN LA APP ↗",
+    "fr": "ANALYSES DANS L’APP ↗",
+    "de": "APP-ANALYSEN ↗",
+    "ja": "アプリ分析 ↗",
+    "ko": "앱 분석 ↗"
+  },
+  "Past hour": {
+    "es": "Última hora",
+    "fr": "Dernière heure",
+    "de": "Letzte Stunde",
+    "ja": "過去1時間",
+    "ko": "지난 1시간"
+  },
+  "Past day": {
+    "es": "Último día",
+    "fr": "Dernières 24 heures",
+    "de": "Letzter Tag",
+    "ja": "過去1日",
+    "ko": "지난 하루"
+  },
+  "Past week": {
+    "es": "Última semana",
+    "fr": "Dernière semaine",
+    "de": "Letzte Woche",
+    "ja": "過去1週間",
+    "ko": "지난주"
+  },
+  "Find the hottest stock now": {
+    "es": "Encuentra la acción más comentada ahora",
+    "fr": "Trouvez l’action la plus en vue",
+    "de": "Die aktuell meistbeachtete Aktie finden",
+    "ja": "今話題の銘柄を見つける",
+    "ko": "지금 가장 주목받는 종목 찾기"
+  },
+  "Select a window above to see which stocks are mentioned the most. Turn the news you read into companies worth researching.": {
+    "es": "Selecciona un período para ver las acciones más mencionadas. Convierte las noticias que lees en empresas que merecen análisis.",
+    "fr": "Sélectionnez une période pour voir les actions les plus citées. Transformez l’actualité en pistes d’entreprises à étudier.",
+    "de": "Zeitraum wählen, um die meistgenannten Aktien zu sehen. Nachrichten in interessante Analyseansätze verwandeln.",
+    "ja": "期間を選び、よく言及される銘柄を確認。読んだニュースから調べる価値のある企業を見つけましょう。",
+    "ko": "기간을 선택해 가장 많이 언급된 종목을 확인하고 읽은 뉴스에서 분석할 기업을 찾아보세요."
+  },
+  "Explore in the app · iOS & Android": {
+    "es": "Explorar en la app · iOS y Android",
+    "fr": "Explorer dans l’app · iOS et Android",
+    "de": "In der App ansehen · iOS und Android",
+    "ja": "アプリで見る · iOS・Android",
+    "ko": "앱에서 살펴보기 · iOS 및 Android"
+  },
+  "Explore stocks to buy now research →": {
+    "es": "Explorar análisis de acciones para comprar ahora →",
+    "fr": "Explorer les analyses d’actions à acheter →",
+    "de": "Aktienideen für heute analysieren →",
+    "ja": "今注目の株式リサーチを見る →",
+    "ko": "지금 주목할 주식 리서치 보기 →"
+  },
+  "Transparency into past setups": {
+    "es": "Transparencia sobre ideas pasadas",
+    "fr": "Transparence sur les idées passées",
+    "de": "Transparenz zu früheren Handelsideen",
+    "ja": "過去の取引アイデアの透明性",
+    "ko": "과거 매매 아이디어의 투명성"
+  },
+  "Explore historical examples with their dates, context and limitations. These are selected educational case studies, not typical returns or an independently audited track record.": {
+    "es": "Explora ejemplos históricos con fechas, contexto y limitaciones. Son casos educativos seleccionados, no rendimientos típicos ni un historial auditado de forma independiente.",
+    "fr": "Explorez des exemples historiques avec dates, contexte et limites. Ce sont des cas pédagogiques sélectionnés, pas des rendements habituels ni un historique audité indépendamment.",
+    "de": "Historische Beispiele mit Daten, Kontext und Grenzen erkunden. Ausgewählte Lernbeispiele sind keine typischen Renditen oder unabhängig geprüften Erfolgsnachweise.",
+    "ja": "日付、背景、限界とともに過去の事例を確認。選定された学習用事例であり、一般的な収益や独立監査済み実績ではありません。",
+    "ko": "날짜, 맥락과 한계가 포함된 과거 사례를 확인하세요. 선별된 교육 사례이며 일반적 수익이나 독립적으로 감사된 성과 기록이 아닙니다."
+  },
+  "Explore a historical case study →": {
+    "es": "Explorar un caso histórico →",
+    "fr": "Explorer un cas historique →",
+    "de": "Historisches Fallbeispiel ansehen →",
+    "ja": "過去の事例を見る →",
+    "ko": "과거 사례 살펴보기 →"
+  },
+  "How we distinguish examples from performance evidence →": {
+    "es": "Cómo distinguimos ejemplos de pruebas de rendimiento →",
+    "fr": "Comment nous distinguons exemples et preuves de performance →",
+    "de": "Wie wir Beispiele von Leistungsnachweisen unterscheiden →",
+    "ja": "事例と実績の証拠の違い →",
+    "ko": "예시와 성과 증거를 구분하는 방법 →"
+  },
+  "Founder of Stocks To Buy Now Research": {
+    "es": "Fundador de Stocks To Buy Now Research",
+    "fr": "Fondateur de Stocks To Buy Now Research",
+    "de": "Gründer von Stocks To Buy Now Research",
+    "ja": "Stocks To Buy Now Research創業者",
+    "ko": "Stocks To Buy Now Research 창업자"
+  },
+  "Built by market expertise": {
+    "es": "Creado con experiencia de mercado",
+    "fr": "Fondé sur l’expertise des marchés",
+    "de": "Auf Markterfahrung aufgebaut",
+    "ja": "市場の専門知識から生まれた",
+    "ko": "시장 전문성으로 구축"
+  },
+  "$4 Billion Managed": {
+    "es": "4.000 millones de dólares gestionados",
+    "fr": "4 milliards de dollars gérés",
+    "de": "4 Milliarden US-Dollar verwaltet",
+    "ja": "40億ドルの運用経験",
+    "ko": "40억 달러 운용"
+  },
+  "Statistician, economist, trader, data scientist and software engineer.": {
+    "es": "Estadístico, economista, trader, científico de datos e ingeniero de software.",
+    "fr": "Statisticien, économiste, trader, data scientist et ingénieur logiciel.",
+    "de": "Statistiker, Ökonom, Trader, Data Scientist und Softwareentwickler.",
+    "ja": "統計学者、経済学者、トレーダー、データサイエンティスト、ソフトウェアエンジニア。",
+    "ko": "통계학자, 경제학자, 트레이더, 데이터 과학자, 소프트웨어 엔지니어."
+  },
+  "Aness combines institutional-market experience with statistics, economics and technology to make sophisticated investing research clearer and more practical. He earned his Master of Financial Engineering at UC Berkeley Haas in 2014. His experience includes Goldman Sachs and work across trading, asset management and risk.": {
+    "es": "Aness combina experiencia institucional con estadística, economía y tecnología para hacer el análisis de inversión más claro y práctico. Obtuvo su máster en Ingeniería Financiera en UC Berkeley Haas en 2014. Su experiencia incluye Goldman Sachs, trading, gestión de activos y riesgo.",
+    "fr": "Aness associe expérience des marchés institutionnels, statistiques, économie et technologie pour rendre la recherche plus claire et pratique. Il a obtenu son master en ingénierie financière à UC Berkeley Haas en 2014. Son parcours comprend Goldman Sachs, le trading, la gestion d’actifs et le risque.",
+    "de": "Aness verbindet institutionelle Markterfahrung mit Statistik, Ökonomie und Technologie, um anspruchsvolle Analysen verständlich und praktisch zu machen. 2014 erwarb er den Master of Financial Engineering an der UC Berkeley Haas. Seine Erfahrung umfasst Goldman Sachs, Handel, Vermögensverwaltung und Risiko.",
+    "ja": "Anessは機関投資家市場の経験と統計、経済、技術を組み合わせ、高度な投資分析を分かりやすく実用的にします。2014年にUC Berkeley Haasで金融工学修士を取得。Goldman Sachsでの経験に加え、取引、資産運用、リスク分野で活動してきました。",
+    "ko": "Aness는 기관 시장 경험에 통계, 경제와 기술을 결합해 복잡한 투자 리서치를 명확하고 실용적으로 만듭니다. 2014년 UC Berkeley Haas에서 금융공학 석사를 취득했으며 Goldman Sachs, 트레이딩, 자산운용과 리스크 분야의 경험이 있습니다."
+  },
+  "Managed": {
+    "es": "Gestionados",
+    "fr": "Gérés",
+    "de": "Verwaltet",
+    "ja": "運用",
+    "ko": "운용"
+  },
+  "Years in market research": {
+    "es": "Años de análisis de mercado",
+    "fr": "Années de recherche sur les marchés",
+    "de": "Jahre Marktanalyse",
+    "ja": "年の市場リサーチ経験",
+    "ko": "년간 시장 리서치"
+  },
+  "Followers": {
+    "es": "Seguidores",
+    "fr": "Abonnés",
+    "de": "Follower",
+    "ja": "フォロワー",
+    "ko": "팔로워"
+  },
+  "Trading & Risk": {
+    "es": "Trading y riesgo",
+    "fr": "Trading et risque",
+    "de": "Handel und Risiko",
+    "ja": "トレーディングとリスク",
+    "ko": "트레이딩 및 리스크"
+  },
+  "Statistics & AI": {
+    "es": "Estadística e IA",
+    "fr": "Statistiques et IA",
+    "de": "Statistik und KI",
+    "ja": "統計とAI",
+    "ko": "통계 및 AI"
+  },
+  "Macroeconomics": {
+    "es": "Macroeconomía",
+    "fr": "Macroéconomie",
+    "de": "Makroökonomie",
+    "ja": "マクロ経済学",
+    "ko": "거시경제학"
+  },
+  "Software Engineering": {
+    "es": "Ingeniería de software",
+    "fr": "Ingénierie logicielle",
+    "de": "Softwareentwicklung",
+    "ja": "ソフトウェア工学",
+    "ko": "소프트웨어 공학"
+  },
+  "View LinkedIn profile": {
+    "es": "Ver perfil de LinkedIn",
+    "fr": "Voir le profil LinkedIn",
+    "de": "LinkedIn-Profil ansehen",
+    "ja": "LinkedInプロフィールを見る",
+    "ko": "LinkedIn 프로필 보기"
+  },
+  "Visit personal website": {
+    "es": "Visitar sitio personal",
+    "fr": "Visiter le site personnel",
+    "de": "Persönliche Website besuchen",
+    "ja": "個人サイトを見る",
+    "ko": "개인 웹사이트 방문"
+  },
+  "Explore free courses ↗": {
+    "es": "Explorar cursos gratuitos ↗",
+    "fr": "Explorer les cours gratuits ↗",
+    "de": "Kostenlose Kurse entdecken ↗",
+    "ja": "無料講座を見る ↗",
+    "ko": "무료 강좌 살펴보기 ↗"
+  },
+  "Explore the evidence": {
+    "es": "Explora las pruebas",
+    "fr": "Examinez les éléments",
+    "de": "Belege prüfen",
+    "ja": "根拠を確認する",
+    "ko": "근거 살펴보기"
+  },
+  "Meet the founder, read our research approach and compare independent customer reviews.": {
+    "es": "Conoce al fundador, consulta nuestro enfoque y compara opiniones independientes de clientes.",
+    "fr": "Découvrez le fondateur, notre démarche et les avis clients indépendants.",
+    "de": "Gründer kennenlernen, Analyseansatz lesen und unabhängige Kundenbewertungen vergleichen.",
+    "ja": "創業者、分析手法、独立した利用者レビューを確認。",
+    "ko": "창업자, 리서치 접근 방식과 독립적인 고객 리뷰를 확인하세요."
+  },
+  "Customer reviews →": {
+    "es": "Opiniones de clientes →",
+    "fr": "Avis clients →",
+    "de": "Kundenbewertungen →",
+    "ja": "利用者レビュー →",
+    "ko": "고객 리뷰 →"
+  },
+  "Credentials and reviews do not guarantee investment results.": {
+    "es": "Las credenciales y opiniones no garantizan resultados de inversión.",
+    "fr": "Les qualifications et avis ne garantissent pas les résultats d’investissement.",
+    "de": "Qualifikationen und Bewertungen garantieren keine Anlageergebnisse.",
+    "ja": "経歴やレビューは投資成果を保証しません。",
+    "ko": "경력과 리뷰가 투자 성과를 보장하지는 않습니다."
+  },
+  "Learn for Free": {
+    "es": "Aprende gratis",
+    "fr": "Apprenez gratuitement",
+    "de": "Kostenlos lernen",
+    "ja": "無料で学ぶ",
+    "ko": "무료로 배우기"
+  },
+  "Explore three free courses on stocks, options and trading setups. Watch at your own pace, with no account or subscription needed.": {
+    "es": "Explora tres cursos gratuitos de acciones, opciones y estrategias. Aprende a tu ritmo, sin cuenta ni suscripción.",
+    "fr": "Explorez trois cours gratuits sur les actions, options et stratégies. Regardez à votre rythme, sans compte ni abonnement.",
+    "de": "Drei kostenlose Kurse zu Aktien, Optionen und Handelsansätzen. Im eigenen Tempo ansehen, ohne Konto oder Abonnement.",
+    "ja": "株式、オプション、取引戦略の3つの無料講座。アカウントや購読なしで、自分のペースで視聴できます。",
+    "ko": "주식, 옵션과 매매 전략의 무료 강좌 3개를 계정이나 구독 없이 자신의 속도로 시청하세요."
+  },
+  "Browse all courses and lessons": {
+    "es": "Ver todos los cursos y lecciones",
+    "fr": "Voir tous les cours et leçons",
+    "de": "Alle Kurse und Lektionen ansehen",
+    "ja": "すべての講座・レッスンを見る",
+    "ko": "전체 강좌 및 수업 보기"
+  },
+  "View the full playlist on YouTube": {
+    "es": "Ver lista completa en YouTube",
+    "fr": "Voir la playlist complète sur YouTube",
+    "de": "Vollständige Playlist auf YouTube ansehen",
+    "ja": "YouTubeで再生リスト全体を見る",
+    "ko": "YouTube에서 전체 재생목록 보기"
+  },
+  "Interactive calculator": {
+    "es": "Calculadora interactiva",
+    "fr": "Calculateur interactif",
+    "de": "Interaktiver Rechner",
+    "ja": "インタラクティブ計算ツール",
+    "ko": "대화형 계산기"
+  },
+  "See the power of compounding": {
+    "es": "Descubre el poder del interés compuesto",
+    "fr": "Découvrez la puissance des intérêts composés",
+    "de": "Die Wirkung des Zinseszinseffekts entdecken",
+    "ja": "複利の力を見る",
+    "ko": "복리의 힘을 확인하세요"
+  },
+  "Hypothetical illustration, not a forecast or expected return from this service. The 7% annual default is an assumption. Returns vary and losses are possible. This model compounds daily with end-of-day deposits, uses 365 days per year and excludes fees, taxes and inflation.": {
+    "es": "Ejemplo hipotético, no una previsión ni rendimiento esperado del servicio. El 7 % anual predeterminado es un supuesto. Los rendimientos varían y puede haber pérdidas. El modelo capitaliza diariamente con depósitos al final del día, usa 365 días y excluye comisiones, impuestos e inflación.",
+    "fr": "Illustration hypothétique, pas une prévision ni un rendement attendu du service. Le taux annuel de 7 % est une hypothèse. Les rendements varient et des pertes sont possibles. Capitalisation quotidienne, versements en fin de journée, 365 jours par an, hors frais, impôts et inflation.",
+    "de": "Hypothetisches Beispiel, keine Prognose oder erwartete Rendite dieses Dienstes. Die jährlichen 7 % sind eine Annahme. Renditen schwanken, Verluste sind möglich. Tägliche Verzinsung mit Einzahlungen am Tagesende, 365 Tage, ohne Gebühren, Steuern und Inflation.",
+    "ja": "仮定の例であり、本サービスの予測や期待収益ではありません。初期値の年7%は仮定です。収益は変動し損失もあり得ます。日末入金・日次複利・年365日で計算し、手数料、税、インフレは含みません。",
+    "ko": "가상의 예시이며 서비스의 예측이나 기대 수익이 아닙니다. 기본 연 7%는 가정입니다. 수익은 달라지며 손실도 가능합니다. 하루 말 납입과 일 복리, 연 365일을 가정하고 수수료, 세금과 인플레이션은 제외합니다."
+  },
+  "Your assumptions": {
+    "es": "Tus supuestos",
+    "fr": "Vos hypothèses",
+    "de": "Ihre Annahmen",
+    "ja": "計算の前提",
+    "ko": "계산 가정"
+  },
+  "Move the sliders or enter a value": {
+    "es": "Mueve los controles o introduce un valor",
+    "fr": "Déplacez les curseurs ou saisissez une valeur",
+    "de": "Regler verschieben oder Wert eingeben",
+    "ja": "スライダーを動かすか値を入力",
+    "ko": "슬라이더를 움직이거나 값을 입력하세요"
+  },
+  "Initial investment": {
+    "es": "Inversión inicial",
+    "fr": "Investissement initial",
+    "de": "Anfangsinvestition",
+    "ja": "初期投資額",
+    "ko": "초기 투자금"
+  },
+  "Daily contribution": {
+    "es": "Aportación diaria",
+    "fr": "Versement quotidien",
+    "de": "Tägliche Einzahlung",
+    "ja": "毎日の積立額",
+    "ko": "일일 납입금"
+  },
+  "Assumed annual return": {
+    "es": "Rentabilidad anual supuesta",
+    "fr": "Rendement annuel supposé",
+    "de": "Angenommene Jahresrendite",
+    "ja": "想定年間利回り",
+    "ko": "가정 연 수익률"
+  },
+  "Investment period": {
+    "es": "Plazo de inversión",
+    "fr": "Durée d’investissement",
+    "de": "Anlagezeitraum",
+    "ja": "投資期間",
+    "ko": "투자 기간"
+  },
+  "years": {
+    "es": "años",
+    "fr": "ans",
+    "de": "Jahre",
+    "ja": "年",
+    "ko": "년"
+  },
+  "Projected value": {
+    "es": "Valor proyectado",
+    "fr": "Valeur projetée",
+    "de": "Prognostizierter Wert",
+    "ja": "試算額",
+    "ko": "예상 가치"
+  },
+  "After": {
+    "es": "Después de",
+    "fr": "Après",
+    "de": "Nach",
+    "ja": "経過年数",
+    "ko": "경과 기간"
+  },
+  "Total contributed": {
+    "es": "Total aportado",
+    "fr": "Total versé",
+    "de": "Gesamte Einzahlungen",
+    "ja": "積立総額",
+    "ko": "총 납입금"
+  },
+  "Projected growth": {
+    "es": "Crecimiento proyectado",
+    "fr": "Croissance projetée",
+    "de": "Prognostiziertes Wachstum",
+    "ja": "試算成長額",
+    "ko": "예상 증가액"
+  },
+  "Illustrative projections only. Returns are not guaranteed and this is not financial advice.": {
+    "es": "Proyecciones ilustrativas. No se garantizan rendimientos y no es asesoramiento financiero.",
+    "fr": "Projections illustratives uniquement. Rendements non garantis ; ceci n’est pas un conseil financier.",
+    "de": "Nur illustrative Berechnungen. Renditen sind nicht garantiert; keine Finanzberatung.",
+    "ja": "参考試算です。収益は保証されず、金融助言ではありません。",
+    "ko": "예시용 추정입니다. 수익은 보장되지 않으며 금융 자문이 아닙니다."
+  },
+  "Company insights": {
+    "es": "Análisis de empresas",
+    "fr": "Analyses d’entreprises",
+    "de": "Unternehmenseinblicke",
+    "ja": "企業分析",
+    "ko": "기업 분석"
+  },
+  "Explore company research": {
+    "es": "Explorar análisis de empresas",
+    "fr": "Explorer les analyses d’entreprises",
+    "de": "Unternehmensanalysen entdecken",
+    "ja": "企業リサーチを見る",
+    "ko": "기업 리서치 살펴보기"
+  },
+  "Search the app’s full stock catalog →": {
+    "es": "Buscar en el catálogo completo de acciones de la app →",
+    "fr": "Rechercher dans le catalogue complet d’actions de l’app →",
+    "de": "Vollständigen Aktienkatalog der App durchsuchen →",
+    "ja": "アプリの全銘柄を検索 →",
+    "ko": "앱의 전체 종목 검색 →"
+  },
+  "Frequently asked questions": {
+    "es": "Preguntas frecuentes",
+    "fr": "Questions fréquentes",
+    "de": "Häufige Fragen",
+    "ja": "よくある質問",
+    "ko": "자주 묻는 질문"
+  },
+  "Stock research FAQ": {
+    "es": "Preguntas sobre análisis de acciones",
+    "fr": "FAQ sur l’analyse d’actions",
+    "de": "FAQ zur Aktienanalyse",
+    "ja": "株式リサーチのFAQ",
+    "ko": "주식 리서치 FAQ"
+  },
+  "Methodology": {
+    "es": "Metodología",
+    "fr": "Méthodologie",
+    "de": "Methodik",
+    "ja": "分析手法",
+    "ko": "방법론"
+  },
+  "Stocks to Buy Now Research | Real-Time Stock Trading Alerts | Stock Market News Today | Free Trading Course": {
+    "es": "Stocks to Buy Now Research | Alertas bursátiles en tiempo real | Noticias y cursos gratuitos",
+    "fr": "Stocks to Buy Now Research | Alertes boursières en temps réel | Actualités et cours gratuits",
+    "de": "Stocks to Buy Now Research | Börsenmeldungen in Echtzeit | Nachrichten und kostenlose Kurse",
+    "ja": "Stocks to Buy Now Research | リアルタイム株式アラート・市場ニュース・無料講座",
+    "ko": "Stocks to Buy Now Research | 실시간 주식 알림 · 시장 뉴스 · 무료 강좌"
+  },
+  "Human-led macro and portfolio research by Aness Hussein Ali, supported by data science and AI-assisted tools. Explore founder credentials and methodology. Not an automated trading bot.": {
+    "es": "Análisis macroeconómico y de carteras de Aness Hussein Ali, con ciencia de datos y herramientas de IA. Conoce al fundador y la metodología. No es un robot de trading automático.",
+    "fr": "Recherche macroéconomique et de portefeuille d’Aness Hussein Ali, avec science des données et outils d’IA. Découvrez son parcours et la méthodologie. Pas un robot de trading automatique.",
+    "de": "Makro- und Portfolioanalysen von Aness Hussein Ali mit Datenwissenschaft und KI-Werkzeugen. Gründerprofil und Methodik entdecken. Kein automatischer Handelsbot.",
+    "ja": "Aness Hussein Aliが主導し、データサイエンスとAIツールで支えるマクロ・ポートフォリオ分析。創業者の経歴と手法をご覧ください。自動売買ボットではありません。",
+    "ko": "Aness Hussein Ali가 주도하고 데이터 과학과 AI 도구가 지원하는 거시경제·포트폴리오 리서치. 창업자 경력과 방법론을 확인하세요. 자동매매 봇이 아닙니다."
+  },
+  "Macro and company research, data-science tools, human investment judgment and AI-assisted analysis. Not an automated trading bot.": {
+    "es": "Análisis macroeconómico y empresarial, ciencia de datos, criterio humano y apoyo de IA. No es un robot de trading automático.",
+    "fr": "Recherche macroéconomique et d’entreprise, science des données, jugement humain et analyse assistée par IA. Pas un robot de trading automatique.",
+    "de": "Makro- und Unternehmensanalysen, Datenwissenschaft, menschliches Anlageurteil und KI-Unterstützung. Kein automatischer Handelsbot.",
+    "ja": "マクロ・企業分析、データサイエンス、人の投資判断、AI支援分析。自動売買ボットではありません。",
+    "ko": "거시경제·기업 리서치, 데이터 과학, 사람의 투자 판단과 AI 보조 분석. 자동매매 봇이 아닙니다."
+  },
+  "Free to download; optional in-app purchases may apply.": {
+    "es": "Descarga gratuita; puede incluir compras opcionales en la app.",
+    "fr": "Téléchargement gratuit ; achats intégrés facultatifs possibles.",
+    "de": "Kostenloser Download; optionale In-App-Käufe möglich.",
+    "ja": "ダウンロード無料。任意のアプリ内購入があります。",
+    "ko": "무료 다운로드. 선택적 인앱 구매가 있을 수 있습니다."
+  },
+  "Stocks to Buy Now Research — macro research, company fundamentals and data science": {
+    "es": "Stocks to Buy Now Research: macroeconomía, fundamentos empresariales y ciencia de datos",
+    "fr": "Stocks to Buy Now Research : macroéconomie, fondamentaux et science des données",
+    "de": "Stocks to Buy Now Research: Makroanalysen, Fundamentaldaten und Datenwissenschaft",
+    "ja": "Stocks to Buy Now Research：マクロ分析、企業の基礎情報、データサイエンス",
+    "ko": "Stocks to Buy Now Research: 거시경제, 기업 펀더멘털과 데이터 과학"
+  },
+  "Less noise.": {
+    "es": "Menos ruido.",
+    "fr": "Moins de bruit.",
+    "de": "Weniger Rauschen.",
+    "ja": "雑音を減らす。",
+    "ko": "잡음은 줄이고."
+  },
+  "Go deeper": {
+    "es": "Profundiza",
+    "fr": "Allez au-delà",
+    "de": "Tiefer blicken",
+    "ja": "さらに深く",
+    "ko": "더 깊이"
+  },
+  "than the price.": {
+    "es": "más allá del precio.",
+    "fr": "du cours.",
+    "de": "als nur auf den Kurs.",
+    "ja": "価格のその先へ。",
+    "ko": "가격 너머로."
+  },
+  "Your next move.": {
+    "es": "Tu próximo paso.",
+    "fr": "Votre prochain mouvement.",
+    "de": "Ihr nächster Schritt.",
+    "ja": "次の一手。",
+    "ko": "다음 움직임."
+  },
+  "More considered.": {
+    "es": "Más meditado.",
+    "fr": "Plus réfléchi.",
+    "de": "Besser durchdacht.",
+    "ja": "より熟考して。",
+    "ko": "더 신중하게."
+  },
+  "Politician trades": {
+    "es": "Operaciones de políticos",
+    "fr": "Transactions des élus",
+    "de": "Politikertransaktionen",
+    "ja": "政治家の取引",
+    "ko": "정치인 거래"
+  },
+  "House & Senate disclosures. See who reported a purchase or sale, the size range and the reporting delay.": {
+    "es": "Declaraciones de la Cámara y el Senado. Consulta quién declaró compras o ventas, el rango de importe y el retraso de publicación.",
+    "fr": "Déclarations de la Chambre et du Sénat. Consultez les achats et ventes, les fourchettes de montants et les délais de déclaration.",
+    "de": "Offenlegungen von Repräsentantenhaus und Senat. Käufer und Verkäufer, Größenordnungen und Meldeverzögerungen prüfen.",
+    "ja": "米下院・上院の開示情報。売買を報告した人物、金額帯、報告までの遅れを確認。",
+    "ko": "미 하원·상원 공시에서 매수·매도 보고자, 금액 범위와 보고 지연을 확인하세요."
+  },
+  "Trade date + disclosure date": {
+    "es": "Fecha de operación + publicación",
+    "fr": "Date de transaction + déclaration",
+    "de": "Handelsdatum + Meldedatum",
+    "ja": "取引日＋開示日",
+    "ko": "거래일 + 공시일"
+  },
+  "Hedge funds & institutions": {
+    "es": "Hedge funds e instituciones",
+    "fr": "Hedge funds et institutions",
+    "de": "Hedgefonds und Institutionen",
+    "ja": "ヘッジファンドと機関投資家",
+    "ko": "헤지펀드 및 기관"
+  },
+  "Explore disclosed portfolios and compare share counts between quarters for selected institutional managers.": {
+    "es": "Explora carteras publicadas y compara el número de acciones entre trimestres de gestores seleccionados.",
+    "fr": "Explorez les portefeuilles déclarés et comparez les nombres d’actions entre trimestres de certains gérants institutionnels.",
+    "de": "Offengelegte Portfolios und Aktienzahlen ausgewählter institutioneller Manager zwischen Quartalen vergleichen.",
+    "ja": "選定した機関投資家の開示ポートフォリオを調べ、四半期ごとの保有株数を比較。",
+    "ko": "선별된 기관 운용사의 공시 포트폴리오를 살펴보고 분기별 보유 주식 수를 비교하세요."
+  },
+  "Quarter-end positions · Form 13F": {
+    "es": "Posiciones al cierre del trimestre · Formulario 13F",
+    "fr": "Positions en fin de trimestre · Formulaire 13F",
+    "de": "Quartalsendbestände · Formular 13F",
+    "ja": "四半期末保有 · Form 13F",
+    "ko": "분기 말 보유 · Form 13F"
+  },
+  "Insider trades": {
+    "es": "Operaciones de directivos",
+    "fr": "Transactions d’initiés",
+    "de": "Insidertransaktionen",
+    "ja": "インサイダー取引",
+    "ko": "내부자 거래"
+  },
+  "Follow reported executive and director transactions. Separate purchases and sales from awards and other activity.": {
+    "es": "Sigue operaciones declaradas de ejecutivos y consejeros. Distingue compras y ventas de concesiones y otras actividades.",
+    "fr": "Suivez les transactions déclarées des dirigeants. Distinguez achats et ventes des attributions et autres opérations.",
+    "de": "Gemeldete Führungskräftetransaktionen verfolgen. Käufe und Verkäufe von Zuteilungen und anderen Vorgängen trennen.",
+    "ja": "役員の報告済み取引を追跡し、売買と報酬付与などの活動を区別。",
+    "ko": "임원의 신고 거래를 확인하고 매수·매도를 보상 지급 등 다른 활동과 구분하세요."
+  },
+  "Transaction date + filing date": {
+    "es": "Fecha de operación + declaración",
+    "fr": "Date de transaction + dépôt",
+    "de": "Transaktionsdatum + Einreichungsdatum",
+    "ja": "取引日＋提出日",
+    "ko": "거래일 + 제출일"
+  },
+  "Daily insider & fund recap →": {
+    "es": "Resumen diario de directivos y fondos →",
+    "fr": "Récapitulatif quotidien des initiés et fonds →",
+    "de": "Täglicher Insider- und Fondsüberblick →",
+    "ja": "インサイダー・ファンドの日次まとめ →",
+    "ko": "내부자 및 펀드 일일 요약 →"
+  },
+  "S&P 500 market prediction": {
+    "es": "Previsión del S&P 500",
+    "fr": "Prévision du S&P 500",
+    "de": "S&P-500-Marktprognose",
+    "ja": "S&P 500市場予測",
+    "ko": "S&P 500 시장 예측"
+  },
+  "View education, diploma & experience ↗": {
+    "es": "Ver formación, diploma y experiencia ↗",
+    "fr": "Voir formation, diplôme et expérience ↗",
+    "de": "Ausbildung, Diplom und Erfahrung ansehen ↗",
+    "ja": "学歴・学位・経験を見る ↗",
+    "ko": "학력, 학위와 경력 보기 ↗"
+  },
+  "Founder & credentials →": {
+    "es": "Fundador y credenciales →",
+    "fr": "Fondateur et qualifications →",
+    "de": "Gründer und Qualifikationen →",
+    "ja": "創業者と経歴 →",
+    "ko": "창업자 및 경력 →"
+  },
+  "Methodology & limitations →": {
+    "es": "Metodología y limitaciones →",
+    "fr": "Méthodologie et limites →",
+    "de": "Methodik und Grenzen →",
+    "ja": "手法と限界 →",
+    "ko": "방법론 및 한계 →"
+  },
+  "Available on iOS and Android": {
+    "es": "Disponible en iOS y Android",
+    "fr": "Disponible sur iOS et Android",
+    "de": "Für iOS und Android verfügbar",
+    "ja": "iOS・Androidで利用可能",
+    "ko": "iOS 및 Android에서 이용 가능"
+  },
+  "Put smarter market insights in your pocket.": {
+    "es": "Lleva un análisis de mercado más inteligente en tu bolsillo.",
+    "fr": "Emportez des analyses de marché plus éclairées.",
+    "de": "Fundierte Markteinblicke für unterwegs.",
+    "ja": "より賢い市場分析をポケットに。",
+    "ko": "더 똑똑한 시장 분석을 주머니 속에."
+  },
+  "Large U.S. stocks": {
+    "es": "Grandes acciones de EE. UU.",
+    "fr": "Grandes capitalisations américaines",
+    "de": "Große US-Aktien",
+    "ja": "米国大型株",
+    "ko": "미국 대형주"
+  },
+  "Small U.S. stocks": {
+    "es": "Pequeñas acciones de EE. UU.",
+    "fr": "Petites capitalisations américaines",
+    "de": "Kleine US-Aktien",
+    "ja": "米国小型株",
+    "ko": "미국 소형주"
+  },
+  "Gold": {
+    "es": "Oro",
+    "fr": "Or",
+    "de": "Gold",
+    "ja": "金",
+    "ko": "금"
+  },
+  "Precious metal": {
+    "es": "Metal precioso",
+    "fr": "Métal précieux",
+    "de": "Edelmetall",
+    "ja": "貴金属",
+    "ko": "귀금속"
+  },
+  "Energy prices": {
+    "es": "Precios de la energía",
+    "fr": "Prix de l’énergie",
+    "de": "Energiepreise",
+    "ja": "エネルギー価格",
+    "ko": "에너지 가격"
+  },
+  "Digital currency": {
+    "es": "Moneda digital",
+    "fr": "Monnaie numérique",
+    "de": "Digitale Währung",
+    "ja": "デジタル通貨",
+    "ko": "디지털 통화"
+  },
+  "1Y Treasury": {
+    "es": "Bono del Tesoro a 1 año",
+    "fr": "Trésor américain à 1 an",
+    "de": "US-Staatsanleihe 1 Jahr",
+    "ja": "米国債1年",
+    "ko": "미 국채 1년"
+  },
+  "10Y Treasury": {
+    "es": "Bono del Tesoro a 10 años",
+    "fr": "Trésor américain à 10 ans",
+    "de": "US-Staatsanleihe 10 Jahre",
+    "ja": "米国債10年",
+    "ko": "미 국채 10년"
+  },
+  "U.S. borrowing rate": {
+    "es": "Tipo de financiación de EE. UU.",
+    "fr": "Taux d’emprunt américain",
+    "de": "US-Finanzierungszins",
+    "ja": "米国の借入金利",
+    "ko": "미국 차입 금리"
+  },
+  "Saved snapshot · {date}": {
+    "es": "Datos guardados · {date}",
+    "fr": "Données enregistrées · {date}",
+    "de": "Gespeicherter Stand · {date}",
+    "ja": "保存済みデータ · {date}",
+    "ko": "저장된 데이터 · {date}"
+  },
+  "Is this an AI trading algorithm or human-led macro research?": {
+    "es": "¿Es un algoritmo de trading con IA o análisis macroeconómico dirigido por personas?",
+    "fr": "S’agit-il d’un algorithme de trading IA ou de recherche macroéconomique humaine ?",
+    "de": "Ist dies ein KI-Handelsalgorithmus oder menschlich geführte Makroanalyse?",
+    "ja": "AI売買アルゴリズムですか、それとも人が主導するマクロ分析ですか？",
+    "ko": "AI 매매 알고리즘인가요, 사람이 주도하는 거시경제 리서치인가요?"
+  },
+  "Our Pro research is human-led, with manually curated macroeconomic views, financial headlines, weekly plans and market recaps. The team uses AI-assisted tools to bring together company research, publicly disclosed insider transactions and hedge-fund holdings, unusual options volume, earnings and events such as index inclusion. These tools help us review more evidence and identify details that could otherwise be overlooked; people interpret the findings and develop the research views. For example, heavy insider selling has been a highly profitable bearish scenario for puts ahead of earnings, but it does not by itself establish that a stock will fall or that a put option will be profitable every single time. High win rates are averaged yield and does not guarantee every single individual win. Manage risks accordingly.": {
+    "es": "Nuestro análisis Pro está dirigido por personas, que seleccionan perspectivas macroeconómicas, titulares financieros, planes semanales y resúmenes de mercado. El equipo usa herramientas de IA para reunir análisis empresariales, operaciones de directivos y posiciones de fondos publicadas, volúmenes inusuales de opciones, resultados y eventos como incorporaciones a índices. Estas herramientas amplían las pruebas revisadas y ayudan a detectar detalles; las personas interpretan los hallazgos y elaboran las perspectivas. Por ejemplo, fuertes ventas de directivos han sido un escenario bajista muy rentable para puts antes de resultados, pero no demuestran por sí solas que una acción vaya a caer ni que una put siempre genere beneficios. Las tasas altas de acierto son resultados agregados y no garantizan cada operación individual. Gestiona el riesgo en consecuencia.",
+    "fr": "Notre recherche Pro est menée par des humains qui sélectionnent les vues macroéconomiques, titres financiers, plans hebdomadaires et bilans de marché. L’équipe utilise l’IA pour rassembler analyses d’entreprises, transactions d’initiés et positions de fonds publiées, volumes inhabituels d’options, résultats et événements comme les inclusions dans un indice. Ces outils permettent d’examiner davantage d’éléments et de repérer des détails ; les personnes interprètent les conclusions et élaborent les analyses. Par exemple, d’importantes ventes d’initiés ont constitué un scénario baissier très rentable pour des puts avant résultats, sans prouver qu’une action baissera ni qu’un put sera rentable à chaque fois. Les taux de réussite élevés sont des résultats agrégés et ne garantissent pas chaque opération. Gérez les risques en conséquence.",
+    "de": "Unsere Pro-Analysen werden von Menschen erstellt, die Makroausblicke, Finanznachrichten, Wochenpläne und Marktüberblicke auswählen. KI-Werkzeuge bündeln Unternehmensanalysen, veröffentlichte Insidertransaktionen und Fondsbestände, ungewöhnliche Optionsvolumina, Ergebnisse und Ereignisse wie Indexaufnahmen. Die Werkzeuge helfen, mehr Belege und Details zu prüfen; Menschen interpretieren die Ergebnisse und entwickeln Einschätzungen. Starke Insiderverkäufe waren beispielsweise ein sehr profitables bärisches Szenario für Puts vor Quartalszahlen, beweisen allein aber weder einen Kursrückgang noch einen Gewinn bei jeder Put-Option. Hohe Erfolgsquoten sind aggregierte Ergebnisse und garantieren keinen einzelnen Gewinn. Risiken entsprechend steuern.",
+    "ja": "Proリサーチは人が主導し、マクロ経済の見解、金融ニュース、週間計画、市場のまとめを手作業で編集しています。AIツールで企業分析、公開インサイダー取引、ファンド保有、異常なオプション出来高、決算、指数採用などを整理します。ツールはより多くの根拠や見落としやすい点の確認を助けますが、解釈と見解の形成は人が行います。例えば大量のインサイダー売りは決算前のプットにとって高収益の弱気シナリオとなった例がありますが、それだけで株価下落や毎回のプット利益を証明するものではありません。高い勝率は集計結果であり、個別の利益を保証しません。リスク管理が必要です。",
+    "ko": "Pro 리서치는 사람이 거시경제 관점, 금융 헤드라인, 주간 계획과 시장 요약을 직접 선별합니다. 팀은 AI 도구로 기업 분석, 공개 내부자 거래와 펀드 보유 현황, 이례적인 옵션 거래량, 실적과 지수 편입 등을 모읍니다. 도구는 더 많은 근거와 놓치기 쉬운 세부 사항을 검토하도록 돕고, 사람은 결과를 해석해 관점을 만듭니다. 예를 들어 대규모 내부자 매도는 실적 전 풋의 높은 수익을 낸 약세 시나리오였지만, 그 자체로 주가 하락이나 매번 풋 수익을 보장하지 않습니다. 높은 승률은 집계 결과이며 개별 거래의 이익을 보장하지 않습니다. 이에 맞게 위험을 관리하세요."
+  },
+  "What are the best AI growth stocks to watch right now?": {
+    "es": "¿Cuáles son las mejores acciones de crecimiento en IA para seguir ahora?",
+    "fr": "Quelles actions de croissance liées à l’IA suivre actuellement ?",
+    "de": "Welche KI-Wachstumsaktien sollte man derzeit beobachten?",
+    "ja": "今注目すべきAI成長株は？",
+    "ko": "지금 주목할 AI 성장주는 무엇인가요?"
+  },
+  "There is no universal best stock. Start with companies whose business you understand, compare growth with valuation, and consider risks and your time horizon. Our company research pages organize evidence and recent headlines; inclusion is not a buy recommendation. Individual stock research, industry rotations, and broader macro predictions are manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).": {
+    "es": "No existe una mejor acción universal. Empieza por empresas cuyo negocio comprendas, compara crecimiento y valoración y considera riesgos y plazo. Nuestras páginas organizan pruebas y titulares; la inclusión no es recomendación de compra. El análisis individual, las rotaciones sectoriales y las previsiones macroeconómicas son seleccionados manualmente por antiguos directores de Goldman Sachs en Nueva York y Bank of America en Londres.",
+    "fr": "Il n’existe pas de meilleure action universelle. Commencez par des entreprises que vous comprenez, comparez croissance et valorisation, et considérez les risques et votre horizon. Nos pages organisent les éléments et titres récents ; une inclusion n’est pas une recommandation d’achat. Les analyses individuelles, rotations sectorielles et prévisions macro sont sélectionnées manuellement par d’anciens directeurs de Goldman Sachs à New York et de Bank of America à Londres.",
+    "de": "Es gibt keine universell beste Aktie. Mit verständlichen Unternehmen beginnen, Wachstum und Bewertung vergleichen sowie Risiken und Zeithorizont beachten. Unsere Seiten ordnen Belege und Nachrichten; eine Aufnahme ist keine Kaufempfehlung. Einzelaktienanalysen, Branchenrotationen und Makroprognosen werden von ehemaligen Directors bei Goldman Sachs in New York und Bank of America in London manuell ausgewählt.",
+    "ja": "万人に最適な銘柄はありません。理解できる事業から始め、成長と評価を比較し、リスクと投資期間を考えます。企業ページは根拠とニュースを整理するもので、掲載は買い推奨ではありません。個別株分析、業種ローテーション、マクロ予測は、ニューヨークのGoldman SachsおよびロンドンのBank of Americaの元ディレクターが手作業で選定しています。",
+    "ko": "모두에게 가장 좋은 종목은 없습니다. 이해하는 사업부터 시작해 성장과 밸류에이션을 비교하고 위험과 투자 기간을 고려하세요. 기업 페이지는 근거와 최신 뉴스를 정리하며, 포함됐다고 매수 추천은 아닙니다. 개별 종목 분석, 업종 순환과 거시 전망은 뉴욕 Goldman Sachs와 런던 Bank of America의 전직 디렉터가 직접 선별합니다."
+  },
+  "How does Stocks To Buy Now Research calculate market signals?": {
+    "es": "¿Cómo calcula Stocks To Buy Now Research sus señales de mercado?",
+    "fr": "Comment Stocks To Buy Now Research calcule-t-il ses signaux ?",
+    "de": "Wie berechnet Stocks To Buy Now Research seine Marktsignale?",
+    "ja": "Stocks To Buy Now Researchは市場シグナルをどう算出しますか？",
+    "ko": "Stocks To Buy Now Research는 시장 시그널을 어떻게 계산하나요?"
+  },
+  "The app brings together company metrics, market context and analytical tools. This website does not publish a complete validated scoring formula. Signals should be assessed with their assumptions and risks rather than treated as certain outcomes.": {
+    "es": "La app reúne métricas empresariales, contexto de mercado y herramientas de análisis. El sitio no publica una fórmula completa y validada de puntuación. Evalúa las señales con sus supuestos y riesgos, no como resultados seguros.",
+    "fr": "L’app réunit indicateurs d’entreprise, contexte et outils d’analyse. Le site ne publie pas de formule de notation complète et validée. Évaluez les signaux avec leurs hypothèses et risques, sans les considérer comme certains.",
+    "de": "Die App verbindet Unternehmenskennzahlen, Marktkontext und Analysewerkzeuge. Eine vollständige validierte Bewertungsformel wird nicht veröffentlicht. Signale mit ihren Annahmen und Risiken beurteilen, nicht als sichere Ergebnisse.",
+    "ja": "企業指標、市場背景、分析ツールを組み合わせます。完全に検証済みのスコア式をサイトで公開しているわけではありません。シグナルは確実な結果ではなく、前提とリスクを踏まえて評価してください。",
+    "ko": "기업 지표, 시장 맥락과 분석 도구를 결합합니다. 웹사이트는 완전하게 검증된 점수 공식을 공개하지 않습니다. 시그널을 확실한 결과로 보지 말고 가정과 위험을 함께 평가하세요."
+  },
+  "Why did a stock rise or fall today?": {
+    "es": "¿Por qué subió o bajó una acción hoy?",
+    "fr": "Pourquoi une action a-t-elle monté ou baissé aujourd’hui ?",
+    "de": "Warum ist eine Aktie heute gestiegen oder gefallen?",
+    "ja": "今日その株が上昇・下落した理由は？",
+    "ko": "오늘 주가가 오르거나 내린 이유는 무엇인가요?"
+  },
+  "Check a timestamped quote, company announcements, earnings guidance and sector performance. Several factors may contribute. A headline occurring near a price move does not by itself prove the cause.": {
+    "es": "Consulta una cotización con hora, anuncios empresariales, previsiones y rendimiento sectorial. Pueden influir varios factores. Un titular cercano al movimiento no demuestra por sí solo la causa.",
+    "fr": "Vérifiez un cours horodaté, les annonces, les prévisions et la performance sectorielle. Plusieurs facteurs peuvent intervenir. La proximité d’un titre avec un mouvement ne prouve pas la cause.",
+    "de": "Zeitgestempelten Kurs, Unternehmensmeldungen, Prognosen und Branchenentwicklung prüfen. Mehrere Faktoren können beitragen. Eine zeitnahe Schlagzeile beweist allein keine Ursache.",
+    "ja": "時刻付き株価、会社発表、業績見通し、セクター動向を確認します。要因は複数あり得ます。値動きに近い時刻のニュースだけで因果関係は証明できません。",
+    "ko": "시간이 표시된 시세, 기업 발표, 실적 가이던스와 업종 성과를 확인하세요. 여러 요인이 작용할 수 있으며, 가격 변동 시점에 나온 뉴스만으로 원인을 입증할 수 없습니다."
+  },
+  "Are the stock quotes and predictions on this website live?": {
+    "es": "¿Son en directo las cotizaciones y previsiones de este sitio?",
+    "fr": "Les cours et prévisions de ce site sont-ils en direct ?",
+    "de": "Sind Kurse und Prognosen auf dieser Website live?",
+    "ja": "サイトの株価や予測はライブですか？",
+    "ko": "이 웹사이트의 시세와 예측은 실시간인가요?"
+  },
+  "Archived research carries its original date. A live quote must have a data source, timestamp and market-session label; an unlabeled screenshot is not a live quote. Forecasts are uncertain and are not guaranteed prices.": {
+    "es": "Los análisis archivados conservan su fecha original. Una cotización en directo debe indicar fuente, hora y sesión de mercado; una captura sin etiquetas no es una cotización en directo. Las previsiones son inciertas, no precios garantizados.",
+    "fr": "Les archives gardent leur date d’origine. Un cours en direct doit indiquer source, heure et séance ; une capture non étiquetée n’est pas un cours en direct. Les prévisions sont incertaines et ne garantissent aucun prix.",
+    "de": "Archivierte Analysen behalten ihr ursprüngliches Datum. Live-Kurse benötigen Quelle, Zeitstempel und Handelssitzung; ein unbeschrifteter Screenshot ist kein Live-Kurs. Prognosen sind unsicher, keine garantierten Preise.",
+    "ja": "過去のリサーチには元の日付を表示します。ライブ株価には情報源、時刻、取引セッションの表示が必要で、説明のない画像はライブ株価ではありません。予測は不確実で価格を保証しません。",
+    "ko": "보관된 리서치에는 원래 날짜가 표시됩니다. 실시간 시세에는 출처, 시간과 거래 세션 표시가 필요하며 표시 없는 스크린샷은 실시간 시세가 아닙니다. 예측은 불확실하며 가격을 보장하지 않습니다."
+  },
+  "What is available publicly and what requires the app?": {
+    "es": "¿Qué es público y qué requiere la app?",
+    "fr": "Qu’est-ce qui est public et qu’est-ce qui nécessite l’app ?",
+    "de": "Was ist öffentlich und wofür braucht man die App?",
+    "ja": "公開情報とアプリが必要な情報は？",
+    "ko": "공개되는 내용과 앱이 필요한 내용은 무엇인가요?"
+  },
+  "Public pages provide company research guides, article previews, a glossary and any separately published full articles. Subscription research and additional app tools remain available in the app.": {
+    "es": "Las páginas públicas ofrecen guías de análisis empresarial, vistas previas de artículos, glosario y artículos completos publicados por separado. El análisis por suscripción y herramientas adicionales están en la app.",
+    "fr": "Les pages publiques proposent guides d’analyse, aperçus d’articles, glossaire et articles complets publiés séparément. La recherche sur abonnement et les outils supplémentaires restent dans l’app.",
+    "de": "Öffentliche Seiten bieten Analyseleitfäden, Artikelvorschauen, Glossar und separat veröffentlichte Vollartikel. Abonnementanalysen und zusätzliche Werkzeuge bleiben in der App verfügbar.",
+    "ja": "公開ページでは企業分析ガイド、記事プレビュー、用語集、別途公開された全文記事を提供します。購読者向けリサーチや追加ツールはアプリで利用できます。",
+    "ko": "공개 페이지는 기업 분석 가이드, 기사 미리보기, 용어집과 별도 공개된 전문 기사를 제공합니다. 구독 리서치와 추가 도구는 앱에서 이용할 수 있습니다."
+  },
+  "Explore membership →": {
+    "es": "Ver suscripciones →",
+    "fr": "Découvrir les abonnements →",
+    "de": "Mitgliedschaften ansehen →",
+    "ja": "メンバーシップを見る →",
+    "ko": "멤버십 살펴보기 →"
+  },
+  "Recent news": {
+    "es": "Noticias recientes",
+    "fr": "Actualités récentes",
+    "de": "Aktuelle Nachrichten",
+    "ja": "最近のニュース",
+    "ko": "최근 뉴스"
+  },
+  "News": {
+    "es": "Noticias",
+    "fr": "Actualités",
+    "de": "Nachrichten",
+    "ja": "ニュース",
+    "ko": "뉴스"
+  },
+  "Mentioned in recap": {
+    "es": "Mencionado en el resumen",
+    "fr": "Mentionné dans le bilan",
+    "de": "Im Überblick erwähnt",
+    "ja": "まとめで言及",
+    "ko": "요약에 언급됨"
+  },
+  "Recap": {
+    "es": "Resumen",
+    "fr": "Bilan",
+    "de": "Rückblick",
+    "ja": "まとめ",
+    "ko": "요약"
+  },
+  "Why it’s moving": {
+    "es": "Por qué se mueve",
+    "fr": "Pourquoi le cours bouge",
+    "de": "Warum sich der Kurs bewegt",
+    "ja": "値動きの背景",
+    "ko": "움직이는 이유"
+  },
+  "Why": {
+    "es": "Por qué",
+    "fr": "Pourquoi",
+    "de": "Warum",
+    "ja": "理由",
+    "ko": "이유"
+  },
+  "Related news": {
+    "es": "Noticias relacionadas",
+    "fr": "Actualités associées",
+    "de": "Ähnliche Nachrichten",
+    "ja": "関連ニュース",
+    "ko": "관련 뉴스"
+  },
+  "Review the signals now ↗": {
+    "es": "Ver las señales ahora ↗",
+    "fr": "Consulter les signaux ↗",
+    "de": "Signale jetzt ansehen ↗",
+    "ja": "シグナルを確認 ↗",
+    "ko": "지금 시그널 확인 ↗"
+  },
+  "STOCK TO BUY": {
+    "es": "ACCIÓN PARA COMPRAR",
+    "fr": "ACTION À ACHETER",
+    "de": "AKTIENIDEE",
+    "ja": "注目銘柄",
+    "ko": "매수 관심 종목"
+  },
+  "Price trend": {
+    "es": "Tendencia del precio",
+    "fr": "Tendance du cours",
+    "de": "Kurstrend",
+    "ja": "価格トレンド",
+    "ko": "가격 추세"
+  },
+  "Projections": {
+    "es": "Proyecciones",
+    "fr": "Projections",
+    "de": "Projektionen",
+    "ja": "予測",
+    "ko": "예측"
+  },
+  "Buy signal": {
+    "es": "Señal de compra",
+    "fr": "Signal d’achat",
+    "de": "Kaufsignal",
+    "ja": "買いシグナル",
+    "ko": "매수 시그널"
+  },
+  "Explore this setup →": {
+    "es": "Explorar esta idea →",
+    "fr": "Explorer cette configuration →",
+    "de": "Diesen Handelsansatz ansehen →",
+    "ja": "このアイデアを見る →",
+    "ko": "이 매매 아이디어 보기 →"
+  },
+  "THE WEEK AT A GLANCE": {
+    "es": "LA SEMANA DE UN VISTAZO",
+    "fr": "LA SEMAINE EN UN COUP D’ŒIL",
+    "de": "DIE WOCHE IM ÜBERBLICK",
+    "ja": "今週の概要",
+    "ko": "한눈에 보는 이번 주"
+  },
+  "See who’s reporting. Tap a company to explore its research.": {
+    "es": "Consulta quién publica resultados. Toca una empresa para ver su análisis.",
+    "fr": "Découvrez qui publie ses résultats. Touchez une entreprise pour voir son analyse.",
+    "de": "Anstehende Berichte ansehen. Unternehmen antippen, um Analysen zu öffnen.",
+    "ja": "決算予定の企業を確認。企業をタップしてリサーチを開きます。",
+    "ko": "실적 발표 기업을 확인하고 기업을 눌러 리서치를 살펴보세요."
+  },
+  "Full earnings calendar ↗": {
+    "es": "Calendario completo de resultados ↗",
+    "fr": "Calendrier complet des résultats ↗",
+    "de": "Vollständiger Ergebniskalender ↗",
+    "ja": "決算カレンダー全体 ↗",
+    "ko": "전체 실적 캘린더 ↗"
+  },
+  "Week": {
+    "es": "Semana",
+    "fr": "Semaine",
+    "de": "Woche",
+    "ja": "週",
+    "ko": "주"
+  },
+  "Month": {
+    "es": "Mes",
+    "fr": "Mois",
+    "de": "Monat",
+    "ja": "月",
+    "ko": "월"
+  },
+  "EPS beat": {
+    "es": "BPA superior a lo esperado",
+    "fr": "BPA supérieur aux attentes",
+    "de": "Gewinn je Aktie über Erwartung",
+    "ja": "EPS予想超過",
+    "ko": "EPS 예상 상회"
+  },
+  "Revenue beat": {
+    "es": "Ingresos superiores a lo esperado",
+    "fr": "Chiffre d’affaires supérieur aux attentes",
+    "de": "Umsatz über Erwartung",
+    "ja": "売上予想超過",
+    "ko": "매출 예상 상회"
+  },
+  "Add data": {
+    "es": "Añadir datos",
+    "fr": "Ajouter des données",
+    "de": "Daten hinzufügen",
+    "ja": "データを追加",
+    "ko": "데이터 추가"
+  },
+  "Show on each company": {
+    "es": "Mostrar en cada empresa",
+    "fr": "Afficher pour chaque entreprise",
+    "de": "Für jedes Unternehmen anzeigen",
+    "ja": "各企業に表示",
+    "ko": "각 기업에 표시"
+  },
+  "EPS & revenue estimates": {
+    "es": "Estimaciones de BPA e ingresos",
+    "fr": "Estimations du BPA et du chiffre d’affaires",
+    "de": "Gewinn- und Umsatzschätzungen",
+    "ja": "EPS・売上予想",
+    "ko": "EPS 및 매출 예상치"
+  },
+  "1-year return": {
+    "es": "Rendimiento a 1 año",
+    "fr": "Rendement sur 1 an",
+    "de": "1-Jahres-Rendite",
+    "ja": "1年リターン",
+    "ko": "1년 수익률"
+  },
+  "Reset to logos": {
+    "es": "Volver a logotipos",
+    "fr": "Revenir aux logos",
+    "de": "Auf Logos zurücksetzen",
+    "ja": "ロゴ表示に戻す",
+    "ko": "로고로 초기화"
+  },
+  "Largest companies first · Expected release times · US Eastern Time": {
+    "es": "Mayores empresas primero · Horarios previstos · Hora del este de EE. UU.",
+    "fr": "Grandes entreprises d’abord · Horaires prévus · Heure de l’Est américain",
+    "de": "Größte Unternehmen zuerst · Erwartete Zeiten · US-Ostküstenzeit",
+    "ja": "大企業順 · 発表予定時刻 · 米国東部時間",
+    "ko": "대기업 순 · 예상 발표 시간 · 미국 동부 시간"
+  },
+  "BMO: before open · AMC: after close · ?: unconfirmed": {
+    "es": "BMO: antes de apertura · AMC: tras el cierre · ?: sin confirmar",
+    "fr": "BMO : avant ouverture · AMC : après clôture · ? : non confirmé",
+    "de": "BMO: vor Eröffnung · AMC: nach Schluss · ?: unbestätigt",
+    "ja": "BMO：寄り前 · AMC：引け後 · ?：未確認",
+    "ko": "BMO: 장 시작 전 · AMC: 장 마감 후 · ?: 미확인"
+  },
+  "Logo ring: average EPS + revenue beat rate · red 0% · yellow 50% · green 100% · gray: missing history": {
+    "es": "Anillo del logo: tasa media de superación de BPA e ingresos · rojo 0 % · amarillo 50 % · verde 100 % · gris: sin historial",
+    "fr": "Anneau du logo : taux moyen de dépassement BPA et chiffre d’affaires · rouge 0 % · jaune 50 % · vert 100 % · gris : historique absent",
+    "de": "Logoring: mittlere Übertreffungsquote bei Gewinn und Umsatz · rot 0 % · gelb 50 % · grün 100 % · grau: Historie fehlt",
+    "ja": "ロゴの輪：EPS・売上の平均予想超過率 · 赤0% · 黄50% · 緑100% · 灰：履歴なし",
+    "ko": "로고 테두리: EPS·매출 평균 예상 상회율 · 빨강 0% · 노랑 50% · 초록 100% · 회색: 이력 없음"
+  },
+  "No reports match this view. Try another period or show unconfirmed times below.": {
+    "es": "No hay informes para esta vista. Prueba otro período o muestra los horarios sin confirmar.",
+    "fr": "Aucun résultat pour cette vue. Essayez une autre période ou affichez les horaires non confirmés.",
+    "de": "Keine Berichte in dieser Ansicht. Anderen Zeitraum wählen oder unbestätigte Zeiten anzeigen.",
+    "ja": "該当する発表がありません。期間を変えるか、未確認時刻を表示してください。",
+    "ko": "이 보기에 해당하는 발표가 없습니다. 다른 기간이나 미확인 시간을 표시해 보세요."
+  },
+  "unconfirmed times (": {
+    "es": "horarios sin confirmar (",
+    "fr": "horaires non confirmés (",
+    "de": "unbestätigte Zeiten (",
+    "ja": "時刻未確認（",
+    "ko": "시간 미확인 ("
+  },
+  "EPS beat rate: actual earnings above estimates in up to 8 recent reports. Select View to explore unavailable EPS or revenue beat history in the app.": {
+    "es": "Tasa de superación del BPA: resultados por encima de estimaciones en hasta 8 informes recientes. Selecciona Ver para consultar en la app el historial no disponible de BPA o ingresos.",
+    "fr": "Taux de dépassement du BPA : résultats supérieurs aux estimations sur 8 rapports récents au maximum. Sélectionnez Voir pour consulter l’historique manquant dans l’app.",
+    "de": "Gewinn-Übertreffungsquote: Ergebnisse über Schätzungen in bis zu 8 aktuellen Berichten. „Ansehen“ öffnet fehlende Gewinn- oder Umsatzhistorie in der App.",
+    "ja": "EPS予想超過率は直近最大8回の発表で予想を上回った割合です。「表示」で不足するEPSや売上の履歴をアプリで確認できます。",
+    "ko": "EPS 예상 상회율은 최근 최대 8회 발표에서 예상치를 웃돈 비율입니다. 보기를 선택하면 앱에서 누락된 EPS·매출 이력을 확인할 수 있습니다."
+  },
+  "Explore earnings jump prediction →": {
+    "es": "Explorar previsión de movimientos por resultados →",
+    "fr": "Explorer les prévisions de variations après résultats →",
+    "de": "Kursbewegungsprognose zu Ergebnissen ansehen →",
+    "ja": "決算時の値動き予測を見る →",
+    "ko": "실적 관련 주가 변동 예측 보기 →"
+  },
+  "Membership access · Your account": {
+    "es": "Acceso de suscripción · Tu cuenta",
+    "fr": "Accès membre · Votre compte",
+    "de": "Mitgliedschaftszugang · Ihr Konto",
+    "ja": "メンバーアクセス · アカウント",
+    "ko": "멤버십 이용 · 내 계정"
+  },
+  "All events": {
+    "es": "Todos los eventos",
+    "fr": "Tous les événements",
+    "de": "Alle Ereignisse",
+    "ja": "すべてのイベント",
+    "ko": "모든 이벤트"
+  },
+  "Index announcements": {
+    "es": "Anuncios de índices",
+    "fr": "Annonces d’indices",
+    "de": "Indexankündigungen",
+    "ja": "指数発表",
+    "ko": "지수 발표"
+  },
+  "13F filings": {
+    "es": "Informes 13F",
+    "fr": "Déclarations 13F",
+    "de": "13F-Meldungen",
+    "ja": "13F報告",
+    "ko": "13F 공시"
+  },
+  "Trading dates": {
+    "es": "Fechas de negociación",
+    "fr": "Dates de négociation",
+    "de": "Handelstermine",
+    "ja": "取引日程",
+    "ko": "거래 일정"
+  },
+  "Economy": {
+    "es": "Economía",
+    "fr": "Économie",
+    "de": "Wirtschaft",
+    "ja": "経済",
+    "ko": "경제"
+  },
+  "Federal Reserve": {
+    "es": "Reserva Federal",
+    "fr": "Réserve fédérale",
+    "de": "US-Notenbank",
+    "ja": "連邦準備制度",
+    "ko": "미 연준"
+  },
+  "U.S. Eastern time ·": {
+    "es": "Hora del este de EE. UU. ·",
+    "fr": "Heure de l’Est américain ·",
+    "de": "US-Ostküstenzeit ·",
+    "ja": "米国東部時間 ·",
+    "ko": "미국 동부 시간 ·"
+  },
+  "selected events · Schedule checked": {
+    "es": "eventos seleccionados · Calendario revisado",
+    "fr": "événements sélectionnés · Calendrier vérifié",
+    "de": "ausgewählte Ereignisse · Kalender geprüft",
+    "ja": "選定イベント · 日程確認済み",
+    "ko": "선별 이벤트 · 일정 확인일"
+  },
+  "Mon": {
+    "es": "Lun",
+    "fr": "Lun",
+    "de": "Mo",
+    "ja": "月",
+    "ko": "월"
+  },
+  "Tue": {
+    "es": "Mar",
+    "fr": "Mar",
+    "de": "Di",
+    "ja": "火",
+    "ko": "화"
+  },
+  "Wed": {
+    "es": "Mié",
+    "fr": "Mer",
+    "de": "Mi",
+    "ja": "水",
+    "ko": "수"
+  },
+  "Thu": {
+    "es": "Jue",
+    "fr": "Jeu",
+    "de": "Do",
+    "ja": "木",
+    "ko": "목"
+  },
+  "Fri": {
+    "es": "Vie",
+    "fr": "Ven",
+    "de": "Fr",
+    "ja": "金",
+    "ko": "금"
+  },
+  "Sat": {
+    "es": "Sáb",
+    "fr": "Sam",
+    "de": "Sa",
+    "ja": "土",
+    "ko": "토"
+  },
+  "Sun": {
+    "es": "Dom",
+    "fr": "Dim",
+    "de": "So",
+    "ja": "日",
+    "ko": "일"
+  },
+  "Details +": {
+    "es": "Detalles +",
+    "fr": "Détails +",
+    "de": "Details +",
+    "ja": "詳細 +",
+    "ko": "상세 +"
+  },
+  "What to watch": {
+    "es": "Qué seguir",
+    "fr": "À surveiller",
+    "de": "Worauf achten",
+    "ja": "注目点",
+    "ko": "주목할 사항"
+  },
+  "Review market predictions →": {
+    "es": "Ver previsiones de mercado →",
+    "fr": "Consulter les prévisions de marché →",
+    "de": "Marktprognosen ansehen →",
+    "ja": "市場予測を確認 →",
+    "ko": "시장 예측 확인 →"
+  },
+  "Explore best stocks to buy now →": {
+    "es": "Explorar las mejores acciones para comprar →",
+    "fr": "Explorer les meilleures idées d’actions →",
+    "de": "Aktuelle Aktienideen ansehen →",
+    "ja": "今注目の銘柄を見る →",
+    "ko": "지금 주목할 종목 보기 →"
+  },
+  "Hottest stock now →": {
+    "es": "Acción más comentada ahora →",
+    "fr": "Action la plus en vue →",
+    "de": "Aktuell meistbeachtete Aktie →",
+    "ja": "今話題の銘柄 →",
+    "ko": "지금 가장 주목받는 종목 →"
+  },
+  "Explore the full research": {
+    "es": "Explorar el análisis completo",
+    "fr": "Explorer l’analyse complète",
+    "de": "Vollständige Analyse ansehen",
+    "ja": "リサーチ全体を見る",
+    "ko": "전체 리서치 보기"
+  },
+  "Contributions": {
+    "es": "Aportaciones",
+    "fr": "Versements",
+    "de": "Einzahlungen",
+    "ja": "積立額",
+    "ko": "납입금"
+  },
+  "Internet Content & Information": {
+    "es": "Contenido e información en internet",
+    "fr": "Contenus et information sur internet",
+    "de": "Internetinhalte und Informationen",
+    "ja": "インターネットコンテンツ・情報",
+    "ko": "인터넷 콘텐츠 및 정보"
+  },
+  "Consumer Electronics": {
+    "es": "Electrónica de consumo",
+    "fr": "Électronique grand public",
+    "de": "Unterhaltungselektronik",
+    "ja": "家電",
+    "ko": "소비자 전자제품"
+  },
+  "Drug Manufacturers - General": {
+    "es": "Fabricantes de medicamentos",
+    "fr": "Laboratoires pharmaceutiques",
+    "de": "Pharmahersteller",
+    "ja": "製薬",
+    "ko": "제약"
+  },
+  "Specialty Retail": {
+    "es": "Comercio especializado",
+    "fr": "Commerce spécialisé",
+    "de": "Facheinzelhandel",
+    "ja": "専門小売",
+    "ko": "전문 소매"
+  },
+  "Banks - Diversified": {
+    "es": "Bancos diversificados",
+    "fr": "Banques diversifiées",
+    "de": "Diversifizierte Banken",
+    "ja": "総合銀行",
+    "ko": "종합 은행"
+  },
+  "Financial - Credit Services": {
+    "es": "Servicios de crédito",
+    "fr": "Services de crédit",
+    "de": "Kreditdienstleistungen",
+    "ja": "信用サービス",
+    "ko": "신용 서비스"
+  },
+  "Aerospace & Defense": {
+    "es": "Aeroespacial y defensa",
+    "fr": "Aérospatiale et défense",
+    "de": "Luftfahrt und Verteidigung",
+    "ja": "航空宇宙・防衛",
+    "ko": "항공우주 및 방위"
+  },
+  "Oil & Gas Integrated": {
+    "es": "Petróleo y gas integrados",
+    "fr": "Pétrole et gaz intégrés",
+    "de": "Integrierte Öl- und Gasunternehmen",
+    "ja": "総合石油・ガス",
+    "ko": "종합 석유 및 가스"
+  },
+  "Auto - Manufacturers": {
+    "es": "Fabricantes de automóviles",
+    "fr": "Constructeurs automobiles",
+    "de": "Autohersteller",
+    "ja": "自動車製造",
+    "ko": "자동차 제조"
+  },
+  "Insurance - Diversified": {
+    "es": "Seguros diversificados",
+    "fr": "Assurance diversifiée",
+    "de": "Diversifizierte Versicherungen",
+    "ja": "総合保険",
+    "ko": "종합 보험"
+  },
+  "Discount Stores": {
+    "es": "Tiendas de descuento",
+    "fr": "Magasins discount",
+    "de": "Discounter",
+    "ja": "ディスカウント店",
+    "ko": "할인점"
+  },
+  "Industrial - Machinery": {
+    "es": "Maquinaria industrial",
+    "fr": "Machines industrielles",
+    "de": "Industriemaschinen",
+    "ja": "産業機械",
+    "ko": "산업 기계"
+  },
+  "Regulated Electric": {
+    "es": "Electricidad regulada",
+    "fr": "Électricité réglementée",
+    "de": "Regulierte Stromversorger",
+    "ja": "規制電力事業",
+    "ko": "규제 전력"
+  },
+  "Computer Hardware": {
+    "es": "Hardware informático",
+    "fr": "Matériel informatique",
+    "de": "Computerhardware",
+    "ja": "コンピュータ機器",
+    "ko": "컴퓨터 하드웨어"
+  },
+  "Medical - Healthcare Plans": {
+    "es": "Planes de salud",
+    "fr": "Assurance santé",
+    "de": "Krankenversicherungen",
+    "ja": "医療保険",
+    "ko": "건강보험"
+  },
+  "Medical - Diagnostics & Research": {
+    "es": "Diagnóstico e investigación médica",
+    "fr": "Diagnostic et recherche médicale",
+    "de": "Medizinische Diagnostik und Forschung",
+    "ja": "医療診断・研究",
+    "ko": "의료 진단 및 연구"
+  },
+  "Financial - Capital Markets": {
+    "es": "Mercados de capitales",
+    "fr": "Marchés de capitaux",
+    "de": "Kapitalmärkte",
+    "ja": "資本市場",
+    "ko": "자본시장"
+  },
+  "Beverages - Non-Alcoholic": {
+    "es": "Bebidas sin alcohol",
+    "fr": "Boissons sans alcool",
+    "de": "Alkoholfreie Getränke",
+    "ja": "清涼飲料",
+    "ko": "비알코올 음료"
+  },
+  "Communication Equipment": {
+    "es": "Equipos de comunicación",
+    "fr": "Équipements de communication",
+    "de": "Kommunikationsausrüstung",
+    "ja": "通信機器",
+    "ko": "통신 장비"
+  },
+  "Medical - Devices": {
+    "es": "Dispositivos médicos",
+    "fr": "Dispositifs médicaux",
+    "de": "Medizintechnik",
+    "ja": "医療機器",
+    "ko": "의료기기"
+  },
+  "Asset Management": {
+    "es": "Gestión de activos",
+    "fr": "Gestion d’actifs",
+    "de": "Vermögensverwaltung",
+    "ja": "資産運用",
+    "ko": "자산운용"
+  },
+  "Household & Personal Products": {
+    "es": "Productos domésticos y personales",
+    "fr": "Produits ménagers et personnels",
+    "de": "Haushalts- und Körperpflegeprodukte",
+    "ja": "家庭用品・パーソナルケア",
+    "ko": "생활 및 개인용품"
+  },
+  "Hardware, Equipment & Parts": {
+    "es": "Equipos y componentes",
+    "fr": "Matériel, équipements et pièces",
+    "de": "Hardware, Ausrüstung und Teile",
+    "ja": "機器・設備・部品",
+    "ko": "하드웨어, 장비 및 부품"
+  },
+  "Entertainment": {
+    "es": "Entretenimiento",
+    "fr": "Divertissement",
+    "de": "Unterhaltung",
+    "ja": "娯楽",
+    "ko": "엔터테인먼트"
+  },
+  "Financial - Data & Stock Exchanges": {
+    "es": "Datos financieros y bolsas",
+    "fr": "Données financières et bourses",
+    "de": "Finanzdaten und Börsen",
+    "ja": "金融データ・取引所",
+    "ko": "금융 데이터 및 거래소"
+  },
+  "Telecommunications Services": {
+    "es": "Servicios de telecomunicaciones",
+    "fr": "Services de télécommunications",
+    "de": "Telekommunikationsdienste",
+    "ja": "通信サービス",
+    "ko": "통신 서비스"
+  },
+  "Chemicals - Specialty": {
+    "es": "Productos químicos especializados",
+    "fr": "Chimie de spécialité",
+    "de": "Spezialchemie",
+    "ja": "特殊化学品",
+    "ko": "특수 화학"
+  },
+  "Information Technology Services": {
+    "es": "Servicios de tecnología de la información",
+    "fr": "Services informatiques",
+    "de": "IT-Dienstleistungen",
+    "ja": "ITサービス",
+    "ko": "IT 서비스"
+  },
+  "Agricultural - Machinery": {
+    "es": "Maquinaria agrícola",
+    "fr": "Machines agricoles",
+    "de": "Landmaschinen",
+    "ja": "農業機械",
+    "ko": "농기계"
+  },
+  "Oil & Gas Exploration & Production": {
+    "es": "Exploración y producción de petróleo y gas",
+    "fr": "Exploration et production pétrolière et gazière",
+    "de": "Öl- und Gasexploration und -förderung",
+    "ja": "石油・ガス探鉱生産",
+    "ko": "석유 및 가스 탐사·생산"
+  },
+  "Insurance - Property & Casualty": {
+    "es": "Seguros de daños",
+    "fr": "Assurance dommages",
+    "de": "Sach- und Unfallversicherungen",
+    "ja": "損害保険",
+    "ko": "손해보험"
+  },
+  "Tobacco": {
+    "es": "Tabaco",
+    "fr": "Tabac",
+    "de": "Tabak",
+    "ja": "たばこ",
+    "ko": "담배"
+  },
+  "Home Improvement": {
+    "es": "Mejoras del hogar",
+    "fr": "Aménagement de la maison",
+    "de": "Heimwerkerbedarf",
+    "ja": "住宅改修用品",
+    "ko": "주택 개량"
+  },
+  "Banks - Regional": {
+    "es": "Bancos regionales",
+    "fr": "Banques régionales",
+    "de": "Regionalbanken",
+    "ja": "地方銀行",
+    "ko": "지역 은행"
+  },
+  "Restaurants": {
+    "es": "Restaurantes",
+    "fr": "Restaurants",
+    "de": "Restaurants",
+    "ja": "飲食店",
+    "ko": "음식점"
+  },
+  "Railroads": {
+    "es": "Ferrocarriles",
+    "fr": "Chemins de fer",
+    "de": "Eisenbahnen",
+    "ja": "鉄道",
+    "ko": "철도"
+  },
+  "Oil & Gas Refining & Marketing": {
+    "es": "Refino y comercialización de petróleo y gas",
+    "fr": "Raffinage et distribution de pétrole et gaz",
+    "de": "Öl- und Gasraffination und -vertrieb",
+    "ja": "石油・ガス精製販売",
+    "ko": "석유 및 가스 정제·판매"
+  },
+  "Electrical Equipment & Parts": {
+    "es": "Equipos y componentes eléctricos",
+    "fr": "Équipements et composants électriques",
+    "de": "Elektroausrüstung und -teile",
+    "ja": "電気機器・部品",
+    "ko": "전기 장비 및 부품"
+  },
+  "REIT - Specialty": {
+    "es": "REIT especializados",
+    "fr": "SIIC spécialisées",
+    "de": "Spezialisierte REITs",
+    "ja": "専門REIT",
+    "ko": "전문 리츠"
+  },
+  "Travel Services": {
+    "es": "Servicios de viajes",
+    "fr": "Services de voyage",
+    "de": "Reisedienstleistungen",
+    "ja": "旅行サービス",
+    "ko": "여행 서비스"
+  },
+  "Biotechnology": {
+    "es": "Biotecnología",
+    "fr": "Biotechnologie",
+    "de": "Biotechnologie",
+    "ja": "バイオテクノロジー",
+    "ko": "생명공학"
+  },
+  "Medical - Instruments & Supplies": {
+    "es": "Instrumental y suministros médicos",
+    "fr": "Instruments et fournitures médicaux",
+    "de": "Medizinische Instrumente und Verbrauchsmaterial",
+    "ja": "医療器具・用品",
+    "ko": "의료 기구 및 용품"
+  },
+  "Oil & Gas Midstream": {
+    "es": "Transporte y almacenamiento de petróleo y gas",
+    "fr": "Transport et stockage de pétrole et gaz",
+    "de": "Öl- und Gastransport und -lagerung",
+    "ja": "石油・ガス輸送貯蔵",
+    "ko": "석유 및 가스 운송·저장"
+  },
+  "Insurance - Brokers": {
+    "es": "Corredores de seguros",
+    "fr": "Courtiers en assurance",
+    "de": "Versicherungsmakler",
+    "ja": "保険仲介",
+    "ko": "보험 중개"
+  },
+  "Medical - Distribution": {
+    "es": "Distribución médica",
+    "fr": "Distribution médicale",
+    "de": "Medizinischer Vertrieb",
+    "ja": "医療流通",
+    "ko": "의료 유통"
+  },
+  "Apparel - Retail": {
+    "es": "Comercio de ropa",
+    "fr": "Commerce d’habillement",
+    "de": "Bekleidungseinzelhandel",
+    "ja": "衣料小売",
+    "ko": "의류 소매"
+  },
+  "REIT - Healthcare Facilities": {
+    "es": "REIT de centros sanitarios",
+    "fr": "SIIC de santé",
+    "de": "Gesundheitsimmobilien-REITs",
+    "ja": "医療施設REIT",
+    "ko": "의료시설 리츠"
+  },
+  "Construction Materials": {
+    "es": "Materiales de construcción",
+    "fr": "Matériaux de construction",
+    "de": "Baustoffe",
+    "ja": "建設資材",
+    "ko": "건설 자재"
+  },
+  "Integrated Freight & Logistics": {
+    "es": "Transporte integrado y logística",
+    "fr": "Fret intégré et logistique",
+    "de": "Integrierter Frachtverkehr und Logistik",
+    "ja": "総合貨物・物流",
+    "ko": "종합 화물 및 물류"
+  },
+  "REIT - Industrial": {
+    "es": "REIT industriales",
+    "fr": "SIIC industrielles",
+    "de": "Industrie-REITs",
+    "ja": "産業施設REIT",
+    "ko": "산업용 리츠"
+  },
+  "Engineering & Construction": {
+    "es": "Ingeniería y construcción",
+    "fr": "Ingénierie et construction",
+    "de": "Ingenieurwesen und Bau",
+    "ja": "エンジニアリング・建設",
+    "ko": "엔지니어링 및 건설"
+  },
+  "Travel Lodging": {
+    "es": "Alojamiento turístico",
+    "fr": "Hébergement touristique",
+    "de": "Reiseunterkünfte",
+    "ja": "宿泊",
+    "ko": "숙박"
+  },
+  "Insurance - Life": {
+    "es": "Seguros de vida",
+    "fr": "Assurance vie",
+    "de": "Lebensversicherungen",
+    "ja": "生命保険",
+    "ko": "생명보험"
+  },
+  "Independent Power Producers": {
+    "es": "Productores independientes de energía",
+    "fr": "Producteurs indépendants d’électricité",
+    "de": "Unabhängige Stromerzeuger",
+    "ja": "独立系発電",
+    "ko": "독립 발전사업자"
+  },
+  "with an available quote.": {
+    "es": "con cotización disponible.",
+    "fr": "avec un cours disponible.",
+    "de": "mit verfügbarem Kurs.",
+    "ja": "利用可能な株価あり。",
+    "ko": "시세 제공."
+  },
+  "Read full results ↗": {
+    "es": "Ver resultados completos ↗",
+    "fr": "Voir les résultats complets ↗",
+    "de": "Vollständige Ergebnisse ansehen ↗",
+    "ja": "結果全体を見る ↗",
+    "ko": "전체 결과 보기 ↗"
+  },
+  "result": {
+    "es": "resultado",
+    "fr": "résultat",
+    "de": "Ergebnis",
+    "ja": "結果",
+    "ko": "결과"
+  },
+  "· Result": {
+    "es": "· Resultado",
+    "fr": "· Résultat",
+    "de": "· Ergebnis",
+    "ja": "· 結果",
+    "ko": "· 결과"
+  },
+  "Previous stock price": {
+    "es": "Precio anterior de la acción",
+    "fr": "Cours précédent",
+    "de": "Vorheriger Aktienkurs",
+    "ja": "前の株価",
+    "ko": "이전 주가"
+  },
+  "Strike": {
+    "es": "Precio de ejercicio",
+    "fr": "Prix d’exercice",
+    "de": "Basispreis",
+    "ja": "権利行使価格",
+    "ko": "행사가"
+  },
+  "Breakeven at expiry": {
+    "es": "Punto de equilibrio al vencimiento",
+    "fr": "Seuil de rentabilité à l’échéance",
+    "de": "Gewinnschwelle bei Verfall",
+    "ja": "満期損益分岐点",
+    "ko": "만기 손익분기점"
+  },
+  "One contract": {
+    "es": "Un contrato",
+    "fr": "Un contrat",
+    "de": "Ein Kontrakt",
+    "ja": "1契約",
+    "ko": "1계약"
+  },
+  "Stock price →": {
+    "es": "Precio de la acción →",
+    "fr": "Cours de l’action →",
+    "de": "Aktienkurs →",
+    "ja": "株価 →",
+    "ko": "주가 →"
+  },
+  "Stock endpoints unavailable": {
+    "es": "Precios extremos no disponibles",
+    "fr": "Cours aux extrémités indisponibles",
+    "de": "Aktien-Endpunkte nicht verfügbar",
+    "ja": "始点・終点の株価なし",
+    "ko": "시작·종료 주가 없음"
+  },
+  "· Stock": {
+    "es": "· Acción",
+    "fr": "· Action",
+    "de": "· Aktie",
+    "ja": "· 株式",
+    "ko": "· 주식"
+  },
+  "· Contract": {
+    "es": "· Contrato",
+    "fr": "· Contrat",
+    "de": "· Kontrakt",
+    "ja": "· 契約",
+    "ko": "· 계약"
+  },
+  "· Return": {
+    "es": "· Rendimiento",
+    "fr": "· Rendement",
+    "de": "· Rendite",
+    "ja": "· リターン",
+    "ko": "· 수익률"
+  },
+  "Stock price recorded around the same time as the option": {
+    "es": "Precio de la acción registrado cerca de la hora de la opción",
+    "fr": "Cours de l’action relevé à un moment proche de celui de l’option",
+    "de": "Aktienkurs etwa zeitgleich mit dem Optionskurs erfasst",
+    "ja": "オプションとほぼ同時刻に記録された株価",
+    "ko": "옵션과 비슷한 시점에 기록된 주가"
+  },
+  "Tap or drag the mint curve (arrow keys also work). Mint dashed: guide between recorded prices · Purple: expiry value, before premium cost.": {
+    "es": "Toca o arrastra la curva verde (también puedes usar flechas). Verde discontinua: guía entre precios registrados · Morado: valor al vencimiento antes de la prima.",
+    "fr": "Touchez ou faites glisser la courbe menthe (flèches possibles). Pointillés menthe : repère entre cours relevés · Violet : valeur à l’échéance avant prime.",
+    "de": "Mintkurve antippen oder ziehen (auch Pfeiltasten). Mint gestrichelt: Orientierung zwischen erfassten Kursen · Lila: Verfallswert vor Prämienkosten.",
+    "ja": "ミント色の曲線をタップ・ドラッグ（矢印キーも可）。破線：記録価格間の目安 · 紫：プレミアム控除前の満期価値。",
+    "ko": "민트색 곡선을 누르거나 드래그하세요(화살표 키 가능). 민트 점선: 기록 가격 사이의 참고선 · 보라: 프리미엄 차감 전 만기 가치."
+  },
+  "Recorded option prices · Dashed curve is illustrative.": {
+    "es": "Precios de opciones registrados · Curva discontinua ilustrativa.",
+    "fr": "Cours d’options relevés · Courbe en pointillés illustrative.",
+    "de": "Erfasste Optionskurse · Gestrichelte Kurve illustrativ.",
+    "ja": "記録済みオプション価格 · 破線はイメージ。",
+    "ko": "기록된 옵션 가격 · 점선은 예시."
+  },
+  "Payoff ·": {
+    "es": "Resultado ·",
+    "fr": "Résultat ·",
+    "de": "Auszahlung ·",
+    "ja": "損益 ·",
+    "ko": "손익 ·"
+  },
+  "/ share ·": {
+    "es": "/ acción ·",
+    "fr": "/ action ·",
+    "de": "/ Aktie ·",
+    "ja": "/ 株 ·",
+    "ko": "/ 주 ·"
+  },
+  "One contract:": {
+    "es": "Un contrato:",
+    "fr": "Un contrat :",
+    "de": "Ein Kontrakt:",
+    "ja": "1契約：",
+    "ko": "1계약:"
+  },
+  "gain before costs": {
+    "es": "ganancia antes de costes",
+    "fr": "gain avant frais",
+    "de": "Gewinn vor Kosten",
+    "ja": "費用控除前利益",
+    "ko": "비용 차감 전 이익"
+  },
+  "Price changes versus the": {
+    "es": "Variaciones de precio frente a",
+    "fr": "Variations des cours par rapport à",
+    "de": "Kursveränderungen gegenüber",
+    "ja": "価格変化の比較基準：",
+    "ko": "가격 변동 비교 기준:"
+  },
+  "Premarket": {
+    "es": "Preapertura",
+    "fr": "Avant ouverture",
+    "de": "Vorbörslich",
+    "ja": "プレマーケット",
+    "ko": "프리마켓"
+  },
+  "After-hours": {
+    "es": "Tras el cierre",
+    "fr": "Après clôture",
+    "de": "Nachbörslich",
+    "ja": "アフターマーケット",
+    "ko": "애프터마켓"
+  },
+  "Regular session": {
+    "es": "Sesión regular",
+    "fr": "Séance régulière",
+    "de": "Regulärer Handel",
+    "ja": "通常取引",
+    "ko": "정규장"
+  },
+  "Latest saved snapshot ·": {
+    "es": "Últimos datos guardados ·",
+    "fr": "Dernières données enregistrées ·",
+    "de": "Letzter gespeicherter Stand ·",
+    "ja": "最新保存データ ·",
+    "ko": "최근 저장 데이터 ·"
+  },
+  "Collected": {
+    "es": "Recopilado",
+    "fr": "Collecté",
+    "de": "Erfasst",
+    "ja": "取得",
+    "ko": "수집"
+  },
+  "holdings have a usable session quote.": {
+    "es": "componentes tienen cotización utilizable de la sesión.",
+    "fr": "composants disposent d’un cours exploitable pour la séance.",
+    "de": "Bestände mit nutzbarem Sitzungskurs.",
+    "ja": "銘柄に利用可能なセッション株価があります。",
+    "ko": "종목에 이용 가능한 세션 시세가 있습니다."
+  },
+  "View all": {
+    "es": "Ver todos",
+    "fr": "Tout voir",
+    "de": "Alle anzeigen",
+    "ja": "すべて表示",
+    "ko": "모두 보기"
+  },
+  "holdings and quote times": {
+    "es": "componentes y horas de cotización",
+    "fr": "composants et heures des cours",
+    "de": "Bestände und Kurszeiten",
+    "ja": "構成銘柄と株価時刻",
+    "ko": "구성 종목 및 시세 시간"
+  },
+  "stock prices and changes · U.S. session date:": {
+    "es": "precios y variaciones · Fecha de sesión en EE. UU.:",
+    "fr": "cours et variations · Date de séance américaine :",
+    "de": "Aktienkurse und Veränderungen · US-Handelstag:",
+    "ja": "株価と変化 · 米国取引日：",
+    "ko": "주가 및 변동 · 미국 거래일:"
+  },
+  "Stock": {
+    "es": "Acción",
+    "fr": "Action",
+    "de": "Aktie",
+    "ja": "株式",
+    "ko": "주식"
+  },
+  "Price (USD)": {
+    "es": "Precio (USD)",
+    "fr": "Cours (USD)",
+    "de": "Kurs (USD)",
+    "ja": "価格（USD）",
+    "ko": "가격 (USD)"
+  },
+  "Quote time (": {
+    "es": "Hora de cotización (",
+    "fr": "Heure du cours (",
+    "de": "Kurszeit (",
+    "ja": "株価時刻（",
+    "ko": "시세 시간 ("
+  },
+  "Scheduled snapshots, not a live quote stream. Quotes may be delayed and have different timestamps. Gray tiles mean unavailable session data. Outside collection hours, the last saved session remains visible. Source: Yahoo Finance via our saved market feed. Extended-hours trading can have lower liquidity and wider spreads.": {
+    "es": "Capturas programadas, no cotizaciones en directo. Pueden tener retraso y horas distintas. El gris indica datos no disponibles. Fuera de la recogida se muestra la última sesión guardada. Fuente: Yahoo Finance mediante nuestro feed guardado. Fuera de horario puede haber menos liquidez y mayores diferenciales.",
+    "fr": "Relevés programmés, pas un flux en direct. Les cours peuvent être retardés et avoir des horaires différents. Le gris indique des données absentes. Hors collecte, la dernière séance reste affichée. Source : Yahoo Finance via notre flux enregistré. Hors séance, la liquidité peut baisser et les écarts s’élargir.",
+    "de": "Geplante Momentaufnahmen, kein Live-Kursstrom. Kurse können verzögert und unterschiedlich datiert sein. Grau bedeutet fehlende Sitzungsdaten. Außerhalb der Erfassung bleibt die letzte Sitzung sichtbar. Quelle: Yahoo Finance über unseren gespeicherten Feed. Außerbörslich sind geringere Liquidität und größere Spreads möglich.",
+    "ja": "定期取得データでありライブ配信ではありません。株価には遅延や時刻の差があり、灰色はデータなしを示します。取得時間外は最終保存セッションを表示します。情報源：保存フィード経由のYahoo Finance。時間外取引では流動性低下やスプレッド拡大があり得ます。",
+    "ko": "정기 저장 데이터이며 실시간 시세 스트림이 아닙니다. 시세는 지연되거나 시간이 다를 수 있고 회색은 데이터 없음을 뜻합니다. 수집 시간 외에는 마지막 세션을 표시합니다. 출처: 저장된 피드를 통한 Yahoo Finance. 시간외 거래는 유동성이 낮고 스프레드가 넓을 수 있습니다."
+  },
+  "A saved": {
+    "es": "Una captura guardada de",
+    "fr": "Un aperçu enregistré de",
+    "de": "Eine gespeicherte",
+    "ja": "保存済み",
+    "ko": "저장된"
+  },
+  "snapshot is currently unavailable. Please try again later or explore the regular-session heatmap.": {
+    "es": "no está disponible. Inténtalo más tarde o consulta el mapa de la sesión regular.",
+    "fr": "est indisponible. Réessayez plus tard ou consultez la carte de la séance régulière.",
+    "de": "Momentaufnahme ist nicht verfügbar. Später erneut versuchen oder die reguläre Heatmap ansehen.",
+    "ja": "スナップショットは現在利用できません。後で再試行するか通常取引のヒートマップをご覧ください。",
+    "ko": "스냅샷을 현재 사용할 수 없습니다. 나중에 다시 시도하거나 정규장 히트맵을 확인하세요."
+  },
+  "Follow how the session unfolds": {
+    "es": "Sigue la evolución de la sesión",
+    "fr": "Suivez le déroulement de la séance",
+    "de": "Den Sitzungsverlauf verfolgen",
+    "ja": "セッションの動きを追う",
+    "ko": "세션 흐름 확인"
+  },
+  "Explore the snapshot archive and continue your stock research in the app.": {
+    "es": "Explora el archivo de datos y continúa tu análisis en la app.",
+    "fr": "Explorez les archives et poursuivez votre recherche dans l’app.",
+    "de": "Archiv erkunden und Aktienanalyse in der App fortsetzen.",
+    "ja": "保存データを調べ、アプリで株式分析を続けましょう。",
+    "ko": "저장 데이터 이력을 보고 앱에서 주식 분석을 이어가세요."
+  },
+  "Price moves versus the": {
+    "es": "Movimientos de precio frente a",
+    "fr": "Variations par rapport à",
+    "de": "Kursbewegungen gegenüber",
+    "ja": "価格変動の比較基準：",
+    "ko": "가격 움직임 비교 기준:"
+  },
+  ". Quote times shown for each instrument.": {
+    "es": ". Se muestra la hora de cada instrumento.",
+    "fr": ". Heure indiquée pour chaque instrument.",
+    "de": ". Kurszeiten je Instrument angezeigt.",
+    "ja": "。各商品の株価時刻を表示。",
+    "ko": ". 각 상품의 시세 시간이 표시됩니다."
+  },
+  "No usable quote in this session": {
+    "es": "Sin cotización utilizable en esta sesión",
+    "fr": "Aucun cours exploitable pour cette séance",
+    "de": "Kein nutzbarer Kurs in dieser Sitzung",
+    "ja": "このセッションに利用可能な株価なし",
+    "ko": "이 세션에 이용 가능한 시세 없음"
+  },
+  "Earnings could not load.": {
+    "es": "No se pudieron cargar los resultados.",
+    "fr": "Impossible de charger les résultats.",
+    "de": "Ergebnisse konnten nicht geladen werden.",
+    "ja": "決算情報を読み込めませんでした。",
+    "ko": "실적을 불러올 수 없습니다."
+  },
+  "Open earnings calendar ↗": {
+    "es": "Abrir calendario de resultados ↗",
+    "fr": "Ouvrir le calendrier des résultats ↗",
+    "de": "Ergebniskalender öffnen ↗",
+    "ja": "決算カレンダーを開く ↗",
+    "ko": "실적 캘린더 열기 ↗"
+  },
+  "Show insights": {
+    "es": "Mostrar análisis",
+    "fr": "Afficher les analyses",
+    "de": "Analysen anzeigen",
+    "ja": "分析を表示",
+    "ko": "분석 표시"
+  },
+  "Insights": {
+    "es": "Análisis",
+    "fr": "Analyses",
+    "de": "Einblicke",
+    "ja": "分析",
+    "ko": "분석"
+  },
+  "Available coverage:": {
+    "es": "Cobertura disponible:",
+    "fr": "Couverture disponible :",
+    "de": "Verfügbarer Zeitraum:",
+    "ja": "利用可能な範囲：",
+    "ko": "제공 범위:"
+  },
+  ". Dates outside this range have not been loaded.": {
+    "es": ". No se han cargado fechas fuera de este rango.",
+    "fr": ". Les dates hors de cette plage ne sont pas chargées.",
+    "de": ". Daten außerhalb dieses Zeitraums wurden nicht geladen.",
+    "ja": "。この範囲外の日付は未取得です。",
+    "ko": ". 이 범위 밖의 날짜는 불러오지 않았습니다."
+  },
+  "EPS est.": {
+    "es": "BPA estimado",
+    "fr": "BPA estimé",
+    "de": "Gewinn/Aktie geschätzt",
+    "ja": "EPS予想",
+    "ko": "EPS 예상"
+  },
+  "Rev. est.": {
+    "es": "Ingresos estimados",
+    "fr": "CA estimé",
+    "de": "Umsatz geschätzt",
+    "ja": "売上予想",
+    "ko": "매출 예상"
+  },
+  "EPS beats": {
+    "es": "BPA superior a estimaciones",
+    "fr": "BPA au-dessus des attentes",
+    "de": "Gewinn über Schätzungen",
+    "ja": "EPS予想超過",
+    "ko": "EPS 예상 상회"
+  },
+  "1Y price": {
+    "es": "Precio a 1 año",
+    "fr": "Cours sur 1 an",
+    "de": "1-Jahres-Kurs",
+    "ja": "1年株価",
+    "ko": "1년 주가"
+  },
+  "No confirmed reports": {
+    "es": "Sin informes confirmados",
+    "fr": "Aucun rapport confirmé",
+    "de": "Keine bestätigten Berichte",
+    "ja": "確定した発表なし",
+    "ko": "확인된 발표 없음"
+  },
+  "“N/A” means not loaded or unavailable. Open a company to load its research. Market cap is USD; estimates and quotes use source currencies. Forward ratios use fiscal-year estimates, not the next 12 months. EPS beat rate is historical earnings performance, not the probability of a stock-price gain.": {
+    "es": "«N/A» significa no cargado o no disponible. Abre una empresa para cargar su análisis. Capitalización en USD; estimaciones y precios en moneda de origen. Ratios futuros basados en el ejercicio fiscal, no en los próximos 12 meses. La tasa de superación del BPA es histórica, no la probabilidad de subida.",
+    "fr": "« N/A » signifie non chargé ou indisponible. Ouvrez une entreprise pour charger son analyse. Capitalisation en USD ; estimations et cours dans les devises sources. Ratios futurs fondés sur l’exercice fiscal, pas les 12 prochains mois. Le taux de dépassement du BPA est historique, pas une probabilité de hausse.",
+    "de": "„N/A“ bedeutet nicht geladen oder nicht verfügbar. Unternehmensanalyse öffnen. Marktkapitalisierung in USD; Schätzungen und Kurse in Quellwährungen. Forward-Kennzahlen beziehen sich auf das Geschäftsjahr, nicht auf zwölf Folgemonate. Die Gewinn-Übertreffungsquote ist historisch, keine Kursgewinnwahrscheinlichkeit.",
+    "ja": "「N/A」は未取得または利用不可です。企業を開くと分析を読み込みます。時価総額はUSD、予想と株価は元の通貨です。予想倍率は翌12か月ではなく会計年度ベースです。EPS超過率は過去の実績で、株価上昇確率ではありません。",
+    "ko": "N/A는 미수집 또는 이용 불가입니다. 기업을 열어 분석을 불러오세요. 시가총액은 USD, 예상치와 시세는 원본 통화입니다. 선행 배수는 향후 12개월이 아닌 회계연도 예상치를 사용합니다. EPS 상회율은 과거 실적이며 주가 상승 확률이 아닙니다."
+  },
+  "View ↗": {
+    "es": "Ver ↗",
+    "fr": "Voir ↗",
+    "de": "Ansehen ↗",
+    "ja": "表示 ↗",
+    "ko": "보기 ↗"
+  },
+  "● Before open": {
+    "es": "● Antes de apertura",
+    "fr": "● Avant ouverture",
+    "de": "● Vor Eröffnung",
+    "ja": "● 寄り前",
+    "ko": "● 장 시작 전"
+  },
+  "● After close": {
+    "es": "● Tras el cierre",
+    "fr": "● Après clôture",
+    "de": "● Nach Schluss",
+    "ja": "● 引け後",
+    "ko": "● 장 마감 후"
+  },
+  "Tap a date for all companies": {
+    "es": "Toca una fecha para ver todas las empresas",
+    "fr": "Touchez une date pour voir toutes les entreprises",
+    "de": "Datum antippen, um alle Unternehmen zu sehen",
+    "ja": "日付をタップして全企業を表示",
+    "ko": "날짜를 눌러 전체 기업 보기"
+  },
+  "No reports match the current filters.": {
+    "es": "Ningún informe coincide con los filtros.",
+    "fr": "Aucun rapport ne correspond aux filtres.",
+    "de": "Keine Berichte passen zu den Filtern.",
+    "ja": "フィルターに該当する発表なし。",
+    "ko": "현재 필터에 해당하는 발표가 없습니다."
+  },
+  "Share earnings snapshot": {
+    "es": "Compartir resumen de resultados",
+    "fr": "Partager l’aperçu des résultats",
+    "de": "Ergebnisübersicht teilen",
+    "ja": "決算概要を共有",
+    "ko": "실적 요약 공유"
+  },
+  "1200 × 1200 PNG · Website branding and QR included": {
+    "es": "PNG 1200 × 1200 · Incluye marca y QR del sitio",
+    "fr": "PNG 1200 × 1200 · Identité du site et QR inclus",
+    "de": "PNG 1200 × 1200 · Website-Marke und QR enthalten",
+    "ja": "1200 × 1200 PNG · サイトロゴとQR付き",
+    "ko": "1200 × 1200 PNG · 사이트 브랜딩 및 QR 포함"
+  },
+  "Shows selected large companies in this period. For ranges over 42 days, the image covers the first 42 days. Scan the QR for the full calendar.": {
+    "es": "Muestra grandes empresas seleccionadas del período. Para más de 42 días, la imagen cubre los primeros 42. Escanea el QR para ver el calendario completo.",
+    "fr": "Affiche certaines grandes entreprises de la période. Au-delà de 42 jours, l’image couvre les 42 premiers. Scannez le QR pour le calendrier complet.",
+    "de": "Zeigt ausgewählte große Unternehmen. Bei mehr als 42 Tagen umfasst das Bild die ersten 42 Tage. QR für den vollständigen Kalender scannen.",
+    "ja": "期間内の主要企業を表示。42日超の場合は最初の42日を画像化します。全日程はQRから確認できます。",
+    "ko": "기간 내 선별된 대기업을 표시합니다. 42일을 초과하면 처음 42일만 이미지에 포함됩니다. 전체 일정은 QR로 확인하세요."
+  },
+  "Share…": {
+    "es": "Compartir…",
+    "fr": "Partager…",
+    "de": "Teilen…",
+    "ja": "共有…",
+    "ko": "공유…"
+  },
+  "Download PNG ↓": {
+    "es": "Descargar PNG ↓",
+    "fr": "Télécharger le PNG ↓",
+    "de": "PNG herunterladen ↓",
+    "ja": "PNGをダウンロード ↓",
+    "ko": "PNG 다운로드 ↓"
+  },
+  "Partial coverage: saved events run from": {
+    "es": "Cobertura parcial: los eventos guardados van desde",
+    "fr": "Couverture partielle : événements enregistrés à partir de",
+    "de": "Teilabdeckung: gespeicherte Ereignisse ab",
+    "ja": "一部期間のみ：保存済みイベントの開始日",
+    "ko": "일부 기간만 제공: 저장된 이벤트 시작일"
+  },
+  "This period is outside the saved schedule (": {
+    "es": "Este período queda fuera del calendario guardado (",
+    "fr": "Cette période est hors du calendrier enregistré (",
+    "de": "Dieser Zeitraum liegt außerhalb des gespeicherten Kalenders (",
+    "ja": "保存済み日程の範囲外です（",
+    "ko": "저장된 일정 범위 밖입니다 ("
+  },
+  "No matching events are listed for this period.": {
+    "es": "No hay eventos coincidentes para este período.",
+    "fr": "Aucun événement correspondant sur cette période.",
+    "de": "Keine passenden Ereignisse für diesen Zeitraum.",
+    "ja": "この期間に該当イベントなし。",
+    "ko": "이 기간에 해당하는 이벤트가 없습니다."
+  },
+  "Select a date to see its events.": {
+    "es": "Selecciona una fecha para ver sus eventos.",
+    "fr": "Sélectionnez une date pour voir les événements.",
+    "de": "Datum auswählen, um Ereignisse zu sehen.",
+    "ja": "日付を選択してイベントを表示。",
+    "ko": "날짜를 선택해 이벤트를 확인하세요."
+  },
+  "· Eastern time": {
+    "es": "· Hora del este",
+    "fr": "· Heure de l’Est",
+    "de": "· US-Ostküstenzeit",
+    "ja": "· 米国東部時間",
+    "ko": "· 미국 동부 시간"
+  },
+  "Signal previews are temporarily unavailable. Explore the signals page for more.": {
+    "es": "Las vistas previas no están disponibles temporalmente. Consulta la página de señales.",
+    "fr": "Aperçus temporairement indisponibles. Consultez la page des signaux.",
+    "de": "Signalvorschauen vorübergehend nicht verfügbar. Signalseite ansehen.",
+    "ja": "シグナルのプレビューは一時利用不可です。シグナルページをご覧ください。",
+    "ko": "시그널 미리보기를 일시적으로 사용할 수 없습니다. 시그널 페이지를 확인하세요."
+  },
+  "Chart unavailable. Check in the app.": {
+    "es": "Gráfico no disponible. Consulta la app.",
+    "fr": "Graphique indisponible. Consultez l’app.",
+    "de": "Diagramm nicht verfügbar. In der App prüfen.",
+    "ja": "チャート利用不可。アプリでご確認ください。",
+    "ko": "차트를 사용할 수 없습니다. 앱에서 확인하세요."
+  },
+  "View available options data →": {
+    "es": "Ver datos de opciones disponibles →",
+    "fr": "Voir les données d’options disponibles →",
+    "de": "Verfügbare Optionsdaten ansehen →",
+    "ja": "利用可能なオプションデータを見る →",
+    "ko": "제공되는 옵션 데이터 보기 →"
+  },
+  "What could your option be worth?": {
+    "es": "¿Cuánto podría valer tu opción?",
+    "fr": "Que pourrait valoir votre option ?",
+    "de": "Was könnte Ihre Option wert sein?",
+    "ja": "オプションの価値はどう変わる？",
+    "ko": "옵션 가치는 얼마가 될까요?"
+  },
+  "Try a long call, then open the calculator to build your own position.": {
+    "es": "Prueba una call comprada y abre la calculadora para crear tu posición.",
+    "fr": "Essayez un achat de call, puis ouvrez le calculateur pour créer votre position.",
+    "de": "Einen Long Call testen und im Rechner die eigene Position erstellen.",
+    "ja": "コール買いを試し、計算ツールで自分のポジションを作成。",
+    "ko": "콜 매수를 시험한 뒤 계산기에서 내 포지션을 만들어 보세요."
+  },
+  "Strike price ($)": {
+    "es": "Precio de ejercicio ($)",
+    "fr": "Prix d’exercice ($)",
+    "de": "Basispreis ($)",
+    "ja": "権利行使価格（$）",
+    "ko": "행사가 ($)"
+  },
+  "Premium per share ($)": {
+    "es": "Prima por acción ($)",
+    "fr": "Prime par action ($)",
+    "de": "Prämie je Aktie ($)",
+    "ja": "1株当たりプレミアム（$）",
+    "ko": "주당 프리미엄 ($)"
+  },
+  "Breakeven": {
+    "es": "Punto de equilibrio",
+    "fr": "Seuil de rentabilité",
+    "de": "Gewinnschwelle",
+    "ja": "損益分岐点",
+    "ko": "손익분기점"
+  },
+  "Maximum loss": {
+    "es": "Pérdida máxima",
+    "fr": "Perte maximale",
+    "de": "Maximaler Verlust",
+    "ja": "最大損失",
+    "ko": "최대 손실"
+  },
+  "One call · 100 shares · At expiration · Fees excluded. Editable examples, not market quotes.": {
+    "es": "Una call · 100 acciones · Al vencimiento · Sin comisiones. Ejemplos editables, no precios de mercado.",
+    "fr": "Un call · 100 actions · À l’échéance · Hors frais. Exemples modifiables, pas des cours de marché.",
+    "de": "Ein Call · 100 Aktien · Bei Verfall · Ohne Gebühren. Editierbare Beispiele, keine Marktkurse.",
+    "ja": "コール1契約 · 100株 · 満期時 · 手数料除外。編集可能な例で市場価格ではありません。",
+    "ko": "콜 1계약 · 100주 · 만기 기준 · 수수료 제외. 수정 가능한 예시이며 시장 시세가 아닙니다."
+  },
+  "Enter a positive strike and a nonnegative premium.": {
+    "es": "Introduce un precio de ejercicio positivo y una prima no negativa.",
+    "fr": "Saisissez un prix d’exercice positif et une prime non négative.",
+    "de": "Positiven Basispreis und nichtnegative Prämie eingeben.",
+    "ja": "正の権利行使価格と0以上のプレミアムを入力。",
+    "ko": "양수 행사가와 0 이상 프리미엄을 입력하세요."
+  },
+  "Calculate your payoff →": {
+    "es": "Calcula tu resultado →",
+    "fr": "Calculer votre résultat →",
+    "de": "Auszahlung berechnen →",
+    "ja": "損益を計算 →",
+    "ko": "손익 계산 →"
+  },
+  "Different ways to express a view.": {
+    "es": "Distintas formas de expresar tu perspectiva.",
+    "fr": "Différentes façons d’exprimer un scénario.",
+    "de": "Verschiedene Wege, eine Marktmeinung umzusetzen.",
+    "ja": "相場観を表すさまざまな方法。",
+    "ko": "전망을 반영하는 다양한 방법."
+  },
+  "Explore the trade-offs before choosing a strategy.": {
+    "es": "Explora las compensaciones antes de elegir una estrategia.",
+    "fr": "Examinez les compromis avant de choisir une stratégie.",
+    "de": "Vor der Strategiewahl Vor- und Nachteile abwägen.",
+    "ja": "戦略を選ぶ前にトレードオフを確認。",
+    "ko": "전략 선택 전에 장단점을 살펴보세요."
+  },
+  "Illustrative expiration payoff shapes; each chart uses its own scale.": {
+    "es": "Formas ilustrativas de resultados al vencimiento; cada gráfico usa su propia escala.",
+    "fr": "Profils illustratifs à l’échéance ; chaque graphique a sa propre échelle.",
+    "de": "Illustrative Verfallsprofile; jedes Diagramm nutzt eine eigene Skala.",
+    "ja": "満期損益の例。各チャートは独自の尺度を使用。",
+    "ko": "만기 손익 예시. 각 차트는 별도 축척을 사용합니다."
+  },
+  "Explore all strategies →": {
+    "es": "Explorar todas las estrategias →",
+    "fr": "Explorer toutes les stratégies →",
+    "de": "Alle Strategien ansehen →",
+    "ja": "すべての戦略を見る →",
+    "ko": "전체 전략 보기 →"
+  },
+  "Loading recent research previews": {
+    "es": "Cargando análisis recientes",
+    "fr": "Chargement des analyses récentes",
+    "de": "Aktuelle Analysevorschauen werden geladen",
+    "ja": "最近のリサーチを読み込み中",
+    "ko": "최근 리서치 불러오는 중"
+  },
+  "Fetching the latest headlines and images. Please wait…": {
+    "es": "Cargando titulares e imágenes. Espera…",
+    "fr": "Chargement des titres et images. Veuillez patienter…",
+    "de": "Aktuelle Schlagzeilen und Bilder werden geladen. Bitte warten…",
+    "ja": "最新の見出しと画像を取得中。お待ちください…",
+    "ko": "최신 제목과 이미지를 불러오는 중입니다. 잠시 기다려 주세요…"
+  },
+  "Recent previews could not be loaded.": {
+    "es": "No se pudieron cargar los análisis recientes.",
+    "fr": "Impossible de charger les aperçus récents.",
+    "de": "Aktuelle Vorschauen konnten nicht geladen werden.",
+    "ja": "最近のプレビューを読み込めませんでした。",
+    "ko": "최근 미리보기를 불러올 수 없습니다."
+  },
+  "Available on iOS & Android": {
+    "es": "Disponible en iOS y Android",
+    "fr": "Disponible sur iOS et Android",
+    "de": "Für iOS und Android verfügbar",
+    "ja": "iOS・Androidで利用可能",
+    "ko": "iOS 및 Android에서 이용 가능"
+  },
+  "View full research pictures, financials and technical setups in StocksToBuyNow.ai.": {
+    "es": "Ver imágenes completas, finanzas y patrones técnicos en StocksToBuyNow.ai.",
+    "fr": "Voir les images complètes, finances et configurations techniques dans StocksToBuyNow.ai.",
+    "de": "Vollständige Analysebilder, Finanzdaten und technische Setups in StocksToBuyNow.ai ansehen.",
+    "ja": "StocksToBuyNow.aiで画像全体、財務、テクニカルパターンを確認。",
+    "ko": "StocksToBuyNow.ai에서 전체 리서치 이미지, 재무와 기술적 패턴을 확인하세요."
+  },
+  "Pinch or double-click to zoom · Drag to explore": {
+    "es": "Pellizca o haz doble clic para ampliar · Arrastra para explorar",
+    "fr": "Pincez ou double-cliquez pour zoomer · Faites glisser pour explorer",
+    "de": "Zum Zoomen ziehen oder doppelklicken · Zum Erkunden verschieben",
+    "ja": "ピンチ・ダブルクリックで拡大 · ドラッグで移動",
+    "ko": "핀치 또는 더블클릭으로 확대 · 드래그로 이동"
+  },
+  "Account & devices ↗": {
+    "es": "Cuenta y dispositivos ↗",
+    "fr": "Compte et appareils ↗",
+    "de": "Konto und Geräte ↗",
+    "ja": "アカウントと端末 ↗",
+    "ko": "계정 및 기기 ↗"
+  },
+  "My membership ↗": {
+    "es": "Mi suscripción ↗",
+    "fr": "Mon abonnement ↗",
+    "de": "Meine Mitgliedschaft ↗",
+    "ja": "メンバーシップ ↗",
+    "ko": "내 멤버십 ↗"
+  },
+  "Open in your phone’s browser": {
+    "es": "Abre en el navegador de tu teléfono",
+    "fr": "Ouvrez dans le navigateur de votre téléphone",
+    "de": "Im Browser Ihres Smartphones öffnen",
+    "ja": "スマートフォンのブラウザで開く",
+    "ko": "휴대전화 브라우저에서 열기"
+  },
+  "Tap the menu in the top-right corner, then select": {
+    "es": "Toca el menú superior derecho y selecciona",
+    "fr": "Touchez le menu en haut à droite, puis choisissez",
+    "de": "Menü oben rechts antippen, dann auswählen",
+    "ja": "右上のメニューをタップして選択：",
+    "ko": "오른쪽 위 메뉴를 누른 뒤 선택:"
+  },
+  "“Open in browser”": {
+    "es": "«Abrir en el navegador»",
+    "fr": "« Ouvrir dans le navigateur »",
+    "de": "„Im Browser öffnen“",
+    "ja": "「ブラウザで開く」",
+    "ko": "“브라우저에서 열기”"
+  },
+  "Year": {
+    "es": "Año",
+    "fr": "Année",
+    "de": "Jahr",
+    "ja": "年",
+    "ko": "년"
+  },
+  "Value": {
+    "es": "Valor",
+    "fr": "Valeur",
+    "de": "Wert",
+    "ja": "価値",
+    "ko": "가치"
+  },
+  "Added": {
+    "es": "Añadido",
+    "fr": "Ajouté",
+    "de": "Hinzugefügt",
+    "ja": "追加額",
+    "ko": "추가금"
+  }
+}

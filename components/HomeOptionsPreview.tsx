@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import useChartEntrance from './useChartEntrance';
 import motion from '../styles/ChartMotion.module.css';
 import {optionsEndpoint} from '../lib/options-endpoint';
@@ -36,7 +37,7 @@ export default function HomeOptionsPreview(){
   const maximum=Math.max(1,...bars.flatMap(b=>[b.call,b.put]));
   const legs:Leg[]=[{type:'call',side:'buy',strike,premium,quantity:1}],valid=!validateLegs(legs),metrics=valid?expirationMetrics(legs):null;
   const calculatorHref=valid?setupHref({version:1,name:'Long call',symbol:'',expiry:'',asOf:'',reference:strike,fee:0,legs}):'/options-profit-calculator/';
-  return <section ref={root} className={styles.section} aria-labelledby="home-options-title">
+  return <LocalizedContent><section ref={root} className={styles.section} aria-labelledby="home-options-title">
     <header className={styles.header} data-motion-reveal><span className={styles.eyebrow}>EXPLORE YOUR NEXT SETUP</span><h2 id="home-options-title">From market moves<br/><em>to options possibilities.</em></h2><p>Explore positioning, model a payoff and compare ways to express your view.</p></header>
     <div className={styles.tabs} role="group" aria-label="Options tools preview">{tabs.map(t=><button key={t.id} aria-pressed={tab===t.id} aria-controls="home-options-panel" onClick={()=>setTab(t.id)}>{t.label} <span aria-hidden="true">→</span></button>)}</div>
     <div id="home-options-panel" data-motion-reveal="panel" className={styles.panel}>
@@ -58,5 +59,5 @@ export default function HomeOptionsPreview(){
         <Link className={styles.cta} href="/options-strategies/">Explore all strategies →</Link>
       </>}
     </div>
-  </section>;
+  </section></LocalizedContent>;
 }

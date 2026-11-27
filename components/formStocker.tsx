@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import MobileStoreLink from './MobileStoreLink';
 import {useSiteAccount} from './SiteAccount';
 import {DESKTOP_ACCESS_PATH,desktopActionLabel,rememberDesktopThread} from '../lib/desktop-access';
@@ -44,9 +45,9 @@ function NewsletterSignUp({
     });
   };
 
-  if(!desktop)return <MobileStoreLink placement={from}/>;
+  if(!desktop)return <LocalizedContent><MobileStoreLink placement={from}/></LocalizedContent>;
   return (
-    <>
+    <LocalizedContent><>
     <a
       className={`nav-cta app-download-cta${secondary ? ' app-download-cta--secondary' : ''}`}
       href={desktop?(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH)):storeUrl}
@@ -58,7 +59,7 @@ function NewsletterSignUp({
       {desktop?desktopActionLabel(label,!!user):label}
     </a>
     {showPrompt&&<AppDownloadModal placement={from} onClose={()=>setShowPrompt(false)}/>}
-    </>
+    </></LocalizedContent>
   );
 }
 

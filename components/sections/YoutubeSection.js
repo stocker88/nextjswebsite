@@ -1,10 +1,11 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import React from 'react';
 
 const playlistId = 'PLiBfVBTk2-F8r-7NsUrJ9Zjle_WIANUye';
 
 const YoutubeSection = () => {
   return (
-    <section id="watch-and-learn" className="playlist-section" aria-labelledby="playlist-title">
+    <LocalizedContent><section id="watch-and-learn" className="playlist-section" aria-labelledby="playlist-title">
       <div className="playlist-shell">
         <div className="playlist-heading">
           <p>Learn for Free</p>
@@ -38,7 +39,7 @@ const YoutubeSection = () => {
           <span aria-hidden="true">↗</span>
         </a>
       </div>
-    </section>
+    </section></LocalizedContent>
   );
 };
 

@@ -46,6 +46,26 @@
     "Five stars",
     "Scan with your phone to get the app"
   ],
+  "components/AttachedThreads.tsx": [
+    "Attached thread",
+    "Attached threads",
+    "Thread engagement"
+  ],
+  "components/CalendarPeriodControls.tsx": [
+    "Calendar view"
+  ],
+  "components/CalendarPredictionPromo.tsx": [
+    "AI RESEARCH ↗",
+    "Explore potential holdings ahead of 13F filings using recent public data, news and previously disclosed position changes. Assess possible index additions using eligibility rules, company rankings and corporate developments. These are research candidates until filings or index announcements confirm them.",
+    "Predictions are not guarantees.",
+    "· IN THE APP"
+  ],
+  "components/CompactSignUp.tsx": [
+    "Sign Up",
+    "Sign up",
+    "Sign up with Apple",
+    "Sign up with Google"
+  ],
   "components/DesktopAccessPage.tsx": [
     "Check membership again",
     "Choose your membership.",
@@ -64,6 +84,21 @@
     "← Back to home"
   ],
   "components/DesktopAppLink.tsx": [],
+  "components/DesktopProductIntro.tsx": [
+    "",
+    "Apple Store",
+    "Customer review illustration",
+    "Data-driven insights into the macro picture, company fundamentals, insider activity, unusual options volume and technical timing.",
+    "Explore membership →",
+    "Explore the market",
+    "Google Play",
+    "Meet our Founder",
+    "Read customer reviews on",
+    "Research. Compare. Build your perspective.",
+    "Scroll to the market overview",
+    "Stocks To Buy Now Research",
+    "Trustpilot"
+  ],
   "components/DeviceCapacityNotice.tsx": [
     "Add more slots",
     "Manage devices",
@@ -75,6 +110,33 @@
   "components/DeviceRecovery.tsx": [
     "Available again:",
     "Back"
+  ],
+  "components/EarningsLearningGuides.tsx": [
+    "THE METHODOLOGY"
+  ],
+  "components/ExtendedHoursSnapshot.tsx": [
+    "A saved",
+    "After-hours",
+    "Change",
+    "Collected",
+    "Continue your market research",
+    "Explore the snapshot archive and continue your stock research in the app.",
+    "Explore the snapshot archive, company metrics and research in the app.",
+    "Extended-hours views",
+    "Follow how the session unfolds",
+    "Latest saved snapshot ·",
+    "Premarket",
+    "Price (USD)",
+    "Price changes versus the",
+    "Quote time (",
+    "Regular session",
+    "Scheduled snapshots, not a live quote stream. Quotes may be delayed and have different timestamps. Gray tiles mean unavailable session data. Outside collection hours, the last saved session remains visible. Source: Yahoo Finance via our saved market feed. Extended-hours trading can have lower liquidity and wider spreads.",
+    "Stock",
+    "View all",
+    "holdings and quote times",
+    "holdings have a usable session quote.",
+    "snapshot is currently unavailable. Please try again later or explore the regular-session heatmap.",
+    "stock prices and changes · U.S. session date:"
   ],
   "components/FearGreedShare.tsx": [
     "Close image preview",
@@ -93,6 +155,154 @@
     "Plan for the next market move",
     "Pro"
   ],
+  "components/HeroFeatureExplorer.tsx": [
+    "Explore product features",
+    "Go from the headline to the whole picture.",
+    "RESEARCH YOU CAN EXAMINE",
+    "Read our methodology and limitations ↗",
+    "Review the context, dates and limitations of historical research setups.",
+    "Stocks investments and options used for direct exposures and hedging. Protect your capital with puts.",
+    "THE COMPLETE RESEARCH TOOLKIT",
+    "Transparency into past setups.",
+    "ways to explore"
+  ],
+  "components/HeroMarketPulse.tsx": [
+    "Market pulse",
+    "Price moves · Treasury changes in bp"
+  ],
+  "components/HeroOverviewHeatmap.tsx": [
+    "S&P 500 holdings · Sized by index weight",
+    "Tap a stock to open its company page. Gray means unavailable data."
+  ],
+  "components/HeroProductReveal.tsx": [
+    "",
+    "A CLEARER VIEW OF THE MARKET",
+    "After-Hours",
+    "Compare",
+    "Every move.",
+    "Explore the full heatmap",
+    "From the big picture to the details that matter.",
+    "Market overview",
+    "More perspective.",
+    "PRODUCT PREVIEW",
+    "Perspective starts here.",
+    "Pre-Market",
+    "Product preview · Saved market data · Treasury: Federal Reserve via FRED",
+    "Research",
+    "S&P 500 by industry",
+    "Stocks to Buy Now",
+    "THE BIG PICTURE",
+    "Understand"
+  ],
+  "components/HomeAlternativeIndicators.tsx": [
+    "BEYOND THE HEADLINES",
+    "Explore shipping flows and the context behind unusual market activity.",
+    "Explore transit history →",
+    "Hormuz Transit Index",
+    "Last 30 daily Hormuz transit observations",
+    "MARITIME ACTIVITY",
+    "Unusual signals. Useful context."
+  ],
+  "components/HomeMarketTiming.tsx": [
+    "Explore earnings dates, company financials and market scenarios. Separate observed results from forecasts, and understand the assumptions behind each example.",
+    "How to evaluate the research →",
+    "Human-led macro and portfolio research.",
+    "Led by Aness Hussein Ali, the research approach combines macroeconomic analysis, company fundamentals, portfolio judgment and data science. Aness reports previous experience at Goldman Sachs and Bank of America;",
+    "Selected community screenshots are not a complete or independently audited performance record. They do not establish typical returns, execution prices or realized profits.",
+    "This is a research platform, not an automated trading bot. Human research and AI-assisted summaries are distinct: AI can support data processing and drafting, while users should check each article’s author, reviewer and sources. Former employers do not endorse this service.",
+    "explore his background and professional profile"
+  ],
+  "components/HomeOptionsPreview.tsx": [
+    "Breakeven",
+    "Calculate your payoff →",
+    "Call and put open interest across available expirations.",
+    "Call open interest",
+    "Different ways to express a view.",
+    "EXPLORE YOUR NEXT SETUP",
+    "Enter a positive strike and a nonnegative premium.",
+    "Explore",
+    "Explore all strategies →",
+    "Explore positioning, model a payoff and compare ways to express your view.",
+    "Explore the trade-offs before choosing a strategy.",
+    "From market moves",
+    "ILLUSTRATIVE INPUTS",
+    "Illustrative expiration payoff shapes; each chart uses its own scale.",
+    "Largest open-interest strikes. Call/put totals do not establish market direction.",
+    "Maximum loss",
+    "One call · 100 shares · At expiration · Fees excluded. Editable examples, not market quotes.",
+    "Options tools preview",
+    "Premium per share ($)",
+    "Preview ticker",
+    "Put open interest",
+    "Strike price ($)",
+    "Totals cover available contracts.",
+    "Try a long call, then open the calculator to build your own position.",
+    "View available options data →",
+    "What could your option be worth?",
+    "Where are positions concentrated?",
+    "options activity →",
+    "to options possibilities.",
+    "● Calls",
+    "● Puts"
+  ],
+  "components/HomeResearch.tsx": [
+    "All app research previews published in the past week. These are not live quotes or a ranked list of buys.",
+    "All market news →",
+    "Company insights",
+    "Editorial standards",
+    "Explore company research",
+    "Fetching the latest headlines and images. Please wait…",
+    "Frequently asked questions",
+    "Investing glossary",
+    "Loading recent research previews",
+    "Market updates · Past week",
+    "Methodology",
+    "Post engagement",
+    "Publication date (UTC)",
+    "Published (UTC)",
+    "Read preview",
+    "Recent previews could not be loaded.",
+    "Research headline",
+    "Research resources",
+    "Search the app’s full stock catalog →",
+    "Stock market news today",
+    "Stock research FAQ",
+    "Try again"
+  ],
+  "components/HomeSignalPreview.tsx": [
+    "A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.",
+    "Explore stock signals",
+    "Explore stock signals →",
+    "Explore this setup →",
+    "Inside the app",
+    "Loading signal previews…",
+    "Price trend",
+    "STOCK TO BUY",
+    "Signal previews are temporarily unavailable. Explore the signals page for more."
+  ],
+  "components/HomeSmartMoney.tsx": [
+    "/ DISCLOSURE RESEARCH",
+    "A new perspective on your next idea. Explore disclosed trades, institutional holdings and the evidence behind research signals.",
+    "Daily insider &amp; fund recap →",
+    "Explore trade signals →",
+    "Find the context.",
+    "Follow the moves.",
+    "How to use it ↗",
+    "Open the Smart Money hub ↗",
+    "POLITICIANS · HEDGE FUNDS · INSIDERS",
+    "Reported activity can be delayed. A disclosure is a starting point for research."
+  ],
+  "components/HomeSmartMoneySignals.tsx": [
+    "",
+    "CONNECT THE DISCLOSURES",
+    "Explore in the app",
+    "IN-APP ALERTS",
+    "ONE STOCK",
+    "See the pattern. Check the evidence. Take the next step.",
+    "The activity is the beginning.",
+    "The context is your edge.",
+    "buying."
+  ],
   "components/IndustryExplorer.tsx": [
     "Explore industries",
     "Find an industry",
@@ -102,6 +312,28 @@
     "P/E based on {count} saved positive multiples",
     "Show all {count} industries",
     "U.S.-listed companies from the app’s catalog. Medians use saved positive P/E values; coverage and snapshot dates vary."
+  ],
+  "components/MarketLearningGuides.tsx": [
+    "THE METHODOLOGY"
+  ],
+  "components/MarketMovers.tsx": [
+    "Biggest movers",
+    "Gainers and decliners",
+    "Stock movers",
+    "Top 10 gainers and decliners across",
+    "tracked stocks in this snapshot.",
+    "with an available quote."
+  ],
+  "components/MarketNewsFeed.tsx": [
+    "",
+    "All news →",
+    "FROM AROUND THE MARKET",
+    "Headlines from external publishers",
+    "Latest market headlines",
+    "Latest stock news",
+    "Search company, ticker or headline",
+    "Search news",
+    "UTC"
   ],
   "components/MarketResearchNextSteps.tsx": [
     "Earnings calendar",
@@ -226,11 +458,73 @@
     "More sign-in options",
     "being set up."
   ],
+  "components/MoverContext.tsx": [
+    "Close article preview"
+  ],
+  "components/MoverTrade.tsx": [
+    "Close options preview",
+    "Preview options performance",
+    "Read full results ↗",
+    "· OPTIONS RESULTS"
+  ],
+  "components/NewsMentionsPromo.tsx": [
+    "APP ANALYTICS ↗",
+    "Available on iOS & Android",
+    "Choose a time window",
+    "Curious which stocks are mentioned most in the news? Choose your perspective, then continue your research with AI in the app.",
+    "Financial snapshots",
+    "Headlines move fast.",
+    "NEWS ATTENTION · EXPLORE IN THE APP",
+    "News mentions",
+    "News mentions time window",
+    "See who’s in focus.",
+    "Technical setups"
+  ],
   "components/OnboardingQuestion.tsx": [
     "QUICK QUESTIONS",
     "Question progress",
     "← Back"
   ],
+  "components/OptionResultPayoff.tsx": [
+    "/ share ·",
+    "Breakeven at expiry",
+    "Expires",
+    "One contract",
+    "One contract:",
+    "Payoff ·",
+    "Previous stock price",
+    "Recorded option prices · Dashed curve is illustrative.",
+    "Stock endpoints unavailable",
+    "Stock price recorded around the same time as the option",
+    "Stock price →",
+    "Strike",
+    "Tap or drag the mint curve (arrow keys also work). Mint dashed: guide between recorded prices · Purple: expiry value, before premium cost.",
+    "gain before costs",
+    "result",
+    "· Contract",
+    "· Result",
+    "· Return",
+    "· Stock"
+  ],
+  "components/OptionsLearningGuides.tsx": [
+    "Options learning guides",
+    "THE METHODOLOGY"
+  ],
+  "components/OptionsSignalsPromo.tsx": [
+    "Curious about “smart money”? Look for activity worth investigating, then connect it with company catalysts and a strategy that fits your outlook.",
+    "Explore the signal behind the activity",
+    "Find your next options idea.",
+    "Follow the activity.",
+    "OPTIONS RESEARCH ↗",
+    "OPTIONS SIGNALS · IN THE APP",
+    "Options activity does not identify hedge funds or confirm what “smart money” is buying. Signals are research ideas; options can lose their entire premium.",
+    "Options research",
+    "Options signal research",
+    "Risk & reward",
+    "Trade setups",
+    "Unusual volume. Call and put positioning. Liquidity and strategy selection. Bring the clues together as you explore options opportunities and research-backed signals in the app."
+  ],
+  "components/PageContents.tsx": [],
   "components/PentagonPizzaCard.tsx": [
     "% coverage;",
     "% of usual;",
@@ -340,18 +634,51 @@
     "Related research"
   ],
   "components/ResearchCTA.tsx": [],
+  "components/ResearchImages.tsx": [
+    "Close app prompt",
+    "Close image",
+    "Image unavailable",
+    "Next image",
+    "Pinch or double-click to zoom · Drag to explore",
+    "Previous image",
+    "View full research pictures, financials and technical setups in StocksToBuyNow.ai."
+  ],
   "components/ResearchPage.tsx": [
     "Research resources"
   ],
   "components/ResearchSections.tsx": [
     "Research sections"
   ],
+  "components/ScrollShowcase.tsx": [
+    "APP PREVIEW · ILLUSTRATIVE RESEARCH VISUAL",
+    "Context before decisions.",
+    "Explore the Stocks To Buy Now Research experience",
+    "Preview of the app’s daily investing routine",
+    "RESEARCH",
+    "Research. Learn. Repeat.",
+    "SCROLL TO EXPLORE",
+    "See the bigger picture.",
+    "The Stocks To Buy Now Research app: signals, insights, earnings and market updates",
+    "YOUR DAILY ROUTINE"
+  ],
+  "components/SessionMarketPulse.tsx": [
+    ". Quote times shown for each instrument.",
+    "Market pulse",
+    "No usable quote in this session",
+    "Price moves versus the"
+  ],
+  "components/ShareAction.tsx": [],
   "components/ShareControl.tsx": [
     "Close share preview",
     "Save PNG",
     "Share",
     "Share image",
     "Share link"
+  ],
+  "components/SignalChart.tsx": [
+    "Buy signal",
+    "Chart unavailable. Check in the app.",
+    "Projections"
   ],
   "components/SiteAccount.tsx": [
     "Back to sign in",
@@ -362,6 +689,11 @@
   "components/SiteMenu.tsx": [
     "Contact the team",
     "Explore"
+  ],
+  "components/SocialBrowserNotice.tsx": [
+    "Open in your phone’s browser",
+    "Tap the menu in the top-right corner, then select",
+    "“Open in browser”"
   ],
   "components/StockAppCTA.tsx": [
     "A subscription is required for full research. Predictions are scenarios, not guarantees.",
@@ -463,6 +795,19 @@
     "· Compare valuation, financial strength and price performance.",
     "· Latest:",
     "· Scale:"
+  ],
+  "components/StockResearchPromo.tsx": [
+    "A complete investment picture.",
+    "AI RESEARCH ↗",
+    "Company research",
+    "More than a ticker.",
+    "Research ideas to evaluate, with risks to consider. Returns are not guaranteed.",
+    "STOCK IDEAS · RESEARCH IN THE APP",
+    "Stock idea alerts",
+    "Stock research inputs",
+    "Timely catalysts",
+    "We track fundamentals, technicals, earnings catalysts and the market environment to identify our best stocks to buy now and send you research-backed ideas through the app.",
+    "What goes into each idea"
   ],
   "components/StockSmartMoney.tsx": [
     "Activity category",
@@ -659,6 +1004,14 @@
     "research is temporarily unavailable. Showing",
     "· Updated"
   ],
+  "components/earnings/EarningsInsightLinks.tsx": [],
+  "components/earnings/EarningsSnapshot.tsx": [
+    "Earnings could not load.",
+    "Earnings snapshot",
+    "Loading earnings…",
+    "Open earnings calendar ↗",
+    "Try again"
+  ],
   "components/earnings/PriceChart.tsx": [
     "(illustration)",
     "200-day average",
@@ -678,6 +1031,27 @@
     "available / illustrative chart events",
     "in view"
   ],
+  "components/earnings/RangeOverview.tsx": [
+    "",
+    "Close day reports",
+    "No reports match the current filters.",
+    "Tap a date for all companies",
+    "View ↗",
+    "more",
+    "reports",
+    "● After close",
+    "● Before open"
+  ],
+  "components/earnings/ShareSnapshot.tsx": [
+    "1200 × 1200 PNG · Website branding and QR included",
+    "Close image preview",
+    "Download PNG ↓",
+    "Earnings snapshot",
+    "Share earnings snapshot",
+    "Shareable earnings calendar with company logos, release windows and a QR code to StocksToBuyNow.ai",
+    "Share…",
+    "Shows selected large companies in this period. For ranges over 42 days, the image covers the first 42 days. Scan the QR for the full calendar."
+  ],
   "components/earnings/StockEarnings.tsx": [
     "EARNINGS & COMPANY RESEARCH",
     "EPS ESTIMATE",
@@ -695,6 +1069,51 @@
     "earnings, valuation & price action",
     "reported earnings"
   ],
+  "components/earnings/WeeklySummary.tsx": [
+    ". Dates outside this range have not been loaded.",
+    "1Y price",
+    "Add data",
+    "Available coverage:",
+    "BMO: before open · AMC: after close · ?: unconfirmed",
+    "Cap",
+    "EPS beat",
+    "EPS beat rate",
+    "EPS beat rate: actual earnings above estimates in up to 8 recent reports. Select View to explore unavailable EPS or revenue beat history in the app.",
+    "EPS beats",
+    "EPS est.",
+    "Earnings snapshot",
+    "Explore EPS and revenue beat history in the app",
+    "Fwd P/E",
+    "Fwd P/S",
+    "Insights",
+    "Largest companies first · Expected release times · US Eastern Time",
+    "Logo ring: average EPS + revenue beat rate · red 0% · yellow 50% · green 100% · gray: missing history",
+    "No confirmed reports",
+    "No reports match this view. Try another period or show unconfirmed times below.",
+    "Price",
+    "Reset to logos",
+    "Rev",
+    "Rev. est.",
+    "Revenue actual above analyst estimates",
+    "Revenue beat",
+    "Revenue beat rate",
+    "See who’s reporting. Tap a company to explore its research.",
+    "Show insights",
+    "Show on each company",
+    "View",
+    "reports",
+    "unconfirmed times (",
+    "“N/A” means not loaded or unavailable. Open a company to load its research. Market cap is USD; estimates and quotes use source currencies. Forward ratios use fiscal-year estimates, not the next 12 months. EPS beat rate is historical earnings performance, not the probability of a stock-price gain."
+  ],
+  "components/formStocker.tsx": [],
+  "components/heatmap/HeatmapShare.tsx": [
+    "Close image preview",
+    "Download PNG",
+    "Navy stock market heatmap with website source and QR code",
+    "Share heatmap",
+    "Share image",
+    "Stock market heatmap"
+  ],
   "components/heatmap/StockPeerPerformance.tsx": [
     "Compare",
     "Compare in heatmap →",
@@ -709,6 +1128,11 @@
     "with",
     "· Closing-price performance"
   ],
+  "components/introApp.tsx": [
+    "Built for better decisions",
+    "Clear, actionable insights designed to help members identify opportunities, understand risk and make more informed investment decisions.",
+    "Get the best stocks before the crowd"
+  ],
   "components/localization/LanguageSelector.tsx": [
     "English",
     "Keep English",
@@ -722,6 +1146,26 @@
     "Scenarios for 2030 and other periods"
   ],
   "components/localization/SpanishContent.tsx": [],
+  "components/market/MarketCalendar.tsx": [
+    "Close event details",
+    "Details +",
+    "Economic releases, Fed decisions, 13F filings and index reviews.",
+    "Full stock market calendar ↗",
+    "Loading your week…",
+    "Market Events Calendar",
+    "Market event categories",
+    "No matching events are listed for this period.",
+    "PLAN YOUR WEEK",
+    "Partial coverage: saved events run from",
+    "Select a date to see its events.",
+    "Selected events, not a complete live calendar. Dates can change; consult the linked official sources. Scheduled index reviews do not guarantee a stock’s inclusion.",
+    "This period is outside the saved schedule (",
+    "U.S. Eastern time ·",
+    "What to watch",
+    "selected events · Schedule checked",
+    "· Eastern time"
+  ],
+  "components/options/ExpirationChart.tsx": [],
   "pages/fear-and-greed-index/index.tsx": [
     ", company fundamentals and the",
     ". Extreme readings can last, and investing involves risk of loss.",

@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import DesktopAppLink from '../DesktopAppLink';
 import {useSiteAccount} from '../SiteAccount';
 import React, { useEffect, useState } from 'react';
@@ -53,7 +54,7 @@ const Hero = ({
   );
 
   return (
-    <section
+    <LocalizedContent><section
       {...props}
       className={outerClasses}
       id="home"
@@ -175,7 +176,7 @@ const Hero = ({
         .mobile-download-hero .hero-bottom-space{height:30px!important}
       }
     `}</style>
-    </section>
+    </section></LocalizedContent>
   );
 }
 

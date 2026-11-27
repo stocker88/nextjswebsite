@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import useChartEntrance from '../useChartEntrance';
 import ChartReveal from '../ChartReveal';
 import {useEffect,useId,useRef,useState} from 'react';
@@ -20,7 +21,7 @@ export default function ExpirationChart({legs,fee=0,low=60,high=140,price,onPric
   const fraction=Math.max(0,Math.min(1,(point.x-left)/(w-left-right)));
   onPriceChange?.(Math.round((low+fraction*(high-low))*100)/100);
  };
- return <svg ref={ref} tabIndex={interactive?0:undefined}
+ return <LocalizedContent><svg ref={ref} tabIndex={interactive?0:undefined}
  onPointerDown={interactive?e=>{if(e.button!==0)return;e.preventDefault();e.currentTarget.dataset.pointerFocus="true";e.currentTarget.focus();e.currentTarget.setPointerCapture(e.pointerId);pickPrice(e.currentTarget,e.clientX,e.clientY)}:undefined}
  onPointerMove={interactive?e=>{if(e.currentTarget.hasPointerCapture(e.pointerId))pickPrice(e.currentTarget,e.clientX,e.clientY)}:undefined}
  onPointerUp={interactive?e=>{if(e.currentTarget.hasPointerCapture(e.pointerId)){pickPrice(e.currentTarget,e.clientX,e.clientY);e.currentTarget.releasePointerCapture(e.pointerId)}}:undefined}
@@ -33,5 +34,5 @@ export default function ExpirationChart({legs,fee=0,low=60,high=140,price,onPric
  <ChartReveal width={w} height={h}><path d={area} fill="#68d9b7" opacity=".13" clipPath={`url(#${id}pos)`}/><path d={area} fill="#fb7898" opacity=".12" clipPath={`url(#${id}neg)`}/><path d={line} fill="none" stroke="#86dec4" strokeWidth={mini?3:3.5} clipPath={`url(#${id}pos)`}/><path d={line} fill="none" stroke="#fb8fa8" strokeWidth={mini?3:3.5} clipPath={`url(#${id}neg)`}/></ChartReveal>
  {!mini&&(w<450?[0,.5,1]:[0,.25,.5,.75,1]).map(t=>{const p=low+(high-low)*t;return <text key={t} x={x(p)} y={h-22} textAnchor="middle" fontSize="12" fill="#9cacc2">{usd(p)}</text>})}
  {!mini&&price!==undefined&&<g><line x1={x(price)} x2={x(price)} y1={top} y2={h-bottom} stroke="#bea8ff" strokeDasharray="4 4"/><circle cx={x(price)} cy={y(expirationPnl(legs,price,fee))} r="5" fill="#bea8ff" stroke="#080e1c" strokeWidth="2"/></g>}
- </svg>
+ </svg></LocalizedContent>
 }

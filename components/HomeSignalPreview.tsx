@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import DesktopAppLink from './DesktopAppLink';
 import {useEffect, useState} from 'react';
 import SignalChart, {type Point} from './SignalChart';
@@ -27,7 +28,7 @@ export default function HomeSignalPreview() {
     return () => { disposed = true; controller.abort(); clearTimeout(timeout); };
   }, []);
 
-  return <section className="signal-preview" aria-labelledby="signal-preview-title">
+  return <LocalizedContent><section className="signal-preview" aria-labelledby="signal-preview-title">
     <header data-motion-reveal className="editorial-heading">
       <span>Inside the app</span>
       <h2 id="signal-preview-title">Explore stock signals</h2>
@@ -73,5 +74,5 @@ export default function HomeSignalPreview() {
       @media(max-width:600px){.signal-preview{padding:36px 16px 48px;}.preview-grid{gap:10px;}.preview-grid :global(.preview-card){padding:12px;border-radius:14px;}.badge{font-size:9px;padding:6px 8px;}.summary{font-size:13px;}.card-link{font-size:12px;}.preview-grid :global(.signal-chart){height:100px;}}
       @media(prefers-reduced-motion:reduce){.preview-grid :global(.preview-card){transition:none;}}
     `}</style>
-  </section>;
+  </section></LocalizedContent>;
 }

@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import Image from 'next/image';
 
 const signalScreenshots = [
@@ -7,7 +8,7 @@ const signalScreenshots = [
 
 export default function Swipe() {
   return (
-    <section className="signal-screenshots" aria-label="AI trading signal examples">
+    <LocalizedContent><section className="signal-screenshots" aria-label="AI trading signal examples">
       {signalScreenshots.map((src, index) => (
         <div className="signal-screenshot" key={src}>
           <Image
@@ -19,6 +20,6 @@ export default function Swipe() {
           />
         </div>
       ))}
-    </section>
+    </section></LocalizedContent>
   );
 }

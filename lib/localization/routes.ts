@@ -1,5 +1,5 @@
 /** Languages are advertised only for routes with saved translated content. */
-export const languages=['en','es','de','fr','ja','ko'] as const;
+export const languages=['en','es','fr','de','ja','ko'] as const;
 export type SiteLanguage=typeof languages[number];
 export const languageNames:Record<SiteLanguage,string>={en:'English',es:'Español',de:'Deutsch',fr:'Français',ja:'日本語',ko:'한국어'};
 export const conversionRoutes=['/login/','/membership/','/ultra/','/account/','/continue/'] as const;
@@ -11,7 +11,7 @@ export function englishPath(path:string){const value=path.replace(/^\/(es|de|fr|
 export function hasTranslation(path:string,language:SiteLanguage){
  if(language==='en')return true;
  const plain=routePath(englishPath(path));
- return (conversionRoutes as readonly string[]).includes(plain)||(language==='es'?(spanishRoutes as readonly string[]):(researchRoutes as readonly string[])).includes(plain)||/^\/prediction\/[^/]+\/(?:today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030)?\/?$/.test(plain);
+ return plain==='/'||(conversionRoutes as readonly string[]).includes(plain)||(language==='es'?(spanishRoutes as readonly string[]):(researchRoutes as readonly string[])).includes(plain)||/^\/prediction\/[^/]+\/(?:today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030)?\/?$/.test(plain);
 }
 export function hasSpanish(path:string){return hasTranslation(path,'es');}
 export function availableLanguages(path:string){return languages.filter(l=>hasTranslation(path,l));}

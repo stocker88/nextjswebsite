@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import React, { useMemo, useRef, useState } from 'react';
 import useChartEntrance from './useChartEntrance';
 import motion from '../styles/ChartMotion.module.css';
@@ -26,11 +27,11 @@ const CompactCompoundTooltip = ({ active, payload, label }) => {
   const contributed = payload.find((item) => item.dataKey === 'onlyAmountSaved');
 
   return (
-    <div className="compound-tooltip">
+    <LocalizedContent><div className="compound-tooltip">
       <strong>Year {label}</strong>
       <span className="compound-tooltip__projected">Value <b>{currency.format(projected?.value || 0)}</b></span>
       <span className="compound-tooltip__contributed">Added <b>{currency.format(contributed?.value || 0)}</b></span>
-    </div>
+    </div></LocalizedContent>
   );
 };
 
@@ -111,7 +112,7 @@ const CompoundInterestCalculator = () => {
   ];
 
   return (
-    <section className="compound-section" aria-labelledby="compound-title">
+    <LocalizedContent><section className="compound-section" aria-labelledby="compound-title">
     <br></br>
       <div className="compound-shell">
         <header className="compound-heading">
@@ -209,7 +210,7 @@ const CompoundInterestCalculator = () => {
       </div>
       <br></br>
       <br></br>
-    </section>
+    </section></LocalizedContent>
   );
 };
 

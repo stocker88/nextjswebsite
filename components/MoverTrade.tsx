@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useId,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 import saved from '../data/mover-trades.json';
@@ -31,7 +32,7 @@ export default function MoverTrade({symbol,compact=false,optionType,sessionDate}
  },[open,result,failed]);
  useEffect(()=>{if(open&&position)panel.current?.querySelector<HTMLButtonElement>('button')?.focus({preventScroll:true})},[open,!!position]);
  if(!trade)return null;
- return <>
+ return <LocalizedContent><>
   <button ref={trigger} type="button" className={`${styles.trigger} ${styles.trade} ${trade.performancePct<0?styles.loss:''} ${compact?styles.compactTrigger:''}`} data-result-post-id={trade.postId} aria-label={`Preview recent options results: ${symbol}, ${formatOptionPerformance(trade.performancePct)} option price return`} aria-haspopup="dialog" aria-expanded={open} aria-controls={open?id:undefined} title="Preview options performance" onClick={()=>{setPosition(null);setOpen(!open)}}><span>{formatOptionPerformance(trade.performancePct)}</span><span aria-hidden="true">↗</span></button>
   {open&&createPortal(<div ref={panel} id={id} role="dialog" aria-label={`${symbol} options result preview`} className={`${styles.popover} ${styles.tradePopover}`} style={{left:position?.left||12,top:position?.top||12,visibility:position?'visible':'hidden'}}>
    <button type="button" className={styles.close} aria-label="Close options preview" onClick={()=>{setOpen(false);trigger.current?.focus()}}>×</button>
@@ -41,5 +42,5 @@ export default function MoverTrade({symbol,compact=false,optionType,sessionDate}
     <AccountLink destination={trade.href} className={styles.read}>Read full results ↗</AccountLink>
    </div>
   </div>,document.body)}
- </>;
+ </></LocalizedContent>;
 }

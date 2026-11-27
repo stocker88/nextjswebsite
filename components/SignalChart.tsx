@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect, useRef, useId, type CSSProperties} from 'react';
 import {signalChartObservations, signalChartDate, signalChartProjection} from '../lib/signal-chart';
 import styles from '../styles/SignalChart.module.css';
@@ -33,7 +34,7 @@ export default function SignalChart({points = [], bars = false, title = 'Price t
     return () => {observer?.disconnect();reduced.removeEventListener('change', setup);delete element.dataset.chartMotion;};
   }, [animationKey]);
 
-  if (!values.length) return <p className="research-meta">Chart unavailable. Check in the app.</p>;
+  if (!values.length) return <LocalizedContent><p className="research-meta">Chart unavailable. Check in the app.</p></LocalizedContent>;
   const displayValues = [...values,...projection.map(point=>point.value)];
   const min = bars ? Math.min(0, ...displayValues) : Math.min(...displayValues);
   const max = bars ? Math.max(0, ...displayValues) : Math.max(...displayValues);
@@ -50,7 +51,7 @@ export default function SignalChart({points = [], bars = false, title = 'Price t
   const priceDate = signalChartDate(last.x);
   const showSignal = !bars && Boolean(sentDate);
   const price = new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(last.value);
-  return <div ref={root} className={styles.chart}>
+  return <LocalizedContent><div ref={root} className={styles.chart}>
     <div className={styles.plot} title={showSignal ? `Buy signal sent ${sentDate}. Last saved chart price ${price}${priceDate ? ` on ${priceDate}` : ''}.${projection.length ? ' Purple path is an illustration from past price movement, not a forecast.' : ''}` : `${title}${projection.length ? '. Purple projections are illustrative trend scenarios, not forecasts.' : ''}`}>
       <svg className="signal-chart" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label={title+(projection.length ? '. Includes illustrative scenarios, not forecasts.' : '')}>
         <title>{title}{showSignal ? ` · Buy signal sent ${sentDate}. Last saved chart price ${price}${priceDate ? ` on ${priceDate}` : ''}.` : ''}</title>
@@ -64,5 +65,5 @@ export default function SignalChart({points = [], bars = false, title = 'Price t
       {showSignal && <div className={styles.endpoint} style={{left:`${lastX}%`,top:`${lastY}%`}} aria-hidden="true"><i/><span className={lastY < 35 ? styles.below : ''}>Buy signal</span></div>}
     </div>
 
-  </div>;
+  </div></LocalizedContent>;
 }

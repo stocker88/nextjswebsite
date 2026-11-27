@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import { useEffect, useState } from 'react';
 
 export function detectSocialBrowser(
@@ -75,7 +76,7 @@ export default function SocialBrowserNotice({
   if (!browserName) return null;
 
   return (
-    <aside className="browserNotice" role="status">
+    <LocalizedContent><aside className="browserNotice" role="status">
       <div>
         <strong>Open in your phone’s browser</strong>
         <span className="browserNoticeAction">
@@ -192,6 +193,6 @@ export default function SocialBrowserNotice({
           }
         }
       `}</style>
-    </aside>
+    </aside></LocalizedContent>
   );
 }

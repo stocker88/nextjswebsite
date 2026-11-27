@@ -1,0 +1,18 @@
+.rail{display:none}
+@media(min-width:1024px){
+ .rail{display:block;position:fixed;z-index:20;top:145px;bottom:32px;left:max(20px,calc((100vw - 1480px)/2));width:210px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#34445c transparent;padding-right:10px}
+ .title{margin:0 0 20px;color:#a7ded1;font-size:11px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}
+ .links{list-style:none;margin:0;padding:0;border-left:1px solid #2c3b51}
+ .links li{margin:0;padding:0}
+ .links a{display:block;margin-left:-1px;padding:10px 10px 10px 17px;border-left:2px solid transparent;color:#91a3bc;text-decoration:none;font-size:13px;line-height:1.5;overflow-wrap:anywhere;transition:color .15s,background .15s}
+ .links a:hover{color:#eef4ff;background:#182238}
+ .links a[aria-current="location"]{border-left-color:#b9a0ff;color:#e5d9ff;background:linear-gradient(90deg,#b9a0ff13,transparent);font-weight:650}
+ .links a:focus-visible{outline:2px solid #b9a0ff;outline-offset:-2px;border-radius:3px}
+}
+@media(prefers-reduced-motion:reduce){.links a{transition:none}}
+
+@media(min-width:1024px) and (max-width:1359px){
+ .rail{left:16px;width:176px;padding-right:8px;top:128px;bottom:20px}
+ .title{margin-bottom:14px;font-size:10px}
+ .links a{padding:8px 6px 8px 12px;font-size:12px;line-height:1.45}
+}

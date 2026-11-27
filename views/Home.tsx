@@ -1,3 +1,4 @@
+import LocalizedContent from '../components/localization/LocalizedContent';
 import HomeMarketTiming from '../components/HomeMarketTiming';
 import DesktopProductIntro from '../components/DesktopProductIntro';
 import MembershipPlans from '../components/MembershipPlans';
@@ -56,20 +57,20 @@ type Props = {
 const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' }) => {
   if (platform === 'google') {
     return (
-      <span className="platform-icon platform-icon--google" aria-hidden="true">
+      <LocalizedContent><span className="platform-icon platform-icon--google" aria-hidden="true">
         <svg viewBox="0 0 64 64" role="img">
           <path fill="#00D7FE" d="M13 9.7v44.6L36.8 32 13 9.7Z" />
           <path fill="#00F076" d="m13 9.7 29.1 16.8-5.3 5.5L13 9.7Z" />
           <path fill="#FFCC00" d="m36.8 32 5.3 5.5L13 54.3 36.8 32Z" />
           <path fill="#FF3A44" d="m42.1 26.5 7.4 4.3c1 .6 1 1.8 0 2.4l-7.4 4.3-5.3-5.5 5.3-5.5Z" />
         </svg>
-      </span>
+      </span></LocalizedContent>
     );
   }
 
   if (platform === 'apple') {
     return (
-      <span className="platform-icon platform-icon--apple" aria-hidden="true">
+      <LocalizedContent><span className="platform-icon platform-icon--apple" aria-hidden="true">
         <svg viewBox="0 0 64 64" role="img">
           <defs>
             <linearGradient id="app-store-gradient" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
@@ -80,18 +81,18 @@ const PlatformIcon = ({ platform }: { platform: 'google' | 'apple' | 'linkedin' 
           <rect width="64" height="64" rx="15" fill="url(#app-store-gradient)" />
           <path d="M23.2 43.8h24.2M18.1 43.8h1.8M25.1 36.8 35.3 19M31 19l15.2 26.3M21.2 45.3l-3 5.2M39.5 36.8l4.2 7.2" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-      </span>
+      </span></LocalizedContent>
     );
   }
 
   return (
-    <span className="platform-icon platform-icon--linkedin" aria-hidden="true">
+    <LocalizedContent><span className="platform-icon platform-icon--linkedin" aria-hidden="true">
       <svg viewBox="0 0 64 64" role="img">
         <rect width="64" height="64" rx="15" fill="#0A66C2" />
         <circle cx="20" cy="21" r="4.2" fill="#fff" />
         <path fill="#fff" d="M16.4 28.1h7.2V50h-7.2V28.1Zm11.6 0h6.9v3c1.7-2.3 4.3-3.8 7.7-3.8 7.5 0 8.9 4.9 8.9 11.4V50h-7.2V39.9c0-2.4 0-5.6-3.4-5.6s-4 2.7-4 5.4V50H28V28.1Z" />
       </svg>
-    </span>
+    </span></LocalizedContent>
   );
 };
 
@@ -106,7 +107,7 @@ const Home = ({ news, topWidgetRef, bodyWidgetRef }: Props) => {
 */}
 
   return (
-    <>
+    <LocalizedContent><>
 <div data-home-motion style={{ width: '100%', overflowX: 'clip', position: 'relative' }}>
     <HomeMotion />
     <Header socialNoticeMode="all" />
@@ -592,7 +593,7 @@ import SignUpModal from '../SignUpModal';
       `}</style>
 
     </div>
-    </>
+    </></LocalizedContent>
   );
 }
 

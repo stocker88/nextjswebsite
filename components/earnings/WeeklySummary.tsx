@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import {useRouter} from 'next/router';
 import EarningsInsightLinks from './EarningsInsightLinks';
 import AppDownloadModal from '../AppDownloadModal';
@@ -13,7 +14,7 @@ const fields = [['cap','Market cap'],['price','Price'],['estimates','EPS & reven
 function Logo({symbol,event,showRing}:{symbol:string;event:Event;showRing:boolean}) {
  const rate=combinedBeatRate(event);
  const [failed,setFailed]=useState(false);
- return <span className="ews-logo" title={showRing?(rate===null?"Combined beat rate unavailable: both histories required":`Average EPS and revenue beat rate: ${rate.toFixed(1)}%`):undefined} style={showRing?{boxShadow:`0 0 0 1px #0d1626, 0 0 0 4px ${beatRingColor(rate)}`}:undefined}>{failed?<span>{symbol}</span>:<img src={'/assets/logo/'+encodeURIComponent(symbol)+'.webp'} alt={symbol+' logo'} width={48} height={48} loading="lazy" onError={()=>setFailed(true)}/>}</span>;
+ return <LocalizedContent><span className="ews-logo" title={showRing?(rate===null?"Combined beat rate unavailable: both histories required":`Average EPS and revenue beat rate: ${rate.toFixed(1)}%`):undefined} style={showRing?{boxShadow:`0 0 0 1px #0d1626, 0 0 0 4px ${beatRingColor(rate)}`}:undefined}>{failed?<span>{symbol}</span>:<img src={'/assets/logo/'+encodeURIComponent(symbol)+'.webp'} alt={symbol+' logo'} width={48} height={48} loading="lazy" onError={()=>setFailed(true)}/>}</span></LocalizedContent>;
 }
 export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRangeChange,minDate,maxDate,includeUnconfirmed=false,showInsights=false,onToggleInsights}:{rows:Event[];from:string;to:string;onSelect:(symbol:string)=>void;calendarHref?:string;onRangeChange?:(from:string,to:string)=>void;minDate?:string;maxDate?:string;includeUnconfirmed?:boolean;showInsights?:boolean;onToggleInsights?:()=>void}) {
  const [extra,setExtra]=useState<string[]>([]),[expanded,setExpanded]=useState<string[]>([]),[showUnknown,setShowUnknown]=useState(includeUnconfirmed),[showBeat,setShowBeat]=useState(true),[showRevenue,setShowRevenue]=useState(true);
@@ -30,7 +31,7 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
  const board=useRef<HTMLDivElement>(null);
  useHeatmapAssembly(board,JSON.stringify([from,to,isRange,mobile,expanded,extra,showBeat,showRevenue,events.map(i=>[i.symbol,i.date,i.session])]),mobile,true,pathname==='/');
  const toggle=(field:string)=>setExtra(all=>all.includes(field)?all.filter(f=>f!==field):[...all,field]);
- return <section className="ews" aria-labelledby="ews-title">
+ return <LocalizedContent><section className="ews" aria-labelledby="ews-title">
   <header className="ews-heading"><div><span className="ec-eyebrow">{isRange?'THE PERIOD AT A GLANCE':'THE WEEK AT A GLANCE'}</span><h2 id="ews-title">Earnings snapshot</h2><p>See who’s reporting. Tap a company to explore its research.</p></div><a href={calendarHref||"#earnings-details"}>{calendarHref?"Full earnings calendar ↗":"Detailed calendar ↓"}</a></header>
   <div className="ews-toolbar">{onRangeChange?<CalendarPeriodControls from={from} to={to} onChange={onRangeChange} minDate={minDate} maxDate={maxDate} detail={`${current.slice(0,4)} · ${events.length} reports shown`}/>:<div className="ews-week"><span>{shortDate(from)} – {shortDate(to)}</span></div>}<div className="ews-toolbar-actions"><div className="ews-toggle-row"><button className="ews-auto" aria-pressed={showBeat} onClick={()=>setShowBeat(v=>!v)} aria-label="EPS beat rate"><span className="ews-control-full">EPS beat rate</span><span className="ews-control-short">EPS beat</span> {showBeat?"✓":"＋"}</button><button className="ews-auto" aria-pressed={showRevenue} onClick={()=>setShowRevenue(v=>!v)} aria-label="Revenue beat rate"><span className="ews-control-full">Revenue beat rate</span><span className="ews-control-short">Revenue beat</span> {showRevenue?"✓":"＋"}</button>{onToggleInsights&&<button className="ews-auto" aria-pressed={showInsights} onClick={onToggleInsights} aria-label="Show insights"><span className="ews-control-full">Show insights</span><span className="ews-control-short">Insights</span> {showInsights?"✓":"＋"}</button>}</div><div className="ews-action-row">{!isRange&&<details className="ews-options"><summary>Add data {extra.length>0&&<span>({extra.length})</span>} ＋</summary><fieldset><legend>Show on each company</legend>{fields.map(([key,label])=><label key={key}><input type="checkbox" checked={extra.includes(key)} onChange={()=>toggle(key)}/>{label}</label>)}<button onClick={()=>setExtra([])} disabled={!extra.length}>Reset to logos</button></fieldset></details>}<ShareSnapshot events={events} dates={days} week={current} end={to} showBeat={showBeat} showRevenue={showRevenue}/></div></div></div>
   <p className="ews-hint">Largest companies first · Expected release times · US Eastern Time<span className="ews-mobile-legend">BMO: before open · AMC: after close · ?: unconfirmed</span></p>
@@ -122,5 +123,5 @@ export default function WeeklySummary({rows,from,to,onSelect,calendarHref,onRang
    }
    @media(max-width:380px){.ews-tile{gap:2px;padding:4px 1px}.ews-ticker>strong{font-size:7px}.ews-logo{width:13px;height:13px;flex-basis:13px}}
   `}</style>
- </section>;
+ </section></LocalizedContent>;
 }

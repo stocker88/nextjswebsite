@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import {heroGroupGeometry,heroTileFont,heroTileValue} from '../../lib/hero-heatmap-layout';
 import ShareAction from '../ShareAction';
 import ShareControl from '../ShareControl';
@@ -75,7 +76,7 @@ export default function HeatmapShare({rows,period,asOf,sector,sizing,grouping,un
  }
  async function share(){if(!image)return;try{if(navigator.canShare?.({files:[image.file]}))await navigator.share({files:[image.file],title:'Stock market heatmap'});else download()}catch(e){if((e as Error).name!=='AbortError')setError('Sharing is unavailable here. Use Download PNG.')}}
  function download(){if(!image)return;const a=document.createElement('a');a.href=image.url;a.download=image.file.name;a.click()}
- return <><ShareControl title="Stock market heatmap" path={viewUrl}/><ShareAction kind="save" onClick={prepare} disabled={busy||!rows.length}>{busy?'Creating image…':'Save Heatmap'}</ShareAction><div hidden ref={qr}><QRCodeSVG value={viewUrl} size={320} level="M" includeMargin/></div>
+ return <LocalizedContent><><ShareControl title="Stock market heatmap" path={viewUrl}/><ShareAction kind="save" onClick={prepare} disabled={busy||!rows.length}>{busy?'Creating image…':'Save Heatmap'}</ShareAction><div hidden ref={qr}><QRCodeSVG value={viewUrl} size={320} level="M" includeMargin/></div>
  {error&&!image&&<span role="alert">{error}</span>}
- <dialog className={styles.shareDialog} ref={dialog} onCancel={()=>setImage(null)}><div className={styles.shareHeader}><h2>Share heatmap</h2><button aria-label="Close image preview" onClick={()=>{dialog.current?.close();setImage(null)}}>×</button></div>{image&&<img src={image.url} alt="Navy stock market heatmap with website source and QR code"/>}<div className={styles.shareActions}><button onClick={share}>Share image</button><button onClick={download}>Download PNG</button></div>{error&&<p role="alert">{error}</p>}</dialog></>;
+ <dialog className={styles.shareDialog} ref={dialog} onCancel={()=>setImage(null)}><div className={styles.shareHeader}><h2>Share heatmap</h2><button aria-label="Close image preview" onClick={()=>{dialog.current?.close();setImage(null)}}>×</button></div>{image&&<img src={image.url} alt="Navy stock market heatmap with website source and QR code"/>}<div className={styles.shareActions}><button onClick={share}>Share image</button><button onClick={download}>Download PNG</button></div>{error&&<p role="alert">{error}</p>}</dialog></></LocalizedContent>;
 }

@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import DesktopAppLink from './DesktopAppLink';
 import {useSiteAccount} from './SiteAccount';
 import {useState} from 'react';
@@ -43,7 +44,7 @@ export default function HeroFeatureExplorer(){
  const {desktop}=useSiteAccount();
  const [group,setGroup]=useState('All features');
  const shown=features.filter(f=>group==='All features'||f.group===group);
- return <div className={styles.explorer}>
+ return <LocalizedContent><div className={styles.explorer}>
   <div data-depth-card className={styles.results}>
    <div><span className={styles.eyebrow}>RESEARCH YOU CAN EXAMINE</span><h3>Transparency into past setups.</h3><p>Review the context, dates and limitations of historical research setups.</p></div>
    <a data-public-content="true" href="/methodology/" className={styles.resultLink}>Read our methodology and limitations ↗</a>
@@ -52,5 +53,5 @@ export default function HeroFeatureExplorer(){
   <div className={styles.explorerHeading}><div><span className={styles.eyebrow}>THE COMPLETE RESEARCH TOOLKIT</span><h3>Go from the headline to the whole picture.</h3></div><span>{features.length} ways to explore</span></div>
   <div className={styles.featureTabs} role="group" aria-label="Explore product features">{groups.map(g=><button key={g} type="button" aria-pressed={g===group} aria-controls="hero-feature-list" onClick={()=>setGroup(g)}>{g}</button>)}</div>
   <div className={styles.featureGrid} id="hero-feature-list">{shown.map(f=>{const FeatureLink=f.href===app?DesktopAppLink:'a';return <FeatureLink data-depth-card key={f.title} href={f.href} target={f.href===app ? '_blank' : undefined} rel={f.href===app ? 'noopener noreferrer' : undefined} className={styles.featureCard}>{f.href===app&&<span className={styles.featureAppBadge}>{desktop?'Membership':'In app'}</span>}<span className={styles.featureIcon} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={iconPaths[f.icon]} /></svg></span><div><span className={styles.featureGroup}>{f.group}{f.href===app&&!desktop?' · IN THE APP':''}</span><h4>{f.title}</h4><p>{f.copy}</p></div><span className={styles.featureArrow} aria-hidden="true">↗</span></FeatureLink>})}</div>
- </div>;
+ </div></LocalizedContent>;
 }

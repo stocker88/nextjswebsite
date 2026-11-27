@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {moverSessionDay} from '../lib/mover-trades';
 import DesktopAppLink from './DesktopAppLink';
 import {AccountLink} from './SiteAccount';
@@ -49,7 +50,7 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
   const explanation=isSessionExplanation(article,period,stock.asOf,stock.changes[period],marketSession),label=article.kind==='signal'?'Signal':explanation?'Why it’s moving':article.kind==='recap'?'Mentioned in recap':article.kind==='coverage'?'Related coverage':article.kind==='headline'?'Related news':'Recent news';
   const articleLink=(children:ReactNode)=>article.kind==='signal'?<DesktopAppLink href={article.href} className={styles.article}>{children}</DesktopAppLink>:<AccountLink destination={article.href} className={styles.article}>{children}</AccountLink>;
   const date=new Date(article.publishedAt).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/New_York'});
-  return <>
+  return <LocalizedContent><>
     <button ref={trigger} type="button" className={`${styles.trigger} ${compact?styles.compactTrigger:''}`} title={label} aria-label={`${label}: ${stock.symbol}`} aria-expanded={open} aria-controls={open?id:undefined} aria-haspopup="dialog" onClick={()=>{setPosition(null);setOpen(!open);}}><span aria-hidden="true">✦</span><span className={styles.fullLabel}>{label}</span>{compact&&<span className={styles.shortLabel} aria-hidden="true">{article.kind==='signal'?'Signal':explanation?'Why':article.kind==='recap'?'Recap':'News'}</span>}</button>
     {open&&createPortal(<div ref={panel} id={id} className={styles.popover} role="dialog" aria-label={`${stock.symbol} recent article`} style={{left:position?.left||12,top:position?.top||12,visibility:position?'visible':'hidden'}}>
       <button className={styles.close} type="button" aria-label="Close article preview" onClick={()=>{setOpen(false);trigger.current?.focus();}}>×</button>
@@ -59,5 +60,5 @@ export default function MoverContext({stock,period,marketSession='intraday',comp
         {article.summary&&<p>{article.summary}</p>}<span className={styles.read}>{article.kind==='headline'?'Read news':article.kind==='signal'?'View Signal':'Read article'} <span aria-hidden="true">↗</span></span>
       </>)}
     </div>,document.body)}
-  </>;
+  </></LocalizedContent>;
 }

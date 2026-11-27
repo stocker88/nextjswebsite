@@ -25,7 +25,7 @@ function translate(node:ReactNode,language:SiteLanguage):ReactNode{
  for(const key of ['href','path'])if(typeof p[key]==='string')props[key]=url(p[key],language);
  if(element.type==='meta'&&typeof p.content==='string')props.content=/url$/.test(p.property||'')?url(p.content,language):translateText(p.content,language);
  if(element.type==='script'&&p.type==='application/ld+json'&&p.dangerouslySetInnerHTML){try{props.dangerouslySetInnerHTML={__html:JSON.stringify(schema(JSON.parse(p.dangerouslySetInnerHTML.__html),language)).replace(/</g,'\\u003c')}}catch{}}
- if(p.children!==undefined&&element.type!==DesktopActionText&&element.type!==DesktopAppLink)props.children=translate(p.children,language);
+ if(p.children!==undefined&&element.type!==DesktopActionText&&(element.type!==DesktopAppLink||typeof p.children!=='string'))props.children=translate(p.children,language);
  return cloneElement(element,props);
 }
 export default function LocalizedContent({children}:{children:ReactNode}){const {language}=useSiteLanguage();return <>{language!=='en'?translate(children,language):children}</>}

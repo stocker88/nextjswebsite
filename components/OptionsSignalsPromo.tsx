@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {DesktopActionText} from './DesktopAppLink';
 import {useId,useState} from 'react';
 import AppDownloadButton from './formStocker';
@@ -13,7 +14,7 @@ const choices=[
 export default function OptionsSignalsPromo({home=false,from='options_tools'}:{home?:boolean;from?:string}){
   const [selected,setSelected]=useState<typeof choices[number]>(choices[0]);
   const id=useId(),titleId=id+'-title',detailId=id+'-detail';
-  return <div className={home?styles.home:styles.wrapper}><section className={styles.promo} aria-labelledby={titleId}>
+  return <LocalizedContent><div className={home?styles.home:styles.wrapper}><section className={styles.promo} aria-labelledby={titleId}>
     <div className={styles.copy}>
       <span className={styles.eyebrow}><span aria-hidden="true">✦</span> OPTIONS SIGNALS · IN THE APP</span>
       <h2 id={titleId}>Follow the activity.<br/><span>Find your next options idea.</span></h2>
@@ -28,5 +29,5 @@ export default function OptionsSignalsPromo({home=false,from='options_tools'}:{h
       <div className={styles.download}><AppDownloadButton popup from={from+'_signals_'+selected.id} label="Review options signals in the app →"/><small><DesktopActionText desktopLabel="Membership access · Your account">{'Get the app · iOS & Android'}</DesktopActionText></small></div>
       <p className={styles.note}>Options activity does not identify hedge funds or confirm what “smart money” is buying. Signals are research ideas; options can lose their entire premium.</p>
     </div>
-  </section></div>;
+  </section></div></LocalizedContent>;
 }

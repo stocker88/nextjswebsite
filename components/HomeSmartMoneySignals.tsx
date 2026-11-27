@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useSiteAccount} from './SiteAccount';
 import {useEffect,useState} from 'react';
 import {dailyAlertPreviewCounts} from '../lib/alert-preview-counts';
@@ -18,7 +19,7 @@ export default function HomeSmartMoneySignals(){
   window.addEventListener('focus',update);document.addEventListener('visibilitychange',update);
   return()=>{clearInterval(timer);window.removeEventListener('focus',update);document.removeEventListener('visibilitychange',update)};
  },[]);
- return <section className={s.section} aria-labelledby="smart-money-preview-title">
+ return <LocalizedContent><section className={s.section} aria-labelledby="smart-money-preview-title">
   <header className={s.header}><span className={s.eyebrow}>CONNECT THE DISCLOSURES</span><h2 id="smart-money-preview-title">The activity is the beginning.<br/><span>The context is your edge.</span></h2><p>See the pattern. Check the evidence. Take the next step.</p></header>
   <div className={s.grid}>{previews.map(preview=><article key={preview.kind} className={`${s.card} ${s[preview.kind]}`}>
    <div className={s.top}><span className={s.category}><i aria-hidden="true"/>{preview.label}</span>{!desktop&&<span className={s.example}>IN-APP ALERTS</span>}</div>
@@ -27,5 +28,5 @@ export default function HomeSmartMoneySignals(){
    <div className={s.action}><AppDownloadButton popup from={`home_${preview.kind}_signal_preview`} label="Review the signals now ↗"/>{!desktop&&<small>Explore in the app</small>}</div>
   </article>)}</div>
 
- </section>;
+ </section></LocalizedContent>;
 }

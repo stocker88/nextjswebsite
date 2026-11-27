@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {generatedImagePreview} from '../lib/generated-image';
 import {useRouter} from 'next/router';
 import {useSiteAccount} from './SiteAccount';
@@ -58,7 +59,7 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
     setOrigin({x:r.left+r.width/2-innerWidth/2,y:r.top+r.height/2-innerHeight/2,sx:r.width/width,sy:r.height/height});
     setZoom(1);setPan({x:0,y:0});setActive(index);
   };
-  return <>
+  return <LocalizedContent><>
     <div className={'pictures '+(items.length>1?'multiple':'')+(items.length===3?' triple':'')+(compact?' compact':'')} style={{'--thumbnail-size': `${thumbnailSize}px`} as React.CSSProperties}>
       {items.map((i,index)=><div key={i.url}>
         <button className="picture" disabled={!!failed[i.url]} onClick={e=>open(index,e.currentTarget)} aria-label={(appOnly?(desktop?'Review the full research picture ':'Get the app to view '):'Expand ')+(title(i)||'image '+(index+1))}>
@@ -156,5 +157,5 @@ export default function ResearchImages({images = [], compact = false, thumbnailS
       @keyframes researchBackdrop{from{background:#0000;backdrop-filter:blur(0)}to{background:#000b;backdrop-filter:blur(8px)}}
       @media(prefers-reduced-motion:reduce){.research-lightbox,.lightbox-panel,.research-lightbox.closing,.closing .lightbox-panel{animation:none}}
     `}</style>
-  </>;
+  </></LocalizedContent>;
 }

@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import React from 'react';
 import Image from 'next/image';
 
@@ -16,7 +17,7 @@ const expertise = [
 
 const Testimonial = () => {
   return (
-    <section className="founder-section" aria-labelledby="founder-title">
+    <LocalizedContent><section className="founder-section" aria-labelledby="founder-title">
       <div className="founder-shell">
         <div className="founder-portrait-wrap">
           <Image
@@ -88,7 +89,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section></LocalizedContent>
   );
 };
 

@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import HedgingAhead, {MarketPredictionPrompt} from '../HedgingAhead';
 import {hedgingAhead} from '../../lib/hedging-events';
 import {monthRange,marketToday,defaultCalendarWeek} from '../../lib/calendar-period';
@@ -62,7 +63,7 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
     } catch(e) {if((e as Error).name!=='AbortError')setError('Could not share the image. Please try again.');}
     finally {setBusy(false);}
   }
-  return <section id="market-calendar" className="market-calendar" aria-labelledby="market-calendar-title">
+  return <LocalizedContent><section id="market-calendar" className="market-calendar" aria-labelledby="market-calendar-title">
     <header><div data-motion-reveal><span className="eyebrow">PLAN YOUR WEEK</span><h2 id="market-calendar-title">Market Events Calendar</h2><p>Economic releases, Fed decisions, 13F filings and index reviews.</p></div>
       {!fullPage&&<a className="full-calendar" href="/stock-market-calendar/">Full stock market calendar ↗</a>}<button className="share" disabled={busy||!covered} onClick={shareImage}>{busy?'Preparing image…':'↗ Share calendar image'}</button></header>
     {!from?<p role="status">Loading your week…</p>:<>
@@ -111,5 +112,5 @@ export default function MarketCalendar({fullPage=false}:{fullPage?:boolean}) {
       }
 
     `}</style>
-  </section>;
+  </section></LocalizedContent>;
 }

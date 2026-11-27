@@ -1,3 +1,4 @@
+import LocalizedContent from '../components/localization/LocalizedContent';
 
 import {fetchResearch} from '../lib/research-server';
 import type {ResearchPreview} from '../lib/research';
@@ -202,7 +203,7 @@ useEffect(() => {
   }, [isMounted, router.events]);
 
   return (
-    <>
+    <LocalizedContent><>
        {/* Force-load absolute secure script assets */}
        <Script
          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
@@ -239,6 +240,7 @@ useEffect(() => {
               },
               {
                 "@type": "WebSite",
+                "inLanguage": "en",
                 "@id": "https://www.stockstobuynow.ai/#website",
                 "url": "https://www.stockstobuynow.ai/",
                 "name": "Stocks to Buy Now Research",
@@ -303,7 +305,7 @@ useEffect(() => {
         </Head>
 
       </Layout>
-    </>
+    </></LocalizedContent>
   )
 }
 

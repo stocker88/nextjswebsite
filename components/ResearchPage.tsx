@@ -1,3 +1,5 @@
+import PageContents from './PageContents';
+import {useRef} from 'react';
 import {useSiteLanguage} from '../lib/localization/use-site-language';
 import {englishPath} from '../lib/localization/routes';
 import ShareControl from './ShareControl';
@@ -10,6 +12,8 @@ import type {ReactNode} from 'react';
 export default function ResearchPage({title, path, children, description = title, noindex = false, hideAppDownload = false, hideResearchNavigation = false, predictionLayout = false, socialImageUrl = "https://www.stockstobuynow.ai/assets/images/research-platform-social.png", socialImageAlt = "Stocks To Buy Now Research research platform", socialImageWidth = 1200, socialImageHeight = 630, ogType = "website"}: {title:string; path:string; children:ReactNode; description?:string; noindex?:boolean; hideAppDownload?:boolean;hideResearchNavigation?:boolean;predictionLayout?:boolean;socialImageUrl?:string;socialImageAlt?:string;socialImageWidth?:number;socialImageHeight?:number;ogType?:string}) {
   const {t,href}=useSiteLanguage();
   const basePath=englishPath(path);
+  const contentRef=useRef<HTMLElement>(null);
+  const showContents=/^\/(?:prediction\/[^/]+(?:\/[^/]+)?|stocks\/[^/]+(?:\/(?:forecast|earnings))?)\/?$/.test(basePath);
   const stockDirectory = /^\/stocks(?:\/page\/\d+)?(?:\?|\/?$)/.test(basePath);
   return <>
     <Head>
@@ -34,7 +38,8 @@ export default function ResearchPage({title, path, children, description = title
       <meta name="twitter:image:alt" content={socialImageAlt} />
     </Head>
     <Header homeHref="/" navBasePath="/" forceDark hideAppDownload={hideAppDownload} />
-    <main className={predictionLayout ? "prediction-layout" : stockDirectory ? "stock-directory" : basePath === "/trading-tools/" ? "trading-tools" : basePath.startsWith("/crypto-prediction") ? "crypto-research" : undefined}>
+    {showContents&&<PageContents content={contentRef} path={path}/>}
+    <main ref={contentRef} data-page-contents={showContents||undefined} className={predictionLayout ? "prediction-layout" : stockDirectory ? "stock-directory" : basePath === "/trading-tools/" ? "trading-tools" : basePath.startsWith("/crypto-prediction") ? "crypto-research" : undefined}>
       {!noindex && !predictionLayout && (path.replace(/\/$/,'')==='/methodology' ? <div className="research-share-actions"><ShareControl title={title} path={path}/><TrackRecordDownload /></div> : <ShareControl title={title} path={path}/>)}
       {stockDirectory ? children : !hideResearchNavigation && <div className={predictionLayout?"prediction-nav-top":undefined}><ResearchSections path={path} /></div>}
       {!stockDirectory && children}
@@ -58,9 +63,11 @@ export default function ResearchPage({title, path, children, description = title
     </main>
     <style jsx>{`
       .prediction-nav-bottom{display:none}
+      @media(min-width:1024px){main[data-page-contents]{padding-left:max(260px,calc((100vw - 1000px)/2));padding-right:max(24px,calc((100vw - 1000px)/2))}main[data-page-contents] :global(h2){scroll-margin-top:150px}}
       main.prediction-layout{min-width:0;max-width:100%;box-sizing:border-box}
       main.prediction-layout > :global(*){min-width:0;max-width:100%;box-sizing:border-box}
       @media(max-width:700px){main.prediction-layout{padding:24px 12px 28px}.prediction-nav-top{display:none}.prediction-nav-bottom{display:block;margin:24px 0}main.prediction-layout :global(.public-copy){font-size:14px;line-height:1.55;overflow-wrap:anywhere}main.prediction-layout :global(.public-copy h1){font-size:28px;margin:8px 0 12px}main.prediction-layout :global(.public-copy p){margin:8px 0 14px}main.prediction-layout :global(p),main.prediction-layout :global(a){overflow-wrap:anywhere}}
+      @media(min-width:1024px) and (max-width:1359px){main[data-page-contents]{padding-left:216px;padding-right:20px}}
       .research-share-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
       .stock-directory .research-resources {display:flex;flex-wrap:wrap;gap:6px 20px;margin:28px 0 0;padding-top:18px;border-top:1px solid #ffffff12;}
       .stock-directory .research-resources :global(a),.stock-directory .research-resources :global(a[aria-current="page"]) {padding:4px 0;min-height:28px;border:0;background:none;border-radius:0;color:#8fa0b8;font-size:11px;font-weight:400;}

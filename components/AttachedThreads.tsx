@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {isEarningsFirst} from '../lib/research';
 import Link from 'next/link';
 import {ResearchPreview, AttachedThread, displayEngagementCount} from '../lib/research';
@@ -9,7 +10,7 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
   const threads: AttachedThread[] = item.attachedThreads?.length ? item.attachedThreads :
     item.attachedTitle ? [{id: '', title: item.attachedTitle, time: null, symbols: []}] : [];
   if (!threads.length) return null;
-  return <aside className="attached-threads" aria-label="Attached threads">
+  return <LocalizedContent><aside className="attached-threads" aria-label="Attached threads">
     {threads.map((thread, index) => <div className="attached-thread" key={thread.id || index}>
       <span className="attachment-label"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m10 13 4-4m-6 6-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0m2 3 2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" transform="translate(1 0)"/></svg>Attached thread</span>
       <div className="attachment-heading">{thread.id ?
@@ -43,5 +44,5 @@ export default function AttachedThreads({item}: {item: ResearchPreview}) {
       .attached-thread :global(.picture) { max-width:100%; }
       @media(max-width:480px) { .attached-thread { padding:12px; } .attachment-heading { font-size:15px; } }
     `}</style>
-  </aside>;
+  </aside></LocalizedContent>;
 }

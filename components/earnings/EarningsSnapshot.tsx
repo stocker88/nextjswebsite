@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import {useEffect,useState,ReactNode} from 'react';
 import {useRouter} from 'next/router';
 import {Calendar,day,endpoint} from '../../lib/earnings';
@@ -26,7 +27,7 @@ export default function EarningsSnapshot({home=false,children}:{home?:boolean;ch
   }
   load();return()=>{active=false};
  },[attempt]);
- return <div id="weekly-earnings" className={'earnings-snapshot'+(home?' earnings-snapshot-home':'')}>
+ return <LocalizedContent><div id="weekly-earnings" className={'earnings-snapshot'+(home?' earnings-snapshot-home':'')}>
   {calendar&&from?<WeeklySummary onRangeChange={(f,t)=>{setFrom(f);setTo(t)}} minDate={calendar.from} maxDate={calendar.to} rows={calendar.items} from={from} to={to} calendarHref="/earnings-calendar/" onSelect={symbol=>router.push('/earnings-calendar/?symbol='+encodeURIComponent(symbol))}/>:<section className="snapshot-status" aria-label="Earnings snapshot">
    <h2>Earnings snapshot</h2>
    {error?<><p>Earnings could not load.</p><button onClick={()=>setAttempt(n=>n+1)}>Try again</button> <a href="/earnings-calendar/">Open earnings calendar ↗</a></>:<p role="status"><span className="snapshot-spinner" aria-hidden="true"/>Loading earnings…</p>}
@@ -54,5 +55,5 @@ export default function EarningsSnapshot({home=false,children}:{home?:boolean;ch
    @media(max-width:700px){.earnings-snapshot-home{padding:0 10px}}
    @media(prefers-reduced-motion:reduce){.snapshot-spinner{animation:none}}
   `}</style>
- </div>;
+ </div></LocalizedContent>;
 }

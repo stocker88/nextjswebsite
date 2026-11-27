@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {DesktopActionText} from './DesktopAppLink';
 import type {ReactNode} from 'react';
 import MarketMovers from './MarketMovers';
@@ -16,7 +17,7 @@ export default function ExtendedHoursSnapshot({session,kind,moversControls,pulse
  const available=validSession(session,kind), rows=available?sessionRows(session,kind):[];
  const movers=available?sessionMoverRows(session,kind):[];
  const quotes=rows.filter(r=>r.changes.day!==null);
- return <section className={styles.snapshot} aria-label={info.title}>
+ return <LocalizedContent><section className={styles.snapshot} aria-label={info.title}>
   <div className={styles.intro}><div><h2>{info.title}</h2><p>Price changes versus the {info.basis}.</p></div>{!embedded&&<nav aria-label="Extended-hours views"><a href={sessionInfo.preMarket.path}>Premarket</a><a href={sessionInfo.afterHours.path}>After-hours</a><a href="/stock-market-heatmap/">Regular session</a></nav>}</div>
   {available?<>
    {!embedded&&<p className={styles.timestamp}>Latest saved snapshot · <time dateTime={session.quotedAt}>{formatTime(session.quotedAt)}</time><br/>Collected <time dateTime={session.assembledAt}>{formatTime(session.assembledAt)}</time> · {quotes.length} of {rows.length} holdings have a usable session quote.<br/><small>{clock?`Times in your timezone · ${clock.timeZone.replace(/_/g,' ')}`:'Times in U.S. Eastern time'}</small></p>}
@@ -26,5 +27,5 @@ export default function ExtendedHoursSnapshot({session,kind,moversControls,pulse
   </>:<p role="status" className={styles.timestamp}>A saved {info.label.toLowerCase()} snapshot is currently unavailable. Please try again later or explore the regular-session heatmap.</p>}
   <aside className={styles.cta}><div><h3>Follow how the session unfolds</h3><p>Explore the snapshot archive and continue your stock research in the app.</p></div><button type="button" onClick={()=>setDownload(true)}><DesktopActionText desktopLabel="Review the full market research →">{'Explore in the app →'}</DesktopActionText></button></aside>
   {download&&<AppDownloadModal placement={kind==='preMarket'?'free_premarket_snapshot':'free_afterhours_snapshot'} onClose={()=>setDownload(false)} title="Continue your market research" description="Explore the snapshot archive, company metrics and research in the app."/>}
- </section>;
+ </section></LocalizedContent>;
 }

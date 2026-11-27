@@ -13,7 +13,7 @@ for(const path of ['https://bad.test/results/','//bad.test/results/','/results/.
 let account={ready:true,user:null,error:false};
 const access=load('components/ContentAccess.tsx',name=>name==='react'?React:name==='react/jsx-runtime'?require(name):name==='next/link'?{__esModule:true,default:({href,children,...props})=>React.createElement('a',{href,...props},children)}:name==='./SiteAccount'?{useSiteAccount:()=>account}:name==='../lib/site-auth'?routes:{});
 const child=React.createElement('p',null,'Public article body for direct visitors and crawlers');
-const Page=load('components/ResearchPage.tsx',name=>name==='../lib/localization/routes'?load('lib/localization/routes.ts'):name==='../lib/localization/use-site-language'?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name==='react/jsx-runtime'?require(name):name==='next/link'||name==='next/head'?{__esModule:true,default:({children,...props})=>React.createElement(name==='next/link'?'a':React.Fragment,name==='next/link'?props:null,children)}:{__esModule:true,default:()=>null}).default;
+const Page=load('components/ResearchPage.tsx',name=>name==='react'?React:name==='../lib/localization/routes'?load('lib/localization/routes.ts'):name==='../lib/localization/use-site-language'?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name==='react/jsx-runtime'?require(name):name==='next/link'||name==='next/head'?{__esModule:true,default:({children,...props})=>React.createElement(name==='next/link'?'a':React.Fragment,name==='next/link'?props:null,children)}:{__esModule:true,default:()=>null}).default;
 let html;
 for(const path of ['/news/example/','/stock-market-news/example/','/results/']){
  html=renderToStaticMarkup(React.createElement(Page,{title:'Research',path},child));

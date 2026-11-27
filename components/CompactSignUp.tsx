@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useState} from 'react';
 import {useSiteAccount} from './SiteAccount';
 import MobileStoreLink from './MobileStoreLink';
@@ -30,7 +31,7 @@ function DesktopCompactSignUp({placement='hero',onComplete}:Props){
    }
   }finally{setBusy(null)}
  };
- return <div className={`compact-signup compact-signup--${placement}`} aria-label="Sign up">
+ return <LocalizedContent><div className={`compact-signup compact-signup--${placement}`} aria-label="Sign up">
   <span className="compact-signup__label">Sign Up</span>
   <div className="compact-signup__providers">
    <button type="button" onClick={()=>void begin('google')} disabled={!!busy} aria-label="Sign up with Google" title="Sign up with Google">
@@ -56,5 +57,5 @@ function DesktopCompactSignUp({placement='hero',onComplete}:Props){
    .compact-signup--hero button svg{width:20px;height:20px}
    @media(prefers-reduced-motion:reduce){button{transition:none}}
   `}</style>
- </div>;
+ </div></LocalizedContent>;
 }

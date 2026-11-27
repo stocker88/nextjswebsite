@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import LanguageSelector from '../localization/LanguageSelector';
 import {useSiteLanguage} from '../../lib/localization/use-site-language';
 import {DESKTOP_ACCESS_PATH} from '../../lib/desktop-access';
@@ -28,7 +29,7 @@ export default function Header({
   const {t,language,href:localizedHref}=useSiteLanguage();
   const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
   // /s renders the same homepage for social/referral links.
-  const isHomePage = pathname === '/' || pathname === '/s';
+  const isHomePage = /^\/(?:es\/?|de\/?|fr\/?|ja\/?|ko\/?)?$/.test(pathname) || pathname === '/s';
   const darkHeader = forceDark || !isHomePage;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -146,7 +147,7 @@ export default function Header({
 
   if (shouldShowSocialNotice) {
     return (
-      <>
+      <LocalizedContent><>
         {browserTheme}
         <SocialBrowserNotice
           browserName={socialBrowserName}
@@ -161,12 +162,12 @@ export default function Header({
               : 'clamp(150px, 18vw, 180px)',
           }}
         />
-      </>
+      </></LocalizedContent>
     );
   }
 
   return (
-    <>
+    <LocalizedContent><>
       {browserTheme}
       <header className={`site-header ${isHomePage ? 'is-home' : ''} ${!isHomePage || isScrolled ? 'is-scrolled' : ''}`} style={{'--header-top-color': bannerColors.top + 'b3', '--header-bottom-color': bannerColors.bottom + 'b3', '--header-edge-color': chromeColor, '--header-surface-color': isOpen ? '#0b1323' : undefined}}>
         <span className="site-header-edge" aria-hidden="true" />
@@ -211,6 +212,6 @@ export default function Header({
           </div>
         </nav>
       </header>
-    </>
+    </></LocalizedContent>
   );
 }

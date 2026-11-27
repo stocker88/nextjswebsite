@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {moverSessionDay} from '../lib/mover-trades';
 import ShareControl from './ShareControl';
 import type {ReactNode,CSSProperties} from 'react';
@@ -8,7 +9,7 @@ import MoverContext from './MoverContext';
 import MoverTrade from './MoverTrade';
 export default function MarketMovers({rows,period,label,periodControls,marketSession='intraday'}:{rows:HeatStock[];period:Period;label?:string;periodControls?:ReactNode;marketSession?:string}) {
  const {gainers,losers}=biggestMovers(rows,period);
- return <section className={styles.movers} aria-label={`Top movers · ${label||'snapshot'}`}>
+ return <LocalizedContent><section className={styles.movers} aria-label={`Top movers · ${label||'snapshot'}`}>
   {periodControls}<h3>Biggest movers{label?` · ${label}`:''}</h3>
   <p>Top 10 gainers and decliners across {rows.length} tracked stocks in this snapshot.</p>
   <ShareControl path={`${marketSession==='premarket'?'/premarket-stock-heatmap/':marketSession==='afterhours'?'/after-hours-stock-heatmap/':'/stock-market-heatmap/'}?period=${period}${marketSession==='premarket'?'&session=preMarket':marketSession==='afterhours'?'&session=afterHours':''}`} title="Stock movers" subtitle={`${label||period} · ${marketSession}`} rows={[...gainers,...losers].map(r=>({label:r.symbol,value:percent(r.changes[period]),detail:`${r.name} · ${r.asOf}`}))}/>
@@ -20,5 +21,5 @@ export default function MarketMovers({rows,period,label,periodControls,marketSes
    </div>):<p>No {title.toLowerCase()} with an available quote.</p>}
   </div>)}
   </div>
- </section>;
+ </section></LocalizedContent>;
 }

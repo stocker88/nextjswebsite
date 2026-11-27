@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import DesktopAppLink from './DesktopAppLink';
 import ShareControl from './ShareControl';
 import type {HeatSnapshot} from '../lib/market-heatmap';
@@ -24,7 +25,7 @@ export default function HeroMarketPulse({latest, period, label, periodControls,c
     const available = quote && Number.isFinite(quote.price) && Number.isFinite(quote.previousClose) && quote.previousClose > 0 && quote.quotedAt?.startsWith(latest.asOf);
     return {...row, change: available ? (quote.price / quote.previousClose - 1) * 100 : null, asOf: available ? quote.quotedAt.slice(0,10) : latest.asOf};
   }) : snapshot.periods[period];
-  return <section className={`${styles.pulsePanel} ${compact?styles.compactPulse:''}`} aria-label={`Market pulse · ${label}`}>
+  return <LocalizedContent><section className={`${styles.pulsePanel} ${compact?styles.compactPulse:''}`} aria-label={`Market pulse · ${label}`}>
     {periodControls}
     <div className={styles.panelHeading}><strong>Market pulse</strong><span className={styles.tag}>{label}</span></div>
     <div className={styles.pulseShare}><ShareControl title="Market pulse" path={`/?period=${period}#product-reveal`} subtitle={`${label} · Price moves / Treasury changes in bp`} rows={rows.filter(r=>r.id!=='DGS30').map(r=>({label:r.name,value:r.yieldRate?`${r.value.toFixed(2)}% (${r.change===null?'—':signed(r.change,0)} bp)`:r.change===null?'Unavailable':`${signed(r.change,2)}%`,detail:`${r.detail} · ${r.asOf}`}))}/></div>
@@ -39,5 +40,5 @@ export default function HeroMarketPulse({latest, period, label, periodControls,c
       </article>)}
     </div>
     <DesktopAppLink className={styles.panelLink} href="https://apps.apple.com/us/app/stocks-to-buy-now-ai-signals/id1565527320">{'Explore Market pulse in the app ↗'}</DesktopAppLink>
-  </section>;
+  </section></LocalizedContent>;
 }

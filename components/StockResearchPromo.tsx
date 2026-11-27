@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {DesktopActionText} from './DesktopAppLink';
 import {useState} from 'react';
 import AppDownloadButton from './formStocker';
@@ -9,7 +10,7 @@ const inputs=[
 ];
 export default function StockResearchPromo(){
  const [selected,setSelected]=useState(0);
- return <section className="prediction-promo" aria-labelledby="stock-research-promo-title">
+ return <LocalizedContent><section className="prediction-promo" aria-labelledby="stock-research-promo-title">
   <div className="prediction-copy"><span className="eyebrow"><span aria-hidden="true">✦</span> STOCK IDEAS · RESEARCH IN THE APP</span>
    <h2 id="stock-research-promo-title">More than a ticker.<br/><span>A complete investment picture.</span></h2>
    <p>We track fundamentals, technicals, earnings catalysts and the market environment to identify our best stocks to buy now and send you research-backed ideas through the app.</p>
@@ -27,5 +28,5 @@ export default function StockResearchPromo(){
    .prediction-panel{min-width:0;padding:24px;border:1px solid #ffffff12;border-radius:18px;background:#080e1c99}.panel-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px;font-size:12px}.panel-heading>span{font-size:8px;letter-spacing:1px;color:#b99dde}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.choices.markets{grid-template-columns:repeat(2,minmax(0,1fr))}.choices button{cursor:pointer;min-width:0;padding:15px 8px;display:flex;align-items:center;flex-direction:column;gap:7px;border:1px solid #33405b;border-radius:12px;background:#172033;color:#bac6da;transition:background .18s,border-color .18s}.choices button:hover{border-color:#b397e8}.choices button[aria-pressed=true]{border-color:#b397e8;background:#302641;color:#e3d3ff}.choices strong{font-size:12px;line-height:1.4}.markets strong{font-size:22px}.choice-icon{font-size:25px;color:#c7b5ff}.choices small{font-size:9px;color:#aab8cd}.choices button:focus-visible{outline:2px solid #c7b5ff;outline-offset:3px}.detail{margin:22px 0 18px;min-height:90px}.detail h3{font-size:16px;font-weight:600;margin:0 0 8px}.detail p{font-size:12px;color:#aabbd4;line-height:1.7;margin:0}.download{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.download :global(.app-download-cta){display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 19px;border-radius:25px;background:#c1a3ff;color:#211332;font-size:12px;font-weight:700;text-decoration:none;text-align:center}.download :global(.app-download-cta:hover){background:#d0baff}.download small{font-size:10px;color:#aabbd4}.forecast-note{font-size:10px;line-height:1.6;color:#869ab7;margin:18px 0 0}
    @media(max-width:760px){.prediction-promo{grid-template-columns:1fr;padding:24px;gap:24px;margin:36px auto 44px}.prediction-copy h2{font-size:30px}.prediction-panel{padding:18px}.detail{min-height:0}.features{margin-top:18px}}@media(max-width:400px){.prediction-promo{padding:19px}.choices strong{font-size:10px}.markets strong{font-size:20px}.panel-heading{flex-wrap:wrap}.eyebrow{font-size:8px;letter-spacing:1px}}
   `}</style>
- </section>;
+ </section></LocalizedContent>;
 }

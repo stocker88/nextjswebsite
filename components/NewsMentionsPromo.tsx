@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useState} from 'react';
 import AppDownloadButton from './formStocker';
 
@@ -9,7 +10,7 @@ const windows = [
 
 export default function NewsMentionsPromo() {
   const [selected, setSelected] = useState<typeof windows[number] | null>(null);
-  return <section className="mentions-promo" aria-labelledby="mentions-title">
+  return <LocalizedContent><section className="mentions-promo" aria-labelledby="mentions-title">
     <div className="mentions-copy">
       <span className="mentions-eyebrow"><span aria-hidden="true">✦</span> NEWS ATTENTION · EXPLORE IN THE APP</span>
       <h2 id="mentions-title">Headlines move fast.<br/><span>See who’s in focus.</span></h2>
@@ -51,5 +52,5 @@ export default function NewsMentionsPromo() {
       @media(max-width:760px){.mentions-promo{grid-template-columns:1fr;gap:24px;padding:24px 20px}.mentions-copy h2{font-size:32px}.mentions-copy p{max-width:none}.mentions-control{padding:18px}.mentions-features{margin-top:16px}.mentions-result{min-height:0}}
       @media(prefers-reduced-motion:reduce){.mentions-windows button{transition:none}.mentions-windows button:hover{transform:none}}
     `}</style>
-  </section>;
+  </section></LocalizedContent>;
 }

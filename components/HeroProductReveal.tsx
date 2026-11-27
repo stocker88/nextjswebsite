@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import MarketMovers from './MarketMovers';
 import extendedStyles from '../styles/ExtendedHours.module.css';
 import {scheduleMarketRefresh} from '../lib/scheduled-market-refresh';
@@ -102,7 +103,7 @@ export default function HeroProductReveal() {
     };
   }, []);
 
-  return <div ref={root} className={styles.reveal} id="product-reveal" tabIndex={-1}>
+  return <LocalizedContent><div ref={root} className={styles.reveal} id="product-reveal" tabIndex={-1}>
     <div className={styles.gradientTail} aria-hidden="true"><i /></div>
     <div data-preview-heading data-title-visible="false" className={styles.heading}>
       <span className={styles.eyebrow}>A CLEARER VIEW OF THE MARKET</span>
@@ -138,5 +139,5 @@ export default function HeroProductReveal() {
     </div>
     <div className={styles.footnote}>Product preview · Saved market data · Treasury: Federal Reserve via FRED</div>
     <HeroFeatureExplorer />
-  </div>;
+  </div></LocalizedContent>;
 }

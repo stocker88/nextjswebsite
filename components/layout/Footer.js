@@ -1,3 +1,4 @@
+import LocalizedContent from '../localization/LocalizedContent';
 import {useSiteLanguage} from '../../lib/localization/use-site-language';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -26,7 +27,7 @@ const Footer = ({
   );
 
   return (
-    <footer
+    <LocalizedContent><footer
       {...props}
       className="professional-footer"
     >
@@ -64,7 +65,7 @@ const Footer = ({
         <span>{t("Made by the Stocks To Buy Now Research team, for you.")}</span>
       </div>
       </Container>
-    </footer>
+    </footer></LocalizedContent>
   );
 }
 

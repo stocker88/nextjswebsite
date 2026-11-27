@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useState} from 'react';
 import {resultStockAxis} from '../lib/result-stock-axis';
 import {usd} from '../lib/options-strategies';
@@ -17,7 +18,7 @@ export default function OptionResultPayoff({result,compact=false}:{result:Pick<O
  const kink=before&&after&&m.strike>axis.minimum&&m.strike<axis.maximum?` L${x(m.strike)} ${y(0)}`:'';
  const screenT=selected??0,t=axis.comparisonFraction(screenT), premium=m.previousClose+(m.sessionClose-m.previousClose)*t*t;
  const inspect=(event:React.PointerEvent<SVGSVGElement>)=>{const box=event.currentTarget.getBoundingClientRect();setSelected(Math.max(0,Math.min(1,((event.clientX-box.left)/box.width*220-60)/152)));};
- return <section className={styles.resultTool} aria-label={`${result.symbol} results payoff`}>
+ return <LocalizedContent><section className={styles.resultTool} aria-label={`${result.symbol} results payoff`}>
   <strong>{result.symbol} · {isPut?'Put':'Call'} result</strong><small>Expires {date(m.expiry)} · Result {date(m.sessionDay)}</small>
   <div className={styles.resultHorizontal}>
    <dl><dt>Previous stock price</dt><dd>{before?usd(before):'Unavailable'}</dd><dt>Strike</dt><dd>{usd(m.strike)}</dd><dt>Breakeven at expiry</dt><dd>{usd(isPut?m.strike-m.previousClose:m.strike+m.previousClose)}</dd></dl>
@@ -37,5 +38,5 @@ export default function OptionResultPayoff({result,compact=false}:{result:Pick<O
   {!compact&&<small>Tap or drag the mint curve (arrow keys also work). Mint dashed: guide between recorded prices · Purple: expiry value, before premium cost.</small>}
   {compact&&<small>Recorded option prices · Dashed curve is illustrative.</small>}
   <p className={styles.resultPayoffLine}><strong>Payoff · {usd(m.previousClose)} → {usd(m.sessionClose)} / share · {m.sessionPct>=0?'+':''}{m.sessionPct.toFixed(2)}%</strong><br/>One contract: {usd(m.previousClose*100)} → {usd(m.sessionClose*100)} · {gain>=0?'+':''}{usd(gain)} gain before costs</p>
- </section>;
+ </section></LocalizedContent>;
 }

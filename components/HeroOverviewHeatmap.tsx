@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {heroGroupGeometry,heroTileFont,heroTileValue} from '../lib/hero-heatmap-layout';
 import HeatmapShare from './heatmap/HeatmapShare';
 import {stockPageHref} from '../lib/stock-page';
@@ -25,7 +26,7 @@ export default function HeroOverviewHeatmap({rows, period, asOf, sessionLabel, s
     return fixed?fixedGroupTiles(grouped,groupNames,size,mapHeight):tile(grouped,group=>group.rows.reduce((sum,row)=>sum+stockWeight(row,sizing,universe),0),size,mapHeight);
   }, [rows,size,mapHeight,grouping,sizing,universe,fixed,groupNames]);
   const change = (row: HeatStock) => row.asOf === asOf ? row.changes[period] : null;
-  return <>
+  return <LocalizedContent><>
     {actions&&<div style={{display:'flex',justifyContent:'flex-end',marginBottom:10,alignItems:'center',gap:8,flexWrap:'wrap'}}><HeatmapShare rows={rows.map(r=>r.asOf===asOf?r:{...r,changes:{...r.changes,[period]:null}})} period={period} asOf={asOf} sector="all" sizing={sizing} grouping={grouping} universe={universe} sessionLabel={sessionLabel} viewUrl={`https://www.stockstobuynow.ai${sharePath||'/stock-market-heatmap/'}?period=${period}${sharePath?.includes('premarket')?'&session=preMarket':sharePath?.includes('after-hours')?'&session=afterHours':''}`} direction="all" colorblind={colorblind} fixed={fixed} groupNames={groupNames} renderSize={size}/></div>}
     <div ref={ref} className={styles.overviewMap} style={maxHeight ? {height:mapHeight,aspectRatio:"auto"} : undefined} aria-label={`S&P 500 heatmap, ${rows.length} holdings grouped by ${grouping}`}>
       {groups.map(groupTile => {
@@ -46,5 +47,5 @@ export default function HeroOverviewHeatmap({rows, period, asOf, sessionLabel, s
       })}
     </div>
     {details&&<div className={styles.overviewDetail}><strong>{rows.length} S&P 500 holdings · Sized by index weight</strong><span>Tap a stock to open its company page. Gray means unavailable data.</span></div>}
-  </>;
+  </></LocalizedContent>;
 }

@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {DesktopActionText} from './DesktopAppLink';
 import StockResearchPromo from './StockResearchPromo';
 import {isEarningsFirst} from '../lib/research';
@@ -55,7 +56,7 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
     };
   }, [items, section, attempt]);
   return (
-    <section className={"home-research " + section}>
+    <LocalizedContent><section className={"home-research " + section}>
       {section !== "news" && <Head>
         <script
           type="application/ld+json"
@@ -242,6 +243,6 @@ export default function HomeResearch({ items, section = "all" }: { items: Resear
           font-weight: 600;
         }
       `}</style>
-    </section>
+    </section></LocalizedContent>
   );
 }

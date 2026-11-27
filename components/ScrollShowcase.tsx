@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useRef} from 'react';
 import Image from 'next/image';
 import useChartEntrance from './useChartEntrance';
@@ -26,7 +27,7 @@ export default function ScrollShowcase(){
     };setup();reduced.addEventListener('change',setup);
     return()=>{observer?.disconnect();cancelAnimationFrame(frame);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);reduced.removeEventListener('change',setup);};
   },[]);
-  return <section ref={root} className={styles.journey} aria-label="Explore the Stocks To Buy Now Research experience">
+  return <LocalizedContent><section ref={root} className={styles.journey} aria-label="Explore the Stocks To Buy Now Research experience">
     <div className={styles.stage}>
       <div className={styles.orbit} aria-hidden="true"/>
       <div className={styles.copy}>{chapters.map((chapter,index)=><article className={styles.chapter} data-chapter-copy={index} key={chapter.eyebrow}>
@@ -40,5 +41,5 @@ export default function ScrollShowcase(){
       </div>
       <div className={styles.progress} aria-hidden="true"><span>SCROLL TO EXPLORE</span><div><i/></div><span>01 — 03</span></div>
     </div>
-  </section>;
+  </section></LocalizedContent>;
 }
