@@ -48,6 +48,7 @@ const Footer = ({
         <div className="footer-link-block">
           <span>Learn &amp; Support</span>
           <Link href="/learn/">Free video courses</Link>
+          <Link href="/learn/get-certified/">Get certified</Link>
           <Link href="/editorial-policy/">Editorial standards</Link>
           <a href="mailto:support@stockstobuynow.ai">support@stockstobuynow.ai</a>
         </div>

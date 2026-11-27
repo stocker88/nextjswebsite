@@ -1,0 +1,157 @@
+{
+  "strategy_horizon": {
+    "videoId": "TdNULuMQvTQ",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/beginners3.mp4?alt=media",
+    "youtubeTitle": "3. Strategy Investment Horizon - The Art of Investing For Everyone - Aness Hussein Ali Stocks To Buy"
+  },
+  "sector_styles": {
+    "videoId": "pJX_8LRTkns",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/beginners4.mp4?alt=media",
+    "youtubeTitle": "4. Sectors Investment Styles - The Art of Investing for Everyone - Aness Hussein Ali Stocks to Buy"
+  },
+  "ai_earnings_surprise": {
+    "videoId": "cIZBALbm9wE",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/earningsjumprisk.mp4?alt=media",
+    "youtubeTitle": "7) Earnings Jump AI Prediction Strategy | Aness Hussein Ali | Stocks to Buy Now: AI Signals"
+  },
+  "pre_earnings_countdown": {
+    "videoId": "ri9FAHIHCUQ",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/earningsrisk.mp4?alt=media",
+    "youtubeTitle": "6) Earnings: Pre Earnings Strategy Exposures | Aness Hussein Ali | Stocks to Buy Now: AI Signals"
+  },
+  "short_term_dips": {
+    "videoId": "XuWZzMgfBsw",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/postearningsrisk.mp4?alt=media",
+    "youtubeTitle": "8) Post Earnings Intraday Trading Strategy | Aness Hussein Ali | Stocks to Buy Now: AI Signals"
+  },
+  "dips_jumps_scanner": {
+    "videoId": "XuWZzMgfBsw",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/postearningsrisk.mp4?alt=media",
+    "youtubeTitle": "8) Post Earnings Intraday Trading Strategy | Aness Hussein Ali | Stocks to Buy Now: AI Signals"
+  },
+  "unusual_volume": {
+    "videoId": "Q08MpbQYfcQ",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/hedgefundrisk.mp4?alt=media",
+    "youtubeTitle": "12) Hedge Fund Trading Signals Opportunities | Warren Buffett | Bill Ackman | Cathie Wood"
+  },
+  "politician_strategy": {
+    "videoId": "ZUXcZ9Fm3LI",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/politicianrisk.mp4?alt=media",
+    "youtubeTitle": "11) Politician Trades | Nancy Pelosi & Trump | Aness Hussein Ali | Stocks to Buy Now : AI Signals"
+  },
+  "yield_distribution": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "delta_call": {
+    "videoId": "zvuWFsbGtZI",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/deltacall.mp4?alt=media",
+    "youtubeTitle": "Delta of a Call - Stock Options for Beginners"
+  },
+  "gamma_call": {
+    "videoId": "8C8DdjRJm2A",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/gammacall.mp4?alt=media",
+    "youtubeTitle": "Gamma of a Call - Stock Options Trading Course for Beginners"
+  },
+  "delta_gamma_put": {
+    "videoId": "32gGXWlfQss",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/deltagammaput.mp4?alt=media",
+    "youtubeTitle": "Delta and Gamma of Put Options - Stock Options Trading Course for Beginners"
+  },
+  "call_option": {
+    "videoId": "Fpin1GiI8i0",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/calls101.mp4?alt=media",
+    "youtubeTitle": "What is a Call Option? - Free Stock Options Trading Course for Beginners"
+  },
+  "put_option": {
+    "videoId": "FqOgFSywys4",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/puts101.mp4?alt=media",
+    "youtubeTitle": "What is a Put Option? - Stock Options for Beginners"
+  },
+  "stocks_vs_options": {
+    "videoId": "5u9FUYvtPho",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/callputparity.mp4?alt=media",
+    "youtubeTitle": "Put-Call Parity - Stock Options for Beginners"
+  },
+  "options_vs_leverage": {
+    "videoId": "hA2N_NYDYIs",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/optionsvsleverage.mp4?alt=media",
+    "youtubeTitle": "Options vs Leverage - Stock Options for Beginners"
+  },
+  "option_pricing": {
+    "videoId": "5zht2eMQdyc",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/optionspricey.mp4?alt=media",
+    "youtubeTitle": "How Pricey is your Option? Stock Option Breakeven Point - Stock Options for Beginners"
+  },
+  "time_decay": {
+    "videoId": "-crsRHPZbEc",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/greeks.mp4?alt=media",
+    "youtubeTitle": "Options Time Decay, Interest Rates, and Dividends - Stock Options for Beginners"
+  },
+  "bid_ask_execution": {
+    "videoId": "MM1vZyTEq1Q",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/orderbook.mp4?alt=media",
+    "youtubeTitle": "How to Get the Best Execution Price for Stocks & Options - Trading Course for Beginners"
+  },
+  "copy_trade": {
+    "videoId": "y2QQbpz2zME",
+    "sourceVideo": "https://optionsonboarding.b-cdn.net/nvidiaorderbook.mp4?alt=media",
+    "youtubeTitle": "How to Copy Trade Options - Stock Options Trading Course for Beginners"
+  },
+  "macro_events": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "cpi": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "ppi": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "fomc": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "nfp": {
+    "videoId": "y2JQLCrxr48",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/marketrisk.mp4?alt=media",
+    "youtubeTitle": "3) Market Trading Opportunity | SP500 Beta CPI PPI FOMC Fed | Aness Hussein Ali | Stocks to Buy Now"
+  },
+  "buybacks": {
+    "videoId": "FX0ELQ13jp8",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/corporateactionsrisk.mp4?alt=media",
+    "youtubeTitle": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers"
+  },
+  "stock_split": {
+    "videoId": "FX0ELQ13jp8",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/corporateactionsrisk.mp4?alt=media",
+    "youtubeTitle": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers"
+  },
+  "dividends": {
+    "videoId": "FX0ELQ13jp8",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/corporateactionsrisk.mp4?alt=media",
+    "youtubeTitle": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers"
+  },
+  "mna": {
+    "videoId": "FX0ELQ13jp8",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/corporateactionsrisk.mp4?alt=media",
+    "youtubeTitle": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers"
+  },
+  "private_placement": {
+    "videoId": "FX0ELQ13jp8",
+    "sourceVideo": "https://stocksonboarding.b-cdn.net/risks/corporateactionsrisk.mp4?alt=media",
+    "youtubeTitle": "13) Corporate Actions = Trading Opportunity | Dividend Announcement, Stock Split, Buy Back, Mergers"
+  },
+  "Market Order vs. Limit Order": {
+    "videoId": "MM1vZyTEq1Q",
+    "sourceVideo": null,
+    "youtubeTitle": "How to Get the Best Execution Price for Stocks & Options - Trading Course for Beginners"
+  }
+}

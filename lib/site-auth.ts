@@ -11,6 +11,7 @@ export function getSiteAuth():Promise<Auth>{
 }
 // Only continue to destinations owned by this flow; never redirect to external input.
 export function accountDestination(value:unknown):string{
+ if(value==='/learn/get-certified/'||value==='/learn/get-certified')return '/learn/get-certified/';
  if(value==='/methodology/#paper-trading-download')return value;
  if(typeof value!=='string')return '/stock-market-heatmap/';
  if(value.startsWith('/read/?')) {
@@ -38,3 +39,5 @@ export function accountDestination(value:unknown):string{
 export function accountLoginUrl(destination:string):string{
  return '/login/?next='+encodeURIComponent(accountDestination(destination));
 }
+
+export function profileCompletionDestination(path:string,next:unknown):string{return path==='/learn/get-certified'||next==='/learn/get-certified/'||next==='/learn/get-certified'?'/learn/get-certified/':'/membership/?from=onboarding';}

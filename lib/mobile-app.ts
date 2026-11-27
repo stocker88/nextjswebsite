@@ -6,3 +6,5 @@ export function mobileStoreUrl(userAgent:string):string{
 export function isMobileAccountPath(path:string):boolean{
  return /^\/(?:login|signup|sign-up|register|onboarding|continue|membership|ultra|account)(?:\/|[?#]|$)/i.test(path);
 }
+
+export function isAcademySignIn(path:string,next:unknown):boolean{return /^\/login\/?$/.test(path)&&(next==='/learn/get-certified/'||next==='/learn/get-certified');}

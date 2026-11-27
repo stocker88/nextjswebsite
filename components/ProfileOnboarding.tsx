@@ -1,3 +1,4 @@
+import {profileCompletionDestination} from '../lib/site-auth';
 import type {ReactNode} from 'react';
 import type {User} from 'firebase/auth';
 import {useEffect,useRef,useState} from 'react';
@@ -66,7 +67,7 @@ function FinancialChart({title,unit,points,compact=false}:{title:string;unit:'re
  </section>;
 }
 
-export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>void|Promise<void>}){
+export function ProfileOnboarding({user,onComplete,learningOnly=false}:{user:User;onComplete:()=>void|Promise<void>;learningOnly?:boolean}){
  const [step,setStep]=useState(0),[userName,setUserName]=useState(()=>normalizeUsername(user.displayName||''));
  const [answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
  const [availability,setAvailability]=useState<UsernameAvailability>('idle'),[error,setError]=useState(''),[saving,setSaving]=useState(false);
@@ -130,7 +131,8 @@ export function ProfileOnboarding({user,onComplete}:{user:User;onComplete:()=>vo
     <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>{availability==='checking'?'Checking username…':'Continue →'}</button>
    </div>}
    {question&&<OnboardingQuestion current={step} questions={onboardingQuestions} answer={answers[question.key]} onBack={()=>setStep(step-1)} onSelect={value=>selectAnswer(question.key,value)}/>}
-   {step===questionCount+1&&<div className={`${s.content} ${s.resultsContent}`}>
+   {step===questionCount+1&&learningOnly&&<div className={s.content}><p className={s.eyebrow}>YOUR FREE LEARNING ACCOUNT</p><h1 id="profile-onboarding-title">Your academy is ready.</h1><p className={s.lead}>Continue to the free lessons, complete the questionnaires and earn your Level 1 course-completion certificate. No subscription is required.</p><button className={s.primary} disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Start learning'}</button></div>}
+   {step===questionCount+1&&!learningOnly&&<div className={`${s.content} ${s.resultsContent}`}>
     <button className={s.back} type="button" onClick={()=>setStep(questionCount)}>← Back</button><p className={s.eyebrow}>ALL {questionCount} QUESTIONS COMPLETE · YOUR RESULTS</p><h1 id="profile-onboarding-title">Your first signals are ready.</h1><p className={s.lead}>{choice.title} {choice.text}</p>
     <div className={s.summary}><span>{answers.experience}</span><span>{answers.interest}</span><span>{answers.horizon}</span></div>
     {proAction}
@@ -177,7 +179,7 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  useEffect(()=>{if(status!=='checking')return;const timeout=setTimeout(()=>{if(!document.hidden)trackSignupProgress('profile_check','error','client/timeout')},10000);return()=>clearTimeout(timeout)},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
  if(status==='complete')return <>{children}</>;
- if(status==='required')return <ProfileOnboarding user={user} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);try{await router.replace('/membership/?from=onboarding')}catch{window.location.assign('/membership/?from=onboarding')}setStatus('complete')}}/>;
+ if(status==='required')return <ProfileOnboarding user={user} learningOnly={profileCompletionDestination(router.pathname,router.query.next)==='/learn/get-certified/'} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);const next=profileCompletionDestination(router.pathname,router.query.next);try{await router.replace(next)}catch{window.location.assign(next)}setStatus('complete')}}/>;
  if(status==='error')return <main className={s.page}><section className={s.errorCard}><img src="/assets/images/stockerRobotIcon.png" width="54" height="54" alt=""/><h1>Let’s reconnect your profile.</h1><p>We couldn’t verify whether your profile is ready. Nothing has been changed.</p><button className={s.primary} onClick={()=>setAttempt(value=>value+1)}>Try again</button><button className={s.secondary} onClick={()=>void signOutWebsiteDevice()}>Use another account</button></section></main>;
  return <div className={s.silentGate} role="status" aria-live="polite">Loading your profile…</div>;
 }

@@ -1,4 +1,4 @@
-import {mobileStoreUrl,isMobileAccountPath} from '../lib/mobile-app';
+import {mobileStoreUrl,isMobileAccountPath,isAcademySignIn} from '../lib/mobile-app';
 import MobileAppBoundary from './MobileAppBoundary';
 import {linkWebsiteAcquisition} from '../lib/acquisition';
 import {activateSignupTracking} from '../lib/signup-progress';
@@ -110,7 +110,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
    if(!(link instanceof HTMLAnchorElement))return;
    if(!isDesktopDevice(navigator)){
     const target=new URL(link.href,location.href);
-    if(target.origin===location.origin&&(isMobileAccountPath(target.pathname)||link.dataset.accountRequired==='true'||link.dataset.bandAccess)){
+    if(target.origin===location.origin&&!isAcademySignIn(target.pathname,target.searchParams.get('next'))&&(isMobileAccountPath(target.pathname)||link.dataset.accountRequired==='true'||link.dataset.bandAccess)){
      event.preventDefault();event.stopImmediatePropagation();window.location.assign(mobileStoreUrl(navigator.userAgent));return;
     }
    }

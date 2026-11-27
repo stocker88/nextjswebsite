@@ -189,7 +189,7 @@ export default function Header({
             </div>
             {!hideAppDownload && (!desktop || (accountReady && !accountUser)) && (desktop?<a
               className={menuStyles.download}
-              href={accountLoginUrl(DESKTOP_ACCESS_PATH)}
+              href={accountLoginUrl(pathname==='/learn/get-certified'?'/learn/get-certified/':DESKTOP_ACCESS_PATH)}
               onClick={closeMenu}
             >Sign Up</a>:<CompactSignUp placement="header" onComplete={closeMenu}/>)}
 

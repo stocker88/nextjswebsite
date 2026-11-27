@@ -27,3 +27,8 @@ for(const nav of [{userAgent:'Mozilla iPhone Mobile',platform:'iPhone',maxTouchP
 for(const href of ['https://apps.apple.com/us/app/id1565527320','https://play.google.com/store/apps/details?id=com.newcompany.stocker','/insight_details_page?postId=123','ai.stockstobuynow://thread/123'])assert.equal(device.isAppDestination(href,'https://www.stockstobuynow.ai'),true);
 for(const href of ['/stock-market-news/','https://apps.apple.com/us/app/id999999','https://play.google.com/store/apps/details?id=other'])assert.equal(device.isAppDestination(href,'https://www.stockstobuynow.ai'),false);
 console.log('Desktop/mobile device detection and app destination targeting passed.');
+
+assert.equal(routes.accountDestination('/learn/get-certified/'),'/learn/get-certified/');
+assert.equal(routes.profileCompletionDestination('/learn/get-certified',null),'/learn/get-certified/');
+assert.equal(routes.profileCompletionDestination('/login','/learn/get-certified/'),'/learn/get-certified/');
+assert.equal(routes.profileCompletionDestination('/login','https://evil.test'),'/membership/?from=onboarding');

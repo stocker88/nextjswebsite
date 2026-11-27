@@ -31,6 +31,8 @@ jobs:
       - uses: actions/configure-pages@v5
         if: vars.WEBSITE_HOST != 'cloudflare'
       - run: yarn test:content-access
+      - run: node scripts/academy-check.cjs
+      - run: node scripts/academy-lessons-check.cjs
       - run: yarn test:profile-onboarding
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs

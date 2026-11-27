@@ -1,3 +1,4 @@
+import {academyLessons,academyLessonPath} from './academy-lessons';
 import {coursePath, lessonPath} from './learning-format';
 import snapshot from '../data/learning/catalog.json';
 
@@ -29,4 +30,4 @@ export const courses = snapshot.courses.map(course => ({
   thumbnail: lessons.find(v => v.id === course.videoIds[0])!.thumbnail,
 }));
 export type Course = typeof courses[number];
-export const learningPaths = () => ['/learn/', ...courses.map(c => coursePath(c.slug)), ...lessons.map(v => lessonPath(v.id))];
+export const learningPaths = () => ['/learn/', '/learn/get-certified/', '/learn/lessons/', ...academyLessons.map(academyLessonPath), ...courses.map(c => coursePath(c.slug)), ...lessons.map(v => lessonPath(v.id))];

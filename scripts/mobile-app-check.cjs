@@ -30,3 +30,7 @@ mobile=true;path='/';assert.equal(boundary({children:'Public website'}).props.ch
 const plans=load('components/MembershipPlans.tsx',{react:{...React,useState:()=>[true,()=>{}],useEffect:()=>{}},'./SiteAccount':{useSiteAccount:()=>({user:null,ready:true,desktop:false})},'../lib/membership-status':{},'./TrustpilotWidget':()=>null,'../styles/DesktopProduct.module.css':{}}).default;
 assert.equal(plans(),null);
 console.log('PASS: iPhone, iPad, Android store mapping; no mobile signup/checkout mount or membership plans; desktop and public pages preserved.');
+
+assert(app.isAcademySignIn('/login','/learn/get-certified/'));
+for(const next of ['/ultra/','/membership/','https://evil.test',null])assert(!app.isAcademySignIn('/login',next));
+assert(!app.isAcademySignIn('/ultra/','/learn/get-certified/'));
