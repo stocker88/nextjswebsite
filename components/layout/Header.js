@@ -25,7 +25,7 @@ export default function Header({
   socialNoticeVariant = 'standard',
 }) {
   const { pathname } = useRouter();
-  const {t,href:localizedHref}=useSiteLanguage();
+  const {t,language,href:localizedHref}=useSiteLanguage();
   const {user:accountUser,ready:accountReady,desktop} = useSiteAccount();
   // /s renders the same homepage for social/referral links.
   const isHomePage = pathname === '/' || pathname === '/s';
@@ -193,7 +193,7 @@ export default function Header({
             </div>
             {!hideAppDownload && (!desktop || (accountReady && !accountUser)) && (desktop?<a
               className={menuStyles.download}
-              href={accountLoginUrl(pathname==='/learn/get-certified'?'/learn/get-certified/':DESKTOP_ACCESS_PATH)}
+              href={accountLoginUrl(pathname==='/learn/get-certified'?'/learn/get-certified/':DESKTOP_ACCESS_PATH,language)}
               onClick={closeMenu}
             >{t('Sign Up')}</a>:<CompactSignUp placement="header" onComplete={closeMenu}/>)}
 

@@ -1,3 +1,4 @@
+import {deviceLanguage} from '../../lib/localization/client-language';
 import {useEffect,useState} from 'react';
 import {useRouter} from 'next/router';
 import {availableLanguages,hasTranslation,languageOf,languagePath,languageNames,languages,LANGUAGE_PREFERENCE_KEY,type SiteLanguage} from '../../lib/localization/routes';
@@ -5,7 +6,7 @@ import {useSiteLanguage} from '../../lib/localization/use-site-language';
 export default function LanguageSelector(){
  const router=useRouter(),{language,t}=useSiteLanguage(),available=availableLanguages(router.asPath);
  const [suggest,setSuggest]=useState<SiteLanguage|null>(null);
- useEffect(()=>{let saved:string|null=null;try{saved=localStorage.getItem(LANGUAGE_PREFERENCE_KEY);}catch{}const preferred=(saved||navigator.languages?.[0]||navigator.language||'en').split('-')[0] as SiteLanguage;setSuggest(language==='en'&&preferred!=='en'&&languages.includes(preferred)&&hasTranslation(router.asPath,preferred)?preferred:null);},[router.asPath,language]);
+ useEffect(()=>{let saved:string|null=null;try{saved=localStorage.getItem(LANGUAGE_PREFERENCE_KEY);}catch{}const preferred=deviceLanguage(navigator.languages?.[0]||navigator.language||'en');const hasChoice=!!saved&&languages.includes(saved as SiteLanguage);setSuggest(!hasChoice&&language==='en'&&preferred!=='en'&&languages.includes(preferred)&&hasTranslation(router.asPath,preferred)?preferred:null);},[router.asPath,language]);
  function choose(next:SiteLanguage){try{localStorage.setItem(LANGUAGE_PREFERENCE_KEY,next);}catch{}setSuggest(null);const target=languagePath(router.asPath,next);if(target!==router.asPath)void router.push(target);}
  return <div className="language-selector"><label><span className="sr-language">{t('Language')}</span><select aria-label={t('Website language')} value={language} onChange={e=>choose(e.target.value as SiteLanguage)}>{available.map(l=><option key={l} value={l}>{languageNames[l]}</option>)}</select></label>
  {suggest&&<div className="language-suggestion" role="status"><span>{languageNames[suggest]}?</span><button onClick={()=>choose(suggest)}>{languageNames[suggest]}</button><button aria-label="Keep English" onClick={()=>choose('en')}>English</button></div>}
