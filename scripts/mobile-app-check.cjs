@@ -2,6 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typ
 const {renderToStaticMarkup}=require('react-dom/server');
 const nodePath=require('node:path');
 function load(file,modules={}){const module={exports:{}};const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true,target:ts.ScriptTarget.ES2020}}).outputText;new Function('require','module','exports',code)(name=>{
+ if(name.includes('localization/LocalizedContent'))return {default:({children})=>React.createElement(React.Fragment,null,children),__esModule:true};
  if(name in modules)return modules[name];
  if(!name.startsWith('.'))return require(name);
  const target=nodePath.resolve(nodePath.dirname(file),name);

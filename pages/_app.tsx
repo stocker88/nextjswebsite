@@ -1,3 +1,6 @@
+import Head from 'next/head';
+import {conversionRoutes,englishPath,routePath} from '../lib/localization/routes';
+import ConversionLanguage from '../components/localization/ConversionLanguage';
 import LanguageAlternates from '../components/localization/LanguageAlternates';
 import { captureAcquisition, installAcquisitionCapture } from '../lib/acquisition';
 import { AppProps } from 'next/app'
@@ -31,7 +34,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div className="App">
       <SessionProvider>
         <InteractionPolish />
-        <SiteAccountProvider><LanguageAlternates /><Component {...pageProps} /></SiteAccountProvider>
+        <LanguageAlternates /><ConversionLanguage />
+        {(conversionRoutes as readonly string[]).includes(routePath(englishPath(router.asPath)))&&<Head><meta name="robots" content="noindex,follow"/></Head>}
+        <SiteAccountProvider><Component {...pageProps} /></SiteAccountProvider>
       </SessionProvider>
     </div>
   );

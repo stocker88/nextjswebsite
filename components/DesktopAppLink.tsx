@@ -7,9 +7,9 @@ export function DesktopActionText({children,desktopLabel}:{children:string;deskt
  const {desktop,user}=useSiteAccount();const {t}=useSiteLanguage();const label=desktop?(desktopLabel||desktopActionLabel(children,!!user)):children;return <>{t(label)}</>;
 }
 export default function DesktopAppLink({href,children,...props}:AnchorHTMLAttributes<HTMLAnchorElement>&{href:string;children:ReactNode}){
- const {desktop,user}=useSiteAccount();const {t}=useSiteLanguage();
+ const {desktop,user}=useSiteAccount();const {t,language,href:localizedHref}=useSiteLanguage();
  const label=typeof children==='string'?(desktop?desktopActionLabel(children,!!user):children):children;
- return <a {...props} href={desktop?(user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH)):href}
+ return <a {...props} href={desktop?(user?localizedHref(DESKTOP_ACCESS_PATH):accountLoginUrl(DESKTOP_ACCESS_PATH,language)):href}
   target={desktop?undefined:props.target} onClick={event=>{if(desktop){rememberDesktopThread(href);return;}props.onClick?.(event)}}>
   {typeof label==='string'?t(label):label}
  </a>;

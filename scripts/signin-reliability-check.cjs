@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),ts=require('typescript');
-function load(file,mocks){const exports={};vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,{exports,require:n=>{if(n in mocks)return mocks[n];throw Error(n)},process:{env:{}},Promise,Date,Error});return exports}
+function load(file,mocks){const exports={};vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,{exports,require:n=>{if(n.endsWith('localization/client-language'))return {clientLanguage:()=> 'en'};if(n in mocks)return mocks[n];throw Error(n)},process:{env:{}},Promise,Date,Error});return exports}
 let calls=0,attempts=0,successes=0,failures=0,resolvePopup,rejectPopup;
 class Provider{setCustomParameters(){}addScope(){}}
 const sdk={GoogleAuthProvider:Provider,FacebookAuthProvider:Provider,TwitterAuthProvider:Provider,OAuthProvider:Provider,getAdditionalUserInfo:()=>({isNewUser:true}),signInWithPopup:()=>{calls++;return new Promise((r,j)=>{resolvePopup=r;rejectPopup=j})}};

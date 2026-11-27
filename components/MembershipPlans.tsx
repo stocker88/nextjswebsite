@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useState,type PointerEvent} from 'react';
 import {AccountLink,useSiteAccount} from './SiteAccount';
 import {canOfferMembership,refreshMembershipStatus} from '../lib/membership-status';
@@ -33,7 +34,7 @@ export default function MembershipPlans({onExplorePro,onExploreFree,verifiedInac
   return()=>{current=false};
  },[ready,uid,verifiedInactive,desktop]);
  if(!visible||desktop===false)return null;
- return <section className={styles.memberships} id="memberships" aria-labelledby="membership-title">
+ return <LocalizedContent><section className={styles.memberships} id="memberships" aria-labelledby="membership-title">
  <header><span className={styles.eyebrow}>MEMBERSHIP</span><h2 id="membership-title">More perspective.<br/>Your choice.</h2><p>{onboarding?'Start your free trial in the app, or go deeper with Pro.':'Start exploring for free. Go deeper with Pro.'}</p></header>
  <div className={styles.plans}>
  <AccountLink onPointerEnter={movePlanLight} onPointerMove={movePlanLight} onPointerLeave={clearPlanLight} onPointerCancel={clearPlanLight} destination="/stock-market-heatmap/" onClick={event=>{if(onExploreFree&&user){event.preventDefault();onExploreFree()}}} className={styles.plan}><span className={styles.planTag}>EXPLORE</span><h3>{onboarding?'Free trial':'Free'}</h3><p className={styles.planLead}>Your daily view of the market.</p><p>Get oriented with public market tools and research previews.</p><ul><li>Market heatmaps and biggest movers</li><li>Public news and research previews</li><li>Earnings and market calendars</li><li>Options strategies and payoff tools</li><li>Receive live alerts straight to your phone</li></ul><span className={styles.secondary}>{onExploreFree?'Start your free trial in the app':'Explore the market'} <span aria-hidden="true">↗</span></span></AccountLink>
@@ -44,4 +45,4 @@ export default function MembershipPlans({onExplorePro,onExploreFree,verifiedInac
  </section>
  <MonthlyTrackRecord />
  <p className={styles.disclosure}>Research and educational tools. Investing involves risk; membership does not guarantee returns. Macro Driven Financial Headlines and Market Prediction Recaps manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).</p>
- </section>}
+ </section></LocalizedContent>}

@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {signOutWebsiteDevice} from '../lib/account-devices';
 import {useEffect,useRef,useState} from 'react';
 import {useSiteAccount} from './SiteAccount';
@@ -41,11 +42,11 @@ export default function AccountMenu(){
   try{await signOutWebsiteDevice();setOpen(false)}
   catch{setError('Could not sign out. Please try again.')}finally{setBusy(false)}
  }
- return <div className={s.account} ref={root}>
+ return <LocalizedContent><div className={s.account} ref={root}>
   <button ref={trigger} className={s.trigger} type="button" aria-label={`Account: ${name}`} aria-expanded={open} aria-controls="site-account-panel" onClick={()=>setOpen(!open)}>
    <span className={s.avatar}>{photo&&photo!==brokenPhoto?<img src={photo} alt="" width="34" height="34" referrerPolicy="no-referrer" onError={()=>setBrokenPhoto(photo)}/>:<span aria-hidden="true">{initials}</span>}</span>
    <span className={s.name}>{name}</span><span className={s.chevron} aria-hidden="true">⌄</span>
   </button>
   {open&&<div id="site-account-panel" className={s.panel}><strong>{name}</strong><span>Signed in</span><a href="/account/">Account &amp; devices ↗</a><a href="/membership/">My membership ↗</a><button type="button" disabled={busy} onClick={()=>void signOut()}>{busy?'Signing out…':'Sign out'}</button>{error&&<p role="alert">{error}</p>}</div>}
- </div>;
+ </div></LocalizedContent>;
 }

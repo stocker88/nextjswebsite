@@ -1,3 +1,4 @@
+import {clientLanguage} from './localization/client-language';
 import {trackAuthentication} from './analytics';
 import type {AuthCredential,User} from 'firebase/auth';
 import {getSiteAuth} from './site-auth';
@@ -38,7 +39,7 @@ async function performSiteSignIn(provider:SiteProvider){
  if(!providerEnabled(provider))throw new Error('This sign-in method is being configured. Please use Google or Apple.');
  const attempt=beginSignupAuthentication(provider);
  let sdk:typeof import('firebase/auth');
- try{const ready=prepared||await prepareSiteSignIn();sdk=ready.sdk;const result=await sdk.signInWithPopup(ready.auth,ready.methods[provider]);const isNew=sdk.getAdditionalUserInfo(result)?.isNewUser===true;finishSignupAuthentication(attempt,result.user.uid,isNew);trackAuthentication(provider,isNew);return result}catch(error){
+ try{const ready=prepared||await prepareSiteSignIn();sdk=ready.sdk;ready.auth.languageCode=clientLanguage();const result=await sdk.signInWithPopup(ready.auth,ready.methods[provider]);const isNew=sdk.getAdditionalUserInfo(result)?.isNewUser===true;finishSignupAuthentication(attempt,result.user.uid,isNew);trackAuthentication(provider,isNew);return result}catch(error){
   failSignupAuthentication(attempt,error);
   sdk=await import('firebase/auth');
   if((error as {code?:string}).code==='auth/account-exists-with-different-credential'){

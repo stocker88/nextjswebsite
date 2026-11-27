@@ -15,7 +15,7 @@ for(const lang of ['de','fr','ja','ko']){
  assert.equal(availableLanguages(english).length,6);
  }
  assert.equal(hasTranslation('/stock-market-news/example/',lang),false);
- assert.equal(languagePath('/login/',lang),'/login/');
+ assert.equal(languagePath('/login/',lang),'/'+lang+'/login/');
  assert.equal(languagePath('https://example.com',lang),'https://example.com');
  for(const route of ['prediction/index.tsx','prediction/[slug].tsx','prediction/[slug]/[period].tsx','fear-and-greed-index/index.tsx','pentagon-pizza-index/index.tsx'])assert.ok(fs.existsSync(path.join('pages',lang,route)));
  assert.notEqual(translateText('What is the Microsoft stock price prediction for 2030?',lang),'What is the Microsoft stock price prediction for 2030?');

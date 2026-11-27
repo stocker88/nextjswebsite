@@ -1,3 +1,4 @@
+import {clientLanguage} from './localization/client-language';
 import {getSiteAuth} from './site-auth';
 import {stripeRedirect,completeWebsiteCheckout} from './website-billing';
 import type {MembershipStatus} from './membership-status';
@@ -12,7 +13,7 @@ async function call<T>(name:string,data:Record<string,string|boolean>={}):Promis
 }
 export async function fetchUltraOffer(){const offer=await call<UltraOffer>('getWebsiteUltraOffer');if(!offer||!Array.isArray(offer.plans)||!offer.membership||typeof offer.route!=='string')throw Error('Invalid membership response');return offer;}
 export async function startUltra(period:UltraPeriod){
- const response=await call<{url:string;kind:'checkout'|'stripe_switch'}>('startWebsiteUltra',{plan:period,origin:location.origin,device:'desktop',acceptedTerms:true,policyVersion:'ultra-2026-10-26'});
+ const response=await call<{url:string;kind:'checkout'|'stripe_switch'}>('startWebsiteUltra',{plan:period,origin:location.origin,language:clientLanguage(),device:'desktop',acceptedTerms:true,policyVersion:'ultra-2026-10-26'});
  const url=stripeRedirect(response.url,response.kind==='stripe_switch'?'billing.stripe.com':'checkout.stripe.com');location.assign(url);
 }
 export async function completeUltraCheckout(session:string){await completeWebsiteCheckout(session);return fetchUltraOffer();}

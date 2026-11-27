@@ -35,6 +35,7 @@ jobs:
       - run: node scripts/academy-lessons-check.cjs
       - run: yarn test:profile-onboarding
       - run: yarn test:localization
+      - run: node scripts/conversion-localization-check.cjs
       - run: yarn test:membership
       - run: node scripts/account-devices-check.cjs
       - run: node scripts/account-linking-check.cjs

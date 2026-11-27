@@ -1,0 +1,2 @@
+import {languages,languageOf,LANGUAGE_PREFERENCE_KEY,type SiteLanguage} from './routes';
+export function clientLanguage():SiteLanguage{if(typeof window==='undefined')return 'en';const route=languageOf(window.location.pathname);if(route!=='en')return route;let saved:string|null=null;try{saved=localStorage.getItem(LANGUAGE_PREFERENCE_KEY)}catch{}const candidate=(saved||navigator.language||'en').split('-')[0];return languages.includes(candidate as SiteLanguage)?candidate as SiteLanguage:'en';}

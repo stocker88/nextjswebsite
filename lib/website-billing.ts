@@ -1,3 +1,4 @@
+import {clientLanguage} from './localization/client-language';
 import {getSiteAuth} from './site-auth';
 import type {MembershipStatus} from './membership-status';
 export type WebsitePlan='monthly'|'annual';
@@ -16,11 +17,11 @@ export function stripeRedirect(value:string,host:'checkout.stripe.com'|'billing.
 }
 export async function startWebsiteCheckout(plan:WebsitePlan){
  const device=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile_web':'desktop';
- const result=await billingCall<{url:string}>('createWebsiteCheckout',{plan,origin:window.location.origin,device,acceptedTerms:true,policyVersion:'membership-2026-10-25'});
+ const result=await billingCall<{url:string}>('createWebsiteCheckout',{plan,origin:window.location.origin,language:clientLanguage(),device,acceptedTerms:true,policyVersion:'membership-2026-10-25'});
  window.location.assign(stripeRedirect(result.url,'checkout.stripe.com'));
 }
 export async function openWebsiteBillingPortal(action:'billing'|'payment_method_update'='billing'){
- const result=await billingCall<{url:string}>('createWebsiteBillingPortal',{action,origin:window.location.origin});
+ const result=await billingCall<{url:string}>('createWebsiteBillingPortal',{action,origin:window.location.origin,language:clientLanguage()});
  window.location.assign(stripeRedirect(result.url,'billing.stripe.com'));
 }
 export type WebsiteCheckoutResult=MembershipStatus&{checkoutConfirmed?:boolean};
@@ -33,14 +34,14 @@ export type StripeBillingDetails={defaultCard:BillingCard|null;subscriptions:Str
 export type CancellationSession={url:string;offerExpiresAt:number|null;serverTime:number};
 export function fetchWebsiteBillingDetails(){return billingCall<StripeBillingDetails>('getWebsiteBillingDetails')}
 export async function startWebsiteCancellation(subscriptionId:string){
- const result=await billingCall<CancellationSession>('startWebsiteCancellation',{subscriptionId,origin:window.location.origin});
+ const result=await billingCall<CancellationSession>('startWebsiteCancellation',{subscriptionId,origin:window.location.origin,language:clientLanguage()});
  stripeRedirect(result.url,'billing.stripe.com');return result;
 }
 export function followBillingUrl(url:string){window.location.assign(stripeRedirect(url,'billing.stripe.com'))}
 
 export type PlanSwitchPreview={subscriptionId:string;priceId:string;periodEnd:number;unitAmount:number;currency:string;billingPeriod:string};
 export async function switchWebsitePlan(subscriptionId:string,confirmation?:PlanSwitchPreview){
- const result=await billingCall<{url?:string;preview?:PlanSwitchPreview;scheduled?:boolean}>('switchWebsitePlan',{subscriptionId,origin:window.location.origin,...(confirmation?{confirm:'schedule-monthly',priceId:confirmation.priceId,periodEnd:String(confirmation.periodEnd)}:{})});
+ const result=await billingCall<{url?:string;preview?:PlanSwitchPreview;scheduled?:boolean}>('switchWebsitePlan',{subscriptionId,origin:window.location.origin,language:clientLanguage(),...(confirmation?{confirm:'schedule-monthly',priceId:confirmation.priceId,periodEnd:String(confirmation.periodEnd)}:{})});
  if(result.url)followBillingUrl(result.url);
  return result;
 }

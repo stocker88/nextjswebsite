@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 function load(file,modules,globals={}){
  const exports={};
  const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX}}).outputText;
- vm.runInNewContext(code,{exports,require:name=>name.endsWith('.module.css')?{default:new Proxy({},{get:(_,key)=>String(key)})}:modules[name]||require(name),...globals});
+ vm.runInNewContext(code,{exports,require:name=>name.includes('localization/LocalizedContent')?{default:({children})=>React.createElement(React.Fragment,null,children)}:name.includes('localization/LanguageSelector')?{default:()=>null}:name.includes('localization/client-language')?{clientLanguage:()=> 'en'}:name.endsWith('.module.css')?{default:new Proxy({},{get:(_,key)=>String(key)})}:modules[name]||require(name),...globals});
  return exports;
 }
 let occupied=[],calls=[],fail=false;
@@ -46,15 +46,29 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
  props={...props,uid:'another'};assert(!nodes(h.render(Suggest,props)).some(n=>n.type==='button'),'Suggestions are account scoped');h.timers();pending[2].reject(Error('offline'));await tick();assert(!nodes(h.render(Suggest,props)).some(n=>n.type==='button'));
  props={...props,enabled:false};assert.equal(h.render(Suggest,props),null);
 
- const main=harness(),events=[];
- const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx',{react:main.hooks,'next/router':{useRouter:()=>({})},'../lib/site-auth':{profileCompletionDestination:()=>'/membership/?from=onboarding'},'../lib/account-devices':{},'../lib/onboarding-signal-preview':{onboardingSignalPreviews:[],lockedSignalPreviews:[]},'../lib/profile-onboarding':profile,'./TrustpilotWidget':{default:()=>null},'./OnboardingQuestion':{default:()=>null},'./UsernameSuggestions':{default:()=>null},'../lib/acquisition':{sourceOptions:[],linkWebsiteAcquisition:async()=>({needsSourceQuestion:false})},'../lib/signup-progress':{observeSignupStep:()=>()=>{},trackSignupProgress:(...args)=>events.push(args),signupErrorCode:error=>error.code||'unknown'}},{window:main.window,document:{addEventListener(){},removeEventListener(){}},URL});
- const mainProps={user:{uid:'me',displayName:'bad-name',photoURL:''},onComplete:()=>{}};
- let tree=main.render(ProfileOnboarding,mainProps);
- const continueButton=()=>nodes(tree).find(n=>n.type==='button'&&n.props.children==='Continue →');
- continueButton().props.onClick();await tick();await tick();tree=main.render(ProfileOnboarding,mainProps);
- assert(events.some(event=>event[0]==='username_corrected'&&event[1]==='success'),'Automatic correction must be recorded');
- assert(events.some(event=>event[0]==='profile'&&event[1]==='success'),'Corrected name continues successfully on the same tap');
- assert(!continueButton(),'Automatic correction must not require another Continue tap');
- assert(!events.some(event=>event.includes('bad-name')),'Raw usernames must not enter telemetry');
+ for(const sourceNeeded of [true,false,'offline']){
+ const main=harness(),events=[],saved=[],linked=[];
+ const questionView=()=>null;
+ const {ProfileOnboarding}=load('components/ProfileOnboarding.tsx',{react:main.hooks,'next/router':{useRouter:()=>({})},'../lib/site-auth':{profileCompletionDestination:()=>'/membership/?from=onboarding'},'../lib/account-devices':{},'../lib/onboarding-signal-preview':{onboardingSignalPreviews:[],lockedSignalPreviews:[]},'../lib/profile-onboarding':{...profile,completeProfileOnboarding:async(user,data)=>saved.push(data)},'./TrustpilotWidget':{default:()=>null},'./OnboardingQuestion':{default:questionView,QuestionProgress:()=>null},'../lib/acquisition':{sourceOptions:[['google','Google search']],linkWebsiteAcquisition:async(uid,source)=>{linked.push(source);if(sourceNeeded==='offline')throw Error('offline');return {needsSourceQuestion:sourceNeeded}}},'../lib/signup-progress':{observeSignupStep:()=>()=>{},trackSignupProgress:(...args)=>events.push(args),signupErrorCode:error=>error.code||'unknown'}},{window:main.window,document:{},URL});
+ const props={user:{uid:'me',displayName:'bad-name'},onComplete:()=>saved.push('complete')};
+ let tree=main.render(ProfileOnboarding,props);await tick();await tick();tree=main.render(ProfileOnboarding,props);
+ assert(!nodes(tree).some(n=>n.type==='input'),'No manual username screen');
+ if(sourceNeeded){
+  assert(nodes(tree).some(n=>n.type==='h1'&&n.props.children==='How did you discover us?'));
+  nodes(tree).find(n=>n.type==='button'&&Array.isArray(n.props.children)&&n.props.children[0]==='Google search').props.onClick();
+  tree=main.render(ProfileOnboarding,props);
+  nodes(tree).find(n=>n.type==='button'&&n.props.children==='Continue →').props.onClick();
+ }
+ for(let i=1;i<=3;i++){
+  tree=main.render(ProfileOnboarding,props);const question=nodes(tree).find(n=>n.type===questionView);
+  assert.equal(question.props.progressCurrent,i+(sourceNeeded?1:0));assert.equal(question.props.progressTotal,sourceNeeded?4:3);
+  if(i===1)assert.equal(typeof question.props.onBack,sourceNeeded?'function':'undefined');
+  question.props.onSelect(profile.onboardingQuestions[i-1].options[0]);
+ }
+ tree=main.render(ProfileOnboarding,props);
+ nodes(tree).find(n=>n.type==='button'&&n.props.children==='Receive new signals now →').props.onClick();await tick();
+ assert.equal(saved[0].userName,'bad_name');assert.equal(saved[0].heardFrom,sourceNeeded?'google':'');assert.equal(saved[1],'complete');
+ assert(!events.some(event=>event.includes('bad-name')));
+ }
  console.log('PASS: validation reasons, safe corrections, bounded database-checked suggestions, explicit selection, stale/account guards, collisions and offline behavior.');
 })().catch(error=>{console.error(error);process.exitCode=1});

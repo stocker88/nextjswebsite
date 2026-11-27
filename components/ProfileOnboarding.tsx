@@ -1,3 +1,6 @@
+import {clientLanguage} from '../lib/localization/client-language';
+import LanguageSelector from './localization/LanguageSelector';
+import LocalizedContent from './localization/LocalizedContent';
 import {profileCompletionDestination} from '../lib/site-auth';
 import type {ReactNode} from 'react';
 import type {User} from 'firebase/auth';
@@ -5,13 +8,12 @@ import {useEffect,useRef,useState} from 'react';
 import {useRouter} from 'next/router';
 import {signOutWebsiteDevice} from '../lib/account-devices';
 import {lockedSignalPreviews,onboardingSignalPreviews,type ChartPoint} from '../lib/onboarding-signal-preview';
-import {availableUsernameSuggestions,resolveSignupUsername,completeProfileOnboarding,isUsernameAvailable,normalizeUsername,onboardingQuestions,siteProfileExists,usernameValidationCode,usernameValidationMessage,type OnboardingAnswers,type UsernameAvailability} from '../lib/profile-onboarding';
+import {resolveSignupUsername,completeProfileOnboarding,onboardingQuestions,siteProfileExists,type OnboardingAnswers} from '../lib/profile-onboarding';
 import TrustpilotWidget from './TrustpilotWidget';
 import {trackSignupProgress,signupErrorCode,observeSignupStep} from '../lib/signup-progress';
 import {linkWebsiteAcquisition,sourceOptions} from '../lib/acquisition';
 import s from '../styles/ProfileOnboarding.module.css';
-import OnboardingQuestion from './OnboardingQuestion';
-import UsernameSuggestions from './UsernameSuggestions';
+import OnboardingQuestion,{QuestionProgress} from './OnboardingQuestion';
 
 const emptyAnswers:OnboardingAnswers={experience:'',interest:'',horizon:''};
 
@@ -22,7 +24,7 @@ function recommendation(answers:OnboardingAnswers){
 }
 
 const chartDate=(value:string)=>Date.parse(`${value}T00:00:00Z`);
-const labelDate=(value:string)=>new Intl.DateTimeFormat('en-US',{month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T00:00:00Z`));
+const labelDate=(value:string)=>new Intl.DateTimeFormat(clientLanguage(),{month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T00:00:00Z`));
 const labelValue=(value:number,unit:'price'|'revenue'|'eps')=>unit==='revenue'?`${(value/1e9).toFixed(value>=1e10?0:1)}B`:unit==='eps'?value.toFixed(value<1?.2:1):value>=1000?`${(value/1000).toFixed(1)}k`:Math.round(value).toString();
 
 function chartGeometry(points:readonly ChartPoint[],width:number,height:number,padding:{left:number;right:number;top:number;bottom:number},zeroBased=false){
@@ -40,7 +42,7 @@ function PriceChart({symbol,points,signalDate,signalLabel,blurred=false}:{symbol
  const preSignal=g.coords.filter(([x])=>x<=signalX+1).map(([x,y],index)=>`${index?'L':'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
  const area=`${g.path} L${g.coords[g.coords.length-1][0].toFixed(1)} ${height-padding.bottom} L${g.coords[0][0].toFixed(1)} ${height-padding.bottom} Z`;
  const mid=Math.floor(points.length/2);
- return <div className={blurred?s.blurredPrice:s.pricePanel}>
+ return <LocalizedContent><div className={blurred?s.blurredPrice:s.pricePanel}>
   <svg className={s.priceChart} viewBox={`0 0 ${width} ${height}`} role={blurred?'presentation':'img'} aria-label={blurred?undefined:`${symbol} historical share price through ${points[points.length-1][0]}, with AI signal marker on ${signalDate}`}>
    <defs><linearGradient id={`price-fill-${symbol}-${blurred?'locked':'open'}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#25cf48" stopOpacity=".35"/><stop offset="1" stopColor="#0aa6d9" stopOpacity=".12"/></linearGradient></defs>
    {[0,.33,.66,1].map(value=><line key={value} x1={padding.left} x2={width-padding.right} y1={padding.top+(height-padding.top-padding.bottom)*value} y2={padding.top+(height-padding.top-padding.bottom)*value} className={s.gridLine}/>)}
@@ -50,13 +52,13 @@ function PriceChart({symbol,points,signalDate,signalLabel,blurred=false}:{symbol
    {!blurred&&<><line x1={signalX} x2={signalX} y1={padding.top} y2={height-padding.bottom} className={s.signalMarker}/><text x={Math.min(signalX+7,width-91)} y={height*.56} className={s.signalMarkerText}>{signalLabel}</text></>}
    {!blurred&&<><text x="4" y={padding.top+4} className={s.axisText}>{labelValue(g.max,'price')}</text><text x="4" y={(padding.top+height-padding.bottom)/2+4} className={s.axisText}>{labelValue((g.max+g.min)/2,'price')}</text><text x="4" y={height-padding.bottom+4} className={s.axisText}>{labelValue(g.min,'price')}</text><text x={padding.left} y={height-5} className={s.axisText}>{labelDate(points[0][0])}</text><text x={width/2} y={height-5} textAnchor="middle" className={s.axisText}>{labelDate(points[mid][0])}</text><text x={width-padding.right} y={height-5} textAnchor="end" className={s.axisText}>{labelDate(points[points.length-1][0])}</text></>}
   </svg>
- </div>;
+ </div></LocalizedContent>;
 }
 
 function FinancialChart({title,unit,points,compact=false}:{title:string;unit:'revenue'|'eps';points:readonly ChartPoint[];compact?:boolean}){
  const width=420,height=compact?118:162,padding={left:42,right:10,top:12,bottom:24},g=chartGeometry(points,width,height,padding,true),innerWidth=width-padding.left-padding.right,slot=innerWidth/points.length,barWidth=Math.max(3,Math.min(9,slot*.46));
  const visibleLabels=compact?[0,points.length-1]:[0,Math.floor(points.length/2),points.length-1];
- return <section className={compact?s.compactFinancial:s.financialPanel} aria-label={`${title} historical chart`}>
+ return <LocalizedContent><section className={compact?s.compactFinancial:s.financialPanel} aria-label={`${title} historical chart`}>
   <h3>{title}</h3>
   <svg className={s.financialChart} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${title}, latest ${labelValue(points[points.length-1][1],unit)}`}>
    {[0,.5,1].map(value=><line key={value} x1={padding.left} x2={width-padding.right} y1={padding.top+(height-padding.top-padding.bottom)*value} y2={padding.top+(height-padding.top-padding.bottom)*value} className={s.gridLine}/>)}
@@ -64,50 +66,45 @@ function FinancialChart({title,unit,points,compact=false}:{title:string;unit:'re
    {points.map(([date,value],index)=>{const x=padding.left+slot*index+(slot-barWidth)/2,y=g.y(value);return <rect key={date} x={x} y={y} width={barWidth} height={height-padding.bottom-y} rx={barWidth/2} className={index>points.length*.58?s.financialBarRecent:s.financialBar} style={{animationDelay:`${index*24}ms`}}/>})}
    {visibleLabels.map(index=><text key={index} x={padding.left+slot*index+slot/2} y={height-5} textAnchor={index===0?'start':index===points.length-1?'end':'middle'} className={s.axisText}>{labelDate(points[index][0])}</text>)}
   </svg>
- </section>;
+ </section></LocalizedContent>;
 }
 
 export function ProfileOnboarding({user,onComplete,learningOnly=false}:{user:User;onComplete:()=>void|Promise<void>;learningOnly?:boolean}){
- const [step,setStep]=useState(0),[userName,setUserName]=useState(()=>normalizeUsername(user.displayName||''));
+ const [step,setStep]=useState(-1),[userName,setUserName]=useState('');
  const [answers,setAnswers]=useState<OnboardingAnswers>(emptyAnswers);
- const [availability,setAvailability]=useState<UsernameAvailability>('idle'),[error,setError]=useState(''),[saving,setSaving]=useState(false);
+ const [error,setError]=useState(''),[saving,setSaving]=useState(false);
  const [needsSource,setNeedsSource]=useState(false),[heardFrom,setHeardFrom]=useState('');
- const [usernameCorrection,setUsernameCorrection]=useState('');
- const latestUsername=useRef('');latestUsername.current=JSON.stringify([user.uid,userName]);
- const interactions=useRef(new Set<string>());
- const trackInteraction=(name:string)=>{if(!interactions.current.has(name)){interactions.current.add(name);trackSignupProgress(name)}};
- useEffect(()=>{let active=true;void linkWebsiteAcquisition(user.uid).then(result=>{if(active)setNeedsSource(result?.needsSourceQuestion!==false)}).catch(()=>{if(active)setNeedsSource(true)});return()=>{active=false}},[user.uid]);
- const chooseSource=(value:string)=>{setHeardFrom(value);if(value){trackSignupProgress('source','success');void linkWebsiteAcquisition(user.uid,value).catch(()=>{/* The profile also retains the answer if this attempt is offline. */})}};
- useEffect(()=>{
-  const name=['profile','question_1','question_2','question_3','results'][step];
-  return observeSignupStep(name);
- },[step,user.uid]);
- useEffect(()=>{
-  const validation=usernameValidationMessage(userName);
-  if(validation){setAvailability('idle');return}
-  let active=true;
-  setAvailability('checking');
-  const timer=window.setTimeout(()=>void isUsernameAvailable(userName,user.uid).then(value=>{if(active)setAvailability(value?'available':'taken')}).catch(()=>{if(active)setAvailability('error')}),400);
-  return()=>{active=false;window.clearTimeout(timer)};
- },[userName,user.uid]);
-
- const validation=usernameValidationMessage(userName);
- const continueProfile=async()=>{
-  if(availability==='checking')return;
-  const requestKey=latestUsername.current;
-  trackSignupProgress('profile','attempt');
-  setError('');
-  setAvailability('checking');
-  try{const resolved=await resolveSignupUsername(userName,user.uid);if(latestUsername.current!==requestKey)return;if(resolved!==userName)trackSignupProgress('username_corrected','success');setUserName(resolved);setAvailability('available');setUsernameCorrection(resolved!==userName?`Your username is ${resolved}. You can change it later in your profile.`:'');trackSignupProgress('profile','success');setStep(1)}
-  catch(cause){if(latestUsername.current!==requestKey)return;trackSignupProgress('profile','error',signupErrorCode(cause));setAvailability('error');setError('We couldn’t check that username. Please try again.')}
+ const usernameRequest=useRef<Promise<string>|null>(null);
+ const prepareUsername=()=>{
+  if(!usernameRequest.current)usernameRequest.current=resolveSignupUsername(user.displayName||'member',user.uid).then(name=>{setUserName(name);trackSignupProgress('profile','success');return name}).catch(cause=>{usernameRequest.current=null;throw cause});
+  return usernameRequest.current;
  };
+ useEffect(()=>{
+  let active=true;
+  void prepareUsername().catch(()=>{/* Retry on completion without blocking the questions. */});
+  void linkWebsiteAcquisition(user.uid).then(result=>{
+   if(!active)return;
+   const required=result?.needsSourceQuestion!==false;
+   setNeedsSource(required);setStep(required?0:1);
+  }).catch(()=>{if(active){setNeedsSource(true);setStep(0)}});
+  return()=>{active=false};
+ },[user.uid]);
+ const chooseSource=(value:string)=>{setHeardFrom(value);setError('')};
+ const continueSource=()=>{
+  if(heardFrom){trackSignupProgress('source','success');void linkWebsiteAcquisition(user.uid,heardFrom).catch(()=>{/* Saved again with the completed profile. */})}
+  setStep(1);
+ };
+ useEffect(()=>{
+  if(step<0)return;
+  return observeSignupStep(step===0?'source':step<=onboardingQuestions.length?`question_${step}`:'results');
+ },[step,user.uid]);
  const selectAnswer=(key:keyof OnboardingAnswers,value:string)=>{trackSignupProgress(`question_${step}`,'success');setAnswers(previous=>({...previous,[key]:value}));setError('');setStep(current=>current+1)};
  const finish=async()=>{
   if(saving)return;
   trackSignupProgress('save','attempt');
   setSaving(true);setError('');
-  try{await completeProfileOnboarding(user,{userName,photoFile:null,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
-  catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false);if(signupErrorCode(cause)==='username_taken'){setAvailability('taken');setStep(0)}}
+  try{const resolvedName=await prepareUsername();await completeProfileOnboarding(user,{userName:resolvedName,photoFile:null,answers,heardFrom});trackSignupProgress('complete','success');await onComplete()}
+  catch(cause){trackSignupProgress('save','error',signupErrorCode(cause));setError(cause instanceof Error?cause.message:'Could not finish your profile. Please try again.');setSaving(false);if(signupErrorCode(cause)==='username_taken')usernameRequest.current=null;}
  };
  const questionCount=onboardingQuestions.length;
  const question=step>=1&&step<=questionCount?onboardingQuestions[step-1]:null;
@@ -117,20 +114,19 @@ export function ProfileOnboarding({user,onComplete,learningOnly=false}:{user:Use
   {error&&<p className={s.fieldError} role="alert">{error}</p>}
  </div>;
 
- return <main className={s.page}>
+ return <LocalizedContent><main className={s.page}>
   <div className={s.glow} aria-hidden="true"/>
   <section className={s.card} aria-labelledby="profile-onboarding-title">
-   <header className={s.top}><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>Stocks To Buy Now Research</span></div><span>{step===0?'Your profile':question?'Your preferences':'Your results'}</span></header>
+   <header className={s.top}><LanguageSelector/><div className={s.brand}><img src="/assets/images/stockerRobotIcon.png" width="40" height="40" alt=""/><span>Stocks To Buy Now Research</span></div><span>{step<0?'Getting started':step===0?'Your discovery':question?'Your preferences':'Your results'}</span></header>
+   {step<0&&<div className={s.content} role="status">Preparing your questions…</div>}
    {step===0&&<div className={s.content}>
-    <p className={s.eyebrow}>CREATE YOUR PROFILE</p><h1 id="profile-onboarding-title">Choose your username.</h1><p className={s.lead}>You can edit your username and add a photo later. Then just {questionCount} quick questions before your results.</p>
-    <label className={s.field}><span>Username</span><input autoFocus autoCapitalize="none" autoCorrect="off" maxLength={15} value={userName} onFocus={()=>trackInteraction('username_focus')} onChange={event=>{trackInteraction('username_edit');setUserName(normalizeUsername(event.target.value));setUsernameCorrection('');setError('')}} placeholder="your_username"/></label>
-    <p className={`${s.fieldNote} ${validation||availability==='taken'||availability==='error'?s.fieldError:availability==='available'?s.fieldSuccess:''}`} aria-live="polite">{validation||(availability==='taken'?'That username is already taken.':availability==='error'?'We couldn’t check availability.':availability==='checking'?'Checking availability…':availability==='available'?'Username available.':'Letters, numbers and underscores only. Up to 5 digits.')}</p>
-    {usernameCorrection&&<p className={s.fieldSuccess} role="status">{usernameCorrection}</p>}
-    <UsernameSuggestions value={userName} uid={user.uid} enabled={!!validation||availability==='taken'} onSelect={name=>{setUserName(name);setUsernameCorrection('');setAvailability('checking');setError('')}}/>
-    {needsSource&&<label className={s.field}><span>How did you discover us? <small>(optional)</small></span><select aria-label="How did you discover us?" value={heardFrom} onChange={event=>chooseSource(event.target.value)} style={{padding:'16px',borderRadius:14,background:'#0b1525',color:'#f5f6ff',border:'1px solid #64748b',fontSize:16}}><option value="">Choose a source</option>{sourceOptions.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label>}
-    <button className={s.primary} type="button" onClick={()=>void continueProfile()} disabled={availability==='checking'}>{availability==='checking'?'Checking username…':'Continue →'}</button>
+    <QuestionProgress current={1} total={questionCount+1}/>
+    <h1 id="profile-onboarding-title">How did you discover us?</h1>
+    <p className={s.lead}>Help us understand where you found us. This question is optional.</p>
+    <div className={s.choices}>{sourceOptions.map(([value,label])=><button key={value} type="button" className={heardFrom===value?s.selected:''} aria-pressed={heardFrom===value} onClick={()=>chooseSource(value)}>{label}<span aria-hidden="true">{heardFrom===value?'✓':'→'}</span></button>)}</div>
+    <button className={s.primary} type="button" onClick={continueSource}>{heardFrom?'Continue →':'Skip →'}</button>
    </div>}
-   {question&&<OnboardingQuestion current={step} questions={onboardingQuestions} answer={answers[question.key]} onBack={()=>setStep(step-1)} onSelect={value=>selectAnswer(question.key,value)}/>}
+   {question&&<OnboardingQuestion current={step} progressCurrent={step+(needsSource?1:0)} progressTotal={questionCount+(needsSource?1:0)} questions={onboardingQuestions} answer={answers[question.key]} onBack={step>1||needsSource?()=>setStep(step-1):undefined} onSelect={value=>selectAnswer(question.key,value)}/>}
    {step===questionCount+1&&learningOnly&&<div className={s.content}><p className={s.eyebrow}>YOUR FREE LEARNING ACCOUNT</p><h1 id="profile-onboarding-title">Your academy is ready.</h1><p className={s.lead}>Continue to the free lessons, complete the questionnaires and earn your Level 1 course-completion certificate. No subscription is required.</p><button className={s.primary} disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Start learning'}</button></div>}
    {step===questionCount+1&&!learningOnly&&<div className={`${s.content} ${s.resultsContent}`}>
     <button className={s.back} type="button" onClick={()=>setStep(questionCount)}>← Back</button><p className={s.eyebrow}>ALL {questionCount} QUESTIONS COMPLETE · YOUR RESULTS</p><h1 id="profile-onboarding-title">Your first signals are ready.</h1><p className={s.lead}>{choice.title} {choice.text}</p>
@@ -140,7 +136,7 @@ export function ProfileOnboarding({user,onComplete,learningOnly=false}:{user:Use
     <div className={s.signalList}>
      {onboardingSignalPreviews.map((signal,index)=><article className={s.signalCard} key={signal.symbol} style={{animationDelay:`${index*120}ms`}}>
       <div className={s.signalIdentity}><img src={signal.logo} width="42" height="42" alt=""/><div><b>{signal.symbol}</b><span>{signal.name}</span></div><strong>{signal.returnLabel}</strong></div>
-      <div className={s.priceTitle}><span>Share price</span><strong>${signal.price[signal.price.length-1][1].toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</strong><small>as of {labelDate(signal.price[signal.price.length-1][0])}</small></div>
+      <div className={s.priceTitle}><span>Share price</span><strong>${signal.price[signal.price.length-1][1].toLocaleString(clientLanguage(),{minimumFractionDigits:2,maximumFractionDigits:2})}</strong><small>as of {labelDate(signal.price[signal.price.length-1][0])}</small></div>
       <PriceChart symbol={signal.symbol} points={signal.price} signalDate={signal.signalDate} signalLabel={signal.signalLabel}/>
       <div className={s.signalMeta}><span>AI BUY SIGNAL</span><span>Price through {labelDate(signal.price[signal.price.length-1][0])}</span></div>
       <FinancialChart title={signal.financial.title} unit={signal.financial.unit} points={signal.financial.points}/>
@@ -164,9 +160,9 @@ export function ProfileOnboarding({user,onComplete,learningOnly=false}:{user:Use
     <button className={s.primary} type="button" disabled={saving} onClick={()=>void finish()}>{saving?'Creating your profile…':'Continue to your free trial →'}</button>
    </div>}
    {error&&<p className={s.error} role="alert">{error}</p>}
-   <footer><button type="button" disabled={saving} onClick={()=>void signOutWebsiteDevice()}>Use another account</button><p>Your profile works in both the app and on the website.</p></footer>
+   <footer>{userName&&<p>Your username is <strong>@{userName}</strong>. You can change it later in your profile.</p>}<button type="button" disabled={saving} onClick={()=>void signOutWebsiteDevice()}>Use another account</button><p>Your profile works in both the app and on the website.</p></footer>
   </section>
- </main>;
+ </main></LocalizedContent>;
 }
 
 export default function ProfileOnboardingGate({user,children,onProfileReady}:{user:User;children:ReactNode;onProfileReady?:(uid:string,ready:boolean)=>void}){
@@ -178,8 +174,8 @@ export default function ProfileOnboardingGate({user,children,onProfileReady}:{us
  useEffect(()=>{if(status==='checking')return observeSignupStep('profile_check')},[status,user.uid]);
  useEffect(()=>{if(status!=='checking')return;const timeout=setTimeout(()=>{if(!document.hidden)trackSignupProgress('profile_check','error','client/timeout')},10000);return()=>clearTimeout(timeout)},[status,user.uid]);
  useEffect(()=>{let active=true;if(cached)onProfileReady?.(user.uid,true);else setStatus('checking');siteProfileExists(user.uid).then(exists=>{if(!active)return;onProfileReady?.(user.uid,exists);if(exists){try{sessionStorage.setItem(cacheKey,'1')}catch{}setStatus('complete')}else{try{sessionStorage.removeItem(cacheKey)}catch{}setStatus('required')}}).catch(()=>{if(active&&!cached){onProfileReady?.(user.uid,false);setStatus('error')}});return()=>{active=false}},[user.uid,attempt,cached,cacheKey,onProfileReady]);
- if(status==='complete')return <>{children}</>;
- if(status==='required')return <ProfileOnboarding user={user} learningOnly={profileCompletionDestination(router.pathname,router.query.next)==='/learn/get-certified/'} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);const next=profileCompletionDestination(router.pathname,router.query.next);try{await router.replace(next)}catch{window.location.assign(next)}setStatus('complete')}}/>;
- if(status==='error')return <main className={s.page}><section className={s.errorCard}><img src="/assets/images/stockerRobotIcon.png" width="54" height="54" alt=""/><h1>Let’s reconnect your profile.</h1><p>We couldn’t verify whether your profile is ready. Nothing has been changed.</p><button className={s.primary} onClick={()=>setAttempt(value=>value+1)}>Try again</button><button className={s.secondary} onClick={()=>void signOutWebsiteDevice()}>Use another account</button></section></main>;
- return <div className={s.silentGate} role="status" aria-live="polite">Loading your profile…</div>;
+ if(status==='complete')return <LocalizedContent><>{children}</></LocalizedContent>;
+ if(status==='required')return <LocalizedContent><ProfileOnboarding key={user.uid} user={user} learningOnly={profileCompletionDestination(router.pathname,router.query.next)==='/learn/get-certified/'} onComplete={async()=>{try{sessionStorage.setItem(cacheKey,'1')}catch{}onProfileReady?.(user.uid,true);const next=profileCompletionDestination(router.pathname,router.query.next);try{await router.replace(next)}catch{window.location.assign(next)}setStatus('complete')}}/></LocalizedContent>;
+ if(status==='error')return <LocalizedContent><main className={s.page}><section className={s.errorCard}><img src="/assets/images/stockerRobotIcon.png" width="54" height="54" alt=""/><h1>Let’s reconnect your profile.</h1><p>We couldn’t verify whether your profile is ready. Nothing has been changed.</p><button className={s.primary} onClick={()=>setAttempt(value=>value+1)}>Try again</button><button className={s.secondary} onClick={()=>void signOutWebsiteDevice()}>Use another account</button></section></main></LocalizedContent>;
+ return <LocalizedContent><div className={s.silentGate} role="status" aria-live="polite">Loading your profile…</div></LocalizedContent>;
 }

@@ -1,3 +1,4 @@
+import {englishPath,languageOf,languagePath,type SiteLanguage} from './localization/routes';
 import type {Auth} from 'firebase/auth';
 let pending:Promise<Auth>|undefined;
 export function getSiteAuth():Promise<Auth>{
@@ -11,6 +12,7 @@ export function getSiteAuth():Promise<Auth>{
 }
 // Only continue to destinations owned by this flow; never redirect to external input.
 export function accountDestination(value:unknown):string{
+ if(typeof value==='string'&&languageOf(value)!=='en')return languagePath(accountDestination(englishPath(value)),languageOf(value));
  if(value==='/learn/get-certified/'||value==='/learn/get-certified')return '/learn/get-certified/';
  if(value==='/methodology/#paper-trading-download')return value;
  if(typeof value!=='string')return '/stock-market-heatmap/';
@@ -36,8 +38,8 @@ export function accountDestination(value:unknown):string{
  if(/^\/(?:results|stock-market-news|market-news|posts|research|catalysts|stock-movers|insider-news|news\/briefings|news)\/[a-z0-9][a-z0-9._-]*\/$/i.test(value)&&!value.includes('..'))return value;
  return '/stock-market-heatmap/';
 }
-export function accountLoginUrl(destination:string):string{
- return '/login/?next='+encodeURIComponent(accountDestination(destination));
+export function accountLoginUrl(destination:string,language:SiteLanguage=languageOf(destination)):string{
+ return languagePath('/login/',language)+'?next='+encodeURIComponent(accountDestination(destination));
 }
 
-export function profileCompletionDestination(path:string,next:unknown):string{return path==='/learn/get-certified'||next==='/learn/get-certified/'||next==='/learn/get-certified'?'/learn/get-certified/':'/membership/?from=onboarding';}
+export function profileCompletionDestination(path:string,next:unknown):string{return englishPath(path)==='/learn/get-certified'||next==='/learn/get-certified/'||next==='/learn/get-certified'?'/learn/get-certified/':languagePath('/membership/?from=onboarding',languageOf(path));}

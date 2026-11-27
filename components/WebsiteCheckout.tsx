@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useRef,useState} from 'react';
 import {startWebsiteCheckout,type WebsitePlan} from '../lib/website-billing';
 import s from '../styles/Membership.module.css';
@@ -6,7 +7,7 @@ export default function WebsiteCheckout({onClose}:{onClose:()=>void}){
  const dialog=useRef<HTMLDialogElement>(null);
  useEffect(()=>{const element=dialog.current;element?.showModal();return()=>element?.close()},[]);
  async function checkout(){if(!accepted)return;setBusy(true);setError('');try{await startWebsiteCheckout(plan)}catch{setError('Checkout couldn’t be opened. Please try again, or refresh your membership if you have already paid.');setBusy(false)}}
- return <dialog ref={dialog} className={s.checkoutDialog} aria-labelledby="checkout-title" onCancel={event=>{event.preventDefault();if(!busy)onClose()}}>
+ return <LocalizedContent><dialog ref={dialog} className={s.checkoutDialog} aria-labelledby="checkout-title" onCancel={event=>{event.preventDefault();if(!busy)onClose()}}>
   <button className={s.close} onClick={onClose} disabled={busy} aria-label="Close plan selection">×</button>
   <span className={s.eyebrow}>YOUR MEMBERSHIP · YOUR PERSPECTIVE</span><h2 id="checkout-title">Go deeper with Pro.</h2>
   <fieldset className={s.planChoices} disabled={busy}><legend>Billing period</legend>
@@ -19,5 +20,5 @@ export default function WebsiteCheckout({onClose}:{onClose:()=>void}){
   <button className={s.primary} disabled={busy||!accepted} onClick={checkout}>{busy?'Opening secure checkout…':'Continue to secure checkout ↗'}</button>
   <p className={s.note}>Renews automatically. Cancel renewal anytime through Manage subscription.</p>
   {error&&<p role="alert" className={s.billingError}>{error}</p>}
- </dialog>;
+ </dialog></LocalizedContent>;
 }

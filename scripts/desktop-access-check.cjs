@@ -3,7 +3,7 @@ const {renderToStaticMarkup}=require('react-dom/server');
 const memory=new Map(),storage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
 function load(file,modules={},globals={}){
  const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText;
- const module={exports:{}};new Function('require','module','exports','sessionStorage',...Object.keys(globals),source)(name=>name==='../lib/localization/use-site-language'?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name in modules?modules[name]:require(name),module,module.exports,storage,...Object.values(globals));return module.exports;
+ const module={exports:{}};new Function('require','module','exports','sessionStorage',...Object.keys(globals),source)(name=>name.includes('localization/LocalizedContent')?{default:({children})=>React.createElement(React.Fragment,null,children),__esModule:true}:name.endsWith('localization/routes')?load('lib/localization/routes.ts'):name.endsWith('localization/use-site-language')?{useSiteLanguage:()=>({language:'en',locale:'en-US',t:s=>s,href:s=>s})}:name==='../lib/localization/use-site-language'?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name in modules?modules[name]:require(name),module,module.exports,storage,...Object.values(globals));return module.exports;
 }
 const access=load('lib/desktop-access.ts'),routes=load('lib/site-auth.ts');
 const active=provider=>({status:'active',isActive:true,subscriptions:[{provider,planName:'Pro',status:'active'}]});

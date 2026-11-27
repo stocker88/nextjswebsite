@@ -1,3 +1,5 @@
+import {useSiteLanguage} from '../lib/localization/use-site-language';
+import {englishPath} from '../lib/localization/routes';
 import {mobileStoreUrl,isMobileAccountPath,isAcademySignIn} from '../lib/mobile-app';
 import MobileAppBoundary from './MobileAppBoundary';
 import {linkWebsiteAcquisition} from '../lib/acquisition';
@@ -19,7 +21,7 @@ import {preloadMembershipStatus} from '../lib/membership-status';
 import ProfileOnboardingGate from './ProfileOnboarding';
 const AccountContext=createContext<{user:User|null;ready:boolean;error:boolean;desktop:boolean}>({user:null,ready:false,error:false,desktop:false});
 export function SiteAccountProvider({children}:{children:ReactNode}){
- const router=useRouter();
+ const router=useRouter(),{language,href}=useSiteLanguage();
  const [desktop,setDesktop]=useState(false);
  useEffect(()=>{const value=isDesktopDevice(navigator);setDesktop(value);document.documentElement.dataset.desktopDevice=String(value);return()=>{delete document.documentElement.dataset.desktopDevice}},[]);
  const [deviceState,setDeviceState]=useState<'checking'|'allowed'|'limit'|'error'>('checking');
@@ -124,7 +126,7 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
    if(isDesktopDevice(navigator)&&isAppDestination(link.href,location.origin)){
     if(link.closest('[data-desktop-download-ready="true"],[data-public-store-link="true"]'))return;
     rememberDesktopThread(link.href);event.preventDefault();event.stopImmediatePropagation();
-    void router.push(state.user?DESKTOP_ACCESS_PATH:accountLoginUrl(DESKTOP_ACCESS_PATH));return;
+    void router.push(state.user?href(DESKTOP_ACCESS_PATH):accountLoginUrl(DESKTOP_ACCESS_PATH,language));return;
    }
    if(link.dataset.bandAccess){
     const destination=contentClickDestination(link.href,location.origin,location.href,true);
@@ -133,14 +135,14 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
      const resolve=state.ready?Promise.resolve(state.user):getSiteAuth().then(async auth=>{await auth.authStateReady();return auth.currentUser}).catch(()=>null);
      const separate=event.button===1||event.metaKey||event.ctrlKey||link.target==='_blank',opened=separate?window.open('about:blank','_blank'):null;
      if(opened)opened.opener=null;
-     void resolve.then(user=>{const guard=bandReadUrl(destination),next=user?guard:accountLoginUrl(guard);if(opened)opened.location.replace(next);else void router.push(next)});
+     void resolve.then(user=>{const guard=bandReadUrl(destination),next=user?guard:accountLoginUrl(guard,language);if(opened)opened.location.replace(next);else void router.push(next)});
      return;
     }
    }
    if(state.user){
     let destination:URL|null=null;
     try{destination=new URL(link.href,location.href)}catch{/* Ignore malformed links. */}
-    const backgroundStatusPath=destination?.pathname.replace(/\/+$/,'');
+    const backgroundStatusPath=destination?englishPath(destination.pathname).replace(/\/+$/,''):undefined;
     if(destination?.origin===location.origin&&['/membership',DESKTOP_ACCESS_PATH.replace(/\/+$/,'')].includes(backgroundStatusPath||'')&&!destination.searchParams.has('session_id')){
      event.preventDefault();event.stopImmediatePropagation();
      const separateTab=event.button===1||event.metaKey||event.ctrlKey||link.target==='_blank';
@@ -167,13 +169,13 @@ export function SiteAccountProvider({children}:{children:ReactNode}){
    const opened=separateTab?window.open('about:blank','_blank'):null;
    if(opened)opened.opener=null;
    void resolveUser.then(user=>{
-    const next=user?destination:accountLoginUrl(destination);
+    const next=user?destination:accountLoginUrl(destination,language);
     if(opened)opened.location.replace(next);else void router.push(next);
    });
   };
   window.addEventListener('click',gate,true);window.addEventListener('auxclick',gate,true);
   return()=>{window.removeEventListener('click',gate,true);window.removeEventListener('auxclick',gate,true)};
- },[state.user,state.ready,router]);
+ },[state.user,state.ready,router,language]);
  const deviceContent=state.user&&deviceState==='limit'?<DeviceRecovery removedUntil={removedUntil} onChanged={()=>setRetry(value=>value+1)}/>:state.user&&deviceState==='error'?<main className={deviceStyle.page}><section className={deviceStyle.card}><h1>Unable to verify this device</h1><p>Please check your connection and try again.</p><button onClick={()=>setRetry(value=>value+1)}>Try this device again</button><button onClick={()=>void signOutWebsiteDevice()}>Back to sign in</button></section></main>:children;
  const content=state.user&&desktop?<ProfileOnboardingGate key={state.user.uid} user={state.user} onProfileReady={handleProfileReady}>{deviceContent}</ProfileOnboardingGate>:children;
  return <AccountContext.Provider value={{...state,desktop}}><MobileAppBoundary>{content}</MobileAppBoundary>{desktop&&capacityNotice&&(!state.user||capacityNotice.uid===state.user.uid)&&<DeviceCapacityNotice notice={capacityNotice} onDismiss={()=>setCapacityNotice(null)}/>}</AccountContext.Provider>;
@@ -182,5 +184,6 @@ export const useSiteAccount=()=>useContext(AccountContext);
 export function AccountLink({destination,children,...props}:Omit<AnchorHTMLAttributes<HTMLAnchorElement>,'href'>&{destination:string;children:ReactNode}){
  // Real hrefs stay crawlable and can be copied/opened directly. The provider
  // prompts for login on actual clicks, on desktop and mobile alike.
- return <a {...props} data-account-required="true" href={destination}>{children}</a>;
+ const {href}=useSiteLanguage();
+ return <a {...props} data-account-required="true" href={href(destination)}>{children}</a>;
 }

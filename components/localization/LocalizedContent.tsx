@@ -21,7 +21,7 @@ function translate(node:ReactNode,language:SiteLanguage):ReactNode{
  const element=node as ReactElement<any>,p=element.props;
  if(p['data-original-language']||element.type==='style')return node;
  const props:Record<string,any>={};
- for(const key of ['title','description','alt','aria-label','placeholder','socialImageAlt'])if(typeof p[key]==='string')props[key]=translateText(p[key],language);
+ for(const key of ['title','description','alt','aria-label','aria-valuetext','placeholder','socialImageAlt'])if(typeof p[key]==='string')props[key]=translateText(p[key],language);
  for(const key of ['href','path'])if(typeof p[key]==='string')props[key]=url(p[key],language);
  if(element.type==='meta'&&typeof p.content==='string')props.content=/url$/.test(p.property||'')?url(p.content,language):translateText(p.content,language);
  if(element.type==='script'&&p.type==='application/ld+json'&&p.dangerouslySetInnerHTML){try{props.dangerouslySetInnerHTML={__html:JSON.stringify(schema(JSON.parse(p.dangerouslySetInnerHTML.__html),language)).replace(/</g,'\\u003c')}}catch{}}

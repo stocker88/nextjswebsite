@@ -1,7 +1,7 @@
 const fs=require('node:fs'),assert=require('node:assert/strict'),ts=require('typescript'),React=require('react');
 function load(file,modules={},globals={}){
  const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText;
- const module={exports:{}};new Function('require','module','exports',...Object.keys(globals),source)(name=>name in modules?modules[name]:require(name),module,module.exports,...Object.values(globals));return module.exports;
+ const module={exports:{}};new Function('require','module','exports',...Object.keys(globals),source)(name=>name.endsWith('localization/routes')?load('lib/localization/routes.ts'):name.endsWith('localization/use-site-language')?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name in modules?modules[name]:require(name),module,module.exports,...Object.values(globals));return module.exports;
 }
 const content=load('lib/content-access.ts'),routes=load('lib/site-auth.ts'),bandAccess=load('lib/band-access.ts');
 const origin='https://www.stockstobuynow.ai';

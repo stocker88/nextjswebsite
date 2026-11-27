@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript'),vm=require('node:vm');
 const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
-function load(file,custom){const exports={};vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText,{exports,require:custom||require,URL});return exports;}
+function load(file,custom){const exports={};vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2020,esModuleInterop:true}}).outputText,{exports,require:name=>name.endsWith('localization/use-site-language')?{useSiteLanguage:()=>({language:'en',t:s=>s,href:s=>s})}:name.endsWith('localization/routes')?load('lib/localization/routes.ts'):(custom||require)(name),URL});return exports;}
 const content=load('lib/content-access.ts'),{signInContentKind,contentClickDestination}=content,routes=load('lib/site-auth.ts');
 for(const path of ['/results','/results/']){assert.equal(signInContentKind(path),'results');assert.equal(routes.accountDestination(path),'/results/');}
 for(const path of ['/news/example/','/news/briefings/example/','/stock-market-news/example--post/','/catalysts/example/','/market-news/example/','/posts/investing/','/insider-news/example/'])assert.equal(signInContentKind(path),'article');

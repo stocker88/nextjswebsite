@@ -1,0 +1,3390 @@
+{
+  "Get started | Stocks To Buy Now Research": {
+    "es": "Empieza | Stocks To Buy Now Research",
+    "de": "Jetzt starten | Stocks To Buy Now Research",
+    "fr": "Commencer | Stocks To Buy Now Research",
+    "ja": "はじめる | Stocks To Buy Now Research",
+    "ko": "시작하기 | Stocks To Buy Now Research"
+  },
+  "← Back to home": {
+    "es": "← Volver al inicio",
+    "de": "← Zur Startseite",
+    "fr": "← Retour à l’accueil",
+    "ja": "← ホームに戻る",
+    "ko": "← 홈으로"
+  },
+  "Stocks To Buy Now Research home": {
+    "es": "Inicio de Stocks To Buy Now Research",
+    "de": "Startseite von Stocks To Buy Now Research",
+    "fr": "Accueil Stocks To Buy Now Research",
+    "ja": "Stocks To Buy Now Researchのホーム",
+    "ko": "Stocks To Buy Now Research 홈"
+  },
+  "YOUR ACCOUNT · YOUR PERSPECTIVE": {
+    "es": "TU CUENTA · TU PERSPECTIVA",
+    "de": "DEIN KONTO · DEINE PERSPEKTIVE",
+    "fr": "VOTRE COMPTE · VOTRE PERSPECTIVE",
+    "ja": "あなたのアカウント・あなたの視点",
+    "ko": "내 계정 · 나만의 관점"
+  },
+  "Let’s get started!": {
+    "es": "¡Empecemos!",
+    "de": "Legen wir los!",
+    "fr": "C’est parti !",
+    "ja": "さあ、はじめましょう！",
+    "ko": "시작해 볼까요!"
+  },
+  "Create an account or sign in to": {
+    "es": "Crea una cuenta o inicia sesión para",
+    "de": "Erstelle ein Konto oder melde dich an, um",
+    "fr": "Créez un compte ou connectez-vous pour",
+    "ja": "アカウントを作成するかログインして、",
+    "ko": "계정을 만들거나 로그인하여"
+  },
+  "save your academy progress and earn your certificate": {
+    "es": "guardar tu progreso en la academia y obtener tu certificado",
+    "de": "deinen Lernfortschritt zu speichern und dein Zertifikat zu erhalten",
+    "fr": "enregistrer votre progression et obtenir votre certificat",
+    "ja": "学習の進捗を保存し、修了証を取得できます",
+    "ko": "학습 진도를 저장하고 수료증을 받으세요"
+  },
+  "explore Ultra": {
+    "es": "explorar Ultra",
+    "de": "Ultra zu entdecken",
+    "fr": "découvrir Ultra",
+    "ja": "Ultraをご覧いただけます",
+    "ko": "Ultra를 살펴보세요"
+  },
+  "access your research": {
+    "es": "acceder a tu análisis",
+    "de": "auf deine Analysen zuzugreifen",
+    "fr": "accéder à vos analyses",
+    "ja": "リサーチにアクセスできます",
+    "ko": "리서치를 이용하세요"
+  },
+  "explore Results": {
+    "es": "explorar los resultados",
+    "de": "Ergebnisse zu entdecken",
+    "fr": "explorer les résultats",
+    "ja": "結果をご覧いただけます",
+    "ko": "결과를 살펴보세요"
+  },
+  "continue reading this article": {
+    "es": "seguir leyendo este artículo",
+    "de": "diesen Artikel weiterzulesen",
+    "fr": "poursuivre la lecture de cet article",
+    "ja": "この記事の続きを読むことができます",
+    "ko": "이 글을 계속 읽으세요"
+  },
+  "explore your membership": {
+    "es": "ver tu suscripción",
+    "de": "deine Mitgliedschaft anzusehen",
+    "fr": "consulter votre abonnement",
+    "ja": "メンバーシップを確認できます",
+    "ko": "멤버십을 확인하세요"
+  },
+  "explore the market": {
+    "es": "explorar el mercado",
+    "de": "den Markt zu erkunden",
+    "fr": "explorer le marché",
+    "ja": "マーケットをご覧いただけます",
+    "ko": "시장을 살펴보세요"
+  },
+  "Sign in to browse results. Full results analysis requires Ultra membership.": {
+    "es": "Inicia sesión para ver los resultados. El análisis completo requiere Ultra.",
+    "de": "Melde dich an, um Ergebnisse anzusehen. Die vollständige Analyse erfordert Ultra.",
+    "fr": "Connectez-vous pour consulter les résultats. Leur analyse complète nécessite Ultra.",
+    "ja": "結果を見るにはログインしてください。詳細な結果分析にはUltraが必要です。",
+    "ko": "결과를 보려면 로그인하세요. 전체 결과 분석은 Ultra 멤버십이 필요합니다."
+  },
+  "For reliable sign-in, use this app’s menu to open this page in Safari or Chrome.": {
+    "es": "Para iniciar sesión sin problemas, abre esta página en Safari o Chrome desde el menú de esta app.",
+    "de": "Öffne diese Seite über das Menü dieser App in Safari oder Chrome, damit die Anmeldung zuverlässig funktioniert.",
+    "fr": "Pour vous connecter sans difficulté, ouvrez cette page dans Safari ou Chrome depuis le menu de cette application.",
+    "ja": "確実にログインするため、このアプリのメニューからSafariまたはChromeでページを開いてください。",
+    "ko": "원활하게 로그인하려면 앱 메뉴에서 이 페이지를 Safari 또는 Chrome으로 여세요."
+  },
+  "Signing in…": {
+    "es": "Iniciando sesión…",
+    "de": "Anmeldung läuft…",
+    "fr": "Connexion en cours…",
+    "ja": "ログイン中…",
+    "ko": "로그인 중…"
+  },
+  "Continue with Google": {
+    "es": "Continuar con Google",
+    "de": "Mit Google fortfahren",
+    "fr": "Continuer avec Google",
+    "ja": "Googleで続ける",
+    "ko": "Google로 계속하기"
+  },
+  "Continue with Apple": {
+    "es": "Continuar con Apple",
+    "de": "Mit Apple fortfahren",
+    "fr": "Continuer avec Apple",
+    "ja": "Appleで続ける",
+    "ko": "Apple로 계속하기"
+  },
+  "Link": {
+    "es": "Vincular",
+    "de": "Verknüpfen",
+    "fr": "Associer",
+    "ja": "連携",
+    "ko": "연결"
+  },
+  "Continue without linking": {
+    "es": "Continuar sin vincular",
+    "de": "Ohne Verknüpfung fortfahren",
+    "fr": "Continuer sans associer",
+    "ja": "連携せずに続ける",
+    "ko": "연결하지 않고 계속하기"
+  },
+  "Already use the app? Continue with the same Google or Apple account.": {
+    "es": "¿Ya usas la app? Continúa con la misma cuenta de Google o Apple.",
+    "de": "Nutzt du bereits die App? Fahre mit demselben Google- oder Apple-Konto fort.",
+    "fr": "Vous utilisez déjà l’application ? Continuez avec le même compte Google ou Apple.",
+    "ja": "すでにアプリをお使いですか？同じGoogleまたはAppleアカウントで続けてください。",
+    "ko": "이미 앱을 사용 중인가요? 동일한 Google 또는 Apple 계정으로 계속하세요."
+  },
+  "Secure account sign-in": {
+    "es": "Inicio de sesión seguro",
+    "de": "Sichere Kontoanmeldung",
+    "fr": "Connexion sécurisée",
+    "ja": "安全なアカウントログイン",
+    "ko": "안전한 계정 로그인"
+  },
+  "More sign-in options": {
+    "es": "Más opciones para iniciar sesión",
+    "de": "Weitere Anmeldeoptionen",
+    "fr": "Autres options de connexion",
+    "ja": "その他のログイン方法",
+    "ko": "다른 로그인 방법"
+  },
+  "— setup pending": {
+    "es": "— pendiente de configuración",
+    "de": "— Einrichtung ausstehend",
+    "fr": "— configuration en cours",
+    "ja": "— 設定準備中",
+    "ko": "— 설정 준비 중"
+  },
+  "being set up.": {
+    "es": "están en proceso de configuración.",
+    "de": "werden eingerichtet.",
+    "fr": "sont en cours de configuration.",
+    "ja": "は設定準備中です。",
+    "ko": "설정 중입니다."
+  },
+  "Look beyond the share price.": {
+    "es": "Mira más allá del precio de la acción.",
+    "de": "Schau über den Aktienkurs hinaus.",
+    "fr": "Allez au-delà du cours de l’action.",
+    "ja": "株価だけでなく、その先を見ましょう。",
+    "ko": "주가 너머를 살펴보세요."
+  },
+  "Start with the business, its valuation and reported earnings.": {
+    "es": "Empieza por el negocio, su valoración y sus resultados publicados.",
+    "de": "Beginne mit dem Unternehmen, seiner Bewertung und den gemeldeten Ergebnissen.",
+    "fr": "Commencez par l’entreprise, sa valorisation et ses résultats publiés.",
+    "ja": "事業、バリュエーション、公表された決算から確認しましょう。",
+    "ko": "사업, 밸류에이션, 발표된 실적부터 확인하세요."
+  },
+  "See the setup. Plan your risk.": {
+    "es": "Analiza la oportunidad. Planifica tu riesgo.",
+    "de": "Prüfe das Setup. Plane dein Risiko.",
+    "fr": "Étudiez la configuration. Définissez votre risque.",
+    "ja": "セットアップを確認し、リスクを計画しましょう。",
+    "ko": "매매 조건을 살펴보고 리스크를 계획하세요."
+  },
+  "Start with trend, momentum and the levels that matter.": {
+    "es": "Empieza por la tendencia, el impulso y los niveles clave.",
+    "de": "Beginne mit Trend, Momentum und wichtigen Kursniveaus.",
+    "fr": "Commencez par la tendance, le momentum et les niveaux clés.",
+    "ja": "トレンド、モメンタム、重要な価格水準から確認しましょう。",
+    "ko": "추세, 모멘텀, 주요 가격대부터 확인하세요."
+  },
+  "Be ready before earnings.": {
+    "es": "Prepárate antes de los resultados.",
+    "de": "Sei vor den Quartalszahlen vorbereitet.",
+    "fr": "Préparez-vous avant les résultats.",
+    "ja": "決算発表前に備えましょう。",
+    "ko": "실적 발표 전에 준비하세요."
+  },
+  "Compare expectations with past results before the next release.": {
+    "es": "Compara las expectativas con los resultados anteriores antes de la próxima publicación.",
+    "de": "Vergleiche Erwartungen mit früheren Ergebnissen vor der nächsten Veröffentlichung.",
+    "fr": "Comparez les attentes aux résultats passés avant la prochaine publication.",
+    "ja": "次の発表前に、市場予想と過去の結果を比較しましょう。",
+    "ko": "다음 발표 전에 예상치와 과거 실적을 비교하세요."
+  },
+  "Could not finish your profile. Please try again.": {
+    "es": "No se pudo completar tu perfil. Inténtalo de nuevo.",
+    "de": "Dein Profil konnte nicht fertiggestellt werden. Bitte versuche es erneut.",
+    "fr": "Impossible de finaliser votre profil. Veuillez réessayer.",
+    "ja": "プロフィールを完成できませんでした。もう一度お試しください。",
+    "ko": "프로필을 완료하지 못했습니다. 다시 시도해 주세요."
+  },
+  "Creating your profile…": {
+    "es": "Creando tu perfil…",
+    "de": "Dein Profil wird erstellt…",
+    "fr": "Création de votre profil…",
+    "ja": "プロフィールを作成中…",
+    "ko": "프로필 생성 중…"
+  },
+  "Receive new signals now →": {
+    "es": "Recibir nuevas señales ahora →",
+    "de": "Jetzt neue Signale erhalten →",
+    "fr": "Recevoir de nouveaux signaux →",
+    "ja": "新しいシグナルを受け取る →",
+    "ko": "새 신호 받기 →"
+  },
+  "Getting started": {
+    "es": "Primeros pasos",
+    "de": "Erste Schritte",
+    "fr": "Premiers pas",
+    "ja": "はじめに",
+    "ko": "시작하기"
+  },
+  "Your discovery": {
+    "es": "Cómo nos conociste",
+    "de": "Wie du uns gefunden hast",
+    "fr": "Votre découverte",
+    "ja": "サービスを知ったきっかけ",
+    "ko": "서비스를 알게 된 경로"
+  },
+  "Your preferences": {
+    "es": "Tus preferencias",
+    "de": "Deine Präferenzen",
+    "fr": "Vos préférences",
+    "ja": "あなたの希望",
+    "ko": "내 관심사"
+  },
+  "Your results": {
+    "es": "Tus resultados",
+    "de": "Deine Ergebnisse",
+    "fr": "Vos résultats",
+    "ja": "あなたの結果",
+    "ko": "내 결과"
+  },
+  "Preparing your questions…": {
+    "es": "Preparando tus preguntas…",
+    "de": "Deine Fragen werden vorbereitet…",
+    "fr": "Préparation de vos questions…",
+    "ja": "質問を準備中…",
+    "ko": "질문 준비 중…"
+  },
+  "How did you discover us?": {
+    "es": "¿Cómo nos conociste?",
+    "de": "Wie hast du uns gefunden?",
+    "fr": "Comment nous avez-vous découverts ?",
+    "ja": "このサービスをどこで知りましたか？",
+    "ko": "어떻게 저희를 알게 되셨나요?"
+  },
+  "Help us understand where you found us. This question is optional.": {
+    "es": "Ayúdanos a saber dónde nos encontraste. Esta pregunta es opcional.",
+    "de": "Hilf uns zu verstehen, wo du uns gefunden hast. Diese Frage ist freiwillig.",
+    "fr": "Aidez-nous à comprendre comment vous nous avez trouvés. Cette question est facultative.",
+    "ja": "どこでこのサービスを知ったか教えてください。回答は任意です。",
+    "ko": "어디서 저희를 알게 되었는지 알려주세요. 선택 사항입니다."
+  },
+  "Continue →": {
+    "es": "Continuar →",
+    "de": "Weiter →",
+    "fr": "Continuer →",
+    "ja": "次へ →",
+    "ko": "계속 →"
+  },
+  "Skip →": {
+    "es": "Omitir →",
+    "de": "Überspringen →",
+    "fr": "Passer →",
+    "ja": "スキップ →",
+    "ko": "건너뛰기 →"
+  },
+  "YOUR FREE LEARNING ACCOUNT": {
+    "es": "TU CUENTA GRATUITA DE APRENDIZAJE",
+    "de": "DEIN KOSTENLOSES LERNKONTO",
+    "fr": "VOTRE COMPTE D’APPRENTISSAGE GRATUIT",
+    "ja": "無料学習アカウント",
+    "ko": "무료 학습 계정"
+  },
+  "Your academy is ready.": {
+    "es": "Tu academia está lista.",
+    "de": "Deine Akademie ist bereit.",
+    "fr": "Votre académie est prête.",
+    "ja": "学習の準備ができました。",
+    "ko": "학습을 시작할 준비가 되었습니다."
+  },
+  "Continue to the free lessons, complete the questionnaires and earn your Level 1 course-completion certificate. No subscription is required.": {
+    "es": "Accede a las lecciones gratuitas, completa los cuestionarios y obtén tu certificado de finalización del Nivel 1. No necesitas suscripción.",
+    "de": "Starte die kostenlosen Lektionen, absolviere die Quizfragen und erhalte dein Abschlusszertifikat für Level 1. Ein Abonnement ist nicht erforderlich.",
+    "fr": "Suivez les leçons gratuites, répondez aux questionnaires et obtenez votre certificat de fin de cours de niveau 1. Aucun abonnement n’est requis.",
+    "ja": "無料レッスンを受講し、クイズを完了するとレベル1の修了証を取得できます。サブスクリプションは不要です。",
+    "ko": "무료 강의를 듣고 퀴즈를 완료하여 레벨 1 수료증을 받으세요. 구독은 필요하지 않습니다."
+  },
+  "Start learning": {
+    "es": "Empezar a aprender",
+    "de": "Mit dem Lernen beginnen",
+    "fr": "Commencer à apprendre",
+    "ja": "学習を始める",
+    "ko": "학습 시작하기"
+  },
+  "← Back": {
+    "es": "← Atrás",
+    "de": "← Zurück",
+    "fr": "← Retour",
+    "ja": "← 戻る",
+    "ko": "← 뒤로"
+  },
+  "ALL": {
+    "es": "TODAS LAS",
+    "de": "ALLE",
+    "fr": "TOUTES LES",
+    "ja": "全",
+    "ko": "전체"
+  },
+  "QUESTIONS COMPLETE · YOUR RESULTS": {
+    "es": "PREGUNTAS COMPLETADAS · TUS RESULTADOS",
+    "de": "FRAGEN BEANTWORTET · DEINE ERGEBNISSE",
+    "fr": "QUESTIONS TERMINÉES · VOS RÉSULTATS",
+    "ja": "問の回答完了・あなたの結果",
+    "ko": "문항 완료 · 내 결과"
+  },
+  "Your first signals are ready.": {
+    "es": "Tus primeras señales están listas.",
+    "de": "Deine ersten Signale sind bereit.",
+    "fr": "Vos premiers signaux sont prêts.",
+    "ja": "最初のシグナルを確認できます。",
+    "ko": "첫 신호가 준비되었습니다."
+  },
+  "AI past predictions": {
+    "es": "Predicciones anteriores de IA",
+    "de": "Frühere KI-Prognosen",
+    "fr": "Prévisions passées de l’IA",
+    "ja": "AIの過去の予測",
+    "ko": "AI의 과거 예측"
+  },
+  "Real signals previously sent to members": {
+    "es": "Señales reales enviadas anteriormente a los miembros",
+    "de": "Echte Signale, die zuvor an Mitglieder gesendet wurden",
+    "fr": "Signaux réels précédemment envoyés aux membres",
+    "ja": "過去にメンバーへ配信された実際のシグナル",
+    "ko": "이전에 회원에게 전송된 실제 신호"
+  },
+  "PREVIEW": {
+    "es": "VISTA PREVIA",
+    "de": "VORSCHAU",
+    "fr": "APERÇU",
+    "ja": "プレビュー",
+    "ko": "미리보기"
+  },
+  "Share price": {
+    "es": "Precio de la acción",
+    "de": "Aktienkurs",
+    "fr": "Cours de l’action",
+    "ja": "株価",
+    "ko": "주가"
+  },
+  "as of": {
+    "es": "al",
+    "de": "Stand",
+    "fr": "au",
+    "ja": "時点：",
+    "ko": "기준:"
+  },
+  "AI BUY SIGNAL": {
+    "es": "SEÑAL DE COMPRA DE IA",
+    "de": "KI-KAUFSIGNAL",
+    "fr": "SIGNAL D’ACHAT IA",
+    "ja": "AI買いシグナル",
+    "ko": "AI 매수 신호"
+  },
+  "Price through": {
+    "es": "Precio hasta",
+    "de": "Kurs bis",
+    "fr": "Cours jusqu’au",
+    "ja": "株価の表示期間：",
+    "ko": "주가 표시 기준일"
+  },
+  "Company and price signal locked": {
+    "es": "Empresa y señal de precio bloqueadas",
+    "de": "Unternehmen und Kurssignal gesperrt",
+    "fr": "Entreprise et signal de prix verrouillés",
+    "ja": "企業名と価格シグナルはロックされています",
+    "ko": "기업명과 가격 신호가 잠겨 있습니다"
+  },
+  "Unlock every price signal": {
+    "es": "Desbloquea todas las señales de precio",
+    "de": "Alle Kurssignale freischalten",
+    "fr": "Débloquez tous les signaux de prix",
+    "ja": "すべての価格シグナルを表示",
+    "ko": "모든 가격 신호 잠금 해제"
+  },
+  "All financial trends are visible. Start your trial to reveal each company and its performance.": {
+    "es": "Todas las tendencias financieras son visibles. Inicia tu prueba para ver cada empresa y su rendimiento.",
+    "de": "Alle Finanztrends sind sichtbar. Starte deine Testphase, um jedes Unternehmen und seine Entwicklung zu sehen.",
+    "fr": "Toutes les tendances financières sont visibles. Commencez votre essai pour découvrir chaque entreprise et ses performances.",
+    "ja": "財務トレンドはすべて表示されています。トライアルを開始すると、各企業名とパフォーマンスを確認できます。",
+    "ko": "재무 추세는 모두 볼 수 있습니다. 체험을 시작하면 각 기업과 성과를 확인할 수 있습니다."
+  },
+  "Historical examples are educational and are not guarantees or recommendations.": {
+    "es": "Los ejemplos históricos son educativos y no constituyen garantías ni recomendaciones.",
+    "de": "Historische Beispiele dienen der Bildung und sind weder Garantien noch Empfehlungen.",
+    "fr": "Les exemples historiques sont pédagogiques et ne constituent ni garanties ni recommandations.",
+    "ja": "過去の事例は学習目的であり、保証や推奨ではありません。",
+    "ko": "과거 사례는 교육 목적이며 보장이나 추천이 아닙니다."
+  },
+  "Independent Trustpilot reviews": {
+    "es": "Reseñas independientes en Trustpilot",
+    "de": "Unabhängige Trustpilot-Bewertungen",
+    "fr": "Avis indépendants sur Trustpilot",
+    "ja": "Trustpilotの独立したレビュー",
+    "ko": "Trustpilot의 독립적인 리뷰"
+  },
+  "Continue to your free trial →": {
+    "es": "Continuar a la prueba gratuita →",
+    "de": "Weiter zur kostenlosen Testphase →",
+    "fr": "Accéder à votre essai gratuit →",
+    "ja": "無料トライアルに進む →",
+    "ko": "무료 체험으로 계속 →"
+  },
+  "Your username is": {
+    "es": "Tu nombre de usuario es",
+    "de": "Dein Benutzername lautet",
+    "fr": "Votre nom d’utilisateur est",
+    "ja": "ユーザー名は",
+    "ko": "사용자 이름은"
+  },
+  ". You can change it later in your profile.": {
+    "es": ". Puedes cambiarlo más adelante en tu perfil.",
+    "de": ". Du kannst ihn später in deinem Profil ändern.",
+    "fr": ". Vous pourrez le modifier dans votre profil.",
+    "ja": "です。後からプロフィールで変更できます。",
+    "ko": "입니다. 나중에 프로필에서 변경할 수 있습니다."
+  },
+  "Use another account": {
+    "es": "Usar otra cuenta",
+    "de": "Anderes Konto verwenden",
+    "fr": "Utiliser un autre compte",
+    "ja": "別のアカウントを使う",
+    "ko": "다른 계정 사용"
+  },
+  "Your profile works in both the app and on the website.": {
+    "es": "Tu perfil funciona tanto en la app como en la web.",
+    "de": "Dein Profil funktioniert in der App und auf der Website.",
+    "fr": "Votre profil fonctionne dans l’application et sur le site.",
+    "ja": "プロフィールはアプリとウェブサイトの両方で利用できます。",
+    "ko": "프로필은 앱과 웹사이트에서 모두 사용할 수 있습니다."
+  },
+  "Let’s reconnect your profile.": {
+    "es": "Volvamos a conectar tu perfil.",
+    "de": "Verbinden wir dein Profil erneut.",
+    "fr": "Reconnectons votre profil.",
+    "ja": "プロフィールに再接続しましょう。",
+    "ko": "프로필을 다시 연결해 주세요."
+  },
+  "We couldn’t verify whether your profile is ready. Nothing has been changed.": {
+    "es": "No pudimos comprobar si tu perfil está listo. No se ha cambiado nada.",
+    "de": "Wir konnten nicht prüfen, ob dein Profil bereit ist. Es wurde nichts geändert.",
+    "fr": "Nous n’avons pas pu vérifier si votre profil est prêt. Rien n’a été modifié.",
+    "ja": "プロフィールの準備状況を確認できませんでした。変更は行われていません。",
+    "ko": "프로필 준비 상태를 확인하지 못했습니다. 변경된 내용은 없습니다."
+  },
+  "Try again": {
+    "es": "Intentar de nuevo",
+    "de": "Erneut versuchen",
+    "fr": "Réessayer",
+    "ja": "再試行",
+    "ko": "다시 시도"
+  },
+  "Loading your profile…": {
+    "es": "Cargando tu perfil…",
+    "de": "Dein Profil wird geladen…",
+    "fr": "Chargement de votre profil…",
+    "ja": "プロフィールを読み込み中…",
+    "ko": "프로필 불러오는 중…"
+  },
+  "QUICK QUESTIONS": {
+    "es": "PREGUNTAS RÁPIDAS",
+    "de": "KURZE FRAGEN",
+    "fr": "QUESTIONS RAPIDES",
+    "ja": "簡単な質問",
+    "ko": "간단한 질문"
+  },
+  "Question progress": {
+    "es": "Progreso de las preguntas",
+    "de": "Fragenfortschritt",
+    "fr": "Progression des questions",
+    "ja": "質問の進捗",
+    "ko": "질문 진행 상황"
+  },
+  "Last question — your results are next.": {
+    "es": "Última pregunta: a continuación, tus resultados.",
+    "de": "Letzte Frage – danach kommen deine Ergebnisse.",
+    "fr": "Dernière question : vos résultats arrivent ensuite.",
+    "ja": "最後の質問です。次に結果が表示されます。",
+    "ko": "마지막 질문입니다. 다음에 결과가 표시됩니다."
+  },
+  "Question {current} of {total}": {
+    "es": "Pregunta {current} de {total}",
+    "de": "Frage {current} von {total}",
+    "fr": "Question {current} sur {total}",
+    "ja": "{total}問中{current}問目",
+    "ko": "{total}개 중 {current}번째 질문"
+  },
+  "{count} more question after this, then your results.": {
+    "es": "Queda {count} pregunta después de esta y luego verás tus resultados.",
+    "de": "Danach folgt noch {count} Frage, dann deine Ergebnisse.",
+    "fr": "Encore {count} question après celle-ci, puis vos résultats.",
+    "ja": "この後あと{count}問で、結果が表示されます。",
+    "ko": "이후 {count}개 질문에 답하면 결과가 표시됩니다."
+  },
+  "{count} more questions after this, then your results.": {
+    "es": "Quedan {count} preguntas después de esta y luego verás tus resultados.",
+    "de": "Danach folgen noch {count} Fragen, dann deine Ergebnisse.",
+    "fr": "Encore {count} questions après celle-ci, puis vos résultats.",
+    "ja": "この後あと{count}問で、結果が表示されます。",
+    "ko": "이후 {count}개 질문에 답하면 결과가 표시됩니다."
+  },
+  "MEMBERSHIP": {
+    "es": "SUSCRIPCIÓN",
+    "de": "MITGLIEDSCHAFT",
+    "fr": "ABONNEMENT",
+    "ja": "メンバーシップ",
+    "ko": "멤버십"
+  },
+  "More perspective.": {
+    "es": "Más perspectiva.",
+    "de": "Mehr Perspektive.",
+    "fr": "Plus de perspective.",
+    "ja": "より広い視点を。",
+    "ko": "더 넓은 관점."
+  },
+  "Your choice.": {
+    "es": "Tú eliges.",
+    "de": "Deine Wahl.",
+    "fr": "À vous de choisir.",
+    "ja": "選ぶのはあなたです。",
+    "ko": "선택은 나에게."
+  },
+  "Start your free trial in the app, or go deeper with Pro.": {
+    "es": "Inicia tu prueba gratuita en la app o profundiza con Pro.",
+    "de": "Starte deine kostenlose Testphase in der App oder gehe mit Pro einen Schritt weiter.",
+    "fr": "Commencez votre essai gratuit dans l’application ou approfondissez avec Pro.",
+    "ja": "アプリで無料トライアルを始めるか、Proでさらに詳しく調べましょう。",
+    "ko": "앱에서 무료 체험을 시작하거나 Pro로 더 깊이 살펴보세요."
+  },
+  "Start exploring for free. Go deeper with Pro.": {
+    "es": "Empieza a explorar gratis. Profundiza con Pro.",
+    "de": "Entdecke den Markt kostenlos. Gehe mit Pro einen Schritt weiter.",
+    "fr": "Explorez gratuitement. Approfondissez avec Pro.",
+    "ja": "無料で始め、Proでさらに詳しく調べましょう。",
+    "ko": "무료로 시작하고 Pro로 더 깊이 살펴보세요."
+  },
+  "EXPLORE": {
+    "es": "EXPLORAR",
+    "de": "ENTDECKEN",
+    "fr": "EXPLORER",
+    "ja": "探す",
+    "ko": "둘러보기"
+  },
+  "Free trial": {
+    "es": "Prueba gratuita",
+    "de": "Kostenlose Testphase",
+    "fr": "Essai gratuit",
+    "ja": "無料トライアル",
+    "ko": "무료 체험"
+  },
+  "Free": {
+    "es": "Gratis",
+    "de": "Kostenlos",
+    "fr": "Gratuit",
+    "ja": "無料",
+    "ko": "무료"
+  },
+  "Your daily view of the market.": {
+    "es": "Tu visión diaria del mercado.",
+    "de": "Dein täglicher Marktüberblick.",
+    "fr": "Votre regard quotidien sur le marché.",
+    "ja": "毎日のマーケットを見渡す。",
+    "ko": "매일 살펴보는 시장."
+  },
+  "Get oriented with public market tools and research previews.": {
+    "es": "Oriéntate con herramientas de mercado públicas y vistas previas de análisis.",
+    "de": "Verschaffe dir mit öffentlichen Markttools und Analysevorschauen einen Überblick.",
+    "fr": "Repérez-vous grâce aux outils de marché publics et aux aperçus d’analyses.",
+    "ja": "公開マーケットツールとリサーチのプレビューで全体像をつかみましょう。",
+    "ko": "공개 시장 도구와 리서치 미리보기로 시장을 파악하세요."
+  },
+  "Market heatmaps and biggest movers": {
+    "es": "Mapas de calor del mercado y mayores movimientos",
+    "de": "Markt-Heatmaps und größte Kursbewegungen",
+    "fr": "Cartes de chaleur et plus fortes variations",
+    "ja": "マーケットヒートマップと値動きの大きい銘柄",
+    "ko": "시장 히트맵과 주요 등락 종목"
+  },
+  "Public news and research previews": {
+    "es": "Noticias públicas y vistas previas de análisis",
+    "de": "Öffentliche Nachrichten und Analysevorschauen",
+    "fr": "Actualités publiques et aperçus d’analyses",
+    "ja": "公開ニュースとリサーチのプレビュー",
+    "ko": "공개 뉴스와 리서치 미리보기"
+  },
+  "Earnings and market calendars": {
+    "es": "Calendarios de resultados y del mercado",
+    "de": "Ergebnis- und Marktkalender",
+    "fr": "Calendriers des résultats et des marchés",
+    "ja": "決算・マーケットカレンダー",
+    "ko": "실적 및 시장 일정"
+  },
+  "Options strategies and payoff tools": {
+    "es": "Estrategias de opciones y herramientas de pérdidas y ganancias",
+    "de": "Optionsstrategien und Auszahlungsrechner",
+    "fr": "Stratégies d’options et outils de gains et pertes",
+    "ja": "オプション戦略と損益ツール",
+    "ko": "옵션 전략과 손익 도구"
+  },
+  "Receive live alerts straight to your phone": {
+    "es": "Recibe alertas en directo en tu móvil",
+    "de": "Erhalte aktuelle Benachrichtigungen direkt auf dein Smartphone",
+    "fr": "Recevez les alertes en direct sur votre téléphone",
+    "ja": "最新アラートをスマートフォンで受け取る",
+    "ko": "휴대폰으로 실시간 알림 받기"
+  },
+  "Start your free trial in the app": {
+    "es": "Inicia tu prueba gratuita en la app",
+    "de": "Kostenlose Testphase in der App starten",
+    "fr": "Commencer votre essai gratuit dans l’application",
+    "ja": "アプリで無料トライアルを始める",
+    "ko": "앱에서 무료 체험 시작"
+  },
+  "Explore the market": {
+    "es": "Explorar el mercado",
+    "de": "Den Markt entdecken",
+    "fr": "Explorer le marché",
+    "ja": "マーケットを見る",
+    "ko": "시장 살펴보기"
+  },
+  "GO DEEPER": {
+    "es": "PROFUNDIZA",
+    "de": "GENAUER HINSEHEN",
+    "fr": "APPROFONDIR",
+    "ja": "さらに詳しく",
+    "ko": "더 깊이 살펴보기"
+  },
+  "FULL ACCESS": {
+    "es": "ACCESO COMPLETO",
+    "de": "VOLLER ZUGRIFF",
+    "fr": "ACCÈS COMPLET",
+    "ja": "フルアクセス",
+    "ko": "전체 이용"
+  },
+  "Pro pricing": {
+    "es": "Precios de Pro",
+    "de": "Pro-Preise",
+    "fr": "Tarifs Pro",
+    "ja": "Proの料金",
+    "ko": "Pro 요금"
+  },
+  "Monthly billing": {
+    "es": "Facturación mensual",
+    "de": "Monatliche Abrechnung",
+    "fr": "Facturation mensuelle",
+    "ja": "月払い",
+    "ko": "월간 결제"
+  },
+  "ANNUAL OFFER": {
+    "es": "OFERTA ANUAL",
+    "de": "JAHRESANGEBOT",
+    "fr": "OFFRE ANNUELLE",
+    "ja": "年間プラン",
+    "ko": "연간 혜택"
+  },
+  "33% OFF": {
+    "es": "33 % DE DESCUENTO",
+    "de": "33 % RABATT",
+    "fr": "33 % DE RÉDUCTION",
+    "ja": "33%割引",
+    "ko": "33% 할인"
+  },
+  "Usually": {
+    "es": "Habitualmente",
+    "de": "Normalerweise",
+    "fr": "Habituellement",
+    "ja": "通常",
+    "ko": "정가"
+  },
+  "$30/month": {
+    "es": "30 USD/mes",
+    "de": "30 USD/Monat",
+    "fr": "30 USD/mois",
+    "ja": "月額30米ドル",
+    "ko": "월 30달러(USD)"
+  },
+  "/month": {
+    "es": "/mes",
+    "de": "/Monat",
+    "fr": "/mois",
+    "ja": "/月",
+    "ko": "/월"
+  },
+  "/year": {
+    "es": "/año",
+    "de": "/Jahr",
+    "fr": "/an",
+    "ja": "/年",
+    "ko": "/년"
+  },
+  "$240 billed annually · Usually $360/year": {
+    "es": "240 USD al año · Precio habitual: 360 USD/año",
+    "de": "240 USD jährlich · Normalerweise 360 USD/Jahr",
+    "fr": "240 USD facturés par an · Habituellement 360 USD/an",
+    "ja": "年額240米ドル・通常は年額360米ドル",
+    "ko": "연간 240달러(USD) 결제 · 정가 연 360달러"
+  },
+  "Bring the research into focus.": {
+    "es": "Céntrate en el análisis.",
+    "de": "Rücke die Analyse in den Fokus.",
+    "fr": "Mettez l’analyse au premier plan.",
+    "ja": "リサーチの要点を明確に。",
+    "ko": "리서치의 핵심에 집중하세요."
+  },
+  "Unlock member insights and the tools to explore each idea in the app. Receive stocks to buy now and market sell signals.": {
+    "es": "Accede a análisis para miembros y herramientas para explorar cada idea en la app. Recibe ideas de acciones para comprar y señales de venta del mercado.",
+    "de": "Erhalte Mitgliedereinblicke und Tools, um jede Idee in der App zu prüfen. Erhalte aktuelle Aktienideen und Verkaufssignale für den Markt.",
+    "fr": "Accédez aux analyses réservées aux membres et aux outils pour étudier chaque idée dans l’application. Recevez des idées d’actions à acheter et des signaux de vente du marché.",
+    "ja": "メンバー向けの分析と、アプリで各アイデアを検討するためのツールを利用できます。今注目の買い銘柄や市場の売りシグナルを受け取れます。",
+    "ko": "회원 전용 분석과 앱에서 각 아이디어를 검토할 수 있는 도구를 이용하세요. 현재 매수 아이디어와 시장 매도 신호를 받아보세요."
+  },
+  "Short- and long-term signals": {
+    "es": "Señales a corto y largo plazo",
+    "de": "Kurz- und langfristige Signale",
+    "fr": "Signaux à court et long terme",
+    "ja": "短期・長期シグナル",
+    "ko": "단기 및 장기 신호"
+  },
+  "Ask what stocks and options to buy now": {
+    "es": "Consulta qué acciones y opciones comprar ahora",
+    "de": "Frage nach aktuellen Aktien- und Optionsideen",
+    "fr": "Demandez quelles actions et options acheter maintenant",
+    "ja": "今の株式・オプションの買いアイデアを質問",
+    "ko": "현재 주식과 옵션 매수 아이디어 질문"
+  },
+  "Review admins’ live portfolios and trades": {
+    "es": "Consulta las carteras y operaciones actuales de los administradores",
+    "de": "Sieh dir die aktuellen Portfolios und Trades der Admins an",
+    "fr": "Consultez les portefeuilles et opérations actuels des administrateurs",
+    "ja": "管理者の現在のポートフォリオと取引を確認",
+    "ko": "관리자의 현재 포트폴리오와 거래 확인"
+  },
+  "Unlock access to community insights": {
+    "es": "Accede a las ideas de la comunidad",
+    "de": "Zugang zu Community-Einblicken erhalten",
+    "fr": "Accédez aux analyses de la communauté",
+    "ja": "コミュニティの知見にアクセス",
+    "ko": "커뮤니티 인사이트 이용"
+  },
+  "Explore Pro": {
+    "es": "Explorar Pro",
+    "de": "Pro entdecken",
+    "fr": "Découvrir Pro",
+    "ja": "Proを見る",
+    "ko": "Pro 살펴보기"
+  },
+  "App membership": {
+    "es": "Suscripción de la app",
+    "de": "App-Mitgliedschaft",
+    "fr": "Abonnement dans l’application",
+    "ja": "アプリのメンバーシップ",
+    "ko": "앱 멤버십"
+  },
+  "Trial active": {
+    "es": "Prueba activa",
+    "de": "Testphase aktiv",
+    "fr": "Essai actif",
+    "ja": "トライアル有効",
+    "ko": "체험 이용 중"
+  },
+  "Payment needs attention": {
+    "es": "Revisa tu pago",
+    "de": "Zahlung prüfen",
+    "fr": "Paiement à vérifier",
+    "ja": "支払いの確認が必要です",
+    "ko": "결제 확인 필요"
+  },
+  "Membership": {
+    "es": "Suscripción",
+    "de": "Mitgliedschaft",
+    "fr": "Abonnement",
+    "ja": "メンバーシップ",
+    "ko": "멤버십"
+  },
+  "Ultra · Pro included": {
+    "es": "Ultra · Pro incluido",
+    "de": "Ultra · Pro enthalten",
+    "fr": "Ultra · Pro inclus",
+    "ja": "Ultra・Proを含む",
+    "ko": "Ultra · Pro 포함"
+  },
+  "Ultra add-on · Pro required": {
+    "es": "Complemento Ultra · Requiere Pro",
+    "de": "Ultra-Zusatz · Pro erforderlich",
+    "fr": "Extension Ultra · Pro requis",
+    "ja": "Ultra追加プラン・Proが必要",
+    "ko": "Ultra 추가 구독 · Pro 필요"
+  },
+  "Pro · Full access": {
+    "es": "Pro · Acceso completo",
+    "de": "Pro · Voller Zugriff",
+    "fr": "Pro · Accès complet",
+    "ja": "Pro・フルアクセス",
+    "ko": "Pro · 전체 이용"
+  },
+  "Billing through": {
+    "es": "Facturado por",
+    "de": "Abrechnung über",
+    "fr": "Facturation via",
+    "ja": "請求元",
+    "ko": "결제 제공처"
+  },
+  "Plan": {
+    "es": "Plan",
+    "de": "Tarif",
+    "fr": "Formule",
+    "ja": "プラン",
+    "ko": "플랜"
+  },
+  "Trial ends": {
+    "es": "La prueba termina",
+    "de": "Testphase endet",
+    "fr": "Fin de l’essai",
+    "ja": "トライアル終了日",
+    "ko": "체험 종료일"
+  },
+  "Payment grace ends": {
+    "es": "Fin del plazo de pago",
+    "de": "Zahlungsfrist endet",
+    "fr": "Fin du délai de paiement",
+    "ja": "支払い猶予の終了",
+    "ko": "결제 유예 종료"
+  },
+  "Renews on": {
+    "es": "Se renueva el",
+    "de": "Verlängert sich am",
+    "fr": "Renouvellement le",
+    "ja": "更新日",
+    "ko": "갱신일"
+  },
+  "Access until": {
+    "es": "Acceso hasta",
+    "de": "Zugriff bis",
+    "fr": "Accès jusqu’au",
+    "ja": "利用期限",
+    "ko": "이용 기한"
+  },
+  "No expiry date": {
+    "es": "Sin fecha de caducidad",
+    "de": "Kein Ablaufdatum",
+    "fr": "Sans date d’expiration",
+    "ja": "有効期限なし",
+    "ko": "만료일 없음"
+  },
+  "Your renewal payment needs attention. Update your card before the 48-hour grace period ends to keep Pro access.": {
+    "es": "Revisa el pago de renovación. Actualiza tu tarjeta antes de que termine el plazo de 48 horas para conservar Pro.",
+    "de": "Deine Verlängerungszahlung muss geprüft werden. Aktualisiere deine Karte vor Ende der 48-stündigen Zahlungsfrist, um Pro zu behalten.",
+    "fr": "Votre paiement de renouvellement nécessite une action. Mettez votre carte à jour avant la fin du délai de 48 heures pour conserver Pro.",
+    "ja": "更新の支払いを確認してください。Proを継続するには、48時間の猶予期間が終了する前にカード情報を更新してください。",
+    "ko": "갱신 결제를 확인해 주세요. Pro 이용을 유지하려면 48시간 유예 기간이 끝나기 전에 카드를 업데이트하세요."
+  },
+  "Renewal is off. Your access continues until the date above.": {
+    "es": "La renovación está desactivada. Tu acceso continúa hasta la fecha indicada.",
+    "de": "Die Verlängerung ist deaktiviert. Dein Zugriff bleibt bis zum oben genannten Datum bestehen.",
+    "fr": "Le renouvellement est désactivé. Votre accès reste valable jusqu’à la date indiquée.",
+    "ja": "自動更新は停止されています。上記の日付までは引き続き利用できます。",
+    "ko": "자동 갱신이 꺼져 있습니다. 위 날짜까지 계속 이용할 수 있습니다."
+  },
+  "Manage subscription & payment card": {
+    "es": "Gestionar suscripción y tarjeta",
+    "de": "Abo und Zahlungskarte verwalten",
+    "fr": "Gérer l’abonnement et la carte",
+    "ja": "サブスクリプションとカードを管理",
+    "ko": "구독 및 결제 카드 관리"
+  },
+  "Manage subscription ↗": {
+    "es": "Gestionar suscripción ↗",
+    "de": "Abo verwalten ↗",
+    "fr": "Gérer l’abonnement ↗",
+    "ja": "サブスクリプションを管理 ↗",
+    "ko": "구독 관리 ↗"
+  },
+  "For billing help,": {
+    "es": "Para ayuda con la facturación,",
+    "de": "Bei Fragen zur Abrechnung:",
+    "fr": "Pour toute aide concernant la facturation,",
+    "ja": "請求に関するお問い合わせは、",
+    "ko": "결제 관련 도움이 필요하면"
+  },
+  "contact support": {
+    "es": "contacta con soporte",
+    "de": "Support kontaktieren",
+    "fr": "contactez l’assistance",
+    "ja": "サポートへご連絡ください",
+    "ko": "고객지원에 문의하세요"
+  },
+  "YOUR PAYMENT": {
+    "es": "TU PAGO",
+    "de": "DEINE ZAHLUNG",
+    "fr": "VOTRE PAIEMENT",
+    "ja": "お支払い",
+    "ko": "내 결제"
+  },
+  "We’re confirming your payment.": {
+    "es": "Estamos confirmando tu pago.",
+    "de": "Wir bestätigen deine Zahlung.",
+    "fr": "Nous confirmons votre paiement.",
+    "ja": "お支払いを確認しています。",
+    "ko": "결제를 확인하고 있습니다."
+  },
+  "Your Pro access will appear once Stripe confirms payment. Please check again before starting another checkout.": {
+    "es": "Tu acceso Pro aparecerá cuando Stripe confirme el pago. Compruébalo de nuevo antes de iniciar otro pago.",
+    "de": "Dein Pro-Zugang erscheint, sobald Stripe die Zahlung bestätigt. Prüfe erneut, bevor du einen weiteren Kauf startest.",
+    "fr": "Votre accès Pro apparaîtra après confirmation du paiement par Stripe. Vérifiez à nouveau avant de lancer un autre paiement.",
+    "ja": "Stripeが支払いを確認するとProが利用可能になります。再度購入する前に、支払い状況をもう一度確認してください。",
+    "ko": "Stripe가 결제를 확인하면 Pro 이용이 활성화됩니다. 새 결제를 시작하기 전에 다시 확인해 주세요."
+  },
+  "Check payment again": {
+    "es": "Comprobar el pago de nuevo",
+    "de": "Zahlung erneut prüfen",
+    "fr": "Vérifier à nouveau le paiement",
+    "ja": "支払いを再確認",
+    "ko": "결제 다시 확인"
+  },
+  "Back to membership": {
+    "es": "Volver a la suscripción",
+    "de": "Zurück zur Mitgliedschaft",
+    "fr": "Retour à l’abonnement",
+    "ja": "メンバーシップに戻る",
+    "ko": "멤버십으로 돌아가기"
+  },
+  "YOUR MEMBERSHIP": {
+    "es": "TU SUSCRIPCIÓN",
+    "de": "DEINE MITGLIEDSCHAFT",
+    "fr": "VOTRE ABONNEMENT",
+    "ja": "メンバーシップ",
+    "ko": "내 멤버십"
+  },
+  "Let’s check again.": {
+    "es": "Comprobémoslo de nuevo.",
+    "de": "Prüfen wir es erneut.",
+    "fr": "Vérifions à nouveau.",
+    "ja": "もう一度確認しましょう。",
+    "ko": "다시 확인해 주세요."
+  },
+  "We couldn’t verify your membership right now. Please retry before choosing another plan.": {
+    "es": "No pudimos verificar tu suscripción. Inténtalo de nuevo antes de elegir otro plan.",
+    "de": "Wir konnten deine Mitgliedschaft gerade nicht prüfen. Versuche es erneut, bevor du einen anderen Tarif wählst.",
+    "fr": "Nous n’avons pas pu vérifier votre abonnement. Réessayez avant de choisir une autre formule.",
+    "ja": "現在メンバーシップを確認できません。別のプランを選ぶ前に、もう一度お試しください。",
+    "ko": "현재 멤버십을 확인할 수 없습니다. 다른 플랜을 선택하기 전에 다시 시도해 주세요."
+  },
+  "Check membership again": {
+    "es": "Comprobar la suscripción de nuevo",
+    "de": "Mitgliedschaft erneut prüfen",
+    "fr": "Vérifier à nouveau l’abonnement",
+    "ja": "メンバーシップを再確認",
+    "ko": "멤버십 다시 확인"
+  },
+  "Need help?": {
+    "es": "¿Necesitas ayuda?",
+    "de": "Brauchst du Hilfe?",
+    "fr": "Besoin d’aide ?",
+    "ja": "お困りですか？",
+    "ko": "도움이 필요하신가요?"
+  },
+  "Contact support": {
+    "es": "Contactar con soporte",
+    "de": "Support kontaktieren",
+    "fr": "Contacter l’assistance",
+    "ja": "サポートに問い合わせる",
+    "ko": "고객지원 문의"
+  },
+  "PAYMENT NEEDS ATTENTION": {
+    "es": "REVISA TU PAGO",
+    "de": "ZAHLUNG PRÜFEN",
+    "fr": "PAIEMENT À VÉRIFIER",
+    "ja": "支払いの確認が必要です",
+    "ko": "결제 확인 필요"
+  },
+  "Let’s restore your Pro access.": {
+    "es": "Restablezcamos tu acceso Pro.",
+    "de": "Stellen wir deinen Pro-Zugang wieder her.",
+    "fr": "Rétablissons votre accès Pro.",
+    "ja": "Proの利用を再開しましょう。",
+    "ko": "Pro 이용을 복구해 보세요."
+  },
+  "Your existing Stripe membership needs a payment update. Use Manage Stripe billing below to update your card and settle payment, rather than purchasing a second subscription.": {
+    "es": "Tu suscripción de Stripe necesita actualizar el pago. Usa la gestión de facturación de Stripe para actualizar la tarjeta y completar el pago, sin comprar una segunda suscripción.",
+    "de": "Für dein bestehendes Stripe-Abo ist eine Zahlungsaktualisierung erforderlich. Aktualisiere unten unter Stripe-Abrechnung deine Karte und begleiche die Zahlung, statt ein zweites Abo abzuschließen.",
+    "fr": "Votre abonnement Stripe nécessite une mise à jour du paiement. Utilisez la gestion Stripe ci-dessous pour actualiser votre carte et régler le paiement, sans acheter un second abonnement.",
+    "ja": "既存のStripeメンバーシップの支払い情報を更新する必要があります。重複購入せず、下のStripe請求管理でカードを更新し、支払いを完了してください。",
+    "ko": "기존 Stripe 구독의 결제 정보를 업데이트해야 합니다. 새 구독을 구매하지 말고 아래 Stripe 결제 관리에서 카드를 업데이트하고 결제를 완료하세요."
+  },
+  "I’ve updated payment — check again": {
+    "es": "Ya actualicé el pago: comprobar de nuevo",
+    "de": "Zahlung aktualisiert – erneut prüfen",
+    "fr": "Paiement mis à jour : vérifier à nouveau",
+    "ja": "支払いを更新しました・再確認",
+    "ko": "결제 업데이트 완료 — 다시 확인"
+  },
+  "Your perspective.": {
+    "es": "Tu perspectiva.",
+    "de": "Deine Perspektive.",
+    "fr": "Votre perspective.",
+    "ja": "あなたの視点。",
+    "ko": "나만의 관점."
+  },
+  "With": {
+    "es": "Con",
+    "de": "Mit",
+    "fr": "Avec",
+    "ja": "プラン：",
+    "ko": "플랜:"
+  },
+  "Your membership is recognized on this account, including subscriptions purchased in the app.": {
+    "es": "Tu suscripción se reconoce en esta cuenta, incluidas las compras realizadas en la app.",
+    "de": "Deine Mitgliedschaft wird diesem Konto zugeordnet, auch wenn sie in der App gekauft wurde.",
+    "fr": "Votre abonnement est reconnu sur ce compte, y compris s’il a été acheté dans l’application.",
+    "ja": "アプリで購入したものも含め、このアカウントのメンバーシップが認識されています。",
+    "ko": "앱에서 구매한 구독을 포함해 이 계정의 멤버십이 확인됩니다."
+  },
+  "Explore the market ↗": {
+    "es": "Explorar el mercado ↗",
+    "de": "Den Markt entdecken ↗",
+    "fr": "Explorer le marché ↗",
+    "ja": "マーケットを見る ↗",
+    "ko": "시장 살펴보기 ↗"
+  },
+  "Join Ultra →": {
+    "es": "Unirte a Ultra →",
+    "de": "Ultra abonnieren →",
+    "fr": "Rejoindre Ultra →",
+    "ja": "Ultraに登録 →",
+    "ko": "Ultra 가입 →"
+  },
+  "Refresh membership": {
+    "es": "Actualizar suscripción",
+    "de": "Mitgliedschaft aktualisieren",
+    "fr": "Actualiser l’abonnement",
+    "ja": "メンバーシップを更新",
+    "ko": "멤버십 새로고침"
+  },
+  "Use the same sign-in account on the website and in the app to access your membership.": {
+    "es": "Usa la misma cuenta en la web y en la app para acceder a tu suscripción.",
+    "de": "Verwende auf der Website und in der App dasselbe Konto, um deine Mitgliedschaft zu nutzen.",
+    "fr": "Utilisez le même compte sur le site et dans l’application pour accéder à votre abonnement.",
+    "ja": "ウェブサイトとアプリで同じアカウントを使用すると、メンバーシップを利用できます。",
+    "ko": "웹사이트와 앱에서 동일한 계정으로 로그인해야 멤버십을 이용할 수 있습니다."
+  },
+  "My membership | Stocks To Buy Now Research": {
+    "es": "Mi suscripción | Stocks To Buy Now Research",
+    "de": "Meine Mitgliedschaft | Stocks To Buy Now Research",
+    "fr": "Mon abonnement | Stocks To Buy Now Research",
+    "ja": "メンバーシップ | Stocks To Buy Now Research",
+    "ko": "내 멤버십 | Stocks To Buy Now Research"
+  },
+  "Let’s reconnect your account.": {
+    "es": "Volvamos a conectar tu cuenta.",
+    "de": "Verbinden wir dein Konto erneut.",
+    "fr": "Reconnectons votre compte.",
+    "ja": "アカウントに再接続しましょう。",
+    "ko": "계정을 다시 연결해 주세요."
+  },
+  "Your account couldn’t be loaded. Sign in again to check your membership.": {
+    "es": "No se pudo cargar tu cuenta. Inicia sesión de nuevo para comprobar tu suscripción.",
+    "de": "Dein Konto konnte nicht geladen werden. Melde dich erneut an, um deine Mitgliedschaft zu prüfen.",
+    "fr": "Impossible de charger votre compte. Reconnectez-vous pour vérifier votre abonnement.",
+    "ja": "アカウントを読み込めませんでした。再度ログインしてメンバーシップを確認してください。",
+    "ko": "계정을 불러오지 못했습니다. 다시 로그인하여 멤버십을 확인하세요."
+  },
+  "Sign in": {
+    "es": "Iniciar sesión",
+    "de": "Anmelden",
+    "fr": "Se connecter",
+    "ja": "ログイン",
+    "ko": "로그인"
+  },
+  "Already a member?": {
+    "es": "¿Ya eres miembro?",
+    "de": "Bereits Mitglied?",
+    "fr": "Déjà membre ?",
+    "ja": "すでにメンバーですか？",
+    "ko": "이미 회원이신가요?"
+  },
+  "Sign in with the same account you use in the app to see your membership.": {
+    "es": "Inicia sesión con la misma cuenta de la app para ver tu suscripción.",
+    "de": "Melde dich mit demselben Konto wie in der App an, um deine Mitgliedschaft zu sehen.",
+    "fr": "Connectez-vous avec le même compte que dans l’application pour voir votre abonnement.",
+    "ja": "アプリで使用しているアカウントでログインすると、メンバーシップを確認できます。",
+    "ko": "앱에서 사용하는 동일한 계정으로 로그인하여 멤버십을 확인하세요."
+  },
+  "Sign in →": {
+    "es": "Iniciar sesión →",
+    "de": "Anmelden →",
+    "fr": "Se connecter →",
+    "ja": "ログイン →",
+    "ko": "로그인 →"
+  },
+  "Manage Stripe billing, cards & invoices": {
+    "es": "Gestionar pagos, tarjetas y facturas de Stripe",
+    "de": "Stripe-Zahlungen, Karten und Rechnungen verwalten",
+    "fr": "Gérer les paiements, cartes et factures Stripe",
+    "ja": "Stripeの支払い・カード・請求書を管理",
+    "ko": "Stripe 결제, 카드 및 청구서 관리"
+  },
+  "Ready to use Pro? Sign in to the app with this same account.": {
+    "es": "¿Listo para usar Pro? Accede a la app con esta misma cuenta.",
+    "de": "Bereit für Pro? Melde dich in der App mit demselben Konto an.",
+    "fr": "Prêt à utiliser Pro ? Connectez-vous à l’application avec ce même compte.",
+    "ja": "Proを利用するには、同じアカウントでアプリにログインしてください。",
+    "ko": "Pro를 이용하려면 같은 계정으로 앱에 로그인하세요."
+  },
+  "Get the App ↗": {
+    "es": "Descargar la app ↗",
+    "de": "App herunterladen ↗",
+    "fr": "Télécharger l’application ↗",
+    "ja": "アプリをダウンロード ↗",
+    "ko": "앱 다운로드 ↗"
+  },
+  "Get the app. Your Pro account is ready.": {
+    "es": "Descarga la app. Tu cuenta Pro está lista.",
+    "de": "Hol dir die App. Dein Pro-Konto ist bereit.",
+    "fr": "Téléchargez l’application. Votre compte Pro est prêt.",
+    "ja": "アプリをダウンロードしてください。Proアカウントの準備ができました。",
+    "ko": "앱을 다운로드하세요. Pro 계정이 준비되었습니다."
+  },
+  "Get the app for iPhone or Android.": {
+    "es": "Descarga la app para iPhone o Android.",
+    "de": "Hol dir die App für iPhone oder Android.",
+    "fr": "Téléchargez l’application pour iPhone ou Android.",
+    "ja": "iPhoneまたはAndroid向けアプリをダウンロード。",
+    "ko": "iPhone 또는 Android용 앱을 다운로드하세요."
+  },
+  "Download the app, then sign in with the same account you used on this website. If you have an active Pro membership, it will be recognized.": {
+    "es": "Descarga la app e inicia sesión con la misma cuenta que usaste en esta web. Tu suscripción Pro activa se reconocerá automáticamente.",
+    "de": "Lade die App herunter und melde dich mit demselben Konto wie auf dieser Website an. Eine aktive Pro-Mitgliedschaft wird erkannt.",
+    "fr": "Téléchargez l’application, puis connectez-vous avec le même compte que sur ce site. Votre abonnement Pro actif sera reconnu.",
+    "ja": "アプリをダウンロードし、このサイトと同じアカウントでログインしてください。有効なProメンバーシップが認識されます。",
+    "ko": "앱을 다운로드한 후 이 웹사이트에서 사용한 계정으로 로그인하세요. 활성 Pro 멤버십이 자동으로 인식됩니다."
+  },
+  "Checkout couldn’t be opened. Please try again, or refresh your membership if you have already paid.": {
+    "es": "No se pudo abrir el pago. Inténtalo de nuevo o actualiza tu suscripción si ya has pagado.",
+    "de": "Die Kasse konnte nicht geöffnet werden. Versuche es erneut oder aktualisiere deinen Mitgliedschaftsstatus, falls du bereits bezahlt hast.",
+    "fr": "Impossible d’ouvrir le paiement. Réessayez ou actualisez votre abonnement si vous avez déjà payé.",
+    "ja": "決済画面を開けませんでした。再試行するか、支払い済みの場合はメンバーシップを更新してください。",
+    "ko": "결제 화면을 열 수 없습니다. 다시 시도하거나 이미 결제했다면 멤버십 상태를 새로고침하세요."
+  },
+  "Close plan selection": {
+    "es": "Cerrar selección de plan",
+    "de": "Planauswahl schließen",
+    "fr": "Fermer le choix de l’offre",
+    "ja": "プラン選択を閉じる",
+    "ko": "요금제 선택 닫기"
+  },
+  "YOUR MEMBERSHIP · YOUR PERSPECTIVE": {
+    "es": "TU SUSCRIPCIÓN · TU PERSPECTIVA",
+    "de": "DEINE MITGLIEDSCHAFT · DEINE PERSPEKTIVE",
+    "fr": "VOTRE ABONNEMENT · VOTRE PERSPECTIVE",
+    "ja": "あなたのメンバーシップ・あなたの視点",
+    "ko": "나의 멤버십 · 나의 관점"
+  },
+  "Go deeper with Pro.": {
+    "es": "Profundiza con Pro.",
+    "de": "Mit Pro tiefer einsteigen.",
+    "fr": "Approfondissez avec Pro.",
+    "ja": "Proで分析を深める。",
+    "ko": "Pro로 더 깊이 분석하세요."
+  },
+  "Billing period": {
+    "es": "Periodo de facturación",
+    "de": "Abrechnungszeitraum",
+    "fr": "Période de facturation",
+    "ja": "請求期間",
+    "ko": "결제 주기"
+  },
+  "Monthly": {
+    "es": "Mensual",
+    "de": "Monatlich",
+    "fr": "Mensuel",
+    "ja": "月払い",
+    "ko": "월간"
+  },
+  "Annual": {
+    "es": "Anual",
+    "de": "Jährlich",
+    "fr": "Annuel",
+    "ja": "年払い",
+    "ko": "연간"
+  },
+  "Save 33%": {
+    "es": "Ahorra un 33 %",
+    "de": "33 % sparen",
+    "fr": "Économisez 33 %",
+    "ja": "33%お得",
+    "ko": "33% 절약"
+  },
+  "$30 billed every month": {
+    "es": "30 USD facturados cada mes",
+    "de": "30 USD pro Monat",
+    "fr": "30 USD facturés chaque mois",
+    "ja": "毎月30米ドルを請求",
+    "ko": "매월 30 USD 청구"
+  },
+  "$240 billed every year": {
+    "es": "240 USD facturados cada año",
+    "de": "240 USD pro Jahr",
+    "fr": "240 USD facturés chaque année",
+    "ja": "毎年240米ドルを請求",
+    "ko": "매년 240 USD 청구"
+  },
+  "Prices in USD. Stripe may offer payment in your local currency at checkout, with the exchange rate and total shown before you pay.": {
+    "es": "Precios en USD. Stripe puede ofrecer el pago en tu moneda local, mostrando el tipo de cambio y el total antes de pagar.",
+    "de": "Preise in USD. Stripe bietet beim Bezahlen möglicherweise deine Landeswährung an. Wechselkurs und Gesamtbetrag werden vor der Zahlung angezeigt.",
+    "fr": "Prix en USD. Stripe peut proposer votre devise locale au paiement, avec le taux de change et le total affichés avant de payer.",
+    "ja": "価格は米ドル表示です。Stripeで現地通貨でのお支払いを選べる場合があります。為替レートと合計は支払い前に表示されます。",
+    "ko": "가격은 USD 기준입니다. Stripe에서 현지 통화 결제를 제공할 수 있으며 결제 전에 환율과 총액이 표시됩니다."
+  },
+  "I agree to the": {
+    "es": "Acepto las",
+    "de": "Ich stimme den folgenden Bedingungen zu:",
+    "fr": "J’accepte les",
+    "ja": "同意する項目：",
+    "ko": "동의 항목:"
+  },
+  "purchase terms": {
+    "es": "condiciones de compra",
+    "de": "Kaufbedingungen",
+    "fr": "conditions d’achat",
+    "ja": "購入条件",
+    "ko": "구매 약관"
+  },
+  ", including automatic renewal,": {
+    "es": ", incluida la renovación automática,",
+    "de": ", einschließlich automatischer Verlängerung,",
+    "fr": ", y compris le renouvellement automatique,",
+    "ja": "（自動更新、",
+    "ko": "(자동 갱신,"
+  },
+  "cancellation": {
+    "es": "cancelación",
+    "de": "Kündigung",
+    "fr": "résiliation",
+    "ja": "解約",
+    "ko": "해지"
+  },
+  "and": {
+    "es": "y",
+    "de": "und",
+    "fr": "et",
+    "ja": "および",
+    "ko": "및"
+  },
+  "refunds": {
+    "es": "reembolsos",
+    "de": "Erstattungen",
+    "fr": "remboursements",
+    "ja": "返金",
+    "ko": "환불"
+  },
+  ". No automatic refunds for unused time; mandatory rights remain protected.": {
+    "es": ". No hay reembolsos automáticos por tiempo no utilizado; se respetan los derechos obligatorios.",
+    "de": ". Keine automatischen Erstattungen für ungenutzte Zeit; zwingende Rechte bleiben geschützt.",
+    "fr": ". Aucun remboursement automatique du temps inutilisé ; vos droits impératifs restent protégés.",
+    "ja": "）。未使用期間の自動返金はありません。法令上の権利は保護されます。",
+    "ko": "). 미사용 기간은 자동 환불되지 않으며 법적 권리는 보호됩니다."
+  },
+  "Privacy policy": {
+    "es": "Política de privacidad",
+    "de": "Datenschutzerklärung",
+    "fr": "Politique de confidentialité",
+    "ja": "プライバシーポリシー",
+    "ko": "개인정보 처리방침"
+  },
+  "Billing privacy and purchase records": {
+    "es": "Privacidad de facturación y registros de compra",
+    "de": "Datenschutz bei Abrechnung und Kaufbelegen",
+    "fr": "Confidentialité des paiements et historique d’achat",
+    "ja": "請求情報のプライバシーと購入記録",
+    "ko": "결제 개인정보 및 구매 기록"
+  },
+  "Opening secure checkout…": {
+    "es": "Abriendo pago seguro…",
+    "de": "Sichere Kasse wird geöffnet…",
+    "fr": "Ouverture du paiement sécurisé…",
+    "ja": "安全な決済画面を開いています…",
+    "ko": "안전한 결제 화면을 여는 중…"
+  },
+  "Continue to secure checkout ↗": {
+    "es": "Continuar al pago seguro ↗",
+    "de": "Weiter zur sicheren Kasse ↗",
+    "fr": "Continuer vers le paiement sécurisé ↗",
+    "ja": "安全な決済に進む ↗",
+    "ko": "안전한 결제로 이동 ↗"
+  },
+  "Renews automatically. Cancel renewal anytime through Manage subscription.": {
+    "es": "Se renueva automáticamente. Cancela la renovación cuando quieras desde Gestionar suscripción.",
+    "de": "Verlängert sich automatisch. Du kannst die Verlängerung jederzeit unter Mitgliedschaft verwalten kündigen.",
+    "fr": "Renouvellement automatique. Désactivez-le à tout moment dans Gérer l’abonnement.",
+    "ja": "自動更新されます。「メンバーシップ管理」でいつでも更新を停止できます。",
+    "ko": "자동 갱신됩니다. 멤버십 관리에서 언제든 갱신을 해지할 수 있습니다."
+  },
+  "Review the setups": {
+    "es": "Revisa las operaciones",
+    "de": "Setups ansehen",
+    "fr": "Examinez les configurations",
+    "ja": "セットアップを確認",
+    "ko": "매매 시나리오 살펴보기"
+  },
+  "Full options results and the market context behind each move.": {
+    "es": "Resultados completos de opciones y el contexto de mercado detrás de cada movimiento.",
+    "de": "Vollständige Optionsergebnisse und der Marktkontext jeder Bewegung.",
+    "fr": "Résultats complets des options et contexte de marché de chaque mouvement.",
+    "ja": "オプションの全結果と各値動きの市場背景。",
+    "ko": "옵션의 전체 결과와 각 움직임의 시장 배경."
+  },
+  "Understand the numbers": {
+    "es": "Comprende las cifras",
+    "de": "Die Zahlen verstehen",
+    "fr": "Comprenez les chiffres",
+    "ja": "数値を理解する",
+    "ko": "수치 이해하기"
+  },
+  "Option prices, contract values, breakeven and payoff scenarios.": {
+    "es": "Precios de opciones, valores de contratos, punto de equilibrio y escenarios de resultados.",
+    "de": "Optionspreise, Kontraktwerte, Gewinnschwelle und Auszahlungsszenarien.",
+    "fr": "Prix des options, valeur des contrats, seuil de rentabilité et scénarios de résultat.",
+    "ja": "オプション価格、契約価値、損益分岐点、損益シナリオ。",
+    "ko": "옵션 가격, 계약 가치, 손익분기점 및 손익 시나리오."
+  },
+  "Bring your research together": {
+    "es": "Reúne tu análisis",
+    "de": "Deine Recherche zusammenführen",
+    "fr": "Rassemblez vos analyses",
+    "ja": "リサーチをひとつに",
+    "ko": "리서치를 한곳에"
+  },
+  "Your Pro signals, research and tools, with deeper Ultra analysis.": {
+    "es": "Tus señales, análisis y herramientas Pro, con análisis Ultra más profundo.",
+    "de": "Deine Pro-Signale, Analysen und Werkzeuge mit vertiefter Ultra-Analyse.",
+    "fr": "Vos signaux, analyses et outils Pro, avec l’analyse approfondie Ultra.",
+    "ja": "Proのシグナル・リサーチ・ツールに、Ultraの詳細分析を追加。",
+    "ko": "Pro 신호, 리서치 및 도구에 Ultra 심층 분석을 더하세요."
+  },
+  "← Your membership": {
+    "es": "← Tu suscripción",
+    "de": "← Deine Mitgliedschaft",
+    "fr": "← Votre abonnement",
+    "ja": "← メンバーシップ",
+    "ko": "← 내 멤버십"
+  },
+  "Complete Level 1 to unlock Ultra": {
+    "es": "Completa el nivel 1 para desbloquear Ultra",
+    "de": "Schließe Level 1 ab, um Ultra freizuschalten",
+    "fr": "Terminez le niveau 1 pour débloquer Ultra",
+    "ja": "レベル1を修了してUltraを利用可能に",
+    "ko": "레벨 1을 완료해 Ultra 잠금 해제"
+  },
+  "Finish Level 1 onboarding in the academy or app before exploring Ultra subscriptions. Learn how short-term options setups differ from Pro stock ideas, including timing, expiry and risk.": {
+    "es": "Completa el nivel 1 en la academia o la app antes de explorar Ultra. Aprende cómo las operaciones de opciones a corto plazo difieren de las ideas de acciones Pro, incluidos plazos, vencimientos y riesgos.",
+    "de": "Schließe Level 1 in der Akademie oder App ab, bevor du Ultra-Abos erkundest. Lerne, wie sich kurzfristige Options-Setups von Pro-Aktienideen unterscheiden, einschließlich Timing, Verfall und Risiko.",
+    "fr": "Terminez le niveau 1 dans l’académie ou l’application avant de découvrir Ultra. Comprenez les différences entre options à court terme et idées d’actions Pro : timing, échéance et risque.",
+    "ja": "Ultraをご検討の前に、アカデミーまたはアプリでレベル1を修了してください。短期オプションとProの株式アイデアの違いを、タイミング・満期・リスクとともに学べます。",
+    "ko": "Ultra 구독을 살펴보기 전에 아카데미 또는 앱에서 레벨 1을 완료하세요. 단기 옵션 시나리오와 Pro 주식 아이디어의 차이, 진입 시점, 만기 및 위험을 배웁니다."
+  },
+  "Sign in to check your progress →": {
+    "es": "Inicia sesión para ver tu progreso →",
+    "de": "Anmelden und Fortschritt prüfen →",
+    "fr": "Connectez-vous pour voir votre progression →",
+    "ja": "ログインして進捗を確認 →",
+    "ko": "로그인하여 진행 상황 확인 →"
+  },
+  "Complete the academy lessons and pass all Level 1 section quizzes. Then return here to refresh your progress.": {
+    "es": "Completa las lecciones y aprueba todos los cuestionarios del nivel 1. Después vuelve aquí para actualizar tu progreso.",
+    "de": "Schließe die Lektionen ab und bestehe alle Abschnittstests von Level 1. Kehre dann hierher zurück, um deinen Fortschritt zu aktualisieren.",
+    "fr": "Terminez les leçons et réussissez tous les quiz du niveau 1. Revenez ensuite ici pour actualiser votre progression.",
+    "ja": "アカデミーのレッスンとレベル1の全セクションクイズを修了後、ここに戻って進捗を更新してください。",
+    "ko": "레슨을 완료하고 레벨 1의 모든 섹션 퀴즈를 통과하세요. 그런 다음 여기로 돌아와 진행 상황을 새로고침하세요."
+  },
+  "Complete Level 1": {
+    "es": "Completar nivel 1",
+    "de": "Level 1 abschließen",
+    "fr": "Terminer le niveau 1",
+    "ja": "レベル1を修了する",
+    "ko": "레벨 1 완료하기"
+  },
+  "Learn in the app": {
+    "es": "Aprender en la app",
+    "de": "In der App lernen",
+    "fr": "Apprendre dans l’application",
+    "ja": "アプリで学ぶ",
+    "ko": "앱에서 학습하기"
+  },
+  "I’ve completed Level 1 — check again": {
+    "es": "He completado el nivel 1: comprobar de nuevo",
+    "de": "Level 1 abgeschlossen – erneut prüfen",
+    "fr": "J’ai terminé le niveau 1 : vérifier à nouveau",
+    "ja": "レベル1修了済み — 再確認",
+    "ko": "레벨 1 완료 — 다시 확인"
+  },
+  "Go deeper.": {
+    "es": "Profundiza.",
+    "de": "Tiefer einsteigen.",
+    "fr": "Approfondissez.",
+    "ja": "より深い分析へ。",
+    "ko": "더 깊이 살펴보세요."
+  },
+  "Trade with perspective.": {
+    "es": "Opera con perspectiva.",
+    "de": "Mit Perspektive handeln.",
+    "fr": "Tradez avec du recul.",
+    "ja": "広い視点で取引を。",
+    "ko": "넓은 시각으로 거래하세요."
+  },
+  "Put the setup, the numbers and the risk in context before your next decision.": {
+    "es": "Pon la operación, las cifras y el riesgo en contexto antes de decidir.",
+    "de": "Ordne Setup, Zahlen und Risiko vor deiner nächsten Entscheidung ein.",
+    "fr": "Mettez la configuration, les chiffres et le risque en perspective avant de décider.",
+    "ja": "次の判断の前に、セットアップ・数値・リスクの背景を理解しましょう。",
+    "ko": "다음 결정을 내리기 전에 매매 시나리오, 수치 및 위험의 맥락을 파악하세요."
+  },
+  "THE DETAILS BEHIND THE MOVE": {
+    "es": "LOS DETALLES DEL MOVIMIENTO",
+    "de": "DIE DETAILS HINTER DER BEWEGUNG",
+    "fr": "LES DÉTAILS DERRIÈRE LE MOUVEMENT",
+    "ja": "値動きの詳細",
+    "ko": "움직임 이면의 세부 정보"
+  },
+  "YOUR NEXT LEVEL OF RESEARCH": {
+    "es": "TU SIGUIENTE NIVEL DE ANÁLISIS",
+    "de": "DEIN NÄCHSTES ANALYSENIVEAU",
+    "fr": "VOTRE PROCHAIN NIVEAU D’ANALYSE",
+    "ja": "リサーチを次のレベルへ",
+    "ko": "리서치의 다음 단계"
+  },
+  "Ultra is yours.": {
+    "es": "Ultra ya es tuyo.",
+    "de": "Ultra gehört dir.",
+    "fr": "Ultra est à vous.",
+    "ja": "Ultraが利用可能です。",
+    "ko": "Ultra를 이용할 수 있습니다."
+  },
+  "Add Ultra to your Pro.": {
+    "es": "Añade Ultra a tu Pro.",
+    "de": "Ergänze dein Pro mit Ultra.",
+    "fr": "Ajoutez Ultra à votre Pro.",
+    "ja": "ProにUltraを追加。",
+    "ko": "Pro에 Ultra를 추가하세요."
+  },
+  "Your app membership, upgraded.": {
+    "es": "Tu suscripción a la app, mejorada.",
+    "de": "Deine App-Mitgliedschaft, erweitert.",
+    "fr": "Votre abonnement à l’application, enrichi.",
+    "ja": "アプリのメンバーシップをアップグレード。",
+    "ko": "앱 멤버십 업그레이드."
+  },
+  "Choose Ultra.": {
+    "es": "Elige Ultra.",
+    "de": "Ultra wählen.",
+    "fr": "Choisissez Ultra.",
+    "ja": "Ultraを選択。",
+    "ko": "Ultra를 선택하세요."
+  },
+  "Manage membership": {
+    "es": "Gestionar suscripción",
+    "de": "Mitgliedschaft verwalten",
+    "fr": "Gérer l’abonnement",
+    "ja": "メンバーシップを管理",
+    "ko": "멤버십 관리"
+  },
+  "Refresh access": {
+    "es": "Actualizar acceso",
+    "de": "Zugriff aktualisieren",
+    "fr": "Actualiser l’accès",
+    "ja": "アクセス権を更新",
+    "ko": "접근 권한 새로고침"
+  },
+  "Get the app →": {
+    "es": "Descargar la app →",
+    "de": "App herunterladen →",
+    "fr": "Télécharger l’application →",
+    "ja": "アプリをダウンロード →",
+    "ko": "앱 다운로드 →"
+  },
+  "Ultra billing period": {
+    "es": "Periodo de facturación Ultra",
+    "de": "Ultra-Abrechnungszeitraum",
+    "fr": "Période de facturation Ultra",
+    "ja": "Ultraの請求期間",
+    "ko": "Ultra 결제 주기"
+  },
+  "$60 billed every month": {
+    "es": "60 USD facturados cada mes",
+    "de": "60 USD pro Monat",
+    "fr": "60 USD facturés chaque mois",
+    "ja": "毎月60米ドルを請求",
+    "ko": "매월 60 USD 청구"
+  },
+  "$90 billed every month": {
+    "es": "90 USD facturados cada mes",
+    "de": "90 USD pro Monat",
+    "fr": "90 USD facturés chaque mois",
+    "ja": "毎月90米ドルを請求",
+    "ko": "매월 90 USD 청구"
+  },
+  "$600 billed once each year": {
+    "es": "600 USD facturados una vez al año",
+    "de": "600 USD einmal jährlich",
+    "fr": "600 USD facturés une fois par an",
+    "ja": "年1回600米ドルを請求",
+    "ko": "연 1회 600 USD 청구"
+  },
+  "$900 billed once each year": {
+    "es": "900 USD facturados una vez al año",
+    "de": "900 USD einmal jährlich",
+    "fr": "900 USD facturés une fois par an",
+    "ja": "年1回900米ドルを請求",
+    "ko": "연 1회 900 USD 청구"
+  },
+  "Sign up or sign in to join Ultra →": {
+    "es": "Regístrate o inicia sesión para acceder a Ultra →",
+    "de": "Registrieren oder anmelden für Ultra →",
+    "fr": "Inscrivez-vous ou connectez-vous pour rejoindre Ultra →",
+    "ja": "Ultraに登録・ログイン →",
+    "ko": "Ultra 가입 또는 로그인 →"
+  },
+  "Opening Stripe…": {
+    "es": "Abriendo Stripe…",
+    "de": "Stripe wird geöffnet…",
+    "fr": "Ouverture de Stripe…",
+    "ja": "Stripeを開いています…",
+    "ko": "Stripe 여는 중…"
+  },
+  "Review my Ultra upgrade →": {
+    "es": "Revisar mi mejora a Ultra →",
+    "de": "Mein Ultra-Upgrade prüfen →",
+    "fr": "Vérifier mon passage à Ultra →",
+    "ja": "Ultraへのアップグレードを確認 →",
+    "ko": "Ultra 업그레이드 검토 →"
+  },
+  "Add Ultra — keep Apple Pro →": {
+    "es": "Añadir Ultra y mantener Apple Pro →",
+    "de": "Ultra hinzufügen, Apple Pro behalten →",
+    "fr": "Ajouter Ultra en conservant Apple Pro →",
+    "ja": "Apple Proを維持してUltraを追加 →",
+    "ko": "Apple Pro 유지 및 Ultra 추가 →"
+  },
+  "Ultra purchase terms": {
+    "es": "Condiciones de compra Ultra",
+    "de": "Ultra-Kaufbedingungen",
+    "fr": "Conditions d’achat Ultra",
+    "ja": "Ultra購入条件",
+    "ko": "Ultra 구매 약관"
+  },
+  ", automatic renewal and cancellation policy. No automatic refunds for unused time; mandatory rights remain protected.": {
+    "es": ", renovación automática y política de cancelación. No hay reembolsos automáticos por tiempo no utilizado; se respetan los derechos obligatorios.",
+    "de": ", automatische Verlängerung und Kündigungsbedingungen. Keine automatischen Erstattungen für ungenutzte Zeit; zwingende Rechte bleiben geschützt.",
+    "fr": ", renouvellement automatique et politique de résiliation. Aucun remboursement automatique du temps inutilisé ; vos droits impératifs restent protégés.",
+    "ja": "、自動更新および解約ポリシー。未使用期間の自動返金はありません。法令上の権利は保護されます。",
+    "ko": ", 자동 갱신 및 해지 정책. 미사용 기간은 자동 환불되지 않으며 법적 권리는 보호됩니다."
+  },
+  "Keep your existing Apple Pro research and tools, and add deeper Ultra analysis.": {
+    "es": "Conserva tus análisis y herramientas Apple Pro y añade análisis Ultra más profundo.",
+    "de": "Behalte deine Apple-Pro-Analysen und Werkzeuge und ergänze vertiefte Ultra-Analysen.",
+    "fr": "Conservez vos analyses et outils Apple Pro et ajoutez l’analyse approfondie Ultra.",
+    "ja": "既存のApple Proのリサーチとツールを維持し、Ultraの詳細分析を追加できます。",
+    "ko": "기존 Apple Pro 리서치와 도구를 유지하면서 Ultra 심층 분석을 추가하세요."
+  },
+  "Research and educational tools. Results shown are historical; future outcomes can differ. Options can lose their entire premium.": {
+    "es": "Herramientas de análisis y educación. Los resultados mostrados son históricos; los futuros pueden diferir. Las opciones pueden perder toda su prima.",
+    "de": "Analyse- und Lernwerkzeuge. Gezeigte Ergebnisse sind historisch; zukünftige Ergebnisse können abweichen. Optionen können ihre gesamte Prämie verlieren.",
+    "fr": "Outils d’analyse et de formation. Les résultats présentés sont historiques ; les résultats futurs peuvent différer. Une option peut perdre la totalité de sa prime.",
+    "ja": "リサーチ・学習用ツールです。表示結果は過去のもので、将来の結果は異なる場合があります。オプションはプレミアム全額を失う可能性があります。",
+    "ko": "리서치 및 교육 도구입니다. 표시된 결과는 과거 실적이며 미래 결과는 다를 수 있습니다. 옵션은 프리미엄 전액을 잃을 수 있습니다."
+  },
+  "Ultra is active alongside your Pro membership. Keep both subscriptions active to retain Ultra access.": {
+    "es": "Ultra está activo junto con Pro. Mantén ambas suscripciones activas para conservar el acceso a Ultra.",
+    "de": "Ultra ist zusätzlich zu Pro aktiv. Beide Abos müssen aktiv bleiben, um Ultra weiter zu nutzen.",
+    "fr": "Ultra est actif en complément de Pro. Maintenez les deux abonnements actifs pour conserver l’accès à Ultra.",
+    "ja": "Proと併せてUltraが有効です。Ultraの利用を継続するには、両方の契約を有効にしてください。",
+    "ko": "Pro와 함께 Ultra가 활성화되어 있습니다. Ultra 이용을 유지하려면 두 구독 모두 활성 상태여야 합니다."
+  },
+  "Ultra is active on this account, including your Pro access.": {
+    "es": "Ultra está activo en esta cuenta e incluye acceso Pro.",
+    "de": "Ultra ist für dieses Konto aktiv, einschließlich Pro-Zugang.",
+    "fr": "Ultra est actif sur ce compte et inclut l’accès Pro.",
+    "ja": "このアカウントではProを含むUltraが有効です。",
+    "ko": "이 계정에서 Pro 이용 권한을 포함한 Ultra가 활성화되어 있습니다."
+  },
+  "Explore full results →": {
+    "es": "Ver resultados completos →",
+    "de": "Vollständige Ergebnisse ansehen →",
+    "fr": "Voir les résultats complets →",
+    "ja": "全結果を見る →",
+    "ko": "전체 결과 보기 →"
+  },
+  "Get the app and sign in with this same account to use Pro and Ultra.": {
+    "es": "Descarga la app e inicia sesión con esta cuenta para usar Pro y Ultra.",
+    "de": "Lade die App herunter und melde dich mit demselben Konto an, um Pro und Ultra zu nutzen.",
+    "fr": "Téléchargez l’application et connectez-vous avec ce même compte pour utiliser Pro et Ultra.",
+    "ja": "ProとUltraを利用するには、アプリで同じアカウントにログインしてください。",
+    "ko": "Pro와 Ultra를 이용하려면 앱을 다운로드하고 같은 계정으로 로그인하세요."
+  },
+  "Live Pro web launches December 1, 2026, with a live video demo.": {
+    "es": "Pro web en directo se lanza el 1 de diciembre de 2026 con una demostración en vídeo en directo.",
+    "de": "Pro Live im Web startet am 1. Dezember 2026 mit einer Live-Videodemo.",
+    "fr": "Pro en direct sur le web arrive le 1er décembre 2026 avec une démonstration vidéo en direct.",
+    "ja": "ライブ版Pro Webは2026年12月1日に公開予定です。ライブ動画デモも実施します。",
+    "ko": "실시간 Pro 웹은 2026년 12월 1일 라이브 영상 데모와 함께 출시됩니다."
+  },
+  "Your older Apple Pro plan stays in place. Add Ultra using the app’s separate add-on, which requires Pro to stay active.": {
+    "es": "Tu plan Apple Pro anterior se mantiene. Añade Ultra desde el complemento de la app; Pro debe seguir activo.",
+    "de": "Dein älterer Apple-Pro-Plan bleibt bestehen. Ergänze Ultra über das separate App-Add-on; Pro muss aktiv bleiben.",
+    "fr": "Votre ancien forfait Apple Pro reste en place. Ajoutez Ultra via l’option distincte de l’application ; Pro doit rester actif.",
+    "ja": "従来のApple Proプランは継続されます。アプリの追加契約でUltraを利用できます。Proの継続が必要です。",
+    "ko": "기존 Apple Pro 요금제는 유지됩니다. 앱의 별도 추가 상품으로 Ultra를 이용하며 Pro를 활성 상태로 유지해야 합니다."
+  },
+  "Your existing store handles your upgrade to inclusive Ultra. It replaces your eligible Pro plan in the app.": {
+    "es": "Tu tienda gestiona el cambio a Ultra con Pro incluido. Sustituye tu plan Pro compatible en la app.",
+    "de": "Dein bisheriger Store führt das Upgrade auf Ultra inklusive Pro durch und ersetzt deinen berechtigten Pro-Plan in der App.",
+    "fr": "Votre boutique actuelle gère le passage à Ultra avec Pro inclus. Il remplace votre forfait Pro éligible dans l’application.",
+    "ja": "現在のストアでPro込みUltraにアップグレードします。アプリ内の対象Proプランが置き換わります。",
+    "ko": "기존 스토어에서 Pro 포함 Ultra로 업그레이드합니다. 앱의 해당 Pro 요금제를 대체합니다."
+  },
+  "Legacy Pro · Ultra add-on": {
+    "es": "Pro anterior · Complemento Ultra",
+    "de": "Bisheriges Pro · Ultra-Add-on",
+    "fr": "Ancien Pro · Option Ultra",
+    "ja": "従来のPro・Ultra追加契約",
+    "ko": "기존 Pro · Ultra 추가 상품"
+  },
+  "Inclusive Ultra · Pro included": {
+    "es": "Ultra completo · Pro incluido",
+    "de": "Ultra komplett · Pro inklusive",
+    "fr": "Ultra complet · Pro inclus",
+    "ja": "Ultra・Pro込み",
+    "ko": "통합 Ultra · Pro 포함"
+  },
+  "The existing 2× add-on pricing applies.": {
+    "es": "Se aplica el precio del complemento existente de 2×.",
+    "de": "Der bestehende 2×-Preis für das Add-on gilt.",
+    "fr": "Le tarif existant de l’option à 2× s’applique.",
+    "ja": "既存の2倍の追加契約料金が適用されます。",
+    "ko": "기존 2배 추가 상품 요금이 적용됩니다."
+  },
+  "The existing 3× Ultra store pricing applies.": {
+    "es": "Se aplica el precio Ultra existente de la tienda de 3×.",
+    "de": "Der bestehende 3×-Ultra-Preis im Store gilt.",
+    "fr": "Le tarif Ultra existant de la boutique à 3× s’applique.",
+    "ja": "既存の3倍のストアUltra料金が適用されます。",
+    "ko": "기존 3배 Ultra 스토어 요금이 적용됩니다."
+  },
+  "Your store shows the local price and any credit before purchase. Website prices do not change an Apple or Google subscription.": {
+    "es": "Tu tienda muestra el precio local y cualquier abono antes de comprar. Los precios web no modifican las suscripciones Apple o Google.",
+    "de": "Dein Store zeigt vor dem Kauf den lokalen Preis und mögliche Gutschriften. Website-Preise ändern kein Apple- oder Google-Abo.",
+    "fr": "Votre boutique affiche le prix local et tout crédit avant l’achat. Les prix du site ne modifient pas un abonnement Apple ou Google.",
+    "ja": "購入前にストアで現地価格と適用クレジットを確認できます。サイトの価格によってAppleやGoogleの契約が変更されることはありません。",
+    "ko": "스토어에서 구매 전에 현지 가격과 적용 크레딧을 표시합니다. 웹사이트 가격은 Apple 또는 Google 구독을 변경하지 않습니다."
+  },
+  "Continue upgrade in the app →": {
+    "es": "Continuar la mejora en la app →",
+    "de": "Upgrade in der App fortsetzen →",
+    "fr": "Continuer dans l’application →",
+    "ja": "アプリでアップグレードを続ける →",
+    "ko": "앱에서 업그레이드 계속 →"
+  },
+  "Open an options result in the app to choose Ultra, using this same sign-in account.": {
+    "es": "Abre un resultado de opciones en la app para elegir Ultra con esta misma cuenta.",
+    "de": "Öffne ein Optionsergebnis in der App, um Ultra mit demselben Konto zu wählen.",
+    "fr": "Ouvrez un résultat d’option dans l’application pour choisir Ultra avec ce même compte.",
+    "ja": "同じアカウントでアプリのオプション結果を開き、Ultraを選択してください。",
+    "ko": "같은 계정으로 앱에서 옵션 결과를 열어 Ultra를 선택하세요."
+  },
+  "I’ve upgraded — refresh access": {
+    "es": "Ya he mejorado: actualizar acceso",
+    "de": "Upgrade erfolgt – Zugriff aktualisieren",
+    "fr": "J’ai changé d’offre : actualiser l’accès",
+    "ja": "アップグレード済み — アクセス権を更新",
+    "ko": "업그레이드 완료 — 접근 권한 새로고침"
+  },
+  "A separate Ultra add-on. Your Apple Pro subscription stays in place and remains billed by Apple.": {
+    "es": "Un complemento Ultra independiente. Tu suscripción Apple Pro se mantiene y Apple continúa facturándola.",
+    "de": "Ein separates Ultra-Add-on. Dein Apple-Pro-Abo bleibt bestehen und wird weiterhin von Apple abgerechnet.",
+    "fr": "Une option Ultra distincte. Votre abonnement Apple Pro reste en place et facturé par Apple.",
+    "ja": "Ultraは別の追加契約です。Apple Proの契約とAppleによる請求は継続します。",
+    "ko": "별도 Ultra 추가 상품입니다. Apple Pro 구독은 유지되며 Apple에서 계속 청구합니다."
+  },
+  "All of Pro, plus the details behind the results.": {
+    "es": "Todo Pro, más los detalles detrás de los resultados.",
+    "de": "Alles aus Pro plus die Details hinter den Ergebnissen.",
+    "fr": "Tout Pro, plus les détails derrière les résultats.",
+    "ja": "Proの全機能に、結果の詳細分析を追加。",
+    "ko": "Pro의 모든 기능과 결과에 대한 세부 분석."
+  },
+  "Your current payment needs attention": {
+    "es": "Tu pago actual requiere atención",
+    "de": "Deine aktuelle Zahlung erfordert Aufmerksamkeit",
+    "fr": "Votre paiement actuel nécessite une action",
+    "ja": "現在のお支払いに対応が必要です",
+    "ko": "현재 결제 확인 필요"
+  },
+  "Keep Pro active for your Ultra add-on": {
+    "es": "Mantén Pro activo para tu complemento Ultra",
+    "de": "Pro für dein Ultra-Add-on aktiv halten",
+    "fr": "Gardez Pro actif pour votre option Ultra",
+    "ja": "Ultra追加契約にはProの継続が必要です",
+    "ko": "Ultra 추가 상품을 위해 Pro 유지"
+  },
+  "Let’s verify your membership": {
+    "es": "Verifiquemos tu suscripción",
+    "de": "Mitgliedschaft überprüfen",
+    "fr": "Vérifions votre abonnement",
+    "ja": "メンバーシップを確認しましょう",
+    "ko": "멤버십을 확인하세요"
+  },
+  "Ultra checkout is being prepared": {
+    "es": "Se está preparando el pago Ultra",
+    "de": "Ultra-Kasse wird vorbereitet",
+    "fr": "Préparation du paiement Ultra",
+    "ja": "Ultra決済を準備中",
+    "ko": "Ultra 결제 준비 중"
+  },
+  "Review your existing membership": {
+    "es": "Revisa tu suscripción actual",
+    "de": "Bestehende Mitgliedschaft prüfen",
+    "fr": "Vérifiez votre abonnement actuel",
+    "ja": "現在のメンバーシップを確認",
+    "ko": "기존 멤버십 확인"
+  },
+  "We couldn’t verify your current plan. Refresh before choosing another subscription.": {
+    "es": "No pudimos verificar tu plan. Actualiza antes de elegir otra suscripción.",
+    "de": "Dein aktueller Plan konnte nicht geprüft werden. Aktualisiere ihn, bevor du ein weiteres Abo wählst.",
+    "fr": "Impossible de vérifier votre offre. Actualisez avant de choisir un autre abonnement.",
+    "ja": "現在のプランを確認できませんでした。別の契約を選ぶ前に更新してください。",
+    "ko": "현재 요금제를 확인할 수 없습니다. 다른 구독을 선택하기 전에 새로고침하세요."
+  },
+  "Manage or refresh your current plan before continuing. Your existing subscription will stay in place.": {
+    "es": "Gestiona o actualiza tu plan antes de continuar. Tu suscripción actual se mantendrá.",
+    "de": "Verwalte oder aktualisiere deinen Plan, bevor du fortfährst. Dein bestehendes Abo bleibt erhalten.",
+    "fr": "Gérez ou actualisez votre offre avant de continuer. Votre abonnement actuel reste en place.",
+    "ja": "続行前に現在のプランを管理または更新してください。既存の契約は維持されます。",
+    "ko": "계속하기 전에 현재 요금제를 관리하거나 새로고침하세요. 기존 구독은 유지됩니다."
+  },
+  "Manage current membership →": {
+    "es": "Gestionar suscripción actual →",
+    "de": "Aktuelle Mitgliedschaft verwalten →",
+    "fr": "Gérer l’abonnement actuel →",
+    "ja": "現在のメンバーシップを管理 →",
+    "ko": "현재 멤버십 관리 →"
+  },
+  "Apple Pro + Stripe Ultra add-on": {
+    "es": "Apple Pro + complemento Ultra de Stripe",
+    "de": "Apple Pro + Stripe-Ultra-Add-on",
+    "fr": "Apple Pro + option Ultra Stripe",
+    "ja": "Apple Pro＋Stripe Ultra追加契約",
+    "ko": "Apple Pro + Stripe Ultra 추가 상품"
+  },
+  "The prices above are for the add-on only, in addition to your existing Apple Pro bill. Both must remain active. Cancelling either subscription does not cancel the other.": {
+    "es": "Los precios anteriores son solo del complemento, además de tu factura Apple Pro. Ambos deben seguir activos. Cancelar una suscripción no cancela la otra.",
+    "de": "Die obigen Preise gelten nur für das Add-on, zusätzlich zu Apple Pro. Beide müssen aktiv bleiben. Die Kündigung eines Abos kündigt nicht das andere.",
+    "fr": "Les prix ci-dessus concernent uniquement l’option, en plus d’Apple Pro. Les deux doivent rester actifs. Résilier l’un ne résilie pas l’autre.",
+    "ja": "上記は追加契約のみの料金で、Apple Proの請求は別途継続します。両方を有効にする必要があります。一方を解約しても、もう一方は解約されません。",
+    "ko": "위 가격은 추가 상품에만 해당하며 기존 Apple Pro 요금은 별도입니다. 두 구독 모두 활성 상태여야 합니다. 한 구독을 해지해도 다른 구독은 해지되지 않습니다."
+  },
+  "Replace your Stripe Pro with Ultra": {
+    "es": "Sustituye tu Stripe Pro por Ultra",
+    "de": "Stripe Pro durch Ultra ersetzen",
+    "fr": "Remplacez votre Stripe Pro par Ultra",
+    "ja": "Stripe ProをUltraに変更",
+    "ko": "Stripe Pro를 Ultra로 변경"
+  },
+  "Stripe shows credit for unused paid time, the amount due now and your next charge before you confirm. This changes your existing subscription.": {
+    "es": "Stripe muestra el abono por tiempo pagado no utilizado, el importe a pagar ahora y el próximo cargo antes de confirmar. Esto modifica tu suscripción actual.",
+    "de": "Stripe zeigt vor der Bestätigung Gutschriften für ungenutzte bezahlte Zeit, den jetzt fälligen Betrag und die nächste Abbuchung. Dein bestehendes Abo wird geändert.",
+    "fr": "Stripe affiche le crédit pour le temps payé inutilisé, le montant dû et le prochain paiement avant confirmation. Votre abonnement actuel sera modifié.",
+    "ja": "確定前にStripeで未使用の支払い済み期間のクレジット、今回の請求額、次回の請求を確認できます。既存の契約が変更されます。",
+    "ko": "확인 전에 Stripe에서 미사용 유료 기간의 크레딧, 현재 결제 금액 및 다음 청구액을 표시합니다. 기존 구독이 변경됩니다."
+  },
+  "Prices in USD. Your final charge, currency and any applicable taxes appear before payment. Cancel renewal through Membership. Pro signals are available in the app now; live Pro web launches December 1, 2026.": {
+    "es": "Precios en USD. El cargo final, la moneda y los impuestos aplicables se muestran antes de pagar. Cancela la renovación desde Suscripción. Las señales Pro ya están en la app; Pro web en directo llega el 1 de diciembre de 2026.",
+    "de": "Preise in USD. Endbetrag, Währung und Steuern werden vor der Zahlung angezeigt. Verlängerung unter Mitgliedschaft kündigen. Pro-Signale sind bereits in der App verfügbar; Pro Live im Web startet am 1. Dezember 2026.",
+    "fr": "Prix en USD. Le montant final, la devise et les taxes sont affichés avant paiement. Désactivez le renouvellement dans Abonnement. Les signaux Pro sont déjà dans l’application ; Pro en direct sur le web arrive le 1er décembre 2026.",
+    "ja": "価格は米ドル表示です。最終金額、通貨、適用税額は支払い前に表示されます。更新はメンバーシップから停止できます。Proシグナルは現在アプリで利用可能です。ライブ版Pro Webは2026年12月1日公開予定です。",
+    "ko": "가격은 USD 기준입니다. 최종 청구액, 통화 및 적용 세금은 결제 전에 표시됩니다. 멤버십에서 갱신을 해지할 수 있습니다. Pro 신호는 현재 앱에서 이용 가능하며 실시간 Pro 웹은 2026년 12월 1일 출시됩니다."
+  },
+  "Your membership couldn’t be verified. Please retry before another purchase.": {
+    "es": "No se pudo verificar tu suscripción. Inténtalo de nuevo antes de otra compra.",
+    "de": "Deine Mitgliedschaft konnte nicht geprüft werden. Versuche es vor einem weiteren Kauf erneut.",
+    "fr": "Impossible de vérifier votre abonnement. Réessayez avant tout nouvel achat.",
+    "ja": "メンバーシップを確認できませんでした。次の購入前に再試行してください。",
+    "ko": "멤버십을 확인할 수 없습니다. 추가 구매 전에 다시 시도하세요."
+  },
+  "Your plan may have changed, or Stripe could not open. Refresh your membership before trying again.": {
+    "es": "Tu plan puede haber cambiado o Stripe no pudo abrirse. Actualiza tu suscripción antes de reintentar.",
+    "de": "Dein Plan könnte sich geändert haben oder Stripe ließ sich nicht öffnen. Aktualisiere deine Mitgliedschaft vor einem neuen Versuch.",
+    "fr": "Votre offre a peut-être changé ou Stripe n’a pas pu s’ouvrir. Actualisez votre abonnement avant de réessayer.",
+    "ja": "プランが変更されたか、Stripeを開けませんでした。再試行する前にメンバーシップを更新してください。",
+    "ko": "요금제가 변경되었거나 Stripe를 열 수 없습니다. 다시 시도하기 전에 멤버십을 새로고침하세요."
+  },
+  "Your account couldn’t be verified. Sign in again.": {
+    "es": "No se pudo verificar tu cuenta. Inicia sesión de nuevo.",
+    "de": "Dein Konto konnte nicht geprüft werden. Melde dich erneut an.",
+    "fr": "Impossible de vérifier votre compte. Reconnectez-vous.",
+    "ja": "アカウントを確認できませんでした。再度ログインしてください。",
+    "ko": "계정을 확인할 수 없습니다. 다시 로그인하세요."
+  },
+  "Add to my calendar": {
+    "es": "Añadir a mi calendario",
+    "de": "Zu meinem Kalender hinzufügen",
+    "fr": "Ajouter à mon agenda",
+    "ja": "カレンダーに追加",
+    "ko": "내 캘린더에 추가"
+  },
+  "All-day event · December 1, 2026": {
+    "es": "Evento de todo el día · 1 de diciembre de 2026",
+    "de": "Ganztägig · 1. Dezember 2026",
+    "fr": "Toute la journée · 1er décembre 2026",
+    "ja": "終日イベント・2026年12月1日",
+    "ko": "종일 일정 · 2026년 12월 1일"
+  },
+  "Payment confirmed and Pro access": {
+    "es": "Pago confirmado y acceso Pro",
+    "de": "Zahlung bestätigt und Pro-Zugang",
+    "fr": "Paiement confirmé et accès Pro",
+    "ja": "支払い確認・Proアクセス",
+    "ko": "결제 확인 및 Pro 이용"
+  },
+  "Get the app and Pro web launch": {
+    "es": "Descarga la app y lanzamiento de Pro web",
+    "de": "App herunterladen und Pro-Webstart",
+    "fr": "Téléchargement et lancement de Pro sur le web",
+    "ja": "アプリとPro Web公開",
+    "ko": "앱 다운로드 및 Pro 웹 출시"
+  },
+  "PAYMENT CONFIRMED · WELCOME TO PRO": {
+    "es": "PAGO CONFIRMADO · BIENVENIDO A PRO",
+    "de": "ZAHLUNG BESTÄTIGT · WILLKOMMEN BEI PRO",
+    "fr": "PAIEMENT CONFIRMÉ · BIENVENUE SUR PRO",
+    "ja": "支払い確認済み・Proへようこそ",
+    "ko": "결제 확인 · Pro에 오신 것을 환영합니다"
+  },
+  "YOUR ACCOUNT · APP & WEB": {
+    "es": "TU CUENTA · APP Y WEB",
+    "de": "DEIN KONTO · APP & WEB",
+    "fr": "VOTRE COMPTE · APPLICATION ET WEB",
+    "ja": "アカウント・アプリとWeb",
+    "ko": "내 계정 · 앱 및 웹"
+  },
+  "You’re Pro. Get started in the app.": {
+    "es": "Ya eres Pro. Empieza en la app.",
+    "de": "Du bist Pro. Starte in der App.",
+    "fr": "Vous êtes Pro. Commencez dans l’application.",
+    "ja": "Proが有効になりました。アプリで始めましょう。",
+    "ko": "Pro가 활성화되었습니다. 앱에서 시작하세요."
+  },
+  "Your Pro membership goes with you.": {
+    "es": "Tu suscripción Pro va contigo.",
+    "de": "Deine Pro-Mitgliedschaft begleitet dich.",
+    "fr": "Votre abonnement Pro vous accompagne.",
+    "ja": "Proをどこでも利用できます。",
+    "ko": "Pro 멤버십을 어디서나 이용하세요."
+  },
+  "Your market, wherever you are.": {
+    "es": "Tu mercado, estés donde estés.",
+    "de": "Dein Markt, überall dabei.",
+    "fr": "Votre marché, où que vous soyez.",
+    "ja": "どこにいても市場にアクセス。",
+    "ko": "어디서나 만나는 시장."
+  },
+  "Your payment is confirmed. Get the app and sign in with the same account you used here to access Pro.": {
+    "es": "Pago confirmado. Descarga la app y accede con la misma cuenta que usaste aquí para utilizar Pro.",
+    "de": "Deine Zahlung ist bestätigt. Lade die App herunter und nutze Pro mit demselben Konto wie hier.",
+    "fr": "Votre paiement est confirmé. Téléchargez l’application et utilisez le même compte qu’ici pour accéder à Pro.",
+    "ja": "支払いが確認されました。アプリをダウンロードし、同じアカウントでログインするとProを利用できます。",
+    "ko": "결제가 확인되었습니다. 앱을 다운로드하고 여기서 사용한 계정으로 로그인하여 Pro를 이용하세요."
+  },
+  "Get the app and sign in with the same account you’re using here to access Pro.": {
+    "es": "Descarga la app y accede con esta misma cuenta para utilizar Pro.",
+    "de": "Lade die App herunter und melde dich mit demselben Konto an, um Pro zu nutzen.",
+    "fr": "Téléchargez l’application et connectez-vous avec ce même compte pour accéder à Pro.",
+    "ja": "Proを利用するには、アプリでこのアカウントにログインしてください。",
+    "ko": "Pro를 이용하려면 앱에서 현재 계정으로 로그인하세요."
+  },
+  "Get the app for iPhone or Android. Already a Pro member? Sign in with the same account to access your membership.": {
+    "es": "Descarga la app para iPhone o Android. ¿Ya eres Pro? Accede con la misma cuenta para usar tu suscripción.",
+    "de": "Hol dir die App für iPhone oder Android. Schon Pro-Mitglied? Melde dich mit demselben Konto an.",
+    "fr": "Téléchargez l’application pour iPhone ou Android. Déjà membre Pro ? Connectez-vous avec le même compte.",
+    "ja": "iPhoneまたはAndroid向けアプリをダウンロード。Pro会員の方は同じアカウントでログインしてください。",
+    "ko": "iPhone 또는 Android용 앱을 다운로드하세요. 이미 Pro 회원이라면 같은 계정으로 로그인하세요."
+  },
+  "COMING TO THE WEB": {
+    "es": "PRÓXIMAMENTE EN LA WEB",
+    "de": "BALD IM WEB",
+    "fr": "BIENTÔT SUR LE WEB",
+    "ja": "近日Web公開",
+    "ko": "곧 웹에서 출시"
+  },
+  "Live Pro web launches": {
+    "es": "Lanzamiento de Pro web en directo",
+    "de": "Pro Live im Web startet",
+    "fr": "Lancement de Pro en direct sur le web",
+    "ja": "ライブ版Pro Web公開",
+    "ko": "실시간 Pro 웹 출시"
+  },
+  "Join us for a live video demo. Add the all-day launch reminder to your calendar; the demo time and viewing link will be announced here.": {
+    "es": "Únete a la demostración en directo. Añade el recordatorio de lanzamiento a tu calendario; aquí anunciaremos la hora y el enlace.",
+    "de": "Sei bei der Live-Videodemo dabei. Trage die ganztägige Starterinnerung in deinen Kalender ein; Uhrzeit und Link folgen hier.",
+    "fr": "Rejoignez la démonstration en direct. Ajoutez le rappel de lancement à votre agenda ; l’heure et le lien seront annoncés ici.",
+    "ja": "ライブ動画デモにご参加ください。公開日の終日リマインダーをカレンダーに追加できます。時刻と視聴リンクはここでお知らせします。",
+    "ko": "라이브 영상 데모에 참여하세요. 캘린더에 종일 출시 알림을 추가할 수 있습니다. 데모 시간과 시청 링크는 여기에 공지됩니다."
+  },
+  "Your membership is linked to your account. Use the same sign-in method in the app.": {
+    "es": "Tu suscripción está vinculada a tu cuenta. Usa el mismo método de acceso en la app.",
+    "de": "Deine Mitgliedschaft ist mit deinem Konto verknüpft. Nutze in der App dieselbe Anmeldemethode.",
+    "fr": "Votre abonnement est lié à votre compte. Utilisez la même méthode de connexion dans l’application.",
+    "ja": "メンバーシップはアカウントに紐づいています。アプリでも同じログイン方法を使用してください。",
+    "ko": "멤버십은 계정에 연결됩니다. 앱에서도 같은 로그인 방법을 사용하세요."
+  },
+  "Switch to monthly at renewal?": {
+    "es": "¿Cambiar a mensual en la renovación?",
+    "de": "Bei Verlängerung auf monatlich wechseln?",
+    "fr": "Passer au mensuel au renouvellement ?",
+    "ja": "次回更新から月払いに変更しますか？",
+    "ko": "갱신 시 월간 결제로 변경할까요?"
+  },
+  "Your annual membership continues through": {
+    "es": "Tu suscripción anual continúa hasta",
+    "de": "Deine Jahresmitgliedschaft läuft bis",
+    "fr": "Votre abonnement annuel se poursuit jusqu’au",
+    "ja": "年払いの有効期限：",
+    "ko": "연간 멤버십 유지 기한:"
+  },
+  ". No payment is taken now.": {
+    "es": ". No se cobra nada ahora.",
+    "de": ". Jetzt wird nichts abgebucht.",
+    "fr": ". Aucun paiement n’est prélevé maintenant.",
+    "ja": "。現在の請求はありません。",
+    "ko": ". 지금 결제되는 금액은 없습니다."
+  },
+  "Your next charge will be": {
+    "es": "Tu próximo cargo será",
+    "de": "Deine nächste Abbuchung beträgt",
+    "fr": "Votre prochain paiement sera de",
+    "ja": "次回請求額：",
+    "ko": "다음 청구액:"
+  },
+  "on": {
+    "es": "el",
+    "de": "am",
+    "fr": "le",
+    "ja": "請求日：",
+    "ko": "청구일:"
+  },
+  ", then every month. Any applicable tax is shown on your Stripe invoice.": {
+    "es": ", y después cada mes. Los impuestos aplicables se muestran en tu factura Stripe.",
+    "de": ", danach monatlich. Anfallende Steuern stehen auf deiner Stripe-Rechnung.",
+    "fr": ", puis chaque mois. Les taxes applicables figurent sur votre facture Stripe.",
+    "ja": "、その後は毎月の請求です。適用税額はStripeの請求書に表示されます。",
+    "ko": ", 이후 매월 청구됩니다. 적용 세금은 Stripe 청구서에 표시됩니다."
+  },
+  "Confirm monthly billing at renewal": {
+    "es": "Confirmar facturación mensual en la renovación",
+    "de": "Monatliche Zahlung ab Verlängerung bestätigen",
+    "fr": "Confirmer le mensuel au renouvellement",
+    "ja": "更新時の月払いを確定",
+    "ko": "갱신 시 월간 결제 확인"
+  },
+  "Keep annual billing": {
+    "es": "Mantener facturación anual",
+    "de": "Jährliche Zahlung beibehalten",
+    "fr": "Conserver le paiement annuel",
+    "ja": "年払いを維持",
+    "ko": "연간 결제 유지"
+  },
+  "Ultra add-on": {
+    "es": "Complemento Ultra",
+    "de": "Ultra-Add-on",
+    "fr": "Option Ultra",
+    "ja": "Ultra追加契約",
+    "ko": "Ultra 추가 상품"
+  },
+  "Renewal off": {
+    "es": "Renovación desactivada",
+    "de": "Verlängerung aus",
+    "fr": "Renouvellement désactivé",
+    "ja": "更新停止中",
+    "ko": "갱신 해지됨"
+  },
+  "Estimated next payment:": {
+    "es": "Próximo pago estimado:",
+    "de": "Geschätzte nächste Zahlung:",
+    "fr": "Prochain paiement estimé :",
+    "ja": "次回支払い予定額：",
+    "ko": "예상 다음 결제액:"
+  },
+  "Billing period ended": {
+    "es": "Periodo de facturación finalizado",
+    "de": "Abrechnungszeitraum beendet",
+    "fr": "Période de facturation terminée",
+    "ja": "請求期間終了",
+    "ko": "결제 기간 종료"
+  },
+  "Current billing period ends": {
+    "es": "El periodo actual finaliza",
+    "de": "Aktueller Abrechnungszeitraum endet",
+    "fr": "La période actuelle se termine le",
+    "ja": "現在の請求期間終了日",
+    "ko": "현재 결제 기간 종료일"
+  },
+  "No default card on file": {
+    "es": "No hay tarjeta predeterminada",
+    "de": "Keine Standardkarte hinterlegt",
+    "fr": "Aucune carte par défaut",
+    "ja": "既定のカードが未登録です",
+    "ko": "기본 카드 없음"
+  },
+  "Expires": {
+    "es": "Caduca",
+    "de": "Gültig bis",
+    "fr": "Expire le",
+    "ja": "有効期限",
+    "ko": "만료일"
+  },
+  "Change card ↗": {
+    "es": "Cambiar tarjeta ↗",
+    "de": "Karte ändern ↗",
+    "fr": "Changer de carte ↗",
+    "ja": "カードを変更 ↗",
+    "ko": "카드 변경 ↗"
+  },
+  "Switch to monthly at renewal": {
+    "es": "Cambiar a mensual al renovar",
+    "de": "Ab Verlängerung monatlich zahlen",
+    "fr": "Passer au mensuel au renouvellement",
+    "ja": "次回更新から月払いに変更",
+    "ko": "갱신 시 월간 결제로 변경"
+  },
+  "Switch to annual ↗": {
+    "es": "Cambiar a anual ↗",
+    "de": "Auf jährlich wechseln ↗",
+    "fr": "Passer à l’annuel ↗",
+    "ja": "年払いに変更 ↗",
+    "ko": "연간 결제로 변경 ↗"
+  },
+  "Stripe shows your next charge before you confirm. Moving to annual bills now with credit for unused time; moving to monthly starts at your annual renewal.": {
+    "es": "Stripe muestra el próximo cargo antes de confirmar. El cambio a anual se cobra ahora, con abono por tiempo no utilizado; el mensual empieza en la renovación anual.",
+    "de": "Stripe zeigt die nächste Zahlung vor der Bestätigung. Jährliche Zahlung beginnt sofort mit Gutschrift für ungenutzte Zeit; monatliche Zahlung beginnt zur Jahresverlängerung.",
+    "fr": "Stripe affiche le prochain paiement avant confirmation. Le passage à l’annuel est facturé maintenant avec crédit du temps inutilisé ; le mensuel commence au renouvellement annuel.",
+    "ja": "確定前にStripeで次回請求を確認できます。年払いへの変更は未使用期間のクレジットを適用して即時請求、月払いへの変更は年次更新時からです。",
+    "ko": "확인 전에 Stripe에서 다음 청구액을 표시합니다. 연간 전환은 미사용 기간 크레딧을 적용해 지금 청구하며, 월간 전환은 연간 갱신 시 시작됩니다."
+  },
+  "Scheduled:": {
+    "es": "Programado:",
+    "de": "Geplant:",
+    "fr": "Programmé :",
+    "ja": "予定：",
+    "ko": "예정:"
+  },
+  "billing starts": {
+    "es": "la facturación comienza",
+    "de": "Abrechnung beginnt",
+    "fr": "la facturation commence",
+    "ja": "請求開始",
+    "ko": "결제 시작"
+  },
+  "at": {
+    "es": "a",
+    "de": "zu",
+    "fr": "à",
+    "ja": "金額：",
+    "ko": "금액:"
+  },
+  "per month. Your current paid period stays unchanged.": {
+    "es": "por mes. Tu periodo pagado actual no cambia.",
+    "de": "pro Monat. Dein aktuell bezahlter Zeitraum bleibt unverändert.",
+    "fr": "par mois. Votre période payée actuelle reste inchangée.",
+    "ja": "／月。現在の支払い済み期間は変更されません。",
+    "ko": "/월. 현재 결제된 기간은 변경되지 않습니다."
+  },
+  "Restore renewal": {
+    "es": "Reactivar renovación",
+    "de": "Verlängerung wieder aktivieren",
+    "fr": "Réactiver le renouvellement",
+    "ja": "更新を再開",
+    "ko": "갱신 복원"
+  },
+  "Cancel device add-on": {
+    "es": "Cancelar complemento de dispositivos",
+    "de": "Geräte-Add-on kündigen",
+    "fr": "Résilier l’option appareils",
+    "ja": "デバイス追加契約を解約",
+    "ko": "기기 추가 상품 해지"
+  },
+  "Cancel Ultra add-on": {
+    "es": "Cancelar complemento Ultra",
+    "de": "Ultra-Add-on kündigen",
+    "fr": "Résilier l’option Ultra",
+    "ja": "Ultra追加契約を解約",
+    "ko": "Ultra 추가 상품 해지"
+  },
+  "Cancel membership": {
+    "es": "Cancelar suscripción",
+    "de": "Mitgliedschaft kündigen",
+    "fr": "Résilier l’abonnement",
+    "ja": "メンバーシップを解約",
+    "ko": "멤버십 해지"
+  },
+  "Your membership stays available until the date above. Renewal is cancelled.": {
+    "es": "Tu suscripción sigue disponible hasta la fecha indicada. La renovación está cancelada.",
+    "de": "Deine Mitgliedschaft bleibt bis zum genannten Datum verfügbar. Die Verlängerung ist gekündigt.",
+    "fr": "Votre abonnement reste disponible jusqu’à la date indiquée. Le renouvellement est désactivé.",
+    "ja": "上記の日付まで利用できます。更新は停止されています。",
+    "ko": "위 날짜까지 멤버십을 이용할 수 있습니다. 갱신은 해지되었습니다."
+  },
+  "Invoices & billing details ↗": {
+    "es": "Facturas y datos de facturación ↗",
+    "de": "Rechnungen und Zahlungsdetails ↗",
+    "fr": "Factures et coordonnées de facturation ↗",
+    "ja": "請求書と請求情報 ↗",
+    "ko": "청구서 및 결제 정보 ↗"
+  },
+  "Stripe securely stores your card and billing details. Only the card brand, last four digits and expiry appear here.": {
+    "es": "Stripe guarda tus datos de pago de forma segura. Aquí solo se muestran la marca, los últimos cuatro dígitos y la caducidad.",
+    "de": "Stripe speichert deine Karten- und Zahlungsdaten sicher. Hier erscheinen nur Kartenmarke, letzte vier Ziffern und Ablaufdatum.",
+    "fr": "Stripe conserve vos données de paiement de manière sécurisée. Seuls la marque, les quatre derniers chiffres et l’expiration sont affichés ici.",
+    "ja": "カードと請求情報はStripeで安全に保管されます。ここにはブランド、下4桁、有効期限のみ表示されます。",
+    "ko": "Stripe가 카드와 결제 정보를 안전하게 보관합니다. 여기에는 카드 브랜드, 마지막 네 자리 및 유효기간만 표시됩니다."
+  },
+  "Before you go.": {
+    "es": "Antes de irte.",
+    "de": "Bevor du gehst.",
+    "fr": "Avant de partir.",
+    "ja": "解約の前に。",
+    "ko": "해지하기 전에."
+  },
+  "You can cancel renewal securely with Stripe. Your access will continue until the end of your paid billing period.": {
+    "es": "Puedes cancelar la renovación de forma segura con Stripe. Tu acceso continúa hasta el final del periodo pagado.",
+    "de": "Du kannst die Verlängerung sicher über Stripe kündigen. Dein Zugang bleibt bis zum Ende des bezahlten Zeitraums bestehen.",
+    "fr": "Vous pouvez désactiver le renouvellement via Stripe. Votre accès continue jusqu’à la fin de la période payée.",
+    "ja": "Stripeで安全に更新を停止できます。支払い済み期間の終了までアクセスは継続します。",
+    "ko": "Stripe에서 안전하게 갱신을 해지할 수 있습니다. 결제한 기간이 끝날 때까지 이용할 수 있습니다."
+  },
+  "ONE-TIME MONTHLY OFFER": {
+    "es": "OFERTA MENSUAL ÚNICA",
+    "de": "EINMALIGES MONATSANGEBOT",
+    "fr": "OFFRE MENSUELLE UNIQUE",
+    "ja": "1回限りの月額オファー",
+    "ko": "1회 한정 월간 혜택"
+  },
+  "20% off one more month.": {
+    "es": "20 % de descuento un mes más.",
+    "de": "20 % Rabatt auf einen weiteren Monat.",
+    "fr": "20 % de réduction sur un mois supplémentaire.",
+    "ja": "次の1か月が20%オフ。",
+    "ko": "한 달 추가 20% 할인."
+  },
+  "This offer has expired.": {
+    "es": "Esta oferta ha caducado.",
+    "de": "Dieses Angebot ist abgelaufen.",
+    "fr": "Cette offre a expiré.",
+    "ja": "このオファーは終了しました。",
+    "ko": "혜택이 만료되었습니다."
+  },
+  "Keep your monthly membership and save 20% on your next renewal only. Your normal monthly price resumes after that.": {
+    "es": "Mantén tu suscripción mensual y ahorra un 20 % solo en la próxima renovación. Después vuelve el precio habitual.",
+    "de": "Behalte dein Monatsabo und spare einmalig 20 % bei der nächsten Verlängerung. Danach gilt wieder der reguläre Preis.",
+    "fr": "Conservez votre abonnement mensuel et économisez 20 % au prochain renouvellement uniquement. Le tarif normal reprend ensuite.",
+    "ja": "月払いを継続すると、次回更新の1回のみ20%割引になります。その後は通常の月額料金に戻ります。",
+    "ko": "월간 멤버십을 유지하면 다음 갱신 1회에 한해 20% 할인됩니다. 이후 정상 월 요금이 적용됩니다."
+  },
+  "Offer time remaining": {
+    "es": "Tiempo restante de la oferta",
+    "de": "Verbleibende Angebotszeit",
+    "fr": "Temps restant pour l’offre",
+    "ja": "オファーの残り時間",
+    "ko": "혜택 남은 시간"
+  },
+  "Available for": {
+    "es": "Disponible durante",
+    "de": "Verfügbar für",
+    "fr": "Disponible pendant",
+    "ja": "残り時間",
+    "ko": "이용 가능 시간"
+  },
+  "This one-hour window won’t restart. The offer can be redeemed once per account and does not apply to annual plans.": {
+    "es": "Este plazo de una hora no se reinicia. La oferta solo se puede usar una vez por cuenta y no se aplica a planes anuales.",
+    "de": "Dieses einstündige Zeitfenster startet nicht neu. Das Angebot gilt einmal pro Konto und nicht für Jahrespläne.",
+    "fr": "Ce délai d’une heure ne redémarre pas. L’offre est utilisable une fois par compte et ne concerne pas les offres annuelles.",
+    "ja": "1時間の期限は再開始されません。アカウントごとに1回限りで、年払いには適用されません。",
+    "ko": "1시간의 기한은 다시 시작되지 않습니다. 계정당 한 번만 사용 가능하며 연간 요금제에는 적용되지 않습니다."
+  },
+  "You can still continue to cancellation. This offer will not be issued again.": {
+    "es": "Puedes continuar con la cancelación. Esta oferta no se volverá a emitir.",
+    "de": "Du kannst weiterhin kündigen. Dieses Angebot wird nicht erneut angeboten.",
+    "fr": "Vous pouvez toujours poursuivre la résiliation. Cette offre ne sera pas proposée à nouveau.",
+    "ja": "引き続き解約に進めます。このオファーは再発行されません。",
+    "ko": "해지를 계속 진행할 수 있습니다. 이 혜택은 다시 제공되지 않습니다."
+  },
+  "Review cancellation options in Stripe ↗": {
+    "es": "Ver opciones de cancelación en Stripe ↗",
+    "de": "Kündigungsoptionen in Stripe prüfen ↗",
+    "fr": "Voir les options de résiliation dans Stripe ↗",
+    "ja": "Stripeで解約オプションを確認 ↗",
+    "ko": "Stripe에서 해지 옵션 확인 ↗"
+  },
+  "Stripe will ask why you’re leaving. You can then choose to cancel or, while eligible, accept the discount. Nothing changes until you confirm there.": {
+    "es": "Stripe preguntará el motivo. Después podrás cancelar o aceptar el descuento si cumples los requisitos. Nada cambia hasta que confirmes allí.",
+    "de": "Stripe fragt nach deinem Kündigungsgrund. Anschließend kannst du kündigen oder bei Berechtigung den Rabatt annehmen. Erst deine Bestätigung dort ändert etwas.",
+    "fr": "Stripe vous demandera le motif. Vous pourrez résilier ou accepter la réduction si vous êtes éligible. Rien ne change avant votre confirmation.",
+    "ja": "Stripeで解約理由を尋ねられます。その後、解約するか、対象の場合は割引を選べます。そこで確定するまで変更されません。",
+    "ko": "Stripe에서 해지 이유를 묻습니다. 이후 해지하거나 대상인 경우 할인을 선택할 수 있습니다. 확인하기 전에는 변경되지 않습니다."
+  },
+  "Your billing information couldn’t be loaded. Please try again.": {
+    "es": "No se pudieron cargar los datos de facturación. Inténtalo de nuevo.",
+    "de": "Zahlungsdaten konnten nicht geladen werden. Versuche es erneut.",
+    "fr": "Impossible de charger vos informations de paiement. Réessayez.",
+    "ja": "請求情報を読み込めませんでした。再試行してください。",
+    "ko": "결제 정보를 불러올 수 없습니다. 다시 시도하세요."
+  },
+  "Stripe could not be opened. Please try again.": {
+    "es": "No se pudo abrir Stripe. Inténtalo de nuevo.",
+    "de": "Stripe konnte nicht geöffnet werden. Versuche es erneut.",
+    "fr": "Impossible d’ouvrir Stripe. Réessayez.",
+    "ja": "Stripeを開けませんでした。再試行してください。",
+    "ko": "Stripe를 열 수 없습니다. 다시 시도하세요."
+  },
+  "Cancellation options couldn’t be opened. Please refresh your membership and try again.": {
+    "es": "No se pudieron abrir las opciones de cancelación. Actualiza tu suscripción y reintenta.",
+    "de": "Kündigungsoptionen konnten nicht geöffnet werden. Aktualisiere deine Mitgliedschaft und versuche es erneut.",
+    "fr": "Impossible d’ouvrir les options de résiliation. Actualisez votre abonnement et réessayez.",
+    "ja": "解約オプションを開けませんでした。メンバーシップを更新して再試行してください。",
+    "ko": "해지 옵션을 열 수 없습니다. 멤버십을 새로고침하고 다시 시도하세요."
+  },
+  "Plan switching could not be completed. Refresh your billing details and try again.": {
+    "es": "No se pudo cambiar el plan. Actualiza los datos de facturación y reintenta.",
+    "de": "Planwechsel nicht abgeschlossen. Aktualisiere die Zahlungsdaten und versuche es erneut.",
+    "fr": "Le changement d’offre a échoué. Actualisez vos informations de paiement et réessayez.",
+    "ja": "プラン変更を完了できませんでした。請求情報を更新して再試行してください。",
+    "ko": "요금제 변경을 완료할 수 없습니다. 결제 정보를 새로고침하고 다시 시도하세요."
+  },
+  "Renewal could not be restored. Refresh your billing details and review again.": {
+    "es": "No se pudo reactivar la renovación. Actualiza los datos y vuelve a comprobarlo.",
+    "de": "Verlängerung konnte nicht aktiviert werden. Aktualisiere die Zahlungsdaten und prüfe erneut.",
+    "fr": "Impossible de réactiver le renouvellement. Actualisez vos informations et réessayez.",
+    "ja": "更新を再開できませんでした。請求情報を更新して再確認してください。",
+    "ko": "갱신을 복원할 수 없습니다. 결제 정보를 새로고침하고 다시 확인하세요."
+  },
+  "Close billing settings": {
+    "es": "Cerrar ajustes de facturación",
+    "de": "Zahlungseinstellungen schließen",
+    "fr": "Fermer les paramètres de paiement",
+    "ja": "請求設定を閉じる",
+    "ko": "결제 설정 닫기"
+  },
+  "YOUR ACCOUNT · YOUR MEMBERSHIP": {
+    "es": "TU CUENTA · TU SUSCRIPCIÓN",
+    "de": "DEIN KONTO · DEINE MITGLIEDSCHAFT",
+    "fr": "VOTRE COMPTE · VOTRE ABONNEMENT",
+    "ja": "アカウント・メンバーシップ",
+    "ko": "내 계정 · 내 멤버십"
+  },
+  "Restore your renewal?": {
+    "es": "¿Reactivar la renovación?",
+    "de": "Verlängerung wieder aktivieren?",
+    "fr": "Réactiver votre renouvellement ?",
+    "ja": "更新を再開しますか？",
+    "ko": "갱신을 복원할까요?"
+  },
+  "Your current access stays the same. No payment is taken now.": {
+    "es": "Tu acceso actual no cambia. No se cobra nada ahora.",
+    "de": "Dein aktueller Zugang bleibt gleich. Jetzt wird nichts abgebucht.",
+    "fr": "Votre accès actuel reste identique. Aucun paiement maintenant.",
+    "ja": "現在のアクセスは変わりません。今の請求はありません。",
+    "ko": "현재 이용 권한은 동일합니다. 지금 결제되는 금액은 없습니다."
+  },
+  "will renew": {
+    "es": "se renovará",
+    "de": "verlängert sich",
+    "fr": "sera renouvelé",
+    "ja": "更新されます",
+    "ko": "갱신 예정"
+  },
+  "at your next renewal": {
+    "es": "en tu próxima renovación",
+    "de": "bei deiner nächsten Verlängerung",
+    "fr": "au prochain renouvellement",
+    "ja": "次回更新時",
+    "ko": "다음 갱신 시"
+  },
+  "and then every": {
+    "es": "y después cada",
+    "de": "und danach alle",
+    "fr": "puis chaque",
+    "ja": "その後の周期",
+    "ko": "이후 주기"
+  },
+  ". Any applicable tax or existing discount is shown on your Stripe invoice.": {
+    "es": ". Los impuestos o descuentos aplicables aparecen en tu factura Stripe.",
+    "de": ". Steuern oder bestehende Rabatte stehen auf deiner Stripe-Rechnung.",
+    "fr": ". Les taxes et réductions applicables figurent sur votre facture Stripe.",
+    "ja": "。適用税額や割引はStripeの請求書に表示されます。",
+    "ko": ". 적용 세금 또는 기존 할인은 Stripe 청구서에 표시됩니다."
+  },
+  "Confirm restore renewal": {
+    "es": "Confirmar reactivación",
+    "de": "Aktivierung bestätigen",
+    "fr": "Confirmer la réactivation",
+    "ja": "更新再開を確定",
+    "ko": "갱신 복원 확인"
+  },
+  "Keep renewal cancelled": {
+    "es": "Mantener renovación cancelada",
+    "de": "Verlängerung gekündigt lassen",
+    "fr": "Garder le renouvellement désactivé",
+    "ja": "更新停止を維持",
+    "ko": "갱신 해지 유지"
+  },
+  "Your billing, in one place.": {
+    "es": "Tu facturación, en un solo lugar.",
+    "de": "Deine Zahlungen an einem Ort.",
+    "fr": "Vos paiements, au même endroit.",
+    "ja": "請求情報をまとめて管理。",
+    "ko": "결제 정보를 한곳에서."
+  },
+  "Review your payment card, update billing details and manage your membership.": {
+    "es": "Revisa tu tarjeta, actualiza los datos de facturación y gestiona tu suscripción.",
+    "de": "Prüfe deine Karte, aktualisiere Zahlungsdaten und verwalte deine Mitgliedschaft.",
+    "fr": "Vérifiez votre carte, actualisez vos coordonnées et gérez votre abonnement.",
+    "ja": "カードの確認、請求情報の更新、メンバーシップの管理ができます。",
+    "ko": "결제 카드를 확인하고 결제 정보를 업데이트하며 멤버십을 관리하세요."
+  },
+  "Loading your Stripe billing details…": {
+    "es": "Cargando datos de facturación Stripe…",
+    "de": "Stripe-Zahlungsdaten werden geladen…",
+    "fr": "Chargement des informations Stripe…",
+    "ja": "Stripeの請求情報を読み込み中…",
+    "ko": "Stripe 결제 정보 불러오는 중…"
+  },
+  "Get the app": {
+    "es": "Descargar la app",
+    "de": "App herunterladen",
+    "fr": "Télécharger l’application",
+    "ja": "アプリをダウンロード",
+    "ko": "앱 다운로드"
+  },
+  "Create your account and get started in the app.": {
+    "es": "Crea tu cuenta y empieza en la app.",
+    "de": "Erstelle dein Konto und starte in der App.",
+    "fr": "Créez votre compte et commencez dans l’application.",
+    "ja": "アカウントを作成してアプリで始めましょう。",
+    "ko": "계정을 만들고 앱에서 시작하세요."
+  },
+  "Get the iPhone app": {
+    "es": "Descargar para iPhone",
+    "de": "iPhone-App herunterladen",
+    "fr": "Télécharger pour iPhone",
+    "ja": "iPhoneアプリを入手",
+    "ko": "iPhone 앱 다운로드"
+  },
+  "Get the Android app": {
+    "es": "Descargar para Android",
+    "de": "Android-App herunterladen",
+    "fr": "Télécharger pour Android",
+    "ja": "Androidアプリを入手",
+    "ko": "Android 앱 다운로드"
+  },
+  "iPhone & iPad reviews": {
+    "es": "Reseñas de iPhone y iPad",
+    "de": "iPhone- und iPad-Bewertungen",
+    "fr": "Avis iPhone et iPad",
+    "ja": "iPhone・iPadのレビュー",
+    "ko": "iPhone 및 iPad 리뷰"
+  },
+  "Android reviews": {
+    "es": "Reseñas de Android",
+    "de": "Android-Bewertungen",
+    "fr": "Avis Android",
+    "ja": "Androidのレビュー",
+    "ko": "Android 리뷰"
+  },
+  "Five stars": {
+    "es": "Cinco estrellas",
+    "de": "Fünf Sterne",
+    "fr": "Cinq étoiles",
+    "ja": "5つ星",
+    "ko": "별 다섯 개"
+  },
+  "Scan with your phone to get the app": {
+    "es": "Escanea con tu móvil para descargar la app",
+    "de": "Mit dem Smartphone scannen und App herunterladen",
+    "fr": "Scannez avec votre téléphone pour télécharger l’application",
+    "ja": "スマートフォンでスキャンしてアプリを入手",
+    "ko": "휴대폰으로 스캔하여 앱 다운로드"
+  },
+  "Already have the app? Scan to open your selected thread.": {
+    "es": "¿Ya tienes la app? Escanea para abrir la conversación seleccionada.",
+    "de": "App schon installiert? Scanne, um den gewählten Thread zu öffnen.",
+    "fr": "Déjà l’application ? Scannez pour ouvrir la discussion choisie.",
+    "ja": "アプリをお持ちの場合はスキャンして選択したスレッドを開けます。",
+    "ko": "이미 앱이 있나요? 스캔하여 선택한 대화를 여세요."
+  },
+  "Could not sign out. Please try again.": {
+    "es": "No se pudo cerrar sesión. Inténtalo de nuevo.",
+    "de": "Abmelden fehlgeschlagen. Versuche es erneut.",
+    "fr": "Impossible de se déconnecter. Réessayez.",
+    "ja": "ログアウトできませんでした。再試行してください。",
+    "ko": "로그아웃할 수 없습니다. 다시 시도하세요."
+  },
+  "Signed in": {
+    "es": "Sesión iniciada",
+    "de": "Angemeldet",
+    "fr": "Connecté",
+    "ja": "ログイン中",
+    "ko": "로그인됨"
+  },
+  "Account & devices ↗": {
+    "es": "Cuenta y dispositivos ↗",
+    "de": "Konto und Geräte ↗",
+    "fr": "Compte et appareils ↗",
+    "ja": "アカウントとデバイス ↗",
+    "ko": "계정 및 기기 ↗"
+  },
+  "Signing out…": {
+    "es": "Cerrando sesión…",
+    "de": "Abmeldung läuft…",
+    "fr": "Déconnexion…",
+    "ja": "ログアウト中…",
+    "ko": "로그아웃 중…"
+  },
+  "Sign out": {
+    "es": "Cerrar sesión",
+    "de": "Abmelden",
+    "fr": "Se déconnecter",
+    "ja": "ログアウト",
+    "ko": "로그아웃"
+  },
+  "Could not load your devices. Please try again.": {
+    "es": "No se pudieron cargar tus dispositivos. Inténtalo de nuevo.",
+    "de": "Geräte konnten nicht geladen werden. Versuche es erneut.",
+    "fr": "Impossible de charger vos appareils. Réessayez.",
+    "ja": "デバイスを読み込めませんでした。再試行してください。",
+    "ko": "기기를 불러올 수 없습니다. 다시 시도하세요."
+  },
+  "Your device payment is being checked. Refresh in a moment.": {
+    "es": "Se está comprobando el pago del dispositivo. Actualiza en un momento.",
+    "de": "Deine Gerätezahlung wird geprüft. Aktualisiere in Kürze.",
+    "fr": "Votre paiement d’appareil est en cours de vérification. Actualisez dans un instant.",
+    "ja": "デバイスの支払いを確認中です。少し待って更新してください。",
+    "ko": "기기 결제를 확인 중입니다. 잠시 후 새로고침하세요."
+  },
+  "Signed-in devices": {
+    "es": "Dispositivos conectados",
+    "de": "Angemeldete Geräte",
+    "fr": "Appareils connectés",
+    "ja": "ログイン中のデバイス",
+    "ko": "로그인된 기기"
+  },
+  "Device management is being prepared for this website. Your existing sign-in is unchanged.": {
+    "es": "Se está preparando la gestión de dispositivos en esta web. Tu sesión actual no cambia.",
+    "de": "Die Geräteverwaltung wird für diese Website vorbereitet. Deine Anmeldung bleibt unverändert.",
+    "fr": "La gestion des appareils est en préparation sur ce site. Votre connexion actuelle reste inchangée.",
+    "ja": "このサイトのデバイス管理を準備中です。現在のログイン状態は変わりません。",
+    "ko": "웹사이트 기기 관리를 준비 중입니다. 기존 로그인은 변경되지 않습니다."
+  },
+  "Could not enable the support device slot. Please try again.": {
+    "es": "No se pudo activar la plaza de dispositivo de soporte. Reintenta.",
+    "de": "Support-Geräteplatz konnte nicht aktiviert werden. Versuche es erneut.",
+    "fr": "Impossible d’activer l’emplacement d’assistance. Réessayez.",
+    "ja": "サポート用デバイス枠を有効にできませんでした。再試行してください。",
+    "ko": "지원 기기 슬롯을 활성화할 수 없습니다. 다시 시도하세요."
+  },
+  "Could not sign out that device. Please try again.": {
+    "es": "No se pudo cerrar sesión en ese dispositivo. Reintenta.",
+    "de": "Gerät konnte nicht abgemeldet werden. Versuche es erneut.",
+    "fr": "Impossible de déconnecter cet appareil. Réessayez.",
+    "ja": "そのデバイスをログアウトできませんでした。再試行してください。",
+    "ko": "해당 기기에서 로그아웃할 수 없습니다. 다시 시도하세요."
+  },
+  "Checking device slots…": {
+    "es": "Comprobando plazas de dispositivos…",
+    "de": "Geräteplätze werden geprüft…",
+    "fr": "Vérification des emplacements…",
+    "ja": "デバイス枠を確認中…",
+    "ko": "기기 슬롯 확인 중…"
+  },
+  "Activity is the last time it checked in.": {
+    "es": "La actividad indica su última conexión.",
+    "de": "Die Aktivität zeigt die letzte Verbindung.",
+    "fr": "L’activité indique la dernière connexion.",
+    "ja": "アクティビティは最後の接続時刻です。",
+    "ko": "활동은 마지막 접속 시간입니다."
+  },
+  "Keep your devices connected": {
+    "es": "Mantén tus dispositivos conectados",
+    "de": "Halte deine Geräte verbunden",
+    "fr": "Gardez vos appareils connectés",
+    "ja": "デバイスの接続を維持",
+    "ko": "기기 연결 유지"
+  },
+  "Resolve by": {
+    "es": "Resolver antes de",
+    "de": "Beheben bis",
+    "fr": "À résoudre avant le",
+    "ja": "対応期限",
+    "ko": "해결 기한"
+  },
+  "Add more slots": {
+    "es": "Añadir más plazas",
+    "de": "Weitere Plätze hinzufügen",
+    "fr": "Ajouter des emplacements",
+    "ja": "枠を追加",
+    "ko": "슬롯 추가"
+  },
+  "Loading devices…": {
+    "es": "Cargando dispositivos…",
+    "de": "Geräte werden geladen…",
+    "fr": "Chargement des appareils…",
+    "ja": "デバイスを読み込み中…",
+    "ko": "기기 불러오는 중…"
+  },
+  "This device": {
+    "es": "Este dispositivo",
+    "de": "Dieses Gerät",
+    "fr": "Cet appareil",
+    "ja": "このデバイス",
+    "ko": "현재 기기"
+  },
+  "Last active": {
+    "es": "Última actividad",
+    "de": "Zuletzt aktiv",
+    "fr": "Dernière activité",
+    "ja": "最終利用",
+    "ko": "마지막 활동"
+  },
+  "Activity unavailable": {
+    "es": "Actividad no disponible",
+    "de": "Aktivität nicht verfügbar",
+    "fr": "Activité indisponible",
+    "ja": "アクティビティ不明",
+    "ko": "활동 정보 없음"
+  },
+  "Next new-device replacement:": {
+    "es": "Próxima sustitución de dispositivo:",
+    "de": "Nächster Gerätewechsel:",
+    "fr": "Prochain remplacement d’appareil :",
+    "ja": "次のデバイス変更可能日：",
+    "ko": "다음 새 기기 교체 가능일:"
+  },
+  ". Your approved devices can reconnect.": {
+    "es": ". Tus dispositivos autorizados pueden volver a conectarse.",
+    "de": ". Deine genehmigten Geräte können sich erneut verbinden.",
+    "fr": ". Vos appareils approuvés peuvent se reconnecter.",
+    "ja": "。承認済みのデバイスは再接続できます。",
+    "ko": ". 승인된 기기는 다시 연결할 수 있습니다."
+  },
+  "Confirm device sign-out": {
+    "es": "Confirmar cierre de sesión del dispositivo",
+    "de": "Geräteabmeldung bestätigen",
+    "fr": "Confirmer la déconnexion de l’appareil",
+    "ja": "デバイスのログアウトを確定",
+    "ko": "기기 로그아웃 확인"
+  },
+  "You will return to the sign-in screen. For an active paid account, this device cannot reconnect for 15 days unless more device slots are purchased. Unpaid accounts are exempt.": {
+    "es": "Volverás al inicio de sesión. En cuentas de pago activas, este dispositivo no podrá reconectarse durante 15 días salvo que compres más plazas. Las cuentas gratuitas están exentas.",
+    "de": "Du kehrst zur Anmeldung zurück. Bei aktivem Bezahlkonto kann dieses Gerät 15 Tage lang nicht erneut verbunden werden, außer du kaufst weitere Plätze. Kostenlose Konten sind ausgenommen.",
+    "fr": "Vous reviendrez à la connexion. Pour un compte payant actif, cet appareil ne pourra se reconnecter pendant 15 jours, sauf achat d’emplacements supplémentaires. Les comptes gratuits sont exemptés.",
+    "ja": "ログイン画面に戻ります。有料契約が有効な場合、枠を追加購入しない限り、このデバイスは15日間再接続できません。無料アカウントは対象外です。",
+    "ko": "로그인 화면으로 돌아갑니다. 유료 계정은 추가 기기 슬롯을 구매하지 않으면 이 기기로 15일간 다시 접속할 수 없습니다. 무료 계정은 제외됩니다."
+  },
+  "That device will be signed out when it next connects. For an active paid account, it cannot reconnect for 15 days unless more device slots are purchased. Unpaid accounts are exempt.": {
+    "es": "Ese dispositivo cerrará sesión al conectarse de nuevo. En cuentas de pago activas no podrá reconectarse durante 15 días salvo que compres más plazas. Las cuentas gratuitas están exentas.",
+    "de": "Das Gerät wird bei der nächsten Verbindung abgemeldet. Bei aktivem Bezahlkonto kann es 15 Tage lang nicht erneut verbunden werden, außer du kaufst weitere Plätze. Kostenlose Konten sind ausgenommen.",
+    "fr": "Cet appareil sera déconnecté à sa prochaine connexion. Pour un compte payant actif, il ne pourra se reconnecter pendant 15 jours, sauf achat d’emplacements supplémentaires. Les comptes gratuits sont exemptés.",
+    "ja": "そのデバイスは次回接続時にログアウトされます。有料契約が有効な場合、枠を追加購入しない限り15日間再接続できません。無料アカウントは対象外です。",
+    "ko": "해당 기기는 다음 접속 시 로그아웃됩니다. 유료 계정은 추가 슬롯을 구매하지 않으면 15일간 다시 접속할 수 없습니다. 무료 계정은 제외됩니다."
+  },
+  "Confirm sign out": {
+    "es": "Confirmar cierre de sesión",
+    "de": "Abmeldung bestätigen",
+    "fr": "Confirmer la déconnexion",
+    "ja": "ログアウトを確定",
+    "ko": "로그아웃 확인"
+  },
+  "Keep signed in": {
+    "es": "Mantener sesión",
+    "de": "Angemeldet bleiben",
+    "fr": "Rester connecté",
+    "ja": "ログインを維持",
+    "ko": "로그인 유지"
+  },
+  "Refresh devices": {
+    "es": "Actualizar dispositivos",
+    "de": "Geräte aktualisieren",
+    "fr": "Actualiser les appareils",
+    "ja": "デバイスを更新",
+    "ko": "기기 새로고침"
+  },
+  "Add a device": {
+    "es": "Añadir dispositivo",
+    "de": "Gerät hinzufügen",
+    "fr": "Ajouter un appareil",
+    "ja": "デバイスを追加",
+    "ko": "기기 추가"
+  },
+  "Connect another phone or browser": {
+    "es": "Conecta otro móvil o navegador",
+    "de": "Weiteres Smartphone oder Browser verbinden",
+    "fr": "Connectez un autre téléphone ou navigateur",
+    "ja": "別のスマートフォンやブラウザを接続",
+    "ko": "다른 휴대폰 또는 브라우저 연결"
+  },
+  "Open the app or stockstobuynow.ai/login on that device and sign in with this same account. It will appear in this list after it connects.": {
+    "es": "Abre la app o stockstobuynow.ai/login en ese dispositivo y accede con esta cuenta. Aparecerá en la lista al conectarse.",
+    "de": "Öffne dort die App oder stockstobuynow.ai/login und melde dich mit demselben Konto an. Danach erscheint das Gerät in der Liste.",
+    "fr": "Ouvrez l’application ou stockstobuynow.ai/login sur cet appareil et connectez-vous avec ce même compte. Il apparaîtra ensuite dans la liste.",
+    "ja": "そのデバイスでアプリまたはstockstobuynow.ai/loginを開き、同じアカウントでログインしてください。接続後にリストに表示されます。",
+    "ko": "해당 기기에서 앱 또는 stockstobuynow.ai/login을 열고 같은 계정으로 로그인하세요. 연결되면 목록에 표시됩니다."
+  },
+  "All your slots are used. Sign out one device first. New-device replacements are limited to once every seven days.": {
+    "es": "Todas las plazas están usadas. Cierra sesión en un dispositivo primero. Solo puedes sustituir un dispositivo cada siete días.",
+    "de": "Alle Plätze sind belegt. Melde zuerst ein Gerät ab. Ein Gerätewechsel ist nur alle sieben Tage möglich.",
+    "fr": "Tous vos emplacements sont utilisés. Déconnectez d’abord un appareil. Le remplacement est limité à une fois tous les sept jours.",
+    "ja": "すべての枠が使用中です。まず1台をログアウトしてください。新しいデバイスへの変更は7日ごとに1回です。",
+    "ko": "모든 슬롯이 사용 중입니다. 먼저 기기 하나에서 로그아웃하세요. 새 기기 교체는 7일에 한 번으로 제한됩니다."
+  },
+  "Your support account includes a third device slot.": {
+    "es": "Tu cuenta de soporte incluye una tercera plaza de dispositivo.",
+    "de": "Dein Support-Konto enthält einen dritten Geräteplatz.",
+    "fr": "Votre compte d’assistance comprend un troisième emplacement.",
+    "ja": "サポートアカウントには3台目の枠が含まれます。",
+    "ko": "지원 계정에는 세 번째 기기 슬롯이 포함됩니다."
+  },
+  "Got it": {
+    "es": "Entendido",
+    "de": "Verstanden",
+    "fr": "Compris",
+    "ja": "確認しました",
+    "ko": "확인"
+  },
+  "Could not load device plans. Please try again.": {
+    "es": "No se pudieron cargar los planes de dispositivos. Reintenta.",
+    "de": "Gerätepläne konnten nicht geladen werden. Versuche es erneut.",
+    "fr": "Impossible de charger les offres d’appareils. Réessayez.",
+    "ja": "デバイスプランを読み込めませんでした。再試行してください。",
+    "ko": "기기 요금제를 불러올 수 없습니다. 다시 시도하세요."
+  },
+  "This device was removed": {
+    "es": "Este dispositivo se eliminó",
+    "de": "Dieses Gerät wurde entfernt",
+    "fr": "Cet appareil a été retiré",
+    "ja": "このデバイスは削除されました",
+    "ko": "이 기기는 삭제되었습니다"
+  },
+  "Device limit reached": {
+    "es": "Límite de dispositivos alcanzado",
+    "de": "Gerätelimit erreicht",
+    "fr": "Limite d’appareils atteinte",
+    "ja": "デバイス上限に達しました",
+    "ko": "기기 한도 도달"
+  },
+  "This device can reconnect after the 15-day waiting period. Add more device slots to reconnect sooner. The restriction ends if this account no longer has an active paid membership.": {
+    "es": "Este dispositivo puede reconectarse tras 15 días. Añade plazas para conectarte antes. La restricción termina si la cuenta deja de tener una suscripción de pago activa.",
+    "de": "Dieses Gerät kann sich nach 15 Tagen wieder verbinden. Zusätzliche Plätze ermöglichen eine frühere Verbindung. Die Einschränkung endet ohne aktive Bezahlmitgliedschaft.",
+    "fr": "Cet appareil pourra se reconnecter après 15 jours. Ajoutez des emplacements pour vous reconnecter plus tôt. La restriction cesse sans abonnement payant actif.",
+    "ja": "15日間の待機後に再接続できます。早めに接続するには枠を追加してください。有効な有料契約がなくなると、この制限は解除されます。",
+    "ko": "15일 대기 후 다시 연결할 수 있습니다. 더 빨리 연결하려면 기기 슬롯을 추가하세요. 활성 유료 멤버십이 없어지면 제한이 종료됩니다."
+  },
+  "Your account has reached its device allowance. Manage your connected devices or add more slots to continue here.": {
+    "es": "Has alcanzado el límite de dispositivos. Gestiona los conectados o añade plazas para continuar.",
+    "de": "Dein Gerätelimit ist erreicht. Verwalte verbundene Geräte oder füge Plätze hinzu, um fortzufahren.",
+    "fr": "Vous avez atteint la limite d’appareils. Gérez vos appareils ou ajoutez des emplacements pour continuer.",
+    "ja": "デバイス枠の上限に達しました。接続中のデバイスを管理するか、枠を追加してください。",
+    "ko": "계정의 기기 한도에 도달했습니다. 연결된 기기를 관리하거나 슬롯을 추가하여 계속하세요."
+  },
+  "Available again:": {
+    "es": "Disponible de nuevo:",
+    "de": "Wieder verfügbar:",
+    "fr": "À nouveau disponible :",
+    "ja": "再利用可能日：",
+    "ko": "다시 이용 가능:"
+  },
+  "Add more device slots": {
+    "es": "Añadir plazas de dispositivos",
+    "de": "Weitere Geräteplätze hinzufügen",
+    "fr": "Ajouter des emplacements d’appareils",
+    "ja": "デバイス枠を追加",
+    "ko": "기기 슬롯 추가"
+  },
+  "Back to sign in": {
+    "es": "Volver a iniciar sesión",
+    "de": "Zurück zur Anmeldung",
+    "fr": "Retour à la connexion",
+    "ja": "ログインに戻る",
+    "ko": "로그인으로 돌아가기"
+  },
+  "Back": {
+    "es": "Atrás",
+    "de": "Zurück",
+    "fr": "Retour",
+    "ja": "戻る",
+    "ko": "뒤로"
+  },
+  "YOUR CONNECTED DEVICES": {
+    "es": "TUS DISPOSITIVOS CONECTADOS",
+    "de": "DEINE VERBUNDENEN GERÄTE",
+    "fr": "VOS APPAREILS CONNECTÉS",
+    "ja": "接続中のデバイス",
+    "ko": "연결된 기기"
+  },
+  "Not now": {
+    "es": "Ahora no",
+    "de": "Nicht jetzt",
+    "fr": "Pas maintenant",
+    "ja": "後で",
+    "ko": "나중에"
+  },
+  "Sign in to manage devices": {
+    "es": "Inicia sesión para gestionar dispositivos",
+    "de": "Anmelden und Geräte verwalten",
+    "fr": "Connectez-vous pour gérer les appareils",
+    "ja": "ログインしてデバイスを管理",
+    "ko": "로그인하여 기기 관리"
+  },
+  "YOUR ACCOUNT": {
+    "es": "TU CUENTA",
+    "de": "DEIN KONTO",
+    "fr": "VOTRE COMPTE",
+    "ja": "アカウント",
+    "ko": "내 계정"
+  },
+  "Account settings": {
+    "es": "Ajustes de cuenta",
+    "de": "Kontoeinstellungen",
+    "fr": "Paramètres du compte",
+    "ja": "アカウント設定",
+    "ko": "계정 설정"
+  },
+  "Signed in as": {
+    "es": "Sesión iniciada como",
+    "de": "Angemeldet als",
+    "fr": "Connecté en tant que",
+    "ja": "ログイン中：",
+    "ko": "로그인 계정:"
+  },
+  "your account": {
+    "es": "tu cuenta",
+    "de": "dein Konto",
+    "fr": "votre compte",
+    "ja": "あなたのアカウント",
+    "ko": "내 계정"
+  },
+  "Sign-in methods": {
+    "es": "Métodos de acceso",
+    "de": "Anmeldemethoden",
+    "fr": "Méthodes de connexion",
+    "ja": "ログイン方法",
+    "ko": "로그인 방법"
+  },
+  "Connect another method to this same account. Your membership, posts and saved content stay together.": {
+    "es": "Conecta otro método a esta cuenta. Tu suscripción, publicaciones y contenido guardado permanecen juntos.",
+    "de": "Verknüpfe eine weitere Methode mit diesem Konto. Mitgliedschaft, Beiträge und gespeicherte Inhalte bleiben zusammen.",
+    "fr": "Associez une autre méthode à ce compte. Abonnement, publications et contenus enregistrés restent regroupés.",
+    "ja": "このアカウントに別のログイン方法を連携できます。メンバーシップ、投稿、保存内容はそのまま維持されます。",
+    "ko": "이 계정에 다른 방법을 연결하세요. 멤버십, 게시물 및 저장된 콘텐츠는 그대로 유지됩니다."
+  },
+  "Setup pending": {
+    "es": "Configuración pendiente",
+    "de": "Einrichtung ausstehend",
+    "fr": "Configuration en attente",
+    "ja": "設定待ち",
+    "ko": "설정 대기 중"
+  },
+  "Link to this account": {
+    "es": "Vincular a esta cuenta",
+    "de": "Mit diesem Konto verknüpfen",
+    "fr": "Associer à ce compte",
+    "ja": "このアカウントに連携",
+    "ko": "이 계정에 연결"
+  },
+  "If a method belongs to another account, it cannot be moved here automatically. Contact support for help.": {
+    "es": "Si el método pertenece a otra cuenta, no puede trasladarse automáticamente. Contacta con soporte.",
+    "de": "Gehört eine Methode zu einem anderen Konto, kann sie nicht automatisch übertragen werden. Wende dich an den Support.",
+    "fr": "Si la méthode appartient à un autre compte, elle ne peut pas être transférée automatiquement. Contactez l’assistance.",
+    "ja": "別のアカウントに紐づく方法は自動で移行できません。サポートにお問い合わせください。",
+    "ko": "다른 계정에 연결된 방법은 자동으로 이전할 수 없습니다. 지원팀에 문의하세요."
+  },
+  "Where are you starting?": {
+    "es": "¿Cuál es tu punto de partida?",
+    "de": "Wo stehst du gerade?",
+    "fr": "Quel est votre point de départ ?",
+    "ja": "投資経験を教えてください",
+    "ko": "어느 단계에서 시작하시나요?"
+  },
+  "We’ll help you explore at your own pace.": {
+    "es": "Te ayudaremos a explorar a tu ritmo.",
+    "de": "Wir helfen dir, in deinem Tempo zu entdecken.",
+    "fr": "Nous vous aidons à découvrir à votre rythme.",
+    "ja": "あなたのペースに合わせてサポートします。",
+    "ko": "자신의 속도에 맞춰 살펴보도록 도와드립니다."
+  },
+  "Beginner": {
+    "es": "Principiante",
+    "de": "Anfänger",
+    "fr": "Débutant",
+    "ja": "初心者",
+    "ko": "초보자"
+  },
+  "Some experience": {
+    "es": "Algo de experiencia",
+    "de": "Etwas Erfahrung",
+    "fr": "Un peu d’expérience",
+    "ja": "少し経験がある",
+    "ko": "약간의 경험"
+  },
+  "Experienced": {
+    "es": "Con experiencia",
+    "de": "Erfahren",
+    "fr": "Expérimenté",
+    "ja": "経験が豊富",
+    "ko": "경험이 풍부함"
+  },
+  "What interests you most?": {
+    "es": "¿Qué te interesa más?",
+    "de": "Was interessiert dich am meisten?",
+    "fr": "Qu’est-ce qui vous intéresse le plus ?",
+    "ja": "最も興味があるものは？",
+    "ko": "무엇에 가장 관심이 있나요?"
+  },
+  "Choose the research you want to explore.": {
+    "es": "Elige el análisis que quieres explorar.",
+    "de": "Wähle die Analysen, die dich interessieren.",
+    "fr": "Choisissez les analyses à explorer.",
+    "ja": "確認したいリサーチを選んでください。",
+    "ko": "살펴보고 싶은 리서치를 선택하세요."
+  },
+  "Stocks": {
+    "es": "Acciones",
+    "de": "Aktien",
+    "fr": "Actions",
+    "ja": "株式",
+    "ko": "주식"
+  },
+  "Options": {
+    "es": "Opciones",
+    "de": "Optionen",
+    "fr": "Options",
+    "ja": "オプション",
+    "ko": "옵션"
+  },
+  "Both": {
+    "es": "Ambos",
+    "de": "Beides",
+    "fr": "Les deux",
+    "ja": "両方",
+    "ko": "둘 다"
+  },
+  "What’s your time horizon?": {
+    "es": "¿Cuál es tu horizonte temporal?",
+    "de": "Was ist dein Zeithorizont?",
+    "fr": "Quel est votre horizon de placement ?",
+    "ja": "投資期間はどのくらいですか？",
+    "ko": "투자 기간은 어느 정도인가요?"
+  },
+  "A quick setup or a longer investment story?": {
+    "es": "¿Una operación rápida o una inversión a más largo plazo?",
+    "de": "Ein kurzfristiges Setup oder eine langfristige Anlage?",
+    "fr": "Une opération rapide ou un investissement à plus long terme ?",
+    "ja": "短期の取引ですか、長期の投資ですか？",
+    "ko": "단기 매매인가요, 장기 투자인가요?"
+  },
+  "Short-term": {
+    "es": "Corto plazo",
+    "de": "Kurzfristig",
+    "fr": "Court terme",
+    "ja": "短期",
+    "ko": "단기"
+  },
+  "Long-term": {
+    "es": "Largo plazo",
+    "de": "Langfristig",
+    "fr": "Long terme",
+    "ja": "長期",
+    "ko": "장기"
+  },
+  "Choose a username.": {
+    "es": "Elige un nombre de usuario.",
+    "de": "Wähle einen Benutzernamen.",
+    "fr": "Choisissez un nom d’utilisateur.",
+    "ja": "ユーザー名を選んでください。",
+    "ko": "사용자 이름을 선택하세요."
+  },
+  "Use a username, not an email address or website.": {
+    "es": "Usa un nombre de usuario, no un correo ni una web.",
+    "de": "Nutze einen Benutzernamen, keine E-Mail oder Website.",
+    "fr": "Utilisez un nom d’utilisateur, pas une adresse e-mail ou un site.",
+    "ja": "メールやサイトではなくユーザー名を入力してください。",
+    "ko": "이메일이나 웹사이트가 아닌 사용자 이름을 사용하세요."
+  },
+  "Use only letters, numbers and underscores (a–z, 0–9, _).": {
+    "es": "Usa solo letras, números y guiones bajos (a–z, 0–9, _).",
+    "de": "Nur Buchstaben, Zahlen und Unterstriche (a–z, 0–9, _).",
+    "fr": "Utilisez lettres, chiffres et tirets bas (a–z, 0–9, _).",
+    "ja": "英小文字、数字、アンダースコア（a–z、0–9、_）のみ使用できます。",
+    "ko": "영문 소문자, 숫자 및 밑줄(a–z, 0–9, _)만 사용하세요."
+  },
+  "Your username can contain at most 5 digits in total.": {
+    "es": "Tu nombre puede contener como máximo 5 dígitos.",
+    "de": "Dein Benutzername darf insgesamt höchstens 5 Ziffern enthalten.",
+    "fr": "Votre nom peut contenir au maximum 5 chiffres.",
+    "ja": "ユーザー名に含められる数字は合計5桁までです。",
+    "ko": "사용자 이름에는 숫자를 최대 5개 포함할 수 있습니다."
+  },
+  "Use 15 characters or fewer.": {
+    "es": "Usa 15 caracteres o menos.",
+    "de": "Verwende höchstens 15 Zeichen.",
+    "fr": "Utilisez 15 caractères maximum.",
+    "ja": "15文字以内で入力してください。",
+    "ko": "15자 이하로 입력하세요."
+  },
+  "We couldn’t choose an available username. Please try again.": {
+    "es": "No pudimos elegir un nombre disponible. Inténtalo de nuevo.",
+    "de": "Kein verfügbarer Benutzername gefunden. Versuche es erneut.",
+    "fr": "Impossible de choisir un nom disponible. Réessayez.",
+    "ja": "利用可能なユーザー名を選択できませんでした。再試行してください。",
+    "ko": "사용 가능한 이름을 선택할 수 없습니다. 다시 시도하세요."
+  },
+  "to your signed-in account? Your profile, membership and saved content stay on this account.": {
+    "es": "¿a tu cuenta actual? Tu perfil, suscripción y contenido guardado permanecen en ella.",
+    "de": "mit deinem angemeldeten Konto? Profil, Mitgliedschaft und gespeicherte Inhalte bleiben auf diesem Konto.",
+    "fr": "à votre compte connecté ? Votre profil, abonnement et contenus enregistrés restent sur ce compte.",
+    "ja": "を現在のアカウントに連携しますか？プロフィール、メンバーシップ、保存内容はこのアカウントに維持されます。",
+    "ko": "을 현재 계정에 연결할까요? 프로필, 멤버십 및 저장된 콘텐츠는 이 계정에 유지됩니다."
+  },
+  "Additional member result: price and company are locked, financial trend is visible": {
+    "es": "Resultado adicional para miembros: precio y empresa bloqueados; tendencia financiera visible",
+    "de": "Weiteres Mitgliederergebnis: Preis und Unternehmen gesperrt, Finanztrend sichtbar",
+    "fr": "Résultat membre supplémentaire : prix et entreprise verrouillés, tendance financière visible",
+    "ja": "追加の会員向け結果：価格と企業名は非表示、財務トレンドは表示",
+    "ko": "추가 회원 결과: 가격과 기업은 잠겨 있으며 재무 추세는 표시됨"
+  },
+  "Research and educational tools. Investing involves risk; membership does not guarantee returns. Macro Driven Financial Headlines and Market Prediction Recaps manually curated by former Goldman Sachs (New York) and Bank of America Directors (London).": {
+    "es": "Herramientas de análisis y educación. Invertir conlleva riesgos; la suscripción no garantiza rentabilidad. Titulares financieros macroeconómicos y resúmenes de previsiones seleccionados manualmente por antiguos directores de Goldman Sachs (Nueva York) y Bank of America (Londres).",
+    "de": "Analyse- und Lernwerkzeuge. Investieren birgt Risiken; eine Mitgliedschaft garantiert keine Renditen. Makro-Finanznachrichten und Marktprognose-Rückblicke, manuell kuratiert von ehemaligen Directors bei Goldman Sachs (New York) und Bank of America (London).",
+    "fr": "Outils d’analyse et de formation. Investir comporte des risques ; l’abonnement ne garantit aucun rendement. Titres financiers macroéconomiques et récapitulatifs de prévisions sélectionnés par d’anciens Directors de Goldman Sachs (New York) et Bank of America (Londres).",
+    "ja": "リサーチ・学習用ツールです。投資にはリスクがあり、会員登録は収益を保証しません。マクロ経済ニュースと市場予測の振り返りは、Goldman Sachs（ニューヨーク）およびBank of America（ロンドン）の元ディレクターが手作業で選定しています。",
+    "ko": "리서치 및 교육 도구입니다. 투자에는 위험이 있으며 멤버십은 수익을 보장하지 않습니다. 거시경제 금융 뉴스와 시장 예측 요약은 Goldman Sachs(뉴욕) 및 Bank of America(런던) 출신 디렉터가 직접 선별합니다."
+  },
+  "Save $": {
+    "es": "Ahorra USD",
+    "de": "USD sparen:",
+    "fr": "Économisez USD",
+    "ja": "割引額（米ドル）：",
+    "ko": "절약 금액(USD):"
+  },
+  "Ultra membership | Stocks To Buy Now Research": {
+    "es": "Suscripción Ultra | Stocks To Buy Now Research",
+    "de": "Ultra-Mitgliedschaft | Stocks To Buy Now Research",
+    "fr": "Abonnement Ultra | Stocks To Buy Now Research",
+    "ja": "Ultraメンバーシップ | Stocks To Buy Now Research",
+    "ko": "Ultra 멤버십 | Stocks To Buy Now Research"
+  },
+  "Explore full options-results research, contract breakdowns and payoff scenarios with Ultra. Pro included.": {
+    "es": "Explora resultados de opciones, detalles de contratos y escenarios de rentabilidad con Ultra. Pro incluido.",
+    "de": "Entdecke vollständige Optionsanalysen, Kontraktdetails und Auszahlungsszenarien mit Ultra. Pro inklusive.",
+    "fr": "Découvrez les résultats d’options, détails de contrats et scénarios de résultat avec Ultra. Pro inclus.",
+    "ja": "Ultraでオプション結果、契約の詳細、損益シナリオを確認。Pro込み。",
+    "ko": "Ultra에서 옵션 결과 리서치, 계약 분석 및 손익 시나리오를 살펴보세요. Pro 포함."
+  },
+  "Get the app | Stocks To Buy Now Research": {
+    "es": "Descargar la app | Stocks To Buy Now Research",
+    "de": "App herunterladen | Stocks To Buy Now Research",
+    "fr": "Télécharger l’application | Stocks To Buy Now Research",
+    "ja": "アプリをダウンロード | Stocks To Buy Now Research",
+    "ko": "앱 다운로드 | Stocks To Buy Now Research"
+  },
+  "Account & sign-in methods | Stocks To Buy Now Research": {
+    "es": "Cuenta y métodos de acceso | Stocks To Buy Now Research",
+    "de": "Konto und Anmeldemethoden | Stocks To Buy Now Research",
+    "fr": "Compte et méthodes de connexion | Stocks To Buy Now Research",
+    "ja": "アカウントとログイン方法 | Stocks To Buy Now Research",
+    "ko": "계정 및 로그인 방법 | Stocks To Buy Now Research"
+  },
+  "Your account changed. Please sign in again.": {
+    "es": "Tu cuenta ha cambiado. Inicia sesión de nuevo.",
+    "de": "Dein Konto hat sich geändert. Melde dich erneut an.",
+    "fr": "Votre compte a changé. Reconnectez-vous.",
+    "ja": "アカウントが変更されました。再度ログインしてください。",
+    "ko": "계정이 변경되었습니다. 다시 로그인하세요."
+  },
+  "This sign-in method is being configured. Please use Google or Apple.": {
+    "es": "Se está configurando este método. Usa Google o Apple.",
+    "de": "Diese Anmeldemethode wird eingerichtet. Nutze Google oder Apple.",
+    "fr": "Cette méthode est en cours de configuration. Utilisez Google ou Apple.",
+    "ja": "このログイン方法は設定中です。GoogleまたはAppleをご利用ください。",
+    "ko": "이 로그인 방법은 설정 중입니다. Google 또는 Apple을 사용하세요."
+  },
+  "Sign in with your existing account first.": {
+    "es": "Primero accede con tu cuenta existente.",
+    "de": "Melde dich zuerst mit deinem bestehenden Konto an.",
+    "fr": "Connectez-vous d’abord à votre compte existant.",
+    "ja": "まず既存のアカウントにログインしてください。",
+    "ko": "먼저 기존 계정으로 로그인하세요."
+  },
+  "Sign in to the existing account with the same email before linking.": {
+    "es": "Antes de vincular, accede a la cuenta existente con el mismo correo.",
+    "de": "Melde dich vor der Verknüpfung im bestehenden Konto mit derselben E-Mail an.",
+    "fr": "Connectez-vous au compte existant avec le même e-mail avant l’association.",
+    "ja": "連携前に同じメールアドレスの既存アカウントにログインしてください。",
+    "ko": "연결하기 전에 같은 이메일의 기존 계정으로 로그인하세요."
+  },
+  "This sign-in method is being configured.": {
+    "es": "Se está configurando este método de acceso.",
+    "de": "Diese Anmeldemethode wird eingerichtet.",
+    "fr": "Cette méthode de connexion est en cours de configuration.",
+    "ja": "このログイン方法は設定中です。",
+    "ko": "이 로그인 방법은 설정 중입니다."
+  },
+  "Please sign in first.": {
+    "es": "Inicia sesión primero.",
+    "de": "Bitte zuerst anmelden.",
+    "fr": "Connectez-vous d’abord.",
+    "ja": "先にログインしてください。",
+    "ko": "먼저 로그인하세요."
+  },
+  "This email already has an account. Sign in using your existing method, then confirm linking the new method.": {
+    "es": "Este correo ya tiene una cuenta. Accede con tu método habitual y confirma la vinculación del nuevo.",
+    "de": "Diese E-Mail hat bereits ein Konto. Melde dich mit deiner bisherigen Methode an und bestätige dann die neue Verknüpfung.",
+    "fr": "Cet e-mail possède déjà un compte. Connectez-vous avec votre méthode habituelle, puis confirmez la nouvelle association.",
+    "ja": "このメールアドレスには既存のアカウントがあります。既存の方法でログイン後、新しい方法の連携を確定してください。",
+    "ko": "이미 계정이 있는 이메일입니다. 기존 방법으로 로그인한 후 새 방법 연결을 확인하세요."
+  },
+  "This sign-in belongs to another account. No accounts or memberships were merged. Use that account or contact support.": {
+    "es": "Este acceso pertenece a otra cuenta. No se han fusionado cuentas ni suscripciones. Usa esa cuenta o contacta con soporte.",
+    "de": "Diese Anmeldung gehört zu einem anderen Konto. Konten und Mitgliedschaften wurden nicht zusammengeführt. Nutze jenes Konto oder kontaktiere den Support.",
+    "fr": "Cette connexion appartient à un autre compte. Aucun compte ni abonnement n’a été fusionné. Utilisez cet autre compte ou contactez l’assistance.",
+    "ja": "このログインは別のアカウントに紐づいています。アカウントや契約は統合されていません。そのアカウントを使用するかサポートにお問い合わせください。",
+    "ko": "이 로그인은 다른 계정에 속합니다. 계정이나 멤버십은 병합되지 않았습니다. 해당 계정을 사용하거나 지원팀에 문의하세요."
+  },
+  "This method is already linked to your account.": {
+    "es": "Este método ya está vinculado a tu cuenta.",
+    "de": "Diese Methode ist bereits mit deinem Konto verknüpft.",
+    "fr": "Cette méthode est déjà associée à votre compte.",
+    "ja": "この方法は既にアカウントに連携されています。",
+    "ko": "이미 계정에 연결된 방법입니다."
+  },
+  "Your browser blocked the sign-in window. Allow pop-ups for stockstobuynow.ai, then tap Continue again. On mobile, open this page in Safari or Chrome.": {
+    "es": "Tu navegador bloqueó la ventana de acceso. Permite las ventanas emergentes para stockstobuynow.ai y pulsa Continuar. En móvil, abre esta página en Safari o Chrome.",
+    "de": "Dein Browser blockiert das Anmeldefenster. Erlaube Pop-ups für stockstobuynow.ai und tippe erneut auf Weiter. Mobil: Öffne die Seite in Safari oder Chrome.",
+    "fr": "Votre navigateur bloque la fenêtre de connexion. Autorisez les pop-ups pour stockstobuynow.ai, puis réessayez. Sur mobile, ouvrez la page dans Safari ou Chrome.",
+    "ja": "ブラウザがログイン画面をブロックしました。stockstobuynow.aiのポップアップを許可し、再度「続行」を押してください。モバイルではSafariまたはChromeで開いてください。",
+    "ko": "브라우저가 로그인 창을 차단했습니다. stockstobuynow.ai 팝업을 허용한 후 계속을 다시 누르세요. 모바일에서는 Safari 또는 Chrome으로 여세요."
+  },
+  "The sign-in window closed before sign-in finished. Tap Continue to try again. If you opened this page inside another app, open it in Safari or Chrome.": {
+    "es": "La ventana se cerró antes de terminar. Pulsa Continuar para reintentar. Si estás dentro de otra app, abre la página en Safari o Chrome.",
+    "de": "Das Fenster wurde vor Abschluss geschlossen. Tippe zum Wiederholen auf Weiter. Falls du in einer anderen App bist, öffne die Seite in Safari oder Chrome.",
+    "fr": "La fenêtre s’est fermée avant la fin. Appuyez sur Continuer pour réessayer. Depuis une autre application, ouvrez cette page dans Safari ou Chrome.",
+    "ja": "ログイン完了前に画面が閉じられました。「続行」で再試行してください。他のアプリ内から開いた場合はSafariまたはChromeをご利用ください。",
+    "ko": "로그인이 완료되기 전에 창이 닫혔습니다. 계속을 눌러 다시 시도하세요. 다른 앱 안에서 열었다면 Safari 또는 Chrome으로 여세요."
+  },
+  "Another sign-in window is already open. Finish there, or close it and try again.": {
+    "es": "Ya hay otra ventana de acceso abierta. Termina allí o ciérrala y reintenta.",
+    "de": "Ein anderes Anmeldefenster ist offen. Schließe die Anmeldung dort ab oder schließe es und versuche es erneut.",
+    "fr": "Une autre fenêtre de connexion est ouverte. Terminez-y la connexion ou fermez-la et réessayez.",
+    "ja": "別のログイン画面が開いています。そちらで完了するか、閉じて再試行してください。",
+    "ko": "다른 로그인 창이 열려 있습니다. 해당 창에서 완료하거나 닫고 다시 시도하세요."
+  },
+  "Your browser cannot save the sign-in session. Open this page in Safari or Chrome with site storage enabled.": {
+    "es": "Tu navegador no puede guardar la sesión. Abre la página en Safari o Chrome con el almacenamiento habilitado.",
+    "de": "Dein Browser kann die Anmeldung nicht speichern. Öffne die Seite in Safari oder Chrome mit aktiviertem Website-Speicher.",
+    "fr": "Votre navigateur ne peut pas enregistrer la session. Ouvrez la page dans Safari ou Chrome avec le stockage activé.",
+    "ja": "ブラウザでログインを保存できません。サイトのストレージを有効にしたSafariまたはChromeで開いてください。",
+    "ko": "브라우저가 로그인 세션을 저장할 수 없습니다. 사이트 저장소가 활성화된 Safari 또는 Chrome으로 여세요."
+  },
+  "There have been too many sign-in attempts. Please wait a few minutes before trying again.": {
+    "es": "Demasiados intentos de acceso. Espera unos minutos y reintenta.",
+    "de": "Zu viele Anmeldeversuche. Warte einige Minuten und versuche es erneut.",
+    "fr": "Trop de tentatives de connexion. Patientez quelques minutes avant de réessayer.",
+    "ja": "ログイン試行回数が多すぎます。数分後に再試行してください。",
+    "ko": "로그인 시도가 너무 많습니다. 몇 분 후 다시 시도하세요."
+  },
+  "This sign-in method is not configured yet. Please use another method.": {
+    "es": "Este método aún no está configurado. Usa otro.",
+    "de": "Diese Methode ist noch nicht eingerichtet. Nutze eine andere.",
+    "fr": "Cette méthode n’est pas encore configurée. Utilisez-en une autre.",
+    "ja": "このログイン方法は未設定です。別の方法をご利用ください。",
+    "ko": "아직 설정되지 않은 로그인 방법입니다. 다른 방법을 사용하세요."
+  },
+  "Sign in again with your existing method, then return here to link.": {
+    "es": "Accede de nuevo con tu método habitual y vuelve aquí para vincular.",
+    "de": "Melde dich erneut mit der bisherigen Methode an und kehre zur Verknüpfung zurück.",
+    "fr": "Reconnectez-vous avec votre méthode habituelle, puis revenez pour l’association.",
+    "ja": "既存の方法で再度ログインし、ここに戻って連携してください。",
+    "ko": "기존 방법으로 다시 로그인한 후 여기로 돌아와 연결하세요."
+  },
+  "This account requires two-factor verification. Please continue in the app.": {
+    "es": "Esta cuenta requiere verificación en dos pasos. Continúa en la app.",
+    "de": "Dieses Konto benötigt Zwei-Faktor-Authentifizierung. Fahre in der App fort.",
+    "fr": "Ce compte nécessite une vérification à deux facteurs. Continuez dans l’application.",
+    "ja": "このアカウントには二要素認証が必要です。アプリで続行してください。",
+    "ko": "이 계정은 이중 인증이 필요합니다. 앱에서 계속하세요."
+  },
+  "Unable to connect. Check your connection and try again.": {
+    "es": "No se puede conectar. Comprueba tu conexión y reintenta.",
+    "de": "Verbindung fehlgeschlagen. Prüfe deine Verbindung und versuche es erneut.",
+    "fr": "Connexion impossible. Vérifiez votre connexion et réessayez.",
+    "ja": "接続できません。通信環境を確認して再試行してください。",
+    "ko": "연결할 수 없습니다. 연결 상태를 확인하고 다시 시도하세요."
+  },
+  "Sign-in could not be completed. Reload this page and try again, or choose another sign-in method.": {
+    "es": "No se pudo completar el acceso. Recarga y reintenta o elige otro método.",
+    "de": "Anmeldung nicht abgeschlossen. Lade die Seite neu und versuche es erneut oder wähle eine andere Methode.",
+    "fr": "La connexion n’a pas abouti. Rechargez la page et réessayez ou choisissez une autre méthode.",
+    "ja": "ログインを完了できませんでした。再読み込みして再試行するか、別の方法を選んでください。",
+    "ko": "로그인을 완료할 수 없습니다. 페이지를 새로고침하고 다시 시도하거나 다른 방법을 선택하세요."
+  },
+  "Unable to create a code. Please try again.": {
+    "es": "No se pudo crear un código. Reintenta.",
+    "de": "Code konnte nicht erstellt werden. Versuche es erneut.",
+    "fr": "Impossible de créer un code. Réessayez.",
+    "ja": "コードを作成できませんでした。再試行してください。",
+    "ko": "코드를 만들 수 없습니다. 다시 시도하세요."
+  },
+  "Please try again.": {
+    "es": "Inténtalo de nuevo.",
+    "de": "Bitte erneut versuchen.",
+    "fr": "Veuillez réessayer.",
+    "ja": "再試行してください。",
+    "ko": "다시 시도하세요."
+  },
+  "Google search": {
+    "es": "Búsqueda de Google",
+    "de": "Google-Suche",
+    "fr": "Recherche Google",
+    "ja": "Google検索",
+    "ko": "Google 검색"
+  },
+  "A friend": {
+    "es": "Un amigo",
+    "de": "Ein Freund",
+    "fr": "Un ami",
+    "ja": "友人",
+    "ko": "친구"
+  },
+  "Not sure": {
+    "es": "No estoy seguro",
+    "de": "Nicht sicher",
+    "fr": "Je ne sais pas",
+    "ja": "わからない",
+    "ko": "잘 모르겠음"
+  },
+  "Please sign in before continuing.": {
+    "es": "Inicia sesión antes de continuar.",
+    "de": "Melde dich an, bevor du fortfährst.",
+    "fr": "Connectez-vous avant de continuer.",
+    "ja": "続行前にログインしてください。",
+    "ko": "계속하기 전에 로그인하세요."
+  },
+  "Your account changed. Please try again.": {
+    "es": "Tu cuenta ha cambiado. Inténtalo de nuevo.",
+    "de": "Dein Konto hat sich geändert. Versuche es erneut.",
+    "fr": "Votre compte a changé. Réessayez.",
+    "ja": "アカウントが変更されました。再試行してください。",
+    "ko": "계정이 변경되었습니다. 다시 시도하세요."
+  },
+  "Invalid billing destination.": {
+    "es": "Destino de facturación no válido.",
+    "de": "Ungültiges Zahlungsziel.",
+    "fr": "Destination de paiement invalide.",
+    "ja": "無効な決済先です。",
+    "ko": "잘못된 결제 대상입니다."
+  },
+  "Continue your research | Stocks To Buy Now Research": {
+    "es": "Continúa tu análisis | Stocks To Buy Now Research",
+    "de": "Recherche fortsetzen | Stocks To Buy Now Research",
+    "fr": "Poursuivez votre analyse | Stocks To Buy Now Research",
+    "ja": "リサーチを続ける | Stocks To Buy Now Research",
+    "ko": "리서치 계속하기 | Stocks To Buy Now Research"
+  },
+  "YOUR ACCOUNT · YOUR RESEARCH": {
+    "es": "TU CUENTA · TU ANÁLISIS",
+    "de": "DEIN KONTO · DEINE RECHERCHE",
+    "fr": "VOTRE COMPTE · VOTRE ANALYSE",
+    "ja": "アカウント・リサーチ",
+    "ko": "내 계정 · 내 리서치"
+  },
+  "Your membership is ready.": {
+    "es": "Tu suscripción está lista.",
+    "de": "Deine Mitgliedschaft ist bereit.",
+    "fr": "Votre abonnement est prêt.",
+    "ja": "メンバーシップの準備ができました。",
+    "ko": "멤버십이 준비되었습니다."
+  },
+  "Get the app and sign in with the same account you’re using here to access your membership.": {
+    "es": "Descarga la app y accede con esta misma cuenta para utilizar tu suscripción.",
+    "de": "Hol dir die App und nutze deine Mitgliedschaft mit demselben Konto.",
+    "fr": "Téléchargez l’application et utilisez ce même compte pour accéder à votre abonnement.",
+    "ja": "アプリをダウンロードし、同じアカウントでメンバーシップをご利用ください。",
+    "ko": "앱을 다운로드하고 같은 계정으로 멤버십을 이용하세요."
+  },
+  "Choose your membership.": {
+    "es": "Elige tu suscripción.",
+    "de": "Wähle deine Mitgliedschaft.",
+    "fr": "Choisissez votre abonnement.",
+    "ja": "メンバーシップを選択。",
+    "ko": "멤버십을 선택하세요."
+  },
+  "Taking you to your payment and membership options…": {
+    "es": "Abriendo tus opciones de pago y suscripción…",
+    "de": "Weiterleitung zu Zahlungs- und Mitgliedschaftsoptionen…",
+    "fr": "Redirection vers les options de paiement et d’abonnement…",
+    "ja": "支払いとメンバーシップの選択画面へ移動中…",
+    "ko": "결제 및 멤버십 옵션으로 이동 중…"
+  },
+  "View membership options →": {
+    "es": "Ver opciones de suscripción →",
+    "de": "Mitgliedschaftsoptionen ansehen →",
+    "fr": "Voir les abonnements →",
+    "ja": "メンバーシップを見る →",
+    "ko": "멤버십 옵션 보기 →"
+  },
+  "Sign up to continue.": {
+    "es": "Regístrate para continuar.",
+    "de": "Registrieren, um fortzufahren.",
+    "fr": "Inscrivez-vous pour continuer.",
+    "ja": "登録して続行。",
+    "ko": "가입하여 계속하세요."
+  },
+  "Use the same sign-in account you use in the app.": {
+    "es": "Usa la misma cuenta que en la app.",
+    "de": "Nutze dasselbe Konto wie in der App.",
+    "fr": "Utilisez le même compte que dans l’application.",
+    "ja": "アプリと同じアカウントを使用してください。",
+    "ko": "앱에서 사용하는 계정으로 로그인하세요."
+  },
+  "Sign in or create an account →": {
+    "es": "Inicia sesión o crea una cuenta →",
+    "de": "Anmelden oder Konto erstellen →",
+    "fr": "Se connecter ou créer un compte →",
+    "ja": "ログイン・アカウント作成 →",
+    "ko": "로그인 또는 계정 만들기 →"
+  },
+  "Your membership couldn’t be verified. Please retry before choosing another plan.": {
+    "es": "No se pudo verificar tu suscripción. Reintenta antes de elegir otro plan.",
+    "de": "Mitgliedschaft nicht verifiziert. Versuche es erneut, bevor du einen anderen Plan wählst.",
+    "fr": "Impossible de vérifier votre abonnement. Réessayez avant de choisir une autre offre.",
+    "ja": "メンバーシップを確認できませんでした。別のプランを選ぶ前に再試行してください。",
+    "ko": "멤버십을 확인할 수 없습니다. 다른 요금제를 선택하기 전에 다시 시도하세요."
+  },
+  "Manage membership →": {
+    "es": "Gestionar suscripción →",
+    "de": "Mitgliedschaft verwalten →",
+    "fr": "Gérer l’abonnement →",
+    "ja": "メンバーシップを管理 →",
+    "ko": "멤버십 관리 →"
+  },
+  "First name": {
+    "es": "Nombre",
+    "de": "Vorname",
+    "fr": "Prénom",
+    "ja": "名",
+    "ko": "이름"
+  },
+  "Last name": {
+    "es": "Apellidos",
+    "de": "Nachname",
+    "fr": "Nom",
+    "ja": "姓",
+    "ko": "성"
+  },
+  "Scheduling…": {
+    "es": "Programando…",
+    "de": "Wird geplant…",
+    "fr": "Programmation…",
+    "ja": "予約中…",
+    "ko": "예약 중…"
+  },
+  "Restoring…": {
+    "es": "Reactivando…",
+    "de": "Wird wiederhergestellt…",
+    "fr": "Réactivation…",
+    "ja": "再開中…",
+    "ko": "복원 중…"
+  },
+  "Active": {
+    "es": "Activo",
+    "de": "Aktiv",
+    "fr": "Actif",
+    "ja": "有効",
+    "ko": "활성"
+  },
+  "month": {
+    "es": "mes",
+    "de": "Monat",
+    "fr": "mois",
+    "ja": "月",
+    "ko": "개월"
+  },
+  "year": {
+    "es": "año",
+    "de": "Jahr",
+    "fr": "an",
+    "ja": "年",
+    "ko": "년"
+  },
+  "Extra devices · +{count}": {
+    "es": "Dispositivos extra · +{count}",
+    "de": "Zusätzliche Geräte · +{count}",
+    "fr": "Appareils supplémentaires · +{count}",
+    "ja": "追加デバイス・+{count}",
+    "ko": "추가 기기 · +{count}"
+  },
+  "Pro · Monthly": {
+    "es": "Pro · Mensual",
+    "de": "Pro · Monatlich",
+    "fr": "Pro · Mensuel",
+    "ja": "Pro・月払い",
+    "ko": "Pro · 월간"
+  },
+  "Pro · Annual": {
+    "es": "Pro · Anual",
+    "de": "Pro · Jährlich",
+    "fr": "Pro · Annuel",
+    "ja": "Pro・年払い",
+    "ko": "Pro · 연간"
+  },
+  "Ultra · Monthly": {
+    "es": "Ultra · Mensual",
+    "de": "Ultra · Monatlich",
+    "fr": "Ultra · Mensuel",
+    "ja": "Ultra・月払い",
+    "ko": "Ultra · 월간"
+  },
+  "Ultra · Annual": {
+    "es": "Ultra · Anual",
+    "de": "Ultra · Jährlich",
+    "fr": "Ultra · Annuel",
+    "ja": "Ultra・年払い",
+    "ko": "Ultra · 연간"
+  },
+  "Ultra add-on · Monthly": {
+    "es": "Complemento Ultra · Mensual",
+    "de": "Ultra-Add-on · Monatlich",
+    "fr": "Option Ultra · Mensuel",
+    "ja": "Ultra追加契約・月払い",
+    "ko": "Ultra 추가 상품 · 월간"
+  },
+  "Ultra add-on · Annual": {
+    "es": "Complemento Ultra · Anual",
+    "de": "Ultra-Add-on · Jährlich",
+    "fr": "Option Ultra · Annuel",
+    "ja": "Ultra追加契約・年払い",
+    "ko": "Ultra 추가 상품 · 연간"
+  }
+}

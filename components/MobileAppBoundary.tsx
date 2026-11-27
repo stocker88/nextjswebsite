@@ -1,3 +1,4 @@
+import LocalizedContent from './localization/LocalizedContent';
 import {useEffect,useState,type ReactNode} from 'react';
 import {useRouter} from 'next/router';
 import Head from 'next/head';
@@ -14,9 +15,9 @@ export default function MobileAppBoundary({children}:{children:ReactNode}){
  // Resolve the device before mounting sign-in, onboarding or checkout effects.
  if(mobile===null)return null;
  if(!mobile)return <>{children}</>;
- return <><Head><title>Get the app | Stocks To Buy Now Research</title></Head><main className={styles.page}><section className={styles.card}>
+ return <LocalizedContent><><Head><title>Get the app | Stocks To Buy Now Research</title></Head><main className={styles.page}><section className={styles.card}>
   <img src="/assets/images/stockerRobotIcon.png" alt="Stocks To Buy Now Research" width="80" height="80"/>
   <h1>Get the app</h1><p>Create your account and get started in the app.</p>
   <MobileStoreLink placement="mobile_account_handoff"/>
- </section></main></>;
+ </section></main></></LocalizedContent>;
 }
