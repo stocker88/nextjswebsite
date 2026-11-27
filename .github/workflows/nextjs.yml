@@ -187,9 +187,12 @@ jobs:
         with:
           name: cloudflare-site
           path: /tmp/cloudflare-site
+      - name: Prepare compressed deployment storage
+        if: vars.WEBSITE_HOST == 'cloudflare'
+        run: bash scripts/github-pages/prepare-build-volume.sh
       - name: Extract verified export
         if: vars.WEBSITE_HOST == 'cloudflare'
-        run: mkdir -p out && tar -xzf /tmp/cloudflare-site/cloudflare-site.tar.gz -C out
+        run: mkdir -p "$WEBSITE_EXPORT_VOLUME/out" && ln -s "$WEBSITE_EXPORT_VOLUME/out" out && tar -xzf /tmp/cloudflare-site/cloudflare-site.tar.gz -C out
       - name: Deploy Cloudflare static assets
         if: vars.WEBSITE_HOST == 'cloudflare'
         env:
