@@ -135,7 +135,11 @@ for(const url of predictions){
  predictionParents.set(data.stock.ticker,url);
  const company=curated.find(item=>item.ticker===data.stock.ticker);
  const companyRoute=company?'stocks/'+company.slug:'instruments/'+encodeURIComponent(data.stock.ticker);
- if(fs.existsSync(path.join(out,companyRoute,'index.html')))assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);else assert(html('prediction').includes('href="'+route+'"'),'Cached-only company missing from prediction directory: '+route);
+ if(fs.existsSync(path.join(out,companyRoute,'index.html')))assert(html(companyRoute).includes('href="'+route+'"'),'Missing company-to-prediction link: '+companyRoute);else {
+  const directoryRoute=predictionDirectory.cachedSymbols.includes(data.stock.ticker)?route.replace(/\/$/,'')+'/2030/':route;
+  assert(fs.existsSync(path.join(out,directoryRoute,'index.html')),'Prediction directory destination missing: '+directoryRoute);
+  assert(html('prediction').includes('href="'+directoryRoute+'"'),'Cached-only company missing from prediction directory: '+directoryRoute);
+ }
  assert(page.includes('2027')&&page.includes('2030'),'Prediction horizons missing: '+url);
 }
 console.log(`Verified ${predictions.length} indexable prediction pages, canonical URLs and inbound company links.`);
