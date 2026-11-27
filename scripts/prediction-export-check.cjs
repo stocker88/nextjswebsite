@@ -12,7 +12,7 @@ const {compact}=require('./compact-prediction-export.cjs');
  fs.writeFileSync(path.join(dataDir,'2030.json'),JSON.stringify(props));fs.writeFileSync(path.join(pageDir,'index.html'),html);
  for(const locale of ['es','de','fr','ja','ko']){const dd=path.join(dir,'_next/data/build-1',locale,'prediction/test-stock-price-prediction');const hd=path.join(dir,locale,'prediction/test-stock-price-prediction/2030');fs.mkdirSync(dd,{recursive:true});fs.mkdirSync(hd,{recursive:true});fs.writeFileSync(path.join(dd,'2030.json'),JSON.stringify(props));fs.writeFileSync(path.join(hd,'index.html'),html);}
  assert.equal(compact(dir).count,6);assert(!fs.existsSync(path.join(dataDir,'2030.json')));
- const packed=require('./pack-localized-predictions.cjs').pack(dir);assert.equal(packed.pages,5);assert.equal(packed.packs,5);
+ const packed=await require('./pack-localized-predictions.cjs').pack(dir);assert.equal(packed.pages,5);assert.equal(packed.packs,5);
  for(const locale of ['es','de','fr','ja','ko']){const saved=JSON.parse(gunzipSync(fs.readFileSync(path.join(dir,'__localized',locale,'test-stock-price-prediction.json.gz'))).toString());assert.equal(saved['2030'],html);assert(!fs.existsSync(path.join(dir,locale,'prediction/test-stock-price-prediction/2030/index.html')));}
  const env={ASSETS:{fetch:async req=>new URL(req.url).pathname==='/prediction/test-stock-price-prediction/2030/'?new Response(html):new Response('missing',{status:404})}};
  const route='https://example.com/_next/data/build-1/prediction/test-stock-price-prediction/2030.json';
