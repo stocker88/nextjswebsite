@@ -3386,5 +3386,96 @@
     "fr": "Option Ultra · Annuel",
     "ja": "Ultra追加契約・年払い",
     "ko": "Ultra 추가 상품 · 연간"
+  },
+  "Monthly track record": {
+    "es": "Historial mensual",
+    "de": "Monatliche Erfolgsbilanz",
+    "fr": "Historique mensuel",
+    "ja": "月次実績",
+    "ko": "월별 실적"
+  },
+  "Track record · Stocks to Buy Now Research": {
+    "es": "Historial · Stocks to Buy Now Research",
+    "de": "Erfolgsbilanz · Stocks to Buy Now Research",
+    "fr": "Historique · Stocks to Buy Now Research",
+    "ja": "実績 · Stocks to Buy Now Research",
+    "ko": "실적 · Stocks to Buy Now Research"
+  },
+  "Monthly outcome distribution": {
+    "es": "Distribución mensual de resultados",
+    "de": "Verteilung der monatlichen Ergebnisse",
+    "fr": "Distribution des résultats mensuels",
+    "ja": "月次結果の分布",
+    "ko": "월별 결과 분포"
+  },
+  "All {0} exit-month cohorts · each month counted once · weighted gross, non-annualized signal returns.": {
+    "es": "Los {0} grupos por mes de salida · cada mes se cuenta una vez · rendimientos brutos ponderados de las señales, sin anualizar.",
+    "de": "Alle {0} nach Ausstiegsmonat gruppierten Kohorten · jeder Monat zählt einmal · gewichtete Bruttorenditen der Signale, nicht annualisiert.",
+    "fr": "Les {0} cohortes par mois de sortie · chaque mois compte une fois · rendements bruts pondérés des signaux, non annualisés.",
+    "ja": "決済月別の全{0}グループ · 各月を1回集計 · シグナルの加重グロスリターン（年率換算なし）。",
+    "ko": "청산 월별 전체 {0}개 그룹 · 각 월을 한 번씩 집계 · 연율화하지 않은 가중 총 신호 수익률."
+  },
+  "Minimum": {
+    "es": "Mínimo",
+    "de": "Minimum",
+    "fr": "Minimum",
+    "ja": "最小",
+    "ko": "최소"
+  },
+  "Maximum": {
+    "es": "Máximo",
+    "de": "Maximum",
+    "fr": "Maximum",
+    "ja": "最大",
+    "ko": "최대"
+  },
+  "Month counts by cohort return range": {
+    "es": "Número de meses por intervalo de rentabilidad",
+    "de": "Anzahl der Monate je Renditebereich",
+    "fr": "Nombre de mois par plage de rendement",
+    "ja": "グループのリターン範囲別の月数",
+    "ko": "그룹 수익률 구간별 월수"
+  },
+  "Full holding-period signal outcomes grouped by exit month—not monthly portfolio returns. 25-percentage-point ranges; months count equally. Past returns do not predict future results.": {
+    "es": "Resultados de las señales durante todo el período de tenencia, agrupados por mes de salida; no son rendimientos mensuales de una cartera. Intervalos de 25 puntos porcentuales; todos los meses pesan lo mismo. Los rendimientos pasados no predicen resultados futuros.",
+    "de": "Signalergebnisse über die gesamte Haltedauer, nach Ausstiegsmonat gruppiert; keine monatlichen Portfoliorenditen. Bereiche von 25 Prozentpunkten; alle Monate zählen gleich. Vergangene Renditen sagen zukünftige Ergebnisse nicht voraus.",
+    "fr": "Résultats des signaux sur toute la durée de détention, regroupés par mois de sortie, et non rendements mensuels d’un portefeuille. Plages de 25 points de pourcentage ; chaque mois compte autant. Les rendements passés ne prédisent pas les résultats futurs.",
+    "ja": "保有期間全体のシグナル実績を決済月別に集計したもので、ポートフォリオの月次リターンではありません。25パーセントポイント刻みで、各月の重みは同じです。過去のリターンは将来の結果を予測するものではありません。",
+    "ko": "전체 보유 기간의 신호 성과를 청산 월별로 집계한 것으로, 포트폴리오의 월별 수익률이 아닙니다. 구간은 25%포인트이며 각 월의 가중치는 같습니다. 과거 수익률이 미래 결과를 예측하지는 않습니다."
+  },
+  "Explore the track record": {
+    "es": "Explorar el historial",
+    "de": "Erfolgsbilanz ansehen",
+    "fr": "Explorer l’historique",
+    "ja": "実績を見る",
+    "ko": "실적 살펴보기"
+  },
+  "Continue your research": {
+    "es": "Continúa tu investigación",
+    "de": "Recherche fortsetzen",
+    "fr": "Poursuivez vos recherches",
+    "ja": "リサーチを続ける",
+    "ko": "리서치 계속하기"
+  },
+  "Continue your research in the app": {
+    "es": "Continúa tu investigación en la app",
+    "de": "Recherche in der App fortsetzen",
+    "fr": "Poursuivez vos recherches dans l’application",
+    "ja": "アプリでリサーチを続ける",
+    "ko": "앱에서 리서치 계속하기"
+  },
+  "Explore signals, market outlooks, alerts and company research with your membership.": {
+    "es": "Explora señales, perspectivas de mercado, alertas y análisis de empresas con tu suscripción.",
+    "de": "Entdecken Sie mit Ihrer Mitgliedschaft Signale, Marktausblicke, Benachrichtigungen und Unternehmensanalysen.",
+    "fr": "Explorez les signaux, perspectives de marché, alertes et analyses d’entreprises avec votre abonnement.",
+    "ja": "メンバーシップでシグナル、市場見通し、アラート、企業リサーチをご覧いただけます。",
+    "ko": "멤버십으로 신호, 시장 전망, 알림, 기업 리서치를 살펴보세요."
+  },
+  "Explore alerts, company metrics and subscription research. Investing involves risk.": {
+    "es": "Explora alertas, métricas empresariales y análisis por suscripción. Invertir conlleva riesgos.",
+    "de": "Entdecken Sie Benachrichtigungen, Unternehmenskennzahlen und Analysen im Abonnement. Investieren ist mit Risiken verbunden.",
+    "fr": "Explorez les alertes, indicateurs d’entreprises et analyses sur abonnement. Investir comporte des risques.",
+    "ja": "アラート、企業指標、サブスクリプション向けリサーチをご覧ください。投資にはリスクが伴います。",
+    "ko": "알림, 기업 지표, 구독 리서치를 살펴보세요. 투자에는 위험이 따릅니다."
   }
 }

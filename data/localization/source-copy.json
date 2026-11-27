@@ -212,6 +212,16 @@
   "components/MobileStoreLink.tsx": [
     "Get the app →"
   ],
+  "components/MonthlyTrackRecord.tsx": [
+    "Explore the track record",
+    "Full holding-period signal outcomes grouped by exit month—not monthly portfolio returns. 25-percentage-point ranges; months count equally. Past returns do not predict future results.",
+    "Maximum",
+    "Minimum",
+    "Month counts by cohort return range",
+    "Monthly outcome distribution",
+    "Monthly track record",
+    "Track record · Stocks to Buy Now Research"
+  ],
   "components/MoreSignInOptions.tsx": [
     "More sign-in options",
     "being set up."
@@ -329,6 +339,7 @@
     "Company research, movers, earnings and options results.",
     "Related research"
   ],
+  "components/ResearchCTA.tsx": [],
   "components/ResearchPage.tsx": [
     "Research resources"
   ],
