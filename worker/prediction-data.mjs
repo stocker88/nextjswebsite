@@ -1,11 +1,11 @@
 // Each public URL serves its saved pre-rendered HTML, including translated SEO.
 async function pageResponse(request,env){
  const url=new URL(request.url);
- const match=url.pathname.match(/^\/(es|de|fr|ja|ko)\/prediction\/([a-z0-9-]+)(?:\/(today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030))?\/?$/);
+ const match=url.pathname.match(/^\/(?:(es|de|fr|ja|ko)\/)?prediction\/([a-z0-9-]+)(?:\/(today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030))?\/?$/);
  if(!match)return env.ASSETS.fetch(request);
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});
  if(!url.pathname.endsWith('/')){url.pathname+='/';return Response.redirect(url.toString(),308);}
- const [,locale,stock,period='overview']=match;
+ const [,locale='en',stock,period='overview']=match;
  const packUrl=new URL('/__localized/'+locale+'/'+stock+'.json.gz',url.origin);
  const pack=await env.ASSETS.fetch(new Request(packUrl));
  if(pack.status!==200)return new Response(null,{status:404});
