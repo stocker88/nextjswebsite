@@ -120,10 +120,6 @@
         "The US stock comparison uses SPY over matching entry and exit dates and matching weights. The scorecard’s European listings are measured in their listing currencies and excluded from the US benchmark comparison. SPY is an exchange-traded fund used as the benchmark proxy, not a brokerage account identical to a reader’s."
       ],
       [
-        "Completed signals and monthly groups",
-        "The completed-signal averages exclude pending and Hold signals. Monthly cohorts group full holding-period returns by exit month; they are not monthly portfolio returns. The downloadable ledger and methodology specify the historical cutoff and the records included."
-      ],
-      [
         "Estimated costs",
         "The displayed estimated-net scenarios subtract 0.10 or 0.20 percentage points of entry notional as assumed round-trip friction. These are illustrations, not measured brokerage expenses, and they do not establish a reader’s after-tax or after-subscription return."
       ],
