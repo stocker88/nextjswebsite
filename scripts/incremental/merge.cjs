@@ -13,7 +13,6 @@ function merge(stage,out,baseline){
    if((reused>0&&rel.startsWith('_next'+path.sep+'static'+path.sep))||/\.(?:png|jpe?g|webp|svg|gif|woff2?|ttf|mp4|pdf)$/i.test(rel)){fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(src,dest);continue;}
    if(e.name!=='index.html')continue;
    const html=fs.readFileSync(src,'utf8'),data=embedded(html);if(!data)continue;
-   const route='/'+relative.split(path.sep).join('/');
    if(!allowed.get(data.page)?.has('/'+relative.split(path.sep).map(encodeURIComponent).join('/')))continue;
    fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(src,dest);
   }}copy(baseline);

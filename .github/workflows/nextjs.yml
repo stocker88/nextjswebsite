@@ -150,7 +150,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/incremental/restore.cjs
-      - run: yarn build:pages
+      - name: Build changed pages with resource monitoring
+        run: bash scripts/github-pages/run-build.sh
       - name: Preserve company research snapshots
         if: always()
         uses: actions/cache/save@v4
