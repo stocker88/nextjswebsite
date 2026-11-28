@@ -3,108 +3,97 @@
     "slug": "holdings-and-conflicts",
     "title": "Holdings and conflicts of interest",
     "description": "How to interpret holdings disclosures, author interests and potential conflicts in Stocks to Buy Now Research content.",
-    "intro": "A financial interest can affect how research is perceived. A holdings disclosure describes a position or relationship at a stated time; it does not establish that a recommendation is suitable for another investor.",
+    "intro": "Stocks to Buy Now Research believes readers should understand the financial interests behind investment commentary. Our contributors may invest in the companies and instruments they discuss. Relevant interests should be considered alongside the research, its assumptions and its risks.",
     "sections": [
       [
-        "Public holdings register",
-        "A verified employee and contractor holdings register has not been supplied for this draft. No names, positions or declarations of no holdings are presented here. Absence of a disclosure must not be read as confirmation that a person or the company has no financial interest."
+        "Contributor and company interests",
+        "Employees and contractors must disclose material positions or beneficial interests relevant to research they contribute. These include long positions, short positions and options. A company position and an individual contributor’s position are separate interests and must be identified as such."
       ],
       [
-        "Information needed for a holdings disclosure",
-        "A useful disclosure identifies the contributor, the company or instrument, whether the exposure is long, short or an option, and the date to which the statement applies. Relevant brokerage, asset-management, issuer and compensated commercial relationships should be described separately. Exact account numbers and private brokerage documents do not belong on a public page."
+        "Disclosures alongside research",
+        "Relevant interests should be disclosed alongside the article or research item, including when a contributor provides an alternative viewpoint. A disclosure should identify the instrument, the nature of the interest and the date to which it applies. Material compensated relationships connected to the subject should also be identified."
       ],
       [
-        "Article disclosures and changing positions",
-        "A disclosure attached to an article should be read in the context of that article and its publication date. Positions and relationships can change. A historical statement should not be presented as a live position without a verified update."
+        "Funds and indirect holdings",
+        "Ownership of a mutual fund or ETF is distinct from direct ownership of every security in that fund. The underlying securities are not treated as direct personal holdings unless the contributor controls those investment decisions."
       ],
       [
-        "Company and contributor interests",
-        "Corporate positions, employee positions and contractor positions are different categories. One does not establish the others. An author may also hold a different view from another contributor; any material interests need to be understood alongside the specific analysis."
+        "Positions can change",
+        "A disclosure reflects the information stated at its date. Holdings and relationships can change, and a historical disclosure is not a live account statement. This page does not provide a live holdings register."
       ],
       [
-        "Questions about a particular article",
-        "Send the page URL, ticker and the interest or relationship you want clarified to support@stockstobuynow.ai. Do not send brokerage passwords, account numbers or private identity documents."
+        "Questions about an interest",
+        "For a question about a particular article, position or relationship, contact support@stockstobuynow.ai with the page URL and ticker. Do not send brokerage passwords, account numbers or private identity documents."
       ]
     ],
-    "pending": [
-      "Confirm who must disclose: founder, employees, contractors and corporate accounts.",
-      "Supply approved public holdings records and their effective dates.",
-      "Confirm disclosure update frequency and the owner of the review process."
-    ]
+    "pending": []
   },
   {
     "slug": "personal-trading-policy",
     "title": "Personal trading and disclosure policy",
-    "description": "A draft framework for personal trading, conflict disclosures and oversight at Stocks to Buy Now Research.",
-    "intro": "Personal-trading rules need clear responsibilities and a process that can actually be followed. This page is a proposed framework for owner review, not a statement that the controls below are already operating.",
+    "description": "Personal trading, minimum holding periods and conflict disclosure standards for Stocks to Buy Now Research employees and contributors.",
+    "intro": "Our personal-trading policy sets standards for investing responsibly while contributing research. Contributors may own investments they discuss, but must disclose relevant interests and keep their personal trading separate from their responsibility to readers.",
     "sections": [
       [
         "Who this policy covers",
         "This policy applies to Stocks to Buy Now Research employees and contractors, including contributors who prepare or review investment content. It covers investments held directly or through accounts they control or in which they have a beneficial interest. Family and household accounts are included when the covered person directs or controls their investment decisions or shares a beneficial interest. Covered investments include stocks, short positions, options, ETFs, mutual funds and cryptocurrencies. Fund holdings are considered at the fund level; individual securities held within a fund are not treated as direct personal holdings unless the person controls those investment decisions."
       ],
       [
-        "Proposed conflict review",
-        "Before publishing research, identify material financial and commercial interests connected with the subject. Set a documented process for resolving conflicts, adding an article disclosure or assigning a different reviewer where appropriate."
+        "Conflicts of interest",
+        "Before contributing research, employees and contractors must identify material financial or commercial interests connected with its subject. Relevant interests must be disclosed alongside the content. Contributors must raise conflicts that could compromise fair analysis before publication."
       ],
       [
-        "Trading windows and minimum holding periods",
-        "The minimum holding period is 7 days. Pre-publication and post-publication trading windows have not yet been confirmed for this draft."
+        "Minimum holding period",
+        "The minimum holding period is 7 days."
       ],
       [
-        "Review and enforcement",
-        "Agree how concerns are reported, who investigates and what happens when a rule is breached. Publish an effective date only after the final policy is adopted and the relevant people have been informed."
+        "Questions and concerns",
+        "Questions about this policy or concerns about a potential conflict should be sent to support@stockstobuynow.ai. Include the relevant research URL and enough detail to identify the issue without sharing private account information."
       ]
     ],
-    "pending": [
-      "Confirm any additional trading or writing windows.",
-      "Name the clearance and oversight owner and confirm reporting requirements.",
-      "Approve scope, exceptions, enforcement and effective date."
-    ]
+    "pending": []
   },
   {
     "slug": "editorial-and-commercial-disclosures",
     "title": "Editorial and commercial disclosures",
     "description": "Editorial standards, AI-assisted research, corrections and the distinction between research and commercial relationships.",
-    "intro": "Readers should be able to distinguish research, product promotion and paid relationships. This page brings together the existing editorial standards and the commercial disclosures that still need confirmation before publication.",
+    "intro": "Stocks to Buy Now Research publishes investment research, educational content and market tools. These standards distinguish our analysis from advertising, commercial relationships and promotion of our own services.",
     "sections": [
       [
-        "Existing editorial standards",
-        "The existing editorial policy distinguishes original analysis, reported developments and app previews. It states that full public articles identify primary sources, their author and publication date, and that substantive revisions should be distinguished from automatic page refreshes."
+        "Editorial independence",
+        "Research must reflect the author’s analysis and the evidence available. Advertisers, sponsors and commercial partners must not determine research conclusions or present paid placement as independent editorial judgement. A business relationship does not by itself establish an investment case."
       ],
       [
-        "Review and AI assistance",
-        "The existing policy requires an identified reviewer, sources and an explicit publication decision for the public-article workflow. It also calls for disclosure of AI assistance. These requirements should not be interpreted as a claim that every historical preview has already undergone the same review."
+        "Authors, sources and review",
+        "Public articles should identify their author, distinguish analysis from reported facts and identify supporting sources. The public-article workflow requires an identified reviewer and an explicit publication decision. Substantive corrections and revisions should be distinguished from routine data refreshes."
       ],
       [
-        "Our own products",
-        "The website promotes Stocks to Buy Now Research subscriptions and app features. These are offers for the publisher’s own products; their presence is not independent endorsement of the research or evidence of future investment performance."
+        "AI-assisted research",
+        "AI tools may support research, drafting and data analysis. Their use does not remove the responsibility to check factual claims, assumptions and calculations. Material AI assistance should be disclosed where relevant to the content."
       ],
       [
-        "Advertising, affiliates and other relationships",
-        "No complete register of advertising, referral commissions, sponsored coverage or affiliated investment businesses has been provided for this draft. It therefore does not claim there are no such relationships or that an operational separation already exists. The final policy needs to explain each material arrangement and how it is disclosed to readers."
+        "Our subscriptions and app",
+        "We promote our own Stocks to Buy Now Research subscriptions, app features and educational tools. These placements are offers for our services. A subscription purchase does not establish the accuracy of a forecast or guarantee an investment outcome."
       ],
       [
-        "Proposed commercial separation",
-        "For approval: clearly label sponsored placements and compensated referral links, identify material relationships relevant to an article, and prevent commercial partners from presenting paid placement as independent editorial judgement. Confirm who enforces these standards before presenting them as an active policy."
+        "Advertising and compensated relationships",
+        "Paid placements and sponsored content must be clearly identified. Where a referral or affiliate link may earn compensation, that relationship must be disclosed near the relevant offer. Material business relationships connected with an article’s subject must also be disclosed. These standards do not imply that every type of commercial arrangement described here is currently offered."
       ],
       [
-        "Corrections",
-        "The existing editorial policy invites readers to email support@stockstobuynow.ai with the page URL, disputed claim and supporting evidence. It calls for material corrections to be explained on the affected article."
+        "Corrections and questions",
+        "To report a possible error or ask about a commercial relationship, email support@stockstobuynow.ai with the page URL, the claim in question and any supporting information. Material corrections should be explained on the affected article."
       ]
     ],
-    "pending": [
-      "Confirm existing advertising, sponsorship, referral and affiliate arrangements.",
-      "Approve the commercial-separation rules and name their owner."
-    ]
+    "pending": []
   },
   {
     "slug": "investment-return-calculations",
     "title": "Investment return calculations and performance disclosures",
-    "description": "How stock-signal results, SPY comparisons, option-price moves and forecast illustrations are calculated and what they do not measure.",
-    "intro": "A price move, a weighted average of signals and a portfolio return answer different questions. This disclosure describes the calculation methods found in the current website and its downloadable methodology, rather than borrowing another publisher’s performance formula.",
+    "description": "How stock research results, SPY comparisons, option-price moves and forecast illustrations are calculated and what they do not measure.",
+    "intro": "A price move, a weighted research average and a portfolio return measure different things. This page explains the methods used in our scorecard, benchmark comparisons, options examples and prediction tools.",
     "sections": [
       [
-        "Stock-signal entry and exit prices",
+        "Stock research entry and exit prices",
         "The current target-date scorecard uses the first eligible exchange open after the later of publication and recommendation timestamps. It exits at the saved target-date close, or the next session if that date is closed. Prices are model inputs from daily adjusted market data."
       ],
       [
@@ -146,7 +135,7 @@
     "slug": "disclaimer",
     "title": "Research disclaimer and service information",
     "description": "The scope and limitations of Stocks to Buy Now Research information, forecasts, market data and educational tools.",
-    "intro": "Stocks to Buy Now Research provides investment research, educational content and tools. Use this information to understand the service alongside the existing Privacy Policy & Terms of Use. This draft does not replace those terms or create a new customer agreement.",
+    "intro": "Stocks to Buy Now Research provides investment research, educational content and tools. Read this information alongside our Privacy Policy & Terms of Use and the terms shown when purchasing a subscription.",
     "sections": [
       [
         "Research and education",
@@ -166,11 +155,9 @@
       ],
       [
         "Responsibility and corrections",
-        "Check material information before acting and consider professional advice appropriate to your circumstances. Report suspected errors with the affected page URL and supporting evidence. This draft does not introduce a blanket exclusion of liability or remove rights that cannot lawfully be excluded."
+        "Check material information before acting and consider professional advice appropriate to your circumstances. Report suspected errors to support@stockstobuynow.ai with the affected page URL and supporting evidence. Nothing on this page removes rights that cannot lawfully be excluded."
       ]
     ],
-    "pending": [
-      "Review this wording alongside the existing customer terms before publication."
-    ]
+    "pending": []
   }
 ]
