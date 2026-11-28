@@ -5,10 +5,16 @@ on:
   repository_dispatch:
     types: [article_published]
   workflow_dispatch:
+    inputs:
+      full_build:
+        description: Rebuild every page instead of reusing unchanged pages
+        type: boolean
+        default: false
   schedule:
     - cron: '17,47 * * * *'
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -20,6 +26,7 @@ jobs:
     timeout-minutes: 180
     env:
       WEBSITE_BUILD_CPUS: "2"
+      WEBSITE_FULL_BUILD: ${{ inputs.full_build || 'false' }}
       NEXT_PUBLIC_APPLE_PROVIDER_TOKEN: ${{ vars.APPLE_PROVIDER_TOKEN }}
     steps:
       - uses: actions/checkout@v4
@@ -31,6 +38,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/configure-pages@v5
         if: vars.WEBSITE_HOST != 'cloudflare'
+      - run: node scripts/incremental/check.cjs
       - run: yarn test:content-access
       - run: node scripts/academy-check.cjs
       - run: node scripts/academy-lessons-check.cjs
@@ -137,6 +145,11 @@ jobs:
           key: iwv-research-v1-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Prepare compressed export storage
         run: bash scripts/github-pages/prepare-build-volume.sh
+      - name: Restore the last successful production export
+        if: vars.WEBSITE_HOST == 'cloudflare'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/incremental/restore.cjs
       - run: yarn build:pages
       - name: Preserve company research snapshots
         if: always()

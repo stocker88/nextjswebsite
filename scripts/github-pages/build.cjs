@@ -28,7 +28,7 @@ async function main(){
  require('../option-result-preview.cjs').writeResultPreviews(root);
  fs.rmSync(stage,{recursive:true,force:true}); fs.mkdirSync(stage);
  if(volume){const link=path.join(root,'.github-pages-build');fs.rmSync(link,{recursive:true,force:true});fs.symlinkSync(stage,link,'dir');}
- const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store','.cache']);
+ const ignored = new Set(['.git','.next','node_modules','out','.github-pages-build','.DS_Store','.cache','.incremental-routes']);
  for(const entry of fs.readdirSync(root)) {
   if(ignored.has(entry)||entry.startsWith('.next-')||entry==='.idea'||entry.startsWith('.env')||entry.endsWith('.tsbuildinfo'))continue;
   fs.cpSync(path.join(root,entry),path.join(stage,entry),{recursive:true});
@@ -41,7 +41,7 @@ async function main(){
  run(['scripts/build-mover-trades.cjs']);
  run(['scripts/render-earnings-social.cjs']);
  write('lib/research-server.ts',`import data from '../data/research.json';\nimport type {ResearchPreview} from './research';\nexport async function fetchResearch():Promise<ResearchPreview[]>{return data as ResearchPreview[];}\n`);
- write('next.config.js',`module.exports={output:'export',trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:${Math.max(2,Math.min(12,Number(process.env.WEBSITE_BUILD_CPUS)||4))}}};\n`);
+ write('next.config.js',`module.exports={output:'export',staticPageGenerationTimeout:${process.env.WEBSITE_PREVIOUS_EXPORT?1800:60},trailingSlash:true,poweredByHeader:false,images:{unoptimized:true},experimental:{cpus:${Math.max(2,Math.min(12,Number(process.env.WEBSITE_BUILD_CPUS)||4))}}};\n`);
  replace('pages/stock-market-news/[id].tsx','return { paths: [], fallback: "blocking" };',`const items = await fetchResearch(); const {researchPages} = await import('../../lib/research'); const pages = researchPages(items); return {paths:pages.map(item=>({params:{id:decodeURIComponent(researchUrl(item.id,item.title).split('/').pop()!)}})),fallback:false};`);
  replace('pages/stock-market-news/page/[page].tsx',"export function getStaticPaths() {return {paths:[],fallback:'blocking'};}","export async function getStaticPaths() {const all=await fetchResearch();return {paths:Array.from({length:Math.max(0,Math.ceil(all.length/40)-1)},(_,i)=>({params:{page:String(i+2)}})),fallback:false};}");
  replace('pages/instruments/[symbol].tsx',"return {paths:[],fallback:'blocking'};","return {paths:catalog.map(item=>({params:{symbol:item.symbol}})),fallback:false};");
@@ -92,7 +92,9 @@ async function main(){
  let videoXml='';
  await require(path.join(stage,'pages/video-sitemap.xml.tsx')).getServerSideProps({res:{setHeader(){},write(chunk){videoXml+=chunk;},end(chunk){if(chunk)videoXml+=chunk;write('public/video-sitemap.xml',videoXml);}}});
  fs.unlinkSync(path.join(stage,'pages/video-sitemap.xml.tsx'));
+ if(process.env.WEBSITE_PREVIOUS_EXPORT)require('./../incremental/prepare.cjs').prepare(stage);
  run([path.join(root,'node_modules/next/dist/bin/next'),'build']);
+ require('./../incremental/merge.cjs').merge(stage,path.join(stage,'out'),process.env.WEBSITE_PREVIOUS_EXPORT);
  // Pages cannot send HTTP 301s. Preserve old URLs with canonical HTML redirects.
  const {researchUrl,researchPages}=require(path.join(stage,'lib/research.ts'));
  const articles=researchPages(require(path.join(stage,'data/research.json')));

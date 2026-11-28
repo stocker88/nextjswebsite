@@ -1,0 +1,20 @@
+const fs=require('fs'),path=require('path'),os=require('os'),{execFileSync}=require('child_process');
+const source=path.resolve(__dirname,'../..'),root=fs.mkdtempSync(path.join(os.tmpdir(),'incremental-next-'));
+const write=(p,v)=>{fs.mkdirSync(path.dirname(path.join(root,p)),{recursive:true});fs.writeFileSync(path.join(root,p),v)};
+fs.symlinkSync(path.join(source,'node_modules'),path.join(root,'node_modules'),'dir');
+write('package.json',JSON.stringify({name:'incremental-fixture',private:true,dependencies:{next:'13',react:'18','react-dom':'18'}}));
+write('next.config.js',"module.exports={output:'export',trailingSlash:true,experimental:{cpus:2}};");
+write('tsconfig.json',JSON.stringify({compilerOptions:{jsx:'preserve',esModuleInterop:true,skipLibCheck:true}}));
+write('pages/index.tsx','export default function Home(){return <h1>Home</h1>}');
+const page="import records from '../../records.json';export default function Page({text}:any){return <h1>{text}</h1>}export function getStaticPaths(){return {paths:records.map(r=>({params:{slug:r.slug}})),fallback:false}}export function getStaticProps({params}:any){return {props:records.find(r=>r.slug===params.slug)}}";
+write('records.json',JSON.stringify([{slug:'one',text:'One'},{slug:'two',text:'Two'}]));write('pages/news/[slug].tsx',page);write('pages/fr/news/[slug].tsx',"export {default,getStaticProps,getStaticPaths} from '../../news/[slug]';");
+const build=()=>execFileSync(process.execPath,[path.join(source,'node_modules/next/dist/bin/next'),'build'],{cwd:root,stdio:'inherit',env:{...process.env,NEXT_TELEMETRY_DISABLED:'1'}});
+build();fs.renameSync(path.join(root,'out'),path.join(root,'previous'));
+write('records.json',JSON.stringify([{slug:'one',text:'One'},{slug:'two',text:'Changed'},{slug:'three',text:'Three'}]));
+fs.cpSync(path.join(source,'scripts/incremental'),path.join(root,'scripts/incremental'),{recursive:true});
+require(path.join(source,'scripts/incremental/prepare.cjs')).prepare(root);process.env.WEBSITE_PREVIOUS_EXPORT=path.join(root,'previous');build();
+require(path.join(source,'scripts/incremental/merge.cjs')).merge(root,path.join(root,'out'),path.join(root,'previous'));
+const assert=require('assert/strict');
+for(const prefix of ['', 'fr/']){assert(fs.readFileSync(path.join(root,'out',prefix,'news/one/index.html'),'utf8').includes('One'));assert(fs.readFileSync(path.join(root,'out',prefix,'news/two/index.html'),'utf8').includes('Changed'));assert(fs.existsSync(path.join(root,'out',prefix,'news/three/index.html')));}
+const report=JSON.parse(fs.readFileSync(path.join(root,'.incremental-routes',encodeURIComponent('/news/[slug]')+'.json'),'utf8'));assert.deepEqual(report.reused,['/news/one']);
+console.log('PASS actual Next export: unchanged page reused, edit/new pages rendered, translated re-exports work. Fixture: '+root);

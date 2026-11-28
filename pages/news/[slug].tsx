@@ -1,3 +1,4 @@
+import {latestOptionResult,type OptionResultPreviewData} from '../../lib/option-results';
 import {SessionPerformanceCard,EarningsResultsCard} from '../../components/ResearchResultCards';
 import ArticlePostEngagement from '../../components/ArticlePostEngagement';
 import StockResults from '../../components/StockResults';
@@ -20,7 +21,7 @@ import {fetchResearch} from '../../lib/research-server';
 import {moverSocialImagePath} from '../../lib/mover-social-preview';
 import styles from '../../styles/MoverStory.module.css';
 
-export default function MoverStory({article:a,research,socialImage}:{article:MoverArticle;research:InstrumentResearchProps|null;socialImage:{url:string;width:number;height:number;alt:string}}){
+export default function MoverStory({article:a,research,socialImage,optionResult}:{optionResult:OptionResultPreviewData|null;article:MoverArticle;research:InstrumentResearchProps|null;socialImage:{url:string;width:number;height:number;alt:string}}){
  const path=moverArticleUrl(a);
  const sector=a.kind==='sector_news';
  const money=(v:number)=>v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2});
@@ -51,7 +52,7 @@ export default function MoverStory({article:a,research,socialImage}:{article:Mov
  <section className={styles.textSection}><span className={styles.kicker}>WHAT TO WATCH</span><h2>{sector?'Investor risks and next steps':'Technical setup and risks'}</h2><p>{a.setup}</p></section>
  <p className={styles.disclosure}>{a.disclosure}</p>
  </article>
- {!sector&&<StockResults symbol={a.symbol}/>}
+ {!sector&&<StockResults result={optionResult}/>}
  <div id="company-research">{sector?<p>{a.symbols?.map(symbol=><Link key={symbol} href={stockPageHref(symbol)} style={{marginRight:20}}>{symbol} research →</Link>)}</p>:research?<CompanyResearchSection research={research}/>:<StockAppCTA symbol={a.symbol}/>}</div>
  </ResearchPage>;
 }
@@ -64,5 +65,5 @@ export async function getStaticProps({params}:{params:{slug:string}}){
  const socialImage=generated?{url:`https://www.stockstobuynow.ai${expectedImage}`,width:1200,height:630,alt:`${article.symbol} ${article.marketSession} price chart`}:{url:fallback.url,width:fallback.width,height:fallback.height,alt:fallback.alt};
  const item=catalog.find(i=>i.symbol===article.symbol);
  const research=item?{item,news:recentStockNews(await fetchResearch(),item.symbol),bundle:item.type==='EQUITY'?loadStockResearch(item.symbol):null,calendar:item.type==='EQUITY'?loadStockEarnings(item.symbol):null}:null;
- return {props:{article,research,socialImage}};
+ return {props:{article,research,socialImage,optionResult:latestOptionResult(article.symbol)}};
 }

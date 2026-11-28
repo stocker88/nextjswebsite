@@ -7,3 +7,6 @@ https://:worker.:account.workers.dev/*
 
 /*
   X-Content-Type-Options: nosniff
+
+/__deployment.json
+  X-Robots-Tag: noindex

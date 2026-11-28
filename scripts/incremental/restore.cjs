@@ -1,0 +1,31 @@
+// Restore only an artifact from a verified successful production workflow.
+const fs=require('node:fs'),path=require('node:path'),{execFileSync}=require('node:child_process'),zlib=require('node:zlib');
+function unpack(out){const base=path.join(out,'__localized');if(!fs.existsSync(base))return;
+ for(const locale of fs.readdirSync(base))for(const file of fs.readdirSync(path.join(base,locale))){
+  if(!file.endsWith('.json.gz'))continue;const stock=file.slice(0,-8);
+  if(!/^[a-z0-9-]+$/.test(stock)||!['en','es','de','fr','ja','ko'].includes(locale))throw Error('Invalid saved prediction pack');
+  const entries=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(base,locale,file))));
+  for(const [period,html] of Object.entries(entries)){
+   if(!/^(overview|today|tomorrow|next-week|next-month|2026|2027|2028|2029|2030)$/.test(period)||typeof html!=='string')throw Error('Invalid saved prediction page');
+   const dest=path.join(out,locale==='en'?'':locale,'prediction',stock,period==='overview'?'':period,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
+  }
+ }fs.rmSync(base,{recursive:true});
+}
+function restore(){
+ if(process.env.WEBSITE_FULL_BUILD==='true'){console.log('Full build explicitly requested.');return;}
+ const repo=process.env.GITHUB_REPOSITORY;if(!repo||!process.env.WEBSITE_EXPORT_VOLUME){console.log('No production artifact context; using a full build.');return;}
+ const api=endpoint=>JSON.parse(execFileSync('gh',['api',`repos/${repo}/${endpoint}`],{encoding:'utf8'}));
+ const runs=api('actions/workflows/nextjs.yml/runs?status=completed&branch=main&per_page=10').workflow_runs;
+ let chosen;
+ for(const run of runs){if(String(run.id)===process.env.GITHUB_RUN_ID)continue;if(run.conclusion!=='success'&&!api(`actions/runs/${run.id}/jobs`).jobs.some(j=>j.name==='deploy'&&j.conclusion==='success'))continue;const artifact=api(`actions/runs/${run.id}/artifacts`).artifacts.find(a=>a.name==='cloudflare-site'&&!a.expired);if(artifact){chosen=run;break;}}
+ if(!chosen){console.log('No retained successful export; a full build is required.');return;}
+ const archive=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous-archive'),out=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous');
+ fs.mkdirSync(archive,{recursive:true});fs.mkdirSync(out,{recursive:true});
+ execFileSync('gh',['run','download',String(chosen.id),'--repo',repo,'--name','cloudflare-site','--dir',archive],{stdio:'inherit'});
+ execFileSync('tar',['-xzf',path.join(archive,'cloudflare-site.tar.gz'),'-C',out],{stdio:'inherit'});
+ unpack(out);fs.rmSync(archive,{recursive:true});
+ // Staging publication helpers are not public pages.
+ fs.appendFileSync(process.env.GITHUB_ENV,`WEBSITE_PREVIOUS_EXPORT=${out}\n`);
+ console.log(`Restored production export from run ${chosen.id} (${chosen.head_sha}).`);
+}
+if(require.main===module)restore();module.exports={unpack};

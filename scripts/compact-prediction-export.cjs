@@ -2,6 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 function compact(out){
  const dataRoot=path.join(out,'_next/data');let count=0,bytes=0;
+ if(!fs.existsSync(dataRoot))return {count,bytes};
  for(const build of fs.readdirSync(dataRoot)){
   for(const locale of ['', 'es', 'de', 'fr', 'ja', 'ko']){
   const base=path.join(dataRoot,build,locale,'prediction');if(!fs.existsSync(base))continue;
