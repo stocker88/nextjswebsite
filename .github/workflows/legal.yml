@@ -1,0 +1,58 @@
+name: Deploy legal pages only
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: github-pages
+    env:
+      WEBSITE_CONTENT_ONLY: 'true'
+      WEBSITE_KEEP_PACKED: 'true'
+      NODE_OPTIONS: --max-old-space-size=3072
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: yarn
+      - run: corepack enable && yarn install --frozen-lockfile
+      - run: bash scripts/github-pages/prepare-build-volume.sh
+      - name: Restore production without unpacking predictions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/incremental/restore.cjs
+      - name: Build and merge only the six legal pages
+        run: node scripts/partial/legal.cjs
+      - name: Verify asset limits
+        run: node scripts/cloudflare-check.cjs
+      - name: Deploy merged production assets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@4.168.0 deploy --config wrangler.jsonc
+      - name: Save merged export for subsequent incremental releases
+        run: tar -czf /tmp/cloudflare-site.tar.gz -C out .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-site
+          path: /tmp/cloudflare-site.tar.gz
+          compression-level: 0
+          retention-days: 1
+      - name: Verify legal pages are live
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          routes=['legal/']+['legal/'+p['slug']+'/' for p in json.load(open('data/legal-disclosures.json'))]
+          for route in routes:
+            result=subprocess.check_output(['curl','--retry','4','--retry-all-errors','--fail','--silent','--show-error','https://www.stockstobuynow.ai/'+route],text=True)
+            assert 'https://www.stockstobuynow.ai/'+route in result
+            assert 'Draft for review' not in result
+            print('Verified live:',route)
+          PY

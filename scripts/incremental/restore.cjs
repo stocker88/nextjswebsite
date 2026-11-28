@@ -12,9 +12,9 @@ function unpack(out){const base=path.join(out,'__localized');if(!fs.existsSync(b
  }fs.rmSync(base,{recursive:true});
 }
 function findBaseline(api,currentRun){
- const recent=api('actions/workflows/nextjs.yml/runs?status=completed&branch=main&per_page=10').workflow_runs;
- const successful=api('actions/workflows/nextjs.yml/runs?status=success&branch=main&per_page=10').workflow_runs;
- const runs=[...new Map([...recent,...successful].map(r=>[r.id,r])).values()].sort((a,b)=>b.id-a.id);
+ const recent=api('actions/runs?status=completed&branch=main&per_page=10').workflow_runs;
+ const successful=api('actions/runs?status=success&branch=main&per_page=10').workflow_runs;
+ const runs=[...new Map([...recent,...successful].filter(r=>!r.path||['.github/workflows/nextjs.yml','.github/workflows/legal.yml'].includes(r.path.split('@')[0])).map(r=>[r.id,r])).values()].sort((a,b)=>b.id-a.id);
  for(const run of runs){
   if(String(run.id)===String(currentRun))continue;
   if(run.conclusion!=='success'&&!api(`actions/runs/${run.id}/jobs`).jobs.some(j=>j.name==='deploy'&&j.conclusion==='success'))continue;
@@ -32,7 +32,10 @@ function restore(){
  fs.mkdirSync(archive,{recursive:true});fs.mkdirSync(out,{recursive:true});
  execFileSync('gh',['run','download',String(chosen.id),'--repo',repo,'--name','cloudflare-site','--dir',archive],{stdio:'inherit'});
  execFileSync('tar',['-xzf',path.join(archive,'cloudflare-site.tar.gz'),'-C',out],{stdio:'inherit'});
- unpack(out);fs.rmSync(archive,{recursive:true});
+ if(process.env.WEBSITE_KEEP_PACKED==='true'){
+  // A page-only release also retains the deployed routing implementation/config.
+  for(const file of ['worker/prediction-data.mjs','wrangler.jsonc']){const saved=api('contents/'+file+'?ref='+chosen.head_sha);if(saved.encoding!=='base64')throw Error('Missing deployed routing file '+file);fs.writeFileSync(path.join(process.cwd(),file),Buffer.from(saved.content,'base64'));}
+ }else unpack(out);fs.rmSync(archive,{recursive:true});
  // Staging publication helpers are not public pages.
  fs.appendFileSync(process.env.GITHUB_ENV,`WEBSITE_PREVIOUS_EXPORT=${out}\n`);
  console.log(`Restored production export from run ${chosen.id} (${chosen.head_sha}).`);
