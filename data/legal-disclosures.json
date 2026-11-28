@@ -1,0 +1,192 @@
+[
+  {
+    "slug": "holdings-and-conflicts",
+    "title": "Holdings and conflicts of interest",
+    "description": "How to interpret holdings disclosures, author interests and potential conflicts in Stocks to Buy Now Research content.",
+    "intro": "A financial interest can affect how research is perceived. A holdings disclosure describes a position or relationship at a stated time; it does not establish that a recommendation is suitable for another investor.",
+    "sections": [
+      [
+        "Public holdings register",
+        "A verified employee and contractor holdings register has not been supplied for this draft. No names, positions or declarations of no holdings are presented here. Absence of a disclosure must not be read as confirmation that a person or the company has no financial interest."
+      ],
+      [
+        "Information needed for a holdings disclosure",
+        "A useful disclosure identifies the contributor, the company or instrument, whether the exposure is long, short or an option, and the date to which the statement applies. Relevant brokerage, asset-management, issuer and compensated commercial relationships should be described separately. Exact account numbers and private brokerage documents do not belong on a public page."
+      ],
+      [
+        "Article disclosures and changing positions",
+        "A disclosure attached to an article should be read in the context of that article and its publication date. Positions and relationships can change. A historical statement should not be presented as a live position without a verified update."
+      ],
+      [
+        "Company and contributor interests",
+        "Corporate positions, employee positions and contractor positions are different categories. One does not establish the others. An author may also hold a different view from another contributor; any material interests need to be understood alongside the specific analysis."
+      ],
+      [
+        "Questions about a particular article",
+        "Send the page URL, ticker and the interest or relationship you want clarified to support@stockstobuynow.ai. Do not send brokerage passwords, account numbers or private identity documents."
+      ]
+    ],
+    "pending": [
+      "Confirm who must disclose: founder, employees, contractors and corporate accounts.",
+      "Supply approved public holdings records and their effective dates.",
+      "Confirm disclosure update frequency and the owner of the review process."
+    ]
+  },
+  {
+    "slug": "personal-trading-policy",
+    "title": "Personal trading and disclosure policy",
+    "description": "A draft framework for personal trading, conflict disclosures and oversight at Stocks to Buy Now Research.",
+    "intro": "Personal-trading rules need clear responsibilities and a process that can actually be followed. This page is a proposed framework for owner review, not a statement that the controls below are already operating.",
+    "sections": [
+      [
+        "Proposed coverage",
+        "Define which employees, contractors and controlled accounts are covered, which instruments count, and how family or household interests are handled. Include direct shares, short exposure and options where relevant."
+      ],
+      [
+        "Proposed conflict review",
+        "Before publishing research, identify material financial and commercial interests connected with the subject. Set a documented process for resolving conflicts, adding an article disclosure or assigning a different reviewer where appropriate."
+      ],
+      [
+        "Trading windows and minimum holding periods",
+        "No company-specific minimum holding period or pre-publication or post-publication trading window has been confirmed for this draft. Another publisher’s ten-day holding rule or two-day writing restriction is not adopted simply by being mentioned as an example."
+      ],
+      [
+        "Clearance, records and exceptions",
+        "If trade clearance is adopted, name the person responsible, define what requires approval and record decisions before the trade. Set reporting deadlines, record-retention arrangements and a documented exception process. A policy should not promise pre-clearance unless someone is assigned to perform it."
+      ],
+      [
+        "Review and enforcement",
+        "Agree how concerns are reported, who investigates and what happens when a rule is breached. Publish an effective date only after the final policy is adopted and the relevant people have been informed."
+      ]
+    ],
+    "pending": [
+      "Choose actual holding periods and trading or writing windows, if any.",
+      "Name the clearance and oversight owner and confirm reporting requirements.",
+      "Approve scope, exceptions, enforcement and effective date."
+    ]
+  },
+  {
+    "slug": "editorial-and-commercial-disclosures",
+    "title": "Editorial and commercial disclosures",
+    "description": "Editorial standards, AI-assisted research, corrections and the distinction between research and commercial relationships.",
+    "intro": "Readers should be able to distinguish research, product promotion and paid relationships. This page brings together the existing editorial standards and the commercial disclosures that still need confirmation before publication.",
+    "sections": [
+      [
+        "Existing editorial standards",
+        "The existing editorial policy distinguishes original analysis, reported developments and app previews. It states that full public articles identify primary sources, their author and publication date, and that substantive revisions should be distinguished from automatic page refreshes."
+      ],
+      [
+        "Review and AI assistance",
+        "The existing policy requires an identified reviewer, sources and an explicit publication decision for the public-article workflow. It also calls for disclosure of AI assistance. These requirements should not be interpreted as a claim that every historical preview has already undergone the same review."
+      ],
+      [
+        "Our own products",
+        "The website promotes Stocks to Buy Now Research subscriptions and app features. These are offers for the publisher’s own products; their presence is not independent endorsement of the research or evidence of future investment performance."
+      ],
+      [
+        "Advertising, affiliates and other relationships",
+        "No complete register of advertising, referral commissions, sponsored coverage or affiliated investment businesses has been provided for this draft. It therefore does not claim there are no such relationships or that an operational separation already exists. The final policy needs to explain each material arrangement and how it is disclosed to readers."
+      ],
+      [
+        "Proposed commercial separation",
+        "For approval: clearly label sponsored placements and compensated referral links, identify material relationships relevant to an article, and prevent commercial partners from presenting paid placement as independent editorial judgement. Confirm who enforces these standards before presenting them as an active policy."
+      ],
+      [
+        "Corrections",
+        "The existing editorial policy invites readers to email support@stockstobuynow.ai with the page URL, disputed claim and supporting evidence. It calls for material corrections to be explained on the affected article."
+      ]
+    ],
+    "pending": [
+      "Confirm existing advertising, sponsorship, referral and affiliate arrangements.",
+      "Approve the commercial-separation rules and name their owner."
+    ]
+  },
+  {
+    "slug": "investment-return-calculations",
+    "title": "Investment return calculations and performance disclosures",
+    "description": "How stock-signal results, SPY comparisons, option-price moves and forecast illustrations are calculated and what they do not measure.",
+    "intro": "A price move, a weighted average of signals and a portfolio return answer different questions. This disclosure describes the calculation methods found in the current website and its downloadable methodology, rather than borrowing another publisher’s performance formula.",
+    "sections": [
+      [
+        "Stock-signal entry and exit prices",
+        "The current target-date scorecard uses the first eligible exchange open after the later of publication and recommendation timestamps. It exits at the saved target-date close, or the next session if that date is closed. Prices are model inputs from daily adjusted market data, not verified customer or publisher brokerage fills."
+      ],
+      [
+        "Dividends, splits and gross returns",
+        "The scorecard metadata describes its prices as split- and dividend-adjusted. Those adjustments are reflected in the model prices; this should not be described as a separate cash-dividend ledger. Gross signal returns do not represent an investor’s result after all trading costs, subscription charges and taxes."
+      ],
+      [
+        "Weights and missing allocations",
+        "The scorecard uses sum(weight × return) divided by sum(weight). Suggested allocations are reconstructed from currently saved risk ratings, with a 1% fallback when the allocation is not available. This is retrospective reconstruction, not a verified record of the weights available at original publication."
+      ],
+      [
+        "Benchmark comparisons",
+        "The US stock comparison uses SPY over matching entry and exit dates and matching weights. The scorecard’s European listings are measured in their listing currencies and excluded from the US benchmark comparison. SPY is an exchange-traded fund used as the benchmark proxy, not a brokerage account identical to a reader’s."
+      ],
+      [
+        "Completed signals and monthly groups",
+        "The completed-signal averages exclude pending and Hold signals. Monthly cohorts group full holding-period returns by exit month; they are not monthly portfolio returns. The downloadable ledger and methodology specify the historical cutoff and the records included."
+      ],
+      [
+        "Estimated costs",
+        "The displayed estimated-net scenarios subtract 0.10 or 0.20 percentage points of entry notional as assumed round-trip friction. These are illustrations, not measured brokerage expenses, and they do not establish a reader’s after-tax or after-subscription return."
+      ],
+      [
+        "Annualisation is not a realised yearly return",
+        "The scorecard annualises its weighted gross return using ((1 + return ÷ 100)^(365 ÷ weighted-average holding days) − 1) × 100. This extrapolates a holding-period average to one year. It does not show that a portfolio earned that annual rate or that the same opportunities could be repeatedly reinvested."
+      ],
+      [
+        "Separate portfolio simulations",
+        "The downloadable calculation metadata also describes a retrospective contribution model. It uses regular contributions, normalised entry allocations and specific cash rules; sale proceeds are not reinvested and cash earns no interest. Its time-weighted return, gain on contributions and drawdown are different measures from the weighted signal average. Read the model assumptions before comparing these figures."
+      ],
+      [
+        "Options results",
+        "Option result cards compare a recorded premium with the previous session’s close, using (comparison premium ÷ previous premium − 1) × 100. One-contract illustrations multiply the per-share premium change by 100 for a standard contract. Adjusted contracts can use different multipliers. The figures are before costs and are price comparisons, not proof that a customer or publisher executed those trades."
+      ],
+      [
+        "Selection of option examples",
+        "The public preview selects the largest session percentage move among the contracts included in that report. Some detailed reports explicitly use the higher of two recorded prices for a contract. Featured examples therefore should not be treated as a complete, unselected strategy return or a win rate. An available quote does not ensure execution at that price."
+      ],
+      [
+        "Predictions and hypothetical paths",
+        "Prediction charts illustrate assumptions and possible paths. They are not realised investment results. Simulated seasonality and event swings do not establish that the forecast or the illustrated timing will occur. Historical outcomes do not guarantee future returns."
+      ],
+      [
+        "Checking a calculation",
+        "Use the scorecard, calculation metadata and downloadable ledger to inspect entries, exits, weights and benchmark windows. For a correction, send the page URL or signal identifier and the specific calculation you believe is wrong to support@stockstobuynow.ai."
+      ]
+    ],
+    "pending": []
+  },
+  {
+    "slug": "disclaimer",
+    "title": "Research disclaimer and service information",
+    "description": "The scope and limitations of Stocks to Buy Now Research information, forecasts, market data and educational tools.",
+    "intro": "Stocks to Buy Now Research provides investment research, educational content and tools. Use this information to understand the service alongside the existing Privacy Policy & Terms of Use. This draft does not replace those terms or create a new customer agreement.",
+    "sections": [
+      [
+        "Research and education",
+        "General research, lessons and example portfolios do not by themselves assess your complete financial circumstances, objectives or ability to bear losses. A stock or options idea is not a promise that it is suitable for every reader."
+      ],
+      [
+        "Investment risks",
+        "Investments can lose value. Options can lose their entire premium, while some short or leveraged positions can expose an investor to losses beyond the initial cash committed. Examples do not account for every person’s fees, taxes, borrowing conditions or execution constraints."
+      ],
+      [
+        "Data, forecasts and availability",
+        "Market data can be delayed, incomplete or revised. Forecasts depend on assumptions and may be wrong. Data refresh frequency and comparison dates vary by feature; a daily dataset should not be interpreted as a continuously updating executable quote."
+      ],
+      [
+        "Accounts, subscriptions and privacy",
+        "The existing Privacy Policy & Terms of Use describes account information, service providers, subscriptions, cancellation and refund arrangements. Review the relevant checkout and payment-provider information for your purchase. This disclosure does not change existing rights or billing terms."
+      ],
+      [
+        "Responsibility and corrections",
+        "Check material information before acting and consider professional advice appropriate to your circumstances. Report suspected errors with the affected page URL and supporting evidence. This draft does not introduce a blanket exclusion of liability or remove rights that cannot lawfully be excluded."
+      ]
+    ],
+    "pending": [
+      "Review this wording alongside the existing customer terms before publication."
+    ]
+  }
+]

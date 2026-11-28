@@ -1,9 +1,12 @@
+import marketEducationGuides from '../data/market-education-guides.json';
+import investmentManagementGuides from '../data/investment-management-guides.json';
 import {spanishRoutes,hasSpanish,englishPath,routePath,languages,languageOf,languagePath,availableLanguages,hasTranslation} from '../lib/localization/routes';
 import {toolEntries} from '../lib/seo-tools-server';
 import {workflows} from '../lib/trading-workflows';
 import {cachedPredictionStocks,predictionCatalog,cachedPredictionDetail} from '../lib/prediction-cache-server';
 import {periods,periodPath,horizonEnd} from '../lib/prediction-periods';
 import investingGuides from '../data/investing-guides.json';
+import questionGuides from '../data/search-question-guides.json';
 import {learningPaths} from '../lib/learning';
 import {optionResults,optionResultUrl} from '../lib/option-results';
 import {insiderArticles} from '../lib/insider-news-server';
@@ -82,8 +85,12 @@ export async function getServerSideProps({ res, sitemapPart }: any) {
     "/editorial-policy",
     "/authors/aness-hussein-ali",
     "/glossary",
+    "/guides/how-to-make-1000-a-month-trading-stocks/",
   ].map((path) => ({ path }));
   entries.push(...toolEntries(),...['/trading-tools/','/stock-analysis/','/stock-comparison/','/crypto-prediction/','/forex-prediction/','/tools/position-size-calculator/','/tools/forex-pip-value-calculator/','/tools/futures-tick-value-calculator/'].map(path=>({path})),...workflows.map(g=>({path:'/trading-guides/'+g.slug+'/'})));
+  entries.push({path:'/guides/financial-markets/'},...marketEducationGuides.map(g=>({path:'/guides/financial-markets/'+g.slug+'/'})));
+  entries.push({path:'/guides/investment-management/'},...investmentManagementGuides.map(g=>({path:'/guides/investment-management/'+g.slug+'/'})));
+  entries.push({path:'/guides/questions/'},...questionGuides.map(g=>({path:'/guides/'+g.slug+'/'})));
   entries.push({path:'/broker-comparison/'},{path:'/guides/'},...investingGuides.map(g=>({path:'/guides/'+g.slug+'/'})));
   entries.push(...learningPaths().map(path=>({path})),{path:'/reviews/'});
   entries.push({path:'/smart-money/investors/'},...publicInvestors.map(p=>({path:investorPath(p.id)})));

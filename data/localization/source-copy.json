@@ -30,7 +30,10 @@
     "Alternative indicators",
     "Build the rest of your investment view",
     "Explore the stock market →",
+    "Historical context, not this tracker’s measured history. The chart above contains only available observations collected for this service.",
+    "How the pizza theory evolved",
     "Market calendar →",
+    "Other unconventional indicators",
     "Pair alternative indicators with company fundamentals, market performance and upcoming events.",
     "Pentagon Pizza",
     "READ THE DATA",
@@ -526,23 +529,42 @@
   ],
   "components/PageContents.tsx": [],
   "components/PentagonPizzaCard.tsx": [
-    "% coverage;",
-    "% of usual;",
-    "100% = usual activity · Equal-weight daily average · At least half of tracked shops reporting",
+    "% of shops reporting",
+    "0% = usual activity · Positive = busier than usual · Negative = quieter than usual",
+    "A weekly comparison needs seven complete days of measured history.",
     "ALTERNATIVE INDICATOR",
-    "Combined activity over time",
-    "Daily combined pizza shop activity relative to usual activity",
-    "Foot traffic, not verified orders or a prediction of military action.",
-    "Get Pro",
-    "In app data",
+    "Activity above or below usual",
+    "Daily averages of available readings · At least half of tracked shops reporting · Missing days remain gaps. Today may be incomplete.",
+    "Daily pizza shop activity deviation from usual activity",
+    "Each reading compares activity with the usual level for that shop at the same weekday and hour.",
+    "Last 7 complete days:",
     "Pentagon Pizza Index",
+    "Pentagon Pizza Index & Tracker",
     "Pizza history period",
     "Public activity at pizza shops near the Pentagon.",
-    "Source readings are currently missing. Pro and app links show access options; they do not confirm data availability.",
     "locations reporting",
-    "measured days ·",
-    "observations",
-    "· UTC · Missing days remain gaps."
+    "versus usual",
+    "versus usual;"
+  ],
+  "components/PizzaShopBreakdown.tsx": [
+    "Activity by pizza shop",
+    "Activity spike",
+    "Day of week",
+    "Explore typical pizza-shop activity near the Pentagon.",
+    "Google Maps ↗",
+    "No baseline available",
+    "Relative popularity: 0–100. These bars are historical patterns, not live orders or opening hours.",
+    "Share on X",
+    "Typical activity",
+    "Typical hourly activity",
+    "Typical hourly activity, separate from live readings. All hours are Eastern Time.",
+    "of usual activity"
+  ],
+  "components/PizzaTypicalWeek.tsx": [
+    "Measured history will appear as readings become available.",
+    "Typical popularity on a 0–100 scale, averaged across shops. This is a usual week, not measured activity on past dates.",
+    "Typical weekly activity · Eastern Time",
+    "Typical weekly pizza-shop activity"
   ],
   "components/PredictionPeriodPage.tsx": [
     "% / year",
@@ -887,6 +909,12 @@
     "Tool categories",
     "Trading tools.",
     "Try a broader search or browse all categories."
+  ],
+  "components/TrustpilotWidget.tsx": [
+    "3,465 reviews",
+    "Based on",
+    "Excellent",
+    "Trustpilot"
   ],
   "components/UltraMembershipPage.tsx": [
     ", automatic renewal and cancellation policy. No automatic refunds for unused time; mandatory rights remain protected.",

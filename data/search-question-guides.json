@@ -1,0 +1,1620 @@
+[
+  {
+    "slug": "can-you-make-200-a-day-trading",
+    "title": "Can you make $200 a day trading stocks?",
+    "category": "Trading income",
+    "description": "What does a $200 daily trading target require? Compare account sizes, monthly return assumptions and the risks of forcing a daily profit.",
+    "answer": "A $200 trading day is possible, but earning it reliably every day is not assured. Over 20 sessions, that target means $4,000 before fees and taxes. Account size, losses and withdrawals matter more than a winning-day screenshot.",
+    "sections": [
+      {
+        "title": "A modest dollar target can still demand a large percentage return",
+        "body": "On a $5,000 account, a $200 gain is 4% in one session. On a $100,000 account it is 0.2%. The same dollar goal therefore describes very different levels of difficulty. Increasing leverage changes exposure, not the quality of a strategy. Start with the percentage and the potential loss rather than the dollar amount."
+      },
+      {
+        "title": "Translate the target into account mathematics",
+        "body": "Required capital equals the monthly profit target divided by the assumed monthly return. At 1%, $4,000 requires $400,000; at 2%, it requires $200,000. These are arithmetic scenarios, not sustainable-return estimates. A month can finish negative even when several trades are profitable."
+      },
+      {
+        "title": "Measure a process before depending on the income",
+        "body": "Keep a journal of entries, exits, position sizes, fees and the reason for each trade. Measure average gain, average loss, the longest losing streak and peak-to-trough drawdown. Paper trading can test order rules without capital at risk, but its fills may be easier than live execution. Set a loss limit that you can afford; stop rather than add trades to catch up with a daily quota."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "$800,000 account",
+          "0.5% assumed monthly return"
+        ],
+        [
+          "$400,000 account",
+          "1% assumed monthly return"
+        ],
+        [
+          "$200,000 account",
+          "2% assumed monthly return"
+        ],
+        [
+          "$80,000 account",
+          "5% assumed monthly return; demanding and uncertain"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this calculation include tax?",
+        "answer": "No. These examples are before tax and trading costs. Your required gross profit would be higher if you need the full target as spendable income."
+      },
+      {
+        "question": "Should I trade every day to reach the target?",
+        "answer": "No. Having no suitable setup is a valid reason not to trade. A calendar target does not create an opportunity."
+      }
+    ],
+    "aliases": [
+      "Can I earn $200 daily by trading?",
+      "Can I make $200 per day from trading?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-you-make-500-a-day-trading",
+    "title": "Can you make $500 a day trading stocks?",
+    "category": "Trading income",
+    "description": "Can you make $500 a day trading stocks? Understand average returns, losing days, capital requirements and the costs behind a daily income target.",
+    "answer": "A $500 trading day is possible, but earning it reliably every day is not assured. Over 20 sessions, that target means $10,000 before fees and taxes. Account size, losses and withdrawals matter more than a winning-day screenshot.",
+    "sections": [
+      {
+        "title": "A daily target is different from an average",
+        "body": "Ten sessions gaining $1,000 and ten losing $500 produce $5,000 over 20 sessions: an average of $250, not $500. A screenshot of the best day leaves out the losing days. Track every session, including days when you do not trade, and separate deposits from investment gains."
+      },
+      {
+        "title": "Translate the target into account mathematics",
+        "body": "Required capital equals the monthly profit target divided by the assumed monthly return. At 1%, $10,000 requires $1,000,000; at 2%, it requires $500,000. These are arithmetic scenarios, not sustainable-return estimates. A month can finish negative even when several trades are profitable."
+      },
+      {
+        "title": "Measure a process before depending on the income",
+        "body": "Keep a journal of entries, exits, position sizes, fees and the reason for each trade. Measure average gain, average loss, the longest losing streak and peak-to-trough drawdown. Paper trading can test order rules without capital at risk, but its fills may be easier than live execution. Set a loss limit that you can afford; stop rather than add trades to catch up with a daily quota."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "$2,000,000 account",
+          "0.5% assumed monthly return"
+        ],
+        [
+          "$1,000,000 account",
+          "1% assumed monthly return"
+        ],
+        [
+          "$500,000 account",
+          "2% assumed monthly return"
+        ],
+        [
+          "$200,000 account",
+          "5% assumed monthly return; demanding and uncertain"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this calculation include tax?",
+        "answer": "No. These examples are before tax and trading costs. Your required gross profit would be higher if you need the full target as spendable income."
+      },
+      {
+        "question": "Should I trade every day to reach the target?",
+        "answer": "No. Having no suitable setup is a valid reason not to trade. A calendar target does not create an opportunity."
+      }
+    ],
+    "aliases": [
+      "Can I earn $500 daily by trading?",
+      "Can I make $500 per day from trading?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-you-make-1000-a-day-trading",
+    "title": "Can you make $1,000 a day trading stocks?",
+    "category": "Trading income",
+    "description": "Explore the capital and returns behind a $1,000 daily trading target, with worked examples of losses, withdrawals and account recovery.",
+    "answer": "A $1,000 trading day is possible, but earning it reliably every day is not assured. Over 20 sessions, that target means $20,000 before fees and taxes. Account size, losses and withdrawals matter more than a winning-day screenshot.",
+    "sections": [
+      {
+        "title": "Withdrawals compete with recovery after a losing month",
+        "body": "Suppose a $200,000 account loses 5%, leaving $190,000. Withdrawing another $20,000 leaves $170,000. Returning to $200,000 then requires about 17.6%, before further withdrawals or costs. A spending plan built around positive trading months needs to account for this sequence of losses."
+      },
+      {
+        "title": "Translate the target into account mathematics",
+        "body": "Required capital equals the monthly profit target divided by the assumed monthly return. At 1%, $20,000 requires $2,000,000; at 2%, it requires $1,000,000. These are arithmetic scenarios, not sustainable-return estimates. A month can finish negative even when several trades are profitable."
+      },
+      {
+        "title": "Measure a process before depending on the income",
+        "body": "Keep a journal of entries, exits, position sizes, fees and the reason for each trade. Measure average gain, average loss, the longest losing streak and peak-to-trough drawdown. Paper trading can test order rules without capital at risk, but its fills may be easier than live execution. Set a loss limit that you can afford; stop rather than add trades to catch up with a daily quota."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "$4,000,000 account",
+          "0.5% assumed monthly return"
+        ],
+        [
+          "$2,000,000 account",
+          "1% assumed monthly return"
+        ],
+        [
+          "$1,000,000 account",
+          "2% assumed monthly return"
+        ],
+        [
+          "$400,000 account",
+          "5% assumed monthly return; demanding and uncertain"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this calculation include tax?",
+        "answer": "No. These examples are before tax and trading costs. Your required gross profit would be higher if you need the full target as spendable income."
+      },
+      {
+        "question": "Should I trade every day to reach the target?",
+        "answer": "No. Having no suitable setup is a valid reason not to trade. A calendar target does not create an opportunity."
+      }
+    ],
+    "aliases": [
+      "Can I earn $1000 daily by trading?",
+      "Can I make $1000 per day from trading?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-you-make-5000-a-day-trading",
+    "title": "Can you make $5,000 a day trading stocks?",
+    "category": "Trading income",
+    "description": "What would $5,000 a day from trading require? Examine capital, leverage, liquidity and the risk behind a six-figure monthly target.",
+    "answer": "A $5,000 trading day is possible, but earning it reliably every day is not assured. Over 20 sessions, that target means $100,000 before fees and taxes. Account size, losses and withdrawals matter more than a winning-day screenshot.",
+    "sections": [
+      {
+        "title": "A large income target is a business-scale risk decision",
+        "body": "A $5,000 daily target corresponds to $100,000 over an illustrative 20-session month. On a $1 million account that is 10% a month before costs and taxes. Trading more contracts can magnify a loss as easily as a gain. A larger position also faces liquidity and execution constraints that a small demonstration trade may not reveal."
+      },
+      {
+        "title": "Translate the target into account mathematics",
+        "body": "Required capital equals the monthly profit target divided by the assumed monthly return. At 1%, $100,000 requires $10,000,000; at 2%, it requires $5,000,000. These are arithmetic scenarios, not sustainable-return estimates. A month can finish negative even when several trades are profitable."
+      },
+      {
+        "title": "Measure a process before depending on the income",
+        "body": "Keep a journal of entries, exits, position sizes, fees and the reason for each trade. Measure average gain, average loss, the longest losing streak and peak-to-trough drawdown. Paper trading can test order rules without capital at risk, but its fills may be easier than live execution. Set a loss limit that you can afford; stop rather than add trades to catch up with a daily quota."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "$20,000,000 account",
+          "0.5% assumed monthly return"
+        ],
+        [
+          "$10,000,000 account",
+          "1% assumed monthly return"
+        ],
+        [
+          "$5,000,000 account",
+          "2% assumed monthly return"
+        ],
+        [
+          "$2,000,000 account",
+          "5% assumed monthly return; demanding and uncertain"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this calculation include tax?",
+        "answer": "No. These examples are before tax and trading costs. Your required gross profit would be higher if you need the full target as spendable income."
+      },
+      {
+        "question": "Should I trade every day to reach the target?",
+        "answer": "No. Having no suitable setup is a valid reason not to trade. A calendar target does not create an opportunity."
+      }
+    ],
+    "aliases": [
+      "Can I earn $5000 daily by trading?",
+      "Can I make $5000 per day from trading?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "how-much-to-invest-to-make-3000-a-month",
+    "title": "How much do you need to invest to make $3,000 a month?",
+    "category": "Trading income",
+    "description": "Compare the capital needed for $3,000 a month from dividends and trading. See yield calculations, income differences and withdrawal risks.",
+    "answer": "A $3,000 monthly target equals $36,000 a year. At an illustrative 4% annual dividend yield, it requires $900,000 before tax. Trading-return assumptions produce different numbers and much less predictable cash flow.",
+    "sections": [
+      {
+        "title": "Separate dividends, withdrawals and trading gains",
+        "body": "Dividends are payments from investments; selling shares is a withdrawal; a trading gain is a realized profit. These are different sources of cash. A portfolio can distribute income while its market value falls. Selling $3,000 of shares every month is possible until the funds run out, but it does not mean the portfolio earned $3,000."
+      },
+      {
+        "title": "The dividend calculation",
+        "body": "Divide $36,000 by the annual yield expressed as a decimal. At 3%, the result is $1.2 million; at 4%, $900,000; at 6%, $600,000. Yields change with prices and distributions, and payments may be quarterly or irregular. A high advertised yield is not proof of a safer income stream. Dividends can be reduced."
+      },
+      {
+        "title": "What changes if you trade instead?",
+        "body": "At an assumed 1% monthly return, the arithmetic requires $300,000; at 2%, $150,000. Neither return is promised, and the account can lose money. Avoid mixing an annual yield with a monthly target. Budget for costs, taxes and months without gains before deciding whether an income plan is practical."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "3% annual dividend yield",
+          "$1,200,000 capital"
+        ],
+        [
+          "4% annual dividend yield",
+          "$900,000 capital"
+        ],
+        [
+          "6% annual dividend yield",
+          "$600,000 capital"
+        ],
+        [
+          "1% assumed monthly trading return",
+          "$300,000 capital; not an income guarantee"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is a 6% yield better than a 4% yield?",
+        "answer": "Not necessarily. Consider dividend coverage, debt, business stability and the reason the yield is high."
+      },
+      {
+        "question": "Is $3,000 a month the same as a safe withdrawal rate?",
+        "answer": "No. A dollar target does not establish a sustainable withdrawal rate. Longevity, inflation, asset allocation and the sequence of returns all matter."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "day-trading-income-100000-account",
+    "title": "How much can a day trader with $100,000 make per day?",
+    "category": "Trading income",
+    "description": "See what hypothetical monthly returns mean for a $100,000 trading account, and why account size alone cannot predict average daily income.",
+    "answer": "A $100,000 account does not imply an average daily income. A 1% monthly gain is $1,000, or $50 per session over 20 sessions; a 2% gain is $100 per session. These are examples, not observed trader averages.",
+    "sections": [
+      {
+        "title": "Why account size cannot establish an average",
+        "body": "Traders use different strategies, leverage and holding periods. Some lose money, some do not trade every day, and surviving accounts are not representative of everyone who started. A meaningful average would need a defined population, period and treatment of closed accounts. We do not have such a dataset to attach a universal income figure to this account size."
+      },
+      {
+        "title": "Understand the denominator",
+        "body": "A $1,000 daily gain is 1% of $100,000. Repeating that dollar gain for 20 sessions would mean a 20% monthly return before expenses, without compounding. That is a demanding target, not a routine expectation. Margin buying power can exceed equity, but losses still reduce the equity supporting the account."
+      },
+      {
+        "title": "Assess the result alongside the drawdown",
+        "body": "A $2,000 profitable month looks different if the account first fell $20,000. Record the largest drawdown, exposure, total costs and time spent trading. Compare performance with an appropriate benchmark and with the risk taken. Withdrawals reduce the capital available for recovery after losses."
+      }
+    ],
+    "table": {
+      "headers": [
+        "Scenario",
+        "Illustrative result"
+      ],
+      "rows": [
+        [
+          "−2% month",
+          "−$2,000 total; −$100 per session equivalent"
+        ],
+        [
+          "1% month",
+          "$1,000 total; $50 per session equivalent"
+        ],
+        [
+          "2% month",
+          "$2,000 total; $100 per session equivalent"
+        ],
+        [
+          "5% month",
+          "$5,000 total; $250 per session equivalent"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Are these actual average earnings?",
+        "answer": "No. They translate hypothetical monthly returns into dollar amounts over 20 sessions."
+      },
+      {
+        "question": "Does more buying power mean more income?",
+        "answer": "No. It increases possible exposure and potential losses; it does not supply a profitable strategy."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-ai-predict-stock-prices",
+    "title": "Can AI really predict stocks with 100% accuracy?",
+    "category": "AI & trading bots",
+    "description": "Can AI predict stocks accurately? Understand forecast horizons, data leakage, out-of-sample testing and why no model guarantees every market move.",
+    "answer": "AI can estimate relationships and construct stock-price scenarios, but it cannot reliably predict every market move or provide 100% accuracy. Useful analysis makes its assumptions, horizon and uncertainty visible.",
+    "sections": [
+      {
+        "title": "A forecast needs a clear definition",
+        "body": "Predicting whether a stock rises tomorrow is different from forecasting next year’s revenue or estimating a five-year valuation. Evaluate the exact output, not the label AI. A broad price range may contain the eventual price often while offering little help with a specific entry or exit."
+      },
+      {
+        "title": "Test predictions on information available at the time",
+        "body": "A model should be evaluated on data it did not learn from. Future earnings, revised economic figures and today’s surviving-company list can accidentally leak into historical tests. Include failed companies, realistic execution costs and a comparison with a simple baseline. Accuracy alone does not show whether a tradable strategy makes money."
+      },
+      {
+        "title": "Use scenarios to make assumptions visible",
+        "body": "Growth and valuation can move independently. A business might grow earnings 10% while its valuation multiple falls enough for the stock to decline. Compare upside, reference and downside assumptions and identify what would invalidate the thesis. A smooth projected line is a conditional illustration, not a scheduled route that prices must follow."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Forecast horizon",
+          "Tomorrow and 2030 require different evidence"
+        ],
+        [
+          "Out-of-sample results",
+          "Check performance outside the training period"
+        ],
+        [
+          "Return after costs",
+          "Correct direction may still be unprofitable"
+        ],
+        [
+          "Downside scenario",
+          "Understand what happens when assumptions fail"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can AI predict market movements with 100% accuracy?",
+        "answer": "No reliable system can guarantee every future market move. Unexpected information, changing conditions and execution costs remain."
+      },
+      {
+        "question": "Are stock price scenarios analyst price targets?",
+        "answer": "Not necessarily. Check the methodology: a user-adjusted growth and valuation illustration is different from published analyst consensus."
+      }
+    ],
+    "aliases": [
+      "Can AI really predict stocks?",
+      "Can AI predict stock market movements with 100% accuracy?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-chatgpt-predict-or-trade-stocks",
+    "title": "Can ChatGPT predict the stock market or trade stocks?",
+    "category": "AI & trading bots",
+    "description": "Explore how ChatGPT can support stock research, where predictions can fail and what separates AI analysis from authorized trade execution.",
+    "answer": "ChatGPT can help explain financial concepts, organize research and analyze supplied data. Its answer is not a guaranteed stock forecast. Executing a trade requires a separate, authorized brokerage connection and appropriate controls.",
+    "sections": [
+      {
+        "title": "Use it for a defined research task",
+        "body": "Ask for a comparison of reported revenue, an explanation of an earnings release or a checklist of assumptions in a valuation. Provide the document and reporting date. Ask it to distinguish reported facts from calculations and opinions. Verify figures against the underlying filing before using them in a decision."
+      },
+      {
+        "title": "A convincing answer can still be wrong",
+        "body": "Generated text can contain incorrect numbers, confused share classes or stale information. A price target produced without a transparent model is not evidence of predictive skill. Ask what data was used, which dates apply and how the conclusion changes if growth or valuation assumptions change."
+      },
+      {
+        "title": "Keep analysis and order execution separate",
+        "body": "A research conversation does not by itself place an order. If a product connects AI to a broker, review permissions, position limits, order confirmation and a way to stop execution. Do not paste brokerage passwords into a chat. Start with simulated workflows and verify the resulting orders rather than assuming natural-language instructions were interpreted correctly."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Explain a filing",
+          "Supply the actual document and verify key numbers"
+        ],
+        [
+          "Compare companies",
+          "Use consistent periods and currencies"
+        ],
+        [
+          "Suggest a target",
+          "Require assumptions and sensitivity analysis"
+        ],
+        [
+          "Execute an order",
+          "Requires an authorized integration and risk controls"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can ChatGPT guarantee profitable trades?",
+        "answer": "No. Language fluency does not establish predictive accuracy or a profitable trading record."
+      },
+      {
+        "question": "Can ChatGPT do stock trading?",
+        "answer": "It can assist research or form part of an authorized trading workflow, but order execution depends on the integration, permissions and broker—not simply asking a question."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-stock-trading",
+    "title": "Which AI tool is best for stock trading?",
+    "category": "AI & trading bots",
+    "description": "Compare AI tools for stock research, backtesting and execution. Learn what to check before choosing an app or connecting a brokerage account.",
+    "answer": "The best AI trading tool depends on whether you need research, strategy testing or order execution. There is no universal winner across those jobs. Compare the workflow, data quality, costs and evidence behind performance claims.",
+    "sections": [
+      {
+        "title": "Start with the decision you need to improve",
+        "body": "A long-term investor may need financial statements and earnings comparisons. An active trader may need timely alerts, liquidity information and defined exits. An automation developer needs reliable APIs, logs and testing controls. Choosing on a leaderboard alone can leave you paying for features that do not solve your problem."
+      },
+      {
+        "title": "What are the top three AI bot categories?",
+        "body": "Research assistants summarize information; testing tools evaluate explicit rules; execution systems send orders. These are three categories, not a ranking of three products. A service can cover more than one, but confirm each capability. A research signal should not be mistaken for a broker executing a trade."
+      },
+      {
+        "title": "Where Stocks to Buy Now Research fits",
+        "body": "Our platform combines human-led research, AI-assisted analysis, company data and learning tools. Use stock comparisons, earnings calendars, heatmaps and price scenarios to explore a thesis. This is a first-party description of our service, not an independent award or a claim that we are the most profitable trading app. Review features and access before subscribing."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Research",
+          "Financial data, explanations, dates and transparent assumptions"
+        ],
+        [
+          "Testing",
+          "Out-of-sample results, costs and drawdowns"
+        ],
+        [
+          "Execution",
+          "Broker compatibility, controls and audit logs"
+        ],
+        [
+          "All categories",
+          "Clear pricing, permissions and support"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "What is the most successful AI stock trading app?",
+        "answer": "A defensible comparison needs comparable, verified results over the same period and risk level. We do not claim a universal winner."
+      },
+      {
+        "question": "What are the top 3 AI bots?",
+        "answer": "Define the task first. Research, backtesting and execution tools solve different problems, so a three-product ranking without criteria can be misleading."
+      }
+    ],
+    "aliases": [
+      "Which AI is best for trading?",
+      "What are the top 3 AI bots?",
+      "What is the most successful AI stock trading app?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "most-successful-ai-trading-bot",
+    "title": "What is the most successful AI trading bot?",
+    "category": "AI & trading bots",
+    "description": "How do you evaluate the most successful AI trading bot? Compare live returns, costs, drawdowns and risk instead of relying on a win-rate claim.",
+    "answer": "There is no single verified most successful trading bot for every market and user. A credible comparison needs live net returns, drawdowns, consistent risk exposure and a complete record—not just a high win rate.",
+    "sections": [
+      {
+        "title": "Define success before comparing products",
+        "body": "Highest return, smallest drawdown and most reliable execution are different goals. A bot that doubles an account while risking most of it is not directly comparable with a lower-risk strategy. Specify the market, account size, period and maximum acceptable loss before comparing results."
+      },
+      {
+        "title": "Separate a backtest from a live record",
+        "body": "A backtest reconstructs hypothetical decisions. It can benefit from parameter tuning or unrealistic fills. Live performance should reconcile to account records, identify deposits and withdrawals, include fees and disclose the full period. Screenshots of selected trades do not establish a complete track record."
+      },
+      {
+        "title": "Check how the strategy fails",
+        "body": "Ask what happens during gaps, connection failures and changing volatility. Determine whether it averages into losing positions, sells uncovered options or relies on leverage. A system can accumulate small wins while hiding occasional large losses. Understand how to pause it and close positions independently before connecting capital."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Net return",
+          "After costs, with deposits excluded"
+        ],
+        [
+          "Maximum drawdown",
+          "Largest peak-to-trough loss"
+        ],
+        [
+          "Live versus simulated",
+          "Different levels of evidence"
+        ],
+        [
+          "Risk exposure",
+          "Leverage and tail losses can distort rankings"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does a 90% win rate make a bot the best?",
+        "answer": "No. Small frequent gains can be outweighed by infrequent large losses."
+      },
+      {
+        "question": "Can yesterday’s best bot stop working?",
+        "answer": "Yes. Market conditions, crowding, costs and execution quality can change."
+      }
+    ],
+    "aliases": [
+      "Which is the most successful trading bot?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "do-ai-trading-bots-make-money",
+    "title": "Do AI trading bots really make money?",
+    "category": "AI & trading bots",
+    "description": "Understand how trading bots can make or lose money, with a worked expectancy example and checks for costs, execution and operational risk.",
+    "answer": "A trading bot can make money if its rules have a durable edge after costs, but automation does not create that edge. Bots can also lose money quickly or repeat a flawed trade without hesitation.",
+    "sections": [
+      {
+        "title": "Automation improves consistency, not the underlying odds",
+        "body": "Software can monitor a market and follow rules without fatigue. It can also enforce bad rules at scale. Separate the quality of the strategy from the convenience of automation. A faster entry is only useful if the expected outcome after spread, slippage and fees remains favorable."
+      },
+      {
+        "title": "Calculate expectancy before counting wins",
+        "body": "Consider an illustrative system winning 40% of trades, with an average $200 win and $100 loss. Gross expectancy is 0.4 × $200 − 0.6 × $100 = $20 per trade. If average costs are $25, net expectancy becomes −$5. The example explains the calculation; it is not a claim about a real bot."
+      },
+      {
+        "title": "Test failure modes before live deployment",
+        "body": "Check stale data, rejected orders, repeated orders and partial fills. Limit position size and losses at the account level, not just inside the strategy. Paper results may not reproduce live liquidity. Monitor the system after deployment and stop if execution or risk departs from what was tested."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Win rate",
+          "Only one part of expectancy"
+        ],
+        [
+          "Average win and loss",
+          "Determines the payoff balance"
+        ],
+        [
+          "All-in trading costs",
+          "Can erase a small edge"
+        ],
+        [
+          "Operational failures",
+          "Can create unintended exposure"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "How much money can AI trading bots make?",
+        "answer": "There is no reliable universal income figure. Returns depend on the strategy, capital, risk, costs and market conditions."
+      },
+      {
+        "question": "Can a bot lose more than expected?",
+        "answer": "Yes. Gaps, leverage, execution failures and some derivatives can produce losses beyond a planned stop."
+      }
+    ],
+    "aliases": [
+      "Is it possible to make money with a trading bot?",
+      "AI Trading Bots: How Much Money Can They Really Make?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "trading-bot-success-rate",
+    "title": "What is the success rate of a trading bot?",
+    "category": "AI & trading bots",
+    "description": "Learn what a trading bot success rate measures, why a 90% win rate can lose money and how to calculate expectancy and break-even win rates.",
+    "answer": "There is no universal trading-bot success rate. A percentage may describe winning trades, profitable accounts or a backtest. Ask which measure is being used and examine losses, costs and the full sample.",
+    "sections": [
+      {
+        "title": "A high win rate can still lose money",
+        "body": "Imagine ten trades: nine win $10 and one loses $150. The win rate is 90%, but the total is a $60 loss before costs. The reverse is also possible: fewer wins can be profitable when average winners are much larger than losers. Always inspect the payoff distribution."
+      },
+      {
+        "title": "Break-even win rate depends on payoff size",
+        "body": "Ignoring costs, break-even win rate equals average loss divided by average win plus average loss. With $200 winners and $100 losers, it is 33.3%. Add $10 cost per trade and it becomes approximately 36.7%. These thresholds assume the average payoffs remain representative."
+      },
+      {
+        "title": "Ask how much evidence supports the percentage",
+        "body": "Ten trades are not the same evidence as a long record across different conditions. Watch for excluded losing accounts, selected dates and parameters chosen after seeing the results. A long sample can still become stale when market behavior changes. Track recent degradation without retuning until every past result looks profitable."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Win rate",
+          "Winning trades ÷ all closed trades"
+        ],
+        [
+          "Expectancy",
+          "Win probability × average win minus losses and costs"
+        ],
+        [
+          "Profit factor",
+          "Gross gains ÷ absolute gross losses"
+        ],
+        [
+          "Drawdown",
+          "Loss from an account peak to a subsequent trough"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is 90% accuracy enough?",
+        "answer": "No. You still need payoff sizes, costs, risk and evidence that the figure is representative."
+      },
+      {
+        "question": "Is backtest success the same as live success?",
+        "answer": "No. Real fills, changing conditions and operational errors can materially change results."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "how-much-does-a-trading-bot-cost",
+    "title": "How much does a good trading bot cost?",
+    "category": "AI & trading bots",
+    "description": "Calculate the total cost of a trading bot: software, market data, hosting and execution. See how recurring costs compare with account size.",
+    "answer": "A trading bot’s total cost can include software, market data, hosting, brokerage fees and slippage. The subscription price alone does not determine value, and a higher price does not prove a better strategy.",
+    "sections": [
+      {
+        "title": "Budget beyond the advertised subscription",
+        "body": "Check whether exchange data, additional markets, alerts, API access and strategy limits require separate payments. Include commissions, spreads and financing when applicable. If the service charges a performance fee, understand the calculation and whether losses carry forward before another fee is charged."
+      },
+      {
+        "title": "Measure the cost against account size",
+        "body": "An illustrative $100 monthly subscription plus $50 data bill costs $150. On a $5,000 account that is 3% of equity each month before trading costs; on $50,000 it is 0.3%. Those figures are examples, not quoted vendor prices. A tool that looks inexpensive in dollars may be costly relative to your capital."
+      },
+      {
+        "title": "Pay for a workflow you can evaluate",
+        "body": "A trial should let you inspect data quality, setup time and whether the product actually performs the intended task. Read cancellation terms and export your records. Compare with a simpler manual or free workflow. Do not infer that you must recover the fee by trading more often."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Software subscription",
+          "Recurring fixed cost"
+        ],
+        [
+          "Data and infrastructure",
+          "May be separate from the base plan"
+        ],
+        [
+          "Execution",
+          "Spreads, commissions, slippage and financing"
+        ],
+        [
+          "Time",
+          "Setup, testing, maintenance and supervision"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is an expensive bot more profitable?",
+        "answer": "Price is not evidence of profitable live performance."
+      },
+      {
+        "question": "How do I compare two prices?",
+        "answer": "Use the same markets, features and data package, then calculate the total recurring cost relative to account size."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "free-ai-stock-trading-bot",
+    "title": "Is there a free AI stock trading bot?",
+    "category": "AI & trading bots",
+    "description": "Explore what free AI trading tools include, the costs they may exclude and the security checks to make before using automated trading software.",
+    "answer": "Free software and research tools can support a trading workflow, but free does not mean costless, profitable or safe. Data, execution, hosting and maintenance may still cost money even when the code is free.",
+    "sections": [
+      {
+        "title": "Clarify what free includes",
+        "body": "A free screener or chatbot may provide research without executing trades. Open-source automation may need technical setup and a separate broker account. A free tier may limit data freshness, instruments or alerts. Identify the exact function you need before comparing the price."
+      },
+      {
+        "title": "Inspect the permissions and maintenance",
+        "body": "Review who maintains the code, what credentials it requests and how updates are delivered. Use narrowly scoped permissions and avoid giving a research tool withdrawal authority. Test in a paper account first. A program that requires you to send funds to an unknown wallet is different from software connected to your own broker."
+      },
+      {
+        "title": "Start with a free learning workflow",
+        "body": "Use lessons to understand orders and position sizing, then research a company and record a hypothetical trade. Compare your intended and actual execution assumptions. This can reveal whether automation solves a real bottleneck before you commit time or money to a bot. Free educational tools should not be presented as guaranteed automated income."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Free research",
+          "May not include order execution"
+        ],
+        [
+          "Free code",
+          "Still needs security and maintenance"
+        ],
+        [
+          "Free data",
+          "May be delayed or restricted"
+        ],
+        [
+          "Free trial",
+          "Check renewal and cancellation terms"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can free bots be legitimate?",
+        "answer": "Yes, but price alone does not establish legitimacy. Review the operator, code, permissions and actual function."
+      },
+      {
+        "question": "Does free software eliminate trading costs?",
+        "answer": "No. Brokerage costs, spreads, slippage and potential losses remain."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "are-ai-trading-bots-legit",
+    "title": "Are AI trading bots legitimate?",
+    "category": "AI & trading bots",
+    "description": "Check whether an AI trading bot is legitimate: review its operator, custody, permissions, performance evidence and withdrawal arrangements.",
+    "answer": "Some automated trading software is genuine, but an AI label does not establish legitimacy or profitability. Check who operates the service, where your money stays, what permissions it needs and whether its claims can be verified.",
+    "sections": [
+      {
+        "title": "Distinguish software from custody",
+        "body": "Software that sends authorized orders to your own brokerage account is different from a website asking you to transfer funds to it. Understand which legal entity holds the money and how withdrawals work. Verify details independently rather than relying on a logo or a testimonial."
+      },
+      {
+        "title": "Check the business model and the record",
+        "body": "Determine whether the provider sells research, software, advice or account management. Relevant registration requirements depend on the activity and jurisdiction. Ask for a complete live record and a clear explanation of fees. A registration or business listing is not a guarantee of investment performance."
+      },
+      {
+        "title": "Recognize claims that deserve skepticism",
+        "body": "Guaranteed returns, pressure to deposit quickly and demands for an extra payment to unlock a withdrawal are warning signs. Do not rely on a chat group’s apparent profits or an AI-generated endorsement. A demonstration account balance is not proof that funds can be withdrawn. Pause and verify before sending money or granting access."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Operator",
+          "Identifiable entity and contact details"
+        ],
+        [
+          "Custody",
+          "Know where funds are held"
+        ],
+        [
+          "Permissions",
+          "Limit access to the intended purpose"
+        ],
+        [
+          "Evidence",
+          "Complete records rather than selected screenshots"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does AI make a platform trustworthy?",
+        "answer": "No. Evaluate the provider and its actual practices independently of its technology claims."
+      },
+      {
+        "question": "Can a genuine bot lose money?",
+        "answer": "Yes. Legitimacy and profitability are separate questions."
+      }
+    ],
+    "aliases": [
+      "Is there any legit AI trading bots?"
+    ],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "is-ai-stock-trading-legal",
+    "title": "Is it legal to use AI for stock trading?",
+    "category": "AI & trading bots",
+    "description": "Learn how AI stock trading relates to broker permissions, market conduct and regulated services, and why rules depend on activity and jurisdiction.",
+    "answer": "Using AI to assist stock research or trading is not automatically prohibited. The activity, jurisdiction, broker permissions and market conduct matter. Automation does not exempt anyone from trading rules or obligations.",
+    "sections": [
+      {
+        "title": "Research and regulated services are different",
+        "body": "Analyzing your own portfolio differs from advising other people, managing their accounts or marketing investment services. Requirements depend on the service and location. Do not assume that calling a product software removes obligations that apply to what it actually does."
+      },
+      {
+        "title": "Check broker permission before connecting automation",
+        "body": "Confirm the broker supports the intended API and order types. Review rate limits, market-data licenses, margin arrangements and account permissions. Keep logs of instructions and orders, set exposure limits and maintain a way to stop the system. A technically possible connection is not necessarily an authorized one."
+      },
+      {
+        "title": "Market conduct still matters",
+        "body": "AI does not make manipulation, deceptive orders or trading on prohibited information acceptable. If a strategy relies on questionable data or behavior, automating it does not solve that problem. For a specific service or cross-border arrangement, obtain advice based on the applicable rules rather than relying on a general educational article."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Personal research",
+          "Verify data and respect usage rights"
+        ],
+        [
+          "Broker integration",
+          "Confirm account and API permissions"
+        ],
+        [
+          "Serving others",
+          "Assess the rules for the actual service"
+        ],
+        [
+          "Market conduct",
+          "Automation does not remove responsibility"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is every AI trading service regulated the same way?",
+        "answer": "No. Research software, advice and account management are different activities, and jurisdiction matters."
+      },
+      {
+        "question": "Can a bot ignore brokerage restrictions?",
+        "answer": "No. Orders remain subject to the account’s permissions and applicable rules."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "is-anyone-using-ai-to-trade-stocks",
+    "title": "Is anyone using AI to trade stocks?",
+    "category": "AI & trading bots",
+    "description": "See how AI is used in stock research, document analysis, model testing and trading workflows—and why adoption does not prove investment performance.",
+    "answer": "Yes. AI is used in research, data processing and parts of trading workflows. That ranges from summarizing filings to testing models; it does not mean every system independently trades or consistently earns a profit.",
+    "sections": [
+      {
+        "title": "Research is a major use case",
+        "body": "A tool can organize earnings releases, classify news or extract figures from documents. These tasks save time but need quality checks. A summary can miss a footnote, mix periods or misinterpret an adjusted metric. Keep the underlying document available and verify the numbers that drive a decision."
+      },
+      {
+        "title": "Prediction and execution need additional controls",
+        "body": "A model may rank opportunities or estimate risk, while separate systems handle sizing and execution. Operational controls are as important as the prediction: data outages, duplicate orders and changing liquidity all affect results. Automation requires supervision even when a strategy has been tested."
+      },
+      {
+        "title": "What an individual investor can apply",
+        "body": "Begin with a narrow task, such as comparing revenue growth across peers. Use consistent dates and definitions, inspect the result and record the decision it informs. Stocks to Buy Now Research provides research and educational workflows; use the tools to understand a setup rather than assuming AI replaces judgment."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Document processing",
+          "Extract and check reported figures"
+        ],
+        [
+          "Research assistance",
+          "Compare companies and scenarios"
+        ],
+        [
+          "Model testing",
+          "Evaluate rules outside the training sample"
+        ],
+        [
+          "Execution support",
+          "Requires authorized systems and risk controls"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does AI use imply better investment returns?",
+        "answer": "No. Adoption proves use, not performance. Results require separate evidence."
+      },
+      {
+        "question": "Must I automate orders to use AI?",
+        "answer": "No. Research assistance can be useful without connecting a trading account."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "can-you-get-in-trouble-for-day-trading",
+    "title": "Can you get in trouble for day trading?",
+    "category": "Risk & market research",
+    "description": "Understand day-trading account restrictions, funding, settlement and market conduct, and the difference between broker limits and unlawful activity.",
+    "answer": "Day trading is not inherently wrongdoing, but you must follow applicable laws, account rules and broker requirements. Restrictions depend on jurisdiction, account type, funding and the products you trade.",
+    "sections": [
+      {
+        "title": "Account restrictions are not the same as a crime",
+        "body": "A broker can restrict activity when an account does not meet its funding, settlement or risk requirements. That is different from unlawful market conduct. Read the current rules for your particular cash or margin account before adopting an intraday strategy; do not assume every broker applies identical requirements."
+      },
+      {
+        "title": "Keep funding and settlement clear",
+        "body": "Know when sale proceeds are available for reuse, what borrowing costs apply and what can trigger a margin call or liquidation. A displayed buying-power figure is not a promise that a position cannot be closed. Avoid building a strategy around funds or permissions you do not actually have."
+      },
+      {
+        "title": "Keep records and respect market rules",
+        "body": "Maintain trade confirmations, statements and tax records. Manipulative conduct and prohibited use of material nonpublic information are not made acceptable by a short holding period. If you trade for other people or sell a service, different obligations may apply. Check current local rules for your situation."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Cash account",
+          "Understand available funds and settlement"
+        ],
+        [
+          "Margin account",
+          "Understand borrowing and liquidation risk"
+        ],
+        [
+          "Trade records",
+          "Keep confirmations and tax information"
+        ],
+        [
+          "Other people’s money",
+          "Different permissions and obligations may apply"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does a restricted account mean I broke the law?",
+        "answer": "Not necessarily. A restriction can arise from brokerage or funding rules. Ask the broker what triggered it."
+      },
+      {
+        "question": "Are rules identical in every country?",
+        "answer": "No. This is a general explanation, not a jurisdiction-specific legal determination."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "why-do-day-traders-lose-money",
+    "title": "Why do people say 90% of day traders lose money?",
+    "category": "Risk & market research",
+    "description": "Examine the claim that 90% of day traders lose money. Learn how costs, position sizing, drawdowns and incomplete statistics affect the picture.",
+    "answer": "The often-repeated 90% figure is not a universal measured rate for all day traders. The underlying risks are real: trading costs, oversized positions, weak strategies and behavioral mistakes can turn frequent activity into losses.",
+    "sections": [
+      {
+        "title": "Ask what the statistic measures",
+        "body": "A credible percentage needs a population, market, period and definition of profitability. Studies of one instrument or country cannot automatically describe every trader. Accounts that stop trading and costs omitted from results can change the picture. Treat an unsourced round number as a claim to examine, not a precise personal probability."
+      },
+      {
+        "title": "Small costs accumulate",
+        "body": "Suppose 100 round trips cost $5 each in commissions, spread and slippage combined. That is $500 before considering whether the strategy made a gross profit. If the expected edge is small, more activity can increase the deficit. A strategy needs to clear its actual costs, not just look right on a chart."
+      },
+      {
+        "title": "Loss management matters as much as entries",
+        "body": "After a 20% loss, a 25% gain is needed to recover. After a 50% loss, it takes 100%. Increasing size after losses or moving exits to avoid admitting a mistake can damage the account faster than a string of small wins repairs it. A written process, realistic sizing and a trade journal help identify mistakes; none guarantees profits."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "10% account loss",
+          "11.1% gain needed to recover"
+        ],
+        [
+          "20% account loss",
+          "25% gain needed"
+        ],
+        [
+          "50% account loss",
+          "100% gain needed"
+        ],
+        [
+          "Costs and leverage",
+          "Can worsen recovery requirements"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is 90% the exact failure rate?",
+        "answer": "Not across all traders. A specific figure requires a defined dataset and methodology."
+      },
+      {
+        "question": "Does a stop-loss guarantee the planned loss?",
+        "answer": "No. Gaps, liquidity and execution can produce a worse fill than the stop level."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "trader-2-4-million-28-minutes",
+    "title": "A trader made $2.4 million in 28 minutes: what does that prove?",
+    "category": "Risk & market research",
+    "description": "Assess the $2.4 million in 28 minutes trading claim. Understand options leverage, paper gains, execution and the evidence a headline leaves out.",
+    "answer": "A headline about $2.4 million in 28 minutes does not establish a repeatable trading strategy. Without verified transactions, capital at risk and execution details, the exact story should not be treated as a demonstrated result.",
+    "sections": [
+      {
+        "title": "Separate the claim from the mechanics",
+        "body": "Large short-term option gains are mathematically possible because an option can change much more, in percentage terms, than its underlying stock. That explains a mechanism, not this particular headline. We are not presenting an identified trader or reconstructed transaction as verified here."
+      },
+      {
+        "title": "Paper value is different from money realized",
+        "body": "An illustrative 1,000 standard contracts bought at $1 per share cost $100,000 when the multiplier is 100. A quoted price of $5 would value them at $500,000, implying a $400,000 paper gain before costs. Selling the whole position at that quote is a separate question: spreads, size and available liquidity matter. These are invented teaching numbers, not the alleged trade."
+      },
+      {
+        "title": "The missing denominator is the risk",
+        "body": "The premium on purchased options can be lost entirely, and a spectacular winner may sit alongside many failed attempts. Ask how much was risked, whether profits were realized and how all trades performed over time. Study options payoff and execution before treating a viral anecdote as an attainable income plan."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Starting capital",
+          "Needed to interpret the return"
+        ],
+        [
+          "Filled orders",
+          "Stronger evidence than a quote screenshot"
+        ],
+        [
+          "Realized versus unrealized",
+          "Displayed value may not be cash profit"
+        ],
+        [
+          "Complete history",
+          "One winner omits other outcomes"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does this page verify the $2.4 million story?",
+        "answer": "No. It explains how to assess the claim and the option mechanics without asserting an unverified account."
+      },
+      {
+        "question": "Can options rise sharply in minutes?",
+        "answer": "Yes, but they can also lose value rapidly. A possible outcome is not a typical or dependable one."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "what-stock-will-skyrocket-in-2026",
+    "title": "What stock will skyrocket in 2026? How to evaluate the claim",
+    "category": "Risk & market research",
+    "description": "How should you research stocks that could rise sharply in 2026? Evaluate catalysts, earnings, valuation expectations and the downside case.",
+    "answer": "No one can identify a stock that is certain to skyrocket in 2026. A useful search begins with catalysts, business performance, valuation and downside—not a promise attached to a ticker.",
+    "sections": [
+      {
+        "title": "Define the time horizon",
+        "body": "This guide is written in late November 2026. A move before year-end is a different question from a multi-year investment thesis. Near-term prices can respond to earnings, liquidity and changes in expectations; a strong long-term business does not guarantee a gain over the remaining weeks."
+      },
+      {
+        "title": "Connect a catalyst to the financial statements",
+        "body": "Ask whether a product launch, industry cycle or spending trend can improve revenue, margins or cash flow. Then ask what the market already expects. Even strong results can disappoint if the price assumes more. Compare valuation and growth with competitors using consistent fiscal periods."
+      },
+      {
+        "title": "Write an upside and a failure case",
+        "body": "An illustrative 20% increase in earnings with an unchanged P/E implies a 20% price increase. If the P/E falls 25%, the combined effect is 1.20 × 0.75 − 1 = −10%. This shows why business growth and stock returns differ. Use prediction tools to inspect assumptions, not to turn an exciting theme into certainty."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Catalyst",
+          "What changes, and when?"
+        ],
+        [
+          "Expectations",
+          "What is already reflected in valuation?"
+        ],
+        [
+          "Balance sheet",
+          "Can the business fund its plan?"
+        ],
+        [
+          "Downside",
+          "What invalidates the thesis?"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Can a cheap share price identify the next winner?",
+        "answer": "No. Share price alone says little about valuation, dilution or business quality."
+      },
+      {
+        "question": "Are projected stock prices guaranteed?",
+        "answer": "No. They depend on assumptions that may not occur."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore stock price scenarios",
+        "href": "/prediction/"
+      },
+      {
+        "label": "Compare companies",
+        "href": "/stock-comparison/"
+      },
+      {
+        "label": "Review upcoming earnings",
+        "href": "/earnings-calendar/"
+      }
+    ]
+  },
+  {
+    "slug": "is-it-worth-buying-ai-stocks",
+    "title": "Is it worth buying AI stocks now?",
+    "category": "Risk & market research",
+    "description": "Explore how to evaluate AI stocks through business models, earnings, valuation and portfolio concentration, with a worked growth-versus-price example.",
+    "answer": "AI can create business opportunities, but an attractive technology trend does not automatically make a stock attractive at its current price. Evaluate revenue quality, spending, competitive advantage and the expectations built into valuation.",
+    "sections": [
+      {
+        "title": "Distinguish the different business models",
+        "body": "Chip suppliers, cloud platforms, data-center infrastructure and software companies have different customers, margins and capital requirements. A company mentioning AI is not the same as a company earning material cash flow from it. Look at how demand translates into sales and how much investment is needed to support those sales."
+      },
+      {
+        "title": "Growth can be offset by a lower multiple",
+        "body": "Suppose earnings per share rise from $5 to $6, a 20% increase. A move from a 40× P/E to 30× changes the implied share price from $200 to $180. That is a 10% decline despite growth. The example highlights sensitivity to expectations, not a forecast for any company."
+      },
+      {
+        "title": "Compare concentration and alternatives",
+        "body": "Several AI-related holdings may rely on the same capital-spending cycle. Count exposures across the portfolio, including funds that already hold large technology positions. Compare peers on margins, cash flow and balance-sheet resilience. Define the evidence that would justify buying, waiting or changing the thesis rather than buying solely because the theme is popular."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Demand",
+          "Recurring revenue versus temporary spending"
+        ],
+        [
+          "Economics",
+          "Margins, cash generation and investment needs"
+        ],
+        [
+          "Valuation",
+          "Growth already priced into the shares"
+        ],
+        [
+          "Portfolio exposure",
+          "Shared risks across related holdings"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is every AI company an AI investment?",
+        "answer": "The label is broad. Check the portion of the business actually exposed to AI and how it makes money."
+      },
+      {
+        "question": "Should I buy just because an influential investor did?",
+        "answer": "No. Their time horizon, price, portfolio and reasons may differ from yours."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Take the free academy",
+        "href": "/learn/get-certified/"
+      }
+    ]
+  },
+  {
+    "slug": "does-warren-buffett-invest-in-ai",
+    "title": "Does Warren Buffett invest in AI? Berkshire’s exposure explained",
+    "category": "Risk & market research",
+    "description": "Understand Berkshire Hathaway’s AI exposure, the difference between holdings and personal investment decisions, and the limits of delayed disclosures.",
+    "answer": "Berkshire Hathaway has exposure to businesses involved in AI, but that is not the same as proving Warren Buffett personally selected a holding because of AI. Separate the company’s disclosed portfolio from assumptions about an individual’s motives.",
+    "sections": [
+      {
+        "title": "Exposure is broader than an AI label",
+        "body": "Apple and Alphabet were among Berkshire’s largest equity holdings disclosed for September 30, 2026. Both businesses have AI-related activities as part of much broader operations. That creates exposure to the theme without making Berkshire a dedicated AI fund or revealing the rationale for every position."
+      },
+      {
+        "title": "A portfolio filing is a snapshot",
+        "body": "Reported holdings describe a date in the past and arrive with a delay. They do not provide a live trading feed, the complete investment thesis or a promise that a position remains unchanged. Changes in the value of a holding can reflect price movement; use share counts when investigating purchases or sales."
+      },
+      {
+        "title": "Use holdings as a research starting point",
+        "body": "Study the company’s revenue mix, competitive position, spending needs and valuation. Do not assume a famous investor’s name removes risk. Berkshire’s portfolio constraints and holding periods can differ substantially from an individual account. Review disclosure dates and compare businesses rather than copying a stale position mechanically."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Berkshire holding",
+          "Company-level portfolio exposure"
+        ],
+        [
+          "Personal decision",
+          "Not established by a holding alone"
+        ],
+        [
+          "Reporting date",
+          "A delayed snapshot, not a live order"
+        ],
+        [
+          "AI exposure",
+          "May be only part of the business"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Does a Berkshire position prove Buffett personally bought it?",
+        "answer": "No. The disclosure alone does not identify the decision-maker or motive."
+      },
+      {
+        "question": "Does owning Berkshire equal owning a pure AI fund?",
+        "answer": "No. Berkshire spans many businesses and investments beyond AI."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore Berkshire holdings",
+        "href": "/smart-money/investors/warren-buffett/"
+      },
+      {
+        "label": "Compare company fundamentals",
+        "href": "/stock-comparison/"
+      }
+    ]
+  },
+  {
+    "slug": "how-does-stocks-to-buy-now-ai-work",
+    "title": "How does Stocks to Buy Now Research work?",
+    "category": "About our platform",
+    "description": "Learn how Stocks to Buy Now Research combines company data, AI-assisted analysis, stock and options research, trading tools and investing lessons.",
+    "answer": "Stocks to Buy Now Research combines human-led market research, AI-assisted analysis and educational tools. Explore companies and events, compare assumptions and use learning content to understand stock and options setups.",
+    "sections": [
+      {
+        "title": "Begin with a company or a market question",
+        "body": "Use a stock heatmap to understand sector moves, an earnings calendar to identify upcoming reports, or company comparisons to review fundamentals. Check the dates and definitions shown with the data. Snapshot information and a projection are different from a live executable quote."
+      },
+      {
+        "title": "Understand the signal’s horizon",
+        "body": "A medium-term stock thesis and a short-term options setup can point in different directions. Pro includes stock and options research; Ultra adds a separate short-term research focus. In the app, open Signals, select Short Term in the top selector and Ultra Options in the second selector. Access depends on the current subscription and eligibility requirements."
+      },
+      {
+        "title": "Learn the reasoning before acting",
+        "body": "Read the setup’s timing and expiry, investigate the risks and consider how the idea fits your own situation. The academy explains concepts and tests understanding. Trading tools support research; they do not remove the need to evaluate execution, position size and possible loss. Historical outcomes help explain what happened, not guarantee what happens next."
+      }
+    ],
+    "table": {
+      "headers": [
+        "What to examine",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Discover",
+          "Heatmaps, news and calendars"
+        ],
+        [
+          "Investigate",
+          "Fundamentals and peer comparisons"
+        ],
+        [
+          "Explore scenarios",
+          "Growth and valuation assumptions"
+        ],
+        [
+          "Learn",
+          "Lessons, quizzes and trading concepts"
+        ]
+      ]
+    },
+    "faq": [
+      {
+        "question": "Is every options idea a medium-term stock buy?",
+        "answer": "No. Short-term options research can reflect a different horizon and does not automatically change the medium-term stock view."
+      },
+      {
+        "question": "Does the platform trade my brokerage account automatically?",
+        "answer": "The research and learning workflows described here do not execute brokerage orders on your behalf."
+      }
+    ],
+    "aliases": [],
+    "tools": [
+      {
+        "label": "Explore trading tools",
+        "href": "/trading-tools/"
+      },
+      {
+        "label": "Browse individual lessons",
+        "href": "/learn/lessons/"
+      },
+      {
+        "label": "Understand the methodology",
+        "href": "/methodology/"
+      }
+    ]
+  }
+]

@@ -46,6 +46,7 @@ const Footer = ({
           <Link href={href("/company/culture/")}>{t("Culture")}</Link>
           <Link href={href("/company/careers/")}>{t("Careers")}</Link>
           <Link href={href("/posts/privacypolicy")}>{t("Privacy Policy")}</Link>
+          <Link href="/legal/">Legal &amp; Disclosures</Link>
         </div>
 
         <div className="footer-link-block">

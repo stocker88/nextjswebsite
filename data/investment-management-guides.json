@@ -1,0 +1,416 @@
+[
+  {
+    "slug": "fund-structures",
+    "title": "Investment fund structures: ETFs, mutual funds and trusts",
+    "description": "Compare ETFs, mutual funds, index funds, investment trusts, REITs and other fund structures. Understand pricing, liquidity, ownership and layered fees.",
+    "intro": "A fund pools money under a shared investment policy. Its legal structure determines how investors hold an interest and withdraw money; its strategy determines what it buys. An index fund can be an ETF or a mutual fund, so these labels do not describe competing categories on a single scale.",
+    "example": "Suppose a listed fund has net assets worth $10 per share and trades at $9. Its market price is at a 10% discount to net asset value. Buying at a discount does not ensure a profit: the underlying assets can fall and the discount can widen.",
+    "terms": [
+      {
+        "name": "Exchange-traded fund (ETF)",
+        "id": "exchange-traded-fund-etf",
+        "body": "An ETF holds a portfolio or follows an investment strategy while its shares trade on an exchange during the trading day. ETFs can be actively managed or track an index; their trading prices may differ from the value of their holdings.",
+        "practice": "Compare the spread, ongoing fee, underlying exposures and trading liquidity. A narrow sector ETF is not broadly diversified simply because it holds several companies."
+      },
+      {
+        "name": "Mutual fund",
+        "id": "mutual-fund",
+        "body": "A conventional open-end mutual fund pools investors' money and issues or redeems shares at the next calculated net asset value, subject to applicable charges and dealing rules. It may hold stocks, bonds or other permitted assets.",
+        "practice": "Check the share class and total costs. Two share classes of the same portfolio can produce different net returns because their fees differ."
+      },
+      {
+        "name": "Index fund",
+        "id": "index-fund",
+        "body": "An index fund seeks to follow a specified benchmark using replication, sampling or another disclosed method. Index tracking describes the investment approach rather than the fund's legal structure.",
+        "practice": "Read the index rules and compare tracking difference after costs. An index of a small industry can carry substantial concentration risk."
+      },
+      {
+        "name": "Investment trust",
+        "id": "investment-trust",
+        "body": "In UK usage, an investment trust is a listed closed-end investment company. Investors usually buy and sell its shares on a stock exchange, where the price can stand above or below the value of its portfolio.",
+        "practice": "Examine gearing, the discount or premium and the board's oversight. A falling discount does not mean the underlying portfolio has improved."
+      },
+      {
+        "name": "Listed investment company",
+        "id": "listed-investment-company",
+        "body": "A listed investment company is a corporate investment vehicle whose shares trade on an exchange, a term especially common in Australia. Its portfolio strategy and dividend policy are separate from its listed status.",
+        "practice": "Compare the share price with net tangible assets and understand tax adjustments in the reported figure. Do not compare pre-tax and post-tax figures as though they were identical."
+      },
+      {
+        "name": "Unit trust",
+        "id": "unit-trust",
+        "body": "A unit trust holds pooled assets under a trust arrangement, with investors owning units rather than shares in a corporate fund. The trustee and manager have distinct responsibilities under the relevant rules and trust deed.",
+        "practice": "Check redemption frequency, charges and the role of the trustee. The label is used across jurisdictions and does not promise identical protections everywhere."
+      },
+      {
+        "name": "Unit investment trust (UIT)",
+        "id": "unit-investment-trust-uit",
+        "body": "A US unit investment trust usually holds a largely fixed portfolio for a stated term and issues redeemable units. It differs from the broader unit-trust structures used in other countries.",
+        "practice": "Review the termination date, sales charges and the cost of rolling into another trust. A familiar name does not make it equivalent to an actively managed mutual fund."
+      },
+      {
+        "name": "Fund of funds",
+        "id": "fund-of-funds",
+        "body": "A fund of funds invests in other funds rather than building all its exposure directly from individual securities. It can spread investments across managers, but it can also duplicate holdings and add an extra layer of fees.",
+        "practice": "Look through to the underlying portfolios. Five funds holding the same large companies may offer less diversification than their number suggests."
+      },
+      {
+        "name": "Hedge fund",
+        "id": "hedge-fund",
+        "body": "A hedge fund is a pooled vehicle with a flexible mandate that may use short selling, leverage, derivatives or less liquid assets. Despite the name, not every hedge fund hedges overall market risk.",
+        "practice": "Understand the strategy, lockups, redemption restrictions and loss exposure before comparing returns. Smooth reported returns can reflect infrequent asset valuations."
+      },
+      {
+        "name": "Pension fund",
+        "id": "pension-fund",
+        "body": "A pension fund invests assets intended to support retirement benefits. Its investment decisions depend on the plan's obligations, contribution structure and time horizon, not just a target return.",
+        "practice": "Distinguish a defined-benefit plan's funding needs from a defined-contribution member's individual account. The party bearing investment risk differs."
+      },
+      {
+        "name": "Private equity fund",
+        "id": "private-equity-fund",
+        "body": "A private equity fund invests in private businesses or takes listed businesses private. Investors often commit capital that is drawn over time, with proceeds returned as investments are sold.",
+        "practice": "Plan for capital calls and a long holding period. An estimated fund value is not the same as cash available for withdrawal."
+      },
+      {
+        "name": "Real estate investment trust (REIT)",
+        "id": "real-estate-investment-trust-reit",
+        "body": "A REIT is a vehicle that holds qualifying real estate assets or financing interests under a jurisdiction's rules. REITs can be listed or unlisted, and property-owning REITs differ from mortgage REITs.",
+        "practice": "Examine debt, property or borrower exposure and distribution coverage. A high distribution yield can coexist with falling asset values and refinancing pressure."
+      },
+      {
+        "name": "Royalty trust",
+        "id": "royalty-trust",
+        "body": "A royalty trust receives income from specified rights, often linked to natural-resource production, and distributes proceeds under its governing terms. Some trusts have limited lives or declining underlying reserves.",
+        "practice": "Check whether distributions include the economic depletion of assets. A large payment may not be sustainable income from a growing business."
+      },
+      {
+        "name": "Split capital investment trust",
+        "id": "split-capital-investment-trust",
+        "body": "A split capital investment trust issues different share classes with different claims on income or capital. The classes sit at different points in the order of repayment and can have very different risks.",
+        "practice": "Read the repayment waterfall and asset-cover calculations. A priority claim is not a guarantee that enough assets will remain to pay it."
+      }
+    ]
+  },
+  {
+    "slug": "international-fund-structures",
+    "title": "International fund structures: SICAV, UCITS, OEIC and more",
+    "description": "Understand international fund labels including SICAV, FCP, CCF, OFC, OEIC and QIAIF, plus umbrella funds, insurance funds and collective trusts.",
+    "intro": "Fund names often describe the law under which a vehicle operates, rather than its expected return. Domicile, investor eligibility, ownership rights and tax treatment can differ even when two funds hold similar securities. Start with the actual legal vehicle and the investor documents.",
+    "example": "An umbrella may offer a bond sub-fund and an equity sub-fund. Buying the equity sub-fund does not automatically give you exposure to the bond portfolio. A currency share class within that equity sub-fund is another layer again: it may change fees or currency hedging without changing the basic stock portfolio.",
+    "terms": [
+      {
+        "name": "Collective trust fund (CIF)",
+        "id": "collective-trust-fund-cif",
+        "body": "A collective investment fund is a bank-administered trust that pools eligible assets under applicable fiduciary rules. These vehicles are often used in retirement arrangements and are not simply retail mutual funds under another name.",
+        "practice": "Check who may participate, the trust document and the withdrawal terms. Bank administration does not make the investment a bank deposit or guarantee its value."
+      },
+      {
+        "name": "Common contractual fund (CCF)",
+        "id": "common-contractual-fund-ccf",
+        "body": "An Irish common contractual fund is an unincorporated contractual pooling arrangement. Its design allows tax-transparent treatment in relevant circumstances, with income attributed to investors rather than automatically taxed as a separate corporate fund.",
+        "practice": "Tax transparency is not tax exemption. Recognition and treaty treatment depend on the investor and the jurisdictions involved."
+      },
+      {
+        "name": "Fonds commun de placement (FCP)",
+        "id": "fonds-commun-de-placement-fcp",
+        "body": "An FCP is a contractual co-ownership form used for pooled investments in countries including France and Luxembourg. Investors hold units, and a management company manages the assets rather than investors holding shares in a fund company.",
+        "practice": "Read the fund's strategy and governing jurisdiction. The FCP label alone says little about whether it holds cash instruments, stocks or higher-risk assets."
+      },
+      {
+        "name": "Labour-sponsored venture capital corporation",
+        "id": "labour-sponsored-venture-capital-corporation",
+        "body": "A Canadian labour-sponsored venture capital corporation invests in eligible businesses under a specialised framework. Certain approved investments may qualify for tax incentives, subject to the applicable programme rules.",
+        "practice": "Assess the underlying venture investments, fees and holding restrictions before considering tax relief. Eligibility and clawback conditions must be checked for the investor's province and circumstances."
+      },
+      {
+        "name": "Offshore fund",
+        "id": "offshore-fund",
+        "body": "An offshore fund is established outside the investor's home jurisdiction. The term describes a location relationship; it does not by itself establish a strategy, tax advantage or regulatory quality.",
+        "practice": "Check local reporting obligations, marketing eligibility and redemption rights. A fund available abroad may not be available or tax-efficient for you."
+      },
+      {
+        "name": "Open-ended fund company (OFC)",
+        "id": "open-ended-fund-company-ofc",
+        "body": "An OFC is a Hong Kong corporate fund structure with variable capital and SFC registration. It permits subscriptions and redemptions under the fund's terms, with separate requirements for public and private offerings.",
+        "practice": "Registration is not a promise of investment performance. Check whether the particular fund is authorised for public offering and what its dealing rules permit."
+      },
+      {
+        "name": "Open-ended investment company (OEIC)",
+        "id": "open-ended-investment-company-oeic",
+        "body": "An OEIC is a UK corporate form for an open-ended investment fund. Shares can be created or cancelled as investors subscribe or redeem, based on the fund's valuation and dealing arrangements.",
+        "practice": "Check the dealing cut-off, dilution adjustments and circumstances in which dealing can be suspended. Open-ended does not mean unconditional instant access."
+      },
+      {
+        "name": "Qualifying investor alternative investment fund (QIAIF)",
+        "id": "qualifying-investor-alternative-investment-fund-qiaif",
+        "body": "A QIAIF is an Irish authorised alternative investment fund intended for investors who meet qualifying-investor criteria. It can support strategies and assets beyond the scope of a conventional retail fund.",
+        "practice": "Verify eligibility and the specific mandate. Authorisation of the vehicle does not make an illiquid strategy appropriate for short-term savings."
+      },
+      {
+        "name": "Short-term investment fund",
+        "id": "short-term-investment-fund",
+        "body": "A short-term investment fund holds short-maturity instruments to meet cash-management objectives. In US bank trust usage, STIF also refers to a specific regulated category of collective investment fund.",
+        "practice": "Check credit exposure, maturity limits and redemption arrangements. A short maturity reduces some risks but does not eliminate default or liquidity risk."
+      },
+      {
+        "name": "SICAV",
+        "id": "sicav",
+        "body": "A SICAV is an investment company with variable capital, used in several European jurisdictions. Investors own shares in the company, whose capital changes through subscriptions and redemptions under its rules.",
+        "practice": "Distinguish the corporate form from the portfolio strategy and regulatory regime. A SICAV can have very different risks depending on its assets and mandate."
+      },
+      {
+        "name": "Tax transparent fund",
+        "id": "tax-transparent-fund",
+        "body": "A tax transparent fund is treated, for relevant tax purposes, as passing income or gains through to investors rather than treating the fund as an ordinary separate taxable company. The treatment depends on the structure and applicable law.",
+        "practice": "Check whether both the fund's jurisdiction and your home jurisdiction recognise the intended treatment. The name alone does not settle your tax liability."
+      },
+      {
+        "name": "Umbrella fund",
+        "id": "umbrella-fund",
+        "body": "An umbrella fund contains multiple sub-funds under a shared legal arrangement. Each sub-fund typically has its own investment policy, while governance or administration may be shared.",
+        "practice": "Verify the rules for liability segregation and switching between sub-funds. Do not assume all compartments share the same risk or that switching has no tax consequences."
+      },
+      {
+        "name": "Unitised insurance fund",
+        "id": "unitised-insurance-fund",
+        "body": "A unitised insurance fund supports an insurance contract whose value is linked to units in an investment portfolio. The policyholder's legal claim is generally through the insurer and contract rather than direct ownership of the underlying securities.",
+        "practice": "Compare policy charges, surrender terms and any guarantees separately from the fund's investment returns. Insurance features and investment performance are different parts of the product."
+      },
+      {
+        "name": "UCITS",
+        "id": "ucits",
+        "body": "UCITS is a European regulatory framework for certain collective investment funds, with requirements covering areas such as eligible assets, diversification, disclosure and investor protection. It is a regulatory classification rather than a promise of low risk.",
+        "practice": "Check the actual strategy and share class. Two UCITS funds can have very different stock, bond, derivative and currency exposures."
+      }
+    ]
+  },
+  {
+    "slug": "investment-styles",
+    "title": "Investment styles: active, passive, value, growth and impact",
+    "description": "Compare active and passive management, value and growth investing, impact funds, thematic investing and systematic contributions with practical examples.",
+    "intro": "An investment style explains how decisions are made. It may describe security selection, a social objective, the organisation of managers or the schedule of contributions. These ideas can overlap: a passive index fund can follow a theme, while a value manager may invest actively.",
+    "example": "If you invest $200 monthly, a $20 unit price buys 10 units and a $10 price buys 20 units, ignoring fees. After both purchases you own 30 units for $400, or about $13.33 each. This contribution schedule spreads entry points; it cannot stop the fund from falling further.",
+    "terms": [
+      {
+        "name": "Active management",
+        "id": "active-management",
+        "body": "An active manager chooses holdings or exposures using judgement, research or a model rather than simply tracking a benchmark. The aim may be outperformance, income, risk control or another stated objective.",
+        "practice": "Evaluate results after fees against a suitable benchmark over different market conditions. A good recent return does not show whether the manager added value for the risk taken."
+      },
+      {
+        "name": "Passive management",
+        "id": "passive-management",
+        "body": "Passive management follows a specified index or rules-based exposure with limited discretion over individual holdings. It still requires decisions about the benchmark, portfolio implementation and rebalancing.",
+        "practice": "Check index concentration and total costs. Passive investing removes some manager-selection decisions, not the risk of the underlying market."
+      },
+      {
+        "name": "Discretionary investment management",
+        "id": "discretionary-investment-management",
+        "body": "Under a discretionary mandate, a manager can make investment decisions for a client within agreed limits without obtaining approval for each trade. This is an account-management arrangement, not necessarily a pooled fund.",
+        "practice": "Agree objectives, restrictions, reporting and fees in writing. Understand who holds the assets and how the mandate can be changed or ended."
+      },
+      {
+        "name": "Hedge fund strategies",
+        "id": "hedge-fund-strategies",
+        "body": "Hedge fund strategies include approaches such as long/short equity, macro, event-driven and relative value. Their exposures and sources of return differ, so hedge funds should not be treated as one uniform investment style.",
+        "practice": "Identify whether results depend on market direction, leverage, liquidity or specific events. The strategy label should match the positions actually held."
+      },
+      {
+        "name": "Impact investing",
+        "id": "impact-investing",
+        "body": "Impact investing seeks an intentional, measurable social or environmental outcome alongside a financial return. It involves setting objectives and assessing outcomes rather than merely applying a positive-sounding label.",
+        "practice": "Look for concrete measures, reporting and a credible connection between the investment and the claimed effect. Different funds pursue different financial-return targets."
+      },
+      {
+        "name": "Manager of managers",
+        "id": "manager-of-managers",
+        "body": "A manager-of-managers approach selects and oversees specialist investment managers within an overall allocation. Specialists may run separate mandates rather than the arrangement simply buying their pooled funds.",
+        "practice": "Check who controls allocation and replaces underperforming managers. Compare the full fee stack and whether manager exposures overlap."
+      },
+      {
+        "name": "Social finance",
+        "id": "social-finance",
+        "body": "Social finance channels capital toward social objectives through structures such as community finance, social enterprises or outcome-based arrangements. Funding may combine investors with different return expectations.",
+        "practice": "Identify who pays, what triggers repayment and who bears losses. A valuable social goal does not itself create a reliable investment cash flow."
+      },
+      {
+        "name": "Socially responsible investing",
+        "id": "socially-responsible-investing",
+        "body": "Socially responsible investing applies ethical or social criteria to investment selection, often through exclusions, positive screens or engagement. Investors and managers may define those criteria differently.",
+        "practice": "Read the actual exclusions and holdings. A fund aligned with one investor's values may not fit another's, and screening alone does not prove measurable impact."
+      },
+      {
+        "name": "Systematic investment plan",
+        "id": "systematic-investment-plan",
+        "body": "A systematic investment plan arranges recurring contributions into an investment, often at regular intervals. It describes a funding habit rather than a guarantee about the portfolio's returns.",
+        "practice": "Choose a contribution level compatible with cash needs. Regular purchases still expose every invested amount to future market losses."
+      },
+      {
+        "name": "Thematic investing",
+        "id": "thematic-investing",
+        "body": "Thematic investing focuses on an idea such as ageing populations, automation or energy transition. Companies may be selected across sectors because they are expected to benefit from the theme.",
+        "practice": "Distinguish a promising trend from a reasonably priced investment. Examine how much of each company's business is actually tied to the theme."
+      },
+      {
+        "name": "Value investing",
+        "id": "value-investing",
+        "body": "Value investing seeks assets priced below an estimate of their underlying worth. Low valuation ratios may attract attention, but investors still need to assess the business, balance sheet and reasons for the discount.",
+        "practice": "A cheap-looking company can be a value trap if earnings decline or debt overwhelms equity. Test assumptions rather than treating a low multiple as proof of a bargain."
+      },
+      {
+        "name": "Growth investing",
+        "id": "growth-investing",
+        "body": "Growth investing focuses on companies expected to expand earnings, revenue or cash flow at an attractive pace. The investment outcome depends on both realised growth and the price paid for it.",
+        "practice": "Stress-test slower growth and a lower valuation multiple. A successful business can still be a disappointing stock investment if expectations were too high."
+      }
+    ]
+  },
+  {
+    "slug": "fund-pricing-fees-and-governance",
+    "title": "Fund pricing, fees and governance: NAV and investor rights",
+    "description": "Learn net asset value, open-end and closed-end fund pricing, performance fees, institutional investors and fund governance with a simple NAV example.",
+    "intro": "The number shown as a fund's value is only one part of the investment. You also need to know the price you can actually trade at, when you can withdraw, which charges reduce returns and who oversees the manager. These details become especially important when markets are stressed.",
+    "example": "A fund has $105 million of assets and $5 million of liabilities, with 10 million shares outstanding. Its net asset value is $10 per share. If its exchange price is $10.50, buyers pay a 5% premium to NAV. If it distributes cash, NAV normally falls by the distribution amount, all else equal.",
+    "terms": [
+      {
+        "name": "Net asset value (NAV)",
+        "id": "net-asset-value-nav",
+        "body": "NAV is the value of a fund's assets minus its liabilities. NAV per share or unit divides that amount by the outstanding shares or units at the valuation time.",
+        "practice": "Check valuation timing and the treatment of less liquid assets. NAV is an accounting valuation and may differ from an executable market price."
+      },
+      {
+        "name": "Open-end fund",
+        "id": "open-end-fund",
+        "body": "An open-end fund can issue and redeem interests under its dealing rules. Traditional mutual fund investors normally transact at the next calculated NAV, while retail investors in open-end ETFs trade shares on an exchange.",
+        "practice": "Read the cut-off times, fees and suspension provisions. Redemption access depends on the fund's terms and the liquidity of its holdings."
+      },
+      {
+        "name": "Closed-end fund",
+        "id": "closed-end-fund",
+        "body": "A closed-end fund generally does not offer routine investor redemption on the same basis as a conventional open-end mutual fund. Many trade on exchanges, where supply and demand determine a price that may differ from NAV.",
+        "practice": "Check discounts, premiums and borrowing. Some specialised closed-end funds offer periodic repurchases, which are different from unrestricted daily redemption."
+      },
+      {
+        "name": "Performance fee",
+        "id": "performance-fee",
+        "body": "A performance fee pays a manager according to a stated measure of investment results. It may involve a benchmark, hurdle rate, high-water mark or other conditions defined in the documents.",
+        "practice": "Work through the calculation after ordinary fees and losses. A high-water mark is not universal, and fee crystallisation dates can affect what the investor pays."
+      },
+      {
+        "name": "Fund governance",
+        "id": "fund-governance",
+        "body": "Fund governance is the system of oversight, responsibilities and controls around a fund. Depending on the structure, boards, trustees, depositaries and other service providers have distinct roles.",
+        "practice": "Look for independent oversight, conflict-management procedures and clear valuation policies. An audit does not guarantee that an investment will perform well."
+      },
+      {
+        "name": "Institutional investor",
+        "id": "institutional-investor",
+        "body": "An institutional investor is an organisation that invests capital, such as a pension scheme, insurer, endowment or asset manager. Its liabilities, scale and investment access may differ from those of an individual.",
+        "practice": "Do not copy a holding without understanding the institution's full portfolio and purpose. A position may hedge another exposure rather than express a simple bullish view."
+      }
+    ]
+  },
+  {
+    "slug": "portfolio-and-bond-theory",
+    "title": "Portfolio and bond theory: diversification, duration and yield curves",
+    "description": "Understand modern portfolio theory, APT, market efficiency, duration, convexity, martingale pricing and the yield curve with practical examples.",
+    "intro": "Investment theories provide frameworks for thinking about risk and prices. They depend on assumptions and estimates, so they are tools for asking better questions rather than formulas that remove uncertainty. Bond concepts also distinguish a promised cash flow from the price at which that promise trades.",
+    "example": "A bond with modified duration of 5 would be expected to fall roughly 5% if its yield rose by one percentage point, using the first-order approximation. Convexity adjusts this estimate for curvature. The calculation assumes other relevant factors stay unchanged; it does not include a change in credit quality or an option being exercised.",
+    "terms": [
+      {
+        "name": "Arbitrage pricing theory (APT)",
+        "id": "arbitrage-pricing-theory-apt",
+        "body": "APT describes expected returns in relation to exposure to multiple systematic risk factors under a no-arbitrage framework. Unlike a single-market-factor model, it allows several sources of common risk.",
+        "practice": "The theory does not hand you a universally correct factor list or return forecast. Results depend on how factors, exposures and risk premiums are estimated."
+      },
+      {
+        "name": "Efficient-market hypothesis",
+        "id": "efficient-market-hypothesis",
+        "body": "The efficient-market hypothesis considers how prices reflect available information, with different forms referring to different information sets. It questions how reliably investors can earn excess risk-adjusted returns from information already incorporated in prices.",
+        "practice": "Efficiency does not mean prices never fall or are always perfectly equal to intrinsic value. Separate a theory about information from a claim that investing has no risk."
+      },
+      {
+        "name": "Fixed income",
+        "id": "fixed-income",
+        "body": "Fixed income includes debt instruments with contractual payment terms, including fixed-rate and floating-rate securities. Payments depend on the issuer and contract, and a bond's market value can change before maturity.",
+        "practice": "Review credit risk, maturity, currency and any call features. A contractual payment schedule is not a guarantee against default or a loss on early sale."
+      },
+      {
+        "name": "Duration",
+        "id": "duration",
+        "body": "Duration describes the timing of bond cash flows or sensitivity to yields, depending on the measure. Macaulay duration is a weighted time measure; modified and effective duration are used to estimate price sensitivity.",
+        "practice": "State which duration you mean. Effective duration can be more relevant for securities whose expected cash flows change when rates change."
+      },
+      {
+        "name": "Convexity",
+        "id": "convexity",
+        "body": "Convexity measures curvature in the relationship between bond prices and yields. It improves a duration-only estimate for larger yield changes, although a local approximation still has limits.",
+        "practice": "Callable securities can show negative convexity in some conditions. Do not apply the positive-convexity intuition of a plain bond to every fixed-income product."
+      },
+      {
+        "name": "Martingale pricing",
+        "id": "martingale-pricing",
+        "body": "Martingale pricing values claims using a suitable pricing measure under which appropriately discounted traded asset prices behave as martingales, given the model's conditions. This connects valuation with no-arbitrage rather than a promise about real-world average returns.",
+        "practice": "Risk-neutral probabilities are pricing tools, not necessarily actual event probabilities. Model assumptions, market completeness and calibration matter."
+      },
+      {
+        "name": "Modern portfolio theory",
+        "id": "modern-portfolio-theory",
+        "body": "Modern portfolio theory studies combinations of assets using expected returns, variances and covariances. Diversification can reduce portfolio variability when assets do not move perfectly together.",
+        "practice": "Expected returns and correlations must be estimated and can change. An efficient portfolio in a model can perform poorly if its inputs prove wrong."
+      },
+      {
+        "name": "Noisy market hypothesis",
+        "id": "noisy-market-hypothesis",
+        "body": "The noisy market hypothesis views prices as affected by noise around underlying economic value rather than only clean signals about fundamentals. It is an alternative lens for considering pricing errors and portfolio construction.",
+        "practice": "Noise does not make a mispricing easy to identify or time. Costs and the persistence of errors can prevent a plausible theory from producing a profitable trade."
+      },
+      {
+        "name": "Yield curve",
+        "id": "yield-curve",
+        "body": "A yield curve plots yields against maturity for a comparable set of debt instruments. It can slope upward, downward or change shape, reflecting expectations, term premiums and other forces.",
+        "practice": "Compare like-for-like issuers and yield measures. A curve's shape is informative but does not provide a certain forecast of future rates or economic conditions."
+      }
+    ]
+  },
+  {
+    "slug": "investment-management-tools",
+    "title": "Investment management tools and alternatives: robo-advisors and more",
+    "description": "Explore robo-advisors, alternative and traditional investments, commodity pool operators and returns-based style analysis before comparing portfolios.",
+    "intro": "Investment management combines asset selection, portfolio construction, administration and oversight. A digital interface or specialist label does not tell you the whole story. Identify what you own, who makes decisions, who holds the assets and how you can access your money.",
+    "example": "Suppose two funds each gain 8%. One holds diversified bonds and shares; the other uses concentrated stock positions and borrowing. The return alone does not make them equivalent. A useful comparison also considers losses along the way, costs, liquidity and the exposures that generated the result.",
+    "terms": [
+      {
+        "name": "Alternative investment",
+        "id": "alternative-investment",
+        "body": "Alternative investments sit outside conventional categories such as publicly traded stocks, mainstream bonds and cash. Examples include private assets and certain specialised strategies, but the boundary is not universal.",
+        "practice": "Evaluate each strategy's actual risks rather than assuming alternatives are independent of markets. Illiquidity and infrequent valuations can hide economic volatility."
+      },
+      {
+        "name": "Traditional investments",
+        "id": "traditional-investments",
+        "body": "Traditional investments commonly refer to listed equities, bonds and cash instruments used in standard portfolios. Each category contains a wide range of credit, duration, currency and market risks.",
+        "practice": "Broad labels are only a starting point. A short government bill and a long speculative-grade bond should not be treated as the same risk because both are debt."
+      },
+      {
+        "name": "Commodity pool operator",
+        "id": "commodity-pool-operator",
+        "body": "In US usage, a commodity pool operator runs a pooled vehicle that trades commodity interests such as futures or swaps, subject to applicable registration rules or exemptions. The pool's actual strategy may extend beyond physical commodities.",
+        "practice": "Check the operator's regulatory status and the pool's documents. Derivative exposure, leverage and collateral arrangements matter more than a commodity-themed name."
+      },
+      {
+        "name": "Robo-advisor",
+        "id": "robo-advisor",
+        "body": "A robo-advisor uses software to help recommend or manage portfolios, often based on a questionnaire and rules for allocation and rebalancing. Services differ in the amount of human advice, account support and discretion provided.",
+        "practice": "Compare advisory fees, underlying fund costs, custody and service limits. An automated portfolio is not a guarantee of suitable advice for every complex financial situation."
+      },
+      {
+        "name": "Returns-based style analysis",
+        "id": "returns-based-style-analysis",
+        "body": "Returns-based style analysis estimates a portfolio's exposures by comparing its returns with selected benchmark returns over a period. It infers an investment style without directly examining every holding.",
+        "practice": "Results depend on the chosen benchmarks and sample period. An inferred exposure is not proof of the current holdings and can miss a recent strategy change."
+      }
+    ]
+  }
+]

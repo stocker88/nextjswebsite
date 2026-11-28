@@ -1,0 +1,3272 @@
+{
+  "source": "https://www.pizzint.watch/",
+  "retrievedAt": "2026-11-28",
+  "shops": [
+    {
+      "name": "Extreme Pizza",
+      "placeId": "ChIJcYireCe3t4kR4d9trEbGYjc",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Extreme%20Pizza&query_place_id=ChIJcYireCe3t4kR4d9trEbGYjc",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 29
+          },
+          {
+            "hour": 12,
+            "popularity": 35
+          },
+          {
+            "hour": 13,
+            "popularity": 35
+          },
+          {
+            "hour": 14,
+            "popularity": 33
+          },
+          {
+            "hour": 15,
+            "popularity": 34
+          },
+          {
+            "hour": 16,
+            "popularity": 46
+          },
+          {
+            "hour": 17,
+            "popularity": 53
+          },
+          {
+            "hour": 18,
+            "popularity": 57
+          },
+          {
+            "hour": 19,
+            "popularity": 57
+          },
+          {
+            "hour": 20,
+            "popularity": 44
+          },
+          {
+            "hour": 21,
+            "popularity": 34
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 44
+          },
+          {
+            "hour": 12,
+            "popularity": 59
+          },
+          {
+            "hour": 13,
+            "popularity": 56
+          },
+          {
+            "hour": 14,
+            "popularity": 56
+          },
+          {
+            "hour": 15,
+            "popularity": 53
+          },
+          {
+            "hour": 16,
+            "popularity": 56
+          },
+          {
+            "hour": 17,
+            "popularity": 62
+          },
+          {
+            "hour": 18,
+            "popularity": 70
+          },
+          {
+            "hour": 19,
+            "popularity": 80
+          },
+          {
+            "hour": 20,
+            "popularity": 82
+          },
+          {
+            "hour": 21,
+            "popularity": 73
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 33
+          },
+          {
+            "hour": 12,
+            "popularity": 39
+          },
+          {
+            "hour": 13,
+            "popularity": 42
+          },
+          {
+            "hour": 14,
+            "popularity": 44
+          },
+          {
+            "hour": 15,
+            "popularity": 52
+          },
+          {
+            "hour": 16,
+            "popularity": 59
+          },
+          {
+            "hour": 17,
+            "popularity": 69
+          },
+          {
+            "hour": 18,
+            "popularity": 73
+          },
+          {
+            "hour": 19,
+            "popularity": 73
+          },
+          {
+            "hour": 20,
+            "popularity": 59
+          },
+          {
+            "hour": 21,
+            "popularity": 44
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 38
+          },
+          {
+            "hour": 12,
+            "popularity": 41
+          },
+          {
+            "hour": 13,
+            "popularity": 49
+          },
+          {
+            "hour": 14,
+            "popularity": 43
+          },
+          {
+            "hour": 15,
+            "popularity": 45
+          },
+          {
+            "hour": 16,
+            "popularity": 47
+          },
+          {
+            "hour": 17,
+            "popularity": 50
+          },
+          {
+            "hour": 18,
+            "popularity": 59
+          },
+          {
+            "hour": 19,
+            "popularity": 58
+          },
+          {
+            "hour": 20,
+            "popularity": 51
+          },
+          {
+            "hour": 21,
+            "popularity": 42
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "4": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 34
+          },
+          {
+            "hour": 12,
+            "popularity": 36
+          },
+          {
+            "hour": 13,
+            "popularity": 42
+          },
+          {
+            "hour": 14,
+            "popularity": 48
+          },
+          {
+            "hour": 15,
+            "popularity": 64
+          },
+          {
+            "hour": 16,
+            "popularity": 67
+          },
+          {
+            "hour": 17,
+            "popularity": 69
+          },
+          {
+            "hour": 18,
+            "popularity": 69
+          },
+          {
+            "hour": 19,
+            "popularity": 70
+          },
+          {
+            "hour": 20,
+            "popularity": 56
+          },
+          {
+            "hour": 21,
+            "popularity": 41
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 31
+          },
+          {
+            "hour": 12,
+            "popularity": 36
+          },
+          {
+            "hour": 13,
+            "popularity": 36
+          },
+          {
+            "hour": 14,
+            "popularity": 34
+          },
+          {
+            "hour": 15,
+            "popularity": 40
+          },
+          {
+            "hour": 16,
+            "popularity": 48
+          },
+          {
+            "hour": 17,
+            "popularity": 66
+          },
+          {
+            "hour": 18,
+            "popularity": 81
+          },
+          {
+            "hour": 19,
+            "popularity": 100
+          },
+          {
+            "hour": 20,
+            "popularity": 91
+          },
+          {
+            "hour": 21,
+            "popularity": 73
+          },
+          {
+            "hour": 22,
+            "popularity": 54
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 32
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 44
+          },
+          {
+            "hour": 14,
+            "popularity": 42
+          },
+          {
+            "hour": 15,
+            "popularity": 44
+          },
+          {
+            "hour": 16,
+            "popularity": 48
+          },
+          {
+            "hour": 17,
+            "popularity": 53
+          },
+          {
+            "hour": 18,
+            "popularity": 58
+          },
+          {
+            "hour": 19,
+            "popularity": 64
+          },
+          {
+            "hour": 20,
+            "popularity": 63
+          },
+          {
+            "hour": 21,
+            "popularity": 59
+          },
+          {
+            "hour": 22,
+            "popularity": 54
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "District Pizza Palace",
+      "placeId": "ChIJ42QeLXu3t4kRnArvcaz2o3A",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=District%20Pizza%20Palace&query_place_id=ChIJ42QeLXu3t4kRnArvcaz2o3A",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 25
+          },
+          {
+            "hour": 12,
+            "popularity": 31
+          },
+          {
+            "hour": 13,
+            "popularity": 37
+          },
+          {
+            "hour": 14,
+            "popularity": 40
+          },
+          {
+            "hour": 15,
+            "popularity": 34
+          },
+          {
+            "hour": 16,
+            "popularity": 42
+          },
+          {
+            "hour": 17,
+            "popularity": 48
+          },
+          {
+            "hour": 18,
+            "popularity": 60
+          },
+          {
+            "hour": 19,
+            "popularity": 60
+          },
+          {
+            "hour": 20,
+            "popularity": 54
+          },
+          {
+            "hour": 21,
+            "popularity": 48
+          },
+          {
+            "hour": 22,
+            "popularity": 45
+          },
+          {
+            "hour": 23,
+            "popularity": 40
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 20
+          },
+          {
+            "hour": 12,
+            "popularity": 25
+          },
+          {
+            "hour": 13,
+            "popularity": 22
+          },
+          {
+            "hour": 14,
+            "popularity": 34
+          },
+          {
+            "hour": 15,
+            "popularity": 20
+          },
+          {
+            "hour": 16,
+            "popularity": 28
+          },
+          {
+            "hour": 17,
+            "popularity": 34
+          },
+          {
+            "hour": 18,
+            "popularity": 68
+          },
+          {
+            "hour": 19,
+            "popularity": 82
+          },
+          {
+            "hour": 20,
+            "popularity": 77
+          },
+          {
+            "hour": 21,
+            "popularity": 54
+          },
+          {
+            "hour": 22,
+            "popularity": 40
+          },
+          {
+            "hour": 23,
+            "popularity": 28
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 22
+          },
+          {
+            "hour": 12,
+            "popularity": 28
+          },
+          {
+            "hour": 13,
+            "popularity": 22
+          },
+          {
+            "hour": 14,
+            "popularity": 25
+          },
+          {
+            "hour": 15,
+            "popularity": 40
+          },
+          {
+            "hour": 16,
+            "popularity": 57
+          },
+          {
+            "hour": 17,
+            "popularity": 62
+          },
+          {
+            "hour": 18,
+            "popularity": 57
+          },
+          {
+            "hour": 19,
+            "popularity": 45
+          },
+          {
+            "hour": 20,
+            "popularity": 37
+          },
+          {
+            "hour": 21,
+            "popularity": 45
+          },
+          {
+            "hour": 22,
+            "popularity": 34
+          },
+          {
+            "hour": 23,
+            "popularity": 20
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 42
+          },
+          {
+            "hour": 12,
+            "popularity": 48
+          },
+          {
+            "hour": 13,
+            "popularity": 45
+          },
+          {
+            "hour": 14,
+            "popularity": 40
+          },
+          {
+            "hour": 15,
+            "popularity": 28
+          },
+          {
+            "hour": 16,
+            "popularity": 28
+          },
+          {
+            "hour": 17,
+            "popularity": 34
+          },
+          {
+            "hour": 18,
+            "popularity": 31
+          },
+          {
+            "hour": 19,
+            "popularity": 37
+          },
+          {
+            "hour": 20,
+            "popularity": 40
+          },
+          {
+            "hour": 21,
+            "popularity": 54
+          },
+          {
+            "hour": 22,
+            "popularity": 62
+          },
+          {
+            "hour": 23,
+            "popularity": 62
+          }
+        ],
+        "4": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 54
+          },
+          {
+            "hour": 12,
+            "popularity": 57
+          },
+          {
+            "hour": 13,
+            "popularity": 34
+          },
+          {
+            "hour": 14,
+            "popularity": 25
+          },
+          {
+            "hour": 15,
+            "popularity": 22
+          },
+          {
+            "hour": 16,
+            "popularity": 28
+          },
+          {
+            "hour": 17,
+            "popularity": 40
+          },
+          {
+            "hour": 18,
+            "popularity": 48
+          },
+          {
+            "hour": 19,
+            "popularity": 57
+          },
+          {
+            "hour": 20,
+            "popularity": 45
+          },
+          {
+            "hour": 21,
+            "popularity": 40
+          },
+          {
+            "hour": 22,
+            "popularity": 40
+          },
+          {
+            "hour": 23,
+            "popularity": 37
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 28
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 45
+          },
+          {
+            "hour": 14,
+            "popularity": 48
+          },
+          {
+            "hour": 15,
+            "popularity": 40
+          },
+          {
+            "hour": 16,
+            "popularity": 45
+          },
+          {
+            "hour": 17,
+            "popularity": 42
+          },
+          {
+            "hour": 18,
+            "popularity": 54
+          },
+          {
+            "hour": 19,
+            "popularity": 51
+          },
+          {
+            "hour": 20,
+            "popularity": 68
+          },
+          {
+            "hour": 21,
+            "popularity": 71
+          },
+          {
+            "hour": 22,
+            "popularity": 62
+          },
+          {
+            "hour": 23,
+            "popularity": 51
+          },
+          {
+            "hour": 0,
+            "popularity": 37
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 17
+          },
+          {
+            "hour": 12,
+            "popularity": 20
+          },
+          {
+            "hour": 13,
+            "popularity": 34
+          },
+          {
+            "hour": 14,
+            "popularity": 40
+          },
+          {
+            "hour": 15,
+            "popularity": 37
+          },
+          {
+            "hour": 16,
+            "popularity": 40
+          },
+          {
+            "hour": 17,
+            "popularity": 51
+          },
+          {
+            "hour": 18,
+            "popularity": 62
+          },
+          {
+            "hour": 19,
+            "popularity": 88
+          },
+          {
+            "hour": 20,
+            "popularity": 100
+          },
+          {
+            "hour": 21,
+            "popularity": 82
+          },
+          {
+            "hour": 22,
+            "popularity": 68
+          },
+          {
+            "hour": 23,
+            "popularity": 45
+          },
+          {
+            "hour": 0,
+            "popularity": 25
+          }
+        ]
+      }
+    },
+    {
+      "name": "We, The Pizza",
+      "placeId": "ChIJS1rpOC-3t4kRsLyM6aftM8k",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=We%2C%20The%20Pizza&query_place_id=ChIJS1rpOC-3t4kRsLyM6aftM8k",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 27
+          },
+          {
+            "hour": 12,
+            "popularity": 39
+          },
+          {
+            "hour": 13,
+            "popularity": 40
+          },
+          {
+            "hour": 14,
+            "popularity": 47
+          },
+          {
+            "hour": 15,
+            "popularity": 65
+          },
+          {
+            "hour": 16,
+            "popularity": 78
+          },
+          {
+            "hour": 17,
+            "popularity": 94
+          },
+          {
+            "hour": 18,
+            "popularity": 85
+          },
+          {
+            "hour": 19,
+            "popularity": 78
+          },
+          {
+            "hour": 20,
+            "popularity": 61
+          },
+          {
+            "hour": 21,
+            "popularity": 0
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 48
+          },
+          {
+            "hour": 11,
+            "popularity": 56
+          },
+          {
+            "hour": 12,
+            "popularity": 82
+          },
+          {
+            "hour": 13,
+            "popularity": 81
+          },
+          {
+            "hour": 14,
+            "popularity": 89
+          },
+          {
+            "hour": 15,
+            "popularity": 72
+          },
+          {
+            "hour": 16,
+            "popularity": 76
+          },
+          {
+            "hour": 17,
+            "popularity": 84
+          },
+          {
+            "hour": 18,
+            "popularity": 98
+          },
+          {
+            "hour": 19,
+            "popularity": 100
+          },
+          {
+            "hour": 20,
+            "popularity": 81
+          },
+          {
+            "hour": 21,
+            "popularity": 56
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 42
+          },
+          {
+            "hour": 11,
+            "popularity": 67
+          },
+          {
+            "hour": 12,
+            "popularity": 92
+          },
+          {
+            "hour": 13,
+            "popularity": 93
+          },
+          {
+            "hour": 14,
+            "popularity": 84
+          },
+          {
+            "hour": 15,
+            "popularity": 76
+          },
+          {
+            "hour": 16,
+            "popularity": 76
+          },
+          {
+            "hour": 17,
+            "popularity": 82
+          },
+          {
+            "hour": 18,
+            "popularity": 90
+          },
+          {
+            "hour": 19,
+            "popularity": 80
+          },
+          {
+            "hour": 20,
+            "popularity": 57
+          },
+          {
+            "hour": 21,
+            "popularity": 38
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 50
+          },
+          {
+            "hour": 11,
+            "popularity": 63
+          },
+          {
+            "hour": 12,
+            "popularity": 77
+          },
+          {
+            "hour": 13,
+            "popularity": 71
+          },
+          {
+            "hour": 14,
+            "popularity": 64
+          },
+          {
+            "hour": 15,
+            "popularity": 71
+          },
+          {
+            "hour": 16,
+            "popularity": 75
+          },
+          {
+            "hour": 17,
+            "popularity": 90
+          },
+          {
+            "hour": 18,
+            "popularity": 94
+          },
+          {
+            "hour": 19,
+            "popularity": 80
+          },
+          {
+            "hour": 20,
+            "popularity": 52
+          },
+          {
+            "hour": 21,
+            "popularity": 35
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "4": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 51
+          },
+          {
+            "hour": 11,
+            "popularity": 64
+          },
+          {
+            "hour": 12,
+            "popularity": 77
+          },
+          {
+            "hour": 13,
+            "popularity": 75
+          },
+          {
+            "hour": 14,
+            "popularity": 61
+          },
+          {
+            "hour": 15,
+            "popularity": 61
+          },
+          {
+            "hour": 16,
+            "popularity": 69
+          },
+          {
+            "hour": 17,
+            "popularity": 86
+          },
+          {
+            "hour": 18,
+            "popularity": 80
+          },
+          {
+            "hour": 19,
+            "popularity": 81
+          },
+          {
+            "hour": 20,
+            "popularity": 65
+          },
+          {
+            "hour": 21,
+            "popularity": 61
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 52
+          },
+          {
+            "hour": 11,
+            "popularity": 73
+          },
+          {
+            "hour": 12,
+            "popularity": 92
+          },
+          {
+            "hour": 13,
+            "popularity": 81
+          },
+          {
+            "hour": 14,
+            "popularity": 63
+          },
+          {
+            "hour": 15,
+            "popularity": 47
+          },
+          {
+            "hour": 16,
+            "popularity": 46
+          },
+          {
+            "hour": 17,
+            "popularity": 57
+          },
+          {
+            "hour": 18,
+            "popularity": 68
+          },
+          {
+            "hour": 19,
+            "popularity": 73
+          },
+          {
+            "hour": 20,
+            "popularity": 67
+          },
+          {
+            "hour": 21,
+            "popularity": 53
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 63
+          },
+          {
+            "hour": 12,
+            "popularity": 73
+          },
+          {
+            "hour": 13,
+            "popularity": 57
+          },
+          {
+            "hour": 14,
+            "popularity": 42
+          },
+          {
+            "hour": 15,
+            "popularity": 34
+          },
+          {
+            "hour": 16,
+            "popularity": 44
+          },
+          {
+            "hour": 17,
+            "popularity": 65
+          },
+          {
+            "hour": 18,
+            "popularity": 69
+          },
+          {
+            "hour": 19,
+            "popularity": 65
+          },
+          {
+            "hour": 20,
+            "popularity": 50
+          },
+          {
+            "hour": 21,
+            "popularity": 44
+          },
+          {
+            "hour": 22,
+            "popularity": 0
+          },
+          {
+            "hour": 23,
+            "popularity": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Papa Johns Pizza",
+      "placeId": "ChIJo03BaX-3t4kRbyhPM0rTuqM",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Papa%20Johns%20Pizza&query_place_id=ChIJo03BaX-3t4kRbyhPM0rTuqM",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 34
+          },
+          {
+            "hour": 11,
+            "popularity": 50
+          },
+          {
+            "hour": 12,
+            "popularity": 65
+          },
+          {
+            "hour": 13,
+            "popularity": 62
+          },
+          {
+            "hour": 14,
+            "popularity": 65
+          },
+          {
+            "hour": 15,
+            "popularity": 65
+          },
+          {
+            "hour": 16,
+            "popularity": 59
+          },
+          {
+            "hour": 17,
+            "popularity": 50
+          },
+          {
+            "hour": 18,
+            "popularity": 43
+          },
+          {
+            "hour": 19,
+            "popularity": 40
+          },
+          {
+            "hour": 20,
+            "popularity": 40
+          },
+          {
+            "hour": 21,
+            "popularity": 50
+          },
+          {
+            "hour": 22,
+            "popularity": 59
+          },
+          {
+            "hour": 23,
+            "popularity": 53
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 9
+          },
+          {
+            "hour": 11,
+            "popularity": 15
+          },
+          {
+            "hour": 12,
+            "popularity": 25
+          },
+          {
+            "hour": 13,
+            "popularity": 28
+          },
+          {
+            "hour": 14,
+            "popularity": 31
+          },
+          {
+            "hour": 15,
+            "popularity": 50
+          },
+          {
+            "hour": 16,
+            "popularity": 50
+          },
+          {
+            "hour": 17,
+            "popularity": 50
+          },
+          {
+            "hour": 18,
+            "popularity": 59
+          },
+          {
+            "hour": 19,
+            "popularity": 62
+          },
+          {
+            "hour": 20,
+            "popularity": 59
+          },
+          {
+            "hour": 21,
+            "popularity": 40
+          },
+          {
+            "hour": 22,
+            "popularity": 31
+          },
+          {
+            "hour": 23,
+            "popularity": 28
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 18
+          },
+          {
+            "hour": 11,
+            "popularity": 34
+          },
+          {
+            "hour": 12,
+            "popularity": 43
+          },
+          {
+            "hour": 13,
+            "popularity": 43
+          },
+          {
+            "hour": 14,
+            "popularity": 50
+          },
+          {
+            "hour": 15,
+            "popularity": 43
+          },
+          {
+            "hour": 16,
+            "popularity": 40
+          },
+          {
+            "hour": 17,
+            "popularity": 53
+          },
+          {
+            "hour": 18,
+            "popularity": 46
+          },
+          {
+            "hour": 19,
+            "popularity": 56
+          },
+          {
+            "hour": 20,
+            "popularity": 46
+          },
+          {
+            "hour": 21,
+            "popularity": 53
+          },
+          {
+            "hour": 22,
+            "popularity": 46
+          },
+          {
+            "hour": 23,
+            "popularity": 34
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 37
+          },
+          {
+            "hour": 11,
+            "popularity": 43
+          },
+          {
+            "hour": 12,
+            "popularity": 37
+          },
+          {
+            "hour": 13,
+            "popularity": 40
+          },
+          {
+            "hour": 14,
+            "popularity": 28
+          },
+          {
+            "hour": 15,
+            "popularity": 31
+          },
+          {
+            "hour": 16,
+            "popularity": 43
+          },
+          {
+            "hour": 17,
+            "popularity": 62
+          },
+          {
+            "hour": 18,
+            "popularity": 62
+          },
+          {
+            "hour": 19,
+            "popularity": 62
+          },
+          {
+            "hour": 20,
+            "popularity": 56
+          },
+          {
+            "hour": 21,
+            "popularity": 53
+          },
+          {
+            "hour": 22,
+            "popularity": 40
+          },
+          {
+            "hour": 23,
+            "popularity": 31
+          }
+        ],
+        "4": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 21
+          },
+          {
+            "hour": 11,
+            "popularity": 25
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 46
+          },
+          {
+            "hour": 14,
+            "popularity": 53
+          },
+          {
+            "hour": 15,
+            "popularity": 46
+          },
+          {
+            "hour": 16,
+            "popularity": 56
+          },
+          {
+            "hour": 17,
+            "popularity": 59
+          },
+          {
+            "hour": 18,
+            "popularity": 87
+          },
+          {
+            "hour": 19,
+            "popularity": 84
+          },
+          {
+            "hour": 20,
+            "popularity": 75
+          },
+          {
+            "hour": 21,
+            "popularity": 53
+          },
+          {
+            "hour": 22,
+            "popularity": 37
+          },
+          {
+            "hour": 23,
+            "popularity": 31
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 53
+          },
+          {
+            "hour": 11,
+            "popularity": 37
+          },
+          {
+            "hour": 12,
+            "popularity": 34
+          },
+          {
+            "hour": 13,
+            "popularity": 31
+          },
+          {
+            "hour": 14,
+            "popularity": 31
+          },
+          {
+            "hour": 15,
+            "popularity": 50
+          },
+          {
+            "hour": 16,
+            "popularity": 62
+          },
+          {
+            "hour": 17,
+            "popularity": 84
+          },
+          {
+            "hour": 18,
+            "popularity": 100
+          },
+          {
+            "hour": 19,
+            "popularity": 93
+          },
+          {
+            "hour": 20,
+            "popularity": 87
+          },
+          {
+            "hour": 21,
+            "popularity": 71
+          },
+          {
+            "hour": 22,
+            "popularity": 62
+          },
+          {
+            "hour": 23,
+            "popularity": 53
+          },
+          {
+            "hour": 0,
+            "popularity": 37
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 43
+          },
+          {
+            "hour": 11,
+            "popularity": 53
+          },
+          {
+            "hour": 12,
+            "popularity": 50
+          },
+          {
+            "hour": 13,
+            "popularity": 53
+          },
+          {
+            "hour": 14,
+            "popularity": 56
+          },
+          {
+            "hour": 15,
+            "popularity": 71
+          },
+          {
+            "hour": 16,
+            "popularity": 81
+          },
+          {
+            "hour": 17,
+            "popularity": 75
+          },
+          {
+            "hour": 18,
+            "popularity": 62
+          },
+          {
+            "hour": 19,
+            "popularity": 40
+          },
+          {
+            "hour": 20,
+            "popularity": 37
+          },
+          {
+            "hour": 21,
+            "popularity": 37
+          },
+          {
+            "hour": 22,
+            "popularity": 43
+          },
+          {
+            "hour": 23,
+            "popularity": 50
+          },
+          {
+            "hour": 0,
+            "popularity": 37
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pizzato Pizza",
+      "placeId": "ChIJrbin_Qm3t4kRVSytw_2DM1g",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pizzato%20Pizza&query_place_id=ChIJrbin_Qm3t4kRVSytw_2DM1g",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 40
+          },
+          {
+            "hour": 12,
+            "popularity": 48
+          },
+          {
+            "hour": 13,
+            "popularity": 60
+          },
+          {
+            "hour": 14,
+            "popularity": 92
+          },
+          {
+            "hour": 15,
+            "popularity": 100
+          },
+          {
+            "hour": 16,
+            "popularity": 88
+          },
+          {
+            "hour": 17,
+            "popularity": 84
+          },
+          {
+            "hour": 18,
+            "popularity": 72
+          },
+          {
+            "hour": 19,
+            "popularity": 64
+          },
+          {
+            "hour": 20,
+            "popularity": 52
+          },
+          {
+            "hour": 21,
+            "popularity": 36
+          },
+          {
+            "hour": 22,
+            "popularity": 36
+          },
+          {
+            "hour": 23,
+            "popularity": 36
+          },
+          {
+            "hour": 0,
+            "popularity": 36
+          },
+          {
+            "hour": 1,
+            "popularity": 40
+          },
+          {
+            "hour": 2,
+            "popularity": 40
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 24
+          },
+          {
+            "hour": 12,
+            "popularity": 32
+          },
+          {
+            "hour": 13,
+            "popularity": 40
+          },
+          {
+            "hour": 14,
+            "popularity": 48
+          },
+          {
+            "hour": 15,
+            "popularity": 48
+          },
+          {
+            "hour": 16,
+            "popularity": 52
+          },
+          {
+            "hour": 17,
+            "popularity": 64
+          },
+          {
+            "hour": 18,
+            "popularity": 60
+          },
+          {
+            "hour": 19,
+            "popularity": 52
+          },
+          {
+            "hour": 20,
+            "popularity": 32
+          },
+          {
+            "hour": 21,
+            "popularity": 48
+          },
+          {
+            "hour": 22,
+            "popularity": 68
+          },
+          {
+            "hour": 23,
+            "popularity": 84
+          },
+          {
+            "hour": 0,
+            "popularity": 56
+          },
+          {
+            "hour": 1,
+            "popularity": 40
+          },
+          {
+            "hour": 2,
+            "popularity": 48
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 36
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 28
+          },
+          {
+            "hour": 14,
+            "popularity": 24
+          },
+          {
+            "hour": 15,
+            "popularity": 20
+          },
+          {
+            "hour": 16,
+            "popularity": 32
+          },
+          {
+            "hour": 17,
+            "popularity": 40
+          },
+          {
+            "hour": 18,
+            "popularity": 56
+          },
+          {
+            "hour": 19,
+            "popularity": 68
+          },
+          {
+            "hour": 20,
+            "popularity": 84
+          },
+          {
+            "hour": 21,
+            "popularity": 68
+          },
+          {
+            "hour": 22,
+            "popularity": 56
+          },
+          {
+            "hour": 23,
+            "popularity": 40
+          },
+          {
+            "hour": 0,
+            "popularity": 28
+          },
+          {
+            "hour": 1,
+            "popularity": 28
+          },
+          {
+            "hour": 2,
+            "popularity": 28
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 48
+          },
+          {
+            "hour": 12,
+            "popularity": 48
+          },
+          {
+            "hour": 13,
+            "popularity": 56
+          },
+          {
+            "hour": 14,
+            "popularity": 44
+          },
+          {
+            "hour": 15,
+            "popularity": 44
+          },
+          {
+            "hour": 16,
+            "popularity": 36
+          },
+          {
+            "hour": 17,
+            "popularity": 40
+          },
+          {
+            "hour": 18,
+            "popularity": 48
+          },
+          {
+            "hour": 19,
+            "popularity": 48
+          },
+          {
+            "hour": 20,
+            "popularity": 60
+          },
+          {
+            "hour": 21,
+            "popularity": 52
+          },
+          {
+            "hour": 22,
+            "popularity": 48
+          },
+          {
+            "hour": 23,
+            "popularity": 44
+          },
+          {
+            "hour": 0,
+            "popularity": 28
+          },
+          {
+            "hour": 1,
+            "popularity": 24
+          },
+          {
+            "hour": 2,
+            "popularity": 16
+          }
+        ],
+        "4": [
+          {
+            "hour": 14,
+            "popularity": 60
+          },
+          {
+            "hour": 15,
+            "popularity": 36
+          },
+          {
+            "hour": 16,
+            "popularity": 32
+          },
+          {
+            "hour": 17,
+            "popularity": 40
+          },
+          {
+            "hour": 18,
+            "popularity": 36
+          },
+          {
+            "hour": 19,
+            "popularity": 36
+          },
+          {
+            "hour": 20,
+            "popularity": 40
+          },
+          {
+            "hour": 21,
+            "popularity": 48
+          },
+          {
+            "hour": 22,
+            "popularity": 56
+          },
+          {
+            "hour": 23,
+            "popularity": 60
+          },
+          {
+            "hour": 0,
+            "popularity": 56
+          },
+          {
+            "hour": 1,
+            "popularity": 52
+          },
+          {
+            "hour": 2,
+            "popularity": 48
+          },
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 60
+          },
+          {
+            "hour": 12,
+            "popularity": 76
+          },
+          {
+            "hour": 13,
+            "popularity": 60
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 48
+          },
+          {
+            "hour": 12,
+            "popularity": 64
+          },
+          {
+            "hour": 13,
+            "popularity": 68
+          },
+          {
+            "hour": 14,
+            "popularity": 68
+          },
+          {
+            "hour": 15,
+            "popularity": 56
+          },
+          {
+            "hour": 16,
+            "popularity": 64
+          },
+          {
+            "hour": 17,
+            "popularity": 52
+          },
+          {
+            "hour": 18,
+            "popularity": 72
+          },
+          {
+            "hour": 19,
+            "popularity": 60
+          },
+          {
+            "hour": 20,
+            "popularity": 56
+          },
+          {
+            "hour": 21,
+            "popularity": 48
+          },
+          {
+            "hour": 22,
+            "popularity": 40
+          },
+          {
+            "hour": 23,
+            "popularity": 32
+          },
+          {
+            "hour": 0,
+            "popularity": 36
+          },
+          {
+            "hour": 1,
+            "popularity": 28
+          },
+          {
+            "hour": 2,
+            "popularity": 32
+          },
+          {
+            "hour": 3,
+            "popularity": 16
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 0
+          },
+          {
+            "hour": 11,
+            "popularity": 28
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 36
+          },
+          {
+            "hour": 14,
+            "popularity": 32
+          },
+          {
+            "hour": 15,
+            "popularity": 36
+          },
+          {
+            "hour": 16,
+            "popularity": 52
+          },
+          {
+            "hour": 17,
+            "popularity": 76
+          },
+          {
+            "hour": 18,
+            "popularity": 80
+          },
+          {
+            "hour": 19,
+            "popularity": 56
+          },
+          {
+            "hour": 20,
+            "popularity": 56
+          },
+          {
+            "hour": 21,
+            "popularity": 56
+          },
+          {
+            "hour": 22,
+            "popularity": 68
+          },
+          {
+            "hour": 23,
+            "popularity": 68
+          },
+          {
+            "hour": 0,
+            "popularity": 52
+          },
+          {
+            "hour": 1,
+            "popularity": 48
+          },
+          {
+            "hour": 2,
+            "popularity": 48
+          },
+          {
+            "hour": 3,
+            "popularity": 36
+          }
+        ]
+      }
+    },
+    {
+      "name": "Domino's Pizza (Pentagon Closest)",
+      "placeId": "ChIJI6ACK7q2t4kRFcPtFhUuYhU",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Domino%27s%20Pizza%20%28Pentagon%20Closest%29&query_place_id=ChIJI6ACK7q2t4kRFcPtFhUuYhU",
+      "baseline": {
+        "0": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 48
+          },
+          {
+            "hour": 11,
+            "popularity": 48
+          },
+          {
+            "hour": 12,
+            "popularity": 36
+          },
+          {
+            "hour": 13,
+            "popularity": 24
+          },
+          {
+            "hour": 14,
+            "popularity": 20
+          },
+          {
+            "hour": 15,
+            "popularity": 24
+          },
+          {
+            "hour": 16,
+            "popularity": 28
+          },
+          {
+            "hour": 17,
+            "popularity": 36
+          },
+          {
+            "hour": 18,
+            "popularity": 60
+          },
+          {
+            "hour": 19,
+            "popularity": 72
+          },
+          {
+            "hour": 20,
+            "popularity": 100
+          },
+          {
+            "hour": 21,
+            "popularity": 88
+          },
+          {
+            "hour": 22,
+            "popularity": 68
+          },
+          {
+            "hour": 23,
+            "popularity": 72
+          }
+        ],
+        "1": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 20
+          },
+          {
+            "hour": 11,
+            "popularity": 16
+          },
+          {
+            "hour": 12,
+            "popularity": 24
+          },
+          {
+            "hour": 13,
+            "popularity": 48
+          },
+          {
+            "hour": 14,
+            "popularity": 68
+          },
+          {
+            "hour": 15,
+            "popularity": 64
+          },
+          {
+            "hour": 16,
+            "popularity": 44
+          },
+          {
+            "hour": 17,
+            "popularity": 36
+          },
+          {
+            "hour": 18,
+            "popularity": 40
+          },
+          {
+            "hour": 19,
+            "popularity": 48
+          },
+          {
+            "hour": 20,
+            "popularity": 52
+          },
+          {
+            "hour": 21,
+            "popularity": 56
+          },
+          {
+            "hour": 22,
+            "popularity": 52
+          },
+          {
+            "hour": 23,
+            "popularity": 48
+          }
+        ],
+        "2": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 36
+          },
+          {
+            "hour": 11,
+            "popularity": 32
+          },
+          {
+            "hour": 12,
+            "popularity": 28
+          },
+          {
+            "hour": 13,
+            "popularity": 36
+          },
+          {
+            "hour": 14,
+            "popularity": 36
+          },
+          {
+            "hour": 15,
+            "popularity": 36
+          },
+          {
+            "hour": 16,
+            "popularity": 36
+          },
+          {
+            "hour": 17,
+            "popularity": 40
+          },
+          {
+            "hour": 18,
+            "popularity": 48
+          },
+          {
+            "hour": 19,
+            "popularity": 56
+          },
+          {
+            "hour": 20,
+            "popularity": 52
+          },
+          {
+            "hour": 21,
+            "popularity": 48
+          },
+          {
+            "hour": 22,
+            "popularity": 44
+          },
+          {
+            "hour": 23,
+            "popularity": 48
+          }
+        ],
+        "3": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 20
+          },
+          {
+            "hour": 11,
+            "popularity": 24
+          },
+          {
+            "hour": 12,
+            "popularity": 32
+          },
+          {
+            "hour": 13,
+            "popularity": 28
+          },
+          {
+            "hour": 14,
+            "popularity": 32
+          },
+          {
+            "hour": 15,
+            "popularity": 52
+          },
+          {
+            "hour": 16,
+            "popularity": 56
+          },
+          {
+            "hour": 17,
+            "popularity": 44
+          },
+          {
+            "hour": 18,
+            "popularity": 44
+          },
+          {
+            "hour": 19,
+            "popularity": 44
+          },
+          {
+            "hour": 20,
+            "popularity": 48
+          },
+          {
+            "hour": 21,
+            "popularity": 44
+          },
+          {
+            "hour": 22,
+            "popularity": 48
+          },
+          {
+            "hour": 23,
+            "popularity": 44
+          }
+        ],
+        "4": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 36
+          },
+          {
+            "hour": 11,
+            "popularity": 44
+          },
+          {
+            "hour": 12,
+            "popularity": 40
+          },
+          {
+            "hour": 13,
+            "popularity": 28
+          },
+          {
+            "hour": 14,
+            "popularity": 28
+          },
+          {
+            "hour": 15,
+            "popularity": 32
+          },
+          {
+            "hour": 16,
+            "popularity": 20
+          },
+          {
+            "hour": 17,
+            "popularity": 20
+          },
+          {
+            "hour": 18,
+            "popularity": 12
+          },
+          {
+            "hour": 19,
+            "popularity": 24
+          },
+          {
+            "hour": 20,
+            "popularity": 16
+          },
+          {
+            "hour": 21,
+            "popularity": 20
+          },
+          {
+            "hour": 22,
+            "popularity": 24
+          },
+          {
+            "hour": 23,
+            "popularity": 20
+          }
+        ],
+        "5": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 24
+          },
+          {
+            "hour": 11,
+            "popularity": 16
+          },
+          {
+            "hour": 12,
+            "popularity": 20
+          },
+          {
+            "hour": 13,
+            "popularity": 24
+          },
+          {
+            "hour": 14,
+            "popularity": 44
+          },
+          {
+            "hour": 15,
+            "popularity": 56
+          },
+          {
+            "hour": 16,
+            "popularity": 68
+          },
+          {
+            "hour": 17,
+            "popularity": 48
+          },
+          {
+            "hour": 18,
+            "popularity": 60
+          },
+          {
+            "hour": 19,
+            "popularity": 44
+          },
+          {
+            "hour": 20,
+            "popularity": 56
+          },
+          {
+            "hour": 21,
+            "popularity": 60
+          },
+          {
+            "hour": 22,
+            "popularity": 56
+          },
+          {
+            "hour": 23,
+            "popularity": 40
+          },
+          {
+            "hour": 0,
+            "popularity": 40
+          }
+        ],
+        "6": [
+          {
+            "hour": 6,
+            "popularity": 0
+          },
+          {
+            "hour": 7,
+            "popularity": 0
+          },
+          {
+            "hour": 8,
+            "popularity": 0
+          },
+          {
+            "hour": 9,
+            "popularity": 0
+          },
+          {
+            "hour": 10,
+            "popularity": 44
+          },
+          {
+            "hour": 11,
+            "popularity": 60
+          },
+          {
+            "hour": 12,
+            "popularity": 68
+          },
+          {
+            "hour": 13,
+            "popularity": 60
+          },
+          {
+            "hour": 14,
+            "popularity": 60
+          },
+          {
+            "hour": 15,
+            "popularity": 40
+          },
+          {
+            "hour": 16,
+            "popularity": 44
+          },
+          {
+            "hour": 17,
+            "popularity": 28
+          },
+          {
+            "hour": 18,
+            "popularity": 32
+          },
+          {
+            "hour": 19,
+            "popularity": 24
+          },
+          {
+            "hour": 20,
+            "popularity": 28
+          },
+          {
+            "hour": 21,
+            "popularity": 36
+          },
+          {
+            "hour": 22,
+            "popularity": 52
+          },
+          {
+            "hour": 23,
+            "popularity": 48
+          },
+          {
+            "hour": 0,
+            "popularity": 36
+          }
+        ]
+      }
+    }
+  ]
+}

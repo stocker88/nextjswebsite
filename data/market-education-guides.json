@@ -1,0 +1,848 @@
+[
+  {
+    "slug": "types-of-financial-markets",
+    "title": "Types of financial markets: primary, secondary, third and fourth",
+    "description": "Understand primary and secondary markets, how companies raise capital and where existing shares trade, with a simple transaction example.",
+    "intro": "A market label answers a specific question: is a company issuing securities, or is one investor selling to another? Other labels describe how an existing security is traded. Primary and secondary markets describe the purpose of the transaction; third and fourth markets are older descriptions of particular secondary-market arrangements.",
+    "example": "Imagine a company issues one million new shares at $10. Before offering costs, the company receives $10 million in the primary market. If an investor later sells 100 of those shares for $12 each, the $1,200 goes to that seller, not to the company. The later trade belongs to the secondary market, wherever it is executed.",
+    "terms": [
+      {
+        "name": "Primary market",
+        "id": "primary-market",
+        "body": "The primary market is where newly issued securities are sold to investors. A company can raise money by issuing shares or bonds; a government can raise money by issuing debt. An offering may also include existing shareholders selling their holdings, so not all proceeds necessarily reach the issuer.",
+        "practice": "Read the offering documents to distinguish newly issued shares from shares sold by existing owners. This distinction affects both financing and dilution."
+      },
+      {
+        "name": "Secondary market",
+        "id": "secondary-market",
+        "body": "The secondary market lets holders buy and sell securities that already exist. It provides an exit for investors and allows market prices to change as expectations change. A company usually receives no direct proceeds from these trades.",
+        "practice": "When you buy an ordinary listed stock through a broker, you are generally trading in the secondary market rather than funding the company directly."
+      },
+      {
+        "name": "Third market",
+        "id": "third-market",
+        "body": "Third-market trading is an older term for trading exchange-listed securities away from the exchange in the over-the-counter market, commonly through dealers. A stock's listing venue and the place where a particular trade executes need not be the same.",
+        "practice": "A Nasdaq-listed company's shares can trade elsewhere. Check execution quality and total cost instead of assuming the listing exchange handled your order."
+      },
+      {
+        "name": "Fourth market",
+        "id": "fourth-market",
+        "body": "The fourth market traditionally refers to institutions trading securities directly with one another rather than through a conventional broker-dealer intermediary. Electronic systems can help arrange these large transactions. It is a market-structure description, not a separate asset class.",
+        "practice": "Direct trading can change intermediation costs, but institutions still face price negotiation, settlement and liquidity considerations. It does not make execution risk disappear."
+      }
+    ]
+  },
+  {
+    "slug": "types-of-stocks",
+    "title": "Types of stocks: common, preferred and special share classes",
+    "description": "Compare common stock, preferred stock, restricted stock, tracking stock and golden shares. Learn how ownership, dividends and voting rights differ.",
+    "intro": "Buying a share gives you the rights attached to that particular class, not a universal package of rights. Two securities issued by the same company can have different voting power, dividend terms, conversion features and priority in a liquidation. The charter, prospectus and security terms determine the details.",
+    "example": "Suppose a company has common shares and a preferred class with a stated $2 annual dividend. The preferred dividend may have priority over common dividends, but it is not automatically a guaranteed payment. Meanwhile, the common shares may have more exposure to business growth and different voting rights. Compare the actual terms before comparing the prices.",
+    "terms": [
+      {
+        "name": "Common stock",
+        "id": "common-stock",
+        "body": "Common stock represents an ownership interest in a business. Holders generally participate in the remaining value after creditors and more senior claims are paid. Voting rights and dividends depend on the share class and company decisions.",
+        "practice": "Common shareholders can benefit from growth, but can also lose their entire investment. A profitable company is not obliged to pay all of its earnings as dividends."
+      },
+      {
+        "name": "Preferred stock",
+        "id": "preferred-stock",
+        "body": "Preferred stock typically has priority over common stock for specified dividends or liquidation distributions. It can have fixed or floating payments, conversion rights or issuer redemption provisions. Its price may react strongly to interest rates and the issuer's financial condition.",
+        "practice": "Check whether dividends are cumulative, whether the issuer can redeem the shares and how much is payable on liquidation. A stated yield is not the same as a guaranteed return."
+      },
+      {
+        "name": "Golden share",
+        "id": "golden-share",
+        "body": "A golden share carries special rights, often allowing a government or another designated holder to veto particular corporate decisions. Those rights may be much larger than its economic ownership would suggest.",
+        "practice": "Do not infer control from the ordinary share count alone. Special veto rights can affect acquisitions, asset sales or changes in ownership."
+      },
+      {
+        "name": "Restricted stock",
+        "id": "restricted-stock",
+        "body": "Restricted stock is subject to conditions on ownership, transfer or sale. The term can refer to employee awards with vesting conditions or securities subject to resale restrictions; these are not identical arrangements.",
+        "practice": "Identify the restriction, its expiry and the relevant tax or resale rules. Restricted stock units are promises to deliver value or shares and are not the same as already issued restricted shares."
+      },
+      {
+        "name": "Tracking stock",
+        "id": "tracking-stock",
+        "body": "Tracking stock is designed to reflect the performance of a particular division or business within a larger company. It usually remains equity in the parent company rather than direct ownership of a legally independent subsidiary.",
+        "practice": "Review how expenses, assets and cash flows are allocated between the tracked business and the rest of the company. The parent board's decisions can affect the result."
+      }
+    ]
+  },
+  {
+    "slug": "share-capital-and-share-counts",
+    "title": "Share capital explained: issued, outstanding and treasury shares",
+    "description": "Learn the difference between authorised capital, issued shares, shares outstanding and treasury stock, with a worked ownership calculation.",
+    "intro": "Share counts tell you how ownership is divided. A company's permission to issue shares is different from the number it has actually issued, and shares held by the company itself are different from shares held by outside owners. Use the right count for market value, earnings per share and voting analysis.",
+    "example": "A company is authorised to issue 20 million shares, has issued 12 million and holds 2 million as treasury stock. In this simplified example, 10 million shares are outstanding. At $15 per share, the equity market value is $150 million. The unused authorisation is not part of today's market capitalisation.",
+    "terms": [
+      {
+        "name": "Authorised capital",
+        "id": "authorised-capital",
+        "body": "Authorised capital is the share capital a company is permitted to issue under its governing documents and applicable law. It may be expressed as a maximum share count or capital amount. The framework differs across jurisdictions.",
+        "practice": "Unused authorisation indicates possible capacity for future issuance, not cash already raised. Check whether issuing additional shares requires further shareholder approval."
+      },
+      {
+        "name": "Issued shares",
+        "id": "issued-shares",
+        "body": "Issued shares are shares a company has created and allotted. Depending on the legal and accounting framework, the issued total can include shares later repurchased and held in treasury.",
+        "practice": "A headline issued-share figure is not always the correct denominator for earnings per share. Reconcile it with treasury shares and the reporting period."
+      },
+      {
+        "name": "Shares outstanding",
+        "id": "shares-outstanding",
+        "body": "Shares outstanding are shares held by shareholders outside the company, including many insider holdings. Weighted-average outstanding shares are used for basic earnings per share; diluted calculations account for certain potentially dilutive instruments.",
+        "practice": "Compare basic and diluted share counts and review changes over time. A rising company profit can translate into slower per-share growth if the share count also rises."
+      },
+      {
+        "name": "Treasury stock",
+        "id": "treasury-stock",
+        "body": "Treasury stock consists of a company's own shares that it has repurchased and retained rather than retired. These shares are generally excluded from outstanding-share counts and do not receive dividends or carry voting rights while held in treasury.",
+        "practice": "A repurchase authorisation is permission, not proof of purchases. Check completed repurchases, employee share issuance and actual net changes in shares outstanding."
+      }
+    ]
+  },
+  {
+    "slug": "stock-market-participants",
+    "title": "Stock market participants: brokers, dealers, investors and traders",
+    "description": "Learn who does what in the stock market, from brokers and market makers to hedgers, arbitrageurs, quantitative analysts and regulators.",
+    "intro": "A single trade can involve an investor choosing an investment, a broker routing the order, a dealer providing liquidity and a venue matching the transaction. These roles can overlap within a firm. Knowing the role helps you understand who is acting for a client, who is taking risk and how they might be paid.",
+    "example": "You submit a buy order through a broker. The broker may send it to an exchange or another execution venue, where a market maker or another investor sells the shares. Your broker facilitates the transaction; the seller supplies the shares. Neither role means someone has independently certified the stock as a good investment.",
+    "terms": [
+      {
+        "name": "Broker",
+        "id": "broker",
+        "body": "A broker arranges transactions for clients. Services can include receiving orders, routing them and providing access to markets. Compensation may come from commissions, service fees or other arrangements.",
+        "practice": "Compare the broker's execution practices, fees and conflicts, not just a zero-commission headline. The broker's role does not guarantee a favourable investment outcome."
+      },
+      {
+        "name": "Floor broker",
+        "id": "floor-broker",
+        "body": "A floor broker handles client orders on a physical trading floor. The role belongs to exchange-based trading arrangements, although many markets now rely heavily on electronic execution.",
+        "practice": "A floor broker acts for others. Do not confuse this with a floor trader taking positions for their own account."
+      },
+      {
+        "name": "Inter-dealer broker",
+        "id": "inter-dealer-broker",
+        "body": "An inter-dealer broker helps dealers transact with other dealers, particularly in wholesale markets. The service can help counterparties find liquidity and negotiate prices.",
+        "practice": "An inter-dealer quote is part of a professional market and may not be a price available to a small retail order."
+      },
+      {
+        "name": "Broker-dealer",
+        "id": "broker-dealer",
+        "body": "A broker-dealer can act as a broker for clients or as a dealer trading for its own account. Acting as principal means the firm is the counterparty rather than simply arranging a trade.",
+        "practice": "Read trade confirmations and disclosures to understand the capacity in which the firm acts. Markups and markdowns can matter as much as explicit commissions."
+      },
+      {
+        "name": "Market maker",
+        "id": "market-maker",
+        "body": "A market maker stands ready to buy or sell under the obligations or practices of a particular market. It quotes prices and takes inventory risk, commonly seeking compensation through spreads and trading results.",
+        "practice": "Quoted size matters. A displayed price may cover only a limited quantity, and spreads can widen when risk or uncertainty increases."
+      },
+      {
+        "name": "Trader",
+        "id": "trader",
+        "body": "A trader buys and sells financial instruments, either for clients, an employer or a personal account. The role can involve short-term execution, risk management or longer holding periods.",
+        "practice": "The word describes an activity, not a proven skill level. Evaluate a trader's process and record after costs rather than relying on the label."
+      },
+      {
+        "name": "Floor trader",
+        "id": "floor-trader",
+        "body": "A floor trader trades on a physical exchange floor for their own account. This differs from a floor broker, whose primary role is executing customer orders.",
+        "practice": "Understand whether the person is providing a service or taking a position. The distinction helps explain incentives and exposure to losses."
+      },
+      {
+        "name": "Proprietary trader",
+        "id": "proprietary-trader",
+        "body": "A proprietary trader trades with a firm's capital rather than solely executing client instructions. Strategies may involve directional bets, relative value, market making or systematic models.",
+        "practice": "Firm risk limits and funding arrangements matter. A retail evaluation or funded-account programme may operate differently from an institutional proprietary desk."
+      },
+      {
+        "name": "Quantitative analyst",
+        "id": "quantitative-analyst",
+        "body": "A quantitative analyst uses mathematics, statistics and programming to study prices, risks or trading strategies. Work can include model development, validation, portfolio construction and execution analysis.",
+        "practice": "Ask how a model was tested on unseen data and how costs were included. A sophisticated formula can still be built on weak assumptions."
+      },
+      {
+        "name": "Investor",
+        "id": "investor",
+        "body": "An investor allocates capital with the aim of receiving future income or an increase in value. Time horizon, financial capacity and tolerance for losses shape the investment approach.",
+        "practice": "Match the investment's risks with when you need the money. A long horizon does not remove the possibility of a permanent loss."
+      },
+      {
+        "name": "Hedger",
+        "id": "hedger",
+        "body": "A hedger takes a position intended to offset an existing or anticipated exposure. For example, a portfolio manager may use an index future to reduce broad equity-market sensitivity.",
+        "practice": "A hedge usually trades some upside or money for protection, and imperfect matching creates basis risk. Measure the combined position rather than one leg alone."
+      },
+      {
+        "name": "Speculator",
+        "id": "speculator",
+        "body": "A speculator deliberately takes risk in pursuit of a favourable price movement. Speculation can provide liquidity but can also involve leverage, concentrated positions and large losses.",
+        "practice": "Define the maximum tolerable loss and the reason for entering. A narrative about a possible gain is not a risk plan."
+      },
+      {
+        "name": "Arbitrageur",
+        "id": "arbitrageur",
+        "body": "An arbitrageur looks for price differences between related instruments or markets. Pure arbitrage aims to lock in a difference, while many real strategies retain execution, financing or convergence risk.",
+        "practice": "Check whether both legs can actually execute at the quoted prices and sizes. Apparent profits can disappear after borrowing fees, spreads and delays."
+      },
+      {
+        "name": "Scalper",
+        "id": "scalper",
+        "body": "A scalper seeks small gains from frequent, short-duration trades. Results can depend heavily on execution speed, spread costs and the ability to exit quickly.",
+        "practice": "A high win rate can coexist with a loss if occasional losing trades or transaction costs exceed the many small gains."
+      },
+      {
+        "name": "Regulator",
+        "id": "regulator",
+        "body": "A regulator supervises activities within a legal mandate, such as securities issuance, trading conduct or intermediary standards. Exchanges and self-regulatory organisations may also impose rules.",
+        "practice": "Check which authority covers the firm, product and jurisdiction. Registration or supervision is not an endorsement of an investment's quality."
+      }
+    ]
+  },
+  {
+    "slug": "stock-exchanges-and-trading-venues",
+    "title": "Stock exchanges, OTC markets, dark pools and trading venues",
+    "description": "Compare exchanges, OTC trading, ATSs, MTFs, ECNs and dark pools. Understand how order access and settlement technology differ from trading venues.",
+    "intro": "Where a stock is listed, where an order is executed and how a trade is processed are three different questions. Trading venues bring counterparties together. Access systems connect participants to those venues, while post-trade systems help confirm and settle transactions.",
+    "example": "A listed share can execute away from its listing exchange. A broker might route an order to another venue to seek available liquidity. The trade still needs confirmation, clearing arrangements and settlement. An electronic route does not eliminate those steps or guarantee the displayed price.",
+    "terms": [
+      {
+        "name": "Stock exchange",
+        "id": "stock-exchange",
+        "body": "A stock exchange is an organised market with rules for membership, trading and, where applicable, listing securities. Modern stock exchanges typically rely on electronic systems, sometimes alongside a physical floor.",
+        "practice": "Separate the exchange's listing requirements from the execution of an individual trade. Being listed does not guarantee financial strength or a continuously liquid market."
+      },
+      {
+        "name": "Major stock exchanges",
+        "id": "major-stock-exchanges",
+        "body": "Examples include the New York Stock Exchange and Nasdaq in the United States, the London Stock Exchange, Tokyo Stock Exchange, Hong Kong Exchanges and Clearing, and the Shanghai and Shenzhen exchanges. Their products, trading calendars and access arrangements differ.",
+        "practice": "Choose a market based on the securities and access you need, not a league-table rank. Exchange size changes over time and does not measure the suitability of a stock."
+      },
+      {
+        "name": "Over-the-counter (OTC)",
+        "id": "over-the-counter-otc",
+        "body": "OTC or off-exchange trading takes place outside an exchange's order book. It can involve dealers or electronic venues and can include both exchange-listed securities and securities that are not exchange listed.",
+        "practice": "OTC is a trading arrangement, not a single risk rating. Disclosure, liquidity and settlement characteristics depend on the instrument and market."
+      },
+      {
+        "name": "Alternative trading system (ATS)",
+        "id": "alternative-trading-system-ats",
+        "body": "In the United States, an ATS is a regulated trading system that brings together buyers and sellers without operating as a national securities exchange. Different systems handle different instruments and order types.",
+        "practice": "An ATS may display quotes or operate without public pre-trade quotes. Review the specific system rather than assuming every ATS is a dark pool."
+      },
+      {
+        "name": "Multilateral trading facility (MTF)",
+        "id": "multilateral-trading-facility-mtf",
+        "body": "An MTF is a category of multilateral trading venue under European and UK market frameworks. It brings together multiple buying and selling interests under rules governing how orders interact.",
+        "practice": "It is not simply another name for a US ATS. Legal classifications, transparency requirements and instrument coverage depend on the jurisdiction."
+      },
+      {
+        "name": "Electronic communication network (ECN)",
+        "id": "electronic-communication-network-ecn",
+        "body": "An ECN electronically matches compatible orders from participants. The term describes a type of trading network and can overlap with legal classifications such as an ATS.",
+        "practice": "Connectivity does not guarantee a fill. The available prices, liquidity and order conditions determine whether your order can execute."
+      },
+      {
+        "name": "Direct market access (DMA)",
+        "id": "direct-market-access-dma",
+        "body": "DMA gives eligible clients a route to submit orders to a venue through a broker's infrastructure and controls. It concerns access and order handling rather than a separate market or security.",
+        "practice": "Direct access still involves rules, credit checks and risk controls. Faster order entry does not remove price or operational risk."
+      },
+      {
+        "name": "Straight-through processing (STP)",
+        "id": "straight-through-processing-stp",
+        "body": "STP automates the movement of transaction information through steps such as confirmation and settlement, reducing manual re-entry. It is a processing approach, not a trading venue.",
+        "practice": "Automation can reduce errors but needs exception handling. A trade can still fail or require investigation when information or assets do not match."
+      },
+      {
+        "name": "Dark pool",
+        "id": "dark-pool",
+        "body": "A dark pool is a trading arrangement that does not publicly display its orders before execution. It can help participants seek liquidity while limiting disclosure of trading intentions.",
+        "practice": "Non-displayed orders are not the same as unregulated or permanently secret trades. Reporting obligations depend on the market and product."
+      },
+      {
+        "name": "Crossing network",
+        "id": "crossing-network",
+        "body": "A crossing network matches compatible buy and sell orders, often using a reference price from another market. Execution can occur at set times or continuously, depending on the system.",
+        "practice": "Check how the reference price is determined and what happens if orders do not match. Participation can reduce some costs while leaving a risk of no execution."
+      },
+      {
+        "name": "Liquidity aggregator",
+        "id": "liquidity-aggregator",
+        "body": "A liquidity aggregator combines prices or available liquidity from multiple providers or venues. It can help an execution system compare routes and sizes.",
+        "practice": "An aggregated screen is only as useful as the quotes behind it. Latency, fees, firm versus indicative prices and available quantity still matter."
+      }
+    ]
+  },
+  {
+    "slug": "stock-valuation-models-and-ratios",
+    "title": "Stock valuation models and ratios: beta, yields, CAPM and more",
+    "description": "Understand valuation ratios and return models, including book value, dividend yield, EV/EBITDA, CAPM, alpha, beta and their limitations.",
+    "intro": "Valuation asks what an investment may be worth under stated assumptions. A ratio summarises selected information; a model connects assumptions to an estimated value or return. Risk measures such as beta help describe exposure, but do not independently tell you whether a stock is cheap.",
+    "example": "A stock priced at $50 with $5 earnings per share has a 10% earnings yield and a price-to-earnings ratio of 10. If it pays a $2 annual dividend, its dividend yield is 4%. Neither percentage is a promised total return: earnings can fall, dividends can change and the share price can decline.",
+    "terms": [
+      {
+        "name": "Alpha",
+        "id": "alpha",
+        "body": "Alpha measures performance beyond what a specified benchmark or risk model would imply. In a market regression, it is the intercept after accounting for market exposure. Different benchmarks and time periods can produce different estimates.",
+        "practice": "Ask which model, period and fees were used. A positive historical alpha is not evidence that the same excess return will persist."
+      },
+      {
+        "name": "Arbitrage pricing theory (APT)",
+        "id": "arbitrage-pricing-theory-apt",
+        "body": "APT relates expected returns to exposure to multiple systematic risk factors under a no-arbitrage framework. Unlike a single-market-factor model, it can accommodate several drivers, but the theory does not supply one universal factor list.",
+        "practice": "Factor definitions, estimation periods and risk premiums matter. A fitted model is a conditional estimate, not a guaranteed price forecast."
+      },
+      {
+        "name": "Beta",
+        "id": "beta",
+        "body": "Beta measures how a security's returns have varied with a benchmark's returns. A beta above one indicates greater estimated market sensitivity in the sample, not necessarily a larger move on every trading day.",
+        "practice": "Beta depends on the chosen benchmark and data window. It does not capture all company-specific risks or the maximum possible loss."
+      },
+      {
+        "name": "Buffett indicator (market capitalisation to GDP)",
+        "id": "buffett-indicator-market-capitalisation-to-gdp",
+        "body": "This indicator compares the value of a stock market with the size of an economy. It is often used as a broad valuation context measure, but listed companies can earn revenue abroad while GDP measures domestic production.",
+        "practice": "Check the market-value universe and GDP period. Cross-country comparisons can be distorted by differences in how much business is publicly listed."
+      },
+      {
+        "name": "Book value (BV)",
+        "id": "book-value-bv",
+        "body": "Book value is an accounting measure of assets minus liabilities, with adjustments depending on the claim being analysed. Book value per common share uses equity attributable to common shareholders and the relevant share count.",
+        "practice": "Accounting values can differ substantially from sale or replacement values. Intangible assets, asset quality and accounting policy affect interpretation."
+      },
+      {
+        "name": "Capital asset pricing model (CAPM)",
+        "id": "capital-asset-pricing-model-capm",
+        "body": "CAPM expresses expected return as the risk-free rate plus beta multiplied by the market risk premium. It is a simplified equilibrium model linking compensation for risk to market exposure.",
+        "practice": "A 4% risk-free rate, beta of 1.2 and 5% market risk premium imply a model return of 10%. Changing the assumptions changes the result; 10% is not a promise."
+      },
+      {
+        "name": "Capital market line (CML)",
+        "id": "capital-market-line-cml",
+        "body": "The CML describes combinations of a risk-free asset and the market portfolio in the standard CAPM framework. It relates expected return to total volatility for these efficient portfolios.",
+        "practice": "It is not a valuation line for every individual stock. Do not substitute total volatility for beta when using the security market line."
+      },
+      {
+        "name": "Dividend discount model (DDM)",
+        "id": "dividend-discount-model-ddm",
+        "body": "The DDM values equity as the present value of expected future dividends. In a constant-growth version, value equals next year's dividend divided by the required return minus the growth rate, with required return greater than growth.",
+        "practice": "Small changes in long-run growth can produce large changes in value. A company with irregular or no dividends may need a different valuation approach."
+      },
+      {
+        "name": "Dividend yield",
+        "id": "dividend-yield",
+        "body": "Dividend yield compares an annual dividend amount with the current share price. The dividend may be based on past payments or an indicated future rate, so the calculation basis matters.",
+        "practice": "A high yield can result from a collapsing share price. Check whether the dividend is sustainable and whether special dividends distort the figure."
+      },
+      {
+        "name": "Earnings yield",
+        "id": "earnings-yield",
+        "body": "Earnings yield divides earnings per share by share price, or comparable total earnings by equity value. It is the inverse of a positive price-to-earnings ratio when both calculations use the same earnings basis.",
+        "practice": "Reported and forecast earnings can differ. Earnings yield is not a cash distribution and is hard to interpret conventionally when earnings are negative."
+      },
+      {
+        "name": "EV/EBITDA",
+        "id": "ev-ebitda",
+        "body": "EV/EBITDA compares enterprise value with earnings before interest, taxes, depreciation and amortisation. Enterprise value broadly includes equity and debt claims, less cash, with other adjustments where relevant.",
+        "practice": "EBITDA omits capital expenditure and working-capital needs. Compare similar businesses and consistent lease and accounting treatments; a low multiple alone does not establish value."
+      },
+      {
+        "name": "Fed model",
+        "id": "fed-model",
+        "body": "The Fed model is a market-valuation comparison between equity earnings yield and a government bond yield. Despite its name, it is not an official promise or a complete model of stock-market value.",
+        "practice": "Stocks and bonds have different cash-flow risks and growth characteristics. Comparing their headline yields does not make them equivalent investments."
+      },
+      {
+        "name": "Net asset value (NAV)",
+        "id": "net-asset-value-nav",
+        "body": "NAV is the value of assets minus liabilities, commonly used for funds. NAV per share divides that net amount by the applicable share count, using the fund's valuation rules.",
+        "practice": "A fund's trading price can differ from NAV. Check valuation timing and whether underlying assets are liquid enough for the published value to be realised."
+      },
+      {
+        "name": "Security characteristic line",
+        "id": "security-characteristic-line",
+        "body": "A security characteristic line is a regression relationship between a security's excess returns and the market's excess returns. Its slope estimates beta and its intercept estimates alpha for the sample.",
+        "practice": "This describes a fitted historical relationship, not a path the stock must follow. Changes in a company's business or leverage can weaken the fit."
+      },
+      {
+        "name": "Security market line (SML)",
+        "id": "security-market-line-sml",
+        "body": "The SML graphs CAPM's relationship between beta and expected return. It applies to securities and portfolios in the model, whereas the CML uses total volatility for efficient portfolio combinations.",
+        "practice": "A stock plotted above an estimated line may look attractive under those inputs. Errors in expected returns or beta can reverse that conclusion."
+      },
+      {
+        "name": "T-model",
+        "id": "t-model",
+        "body": "The T-model connects shareholder returns with business growth, cash-flow yield and changes in valuation, using accounting relationships such as return on equity and price-to-book. It is a framework for making the drivers of an estimate explicit.",
+        "practice": "Separate business performance from changes in what investors will pay for it. Strong growth can be offset by a falling valuation multiple."
+      }
+    ]
+  },
+  {
+    "slug": "trading-strategies-and-investment-theories",
+    "title": "Trading strategies and investment theories explained",
+    "description": "Compare buy and hold, value, growth, momentum, swing trading and systematic strategies, alongside portfolio theory and market-efficiency concepts.",
+    "intro": "A strategy needs a selection rule, a holding period, a way to size positions and a reason to exit. A theory is a way to explain or model markets. Neither a familiar strategy name nor a convincing theory proves that a particular implementation will make money after costs.",
+    "example": "Consider a $10,000 account and a hypothetical trade risking $100 before gaps and costs. If the planned loss is $2 per share, the calculated position is 50 shares. The strategy still needs an entry and exit rule, and actual losses can exceed the plan. A position-size calculation does not validate the trade itself.",
+    "terms": [
+      {
+        "name": "Algorithmic trading",
+        "id": "algorithmic-trading",
+        "body": "Algorithmic trading uses programmed instructions to place or manage orders. An algorithm can execute a human investment decision or generate decisions from data; it need not use artificial intelligence.",
+        "practice": "Test order handling, failure modes and realistic costs as well as returns. A profitable backtest can fail when exposed to live liquidity and changing markets."
+      },
+      {
+        "name": "Buy and hold",
+        "id": "buy-and-hold",
+        "body": "Buy and hold involves retaining investments over a long period rather than frequently reacting to price moves. The approach aims to participate in long-term business or market growth.",
+        "practice": "Long holding periods reduce turnover but do not repair a permanently impaired business. Diversification and periodic review remain relevant."
+      },
+      {
+        "name": "Contrarian investing",
+        "id": "contrarian-investing",
+        "body": "Contrarian investors look for opportunities where prevailing expectations may be excessively pessimistic or optimistic. The position deliberately differs from the popular view.",
+        "practice": "Being unpopular is not evidence of being right. Identify what the market may be missing and what would show that your thesis is wrong."
+      },
+      {
+        "name": "Dollar cost averaging",
+        "id": "dollar-cost-averaging",
+        "body": "Dollar cost averaging invests a fixed cash amount at regular intervals. The same contribution buys more shares when prices are lower and fewer when prices are higher.",
+        "practice": "It reduces the need to choose one entry date but cannot prevent losses or guarantee a better result than investing a lump sum. Fees matter for small contributions."
+      },
+      {
+        "name": "Efficient-market hypothesis (EMH)",
+        "id": "efficient-market-hypothesis-emh",
+        "body": "EMH proposes that prices reflect available information, with different forms addressing different information sets. It challenges the idea that simple, widely known information reliably creates excess returns.",
+        "practice": "It does not mean prices never change or that every price is objectively correct. The practical question is whether an apparent edge survives costs and risk adjustment."
+      },
+      {
+        "name": "Fundamental analysis",
+        "id": "fundamental-analysis",
+        "body": "Fundamental analysis studies a business, its finances, industry and valuation to assess its investment prospects. It connects operating results and expectations with the price paid.",
+        "practice": "A strong company can be an expensive investment. Compare the business outlook with assumptions already reflected in the share price."
+      },
+      {
+        "name": "Growth stock",
+        "id": "growth-stock",
+        "body": "A growth stock is associated with expectations of relatively strong expansion in revenue, earnings or cash flow. Investors may accept a high current valuation in anticipation of future results.",
+        "practice": "Distinguish business growth from shareholder returns. Disappointing growth or a lower valuation multiple can cause losses even when sales increase."
+      },
+      {
+        "name": "Market timing",
+        "id": "market-timing",
+        "body": "Market timing changes exposure based on forecasts of market direction or turning points. It can involve moving between cash and equities or changing exposure through derivatives.",
+        "practice": "The process needs both an exit and a re-entry decision. Missing rebounds, trading costs and forecast errors can overwhelm the benefit of avoiding a decline."
+      },
+      {
+        "name": "Modern portfolio theory (MPT)",
+        "id": "modern-portfolio-theory-mpt",
+        "body": "MPT studies portfolios through expected returns, variances and correlations. Combining assets can reduce total volatility when their returns do not move together perfectly.",
+        "practice": "Estimated correlations can change during stress. An optimised portfolio is only as reliable as its inputs and constraints."
+      },
+      {
+        "name": "Momentum investing",
+        "id": "momentum-investing",
+        "body": "Momentum investing favours assets with stronger recent performance relative to a defined universe or measure. Rules specify the lookback period, rebalancing frequency and risk controls.",
+        "practice": "Momentum can reverse abruptly and crowded positions can unwind together. Include turnover, drawdowns and regime changes in evaluation."
+      },
+      {
+        "name": "Mosaic theory",
+        "id": "mosaic-theory",
+        "body": "Mosaic theory describes building an investment conclusion from public information and pieces of nonmaterial nonpublic information. It does not permit trading on material nonpublic information merely because other research was also performed.",
+        "practice": "Keep the origin of information clear and follow applicable law and compliance procedures. The label is not a defence for using an inside tip."
+      },
+      {
+        "name": "Pairs trade",
+        "id": "pairs-trade",
+        "body": "A pairs trade takes offsetting positions in two related securities, aiming to benefit from a change in their relative pricing. The relationship may be based on business similarity or statistical evidence.",
+        "practice": "A historically stable relationship can break. Short borrowing, unequal exposures and persistent divergence can make the combined trade risky."
+      },
+      {
+        "name": "Post-modern portfolio theory (PMPT)",
+        "id": "post-modern-portfolio-theory-pmpt",
+        "body": "PMPT approaches often emphasise downside risk relative to an investor's target rather than treating all return variation equally. They expand the risk discussion beyond the mean-variance framework.",
+        "practice": "A downside measure depends on the target and data sample. It cannot reveal losses that the historical data never contained."
+      },
+      {
+        "name": "Random walk hypothesis (RMH)",
+        "id": "random-walk-hypothesis-rmh",
+        "body": "The random walk hypothesis treats successive price changes as unpredictable from past price changes under specified assumptions. It is related to, but not identical with, market-efficiency ideas.",
+        "practice": "A random-looking chart is not proof of the hypothesis, and a visible pattern is not proof of a tradable edge. Test a rule on data not used to design it."
+      },
+      {
+        "name": "Sector rotation",
+        "id": "sector-rotation",
+        "body": "Sector rotation changes allocations among industries according to valuations, economic conditions or relative performance. The approach tries to anticipate or respond to changes in market leadership.",
+        "practice": "Economic phases are difficult to identify in real time. Concentrating in a sector can increase exposure to a common shock."
+      },
+      {
+        "name": "Style investing",
+        "id": "style-investing",
+        "body": "Style investing organises exposure around characteristics such as value, growth, size or quality. Funds and portfolios can combine several styles or deliberately concentrate on one.",
+        "practice": "Style names can conceal different selection methods. Inspect holdings, portfolio construction and overlap rather than relying solely on a label."
+      },
+      {
+        "name": "Swing trading",
+        "id": "swing-trading",
+        "body": "Swing trading seeks to capture price moves over several sessions or weeks. Entries and exits may use chart patterns, business catalysts or both.",
+        "practice": "Holding overnight introduces gap risk. A stop order cannot ensure an exit at the planned price when trading resumes elsewhere."
+      },
+      {
+        "name": "Technical analysis",
+        "id": "technical-analysis",
+        "body": "Technical analysis examines prices, trading volume and other market behaviour to frame trading decisions. It includes trends, support and resistance, and indicator-based rules.",
+        "practice": "Specify rules before evaluating outcomes. Selecting attractive patterns after the event can create an illusion of forecasting skill."
+      },
+      {
+        "name": "Trend following",
+        "id": "trend-following",
+        "body": "Trend following takes positions aligned with an established price direction and usually exits when a rule signals reversal. It does not require identifying the exact start or end of a move.",
+        "practice": "Sideways markets can produce repeated small losses. Position sizing and willingness to follow the exit rule are central to the approach."
+      },
+      {
+        "name": "Value averaging",
+        "id": "value-averaging",
+        "body": "Value averaging adjusts contributions or withdrawals to keep a portfolio near a predetermined value path. Unlike fixed contributions, the amount invested can rise sharply after losses.",
+        "practice": "Check whether the required cash would be available during a sustained decline. A smooth target path does not mean the investment itself is low risk."
+      },
+      {
+        "name": "Value investing",
+        "id": "value-investing",
+        "body": "Value investing seeks securities priced below an estimate of underlying value. The estimate might use assets, earnings, cash flows or a combination of methods.",
+        "practice": "A low price can reflect a deteriorating business rather than a bargain. Test the assumptions that would close the gap between price and estimated value."
+      },
+      {
+        "name": "Quantitative analysis (finance)",
+        "id": "quantitative-analysis-finance",
+        "body": "Quantitative analysis uses numerical data and formal methods to evaluate investments, risks or execution. It ranges from simple screening rules to complex statistical models.",
+        "practice": "Protect against overfitting, look-ahead bias and survivorship bias. Results should include trading frictions and performance on genuinely unseen data."
+      }
+    ]
+  },
+  {
+    "slug": "trading-orders-and-execution-terms",
+    "title": "Trading execution explained: spreads, order books and slippage",
+    "description": "Learn bid–ask spreads, market depth, block trades, slippage and positions, with a practical example of how order size affects execution.",
+    "intro": "A chart shows prices, but an order interacts with available liquidity. Your result depends on the price, the number of shares available, the order's conditions and what changes before execution. Trading costs include more than a broker's commission.",
+    "example": "Suppose the best bid is $49.95 and the best ask is $50.05 for 100 shares. The spread is $0.10. An immediate purchase of 300 shares might fill 100 at $50.05 and the rest at higher asks. A limit order can cap the purchase price, but may fill only partly or not at all.",
+    "terms": [
+      {
+        "name": "Trade",
+        "id": "trade",
+        "body": "A trade is an agreement to exchange a financial instrument for consideration at agreed terms. Execution establishes the transaction; clearing and settlement handle the resulting obligations and transfer of assets.",
+        "practice": "An executed order and a settled holding are different stages. Know when funds and securities become available under the market's settlement arrangements."
+      },
+      {
+        "name": "Bid–ask spread",
+        "id": "bid-ask-spread",
+        "body": "The bid is a price a buyer offers and the ask is a price a seller requests. Their difference is the spread. Quoted prices apply to particular quantities and can change before an order arrives.",
+        "practice": "Buying at the ask and immediately selling at the bid creates a spread cost even if the underlying market does not move."
+      },
+      {
+        "name": "Block trade",
+        "id": "block-trade",
+        "body": "A block trade is a large transaction relative to a market's conventions or the security's normal liquidity. Institutions may negotiate blocks to manage the market impact of a large order.",
+        "practice": "Large does not automatically mean informed or bullish. Each executed block has both a buyer and a seller, and price concessions can matter."
+      },
+      {
+        "name": "Market depth",
+        "id": "market-depth",
+        "body": "Market depth describes available buying and selling interest across price levels and quantities. It helps indicate how far a large order might move through available liquidity.",
+        "practice": "Displayed depth can change or be cancelled, and some interest is not displayed. A deep-looking order book is not a guarantee of execution."
+      },
+      {
+        "name": "Order book",
+        "id": "order-book",
+        "body": "An order book organises resting buy and sell orders by price and other priority rules. Some venues display part of this information to market participants.",
+        "practice": "The visible book may cover only one venue. It does not necessarily show every order or every source of liquidity for the stock."
+      },
+      {
+        "name": "Open outcry",
+        "id": "open-outcry",
+        "body": "Open outcry is a method of trading through spoken bids, offers and hand signals on a physical floor. It contrasts with fully electronic order matching, although hybrid arrangements can exist.",
+        "practice": "A floor photograph does not explain all trading in the product. Check the actual electronic and floor arrangements for the market concerned."
+      },
+      {
+        "name": "Position",
+        "id": "position",
+        "body": "A position is an exposure to a financial instrument or strategy. It can be long, short, hedged or composed of several related trades.",
+        "practice": "Assess the net and gross exposures together. Two offsetting positions can still carry financing, liquidity and basis risks."
+      },
+      {
+        "name": "Long position",
+        "id": "long-position",
+        "body": "A long position generally benefits when the value of the held instrument increases. A fully paid long stock position represents ownership, while a long derivative has its own contract terms.",
+        "practice": "For fully paid shares, the amount invested can be lost if the company becomes worthless. Leverage or derivatives can change the risk profile."
+      },
+      {
+        "name": "Slippage",
+        "id": "slippage",
+        "body": "Slippage is the difference between an expected or reference price and the actual execution price. It can be favourable or unfavourable and can arise from movement, latency or insufficient liquidity.",
+        "practice": "Choose a clear reference price when measuring it. Compare average execution across the full order rather than focusing only on the first fill."
+      },
+      {
+        "name": "Direct execution costs",
+        "id": "direct-execution-costs",
+        "body": "Commissions, exchange fees, financing and currency conversion can affect the net result of a trade. Spread and market impact are additional economic costs even when no commission is charged.",
+        "practice": "Estimate the complete round trip before entering. A strategy targeting tiny gains is especially sensitive to costs that look small in isolation."
+      }
+    ]
+  },
+  {
+    "slug": "corporate-actions-and-shareholder-rights",
+    "title": "Corporate actions and shareholder rights: splits, buybacks and offers",
+    "description": "Understand dividends, stock splits, dilution, buybacks, tender offers, cross-listings and voting rights, with examples of their effect on ownership.",
+    "intro": "Corporate actions can change your share count, cash balance, voting rights or ownership percentage. Some are largely mechanical; others transfer value or change control. Read the terms rather than treating every increase in shares or every cash payment as a gain.",
+    "example": "In a two-for-one split, 10 shares at $100 become 20 shares at roughly $50 before other market changes. The holding is still worth about $1,000. By contrast, issuing new shares to other investors can reduce your ownership percentage. Share counts alone cannot tell you which event occurred.",
+    "terms": [
+      {
+        "name": "Cross-listing",
+        "id": "cross-listing",
+        "body": "Cross-listing makes a company's securities available on more than one exchange, sometimes through depositary receipts. It can broaden investor access without creating a separate underlying business.",
+        "practice": "Check the currency, share ratio and trading hours. A depositary receipt price may not be directly comparable with the price of one ordinary share."
+      },
+      {
+        "name": "Dividend",
+        "id": "dividend",
+        "body": "A dividend distributes cash or other value to shareholders when declared under the company's arrangements. It can be recurring or special, and future payments can change.",
+        "practice": "A dividend is not free additional value: the stock typically adjusts around the ex-dividend date, alongside other price movements. Consider total return and taxes."
+      },
+      {
+        "name": "Dual-listed company",
+        "id": "dual-listed-company",
+        "body": "A dual-listed company structure links two separate legal companies so they operate economically as a combined enterprise while retaining separate listings and shareholder arrangements. This differs from listing one company's shares on multiple exchanges.",
+        "practice": "Voting agreements, equalisation arrangements and jurisdictional rules affect the relationship. Do not assume the two securities are interchangeable."
+      },
+      {
+        "name": "Initial public offering (IPO)",
+        "id": "initial-public-offering-ipo",
+        "body": "An IPO is a company's first public offering of its shares. It can include new shares raising capital for the company and existing shares sold by current owners.",
+        "practice": "The offer price and the first exchange-traded price can differ. Review use of proceeds, dilution, ownership and restrictions on existing holders."
+      },
+      {
+        "name": "Public offering",
+        "id": "public-offering",
+        "body": "A public offering sells securities to the public under the applicable offering framework. It can be an IPO or a later offering by an already public issuer.",
+        "practice": "Determine who receives the proceeds and how the new securities rank. A later offering can change the share count or capital structure."
+      },
+      {
+        "name": "Public float",
+        "id": "public-float",
+        "body": "Public float describes shares available for public trading, generally excluding certain insider, controlling or restricted holdings. Exact definitions depend on the purpose and rule used.",
+        "practice": "A small float can amplify price movements and make execution harder. Float and total shares outstanding are not interchangeable."
+      },
+      {
+        "name": "Mandatory offer",
+        "id": "mandatory-offer",
+        "body": "A mandatory offer is a takeover offer required when specified ownership or control conditions are met under a jurisdiction's rules. Thresholds, exemptions and pricing requirements vary.",
+        "practice": "Check the rules that apply to the issuer and transaction. A threshold from one country should not be assumed to apply elsewhere."
+      },
+      {
+        "name": "Tender offer",
+        "id": "tender-offer",
+        "body": "A tender offer invites holders to sell securities on stated terms within a defined period. It can come from an acquirer or the issuing company and may be conditional or limited in size.",
+        "practice": "Review the deadline, conditions, withdrawal rights and possible proration. An announced price does not mean every submitted share will necessarily be accepted."
+      },
+      {
+        "name": "Reverse stock split",
+        "id": "reverse-stock-split",
+        "body": "A reverse split combines several shares into fewer shares, with a proportionate mechanical increase in the price per share. It does not by itself repair the company's finances.",
+        "practice": "Ten shares at $2 could become one at about $20 before other changes. Check how fractional shares are handled and why the company chose the action."
+      },
+      {
+        "name": "Stock split",
+        "id": "stock-split",
+        "body": "A stock split increases the number of shares while proportionately reducing the price per share mechanically. It leaves each shareholder's ownership percentage unchanged, apart from details such as fractional treatment.",
+        "practice": "A lower price per share after a split does not mean the whole company became cheaper. Compare market capitalisation and adjusted historical prices."
+      },
+      {
+        "name": "Share repurchase",
+        "id": "share-repurchase",
+        "body": "A share repurchase occurs when a company buys its own shares. It can reduce shares outstanding if shares are retired or held in treasury, but new issuance can offset the reduction.",
+        "practice": "Compare the price paid with business value and other uses of cash. A buyback funded by borrowing also changes leverage and risk."
+      },
+      {
+        "name": "Shareholder value",
+        "id": "shareholder-value",
+        "body": "Shareholder value concerns the economic value available to owners through distributions and the value of their holdings. Sustainable value depends on cash generation, investment decisions and risk.",
+        "practice": "An action that raises short-term earnings per share does not necessarily create long-term value. Consider the capital used and the risks introduced."
+      },
+      {
+        "name": "Squeeze-out",
+        "id": "squeeze-out",
+        "body": "A squeeze-out is a process through which a controlling holder can acquire remaining minority holdings under specified legal conditions. It is a corporate-control mechanism, not a short squeeze.",
+        "practice": "Minority-holder protections and valuation procedures differ by jurisdiction. Review official transaction documents and available rights."
+      },
+      {
+        "name": "Stock dilution",
+        "id": "stock-dilution",
+        "body": "Dilution occurs when new shares or share-linked instruments reduce an existing holder's proportionate ownership or affect per-share measures. Raising capital can still create value if the proceeds are used productively.",
+        "practice": "Compare what the company receives with the claims it issues. Ownership dilution and a decline in economic value are related questions, not automatic equivalents."
+      },
+      {
+        "name": "Stock swap",
+        "id": "stock-swap",
+        "body": "A stock swap exchanges one equity holding for another, often as part of a merger or acquisition. The exchange ratio determines how many acquiring-company shares a holder receives.",
+        "practice": "The value of an all-share offer moves with the buyer's share price unless the terms provide protection. Review conditions and potential tax consequences."
+      },
+      {
+        "name": "Voting interest",
+        "id": "voting-interest",
+        "body": "Voting interest measures the share of voting power attached to a holding. Multiple share classes, special rights and agreements can make voting power differ from economic ownership.",
+        "practice": "An investor owning 10% of the equity may have more or less than 10% of the votes. Review the class structure and control disclosures."
+      }
+    ]
+  },
+  {
+    "slug": "market-risk-and-portfolio-terms",
+    "title": "Market risk and portfolio terms: margin, volatility and short selling",
+    "description": "Understand margin, short squeezes, volatility, market trends and portfolio risk measures, with clear explanations of common investing terminology.",
+    "intro": "Risk has several dimensions: the price can move against you, the instrument can become hard to sell, financing can become more expensive or your assumptions can be wrong. A single number such as volatility or beta cannot summarise every way an investment can lose money.",
+    "example": "If you buy $10,000 of stock using $5,000 cash and $5,000 borrowed, a fall in the stock to $8,000 leaves $3,000 of equity before interest and fees. The stock lost 20%, but your initial equity lost 40%. A broker may require more collateral or liquidate positions under the account terms.",
+    "terms": [
+      {
+        "name": "DuPont analysis",
+        "id": "dupont-analysis",
+        "body": "DuPont analysis breaks return on equity into drivers such as profit margin, asset turnover and financial leverage. It helps explain why two businesses can report similar returns on equity for different reasons.",
+        "practice": "A higher return on equity may come from more borrowing rather than stronger operations. Examine the components and the quality of the underlying earnings."
+      },
+      {
+        "name": "Efficient frontier",
+        "id": "efficient-frontier",
+        "body": "The efficient frontier is the set of portfolios with the highest estimated expected return for a given risk level, or the lowest estimated risk for a given return, within a model and investment universe.",
+        "practice": "It is calculated from assumptions, not discovered as a guaranteed set of outcomes. Constraints and estimation errors can materially change the result."
+      },
+      {
+        "name": "Financial law",
+        "id": "financial-law",
+        "body": "Financial law covers legal rules affecting financial transactions, institutions and markets. It can include securities offerings, trading conduct, consumer protection, contracts and insolvency.",
+        "practice": "The applicable rules depend on jurisdiction, product and participant. A general educational definition is not a substitute for checking the rules governing a specific transaction."
+      },
+      {
+        "name": "Flight-to-quality",
+        "id": "flight-to-quality",
+        "body": "A flight-to-quality describes investors shifting toward assets they consider safer during uncertainty. This can include high-quality government debt or cash, depending on the type of stress.",
+        "practice": "Perceived safety is context-dependent. An asset that protects against credit stress may still carry interest-rate, inflation or currency risk."
+      },
+      {
+        "name": "Government bond",
+        "id": "government-bond",
+        "body": "A government bond is debt issued by a government, with repayment and interest terms set by the instrument. Risks differ across issuers, currencies and maturities.",
+        "practice": "A bond can lose market value when yields rise, even if repayment remains expected. Foreign-currency exposure and issuer creditworthiness also matter."
+      },
+      {
+        "name": "Greenspan put",
+        "id": "greenspan-put",
+        "body": "The Greenspan put is a market nickname for the belief that monetary policy might cushion severe market declines. It describes an expectation about policymakers rather than an actual option contract.",
+        "practice": "Policy support is neither automatic nor tailored to your investment. Decisions can prioritise inflation or other objectives even when asset prices fall."
+      },
+      {
+        "name": "Haircut",
+        "id": "haircut",
+        "body": "A haircut is a reduction applied to an asset's value when determining collateral or lending capacity. It provides a buffer for price changes, liquidity risk or other uncertainty.",
+        "practice": "With a 20% haircut, $10,000 of eligible collateral supports $8,000 of recognised collateral value before other constraints. Haircuts can increase during stress."
+      },
+      {
+        "name": "Margin",
+        "id": "margin",
+        "body": "Margin can mean borrowed funds used to buy securities or collateral required to support a leveraged position. The precise meaning depends on the account and product.",
+        "practice": "Interest, maintenance requirements and liquidation rights can change outcomes. Losses can exceed the cash initially committed to a leveraged position."
+      },
+      {
+        "name": "Market anomaly",
+        "id": "market-anomaly",
+        "body": "A market anomaly is a return pattern that appears inconsistent with a particular model or benchmark. It may reflect risk, behaviour, data problems or a pattern that disappears after discovery.",
+        "practice": "Check whether the result survives different samples and trading costs. Calling a pattern an anomaly does not make it a reliable opportunity."
+      },
+      {
+        "name": "Market capitalisation",
+        "id": "market-capitalisation",
+        "body": "Market capitalisation is the share price multiplied by the applicable number of shares outstanding. It measures the market value of equity rather than the value of the entire capital structure.",
+        "practice": "It excludes debt claims and does not equal the cash needed to buy every share at once. Share-class differences can require adjustments."
+      },
+      {
+        "name": "Market manipulation",
+        "id": "market-manipulation",
+        "body": "Market manipulation involves conduct intended to create a misleading appearance of price, trading activity or demand. Examples can include deceptive orders or coordinated misleading promotion.",
+        "practice": "Unusual volume alone does not prove manipulation. Be cautious about guaranteed-return claims, artificial urgency and unsupported stories; legal definitions depend on jurisdiction."
+      },
+      {
+        "name": "Market trend",
+        "id": "market-trend",
+        "body": "A market trend is a sustained general direction in prices over a defined period. A short-term uptrend can exist within a longer-term decline.",
+        "practice": "Specify the time horizon and rule used to identify the trend. Different definitions can lead to different conclusions from the same chart."
+      },
+      {
+        "name": "Mean reversion",
+        "id": "mean-reversion",
+        "body": "Mean reversion is the tendency of a variable to move back toward a reference level after a deviation. Some strategies assume a price, spread or valuation will return toward its historical norm.",
+        "practice": "The reference level can change permanently. A large deviation may reflect new information rather than a temporary opportunity."
+      },
+      {
+        "name": "Momentum",
+        "id": "momentum",
+        "body": "Momentum describes persistence in recent price performance or a related measure. It may refer to a stock's own price direction or its strength relative to other securities.",
+        "practice": "Choose the measure and horizon explicitly. Momentum and valuation can point in different directions without either guaranteeing the next move."
+      },
+      {
+        "name": "Rally",
+        "id": "rally",
+        "body": "A rally is a period of rising prices. It can occur in an individual security or a broad market and can happen during an otherwise declining longer-term environment.",
+        "practice": "Check breadth, volume and the chosen timeframe before treating a bounce as a lasting change. The label alone says nothing about cause or durability."
+      },
+      {
+        "name": "Returns-based style analysis",
+        "id": "returns-based-style-analysis",
+        "body": "Returns-based style analysis estimates a portfolio's exposure to investment styles by comparing its return series with style benchmarks. It infers behaviour without necessarily seeing the holdings.",
+        "practice": "A statistical exposure is not proof of what the manager owns. Holdings changes, leverage and an unsuitable benchmark set can distort the inference."
+      },
+      {
+        "name": "Short selling",
+        "id": "short-selling",
+        "body": "Short selling generally involves selling borrowed securities with the intention of buying them back later. A lower repurchase price can create a gain; a higher price creates a loss, alongside borrowing and other costs.",
+        "practice": "A stock price can rise without a fixed ceiling, so potential losses on an uncovered short stock position are theoretically unlimited. Borrow availability and recalls also matter."
+      },
+      {
+        "name": "Short squeeze",
+        "id": "short-squeeze",
+        "body": "A short squeeze occurs when rising prices and pressure on short sellers lead some to buy shares to close positions, potentially adding further upward pressure.",
+        "practice": "High short interest does not ensure a squeeze. Traders buying in anticipation can still lose if the expected buying pressure fails to appear or reverses."
+      },
+      {
+        "name": "Speculation",
+        "id": "speculation",
+        "body": "Speculation means accepting uncertainty about future prices in pursuit of profit. It can involve many instruments and holding periods, not only rapid trading.",
+        "practice": "Separate a possible outcome from a probable one. Size exposure around the loss you can bear rather than the most exciting upside scenario."
+      },
+      {
+        "name": "Stock market index",
+        "id": "stock-market-index",
+        "body": "A stock market index tracks a selected group of securities using stated inclusion and weighting rules. Different indexes can represent a broad market, sector, style or another theme.",
+        "practice": "Check whether it is price-weighted, capitalisation-weighted or constructed differently, and whether returns include dividends. An index is not itself a directly purchasable security."
+      },
+      {
+        "name": "Uptick rule",
+        "id": "uptick-rule",
+        "body": "An uptick rule restricts certain short sales based on price conditions. Historical US tick-test rules and the later alternative uptick rule are different arrangements. The latter uses a trigger and a bid-based restriction for covered securities.",
+        "practice": "Do not assume a short sale is allowed simply because a stock's last trade rose. Check current broker guidance and the rules applicable to the security and jurisdiction."
+      },
+      {
+        "name": "Volatility",
+        "id": "volatility",
+        "body": "Volatility measures the variability of returns or is inferred from option prices, depending on the context. Historical volatility describes a past sample; implied volatility reflects option-market pricing through a model.",
+        "practice": "Volatility is not a forecast of direction and is not the same as maximum loss. A low historical reading can precede a sudden large move."
+      },
+      {
+        "name": "Yield",
+        "id": "yield",
+        "body": "Yield expresses an income or return measure relative to a price or investment amount. Dividend yield, current bond yield and yield to maturity use different calculations and assumptions.",
+        "practice": "Name the measure before comparing percentages. Yield to maturity depends on contractual payments and reinvestment assumptions, while realised total return can differ."
+      }
+    ]
+  }
+]
