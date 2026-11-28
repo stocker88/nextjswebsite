@@ -116,10 +116,6 @@
         "The scorecard metadata describes its prices as split- and dividend-adjusted. Those adjustments are reflected in the model prices; this should not be described as a separate cash-dividend ledger. Gross signal returns do not represent an investor’s result after all trading costs, subscription charges and taxes."
       ],
       [
-        "Weights and missing allocations",
-        "The scorecard uses sum(weight × return) divided by sum(weight). Suggested allocations are reconstructed from currently saved risk ratings, with a 1% fallback when the allocation is not available. This is retrospective reconstruction, not a verified record of the weights available at original publication."
-      ],
-      [
         "Benchmark comparisons",
         "The US stock comparison uses SPY over matching entry and exit dates and matching weights. The scorecard’s European listings are measured in their listing currencies and excluded from the US benchmark comparison. SPY is an exchange-traded fund used as the benchmark proxy, not a brokerage account identical to a reader’s."
       ],
