@@ -31,8 +31,8 @@ export default function HomeSignalPreview() {
   return <LocalizedContent><section className="signal-preview" aria-labelledby="signal-preview-title">
     <header data-motion-reveal className="editorial-heading">
       <span>Inside the app</span>
-      <h2 id="signal-preview-title">Explore stock signals</h2>
-      <p>A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.</p>
+      <h2 id="signal-preview-title">Explore Stock Research</h2>
+      <p>A preview of recent setups, with price trends and business metrics. Open the stock research page to explore more.</p>
     </header>
     <div className="preview-grid" aria-busy={loading}>
       {loading ? Array.from({length:PREVIEW_LIMIT}, (_,i) => <div className="loading-card" key={i} aria-hidden="true" />) : items.map((item,index) => {
@@ -50,9 +50,9 @@ export default function HomeSignalPreview() {
         </DesktopAppLink>;
       })}
     </div>
-    {loading && <p className="status" role="status">Loading signal previews…</p>}
-    {!loading && !items.length && <p className="status">Signal previews are temporarily unavailable. Explore the signals page for more.</p>}
-    <div className="preview-action"><DesktopAppLink href="/stocks-to-buy" className="preview-cta">Explore stock signals →</DesktopAppLink></div>
+    {loading && <p className="status" role="status">Loading research previews…</p>}
+    {!loading && !items.length && <p className="status">Research previews are temporarily unavailable. Explore the stock research page for more.</p>}
+    <div className="preview-action"><DesktopAppLink href="/stocks-to-buy" className="preview-cta">Explore Stock Research →</DesktopAppLink></div>
     <style jsx>{`
       .signal-preview{max-width:1000px;margin:0 auto;padding:48px 24px 64px;color:#e5edf8;}
       .preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}

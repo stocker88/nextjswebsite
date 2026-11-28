@@ -273,15 +273,15 @@
     "Try again"
   ],
   "components/HomeSignalPreview.tsx": [
-    "A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.",
-    "Explore stock signals",
-    "Explore stock signals →",
+    "A preview of recent setups, with price trends and business metrics. Open the stock research page to explore more.",
+    "Explore Stock Research",
+    "Explore Stock Research →",
     "Explore this setup →",
     "Inside the app",
-    "Loading signal previews…",
+    "Loading research previews…",
     "Price trend",
-    "STOCK TO BUY",
-    "Signal previews are temporarily unavailable. Explore the signals page for more."
+    "Research previews are temporarily unavailable. Explore the stock research page for more.",
+    "STOCK TO BUY"
   ],
   "components/HomeSmartMoney.tsx": [
     "/ DISCLOSURE RESEARCH",

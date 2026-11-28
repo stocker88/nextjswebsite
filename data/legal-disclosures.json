@@ -144,10 +144,6 @@
         "Option result cards compare a recorded premium with the previous session’s close, using (comparison premium ÷ previous premium − 1) × 100. One-contract illustrations multiply the per-share premium change by 100 for a standard contract. Adjusted contracts can use different multipliers. The figures are before costs and are price comparisons, not proof that a customer or publisher executed those trades."
       ],
       [
-        "Selection of option examples",
-        "The public preview selects the largest session percentage move among the contracts included in that report. Some detailed reports explicitly use the higher of two recorded prices for a contract. Featured examples therefore should not be treated as a complete, unselected strategy return or a win rate. An available quote does not ensure execution at that price."
-      ],
-      [
         "Predictions and hypothetical paths",
         "Prediction charts illustrate assumptions and possible paths. They are not realised investment results. Simulated seasonality and event swings do not establish that the forecast or the illustrated timing will occur. Historical outcomes do not guarantee future returns."
       ],

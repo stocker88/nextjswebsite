@@ -685,9 +685,9 @@
     "ja": "投資アイデアと企業の基礎情報を結び付け、ティッカーの背後にある事業を調べます。",
     "ko": "투자 아이디어와 기업 펀더멘털을 연결하고 종목코드 뒤의 사업을 살펴보세요."
   },
-  "Explore stock research": {
+  "Explore Stock Research": {
     "es": "Explorar análisis de acciones",
-    "fr": "Explorer les analyses d’actions",
+    "fr": "Explorer les analyses boursières",
     "de": "Aktienanalysen entdecken",
     "ja": "株式リサーチを見る",
     "ko": "주식 리서치 살펴보기"
@@ -979,33 +979,12 @@
     "ja": "アプリの中へ",
     "ko": "앱에서"
   },
-  "Explore stock signals": {
-    "es": "Explorar señales de acciones",
-    "fr": "Explorer les signaux d’actions",
-    "de": "Aktiensignale ansehen",
-    "ja": "株式シグナルを見る",
-    "ko": "주식 시그널 살펴보기"
-  },
-  "A preview of recent setups, with price trends and business metrics. Open the signals page to explore more.": {
-    "es": "Vista previa de ideas recientes, tendencias de precios y métricas empresariales. Abre la página de señales para ver más.",
-    "fr": "Un aperçu des idées récentes, des tendances de cours et des indicateurs d’entreprise. Ouvrez la page des signaux pour en savoir plus.",
-    "de": "Vorschau aktueller Handelsideen mit Kurstrends und Unternehmenskennzahlen. Auf der Signalseite mehr entdecken.",
-    "ja": "最近の取引アイデア、価格トレンド、企業指標のプレビュー。詳しくはシグナルページへ。",
-    "ko": "최근 매매 아이디어, 가격 추세와 기업 지표를 미리 살펴보세요. 시그널 페이지에서 더 확인할 수 있습니다."
-  },
-  "Loading signal previews…": {
-    "es": "Cargando señales…",
-    "fr": "Chargement des signaux…",
-    "de": "Signalvorschau wird geladen…",
-    "ja": "シグナルを読み込み中…",
-    "ko": "시그널 불러오는 중…"
-  },
-  "Explore stock signals →": {
-    "es": "Explorar señales de acciones →",
-    "fr": "Explorer les signaux d’actions →",
-    "de": "Aktiensignale ansehen →",
-    "ja": "株式シグナルを見る →",
-    "ko": "주식 시그널 살펴보기 →"
+  "Explore Stock Research →": {
+    "es": "Explorar análisis de acciones →",
+    "fr": "Explorer les analyses boursières →",
+    "de": "Aktienanalysen entdecken →",
+    "ja": "株式リサーチを見る →",
+    "ko": "주식 리서치 살펴보기 →"
   },
   "Earnings snapshot": {
     "es": "Resumen de resultados",
@@ -4052,13 +4031,6 @@
     "ja": "· 米国東部時間",
     "ko": "· 미국 동부 시간"
   },
-  "Signal previews are temporarily unavailable. Explore the signals page for more.": {
-    "es": "Las vistas previas no están disponibles temporalmente. Consulta la página de señales.",
-    "fr": "Aperçus temporairement indisponibles. Consultez la page des signaux.",
-    "de": "Signalvorschauen vorübergehend nicht verfügbar. Signalseite ansehen.",
-    "ja": "シグナルのプレビューは一時利用不可です。シグナルページをご覧ください。",
-    "ko": "시그널 미리보기를 일시적으로 사용할 수 없습니다. 시그널 페이지를 확인하세요."
-  },
   "Chart unavailable. Check in the app.": {
     "es": "Gráfico no disponible. Consulta la app.",
     "fr": "Graphique indisponible. Consultez l’app.",
@@ -4261,5 +4233,26 @@
     "de": "Hinzugefügt",
     "ja": "追加額",
     "ko": "추가금"
+  },
+  "A preview of recent setups, with price trends and business metrics. Open the stock research page to explore more.": {
+    "es": "Vista previa de ideas recientes, tendencias de precios y métricas empresariales. Explora el análisis de acciones para ver más.",
+    "fr": "Un aperçu des idées récentes, des tendances de cours et des indicateurs d’entreprise. Explorez les analyses boursières pour en savoir plus.",
+    "de": "Aktuelle Handelsideen mit Kurstrends und Unternehmenskennzahlen. Entdecken Sie weitere Aktienanalysen.",
+    "ja": "最近の投資アイデア、価格トレンド、企業指標を紹介。株式リサーチで詳しくご覧ください。",
+    "ko": "최근 투자 아이디어, 가격 추세와 기업 지표를 살펴보세요. 주식 리서치에서 더 확인할 수 있습니다."
+  },
+  "Loading research previews…": {
+    "es": "Cargando análisis…",
+    "fr": "Chargement des analyses…",
+    "de": "Analysen werden geladen…",
+    "ja": "リサーチを読み込み中…",
+    "ko": "리서치 불러오는 중…"
+  },
+  "Research previews are temporarily unavailable. Explore the stock research page for more.": {
+    "es": "Las vistas previas no están disponibles temporalmente. Explora el análisis de acciones para ver más.",
+    "fr": "Les aperçus sont temporairement indisponibles. Explorez les analyses boursières pour en savoir plus.",
+    "de": "Die Vorschau ist vorübergehend nicht verfügbar. Entdecken Sie weitere Aktienanalysen.",
+    "ja": "プレビューは一時的に利用できません。株式リサーチをご覧ください。",
+    "ko": "미리보기를 일시적으로 사용할 수 없습니다. 주식 리서치에서 더 확인해 보세요."
   }
 }

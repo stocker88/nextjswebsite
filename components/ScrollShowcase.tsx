@@ -6,7 +6,7 @@ import ChartReveal from './ChartReveal';
 import styles from '../styles/ScrollShowcase.module.css';
 const chapters=[
   {eyebrow:'01 / THE BIG PICTURE',title:'Less noise.\nMore perspective.',text:'Start with the market. Explore the heatmap, follow the calendar and put the day’s moves in context.',href:'/stock-market-heatmap/',link:'Explore the market'},
-  {eyebrow:'02 / LOOK CLOSER',title:'Go deeper\nthan the price.',text:'Bring stock ideas and company fundamentals together. Explore the business behind the ticker.',href:'/stocks-to-buy/',link:'Explore stock research'},
+  {eyebrow:'02 / LOOK CLOSER',title:'Go deeper\nthan the price.',text:'Bring stock ideas and company fundamentals together. Explore the business behind the ticker.',href:'/stocks-to-buy/',link:'Explore Stock Research'},
   {eyebrow:'03 / MAKE IT A ROUTINE',title:'Your next move.\nMore considered.',text:'Make room for research, learning and a daily investing routine. All in one place.',href:'/#how-it-works',link:'Discover the app'},
 ];
 export default function ScrollShowcase(){
