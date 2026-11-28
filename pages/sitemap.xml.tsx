@@ -1,3 +1,4 @@
+import legalDisclosures from '../data/legal-disclosures.json';
 import marketEducationGuides from '../data/market-education-guides.json';
 import investmentManagementGuides from '../data/investment-management-guides.json';
 import {spanishRoutes,hasSpanish,englishPath,routePath,languages,languageOf,languagePath,availableLanguages,hasTranslation} from '../lib/localization/routes';
@@ -88,6 +89,7 @@ export async function getServerSideProps({ res, sitemapPart }: any) {
     "/guides/how-to-make-1000-a-month-trading-stocks/",
   ].map((path) => ({ path }));
   entries.push(...toolEntries(),...['/trading-tools/','/stock-analysis/','/stock-comparison/','/crypto-prediction/','/forex-prediction/','/tools/position-size-calculator/','/tools/forex-pip-value-calculator/','/tools/futures-tick-value-calculator/'].map(path=>({path})),...workflows.map(g=>({path:'/trading-guides/'+g.slug+'/'})));
+  entries.push({path:'/legal/'},...legalDisclosures.map(p=>({path:'/legal/'+p.slug+'/'})));
   entries.push({path:'/guides/financial-markets/'},...marketEducationGuides.map(g=>({path:'/guides/financial-markets/'+g.slug+'/'})));
   entries.push({path:'/guides/investment-management/'},...investmentManagementGuides.map(g=>({path:'/guides/investment-management/'+g.slug+'/'})));
   entries.push({path:'/guides/questions/'},...questionGuides.map(g=>({path:'/guides/'+g.slug+'/'})));

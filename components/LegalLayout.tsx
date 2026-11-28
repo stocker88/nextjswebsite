@@ -6,5 +6,5 @@ import Footer from './layout/Footer';
 import {SITE} from '../lib/seo';
 import s from '../styles/Legal.module.css';
 export default function LegalLayout({title,description,path,children}:{title:string;description:string;path:string;children:ReactNode}){
- return <><Head><title>{title} | Stocks to Buy Now Research</title><meta name="description" content={description}/><meta name="robots" content="noindex,nofollow"/><link rel="canonical" href={SITE+path}/></Head><Header forceDark navBasePath="/"/><main className={s.page}><nav className={s.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/legal/">Legal &amp; Disclosures</Link></nav>{children}</main><Footer/></>;
+ return <><Head><title>{title} | Stocks to Buy Now Research</title><meta name="description" content={description}/><meta name="robots" content="index,follow"/><link rel="canonical" href={SITE+path}/></Head><Header forceDark navBasePath="/"/><main className={s.page}><nav className={s.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/legal/">Legal &amp; Disclosures</Link></nav>{children}</main><Footer/></>;
 }
