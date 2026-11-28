@@ -14,6 +14,11 @@ function merge(baseline,generated){
  for(const dir of ['static','data']){const source=path.join(generated,'_next',dir);if(fs.existsSync(source))fs.cpSync(source,path.join(baseline,'_next',dir),{recursive:true,errorOnExist:false});}
  const sitemapPath=path.join(baseline,'sitemap.xml');let sitemap=fs.readFileSync(sitemapPath,'utf8');
  const location='https://www.stockstobuynow.ai/sitemaps/legal.xml';
+ if(sitemap.includes('</urlset>')){
+  fs.mkdirSync(path.join(baseline,'sitemaps'),{recursive:true});
+  fs.writeFileSync(path.join(baseline,'sitemaps/retained.xml'),sitemap);
+  sitemap='<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://www.stockstobuynow.ai/sitemaps/retained.xml</loc></sitemap></sitemapindex>';
+ }
  assert(sitemap.includes('</sitemapindex>'),'Expected production sitemap index');
  if(!sitemap.includes('<loc>'+location+'</loc>'))sitemap=sitemap.replace('</sitemapindex>','<sitemap><loc>'+location+'</loc></sitemap></sitemapindex>');
  fs.writeFileSync(sitemapPath,sitemap);
@@ -27,6 +32,13 @@ function merge(baseline,generated){
 }
 function build(){
  const baseline=process.env.WEBSITE_PREVIOUS_EXPORT;assert(baseline&&fs.existsSync(path.join(baseline,'index.html')),'A successful production export is required; no full-build fallback.');
+ if(process.env.GITHUB_ACTIONS==='true'){
+  const live=execFileSync('curl',['--fail','--silent','--show-error','https://www.stockstobuynow.ai/'],{encoding:'utf8'});
+  const saved=fs.readFileSync(path.join(baseline,'index.html'),'utf8');
+  const id=html=>JSON.parse(html.match(/<script\b[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]).buildId;
+  console.log('Production baseline build:',id(saved),'Live build:',id(live));
+  assert.equal(id(saved),id(live),'Saved export does not match live production; refusing to replace unrelated pages.');
+ }
  const stage=path.join(process.env.WEBSITE_EXPORT_VOLUME||root,'.legal-build');fs.rmSync(stage,{recursive:true,force:true});fs.mkdirSync(stage,{recursive:true});
  for(const dir of ['components','lib','styles','data','context','contexts','hooks','utils','types','@types','interfaces','layouts','views'])if(fs.existsSync(path.join(root,dir)))fs.cpSync(path.join(root,dir),path.join(stage,dir),{recursive:true});
  for(const file of ['package.json','tsconfig.json','next-env.d.ts','postcss.config.js','tailwind.config.js','tailwind.config.ts','stockerSession.tsx','mathjax-config.js'])if(fs.existsSync(path.join(root,file)))fs.copyFileSync(path.join(root,file),path.join(stage,file));
