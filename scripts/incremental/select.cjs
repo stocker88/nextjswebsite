@@ -18,7 +18,10 @@ async function select(template,result,getProps,root=process.cwd()){
   if(valid.length%5000===0)console.log(`Checking ${template}: ${valid.length}/${result.paths.length} page inputs`);
   const file=path.join(baseline,decodeURIComponent(route),'index.html');let old=null,html='';
   if(fs.existsSync(file)){html=fs.readFileSync(file,'utf8');try{old=embedded(html);}catch{}}
-  if(!old||old.page!==template||(!sameLocale&&hash(assetsFromHtml(html))!==hash(assets))){selected.push(entry);continue;}
+  if(!old||old.page!==template||(!sameLocale&&hash(assetsFromHtml(html))!==hash(assets))){
+   if(old&&process.env.WEBSITE_CONTENT_ONLY==='true')throw Error(`Content-only publication cannot replace incompatible rendering assets for ${route}. Publish shared code separately before retrying content.`);
+   selected.push(entry);continue;
+  }
   // Only pageProps are compared: build IDs and router metadata belong to the release.
   const params=typeof entry==='string'?null:entry.params;
   if(!params){selected.push(entry);continue;}

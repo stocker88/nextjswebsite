@@ -12,9 +12,14 @@ const {select,embedded,routeFor,assetsFromHtml}=require('./select.cjs'),{wrap}=r
  write(path.join(root,'data/localization/home.json'),JSON.stringify({Hello:{fr:'Bonjour',de:'Hallo'}}));const before=state(root);
  write(path.join(root,'data/localization/home.json'),JSON.stringify({Hello:{fr:'Salut',de:'Hallo'}}));const after=state(root);
  assert(sameLanguage(after,before,'/de/prediction/[slug]'));assert(sameLanguage(after,before,'/prediction/[slug]'));assert(!sameLanguage(after,before,'/fr/prediction/[slug]'));
+ const previousMode=process.env.WEBSITE_CONTENT_ONLY;process.env.WEBSITE_CONTENT_ONLY='true';
  const previous=process.env.WEBSITE_PREVIOUS_EXPORT;process.env.WEBSITE_PREVIOUS_EXPORT=baseline;
  const result=await select('/news/[slug]',{paths:['same','edit','new'].map(slug=>({params:{slug}})),fallback:false},async({params:{slug}})=>({props:{slug,text:slug==='same'?'unchanged':'new'}}),root);
  assert.deepEqual(result.paths.map(e=>e.params.slug),['edit','new']);assert.equal(routeFor('/fr/guides/[...slug]',{params:{slug:['one','two']}}),'/fr/guides/one/two');
+ write(path.join(root,'.next/build-manifest.json'),JSON.stringify({pages:{'/_app':['static/chunks/changed.js'],'/news/[slug]':assets.slice(2)}}));
+ await assert.rejects(()=>select('/news/[slug]',{paths:[{params:{slug:'same'}}],fallback:false},async()=>({props:{slug:'same',text:'unchanged'}}),root),/Content-only publication/);
+ write(path.join(root,'.next/build-manifest.json'),JSON.stringify({pages:{'/_app':assets.slice(0,2),'/news/[slug]':assets.slice(2)}}));
+ if(previousMode===undefined)delete process.env.WEBSITE_CONTENT_ONLY;else process.env.WEBSITE_CONTENT_ONLY=previousMode;
  for(const slug of ['edit','new'])write(path.join(out,'news',slug,'index.html'),html(slug,'new'));
  for(const a of assets)write(path.join(baseline,'_next',a),'asset');
  merge(root,out,baseline);assert(fs.existsSync(path.join(out,'news/same/index.html')));assert(!fs.existsSync(path.join(out,'news/removed/index.html')));assert.equal(embedded(fs.readFileSync(path.join(out,'news/edit/index.html'),'utf8')).props.pageProps.text,'new');

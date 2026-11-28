@@ -27,7 +27,7 @@ function restore(){
  const repo=process.env.GITHUB_REPOSITORY;if(!repo||!process.env.WEBSITE_EXPORT_VOLUME){console.log('No production artifact context; using a full build.');return;}
  const api=endpoint=>JSON.parse(execFileSync('gh',['api',`repos/${repo}/${endpoint}`],{encoding:'utf8'}));
  const chosen=findBaseline(api,process.env.GITHUB_RUN_ID);
- if(!chosen){console.log('No retained successful export; a full build is required.');return;}
+ if(!chosen){if(process.env.WEBSITE_CONTENT_ONLY==='true')throw Error('Content publication requires a retained production export. Refusing a full-site rebuild; deploy a code baseline first.');console.log('No retained successful export; a full build is required.');return;}
  const archive=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous-archive'),out=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous');
  fs.mkdirSync(archive,{recursive:true});fs.mkdirSync(out,{recursive:true});
  execFileSync('gh',['run','download',String(chosen.id),'--repo',repo,'--name','cloudflare-site','--dir',archive],{stdio:'inherit'});

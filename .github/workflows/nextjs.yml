@@ -6,6 +6,10 @@ on:
     types: [article_published]
   workflow_dispatch:
     inputs:
+      content_only:
+        description: Publish content changes without allowing a full-site fallback
+        type: boolean
+        default: true
       full_build:
         description: Rebuild every page instead of reusing unchanged pages
         type: boolean
@@ -26,6 +30,7 @@ jobs:
     timeout-minutes: 180
     env:
       WEBSITE_BUILD_CPUS: "2"
+      WEBSITE_CONTENT_ONLY: ${{ !inputs.full_build && (github.event_name == 'schedule' || github.event_name == 'repository_dispatch' || (github.event_name == 'workflow_dispatch' && inputs.content_only)) }}
       WEBSITE_FULL_BUILD: ${{ inputs.full_build || 'false' }}
       NEXT_PUBLIC_APPLE_PROVIDER_TOKEN: ${{ vars.APPLE_PROVIDER_TOKEN }}
     steps:
