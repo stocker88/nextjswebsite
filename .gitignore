@@ -31,3 +31,7 @@ public/comparison-data/
 .next-logo-preview/
 
 .next-iwv-preview/
+
+# Isolated phased legal build
+.legal-build/
+legal-out/

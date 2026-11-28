@@ -1,0 +1,15 @@
+{
+  "name": "stockstobuynow-legal",
+  "account_id": "4e00a3eed53a095fe547ea7a997ebc51",
+  "compatibility_date": "2026-11-25",
+  "workers_dev": false,
+  "preview_urls": false,
+  "main": "worker/legal.mjs",
+  "routes": [
+    {"pattern":"www.stockstobuynow.ai/legal*","zone_name":"stockstobuynow.ai"},
+    {"pattern":"www.stockstobuynow.ai/_legal-assets/*","zone_name":"stockstobuynow.ai"},
+    {"pattern":"www.stockstobuynow.ai/sitemaps/legal.xml*","zone_name":"stockstobuynow.ai"},
+    {"pattern":"www.stockstobuynow.ai/sitemap.xml*","zone_name":"stockstobuynow.ai"}
+  ],
+  "assets":{"directory":"./legal-out","binding":"ASSETS","html_handling":"auto-trailing-slash","not_found_handling":"404-page"}
+}
