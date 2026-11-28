@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
+      WEBSITE_BUILD_CPUS: "2"
       NEXT_PUBLIC_APPLE_PROVIDER_TOKEN: ${{ vars.APPLE_PROVIDER_TOKEN }}
     steps:
       - uses: actions/checkout@v4
