@@ -1,4 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
+import {useSiteLanguage} from '../lib/localization/use-site-language';
+
+// Trustpilot has no Korean widget locale; retain English for that locale.
+const widgetLocales = {en: 'en-US', es: 'es-ES', fr: 'fr-FR', de: 'de-DE', ja: 'ja-JP', ko: 'en-US'} as const;
 
 interface TrustProps {
   templateId: string;
@@ -15,12 +19,15 @@ export default function TrustpilotWidget({
   isTopStrip = false,
   trustpilotUrl = "https://www.trustpilot.com/review/stockstobuynow.ai"
 }: TrustProps) {
+  const {language} = useSiteLanguage();
+  const widgetLocale = widgetLocales[language] || widgetLocales.en;
   const containerRef = useRef<HTMLDivElement>(null);
 
   // States: 'loading' | 'widget' | 'fallback'
   const [renderMode, setRenderMode] = useState<'loading' | 'widget' | 'fallback'>('loading');
 
   useEffect(() => {
+    setRenderMode('loading');
     let attempts = 0;
     const maxAttempts = 20;
     let timeoutId: NodeJS.Timeout;
@@ -54,7 +61,7 @@ export default function TrustpilotWidget({
 
         const trustbox = document.createElement("div");
         trustbox.className = "trustpilot-widget";
-        trustbox.setAttribute("data-locale", "en-US");
+        trustbox.setAttribute("data-locale", widgetLocale);
         trustbox.setAttribute("data-template-id", templateId);
         trustbox.setAttribute("data-businessunit-id", businessUnitId);
         trustbox.setAttribute("data-style-height", height);
@@ -100,7 +107,7 @@ export default function TrustpilotWidget({
       clearTimeout(fallbackTimer);
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [templateId, businessUnitId, height, isTopStrip, trustpilotUrl]);
+  }, [templateId, businessUnitId, height, isTopStrip, trustpilotUrl, widgetLocale]);
 
   const showFallback = renderMode === 'fallback';
 
