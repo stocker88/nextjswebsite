@@ -109,7 +109,7 @@
     "sections": [
       [
         "Stock-signal entry and exit prices",
-        "The current target-date scorecard uses the first eligible exchange open after the later of publication and recommendation timestamps. It exits at the saved target-date close, or the next session if that date is closed. Prices are model inputs from daily adjusted market data, not verified customer or publisher brokerage fills."
+        "The current target-date scorecard uses the first eligible exchange open after the later of publication and recommendation timestamps. It exits at the saved target-date close, or the next session if that date is closed. Prices are model inputs from daily adjusted market data."
       ],
       [
         "Dividends, splits and gross returns",
