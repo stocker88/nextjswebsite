@@ -11,13 +11,22 @@ function unpack(out){const base=path.join(out,'__localized');if(!fs.existsSync(b
   }
  }fs.rmSync(base,{recursive:true});
 }
+function findBaseline(api,currentRun){
+ const recent=api('actions/workflows/nextjs.yml/runs?status=completed&branch=main&per_page=10').workflow_runs;
+ const successful=api('actions/workflows/nextjs.yml/runs?status=success&branch=main&per_page=10').workflow_runs;
+ const runs=[...new Map([...recent,...successful].map(r=>[r.id,r])).values()].sort((a,b)=>b.id-a.id);
+ for(const run of runs){
+  if(String(run.id)===String(currentRun))continue;
+  if(run.conclusion!=='success'&&!api(`actions/runs/${run.id}/jobs`).jobs.some(j=>j.name==='deploy'&&j.conclusion==='success'))continue;
+  if(api(`actions/runs/${run.id}/artifacts`).artifacts.some(a=>a.name==='cloudflare-site'&&!a.expired))return run;
+ }
+ return null;
+}
 function restore(){
  if(process.env.WEBSITE_FULL_BUILD==='true'){console.log('Full build explicitly requested.');return;}
  const repo=process.env.GITHUB_REPOSITORY;if(!repo||!process.env.WEBSITE_EXPORT_VOLUME){console.log('No production artifact context; using a full build.');return;}
  const api=endpoint=>JSON.parse(execFileSync('gh',['api',`repos/${repo}/${endpoint}`],{encoding:'utf8'}));
- const runs=api('actions/workflows/nextjs.yml/runs?status=completed&branch=main&per_page=10').workflow_runs;
- let chosen;
- for(const run of runs){if(String(run.id)===process.env.GITHUB_RUN_ID)continue;if(run.conclusion!=='success'&&!api(`actions/runs/${run.id}/jobs`).jobs.some(j=>j.name==='deploy'&&j.conclusion==='success'))continue;const artifact=api(`actions/runs/${run.id}/artifacts`).artifacts.find(a=>a.name==='cloudflare-site'&&!a.expired);if(artifact){chosen=run;break;}}
+ const chosen=findBaseline(api,process.env.GITHUB_RUN_ID);
  if(!chosen){console.log('No retained successful export; a full build is required.');return;}
  const archive=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous-archive'),out=path.join(process.env.WEBSITE_EXPORT_VOLUME,'previous');
  fs.mkdirSync(archive,{recursive:true});fs.mkdirSync(out,{recursive:true});
@@ -28,4 +37,4 @@ function restore(){
  fs.appendFileSync(process.env.GITHUB_ENV,`WEBSITE_PREVIOUS_EXPORT=${out}\n`);
  console.log(`Restored production export from run ${chosen.id} (${chosen.head_sha}).`);
 }
-if(require.main===module)restore();module.exports={unpack};
+if(require.main===module)restore();module.exports={unpack,findBaseline};

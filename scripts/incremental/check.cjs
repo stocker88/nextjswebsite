@@ -1,6 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {select,embedded,routeFor,assetsFromHtml}=require('./select.cjs'),{wrap}=require('./prepare.cjs'),{merge}=require('./merge.cjs');
 (async()=>{
+ const baselineRun=require('./restore.cjs').findBaseline(endpoint=>endpoint.includes('status=success')?{workflow_runs:[{id:1,conclusion:'success'}]}:endpoint.includes('status=completed')?{workflow_runs:Array.from({length:10},(_,i)=>({id:20-i,conclusion:'failure'}))}:endpoint.endsWith('/jobs')?{jobs:[{name:'deploy',conclusion:'skipped'}]}:{artifacts:[{name:'cloudflare-site',expired:false}]},99);assert.equal(baselineRun.id,1);
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'incremental-check-')),baseline=path.join(root,'previous'),out=path.join(root,'out');
  const write=(name,text)=>{fs.mkdirSync(path.dirname(name),{recursive:true});fs.writeFileSync(name,text)};
  const assets=['static/chunks/framework-a.js','static/chunks/pages/_app-a.js','static/chunks/pages/news/[slug]-a.js','static/css/a.css'];

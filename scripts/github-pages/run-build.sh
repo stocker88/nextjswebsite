@@ -6,7 +6,7 @@ monitor_resources() {
   while true; do
     printf '\nBuild resources at %s\n' "$(date -u +%FT%TZ)"
     free -m
-    df -h "${WEBSITE_EXPORT_VOLUME:-.}"
+    df -h / /mnt "${WEBSITE_EXPORT_VOLUME:-.}"
     sleep 60
   done
 }
