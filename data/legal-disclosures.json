@@ -48,7 +48,7 @@
       ],
       [
         "Trading windows and minimum holding periods",
-        "No company-specific minimum holding period or pre-publication or post-publication trading window has been confirmed for this draft. Another publisher’s ten-day holding rule or two-day writing restriction is not adopted simply by being mentioned as an example."
+        "The minimum holding period is 7 days. Pre-publication and post-publication trading windows have not yet been confirmed for this draft."
       ],
       [
         "Clearance, records and exceptions",
@@ -60,7 +60,7 @@
       ]
     ],
     "pending": [
-      "Choose actual holding periods and trading or writing windows, if any.",
+      "Confirm any additional trading or writing windows.",
       "Name the clearance and oversight owner and confirm reporting requirements.",
       "Approve scope, exceptions, enforcement and effective date."
     ]
