@@ -9,6 +9,10 @@ function wrap(source,template,runtime){
   return `export {${keep.join(',')}} from ${q}${from}${q};\nimport {getStaticPaths as ${getter},getStaticProps as ${props}} from ${q}${from}${q};`;
  });
  if(!handled){
+  source=source.replace(/export\s*\{([^}]*\bgetStaticProps\b[^}]*)\}\s*from\s*(['"])([^'"]+)\2\s*;?/, (statement,names,q,from)=>{
+   props='__incrementalProps';
+   return statement+`\nimport {getStaticProps as ${props}} from ${q}${from}${q};\n`;
+  });
   source=source.replace(/export\s+(async\s+)?function\s+getStaticPaths\b/,(_,asyncWord='')=>{handled=true;return `${asyncWord}function ${getter}`;});
   if(!handled)source=source.replace(/export\s+(const|let)\s+getStaticPaths\b/,(_,kind)=>{handled=true;return `${kind} ${getter}`;});
  }

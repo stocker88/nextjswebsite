@@ -8,6 +8,7 @@ write('tsconfig.json',JSON.stringify({compilerOptions:{jsx:'preserve',esModuleIn
 write('pages/index.tsx','export default function Home(){return <h1>Home</h1>}');
 const page="import records from '../../records.json';export default function Page({text}:any){return <h1>{text}</h1>}export function getStaticPaths(){return {paths:records.map(r=>({params:{slug:r.slug}})),fallback:false}}export function getStaticProps({params}:any){return {props:records.find(r=>r.slug===params.slug)}}";
 write('records.json',JSON.stringify([{slug:'one',text:'One'},{slug:'two',text:'Two'}]));write('pages/news/[slug].tsx',page);write('pages/fr/news/[slug].tsx',"export {default,getStaticProps,getStaticPaths} from '../../news/[slug]';");
+write('pages/alternate/[slug].tsx',"export {default,getStaticProps} from '../news/[slug]';export function getStaticPaths(){return {paths:[{params:{slug:'one'}}],fallback:false}}");
 const build=()=>execFileSync(process.execPath,[path.join(source,'node_modules/next/dist/bin/next'),'build'],{cwd:root,stdio:'inherit',env:{...process.env,NEXT_TELEMETRY_DISABLED:'1'}});
 build();fs.renameSync(path.join(root,'out'),path.join(root,'previous'));
 write('records.json',JSON.stringify([{slug:'one',text:'One'},{slug:'two',text:'Changed'},{slug:'three',text:'Three'}]));
